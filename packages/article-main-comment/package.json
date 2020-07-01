@@ -1,5 +1,6 @@
 {
   "name": "@times-components-native/article-main-comment",
+  "private": true,
   "version": "2.24.2",
   "description": "Main Comment Article Template",
   "main": "dist/article-main-comment",

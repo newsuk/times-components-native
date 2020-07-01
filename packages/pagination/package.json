@@ -1,5 +1,6 @@
 {
   "name": "@times-components-native/pagination",
+  "private": true,
   "version": "3.4.35",
   "main": "dist/pagination",
   "dev": "src/pagination",

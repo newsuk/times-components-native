@@ -1,5 +1,6 @@
 {
   "name": "@times-components-native/context",
+  "private": true,
   "version": "1.2.17",
   "description": "Shared context between components",
   "main": "dist/context",

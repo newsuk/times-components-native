@@ -1,5 +1,6 @@
 {
   "name": "@times-components-native/error-view",
+  "private": true,
   "version": "2.3.48",
   "description": "Handles errors",
   "main": "dist/error-view",

@@ -1,5 +1,6 @@
 {
   "name": "@times-components-native/watermark",
+  "private": true,
   "version": "2.7.42",
   "description": "Watermark",
   "main": "dist/watermark",

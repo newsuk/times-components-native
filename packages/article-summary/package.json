@@ -1,5 +1,6 @@
 {
   "name": "@times-components-native/article-summary",
+  "private": true,
   "version": "3.16.41",
   "main": "dist/article-summary",
   "dev": "src/article-summary",

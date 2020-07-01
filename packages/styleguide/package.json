@@ -1,5 +1,6 @@
 {
   "name": "@times-components-native/styleguide",
+  "private": true,
   "version": "3.38.10",
   "description": "Centralised library for common styles throughout the Times",
   "main": "dist/styleguide",

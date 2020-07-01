@@ -1,5 +1,6 @@
 {
   "name": "@times-components-native/mocks",
+  "private": true,
   "version": "0.1.15",
   "description": "Shared mocks for the tests",
   "main": "dist/index",

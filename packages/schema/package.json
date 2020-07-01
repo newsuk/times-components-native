@@ -1,5 +1,6 @@
 {
   "name": "@times-components-native/schema",
+  "private": true,
   "version": "0.6.23",
   "main": "fragment-matcher.js",
   "bin": {

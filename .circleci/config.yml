@@ -238,6 +238,9 @@ workflows:
 
     run_tests:
         jobs:
+            - hold:
+                  type: approval
+
             - setup
             - run_lint:
                   requires:
@@ -293,6 +296,7 @@ workflows:
                         only: 
                           - master
                   requires:
+                      - hold
                       - build_storybook
                       - run_lint
                       - run_noplatform_tests

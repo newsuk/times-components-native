@@ -1,5 +1,6 @@
 {
   "name": "@times-components-native/svgs",
+  "private": true,
   "version": "2.7.30",
   "description": "Svgs wrapper",
   "main": "dist/index",

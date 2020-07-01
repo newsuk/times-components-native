@@ -1,5 +1,6 @@
 {
   "name": "@times-components-native/pull-quote",
+  "private": true,
   "version": "3.6.32",
   "description": "Pull Quote for Times Components Articles",
   "main": "dist/pull-quote",

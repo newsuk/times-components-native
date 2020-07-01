@@ -1,5 +1,6 @@
 {
   "name": "@times-components-native/ssr",
+  "private": true,
   "main": "src",
   "version": "2.19.1",
   "scripts": {

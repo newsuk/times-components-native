@@ -1,5 +1,6 @@
 {
   "name": "@times-components-native/article-comments",
+  "private": true,
   "version": "0.6.37",
   "description": "Article Comments",
   "main": "dist/article-comments",

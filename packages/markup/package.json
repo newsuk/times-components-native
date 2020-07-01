@@ -1,5 +1,6 @@
 {
   "name": "@times-components-native/markup",
+  "private": true,
   "version": "3.4.48",
   "description": "a component which takes an HTML ast and renders the platform specific markup",
   "main": "dist/markup",

@@ -1,5 +1,6 @@
 {
   "name": "@times-components-native/android-app",
+  "private": true,
   "version": "0.17.126",
   "license": "BSD-3-Clause",
   "scripts": {
@@ -29,6 +30,5 @@
     "metro-react-native-babel-preset": "0.53.1",
     "prettier": "1.14.3",
     "webpack": "4.30.0"
-  },
-  "private": true
+  }
 }

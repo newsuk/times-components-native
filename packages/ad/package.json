@@ -1,5 +1,6 @@
 {
   "name": "@times-components-native/ad",
+  "private": true,
   "version": "2.13.5",
   "description": "Ad component",
   "main": "dist/ad",

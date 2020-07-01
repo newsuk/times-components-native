@@ -1,5 +1,6 @@
 {
   "name": "@times-components-native/article-magazine-standard",
+  "private": true,
   "version": "3.24.2",
   "description": "Magazine Standard Article Template",
   "main": "dist/article-magazine-standard",

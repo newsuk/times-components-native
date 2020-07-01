@@ -1,5 +1,6 @@
 {
   "name": "@times-components-native/save-star-web",
+  "private": true,
   "version": "0.6.44",
   "description": "Save Star for Web",
   "main": "dist/save-star-web",

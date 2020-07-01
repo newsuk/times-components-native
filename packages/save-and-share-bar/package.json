@@ -1,5 +1,6 @@
 {
   "name": "@times-components-native/save-and-share-bar",
+  "private": true,
   "version": "0.9.47",
   "description": "Save and Share bar",
   "main": "dist/save-and-share-bar",

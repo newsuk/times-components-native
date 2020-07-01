@@ -1,5 +1,6 @@
 {
   "name": "@times-components-native/jest-configurator",
+  "private": true,
   "version": "2.6.11",
   "description": "Cross platform Jest Config",
   "main": "lib/jest-configurator.js",

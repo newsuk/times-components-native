@@ -1,5 +1,6 @@
 {
   "name": "@times-components-native/webpack-configurator",
+  "private": true,
   "version": "2.0.27",
   "description": "webpack-configurator for times-components",
   "main": "dist",

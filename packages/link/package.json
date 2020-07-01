@@ -1,5 +1,6 @@
 {
   "name": "@times-components-native/link",
+  "private": true,
   "version": "3.6.32",
   "description": "component to handle links and navigation",
   "main": "dist/link",

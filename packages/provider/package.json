@@ -1,5 +1,6 @@
 {
   "name": "@times-components-native/provider",
+  "private": true,
   "version": "1.24.1",
   "main": "dist/provider",
   "dev": "src/provider",

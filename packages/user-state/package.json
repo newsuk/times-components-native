@@ -1,5 +1,6 @@
 {
   "name": "@times-components-native/user-state",
+  "private": true,
   "version": "0.1.51",
   "description": "Selectively render react components based on current user state",
   "main": "dist/user-state",

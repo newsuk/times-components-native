@@ -1,5 +1,6 @@
 {
   "name": "@times-components-native/storybook-native",
+  "private": true,
   "version": "0.2.13",
   "license": "BSD-3-Clause",
   "scripts": {

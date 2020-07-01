@@ -1,5 +1,6 @@
 {
   "name": "@times-components-native/interactive-wrapper",
+  "private": true,
   "version": "0.8.2",
   "description": "Wrapper for legacy Interactive components",
   "main": "dist/interactive-wrapper",

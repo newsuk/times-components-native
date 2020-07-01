@@ -1,5 +1,6 @@
 {
   "name": "@times-components-native/related-articles",
+  "private": true,
   "version": "6.5.7",
   "description": "related articles of an article",
   "main": "dist/related-articles",

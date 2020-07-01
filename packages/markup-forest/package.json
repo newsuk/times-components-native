@@ -1,5 +1,6 @@
 {
   "name": "@times-components-native/markup-forest",
+  "private": true,
   "version": "1.7.31",
   "description": "Utility functions for traversing The Times' AST",
   "main": "dist/markup-forest",

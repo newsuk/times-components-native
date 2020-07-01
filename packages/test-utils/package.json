@@ -1,5 +1,6 @@
 {
   "name": "@times-components-native/test-utils",
+  "private": true,
   "version": "2.3.8",
   "description": "Test helpers for Times Components",
   "main": "dist/index",

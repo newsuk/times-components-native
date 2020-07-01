@@ -1,5 +1,6 @@
 {
   "name": "@times-components-native/pages",
+  "private": true,
   "version": "2.2.19",
   "main": "dist/pages",
   "dev": "src/pages",

@@ -1,5 +1,6 @@
 {
   "name": "@times-components-native/article-paragraph",
+  "private": true,
   "version": "1.4.113",
   "description": "Article Paragraph",
   "main": "dist/",

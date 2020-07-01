@@ -1,5 +1,6 @@
 {
   "name": "@times-components-native/tracking",
+  "private": true,
   "version": "2.6.13",
   "main": "dist/tracking",
   "dev": "src/tracking",

@@ -1,5 +1,6 @@
 {
   "name": "@times-components-native/author-profile",
+  "private": true,
   "version": "6.3.14",
   "description": "Author profile information along with a list of articles they have written",
   "main": "dist/author-profile",

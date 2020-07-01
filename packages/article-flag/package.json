@@ -1,5 +1,6 @@
 {
   "name": "@times-components-native/article-flag",
+  "private": true,
   "version": "2.10.0",
   "description": "The article flag (sponsored, new, updated, etc)",
   "main": "dist/article-flag.js",
