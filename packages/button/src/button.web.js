@@ -1,5 +1,5 @@
 import React from "react";
-import { capitalise } from "@times-components/utils";
+import { capitalise } from "@times-components-native/utils";
 import { propTypes, defaultProps } from "./button-prop-types";
 import styles from "./styles";
 

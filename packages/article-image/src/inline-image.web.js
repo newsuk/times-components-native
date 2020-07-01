@@ -1,6 +1,6 @@
 import React from "react";
-import Caption from "@times-components/caption";
-import Image from "@times-components/image";
+import Caption from "@times-components-native/caption";
+import Image from "@times-components-native/image";
 import { propTypes, defaultPropTypes } from "./article-image-prop-types";
 import {
   InsetCaptionContainerStyle,

@@ -1,9 +1,9 @@
 import React, { Component, Fragment } from "react";
 import ArticleSkeleton, {
   ArticleKeylineItem
-} from "@times-components/article-skeleton";
-import { getHeadline, getLeadAsset } from "@times-components/utils";
-import { CentredCaption } from "@times-components/caption";
+} from "@times-components-native/article-skeleton";
+import { getHeadline, getLeadAsset } from "@times-components-native/utils";
+import { CentredCaption } from "@times-components-native/caption";
 import Meta from "./article-meta/article-meta";
 import ArticleHeader from "./article-header/article-header";
 import {

@@ -1,6 +1,6 @@
 import React from "react";
-import { ArticleFlags } from "@times-components/article-flag";
-import Image from "@times-components/image";
+import { ArticleFlags } from "@times-components-native/article-flag";
+import Image from "@times-components-native/image";
 
 import Label from "../article-label/article-label";
 import Meta from "../article-meta/article-meta";

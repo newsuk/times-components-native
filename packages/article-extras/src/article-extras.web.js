@@ -1,10 +1,10 @@
 import React from "react";
 import PropTypes from "prop-types";
-import UserState from "@times-components/user-state";
-import ArticleComments from "@times-components/article-comments";
-import RelatedArticles from "@times-components/related-articles";
-import { MessageContext } from "@times-components/message-bar";
-import SaveAndShareBar from "@times-components/save-and-share-bar";
+import UserState from "@times-components-native/user-state";
+import ArticleComments from "@times-components-native/article-comments";
+import RelatedArticles from "@times-components-native/related-articles";
+import { MessageContext } from "@times-components-native/message-bar";
+import SaveAndShareBar from "@times-components-native/save-and-share-bar";
 import ArticleTopics from "./article-topics";
 import { ShareAndSaveContainer } from "./styles/responsive";
 

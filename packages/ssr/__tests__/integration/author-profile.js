@@ -1,5 +1,5 @@
 /* eslint-disable no-unused-expressions */
-import { MockAuthor, MockArticle } from "@times-components/fixture-generator";
+import { MockAuthor, MockArticle } from "@times-components-native/fixture-generator";
 
 describe("AuthorProfile", () => {
   before(() =>

@@ -25,7 +25,7 @@ required Tealium JavaScript to the page (`utag.js`).
 ```
 import tealiumReporter, {
   TealiumSendScheduler
-} from "@times-components/tealium";
+} from "@times-components-native/tealium";
 
 const trackingOptions = {
   account: "my-account-name",

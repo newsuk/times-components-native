@@ -1,4 +1,4 @@
-import { article } from "@times-components/provider-test-tools";
+import { article } from "@times-components-native/provider-test-tools";
 
 const createArticle = () => ({
   bylines: [],

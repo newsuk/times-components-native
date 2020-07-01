@@ -1,7 +1,7 @@
 import React from "react";
 import { View } from "react-native";
-import { spacing, colours } from "@times-components/styleguide";
-import { MockBookmarksProvider } from "@times-components/provider-test-tools";
+import { spacing, colours } from "@times-components-native/styleguide";
+import { MockBookmarksProvider } from "@times-components-native/provider-test-tools";
 
 import SaveStarWeb from "./src/save-star-web";
 

@@ -1,7 +1,7 @@
 import React from "react";
 import { AppRegistry } from "react-native-web";
 import TestRenderer from "react-test-renderer";
-import { ContextProviderWithDefaults } from "@times-components/context";
+import { ContextProviderWithDefaults } from "@times-components-native/context";
 import {
   addSerializers,
   compose,
@@ -11,15 +11,15 @@ import {
   minimalWebTransform,
   rnwTransform,
   stylePrinter
-} from "@times-components/jest-serializer";
-import { themeFactory } from "@times-components/styleguide";
+} from "@times-components-native/jest-serializer";
+import { themeFactory } from "@times-components-native/styleguide";
 import "./mocks.web";
 import ArticleMagazineStandard from "../src/article-magazine-standard";
 import articleFixture, { testFixture } from "../fixtures/full-article";
 import sharedProps from "./shared-props";
 
-jest.mock("@times-components/article-lead-asset", () => "ArticleLeadAsset");
-jest.mock("@times-components/save-and-share-bar", () => "SaveAndShareBar");
+jest.mock("@times-components-native/article-lead-asset", () => "ArticleLeadAsset");
+jest.mock("@times-components-native/save-and-share-bar", () => "SaveAndShareBar");
 
 const styles = [
   "alignItems",

@@ -1,8 +1,8 @@
 /* eslint-disable react/prop-types,react/no-unused-state */
 import React, { Component } from "react";
 import TestRenderer from "react-test-renderer";
-import { delay } from "@times-components/test-utils";
-import Link from "@times-components/link";
+import { delay } from "@times-components-native/test-utils";
+import Link from "@times-components-native/link";
 
 jest.doMock("../src/save-api", () => {
   let setSavedStatus;

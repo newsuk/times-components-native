@@ -3,12 +3,12 @@
 const React = require("react");
 const { ApolloProvider } = require("react-apollo");
 const { HelmetProvider } = require("react-helmet-async");
-const { TopicProvider } = require("@times-components/provider/rnw");
+const { TopicProvider } = require("@times-components-native/provider/rnw");
 const {
   ContextProviderWithDefaults
-} = require("@times-components/context/rnw");
-const { scales } = require("@times-components/styleguide/rnw");
-const Topic = require("@times-components/topic/rnw").default;
+} = require("@times-components-native/context/rnw");
+const { scales } = require("@times-components-native/styleguide/rnw");
+const Topic = require("@times-components-native/topic/rnw").default;
 
 const scale = scales.large;
 const sectionColour = "#FFFFFF";

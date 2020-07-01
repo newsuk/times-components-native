@@ -1,6 +1,6 @@
 import React from "react";
 import TestRenderer from "react-test-renderer";
-import { iterator } from "@times-components/test-utils";
+import { iterator } from "@times-components-native/test-utils";
 import ArticleList from "../src/article-list";
 import articlesFixture from "../fixtures/articles.json";
 

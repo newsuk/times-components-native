@@ -1,6 +1,6 @@
 /* eslint-env browser */
 import React, { Component, Fragment } from "react";
-import { appendToImageURL } from "@times-components/utils";
+import { appendToImageURL } from "@times-components-native/utils";
 import { propTypes, defaultProps } from "./video-prop-types";
 import Video360Icon from "./video-360-icon";
 

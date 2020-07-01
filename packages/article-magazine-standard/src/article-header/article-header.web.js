@@ -1,7 +1,7 @@
 import React from "react";
-import Context from "@times-components/context";
-import { ArticleFlags } from "@times-components/article-flag";
-import { fonts } from "@times-components/styleguide";
+import Context from "@times-components-native/context";
+import { ArticleFlags } from "@times-components-native/article-flag";
+import { fonts } from "@times-components-native/styleguide";
 
 import Label from "../article-label/article-label";
 import Meta from "../article-meta/article-meta";

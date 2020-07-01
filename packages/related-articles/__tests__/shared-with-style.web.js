@@ -8,8 +8,8 @@ import {
   minimalWebTransform,
   rnwTransform,
   stylePrinter
-} from "@times-components/jest-serializer";
-import { mockNativeModules } from "@times-components/mocks";
+} from "@times-components-native/jest-serializer";
+import { mockNativeModules } from "@times-components-native/mocks";
 
 mockNativeModules();
 
@@ -32,8 +32,8 @@ const styles = [
   "marginTop"
 ];
 
-jest.mock("@times-components/card", () => "Card");
-jest.mock("@times-components/link", () => "Link");
+jest.mock("@times-components-native/card", () => "Card");
+jest.mock("@times-components-native/link", () => "Link");
 
 addSerializers(
   expect,

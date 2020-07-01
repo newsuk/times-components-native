@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import { View } from "react-native";
-import { addMissingProtocol, appendToImageURL } from "@times-components/utils";
+import { addMissingProtocol, appendToImageURL } from "@times-components-native/utils";
 import Placeholder from "./placeholder";
 import { defaultProps, propTypes } from "./image-prop-types";
 import styles from "./styles/index.web";

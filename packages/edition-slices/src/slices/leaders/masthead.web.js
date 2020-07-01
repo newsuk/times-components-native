@@ -1,5 +1,5 @@
 import React from "react";
-import Image from "@times-components/image";
+import Image from "@times-components-native/image";
 import styleFactory from "./styles";
 import propTypes from "./proptypes";
 

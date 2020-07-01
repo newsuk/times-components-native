@@ -1,13 +1,13 @@
 import React, { Fragment } from "react";
 import PropTypes from "prop-types";
-import { AdContainer } from "@times-components/ad";
-import ArticleExtras from "@times-components/article-extras";
-import LazyLoad from "@times-components/lazy-load";
-import { spacing } from "@times-components/styleguide";
-import { StickyProvider } from "@times-components/sticky";
-import { withTrackScrollDepth } from "@times-components/tracking";
-import UserState from "@times-components/user-state";
-import { MessageContext } from "@times-components/message-bar";
+import { AdContainer } from "@times-components-native/ad";
+import ArticleExtras from "@times-components-native/article-extras";
+import LazyLoad from "@times-components-native/lazy-load";
+import { spacing } from "@times-components-native/styleguide";
+import { StickyProvider } from "@times-components-native/sticky";
+import { withTrackScrollDepth } from "@times-components-native/tracking";
+import UserState from "@times-components-native/user-state";
+import { MessageContext } from "@times-components-native/message-bar";
 import ArticleBody, { ArticleLink } from "./article-body/article-body";
 import {
   articleSkeletonDefaultProps,

@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import TestRenderer from "react-test-renderer";
 import PropTypes from "prop-types";
-import Link from "@times-components/link";
+import Link from "@times-components-native/link";
 import SaveStarWebWithTracking from "../src/save-star-with-tracking";
 
 class WithTrackingContext extends Component {

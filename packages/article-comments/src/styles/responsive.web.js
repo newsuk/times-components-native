@@ -5,7 +5,7 @@ import {
   fonts,
   fontSizes,
   spacing
-} from "@times-components/styleguide";
+} from "@times-components-native/styleguide";
 
 export const CommentContainer = styled.div`
   margin-left: auto;

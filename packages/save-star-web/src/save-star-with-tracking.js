@@ -2,10 +2,10 @@
 import React, { Fragment } from "react";
 import { ActivityIndicator, Text } from "react-native";
 import styled from "styled-components";
-import Link from "@times-components/link";
-import { HoverIcon } from "@times-components/utils";
+import Link from "@times-components-native/link";
+import { HoverIcon } from "@times-components-native/utils";
 import PropTypes from "prop-types";
-import { IconStar } from "@times-components/icons";
+import { IconStar } from "@times-components-native/icons";
 import styles, { getStyles } from "./styles";
 import withTrackEvents from "./tracking/with-track-events";
 

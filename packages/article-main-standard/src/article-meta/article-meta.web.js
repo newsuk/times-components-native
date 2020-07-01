@@ -3,16 +3,16 @@ import React from "react";
 import PropTypes from "prop-types";
 import { Text, View } from "react-native";
 import styled from "styled-components";
-import { breakpoints, spacing } from "@times-components/styleguide";
+import { breakpoints, spacing } from "@times-components-native/styleguide";
 import {
   KeylineItem,
   ArticleKeylineItem
-} from "@times-components/article-skeleton";
+} from "@times-components-native/article-skeleton";
 import {
   ArticleBylineWithLinks,
   hasBylineData
-} from "@times-components/article-byline";
-import DatePublication from "@times-components/date-publication";
+} from "@times-components-native/article-byline";
+import DatePublication from "@times-components-native/date-publication";
 import { defaultProps, propTypes } from "./article-meta-prop-types";
 
 import styles from "../styles/article-meta";
