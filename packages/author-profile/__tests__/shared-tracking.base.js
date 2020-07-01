@@ -9,8 +9,8 @@ import authorProfileTrackingContext from "../src/author-profile-tracking-context
 import author from "./fixtures";
 
 mockNativeModules();
-// eslint-disable-next-line global-require
 jest.mock("@times-components-native/provider", () =>
+  // eslint-disable-next-line global-require
   require("./mock-provider")
 );
 

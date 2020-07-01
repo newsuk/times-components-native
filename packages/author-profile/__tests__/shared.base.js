@@ -5,8 +5,8 @@ import { ApolloError } from "apollo-client";
 import "./mocks";
 import AuthorProfile from "../src/author-profile";
 
-// eslint-disable-next-line global-require
 jest.mock("@times-components-native/provider", () =>
+  // eslint-disable-next-line global-require
   require("./mock-provider")
 );
 jest.mock("@times-components-native/tracking", () => {
