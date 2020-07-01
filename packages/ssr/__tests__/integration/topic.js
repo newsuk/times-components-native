@@ -1,6 +1,9 @@
 /* eslint-disable no-unused-expressions */
 
-import { MockTopic, MockArticle } from "@times-components-native/fixture-generator";
+import {
+  MockTopic,
+  MockArticle
+} from "@times-components-native/fixture-generator";
 
 describe("The Topic Page", () => {
   before(() => {

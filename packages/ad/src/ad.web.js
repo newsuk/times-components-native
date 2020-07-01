@@ -2,7 +2,10 @@
 import React, { Component } from "react";
 import { Subscriber } from "react-broadcast";
 import { Platform, View } from "react-native";
-import { screenWidth, ServerClientRender } from "@times-components-native/utils";
+import {
+  screenWidth,
+  ServerClientRender
+} from "@times-components-native/utils";
 import { getPrebidSlotConfig, getSlotConfig, prebidConfig } from "./utils";
 import adInit from "./utils/ad-init";
 import AdContainer from "./ad-container";

@@ -17,7 +17,10 @@ import ArticleMainComment from "../src/article-main-comment";
 import articleFixture, { testFixture } from "../fixtures/full-article";
 import sharedProps from "./shared-props";
 
-jest.mock("@times-components-native/save-and-share-bar", () => "SaveAndShareBar");
+jest.mock(
+  "@times-components-native/save-and-share-bar",
+  () => "SaveAndShareBar"
+);
 
 const styles = [
   "alignItems",

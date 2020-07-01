@@ -1,6 +1,10 @@
 import { View } from "react-native";
 import styled from "styled-components";
-import { breakpoints, colours, spacing } from "@times-components-native/styleguide";
+import {
+  breakpoints,
+  colours,
+  spacing
+} from "@times-components-native/styleguide";
 import ArticleLeadAsset from "@times-components-native/article-lead-asset";
 
 export const MainContainer = styled(View)`

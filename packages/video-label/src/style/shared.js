@@ -1,4 +1,6 @@
-import styleguideFactory, { spacing } from "@times-components-native/styleguide";
+import styleguideFactory, {
+  spacing
+} from "@times-components-native/styleguide";
 
 const { fontFactory } = styleguideFactory();
 

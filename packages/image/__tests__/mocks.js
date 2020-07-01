@@ -1,5 +1,8 @@
 // eslint-disable-next-line import/prefer-default-export
-export { setIsTablet, setDimension } from "@times-components-native/mocks/dimensions";
+export {
+  setIsTablet,
+  setDimension
+} from "@times-components-native/mocks/dimensions";
 
 jest.mock("NativeAnimatedHelper", () => "NativeAnimatedHelper", {
   virtual: true

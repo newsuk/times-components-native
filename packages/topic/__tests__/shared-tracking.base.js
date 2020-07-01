@@ -8,7 +8,9 @@ import Topic from "../src/topic";
 
 mockNativeModules();
 // eslint-disable-next-line global-require
-jest.mock("@times-components-native/provider", () => require("./mock-provider"));
+jest.mock("@times-components-native/provider", () =>
+  require("./mock-provider")
+);
 
 export default props => {
   const tests = [

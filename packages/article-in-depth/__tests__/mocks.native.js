@@ -17,7 +17,10 @@ jest.mock("@times-components-native/article-flag", () => ({
 jest.mock("@times-components-native/article-image", () => "ArticleImage");
 jest.mock("@times-components-native/article-label", () => "ArticleLabel");
 jest.mock("@times-components-native/article-topics", () => "ArticleTopics");
-jest.mock("@times-components-native/article-skeleton", () => MockArticleSkeleton);
+jest.mock(
+  "@times-components-native/article-skeleton",
+  () => MockArticleSkeleton
+);
 jest.mock("@times-components-native/button", () => "Button");
 jest.mock("@times-components-native/caption", () => ({
   __esModule: true,

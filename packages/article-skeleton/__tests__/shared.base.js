@@ -23,7 +23,10 @@ import {
   paragraphStartingWithDoubleQuote
 } from "../fixtures/dropcap-article-content";
 
-jest.mock("@times-components-native/save-and-share-bar", () => "SaveAndShareBar");
+jest.mock(
+  "@times-components-native/save-and-share-bar",
+  () => "SaveAndShareBar"
+);
 
 export const renderArticle = (data, header = null) => (
   <ContextProviderWithDefaults

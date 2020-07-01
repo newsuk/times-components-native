@@ -1,7 +1,10 @@
 /* eslint-disable prefer-destructuring */
 import React from "react";
 import { View, Text, Dimensions, Platform } from "react-native";
-import styleguide, { colours, tabletWidth } from "@times-components-native/styleguide";
+import styleguide, {
+  colours,
+  tabletWidth
+} from "@times-components-native/styleguide";
 import { AttributedString } from "@times-components-native/typeset";
 import { screenWidth } from "@times-components-native/utils";
 import Ad from "@times-components-native/ad";

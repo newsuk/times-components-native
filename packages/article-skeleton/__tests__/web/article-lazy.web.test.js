@@ -13,7 +13,10 @@ import { adConfig } from "../ad-mock";
 import ArticleSkeleton from "../../src/article-skeleton";
 import articleFixture, { testFixture } from "../../fixtures/full-article";
 
-jest.mock("@times-components-native/save-and-share-bar", () => "SaveAndShareBar");
+jest.mock(
+  "@times-components-native/save-and-share-bar",
+  () => "SaveAndShareBar"
+);
 jest.mock("@times-components-native/lazy-load", () => ({ children }) => {
   const observed = new Map([
     [

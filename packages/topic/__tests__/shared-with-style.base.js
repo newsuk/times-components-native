@@ -5,7 +5,9 @@ import "./mocks";
 import Topic from "../src/topic";
 
 // eslint-disable-next-line global-require
-jest.mock("@times-components-native/provider", () => require("./mock-provider"));
+jest.mock("@times-components-native/provider", () =>
+  require("./mock-provider")
+);
 jest.mock("@times-components-native/tracking", () => {
   const id = x => x;
 

@@ -65,7 +65,9 @@ export default () => {
       };
     });
 
-    const { removeDimensionsListener } = require("@times-components-native/utils");
+    const {
+      removeDimensionsListener
+    } = require("@times-components-native/utils");
     // eslint-disable-next-line no-shadow
     const Responsive = require("../src/responsive").default;
 

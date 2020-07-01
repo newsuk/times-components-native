@@ -1,7 +1,10 @@
 import React from "react";
 import { boolean } from "@storybook/addon-knobs/react";
 import { scales } from "@times-components-native/styleguide";
-import { MessageManager, MessageContext } from "@times-components-native/message-bar";
+import {
+  MessageManager,
+  MessageContext
+} from "@times-components-native/message-bar";
 import { MockBookmarksProvider } from "@times-components-native/provider-test-tools";
 import SaveAndShareBar from "./src/save-and-share-bar";
 

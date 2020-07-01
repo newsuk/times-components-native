@@ -21,7 +21,10 @@ jest.mock("@times-components-native/article-image", () => "ArticleImage");
 jest.mock("@times-components-native/article-topics", () => "ArticleTopics");
 jest.mock("@times-components-native/date-publication", () => "DatePublication");
 jest.mock("@times-components-native/image", () => "Image");
-jest.mock("@times-components-native/interactive-wrapper", () => "InteractiveWrapper");
+jest.mock(
+  "@times-components-native/interactive-wrapper",
+  () => "InteractiveWrapper"
+);
 jest.mock("@times-components-native/link", () => ({
   __esModule: true,
   default: "Link",

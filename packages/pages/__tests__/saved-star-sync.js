@@ -7,7 +7,9 @@ import SectionPage from "../src/section/section";
 
 jest.mock("@times-components-native/section", () => {
   const { View: RNView } = require.requireActual("react-native");
-  const { SectionContext } = require.requireActual("@times-components-native/context");
+  const { SectionContext } = require.requireActual(
+    "@times-components-native/context"
+  );
 
   return () => (
     <SectionContext.Consumer>

@@ -1,4 +1,8 @@
-import { fontFactory, spacing, colours } from "@times-components-native/styleguide";
+import {
+  fontFactory,
+  spacing,
+  colours
+} from "@times-components-native/styleguide";
 
 const styles = {
   noSubscriptionMessage: {

@@ -21,7 +21,10 @@ jest.mock("@times-components-native/button", () => "Button");
 jest.mock("@times-components-native/image", () => ({
   ModalImage: "ModalImage"
 }));
-jest.mock("@times-components-native/interactive-wrapper", () => "InteractiveWrapper");
+jest.mock(
+  "@times-components-native/interactive-wrapper",
+  () => "InteractiveWrapper"
+);
 jest.mock("@times-components-native/pull-quote", () => "PullQuote");
 jest.mock("@times-components-native/related-articles", () => "RelatedArticles");
 jest.mock("@times-components-native/watermark", () => "Watermark");

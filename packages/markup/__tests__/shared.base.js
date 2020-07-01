@@ -1,7 +1,9 @@
 import React from "react";
 import { View } from "react-native";
 import { iterator } from "@times-components-native/test-utils";
-import renderTrees, { renderTree } from "@times-components-native/markup-forest";
+import renderTrees, {
+  renderTree
+} from "@times-components-native/markup-forest";
 import coreRenderers from "../src/markup";
 import paragraph from "../fixtures/paragraph.json";
 import block from "../fixtures/block.json";
