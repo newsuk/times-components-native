@@ -9,8 +9,7 @@
     "fmt": "eslint . --fix && prettier --write '**/*.*'",
     "depcheck": "depcheck --ignores='@babel/*,babel-*,depcheck,**/eslint*,graphql,jest,prettier,webpack*' --ignore-bin-package=false --skip-missing",
     "lint": "eslint . && yarn prettier:diff && yarn depcheck",
-    "test": "jest --config='./__tests__/jest.config.js'",
-    "prepublishOnly": "yarn transpile && yarn bundle",
+    "test": "jest --config='./__tests__/jest.config.js'"
   },
   "repository": {
     "type": "git",

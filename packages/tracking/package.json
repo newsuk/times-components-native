@@ -11,8 +11,7 @@
     "lint": "eslint . && yarn prettier:diff",
     "test:android": "jest --config='./__tests__/android/jest.config.js'",
     "test:ios": "jest --config='./__tests__/ios/jest.config.js'",
-    "test:all": "yarn test:android --coverage && yarn test:ios --coverage",
-    "prepublishOnly": "yarn transpile && yarn bundle",
+    "test:all": "yarn test:android --coverage && yarn test:ios --coverage"
   },
   "repository": {
     "type": "git",

@@ -6,7 +6,6 @@
   "main": "dist/ad",
   "dev": "src/ad",
   "scripts": {
-    "prepublishOnly": "yarn transpile && yarn bundle",
     "fmt": "eslint . --fix && prettier --write '**/*.*'",
     "prettier:diff": "prettier --list-different '**/*.*'",
     "depcheck": "depcheck --ignores='@babel/*,babel-*,depcheck,eslint,jest,prettier,webpack*' --ignore-bin-package=false --skip-missing",

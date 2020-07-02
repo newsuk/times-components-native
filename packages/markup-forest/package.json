@@ -9,8 +9,7 @@
     "fmt": "eslint . --fix && prettier --write '**/*.*'",
     "prettier:diff": "prettier --list-different '**/*.*'",
     "lint": "eslint . && yarn prettier:diff",
-    "test": "jest",
-    "prepublishOnly": "yarn transpile && yarn bundle",
+    "test": "jest"
   },
   "jest": {
     "testEnvironment": "jsdom",

@@ -50,17 +50,14 @@
     "npm:publish": "sh ./lib/publish.sh",
     "cinstall": "./lib/custom_install.sh",
     "clean": "watchman watch-del-all && rm -rf $TMPDIR/metro-* && rm -rf $TMPDIR/haste-* && yarn cache clean && jest --clearCache",
-    "bundle": "lerna run bundle",
-    "build:local": "yarn install && yarn bundle && yarn prepublishOnly",
-    "postinstall": "yarn run fetch-fonts && lerna run postinstall && lerna run transpile",
+    "postinstall": "yarn run fetch-fonts && lerna run postinstall",
     "packages:publish": "lerna publish --conventional-commits --yes --concurrency=1 --exact",
     "packages:publish-dry-run": "yarn packages:publish --no-git-tag-version --no-push",
     "commit": "git-cz",
     "prepublishOnly": "lerna run prepublishOnly",
     "test:ios": "lerna run test:ios --stream",
     "test:android": "lerna run test:android --stream",
-    "test:unit": "lerna run test:unit --stream",
-    "watch": "lerna run watch --stream --no-sort --concurrency 100"
+    "test:unit": "lerna run test:unit --stream"
   },
   "jest": {
     "preset": "react-native",

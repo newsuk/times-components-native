@@ -5,8 +5,6 @@
   "description": "dependency analyzer and fixer",
   "main": "dist/depend",
   "scripts": {
-    "transpile": "babel src -d dist --ignore __tests__",
-    "prepublishOnly": "yarn transpile",
     "fmt": "eslint . --fix && prettier --write '**/*.*'",
     "prettier:diff": "prettier --list-different '**/*.*'",
     "depcheck": "depcheck --ignores='@babel/*,babel-*,depcheck,eslint,jest,prettier,webpack*' --ignore-bin-package=false --skip-missing",
