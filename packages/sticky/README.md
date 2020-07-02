@@ -37,6 +37,7 @@ yarn lint
 Testing can be done on each platform individually
 
 ```
+
 ```
 
 Or the tests for all platforms can be run
