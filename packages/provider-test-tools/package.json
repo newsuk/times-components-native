@@ -3,8 +3,7 @@
   "private": true,
   "version": "1.19.1",
   "description": "utillity for testing apollo-client's behaviour",
-  "main": "dist/index",
-  "dev": "src/index",
+  "main": "src/index",
   "scripts": {
     "fmt": "eslint . --fix && prettier --write '**/*.*'",
     "prettier:diff": "prettier --list-different '**/*.*'",
@@ -21,7 +20,7 @@
       "**/packages/provider-test-tools/src/*.js"
     ],
     "transformIgnorePatterns": [
-      "node_modules/(?!(react-native|@times-components)/)"
+      "node_modules/react-native"
     ],
     "testMatch": [
       "<rootDir>/packages/provider-test-tools/__tests__/**.test.js"

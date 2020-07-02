@@ -3,8 +3,7 @@
   "private": true,
   "version": "3.2.48",
   "description": "Renders a gradient background",
-  "main": "dist/gradient",
-  "dev": "src/gradient",
+  "main": "src/gradient",
   "scripts": {
     "fmt": "eslint . --fix && prettier --write '**/*.*'",
     "prettier:diff": "prettier --list-different '**/*.*'",
@@ -19,7 +18,7 @@
     "rootDir": "../../",
     "coverageDirectory": "<rootDir>/packages/gradient/coverage/",
     "transformIgnorePatterns": [
-      "node_modules/(?!(react-native|@times-components)/)"
+      "node_modules/react-native"
     ],
     "testMatch": [
       "<rootDir>/packages/gradient/__tests__/*.test.js"

@@ -3,8 +3,7 @@
   "private": true,
   "version": "2.7.30",
   "description": "Svgs wrapper",
-  "main": "dist/index",
-  "dev": "src/index",
+  "main": "src/index",
   "scripts": {
     "fmt": "eslint . --fix && prettier --write '**/*.*'",
     "prettier:diff": "prettier --list-different '**/*.*'",
@@ -19,7 +18,7 @@
     "rootDir": "../../",
     "coverageDirectory": "<rootDir>/packages/svgs/coverage/",
     "transformIgnorePatterns": [
-      "node_modules/(?!(react-native|react-native-svg|@times-components)/)"
+      "node_modules/(?!(react-native|react-native-svg)/)"
     ],
     "testMatch": [
       "<rootDir>/packages/svgs/__tests__/*.test.js"

@@ -3,8 +3,7 @@
   "private": true,
   "version": "0.6.13",
   "description": "Use IntersectionObserver to lazy load resources",
-  "main": "dist/lazy-load",
-  "dev": "src/lazy-load",
+  "main": "src/lazy-load",
   "scripts": {
     "depcheck": "depcheck --ignores='@babel/*,babel-*,depcheck,eslint,jest,prettier,webpack*' --ignore-bin-package=false --skip-missing",
     "fmt": "eslint . --fix && prettier --write '**/*.*'",

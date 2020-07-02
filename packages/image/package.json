@@ -2,8 +2,7 @@
   "name": "@times-components-native/image",
   "private": true,
   "version": "6.7.25",
-  "main": "dist/index",
-  "dev": "src/index",
+  "main": "src/index",
   "scripts": {
     "fmt": "eslint . --fix && prettier --write '**/*.*'",
     "prettier:diff": "prettier --list-different '**/*.*'",

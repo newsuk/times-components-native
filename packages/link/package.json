@@ -3,8 +3,7 @@
   "private": true,
   "version": "3.6.32",
   "description": "component to handle links and navigation",
-  "main": "dist/link",
-  "dev": "src/link",
+  "main": "src/link",
   "scripts": {
     "fmt": "eslint . --fix && prettier --write '**/*.*'",
     "prettier:diff": "prettier --list-different '**/*.*'",

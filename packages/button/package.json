@@ -3,8 +3,7 @@
   "private": true,
   "version": "2.4.52",
   "description": "Button component",
-  "main": "dist/button",
-  "dev": "src/button",
+  "main": "src/button",
   "scripts": {
     "fmt": "eslint . --fix && prettier --write '**/*.*'",
     "prettier:diff": "prettier --list-different '**/*.*'",

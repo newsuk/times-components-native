@@ -2,8 +2,7 @@
   "name": "@times-components-native/pagination",
   "private": true,
   "version": "3.4.35",
-  "main": "dist/pagination",
-  "dev": "src/pagination",
+  "main": "src/pagination",
   "scripts": {
     "fmt": "eslint . --fix && prettier --write '**/*.*'",
     "prettier:diff": "prettier --list-different '**/*.*'",

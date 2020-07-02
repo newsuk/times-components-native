@@ -19,7 +19,7 @@
     "coverageDirectory": "<rootDir>/packages/video/coverage/",
     "testEnvironment": "jsdom",
     "transformIgnorePatterns": [
-      "node_modules/(?!(react-native|@times-components)/)"
+      "node_modules/react-native"
     ],
     "testMatch": [
       "<rootDir>/packages/video/__tests__/*.test.js"

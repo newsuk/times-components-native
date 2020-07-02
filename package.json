@@ -61,14 +61,12 @@
   },
   "jest": {
     "preset": "react-native",
-    "coveragePathIgnorePatterns": [
-      "lib/cli/edition-checker/src/main.js"
-    ],
+    "coveragePathIgnorePatterns": [],
     "testPathIgnorePatterns": [
       "<rootDir>/node_modules/"
     ],
     "transformIgnorePatterns": [
-      "node_modules/(?!react-native|react-native-svg|@times-components)",
+      "node_modules/(?!react-native|react-native-svg)",
       "packages/?!author-profile"
     ]
   },

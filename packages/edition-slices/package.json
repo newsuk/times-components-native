@@ -3,8 +3,7 @@
   "private": true,
   "version": "0.104.1",
   "description": "Components used in edition pages including slices and tiles",
-  "main": "dist/edition-slices",
-  "dev": "src/edition-slices",
+  "main": "src/edition-slices",
   "scripts": {
     "depcheck": "depcheck --ignores='@babel/*,babel-*,depcheck,eslint,jest,prettier,webpack*' --ignore-bin-package=false --skip-missing",
     "fmt": "eslint . --fix && prettier --write '**/*.*'",

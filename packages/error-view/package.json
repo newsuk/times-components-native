@@ -3,8 +3,7 @@
   "private": true,
   "version": "2.3.48",
   "description": "Handles errors",
-  "main": "dist/error-view",
-  "dev": "src/error-view",
+  "main": "src/error-view",
   "scripts": {
     "fmt": "eslint . --fix && prettier --write '**/*.*'",
     "prettier:diff": "prettier --list-different '**/*.*'",

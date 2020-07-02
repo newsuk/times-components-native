@@ -3,8 +3,7 @@
   "private": true,
   "version": "2.1.35",
   "description": "Bulleted list of text data",
-  "main": "dist/key-facts",
-  "dev": "src/key-facts",
+  "main": "src/key-facts",
   "scripts": {
     "fmt": "eslint . --fix && prettier --write '**/*.*'",
     "prettier:diff": "prettier --list-different '**/*.*'",

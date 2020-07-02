@@ -2,8 +2,7 @@
   "name": "@times-components-native/pages",
   "private": true,
   "version": "2.2.19",
-  "main": "dist/pages",
-  "dev": "src/pages",
+  "main": "src/pages",
   "scripts": {
     "fmt": "eslint . --fix && prettier --write '**/*.*'",
     "prettier:diff": "prettier --list-different '**/*.*'",
