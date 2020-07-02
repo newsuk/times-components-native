@@ -25,7 +25,6 @@ yarn lint
 Testing can be done on web
 
 ```
-yarn test:web
 yarn test
 ```
 
