@@ -1,4 +1,4 @@
-import styleguide, { tabletWidth } from "@times-components-native/styleguide";
+import styleguide, { tabletWidth } from "@times-components/styleguide";
 
 const sharedStyles = scale => {
   const { colours, fontFactory, spacing, lineHeight } = styleguide({ scale });
@@ -38,7 +38,8 @@ const sharedStyles = scale => {
       marginBottom: spacing(5)
     },
     containerTablet: {
-      alignSelf: "center"
+      alignSelf: "center",
+      width: tabletWidth
     },
     imageContainerTablet: {
       alignSelf: "center"
