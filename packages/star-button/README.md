@@ -7,7 +7,7 @@ A star button component which is clickable and has three states: `default`, `sel
 ## How to use
 
 ```js
-import StarButton from "@times-components/star-button";
+import StarButton from "@times-components-native/star-button";
 
 // works this way
 <StarButton onPress={this.onStarPress} />;
@@ -49,7 +49,6 @@ platform with [jest](https://facebook.github.io/jest/).
 yarn test:all
 yarn test:android
 yarn test:ios
-yarn test:web
 ```
 
 Visit the official

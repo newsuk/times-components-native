@@ -1,7 +1,7 @@
 import React from "react";
 import PropTypes from "prop-types";
-import ArticleTopics from "@times-components/article-topics";
-import UserState from "@times-components/user-state";
+import ArticleTopics from "@times-components-native/article-topics";
+import UserState from "@times-components-native/user-state";
 import styles from "../styles/article-topics";
 
 const ShowTopics = ({ topics }) => {

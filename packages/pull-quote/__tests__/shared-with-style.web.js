@@ -8,13 +8,13 @@ import {
   minimalWebTransform,
   rnwTransform,
   stylePrinter
-} from "@times-components/jest-serializer";
+} from "@times-components-native/jest-serializer";
 import shared from "./shared-with-style.base";
 
-jest.mock("@times-components/link", () => ({
+jest.mock("@times-components-native/link", () => ({
   TextLink: "TextLink"
 }));
-jest.mock("@times-components/icons", () => ({
+jest.mock("@times-components-native/icons", () => ({
   IconTwitter: "IconTwitter"
 }));
 

@@ -1,5 +1,5 @@
 import React from "react";
-import ArticleTopics from "@times-components/article-topics";
+import ArticleTopics from "@times-components-native/article-topics";
 import PropTypes from "prop-types";
 import TopicsContainer from "./styles/responsive";
 import styles from "./styles";

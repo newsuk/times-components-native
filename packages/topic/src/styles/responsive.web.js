@@ -6,7 +6,7 @@ import {
   fonts,
   fontSizes,
   spacing
-} from "@times-components/styleguide";
+} from "@times-components-native/styleguide";
 
 export const HeadContainerWithDescription = styled(View)`
   width: 100%;

@@ -48,7 +48,7 @@ export default ({ exists, readFile }, resolve) => {
       return cb();
     }
 
-    if (filePath.match(/^@times-components/)) {
+    if (filePath.match(/^@times-components-native/)) {
       return cb(null, `commonjs2 ${filePath}/rnw`);
     }
 

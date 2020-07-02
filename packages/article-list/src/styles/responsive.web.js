@@ -1,6 +1,6 @@
 import { View } from "react-native";
 import styled from "styled-components";
-import { breakpoints, spacing } from "@times-components/styleguide";
+import { breakpoints, spacing } from "@times-components-native/styleguide";
 
 export const ListContentContainer = styled(View)`
   margin: 0 auto;

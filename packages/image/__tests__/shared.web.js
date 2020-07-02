@@ -9,8 +9,8 @@ import {
   minimalWebTransform,
   print,
   replacePropTransform
-} from "@times-components/jest-serializer";
-import { hash } from "@times-components/test-utils";
+} from "@times-components-native/jest-serializer";
+import { hash } from "@times-components-native/test-utils";
 import "./mocks";
 import Image from "../src";
 import Placeholder from "../src/placeholder";

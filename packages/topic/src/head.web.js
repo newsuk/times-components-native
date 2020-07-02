@@ -1,8 +1,8 @@
 import React from "react";
 import PropTypes from "prop-types";
 import { Helmet } from "react-helmet-async";
-import Context from "@times-components/context";
-import { renderTreeArrayAsText } from "@times-components/markup-forest";
+import Context from "@times-components-native/context";
+import { renderTreeArrayAsText } from "@times-components-native/markup-forest";
 
 import { propTypes as topicHeadPropTypes } from "./topic-head-prop-types";
 

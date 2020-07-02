@@ -9,7 +9,7 @@ touchable (native) elements. There are two exported components:
 ## How to use
 
 ```js
-import Link, { TextLink } from "@times-components/link";
+import Link, { TextLink } from "@times-components-native/link";
 
 // works with block elements
 <Link url="https://thetimes.co.uk" onPress={doSomeNavigation(url)}>
@@ -57,7 +57,6 @@ platform with [jest](https://facebook.github.io/jest/).
 yarn test:all
 yarn test:android
 yarn test:ios
-yarn test:web
 ```
 
 Visit the official

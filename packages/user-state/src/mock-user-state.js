@@ -1,8 +1,9 @@
 /* eslint-disable no-undef,global-require,import/no-extraneous-dependencies */
 function mockUserState() {
-  jest.mock("@times-components/user-state", () => {
-    const RealUserState = require.requireActual("@times-components/user-state")
-      .default;
+  jest.mock("@times-components-native/user-state", () => {
+    const RealUserState = require.requireActual(
+      "@times-components-native/user-state"
+    ).default;
 
     function MockUserState({ state, children = null, fallback = null }) {
       return MockUserState.mockStates.find(s => s === state)
@@ -30,7 +31,7 @@ function mockUserState() {
     return MockUserState;
   });
 
-  const UserState = require("@times-components/user-state");
+  const UserState = require("@times-components-native/user-state");
 
   beforeEach(() => {
     UserState.mockReset();

@@ -1,6 +1,6 @@
 import React, { Component } from "react";
-import ArticleSkeleton from "@times-components/article-skeleton";
-import { getHeadline } from "@times-components/utils";
+import ArticleSkeleton from "@times-components-native/article-skeleton";
+import { getHeadline } from "@times-components-native/utils";
 import ArticleHeader from "./article-header/article-header";
 import {
   articlePropTypes,

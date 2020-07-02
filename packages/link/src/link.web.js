@@ -1,7 +1,7 @@
 /* eslint-disable react/require-default-props */
 import React from "react";
 import styled from "styled-components";
-import { breakpoints } from "@times-components/styleguide";
+import { breakpoints } from "@times-components-native/styleguide";
 import PropTypes from "prop-types";
 
 const respStylesSelector = selector => ({ responsiveLinkStyles }) =>

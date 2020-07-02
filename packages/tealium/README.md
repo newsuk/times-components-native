@@ -25,7 +25,7 @@ required Tealium JavaScript to the page (`utag.js`).
 ```
 import tealiumReporter, {
   TealiumSendScheduler
-} from "@times-components/tealium";
+} from "@times-components-native/tealium";
 
 const trackingOptions = {
   account: "my-account-name",
@@ -78,7 +78,6 @@ platform with [jest](https://facebook.github.io/jest/).
 yarn test:all
 yarn test:android
 yarn test:ios
-yarn test:web
 ```
 
 ## Future

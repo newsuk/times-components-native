@@ -18,8 +18,8 @@
 
 import React from "react";
 import PropTypes from "prop-types";
-import Context from "@times-components/context";
-import { ServerClientRender } from "@times-components/utils";
+import Context from "@times-components-native/context";
+import { ServerClientRender } from "@times-components-native/utils";
 
 function ClientUserStateConsumer({ children, serverRender = true }) {
   return (

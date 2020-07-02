@@ -1,7 +1,7 @@
 import React from "react";
 import { View, Text } from "react-native";
-import Image from "@times-components/image";
-import ErrorView from "@times-components/error-view";
+import Image from "@times-components-native/image";
+import ErrorView from "@times-components-native/error-view";
 import InlineVideoPlayer from "./inline-video-player";
 import IsPaidSubscriber from "./is-paid-subscriber";
 import VideoError from "./video-error";

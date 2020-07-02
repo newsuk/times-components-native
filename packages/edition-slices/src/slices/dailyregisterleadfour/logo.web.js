@@ -1,6 +1,6 @@
 import React from "react";
 import PropTypes from "prop-types";
-import Image from "@times-components/image";
+import Image from "@times-components-native/image";
 
 const Logo = ({ imageUri, style, ratio }) => (
   <Image aspectRatio={ratio} style={style} uri={imageUri} />

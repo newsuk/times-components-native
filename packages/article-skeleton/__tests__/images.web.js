@@ -5,11 +5,14 @@ import {
   minimaliseTransform,
   minimalWebTransform,
   print
-} from "@times-components/jest-serializer";
+} from "@times-components-native/jest-serializer";
 import "./mocks.web";
 import shared from "./images.base";
 
-jest.mock("@times-components/save-and-share-bar", () => "SaveAndShareBar");
+jest.mock(
+  "@times-components-native/save-and-share-bar",
+  () => "SaveAndShareBar"
+);
 
 const omitProps = new Set([
   "article",

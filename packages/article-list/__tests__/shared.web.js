@@ -5,7 +5,7 @@ import {
   minimaliseTransform,
   minimalWebTransform,
   print
-} from "@times-components/jest-serializer";
+} from "@times-components-native/jest-serializer";
 import TestRenderer from "react-test-renderer";
 import "./mocks";
 import { omitWeb as omitProps } from "./utils";

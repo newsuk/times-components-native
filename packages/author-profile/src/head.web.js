@@ -1,7 +1,7 @@
 import React from "react";
 import PropTypes from "prop-types";
 import { Helmet } from "react-helmet-async";
-import { renderTreeArrayAsText } from "@times-components/markup-forest";
+import { renderTreeArrayAsText } from "@times-components-native/markup-forest";
 
 import { propTypes as authorProfileHeadPropTypes } from "./author-profile-head-prop-types";
 

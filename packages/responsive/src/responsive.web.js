@@ -1,7 +1,7 @@
 import React from "react";
 import PropTypes from "prop-types";
-import { getEditionBreakpoint } from "@times-components/styleguide";
-import { getDimensions } from "@times-components/utils";
+import { getEditionBreakpoint } from "@times-components-native/styleguide";
+import { getDimensions } from "@times-components-native/utils";
 import ResponsiveContext from "./context";
 
 const Responsive = ({ children }) => {

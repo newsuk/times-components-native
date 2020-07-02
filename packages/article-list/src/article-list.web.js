@@ -1,13 +1,13 @@
 /* eslint-env browser */
 import React, { Component, Fragment } from "react";
 import { View } from "react-native";
-import { AdContainer } from "@times-components/ad";
-import Button from "@times-components/button";
-import ErrorView from "@times-components/error-view";
-import { spacing } from "@times-components/styleguide";
-import { withTrackScrollDepth } from "@times-components/tracking";
-import { normaliseWidthForAssetRequestCache } from "@times-components/utils";
-import LazyLoad from "@times-components/lazy-load";
+import { AdContainer } from "@times-components-native/ad";
+import Button from "@times-components-native/button";
+import ErrorView from "@times-components-native/error-view";
+import { spacing } from "@times-components-native/styleguide";
+import { withTrackScrollDepth } from "@times-components-native/tracking";
+import { normaliseWidthForAssetRequestCache } from "@times-components-native/utils";
+import LazyLoad from "@times-components-native/lazy-load";
 import { scrollUpToPaging } from "./utils/index.web";
 import ArticleListError from "./article-list-error";
 import ArticleListItem from "./article-list-item";

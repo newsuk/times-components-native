@@ -1,7 +1,7 @@
 /* eslint-disable react/require-default-props */
 import React from "react";
 import PropTypes from "prop-types";
-import editionBreakpoints from "@times-components/styleguide";
+import editionBreakpoints from "@times-components-native/styleguide";
 import {
   getTileStrapline,
   TileLink,
@@ -23,7 +23,7 @@ const TileX = ({ onPress, tile, breakpoint = editionBreakpoints.medium }) => {
             headlineStyle={styles.headline}
             strapline={getTileStrapline(tile)}
             straplineStyle={styles.strapline}
-            summary={getTileSummary(tile, 800)}
+            summary={getTileSummary(tile, 1000)}
             summaryStyle={styles.summary}
             tile={tile}
             whiteSpaceHeight={whiteSpaceHeight}

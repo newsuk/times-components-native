@@ -5,7 +5,7 @@ commonly used across Times Components packages and components. Many of the
 properties of the styleguide can be simply exported as named exports:
 
 ```
-import { colours, spacing } from "@times-components/styleguide";
+import { colours, spacing } from "@times-components-native/styleguide";
 ```
 
 However, the default export is a factory method which takes a configuration
@@ -18,7 +18,7 @@ config object. This object includes a scale property which manages the
 user-controlled font size settings:
 
 ```
-import styleguide from "@times-components/styleguide";
+import styleguide from "@times-components-native/styleguide";
 
 const { colours, fontFactory, spacing } = styleguide({ scale });
 ```
@@ -77,7 +77,6 @@ platform with [jest](https://facebook.github.io/jest/).
 yarn test:all
 yarn test:android
 yarn test:ios
-yarn test:web
 ```
 
 Visit the official

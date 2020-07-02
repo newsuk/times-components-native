@@ -11,7 +11,7 @@ exported components:
 ## How to use
 
 ```js
-import Gradient, { OverlayGradient } from "@times-components/gradient";
+import Gradient, { OverlayGradient } from "@times-components-native/gradient";
 
 // Works on it's own
 <Gradient
@@ -60,7 +60,6 @@ platform with [jest](https://facebook.github.io/jest/).
 yarn test:all
 yarn test:android
 yarn test:ios
-yarn test:web
 ```
 
 Visit the official

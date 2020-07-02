@@ -1,7 +1,0 @@
-// Jest Snapshot v1, https://goo.gl/fbAQLP
-
-exports[`On web the Enzyme root serializer should render the expected snapshot 1`] = `
-<SomeComponent
-  style={null}
-/>
-`;

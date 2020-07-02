@@ -8,7 +8,7 @@ import {
   minimalWebTransform,
   rnwTransform,
   stylePrinter
-} from "@times-components/jest-serializer";
+} from "@times-components-native/jest-serializer";
 import shared from "./shared-error.base.web";
 
 const keepProps = new Set(["class", "className", "style"]);

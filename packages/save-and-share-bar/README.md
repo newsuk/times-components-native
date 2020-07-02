@@ -10,7 +10,7 @@ package
 ## How to use
 
 ```js
-import SaveAndShareBar from "@times-components/save-and-share-bar";
+import SaveAndShareBar from "@times-components-native/save-and-share-bar";
 
 <SaveAndShareBar
   articleUrl={articleId}
@@ -37,7 +37,7 @@ yarn lint
 Testing can be done on each platform individually
 
 ```
-yarn test:web
+
 ```
 
 Or the tests for all platforms can be run

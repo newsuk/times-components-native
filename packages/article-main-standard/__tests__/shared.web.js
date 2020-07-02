@@ -7,7 +7,7 @@ import {
   minimaliseTransform,
   minimalWebTransform,
   print
-} from "@times-components/jest-serializer";
+} from "@times-components-native/jest-serializer";
 import { UserState } from "./mocks.web";
 import shared from "./shared.base";
 import ArticleMainStandard from "../src/article-main-standard";

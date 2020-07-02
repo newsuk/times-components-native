@@ -1,3 +1,0 @@
-// Jest Snapshot v1, https://goo.gl/fbAQLP
-
-exports[`with default values 1`] = `"{\\"editionBreakpoint\\":\\"wide\\",\\"isTablet\\":false,\\"screenWidth\\":1024}"`;

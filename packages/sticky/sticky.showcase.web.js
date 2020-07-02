@@ -1,8 +1,8 @@
 /* eslint-env browser */
 import React from "react";
 import styled, { css } from "styled-components";
-import { createScopedGlobalStyle } from "@times-components/storybook";
-import { breakpoints } from "@times-components/styleguide";
+import { createScopedGlobalStyle } from "@times-components-native/storybook";
+import { breakpoints } from "@times-components-native/styleguide";
 import Sticky, {
   STICKY_CLASS_NAME,
   StickyProvider,

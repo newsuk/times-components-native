@@ -6,9 +6,9 @@ import {
   fontSizes,
   lineHeight,
   spacing
-} from "@times-components/styleguide";
+} from "@times-components-native/styleguide";
 
-import ArticleLeadAsset from "@times-components/article-lead-asset";
+import ArticleLeadAsset from "@times-components-native/article-lead-asset";
 
 export const AuthorImageContainer = styled(View)`
   border-radius: 50%;

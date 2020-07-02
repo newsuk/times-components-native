@@ -1,14 +1,14 @@
 import React from "react";
 import TestRenderer from "react-test-renderer";
 import { shallow } from "enzyme";
-import { iterator } from "@times-components/test-utils";
+import { iterator } from "@times-components-native/test-utils";
 import {
   addSerializers,
   compose,
   minimaliseTransform,
   minimalWebTransform,
   print
-} from "@times-components/jest-serializer";
+} from "@times-components-native/jest-serializer";
 import ArticleList from "../src/article-list";
 import articlesFixture from "../fixtures/articles.json";
 import adConfig from "../fixtures/article-ad-config.json";

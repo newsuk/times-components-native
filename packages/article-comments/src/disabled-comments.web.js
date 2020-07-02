@@ -1,5 +1,5 @@
 import React from "react";
-import { TextLink } from "@times-components/link";
+import { TextLink } from "@times-components-native/link";
 import {
   CommentContainer,
   CommentDisabledHeadline,

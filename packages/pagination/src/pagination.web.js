@@ -1,9 +1,9 @@
 import React from "react";
 import { StyleSheet } from "react-native";
 import PropTypes from "prop-types";
-import Link from "@times-components/link";
-import { withTrackEvents } from "@times-components/tracking";
-import styleguide from "@times-components/styleguide";
+import Link from "@times-components-native/link";
+import { withTrackEvents } from "@times-components-native/tracking";
+import styleguide from "@times-components-native/styleguide";
 import withPageState from "./pagination-wrapper";
 import { PreviousPageIcon, NextPageIcon } from "./pagination-icons";
 import Results from "./results";

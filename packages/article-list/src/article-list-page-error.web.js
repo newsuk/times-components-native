@@ -1,6 +1,6 @@
 import React from "react";
-import Button from "@times-components/button";
-import Image from "@times-components/image";
+import Button from "@times-components-native/button";
+import Image from "@times-components-native/image";
 import ArticleListError from "./article-list-error";
 import propTypes from "./article-list-error-prop-types";
 import {
