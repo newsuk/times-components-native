@@ -137,24 +137,6 @@ jobs:
                       npx lerna run test:unit --stream --since -- -- --ci --bail --coverage
                   working_directory: ~/project/
 
-    run_cypress_tests:
-        executor: node
-        steps:
-            - checkout
-            - attach_workspace:
-                  at: ./
-            - run:
-                  name: Install Cypress binary
-                  command: |
-                      npx yarn@1.16.0 cypress install
-                  working_directory: ~/project/
-            - run:
-                  name: Run Cypress Tests
-                  command: |
-                    sudo apt install lsof
-                    npx yarn@1.16.0 test:e2e
-                  working_directory: ~/project/
-
     publish_android:
         executor: node
         steps:
@@ -233,9 +215,6 @@ workflows:
             - run_unit_tests:
                   requires:
                       - setup
-            - run_cypress_tests:
-                  requires:
-                      - setup
             - publish_storybook:
                   filters:
                     branches:
@@ -249,7 +228,6 @@ workflows:
                       - run_ios_tests
                       - run_web_tests
                       - run_unit_tests
-                      - run_cypress_tests
             - hold:
                   type: approval
                   branches:
@@ -263,7 +241,6 @@ workflows:
                       - run_ios_tests
                       - run_web_tests
                       - run_unit_tests
-                      - run_cypress_tests
             - publish_android:
                   filters:
                     branches:
