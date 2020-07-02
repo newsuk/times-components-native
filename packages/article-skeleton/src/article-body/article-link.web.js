@@ -1,5 +1,5 @@
 import React from "react";
-import Link from "@times-components/link";
+import Link from "@times-components-native/link";
 import PropTypes from "prop-types";
 import {
   linkStyles,

@@ -2,7 +2,7 @@
 /* eslint-disable react/forbid-prop-types */
 import React, { Component } from "react";
 import PropTypes from "prop-types";
-import { Placeholder } from "@times-components/image";
+import { Placeholder } from "@times-components-native/image";
 
 function ensureElement(selector, createElement) {
   if (document.body.querySelector(selector)) {

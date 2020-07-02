@@ -11,7 +11,7 @@ import {
   propsNoChildren,
   replaceTransform,
   rnwTransform
-} from "@times-components/jest-serializer";
+} from "@times-components-native/jest-serializer";
 import { mount } from "enzyme";
 import shared from "./shared.base";
 

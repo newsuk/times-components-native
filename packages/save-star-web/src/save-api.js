@@ -2,12 +2,12 @@
 import React from "react";
 import PropTypes from "prop-types";
 import { Mutation } from "react-apollo";
-import { ArticleBookmarked } from "@times-components/provider";
+import { ArticleBookmarked } from "@times-components-native/provider";
 import {
   saveBookmarks,
   unsaveBookmarks,
   articleBookmarked
-} from "@times-components/provider-queries";
+} from "@times-components-native/provider-queries";
 
 function updateCache(cache, { id, isBookmarked }) {
   const cached = cache.readQuery({

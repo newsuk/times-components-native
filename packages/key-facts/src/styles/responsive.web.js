@@ -1,6 +1,6 @@
 import { Text, View } from "react-native";
 import styled from "styled-components";
-import { breakpoints, spacing } from "@times-components/styleguide";
+import { breakpoints, spacing } from "@times-components-native/styleguide";
 
 export const KeyFactsResponsiveContainer = styled(View)`
   margin: 5px 10px;

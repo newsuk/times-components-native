@@ -9,7 +9,7 @@ declare module 'parse-svg-path' {
   type SimplePath = SimpleSegment[];
 }
 
-declare module '@times-components/test-utils' {
+declare module '@times-components-native/test-utils' {
   export const TestFont: any;
 }
 

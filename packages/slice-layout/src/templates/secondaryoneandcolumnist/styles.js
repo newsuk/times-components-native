@@ -1,4 +1,7 @@
-import { editionBreakpoints, spacing } from "@times-components/styleguide";
+import {
+  editionBreakpoints,
+  spacing
+} from "@times-components-native/styleguide";
 
 const sharedStyles = {
   container: {

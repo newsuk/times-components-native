@@ -10,15 +10,18 @@ import {
   minimalWebTransform,
   rnwTransform,
   stylePrinter
-} from "@times-components/jest-serializer";
+} from "@times-components-native/jest-serializer";
 import "./mocks.web";
-import { ContextProviderWithDefaults } from "@times-components/context";
+import { ContextProviderWithDefaults } from "@times-components-native/context";
 import ArticleSkeleton from "../src/article-skeleton";
 import articleFixture, { testFixture } from "../fixtures/full-article";
 import { adConfig } from "./ad-mock";
 import articleSkeletonProps from "./shared-article-skeleton-props";
 
-jest.mock("@times-components/save-and-share-bar", () => "SaveAndShareBar");
+jest.mock(
+  "@times-components-native/save-and-share-bar",
+  () => "SaveAndShareBar"
+);
 
 const styles = [
   "alignItems",

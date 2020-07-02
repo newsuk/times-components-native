@@ -1,4 +1,7 @@
-import { MockArticle, MockUser } from "@times-components/fixture-generator";
+import {
+  MockArticle,
+  MockUser
+} from "@times-components-native/fixture-generator";
 
 const relatedArticleCount = 3;
 

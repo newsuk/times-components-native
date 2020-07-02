@@ -2,7 +2,7 @@
 
 import React, { Component } from "react";
 import PropTypes from "prop-types";
-import { TextLink } from "@times-components/link";
+import { TextLink } from "@times-components-native/link";
 import {
   CommentContainer,
   CommentEnabledGuidelines

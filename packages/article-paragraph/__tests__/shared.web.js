@@ -1,5 +1,5 @@
 import { AppRegistry } from "react-native-web";
-import { iterator } from "@times-components/test-utils";
+import { iterator } from "@times-components-native/test-utils";
 
 import {
   addSerializers,
@@ -9,7 +9,7 @@ import {
   minimalWebTransform,
   rnwTransform,
   stylePrinter
-} from "@times-components/jest-serializer";
+} from "@times-components-native/jest-serializer";
 
 import shared from "./shared.base";
 

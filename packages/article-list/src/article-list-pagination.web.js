@@ -1,6 +1,6 @@
 import React from "react";
 import { View } from "react-native";
-import Pagination from "@times-components/pagination";
+import Pagination from "@times-components-native/pagination";
 import PropTypes from "prop-types";
 import styles from "./styles";
 

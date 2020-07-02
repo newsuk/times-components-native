@@ -1,5 +1,5 @@
 /* eslint-disable global-require */
-const mockTpa = require("@times-components/mock-tpa-server");
+const mockTpa = require("@times-components-native/mock-tpa-server");
 
 module.exports = on => {
   on("task", {

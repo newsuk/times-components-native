@@ -1,8 +1,11 @@
 import React from "react";
 import { boolean } from "@storybook/addon-knobs/react";
-import { scales } from "@times-components/styleguide";
-import { MessageManager, MessageContext } from "@times-components/message-bar";
-import { MockBookmarksProvider } from "@times-components/provider-test-tools";
+import { scales } from "@times-components-native/styleguide";
+import {
+  MessageManager,
+  MessageContext
+} from "@times-components-native/message-bar";
+import { MockBookmarksProvider } from "@times-components-native/provider-test-tools";
 import SaveAndShareBar from "./src/save-and-share-bar";
 
 const articleId = "5504b5a8-b1c0-11e8-a553-a0ee9be48bc6";

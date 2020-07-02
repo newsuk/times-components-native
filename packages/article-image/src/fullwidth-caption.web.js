@@ -1,5 +1,5 @@
 import React from "react";
-import Caption from "@times-components/caption";
+import Caption from "@times-components-native/caption";
 import { propTypes, defaultProps } from "./fullwidth-caption-prop-types";
 import { FullWidthCaptionContainer } from "./styles/responsive";
 

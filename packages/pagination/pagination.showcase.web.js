@@ -1,8 +1,8 @@
 /* eslint-disable react/prop-types */
 import React from "react";
-import { LateralSpacingDecorator } from "@times-components/storybook";
-import storybookReporter from "@times-components/tealium-utils";
-import { withTrackingContext } from "@times-components/tracking";
+import { LateralSpacingDecorator } from "@times-components-native/storybook";
+import storybookReporter from "@times-components-native/tealium-utils";
+import { withTrackingContext } from "@times-components-native/tracking";
 import Pagination from "./src/pagination";
 import { PreviousPageIcon, NextPageIcon } from "./src/pagination-icons";
 

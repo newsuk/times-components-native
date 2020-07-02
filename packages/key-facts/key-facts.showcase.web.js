@@ -1,4 +1,4 @@
-import { LateralSpacingDecorator } from "@times-components/storybook";
+import { LateralSpacingDecorator } from "@times-components-native/storybook";
 import data from "./fixtures/key-facts-showcase.json";
 import dataNoTitle from "./fixtures/key-facts-no-title-showcase.json";
 import renderKeyFacts from "./showcase-helper";

@@ -18,7 +18,7 @@ requirements \* other than importing the desired serializers for your needs.
 ## Getting started
 
 ```
-yarn add @times-components/jest-serializer --dev
+yarn add @times-components-native/jest-serializer --dev
 ```
 
 within your tests you can now use code that looks like this:
@@ -28,7 +28,7 @@ import {
   addSerializers,
   enzymeRenderedSerializer,
   minimalNative
-} from "@times-components/jest-serializer";
+} from "@times-components-native/jest-serializer";
 
 addSerializers(expect, enzymeRenderedSerializer(), minimalNative);
 ```

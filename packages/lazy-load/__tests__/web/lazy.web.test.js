@@ -1,11 +1,11 @@
 import React from "react";
 import { mount } from "enzyme";
-import { iterator } from "@times-components/test-utils";
+import { iterator } from "@times-components-native/test-utils";
 import {
   addSerializers,
   enzymeRenderedSerializer,
   minimalise
-} from "@times-components/jest-serializer";
+} from "@times-components-native/jest-serializer";
 import LazyLoad from "../../src/lazy-load";
 
 const delay = ms => new Promise(res => setTimeout(res, ms));

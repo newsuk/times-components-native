@@ -19,7 +19,7 @@ or a fallback if not.
 You can use it as follows.
 
 ```js
-import UserState from "@times-components/user-state";
+import UserState from "@times-components-native/user-state";
 
 <UserState
     state={UserState.subscriber}
@@ -46,12 +46,12 @@ the fallback.
 - `subscriber`: Is the user a subscriber
 - `loggedInOrShared`: Is the user logged in or on a share token (subscriber, RA, RA Expired, share token)
 
-There is a companion tool inside the `@times-components/mocks` for mocking
+There is a companion tool inside the `@times-components-native/mocks` for mocking
 the `UserState` package and rendering with a specific user state.
 
 ```js
 // In the test file
-import { mockUserState } from "@times-components/user-state";
+import { mockUserState } from "@times-components-native/user-state";
 const UserState = mockUserState();
 
 UserState.mockStates = [
@@ -61,7 +61,7 @@ UserState.mockStates = [
 ];
 
 // Use UseState as usual in your production code
-import UserState from "@times-components/user-state";
+import UserState from "@times-components-native/user-state";
 
 <UserState state={/*...*/}>
   // ...
@@ -76,7 +76,7 @@ selectively renders based on the user state. You just need to ensure that
 `addUserStateKnobs` is called for every story.
 
 ```js
-import { addUserStateKnobs, USER_STATES } from "@times-components/user-state";
+import { addUserStateKnobs, USER_STATES } from "@times-components-native/user-state";
 
 storiesOf(...)
   .add(() => {

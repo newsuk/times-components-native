@@ -1,4 +1,8 @@
-import { spacing, colours, fontFactory } from "@times-components/styleguide";
+import {
+  spacing,
+  colours,
+  fontFactory
+} from "@times-components-native/styleguide";
 
 const ICON_SIZE = 40;
 

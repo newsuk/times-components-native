@@ -5,7 +5,7 @@ import {
   colours,
   fonts,
   fontSizes
-} from "@times-components/styleguide";
+} from "@times-components-native/styleguide";
 
 const PullQuoteContent = styled(Text)`
   color: ${colours.functional.primary};

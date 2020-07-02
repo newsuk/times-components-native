@@ -2,36 +2,36 @@
 
 exports[`Inline Newsletter Puff renders 'saving' when the button is clicked 1`] = `
 <div
-  className="inline-newsletter-puff__InpContainer-sc-13hmjc-0 iUoiZz inline-newsletter-puff__InpContainer-sc-13hmjc-0 iUoiZz css-view-1dbjc4n"
+  className="inline-newsletter-puff__InpContainer-sc-1gmgdfq-0 knNoFo inline-newsletter-puff__InpContainer-sc-1gmgdfq-0 knNoFo css-view-1dbjc4n"
 >
   <div
-    className="inline-newsletter-puff__InpImageContainer-sc-13hmjc-1 fAjoxv inline-newsletter-puff__InpImageContainer-sc-13hmjc-1 fAjoxv css-view-1dbjc4n"
+    className="inline-newsletter-puff__InpImageContainer-sc-1gmgdfq-1 jFQKoN inline-newsletter-puff__InpImageContainer-sc-1gmgdfq-1 jFQKoN css-view-1dbjc4n"
   >
     Image rendered with imageUri=https://nuk-tnl-deck-prod-static.s3-eu-west-1.amazonaws.com/uploads/2aa9050e6c3d4de682f11a4802ebba96.jpg
   </div>
   <div
-    className="inline-newsletter-puff__InpSignupContainer-sc-13hmjc-5 fgHAmw inline-newsletter-puff__InpSignupContainer-sc-13hmjc-5 fgHAmw css-view-1dbjc4n"
+    className="inline-newsletter-puff__InpSignupContainer-sc-1gmgdfq-5 gAMTAE inline-newsletter-puff__InpSignupContainer-sc-1gmgdfq-5 gAMTAE css-view-1dbjc4n"
   >
     <div
-      className="inline-newsletter-puff__InpSignupLabel-sc-13hmjc-6 fGDuEb inline-newsletter-puff__InpSignupLabel-sc-13hmjc-6 fGDuEb css-text-901oao"
+      className="inline-newsletter-puff__InpSignupLabel-sc-1gmgdfq-6 fOnzRc inline-newsletter-puff__InpSignupLabel-sc-1gmgdfq-6 fOnzRc css-text-901oao"
       dir="auto"
     >
       STRAIGHT IN YOUR INBOX
     </div>
     <div
-      className="inline-newsletter-puff__InpSignupHeadline-sc-13hmjc-7 kSVfs inline-newsletter-puff__InpSignupHeadline-sc-13hmjc-7 kSVfs css-text-901oao"
+      className="inline-newsletter-puff__InpSignupHeadline-sc-1gmgdfq-7 cieTgW inline-newsletter-puff__InpSignupHeadline-sc-1gmgdfq-7 cieTgW css-text-901oao"
       dir="auto"
     >
       Politics. Explained.
     </div>
     <div
-      className="inline-newsletter-puff__InpCopy-sc-13hmjc-8 hLhbxF inline-newsletter-puff__InpCopy-sc-13hmjc-8 hLhbxF css-text-901oao"
+      className="inline-newsletter-puff__InpCopy-sc-1gmgdfq-8 hQzIaX inline-newsletter-puff__InpCopy-sc-1gmgdfq-8 hQzIaX css-text-901oao"
       dir="auto"
     >
       Sign up to receive our brilliant Red Box newsletter, Matt Chorley\`s poke at politics delivered every weekday morning at 8am.
     </div>
     <div
-      className="inline-newsletter-puff__InpSignupCTAContainer-sc-13hmjc-9 hrIwVO inline-newsletter-puff__InpSignupCTAContainer-sc-13hmjc-9 hrIwVO css-view-1dbjc4n"
+      className="inline-newsletter-puff__InpSignupCTAContainer-sc-1gmgdfq-9 ewuNfs inline-newsletter-puff__InpSignupCTAContainer-sc-1gmgdfq-9 ewuNfs css-view-1dbjc4n"
     >
       <button
         onClick={[Function]}
@@ -70,7 +70,7 @@ exports[`Inline Newsletter Puff renders null when is already subscribed 1`] = `n
 
 exports[`Inline Newsletter Puff renders placeholder when loading 1`] = `
 <div
-  className="inline-newsletter-puff__InpContainer-sc-13hmjc-0 iUoiZz inline-newsletter-puff__InpContainer-sc-13hmjc-0 iUoiZz css-view-1dbjc4n"
+  className="inline-newsletter-puff__InpContainer-sc-1gmgdfq-0 knNoFo inline-newsletter-puff__InpContainer-sc-1gmgdfq-0 knNoFo css-view-1dbjc4n"
   style={
     Object {
       "height": "257px",
@@ -83,36 +83,36 @@ exports[`Inline Newsletter Puff renders placeholder when loading 1`] = `
 
 exports[`Inline Newsletter Puff renders signup state 1`] = `
 <div
-  className="inline-newsletter-puff__InpContainer-sc-13hmjc-0 iUoiZz inline-newsletter-puff__InpContainer-sc-13hmjc-0 iUoiZz css-view-1dbjc4n"
+  className="inline-newsletter-puff__InpContainer-sc-1gmgdfq-0 knNoFo inline-newsletter-puff__InpContainer-sc-1gmgdfq-0 knNoFo css-view-1dbjc4n"
 >
   <div
-    className="inline-newsletter-puff__InpImageContainer-sc-13hmjc-1 fAjoxv inline-newsletter-puff__InpImageContainer-sc-13hmjc-1 fAjoxv css-view-1dbjc4n"
+    className="inline-newsletter-puff__InpImageContainer-sc-1gmgdfq-1 jFQKoN inline-newsletter-puff__InpImageContainer-sc-1gmgdfq-1 jFQKoN css-view-1dbjc4n"
   >
     Image rendered with imageUri=https://nuk-tnl-deck-prod-static.s3-eu-west-1.amazonaws.com/uploads/2aa9050e6c3d4de682f11a4802ebba96.jpg
   </div>
   <div
-    className="inline-newsletter-puff__InpSignupContainer-sc-13hmjc-5 fgHAmw inline-newsletter-puff__InpSignupContainer-sc-13hmjc-5 fgHAmw css-view-1dbjc4n"
+    className="inline-newsletter-puff__InpSignupContainer-sc-1gmgdfq-5 gAMTAE inline-newsletter-puff__InpSignupContainer-sc-1gmgdfq-5 gAMTAE css-view-1dbjc4n"
   >
     <div
-      className="inline-newsletter-puff__InpSignupLabel-sc-13hmjc-6 fGDuEb inline-newsletter-puff__InpSignupLabel-sc-13hmjc-6 fGDuEb css-text-901oao"
+      className="inline-newsletter-puff__InpSignupLabel-sc-1gmgdfq-6 fOnzRc inline-newsletter-puff__InpSignupLabel-sc-1gmgdfq-6 fOnzRc css-text-901oao"
       dir="auto"
     >
       STRAIGHT IN YOUR INBOX
     </div>
     <div
-      className="inline-newsletter-puff__InpSignupHeadline-sc-13hmjc-7 kSVfs inline-newsletter-puff__InpSignupHeadline-sc-13hmjc-7 kSVfs css-text-901oao"
+      className="inline-newsletter-puff__InpSignupHeadline-sc-1gmgdfq-7 cieTgW inline-newsletter-puff__InpSignupHeadline-sc-1gmgdfq-7 cieTgW css-text-901oao"
       dir="auto"
     >
       Politics. Explained.
     </div>
     <div
-      className="inline-newsletter-puff__InpCopy-sc-13hmjc-8 hLhbxF inline-newsletter-puff__InpCopy-sc-13hmjc-8 hLhbxF css-text-901oao"
+      className="inline-newsletter-puff__InpCopy-sc-1gmgdfq-8 hQzIaX inline-newsletter-puff__InpCopy-sc-1gmgdfq-8 hQzIaX css-text-901oao"
       dir="auto"
     >
       Sign up to receive our brilliant Red Box newsletter, Matt Chorley\`s poke at politics delivered every weekday morning at 8am.
     </div>
     <div
-      className="inline-newsletter-puff__InpSignupCTAContainer-sc-13hmjc-9 hrIwVO inline-newsletter-puff__InpSignupCTAContainer-sc-13hmjc-9 hrIwVO css-view-1dbjc4n"
+      className="inline-newsletter-puff__InpSignupCTAContainer-sc-1gmgdfq-9 ewuNfs inline-newsletter-puff__InpSignupCTAContainer-sc-1gmgdfq-9 ewuNfs css-view-1dbjc4n"
     >
       <button
         onClick={[Function]}
@@ -149,36 +149,36 @@ exports[`Inline Newsletter Puff renders signup state 1`] = `
 
 exports[`Inline Newsletter Puff renders signup view when not already subscribed 1`] = `
 <div
-  className="inline-newsletter-puff__InpContainer-sc-13hmjc-0 iUoiZz inline-newsletter-puff__InpContainer-sc-13hmjc-0 iUoiZz css-view-1dbjc4n"
+  className="inline-newsletter-puff__InpContainer-sc-1gmgdfq-0 knNoFo inline-newsletter-puff__InpContainer-sc-1gmgdfq-0 knNoFo css-view-1dbjc4n"
 >
   <div
-    className="inline-newsletter-puff__InpImageContainer-sc-13hmjc-1 fAjoxv inline-newsletter-puff__InpImageContainer-sc-13hmjc-1 fAjoxv css-view-1dbjc4n"
+    className="inline-newsletter-puff__InpImageContainer-sc-1gmgdfq-1 jFQKoN inline-newsletter-puff__InpImageContainer-sc-1gmgdfq-1 jFQKoN css-view-1dbjc4n"
   >
     Image rendered with imageUri=https://nuk-tnl-deck-prod-static.s3-eu-west-1.amazonaws.com/uploads/2aa9050e6c3d4de682f11a4802ebba96.jpg
   </div>
   <div
-    className="inline-newsletter-puff__InpSignupContainer-sc-13hmjc-5 fgHAmw inline-newsletter-puff__InpSignupContainer-sc-13hmjc-5 fgHAmw css-view-1dbjc4n"
+    className="inline-newsletter-puff__InpSignupContainer-sc-1gmgdfq-5 gAMTAE inline-newsletter-puff__InpSignupContainer-sc-1gmgdfq-5 gAMTAE css-view-1dbjc4n"
   >
     <div
-      className="inline-newsletter-puff__InpSignupLabel-sc-13hmjc-6 fGDuEb inline-newsletter-puff__InpSignupLabel-sc-13hmjc-6 fGDuEb css-text-901oao"
+      className="inline-newsletter-puff__InpSignupLabel-sc-1gmgdfq-6 fOnzRc inline-newsletter-puff__InpSignupLabel-sc-1gmgdfq-6 fOnzRc css-text-901oao"
       dir="auto"
     >
       STRAIGHT IN YOUR INBOX
     </div>
     <div
-      className="inline-newsletter-puff__InpSignupHeadline-sc-13hmjc-7 kSVfs inline-newsletter-puff__InpSignupHeadline-sc-13hmjc-7 kSVfs css-text-901oao"
+      className="inline-newsletter-puff__InpSignupHeadline-sc-1gmgdfq-7 cieTgW inline-newsletter-puff__InpSignupHeadline-sc-1gmgdfq-7 cieTgW css-text-901oao"
       dir="auto"
     >
       Politics. Explained.
     </div>
     <div
-      className="inline-newsletter-puff__InpCopy-sc-13hmjc-8 hLhbxF inline-newsletter-puff__InpCopy-sc-13hmjc-8 hLhbxF css-text-901oao"
+      className="inline-newsletter-puff__InpCopy-sc-1gmgdfq-8 hQzIaX inline-newsletter-puff__InpCopy-sc-1gmgdfq-8 hQzIaX css-text-901oao"
       dir="auto"
     >
       Sign up to receive our brilliant Red Box newsletter, Matt Chorley\`s poke at politics delivered every weekday morning at 8am.
     </div>
     <div
-      className="inline-newsletter-puff__InpSignupCTAContainer-sc-13hmjc-9 hrIwVO inline-newsletter-puff__InpSignupCTAContainer-sc-13hmjc-9 hrIwVO css-view-1dbjc4n"
+      className="inline-newsletter-puff__InpSignupCTAContainer-sc-1gmgdfq-9 ewuNfs inline-newsletter-puff__InpSignupCTAContainer-sc-1gmgdfq-9 ewuNfs css-view-1dbjc4n"
     >
       <button
         onClick={[Function]}
@@ -215,48 +215,48 @@ exports[`Inline Newsletter Puff renders signup view when not already subscribed 
 
 exports[`Inline Newsletter Puff renders the success view after subscribing  1`] = `
 <div
-  className="inline-newsletter-puff__InpContainer-sc-13hmjc-0 iUoiZz inline-newsletter-puff__InpContainer-sc-13hmjc-0 iUoiZz css-view-1dbjc4n"
+  className="inline-newsletter-puff__InpContainer-sc-1gmgdfq-0 knNoFo inline-newsletter-puff__InpContainer-sc-1gmgdfq-0 knNoFo css-view-1dbjc4n"
 >
   <div
-    className="inline-newsletter-puff__InpImageContainer-sc-13hmjc-1 fAjoxv inline-newsletter-puff__InpImageContainer-sc-13hmjc-1 fAjoxv css-view-1dbjc4n"
+    className="inline-newsletter-puff__InpImageContainer-sc-1gmgdfq-1 jFQKoN inline-newsletter-puff__InpImageContainer-sc-1gmgdfq-1 jFQKoN css-view-1dbjc4n"
   >
     Image rendered with imageUri=https://nuk-tnl-deck-prod-static.s3-eu-west-1.amazonaws.com/uploads/2aa9050e6c3d4de682f11a4802ebba96.jpg
   </div>
   <div
-    className="inline-newsletter-puff__InpSubscribedContainer-sc-13hmjc-2 cJNdAl inline-newsletter-puff__InpSubscribedContainer-sc-13hmjc-2 cJNdAl css-view-1dbjc4n"
+    className="inline-newsletter-puff__InpSubscribedContainer-sc-1gmgdfq-2 bzaUAE inline-newsletter-puff__InpSubscribedContainer-sc-1gmgdfq-2 bzaUAE css-view-1dbjc4n"
   >
     <div
-      className="inline-newsletter-puff__InpSubscribedHeadline-sc-13hmjc-3 gFPzTp inline-newsletter-puff__InpSubscribedHeadline-sc-13hmjc-3 gFPzTp css-text-901oao"
+      className="inline-newsletter-puff__InpSubscribedHeadline-sc-1gmgdfq-3 djuGHS inline-newsletter-puff__InpSubscribedHeadline-sc-1gmgdfq-3 djuGHS css-text-901oao"
       dir="auto"
     >
       You’ve successfully signed up
     </div>
     <div
-      className="inline-newsletter-puff__InpSubscribedCopy-sc-13hmjc-4 fopmPr inline-newsletter-puff__InpSubscribedCopy-sc-13hmjc-4 fopmPr css-text-901oao"
+      className="inline-newsletter-puff__InpSubscribedCopy-sc-1gmgdfq-4 ffREjf inline-newsletter-puff__InpSubscribedCopy-sc-1gmgdfq-4 ffREjf css-text-901oao"
       dir="auto"
     >
       Congratulations you can now enjoy daily updates from Red Box.
     </div>
     <div
-      className="inline-newsletter-puff__InpPreferencesContainer-sc-13hmjc-10 jWzuZh inline-newsletter-puff__InpPreferencesContainer-sc-13hmjc-10 jWzuZh css-view-1dbjc4n"
+      className="inline-newsletter-puff__InpPreferencesContainer-sc-1gmgdfq-10 fpkSWV inline-newsletter-puff__InpPreferencesContainer-sc-1gmgdfq-10 fpkSWV css-view-1dbjc4n"
     >
       <a
-        className="linkweb__RespLink-yfb9n-0 cCCShB"
+        className="linkweb__RespLink-nm8lfw-0 jXzAJf"
         href="https://home.thetimes.co.uk/myNews"
         onClick={[Function]}
         target={null}
       >
         <div
-          className="inline-newsletter-puff__InpPreferencesView-sc-13hmjc-13 iRumcp inline-newsletter-puff__InpPreferencesView-sc-13hmjc-13 iRumcp css-view-1dbjc4n"
+          className="inline-newsletter-puff__InpPreferencesView-sc-1gmgdfq-13 joMqQY inline-newsletter-puff__InpPreferencesView-sc-1gmgdfq-13 joMqQY css-view-1dbjc4n"
         >
           <div
-            className="inline-newsletter-puff__InpPreferencesText-sc-13hmjc-11 bEnqSP inline-newsletter-puff__InpPreferencesText-sc-13hmjc-11 bEnqSP css-text-901oao"
+            className="inline-newsletter-puff__InpPreferencesText-sc-1gmgdfq-11 hiXXJO inline-newsletter-puff__InpPreferencesText-sc-1gmgdfq-11 hiXXJO css-text-901oao"
             dir="auto"
           >
             Manage preferences here
           </div>
           <div
-            className="inline-newsletter-puff__InpIconContainer-sc-13hmjc-12 fJlAxF inline-newsletter-puff__InpIconContainer-sc-13hmjc-12 fJlAxF css-view-1dbjc4n"
+            className="inline-newsletter-puff__InpIconContainer-sc-1gmgdfq-12 fjYueD inline-newsletter-puff__InpIconContainer-sc-1gmgdfq-12 fjYueD css-view-1dbjc4n"
           >
             <svg
               aria-label="icon-forward-arrow"

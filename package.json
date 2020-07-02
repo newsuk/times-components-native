@@ -1,8 +1,8 @@
 {
-  "name": "times-components",
+  "name": "times-components-native",
   "private": true,
   "version": "0.0.1",
-  "description": "A collection of presentational components for The Times and Sunday Times",
+  "description": "A collection of react-native components for The Times and Sunday Times",
   "main": "index.js",
   "engines": {
     "node": ">=10.13.0 <13",
@@ -44,7 +44,7 @@
     "android:build-lib": "yarn android:build-lib:js && cp -r node_modules/@react-native-community/netinfo node_modules/react-native-community-netinfo && cd android-app && yarn build",
     "android:build-lib:js": "mkdir -p android-app/xnative/src/main/assets/ && mkdir -p android-app/xnative/src/main/res/ && react-native ram-bundle --platform android --dev false --minify --entry-file android-app/index.android.js --bundle-output android-app/xnative/src/main/assets/index.android.bundle --assets-dest android-app/xnative/src/main/res/",
     "android:device": "./lib/setup_device_connections.sh && yarn android",
-    "android:publish-lib": "lerna run --scope @times-components/android-app publish-library --stream",
+    "android:publish-lib": "lerna run --scope @times-components-native/android-app publish-library --stream",
     "prefmt": "prettier --write '**/*.{js,json}'",
     "fmt": "lerna run fmt",
     "npm:publish": "sh ./lib/publish.sh",
@@ -116,7 +116,7 @@
     "@storybook/addons": "5.3.18",
     "@storybook/react": "5.3.18",
     "@storybook/react-native": "5.3.18",
-    "@times-components/depend": "*",
+    "@times-components-native/depend": "*",
     "babel-eslint": "10.0.2",
     "babel-jest": "24.8.0",
     "babel-loader": "8.0.5",

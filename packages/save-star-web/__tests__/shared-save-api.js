@@ -1,7 +1,7 @@
 import React from "react";
 import TestRenderer from "react-test-renderer";
-import { delay } from "@times-components/test-utils";
-import { MockBookmarksProvider } from "@times-components/provider-test-tools";
+import { delay } from "@times-components-native/test-utils";
+import { MockBookmarksProvider } from "@times-components-native/provider-test-tools";
 import SaveAPI from "../src/save-api";
 
 export default () => {

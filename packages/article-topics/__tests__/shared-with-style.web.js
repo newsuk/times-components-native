@@ -7,7 +7,7 @@ import {
   minimaliseTransform,
   rnwTransform,
   stylePrinter
-} from "@times-components/jest-serializer";
+} from "@times-components-native/jest-serializer";
 import shared from "./shared-with-style.base";
 
 const styles = [

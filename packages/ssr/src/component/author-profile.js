@@ -3,11 +3,14 @@
 const React = require("react");
 const { ApolloProvider } = require("react-apollo");
 const { HelmetProvider } = require("react-helmet-async");
-const { AuthorProfileProvider } = require("@times-components/provider/rnw");
+const {
+  AuthorProfileProvider
+} = require("@times-components-native/provider/rnw");
 const {
   ContextProviderWithDefaults
-} = require("@times-components/context/rnw");
-const AuthorProfile = require("@times-components/author-profile/rnw").default;
+} = require("@times-components-native/context/rnw");
+const AuthorProfile = require("@times-components-native/author-profile/rnw")
+  .default;
 
 module.exports = (client, analyticsStream, data, helmetContext) => {
   const {

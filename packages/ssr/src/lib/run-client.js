@@ -5,12 +5,12 @@ const { ApolloClient } = require("apollo-client");
 const { AppRegistry } = require("react-native");
 const { createHttpLink } = require("apollo-link-http");
 const fetch = require("unfetch").default;
-const { fragmentMatcher } = require("@times-components/schema");
+const { fragmentMatcher } = require("@times-components-native/schema");
 const { InMemoryCache } = require("apollo-cache-inmemory");
 const {
   default: tealiumReporter,
   TealiumSendScheduler
-} = require("@times-components/tealium");
+} = require("@times-components-native/tealium");
 
 const makeClient = options => {
   if (!options.uri) {

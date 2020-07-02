@@ -116,9 +116,9 @@ exports[`7. card with a loading state 1`] = `
         "$$typeof": Symbol(react.forward_ref),
         "attrs": Array [],
         "componentStyle": ComponentStyle {
-          "componentId": "indexweb__FadeIn-v0crhg-0",
+          "componentId": "indexweb__FadeIn-sc-1a5ek2d-0",
           "isStatic": true,
-          "lastClassName": "grpdxt",
+          "lastClassName": "bjNFOP",
           "rules": Array [
             "animation:",
             Keyframes {
@@ -137,7 +137,7 @@ exports[`7. card with a loading state 1`] = `
         "displayName": "indexweb__FadeIn",
         "foldedComponentIds": Array [],
         "render": [Function],
-        "styledComponentId": "indexweb__FadeIn-v0crhg-0",
+        "styledComponentId": "indexweb__FadeIn-sc-1a5ek2d-0",
         "target": [Function],
         "toString": [Function],
         "warnTooManyClasses": [Function],
@@ -198,9 +198,9 @@ exports[`8. card with a loading state and no image 1`] = `
         "$$typeof": Symbol(react.forward_ref),
         "attrs": Array [],
         "componentStyle": ComponentStyle {
-          "componentId": "indexweb__FadeIn-v0crhg-0",
+          "componentId": "indexweb__FadeIn-sc-1a5ek2d-0",
           "isStatic": true,
-          "lastClassName": "grpdxt",
+          "lastClassName": "bjNFOP",
           "rules": Array [
             "animation:",
             Keyframes {
@@ -219,7 +219,7 @@ exports[`8. card with a loading state and no image 1`] = `
         "displayName": "indexweb__FadeIn",
         "foldedComponentIds": Array [],
         "render": [Function],
-        "styledComponentId": "indexweb__FadeIn-v0crhg-0",
+        "styledComponentId": "indexweb__FadeIn-sc-1a5ek2d-0",
         "target": [Function],
         "toString": [Function],
         "warnTooManyClasses": [Function],
@@ -268,9 +268,9 @@ exports[`9. card with reversed loading state 1`] = `
         "$$typeof": Symbol(react.forward_ref),
         "attrs": Array [],
         "componentStyle": ComponentStyle {
-          "componentId": "indexweb__FadeIn-v0crhg-0",
+          "componentId": "indexweb__FadeIn-sc-1a5ek2d-0",
           "isStatic": true,
-          "lastClassName": "grpdxt",
+          "lastClassName": "bjNFOP",
           "rules": Array [
             "animation:",
             Keyframes {
@@ -289,7 +289,7 @@ exports[`9. card with reversed loading state 1`] = `
         "displayName": "indexweb__FadeIn",
         "foldedComponentIds": Array [],
         "render": [Function],
-        "styledComponentId": "indexweb__FadeIn-v0crhg-0",
+        "styledComponentId": "indexweb__FadeIn-sc-1a5ek2d-0",
         "target": [Function],
         "toString": [Function],
         "warnTooManyClasses": [Function],
@@ -350,9 +350,9 @@ exports[`10. card with reversed loading state with no image 1`] = `
         "$$typeof": Symbol(react.forward_ref),
         "attrs": Array [],
         "componentStyle": ComponentStyle {
-          "componentId": "indexweb__FadeIn-v0crhg-0",
+          "componentId": "indexweb__FadeIn-sc-1a5ek2d-0",
           "isStatic": true,
-          "lastClassName": "grpdxt",
+          "lastClassName": "bjNFOP",
           "rules": Array [
             "animation:",
             Keyframes {
@@ -371,7 +371,7 @@ exports[`10. card with reversed loading state with no image 1`] = `
         "displayName": "indexweb__FadeIn",
         "foldedComponentIds": Array [],
         "render": [Function],
-        "styledComponentId": "indexweb__FadeIn-v0crhg-0",
+        "styledComponentId": "indexweb__FadeIn-sc-1a5ek2d-0",
         "target": [Function],
         "toString": [Function],
         "warnTooManyClasses": [Function],

@@ -6,7 +6,7 @@ import {
   minimalWebTransform,
   rnwTransform,
   stylePrinter
-} from "@times-components/jest-serializer";
+} from "@times-components-native/jest-serializer";
 import shared from "./shared-with-styles.base";
 
 export default Component => {

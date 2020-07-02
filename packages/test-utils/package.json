@@ -1,5 +1,6 @@
 {
-  "name": "@times-components/test-utils",
+  "name": "@times-components-native/test-utils",
+  "private": true,
   "version": "2.3.8",
   "description": "Test helpers for Times Components",
   "main": "dist/index",
@@ -42,8 +43,8 @@
     "opentype.js": "1.1.0"
   },
   "devDependencies": {
-    "@times-components/eslint-config-thetimes": "0.8.16",
-    "@times-components/webpack-configurator": "2.0.27",
+    "@times-components-native/eslint-config-thetimes": "0.8.16",
+    "@times-components-native/webpack-configurator": "2.0.27",
     "depcheck": "0.6.9",
     "enzyme": "3.9.0",
     "enzyme-adapter-react-16": "1.12.1",

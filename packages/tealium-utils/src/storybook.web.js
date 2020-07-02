@@ -1,7 +1,7 @@
 import { action } from "@storybook/addon-actions";
 import tealiumReporter, {
   TealiumSendScheduler
-} from "@times-components/tealium";
+} from "@times-components-native/tealium";
 
 const trackingOptions = {
   account: "newsinternational",

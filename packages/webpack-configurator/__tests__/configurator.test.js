@@ -18,8 +18,14 @@ describe("webpack-configurator", () => {
 
   it("should append rnw to @times-components packages", async () => {
     const { externals } = create({});
-    const declaration = await p(externals, null, "@times-components/package");
-    expect(declaration).toEqual("commonjs2 @times-components/package/rnw");
+    const declaration = await p(
+      externals,
+      null,
+      "@times-components-native/package"
+    );
+    expect(declaration).toEqual(
+      "commonjs2 @times-components-native/package/rnw"
+    );
   });
 
   it("should return babelconfig with rnw-plugin none found", async () => {

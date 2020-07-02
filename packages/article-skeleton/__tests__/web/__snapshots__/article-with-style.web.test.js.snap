@@ -504,17 +504,17 @@ exports[`full article with style 1`] = `
   <article>
     <Head />
     <div
-      className="c0 responsiveweb-sc-1exejum-0 c0 css-view-1dbjc4n"
+      className="c0 responsiveweb-lpkuea-0 c0 css-view-1dbjc4n"
     >
       <AdContainer
         className="IS1"
       />
     </div>
     <main
-      className="c1 responsiveweb__MainContainer-sc-1exejum-1 c1 css-view-1dbjc4n"
+      className="c1 responsiveweb__MainContainer-lpkuea-1 c1 css-view-1dbjc4n"
     >
       <div
-        className="c2 responsiveweb__HeaderContainer-sc-1exejum-2 c2 css-view-1dbjc4n"
+        className="c2 responsiveweb__HeaderContainer-lpkuea-2 c2 css-view-1dbjc4n"
       >
         <div
           className="c3 c4 c5"
@@ -534,7 +534,7 @@ exports[`full article with style 1`] = `
         </div>
       </div>
       <article
-        className="c7 responsiveweb__BodyContainer-sc-1exejum-3 c7 css-view-1dbjc4n"
+        className="c7 responsiveweb__BodyContainer-lpkuea-3 c7 css-view-1dbjc4n"
       >
         <p
           className="c8"
@@ -558,21 +558,21 @@ exports[`full article with style 1`] = `
         </div>
         <div>
           <div
-            className="c12 responsiveweb__PrimaryImg-sc-16nqyj8-5 c12 css-view-1dbjc4n"
+            className="c12 responsiveweb__PrimaryImg-sc-1hp5s9g-5 c12 css-view-1dbjc4n"
           >
             <ArticleImage />
           </div>
         </div>
         <div>
           <div
-            className="c13 responsiveweb__SecondaryImg-sc-16nqyj8-7 c13 css-view-1dbjc4n"
+            className="c13 responsiveweb__SecondaryImg-sc-1hp5s9g-7 c13 css-view-1dbjc4n"
           >
             <ArticleImage />
           </div>
         </div>
         <div>
           <div
-            className="c14 responsiveweb__InlineImg-sc-16nqyj8-8 c14 css-view-1dbjc4n"
+            className="c14 responsiveweb__InlineImg-sc-1hp5s9g-8 c14 css-view-1dbjc4n"
           >
             <ArticleImage />
           </div>
@@ -589,10 +589,10 @@ exports[`full article with style 1`] = `
             Some content
           </p>
           <div
-            className="c15 responsiveweb__PullQuoteContainer-sc-16nqyj8-10 c15 css-view-1dbjc4n"
+            className="c15 responsiveweb__PullQuoteContainer-sc-1hp5s9g-10 c15 css-view-1dbjc4n"
           >
             <div
-              className="c16 responsiveweb__PullQuoteResp-sc-16nqyj8-9 c16 css-view-1dbjc4n"
+              className="c16 responsiveweb__PullQuoteResp-sc-1hp5s9g-9 c16 css-view-1dbjc4n"
             >
               <PullQuote>
                 The pull quote content
@@ -600,7 +600,7 @@ exports[`full article with style 1`] = `
             </div>
           </div>
           <div
-            className="c12 responsiveweb__PrimaryImg-sc-16nqyj8-5 c12 css-view-1dbjc4n"
+            className="c12 responsiveweb__PrimaryImg-sc-1hp5s9g-5 c12 css-view-1dbjc4n"
           >
             <figure
               className="IS9"
@@ -626,7 +626,7 @@ exports[`full article with style 1`] = `
               </div>
               <figcaption>
                 <div
-                  className="c17 inset-captionweb__InsetCaptionStyle-sc-8m7lci-0 c17 css-view-1dbjc4n"
+                  className="c17 inset-captionweb__InsetCaptionStyle-sc-1294ohe-0 c17 css-view-1dbjc4n"
                 >
                   <Caption />
                 </div>

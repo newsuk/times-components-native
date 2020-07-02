@@ -1,8 +1,8 @@
 import React from "react";
-import { ContextProviderWithDefaults } from "@times-components/context";
-import { scales, themeFactory } from "@times-components/styleguide";
-import coreRenderers from "@times-components/markup";
-import { renderTree } from "@times-components/markup-forest";
+import { ContextProviderWithDefaults } from "@times-components-native/context";
+import { scales, themeFactory } from "@times-components-native/styleguide";
+import coreRenderers from "@times-components-native/markup";
+import { renderTree } from "@times-components-native/markup-forest";
 import ArticleParagraph from "../src";
 import DropCapView from "../src/drop-cap";
 
