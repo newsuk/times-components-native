@@ -329,7 +329,6 @@ export default ({
       }
     ) {
       const aspectRatio = 16 / 9;
-
       const contentWidth = screenWidth(isTablet) - (isTablet && tabletRowPadding);
       const height = contentWidth / aspectRatio;
       return (
