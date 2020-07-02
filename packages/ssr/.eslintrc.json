@@ -1,7 +1,0 @@
-{
-  "extends": ["@times-components-native/thetimes"],
-  "plugins": ["cypress"],
-  "env": {
-    "cypress/globals": true
-  }
-}
