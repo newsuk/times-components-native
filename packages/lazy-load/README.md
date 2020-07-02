@@ -42,7 +42,7 @@ yarn lint
 Testing can be done on each platform individually
 
 ```
-yarn test:web
+
 ```
 
 Visit the official

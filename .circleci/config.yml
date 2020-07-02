@@ -113,18 +113,6 @@ jobs:
                       npx lerna run test:ios --stream --since -- -- --ci --bail --coverage
                   working_directory: ~/project/
 
-    run_web_tests:
-        executor: node
-        steps:
-            - checkout
-            - attach_workspace:
-                  at: ./
-            - run:
-                  name: Run Web Tests
-                  command: |
-                      npx lerna run test:web --stream --since -- -- --ci --bail --coverage
-                  working_directory: ~/project/
-
     run_unit_tests:
         executor: node
         steps:
@@ -209,9 +197,6 @@ workflows:
             - run_ios_tests:
                   requires:
                       - setup
-            - run_web_tests:
-                  requires:
-                      - setup
             - run_unit_tests:
                   requires:
                       - setup
@@ -226,7 +211,6 @@ workflows:
                       - run_noplatform_tests
                       - run_android_tests
                       - run_ios_tests
-                      - run_web_tests
                       - run_unit_tests
             - hold:
                   type: approval
@@ -239,7 +223,6 @@ workflows:
                       - run_noplatform_tests
                       - run_android_tests
                       - run_ios_tests
-                      - run_web_tests
                       - run_unit_tests
             - publish_android:
                   filters:
