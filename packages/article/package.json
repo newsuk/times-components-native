@@ -10,7 +10,7 @@
     "prettier:diff": "prettier --list-different '**/*.*'",
     "depcheck": "depcheck --ignores='@babel/*,babel-*,depcheck,eslint,jest,prettier,react-art,stylelint*,webpack*' --ignore-bin-package=false --skip-missing",
     "lint": "eslint . && yarn prettier:diff && yarn depcheck",
-    "test": "jest --config='./__tests__/jest.config.js'",
+    "test": "jest --config='./__tests__/jest.config.js'"
   },
   "repository": {
     "type": "git",

@@ -11,7 +11,7 @@
     "depcheck": "depcheck --ignores='@babel/*,babel-*,depcheck,eslint,jest,prettier,webpack*' --ignore-bin-package=false --skip-missing",
     "lint": "eslint . && yarn prettier:diff && yarn depcheck",
     "test": "jest --config='./__tests__/jest.config.js'",
-    "transpile": "babel src -d dist",
+    "transpile": "babel src -d dist"
   },
   "repository": {
     "type": "git",
