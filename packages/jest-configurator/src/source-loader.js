@@ -6,9 +6,12 @@ const { readFileSync } = require("fs");
 const { createHash } = require("crypto");
 const path = require("path");
 
-const readSource = filename => readFileSync(filename).toString();
+const readSource = filename => {
+  console.log(filename)
+  return readFileSync(filename).toString();
+};
 
-const isPackageFile = filename => filename.includes("times-components");
+const isPackageFile = filename => filename.includes("@times-components");
 
 const pointToSource = filename => filename.replace("dist", "src");
 
