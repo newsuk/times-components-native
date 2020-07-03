@@ -30,7 +30,7 @@ const articlePropTypes = {
 };
 
 const articleDefaultProps = {
-  data: null,  
+  data: null,
   receiveChildList: () => {}
 };
 
