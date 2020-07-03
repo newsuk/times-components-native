@@ -1,17 +1,8 @@
 import { iterator } from "@times-components-native/test-utils";
 import { readFileSync } from "fs";
-import { getCacheKey, process as transform } from "../src/source-loader";
+import { process as transform } from "../src/source-loader";
 
 const tests = [
-  {
-    name: "monorepo package hash",
-    test() {
-      const filePath = "./fixtures/times-components/src/test.js";
-      const fileContents = readFileSync(filePath).toString();
-
-      expect(getCacheKey(fileContents, filePath, "", {})).toMatchSnapshot();
-    }
-  },
   {
     name: "transformed non-monorepo file",
     test() {
