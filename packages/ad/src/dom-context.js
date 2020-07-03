@@ -29,7 +29,8 @@ class DOMContext extends PureComponent {
   constructor(props) {
     super(props);
     this.state = {
-      loaded: false
+      loaded: false,
+      height: 0
     };
   }
 
@@ -59,6 +60,7 @@ class DOMContext extends PureComponent {
   handleMessageEvent = e => {
     const { onRenderComplete, onRenderError, data } = this.props;
     const json = e.nativeEvent.data;
+    console.log(json);
     if (
       json.indexOf("isTngMessage") === -1 &&
       json.indexOf("unrulyLoaded") === -1
@@ -82,6 +84,12 @@ class DOMContext extends PureComponent {
       case "renderComplete":
         onRenderComplete();
         break;
+      case "setAdWebViewHeight": {
+        this.setState({
+          height: detail.height
+        })
+        break;
+      }
       default:
         if (data.debug) {
           logger(type, detail);
@@ -120,7 +128,8 @@ class DOMContext extends PureComponent {
   };
 
   render() {
-    const { baseUrl, data, init, width, height } = this.props;
+    const { baseUrl, data, init, width } = this.props;
+    const { height } = this.state;
     // NOTE: if this generated code is not working, and you don't know why
     // because React Native doesn't report errors in webview JS code, try
     // connecting a debugger to the app, console.log(html), copy and paste
@@ -182,6 +191,7 @@ class DOMContext extends PureComponent {
         </body>
       </html>
     `;
+    // console.log('HTML ', html)
     const { loaded } = this.state;
 
     return (
