@@ -10,10 +10,10 @@
     "depcheck": "depcheck --ignores='@babel/*,babel-*,depcheck,eslint,jest,prettier,webpack*' --ignore-bin-package=false --skip-missing",
     "lint": "eslint . && yarn prettier:diff && yarn depcheck",
     "test": "jest",
-    "cli": "node dist/cli.js -l ../../"
+    "cli": "babel-node src/cli.js -l ../../"
   },
   "bin": {
-    "depend": "dist/cli.js"
+    "depend": "src/cli.js"
   },
   "jest": {
     "preset": "react-native",
@@ -52,6 +52,7 @@
   "homepage": "https://github.com/newsuk/times-components#readme",
   "devDependencies": {
     "@babel/core": "7.4.4",
+    "@babel/node": "7.10.4",
     "@times-components-native/eslint-config-thetimes": "0.8.16",
     "babel-jest": "24.8.0",
     "depcheck": "0.6.9",
