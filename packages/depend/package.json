@@ -26,7 +26,7 @@
       "!**/packages/depend/src/get-packages.js"
     ],
     "transformIgnorePatterns": [
-      "node_modules/react-native"
+      "node_modules/(?!(react-native)/)"
     ],
     "testMatch": [
       "<rootDir>/packages/depend/__tests__/**.test.js"
