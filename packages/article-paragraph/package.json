@@ -3,8 +3,7 @@
   "private": true,
   "version": "1.4.113",
   "description": "Article Paragraph",
-  "main": "dist/",
-  "dev": "src/",
+  "main": "src/",
   "scripts": {
     "depcheck": "depcheck --ignores='@babel/*,babel-*,depcheck,eslint,jest,prettier,webpack*' --ignore-bin-package=false --skip-missing",
     "fmt": "eslint . --fix && prettier --write '**/*.*'",

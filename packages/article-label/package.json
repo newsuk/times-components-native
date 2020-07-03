@@ -3,8 +3,7 @@
   "private": true,
   "version": "2.7.47",
   "description": "The article label",
-  "main": "dist/article-label",
-  "dev": "src/article-label",
+  "main": "src/article-label",
   "scripts": {
     "fmt": "eslint . --fix && prettier --write '**/*.*'",
     "prettier:diff": "prettier --list-different '**/*.*'",

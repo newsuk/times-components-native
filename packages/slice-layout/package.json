@@ -3,7 +3,7 @@
   "private": true,
   "version": "0.47.4",
   "description": "Slice layout",
-  "main": "dist/slice-layout",
+  "main": "src/slice-layout",
   "scripts": {
     "fmt": "eslint . --fix && prettier --write '**/*.*'",
     "prettier:diff": "prettier --list-different '**/*.*'",
@@ -77,6 +77,5 @@
   },
   "publishConfig": {
     "access": "public"
-  },
-  "dev": "src/slice-layout"
+  }
 }

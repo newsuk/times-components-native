@@ -3,8 +3,7 @@
   "private": true,
   "version": "0.6.44",
   "description": "Save Star for Web",
-  "main": "dist/save-star-web",
-  "dev": "src/save-star-web",
+  "main": "src/save-star-web",
   "scripts": {
     "depcheck": "depcheck --ignores='@babel/*,babel-*,depcheck,eslint,jest,prettier,webpack*' --ignore-bin-package=false --skip-missing",
     "fmt": "prettier --write '**/*.*'",

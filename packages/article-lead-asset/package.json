@@ -3,8 +3,7 @@
   "private": true,
   "version": "1.6.24",
   "description": "Generalised Lead Asset component for templates to consume & style",
-  "main": "dist/article-lead-asset",
-  "dev": "src/article-lead-asset",
+  "main": "src/article-lead-asset",
   "scripts": {
     "depcheck": "depcheck --ignores='@babel/*,babel-*,depcheck,eslint,jest,prettier,webpack*' --ignore-bin-package=false --skip-missing",
     "fmt": "eslint . --fix && prettier --write '**/*.*'",

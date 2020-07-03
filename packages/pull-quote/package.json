@@ -3,8 +3,7 @@
   "private": true,
   "version": "3.6.32",
   "description": "Pull Quote for Times Components Articles",
-  "main": "dist/pull-quote",
-  "dev": "src/pull-quote",
+  "main": "src/pull-quote",
   "scripts": {
     "fmt": "eslint . --fix && prettier --write '**/*.*'",
     "prettier:diff": "prettier --list-different '**/*.*'",

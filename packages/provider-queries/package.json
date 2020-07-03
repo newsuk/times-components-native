@@ -3,8 +3,7 @@
   "private": true,
   "version": "2.14.1",
   "description": "GraphQL queries for sharing",
-  "main": "dist/provider-queries",
-  "dev": "src/provider-queries",
+  "main": "src/provider-queries",
   "scripts": {
     "fmt": "eslint . --fix && prettier --write '**/*.*'",
     "prettier:diff": "prettier --list-different '**/*.*'",

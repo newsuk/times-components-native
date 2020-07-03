@@ -3,8 +3,7 @@
   "private": true,
   "version": "4.1.36",
   "description": "Map of Topics related to the Article",
-  "main": "dist/article-topics",
-  "dev": "src/article-topics",
+  "main": "src/article-topics",
   "scripts": {
     "fmt": "eslint . --fix && prettier --write '**/*.*'",
     "prettier:diff": "prettier --list-different '**/*.*'",

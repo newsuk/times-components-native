@@ -3,8 +3,7 @@
   "private": true,
   "version": "0.2.48",
   "description": "Attach children to viewport on scroll (web only)",
-  "main": "dist/sticky",
-  "dev": "src/sticky",
+  "main": "src/sticky",
   "scripts": {
     "depcheck": "depcheck --ignores='@babel/*,babel-*,depcheck,eslint,stylelint*,jest,prettier,webpack*' --ignore-bin-package=false --skip-missing",
     "fmt": "eslint . --fix && prettier --write '**/*.*'",

@@ -3,8 +3,7 @@
   "private": true,
   "version": "2.10.0",
   "description": "The article flag (sponsored, new, updated, etc)",
-  "main": "dist/article-flag.js",
-  "dev": "src/article-flag.js",
+  "main": "src/article-flag.js",
   "scripts": {
     "prettier:diff": "prettier --list-different '**/*.*'",
     "fmt": "eslint . --fix && prettier --write '**/*.*'",

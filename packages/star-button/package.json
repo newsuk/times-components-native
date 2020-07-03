@@ -3,8 +3,7 @@
   "private": true,
   "version": "0.3.31",
   "description": "Star button",
-  "main": "dist/star-button",
-  "dev": "src/star-button",
+  "main": "src/star-button",
   "scripts": {
     "depcheck": "depcheck --ignores='@babel/*,babel-*,depcheck,eslint,jest,prettier,webpack*' --ignore-bin-package=false --skip-missing",
     "fmt": "eslint . --fix && prettier --write '**/*.*'",

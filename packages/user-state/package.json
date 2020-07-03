@@ -3,8 +3,7 @@
   "private": true,
   "version": "0.1.51",
   "description": "Selectively render react components based on current user state",
-  "main": "dist/user-state",
-  "dev": "src/user-state",
+  "main": "src/user-state",
   "scripts": {
     "depcheck": "depcheck --ignores='@babel/*,babel-*,depcheck,eslint,jest,prettier,webpack*' --ignore-bin-package=false --skip-missing",
     "fmt": "eslint . --fix && prettier --write '**/*.*'",

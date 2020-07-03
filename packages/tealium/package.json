@@ -3,8 +3,7 @@
   "private": true,
   "version": "1.13.29",
   "description": "React component for tealium reporter",
-  "main": "dist",
-  "dev": "src",
+  "main": "src",
   "scripts": {
     "fmt": "eslint . --fix && prettier --write '**/*.*'",
     "prettier:diff": "prettier --list-different '**/*.*'",

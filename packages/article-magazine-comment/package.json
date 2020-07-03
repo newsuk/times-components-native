@@ -3,8 +3,7 @@
   "private": true,
   "version": "3.24.2",
   "description": "Magazine Comment Article Template",
-  "main": "dist/article-magazine-comment",
-  "dev": "src/article-magazine-comment",
+  "main": "src/article-magazine-comment",
   "scripts": {
     "depcheck": "depcheck --ignores='@babel/*,babel-*,depcheck,eslint,jest,prettier,webpack*' --ignore-bin-package=false --skip-missing",
     "fmt": "eslint . --fix && prettier --write '**/*.*'",

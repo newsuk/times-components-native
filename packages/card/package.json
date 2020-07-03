@@ -2,8 +2,7 @@
   "name": "@times-components-native/card",
   "private": true,
   "version": "6.4.25",
-  "main": "dist/card",
-  "dev": "src/card",
+  "main": "src/card",
   "scripts": {
     "fmt": "eslint . --fix && prettier --write '**/*.*'",
     "prettier:diff": "prettier --list-different '**/*.*'",

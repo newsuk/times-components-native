@@ -3,8 +3,7 @@
   "private": true,
   "version": "0.6.37",
   "description": "Article Comments",
-  "main": "dist/article-comments",
-  "dev": "src/article-comments",
+  "main": "src/article-comments",
   "scripts": {
     "depcheck": "depcheck --ignores='@babel/*,babel-*,depcheck,eslint,jest,prettier,webpack*' --ignore-bin-package=false --skip-missing",
     "fmt": "eslint . --fix && prettier --write '**/*.*'",

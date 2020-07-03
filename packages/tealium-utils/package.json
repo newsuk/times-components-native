@@ -3,8 +3,7 @@
   "private": true,
   "version": "0.7.68",
   "description": "React tealium helpers for Times Components",
-  "main": "dist",
-  "dev": "src",
+  "main": "src",
   "scripts": {
     "fmt": "eslint . --fix && prettier --write '**/*.*'",
     "prettier:diff": "prettier --list-different '**/*.*'",

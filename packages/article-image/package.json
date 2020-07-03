@@ -3,8 +3,7 @@
   "private": true,
   "version": "7.5.25",
   "description": "Article Image",
-  "main": "dist/article-image",
-  "dev": "src/article-image",
+  "main": "src/article-image",
   "scripts": {
     "fmt": "eslint . --fix && prettier --write '**/*.*'",
     "prettier:diff": "prettier --list-different '**/*.*'",

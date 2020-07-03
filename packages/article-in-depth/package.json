@@ -3,8 +3,7 @@
   "private": true,
   "version": "3.24.2",
   "description": "In Depth Article Template",
-  "main": "dist/article-in-depth",
-  "dev": "src/article-in-depth",
+  "main": "src/article-in-depth",
   "scripts": {
     "depcheck": "depcheck --ignores='@babel/*,babel-*,depcheck,eslint,jest,prettier,webpack*' --ignore-bin-package=false --skip-missing",
     "fmt": "eslint . --fix && prettier --write '**/*.*'",

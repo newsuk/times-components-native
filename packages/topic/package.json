@@ -3,8 +3,7 @@
   "private": true,
   "version": "5.3.14",
   "description": "Topic page component",
-  "main": "dist/topic",
-  "dev": "src/topic",
+  "main": "src/topic",
   "scripts": {
     "fmt": "eslint . --fix && prettier --write '**/*.*'",
     "prettier:diff": "prettier --list-different '**/*.*'",

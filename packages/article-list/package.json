@@ -3,8 +3,7 @@
   "private": true,
   "version": "9.7.14",
   "description": "Paginated list of articles",
-  "main": "dist/article-list",
-  "dev": "src/article-list",
+  "main": "src/article-list",
   "scripts": {
     "fmt": "eslint . --fix && prettier --write '**/*.*'",
     "prettier:diff": "prettier --list-different '**/*.*'",

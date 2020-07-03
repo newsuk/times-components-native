@@ -3,7 +3,7 @@
   "private": true,
   "version": "2.1.26",
   "description": "dependency analyzer and fixer",
-  "main": "dist/depend",
+  "main": "src/depend",
   "scripts": {
     "fmt": "eslint . --fix && prettier --write '**/*.*'",
     "prettier:diff": "prettier --list-different '**/*.*'",

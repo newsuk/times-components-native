@@ -2,8 +2,7 @@
   "name": "@times-components-native/article-summary",
   "private": true,
   "version": "3.16.41",
-  "main": "dist/article-summary",
-  "dev": "src/article-summary",
+  "main": "src/article-summary",
   "scripts": {
     "fmt": "eslint . --fix && prettier --write '**/*.*'",
     "prettier:diff": "prettier --list-different '**/*.*'",

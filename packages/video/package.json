@@ -2,8 +2,7 @@
   "name": "@times-components-native/video",
   "private": true,
   "version": "4.10.18",
-  "main": "dist/video",
-  "dev": "src/video",
+  "main": "src/video",
   "scripts": {
     "fmt": "eslint . --fix && prettier --write '**/*.*'",
     "prettier:diff": "prettier --list-different '**/*.*'",

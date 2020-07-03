@@ -3,8 +3,7 @@
   "private": true,
   "version": "0.9.47",
   "description": "Save and Share bar",
-  "main": "dist/save-and-share-bar",
-  "dev": "src/save-and-share-bar",
+  "main": "src/save-and-share-bar",
   "scripts": {
     "depcheck": "depcheck --ignores='@babel/*,babel-*,depcheck,eslint,jest,prettier,webpack*' --ignore-bin-package=false --skip-missing",
     "fmt": "eslint . --fix && prettier --write '**/*.*'",
