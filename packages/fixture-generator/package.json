@@ -3,8 +3,8 @@
   "private": true,
   "version": "0.28.1",
   "description": "Creates fixture data for testing",
-  "main": "build/index.js",
-  "types": "build/index.d.ts",
+  "main": "src/index.ts",
+  "types": "src/types.ts",
   "scripts": {
     "transpile": "yarn getSchema && yarn gentypes && tsc",
     "gentypes": "gql-gen --schema ./schema.json --template graphql-codegen-typescript-template --out ./src/types.ts",
