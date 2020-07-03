@@ -7,7 +7,6 @@ const { createHash } = require("crypto");
 const path = require("path");
 
 const readSource = filename => {
-  console.log(filename)
   return readFileSync(filename).toString();
 };
 
