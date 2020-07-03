@@ -3,8 +3,7 @@
   "private": true,
   "version": "3.38.10",
   "description": "Centralised library for common styles throughout the Times",
-  "main": "dist/styleguide",
-  "dev": "src/styleguide",
+  "main": "src/styleguide",
   "scripts": {
     "fmt": "eslint . --fix && prettier --write '**/*.*'",
     "prettier:diff": "prettier --list-different '**/*.*'",
