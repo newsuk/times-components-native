@@ -259,11 +259,11 @@ export default ({ el, data, platform, eventCallback, window }) => {
           pubads.enableSingleRequest();
           pubads.collapseEmptyDivs(true, true);
 
-          pubads.addEventListener('slotRenderEnded', event => {
+          pubads.addEventListener("slotRenderEnded", event => {
             eventCallback(event);
 
-            if (event.slot.getSlotElementId() === 'native-inline-ad') {
-              eventCallback("setAdWebViewHeight", {height: event.size[1]});
+            if (event.slot.getSlotElementId() === "native-inline-ad") {
+              eventCallback("setAdWebViewHeight", { height: event.size[1] });
             }
           });
 

@@ -87,7 +87,7 @@ class DOMContext extends PureComponent {
       case "setAdWebViewHeight": {
         this.setState({
           height: detail.height
-        })
+        });
         break;
       }
       default:
