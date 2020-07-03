@@ -7,7 +7,7 @@
   "scripts": {
     "fmt": "eslint . --fix && prettier --write '**/*.*'",
     "prettier:diff": "prettier --list-different '**/*.*'",
-    "depcheck": "depcheck --ignores='@babel/*,babel-*,depcheck,**/eslint*,graphql,jest,prettier,webpack*' --ignore-bin-package=false --skip-missing",
+    "depcheck": "depcheck --ignores='@babel/*,babel-*,depcheck,**/eslint*,graphql,jest,prettier,webpack*,jest-transform-graphql' --ignore-bin-package=false --skip-missing",
     "lint": "eslint . && yarn prettier:diff && yarn depcheck",
     "test": "jest"
   },
@@ -20,12 +20,15 @@
       "**/packages/provider-test-tools/src/*.js"
     ],
     "transformIgnorePatterns": [
-      "node_modules/react-native"
+      "node_modules/(?!(react-native)/)"
     ],
     "testMatch": [
       "<rootDir>/packages/provider-test-tools/__tests__/**.test.js"
     ],
-    "testURL": "http://localhost"
+    "testURL": "http://localhost",
+    "transform": {
+      "\\.(gql|graphql)$": "jest-transform-graphql"
+    }
   },
   "repository": {
     "type": "git",
@@ -56,6 +59,7 @@
     "eslint": "5.9.0",
     "eslint-plugin-graphql": "2.1.1",
     "jest": "24.8.0",
+    "jest-transform-graphql": "2.1.0",
     "prettier": "1.14.3",
     "webpack": "4.30.0",
     "webpack-cli": "3.3.1"
