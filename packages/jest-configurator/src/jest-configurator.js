@@ -1,8 +1,8 @@
-import findNodeModules from "find-node-modules";
-import path from "path";
-import mockRNComponent from "./react-native-mock-components";
+const findNodeModules = require('find-node-modules')
+const path = require('path')
+const mockRNComponent = require('./react-native-mock-components')
 
-export const mockReactNativeComponent = mockRNComponent;
+module.exports.mockReactNativeComponent = mockRNComponent;
 
 const nativeSpecific = platform => ({
   haste: {
@@ -52,7 +52,7 @@ const platformCode = platform => {
   }
 };
 
-export default (platform, cwd, options = {}) => {
+module.exports = (platform, cwd, options = {}) => {
   const { coverageIgnoreGlobs = [], setupFilesAfterEnv } = options;
   const [local, global] = findNodeModules(cwd);
   const module = path.resolve(cwd, local.replace("node_modules", ""));

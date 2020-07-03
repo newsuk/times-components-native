@@ -1,10 +1,10 @@
-import * as babelJest from "babel-jest";
-import jestPreset from "babel-preset-jest";
-import { transform as babelTransform } from "@babel/core";
-import babelIstanbulPlugin from "babel-plugin-istanbul";
-import { readFileSync } from "fs";
-import { createHash } from "crypto";
-import path from "path";
+const babelJest = require('babel-jest');
+const jestPreset = require("babel-preset-jest");
+const { transform : babelTransform } = require("@babel/core");
+const babelIstanbulPlugin = require("babel-plugin-istanbul");
+const { readFileSync } = require("fs");
+const { createHash } = require("crypto");
+const path = require("path");
 
 const readSource = filename => readFileSync(filename).toString();
 
@@ -55,4 +55,4 @@ const transform = (
   return transformResult || source;
 };
 
-export { getCacheKey, transform as process };
+module.exports = { getCacheKey, process: transform };
