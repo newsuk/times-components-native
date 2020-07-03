@@ -1,5 +1,5 @@
 const jestPreset = require("babel-preset-jest");
-const { transform : babelTransform } = require("@babel/core");
+const { transform: babelTransform } = require("@babel/core");
 const babelIstanbulPlugin = require("babel-plugin-istanbul");
 const { readFileSync } = require("fs");
 const path = require("path");

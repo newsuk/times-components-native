@@ -1,6 +1,6 @@
-const findNodeModules = require('find-node-modules')
-const path = require('path')
-const mockRNComponent = require('./react-native-mock-components')
+const findNodeModules = require("find-node-modules");
+const path = require("path");
+const mockRNComponent = require("./react-native-mock-components");
 
 module.exports.mockReactNativeComponent = mockRNComponent;
 
