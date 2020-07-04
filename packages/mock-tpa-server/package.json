@@ -3,7 +3,7 @@
   "private": true,
   "version": "0.2.53",
   "description": "utility for testing times component clients with mocked api",
-  "main": "./dist/index",
+  "main": "./src/index",
   "scripts": {
     "fmt": "eslint . --fix && prettier --write '**/*.*'",
     "prettier:diff": "prettier --list-different '**/*.*'",

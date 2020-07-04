@@ -2,8 +2,7 @@
   "name": "@times-components-native/video",
   "private": true,
   "version": "4.10.18",
-  "main": "dist/video",
-  "dev": "src/video",
+  "main": "src/video",
   "scripts": {
     "fmt": "eslint . --fix && prettier --write '**/*.*'",
     "prettier:diff": "prettier --list-different '**/*.*'",
@@ -11,12 +10,7 @@
     "lint": "eslint . && yarn prettier:diff && yarn depcheck",
     "test:ios": "jest --config='./__tests__/ios/jest.config.js'",
     "test:android": "jest --config='./__tests__/android/jest.config.js'",
-    "test:all": "yarn test:ios --coverage && yarn test:android --coverage",
-    "prepublishOnly": "yarn transpile && yarn bundle",
-    "cleanup-dist": "rm -rf dist",
-    "transpile": "yarn cleanup-dist && babel src -d dist",
-    "watch": "watch 'yarn bundle' ./src --ignoreDotFiles --ignoreUnreadable",
-    "bundle": "NODE_ENV=production webpack -p"
+    "test:all": "yarn test:ios --coverage && yarn test:android --coverage"
   },
   "jest": {
     "preset": "react-native",
@@ -24,7 +18,7 @@
     "coverageDirectory": "<rootDir>/packages/video/coverage/",
     "testEnvironment": "jsdom",
     "transformIgnorePatterns": [
-      "node_modules/(?!(react-native|@times-components)/)"
+      "node_modules/react-native"
     ],
     "testMatch": [
       "<rootDir>/packages/video/__tests__/*.test.js"

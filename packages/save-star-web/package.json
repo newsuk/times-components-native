@@ -3,18 +3,12 @@
   "private": true,
   "version": "0.6.44",
   "description": "Save Star for Web",
-  "main": "dist/save-star-web",
-  "dev": "src/save-star-web",
+  "main": "src/save-star-web",
   "scripts": {
     "depcheck": "depcheck --ignores='@babel/*,babel-*,depcheck,eslint,jest,prettier,webpack*' --ignore-bin-package=false --skip-missing",
     "fmt": "prettier --write '**/*.*'",
     "prettier:diff": "prettier --list-different '**/*.*'",
-    "lint": "eslint . && yarn prettier:diff && yarn depcheck",
-    "prepublishOnly": "yarn transpile && yarn bundle",
-    "cleanup-dist": "rm -rf dist",
-    "transpile": "yarn cleanup-dist && babel src -d dist",
-    "watch": "watch 'yarn bundle' ./src --ignoreDotFiles --ignoreUnreadable",
-    "bundle": "NODE_ENV=production webpack -p"
+    "lint": "eslint . && yarn prettier:diff && yarn depcheck"
   },
   "repository": {
     "type": "git",
@@ -52,7 +46,6 @@
     "@times-components-native/provider-test-tools": "1.19.1",
     "@times-components-native/storybook": "4.1.54",
     "@times-components-native/test-utils": "2.3.8",
-    "@times-components-native/webpack-configurator": "2.0.27",
     "babel-jest": "24.8.0",
     "babel-loader": "8.0.5",
     "eslint": "5.9.0",

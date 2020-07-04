@@ -3,18 +3,12 @@
   "private": true,
   "version": "0.2.48",
   "description": "Attach children to viewport on scroll (web only)",
-  "main": "dist/sticky",
-  "dev": "src/sticky",
+  "main": "src/sticky",
   "scripts": {
     "depcheck": "depcheck --ignores='@babel/*,babel-*,depcheck,eslint,stylelint*,jest,prettier,webpack*' --ignore-bin-package=false --skip-missing",
     "fmt": "eslint . --fix && prettier --write '**/*.*'",
     "prettier:diff": "prettier --list-different '**/*.*'",
-    "lint": "eslint . && stylelint . && yarn prettier:diff && yarn depcheck",
-    "prepublishOnly": "yarn transpile && yarn bundle",
-    "cleanup-dist": "rm -rf dist",
-    "transpile": "yarn cleanup-dist && babel src -d dist",
-    "watch": "watch 'yarn bundle' ./src --ignoreDotFiles --ignoreUnreadable",
-    "bundle": "NODE_ENV=production webpack -p"
+    "lint": "eslint . && stylelint . && yarn prettier:diff && yarn depcheck"
   },
   "repository": {
     "type": "git",
@@ -44,7 +38,6 @@
     "@times-components-native/eslint-config-thetimes": "0.8.16",
     "@times-components-native/storybook": "4.1.54",
     "@times-components-native/styleguide": "3.38.10",
-    "@times-components-native/webpack-configurator": "2.0.27",
     "babel-jest": "24.8.0",
     "babel-loader": "8.0.5",
     "eslint": "5.9.0",

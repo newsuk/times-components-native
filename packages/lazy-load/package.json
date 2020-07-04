@@ -3,18 +3,12 @@
   "private": true,
   "version": "0.6.13",
   "description": "Use IntersectionObserver to lazy load resources",
-  "main": "dist/lazy-load",
-  "dev": "src/lazy-load",
+  "main": "src/lazy-load",
   "scripts": {
     "depcheck": "depcheck --ignores='@babel/*,babel-*,depcheck,eslint,jest,prettier,webpack*' --ignore-bin-package=false --skip-missing",
     "fmt": "eslint . --fix && prettier --write '**/*.*'",
     "prettier:diff": "prettier --list-different '**/*.*'",
-    "lint": "eslint . && yarn prettier:diff && yarn depcheck",
-    "prepublishOnly": "yarn transpile && yarn bundle",
-    "watch": "watch 'yarn bundle' ./src --ignoreDotFiles --ignoreUnreadable",
-    "cleanup-dist": "rm -rf dist",
-    "transpile": "yarn cleanup-dist && babel src -d dist",
-    "bundle": "NODE_ENV=production webpack -p"
+    "lint": "eslint . && yarn prettier:diff && yarn depcheck"
   },
   "repository": {
     "type": "git",
@@ -37,7 +31,6 @@
     "@babel/core": "7.4.4",
     "@times-components-native/eslint-config-thetimes": "0.8.16",
     "@times-components-native/storybook": "4.1.54",
-    "@times-components-native/webpack-configurator": "2.0.27",
     "babel-jest": "24.8.0",
     "eslint": "5.9.0",
     "jest": "24.8.0",

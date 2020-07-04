@@ -1,4 +1,4 @@
-import React from "react";
+const React = require("react");
 
 const mockReactNativeComponent = componentName => {
   const RealComponent = require.requireActual(componentName);
@@ -15,4 +15,4 @@ const mockReactNativeComponent = componentName => {
   return MockComponent;
 };
 
-export default mockReactNativeComponent;
+module.exports = mockReactNativeComponent;
