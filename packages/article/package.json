@@ -35,7 +35,6 @@
     "@times-components-native/provider-test-tools": "1.19.1",
     "@times-components-native/storybook": "4.1.54",
     "@times-components-native/tealium-utils": "0.7.68",
-    "@times-components-native/user-state": "0.1.51",
     "babel-jest": "24.8.0",
     "babel-loader": "8.0.5",
     "babel-plugin-add-react-displayname": "0.0.5",
