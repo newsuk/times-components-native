@@ -76,14 +76,7 @@ class Ad extends Component {
   };
 
   renderAd(adConfig) {
-    const {
-      baseUrl,
-      contextUrl,
-      isLoading,
-      section,
-      slotName,
-      style
-    } = this.props;
+    const { baseUrl, contextUrl, isLoading, slotName, style } = this.props;
     const { config, hasError, isAdReady, offline } = this.state;
 
     if (hasError || offline) return null;
@@ -91,7 +84,7 @@ class Ad extends Component {
     this.slots = adConfig.bidderSlots.map(slot =>
       getPrebidSlotConfig(
         slot,
-        section,
+        adConfig.slotTargeting.section,
         config.maxSizes.width,
         adConfig.biddersConfig.bidders
       )
@@ -118,7 +111,7 @@ class Ad extends Component {
         minPrice: adConfig.biddersConfig.minPrice,
         timeout: adConfig.biddersConfig.timeout
       }),
-      section,
+      section: adConfig.slotTargeting.section,
       sizingMap: config.mappings,
       slotName,
       slots: this.slots,
