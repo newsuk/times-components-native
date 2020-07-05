@@ -111,6 +111,7 @@
     "babel-eslint": "10.0.2",
     "babel-jest": "24.8.0",
     "babel-loader": "8.0.5",
+    "babel-plugin-import-graphql": "2.7.0",
     "babel-plugin-transform-react-remove-prop-types": "0.4.24",
     "commitizen": "2.9.6",
     "coveralls": "2.13.1",
