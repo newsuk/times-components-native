@@ -3,7 +3,7 @@ version: 2.1
 executors:
     node:
         docker:
-            - image: circleci/node:10.13.0-browsers
+            - image: circleci/node:10.13.0
         resource_class: 2xlarge
 
 commands:
@@ -173,28 +173,13 @@ workflows:
             - run_unit_tests:
                   requires:
                       - setup
-            - hold:
-                  type: approval
-                  branches:
-                      only: 
-                          - master
-                  requires:
-                      - run_lint
-                      - run_noplatform_tests
-                      - run_android_tests
-                      - run_ios_tests
-                      - run_unit_tests
-            - publish_android:
-                  filters:
-                    branches:
-                        only: 
-                          - master
-                  requires:
-                      - hold
+            # - publish_android:
+            #       filters:
+            #         branches:
+            #             only: 
+            #               - master
+            #       requires:
+            #           - hold
             - publish_ios:
-                  filters:
-                    branches:
-                        only: 
-                          - master
                   requires:
-                      - hold
+                      - setup
