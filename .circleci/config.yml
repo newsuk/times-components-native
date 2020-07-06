@@ -122,7 +122,7 @@ jobs:
             - run:
                   name: Build and publish android js bundles
                   command: |
-                      # Install JDK and android SDK   
+                      # Install JDK and android SDK
                       sudo apt-get update
                       sudo apt install default-jdk
                       cd /home
@@ -176,7 +176,7 @@ workflows:
             # - publish_android:
             #       filters:
             #         branches:
-            #             only: 
+            #             only:
             #               - master
             #       requires:
             #           - hold
