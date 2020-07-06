@@ -260,10 +260,15 @@ export default ({ el, data, platform, eventCallback, window }) => {
           pubads.collapseEmptyDivs(true, true);
 
           pubads.addEventListener("slotRenderEnded", event => {
-            eventCallback(event);
-
-            if (event.slot.getSlotElementId() === "native-inline-ad") {
-              eventCallback("setAdWebViewHeight", { height: event.size[1] });
+            if (
+              event.slot.getSlotElementId() === "native-inline-ad" &&
+              !event.isEmpty
+            ) {
+              const height =
+                event && event.size && event.size[1] && event.size[1] > 1
+                  ? event.size[1]
+                  : 0;
+              eventCallback("setAdWebViewHeight", { height });
             }
           });
 

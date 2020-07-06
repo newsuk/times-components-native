@@ -6,7 +6,7 @@ import DeviceInfo from "react-native-device-info";
 import webviewEventCallbackSetup from "./utils/webview-event-callback-setup";
 import logger from "./utils/logger";
 import { propTypes, defaultProps } from "./dom-context-prop-types";
-import { calculateViewportVisible } from "./styles/index";
+import styles, { calculateViewportVisible } from "./styles/index";
 
 const ViewportAwareView = Viewport.Aware(View);
 
@@ -60,7 +60,7 @@ class DOMContext extends PureComponent {
   handleMessageEvent = e => {
     const { onRenderComplete, onRenderError, data } = this.props;
     const json = e.nativeEvent.data;
-    console.log(json);
+
     if (
       json.indexOf("isTngMessage") === -1 &&
       json.indexOf("unrulyLoaded") === -1
@@ -85,8 +85,12 @@ class DOMContext extends PureComponent {
         onRenderComplete();
         break;
       case "setAdWebViewHeight": {
+        const adHeight = detail.height;
+        const webViewHeight =
+          adHeight > 1 ? adHeight + styles.containerAdditionalHeight.height : 0;
+
         this.setState({
-          height: detail.height
+          height: webViewHeight
         });
         break;
       }
@@ -191,9 +195,8 @@ class DOMContext extends PureComponent {
         </body>
       </html>
     `;
-    // console.log('HTML ', html)
-    const { loaded } = this.state;
 
+    const { loaded } = this.state;
     return (
       <ViewportAwareView
         onViewportEnter={this.loadAd}
