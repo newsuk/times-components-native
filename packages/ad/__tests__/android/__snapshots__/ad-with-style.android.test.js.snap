@@ -3,30 +3,20 @@
 exports[`1. multiple ad slots 1`] = `
 Array [
   <View
-    className="IS3"
+    className="IS2"
   >
     <View
-      className="IS2"
+      className="IS1"
       inViewport={false}
-    >
-      <View
-        className="IS1"
-        inViewport={false}
-      />
-    </View>
+    />
   </View>,
   <View
-    className="IS3"
+    className="IS2"
   >
     <View
-      className="IS2"
+      className="IS1"
       inViewport={false}
-    >
-      <View
-        className="IS1"
-        inViewport={false}
-      />
-    </View>
+    />
   </View>,
 ]
 `;
