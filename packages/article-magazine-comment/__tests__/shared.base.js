@@ -7,10 +7,6 @@ import articleFixture, { testFixture } from "../fixtures/full-article";
 import sharedProps from "./shared-props";
 import { adConfig } from "./ad-mock";
 
-jest.mock(
-  "@times-components-native/save-and-share-bar",
-  () => "SaveAndShareBar"
-);
 
 const findComponents = (testInstance, componentName) =>
   testInstance.root.findAll(node => {
