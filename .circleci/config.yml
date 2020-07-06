@@ -179,6 +179,12 @@ workflows:
                     branches:
                         only: 
                             - master
+                  requires:
+                      - run_lint
+                      - run_noplatform_tests
+                      - run_android_tests
+                      - run_ios_tests
+                      - run_unit_tests
             - publish_android:
                   requires:
                       - hold
