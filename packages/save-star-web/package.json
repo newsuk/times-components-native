@@ -42,9 +42,7 @@
   "devDependencies": {
     "@babel/core": "7.4.4",
     "@times-components-native/eslint-config-thetimes": "0.8.16",
-    "@times-components-native/jest-serializer": "3.2.23",
     "@times-components-native/provider-test-tools": "1.19.1",
-    "@times-components-native/storybook": "4.1.54",
     "@times-components-native/test-utils": "2.3.8",
     "babel-jest": "24.8.0",
     "babel-loader": "8.0.5",

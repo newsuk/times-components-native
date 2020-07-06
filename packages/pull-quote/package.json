@@ -45,7 +45,6 @@
     "enzyme": "3.9.0",
     "eslint": "5.9.0",
     "jest": "24.8.0",
-    "jest-styled-components": "6.3.1",
     "prettier": "1.14.3",
     "react": "16.9.0",
     "react-art": "16.6.3",
@@ -64,8 +63,7 @@
     "@times-components-native/icons": "2.14.49",
     "@times-components-native/link": "3.6.32",
     "@times-components-native/styleguide": "3.38.10",
-    "prop-types": "15.7.2",
-    "styled-components": "4.3.2"
+    "prop-types": "15.7.2"
   },
   "resolutions": {
     "react": "16.9.0",

@@ -65,8 +65,7 @@
     "@times-components-native/responsive": "0.6.15",
     "@times-components-native/styleguide": "3.38.10",
     "lodash.pick": "4.4.0",
-    "prop-types": "15.7.2",
-    "styled-components": "4.3.2"
+    "prop-types": "15.7.2"
   },
   "resolutions": {
     "react": "16.9.0",
