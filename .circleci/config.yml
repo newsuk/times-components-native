@@ -3,7 +3,7 @@ version: 2.1
 executors:
     node:
         docker:
-            - image: circleci/node:10.13.0-browsers
+            - image: circleci/node:10.13.0
         resource_class: 2xlarge
 
 commands:
@@ -122,7 +122,7 @@ jobs:
             - run:
                   name: Build and publish android js bundles
                   command: |
-                      # Install JDK and android SDK   
+                      # Install JDK and android SDK
                       sudo apt-get update
                       sudo apt install default-jdk
                       cd /home
@@ -175,9 +175,10 @@ workflows:
                       - setup
             - hold:
                   type: approval
-                  branches:
-                      only: 
-                          - master
+                  filters:
+                    branches:
+                        only: 
+                            - master
                   requires:
                       - run_lint
                       - run_noplatform_tests
@@ -185,16 +186,8 @@ workflows:
                       - run_ios_tests
                       - run_unit_tests
             - publish_android:
-                  filters:
-                    branches:
-                        only: 
-                          - master
                   requires:
                       - hold
             - publish_ios:
-                  filters:
-                    branches:
-                        only: 
-                          - master
                   requires:
                       - hold
