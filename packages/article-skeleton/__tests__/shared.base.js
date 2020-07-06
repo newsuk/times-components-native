@@ -23,7 +23,6 @@ import {
   paragraphStartingWithDoubleQuote
 } from "../fixtures/dropcap-article-content";
 
-
 export const renderArticle = (data, header = null) => (
   <ContextProviderWithDefaults
     value={{

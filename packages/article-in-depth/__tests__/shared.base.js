@@ -7,7 +7,6 @@ import articleFixture, { testFixture } from "../fixtures/full-article";
 import sharedProps from "./shared-props";
 import { adConfig } from "./ad-mock";
 
-
 const findComponents = (testInstance, componentName) =>
   testInstance.root.findAll(node => {
     if (typeof node.type === "string") {

@@ -5,7 +5,6 @@ import ArticleSkeleton from "../src/article-skeleton";
 import articleFixture from "../fixtures/full-article";
 import articleSkeletonProps from "./shared-article-skeleton-props";
 
-
 export default () => {
   describe("[Article page analytics]", () => {
     let stream = null;

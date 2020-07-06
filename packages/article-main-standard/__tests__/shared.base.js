@@ -8,7 +8,6 @@ import articleFixture, { testFixture } from "../fixtures/full-article";
 import { adConfig } from "./ad-mock";
 import articleProps from "./shared-article-props";
 
-
 const emptyArticle = {
   bylines: null,
   expirableFlags: null,
