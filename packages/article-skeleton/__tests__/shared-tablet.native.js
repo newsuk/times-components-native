@@ -30,7 +30,6 @@ export default () => {
     {
       name: "with inline video",
       test: async () => {
-
         const article = articleFixture({
           ...fixtureArgs,
           content: [
@@ -46,10 +45,10 @@ export default () => {
               },
               children: [],
               name: "video"
-            },
+            }
           ]
         });
-        
+
         const testInstance = TestRenderer.create(
           <Responsive>{renderArticle(article, undefined, true)}</Responsive>
         );
