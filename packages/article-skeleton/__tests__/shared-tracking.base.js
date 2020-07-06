@@ -5,11 +5,6 @@ import ArticleSkeleton from "../src/article-skeleton";
 import articleFixture from "../fixtures/full-article";
 import articleSkeletonProps from "./shared-article-skeleton-props";
 
-jest.mock(
-  "@times-components-native/save-and-share-bar",
-  () => "SaveAndShareBar"
-);
-
 export default () => {
   describe("[Article page analytics]", () => {
     let stream = null;
