@@ -12,20 +12,10 @@ const nativeSpecific = platform => ({
   }
 });
 
-const webSpecific = {
-  moduleFileExtensions: ["graphql", "web.js", "js", "json"],
-  moduleNameMapper: {
-    "\\.(png)$": "identity-obj-proxy",
-    "^react-native$": "react-native-web"
-  },
-  testEnvironment: "jsdom"
-};
-
 const nodeSpecific = {
-  moduleFileExtensions: ["node.js", "web.js", "js", "ts", "json"],
+  moduleFileExtensions: ["node.js", "js", "ts", "json"],
   moduleNameMapper: {
-    "\\.(png)$": "identity-obj-proxy",
-    "^react-native$": "react-native-web"
+    "\\.(png)$": "identity-obj-proxy"
   },
   testEnvironment: "node"
 };
@@ -39,8 +29,6 @@ const platformIndependentSpecific = {
 
 const platformCode = platform => {
   switch (platform) {
-    case "web":
-      return webSpecific;
     case "node":
       return nodeSpecific;
     case "ios":

@@ -10,7 +10,7 @@
     "bundle": "cp fragment-matcher.js rnw.js",
     "fmt": "prettier --write '**/*.*'",
     "lint": "eslint . && yarn prettier:diff",
-    "postinstall": "node ./index && yarn fmt",
+    "postinstall": "node ./index",
     "prettier:diff": "prettier --list-different '**/*.*'",
     "test": "jest"
   },
