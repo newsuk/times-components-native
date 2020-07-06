@@ -1,8 +1,8 @@
 /* eslint-disable react/no-multi-comp */
 import React from "react";
-import { iterator } from "@times-components-native/test-utils";
-import { ContextProviderWithDefaults } from "@times-components-native/context";
-import { scales } from "@times-components-native/styleguide";
+import { iterator } from "@times-components/test-utils";
+import { ContextProviderWithDefaults } from "@times-components/context";
+import { scales } from "@times-components/styleguide";
 import ArticleSkeleton from "../src/article-skeleton";
 import contentWithNestedFirstParagraph from "../fixtures/bold-article-content";
 import contentWithHeadingTags from "../fixtures/headings-article-content";
@@ -23,7 +23,7 @@ import {
   paragraphStartingWithDoubleQuote
 } from "../fixtures/dropcap-article-content";
 
-export const renderArticle = (data, header = null) => (
+export const renderArticle = (data, header = null, isTablet = false) => (
   <ContextProviderWithDefaults
     value={{
       theme: { scale: scales.medium, sectionColour: "#FF0000" },
@@ -35,6 +35,7 @@ export const renderArticle = (data, header = null) => (
       analyticsStream={() => {}}
       data={data}
       header={header}
+      isTablet={isTablet}
       onAuthorPress={() => {}}
       onCommentGuidelinesPress={() => {}}
       onCommentsPress={() => {}}
