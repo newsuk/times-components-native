@@ -5,7 +5,7 @@
   "description": "Wrapper for legacy Interactive components",
   "main": "src/interactive-wrapper",
   "scripts": {
-    "depcheck": "depcheck --ignores='@babel/*,babel-*,depcheck,eslint,identity-obj-proxy,jest,prettier,webpack*' --ignore-bin-package=false --skip-missing",
+    "depcheck": "depcheck --ignores='@babel/*,babel-*,depcheck,eslint,identity-obj-proxy,jest,prettier' --ignore-bin-package=false --skip-missing",
     "fmt": "eslint . --fix && prettier --write '**/*.*'",
     "prettier:diff": "prettier --list-different '**/*.*'",
     "lint": "eslint . && yarn prettier:diff && yarn depcheck",
@@ -46,9 +46,7 @@
     "react": "16.9.0",
     "react-dom": "16.9.0",
     "react-native": "0.61.5",
-    "react-test-renderer": "16.9.0",
-    "webpack": "4.30.0",
-    "webpack-cli": "3.3.1"
+    "react-test-renderer": "16.9.0"
   },
   "dependencies": {
     "@times-components-native/utils": "6.3.14",

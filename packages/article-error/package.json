@@ -5,7 +5,7 @@
   "description": "Article Error Template",
   "main": "src/article-error",
   "scripts": {
-    "depcheck": "depcheck --ignores='@babel/*,babel-*,depcheck,eslint,jest,prettier,webpack*' --ignore-bin-package=false --skip-missing",
+    "depcheck": "depcheck --ignores='@babel/*,babel-*,depcheck,eslint,jest,prettier' --ignore-bin-package=false --skip-missing",
     "fmt": "eslint . --fix && prettier --write '**/*.*'",
     "prettier:diff": "prettier --list-different '**/*.*'",
     "lint": "eslint . && yarn prettier:diff && yarn depcheck",
