@@ -48,7 +48,6 @@
     "depcheck": "0.6.9",
     "eslint": "5.9.0",
     "jest": "24.8.0",
-    "jest-styled-components": "6.3.1",
     "mockdate": "2.0.2",
     "prettier": "1.14.3",
     "react": "16.9.0",
@@ -79,9 +78,7 @@
     "@times-components-native/tracking": "2.6.13",
     "@times-components-native/utils": "6.3.14",
     "lodash.get": "4.4.2",
-    "prop-types": "15.7.2",
-    "react-helmet-async": "1.0.2",
-    "styled-components": "4.3.2"
+    "prop-types": "15.7.2"
   },
   "resolutions": {
     "react": "16.9.0",

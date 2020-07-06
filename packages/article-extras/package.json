@@ -54,15 +54,12 @@
     "@times-components-native/article-topics": "4.1.36",
     "@times-components-native/button": "2.4.52",
     "@times-components-native/context": "1.2.17",
-    "@times-components-native/message-bar": "0.3.52",
     "@times-components-native/provider": "1.24.1",
     "@times-components-native/related-articles": "6.5.7",
     "@times-components-native/responsive": "0.6.15",
-    "@times-components-native/save-and-share-bar": "0.9.47",
     "@times-components-native/styleguide": "3.38.10",
     "@times-components-native/user-state": "0.1.51",
-    "prop-types": "15.7.2",
-    "styled-components": "4.3.2"
+    "prop-types": "15.7.2"
   },
   "resolutions": {
     "react": "16.9.0",

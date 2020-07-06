@@ -44,7 +44,6 @@
     "babel-jest": "24.8.0",
     "eslint": "5.9.0",
     "jest": "24.8.0",
-    "jest-styled-components": "6.3.1",
     "prettier": "1.14.3",
     "react": "16.9.0",
     "react-dom": "16.9.0",
@@ -65,11 +64,9 @@
     "@times-components-native/image": "6.7.25",
     "@times-components-native/responsive": "0.6.15",
     "@times-components-native/styleguide": "3.38.10",
-    "@times-components-native/user-state": "0.1.51",
     "@times-components-native/utils": "6.3.14",
     "@times-components-native/video-label": "2.4.50",
-    "prop-types": "15.7.2",
-    "styled-components": "4.3.2"
+    "prop-types": "15.7.2"
   },
   "resolutions": {
     "react": "16.9.0",

@@ -68,14 +68,11 @@
     "webpack-cli": "3.3.1"
   },
   "dependencies": {
-    "@times-components-native/error-view": "2.3.48",
     "@times-components-native/icons": "2.14.49",
     "@times-components-native/image": "6.7.25",
     "@times-components-native/styleguide": "3.38.10",
     "@times-components-native/svgs": "2.7.30",
-    "@times-components-native/utils": "6.3.14",
-    "prop-types": "15.7.2",
-    "styled-components": "4.3.2"
+    "prop-types": "15.7.2"
   },
   "resolutions": {
     "react": "16.9.0",

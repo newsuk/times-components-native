@@ -33,7 +33,6 @@
     "react",
     "native",
     "web",
-    "svgs",
     "component"
   ],
   "license": "BSD-3-Clause",
@@ -64,8 +63,7 @@
   },
   "dependencies": {
     "prop-types": "15.7.2",
-    "react-native-svg": "9.11.1",
-    "svgs": "3.2.1"
+    "react-native-svg": "9.11.1"
   },
   "resolutions": {
     "react": "16.9.0",

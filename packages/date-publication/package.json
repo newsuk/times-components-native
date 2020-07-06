@@ -54,8 +54,7 @@
   "dependencies": {
     "@times-components-native/styleguide": "3.38.10",
     "date-fns": "1.28.5",
-    "prop-types": "15.7.2",
-    "styled-components": "4.3.2"
+    "prop-types": "15.7.2"
   },
   "resolutions": {
     "react": "16.9.0",

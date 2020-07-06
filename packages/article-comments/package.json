@@ -36,8 +36,7 @@
     "@times-components-native/link": "3.6.32",
     "@times-components-native/styleguide": "3.38.10",
     "@times-components-native/tracking": "2.6.13",
-    "prop-types": "15.7.2",
-    "styled-components": "4.3.2"
+    "prop-types": "15.7.2"
   },
   "devDependencies": {
     "@babel/core": "7.4.4",
@@ -49,7 +48,6 @@
     "babel-plugin-styled-components": "1.10.6",
     "eslint": "5.9.0",
     "jest": "24.8.0",
-    "jest-styled-components": "6.3.1",
     "prettier": "1.14.3",
     "react": "16.9.0",
     "react-dom": "16.9.0",
