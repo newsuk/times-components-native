@@ -173,17 +173,15 @@ workflows:
             - run_unit_tests:
                   requires:
                       - setup
-            # - publish_android:
-            #       filters:
-            #         branches:
-            #             only:
-            #               - master
-            #       requires:
-            #           - hold
-            - publish_ios:
+            - hold:
+                  type: approval
                   filters:
                     branches:
-                        only:
-                          - master
+                        only: 
+                            - master
+            - publish_android:
                   requires:
-                      - setup
+                      - hold
+            - publish_ios:
+                  requires:
+                      - hold
