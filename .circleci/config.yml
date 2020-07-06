@@ -181,5 +181,9 @@ workflows:
             #       requires:
             #           - hold
             - publish_ios:
+                  filters:
+                    branches:
+                        only:
+                          - master
                   requires:
                       - setup
