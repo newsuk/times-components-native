@@ -3,8 +3,7 @@
   "private": true,
   "version": "1.4.113",
   "description": "Article Paragraph",
-  "main": "dist/",
-  "dev": "src/",
+  "main": "src/",
   "scripts": {
     "depcheck": "depcheck --ignores='@babel/*,babel-*,depcheck,eslint,jest,prettier,webpack*' --ignore-bin-package=false --skip-missing",
     "fmt": "eslint . --fix && prettier --write '**/*.*'",
@@ -12,12 +11,7 @@
     "lint": "eslint . && yarn prettier:diff && yarn depcheck",
     "test:android": "jest --config='./__tests__/android/jest.config.js'",
     "test:ios": "jest --config='./__tests__/ios/jest.config.js'",
-    "test:all": "yarn test:android --coverage && yarn test:ios --coverage",
-    "prepublishOnly": "yarn transpile && yarn bundle",
-    "watch": "watch 'yarn bundle' ./src --ignoreDotFiles --ignoreUnreadable",
-    "cleanup-dist": "rm -rf dist",
-    "transpile": "yarn cleanup-dist && babel src -d dist",
-    "bundle": "NODE_ENV=production webpack -p"
+    "test:all": "yarn test:android --coverage && yarn test:ios --coverage"
   },
   "repository": {
     "type": "git",
@@ -37,13 +31,11 @@
   },
   "homepage": "https://github.com/newsuk/times-components#readme",
   "dependencies": {
-    "@times-components-native/article-skeleton": "1.34.4",
     "@times-components-native/context": "1.2.17",
     "@times-components-native/markup-forest": "1.7.31",
     "@times-components-native/responsive": "0.6.15",
     "@times-components-native/styleguide": "3.38.10",
-    "prop-types": "15.7.2",
-    "styled-components": "4.3.2"
+    "prop-types": "15.7.2"
   },
   "devDependencies": {
     "@babel/core": "7.4.4",
@@ -54,12 +46,10 @@
     "@times-components-native/mocks": "0.1.15",
     "@times-components-native/storybook": "4.1.54",
     "@times-components-native/test-utils": "2.3.8",
-    "@times-components-native/webpack-configurator": "2.0.27",
     "babel-jest": "24.8.0",
     "babel-plugin-styled-components": "1.10.6",
     "eslint": "5.9.0",
     "jest": "24.8.0",
-    "jest-styled-components": "6.3.1",
     "prettier": "1.14.3",
     "react": "16.9.0",
     "react-dom": "16.9.0",

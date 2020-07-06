@@ -65,18 +65,6 @@ jobs:
                       npx yarn@1.16.0 lint
                   working_directory: ~/project/
 
-    build_storybook:
-        executor: node
-        steps:
-            - checkout
-            - attach_workspace:
-                  at: ./
-            - run:
-                  name: Run Tests
-                  command: |
-                      npx yarn@1.16.0 test
-                  working_directory: ~/project/
-
     run_noplatform_tests:
         executor: node
         steps:
@@ -164,18 +152,6 @@ jobs:
                       npx yarn@1.16.0 ios:publish-lib
                   working_directory: ~/project/
 
-    publish_storybook:
-        executor: node
-        steps:
-            - checkout
-            - attach_workspace:
-                  at: ./
-            - run:
-                  name: Publish Storybook
-                  command: |
-                      npx yarn@1.16.0 storybook:publish 
-                  working_directory: ~/project/
-
 workflows:
     version: 2
 
@@ -183,9 +159,6 @@ workflows:
         jobs:
             - setup
             - run_lint:
-                  requires:
-                      - setup
-            - build_storybook:
                   requires:
                       - setup
             - run_noplatform_tests:
@@ -200,25 +173,12 @@ workflows:
             - run_unit_tests:
                   requires:
                       - setup
-            - publish_storybook:
-                  filters:
-                    branches:
-                        only: 
-                          - master
-                  requires:
-                      - build_storybook
-                      - run_lint
-                      - run_noplatform_tests
-                      - run_android_tests
-                      - run_ios_tests
-                      - run_unit_tests
             - hold:
                   type: approval
                   branches:
                       only: 
                           - master
                   requires:
-                      - build_storybook
                       - run_lint
                       - run_noplatform_tests
                       - run_android_tests

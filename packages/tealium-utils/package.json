@@ -3,18 +3,12 @@
   "private": true,
   "version": "0.7.68",
   "description": "React tealium helpers for Times Components",
-  "main": "dist",
-  "dev": "src",
+  "main": "src",
   "scripts": {
     "fmt": "eslint . --fix && prettier --write '**/*.*'",
     "prettier:diff": "prettier --list-different '**/*.*'",
     "depcheck": "depcheck --ignores='@babel/*,babel-*,depcheck,eslint,jest,prettier,webpack*' --ignore-bin-package=false --skip-missing",
-    "lint": "eslint . && yarn prettier:diff && yarn depcheck",
-    "prepublishOnly": "yarn transpile && yarn bundle",
-    "cleanup-dist": "rm -rf dist",
-    "transpile": "yarn cleanup-dist && babel src --ignore node_modules,__tests__ -d dist",
-    "watch": "watch 'yarn bundle' ./src --ignoreDotFiles --ignoreUnreadable",
-    "bundle": "NODE_ENV=production webpack -p"
+    "lint": "eslint . && yarn prettier:diff && yarn depcheck"
   },
   "repository": {
     "type": "git",
@@ -40,8 +34,7 @@
     "webpack-cli": "3.3.1"
   },
   "dependencies": {
-    "@storybook/addon-actions": "5.3.18",
-    "@times-components-native/tealium": "1.13.29"
+    "@storybook/addon-actions": "5.3.18"
   },
   "resolutions": {
     "react": "16.9.0",

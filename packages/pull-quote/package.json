@@ -3,8 +3,7 @@
   "private": true,
   "version": "3.6.32",
   "description": "Pull Quote for Times Components Articles",
-  "main": "dist/pull-quote",
-  "dev": "src/pull-quote",
+  "main": "src/pull-quote",
   "scripts": {
     "fmt": "eslint . --fix && prettier --write '**/*.*'",
     "prettier:diff": "prettier --list-different '**/*.*'",
@@ -12,12 +11,7 @@
     "lint": "eslint . && stylelint . && yarn prettier:diff && yarn depcheck",
     "test:android": "jest --config='./__tests__/android/jest.config.js'",
     "test:ios": "jest --config='./__tests__/ios/jest.config.js'",
-    "test:all": "yarn test:android --coverage && yarn test:ios --coverage",
-    "prepublishOnly": "yarn transpile && yarn bundle",
-    "watch": "watch 'yarn bundle' ./src --ignoreDotFiles --ignoreUnreadable",
-    "cleanup-dist": "rm -rf dist",
-    "transpile": "yarn cleanup-dist && babel src -d dist",
-    "bundle": "NODE_ENV=production webpack -p"
+    "test:all": "yarn test:android --coverage && yarn test:ios --coverage"
   },
   "repository": {
     "type": "git",
@@ -51,7 +45,6 @@
     "enzyme": "3.9.0",
     "eslint": "5.9.0",
     "jest": "24.8.0",
-    "jest-styled-components": "6.3.1",
     "prettier": "1.14.3",
     "react": "16.9.0",
     "react-art": "16.6.3",
@@ -70,8 +63,7 @@
     "@times-components-native/icons": "2.14.49",
     "@times-components-native/link": "3.6.32",
     "@times-components-native/styleguide": "3.38.10",
-    "prop-types": "15.7.2",
-    "styled-components": "4.3.2"
+    "prop-types": "15.7.2"
   },
   "resolutions": {
     "react": "16.9.0",

@@ -3,8 +3,7 @@
   "private": true,
   "version": "3.24.2",
   "description": "In Depth Article Template",
-  "main": "dist/article-in-depth",
-  "dev": "src/article-in-depth",
+  "main": "src/article-in-depth",
   "scripts": {
     "depcheck": "depcheck --ignores='@babel/*,babel-*,depcheck,eslint,jest,prettier,webpack*' --ignore-bin-package=false --skip-missing",
     "fmt": "eslint . --fix && prettier --write '**/*.*'",
@@ -12,12 +11,7 @@
     "lint": "eslint . && yarn prettier:diff && yarn depcheck",
     "test:android": "jest --config='./__tests__/android/jest.config.js'",
     "test:ios": "jest --config='./__tests__/ios/jest.config.js'",
-    "test:all": "yarn test:android --coverage && yarn test:ios --coverage",
-    "prepublishOnly": "yarn transpile && yarn bundle",
-    "watch": "watch 'yarn bundle' ./src --ignoreDotFiles --ignoreUnreadable",
-    "cleanup-dist": "rm -rf dist",
-    "transpile": "yarn cleanup-dist && babel src -d dist",
-    "bundle": "NODE_ENV=production webpack -p"
+    "test:all": "yarn test:android --coverage && yarn test:ios --coverage"
   },
   "repository": {
     "type": "git",
@@ -47,11 +41,9 @@
     "@times-components-native/storybook": "4.1.54",
     "@times-components-native/tealium-utils": "0.7.68",
     "@times-components-native/test-utils": "2.3.8",
-    "@times-components-native/webpack-configurator": "2.0.27",
     "babel-jest": "24.8.0",
     "eslint": "5.9.0",
     "jest": "24.8.0",
-    "jest-styled-components": "6.3.1",
     "prettier": "1.14.3",
     "react": "16.9.0",
     "react-dom": "16.9.0",
@@ -73,11 +65,9 @@
     "@times-components-native/date-publication": "0.21.49",
     "@times-components-native/responsive": "0.6.15",
     "@times-components-native/styleguide": "3.38.10",
-    "@times-components-native/user-state": "0.1.51",
     "@times-components-native/utils": "6.3.14",
     "@times-components-native/video-label": "2.4.50",
-    "prop-types": "15.7.2",
-    "styled-components": "4.3.2"
+    "prop-types": "15.7.2"
   },
   "resolutions": {
     "react": "16.9.0",

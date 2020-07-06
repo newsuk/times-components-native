@@ -3,8 +3,7 @@
   "private": true,
   "version": "6.3.14",
   "description": "Author profile information along with a list of articles they have written",
-  "main": "dist/author-profile",
-  "dev": "src/author-profile",
+  "main": "src/author-profile",
   "scripts": {
     "fmt": "eslint . --fix && prettier --write '**/*.*'",
     "prettier:diff": "prettier --list-different '**/*.*'",
@@ -12,12 +11,7 @@
     "lint": "eslint . && stylelint . && yarn prettier:diff && yarn depcheck",
     "test:android": "jest --config='./__tests__/android/jest.config.js'",
     "test:ios": "jest --config='./__tests__/ios/jest.config.js'",
-    "test:all": "yarn test:android --coverage && yarn test:ios --coverage",
-    "prepublishOnly": "yarn transpile && yarn bundle",
-    "watch": "watch 'yarn bundle' ./src --ignoreDotFiles --ignoreUnreadable",
-    "cleanup-dist": "rm -rf dist",
-    "transpile": "yarn cleanup-dist && babel src -d dist",
-    "bundle": "NODE_ENV=production webpack -p"
+    "test:all": "yarn test:android --coverage && yarn test:ios --coverage"
   },
   "repository": {
     "type": "git",
@@ -48,14 +42,12 @@
     "@times-components-native/storybook": "4.1.54",
     "@times-components-native/tealium-utils": "0.7.68",
     "@times-components-native/test-utils": "2.3.8",
-    "@times-components-native/webpack-configurator": "2.0.27",
     "apollo-client": "2.5.1",
     "babel-jest": "24.8.0",
     "babel-loader": "8.0.5",
     "depcheck": "0.6.9",
     "eslint": "5.9.0",
     "jest": "24.8.0",
-    "jest-styled-components": "6.3.1",
     "mockdate": "2.0.2",
     "prettier": "1.14.3",
     "react": "16.9.0",
@@ -86,9 +78,7 @@
     "@times-components-native/tracking": "2.6.13",
     "@times-components-native/utils": "6.3.14",
     "lodash.get": "4.4.2",
-    "prop-types": "15.7.2",
-    "react-helmet-async": "1.0.2",
-    "styled-components": "4.3.2"
+    "prop-types": "15.7.2"
   },
   "resolutions": {
     "react": "16.9.0",

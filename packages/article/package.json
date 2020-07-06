@@ -3,19 +3,13 @@
   "private": true,
   "version": "7.5.2",
   "description": "The article",
-  "main": "dist/article",
-  "dev": "src/article",
+  "main": "src/article",
   "scripts": {
     "fmt": "eslint . --fix && prettier --write '**/*.*'",
     "prettier:diff": "prettier --list-different '**/*.*'",
     "depcheck": "depcheck --ignores='@babel/*,babel-*,depcheck,eslint,jest,prettier,react-art,stylelint*,webpack*' --ignore-bin-package=false --skip-missing",
     "lint": "eslint . && yarn prettier:diff && yarn depcheck",
-    "prepublishOnly": "yarn transpile && yarn bundle",
-    "test": "jest --config='./__tests__/jest.config.js'",
-    "watch": "watch 'yarn bundle' ./src --ignoreDotFiles --ignoreUnreadable",
-    "cleanup-dist": "rm -rf dist",
-    "transpile": "yarn cleanup-dist && babel src -d dist",
-    "bundle": "NODE_ENV=production webpack -p"
+    "test": "jest --config='./__tests__/jest.config.js'"
   },
   "repository": {
     "type": "git",
@@ -41,8 +35,6 @@
     "@times-components-native/provider-test-tools": "1.19.1",
     "@times-components-native/storybook": "4.1.54",
     "@times-components-native/tealium-utils": "0.7.68",
-    "@times-components-native/user-state": "0.1.51",
-    "@times-components-native/webpack-configurator": "2.0.27",
     "babel-jest": "24.8.0",
     "babel-loader": "8.0.5",
     "babel-plugin-add-react-displayname": "0.0.5",

@@ -3,17 +3,13 @@
   "private": true,
   "version": "3.2.23",
   "description": "serializer",
-  "main": "dist/index",
-  "dev": "src/jest-serializer",
+  "main": "src/index",
   "scripts": {
     "fmt": "eslint . --fix && prettier --write '**/*.*'",
     "prettier:diff": "prettier --list-different '**/*.*'",
     "depcheck": "depcheck --ignores='@babel/*,babel-*,depcheck,eslint,identity-obj-proxy,jest,prettier,react-art,webpack*' --ignore-bin-package=false --skip-missing",
     "lint": "eslint . && yarn prettier:diff && yarn depcheck",
-    "test:ios": "jest --config='./jest.config.native.js'",
-    "prepublishOnly": "yarn transpile",
-    "cleanup-dist": "rm -rf dist",
-    "transpile": "yarn cleanup-dist && babel src -d dist"
+    "test:ios": "jest --config='./jest.config.native.js'"
   },
   "repository": {
     "type": "git",

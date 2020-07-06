@@ -3,8 +3,7 @@
   "private": true,
   "version": "0.5.68",
   "description": "Extra information components at the bottom of the articles, such as topics, related articles and comments",
-  "main": "dist/index",
-  "dev": "src/index",
+  "main": "src/index",
   "scripts": {
     "depcheck": "depcheck --ignores='@babel/*,babel-*,depcheck,eslint,jest,prettier,webpack*' --ignore-bin-package=false --skip-missing",
     "fmt": "eslint . --fix && prettier --write '**/*.*'",
@@ -12,12 +11,7 @@
     "lint": "eslint . && yarn prettier:diff && yarn depcheck",
     "test:android": "jest --config='./__tests__/android/jest.config.js'",
     "test:ios": "jest --config='./__tests__/ios/jest.config.js'",
-    "test:all": "yarn test:android --coverage && yarn test:ios --coverage",
-    "prepublishOnly": "yarn transpile && yarn bundle",
-    "watch": "watch 'yarn bundle' ./src --ignoreDotFiles --ignoreUnreadable",
-    "cleanup-dist": "rm -rf dist",
-    "transpile": "yarn cleanup-dist && babel src -d dist",
-    "bundle": "NODE_ENV=production webpack -p"
+    "test:all": "yarn test:android --coverage && yarn test:ios --coverage"
   },
   "repository": {
     "type": "git",
@@ -44,7 +38,6 @@
     "@times-components-native/provider-test-tools": "1.19.1",
     "@times-components-native/storybook": "4.1.54",
     "@times-components-native/test-utils": "2.3.8",
-    "@times-components-native/webpack-configurator": "2.0.27",
     "babel-jest": "24.8.0",
     "eslint": "5.9.0",
     "jest": "24.8.0",
@@ -61,15 +54,12 @@
     "@times-components-native/article-topics": "4.1.36",
     "@times-components-native/button": "2.4.52",
     "@times-components-native/context": "1.2.17",
-    "@times-components-native/message-bar": "0.3.52",
     "@times-components-native/provider": "1.24.1",
     "@times-components-native/related-articles": "6.5.7",
     "@times-components-native/responsive": "0.6.15",
-    "@times-components-native/save-and-share-bar": "0.9.47",
     "@times-components-native/styleguide": "3.38.10",
     "@times-components-native/user-state": "0.1.51",
-    "prop-types": "15.7.2",
-    "styled-components": "4.3.2"
+    "prop-types": "15.7.2"
   },
   "resolutions": {
     "react": "16.9.0",

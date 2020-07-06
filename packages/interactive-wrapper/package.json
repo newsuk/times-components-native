@@ -3,8 +3,7 @@
   "private": true,
   "version": "0.8.2",
   "description": "Wrapper for legacy Interactive components",
-  "main": "dist/interactive-wrapper",
-  "dev": "src/interactive-wrapper",
+  "main": "src/interactive-wrapper",
   "scripts": {
     "depcheck": "depcheck --ignores='@babel/*,babel-*,depcheck,eslint,identity-obj-proxy,jest,prettier,webpack*' --ignore-bin-package=false --skip-missing",
     "fmt": "eslint . --fix && prettier --write '**/*.*'",
@@ -12,12 +11,7 @@
     "lint": "eslint . && yarn prettier:diff && yarn depcheck",
     "test:android": "jest --config='./__tests__/android/jest.config.js'",
     "test:ios": "jest --config='./__tests__/ios/jest.config.js'",
-    "test:all": "yarn test:android --coverage && yarn test:ios --coverage",
-    "prepublishOnly": "yarn transpile && yarn bundle",
-    "watch": "watch 'yarn bundle' ./src --ignoreDotFiles --ignoreUnreadable",
-    "cleanup-dist": "rm -rf dist",
-    "transpile": "yarn cleanup-dist && babel src -d dist",
-    "bundle": "NODE_ENV=production webpack -p"
+    "test:all": "yarn test:android --coverage && yarn test:ios --coverage"
   },
   "repository": {
     "type": "git",
@@ -43,7 +37,6 @@
     "@times-components-native/jest-configurator": "2.6.11",
     "@times-components-native/jest-serializer": "3.2.23",
     "@times-components-native/storybook": "4.1.54",
-    "@times-components-native/webpack-configurator": "2.0.27",
     "babel-jest": "24.8.0",
     "enzyme": "3.9.0",
     "eslint": "5.9.0",
@@ -58,7 +51,6 @@
     "webpack-cli": "3.3.1"
   },
   "dependencies": {
-    "@times-components-native/image": "6.7.25",
     "@times-components-native/utils": "6.3.14",
     "prop-types": "15.7.2",
     "react-native-webview": "7.0.5"

@@ -2,8 +2,7 @@
   "name": "@times-components-native/pagination",
   "private": true,
   "version": "3.4.35",
-  "main": "dist/pagination",
-  "dev": "src/pagination",
+  "main": "src/pagination",
   "scripts": {
     "fmt": "eslint . --fix && prettier --write '**/*.*'",
     "prettier:diff": "prettier --list-different '**/*.*'",
@@ -11,12 +10,7 @@
     "lint": "eslint . && stylelint . && yarn prettier:diff && yarn depcheck",
     "test:android": "jest --config='./__tests__/android/jest.config.js'",
     "test:ios": "jest --config='./__tests__/ios/jest.config.js'",
-    "test:all": "yarn test:android --coverage && yarn test:ios --coverage",
-    "prepublishOnly": "yarn transpile && yarn bundle",
-    "watch": "watch 'yarn bundle' ./src --ignoreDotFiles --ignoreUnreadable",
-    "cleanup-dist": "rm -rf dist",
-    "transpile": "yarn cleanup-dist && babel src -d dist",
-    "bundle": "NODE_ENV=production webpack -p"
+    "test:all": "yarn test:android --coverage && yarn test:ios --coverage"
   },
   "repository": {
     "type": "git",
@@ -40,10 +34,7 @@
     "@times-components-native/eslint-config-thetimes": "0.8.16",
     "@times-components-native/jest-configurator": "2.6.11",
     "@times-components-native/jest-serializer": "3.2.23",
-    "@times-components-native/storybook": "4.1.54",
-    "@times-components-native/tealium-utils": "0.7.68",
     "@times-components-native/test-utils": "2.3.8",
-    "@times-components-native/webpack-configurator": "2.0.27",
     "babel-jest": "24.8.0",
     "babel-loader": "8.0.5",
     "babel-plugin-add-react-displayname": "0.0.5",
@@ -67,13 +58,9 @@
     "webpack-cli": "3.3.1"
   },
   "dependencies": {
-    "@times-components-native/link": "3.6.32",
     "@times-components-native/styleguide": "3.38.10",
-    "@times-components-native/svgs": "2.7.30",
-    "@times-components-native/tracking": "2.6.13",
     "prop-types": "15.7.2",
-    "react-display-name": "0.2.3",
-    "styled-components": "4.3.2"
+    "react-display-name": "0.2.3"
   },
   "resolutions": {
     "react": "16.9.0",

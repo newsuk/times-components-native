@@ -3,8 +3,7 @@
   "private": true,
   "version": "3.38.10",
   "description": "Centralised library for common styles throughout the Times",
-  "main": "dist/styleguide",
-  "dev": "src/styleguide",
+  "main": "src/styleguide",
   "scripts": {
     "fmt": "eslint . --fix && prettier --write '**/*.*'",
     "prettier:diff": "prettier --list-different '**/*.*'",
@@ -12,12 +11,7 @@
     "lint": "eslint . && stylelint . && yarn prettier:diff && yarn depcheck",
     "test:all": "yarn test:android --coverage && yarn test:ios --coverage",
     "test:android": "jest --config='./__tests__/android/jest.config.js'",
-    "test:ios": "jest --config='./__tests__/ios/jest.config.js'",
-    "prepublishOnly": "yarn transpile && yarn bundle",
-    "cleanup-dist": "rm -rf dist",
-    "transpile": "yarn cleanup-dist && babel src -d dist",
-    "watch": "watch 'yarn bundle' ./src --ignoreDotFiles --ignoreUnreadable",
-    "bundle": "NODE_ENV=production webpack -p"
+    "test:ios": "jest --config='./__tests__/ios/jest.config.js'"
   },
   "repository": {
     "type": "git",
@@ -42,7 +36,6 @@
     "@times-components-native/jest-serializer": "3.2.23",
     "@times-components-native/storybook": "4.1.54",
     "@times-components-native/test-utils": "2.3.8",
-    "@times-components-native/webpack-configurator": "2.0.27",
     "babel-loader": "8.0.5",
     "babel-plugin-add-react-displayname": "0.0.5",
     "babel-plugin-styled-components": "1.10.6",
@@ -64,8 +57,7 @@
     "webpack-cli": "3.3.1"
   },
   "dependencies": {
-    "prop-types": "15.7.2",
-    "styled-components": "4.3.2"
+    "prop-types": "15.7.2"
   },
   "resolutions": {
     "react": "16.9.0",

@@ -1,4 +1,4 @@
-# times-components-native [![CircleCI](https://circleci.com/gh/newsuk/times-components-native.svg?style=svg)](https://circleci.com/gh/newsuk/times-components-native)
+# times-components-native [![circleci][circleci-image]][circleci-url]
 
 ### Purpose
 
@@ -150,3 +150,6 @@ the project
 `yarn commit` will commit files (same as `git commit`), and will aid the
 contributor with adding a suitable commit message inline with
 [conventional changelog](https://github.com/commitizen/cz-cli)
+
+[circleci-image]: https://circleci.com/gh/newsuk/times-components-native.svg?style=svg&circle-token=80d0af899358a9d50ea9c157366f319a809d88ae
+[circleci-url]: https://circleci.com/gh/newsuk/times-components-natives
