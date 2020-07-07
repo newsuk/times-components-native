@@ -23,7 +23,7 @@ import {
   paragraphStartingWithDoubleQuote
 } from "../fixtures/dropcap-article-content";
 
-export const renderArticle = (data, header = null) => (
+export const renderArticle = (data, header = null, isTablet = false) => (
   <ContextProviderWithDefaults
     value={{
       theme: { scale: scales.medium, sectionColour: "#FF0000" },
@@ -35,6 +35,7 @@ export const renderArticle = (data, header = null) => (
       analyticsStream={() => {}}
       data={data}
       header={header}
+      isTablet={isTablet}
       onAuthorPress={() => {}}
       onCommentGuidelinesPress={() => {}}
       onCommentsPress={() => {}}
