@@ -94,11 +94,6 @@ and the client due to the different JS objects.
 `storybook-static` folder that is synced to the `gh_pages` branch to demo the
 components in the web
 
-When the CI passes `packages:publish` will be run that uses
-[conventional commits](https://conventionalcommits.org/) to bump to the correct
-semver version, create a CHANGELOG and push to the `@times-components` org on
-npm
-
 ## Component categories
 
 When creating a new component you should specify the most suitable category in
