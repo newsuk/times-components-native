@@ -11,19 +11,40 @@ Object {
 `;
 
 exports[`fetch gql schema should 2. write the expected fragment matcher 1`] = `
+"const apolloCacheInmemory = require(\\"apollo-cache-inmemory\\");
+
+const introspectionQueryResultData = {
+  __schema: {
+    types: [
+      {
+        name: \\"leadAsset\\",
+        description: \\"\\",
+        args: [],
+        type: { kind: \\"UNION\\", name: \\"Media\\", ofType: null },
+        isDeprecated: false,
+        deprecationReason: null
+      },
+      {
+        kind: \\"UNION\\",
+        name: \\"Media\\",
+        description: \\"\\",
+        fields: null,
+        inputFields: null,
+        interfaces: null,
+        enumValues: null,
+        possibleTypes: [
+          { kind: \\"OBJECT\\", name: \\"Image\\", ofType: null },
+          { kind: \\"OBJECT\\", name: \\"Video\\", ofType: null }
+        ]
+      }
+    ]
+  }
+};
+
+const fragmentMatcher = new apolloCacheInmemory.IntrospectionFragmentMatcher({
+  introspectionQueryResultData
+});
+
+module.exports.fragmentMatcher = fragmentMatcher;
 "
-  const apolloCacheInmemory = require(\\"apollo-cache-inmemory\\");
-
-  const introspectionQueryResultData = {
-    __schema: {
-      types: [{\\"name\\":\\"leadAsset\\",\\"description\\":\\"\\",\\"args\\":[],\\"type\\":{\\"kind\\":\\"UNION\\",\\"name\\":\\"Media\\",\\"ofType\\":null},\\"isDeprecated\\":false,\\"deprecationReason\\":null},{\\"kind\\":\\"UNION\\",\\"name\\":\\"Media\\",\\"description\\":\\"\\",\\"fields\\":null,\\"inputFields\\":null,\\"interfaces\\":null,\\"enumValues\\":null,\\"possibleTypes\\":[{\\"kind\\":\\"OBJECT\\",\\"name\\":\\"Image\\",\\"ofType\\":null},{\\"kind\\":\\"OBJECT\\",\\"name\\":\\"Video\\",\\"ofType\\":null}]}]
-    }
-  };
-
-  const fragmentMatcher = new apolloCacheInmemory.IntrospectionFragmentMatcher({
-    introspectionQueryResultData
-  });
-
-  module.exports.fragmentMatcher = fragmentMatcher;
-  "
 `;

@@ -7,10 +7,9 @@ module.exports = async ({ config }, env, defaultConfig) => {
     ...config.resolve,
     alias: {
       ...config.resolve.alias,
-      "react-native": "react-native-web",
       "@storybook/react-native": "@storybook/react"
     },
-    extensions: [".web.js", ".js", ".ios.js", ".android.js", ".mjs"],
+    extensions: [".js", ".ios.js", ".android.js", ".mjs"],
     mainFields: ["devModule", "dev", "module", "main"]
   };
   config.plugins.push(
@@ -20,10 +19,6 @@ module.exports = async ({ config }, env, defaultConfig) => {
     })
   );
   config.module.rules.push(
-    {
-      test: /\.(png|jpe?g|gif)$/,
-      loader: 'react-native-web-image-loader?name=[hash].[ext]',
-    },
     {
       test: /\.mjs$/,
       include: /node_modules/,
