@@ -53,6 +53,7 @@
   "dependencies": {
     "@times-components-native/utils": "6.3.14",
     "prop-types": "15.7.2",
+    "react-native-autoheight-webview": "1.5.1",
     "react-native-webview": "7.0.5"
   },
   "resolutions": {
