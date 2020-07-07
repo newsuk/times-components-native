@@ -3,7 +3,7 @@ version: 2.1
 executors:
     node:
         docker:
-            - image: circleci/node:10.13.0-browsers
+            - image: circleci/node:10.13.0
         resource_class: 2xlarge
 
 commands:
@@ -65,18 +65,6 @@ jobs:
                       npx yarn@1.16.0 lint
                   working_directory: ~/project/
 
-    build_storybook:
-        executor: node
-        steps:
-            - checkout
-            - attach_workspace:
-                  at: ./
-            - run:
-                  name: Run Tests
-                  command: |
-                      npx yarn@1.16.0 test
-                  working_directory: ~/project/
-
     run_noplatform_tests:
         executor: node
         steps:
@@ -134,7 +122,7 @@ jobs:
             - run:
                   name: Build and publish android js bundles
                   command: |
-                      # Install JDK and android SDK   
+                      # Install JDK and android SDK
                       sudo apt-get update
                       sudo apt install default-jdk
                       cd /home
@@ -164,18 +152,6 @@ jobs:
                       npx yarn@1.16.0 ios:publish-lib
                   working_directory: ~/project/
 
-    publish_storybook:
-        executor: node
-        steps:
-            - checkout
-            - attach_workspace:
-                  at: ./
-            - run:
-                  name: Publish Storybook
-                  command: |
-                      npx yarn@1.16.0 storybook:publish 
-                  working_directory: ~/project/
-
 workflows:
     version: 2
 
@@ -183,9 +159,6 @@ workflows:
         jobs:
             - setup
             - run_lint:
-                  requires:
-                      - setup
-            - build_storybook:
                   requires:
                       - setup
             - run_noplatform_tests:
@@ -200,41 +173,21 @@ workflows:
             - run_unit_tests:
                   requires:
                       - setup
-            - publish_storybook:
+            - hold:
+                  type: approval
                   filters:
                     branches:
                         only: 
-                          - master
+                            - master
                   requires:
-                      - build_storybook
-                      - run_lint
-                      - run_noplatform_tests
-                      - run_android_tests
-                      - run_ios_tests
-                      - run_unit_tests
-            - hold:
-                  type: approval
-                  branches:
-                      only: 
-                          - master
-                  requires:
-                      - build_storybook
                       - run_lint
                       - run_noplatform_tests
                       - run_android_tests
                       - run_ios_tests
                       - run_unit_tests
             - publish_android:
-                  filters:
-                    branches:
-                        only: 
-                          - master
                   requires:
                       - hold
             - publish_ios:
-                  filters:
-                    branches:
-                        only: 
-                          - master
                   requires:
                       - hold

@@ -1,6 +1,7 @@
 import React from "react";
 import { Text, View } from "react-native";
 import storybookReporter from "@times-components-native/tealium-utils";
+import { ratioTextToFloat } from "@times-components-native/utils";
 import { withTrackingContext } from "@times-components-native/tracking";
 import {
   authorProfile as makeAuthorParams,
@@ -18,7 +19,6 @@ import {
 import get from "lodash.get";
 import ArticleList, { ArticleListPageError } from "./src/article-list";
 import adConfig from "./fixtures/article-ad-config.json";
-import { ratioTextToFloat } from "../utils/dist";
 
 const preventDefaultedAction = decorateAction =>
   decorateAction([

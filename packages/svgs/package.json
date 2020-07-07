@@ -3,28 +3,22 @@
   "private": true,
   "version": "2.7.30",
   "description": "Svgs wrapper",
-  "main": "dist/index",
-  "dev": "src/index",
+  "main": "src/index",
   "scripts": {
     "fmt": "eslint . --fix && prettier --write '**/*.*'",
     "prettier:diff": "prettier --list-different '**/*.*'",
     "depcheck": "depcheck --ignores='@babel/*,babel-*,depcheck,eslint,jest,prettier,webpack*' --ignore-bin-package=false --skip-missing",
     "lint": "eslint . && yarn prettier:diff && yarn depcheck",
-    "prepublishOnly": "yarn transpile && yarn bundle",
     "test:android": "jest --config='./__tests__/android/jest.config.js'",
     "test:ios": "jest --config='./__tests__/ios/jest.config.js'",
-    "test:all": "yarn test:android --coverage && yarn test:ios --coverage",
-    "cleanup-dist": "rm -rf dist",
-    "transpile": "yarn cleanup-dist && babel src -d dist",
-    "watch": "watch 'yarn bundle' ./src --ignoreDotFiles --ignoreUnreadable",
-    "bundle": "NODE_ENV=production webpack -p"
+    "test:all": "yarn test:android --coverage && yarn test:ios --coverage"
   },
   "jest": {
     "preset": "react-native",
     "rootDir": "../../",
     "coverageDirectory": "<rootDir>/packages/svgs/coverage/",
     "transformIgnorePatterns": [
-      "node_modules/(?!(react-native|react-native-svg|@times-components)/)"
+      "node_modules/(?!(react-native|react-native-svg)/)"
     ],
     "testMatch": [
       "<rootDir>/packages/svgs/__tests__/*.test.js"
@@ -39,7 +33,6 @@
     "react",
     "native",
     "web",
-    "svgs",
     "component"
   ],
   "license": "BSD-3-Clause",
@@ -53,7 +46,6 @@
     "@times-components-native/jest-configurator": "2.6.11",
     "@times-components-native/jest-serializer": "3.2.23",
     "@times-components-native/test-utils": "2.3.8",
-    "@times-components-native/webpack-configurator": "2.0.27",
     "babel-jest": "24.8.0",
     "babel-loader": "8.0.5",
     "babel-plugin-add-react-displayname": "0.0.5",
@@ -71,8 +63,7 @@
   },
   "dependencies": {
     "prop-types": "15.7.2",
-    "react-native-svg": "9.11.1",
-    "svgs": "3.2.1"
+    "react-native-svg": "9.11.1"
   },
   "resolutions": {
     "react": "16.9.0",

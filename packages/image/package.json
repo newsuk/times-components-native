@@ -2,8 +2,7 @@
   "name": "@times-components-native/image",
   "private": true,
   "version": "6.7.25",
-  "main": "dist/index",
-  "dev": "src/index",
+  "main": "src/index",
   "scripts": {
     "fmt": "eslint . --fix && prettier --write '**/*.*'",
     "prettier:diff": "prettier --list-different '**/*.*'",
@@ -12,12 +11,7 @@
     "test:android": "jest --config='./__tests__/android/jest.config.js'",
     "test:android:debug": "node --inspect --inspect-brk node_modules/.bin/jest --config='./__tests__/android/jest.config.js'",
     "test:ios": "jest --config='./__tests__/ios/jest.config.js'",
-    "test:all": "yarn test:android --coverage && yarn test:ios --coverage",
-    "prepublishOnly": "yarn transpile && yarn bundle",
-    "watch": "watch 'yarn bundle' ./src --ignoreDotFiles --ignoreUnreadable",
-    "cleanup-dist": "rm -rf dist",
-    "transpile": "yarn cleanup-dist && babel src -d dist",
-    "bundle": "NODE_ENV=production webpack -p"
+    "test:all": "yarn test:android --coverage && yarn test:ios --coverage"
   },
   "repository": {
     "type": "git",
@@ -43,7 +37,6 @@
     "@times-components-native/jest-serializer": "3.2.23",
     "@times-components-native/storybook": "4.1.54",
     "@times-components-native/test-utils": "2.3.8",
-    "@times-components-native/webpack-configurator": "2.0.27",
     "babel-jest": "24.8.0",
     "babel-loader": "8.0.5",
     "babel-plugin-add-react-displayname": "0.0.5",
@@ -51,7 +44,6 @@
     "depcheck": "0.6.9",
     "eslint": "5.9.0",
     "jest": "24.8.0",
-    "jest-styled-components": "6.3.1",
     "prettier": "1.14.3",
     "react": "16.9.0",
     "react-art": "16.6.3",
@@ -69,12 +61,9 @@
     "@times-components-native/responsive": "0.6.15",
     "@times-components-native/responsive-image": "0.6.11",
     "@times-components-native/styleguide": "3.38.10",
-    "@times-components-native/svgs": "2.7.30",
-    "@times-components-native/utils": "6.3.14",
     "hoist-non-react-statics": "2.5.5",
     "prop-types": "15.7.2",
     "react-native-image-zoom-viewer": "2.2.26",
-    "styled-components": "4.3.2",
     "url-parse": "1.4.7"
   },
   "resolutions": {

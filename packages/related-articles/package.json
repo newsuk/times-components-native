@@ -3,8 +3,7 @@
   "private": true,
   "version": "6.5.7",
   "description": "related articles of an article",
-  "main": "dist/related-articles",
-  "dev": "src/related-articles",
+  "main": "src/related-articles",
   "scripts": {
     "fmt": "eslint . --fix && prettier --write '**/*.*'",
     "prettier:diff": "prettier --list-different '**/*.*'",
@@ -13,12 +12,7 @@
     "test": "jest roles.test.js --config='./__tests__/jest.config.js'",
     "test:android": "jest --config='./__tests__/android/jest.config.js'",
     "test:ios": "jest --config='./__tests__/ios/jest.config.js'",
-    "test:all": "yarn test:android --coverage && yarn test:ios --coverage && yarn test",
-    "prepublishOnly": "yarn transpile && yarn bundle",
-    "watch": "watch 'yarn bundle' ./src --ignoreDotFiles --ignoreUnreadable",
-    "cleanup-dist": "rm -rf dist",
-    "transpile": "yarn cleanup-dist && babel src -d dist",
-    "bundle": "NODE_ENV=production webpack -p"
+    "test:all": "yarn test:android --coverage && yarn test:ios --coverage && yarn test"
   },
   "repository": {
     "type": "git",
@@ -46,7 +40,6 @@
     "@times-components-native/storybook": "4.1.54",
     "@times-components-native/tealium-utils": "0.7.68",
     "@times-components-native/test-utils": "2.3.8",
-    "@times-components-native/webpack-configurator": "2.0.27",
     "babel-jest": "24.8.0",
     "babel-loader": "8.0.5",
     "babel-plugin-add-react-displayname": "0.0.5",
@@ -55,7 +48,6 @@
     "enzyme": "3.9.0",
     "eslint": "5.9.0",
     "jest": "24.8.0",
-    "jest-styled-components": "6.3.1",
     "mockdate": "2.0.2",
     "prettier": "1.14.3",
     "react": "16.9.0",
@@ -70,7 +62,6 @@
   "dependencies": {
     "@times-components-native/article-summary": "3.16.41",
     "@times-components-native/card": "6.4.25",
-    "@times-components-native/context": "1.2.17",
     "@times-components-native/link": "3.6.32",
     "@times-components-native/markup-forest": "1.7.31",
     "@times-components-native/slice-layout": "0.47.4",
