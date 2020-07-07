@@ -3,7 +3,8 @@ import React from "react";
 import { View, Text, Dimensions, Platform } from "react-native";
 import styleguide, {
   colours,
-  tabletWidth
+  tabletWidth,
+  tabletRowPadding
 } from "@times-components-native/styleguide";
 import { AttributedString } from "@times-components-native/typeset";
 import { screenWidth } from "@times-components-native/utils";
@@ -328,8 +329,9 @@ export default ({
       }
     ) {
       const aspectRatio = 16 / 9;
-      const screenW = screenWidth(isTablet);
-      const height = screenW / aspectRatio;
+      const contentWidth =
+        screenWidth(isTablet) - (isTablet && tabletRowPadding);
+      const height = contentWidth / aspectRatio;
       return (
         <View
           key={key}
@@ -342,7 +344,7 @@ export default ({
             policyKey={brightcovePolicyKey}
             poster={{ uri: posterImageUrl }}
             videoId={brightcoveVideoId}
-            width={screenW}
+            width={contentWidth}
           />
           <InsetCaption caption={caption} />
         </View>
