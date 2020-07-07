@@ -7,7 +7,7 @@
     "fmt": "eslint . --fix && prettier --write '**/*.*'",
     "prettier:diff": "prettier --list-different '**/*.*'",
     "depcheck": "depcheck --ignores='@babel/*,babel-*,depcheck,eslint,jest,prettier,react-art,stylelint' --ignore-bin-package=false --skip-missing",
-    "lint": "eslint . && stylelint . && yarn prettier:diff && yarn depcheck",
+    "lint": "eslint . && yarn prettier:diff && yarn depcheck",
     "test:android": "jest --config='./__tests__/android/jest.config.js'",
     "test:android:debug": "node --inspect --inspect-brk node_modules/.bin/jest --config='./__tests__/android/jest.config.js'",
     "test:ios": "jest --config='./__tests__/ios/jest.config.js'",
@@ -48,8 +48,7 @@
     "react-art": "16.6.3",
     "react-dom": "16.9.0",
     "react-native": "0.61.5",
-    "react-test-renderer": "16.9.0",
-    "stylelint": "9.4.0"
+    "react-test-renderer": "16.9.0"
   },
   "dependencies": {
     "@times-components-native/gradient": "3.2.48",
