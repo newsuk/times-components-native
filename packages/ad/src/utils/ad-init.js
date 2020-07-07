@@ -258,6 +258,22 @@ export default ({ el, data, platform, eventCallback, window }) => {
           pubads.disableInitialLoad();
           pubads.enableSingleRequest();
           pubads.collapseEmptyDivs(true, true);
+
+          pubads.addEventListener("slotRenderEnded", event => {
+            if (
+              event &&
+              event.slot &&
+              event.slot.getSlotElementId() === "native-inline-ad" &&
+              !event.isEmpty
+            ) {
+              const height =
+                event && event.size && event.size[1] && event.size[1] > 1
+                  ? event.size[1]
+                  : 0;
+              eventCallback("setAdWebViewHeight", { height });
+            }
+          });
+
           googletag.enableServices();
           eventCallback("warn", "[Google] INFO: initialised");
         });

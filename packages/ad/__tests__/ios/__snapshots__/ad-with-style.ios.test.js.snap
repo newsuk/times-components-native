@@ -3,10 +3,10 @@
 exports[`1. multiple ad slots 1`] = `
 Array [
   <View
-    className="IS5"
+    className="IS4"
   >
     <View
-      className="IS4"
+      className="IS3"
       inViewport={false}
     >
       <View
@@ -20,17 +20,13 @@ Array [
           useSharedProcessPool={true}
         />
       </View>
-      <View
-        className="IS3"
-        inViewport={false}
-      />
     </View>
   </View>,
   <View
-    className="IS5"
+    className="IS4"
   >
     <View
-      className="IS4"
+      className="IS3"
       inViewport={false}
     >
       <View
@@ -44,10 +40,6 @@ Array [
           useSharedProcessPool={true}
         />
       </View>
-      <View
-        className="IS3"
-        inViewport={false}
-      />
     </View>
   </View>,
 ]

@@ -120,9 +120,8 @@ class Ad extends Component {
 
     const sizeProps =
       !isAdReady || hasError
-        ? { height: 0, width: 0 }
+        ? { width: 0 }
         : {
-            height: config.maxSizes.height,
             width:
               Platform.OS === "ios" || Platform.OS === "android"
                 ? screenWidth()
