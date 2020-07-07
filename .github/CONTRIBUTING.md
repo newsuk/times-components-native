@@ -94,11 +94,6 @@ and the client due to the different JS objects.
 `storybook-static` folder that is synced to the `gh_pages` branch to demo the
 components in the web
 
-When the CI passes `packages:publish` will be run that uses
-[conventional commits](https://conventionalcommits.org/) to bump to the correct
-semver version, create a CHANGELOG and push to the `@times-components` org on
-npm
-
 ## Component categories
 
 When creating a new component you should specify the most suitable category in
@@ -277,7 +272,7 @@ eg
 
 ## Setting Up a Local Copy
 
-1. Clone the repo with `https://github.com/newsuk/times-components.git`
+1. Clone the repo with `https://github.com/newsuk/times-components-native.git`
 
 2. Run `yarn` in the root folder. Set a `GRAPHQL_ENDPOINT` envar for linting.
 

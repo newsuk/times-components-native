@@ -45,30 +45,6 @@ describe("Jest Configurator Tests", () => {
     });
   });
 
-  describe("Web specific configuration", () => {
-    it("should use the module mapper to match react-native to react-native-web", () => {
-      const config = jestConfigurator("web", dir);
-      expect(config.moduleNameMapper["^react-native$"]).toEqual(
-        "react-native-web"
-      );
-    });
-
-    it("should always use jsdom as the test environment", () => {
-      const config = jestConfigurator("web", dir);
-      expect(config.testEnvironment).toEqual("jsdom");
-    });
-
-    it("should have the correct module name extensions", () => {
-      const config = jestConfigurator("web", dir);
-      expect(config.moduleFileExtensions).toEqual([
-        "graphql",
-        "web.js",
-        "js",
-        "json"
-      ]);
-    });
-  });
-
   describe("Native specific configuration", () => {
     it("should have a default platform that matches the param in the haste", () => {
       const config = jestConfigurator("ios", dir);
