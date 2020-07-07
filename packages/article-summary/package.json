@@ -6,7 +6,7 @@
   "scripts": {
     "fmt": "eslint . --fix && prettier --write '**/*.*'",
     "prettier:diff": "prettier --list-different '**/*.*'",
-    "depcheck": "depcheck --ignores='@babel/*,babel-*,depcheck,eslint,jest,prettier,react-art,webpack*' --ignore-bin-package=false --skip-missing",
+    "depcheck": "depcheck --ignores='@babel/*,babel-*,depcheck,eslint,jest,prettier,react-art' --ignore-bin-package=false --skip-missing",
     "lint": "eslint . && yarn prettier:diff && yarn depcheck",
     "test:android": "jest --config='./__tests__/android/jest.config.js'",
     "test:ios": "jest --config='./__tests__/ios/jest.config.js'",
@@ -14,10 +14,9 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/newsuk/times-components.git"
+    "url": "git+https://github.com/newsuk/times-components-native.git"
   },
   "keywords": [
-    "react-native-web",
     "react",
     "native",
     "web",
@@ -48,9 +47,7 @@
     "react-art": "16.6.3",
     "react-dom": "16.9.0",
     "react-native": "0.61.5",
-    "react-test-renderer": "16.9.0",
-    "webpack": "4.30.0",
-    "webpack-cli": "3.3.1"
+    "react-test-renderer": "16.9.0"
   },
   "dependencies": {
     "@times-components-native/article-byline": "3.5.21",
@@ -61,8 +58,7 @@
     "@times-components-native/markup-forest": "1.7.31",
     "@times-components-native/styleguide": "3.38.10",
     "@times-components-native/video-label": "2.4.50",
-    "prop-types": "15.7.2",
-    "react-native-web": "0.11.4"
+    "prop-types": "15.7.2"
   },
   "resolutions": {
     "react": "16.9.0",
@@ -71,8 +67,7 @@
   "peerDependencies": {
     "react": ">=16.9",
     "react-dom": ">=16.9",
-    "react-native": ">=0.59",
-    "react-native-web": "0.11.4"
+    "react-native": ">=0.59"
   },
   "publishConfig": {
     "access": "public"

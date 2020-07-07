@@ -1,6 +1,7 @@
-/* eslint-disable no-console */
+/* eslint-disable no-console, import/no-extraneous-dependencies */
 
 const { introspectionQuery } = require("graphql");
+const prettier = require("prettier");
 const fs = require("fs");
 const { promisify } = require("util");
 const path = require("path");
@@ -22,7 +23,10 @@ const fetchIntrospection = async (fetch, endpoint) => {
 };
 
 const writeSchema = async (cwd, schema) =>
-  writeFile(path.join(cwd, "schema.json"), JSON.stringify(schema));
+  writeFile(
+    path.join(cwd, "schema.json"),
+    prettier.format(JSON.stringify(schema), { parser: "json" })
+  );
 
 const writeFragmentMatcher = (cwd, schema) => {
   // eslint-disable-next-line no-underscore-dangle
@@ -30,7 +34,8 @@ const writeFragmentMatcher = (cwd, schema) => {
     ({ possibleTypes }) => possibleTypes !== null
   );
 
-  const fm = `
+  const fm = prettier.format(
+    `
   const apolloCacheInmemory = require("apollo-cache-inmemory");
 
   const introspectionQueryResultData = {
@@ -44,7 +49,9 @@ const writeFragmentMatcher = (cwd, schema) => {
   });
 
   module.exports.fragmentMatcher = fragmentMatcher;
-  `;
+  `,
+    { parser: "babylon" }
+  );
 
   return writeFile(path.join(cwd, "fragment-matcher.js"), fm);
 };

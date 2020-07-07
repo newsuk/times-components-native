@@ -5,17 +5,16 @@
   "description": "Shared mocks for the tests",
   "main": "src/index",
   "scripts": {
-    "depcheck": "depcheck --ignores='@babel/*,babel-*,depcheck,eslint,jest,prettier,webpack*,react-native' --ignore-bin-package=false --skip-missing",
+    "depcheck": "depcheck --ignores='@babel/*,babel-*,depcheck,eslint,jest,prettier*,react-native' --ignore-bin-package=false --skip-missing",
     "fmt": "eslint . --fix && prettier --write '**/*.*'",
     "prettier:diff": "prettier --list-different '**/*.*'",
     "lint": "eslint . && yarn prettier:diff && yarn depcheck"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/newsuk/times-components.git"
+    "url": "git+https://github.com/newsuk/times-components-native.git"
   },
   "keywords": [
-    "react-native-web",
     "react",
     "native",
     "web",
@@ -47,8 +46,7 @@
   },
   "peerDependencies": {
     "react": ">=16.5",
-    "react-native": ">=0.59",
-    "react-native-web": "0.11.4"
+    "react-native": ">=0.59"
   },
   "publishConfig": {
     "access": "public"
