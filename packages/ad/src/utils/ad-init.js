@@ -261,6 +261,8 @@ export default ({ el, data, platform, eventCallback, window }) => {
 
           pubads.addEventListener("slotRenderEnded", event => {
             if (
+              event &&
+              event.slot &&
               event.slot.getSlotElementId() === "native-inline-ad" &&
               !event.isEmpty
             ) {
