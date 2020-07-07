@@ -6,7 +6,10 @@ export default StyleSheet.create({
   ...baseStyles,
   container: {
     ...baseStyles.container,
-    marginBottom: spacing(4)
+    marginTop: -spacing(4)
+  },
+  containerAdditionalHeight: {
+    height: spacing(8)
   }
 });
 
