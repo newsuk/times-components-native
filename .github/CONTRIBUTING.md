@@ -272,7 +272,7 @@ eg
 
 ## Setting Up a Local Copy
 
-1. Clone the repo with `https://github.com/newsuk/times-components.git`
+1. Clone the repo with `https://github.com/newsuk/times-components-native.git`
 
 2. Run `yarn` in the root folder. Set a `GRAPHQL_ENDPOINT` envar for linting.
 
