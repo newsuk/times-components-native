@@ -41,7 +41,7 @@ const collapsed = (isTablet, content) =>
 
 export const setAdPosition = (adPosition = 6, content) => {
   // The default position of the ad block in content provided by TPA is the 6th item
-  if (adPosition === 6) return content;
+  if (adPosition === 6 || !Number.isInteger(adPosition)) return content;
 
   let hasAd = false;
   const contentWithoutAdSlot = content.filter(item => {

@@ -37,6 +37,11 @@ export default () => {
     expect(setAdPosition(6, content)).toEqual(content);
   });
 
+  it("setAdPosition should return content untouched if adPosition is not an integer", () => {
+    expect(setAdPosition('wibble', content)).toEqual(content);
+    expect(setAdPosition(6.1, content)).toEqual(content);
+  });
+
   it("setAdPosition should return content untouched if no ad block present in content", () => {
     const contentWithoutAd = content.filter(item => item.name !== "ad");
     expect(setAdPosition(6, contentWithoutAd)).toEqual(contentWithoutAd);
