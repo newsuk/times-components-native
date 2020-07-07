@@ -38,7 +38,7 @@ export default () => {
   });
 
   it("setAdPosition should return content untouched if adPosition is not an integer", () => {
-    expect(setAdPosition('wibble', content)).toEqual(content);
+    expect(setAdPosition("wibble", content)).toEqual(content);
     expect(setAdPosition(6.1, content)).toEqual(content);
   });
 
