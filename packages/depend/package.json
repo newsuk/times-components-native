@@ -7,7 +7,7 @@
   "scripts": {
     "fmt": "eslint . --fix && prettier --write '**/*.*'",
     "prettier:diff": "prettier --list-different '**/*.*'",
-    "depcheck": "depcheck --ignores='@babel/*,babel-*,depcheck,eslint,jest,prettier,webpack*' --ignore-bin-package=false --skip-missing",
+    "depcheck": "depcheck --ignores='@babel/*,babel-*,depcheck,eslint,jest,prettier' --ignore-bin-package=false --skip-missing",
     "lint": "eslint . && yarn prettier:diff && yarn depcheck",
     "test": "jest",
     "cli": "babel-node src/cli.js -l ../../"

@@ -5,7 +5,7 @@
   "description": "Components used in edition pages including slices and tiles",
   "main": "src/edition-slices",
   "scripts": {
-    "depcheck": "depcheck --ignores='@babel/*,babel-*,depcheck,eslint,jest,prettier,webpack*' --ignore-bin-package=false --skip-missing",
+    "depcheck": "depcheck --ignores='@babel/*,babel-*,depcheck,eslint,jest,prettier' --ignore-bin-package=false --skip-missing",
     "fmt": "eslint . --fix && prettier --write '**/*.*'",
     "prettier:diff": "prettier --list-different '**/*.*'",
     "lint": "eslint . && yarn prettier:diff && yarn depcheck",
@@ -64,9 +64,7 @@
     "react": "16.9.0",
     "react-dom": "16.9.0",
     "react-native": "0.61.5",
-    "react-test-renderer": "16.9.0",
-    "webpack": "4.30.0",
-    "webpack-cli": "3.3.1"
+    "react-test-renderer": "16.9.0"
   },
   "resolutions": {
     "react": "16.9.0",
