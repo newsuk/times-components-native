@@ -1,6 +1,7 @@
 import PropTypes from "prop-types";
 
 export const propTypes = {
+  adPosition: PropTypes.number,
   article: PropTypes.shape({}),
   devInteractives: PropTypes.bool,
   error: PropTypes.shape({}),

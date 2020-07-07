@@ -2,6 +2,7 @@ import PropTypes from "prop-types";
 
 const articleSkeletonPropTypes = {
   adConfig: PropTypes.shape({}),
+  adPosition: PropTypes.number,
   analyticsStream: PropTypes.func.isRequired,
   data: PropTypes.shape({}),
   Header: PropTypes.func.isRequired,

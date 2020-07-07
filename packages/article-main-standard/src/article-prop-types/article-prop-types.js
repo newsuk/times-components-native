@@ -4,6 +4,7 @@ import ArticleMeta from "../article-meta/article-meta";
 
 const articlePropTypesBase = {
   adConfig: PropTypes.shape({}).isRequired,
+  adPosition: PropTypes.number,
   analyticsStream: PropTypes.func.isRequired,
   data: PropTypes.shape({
     ...ArticleHeader.propTypes,

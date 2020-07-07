@@ -39,6 +39,28 @@ const collapsed = (isTablet, content) =>
         return [node, ...acc];
       }, []);
 
+export const setAdPosition = (adPosition = 6, content) => {
+  // The default position of the ad block in content provided by TPA is the 6th item
+  if (adPosition === 6) return content;
+
+  let hasAd = false;
+  const contentWithoutAdSlot = content.filter(item => {
+    const isItemAd = item.name === "ad";
+    if (isItemAd) hasAd = true;
+    return !isItemAd;
+  });
+  if (!hasAd) return content;
+
+  return [
+    ...contentWithoutAdSlot.slice(0, adPosition - 1),
+    {
+      name: "ad",
+      children: []
+    },
+    ...contentWithoutAdSlot.slice(adPosition - 1)
+  ];
+};
+
 export const getStringBounds = (fontSettings, string) => {
   const { fontSize } = fontSettings;
   const font = FontStorage.getFont(fontSettings);
@@ -61,4 +83,6 @@ export const getStringBounds = (fontSettings, string) => {
   return { width, height };
 };
 
-export default memoize((isTablet, content) => collapsed(isTablet, content));
+export default memoize((isTablet, adPosition, content) =>
+  collapsed(isTablet, setAdPosition(adPosition, content))
+);
