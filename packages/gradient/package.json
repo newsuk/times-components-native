@@ -26,7 +26,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/newsuk/times-components.git"
+    "url": "git+https://github.com/newsuk/times-components-native.git"
   },
   "keywords": [
     "react",
