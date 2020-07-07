@@ -84,8 +84,6 @@
     "@times-components-native/provider-queries": "2.14.1",
     "@times-components-native/pull-quote": "3.6.32",
     "@times-components-native/responsive": "0.6.15",
-    "@times-components-native/save-and-share-bar": "0.9.47",
-    "@times-components-native/sticky": "0.2.48",
     "@times-components-native/styleguide": "3.38.10",
     "@times-components-native/tracking": "2.6.13",
     "@times-components-native/typeset": "0.1.3",
