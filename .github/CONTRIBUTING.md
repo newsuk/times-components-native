@@ -263,35 +263,6 @@ eg
 * FontName / Full name = GillSansMTStd-Medium
 * FamilyName = GillSansMTStd-Medium
 
-## Folder Structure
-
-An example component/package looks like this:
-
-```
-.
-└── card
-    ├── __tests__
-    │   └── android
-    │       └── __snapshots__
-    │           └── card.android.test.js.snap
-    │           └── card-with-style.android.test.js.snap
-    │       └── card.android.test.js
-    │       └── card-with-style.android.test.js
-    │   └── ios
-    │   └── web
-    │   └── shared.test.js
-    │   └── shared.native.js
-    │   └── shared.web.js
-    ├── src
-    │   └── card.js
-    ├── card.showcase.js
-    ├── card.stories.js
-    ├── CHANGELOG.md
-    ├── package.json
-    ├── README.md
-    ├── rnw.js
-    └── webpack.config.js
-```
 
 ### Overview of project directory structure
 
