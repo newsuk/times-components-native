@@ -29,10 +29,7 @@ const ArticleBylineWithLinks = ({ ast, centered, ...props }) =>
   renderByline(
     withTrackEvents(AuthorComponent),
     ast,
-    // TODO: revert platform switch after design signoff
-    centered && Platform.OS === "web"
-      ? [styles.text, styles.centered]
-      : styles.text,
+    styles.text,
     props
   );
 
