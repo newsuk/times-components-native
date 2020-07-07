@@ -148,4 +148,4 @@ See the [CONTRIBUTING.md](.github/CONTRIBUTING.md) for an extensive breakdown of
 the project
 
 [circleci-image]: https://circleci.com/gh/newsuk/times-components-native.svg?style=svg&circle-token=80d0af899358a9d50ea9c157366f319a809d88ae
-[circleci-url]: https://circleci.com/gh/newsuk/times-components-natives
+[circleci-url]: https://circleci.com/gh/newsuk/times-components-native
