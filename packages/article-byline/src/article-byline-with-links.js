@@ -25,12 +25,7 @@ const AuthorComponent = ({ slug, className, onAuthorPress, children }) => {
 };
 
 const ArticleBylineWithLinks = ({ ast, centered, ...props }) =>
-  renderByline(
-    withTrackEvents(AuthorComponent),
-    ast,
-    styles.text,
-    props
-  );
+  renderByline(withTrackEvents(AuthorComponent), ast, styles.text, props);
 
 ArticleBylineWithLinks.displayName = "ArticleBylineWithLinks";
 
