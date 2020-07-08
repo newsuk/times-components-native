@@ -41,7 +41,8 @@ const ArticleWithContent = props => {
     onRelatedArticlePress,
     onTopicPress,
     isTablet,
-    onViewed
+    onViewed,
+    adPosition
   } = props;
 
   const { id, url, content } = data;
@@ -95,7 +96,7 @@ const ArticleWithContent = props => {
   );
 
   const fixedContent = useMemo(
-    () => [...fixup(isTablet, content), { name: "footer" }],
+    () => [...fixup(isTablet, adPosition, content), { name: "footer" }],
     [content, isTablet]
   );
   const images = fixedContent.filter(node => node.name === "image");

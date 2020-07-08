@@ -1,6 +1,6 @@
 /* eslint-disable global-require */
 import { FontStorage } from "@times-components-native/typeset";
-import { getStringBounds } from "../src/body-utils";
+import { getStringBounds, setAdPosition } from "../src/body-utils";
 
 FontStorage.registerFont(
   "TimesDigitalW04",
@@ -17,5 +17,45 @@ export default () => {
       color: "black"
     };
     expect(getStringBounds(fontSettings, '"A')).toMatchSnapshot();
+  });
+
+  const content = [
+    { name: "paragraph", children: [] },
+    { name: "paragraph", children: [] },
+    { name: "paragraph", children: [] },
+    { name: "paragraph", children: [] },
+    { name: "paragraph", children: [] },
+    { name: "ad", children: [] },
+    { name: "paragraph", children: [] }
+  ];
+
+  it("setAdPosition should return content untouched if no adPosition specified", () => {
+    expect(setAdPosition(undefined, content)).toEqual(content);
+  });
+
+  it("setAdPosition should return content untouched if adPosition is not an integer", () => {
+    expect(setAdPosition("wibble", content)).toEqual(content);
+    expect(setAdPosition(6.1, content)).toEqual(content);
+  });
+
+  it("setAdPosition should return content untouched if adPosition is same as received from TPA", () => {
+    expect(setAdPosition(6, content)).toEqual(content);
+  });
+
+  it("setAdPosition should return content untouched if no ad block present in content", () => {
+    const contentWithoutAd = content.filter(item => item.name !== "ad");
+    expect(setAdPosition(6, contentWithoutAd)).toEqual(contentWithoutAd);
+  });
+
+  it("setAdPosition should return content with the ad moved to the provided adPosition", () => {
+    expect(setAdPosition(2, content)).toEqual([
+      { name: "paragraph", children: [] },
+      { name: "ad", children: [] },
+      { name: "paragraph", children: [] },
+      { name: "paragraph", children: [] },
+      { name: "paragraph", children: [] },
+      { name: "paragraph", children: [] },
+      { name: "paragraph", children: [] }
+    ]);
   });
 };
