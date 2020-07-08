@@ -33,13 +33,13 @@ export default () => {
     expect(setAdPosition(undefined, content)).toEqual(content);
   });
 
-  it("setAdPosition should return content untouched if adPosition is same as default", () => {
-    expect(setAdPosition(6, content)).toEqual(content);
-  });
-
   it("setAdPosition should return content untouched if adPosition is not an integer", () => {
     expect(setAdPosition("wibble", content)).toEqual(content);
     expect(setAdPosition(6.1, content)).toEqual(content);
+  });
+
+  it("setAdPosition should return content untouched if adPosition is same as received from TPA", () => {
+    expect(setAdPosition(6, content)).toEqual(content);
   });
 
   it("setAdPosition should return content untouched if no ad block present in content", () => {

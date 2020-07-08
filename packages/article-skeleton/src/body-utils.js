@@ -39,17 +39,19 @@ const collapsed = (isTablet, content) =>
         return [node, ...acc];
       }, []);
 
-export const setAdPosition = (adPosition = 6, content) => {
-  // The default position of the ad block in content provided by TPA is the 6th item
-  if (adPosition === 6 || !Number.isInteger(adPosition)) return content;
+export const setAdPosition = (adPosition, content) => {
+  if (!Number.isInteger(adPosition)) return content;
 
-  let hasAd = false;
-  const contentWithoutAdSlot = content.filter(item => {
+  let currentAdSlotIndex;
+
+  const contentWithoutAdSlot = content.filter((item, index) => {
     const isItemAd = item.name === "ad";
-    if (isItemAd) hasAd = true;
+    if (isItemAd) currentAdSlotIndex = index;
     return !isItemAd;
   });
-  if (!hasAd) return content;
+
+  if (!currentAdSlotIndex || adPosition === currentAdSlotIndex + 1)
+    return content;
 
   return [
     ...contentWithoutAdSlot.slice(0, adPosition - 1),
