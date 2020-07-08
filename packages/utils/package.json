@@ -28,24 +28,9 @@
   "publishConfig": {
     "access": "public"
   },
-  "devDependencies": {
-    "@babel/core": "7.4.4",
-    "@times-components-native/eslint-config-thetimes": "0.8.16",
-    "@times-components-native/jest-configurator": "2.6.11",
-    "@times-components-native/jest-serializer": "3.2.23",
-    "babel-jest": "24.8.0",
-    "babel-loader": "8.0.5",
-    "babel-plugin-add-react-displayname": "0.0.5",
-    "babel-plugin-styled-components": "1.10.6",
-    "depcheck": "0.6.9",
-    "eslint": "5.9.0",
-    "jest": "24.8.0",
-    "prettier": "1.14.3",
-    "react-test-renderer": "16.9.0"
-  },
   "dependencies": {
-    "@times-components-native/schema": "0.6.23",
-    "@times-components-native/styleguide": "3.38.10",
+    "@times-components-native/schema": "file:../schema",
+    "@times-components-native/styleguide": "file:../styleguide",
     "apollo-cache-inmemory": "1.5.1",
     "apollo-client": "2.5.1",
     "apollo-link-http": "1.5.14",

@@ -30,25 +30,16 @@
   },
   "homepage": "https://github.com/newsuk/times-components#readme",
   "devDependencies": {
-    "@babel/core": "7.4.4",
-    "@times-components-native/eslint-config-thetimes": "0.8.16",
-    "@times-components-native/jest-configurator": "2.6.11",
-    "@times-components-native/storybook": "4.1.54",
-    "babel-jest": "24.8.0",
-    "eslint": "5.9.0",
-    "jest": "24.8.0",
-    "prettier": "1.14.3",
-    "react": "16.9.0",
-    "react-dom": "16.9.0",
-    "react-native": "0.61.5",
-    "react-test-renderer": "16.9.0"
+    "@times-components-native/eslint-config-thetimes": "file:../eslint-config-thetimes",
+    "@times-components-native/jest-configurator": "file:../jest-configurator",
+    "@times-components-native/storybook": "file:../storybook"
   },
   "dependencies": {
-    "@times-components-native/caption": "3.0.131",
-    "@times-components-native/image": "6.7.25",
-    "@times-components-native/jest-serializer": "3.2.23",
-    "@times-components-native/test-utils": "2.3.8",
-    "@times-components-native/video": "4.10.18",
+    "@times-components-native/caption": "file:../caption",
+    "@times-components-native/image": "file:../image",
+    "@times-components-native/jest-serializer": "file:../jest-serializer",
+    "@times-components-native/test-utils": "file:../test-utils",
+    "@times-components-native/video": "file:../video",
     "prop-types": "15.7.2"
   },
   "resolutions": {
