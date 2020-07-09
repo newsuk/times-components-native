@@ -1,3 +1,3 @@
-jest.mock("@times-components-native/image", () => ({
+jest.mock("@tcn/image", () => ({
   ModalImage: "ModalImage"
 }));

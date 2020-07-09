@@ -1,5 +1,5 @@
 import React from "react";
-import coreRenderers from "@times-components-native/markup";
+import coreRenderers from "@tcn/markup";
 import { Text } from "react-native";
 
 export default {

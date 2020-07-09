@@ -1,20 +1,20 @@
 /* eslint-disable import/no-extraneous-dependencies, no-bitwise, operator-assignment, react/prop-types */
 import React, { Component, Fragment } from "react";
-import articleAdConfig from "@times-components-native/ad/fixtures/article-ad-config.json";
+import articleAdConfig from "@tcn/ad/fixtures/article-ad-config.json";
 import {
   ContextProviderWithDefaults,
   defaults
-} from "@times-components-native/context";
-import { ArticleProvider } from "@times-components-native/provider";
+} from "@tcn/context";
+import { ArticleProvider } from "@tcn/provider";
 import {
   article as makeParams,
   fixtures,
   MockedProvider,
   schemaToMocks
-} from "@times-components-native/provider-test-tools";
-import { sections } from "@times-components-native/storybook";
-import { scales, themeFactory } from "@times-components-native/styleguide";
-import storybookReporter from "@times-components-native/tealium-utils";
+} from "@tcn/provider-test-tools";
+import { sections } from "@tcn/storybook";
+import { scales, themeFactory } from "@tcn/styleguide";
+import storybookReporter from "@tcn/tealium-utils";
 import Article, { templates } from "./src/article";
 
 const preventDefaultedAction = decorateAction =>

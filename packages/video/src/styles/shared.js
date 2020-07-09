@@ -2,7 +2,7 @@ import {
   fontFactory,
   spacing,
   colours
-} from "@times-components-native/styleguide";
+} from "@tcn/styleguide";
 
 const styles = {
   noSubscriptionMessage: {

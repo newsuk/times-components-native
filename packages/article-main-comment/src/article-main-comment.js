@@ -1,11 +1,11 @@
 /* eslint-disable consistent-return */
 
 import React, { Component } from "react";
-import ArticleError from "@times-components-native/article-error";
-import ArticleSkeleton from "@times-components-native/article-skeleton";
-import { getHeadline } from "@times-components-native/utils";
-import { ResponsiveContext } from "@times-components-native/responsive";
-import Context from "@times-components-native/context";
+import ArticleError from "@tcn/article-error";
+import ArticleSkeleton from "@tcn/article-skeleton";
+import { getHeadline } from "@tcn/utils";
+import { ResponsiveContext } from "@tcn/responsive";
+import Context from "@tcn/context";
 import ArticleHeader from "./article-header/article-header";
 import {
   articlePropTypes,

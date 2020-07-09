@@ -1,5 +1,5 @@
 import React from "react";
-import Video from "@times-components-native/video";
+import Video from "@tcn/video";
 
 import {
   videoPropTypes,

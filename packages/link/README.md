@@ -9,7 +9,7 @@ touchable (native) elements. There are two exported components:
 ## How to use
 
 ```js
-import Link, { TextLink } from "@times-components-native/link";
+import Link, { TextLink } from "@tcn/link";
 
 // works with block elements
 <Link url="https://thetimes.co.uk" onPress={doSomeNavigation(url)}>

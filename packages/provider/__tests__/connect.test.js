@@ -3,8 +3,8 @@ import {
   addSerializers,
   enzymeRenderedSerializer,
   minimalise
-} from "@times-components-native/jest-serializer";
-import { iterator } from "@times-components-native/test-utils";
+} from "@tcn/jest-serializer";
+import { iterator } from "@tcn/test-utils";
 import renderer from "react-test-renderer";
 import { shallow } from "enzyme";
 import gql from "graphql-tag";

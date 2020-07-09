@@ -1,6 +1,6 @@
 import React from "react";
 import TestRenderer from "react-test-renderer";
-import { iterator } from "@times-components-native/test-utils";
+import { iterator } from "@tcn/test-utils";
 import "./mock-timezone-non-london";
 import DatePublication from "../src/date-publication";
 

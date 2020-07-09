@@ -30,23 +30,23 @@
   },
   "homepage": "https://github.com/newsuk/times-components#readme",
   "devDependencies": {
-    "@times-components-native/eslint-config-thetimes": "file:../eslint-config-thetimes",
-    "@times-components-native/jest-configurator": "file:../jest-configurator",
-    "@times-components-native/jest-serializer": "file:../jest-serializer",
-    "@times-components-native/provider-test-tools": "file:../provider-test-tools",
-    "@times-components-native/storybook": "file:../storybook",
-    "@times-components-native/test-utils": "file:../test-utils"
+
+
+
+
+
+
   },
   "dependencies": {
-    "@times-components-native/article-comments": "file:../article-comments",
-    "@times-components-native/article-topics": "file:../article-topics",
-    "@times-components-native/button": "file:../button",
-    "@times-components-native/context": "file:../context",
-    "@times-components-native/provider": "file:../provider",
-    "@times-components-native/related-articles": "file:../related-articles",
-    "@times-components-native/responsive": "file:../responsive",
-    "@times-components-native/styleguide": "file:../styleguide",
-    "@times-components-native/user-state": "file:../user-state",
+
+
+
+
+
+
+
+
+
     "prop-types": "15.7.2"
   },
   "resolutions": {

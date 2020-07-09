@@ -2,14 +2,14 @@
 import React, { useState } from "react";
 import { View, Text } from "react-native";
 import PropTypes from "prop-types";
-import styleguide, { tabletWidth } from "@times-components-native/styleguide";
-import { screenWidth } from "@times-components-native/utils";
+import styleguide, { tabletWidth } from "@tcn/styleguide";
+import { screenWidth } from "@tcn/utils";
 import {
   TextContainer,
   LayoutManager,
   BoxExclusion
-} from "@times-components-native/typeset";
-import ArticleParagraphWrapper from "@times-components-native/article-paragraph";
+} from "@tcn/typeset";
+import ArticleParagraphWrapper from "@tcn/article-paragraph";
 
 const InlineParagraph = ({
   onLinkPress,

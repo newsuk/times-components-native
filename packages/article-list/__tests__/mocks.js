@@ -1,20 +1,20 @@
 // eslint-disable-next-line global-require
-jest.mock("@times-components-native/ad", () => ({
+jest.mock("@tcn/ad", () => ({
   __esModule: "true",
   AdContainer: "AdContainer"
 }));
-jest.mock("@times-components-native/article-summary", () => ({
+jest.mock("@tcn/article-summary", () => ({
   __esModule: "true",
   default: "ArticleSummary",
   ArticleSummaryHeadline: "ArticleSummaryHeadline",
   ArticleSummaryContent: "ArticleSummaryContent"
 }));
-jest.mock("@times-components-native/button", () => "Button");
-jest.mock("@times-components-native/card", () => "Card");
-jest.mock("@times-components-native/image", () => "Image");
-jest.mock("@times-components-native/link", () => "Link");
-jest.mock("@times-components-native/pagination", () => "Pagination");
-jest.mock("@times-components-native/tracking", () => {
+jest.mock("@tcn/button", () => "Button");
+jest.mock("@tcn/card", () => "Card");
+jest.mock("@tcn/image", () => "Image");
+jest.mock("@tcn/link", () => "Link");
+jest.mock("@tcn/pagination", () => "Pagination");
+jest.mock("@tcn/tracking", () => {
   const mockTracking = component => component;
   return {
     withTrackEvents: mockTracking,
@@ -22,4 +22,4 @@ jest.mock("@times-components-native/tracking", () => {
     withTrackScrollDepth: mockTracking
   };
 });
-jest.mock("@times-components-native/watermark", () => "Watermark");
+jest.mock("@tcn/watermark", () => "Watermark");

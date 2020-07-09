@@ -1,14 +1,14 @@
 import React from "react";
 import { Text } from "react-native";
 import TestRenderer from "react-test-renderer";
-import { iterator } from "@times-components-native/test-utils";
+import { iterator } from "@tcn/test-utils";
 import {
   addSerializers,
   compose,
   minimaliseTransform,
   minimalNativeTransform,
   print
-} from "@times-components-native/jest-serializer";
+} from "@tcn/jest-serializer";
 import { ApolloError } from "apollo-client";
 import "./mocks";
 import ArticleList from "../src/article-list";

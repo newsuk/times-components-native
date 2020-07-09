@@ -5,14 +5,14 @@ import {
   minimaliseTransform,
   minimalNativeTransform,
   print
-} from "@times-components-native/jest-serializer";
-import { mockNativeModules } from "@times-components-native/mocks";
+} from "@tcn/jest-serializer";
+import { mockNativeModules } from "@tcn/mocks";
 
 mockNativeModules();
 
-jest.mock("@times-components-native/card", () => "Card");
-jest.mock("@times-components-native/link", () => "Link");
-jest.mock("@times-components-native/article-label", () => "ArticleLabel");
+jest.mock("@tcn/card", () => "Card");
+jest.mock("@tcn/link", () => "Link");
+jest.mock("@tcn/article-label", () => "ArticleLabel");
 
 addSerializers(
   expect,

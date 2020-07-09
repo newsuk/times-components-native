@@ -40,10 +40,9 @@
   },
   "homepage": "https://github.com/newsuk/times-components#readme",
   "devDependencies": {
-    "@times-components-native/test-utils": "file:../test-utils"
+
   },
   "dependencies": {
-    "prop-types": "15.7.2",
     "react-native-svg": "9.11.1"
   },
   "resolutions": {

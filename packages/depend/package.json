@@ -51,7 +51,7 @@
   },
   "homepage": "https://github.com/newsuk/times-components#readme",
   "devDependencies": {
-    "@times-components-native/eslint-config-thetimes": "file:../eslint-config-thetimes"
+
   },
   "dependencies": {
     "chalk": "2.4.1",

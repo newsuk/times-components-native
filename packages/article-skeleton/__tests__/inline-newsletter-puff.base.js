@@ -1,17 +1,17 @@
 import React from "react";
 import { create } from "react-test-renderer";
 
-import { delay } from "@times-components-native/test-utils";
-import { MockedProvider } from "@times-components-native/provider-test-tools";
-import Button from "@times-components-native/button";
+import { delay } from "@tcn/test-utils";
+import { MockedProvider } from "@tcn/provider-test-tools";
+import Button from "@tcn/button";
 
 import {
   getNewsletter,
   subscribeNewsletter
-} from "@times-components-native/provider-queries";
+} from "@tcn/provider-queries";
 import InlineNewsletterPuff from "../src/article-body/inline-newsletter-puff";
 
-jest.mock("@times-components-native/image", () => ({
+jest.mock("@tcn/image", () => ({
   __esModule: true,
   default: ({ uri }) => `Image rendered with imageUri=${uri}`,
   Placeholder: () => "Placeholder rendered"

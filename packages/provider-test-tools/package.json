@@ -48,12 +48,12 @@
   },
   "homepage": "https://github.com/newsuk/times-components#readme",
   "devDependencies": {
-    "@times-components-native/test-utils": "file:../test-utils"
+
   },
   "dependencies": {
-    "@times-components-native/fixture-generator": "file:../fixture-generator",
-    "@times-components-native/provider-queries": "file:../provider-queries",
-    "@times-components-native/schema": "file:../schema",
+
+
+
     "apollo-cache-inmemory": "1.5.1",
     "apollo-client": "2.5.1",
     "apollo-link": "1.2.4",
@@ -62,7 +62,6 @@
     "graphql-tag": "2.10.3",
     "graphql-tools": "4.0.4",
     "lodash.isequal": "4.4.0",
-    "prop-types": "15.7.2",
     "react": "16.9.0",
     "react-apollo": "2.5.5",
     "react-test-renderer": "16.9.0",

@@ -1,5 +1,5 @@
 import { StyleSheet } from "react-native";
-import { spacing } from "@times-components-native/styleguide";
+import { spacing } from "@tcn/styleguide";
 import nativeStyles from "./native";
 
 const appStyles = {

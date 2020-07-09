@@ -27,12 +27,11 @@
     "@storybook/addon-actions": "5.3.18",
     "@storybook/addon-knobs": "5.3.18",
     "@storybook/react-native": "5.3.18",
-    "@times-components-native/schema": "file:../schema",
-    "@times-components-native/user-state": "file:../user-state",
+
+
     "apollo-cache-inmemory": "1.5.1",
     "apollo-client": "2.5.1",
     "apollo-link-http": "1.5.14",
-    "prop-types": "15.7.2",
     "react": "16.9.0",
     "react-apollo": "2.5.5",
     "react-helmet-async": "1.0.2",

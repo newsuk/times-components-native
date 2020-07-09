@@ -3,7 +3,7 @@ import {
   fontFactory,
   spacing,
   editionBreakpoints
-} from "@times-components-native/styleguide";
+} from "@tcn/styleguide";
 
 const styles = {
   container: {

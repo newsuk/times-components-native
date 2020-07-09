@@ -1,5 +1,5 @@
 import PropTypes from "prop-types";
-import { colours } from "@times-components-native/styleguide";
+import { colours } from "@tcn/styleguide";
 
 const articleFlagPropTypes = {
   color: PropTypes.oneOfType([

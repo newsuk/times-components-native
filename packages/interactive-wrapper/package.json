@@ -31,15 +31,13 @@
   },
   "homepage": "https://github.com/newsuk/times-components#readme",
   "devDependencies": {
-    "@times-components-native/jest-configurator": "file:../jest-configurator",
-    "@times-components-native/jest-serializer": "file:../jest-serializer",
-    "@times-components-native/storybook": "file:../storybook"
+
+
+
   },
   "dependencies": {
-    "@times-components-native/utils": "file:../utils",
-    "prop-types": "15.7.2",
+
     "react-native-autoheight-webview": "1.5.1",
-    "react-native-webview": "7.0.5"
   },
   "resolutions": {
     "react": "16.9.0",

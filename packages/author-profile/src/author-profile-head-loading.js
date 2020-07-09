@@ -1,6 +1,6 @@
 import React from "react";
 import { View } from "react-native";
-import Gradient from "@times-components-native/gradient";
+import Gradient from "@tcn/gradient";
 import styles from "./styles";
 
 const AuthorProfileHeadLoading = () => (

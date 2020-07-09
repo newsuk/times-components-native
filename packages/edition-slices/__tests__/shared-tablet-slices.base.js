@@ -1,8 +1,8 @@
 import React from "react";
 import TestRenderer from "react-test-renderer";
-import { editionBreakpointWidths } from "@times-components-native/styleguide";
-import { iterator } from "@times-components-native/test-utils";
-import { getDimensions } from "@times-components-native/utils";
+import { editionBreakpointWidths } from "@tcn/styleguide";
+import { iterator } from "@tcn/test-utils";
+import { getDimensions } from "@tcn/utils";
 import {
   mockCommentLeadAndCartoonSlice,
   mockDailyRegisterSlice,
@@ -20,8 +20,8 @@ import {
   getPuzzleSlices,
   mockSecondaryOneAndFourSlice,
   mockListTwoAndSixNoPicSlice
-} from "@times-components-native/fixture-generator";
-import Responsive from "@times-components-native/responsive";
+} from "@tcn/fixture-generator";
+import Responsive from "@tcn/responsive";
 import "./mocks";
 import {
   CommentLeadAndCartoonSlice,
@@ -125,9 +125,9 @@ const slices = [
   }
 ];
 
-jest.mock("@times-components-native/utils", () => {
+jest.mock("@tcn/utils", () => {
   // eslint-disable-next-line global-require
-  const actualUtils = jest.requireActual("@times-components-native/utils");
+  const actualUtils = jest.requireActual("@tcn/utils");
 
   return {
     ...actualUtils,

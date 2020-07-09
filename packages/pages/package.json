@@ -29,23 +29,22 @@
   },
   "homepage": "https://github.com/newsuk/times-components#readme",
   "devDependencies": {
-    "@times-components-native/storybook": "file:../storybook",
-    "@times-components-native/test-utils": "file:../test-utils"
+
+
   },
   "dependencies": {
-    "@times-components-native/article": "file:../article",
-    "@times-components-native/author-profile": "file:../author-profile",
-    "@times-components-native/context": "file:../context",
-    "@times-components-native/provider": "file:../provider",
-    "@times-components-native/schema": "file:../schema",
-    "@times-components-native/section": "file:../section",
-    "@times-components-native/styleguide": "file:../styleguide",
-    "@times-components-native/topic": "file:../topic",
+
+
+
+
+
+
+
+
     "apollo-cache-inmemory": "1.5.1",
     "apollo-client": "2.5.1",
     "apollo-link-http": "1.5.14",
     "graphql": "14.2.1",
-    "prop-types": "15.7.2",
     "react-apollo": "2.5.5"
   },
   "resolutions": {

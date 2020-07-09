@@ -1,7 +1,7 @@
 import {
   topicArticles,
   topicArticlesPTV
-} from "@times-components-native/provider-queries";
+} from "@tcn/provider-queries";
 import connectGraphql from "./connect";
 
 export default connectGraphql(topicArticles, topicArticlesPTV);

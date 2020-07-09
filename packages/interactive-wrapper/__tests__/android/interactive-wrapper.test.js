@@ -8,7 +8,7 @@ import {
   minimaliseTransform,
   minimalNativeTransform,
   print
-} from "@times-components-native/jest-serializer";
+} from "@tcn/jest-serializer";
 
 import InteractiveWrapper from "../../src/interactive-wrapper";
 

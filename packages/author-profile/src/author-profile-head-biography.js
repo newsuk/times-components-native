@@ -3,8 +3,8 @@ import { Text } from "react-native";
 import PropTypes from "prop-types";
 import renderTrees, {
   propTypes as treePropTypes
-} from "@times-components-native/markup-forest";
-import coreRenderers from "@times-components-native/markup";
+} from "@tcn/markup-forest";
+import coreRenderers from "@tcn/markup";
 import styles from "./styles";
 
 const AuthorProfileHeadBiography = ({ biography }) => (

@@ -4,7 +4,7 @@ import {
   fontFactory,
   spacing,
   tabletWidth
-} from "@times-components-native/styleguide";
+} from "@tcn/styleguide";
 
 const styles = StyleSheet.create({
   extrasErrorBody: {

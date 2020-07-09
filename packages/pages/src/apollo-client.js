@@ -2,7 +2,7 @@ import { NativeModules } from "react-native";
 import { ApolloClient } from "apollo-client";
 import { createHttpLink } from "apollo-link-http";
 import { InMemoryCache } from "apollo-cache-inmemory";
-import { fragmentMatcher } from "@times-components-native/schema";
+import { fragmentMatcher } from "@tcn/schema";
 
 const {
   NativeFetch,

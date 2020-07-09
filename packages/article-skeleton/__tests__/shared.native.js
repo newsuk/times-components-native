@@ -8,10 +8,10 @@ import {
   print,
   minimaliseTransform,
   minimalNativeTransform
-} from "@times-components-native/jest-serializer";
-import { TextLink } from "@times-components-native/link";
+} from "@tcn/jest-serializer";
+import { TextLink } from "@tcn/link";
 import "./mocks.native";
-import { FontStorage } from "@times-components-native/typeset";
+import { FontStorage } from "@tcn/typeset";
 import shared from "./shared.base";
 import ArticleSkeleton from "../src/article-skeleton";
 import articleFixture, {
@@ -24,19 +24,19 @@ import articleSkeletonProps from "./shared-article-skeleton-props";
 
 FontStorage.registerFont(
   "TimesDigitalW04",
-  () => require("@times-components-native/test-utils").TestFont
+  () => require("@tcn/test-utils").TestFont
 );
 FontStorage.registerFont(
   "TimesDigitalW04-Bold",
-  () => require("@times-components-native/test-utils").TestFont
+  () => require("@tcn/test-utils").TestFont
 );
 FontStorage.registerFont(
   "TimesDigitalW04-Italic",
-  () => require("@times-components-native/test-utils").TestFont
+  () => require("@tcn/test-utils").TestFont
 );
 FontStorage.registerFont(
   "TimesModern-Regular",
-  () => require("@times-components-native/test-utils").TestFont
+  () => require("@tcn/test-utils").TestFont
 );
 
 const omitKeys = new Set([

@@ -1,9 +1,9 @@
 import React, { Fragment } from "react";
 import { View } from "react-native";
 import PropTypes from "prop-types";
-import { ResponsiveContext } from "@times-components-native/responsive";
-import ArticleComments from "@times-components-native/article-comments";
-import RelatedArticles from "@times-components-native/related-articles";
+import { ResponsiveContext } from "@tcn/responsive";
+import ArticleComments from "@tcn/article-comments";
+import RelatedArticles from "@tcn/related-articles";
 import ArticleTopics from "./article-topics";
 import styles from "./styles";
 

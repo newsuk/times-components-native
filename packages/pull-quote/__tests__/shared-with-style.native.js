@@ -5,13 +5,13 @@ import {
   flattenStyleTransform,
   minimalNativeTransform,
   print
-} from "@times-components-native/jest-serializer";
+} from "@tcn/jest-serializer";
 import shared from "./shared-with-style.base";
 
-jest.mock("@times-components-native/link", () => ({
+jest.mock("@tcn/link", () => ({
   TextLink: "TextLink"
 }));
-jest.mock("@times-components-native/icons", () => ({
+jest.mock("@tcn/icons", () => ({
   IconTwitter: "IconTwitter"
 }));
 

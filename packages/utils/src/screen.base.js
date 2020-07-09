@@ -1,5 +1,5 @@
 import { Dimensions } from "react-native";
-import { tabletWidth } from "@times-components-native/styleguide";
+import { tabletWidth } from "@tcn/styleguide";
 
 export const acceptedWidths = [
   320,

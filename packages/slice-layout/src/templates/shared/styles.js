@@ -1,4 +1,4 @@
-import { colours, spacing } from "@times-components-native/styleguide";
+import { colours, spacing } from "@tcn/styleguide";
 
 const styles = {
   itemColSeparator: {

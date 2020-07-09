@@ -1,4 +1,4 @@
-import styleguide, { tabletWidth } from "@times-components-native/styleguide";
+import styleguide, { tabletWidth } from "@tcn/styleguide";
 
 const sharedStyles = scale => {
   const { colours, fontFactory, spacing, lineHeight } = styleguide({ scale });

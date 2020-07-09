@@ -2,11 +2,11 @@
 /* eslint-env browser */
 import React from "react";
 import { View, Text } from "react-native";
-import { CenteredDecorator } from "@times-components-native/storybook";
-import { fonts } from "@times-components-native/styleguide";
+import { CenteredDecorator } from "@tcn/storybook";
+import { fonts } from "@tcn/styleguide";
 import renderTrees, {
   renderTree
-} from "@times-components-native/markup-forest";
+} from "@tcn/markup-forest";
 import coreRenderers from "./src/markup";
 
 const multiParagraph = require("./fixtures/multi-paragraph.json");

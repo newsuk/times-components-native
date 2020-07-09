@@ -4,7 +4,7 @@ import {
   mockEditionSlice,
   mockDailyRegisterSlice,
   mockPuzzleSlice
-} from "@times-components-native/fixture-generator";
+} from "@tcn/fixture-generator";
 
 export const tile = mockEditionSlice(1).items[0];
 export const dailyRegisterItem = mockDailyRegisterSlice().birthdaysToday;

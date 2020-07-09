@@ -1,4 +1,4 @@
-import { showcaseConverter } from "@times-components-native/storybook";
+import { showcaseConverter } from "@tcn/storybook";
 import showcase from "./edition-slices.showcase";
 
 showcaseConverter(module, showcase);

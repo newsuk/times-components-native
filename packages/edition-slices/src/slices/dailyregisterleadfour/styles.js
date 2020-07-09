@@ -3,7 +3,7 @@ import {
   spacing,
   fonts,
   fontSizes
-} from "@times-components-native/styleguide";
+} from "@tcn/styleguide";
 
 const smallBreakpointStyles = {
   container: {

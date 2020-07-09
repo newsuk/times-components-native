@@ -30,15 +30,15 @@
   },
   "homepage": "https://github.com/newsuk/times-components#readme",
   "dependencies": {
-    "@times-components-native/article-list": "file:../article-list",
-    "@times-components-native/markup": "file:../markup",
-    "@times-components-native/markup-forest": "file:../markup-forest",
-    "@times-components-native/pagination": "file:../pagination",
-    "@times-components-native/provider": "file:../provider",
-    "@times-components-native/responsive": "file:../responsive",
-    "@times-components-native/styleguide": "file:../styleguide",
-    "@times-components-native/tracking": "file:../tracking",
-    "@times-components-native/utils": "file:../utils",
+
+
+
+
+
+
+
+
+
     "lodash.get": "4.4.2",
     "prop-types": "15.7.2"
   },

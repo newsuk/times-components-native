@@ -7,7 +7,7 @@ import {
   print,
   propsNoChildren,
   replaceTransform
-} from "@times-components-native/jest-serializer";
+} from "@tcn/jest-serializer";
 import shared from "./shared-dim.base";
 
 export default () => {

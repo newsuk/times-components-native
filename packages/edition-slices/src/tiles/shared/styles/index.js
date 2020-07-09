@@ -1,4 +1,4 @@
-import { spacing } from "@times-components-native/styleguide";
+import { spacing } from "@tcn/styleguide";
 
 const horizontalStyles = {
   container: {

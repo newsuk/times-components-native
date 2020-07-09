@@ -30,15 +30,15 @@
   },
   "homepage": "https://github.com/newsuk/times-components#readme",
   "devDependencies": {
-    "@times-components-native/jest-configurator": "file:../jest-configurator",
-    "@times-components-native/jest-serializer": "file:../jest-serializer",
-    "@times-components-native/storybook": "file:../storybook",
-    "@times-components-native/test-utils": "file:../test-utils"
+
+
+
+
   },
   "dependencies": {
-    "@times-components-native/styleguide": "file:../styleguide",
-    "@times-components-native/svgs": "file:../svgs",
-    "@times-components-native/utils": "file:../utils",
+
+
+
     "prop-types": "15.7.2"
   },
   "resolutions": {

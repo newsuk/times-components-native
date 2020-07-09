@@ -1,15 +1,15 @@
 import React from "react";
 import TestRenderer from "react-test-renderer";
-import { iterator } from "@times-components-native/test-utils";
+import { iterator } from "@tcn/test-utils";
 import { ApolloError } from "apollo-client";
 import "./mocks";
 import Topic from "../src/topic";
 
-jest.mock("@times-components-native/provider", () =>
+jest.mock("@tcn/provider", () =>
   // eslint-disable-next-line global-require
   require("./mock-provider")
 );
-jest.mock("@times-components-native/tracking", () => {
+jest.mock("@tcn/tracking", () => {
   const id = x => x;
 
   return {

@@ -1,6 +1,6 @@
 import styleguideFactory, {
   spacing
-} from "@times-components-native/styleguide";
+} from "@tcn/styleguide";
 
 const { fontFactory } = styleguideFactory();
 

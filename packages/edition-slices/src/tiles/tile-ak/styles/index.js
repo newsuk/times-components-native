@@ -2,7 +2,7 @@ import {
   colours,
   spacing,
   editionBreakpoints
-} from "@times-components-native/styleguide";
+} from "@tcn/styleguide";
 
 const headlineFontSizeResolver = {
   [editionBreakpoints.medium]: 20,

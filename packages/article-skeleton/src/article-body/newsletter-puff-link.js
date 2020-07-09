@@ -1,13 +1,13 @@
 import React from "react";
 import PropTypes from "prop-types";
 
-import Link from "@times-components-native/link";
-import { IconForwardArrow } from "@times-components-native/icons";
+import Link from "@tcn/link";
+import { IconForwardArrow } from "@tcn/icons";
 import {
   withTrackingContext,
   withTrackEvents
-} from "@times-components-native/tracking";
-import { colours } from "@times-components-native/styleguide";
+} from "@tcn/tracking";
+import { colours } from "@tcn/styleguide";
 import {
   InpPreferencesView,
   InpPreferencesText,

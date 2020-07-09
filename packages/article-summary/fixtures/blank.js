@@ -1,5 +1,5 @@
 import React from "react";
-import { colours } from "@times-components-native/styleguide";
+import { colours } from "@tcn/styleguide";
 import { ArticleSummaryHeadline } from "..";
 
 const defaultHeadline =

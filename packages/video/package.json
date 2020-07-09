@@ -42,10 +42,10 @@
   },
   "homepage": "https://github.com/newsuk/times-components#readme",
   "dependencies": {
-    "@times-components-native/icons": "file:../icons",
-    "@times-components-native/image": "file:../image",
-    "@times-components-native/styleguide": "file:../styleguide",
-    "@times-components-native/svgs": "file:../svgs",
+
+
+
+
     "prop-types": "15.7.2"
   },
   "resolutions": {

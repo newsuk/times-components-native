@@ -1,6 +1,6 @@
 import React from "react";
 import TestRenderer from "react-test-renderer";
-import { themeFactory } from "@times-components-native/styleguide";
+import { themeFactory } from "@tcn/styleguide";
 import PullQuotes from "../src/pull-quote";
 
 const content = "Some content";

@@ -1,5 +1,5 @@
 import React, { Fragment } from "react";
-import Gradient from "@times-components-native/gradient";
+import Gradient from "@tcn/gradient";
 import styles from "./styles";
 
 export default () => (

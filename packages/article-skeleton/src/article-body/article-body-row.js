@@ -5,17 +5,17 @@ import styleguide, {
   colours,
   tabletWidth,
   tabletRowPadding
-} from "@times-components-native/styleguide";
-import { AttributedString } from "@times-components-native/typeset";
-import { screenWidth } from "@times-components-native/utils";
-import Ad from "@times-components-native/ad";
-import ArticleImage from "@times-components-native/article-image";
-import InteractiveWrapper from "@times-components-native/interactive-wrapper";
-import KeyFacts from "@times-components-native/key-facts";
-import PullQuote from "@times-components-native/pull-quote";
-import Video from "@times-components-native/video";
-import ArticleParagraphWrapper from "@times-components-native/article-paragraph";
-import Context from "@times-components-native/context";
+} from "@tcn/styleguide";
+import { AttributedString } from "@tcn/typeset";
+import { screenWidth } from "@tcn/utils";
+import Ad from "@tcn/ad";
+import ArticleImage from "@tcn/article-image";
+import InteractiveWrapper from "@tcn/interactive-wrapper";
+import KeyFacts from "@tcn/key-facts";
+import PullQuote from "@tcn/pull-quote";
+import Video from "@tcn/video";
+import ArticleParagraphWrapper from "@tcn/article-paragraph";
+import Context from "@tcn/context";
 import ArticleParagraph from "./article-body-paragraph";
 import InsetCaption from "./inset-caption";
 import styleFactory from "../styles/article-body";

@@ -2,9 +2,9 @@
 import React from "react";
 import { View, Text } from "react-native";
 import PropTypes from "prop-types";
-import coreRenderers from "@times-components-native/markup";
-import renderTrees from "@times-components-native/markup-forest";
-import { editionBreakpoints } from "@times-components-native/styleguide";
+import coreRenderers from "@tcn/markup";
+import renderTrees from "@tcn/markup-forest";
+import { editionBreakpoints } from "@tcn/styleguide";
 import renderer from "./markup";
 import styleFactory from "./styles";
 

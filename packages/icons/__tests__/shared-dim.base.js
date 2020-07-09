@@ -1,5 +1,5 @@
 import React from "react";
-import { iterator } from "@times-components-native/test-utils";
+import { iterator } from "@tcn/test-utils";
 import * as Icons from "../src/icons";
 
 export default renderMethod => {

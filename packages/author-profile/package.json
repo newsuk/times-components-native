@@ -30,30 +30,30 @@
   },
   "homepage": "https://github.com/newsuk/times-components#readme",
   "devDependencies": {
-    "@times-components-native/eslint-config-thetimes": "file:../eslint-config-thetimes",
-    "@times-components-native/jest-configurator": "file:../jest-configurator",
-    "@times-components-native/jest-serializer": "file:../jest-serializer",
-    "@times-components-native/mocks": "file:../mocks",
-    "@times-components-native/provider-queries": "file:../provider-queries",
-    "@times-components-native/provider-test-tools": "file:../provider-test-tools",
-    "@times-components-native/storybook": "file:../storybook",
-    "@times-components-native/tealium-utils": "file:../tealium-utils",
-    "@times-components-native/test-utils": "file:../test-utils"
+
+
+
+
+
+
+
+
+
   },
   "dependencies": {
-    "@times-components-native/article-list": "file:../article-list",
-    "@times-components-native/gradient": "file:../gradient",
-    "@times-components-native/icons": "file:../icons",
-    "@times-components-native/image": "file:../image",
-    "@times-components-native/link": "file:../link",
-    "@times-components-native/markup": "file:../markup",
-    "@times-components-native/markup-forest": "file:../markup-forest",
-    "@times-components-native/pagination": "file:../pagination",
-    "@times-components-native/provider": "file:../provider",
-    "@times-components-native/responsive": "file:../responsive",
-    "@times-components-native/styleguide": "file:../styleguide",
-    "@times-components-native/tracking": "file:../tracking",
-    "@times-components-native/utils": "file:../utils",
+
+
+
+
+
+
+
+
+
+
+
+
+
     "lodash.get": "4.4.2",
     "prop-types": "15.7.2"
   },

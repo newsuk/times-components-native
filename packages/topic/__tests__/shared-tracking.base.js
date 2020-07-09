@@ -1,13 +1,13 @@
 import React from "react";
 import TestRenderer from "react-test-renderer";
-import { mockNativeModules } from "@times-components-native/mocks";
-import { iterator } from "@times-components-native/test-utils";
+import { mockNativeModules } from "@tcn/mocks";
+import { iterator } from "@tcn/test-utils";
 import mockDate from "mockdate";
 import "./mocks";
 import Topic from "../src/topic";
 
 mockNativeModules();
-jest.mock("@times-components-native/provider", () =>
+jest.mock("@tcn/provider", () =>
   // eslint-disable-next-line global-require
   require("./mock-provider")
 );

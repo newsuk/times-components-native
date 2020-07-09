@@ -4,7 +4,7 @@ import {
   spacing,
   fontSizes,
   colours
-} from "@times-components-native/styleguide";
+} from "@tcn/styleguide";
 
 const smallBreakpointStyles = {
   bold: {

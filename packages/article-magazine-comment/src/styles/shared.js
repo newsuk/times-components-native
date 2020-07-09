@@ -1,7 +1,7 @@
 import styleguide, {
   tabletRowPadding,
   tabletWidth
-} from "@times-components-native/styleguide";
+} from "@tcn/styleguide";
 
 const { colours, fontFactory, spacing } = styleguide();
 const sharedStyles = {

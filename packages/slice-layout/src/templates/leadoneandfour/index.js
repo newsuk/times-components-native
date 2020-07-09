@@ -1,7 +1,7 @@
 import React, { Fragment } from "react";
 import { View } from "react-native";
 import PropTypes from "prop-types";
-import { editionBreakpoints } from "@times-components-native/styleguide";
+import { editionBreakpoints } from "@tcn/styleguide";
 import { ItemColSeparator } from "../shared";
 import VerticalLayout from "../verticallayout";
 import stylesFactory from "./styles";

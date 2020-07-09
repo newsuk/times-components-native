@@ -6,8 +6,8 @@ import {
   minimalNativeTransform,
   print,
   replacePropTransform
-} from "@times-components-native/jest-serializer";
-import { hash } from "@times-components-native/test-utils";
+} from "@tcn/jest-serializer";
+import { hash } from "@tcn/test-utils";
 
 const longValues = new Set(["d", "transform"]);
 

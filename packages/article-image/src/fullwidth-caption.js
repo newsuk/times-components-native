@@ -1,6 +1,6 @@
 import React from "react";
 import { View } from "react-native";
-import { CentredCaption } from "@times-components-native/caption";
+import { CentredCaption } from "@tcn/caption";
 import { propTypes, defaultProps } from "./fullwidth-caption-prop-types";
 import styles from "./styles";
 

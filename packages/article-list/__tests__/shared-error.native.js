@@ -5,8 +5,8 @@ import {
   minimalNativeTransform,
   print,
   replacePropTransform
-} from "@times-components-native/jest-serializer";
-import { hash } from "@times-components-native/test-utils";
+} from "@tcn/jest-serializer";
+import { hash } from "@tcn/test-utils";
 import { omitNative as omitProps } from "./utils";
 import shared from "./shared-error.base.native";
 

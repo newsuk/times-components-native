@@ -1,7 +1,7 @@
 import React from "react";
 import { View } from "react-native";
-import { TextLink } from "@times-components-native/link";
-import { IconTwitter } from "@times-components-native/icons";
+import { TextLink } from "@tcn/link";
+import { IconTwitter } from "@tcn/icons";
 import { propTypes, defaultProps } from "./pull-quote-twitter-link-prop-types";
 import makeTwitterUrl from "./utils";
 import styles from "./styles";

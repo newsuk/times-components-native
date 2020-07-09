@@ -2,7 +2,7 @@ import { MockList } from "graphql-tools";
 import {
   topic as topicQuery,
   topicArticles as articleQuery
-} from "@times-components-native/provider-queries";
+} from "@tcn/provider-queries";
 import generateQueries from "./generate-queries";
 
 const description = [

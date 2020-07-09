@@ -1,6 +1,6 @@
 import React from "react";
 import { View } from "react-native";
-import { ResponsiveContext } from "@times-components-native/responsive";
+import { ResponsiveContext } from "@tcn/responsive";
 import ArticleImage from "./article-image.base";
 import { propTypes, defaultPropTypes } from "./article-image-prop-types";
 import styles from "./styles";

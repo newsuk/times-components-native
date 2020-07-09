@@ -2,7 +2,7 @@
 import React from "react";
 import { Text } from "react-native";
 import PropTypes from "prop-types";
-import ArticleParagraphWrapper from "@times-components-native/article-paragraph";
+import ArticleParagraphWrapper from "@tcn/article-paragraph";
 
 const SimpleParagraph = ({
   onLinkPress,

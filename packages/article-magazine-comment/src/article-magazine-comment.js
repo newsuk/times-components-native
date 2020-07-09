@@ -1,18 +1,18 @@
 /* eslint-disable consistent-return */
 
 import React, { Component, Fragment } from "react";
-import ArticleError from "@times-components-native/article-error";
-import ArticleSkeleton from "@times-components-native/article-skeleton";
+import ArticleError from "@tcn/article-error";
+import ArticleSkeleton from "@tcn/article-skeleton";
 import {
   getHeadline,
   getLeadAsset,
   getStandardTemplateCrop
-} from "@times-components-native/utils";
-import { CentredCaption } from "@times-components-native/caption";
-import ArticleLeadAsset from "@times-components-native/article-lead-asset";
-import { ResponsiveContext } from "@times-components-native/responsive";
-import { tabletWidth } from "@times-components-native/styleguide";
-import Context from "@times-components-native/context";
+} from "@tcn/utils";
+import { CentredCaption } from "@tcn/caption";
+import ArticleLeadAsset from "@tcn/article-lead-asset";
+import { ResponsiveContext } from "@tcn/responsive";
+import { tabletWidth } from "@tcn/styleguide";
+import Context from "@tcn/context";
 import ArticleHeader from "./article-header/article-header";
 import {
   articlePropTypes,

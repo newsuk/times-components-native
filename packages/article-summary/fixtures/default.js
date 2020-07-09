@@ -1,6 +1,6 @@
 import React from "react";
-import { colours } from "@times-components-native/styleguide";
-import { ArticleFlags } from "@times-components-native/article-flag";
+import { colours } from "@tcn/styleguide";
+import { ArticleFlags } from "@tcn/article-flag";
 import { ArticleSummaryHeadline, ArticleSummaryContent } from "..";
 
 const defaultHeadline =

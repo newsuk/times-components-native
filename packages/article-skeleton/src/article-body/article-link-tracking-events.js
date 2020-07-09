@@ -1,4 +1,4 @@
-import { withTrackEvents } from "@times-components-native/tracking";
+import { withTrackEvents } from "@tcn/tracking";
 
 export default Component =>
   withTrackEvents(Component, {

@@ -28,7 +28,7 @@ import {
   addSerializers,
   enzymeRenderedSerializer,
   minimalNative
-} from "@times-components-native/jest-serializer";
+} from "@tcn/jest-serializer";
 
 addSerializers(expect, enzymeRenderedSerializer(), minimalNative);
 ```

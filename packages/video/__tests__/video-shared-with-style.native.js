@@ -7,15 +7,15 @@ import {
   flattenStyleTransform,
   minimaliseTransform,
   print
-} from "@times-components-native/jest-serializer";
-import { iterator } from "@times-components-native/test-utils";
+} from "@tcn/jest-serializer";
+import { iterator } from "@tcn/test-utils";
 import Video from "../src/video";
 import defaultVideoProps from "./default-video-props";
 
-jest.mock("@times-components-native/image", () => "Image");
+jest.mock("@tcn/image", () => "Image");
 
 // eslint-disable-next-line global-require
-jest.mock("@times-components-native/svgs", () => require("./mock-svg"));
+jest.mock("@tcn/svgs", () => require("./mock-svg"));
 
 export default () => {
   addSerializers(

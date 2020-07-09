@@ -1,6 +1,6 @@
 import React from "react";
-import { fonts } from "@times-components-native/styleguide";
-import { FontStorage, BoxExclusion } from "@times-components-native/typeset";
+import { fonts } from "@tcn/styleguide";
+import { FontStorage, BoxExclusion } from "@tcn/typeset";
 import { Text } from "react-native";
 import { getStringBounds } from "../body-utils";
 import styles from "../styles/shared";

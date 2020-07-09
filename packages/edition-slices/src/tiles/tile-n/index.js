@@ -5,7 +5,7 @@ import PropTypes from "prop-types";
 import {
   colours,
   editionBreakpoints
-} from "@times-components-native/styleguide";
+} from "@tcn/styleguide";
 import {
   getTileImage,
   getTileStrapline,

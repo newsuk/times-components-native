@@ -3,12 +3,12 @@ import PropTypes from "prop-types";
 import {
   getEditionBreakpoint,
   tabletWidth
-} from "@times-components-native/styleguide";
+} from "@tcn/styleguide";
 import {
   getDimensions,
   addDimensionsListener,
   removeDimensionsListener
-} from "@times-components-native/utils";
+} from "@tcn/utils";
 import { NativeModules } from "react-native";
 import ResponsiveContext from "./context";
 

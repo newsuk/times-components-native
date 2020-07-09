@@ -1,5 +1,5 @@
 import { StyleSheet } from "react-native";
-import { spacing } from "@times-components-native/styleguide";
+import { spacing } from "@tcn/styleguide";
 import sharedStylesFactory from "./shared";
 import globalStyle from "../shared";
 

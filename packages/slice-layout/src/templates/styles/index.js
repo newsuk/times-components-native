@@ -1,4 +1,4 @@
-import { colours } from "@times-components-native/styleguide";
+import { colours } from "@tcn/styleguide";
 
 const styles = {
   item: {

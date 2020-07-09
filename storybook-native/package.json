@@ -29,9 +29,8 @@
     "@storybook/addons": "5.3.18",
     "@storybook/react": "5.3.18",
     "@storybook/react-native": "5.3.18",
-    "@times-components-native/storybook": "file:../packages/storybook",
+
     "core-js": "^2.6.5",
-    "prop-types": "15.7.2",
     "react": "16.9.0",
     "react-native": "0.61.5",
     "react-native-svg": "9.11.1",

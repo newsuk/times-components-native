@@ -1,7 +1,7 @@
 /* eslint-disable react/forbid-prop-types */
 import React, { useMemo } from "react";
-import { AttributedString } from "@times-components-native/typeset";
-import { colours } from "@times-components-native/styleguide";
+import { AttributedString } from "@tcn/typeset";
+import { colours } from "@tcn/styleguide";
 import PropTypes from "prop-types";
 import makeDropCap from "./drop-cap";
 import InlineParagraph from "./inline-paragraph";

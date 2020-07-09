@@ -1,9 +1,9 @@
 import React from "react";
 import { Text, View } from "react-native";
-import { ArticleFlags } from "@times-components-native/article-flag";
-import Context from "@times-components-native/context";
-import { fontFactory } from "@times-components-native/styleguide";
-import { gqlRgbaToStyle } from "@times-components-native/utils";
+import { ArticleFlags } from "@tcn/article-flag";
+import Context from "@tcn/context";
+import { fontFactory } from "@tcn/styleguide";
+import { gqlRgbaToStyle } from "@tcn/utils";
 
 import Label from "../article-label/article-label";
 import Standfirst from "../article-standfirst/article-standfirst";

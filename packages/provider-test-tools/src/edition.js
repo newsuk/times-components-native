@@ -1,6 +1,6 @@
 import { MockList } from "graphql-tools";
-import { mockEditionSlice } from "@times-components-native/fixture-generator";
-import { edition as editionQuery } from "@times-components-native/provider-queries";
+import { mockEditionSlice } from "@tcn/fixture-generator";
+import { edition as editionQuery } from "@tcn/provider-queries";
 import article from "../fixtures/article.json";
 
 const getMediaUrl = (obj, ratio) => {

@@ -1,12 +1,12 @@
 import React, { Component } from "react";
 import { ActivityIndicator, FlatList, View } from "react-native";
-import Button from "@times-components-native/button";
-import { colours, tabletWidth } from "@times-components-native/styleguide";
-import { withTrackScrollDepth } from "@times-components-native/tracking";
+import Button from "@tcn/button";
+import { colours, tabletWidth } from "@tcn/styleguide";
+import { withTrackScrollDepth } from "@tcn/tracking";
 import {
   normaliseWidthForAssetRequestCache,
   screenWidthInPixels
-} from "@times-components-native/utils";
+} from "@tcn/utils";
 import ArticleListError from "./article-list-error";
 import ArticleListItemWithError from "./article-list-item-with-error";
 import ArticleListItemSeparator from "./article-list-item-separator";

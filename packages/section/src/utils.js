@@ -1,6 +1,6 @@
 /* eslint-disable no-param-reassign */
 import memoizeOne from "memoize-one";
-import { editionBreakpoints } from "@times-components-native/styleguide";
+import { editionBreakpoints } from "@tcn/styleguide";
 
 const composeSliceBuilders = (firstBuilder, secondBuilder) => slices =>
   secondBuilder(firstBuilder(slices));

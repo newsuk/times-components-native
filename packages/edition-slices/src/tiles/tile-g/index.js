@@ -2,7 +2,7 @@
 import React from "react";
 import { View } from "react-native";
 import PropTypes from "prop-types";
-import editionBreakpoints from "@times-components-native/styleguide";
+import editionBreakpoints from "@tcn/styleguide";
 import {
   getTileImage,
   TileLink,

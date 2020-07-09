@@ -4,7 +4,7 @@ import {
   edition as makeEditionParams,
   MockedProvider,
   MockFixture
-} from "@times-components-native/provider-test-tools";
+} from "@tcn/provider-test-tools";
 import { EditionProvider } from "../src/provider";
 
 const renderComponent = child => {

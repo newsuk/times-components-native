@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import { View } from "react-native";
-import { ResponsiveContext } from "@times-components-native/responsive";
-import Image from "@times-components-native/image";
+import { ResponsiveContext } from "@tcn/responsive";
+import Image from "@tcn/image";
 import { cardPropTypes, cardDefaultProps } from "./card-prop-types";
 import Loading from "./card-loading";
 import styles from "./styles";

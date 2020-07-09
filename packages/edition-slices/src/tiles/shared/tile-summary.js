@@ -4,10 +4,10 @@ import ArticleSummary, {
   ArticleSummaryContent,
   ArticleSummaryHeadline,
   ArticleSummaryStrapline
-} from "@times-components-native/article-summary";
-import { ArticleFlags } from "@times-components-native/article-flag";
-import { colours } from "@times-components-native/styleguide";
-import { ResponsiveContext } from "@times-components-native/responsive";
+} from "@tcn/article-summary";
+import { ArticleFlags } from "@tcn/article-flag";
+import { colours } from "@tcn/styleguide";
+import { ResponsiveContext } from "@tcn/responsive";
 import PositionedTileStar from "./positioned-tile-star";
 
 class TileSummary extends Component {

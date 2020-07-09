@@ -1,6 +1,6 @@
 import React from "react";
-import { ContextProviderWithDefaults } from "@times-components-native/context";
-import { scales } from "@times-components-native/styleguide";
+import { ContextProviderWithDefaults } from "@tcn/context";
+import { scales } from "@tcn/styleguide";
 import ArticleSkeleton from "../src/article-skeleton";
 import articleFixture, { testFixture } from "../fixtures/full-article";
 import { adConfig } from "./ad-mock";

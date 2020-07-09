@@ -5,8 +5,8 @@ import {
   compose,
   print,
   minimalNativeTransform
-} from "@times-components-native/jest-serializer";
-import { iterator } from "@times-components-native/test-utils";
+} from "@tcn/jest-serializer";
+import { iterator } from "@tcn/test-utils";
 import shared from "./shared.base";
 import ArticleLeadAsset from "../src/article-lead-asset";
 

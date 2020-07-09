@@ -1,8 +1,8 @@
 import React from "react";
 import { Text } from "react-native";
-import { TextLink } from "@times-components-native/link";
-import { renderTree } from "@times-components-native/markup-forest";
-import coreRenderers from "@times-components-native/markup";
+import { TextLink } from "@tcn/link";
+import { renderTree } from "@tcn/markup-forest";
+import coreRenderers from "@tcn/markup";
 import { defaultProps, propTypes } from "./key-facts-text-prop-types";
 import styles from "./styles";
 

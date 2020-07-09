@@ -5,8 +5,8 @@ import {
   flattenStyleTransform,
   minimalNativeTransform,
   print
-} from "@times-components-native/jest-serializer";
-import { iterator } from "@times-components-native/test-utils";
+} from "@tcn/jest-serializer";
+import { iterator } from "@tcn/test-utils";
 import shared from "../shared";
 
 addSerializers(

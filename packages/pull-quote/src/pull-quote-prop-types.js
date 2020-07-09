@@ -1,5 +1,5 @@
 import PropTypes from "prop-types";
-import { colours } from "@times-components-native/styleguide";
+import { colours } from "@tcn/styleguide";
 import {
   propTypes as twitterPropTypes,
   defaultProps as twitterDefaultTypes

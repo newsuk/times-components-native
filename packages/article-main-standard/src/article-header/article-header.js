@@ -4,7 +4,7 @@ import { Text, View } from "react-native";
 import {
   ArticleFlags,
   getActiveFlags
-} from "@times-components-native/article-flag";
+} from "@tcn/article-flag";
 
 import HeaderLabel from "../article-header-label/article-header-label";
 import HeaderStandfirst from "./article-header-standfirst";

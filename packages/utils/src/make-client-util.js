@@ -1,7 +1,7 @@
 /* eslint-env browser */
 import fetch from "unfetch";
 import { createHttpLink } from "apollo-link-http";
-import { fragmentMatcher } from "@times-components-native/schema";
+import { fragmentMatcher } from "@tcn/schema";
 import { InMemoryCache } from "apollo-cache-inmemory";
 import { ApolloClient } from "apollo-client";
 

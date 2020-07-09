@@ -2,7 +2,7 @@
 
 import React from "react";
 import { View } from "react-native";
-import { colours, fonts, fontSizes } from "@times-components-native/styleguide";
+import { colours, fonts, fontSizes } from "@tcn/styleguide";
 
 const styles = {
   color: colours.section.comment,

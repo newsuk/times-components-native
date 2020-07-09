@@ -1,6 +1,6 @@
 import React from "react";
 import TestRenderer from "react-test-renderer";
-import { scales } from "@times-components-native/styleguide";
+import { scales } from "@tcn/styleguide";
 import Context, {
   ContextProviderWithDefaults,
   SectionContext

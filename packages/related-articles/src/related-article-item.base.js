@@ -4,9 +4,9 @@ import get from "lodash.get";
 import ArticleSummary, {
   ArticleSummaryContent,
   ArticleSummaryHeadline
-} from "@times-components-native/article-summary";
-import Card from "@times-components-native/card";
-import { colours } from "@times-components-native/styleguide";
+} from "@tcn/article-summary";
+import Card from "@tcn/card";
+import { colours } from "@tcn/styleguide";
 import {
   relatedArticleItemPropTypes,
   relatedArticleItemDefaultProps

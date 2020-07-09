@@ -6,7 +6,7 @@ import {
   flattenStyleTransform,
   minimalNativeTransform,
   print
-} from "@times-components-native/jest-serializer";
+} from "@tcn/jest-serializer";
 import ArticleError from "../src/article-error";
 
 const shared = () => {

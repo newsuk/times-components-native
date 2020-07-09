@@ -1,8 +1,8 @@
 import React from "react";
 import { View } from "react-native";
 import PropTypes from "prop-types";
-import ArticleTopics from "@times-components-native/article-topics";
-import { ResponsiveContext } from "@times-components-native/responsive";
+import ArticleTopics from "@tcn/article-topics";
+import { ResponsiveContext } from "@tcn/responsive";
 import styles from "./styles";
 
 const ShowTopics = ({ topics, onPress }) => {

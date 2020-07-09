@@ -4,7 +4,7 @@ import {
   articleExtras as makeParams,
   MockFixture,
   MockedProvider
-} from "@times-components-native/provider-test-tools";
+} from "@tcn/provider-test-tools";
 import ArticleExtras from "./src/article-extras";
 
 const renderExtras = props => (

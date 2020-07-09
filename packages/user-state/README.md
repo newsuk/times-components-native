@@ -19,7 +19,7 @@ or a fallback if not.
 You can use it as follows.
 
 ```js
-import UserState from "@times-components-native/user-state";
+import UserState from "@tcn/user-state";
 
 <UserState
     state={UserState.subscriber}
@@ -51,7 +51,7 @@ the `UserState` package and rendering with a specific user state.
 
 ```js
 // In the test file
-import { mockUserState } from "@times-components-native/user-state";
+import { mockUserState } from "@tcn/user-state";
 const UserState = mockUserState();
 
 UserState.mockStates = [
@@ -61,7 +61,7 @@ UserState.mockStates = [
 ];
 
 // Use UseState as usual in your production code
-import UserState from "@times-components-native/user-state";
+import UserState from "@tcn/user-state";
 
 <UserState state={/*...*/}>
   // ...
@@ -76,7 +76,7 @@ selectively renders based on the user state. You just need to ensure that
 `addUserStateKnobs` is called for every story.
 
 ```js
-import { addUserStateKnobs, USER_STATES } from "@times-components-native/user-state";
+import { addUserStateKnobs, USER_STATES } from "@tcn/user-state";
 
 storiesOf(...)
   .add(() => {

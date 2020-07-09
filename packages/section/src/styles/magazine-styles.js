@@ -1,7 +1,7 @@
 import {
   colours,
   editionBreakpoints
-} from "@times-components-native/styleguide";
+} from "@tcn/styleguide";
 
 const mainStyle = {
   container: {

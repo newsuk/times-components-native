@@ -3,7 +3,7 @@ import {
   fonts,
   spacing,
   editionBreakpoints
-} from "@times-components-native/styleguide";
+} from "@tcn/styleguide";
 
 const paddingVerticalResolver = {
   [editionBreakpoints.medium]: spacing(8),

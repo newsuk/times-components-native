@@ -5,7 +5,7 @@ import {
   flattenStyleTransform,
   minimalNativeTransform,
   print
-} from "@times-components-native/jest-serializer";
+} from "@tcn/jest-serializer";
 import shared from "./shared-tile-n.base";
 
 export default () => {

@@ -2,7 +2,7 @@ import React, { StrictMode } from "react";
 import { HelmetProvider } from "react-helmet-async";
 import PropTypes from "prop-types";
 import { Platform } from "react-native";
-import { addUserStateKnobs } from "@times-components-native/user-state";
+import { addUserStateKnobs } from "@tcn/user-state";
 
 React.Fragment = ({ children }) => children;
 React.Fragment.propTypes = {

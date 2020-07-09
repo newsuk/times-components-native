@@ -1,7 +1,7 @@
 import React from "react";
-import { colours } from "@times-components-native/styleguide";
-import Svg, { Path } from "@times-components-native/svgs";
-import { clean } from "@times-components-native/utils";
+import { colours } from "@tcn/styleguide";
+import Svg, { Path } from "@tcn/svgs";
+import { clean } from "@tcn/utils";
 import propTypes from "./prop-types";
 
 const IconCopyLink = ({

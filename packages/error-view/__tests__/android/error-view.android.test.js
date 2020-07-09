@@ -1,7 +1,7 @@
 import {
   addSerializers,
   minimalNative
-} from "@times-components-native/jest-serializer";
+} from "@tcn/jest-serializer";
 import shared from "../shared";
 
 addSerializers(expect, minimalNative);

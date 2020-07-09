@@ -28,24 +28,24 @@
   },
   "homepage": "https://github.com/newsuk/times-components#readme",
   "devDependencies": {
-    "@times-components-native/eslint-config-thetimes": "file:../eslint-config-thetimes",
-    "@times-components-native/jest-configurator": "file:../jest-configurator",
-    "@times-components-native/provider-test-tools": "file:../provider-test-tools",
-    "@times-components-native/storybook": "file:../storybook",
-    "@times-components-native/tealium-utils": "file:../tealium-utils"
+
+
+
+
+
   },
   "dependencies": {
-    "@times-components-native/ad": "file:../ad",
-    "@times-components-native/article-in-depth": "file:../article-in-depth",
-    "@times-components-native/article-magazine-comment": "file:../article-magazine-comment",
-    "@times-components-native/article-magazine-standard": "file:../article-magazine-standard",
-    "@times-components-native/article-main-comment": "file:../article-main-comment",
-    "@times-components-native/article-main-standard": "file:../article-main-standard",
-    "@times-components-native/context": "file:../context",
-    "@times-components-native/message-bar": "file:../message-bar",
-    "@times-components-native/provider": "file:../provider",
-    "@times-components-native/responsive": "file:../responsive",
-    "@times-components-native/styleguide": "file:../styleguide"
+
+
+
+
+
+
+
+
+
+
+
   },
   "resolutions": {
     "react": "16.9.0",

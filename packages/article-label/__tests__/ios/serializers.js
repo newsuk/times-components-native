@@ -1,6 +1,6 @@
 const {
   addSerializers,
   flattenStyle
-} = require("@times-components-native/jest-serializer");
+} = require("@tcn/jest-serializer");
 
 addSerializers(expect, flattenStyle);

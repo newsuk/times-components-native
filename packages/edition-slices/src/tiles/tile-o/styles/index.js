@@ -3,7 +3,7 @@ import {
   spacing,
   colours,
   editionBreakpoints
-} from "@times-components-native/styleguide";
+} from "@tcn/styleguide";
 
 const fontSizeResolver = {
   [editionBreakpoints.small]: 18,

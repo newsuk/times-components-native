@@ -4,8 +4,8 @@ import {
   authorProfile as makeAuthorParams,
   MockedProvider,
   MockFixture
-} from "@times-components-native/provider-test-tools";
-import { authorArticlesWithImages as authorArticlesWithImagesQuery } from "@times-components-native/provider-queries";
+} from "@tcn/provider-test-tools";
+import { authorArticlesWithImages as authorArticlesWithImagesQuery } from "@tcn/provider-queries";
 import { AuthorArticlesWithImagesProvider } from "../src/provider";
 
 const renderComponent = child => {

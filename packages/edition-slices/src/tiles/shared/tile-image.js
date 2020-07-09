@@ -1,7 +1,7 @@
 import React from "react";
 import { View } from "react-native";
-import { PlayIcon } from "@times-components-native/video";
-import Image from "@times-components-native/image";
+import { PlayIcon } from "@tcn/video";
+import Image from "@tcn/image";
 import { playIconStyles } from "./styles";
 
 const TileImage = ({ hasVideo, style, ...props }) => {

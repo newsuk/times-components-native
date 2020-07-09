@@ -1,4 +1,4 @@
-import { colours, fonts, spacing } from "@times-components-native/styleguide";
+import { colours, fonts, spacing } from "@tcn/styleguide";
 
 const styles = {
   headline: {

@@ -27,16 +27,15 @@
   },
   "homepage": "https://github.com/newsuk/times-components#readme",
   "devDependencies": {
-    "@times-components-native/storybook": "file:../storybook",
-    "@times-components-native/test-utils": "file:../test-utils"
+
+
   },
   "dependencies": {
-    "@times-components-native/provider-queries": "file:../provider-queries",
+
     "graphql-tag": "2.10.3",
     "hoist-non-react-statics": "2.5.5",
     "lodash.isequal": "4.4.0",
     "lodash.pick": "4.4.0",
-    "prop-types": "15.7.2",
     "react-apollo": "2.5.5",
     "react-display-name": "0.2.3"
   },

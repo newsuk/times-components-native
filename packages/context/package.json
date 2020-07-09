@@ -30,11 +30,11 @@
   },
   "homepage": "https://github.com/newsuk/times-components#readme",
   "dependencies": {
-    "@times-components-native/styleguide": "file:../styleguide"
+
   },
   "devDependencies": {
-    "@times-components-native/eslint-config-thetimes": "file:../eslint-config-thetimes",
-    "@times-components-native/jest-configurator": "file:../jest-configurator"
+
+
   },
   "resolutions": {
     "react": "16.9.0",

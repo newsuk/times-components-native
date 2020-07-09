@@ -6,7 +6,7 @@ in their `.eslintrc.json` files.
 
 ```
 {
-  "extends": ["@times-components-native/thetimes"]
+  "extends": ["@tcn/thetimes"]
 }
 ```
 

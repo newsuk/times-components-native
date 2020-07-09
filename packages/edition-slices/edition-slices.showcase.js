@@ -16,9 +16,9 @@ import {
   mockSecondaryOneAndFourSlice,
   mockSecondaryTwoAndTwoSlice,
   mockSecondaryTwoNoPicAndTwoSlice
-} from "@times-components-native/fixture-generator";
-import { SectionContext } from "@times-components-native/context";
-import Responsive from "@times-components-native/responsive";
+} from "@tcn/fixture-generator";
+import { SectionContext } from "@tcn/context";
+import Responsive from "@tcn/responsive";
 import {
   CommentLeadAndCartoonSlice,
   LeadOneAndFourSlice,

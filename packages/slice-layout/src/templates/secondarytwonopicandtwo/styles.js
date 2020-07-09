@@ -1,7 +1,7 @@
 import {
   spacing,
   editionBreakpoints
-} from "@times-components-native/styleguide";
+} from "@tcn/styleguide";
 
 const mediumBreakpointStyles = {
   container: {

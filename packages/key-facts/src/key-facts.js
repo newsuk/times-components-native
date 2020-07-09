@@ -1,7 +1,7 @@
 import React from "react";
 import { View } from "react-native";
-import Context from "@times-components-native/context";
-import styleguide, { colours } from "@times-components-native/styleguide";
+import Context from "@tcn/context";
+import styleguide, { colours } from "@tcn/styleguide";
 import KeyFactsContainer from "./key-facts-container";
 import KeyFactsText from "./key-facts-text";
 import KeyFactsTitle from "./key-facts-title";

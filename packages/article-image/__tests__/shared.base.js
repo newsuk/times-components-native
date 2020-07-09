@@ -1,5 +1,5 @@
 import React from "react";
-import { iterator } from "@times-components-native/test-utils";
+import { iterator } from "@tcn/test-utils";
 import ArticleImage from "../src/article-image";
 
 const testImageUrl = "https://img/someImage";

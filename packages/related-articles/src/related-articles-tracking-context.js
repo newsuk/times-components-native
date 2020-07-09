@@ -1,4 +1,4 @@
-import { withTrackingContext } from "@times-components-native/tracking";
+import { withTrackingContext } from "@tcn/tracking";
 import getHeadline from "./utils";
 import standardRoles from "./roles";
 

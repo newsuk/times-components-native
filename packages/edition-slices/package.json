@@ -30,31 +30,31 @@
   },
   "homepage": "https://github.com/newsuk/times-components#readme",
   "dependencies": {
-    "@times-components-native/article-byline": "file:../article-byline",
-    "@times-components-native/article-flag": "file:../article-flag",
-    "@times-components-native/article-summary": "file:../article-summary",
-    "@times-components-native/context": "file:../context",
-    "@times-components-native/icons": "file:../icons",
-    "@times-components-native/image": "file:../image",
-    "@times-components-native/link": "file:../link",
-    "@times-components-native/markup": "file:../markup",
-    "@times-components-native/markup-forest": "file:../markup-forest",
-    "@times-components-native/responsive": "file:../responsive",
-    "@times-components-native/slice-layout": "file:../slice-layout",
-    "@times-components-native/star-button": "file:../star-button",
-    "@times-components-native/styleguide": "file:../styleguide",
-    "@times-components-native/tracking": "file:../tracking",
-    "@times-components-native/utils": "file:../utils",
-    "@times-components-native/video": "file:../video",
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
     "prop-types": "15.7.2"
   },
   "devDependencies": {
-    "@times-components-native/eslint-config-thetimes": "file:../eslint-config-thetimes",
-    "@times-components-native/fixture-generator": "file:../fixture-generator",
-    "@times-components-native/jest-configurator": "file:../jest-configurator",
-    "@times-components-native/jest-serializer": "file:../jest-serializer",
-    "@times-components-native/storybook": "file:../storybook",
-    "@times-components-native/test-utils": "file:../test-utils"
+
+
+
+
+
+
   },
   "resolutions": {
     "react": "16.9.0",

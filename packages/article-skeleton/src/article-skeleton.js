@@ -1,11 +1,11 @@
 import React, { useCallback, useState, useMemo } from "react";
 import { View, FlatList, ActivityIndicator, Platform } from "react-native";
 import PropTypes from "prop-types";
-import { screenWidth } from "@times-components-native/utils";
-import { withTrackScrollDepth } from "@times-components-native/tracking";
+import { screenWidth } from "@tcn/utils";
+import { withTrackScrollDepth } from "@tcn/tracking";
 import { Viewport } from "@skele/components";
-import { render } from "@times-components-native/markup-forest";
-import ArticleExtras from "@times-components-native/article-extras";
+import { render } from "@tcn/markup-forest";
+import ArticleExtras from "@tcn/article-extras";
 import {
   articleSkeletonPropTypes,
   articleSkeletonDefaultProps

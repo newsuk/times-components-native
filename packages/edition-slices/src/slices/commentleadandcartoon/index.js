@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import { CommentLeadAndCartoon } from "@times-components-native/slice-layout";
+import { CommentLeadAndCartoon } from "@tcn/slice-layout";
 import PropTypes from "prop-types";
 import { TileP, TileQ, TileAH, TileAI } from "../../tiles";
 import { ResponsiveSlice } from "../shared";

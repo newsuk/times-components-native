@@ -1,9 +1,9 @@
 import React from "react";
 import { Text, View } from "react-native";
 import PropTypes from "prop-types";
-import { SectionContext } from "@times-components-native/context";
-import { IconForwardArrow } from "@times-components-native/icons";
-import { colours } from "@times-components-native/styleguide";
+import { SectionContext } from "@tcn/context";
+import { IconForwardArrow } from "@tcn/icons";
+import { colours } from "@tcn/styleguide";
 import styleFactory from "./styles";
 
 const styles = styleFactory();

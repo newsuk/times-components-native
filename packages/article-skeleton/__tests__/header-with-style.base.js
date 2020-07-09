@@ -1,9 +1,9 @@
 /* eslint-disable react/no-multi-comp */
 import React from "react";
 import { Text, View } from "react-native";
-import { iterator } from "@times-components-native/test-utils";
-import { ContextProviderWithDefaults } from "@times-components-native/context";
-import { scales } from "@times-components-native/styleguide";
+import { iterator } from "@tcn/test-utils";
+import { ContextProviderWithDefaults } from "@tcn/context";
+import { scales } from "@tcn/styleguide";
 import ArticleSkeleton from "../src/article-skeleton";
 import articleFixture from "../fixtures/full-article";
 import { adConfig } from "./ad-mock";

@@ -1,5 +1,5 @@
 import get from "lodash.get";
-import { withTrackingContext } from "@times-components-native/tracking";
+import { withTrackingContext } from "@tcn/tracking";
 
 export default Component =>
   withTrackingContext(Component, {

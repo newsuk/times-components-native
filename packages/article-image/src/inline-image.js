@@ -1,7 +1,7 @@
 import React from "react";
 import { View } from "react-native";
-import Caption from "@times-components-native/caption";
-import { ModalImage } from "@times-components-native/image";
+import Caption from "@tcn/caption";
+import { ModalImage } from "@tcn/image";
 import { propTypes, defaultPropTypes } from "./article-image-prop-types";
 import styles from "./styles";
 

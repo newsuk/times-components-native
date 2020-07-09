@@ -1,8 +1,8 @@
 /* eslint-disable global-require */
 import React from "react";
-import { MockEdition } from "@times-components-native/fixture-generator";
-import { SectionContext } from "@times-components-native/context";
-import { editionBreakpoints } from "@times-components-native/styleguide";
+import { MockEdition } from "@tcn/fixture-generator";
+import { SectionContext } from "@tcn/context";
+import { editionBreakpoints } from "@tcn/styleguide";
 import {
   addSerializers,
   compose,
@@ -10,16 +10,16 @@ import {
   minimaliseTransform,
   minimalNativeTransform,
   print
-} from "@times-components-native/jest-serializer";
+} from "@tcn/jest-serializer";
 import TestRenderer from "react-test-renderer";
 import SectionItemSeparator from "../src/section-item-separator";
 import Section from "../src/section";
 import PuzzleBar from "../src/puzzle-bar";
 
-jest.mock("@times-components-native/edition-slices", () => {
+jest.mock("@tcn/edition-slices", () => {
   const slicesMock = {};
   const slicesMap = require.requireActual(
-    "@times-components-native/edition-slices"
+    "@tcn/edition-slices"
   ).default;
 
   Object.keys(slicesMap).forEach(key => {
@@ -32,10 +32,10 @@ jest.mock("@times-components-native/edition-slices", () => {
   };
 });
 
-jest.mock("@times-components-native/icons", () => ({
+jest.mock("@tcn/icons", () => ({
   IconForwardArrow: "IconForwardArrow"
 }));
-jest.mock("@times-components-native/image", () => ({
+jest.mock("@tcn/image", () => ({
   __esModule: true,
   default: "TimesImage"
 }));
@@ -92,8 +92,8 @@ export default () => {
   });
 
   it("should render secondary 2 and 2 for mobile (small breakpoint)", () => {
-    jest.doMock("@times-components-native/utils", () => {
-      const actualUtils = jest.requireActual("@times-components-native/utils");
+    jest.doMock("@tcn/utils", () => {
+      const actualUtils = jest.requireActual("@tcn/utils");
 
       return {
         ...actualUtils,

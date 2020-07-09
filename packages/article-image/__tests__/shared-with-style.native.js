@@ -6,13 +6,13 @@ import {
   flattenStyleTransform,
   minimalNativeTransform,
   print
-} from "@times-components-native/jest-serializer";
+} from "@tcn/jest-serializer";
 import TestRenderer from "react-test-renderer";
-import Responsive from "@times-components-native/responsive";
+import Responsive from "@tcn/responsive";
 
 import shared from "./shared-with-style.base";
 
-jest.mock("@times-components-native/image", () => ({
+jest.mock("@tcn/image", () => ({
   ModalImage: "ModalImage"
 }));
 

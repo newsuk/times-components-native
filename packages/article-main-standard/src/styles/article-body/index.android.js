@@ -1,5 +1,5 @@
 import { StyleSheet } from "react-native";
-import styleguide from "@times-components-native/styleguide";
+import styleguide from "@tcn/styleguide";
 import sharedStylesFactory from "./shared";
 import globalStyle from "../shared";
 

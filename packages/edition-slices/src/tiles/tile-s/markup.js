@@ -1,6 +1,6 @@
 import React from "react";
 import { Text } from "react-native";
-import { editionBreakpoints } from "@times-components-native/styleguide";
+import { editionBreakpoints } from "@tcn/styleguide";
 import stylefactory from "./styles";
 
 const styles = stylefactory(editionBreakpoints.small);
