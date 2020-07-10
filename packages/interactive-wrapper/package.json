@@ -37,7 +37,7 @@
   },
   "dependencies": {
 
-    "react-native-autoheight-webview": "1.5.1",
+    "react-native-autoheight-webview": "1.5.1"
   },
   "resolutions": {
     "react": "16.9.0",

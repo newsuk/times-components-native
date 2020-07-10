@@ -9,6 +9,7 @@
     "yarn": ">=1.16.0"
   },
   "scripts": {
+    "test": "jest",
     "test:all": "lerna run test --since --stream && lerna run test:all --since --stream",
     "prelint": "eslint . && prettier --list-different '**/*.js' && yarn deps:lint",
     "prettier:diff": "prettier --list-different '**/*.*'",
@@ -98,6 +99,7 @@
     "babel-loader": "8.0.5",
     "babel-plugin-add-react-displayname": "0.0.5",
     "babel-plugin-import-graphql": "2.7.0",
+    "babel-plugin-module-resolver": "4.0.0",
     "babel-plugin-styled-components": "1.10.6",
     "babel-plugin-transform-react-remove-prop-types": "0.4.24",
     "codecov": "3.6.1",
