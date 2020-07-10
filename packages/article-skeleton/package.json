@@ -38,7 +38,6 @@
     "lodash.pick": "4.4.0",
     "luxon": "1.18.0",
     "memoize-one": "5.1.1",
-    "mockdate": "2.0.2",
     "react-apollo": "2.5.5",
     "styled-components": "4.3.2"
   },
