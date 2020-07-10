@@ -127,7 +127,7 @@ const slices = [
 
 jest.mock("@tcn/utils", () => {
   // eslint-disable-next-line global-require
-  const actualUtils = jest.requireActual("@tcn/utils");
+  const actualUtils = jest.requireActual("../../utils");
 
   return {
     ...actualUtils,

@@ -21,15 +21,15 @@ exports[`NewsletterPuffLink renders the link with the text \`Manage preferences 
   style={Object {}}
 >
   <View
-    className="inline-newsletter-puff__InpPreferencesView-sc-1gmgdfq-13 joMqQY"
+    className="inline-newsletter-puff__InpPreferencesView-sc-1how1ig-13 jrdxG"
   >
     <Text
-      className="inline-newsletter-puff__InpPreferencesText-sc-1gmgdfq-11 hiXXJO"
+      className="inline-newsletter-puff__InpPreferencesText-sc-1how1ig-11 iTPTWl"
     >
       Manage preferences here
     </Text>
     <View
-      className="inline-newsletter-puff__InpIconContainer-sc-1gmgdfq-12 fjYueD"
+      className="inline-newsletter-puff__InpIconContainer-sc-1how1ig-12 gSDsVb"
     >
       <RNSVGSvgView
         align="xMidYMid"

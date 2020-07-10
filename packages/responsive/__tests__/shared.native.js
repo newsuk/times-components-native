@@ -28,7 +28,7 @@ export default () => {
 
   it("addDimensionListener is called on mount", () => {
     jest.doMock("@tcn/utils", () => {
-      const actualUtils = jest.requireActual("@tcn/utils");
+      const actualUtils = jest.requireActual("../../utils");
 
       return {
         ...actualUtils,
@@ -55,7 +55,7 @@ export default () => {
 
   it("removeDimensionListener is called on unmount", () => {
     jest.doMock("@tcn/utils", () => {
-      const actualUtils = jest.requireActual("@tcn/utils");
+      const actualUtils = jest.requireActual("../../utils");
 
       return {
         ...actualUtils,
