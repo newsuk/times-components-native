@@ -24,6 +24,7 @@ const {
 } = NativeModules.ArticleEvents;
 
 const ArticleBase = ({
+  adPosition,
   adTestMode,
   article,
   devInteractives,
@@ -61,6 +62,7 @@ const ArticleBase = ({
     <ContextProviderWithDefaults value={{ theme }}>
       <Article
         adConfig={adConfig}
+        adPosition={adPosition}
         analyticsStream={trackArticle}
         article={article}
         error={omitErrors ? null : error}
