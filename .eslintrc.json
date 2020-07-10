@@ -1,6 +1,7 @@
 {
   "extends": ["airbnb", "prettier", "prettier/react"],
   "plugins": ["react-hooks"],
+  "parser": "babel-eslint",
   "rules": {
     "react/jsx-filename-extension": [1, { "extensions": [".js"] }],
     "react-hooks/rules-of-hooks": "error",
@@ -9,8 +10,40 @@
     "import/no-extraneous-dependencies": [
       "error",
       {
-        "devDependencies": ["**/storybook/**"],
+        "devDependencies": [
+          "**/mock-*/**",
+          "**/__tests__/**",
+          "**/*.test.*",
+          "**/fixtures/**",
+          "**/*.stories*",
+          "**/*.showcase*",
+          "**/showcase-helper*",
+          "**/scripts/**",
+          "**/storybook/**",
+          "webpack.config*.js"
+        ],
         "optionalDependencies": false
+      }
+    ],
+    "jsx-a11y/anchor-is-valid": [
+      "error",
+      {
+        "components": ["Link"],
+        "specialLink": ["url"],
+        "aspects": ["noHref", "invalidHref", "preferButton"]
+      }
+    ],
+    "no-restricted-properties": [
+      2,
+      {
+        "object": "React",
+        "property": "Component",
+        "message": "Please destruct Component from React."
+      },
+      {
+        "object": "React",
+        "property": "PureComponent",
+        "message": "Please destruct PureComponent from React."
       }
     ]
   },
