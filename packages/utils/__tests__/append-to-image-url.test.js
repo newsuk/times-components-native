@@ -1,4 +1,4 @@
-import { appendToImageURL } from "../src";
+import { appendToImageURL } from "../index";
 
 describe("appendToImageURL", () => {
   it("should return correct url for an empty key", () => {

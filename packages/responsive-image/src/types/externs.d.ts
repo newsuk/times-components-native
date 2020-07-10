@@ -1,13 +1,13 @@
 declare module '*.png';
 
-declare module '@times-components-native/styleguide' {
+declare module '@tcn/styleguide' {
   type ColourMap = Record<string, string>;
   type Colours = Record<string, ColourMap>;
 
   export const colours: Colours;
 }
 
-declare module '@times-components-native/utils' {
+declare module '@tcn/utils' {
   type appendToImageURL = (url: string, key: string, value: string | number) => string;
 
   export const appendToImageURL: appendToImageURL;

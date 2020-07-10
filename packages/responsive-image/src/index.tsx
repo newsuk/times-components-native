@@ -9,7 +9,7 @@ import {
 } from 'react-native';
 import Url from 'url-parse';
 import logoPath from '../assets/t.png';
-import { appendToImageURL } from '@times-components-native/utils';
+import { appendToImageURL } from '@tcn/utils';
 import findClosestWidth from './utils/findClosestWidth';
 import styles from './styles';
 
