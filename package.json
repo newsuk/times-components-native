@@ -11,7 +11,7 @@
   "scripts": {
     "test": "jest",
     "test:all": "lerna run test --since --stream && lerna run test:all --since --stream",
-    "prelint": "eslint . && prettier --list-different '**/*.js' && yarn deps:lint",
+    "prelint": "eslint . && prettier --list-different '**/*.js'",
     "prettier:diff": "prettier --list-different '**/*.*'",
     "depcheck": "depcheck --ignores='@babel/*,babel-*,depcheck,eslint,@thetimes,identity-obj-proxy,graphql,jest,prettier,react-art,graphql-codegen-typescript-template,@types/jest,graphql-code-generator,ts-jest,typescript,typings' --ignore-bin-package=false --skip-missing",
     "lint": "eslint . && yarn prettier:diff && yarn depcheck",
@@ -135,7 +135,6 @@
     "node-fetch": "2.2.0",
     "npm-run-all": "4.1.5",
     "open-cli": "5.0.0",
-    "opentype.js": "1.1.0",
     "prettier": "1.14.3",
     "react": "16.9.0",
     "react-art": "16.6.3",
@@ -161,11 +160,17 @@
   "dependencies": {
     "@react-native-community/netinfo": "5.3.3",
     "@skele/components": "1.0.0-alpha.40",
+    "lodash.get": "4.4.2",
     "lodash.pick": "4.4.0",
+    "luxon": "1.18.0",
+    "memoize-one": "5.1.1",
     "mockdate": "2.0.2",
+    "opentype.js": "1.1.0",
     "prop-types": "15.7.2",
+    "react-apollo": "2.5.5",
     "react-broadcast": "0.5.2",
     "react-native-device-info": "5.3.1",
-    "react-native-webview": "7.0.5"
+    "react-native-webview": "7.0.5",
+    "styled-components": "4.3.2"
   }
 }
