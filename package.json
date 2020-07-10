@@ -37,7 +37,7 @@
     "android:publish-lib": "lerna run --scope @times-components-native/android-app publish-library --stream",
     "prefmt": "prettier --write '**/*.{js,json}'",
     "fmt": "eslint . --fix && prettier --write '**/*.*'",
-    "postinstall": "yarn run fetch-fonts && lerna run postinstall",
+    "postinstall": "yarn run fetch-fonts",
     "test:ios": "lerna run test:ios --stream",
     "test:android": "lerna run test:android --stream",
     "test:unit": "lerna run test:unit --stream"
@@ -53,12 +53,6 @@
       "packages/?!author-profile"
     ]
   },
-  "workspaces": [
-    "android-app",
-    "ios-app",
-    "packages/*",
-    "storybook-native"
-  ],
   "repository": {
     "type": "git",
     "url": "git+https://github.com/newsuk/times-components-native.git"
@@ -134,7 +128,6 @@
     "jest": "24.8.0",
     "jest-transform-graphql": "2.1.0",
     "jsdom": "9.12.0",
-    "lerna": "3.2.1",
     "lodash.merge": "4.6.2",
     "lodash.omit": "4.4.0",
     "metro-react-native-babel-preset": "0.53.1",
