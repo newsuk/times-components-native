@@ -34,7 +34,7 @@
     "prefmt": "prettier --write '**/*.{js,json}'",
     "fmt": "eslint . --fix && prettier --write '**/*.*'",
     "postinstall": "node ./scripts/fetch-fonts",
-    "test:ios": "lerna run test:ios --stream",
+    "test:ios": "jest --config jest.ios.config.js",
     "test:android": "jest --config jest.android.config.js",
     "test:unit": "lerna run test:unit --stream"
   },
@@ -176,12 +176,14 @@
     "react-broadcast": "0.5.2",
     "react-display-name": "0.2.3",
     "react-dom": "16.9.0",
+    "react-helmet-async": "1.0.2",
     "react-native": "0.61.5",
     "react-native-autoheight-webview": "1.5.1",
     "react-native-device-info": "5.3.1",
     "react-native-image-zoom-viewer": "2.2.26",
     "react-native-svg": "9.11.1",
     "react-native-webview": "7.0.5",
-    "styled-components": "4.3.2"
+    "styled-components": "4.3.2",
+    "unfetch": "^4.1.0"
   }
 }

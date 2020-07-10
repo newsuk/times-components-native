@@ -2,6 +2,7 @@ import React from "react";
 import TestRenderer from "react-test-renderer";
 import { iterator } from "@tcn/test-utils";
 import { Svg, G, Path, Polygon, Rect } from "../src";
+import './serializers.native'
 
 export default () => {
   const tests = [
