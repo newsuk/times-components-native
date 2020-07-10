@@ -160,6 +160,7 @@
     "apollo-cache-inmemory": "1.5.1",
     "apollo-link-http": "1.5.14",
     "date-fns": "1.28.5",
+    "hoist-non-react-statics": "2.5.5",
     "jest-plugin-context": "2.9.0",
     "lodash.get": "4.4.2",
     "lodash.isequal": "4.4.0",
@@ -184,6 +185,7 @@
     "react-native-svg": "9.11.1",
     "react-native-webview": "7.0.5",
     "styled-components": "4.3.2",
-    "unfetch": "^4.1.0"
+    "unfetch": "^4.1.0",
+    "url-parse": "1.4.7"
   }
 }
