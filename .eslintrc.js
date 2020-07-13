@@ -1,4 +1,6 @@
-{
+const schemaJson = require("./packages/schema/schema.json") ;
+
+module.exports = {
   "extends": ["airbnb", "prettier", "prettier/react"],
   "plugins": ["graphql", "react-hooks"],
   "parser": "babel-eslint",
@@ -50,7 +52,7 @@
       "error",
       {
         "env": "apollo",
-        "schemaJson": require("@tcn/schema/schema.json")
+        "schemaJson": schemaJson
       }
     ]
   },
