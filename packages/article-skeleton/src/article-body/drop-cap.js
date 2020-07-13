@@ -41,6 +41,8 @@ export default (scale, color, dropCapFont, paragraph) => {
       style={[
         {
           position: "absolute",
+          borderWidth: 1,
+          borderColor: "green",
           left: styles.articleMainContentRow.paddingLeft,
           fontSize,
           lineHeight: height * 1.33,

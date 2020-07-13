@@ -1,19 +1,28 @@
 import React from "react";
+import { NativeModules } from "react-native";
+import { getDimensions } from "@times-components-native/utils";
 import ArticleMagazineComment from "@times-components-native/article-magazine-comment";
 import ArticleInDepth from "@times-components-native/article-in-depth";
 import ArticleMagazineStandard from "@times-components-native/article-magazine-standard";
 import ArticleMainStandard from "@times-components-native/article-main-standard";
 import ArticleMainComment from "@times-components-native/article-main-comment";
+import ArticleMainCommentTablet from "@times-components-native/article-main-comment-tablet";
 import Responsive from "@times-components-native/responsive";
-import { scales } from "@times-components-native/styleguide";
+import { scales, tabletWidth } from "@times-components-native/styleguide";
 import { MessageManager } from "@times-components-native/message-bar";
 import { getMediaList, addIndexesToInlineImages } from "./utils";
+
+const { width } = getDimensions();
+const config = (NativeModules || {}).ReactConfig;
+const isTablet =
+  (config && config.breakpoint && config.breakpoint !== "small") ||
+  width > tabletWidth;
 
 export const templates = {
   indepth: ArticleInDepth,
   magazinecomment: ArticleMagazineComment,
   magazinestandard: ArticleMagazineStandard,
-  maincomment: ArticleMainComment,
+  maincomment: isTablet ? ArticleMainCommentTablet : ArticleMainComment,
   mainstandard: ArticleMainStandard
 };
 
