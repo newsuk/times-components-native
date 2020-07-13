@@ -33,6 +33,7 @@
     "prefmt": "prettier --write '**/*.{js,json}'",
     "fmt": "eslint . --fix && prettier --write '**/*.*'",
     "postinstall": "node ./scripts/fetch-fonts",
+    "typecheck": "tsc --project ./",
     "test:ios": "jest --config test-setup/jest.ios.config.js",
     "test:android": "jest --config test-setup/jest.android.config.js",
     "test:common": "jest --config test-setup/jest.common.config.js",

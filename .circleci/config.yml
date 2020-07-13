@@ -65,6 +65,18 @@ jobs:
                       npx yarn@1.16.0 lint
                   working_directory: ~/project/
 
+    run_typecheck:
+      executor: node
+      steps:
+        - checkout
+        - attach_workspace:
+            at: ./
+        - run:
+            name: Run Type Check
+            command: |
+              npx yarn@1.16.0 typecheck
+            working_directory: ~/project/
+
     run_noplatform_tests:
         executor: node
         steps:
@@ -149,6 +161,9 @@ workflows:
             - run_lint:
                   requires:
                       - setup
+            - run_typecheck:
+                requires:
+                  - setup
             - run_noplatform_tests:
                   requires:
                       - setup
@@ -166,6 +181,7 @@ workflows:
                             - master
                   requires:
                       - run_lint
+                      - run_typecheck
                       - run_noplatform_tests
                       - run_android_tests
                       - run_ios_tests
