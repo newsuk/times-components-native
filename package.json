@@ -158,8 +158,11 @@
     "@react-native-community/netinfo": "5.3.3",
     "@skele/components": "1.0.0-alpha.40",
     "apollo-cache-inmemory": "1.5.1",
+    "apollo-link": "1.2.4",
     "apollo-link-http": "1.5.14",
+    "apollo-utilities": "1.2.1",
     "date-fns": "1.28.5",
+    "graphql-tools": "4.0.4",
     "hoist-non-react-statics": "2.5.5",
     "jest-plugin-context": "2.9.0",
     "lodash.get": "4.4.2",
@@ -186,6 +189,7 @@
     "react-native-webview": "7.0.5",
     "styled-components": "4.3.2",
     "unfetch": "^4.1.0",
-    "url-parse": "1.4.7"
+    "url-parse": "1.4.7",
+    "zen-observable": "0.8.11"
   }
 }

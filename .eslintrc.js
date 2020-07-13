@@ -1,6 +1,6 @@
 {
   "extends": ["airbnb", "prettier", "prettier/react"],
-  "plugins": ["react-hooks"],
+  "plugins": ["graphql", "react-hooks"],
   "parser": "babel-eslint",
   "rules": {
     "react/jsx-filename-extension": [1, { "extensions": [".js"] }],
@@ -44,6 +44,13 @@
         "object": "React",
         "property": "PureComponent",
         "message": "Please destruct PureComponent from React."
+      }
+    ],
+    "graphql/template-strings": [
+      "error",
+      {
+        "env": "apollo",
+        "schemaJson": require("@tcn/schema/schema.json")
       }
     ]
   },
