@@ -2,14 +2,18 @@
   "compilerOptions": {
     "allowJs": true,
     "allowSyntheticDefaultImports": true,
-    "jsx": "react-native",
+    "baseUrl": "./",
     "esModuleInterop": true,
+    "jsx": "react-native",
     "lib": ["es7", "es2017.object"],
     "module": "commonjs",
     "moduleResolution": "node",
     "noEmit": true,
     "noUnusedLocals": true,
     "noUnusedParameters": true,
+    "paths": {
+      "@times-components-native/*": ["packages/*"]
+    },
     "resolveJsonModule": true,
     "skipLibCheck": true,
     "strict": true,
