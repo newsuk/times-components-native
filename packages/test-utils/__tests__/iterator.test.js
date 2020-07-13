@@ -1,5 +1,5 @@
 import React from "react";
-import { iterator } from "../src/index";
+import { iterator } from "../index";
 import { Text }from 'react-native'
 import renderer from "react-test-renderer";
 
