@@ -1,4 +1,4 @@
-import { delayAndAdvance, delay, advance } from "../src";
+import { delayAndAdvance, delay, advance } from "../index";
 
 describe("faketimer tests", () => {
   beforeAll(() => jest.useFakeTimers());
