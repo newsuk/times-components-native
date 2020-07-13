@@ -1,14 +1,14 @@
-import MockArticle from "./mock-article";
-import MockUser from "./mock-user";
-import MockImage from "./mock-image";
-import MockAuthor from "./mock-author";
-import MockEdition from "./mock-edition";
+import MockArticle from "./src/mock-article";
+import MockUser from "./src/mock-user";
+import MockImage from "./src/mock-image";
+import MockAuthor from "./src/mock-author";
+import MockEdition from "./src/mock-edition";
 import {
   mockMagazineSection,
   mockPuzzleSection,
   mockStandardSection,
   getPuzzleSlices
-} from "./mock-section";
+} from "./src/mock-section";
 import mockEditionSlice, {
   mockDailyRegisterSlice,
   mockLeadersSlice,
@@ -27,9 +27,9 @@ import mockEditionSlice, {
   mockSecondaryTwoAndTwoSlice,
   mockSecondaryTwoNoPicAndTwoSlice,
   mockPuzzleSlice
-} from "./mock-slice";
-import MockTile from "./mock-tile";
-import MockTopic from "./mock-topic";
+} from "./src/mock-slice";
+import MockTile from "./src/mock-tile";
+import MockTopic from "./src/mock-topic";
 
 export {
   mockDailyRegisterSlice,
