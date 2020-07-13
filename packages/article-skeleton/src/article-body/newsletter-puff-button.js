@@ -1,11 +1,11 @@
 import React from "react";
 import PropTypes from "prop-types";
 
-import Button from "@tcn/button";
+import Button from "@times-components-native/button";
 import {
   withTrackingContext,
   withTrackEvents
-} from "@tcn/tracking";
+} from "@times-components-native/tracking";
 import { buttonStyles, textStyle } from "../styles/inline-newsletter-puff";
 
 const NewsletterPuffButton = ({ updatingSubscription, onPress }) => (

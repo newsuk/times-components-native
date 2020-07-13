@@ -3,8 +3,8 @@ import {
   mockPuzzleSection,
   mockStandardSection,
   mockMagazineSection
-} from "@tcn/fixture-generator";
-import storybookReporter from "@tcn/tealium-utils";
+} from "@times-components-native/fixture-generator";
+import storybookReporter from "@times-components-native/tealium-utils";
 import Section from "./src/section";
 
 const preventDefaultedAction = decorateAction =>

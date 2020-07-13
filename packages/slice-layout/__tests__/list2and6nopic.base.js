@@ -1,6 +1,6 @@
 import React from "react";
-import { iterator } from "@tcn/test-utils";
-import { editionBreakpoints } from "@tcn/styleguide";
+import { iterator } from "@times-components-native/test-utils";
+import { editionBreakpoints } from "@times-components-native/styleguide";
 import createItem from "./utils";
 import { ListTwoAndSixNoPic } from "../src/slice-layout";
 import styles from "../src/templates/listtwoandsixnopic/styles";

@@ -1,4 +1,4 @@
-import { spacing } from "@tcn/styleguide";
+import { spacing } from "@times-components-native/styleguide";
 
 export const opinionConfig = {
   imageConfig: {

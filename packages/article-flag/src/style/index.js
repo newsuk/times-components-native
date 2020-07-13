@@ -1,4 +1,4 @@
-import { spacing, fontFactory } from "@tcn/styleguide";
+import { spacing, fontFactory } from "@times-components-native/styleguide";
 import sharedStyles from "./shared";
 
 const styles = {

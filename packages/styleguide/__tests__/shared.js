@@ -1,13 +1,13 @@
 import { Text } from "react-native";
 import React from "react";
 import TestRenderer from "react-test-renderer";
-import { iterator } from "@tcn/test-utils";
+import { iterator } from "@times-components-native/test-utils";
 import styleguide, { Animations, scales } from "../src/styleguide";
 import themeFactory from "../src/theme/theme-factory";
 const {
   addSerializers,
   minimalNative
-} = require("@tcn/jest-serializer");
+} = require("@times-components-native/jest-serializer");
 
 addSerializers(expect, minimalNative);
 

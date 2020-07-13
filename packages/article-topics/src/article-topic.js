@@ -1,8 +1,8 @@
 import React from "react";
-import Context from "@tcn/context";
+import Context from "@times-components-native/context";
 import { Text, View } from "react-native";
-import Link from "@tcn/link";
-import { withTrackEvents } from "@tcn/tracking";
+import Link from "@times-components-native/link";
+import { withTrackEvents } from "@times-components-native/tracking";
 import styles from "./styles";
 import topicPropTypes from "./article-topic-prop-types";
 

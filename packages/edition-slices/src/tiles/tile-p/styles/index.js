@@ -3,7 +3,7 @@ import {
   fonts,
   fontSizes,
   spacing
-} from "@tcn/styleguide";
+} from "@times-components-native/styleguide";
 
 const styles = {
   bylineOpinion: {

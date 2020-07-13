@@ -4,7 +4,7 @@ import {
   fontFactory,
   spacing,
   editionBreakpoints
-} from "@tcn/styleguide";
+} from "@times-components-native/styleguide";
 
 const fontSizeResolver = {
   [editionBreakpoints.small]: 18,

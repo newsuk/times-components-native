@@ -1,5 +1,5 @@
 import React from "react";
-import { colours } from "@tcn/styleguide";
+import { colours } from "@times-components-native/styleguide";
 import { defaultProps, propTypes } from "./gradient-prop-types";
 import GradientBase from "./gradient.base";
 

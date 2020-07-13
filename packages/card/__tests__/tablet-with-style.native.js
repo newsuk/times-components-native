@@ -5,11 +5,11 @@ import {
   flattenStyleTransform,
   minimalNativeTransform,
   print
-} from "@tcn/jest-serializer";
+} from "@times-components-native/jest-serializer";
 import shared from "./tablet-with-style.base";
 
-jest.mock("@tcn/image", () => "Image");
-jest.mock("@tcn/gradient", () => "Gradient");
+jest.mock("@times-components-native/image", () => "Image");
+jest.mock("@times-components-native/gradient", () => "Gradient");
 
 export default () => {
   addSerializers(

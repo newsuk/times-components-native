@@ -1,7 +1,7 @@
 /* eslint-disable react/prop-types */
 import React from "react";
 import { ScrollView, View } from "react-native";
-import { editionBreakpoints } from "@tcn/styleguide";
+import { editionBreakpoints } from "@times-components-native/styleguide";
 
 import {
   VerticalLayout,

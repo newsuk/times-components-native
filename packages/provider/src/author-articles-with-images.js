@@ -1,7 +1,7 @@
 import {
   authorArticlesWithImages,
   authorArticlesWithImagesPTV
-} from "@tcn/provider-queries";
+} from "@times-components-native/provider-queries";
 import connectGraphql from "./connect";
 
 export default connectGraphql(

@@ -4,7 +4,7 @@ import {
   article as makeParams,
   MockedProvider,
   schemaToMocks
-} from "@tcn/provider-test-tools";
+} from "@times-components-native/provider-test-tools";
 import { ArticleProvider } from "../src/provider";
 
 const renderComponent = (mocks, id, child) =>

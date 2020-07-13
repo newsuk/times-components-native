@@ -1,5 +1,5 @@
-import { getDimensions } from "@tcn/utils";
-import { tabletWidth } from "@tcn/styleguide";
+import { getDimensions } from "@times-components-native/utils";
+import { tabletWidth } from "@times-components-native/styleguide";
 import { NativeModules } from "react-native";
 import {
   CommentLeadAndCartoonSlice,

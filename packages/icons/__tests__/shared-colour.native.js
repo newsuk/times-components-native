@@ -7,7 +7,7 @@ import {
   minimaliseTransform,
   replaceTransform,
   print
-} from "@tcn/jest-serializer";
+} from "@times-components-native/jest-serializer";
 import shared from "./shared-colour.base";
 
 export default () => {

@@ -1,9 +1,9 @@
 import React from "react";
 import { Text, View } from "react-native";
 import PropTypes from "prop-types";
-import Button from "@tcn/button";
-import Context from "@tcn/context";
-import styleguide from "@tcn/styleguide";
+import Button from "@times-components-native/button";
+import Context from "@times-components-native/context";
+import styleguide from "@times-components-native/styleguide";
 import styles from "./styles";
 
 const ArticleExtrasError = ({ refetch }) => (

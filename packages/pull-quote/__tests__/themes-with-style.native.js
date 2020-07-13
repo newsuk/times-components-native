@@ -4,14 +4,14 @@ import {
   flattenStyleTransform,
   minimalNativeTransform,
   print
-} from "@tcn/jest-serializer";
-import { iterator } from "@tcn/test-utils";
+} from "@times-components-native/jest-serializer";
+import { iterator } from "@times-components-native/test-utils";
 import tests from "./themes-with-style.base";
 
-jest.mock("@tcn/link", () => ({
+jest.mock("@times-components-native/link", () => ({
   TextLink: "TextLink"
 }));
-jest.mock("@tcn/icons", () => ({
+jest.mock("@times-components-native/icons", () => ({
   IconTwitter: "IconTwitter"
 }));
 

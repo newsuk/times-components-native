@@ -8,8 +8,8 @@ import {
   minimaliseTransform,
   minimalNativeTransform,
   print
-} from "@tcn/jest-serializer";
-import { iterator } from "@tcn/test-utils";
+} from "@times-components-native/jest-serializer";
+import { iterator } from "@times-components-native/test-utils";
 import Gradient from "../src/gradient";
 
 export default () => {

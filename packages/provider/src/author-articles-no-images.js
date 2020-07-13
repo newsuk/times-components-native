@@ -2,7 +2,7 @@ import React from "react";
 import {
   authorArticlesNoImages,
   authorArticlesNoImagesPTV
-} from "@tcn/provider-queries";
+} from "@times-components-native/provider-queries";
 import connectGraphql from "./connect";
 
 const AuthorArticlesNoImagesProvider = connectGraphql(

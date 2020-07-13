@@ -1,6 +1,6 @@
 import React from "react";
 import { create } from "react-test-renderer";
-import Button from "@tcn/button";
+import Button from "@times-components-native/button";
 import mockDate from "mockdate";
 
 import NewsletterPuffButton from "../src/article-body/newsletter-puff-button";

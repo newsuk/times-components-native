@@ -1,4 +1,4 @@
-import { spacing, tabletWidth } from "@tcn/styleguide";
+import { spacing, tabletWidth } from "@times-components-native/styleguide";
 
 const globalStyle = {
   articleMainContentRow: {

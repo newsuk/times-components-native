@@ -3,7 +3,7 @@ import {
   CentredCaption,
   propTypes,
   defaultProps
-} from "@tcn/caption";
+} from "@times-components-native/caption";
 import InsetCaption from "./inset-caption";
 
 const InsetCenteredCaption = props => (

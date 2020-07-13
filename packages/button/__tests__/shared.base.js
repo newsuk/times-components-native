@@ -1,5 +1,5 @@
 import React from "react";
-import { iterator } from "@tcn/test-utils";
+import { iterator } from "@times-components-native/test-utils";
 import Button from "../src/button";
 
 export default renderMethod => {

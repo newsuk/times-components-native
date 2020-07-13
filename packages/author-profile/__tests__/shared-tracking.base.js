@@ -1,7 +1,7 @@
 import React from "react";
 import TestRenderer from "react-test-renderer";
-import { mockNativeModules } from "@tcn/mocks";
-import { iterator } from "@tcn/test-utils";
+import { mockNativeModules } from "@times-components-native/mocks";
+import { iterator } from "@times-components-native/test-utils";
 import mockDate from "mockdate";
 import "./mocks";
 import AuthorProfile from "../src/author-profile";
@@ -9,7 +9,7 @@ import authorProfileTrackingContext from "../src/author-profile-tracking-context
 import author from "./fixtures";
 
 mockNativeModules();
-jest.mock("@tcn/provider", () =>
+jest.mock("@times-components-native/provider", () =>
   // eslint-disable-next-line global-require
   require("./mock-provider")
 );

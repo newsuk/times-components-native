@@ -1,8 +1,8 @@
 /* eslint-disable react/no-multi-comp */
 import React from "react";
-import { iterator } from "@tcn/test-utils";
-import { ContextProviderWithDefaults } from "@tcn/context";
-import { scales } from "@tcn/styleguide";
+import { iterator } from "@times-components-native/test-utils";
+import { ContextProviderWithDefaults } from "@times-components-native/context";
+import { scales } from "@times-components-native/styleguide";
 import ArticleSkeleton from "../src/article-skeleton";
 import contentWithNestedFirstParagraph from "../fixtures/bold-article-content";
 import contentWithHeadingTags from "../fixtures/headings-article-content";

@@ -5,8 +5,8 @@ import {
   minimalNativeTransform,
   print,
   replacePropTransform
-} from "@tcn/jest-serializer";
-import { hash } from "@tcn/test-utils";
+} from "@times-components-native/jest-serializer";
+import { hash } from "@times-components-native/test-utils";
 import shared from "./shared.base";
 import topic from "./fixtures";
 

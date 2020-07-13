@@ -6,11 +6,11 @@ import {
   minimaliseTransform,
   minimalNativeTransform,
   print
-} from "@tcn/jest-serializer";
+} from "@times-components-native/jest-serializer";
 import shared from "./shared.base";
 
-jest.mock("@tcn/image", () => "Image");
-jest.mock("@tcn/gradient", () => "Gradient");
+jest.mock("@times-components-native/image", () => "Image");
+jest.mock("@times-components-native/gradient", () => "Gradient");
 
 export default () => {
   addSerializers(

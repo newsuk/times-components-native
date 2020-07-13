@@ -6,7 +6,7 @@ import {
   fonts,
   fontSizes,
   spacing
-} from "@tcn/styleguide";
+} from "@times-components-native/styleguide";
 
 export const InpContainer = styled(View)`
   background-color: ${colours.functional.newsletterPuffBackground};

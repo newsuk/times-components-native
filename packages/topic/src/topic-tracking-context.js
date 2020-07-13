@@ -1,4 +1,4 @@
-import { withTrackingContext } from "@tcn/tracking";
+import { withTrackingContext } from "@times-components-native/tracking";
 
 export default Component =>
   withTrackingContext(Component, {

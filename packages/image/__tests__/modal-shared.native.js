@@ -1,7 +1,7 @@
 import React from "react";
 import { Modal, Text, View } from "react-native";
 import TestRenderer, { act } from "react-test-renderer";
-import Link from "@tcn/link";
+import Link from "@times-components-native/link";
 import {
   addSerializers,
   compose,
@@ -9,8 +9,8 @@ import {
   minimalNativeTransform,
   print,
   replacePropTransform
-} from "@tcn/jest-serializer";
-import { hash, iterator } from "@tcn/test-utils";
+} from "@times-components-native/jest-serializer";
+import { hash, iterator } from "@times-components-native/test-utils";
 import Image, { ModalImage } from "../src";
 
 jest.mock("react-native-image-zoom-viewer", () => "ImageZoomView");

@@ -1,6 +1,6 @@
 import { AppRegistry } from "react-native";
-import Page from "@tcn/pages";
-import { FontStorage } from "@tcn/typeset";
+import Page from "@times-components-native/pages";
+import { FontStorage } from "@times-components-native/typeset";
 import ttf from "../fonts";
 
 Object.keys(ttf).forEach(fontName => {

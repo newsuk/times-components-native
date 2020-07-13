@@ -1,4 +1,4 @@
-import styleguideFactory from "@tcn/styleguide";
+import styleguideFactory from "@times-components-native/styleguide";
 
 const { colours, fontFactory, spacing } = styleguideFactory();
 const sharedStyles = {

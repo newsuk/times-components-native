@@ -1,7 +1,7 @@
 /* eslint-disable react/prop-types */
 import React from "react";
-import { ContextProviderWithDefaults } from "@tcn/context";
-import { scales } from "@tcn/styleguide";
+import { ContextProviderWithDefaults } from "@times-components-native/context";
+import { scales } from "@times-components-native/styleguide";
 import topicsData from "./fixtures/topics";
 import renderArticleTopics from "./showcase-helper";
 

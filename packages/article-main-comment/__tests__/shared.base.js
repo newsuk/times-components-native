@@ -1,7 +1,7 @@
 /* eslint-disable react/no-multi-comp */
 import React from "react";
 import TestRenderer from "react-test-renderer";
-import { iterator } from "@tcn/test-utils";
+import { iterator } from "@times-components-native/test-utils";
 import ArticleMainComment from "../src/article-main-comment";
 import articleFixture, { testFixture } from "../fixtures/full-article";
 import sharedProps from "./shared-props";

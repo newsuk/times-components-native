@@ -6,26 +6,26 @@ import {
   print,
   minimaliseTransform,
   minimalNativeTransform
-} from "@tcn/jest-serializer";
+} from "@times-components-native/jest-serializer";
 import "./mocks.native";
-import { FontStorage } from "@tcn/typeset";
+import { FontStorage } from "@times-components-native/typeset";
 import shared from "./header-with-style.base";
 
 FontStorage.registerFont(
   "TimesDigitalW04",
-  () => require("@tcn/test-utils").TestFont
+  () => require("@times-components-native/test-utils").TestFont
 );
 FontStorage.registerFont(
   "TimesDigitalW04-Bold",
-  () => require("@tcn/test-utils").TestFont
+  () => require("@times-components-native/test-utils").TestFont
 );
 FontStorage.registerFont(
   "TimesDigitalW04-Italic",
-  () => require("@tcn/test-utils").TestFont
+  () => require("@times-components-native/test-utils").TestFont
 );
 FontStorage.registerFont(
   "TimesModern-Regular",
-  () => require("@tcn/test-utils").TestFont
+  () => require("@times-components-native/test-utils").TestFont
 );
 
 const omitKeys = new Set([

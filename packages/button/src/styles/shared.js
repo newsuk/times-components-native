@@ -1,4 +1,4 @@
-import styleguide from "@tcn/styleguide";
+import styleguide from "@times-components-native/styleguide";
 
 const { colours, fontFactory } = styleguide();
 const styles = {

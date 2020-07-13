@@ -2,7 +2,7 @@
 export {
   setIsTablet,
   setDimension
-} from "@tcn/mocks/dimensions";
+} from "@times-components-native/mocks/dimensions";
 
 jest.mock("NativeAnimatedHelper", () => "NativeAnimatedHelper", {
   virtual: true
@@ -10,14 +10,14 @@ jest.mock("NativeAnimatedHelper", () => "NativeAnimatedHelper", {
 
 jest.mock("../src/safeAreaView", () => "SafeAreaView");
 
-jest.mock("@tcn/gradient", () => ({
+jest.mock("@times-components-native/gradient", () => ({
   OverlayGradient: "OverlayGradient"
 }));
 
 // eslint-disable-next-line global-require
-jest.mock("@tcn/svgs", () => require("./mock-svg"));
+jest.mock("@times-components-native/svgs", () => require("./mock-svg"));
 
-jest.mock("@tcn/utils", () => {
+jest.mock("@times-components-native/utils", () => {
   // eslint-disable-next-line global-require
   const actualUtils = jest.requireActual("../../utils");
 

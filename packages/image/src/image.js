@@ -1,3 +1,3 @@
-import responsiveImage from "@tcn/responsive-image";
+import responsiveImage from "@times-components-native/responsive-image";
 
 export default responsiveImage;

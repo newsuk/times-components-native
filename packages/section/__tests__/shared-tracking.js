@@ -1,13 +1,13 @@
 import React, { Component } from "react";
 import PropTypes from "prop-types";
-import { MockEdition } from "@tcn/fixture-generator";
-import Link from "@tcn/link";
-import { SectionContext } from "@tcn/context";
-import StarButton from "@tcn/star-button";
+import { MockEdition } from "@times-components-native/fixture-generator";
+import Link from "@times-components-native/link";
+import { SectionContext } from "@times-components-native/context";
+import StarButton from "@times-components-native/star-button";
 import TestRenderer from "react-test-renderer";
 import Section from "../src/section";
 
-jest.mock("@tcn/icons", () => ({
+jest.mock("@times-components-native/icons", () => ({
   IconForwardArrow: "IconForwardArrow",
   IconStar: "IconStar",
   IconVideo: "IconVideo"
@@ -19,7 +19,7 @@ jest.mock("react-native", () => {
   };
   return rn;
 });
-jest.mock("@tcn/image", () => ({
+jest.mock("@times-components-native/image", () => ({
   __esModule: true,
   default: "TimesImage"
 }));

@@ -1,4 +1,4 @@
-import { mockEditionSlice } from "@tcn/fixture-generator";
+import { mockEditionSlice } from "@times-components-native/fixture-generator";
 import {
   getTileImage,
   getTileSummary,
@@ -7,7 +7,7 @@ import {
 
 const tile = mockEditionSlice(1).items[0];
 
-jest.mock("@tcn/image", () => "TimesImage");
+jest.mock("@times-components-native/image", () => "TimesImage");
 
 export default () => {
   describe("getTileImage should", () => {

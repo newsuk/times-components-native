@@ -1,8 +1,8 @@
 import React from "react";
-import ArticleLabel from "@tcn/article-label";
-import Context from "@tcn/context";
-import { colours } from "@tcn/styleguide";
-import VideoLabel from "@tcn/video-label";
+import ArticleLabel from "@times-components-native/article-label";
+import Context from "@times-components-native/context";
+import { colours } from "@times-components-native/styleguide";
+import VideoLabel from "@times-components-native/video-label";
 import styles from "../styles/article-header";
 
 export default render => ({ isVideo, label }) => {

@@ -1,9 +1,9 @@
 import React from "react";
 import { Text, View } from "react-native";
 import PropTypes from "prop-types";
-import { ArticleFlags } from "@tcn/article-flag";
-import { ModalImage } from "@tcn/image";
-import { ResponsiveContext } from "@tcn/responsive";
+import { ArticleFlags } from "@times-components-native/article-flag";
+import { ModalImage } from "@times-components-native/image";
+import { ResponsiveContext } from "@times-components-native/responsive";
 import Label from "../article-label/article-label";
 import Meta from "../article-meta/article-meta";
 import Standfirst from "../article-standfirst/article-standfirst";

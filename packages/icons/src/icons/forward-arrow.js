@@ -1,6 +1,6 @@
 import React from "react";
-import { colours } from "@tcn/styleguide";
-import Svg, { G, Path } from "@tcn/svgs";
+import { colours } from "@times-components-native/styleguide";
+import Svg, { G, Path } from "@times-components-native/svgs";
 import propTypes from "./prop-types";
 
 const ForwardArrow = ({ fillColour }) => (

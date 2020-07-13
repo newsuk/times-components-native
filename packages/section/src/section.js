@@ -3,8 +3,8 @@ import { FlatList, View } from "react-native";
 import PropTypes from "prop-types";
 import Responsive, {
   ResponsiveContext
-} from "@tcn/responsive";
-import { withTrackScrollDepth } from "@tcn/tracking";
+} from "@times-components-native/responsive";
+import { withTrackScrollDepth } from "@times-components-native/tracking";
 import SectionItemSeparator from "./section-item-separator";
 import withTrackingContext from "./section-tracking-context";
 import PuzzleBar from "./puzzle-bar";

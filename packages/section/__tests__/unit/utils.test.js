@@ -1,5 +1,5 @@
-import { mockPuzzleSlice } from "@tcn/fixture-generator";
-import { editionBreakpoints } from "@tcn/styleguide";
+import { mockPuzzleSlice } from "@times-components-native/fixture-generator";
+import { editionBreakpoints } from "@times-components-native/styleguide";
 import {
   splitPuzzlesBySlices,
   buildSliceData,

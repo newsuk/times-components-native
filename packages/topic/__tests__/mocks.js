@@ -1,11 +1,11 @@
 jest.mock("react-helmet-async", () => ({ Helmet: "Helmet" }));
 
-jest.mock("@tcn/article-list", () =>
+jest.mock("@times-components-native/article-list", () =>
   // eslint-disable-next-line global-require
   require("./mock-article-list")
 );
-jest.mock("@tcn/gradient", () => "Gradient");
-jest.mock("@tcn/pagination", () => {
+jest.mock("@times-components-native/gradient", () => "Gradient");
+jest.mock("@times-components-native/pagination", () => {
   const id = x => x;
 
   return {

@@ -1,10 +1,10 @@
 import React from "react";
 import { Text, View } from "react-native";
 import PropTypes from "prop-types";
-import { ArticleFlags } from "@tcn/article-flag";
-import { ModalImage } from "@tcn/image";
-import Context from "@tcn/context";
-import { fontFactory } from "@tcn/styleguide";
+import { ArticleFlags } from "@times-components-native/article-flag";
+import { ModalImage } from "@times-components-native/image";
+import Context from "@times-components-native/context";
+import { fontFactory } from "@times-components-native/styleguide";
 
 import Label from "../article-label/article-label";
 import Meta from "../article-meta/article-meta";

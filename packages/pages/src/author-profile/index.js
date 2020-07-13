@@ -1,8 +1,8 @@
 import * as React from "react";
 import { NativeModules } from "react-native";
 import PropTypes from "prop-types";
-import AuthorProfile from "@tcn/author-profile";
-import { AuthorProfileProvider } from "@tcn/provider";
+import AuthorProfile from "@times-components-native/author-profile";
+import { AuthorProfileProvider } from "@times-components-native/provider";
 import withNativeProvider from "../with-native-provider";
 
 const { track } = NativeModules.ReactAnalytics;

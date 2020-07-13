@@ -1,18 +1,18 @@
 jest.mock("react-helmet-async", () => ({ Helmet: "Helmet" }));
 
-jest.mock("@tcn/article-list", () =>
+jest.mock("@times-components-native/article-list", () =>
   // eslint-disable-next-line global-require
   require("./mock-article-list")
 );
-jest.mock("@tcn/gradient", () => "Gradient");
-jest.mock("@tcn/icons", () => ({
+jest.mock("@times-components-native/gradient", () => "Gradient");
+jest.mock("@times-components-native/icons", () => ({
   IconTwitter: "IconTwitter"
 }));
-jest.mock("@tcn/image", () => "Image");
-jest.mock("@tcn/link", () => ({
+jest.mock("@times-components-native/image", () => "Image");
+jest.mock("@times-components-native/link", () => ({
   TextLink: "TextLink"
 }));
-jest.mock("@tcn/pagination", () => {
+jest.mock("@times-components-native/pagination", () => {
   const id = x => x;
 
   return {

@@ -4,7 +4,7 @@ import {
   spacing,
   editionBreakpoints,
   globalSpacingStyles
-} from "@tcn/styleguide";
+} from "@times-components-native/styleguide";
 
 const fontSizeResolver = {
   [editionBreakpoints.medium]: 40,

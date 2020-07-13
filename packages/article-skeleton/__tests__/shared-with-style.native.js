@@ -8,29 +8,29 @@ import {
   print,
   minimaliseTransform,
   minimalNativeTransform
-} from "@tcn/jest-serializer";
+} from "@times-components-native/jest-serializer";
 import "./mocks.native";
-import Responsive from "@tcn/responsive";
-import { setIsTablet } from "@tcn/mocks/dimensions";
-import { FontStorage } from "@tcn/typeset";
+import Responsive from "@times-components-native/responsive";
+import { setIsTablet } from "@times-components-native/mocks/dimensions";
+import { FontStorage } from "@times-components-native/typeset";
 import articleFixture from "../fixtures/full-article";
 import shared, { renderArticle, fixtureArgs } from "./shared.base";
 
 FontStorage.registerFont(
   "TimesDigitalW04",
-  () => require("@tcn/test-utils").TestFont
+  () => require("@times-components-native/test-utils").TestFont
 );
 FontStorage.registerFont(
   "TimesDigitalW04-Bold",
-  () => require("@tcn/test-utils").TestFont
+  () => require("@times-components-native/test-utils").TestFont
 );
 FontStorage.registerFont(
   "TimesDigitalW04-Italic",
-  () => require("@tcn/test-utils").TestFont
+  () => require("@times-components-native/test-utils").TestFont
 );
 FontStorage.registerFont(
   "TimesModern-Regular",
-  () => require("@tcn/test-utils").TestFont
+  () => require("@times-components-native/test-utils").TestFont
 );
 
 export default () => {

@@ -1,14 +1,14 @@
 import React from "react";
 import { NativeModules, View } from "react-native";
 import TestRenderer from "react-test-renderer";
-import { delay } from "@tcn/test-utils";
+import { delay } from "@times-components-native/test-utils";
 import "./mocks";
 import SectionPage from "../src/section/section";
 
-jest.mock("@tcn/section", () => {
+jest.mock("@times-components-native/section", () => {
   const { View: RNView } = require.requireActual("react-native");
   const { SectionContext } = require.requireActual(
-    "@tcn/context"
+    "@times-components-native/context"
   );
 
   return () => (

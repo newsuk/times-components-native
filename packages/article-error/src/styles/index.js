@@ -4,7 +4,7 @@ import {
   fonts,
   fontSizes,
   spacing
-} from "@tcn/styleguide";
+} from "@times-components-native/styleguide";
 
 export default StyleSheet.create({
   errorContainer: {

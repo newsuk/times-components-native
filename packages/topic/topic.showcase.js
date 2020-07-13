@@ -5,8 +5,8 @@ import {
   MockedProvider,
   MockFixture,
   topic as makeParams
-} from "@tcn/provider-test-tools";
-import storybookReporter from "@tcn/tealium-utils";
+} from "@times-components-native/provider-test-tools";
+import storybookReporter from "@times-components-native/tealium-utils";
 import Topic from "./src/topic";
 import TopicProvider from "../provider/src/topic";
 import adConfig from "./fixtures/topic-ad-config.json";

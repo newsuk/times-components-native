@@ -24,7 +24,7 @@ module.exports = api => {
             ".json"
           ],
           alias: {
-            "@tcn": "./packages"
+            "@times-components-native": "./packages"
           }
         }
       ]

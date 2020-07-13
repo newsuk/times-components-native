@@ -4,7 +4,7 @@ import {
   saveBookmarks,
   unsaveBookmarks,
   articleBookmarked
-} from "@tcn/provider-queries";
+} from "@times-components-native/provider-queries";
 
 import MockedProvider from "./mocked-provider";
 import { schemaToMocks } from "./mock-fixture";

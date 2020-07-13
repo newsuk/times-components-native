@@ -3,7 +3,7 @@ import {
   sliceContentMaxWidth,
   spacing,
   editionBreakpoints
-} from "@tcn/styleguide";
+} from "@times-components-native/styleguide";
 
 const tabletPaddingHorizontalResolver = {
   [editionBreakpoints.medium]: spacing(2),

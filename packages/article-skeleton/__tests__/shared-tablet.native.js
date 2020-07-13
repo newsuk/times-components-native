@@ -8,10 +8,10 @@ import {
   print,
   minimaliseTransform,
   minimalNativeTransform
-} from "@tcn/jest-serializer";
+} from "@times-components-native/jest-serializer";
 import "./mocks.native";
-import Responsive from "@tcn/responsive";
-import { iterator } from "@tcn/test-utils";
+import Responsive from "@times-components-native/responsive";
+import { iterator } from "@times-components-native/test-utils";
 import articleFixture from "../fixtures/full-article";
 import { renderArticle, fixtureArgs } from "./shared.base";
 

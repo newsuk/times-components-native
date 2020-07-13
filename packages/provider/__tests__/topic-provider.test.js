@@ -4,7 +4,7 @@ import {
   MockedProvider,
   MockFixture,
   topic as makeTopicParams
-} from "@tcn/provider-test-tools";
+} from "@times-components-native/provider-test-tools";
 import { TopicProvider } from "../src/provider";
 
 const renderComponent = child => {

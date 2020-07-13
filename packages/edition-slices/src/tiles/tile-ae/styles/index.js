@@ -3,7 +3,7 @@ import {
   spacing,
   editionBreakpoints,
   globalSpacingStyles
-} from "@tcn/styleguide";
+} from "@times-components-native/styleguide";
 
 const headlineFontResolver = {
   [editionBreakpoints.medium]: 30,

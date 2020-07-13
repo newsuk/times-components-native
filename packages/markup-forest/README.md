@@ -19,8 +19,8 @@ functions will only render elements which have a renderer with no fallback.
 ### renderTrees
 
 ```js
-import { renderTrees } from "@tcn/markup-forest";
-import coreRenderers from "@tcn/markup";
+import { renderTrees } from "@times-components-native/markup-forest";
+import coreRenderers from "@times-components-native/markup";
 
 const trees = [
   {
@@ -63,8 +63,8 @@ const element = <View>{renderTrees(trees, coreRenderers)}<View>
 ### renderTree
 
 ```js
-import { renderTree } from "@tcn/markup-forest";
-import coreRenderers from "@tcn/markup";
+import { renderTree } from "@times-components-native/markup-forest";
+import coreRenderers from "@times-components-native/markup";
 
 const tree = {
   "name": "bold",

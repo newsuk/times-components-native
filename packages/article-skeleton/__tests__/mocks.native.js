@@ -1,33 +1,33 @@
-import { mockNativeModules } from "@tcn/mocks";
+import { mockNativeModules } from "@times-components-native/mocks";
 // eslint-disable-next-line global-require
-jest.mock("@tcn/ad", () => require("./ad-mock"));
-jest.mock("@tcn/article-extras", () => "ArticleExtras");
-jest.mock("@tcn/article-byline", () => ({
+jest.mock("@times-components-native/ad", () => require("./ad-mock"));
+jest.mock("@times-components-native/article-extras", () => "ArticleExtras");
+jest.mock("@times-components-native/article-byline", () => ({
   ArticleBylineWithLinks: "ArticleBylineWithLinks",
   hasBylineData: () => true
 }));
-jest.mock("@tcn/article-error", () => "ArticleError");
-jest.mock("@tcn/article-flag", () => ({
+jest.mock("@times-components-native/article-error", () => "ArticleError");
+jest.mock("@times-components-native/article-flag", () => ({
   ExclusiveArticleFlag: "ExclusiveArticleFlag",
   NewArticleFlag: "NewArticleFlag",
   SponsoredArticleFlag: "SponsoredArticleFlag",
   UpdatedArticleFlag: "UpdatedArticleFlag"
 }));
-jest.mock("@tcn/article-image", () => "ArticleImage");
-jest.mock("@tcn/article-label", () => "ArticleLabel");
+jest.mock("@times-components-native/article-image", () => "ArticleImage");
+jest.mock("@times-components-native/article-label", () => "ArticleLabel");
 
-jest.mock("@tcn/article-topics", () => "ArticleTopics");
-jest.mock("@tcn/button", () => "Button");
-jest.mock("@tcn/image", () => ({
+jest.mock("@times-components-native/article-topics", () => "ArticleTopics");
+jest.mock("@times-components-native/button", () => "Button");
+jest.mock("@times-components-native/image", () => ({
   ModalImage: "ModalImage"
 }));
 jest.mock(
-  "@tcn/interactive-wrapper",
+  "@times-components-native/interactive-wrapper",
   () => "InteractiveWrapper"
 );
-jest.mock("@tcn/pull-quote", () => "PullQuote");
-jest.mock("@tcn/related-articles", () => "RelatedArticles");
-jest.mock("@tcn/watermark", () => "Watermark");
-jest.mock("@tcn/video", () => "Video");
-jest.mock("@tcn/video-label", () => "VideoLabel");
+jest.mock("@times-components-native/pull-quote", () => "PullQuote");
+jest.mock("@times-components-native/related-articles", () => "RelatedArticles");
+jest.mock("@times-components-native/watermark", () => "Watermark");
+jest.mock("@times-components-native/video", () => "Video");
+jest.mock("@times-components-native/video-label", () => "VideoLabel");
 mockNativeModules();

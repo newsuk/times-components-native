@@ -1,11 +1,11 @@
 import React from "react";
 import { DeviceEventEmitter, NativeModules } from "react-native";
 import TestRenderer from "react-test-renderer";
-import { delay } from "@tcn/test-utils";
+import { delay } from "@times-components-native/test-utils";
 import "./mocks";
 import Section from "../src/section";
 
-jest.mock("@tcn/section", () => "Section");
+jest.mock("@times-components-native/section", () => "Section");
 
 export default () => {
   it("section data gets updated through the bridge on updateSectionData event", async () => {

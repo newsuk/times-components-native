@@ -5,8 +5,8 @@ import {
   minimaliseTransform,
   flattenStyleTransform,
   print
-} from "@tcn/jest-serializer";
-import { iterator } from "@tcn/test-utils";
+} from "@times-components-native/jest-serializer";
+import { iterator } from "@times-components-native/test-utils";
 import tests from "./themes-with-style.base";
 
 export default () => {

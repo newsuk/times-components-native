@@ -1,10 +1,10 @@
 /* eslint-disable global-require */
-import { FontStorage } from "@tcn/typeset";
+import { FontStorage } from "@times-components-native/typeset";
 import { getStringBounds, setAdPosition } from "../src/body-utils";
 
 FontStorage.registerFont(
   "TimesDigitalW04",
-  () => require("@tcn/test-utils").TestFont
+  () => require("@times-components-native/test-utils").TestFont
 );
 
 export default () => {

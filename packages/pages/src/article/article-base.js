@@ -1,11 +1,11 @@
 import React from "react";
 import { NativeModules, Platform } from "react-native";
-import Article from "@tcn/article";
+import Article from "@times-components-native/article";
 import {
   ContextProviderWithDefaults,
   defaults
-} from "@tcn/context";
-import { themeFactory } from "@tcn/styleguide";
+} from "@times-components-native/context";
+import { themeFactory } from "@times-components-native/styleguide";
 import adTargetConfig from "./ad-targeting-config";
 import { propTypes, defaultProps } from "./article-prop-types";
 import trackArticle from "./track-article";

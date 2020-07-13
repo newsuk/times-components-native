@@ -2,7 +2,7 @@ import {
   colours,
   editionBreakpoints,
   spacing
-} from "@tcn/styleguide";
+} from "@times-components-native/styleguide";
 
 const smallBreakpointStyles = {
   container: {

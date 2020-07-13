@@ -4,7 +4,7 @@ import {
   flattenStyleTransform,
   minimalNativeTransform,
   print
-} from "@tcn/jest-serializer";
+} from "@times-components-native/jest-serializer";
 import shared from "./shared-with-style.base";
 
 export default () => {

@@ -5,14 +5,14 @@ jest.mock("../src/tiles", () => {
   });
   return tileMocks;
 });
-jest.mock("@tcn/article-flag", () => ({
+jest.mock("@times-components-native/article-flag", () => ({
   ArticleFlags: "ArticleFlags"
 }));
-jest.mock("@tcn/icons", () => ({
+jest.mock("@times-components-native/icons", () => ({
   IconStar: "IconStar",
   TheSTLogo: "TheSTLogo",
   TheTimesLogo: "TheTimesLogo"
 }));
-jest.mock("@tcn/image", () => "Image");
-jest.mock("@tcn/link", () => "Link");
-jest.mock("@tcn/gradient", () => "Gradient");
+jest.mock("@times-components-native/image", () => "Image");
+jest.mock("@times-components-native/link", () => "Link");
+jest.mock("@times-components-native/gradient", () => "Gradient");

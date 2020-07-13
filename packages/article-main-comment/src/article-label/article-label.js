@@ -1,9 +1,9 @@
 import React from "react";
 import { View } from "react-native";
-import ArticleLabel from "@tcn/article-label";
-import VideoLabel from "@tcn/video-label";
-import Context from "@tcn/context";
-import { colours } from "@tcn/styleguide";
+import ArticleLabel from "@times-components-native/article-label";
+import VideoLabel from "@times-components-native/video-label";
+import Context from "@times-components-native/context";
+import { colours } from "@times-components-native/styleguide";
 
 import {
   articleLabelPropTypes,

@@ -7,7 +7,7 @@ import {
   minimaliseTransform,
   minimalNativeTransform,
   print
-} from "@tcn/jest-serializer";
+} from "@times-components-native/jest-serializer";
 import UserState from "../src/user-state";
 
 jest.mock("../src/client-user-state-consumer", () => ({ children }) =>

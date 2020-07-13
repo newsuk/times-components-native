@@ -1,4 +1,4 @@
-import { spacing } from "@tcn/styleguide";
+import { spacing } from "@times-components-native/styleguide";
 
 const styles = {
   container: {

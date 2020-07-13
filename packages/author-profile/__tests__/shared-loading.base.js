@@ -1,14 +1,14 @@
 import React from "react";
 import TestRenderer from "react-test-renderer";
-import { iterator } from "@tcn/test-utils";
+import { iterator } from "@times-components-native/test-utils";
 import "./mocks";
 import AuthorProfile from "../src/author-profile";
 
 jest.mock(
-  "@tcn/provider",
+  "@times-components-native/provider",
   () => require("./mock-loading-provider") // eslint-disable-line global-require
 );
-jest.mock("@tcn/tracking", () => {
+jest.mock("@times-components-native/tracking", () => {
   const id = x => x;
 
   return {

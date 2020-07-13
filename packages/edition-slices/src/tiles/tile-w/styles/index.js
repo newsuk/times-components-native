@@ -2,7 +2,7 @@ import {
   spacing,
   fonts,
   globalSpacingStyles
-} from "@tcn/styleguide";
+} from "@times-components-native/styleguide";
 
 const mediumBreakpointStyles = {
   container: {

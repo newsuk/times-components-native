@@ -2,7 +2,7 @@ import {
   colours,
   spacing,
   editionBreakpoints
-} from "@tcn/styleguide";
+} from "@times-components-native/styleguide";
 
 export const darkBackgroundColour = {
   backgroundColor: colours.functional.darkSupplement

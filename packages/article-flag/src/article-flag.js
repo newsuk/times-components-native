@@ -1,8 +1,8 @@
 import React from "react";
 import { View, Text } from "react-native";
 import PropTypes from "prop-types";
-import { colours } from "@tcn/styleguide";
-import { gqlRgbaToStyle } from "@tcn/utils";
+import { colours } from "@times-components-native/styleguide";
+import { gqlRgbaToStyle } from "@times-components-native/utils";
 import styles from "./style";
 import getActiveFlags from "./get-active-flags";
 import {

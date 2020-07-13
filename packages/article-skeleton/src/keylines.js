@@ -3,7 +3,7 @@ import {
   breakpoints,
   colours,
   spacing
-} from "@tcn/styleguide";
+} from "@times-components-native/styleguide";
 
 export const KeylineItem = styled.div`
   border: solid ${colours.functional.keyline};

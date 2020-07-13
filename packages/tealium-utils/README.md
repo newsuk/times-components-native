@@ -6,7 +6,7 @@ for usage in the Times Components showcases. Showcases typically import this
 method and pass it to any component that utilises the tracking package.
 
 ```
-import storybookReporter from "@tcn/tealium-utils";
+import storybookReporter from "@times-components-native/tealium-utils";
 
 ...
 <MyTrackedComponent analyticsStream={storybookReporter} />

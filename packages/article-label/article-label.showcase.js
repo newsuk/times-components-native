@@ -1,8 +1,8 @@
 /* eslint-disable react/prop-types */
 import React from "react";
 import pick from "lodash.pick";
-import { sections } from "@tcn/storybook";
-import { colours } from "@tcn/styleguide";
+import { sections } from "@times-components-native/storybook";
+import { colours } from "@times-components-native/styleguide";
 import ArticleLabel from "./src/article-label";
 
 export default {

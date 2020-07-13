@@ -1,4 +1,4 @@
-import { article } from "@tcn/provider-queries";
+import { article } from "@times-components-native/provider-queries";
 import connectGraphql from "./connect";
 
 export default connectGraphql(article);
