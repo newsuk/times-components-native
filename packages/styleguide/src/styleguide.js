@@ -3,62 +3,54 @@ import functionalColours from "./colours/functional";
 
 import FadeIn from "./animations";
 
-import breakpoints, {
-  editionBreakpoints,
-  editionMaxWidth,
-  getEditionBreakpoint,
-  editionBreakpointWidths,
-  sliceContentMaxWidth
-} from "./breakpoints";
+import breakpoints from "./breakpoints";
 import timesLineHeightsFactory from "./line-heights";
 import timesFonts from "./fonts/fonts";
 import timesFontSizes from "./fonts/font-sizes";
 import timesFontFactory from "./fonts/font-factory";
-import themeFactory from "./theme/theme-factory";
 
 import scales from "./scales";
-import spacing, { globalSpacingStyles } from "./spacing";
+import spacing from "./spacing";
 
-const colours = {
+export const colours = {
   functional: functionalColours,
   secondarySectionColours,
   section: sectionColours
 };
 
-const Animations = {
+export const Animations = {
   FadeIn
 };
-const fonts = timesFonts;
-const fontFactory = timesFontFactory();
-const fontSizes = timesFontSizes();
-const lineHeight = timesLineHeightsFactory();
-const {
+export const fonts = timesFonts;
+export const fontFactory = timesFontFactory();
+export const fontSizes = timesFontSizes();
+export const lineHeight = timesLineHeightsFactory();
+export const {
   nativeTablet: tabletWidth,
   nativeTabletWide: tabletWidthMax
 } = breakpoints;
-const tabletRowPadding = 20;
+export const tabletRowPadding = 20;
 
 export {
-  Animations,
-  breakpoints,
-  colours,
+  default as breakpoints,
   editionBreakpoints,
   editionBreakpointWidths,
   editionMaxWidth,
   sliceContentMaxWidth,
-  fonts,
-  fontFactory,
-  fontSizes,
   getEditionBreakpoint,
-  lineHeight,
-  scales,
-  spacing,
+} from './breakpoints';
+
+export {
+  default as scales
+} from './scales';
+
+export {
+  default as spacing,
   globalSpacingStyles,
-  tabletRowPadding,
-  tabletWidth,
-  tabletWidthMax,
-  themeFactory
-};
+} from './spacing';
+
+export { default as themeFactory } from "./theme/theme-factory";
+
 export default ({ scale = scales.medium } = {}) => ({
   Animations,
   colours,

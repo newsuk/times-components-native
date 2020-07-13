@@ -1,0 +1,21 @@
+export {
+  VerticalLayout,
+  HorizontalLayout,
+  CommentLeadAndCartoon,
+  StandardSlice,
+  ListVerticalLayout,
+  LeadOneAndFourSlice,
+  LeadOneAndOneSlice,
+  LeadOneAndTwoSlice,
+  LeadTwoNoPicAndTwoSlice,
+  OpinionOneAndTwoSlice,
+  SecondaryOneAndColumnistSlice,
+  SecondaryFourSlice,
+  SecondaryTwoAndTwoSlice,
+  SecondaryOneAndFourSlice,
+  SecondaryTwoNoPicAndTwoSlice,
+  Leaders,
+  ListTwoAndSixNoPic,
+  ItemColSeparator,
+  ItemRowSeparator
+} from './src/slice-layout';
