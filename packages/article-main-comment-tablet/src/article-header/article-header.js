@@ -23,15 +23,12 @@ const ArticleHeader = ({
   standfirst
 }) => (
   <ResponsiveContext.Consumer>
-    {({ isTablet }) => (
-      <View style={[styles.header, isTablet && styles.headerTablet]}>
-        <View style={[styles.container, isTablet && styles.containerTablet]}>
+    {() => (
+      <View style={styles.header}>
+        <View style={styles.container}>
           <Label isVideo={hasVideo} label={label} />
           <Text
-            style={[
-              styles.articleHeadline,
-              isTablet && styles.articleHeadlineTablet
-            ]}
+            style={styles.articleHeadline}
           >
             {headline}
           </Text>
@@ -39,7 +36,6 @@ const ArticleHeader = ({
           <Standfirst standfirst={standfirst} />
           <Meta
             hasStandfirst={standfirst}
-            isTablet={isTablet}
             publicationName={publicationName}
             publishedTime={publishedTime}
           />

@@ -5,29 +5,19 @@ const sharedStyles = {
   articleHeadline: {
     ...fontFactory({
       font: "headline",
-      fontSize: "headline"
+      fontSize: "articleHeadline"
     }),
     color: colours.functional.brandColour,
     marginBottom: spacing(2),
-    textAlign: "center"
-  },
-  articleHeadlineTablet: {
-    ...fontFactory({
-      font: "headline",
-      fontSize: "articleHeadline"
-    })
   },
   authorImage: {
     marginBottom: spacing(5)
   },
   container: {
-    alignItems: "center",
+    alignSelf: "center",
+    width: tabletWidth,
     paddingLeft: spacing(2),
     paddingRight: spacing(2)
-  },
-  containerTablet: {
-    alignSelf: "center",
-    width: tabletWidth
   },
   datePublication: {
     ...fontFactory({
@@ -35,20 +25,14 @@ const sharedStyles = {
       fontSize: "cardMeta"
     }),
     color: colours.functional.secondary,
-    marginTop: spacing(1)
-  },
-  datePublicationTablet: {
     marginTop: "auto"
   },
   header: {
-    // TODO: put back after design signoff
     marginBottom: spacing(3),
     paddingBottom: spacing(4),
-    paddingTop: spacing(7)
-  },
-  headerTablet: {
-    alignSelf: "center",
-    width: tabletWidth
+    paddingTop: spacing(7),
+    width: tabletWidth,
+    paddingLeft: "50%",
   },
   label: {
     marginBottom: spacing(2)
@@ -58,23 +42,13 @@ const sharedStyles = {
     flexWrap: "wrap"
   },
   metaContainer: {
-    alignItems: "center",
+    flexDirection: "row",
     width: "100%",
     paddingVertical: spacing(2),
     borderBottomColor: colours.functional.keyline,
     borderBottomWidth: 1,
     borderTopColor: colours.functional.keyline,
     borderTopWidth: 1
-  },
-  metaContainerTablet: {
-    flexDirection: "row",
-    justifyContent: "center"
-  },
-  separator: {
-    borderRightColor: colours.functional.keyline,
-    borderRightWidth: 1,
-    height: spacing(3),
-    marginHorizontal: spacing(2)
   },
   standFirst: {
     ...fontFactory({
@@ -83,8 +57,13 @@ const sharedStyles = {
     }),
     color: colours.functional.primary,
     marginBottom: spacing(3),
-    paddingHorizontal: spacing(2),
-    textAlign: "center"
+  },
+  leftColumnContainer: {
+    left: 40,
+    width: 197,
+    height: 200,
+    borderWidth: 1,
+    borderColor: "blue"
   }
 };
 

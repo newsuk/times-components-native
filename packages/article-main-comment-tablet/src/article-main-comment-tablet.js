@@ -23,7 +23,6 @@ class ArticlePage extends Component {
   renderHeader() {
     const { article, onAuthorPress, onImagePress } = this.props;
     const {
-      bylines,
       expirableFlags,
       hasVideo,
       headline,
@@ -35,19 +34,8 @@ class ArticlePage extends Component {
       standfirst
     } = article;
 
-    const authorImage =
-      bylines &&
-      bylines.length > 0 &&
-      bylines[0].image &&
-      Object.keys(bylines[0].image).length !== 0 &&
-      bylines[0].image.crop
-        ? bylines[0].image.crop.url
-        : null;
-
     return (
       <ArticleHeader
-        authorImage={authorImage}
-        bylines={bylines}
         flags={expirableFlags}
         hasVideo={hasVideo}
         headline={getHeadline(headline, shortHeadline)}
@@ -73,6 +61,7 @@ class ArticlePage extends Component {
       return null;
     }
 
+
     const {
       adConfig,
       adPosition,
@@ -92,6 +81,18 @@ class ArticlePage extends Component {
       receiveChildList
     } = this.props;
 
+    const { bylines } = article;
+
+    const authorImage =
+    bylines &&
+    bylines.length > 0 &&
+    bylines[0].image &&
+    Object.keys(bylines[0].image).length !== 0 &&
+    bylines[0].image.crop
+      ? bylines[0].image.crop.url
+      : null;
+    console.log('bylines[0].image', bylines[0].image);
+
     return (
       <ResponsiveContext.Consumer>
         {({ isTablet }) => (
@@ -99,8 +100,11 @@ class ArticlePage extends Component {
             {({ theme: { scale, dropCapFont } }) => (
               <>
                 <ArticleLeftColumn
-                  isTablet={isTablet}
+                  authorImage={authorImage}
+                  bylines={bylines}
                   onAuthorPress={onAuthorPress}
+                  onImagePress={onImagePress}
+                  onTopicPress={onTopicPress}
                 />
                 <ArticleSkeleton
                   adConfig={adConfig}
