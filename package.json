@@ -39,16 +39,7 @@
     "test:ios": "jest --config test-setup/jest.ios.config.js",
     "test:android": "jest --config test-setup/jest.android.config.js",
     "test:common": "jest --config test-setup/jest.common.config.js",
-    "test:all": "yarn test:ios && yarn test:android && yarn test:common"},
-  "jest": {
-    "preset": "react-native",
-    "testPathIgnorePatterns": [
-      "<rootDir>/node_modules/"
-    ],
-    "transformIgnorePatterns": [
-      "node_modules/(?!react-native|react-native-svg)",
-      "packages/?!author-profile"
-    ]
+    "test:all": "yarn test:ios && yarn test:android && yarn test:common"
   },
   "repository": {
     "type": "git",

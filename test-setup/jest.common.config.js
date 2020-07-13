@@ -1,7 +1,7 @@
 module.exports = {
   preset: 'react-native',
   setupFiles: [
-    './setup-jest.js',
+    '<rootDir>/test-setup/setup-jest.js',
     'jest-plugin-context/setup'
   ],
   setupFilesAfterEnv: [],
