@@ -10,6 +10,7 @@ module.exports = {
     'jest-plugin-context/setup'
   ],
   setupFilesAfterEnv: [],
+  rootDir: '../',
   testMatch: ['**/__tests__/android/*.test.js', '**/__tests__/android/*.test.ts'],
   testURL: 'http://localhost',
   transform: {

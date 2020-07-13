@@ -5,6 +5,7 @@ module.exports = {
     'jest-plugin-context/setup'
   ],
   setupFilesAfterEnv: [],
+  rootDir: '../',
   testMatch: ['**/__tests__/**/*.test.js', '**/__tests__/**/*.test.ts'],
   testPathIgnorePatterns: ['android/', 'ios/'],
   testURL: 'http://localhost',
