@@ -9,10 +9,10 @@
     "yarn": ">=1.16.0"
   },
   "scripts": {
-    "prelint": "eslint . && prettier --list-different '**/*.js'",
-    "prettier:diff": "prettier --list-different '**/*.*'",
+    "prettier:check": "prettier --list-different '**/*.{ts,js,json,md}'",
+    "prettier:apply": "prettier --write '**/*.{ts,js,json,md}'",
     "depcheck": "depcheck --ignores='@babel/*,babel-*,depcheck,eslint,@thetimes,identity-obj-proxy,graphql,jest,prettier,react-art,graphql-codegen-typescript-template,@types/jest,graphql-code-generator,ts-jest,typescript,typings' --ignore-bin-package=false --skip-missing",
-    "lint": "eslint . && yarn prettier:diff && yarn depcheck",
+    "lint": "eslint . && yarn prettier:check && yarn depcheck",
     "prestorybook": "yarn storybook:build-vendor",
     "storybook": "start-storybook -p 9001 -c .storybook -s ./dist/public",
     "storybook:build-vendor": "webpack --config ./.storybook/vendor.webpack.config.js",
@@ -30,8 +30,7 @@
     "android:build-lib": "yarn android:build-lib:js && cp -r node_modules/@react-native-community/netinfo node_modules/react-native-community-netinfo && cd android-app && yarn build",
     "android:build-lib:js": "mkdir -p android-app/xnative/src/main/assets/ && mkdir -p android-app/xnative/src/main/res/ && react-native ram-bundle --platform android --dev false --minify --entry-file android-app/index.android.js --bundle-output android-app/xnative/src/main/assets/index.android.bundle --assets-dest android-app/xnative/src/main/res/",
     "android:publish-lib": "lerna run --scope @times-components-native/android-app publish-library --stream",
-    "prefmt": "prettier --write '**/*.{js,json}'",
-    "fmt": "eslint . --fix && prettier --write '**/*.*'",
+    "fmt": "eslint . --fix && yarn prettier:apply",
     "typecheck": "tsc --project ./",
     "postinstall": "yarn gen:schema && yarn gen:types && node ./scripts/fetch-fonts",
     "gen:schema": "cd packages/schema && GRAPHQL_ENDPOINT=https://api.thetimes.co.uk/graphql node fetchSchema.js && cd -",
