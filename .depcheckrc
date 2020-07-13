@@ -1,0 +1,20 @@
+ignores: [
+  "@babel/*",
+  "babel-*",
+  "depcheck",
+  "eslint",
+  "@thetimes",
+  "identity-obj-proxy",
+  "graphql",
+  "jest",
+  "prettier",
+  "react-art",
+  "graphql-codegen-typescript-template",
+  "@types/jest",
+  "graphql-code-generator",
+  "ts-jest",
+  "typescript",
+  "typings"
+]
+skip-missing: true
+ignore-bin-package: false
