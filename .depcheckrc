@@ -1,10 +1,9 @@
 ignores: [
   "@babel/*",
-  "babel-*",
+  "*babel-*",
   "depcheck",
-  "eslint",
+  "eslint-*",
   "@thetimes",
-  "identity-obj-proxy",
   "graphql",
   "jest",
   "prettier",
@@ -14,7 +13,20 @@ ignores: [
   "graphql-code-generator",
   "ts-jest",
   "typescript",
-  "typings"
+  "@bam.tech/react-native-graphql-transformer",
+  "@storybook/addons",
+  "global",
+  "react-native-storybook-loader",
+  "tslint",
+  "tslint-config-prettier",
+  "tslint-immutable",
+  "url",
+  "url-polyfill"
 ]
 skip-missing: true
 ignore-bin-package: false
+specials: [
+  "eslint",
+  "jest",
+  "prettier"
+]
