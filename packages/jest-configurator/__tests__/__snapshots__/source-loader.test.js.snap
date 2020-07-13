@@ -1,5 +1,0 @@
-// Jest Snapshot v1, https://goo.gl/fbAQLP
-
-exports[`1. transformed non-monorepo file 1`] = `"var _interopRequireDefault=require(\\"@babel/runtime/helpers/interopRequireDefault\\");Object.defineProperty(exports,\\"__esModule\\",{value:true});exports.default=void 0;var _fs=_interopRequireDefault(require(\\"fs\\"));var sum=function sum(a,b){return a+b;};var _default=sum;exports.default=_default;"`;
-
-exports[`2. transformed monorepo src file 1`] = `"Object.defineProperty(exports,\\"__esModule\\",{value:true});exports.default=void 0;var sum=function sum(a,b){return a+b;};var _default=sum;exports.default=_default;"`;
