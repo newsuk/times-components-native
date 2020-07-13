@@ -1,4 +1,4 @@
-const schemaJson = require("./packages/schema/schema.json") ;
+const schemaJson = require("./packages/schema/schema.json");
 
 module.exports = {
   "extends": ["airbnb", "prettier", "prettier/react"],
