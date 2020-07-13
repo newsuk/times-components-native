@@ -1,1 +1,1 @@
-export { default as Svg, G, Path, Polygon, Rect } from "react-native-svg";
+export { default, G, Path, Polygon, Rect } from "react-native-svg";
