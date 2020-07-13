@@ -1,4 +1,4 @@
-import { TestFont } from '@times-components-native/test-utils';
+import { TestFont } from '@tcn/test-utils';
 import { BoxExclusion, FontStorage } from '../src';
 import AttributedString from '../src/AttributedString';
 import LayoutManager from '../src/LayoutManager';

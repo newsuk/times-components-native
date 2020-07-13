@@ -9,7 +9,6 @@
     "yarn": ">=1.16.0"
   },
   "scripts": {
-    "test:all": "lerna run test --since --stream && lerna run test:all --since --stream",
     "prelint": "eslint . && prettier --list-different '**/*.js'",
     "prettier:diff": "prettier --list-different '**/*.*'",
     "depcheck": "depcheck --ignores='@babel/*,babel-*,depcheck,eslint,@thetimes,identity-obj-proxy,graphql,jest,prettier,react-art,graphql-codegen-typescript-template,@types/jest,graphql-code-generator,ts-jest,typescript,typings' --ignore-bin-package=false --skip-missing",
@@ -34,10 +33,10 @@
     "prefmt": "prettier --write '**/*.{js,json}'",
     "fmt": "eslint . --fix && prettier --write '**/*.*'",
     "postinstall": "node ./scripts/fetch-fonts",
-    "test:ios": "jest --config jest.ios.config.js",
-    "test:android": "jest --config jest.android.config.js",
-    "test:unit": "lerna run test:unit --stream"
-  },
+    "test:ios": "jest --config test-setup/jest.ios.config.js",
+    "test:android": "jest --config test-setup/jest.android.config.js",
+    "test:common": "jest --config test-setup/jest.common.config.js",
+    "test:all": "yarn test:ios && yarn test:android && yarn test:common"},
   "jest": {
     "preset": "react-native",
     "testPathIgnorePatterns": [
