@@ -37,7 +37,7 @@ log "Publish IOS Resources ..."
 # =======================
 
 log "Checking new version ..."
-VERSION=$(cat ios-app/package.json | grep version | head -1 | sed 's/[\",\t ]//g' | awk -F: '{ print $2 }' 2>&4)
+VERSION=$(cat ./package.json | grep version | head -1 | sed 's/[\",\t ]//g' | awk -F: '{ print $2 }' 2>&4)
 if [ -z "$VERSION" ]
 then
   logError "Error: Can't find ios version"
