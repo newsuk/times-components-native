@@ -34,7 +34,7 @@
     "android:publish-lib": "cd android-app && ./publish.sh",
     "fmt": "eslint . --fix && yarn prettier:apply",
     "typecheck": "tsc --project ./",
-    "postinstall": "yarn gen:schema && yarn gen:types && node ./scripts/fetch-fonts",
+    "postinstall": "yarn gen:schema && yarn gen:types && node ./scripts/fetch-fonts && rnstl",
     "gen:schema": "cd packages/schema && GRAPHQL_ENDPOINT=https://api.thetimes.co.uk/graphql node fetchSchema.js && cd -",
     "gen:types": "gql-gen --schema ./packages/schema/schema.json --template graphql-codegen-typescript-template --out ./packages/fixture-generator/src/types.ts",
     "test:ios": "jest --config test-setup/jest.ios.config.js",
@@ -56,6 +56,15 @@
   "bugs": {
     "url": "https://github.com/newsuk/times-components/issues"
   },
+  "config": {
+    "react-native-storybook-loader": {
+      "searchDir": [
+        "packages"
+      ],
+      "pattern": "**/*.stories.js",
+      "outputFile": "./storybook-native/story-loader.js"
+    }
+  },
   "homepage": "https://github.com/newsuk/times-components#readme",
   "devDependencies": {
     "@babel/cli": "7.4.4",
@@ -67,6 +76,7 @@
     "@storybook/addon-actions": "5.3.18",
     "@storybook/addon-info": "5.3.18",
     "@storybook/addon-knobs": "5.3.18",
+    "@storybook/addon-ondevice-knobs": "5.3.18",
     "@storybook/addon-options": "5.3.18",
     "@storybook/addons": "5.3.18",
     "@storybook/react": "5.3.18",
@@ -129,6 +139,7 @@
     "webpack": "4.30.0"
   },
   "dependencies": {
+    "@react-native-community/async-storage": "1.11.0",
     "@react-native-community/netinfo": "5.3.3",
     "@skele/components": "1.0.0-alpha.40",
     "apollo-cache-inmemory": "1.5.1",
