@@ -1,4 +1,4 @@
-module.exports = api => {
+module.exports = (api) => {
   api.cache(true);
   return {
     presets: ["module:metro-react-native-babel-preset"],
@@ -21,13 +21,13 @@ module.exports = api => {
             ".tsx",
             ".jsx",
             ".js",
-            ".json"
+            ".json",
           ],
           alias: {
-            "@times-components-native": "./packages"
-          }
-        }
-      ]
-    ]
+            "@times-components-native": "./packages",
+          },
+        },
+      ],
+    ],
   };
 };
