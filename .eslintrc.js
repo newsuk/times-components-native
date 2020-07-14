@@ -3,10 +3,13 @@ const schemaJson = require("./packages/schema/schema.json");
 module.exports = {
   "env": {
     "es6": true,
-    "react-native/react-native": true
+    "node": true,
   },
   "extends": [
-    "plugin:prettier/recommended"
+    "eslint:recommended",
+    "plugin:@typescript-eslint/recommended",
+    "plugin:react-hooks/recommended",
+    // "plugin:prettier/recommended"
   ],
   "parser": "@typescript-eslint/parser",
   "parserOptions": {
@@ -20,8 +23,8 @@ module.exports = {
     "@typescript-eslint",
     "graphql",
     "import",
+    "jsx-a11y",
     "react",
-    "react-hook",
     "react-native"
   ],
   "rules": {
@@ -75,6 +78,7 @@ module.exports = {
     "react/jsx-filename-extension": [1, { "extensions": [".js"] }],
     "react-hooks/rules-of-hooks": "error",
     "react-hooks/exhaustive-deps": "warn",
+    "@typescript-eslint/no-var-requires": "off"
   },
   "settings": {
     "import/resolver": {
