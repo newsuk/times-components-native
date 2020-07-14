@@ -12,6 +12,7 @@ ignores: [
   "prettier",
   "react-art",
   "react-native-storybook-loader",
+  "react-native-v8",
   "@storybook/addons",
   "@thetimes",
   "@types/jest",
@@ -19,7 +20,8 @@ ignores: [
   "@typescript-eslint/eslint-plugin",
   "@typescript-eslint/parser",
   "url",
-  "url-polyfill"
+  "url-polyfill",
+  "v8-android"
 ]
 skip-missing: true
 ignore-bin-package: false

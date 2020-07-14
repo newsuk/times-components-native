@@ -1,5 +1,1 @@
-**/node_modules/*
-**/coverage/*
-dist
-rnw.js
 metro.config.js

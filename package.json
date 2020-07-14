@@ -1,7 +1,7 @@
 {
   "name": "times-components-native",
   "private": true,
-  "version": "0.0.1",
+  "version": "1.1.0",
   "description": "A collection of react-native components for The Times and Sunday Times",
   "main": "index.js",
   "engines": {
@@ -22,17 +22,19 @@
     "storybook-native": "react-native start --config ./storybook-native/metro.config.js",
     "ios": "react-native run-ios --no-packager",
     "ios:logs": "yarn ios && react-native log-ios",
-    "ios:app": "react-native start --config ./ios-app/metro.config.js",
-    "ios:build-lib": "yarn ios:build-lib:js && cd ios-app && yarn build",
+    "ios:app": "react-native start --config ./ios-app/metro.config.js --reset-cache",
+    "ios:build-lib": "yarn ios:build-lib:js && yarn ios:build-lib:update-version",
     "ios:build-lib:js": "mkdir -p ios-app/ios-assets/js && mkdir -p ios-app/ios-assets/res/graphql && cp ./packages/provider-queries/src/*.graphql ./ios-app/ios-assets/res/graphql && react-native ram-bundle --platform ios --dev false --entry-file ios-app/index.ios.js --bundle-output ios-app/ios-assets/js/index.ios.bundle --assets-dest ios-app/ios-assets/res/",
+    "ios:build-lib:update-version": "cat package.json | grep version | head -1 | sed 's/[\",\t ]//g' | awk -F: '{ print \"Bundle Version: \" $2 }' > ios-app/ios-assets/js/version.meta",
     "ios:publish-lib": "./scripts/publish-ios-assets.sh -v",
     "android:app": "react-native start --config ./android-app/metro.config.js",
-    "android:build-lib": "yarn android:build-lib:js && cp -r node_modules/@react-native-community/netinfo node_modules/react-native-community-netinfo && cd android-app && yarn build",
+    "android:build-lib": "yarn android:build-lib:js && cp -r node_modules/@react-native-community/netinfo node_modules/react-native-community-netinfo && yarn android:build-lib:aar",
     "android:build-lib:js": "mkdir -p android-app/xnative/src/main/assets/ && mkdir -p android-app/xnative/src/main/res/ && react-native ram-bundle --platform android --dev false --minify --entry-file android-app/index.android.js --bundle-output android-app/xnative/src/main/assets/index.android.bundle --assets-dest android-app/xnative/src/main/res/",
-    "android:publish-lib": "lerna run --scope @times-components-native/android-app publish-library --stream",
+    "android:build-lib:aar": "cd android-app && ./gradlew clean && ./gradlew generateReactArchives && ./gradlew assemble && ./gradlew publish && cd -",
+    "android:publish-lib": "cd android-app && ./publish.sh",
     "fmt": "eslint . --fix && yarn prettier:apply",
     "typecheck": "tsc --project ./",
-    "postinstall": "yarn gen:schema && yarn gen:types && node ./scripts/fetch-fonts",
+    "postinstall": "yarn gen:schema && yarn gen:types && node ./scripts/fetch-fonts && rnstl",
     "gen:schema": "cd packages/schema && GRAPHQL_ENDPOINT=https://api.thetimes.co.uk/graphql node fetchSchema.js && cd -",
     "gen:types": "gql-gen --schema ./packages/schema/schema.json --template graphql-codegen-typescript-template --out ./packages/fixture-generator/src/types.ts",
     "test:ios": "jest --config test-setup/jest.ios.config.js",
@@ -54,6 +56,15 @@
   "bugs": {
     "url": "https://github.com/newsuk/times-components/issues"
   },
+  "config": {
+    "react-native-storybook-loader": {
+      "searchDir": [
+        "packages"
+      ],
+      "pattern": "**/*.stories.js",
+      "outputFile": "./storybook-native/story-loader.js"
+    }
+  },
   "homepage": "https://github.com/newsuk/times-components#readme",
   "devDependencies": {
     "@babel/cli": "7.4.4",
@@ -65,6 +76,7 @@
     "@storybook/addon-actions": "5.3.18",
     "@storybook/addon-info": "5.3.18",
     "@storybook/addon-knobs": "5.3.18",
+    "@storybook/addon-ondevice-knobs": "5.3.18",
     "@storybook/addon-options": "5.3.18",
     "@storybook/addons": "5.3.18",
     "@storybook/react": "5.3.18",
@@ -126,6 +138,7 @@
     "webpack": "4.30.0"
   },
   "dependencies": {
+    "@react-native-community/async-storage": "1.11.0",
     "@react-native-community/netinfo": "5.3.3",
     "@skele/components": "1.0.0-alpha.40",
     "apollo-cache-inmemory": "1.5.1",
@@ -152,12 +165,14 @@
     "react-display-name": "0.2.3",
     "react-dom": "16.9.0",
     "react-native": "0.61.5",
+    "react-native-v8": "0.61.5-patch.3",
     "react-native-autoheight-webview": "1.5.1",
     "react-native-device-info": "5.3.1",
     "react-native-image-zoom-viewer": "2.2.26",
     "react-native-svg": "9.11.1",
     "react-native-webview": "7.0.5",
     "styled-components": "4.3.2",
+    "v8-android": "8.80.1",
     "unfetch": "^4.1.0",
     "url-parse": "1.4.7",
     "zen-observable": "0.8.11"
