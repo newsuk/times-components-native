@@ -17,9 +17,11 @@ ignores: [
   "@storybook/addons",
   "global",
   "react-native-storybook-loader",
+  "react-native-v8",
   "tslint",
   "tslint-config-prettier",
   "tslint-immutable",
+  "v8-android",
   "url",
   "url-polyfill"
 ]
