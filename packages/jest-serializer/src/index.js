@@ -1,3 +1,4 @@
+// eslint-disable-next-line import/no-extraneous-dependencies
 import { createSerializer } from "enzyme-to-json";
 
 const compose = (printer, ...transformers) =>
@@ -9,7 +10,7 @@ const compose = (printer, ...transformers) =>
             accum: a,
             children: c,
             node: n,
-            props: p
+            props: p,
           };
         }
 
@@ -19,13 +20,13 @@ const compose = (printer, ...transformers) =>
         accum,
         children,
         node,
-        props
+        props,
       }
     )
   );
 
 const addSerializers = (expect, ...serializers) => {
-  serializers.forEach(serializer => expect.addSnapshotSerializer(serializer));
+  serializers.forEach((serializer) => expect.addSnapshotSerializer(serializer));
 };
 
 const enzymeRenderedSerializer = () => createSerializer({ mode: "deep" });
@@ -38,15 +39,18 @@ export {
   default as minimalise,
   minimaliseTransform,
   minimalNative,
-  minimalNativeTransform
+  minimalNativeTransform,
 } from "./minimalise";
-export { default as flattenStyle,  flattenStyleTransform } from "./flatten-style";
-export  {
+export {
+  default as flattenStyle,
+  flattenStyleTransform,
+} from "./flatten-style";
+export {
   default as replace,
   justChildren,
   meltNative,
   propsNoChildren,
-  replaceTransform
+  replaceTransform,
 } from "./replace";
 export { default as replaceProp, replacePropTransform } from "./replace-prop";
 export { hoistStyle, hoistStyleTransform } from "./hoist-style";

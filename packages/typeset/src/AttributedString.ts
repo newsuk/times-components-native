@@ -2,28 +2,28 @@ export interface TypographySettings {
   lineHeight?: number;
   fontSize?: number;
   fontFamily?: string;
-  fontStyle?: 'italic' | 'normal';
-  fontWeight?: 'bold' | 'normal';
+  fontStyle?: "italic" | "normal";
+  fontWeight?: "bold" | "normal";
 }
 
 export interface LinkTag {
-  tag: 'LINK';
+  tag: "LINK";
   href: string;
 }
 
 export interface FontTag {
-  tag: 'FONT';
+  tag: "FONT";
   settings: TypographySettings;
 }
 
 export type AttributeTag = LinkTag | FontTag;
 
 export function isFontTag(value: AttributeTag | null): value is FontTag {
-  return value !== null && value !== undefined && value.tag === 'FONT';
+  return value !== null && value !== undefined && value.tag === "FONT";
 }
 
 export function isLinkTag(value: AttributeTag | null): value is LinkTag {
-  return value !== null && value !== undefined && value.tag === 'LINK';
+  return value !== null && value !== undefined && value.tag === "LINK";
 }
 
 export default class AttributedString {
@@ -39,12 +39,12 @@ export default class AttributedString {
   }
   public static join(strings: AttributedString[]): AttributedString {
     if (strings.length === 0) {
-      return new AttributedString('', []);
+      return new AttributedString("", []);
     }
     return strings.reduce(AttributedString.concat);
   }
 
-  public string: string = '';
+  public string: string = "";
   public attributes: AttributeTag[][] = [];
   public length: number;
   public parent?: AttributedString;
@@ -84,9 +84,9 @@ export default class AttributedString {
     }
 
     return chunks;
-  };
+  }
 
-  public split = (chars: string[] = [' ', '\n']) => {
+  public split = (chars: string[] = [" ", "\n"]) => {
     const attrs = this.attributes;
     let start = 0;
     const chunks: AttributedString[] = [];
@@ -110,10 +110,10 @@ export default class AttributedString {
 
   public collapsedAttributes(index: number): AttributeTag[] {
     const tags = this.getTagsForIndex(index);
-    const fontAttrs = tags.filter(isFontTag).map(f => f.settings);
+    const fontAttrs = tags.filter(isFontTag).map((f) => f.settings);
     const linkAttrs = tags.filter(isLinkTag);
     const attr = fontAttrs.reduce((acc, v) => ({ ...acc, ...v }), {});
-    return [{ tag: 'FONT', settings: attr }, linkAttrs[0] || null];
+    return [{ tag: "FONT", settings: attr }, linkAttrs[0] || null];
   }
 
   public slice(begin: number, end?: number): AttributedString {

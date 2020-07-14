@@ -56,7 +56,6 @@ buck-out/
 */fastlane/screenshots
 
 storybook-native/story-loader.js
-storybook-static
 coverage
 dist
 packages/*/rnw.js
