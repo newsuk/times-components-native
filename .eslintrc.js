@@ -1,13 +1,30 @@
 const schemaJson = require("./packages/schema/schema.json");
 
 module.exports = {
-  "extends": ["airbnb", "prettier", "prettier/react"],
-  "plugins": ["graphql", "react-hooks"],
-  "parser": "babel-eslint",
+  "env": {
+    "es6": true,
+    "react-native/react-native": true
+  },
+  "extends": [
+    "plugin:prettier/recommended"
+  ],
+  "parser": "@typescript-eslint/parser",
+  "parserOptions": {
+    "ecmaFeatures": {
+      "jsx": true
+    },
+    "ecmaVersion": 2018,
+    "sourceType": "module"
+  },
+  "plugins": [
+    "@typescript-eslint",
+    "graphql",
+    "import",
+    "react",
+    "react-hook",
+    "react-native"
+  ],
   "rules": {
-    "react/jsx-filename-extension": [1, { "extensions": [".js"] }],
-    "react-hooks/rules-of-hooks": "error",
-    "react-hooks/exhaustive-deps": "warn",
     "import/extensions": "off",
     "import/no-extraneous-dependencies": [
       "error",
@@ -54,7 +71,10 @@ module.exports = {
         "env": "apollo",
         "schemaJson": schemaJson
       }
-    ]
+    ],
+    "react/jsx-filename-extension": [1, { "extensions": [".js"] }],
+    "react-hooks/rules-of-hooks": "error",
+    "react-hooks/exhaustive-deps": "warn",
   },
   "settings": {
     "import/resolver": {
@@ -64,4 +84,4 @@ module.exports = {
     }
   },
   "root": true
-}
+};
