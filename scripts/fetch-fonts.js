@@ -134,12 +134,12 @@ const download = (source, dest) =>
         stream.on("error", reject);
 
         res.body.pipe(stream);
-      })
+      }),
   );
 
 const generate = (file, fontName, fontFamily) =>
   exec(
-    `fontforge -lang=ff -c 'Open($1); SetFondName("${fontFamily}"); SetFontNames("${fontName}", "${fontFamily}", "${fontName}"); Generate("${file}");' ${file}`
+    `fontforge -lang=ff -c 'Open($1); SetFondName("${fontFamily}"); SetFontNames("${fontName}", "${fontFamily}", "${fontName}"); Generate("${file}");' ${file}`,
   ).catch((e) => console.error(e)); // eslint-disable-line no-console
 
 mkdirp(fontDir).then(() =>
@@ -164,7 +164,7 @@ mkdirp(fontDir).then(() =>
           });
         }
         return Promise.resolve();
-      })
-    )
-  )
+      }),
+    ),
+  ),
 );
