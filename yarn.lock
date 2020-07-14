@@ -11829,6 +11829,13 @@ react-native-swipe-gestures@^1.0.4:
   resolved "https://registry.yarnpkg.com/react-native-swipe-gestures/-/react-native-swipe-gestures-1.0.5.tgz#a172cb0f3e7478ccd681fd36b8bfbcdd098bde7c"
   integrity sha512-Ns7Bn9H/Tyw278+5SQx9oAblDZ7JixyzeOczcBK8dipQk2pD7Djkcfnf1nB/8RErAmMLL9iXgW0QHqiII8AhKw==
 
+react-native-v8@0.61.5-patch.3:
+  version "0.61.5-patch.3"
+  resolved "https://registry.yarnpkg.com/react-native-v8/-/react-native-v8-0.61.5-patch.3.tgz#c5f4f235f5b9922f5f982811d293c890d45fecd5"
+  integrity sha512-1cCc/zRK9uZ6Z/++aLPBMf5h78B74+qMdyKlJRDG9uREtd6BiAPvtqkW2QN37SYAe4IjH23BfO85rnpBGrnfgA==
+  dependencies:
+    v8-android "~8.80.1"
+
 react-native-webview@7.0.5:
   version "7.0.5"
   resolved "https://registry.yarnpkg.com/react-native-webview/-/react-native-webview-7.0.5.tgz#1dd9d4f2856bda86a40222eca3612bf2152bacd3"
@@ -14068,6 +14075,11 @@ uuid@^3.1.0, uuid@^3.3.2:
   version "3.4.0"
   resolved "https://registry.yarnpkg.com/uuid/-/uuid-3.4.0.tgz#b23e4358afa8a202fe7a100af1f5f883f02007ee"
   integrity sha512-HjSDRw6gZE5JMggctHBcjVak08+KEVhSIiDzFnT9S9aegmp85S/bReBVTb4QTFaRNptJ9kuYaNhnbNEOkbKb/A==
+
+v8-android@8.80.1, v8-android@~8.80.1:
+  version "8.80.1"
+  resolved "https://registry.yarnpkg.com/v8-android/-/v8-android-8.80.1.tgz#ec4c9be7656445377e6c080ebc39b1ab7e95fbce"
+  integrity sha512-YtJEYC4cEr/EJjCAllQN1T+PX+XtcrCCBXJv+dLdzxxRtVKkHlf8kAxyriXUOtGmiMtgzlz+d8hQugVPdq8ZfA==
 
 v8flags@^3.1.1:
   version "3.2.0"
