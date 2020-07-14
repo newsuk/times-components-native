@@ -39,13 +39,6 @@ class InteractiveWrapper extends Component {
     }
   }
 
-  updateHeight = passedHeight => {
-    const { height } = this.state;
-    if (passedHeight !== height && Math.abs(passedHeight - height) > 5) {
-      this.setState({ height: passedHeight });
-    }
-  };
-
   onMessage(e) {
     if (
       (e && e.nativeEvent && e.nativeEvent.data) ||
@@ -64,6 +57,13 @@ class InteractiveWrapper extends Component {
     }
   }
 
+  updateHeight = passedHeight => {
+    const { height } = this.state;
+    if (passedHeight !== height && Math.abs(passedHeight - height) > 5) {
+      this.setState({ height: passedHeight });
+    }
+  };
+
   // eslint-disable-next-line class-methods-use-this
   handleOnShouldStartLoadWithRequest(data) {
     if (
@@ -80,7 +80,8 @@ class InteractiveWrapper extends Component {
   render() {
     const {
       config: { dev, environment, platform, version },
-      id, isResponsiveGraphics
+      id,
+      isResponsiveGraphics
     } = this.props;
     const { height } = this.state;
     const uri = `${editorialLambdaProtocol}${editorialLambdaOrigin}/${editorialLambdaSlug}/${id}?dev=${dev}&env=${environment}&platform=${platform}&version=${version}`;
@@ -90,7 +91,7 @@ class InteractiveWrapper extends Component {
       }, 500);
       true;
     `;
-      const WebViewWrapper = isResponsiveGraphics ? WebView : AutoHeightWebView;
+    const WebViewWrapper = isResponsiveGraphics ? WebView : AutoHeightWebView;
 
     return (
       <WebViewWrapper
@@ -114,7 +115,8 @@ class InteractiveWrapper extends Component {
 
 InteractiveWrapper.propTypes = {
   config: PropTypes.shape({}),
-  id: PropTypes.string.isRequired
+  id: PropTypes.string.isRequired,
+  isResponsiveGraphics: PropTypes.bool.isRequired
 };
 
 InteractiveWrapper.defaultProps = {
