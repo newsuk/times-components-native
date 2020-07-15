@@ -314,7 +314,6 @@ exports[`1. a full article with all content items with dropcap template 1`] = `
           >
             <InteractiveWrapper
               id="d2f83305-d558-4f78-f582-32115c659355"
-              isResponsiveGraphics={false}
             />
           </View>
         </View>
@@ -436,7 +435,6 @@ exports[`2. an article with interactives 1`] = `
           >
             <InteractiveWrapper
               id="d2f83305-d558-4f78-f582-32115c659355"
-              isResponsiveGraphics={false}
             />
           </View>
         </View>
@@ -475,7 +473,6 @@ exports[`2. an article with interactives 1`] = `
           >
             <InteractiveWrapper
               id="abc"
-              isResponsiveGraphics={false}
             />
           </View>
         </View>
