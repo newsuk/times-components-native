@@ -84,7 +84,7 @@ jobs:
             - run:
                   name: Run No Specific Platform Tests
                   command: |
-                      npx run test:common
+                      yarn test:common
                   working_directory: ~/project/
 
     run_android_tests:
@@ -96,7 +96,7 @@ jobs:
             - run:
                   name: Run Android Tests
                   command: |
-                      npx run test:android
+                      yarn test:android
                   working_directory: ~/project/
 
     run_ios_tests:
