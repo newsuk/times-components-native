@@ -14,14 +14,13 @@ bundle, image assets and native dependencies.
 
 ## Dev Server
 
-In order to run the dev server, either run `yarn android:app` in the repo root
-or `yarn start` inside this package. This will start react-native bundler and provide
+In order to run the dev server, run `yarn android:app`. This will start react-native bundler and provide
 on-the-fly bundles for the react development.
 
 ## Bundling and release
 
 To publish this repo to maven, it needs to be built as a native android library.
-Run `yarn android:build-lib` to achieve this, and publish using publish.sh script.
+Run `yarn android:build-lib` to achieve this, and publish using `yarn android:publish-lib`.
 
 This bundling process first creates the js bundle, puts it inside an android
 library and assembles the android library, alongside any native dependencies.
@@ -31,7 +30,7 @@ it can be consumed by the native applications.
 ## Adding new native dependencies
 
 Whenever a native dependency is added to times-components, it should also be
-added to this package and `build.gradle` scripts should be updated. Add the
+added to the `build.gradle` scripts. Add the
 library name to `reactProjects` in build.gradle so it can be bundled and
 uploaded to maven.
 
@@ -59,7 +58,7 @@ uploaded to maven.
 2. update the version in android-app package.json and chnage the android build.gradle package version correspondingly
 3. Build lib `yarn android:build-lib`
 4. Copy newly built android bundle to andriod repo `cp android-app/xnative/src/main/assets/index.android.bundle ../../nu-projectd-times-smartphone-android/mobile/src/main/assets/index.android.bundle`
-5. before building, update the version in android-app/package.json to something that doesnt exist in nu-android, mobile/build.gradle change the version to match in the top level build.gradle add the local repo: `maven { url "../../times-components/android-app/repo"}`
+5. before building, update the version in android-app/package.json to something that doesnt exist in nu-android, mobile/build.gradle change the version to match in the top-level build.gradle add the local repo: `maven { url "../../times-components/android-app/repo"}`
 6. then using android studio build the app onto the device
 
 ### Upgrade Times Component in the Android app

@@ -2,7 +2,7 @@
 
 ### Purpose
 
-Home of The Times' `react native` components used in the mobile apps.
+Home of The Times' `react native` components used in the mobile and tablet apps.
 
 ### Dev Environment
 
@@ -29,22 +29,17 @@ Go to http://components.thetimes.co.uk
 
 3. Components can be seen running in a storybook:
 
-- web storybook
-  1. `yarn storybook`
-  2. go to http://localhost:9001
-- native storybook
-  1. `cd ios && pod install && cd -`
-  2. `yarn storybook-native` and leave it running
-  3. `yarn ios` to start the iOS app
-  4. To start the Android app:
-     - [Start a virtual device](https://developer.android.com/studio/run/managing-avds.html)
-     - Check Android SDK path is exported to \$ANDROID_HOME. In Mac, android sdk
-       is installed to ~/Library/Android/sdk by default. `export ANDROID_HOME="/Users/<USERNAME>/Library/Android/sdk"`
-     - `yarn android`
-     - If you get build errors, check your JDK version with `javac -version`,
-       which should print `javac 1.8.XXXX`. Earlier or later versions may not
-       work.
-  5. go to http://localhost:7007
+1. `cd ios && pod install && cd -`
+2. `yarn storybook-native` and leave it running
+3. `yarn ios` to start the iOS app
+4. To start the Android app:
+ - [Start a virtual device](https://developer.android.com/studio/run/managing-avds.html)
+ - Check Android SDK path is exported to \$ANDROID_HOME. In Mac, android sdk
+   is installed to ~/Library/Android/sdk by default. `export ANDROID_HOME="/Users/<USERNAME>/Library/Android/sdk"`
+ - `yarn android`
+ - If you get build errors, check your JDK version with `javac -version`,
+   which should print `javac 1.8.XXXX`. Earlier or later versions may not
+   work.
 
 ## Native App Dev Server
 
@@ -54,6 +49,27 @@ server via:
 `yarn android:app` or `yarn ios:app`
 
 For step by step guide, see the corresponding Readme documentation for [android](./android-app/README.md) and [ios](./ios-app/README.md)
+
+## Development
+
+The code can be formatted and linted in accordance with the agreed standards.
+
+```
+yarn fmt
+yarn lint
+```
+
+## Testing
+
+This package uses [yarn](https://yarnpkg.com) (latest) to run unit tests on each
+platform with [jest](https://facebook.github.io/jest/).
+
+```
+yarn test:all
+yarn test:android
+yarn test:ios
+yarn test:common
+```
 
 ### Fonts ⚠️
 
@@ -71,17 +87,6 @@ See [utils package](packages/utils/README.md) on how to update the schema
 
 The components in this project can be debugged through your browser's developer
 tools. These steps assume the use of Chrome DevTools.
-
-To debug our web Storybook:
-
-1. `yarn storybook`
-2. navigate to http://localhost:9001
-3. open DevTools
-4. Click _Sources_
-5. In the _Network_ tab under the leftmost pane, expand _top_ =>
-   _storybook-preview-iframe_ => _webpack://_ => _._ => _packages_
-
-Any of these source files can be debugged directly.
 
 To debug our native Storybook:
 
@@ -104,18 +109,14 @@ Follow these steps [here](https://github.com/newsuk/cps-content-render#locally-m
 
 Tests are currently using [jest](https://jestjs.io/) to run so if you want to debug any test follow these steps:
 
-1. (FIND YOUR TEST COMMAND) `jest --config="./packages/provider/__tests__/jest.config.js"`. Depending on what directory we start the tests from, the `--config` directory may differ. My currenct directory is at the repo root: `times-components`.
+1. (FIND YOUR TEST COMMAND) `jest --config="./test-setup/jest.android.config.js"`. Depending on whether you want to run android/ios/common unit tests, the `--config` directory may differ.
 
-2. See your test command from the `package.json` for the speciffic package you want to check out.
-
-> NOTE: If you don't have jest installed globally, you can use it locally from the `node_modules/.bin/jest`
-
-3. (START TESTS IN DEBUG MODE) We need to start the same command but through node while in debug mode like so:
-   `node --inspect-brk ./node_modules/.bin/jest --config="./packages/provider/__tests__/jest.config.js" --runInBand`
+2. (START TESTS IN DEBUG MODE) We need to start the same command but through node while in debug mode like so:
+   `node --inspect-brk ./node_modules/.bin/jest --config="./test-setup/jest.android.config.js" --runInBand`
 
 > NOTE: `--runInBand` is a `jest` flag that runs all tests serially in the current process. If we don't add this flag, only the node process that started `jest` will be debuggable.
 
-4. (ADD DEBUG STATEMENTS) Normaly we would add breakpoints, but when remote debugging that's not always possible, because the files we need to put the breakpoints on aren't loaded yet by `jest`. So in order to make the debugger stop where we want it to, we need to add [`debugger;`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/debugger) statements instead of breakpoints in the code and re-transpile if necessary.
+4. (ADD DEBUG STATEMENTS) Normally we would add breakpoints, but when remote debugging that's not always possible, because the files we need to put the breakpoints on aren't loaded yet by `jest`. So in order to make the debugger stop where we want it to, we need to add [`debugger;`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/debugger) statements instead of breakpoints in the code and re-transpile if necessary.
 
 5. (ATTACH TO WEB SOCKET) Once we've started the tests in debug mode, we need to attach to it:
 

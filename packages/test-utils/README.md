@@ -46,8 +46,3 @@ it("2. test two", () => {
   // do stuff with snapshots
 });
 ```
-
-## Contributing
-
-Please read [CONTRIBUTING.md](./CONTRIBUTING.md) before contributing to this
-package
