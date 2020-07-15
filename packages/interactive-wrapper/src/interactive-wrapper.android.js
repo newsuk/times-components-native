@@ -2,7 +2,6 @@ import React, { Component } from "react";
 import { Linking } from "react-native";
 import PropTypes from "prop-types";
 import AutoHeightWebView from "react-native-autoheight-webview";
-import { WebView } from "react-native-webview";
 import ResponsiveImageInteractive from "./responsive-image";
 
 const editorialLambdaProtocol = "https://";
@@ -29,31 +28,12 @@ class InteractiveWrapper extends Component {
     this.handleOnShouldStartLoadWithRequest = this.handleOnShouldStartLoadWithRequest.bind(
       this
     );
-    this.onMessage = this.onMessage.bind(this);
     this.onLoadEnd = this.onLoadEnd.bind(this);
   }
 
   onLoadEnd() {
     if (this.webview) {
       this.webview.postMessage("thetimes.co.uk", "*");
-    }
-  }
-
-  onMessage(e) {
-    if (
-      (e && e.nativeEvent && e.nativeEvent.data) ||
-      e.nativeEvent.data === "0"
-    ) {
-      const { height } = this.state;
-      const newHeight = parseInt(e.nativeEvent.data, 10);
-
-      if (newHeight && newHeight > height) {
-        const updateState =
-          newHeight < 30 ? { height: newHeight + 30 } : { height: newHeight };
-        this.setState(updateState);
-      }
-    } else {
-      console.error(`Invalid height received ${e.nativeEvent.data}`); // eslint-disable-line no-console
     }
   }
 
@@ -80,26 +60,16 @@ class InteractiveWrapper extends Component {
   render() {
     const {
       config: { dev, environment, platform, version },
-      id,
-      isResponsiveGraphics
+      id
     } = this.props;
     const { height } = this.state;
     const uri = `${editorialLambdaProtocol}${editorialLambdaOrigin}/${editorialLambdaSlug}/${id}?dev=${dev}&env=${environment}&platform=${platform}&version=${version}`;
-    const scriptToInject = `
-      setTimeout(function() {
-        window.ReactNativeWebView.postMessage(document.documentElement.scrollHeight);
-      }, 500);
-      true;
-    `;
-    const WebViewWrapper = isResponsiveGraphics ? WebView : AutoHeightWebView;
 
     return (
-      <WebViewWrapper
+      <AutoHeightWebView
         onSizeUpdated={size => this.updateHeight(size.height)}
-        onMessage={this.onMessage}
-        scalesPageToFit
+        scalesPageToFit={false}
         automaticallyAdjustContentInsets={false}
-        injectedJavaScript={scriptToInject}
         onLoadEnd={this.onLoadEnd}
         ref={ref => {
           this.webview = ref;
@@ -115,8 +85,7 @@ class InteractiveWrapper extends Component {
 
 InteractiveWrapper.propTypes = {
   config: PropTypes.shape({}),
-  id: PropTypes.string.isRequired,
-  isResponsiveGraphics: PropTypes.bool.isRequired
+  id: PropTypes.string.isRequired
 };
 
 InteractiveWrapper.defaultProps = {

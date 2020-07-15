@@ -57,7 +57,7 @@ exports[`renders correctly 1`] = `
     width = wrapper.offsetWidth || document.documentElement.offsetWidth;
 
     if(!usingScale && window.innerWidth) {
-      usingScale = screen.width / window.innerWidth;
+      usingScale = 1;
     }
 
     window.ReactNativeWebView.postMessage(JSON.stringify({ width: Math.min(width, screen.width), height: height * usingScale }));
