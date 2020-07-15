@@ -1,17 +1,17 @@
-import * as React from 'react';
+import * as React from "react";
 import {
   Image,
   ImageBackground,
   ImageSourcePropType,
   ImageStyle,
   PixelRatio,
-  View
-} from 'react-native';
-import Url from 'url-parse';
-import logoPath from '../assets/t.png';
-import { appendToImageURL } from '@times-components-native/utils';
-import findClosestWidth from './utils/findClosestWidth';
-import styles from './styles';
+  View,
+} from "react-native";
+import Url from "url-parse";
+import logoPath from "../assets/t.png";
+import { appendToImageURL } from "@times-components-native/utils";
+import findClosestWidth from "./utils/findClosestWidth";
+import styles from "./styles";
 
 interface ResponsiveImageProps {
   readonly aspectRatio?: number;
@@ -22,7 +22,7 @@ interface ResponsiveImageProps {
   readonly relativeHorizontalOffset?: number;
   readonly relativeVerticalOffset?: number;
   readonly relativeWidth?: number;
-  readonly resizeMode?: ImageStyle['resizeMode'];
+  readonly resizeMode?: ImageStyle["resizeMode"];
   readonly rounded?: boolean;
   readonly style?: any;
   readonly onLayout?: (ev: any) => {};
@@ -34,9 +34,9 @@ interface ElementProps {
   readonly source: ImageSourcePropType;
   readonly onLoadEnd?: () => void;
   readonly onLoad?: () => void;
-  readonly aspectRatio?: ResponsiveImageProps['aspectRatio'];
+  readonly aspectRatio?: ResponsiveImageProps["aspectRatio"];
   readonly borderRadius: number;
-  readonly resize: ImageStyle['resizeMode'];
+  readonly resize: ImageStyle["resizeMode"];
   readonly fadeDuration: number;
   readonly onError?: () => void;
 }
@@ -49,7 +49,7 @@ const ImageElement = ({
   borderRadius,
   resize,
   fadeDuration,
-  onError
+  onError,
 }: ElementProps) => (
   <Image
     fadeDuration={fadeDuration}
@@ -57,12 +57,12 @@ const ImageElement = ({
     onLoadEnd={onLoadEnd}
     onLoad={onLoad}
     onError={onError}
-    resizeMethod={'resize'}
+    resizeMethod={"resize"}
     style={{
       aspectRatio,
       borderRadius,
       ...styles.imageStyle,
-      resizeMode: resize
+      resizeMode: resize,
     }}
   />
 );
@@ -79,29 +79,26 @@ const ResponsiveImage = (props: ResponsiveImageProps) => {
     resizeMode,
     rounded,
     onLayout,
-    onError
+    onError,
   } = props;
 
-  if (!uri) {
-    return null;
-  }
   const borderRadius = rounded ? 9999 : 0;
 
   const url: Url = new Url(uri, true);
-  if (!uri.includes('data:')) {
+  if (!uri.includes("data:")) {
     url.query.rel_width = (relativeWidth || 1).toString();
     url.query.rel_height = (relativeHeight || 1).toString();
     url.query.rel_vertical_offset = relativeVerticalOffset
       ? relativeVerticalOffset.toString()
-      : '0';
+      : "0";
     url.query.rel_horizontal_offset = relativeHorizontalOffset
       ? relativeHorizontalOffset.toString()
-      : '0';
-    url.query.offline = 'true';
+      : "0";
+    url.query.offline = "true";
   }
   const offlineUrl = url.toString();
   const [width, setWidth] = React.useState(0);
-  url.query.offline = 'false';
+  url.query.offline = "false";
   const onlineUrl = url.toString();
 
   const [showOffline, setShowOffline] = React.useState(false);
@@ -110,33 +107,30 @@ const ResponsiveImage = (props: ResponsiveImageProps) => {
   const [checkedCache, setCheckedCache] = React.useState(false);
   const [failed, setFailed] = React.useState(false);
 
-  React.useEffect(
-    () => {
-      if ('queryCache' in Image && width && !checkedCache) {
-        const cache =
-          Image.queryCache && Image.queryCache([onlineUrl, offlineUrl]);
-        setCheckedCache(true);
-        if (!cache) {
+  React.useEffect(() => {
+    if ("queryCache" in Image && width && !checkedCache) {
+      const cache =
+        Image.queryCache && Image.queryCache([onlineUrl, offlineUrl]);
+      setCheckedCache(true);
+      if (!cache) {
+        return;
+      }
+      cache.then((results) => {
+        if (onlineUrl in results) {
+          setShowOnline(true);
+          setShowOffline(false);
+          setShowPlaceholder(false);
           return;
         }
-        cache.then(results => {
-          if (onlineUrl in results) {
-            setShowOnline(true);
-            setShowOffline(false);
-            setShowPlaceholder(false);
-            return;
-          }
-          if (offlineUrl in results) {
-            setShowOffline(true);
-            setShowPlaceholder(false);
-          }
-        });
-      }
-    },
-    [width]
-  );
+        if (offlineUrl in results) {
+          setShowOffline(true);
+          setShowPlaceholder(false);
+        }
+      });
+    }
+  }, [width]);
 
-  const imageRef = React.useCallback(event => {
+  const imageRef = React.useCallback((event) => {
     const { width } = event.nativeEvent.layout;
 
     setWidth(width);
@@ -144,6 +138,10 @@ const ResponsiveImage = (props: ResponsiveImageProps) => {
       onLayout(event);
     }
   }, []);
+
+  if (!uri) {
+    return null;
+  }
 
   if (!width || !checkedCache) {
     return (
@@ -154,26 +152,26 @@ const ResponsiveImage = (props: ResponsiveImageProps) => {
         imageStyle={{
           ...styles.imageStyle,
           borderRadius,
-          resizeMode: 'center'
+          resizeMode: "center",
         }}
         style={{
           ...styles.style,
           ...propStyle,
           aspectRatio,
-          borderRadius
+          borderRadius,
         }}
       />
     );
   }
 
-  const resize = resizeMode || 'cover';
+  const resize = resizeMode || "cover";
   const ratio = PixelRatio.get();
   const closestWidth = width && findClosestWidth(width * ratio);
 
   const highRes = showOnline && (
     <ImageElement
       key="online"
-      source={{ uri: appendToImageURL(onlineUrl, 'resize', closestWidth) }}
+      source={{ uri: appendToImageURL(onlineUrl, "resize", closestWidth) }}
       aspectRatio={aspectRatio}
       borderRadius={borderRadius}
       onLoad={() => {
@@ -194,7 +192,7 @@ const ResponsiveImage = (props: ResponsiveImageProps) => {
   const lowRes = showOffline && (
     <ImageElement
       key="offline"
-      source={{ uri: appendToImageURL(offlineUrl, 'resize', closestWidth) }}
+      source={{ uri: appendToImageURL(offlineUrl, "resize", closestWidth) }}
       aspectRatio={aspectRatio}
       borderRadius={borderRadius}
       onLoadEnd={() => {
@@ -226,7 +224,7 @@ const ResponsiveImage = (props: ResponsiveImageProps) => {
         }
       }}
       fadeDuration={0}
-      style={{ resizeMode: 'center', width, height: '100%' }}
+      style={{ resizeMode: "center", width, height: "100%" }}
     />
   );
 

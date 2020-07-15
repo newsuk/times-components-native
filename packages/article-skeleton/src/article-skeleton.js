@@ -8,7 +8,7 @@ import { render } from "@times-components-native/markup-forest";
 import ArticleExtras from "@times-components-native/article-extras";
 import {
   articleSkeletonPropTypes,
-  articleSkeletonDefaultProps
+  articleSkeletonDefaultProps,
 } from "./article-skeleton-prop-types";
 import articleTrackingContext from "./tracking/article-tracking-context";
 import Gutter, { maxWidth } from "./gutter";
@@ -21,7 +21,7 @@ const templateWithDropCaps = [
   "indepth",
   "maincomment",
   "magazinestandard",
-  "magazinecomment"
+  "magazinecomment",
 ];
 
 const isDropcapsDisabled = ({ template, dropcapsDisabled }) => {
@@ -31,7 +31,7 @@ const isDropcapsDisabled = ({ template, dropcapsDisabled }) => {
   return !templateWithDropCaps.includes(template);
 };
 
-const ArticleWithContent = props => {
+const ArticleWithContent = (props) => {
   const {
     Header,
     data,
@@ -42,17 +42,17 @@ const ArticleWithContent = props => {
     onTopicPress,
     isTablet,
     onViewed,
-    adPosition
+    adPosition,
   } = props;
 
   const { id, url, content } = data;
 
-  const onViewableItemsChanged = useCallback(info => {
+  const onViewableItemsChanged = useCallback((info) => {
     if (!onViewed || !info.changed || !info.changed.length) return [];
 
     return info.changed
-      .filter(viewableItem => viewableItem.isViewable)
-      .map(viewableItem => onViewed(viewableItem.item, data));
+      .filter((viewableItem) => viewableItem.isViewable)
+      .map((viewableItem) => onViewed(viewableItem.item, data));
   }, []);
 
   const [loading, setLoading] = useState(true);
@@ -62,7 +62,7 @@ const ArticleWithContent = props => {
         <ActivityIndicator size="large" animating={loading} />
       </Gutter>
     ),
-    [loading]
+    [loading],
   );
 
   const onEndReached = () => {
@@ -75,7 +75,7 @@ const ArticleWithContent = props => {
         <Header width={Math.min(maxWidth, screenWidth())} />
       </Gutter>
     ),
-    []
+    [],
   );
 
   const footer = useMemo(
@@ -92,14 +92,14 @@ const ArticleWithContent = props => {
         />
       </Gutter>
     ),
-    []
+    [],
   );
 
   const fixedContent = useMemo(
     () => [...fixup(isTablet, adPosition, content), { name: "footer" }],
-    [content, isTablet]
+    [content, isTablet],
   );
-  const images = fixedContent.filter(node => node.name === "image");
+  const images = fixedContent.filter((node) => node.name === "image");
 
   const dropcapsDisabled = isDropcapsDisabled(data);
   const renderChild = render(renderers({ dropcapsDisabled, ...props, images }));
@@ -114,20 +114,20 @@ const ArticleWithContent = props => {
         </ErrorBoundary>
       </Gutter>
     ),
-    [footer]
+    [footer],
   );
 
   const iosScroller =
     // FIXME: remove this when ios memory leaks are resolved
     useCallback(
-      scrollprops => (
+      (scrollprops) => (
         <FlatList
           {...scrollprops}
           data={scrollprops.data.map((item, index) => Child({ item, index }))}
           renderItem={({ item }) => item}
         />
       ),
-      [Child]
+      [Child],
     );
 
   const Scroller = Platform.OS === "ios" ? iosScroller : FlatList;
@@ -166,14 +166,14 @@ ArticleWithContent.propTypes = {
   onRelatedArticlePress: PropTypes.func.isRequired,
   onTwitterLinkPress: PropTypes.func.isRequired,
   onVideoPress: PropTypes.func.isRequired,
-  onImagePress: PropTypes.func.isRequired
+  onImagePress: PropTypes.func.isRequired,
 };
 ArticleWithContent.defaultProps = {
   ...articleSkeletonDefaultProps,
-  interactiveConfig: {}
+  interactiveConfig: {},
 };
 
-const ArticleSkeleton = props => {
+const ArticleSkeleton = (props) => {
   const { data } = props;
 
   if (!data) {
@@ -200,11 +200,11 @@ ArticleSkeleton.propTypes = {
   onRelatedArticlePress: PropTypes.func.isRequired,
   onTwitterLinkPress: PropTypes.func.isRequired,
   onVideoPress: PropTypes.func.isRequired,
-  onImagePress: PropTypes.func.isRequired
+  onImagePress: PropTypes.func.isRequired,
 };
 ArticleSkeleton.defaultProps = {
   ...articleSkeletonDefaultProps,
-  interactiveConfig: {}
+  interactiveConfig: {},
 };
 
 export default articleTrackingContext(withTrackScrollDepth(ArticleSkeleton));
