@@ -17,7 +17,7 @@
     "storybook:build": "yarn storybook:build-vendor && build-storybook -c .storybook -s ./dist/public",
     "prestorybook:test-build": "yarn storybook:build-vendor",
     "storybook:test-build": "build-storybook -c .storybook -s ./dist/public",
-    "storybook-native": "yarn prestorybook-native && react-native start --config ./storybook-native/metro.config.js",
+    "storybook-native": "react-native start --config ./storybook-native/metro.config.js",
     "prestorybook-native": "rnstl",
     "ios": "react-native run-ios --no-packager",
     "ios:logs": "yarn ios && react-native log-ios",
