@@ -8,7 +8,7 @@ Times Components showcases its UI components using
 > interactively develop and test components.
 
 Each package has one or more `my-component.stories.js` file. The
-`.(stories|stories.web).js` file name is the hook that the CLI uses to load
+`.(stories).js` file name is the hook that the CLI uses to load
 these stories into storybook.
 
 ## `my-component.stories.js`
@@ -39,7 +39,7 @@ package has a `my-component.showcase.js` file which exports a showcase object.
 
 - type: string: story | decorator
 - name: string
-- platform: string: ios | android | native | web
+- platform: string: ios | android | native
 - component: function: The method can take optional arguments `knobs` and
   `decorators`
 
@@ -81,31 +81,3 @@ The showcase package provides some custom
 - WhiteBgColorDecorator - puts the wrapped component on a white background for
   easier visual representation
 
-## Contributing
-
-Please read [CONTRIBUTING.md](./CONTRIBUTING.md) before contributing to this
-package
-
-## Running the code
-
-Please see our main [README.md](../README.md) to get the project running locally
-
-## Development
-
-The code can be formatted and linted in accordance with the agreed standards.
-
-```
-yarn fmt
-yarn lint
-```
-
-## Testing
-
-This package uses [yarn](https://yarnpkg.com) (latest) to run unit tests on each
-platform with [jest](https://facebook.github.io/jest/).
-
-```
-yarn test:all
-yarn test:android
-yarn test:ios
-```

@@ -13,8 +13,7 @@ bundle, image assets and native dependencies.
 
 ## Dev Server
 
-In order to run the dev server, either run `yarn ios:app` in the repo root
-or `yarn start` inside this package. This will start react-native bundler and provide
+In order to run the dev server, run `yarn ios:app`. This will start react-native bundler and provide
 on-the-fly bundles for the react development.
 
 ## How to get the ios app set up and running on latest times-components
