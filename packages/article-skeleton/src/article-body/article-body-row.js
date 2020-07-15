@@ -270,12 +270,7 @@ export default ({
             display === "fullwidth" && styles.interactiveContainerFullWidth
           ]}
         >
-          <InteractiveWrapper
-            config={interactiveConfig}
-            id={id}
-            key={key}
-            isResponsiveGraphics={element.value === "responsive-graphics"}
-          />
+          <InteractiveWrapper config={interactiveConfig} id={id} key={key} />
         </View>
       );
     },
