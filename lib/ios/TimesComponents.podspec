@@ -1,5 +1,4 @@
 # coding: utf-8
-require 'json'
 
 # Please read very carefully or you will be in world of massive massive pain.
 # You been warned!!!
@@ -44,14 +43,9 @@ require 'json'
 #   - $ pod spec lint TimesComponents.podspec --sources='https://github.com/newsuk/times-pod-specs,https://github.com/CocoaPods/Specs' --verbose --allow-warnings
 #   - $ pod repo push newsuk TimesComponents.podspec  --verbose --allow-warnings --use-json (assumes you have newsuk podspec repo set!!)
 
-package = JSON.parse(File.read("./ios-app/package.json"))
-
-podspec_version = package["version"]
-react_native_version = package["dependencies"]["react-native"]
-
 Pod::Spec.new do |s|
   s.name             = "TimesComponents"
-  s.version          = podspec_version
+  s.version          = PACKAGE_VERSION
   s.summary          = "Times iOS React components"
   s.description      = "All the things for Times iOS React components including dependencies"
   s.homepage         = "https://www.news.co.uk"
