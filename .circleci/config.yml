@@ -188,3 +188,7 @@ workflows:
             - publish_ios:
                   requires:
                       - hold
+            - publish_notes:
+                requires:
+                  - release-android
+                  - release-ios
