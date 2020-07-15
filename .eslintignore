@@ -3,5 +3,5 @@
 **/rnw.js
 dist
 storybook-native
-android-app
-ios-app
+lib/android
+lib/ios

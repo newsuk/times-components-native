@@ -20,9 +20,8 @@ storybook-native
 *.html
 *.sh
 *.log
-android-app
-ios-app
+lib/android
+lib/ios
 coverage
 settings.gradle
 build.gradle
-TimesReactIOS.podspec
