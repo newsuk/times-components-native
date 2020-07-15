@@ -11,7 +11,6 @@ module.exports = (api) => {
       [
         "module-resolver",
         {
-          // root: ["./"],
           extensions: [
             ".ios.ts",
             ".android.ts",
