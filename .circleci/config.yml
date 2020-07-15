@@ -12,7 +12,7 @@ commands:
         steps:
             - run:
                   name: Install Dependencies
-                  command: npx yarn@1.16.0 install --frozen-lockfile --ignore-engines
+                  command: yarn install --frozen-lockfile --ignore-engines
                   working_directory: ~/project/
 
     restore-yarn:
@@ -61,8 +61,7 @@ jobs:
                   at: ./
             - run:
                   name: Run Lint
-                  command: |
-                      npx yarn@1.16.0 lint
+                  command: yarn lint
                   working_directory: ~/project/
 
     run_typecheck:
@@ -73,8 +72,7 @@ jobs:
             at: ./
         - run:
             name: Run Type Check
-            command: |
-              npx yarn@1.16.0 typecheck
+            command: yarn typecheck
             working_directory: ~/project/
 
     run_noplatform_tests:
@@ -86,7 +84,7 @@ jobs:
             - run:
                   name: Run No Specific Platform Tests
                   command: |
-                      npx run test:common
+                      yarn test:common
                   working_directory: ~/project/
 
     run_android_tests:
@@ -98,7 +96,7 @@ jobs:
             - run:
                   name: Run Android Tests
                   command: |
-                      npx run test:android
+                      yarn test:android
                   working_directory: ~/project/
 
     run_ios_tests:
@@ -109,8 +107,7 @@ jobs:
                   at: ./
             - run:
                   name: Run iOS Tests
-                  command: |
-                      npx run test:ios
+                  command: yarn test:ios
                   working_directory: ~/project/
 
     publish_android:
@@ -136,8 +133,8 @@ jobs:
                       sudo chmod ugo+rwx "android-sdk"
                       cd ~/project/
                       # TODO: move above lines in a docker image
-                      npx yarn@1.16.0 android:build-lib
-                      npx yarn@1.16.0 android:publish-lib
+                      yarn android:build-lib
+                      yarn android:publish-lib
                   working_directory: ~/project/
     publish_ios:
         executor: node
@@ -148,8 +145,8 @@ jobs:
             - run:
                   name: Build and publish iOS js bundles
                   command: |
-                      npx yarn@1.16.0 ios:build-lib
-                      npx yarn@1.16.0 ios:publish-lib
+                      yarn ios:build-lib
+                      yarn ios:publish-lib
                   working_directory: ~/project/
 
 workflows:
