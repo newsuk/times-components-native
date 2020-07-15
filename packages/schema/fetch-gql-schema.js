@@ -11,12 +11,12 @@ const writeFile = promisify(fs.writeFile);
 const fetchIntrospection = async (fetch, endpoint) => {
   const fetchResult = await fetch(endpoint, {
     body: JSON.stringify({
-      query: introspectionQuery
+      query: introspectionQuery,
     }),
     headers: {
-      "Content-Type": "application/json"
+      "Content-Type": "application/json",
     },
-    method: "POST"
+    method: "POST",
   });
 
   return fetchResult.json();
@@ -25,13 +25,13 @@ const fetchIntrospection = async (fetch, endpoint) => {
 const writeSchema = async (cwd, schema) =>
   writeFile(
     path.join(cwd, "schema.json"),
-    prettier.format(JSON.stringify(schema), { parser: "json" })
+    prettier.format(JSON.stringify(schema), { parser: "json" }),
   );
 
 const writeFragmentMatcher = (cwd, schema) => {
   // eslint-disable-next-line no-underscore-dangle
   const filteredTypes = schema.data.__schema.types.filter(
-    ({ possibleTypes }) => possibleTypes !== null
+    ({ possibleTypes }) => possibleTypes !== null,
   );
 
   const fm = prettier.format(
@@ -50,7 +50,7 @@ const writeFragmentMatcher = (cwd, schema) => {
 
   module.exports.fragmentMatcher = fragmentMatcher;
   `,
-    { parser: "babylon" }
+    { parser: "babel" },
   );
 
   return writeFile(path.join(cwd, "fragment-matcher.js"), fm);
@@ -61,6 +61,6 @@ module.exports = async (cwd, fetch, endpoint) => {
 
   return Promise.all([
     writeSchema(cwd, schema),
-    writeFragmentMatcher(cwd, schema)
+    writeFragmentMatcher(cwd, schema),
   ]);
 };
