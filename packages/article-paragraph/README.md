@@ -1,11 +1,8 @@
 # Article Paragraph
 
-This packages provides a component for displaying an article paragraph
-on android and web, including support for displaying a "drop
+This package provides a component for displaying an article paragraph
+on android/ios, including support for displaying a "drop
 cap" at the beginning of a paragraph.
-
-On the web, the drop cap is implemented using CSS floats, and should work with
-any styling or markup used.
 
 React Native does not support CSS floats. Therefore, on android,
 the drop cap is implemented by rendering three separate text boxes to
@@ -37,42 +34,6 @@ We use a [3rd party library](https://github.com/aMarCruz/react-native-text-size)
 to calculate the text to fit next to the drop cap. There is currently limited support for iOS
 from this library. **Therefore, this package
 does not currently have support for iOS.**
-
-## Contributing
-
-Please read [CONTRIBUTING.md](./CONTRIBUTING.md) before contributing to this
-package
-
-## Running the code
-
-Please see our main [README.md](../README.md) to get the project running locally
-
-## Development
-
-The code can be formatted and linted in accordance with the agreed standards.
-
-```
-yarn fmt
-yarn lint
-```
-
-## Testing
-
-Testing can be done on each platform individually
-
-```
-yarn test:android
-```
-
-Or the tests for all platforms can be run
-
-```
-yarn test:all
-```
-
-Visit the official
-
-https://components.thetimes.co.uk/?knob-Size%20of%20ad%20placeholder%3A=default&knob-Scale=medium&knob-Section=%23333333&selectedKind=Primitives%2FArticle%20Paragraph&selectedStory=Paragraph&full=0&addons=1&stories=1&panelRight=0&addonPanel=storybooks%2Fstorybook-addon-knobs
 
 ## Future
 

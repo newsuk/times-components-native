@@ -1,6 +1,6 @@
 # ArticleSkeleton
 
-The article skeleton component is a composed collection of components and features which go to make up an article. This is distinct from the concept of an article page in the pages package, as that page deals with the data provider, whereas the article skeleton component is intended to be a dumb component. It does however compose ads and lazy loading features on web.
+The article skeleton component is a composed collection of components and features which go to make up an article. This is distinct from the concept of an article page in the pages package, as that page deals with the data provider, whereas the article skeleton component is intended to be a dumb component.
 
 Article consumes components such as `ArticleHeader`, `ArticleTopics` and `RelatedArticles`, all of which are related to a specific article. Some of these components are self-contained within the article skeleton package itself. Components that are quite large or complex (e.g. related articles), or are used elsewhere (e.g. article label) are separated and put into separate packages.
 
@@ -34,32 +34,3 @@ bother lazy loading (because we always want it) but still get the added benefit
 of seeing something much faster on a poor connection. We then don't ask for the
 high resolution version of an image in the rest of the body until it comes into
 the viewport.
-
-## Contributing
-
-Please read [CONTRIBUTING.md](./CONTRIBUTING.md) before contributing to this
-package
-
-## Running the code
-
-Please see our main [README.md](../README.md) to get the project running locally
-
-## Development
-
-The code can be formatted and linted in accordance with the agreed standards.
-
-```
-yarn fmt
-yarn lint
-```
-
-## Testing
-
-This package uses [yarn](https://yarnpkg.com) (latest) to run unit tests on each
-platform with [jest](https://facebook.github.io/jest/).
-
-```
-yarn test:all
-yarn test:android
-yarn test:ios
-```
