@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+// eslint-disable-next-line import/no-extraneous-dependencies
 import renderer from "react-test-renderer";
 import PropTypes from "prop-types";
 import { ApolloProvider } from "react-apollo";
@@ -21,10 +22,10 @@ export default function providerTester(
 
     componentDidMount() {
       isMounted = true;
-      setProps = state => {
+      setProps = (state) => {
         if (!isMounted) return Promise.resolve();
 
-        return new Promise(done =>
+        return new Promise((done) =>
           this.setState(() => {
             done(state);
             return state;
@@ -46,19 +47,19 @@ export default function providerTester(
   }
 
   Stateful.propTypes = {
-    children: PropTypes.func.isRequired
+    children: PropTypes.func.isRequired,
   };
 
   const component = renderer.create(
     <ApolloProvider client={client}>
       {
         <Stateful>
-          {state => (
+          {(state) => (
             <WrappedComponent {...state}>
-              {props => {
+              {(props) => {
                 link.pushEvent({
                   props,
-                  type: "render"
+                  type: "render",
                 });
                 return null;
               }}
@@ -73,6 +74,6 @@ export default function providerTester(
     client,
     component,
     link,
-    setProps
+    setProps,
   };
 }

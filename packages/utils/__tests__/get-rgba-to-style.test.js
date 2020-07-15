@@ -1,4 +1,4 @@
-import { gqlRgbaToStyle } from "../src";
+import { gqlRgbaToStyle } from "../index";
 
 const colour = {
   rgba: {

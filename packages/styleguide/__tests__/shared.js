@@ -4,6 +4,12 @@ import TestRenderer from "react-test-renderer";
 import { iterator } from "@times-components-native/test-utils";
 import styleguide, { Animations, scales } from "../src/styleguide";
 import themeFactory from "../src/theme/theme-factory";
+const {
+  addSerializers,
+  minimalNative
+} = require("@times-components-native/jest-serializer");
+
+addSerializers(expect, minimalNative);
 
 const tests = [
   {

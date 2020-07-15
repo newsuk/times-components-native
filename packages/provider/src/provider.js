@@ -1,14 +1,12 @@
-export { QueryProvider } from "./connect";
-export AuthorProfileProvider from "./author-profile";
-export AuthorArticlesNoImagesProvider from "./author-articles-no-images";
-export AuthorArticlesWithImagesProvider from "./author-articles-with-images";
-export ArticleBookmarked from "./article-bookmarked";
-export ArticleProvider from "./article";
-export GetNewsletter from "./get-newsletter";
-export ArticleExtrasProvider from "./article-extras";
-export EditionProvider from "./edition";
-export TopicProvider from "./topic";
-export TopicArticlesProvider from "./topic-articles";
-export DraftArticleProvider from "./draft-article";
-
-export default from "./connect";
+export { default, QueryProvider } from "./connect";
+export { default as AuthorProfileProvider } from "./author-profile";
+export { default as AuthorArticlesNoImagesProvider } from "./author-articles-no-images";
+export { default as AuthorArticlesWithImagesProvider } from "./author-articles-with-images";
+export { default as ArticleBookmarked } from "./article-bookmarked";
+export { default as ArticleProvider } from "./article";
+export { default as GetNewsletter } from "./get-newsletter";
+export { default as ArticleExtrasProvider } from "./article-extras";
+export { default as EditionProvider } from "./edition";
+export { default as TopicProvider } from "./topic";
+export { default as TopicArticlesProvider } from "./topic-articles";
+export { default as DraftArticleProvider } from "./draft-article";

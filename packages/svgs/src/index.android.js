@@ -1,4 +1,1 @@
-import Svg, { G, Path, Polygon, Rect } from "react-native-svg";
-
-export default Svg;
-export { G, Path, Polygon, Rect, Svg };
+export { default, G, Path, Polygon, Rect, Svg } from "react-native-svg";

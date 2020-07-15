@@ -38,7 +38,6 @@ node_modules/
 lcov.info
 .coveralls.yml
 package-lock.json
-.json.lerna_backup
 
 # BUCK
 buck-out/
@@ -57,13 +56,13 @@ buck-out/
 */fastlane/screenshots
 
 storybook-native/story-loader.js
-storybook-static
 coverage
 dist
 packages/*/rnw.js
 
 # developer editor preferences
 .vscode
+jsconfig.json
 
 # Bundles
 ios/Index/
@@ -75,3 +74,4 @@ ios/main.jsbundle.meta
 
 
 fragment-matcher.js
+schema.json

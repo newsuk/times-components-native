@@ -2,7 +2,7 @@ apply plugin: 'com.android.library'
 apply plugin: 'maven-publish'
 import groovy.json.JsonSlurper
 
-def packageInfo = new JsonSlurper().parseText(rootProject.file('package.json').text)
+def packageInfo = new JsonSlurper().parseText(rootProject.file("../package.json").text)
 
 def reactRepositoryPath = "$rootDir/repo"
 
@@ -81,11 +81,11 @@ dependencies {
     api "com.facebook.react:react-native:${packageInfo.dependencies.'react-native'}"
     api "org.chromium:v8-android:${packageInfo.dependencies.'v8-android'}"
 
-    api("react-repo:react-native-svg:${packageInfo.dependencies.'react-native-svg'}") {	
-        exclude group: "com.facebook.react"	
+    api("react-repo:react-native-svg:${packageInfo.dependencies.'react-native-svg'}") {
+        exclude group: "com.facebook.react"
     }
-    api("react-repo:react-native-webview:${packageInfo.dependencies.'react-native-webview'}") {	
-        exclude group: "com.facebook.react"	
+    api("react-repo:react-native-webview:${packageInfo.dependencies.'react-native-webview'}") {
+        exclude group: "com.facebook.react"
     }
     api("react-repo:react-native-device-info:${packageInfo.dependencies.'react-native-device-info'}") {
         exclude group: "com.facebook.react"

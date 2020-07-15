@@ -1,4 +1,4 @@
-import { capitalise, ratioTextToFloat } from "../src";
+import { capitalise, ratioTextToFloat } from "../index";
 
 describe("capitalise should", () => {
   it("capitalise the first letter of a sentence", () => {

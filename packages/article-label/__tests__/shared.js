@@ -2,6 +2,9 @@ import React from "react";
 import TestRenderer from "react-test-renderer";
 import ArticleLabel from "../src/article-label";
 
+import {addSerializers, flattenStyle} from "@times-components-native/jest-serializer";
+addSerializers(expect, flattenStyle);
+
 module.exports = () => {
   it("renders ArticleLabel", () => {
     const testInstance = TestRenderer.create(

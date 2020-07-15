@@ -19,7 +19,7 @@ jest.mock("@times-components-native/svgs", () => require("./mock-svg"));
 
 jest.mock("@times-components-native/utils", () => {
   // eslint-disable-next-line global-require
-  const actualUtils = jest.requireActual("@times-components-native/utils");
+  const actualUtils = jest.requireActual("../../utils");
 
   return {
     ...actualUtils,

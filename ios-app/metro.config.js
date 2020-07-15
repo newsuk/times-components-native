@@ -33,7 +33,6 @@ module.exports = (async () => {
     watchFolders: [
       root,
       path.join(root, "node_modules"),
-      path.join(__dirname, "node_modules")
     ]
   };
 })();

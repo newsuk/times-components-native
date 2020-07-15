@@ -65,6 +65,18 @@ jobs:
                       npx yarn@1.16.0 lint
                   working_directory: ~/project/
 
+    run_typecheck:
+      executor: node
+      steps:
+        - checkout
+        - attach_workspace:
+            at: ./
+        - run:
+            name: Run Type Check
+            command: |
+              npx yarn@1.16.0 typecheck
+            working_directory: ~/project/
+
     run_noplatform_tests:
         executor: node
         steps:
@@ -74,7 +86,7 @@ jobs:
             - run:
                   name: Run No Specific Platform Tests
                   command: |
-                      npx lerna run test --stream --since -- -- --ci --bail --coverage
+                      npx run test:common
                   working_directory: ~/project/
 
     run_android_tests:
@@ -86,7 +98,7 @@ jobs:
             - run:
                   name: Run Android Tests
                   command: |
-                      npx lerna run test:android --stream --since -- -- --ci --bail --coverage
+                      npx run test:android
                   working_directory: ~/project/
 
     run_ios_tests:
@@ -98,19 +110,7 @@ jobs:
             - run:
                   name: Run iOS Tests
                   command: |
-                      npx lerna run test:ios --stream --since -- -- --ci --bail --coverage
-                  working_directory: ~/project/
-
-    run_unit_tests:
-        executor: node
-        steps:
-            - checkout
-            - attach_workspace:
-                  at: ./
-            - run:
-                  name: Run Unit Tests
-                  command: |
-                      npx lerna run test:unit --stream --since -- -- --ci --bail --coverage
+                      npx run test:ios
                   working_directory: ~/project/
 
     publish_android:
@@ -161,6 +161,9 @@ workflows:
             - run_lint:
                   requires:
                       - setup
+            - run_typecheck:
+                requires:
+                  - setup
             - run_noplatform_tests:
                   requires:
                       - setup
@@ -170,21 +173,18 @@ workflows:
             - run_ios_tests:
                   requires:
                       - setup
-            - run_unit_tests:
-                  requires:
-                      - setup
             - hold:
                   type: approval
                   filters:
                     branches:
-                        only: 
+                        only:
                             - master
                   requires:
                       - run_lint
+                      - run_typecheck
                       - run_noplatform_tests
                       - run_android_tests
                       - run_ios_tests
-                      - run_unit_tests
             - publish_android:
                   requires:
                       - hold
