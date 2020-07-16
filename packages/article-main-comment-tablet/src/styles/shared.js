@@ -26,7 +26,6 @@ const sharedStyles = {
     paddingBottom: spacing(4),
     paddingTop: spacing(7),
     maxWidth: narrowArticleContentWidth,
-    borderWidth: 1,
   },
   container: {
     paddingLeft: spacing(2),
@@ -60,8 +59,6 @@ const sharedStyles = {
     height: "100%",
     paddingLeft: 40,
     position: "absolute",
-    borderWidth: 1,
-    borderColor: "blue"
   },
   authorImage: {
     width: 130,

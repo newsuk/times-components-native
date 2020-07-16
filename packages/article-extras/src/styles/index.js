@@ -44,14 +44,11 @@ const styles = StyleSheet.create({
   extrasTablet: {
     alignSelf: "center",
     maxWidth: tabletWidth,
-    marginLeft: 0, 
     width: "100%",
-    borderWidth: 1,
-    borderColor: "orange"
   },
   narrowContent: {
+    marginLeft: 0, 
     alignSelf: "flex-start",
-    marginLeft: "25%",
     maxWidth: narrowArticleContentWidth,
     borderColor: "blue"
   }

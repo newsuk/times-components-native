@@ -135,7 +135,7 @@ const ArticleWithContent = (props) => {
   const Scroller = Platform.OS === "ios" ? iosScroller : FlatList;
 
   return (
-    <View style={styles.articleContainer}>
+    <View style={[styles.articleContainer, narrowContent && styles.articleContainerNarrow]}>
       <Viewport.Tracker>
         <Scroller
           data={fixedContent}
