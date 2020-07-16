@@ -100,6 +100,13 @@ exports[`1. modal image 1`] = `
           />
         </ARTSurfaceView>
         <View
+          forceInset={
+            Object {
+              "bottom": "always",
+              "horizontal": "always",
+              "top": "never",
+            }
+          }
           pointerEvents="box-none"
         >
           <View>
@@ -229,6 +236,13 @@ exports[`2. modal image with no caption 1`] = `
           />
         </ARTSurfaceView>
         <View
+          forceInset={
+            Object {
+              "bottom": "always",
+              "horizontal": "always",
+              "top": "never",
+            }
+          }
           pointerEvents="box-none"
         />
       </View>
@@ -353,6 +367,13 @@ exports[`3. modal image with custom highressize 1`] = `
           />
         </ARTSurfaceView>
         <View
+          forceInset={
+            Object {
+              "bottom": "always",
+              "horizontal": "always",
+              "top": "never",
+            }
+          }
           pointerEvents="box-none"
         >
           <View>

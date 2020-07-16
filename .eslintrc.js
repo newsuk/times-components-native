@@ -90,7 +90,7 @@ module.exports = {
     "@typescript-eslint/no-explicit-any": "off",
     "react/prop-types": "off",
     "no-undef": "off",
-    "@typescript-eslint/no-unused-vars": "off",
+    "@typescript-eslint/no-unused-vars": ["warn", { "ignoreRestSiblings": true }],
     "no-redeclare": "off",
     "@typescript-eslint/no-non-null-assertion": "off",
     "@typescript-eslint/no-this-alias": "off"
