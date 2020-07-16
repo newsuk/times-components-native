@@ -78,12 +78,12 @@ module.exports = {
       }
     ],
     "react/jsx-filename-extension": [1, { "extensions": [".js", ".jsx", ".ts", ".tsx"] }],
-    // "react-hooks/exhaustive-deps": "warn",
-    "react-hooks/exhaustive-deps": "off",
-    // "react-hooks/rules-of-hooks": "error",
-    "react-hooks/rules-of-hooks": "off",
+    "react-hooks/rules-of-hooks": "error",
     "@typescript-eslint/no-var-requires": "off",
     "@typescript-eslint/explicit-module-boundary-types": "off",
+    // Temporarily disabled rules
+    // "react-hooks/exhaustive-deps": "warn",
+    "react-hooks/exhaustive-deps": "off",
     "@typescript-eslint/no-empty-function": "off",
     "react/display-name": "off",
     "@typescript-eslint/no-inferrable-types": "off",
@@ -96,7 +96,6 @@ module.exports = {
     "no-redeclare": "off",
     "@typescript-eslint/no-non-null-assertion": "off",
     "@typescript-eslint/no-this-alias": "off"
-    // "import/no-extraneous-dependencies": "off"
   },
   "settings": {
     "import/resolver": {
