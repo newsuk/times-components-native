@@ -6,7 +6,7 @@ import {
   enzymeTreeSerializer,
   minimalNativeTransform,
   print,
-  replacePropTransform
+  replacePropTransform,
 } from "@times-components-native/jest-serializer";
 import { hash } from "@times-components-native/test-utils";
 import Watermark from "../src/watermark";
@@ -20,13 +20,11 @@ export default () => {
     compose(
       print,
       minimalNativeTransform,
-      replacePropTransform((value, key) => (key === "d" ? hash(value) : value))
-    )
+      replacePropTransform((value, key) => (key === "d" ? hash(value) : value)),
+    ),
   );
-
   it("1. watermark", () => {
     const wrapper = shallow(<Watermark height={250} width={300} />);
-
     expect(wrapper).toMatchSnapshot();
   });
 };
