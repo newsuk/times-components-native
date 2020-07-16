@@ -18,11 +18,15 @@ const SectionPage = ({ editionId, sectionTitle }) => {
         const { publicationName: pubName } = edition;
         return edition.sections
           .filter(({ title }) => title === sectionTitle)
-          .map(sectionData => (
-            <Section publicationName={pubName} section={sectionData} />
+          .map((sectionData, index) => (
+            <Section
+              key={index}
+              publicationName={pubName}
+              section={sectionData}
+            />
           ));
       }}
-    </EditionProvider>
+    </EditionProvider>,
   );
 
   return <SectionPageView />;
@@ -30,7 +34,7 @@ const SectionPage = ({ editionId, sectionTitle }) => {
 
 SectionPage.propTypes = {
   editionId: PropTypes.string.isRequired,
-  sectionTitle: PropTypes.string.isRequired
+  sectionTitle: PropTypes.string.isRequired,
 };
 
 export default SectionPage;
