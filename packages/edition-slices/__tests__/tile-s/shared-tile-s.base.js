@@ -33,11 +33,11 @@ export default () => {
 
       const output = TestRenderer.create(
         <TileS
-          onPress={() => {}}
+          onPress={() => null}
           tile={dailyRegisterItem}
           breakpoint={editionBreakpoints.medium}
           logo={<Logo />}
-        />
+        />,
       );
       expect(output).toMatchSnapshot();
     });

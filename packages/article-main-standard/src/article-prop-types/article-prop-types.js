@@ -8,11 +8,11 @@ const articlePropTypesBase = {
   analyticsStream: PropTypes.func.isRequired,
   data: PropTypes.shape({
     ...ArticleHeader.propTypes,
-    ...ArticleMeta.propTypes
+    ...ArticleMeta.propTypes,
     // Could have more here
   }),
   receiveChildList: PropTypes.func,
-  navigationMode: PropTypes.shape({}).isRequired
+  navigationMode: PropTypes.shape({}).isRequired,
 };
 
 const articlePropTypes = {
@@ -27,12 +27,12 @@ const articlePropTypes = {
   onTopicPress: PropTypes.func.isRequired,
   onTwitterLinkPress: PropTypes.func.isRequired,
   onVideoPress: PropTypes.func.isRequired,
-  refetch: PropTypes.func.isRequired
+  refetch: PropTypes.func.isRequired,
 };
 
 const articleDefaultProps = {
   data: null,
-  receiveChildList: () => {}
+  receiveChildList: () => null,
 };
 
 export { articlePropTypes, articleDefaultProps };

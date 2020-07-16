@@ -3,29 +3,29 @@ import { ScrollView } from "react-native";
 import {
   articleExtras as makeParams,
   MockFixture,
-  MockedProvider
+  MockedProvider,
 } from "@times-components-native/provider-test-tools";
 import ArticleExtras from "./src/article-extras";
 
-const renderExtras = props => (
+const renderExtras = (props) => (
   <MockFixture
     params={makeParams({
       ...props,
       variables: () => ({
-        id: "dummy-article-id"
-      })
+        id: "dummy-article-id",
+      }),
     })}
-    render={mocks => (
+    render={(mocks) => (
       <MockedProvider mocks={mocks}>
         <ScrollView>
           <ArticleExtras
-            analyticsStream={() => {}}
+            analyticsStream={() => null}
             articleId="dummy-article-id"
             articleUrl="dummy-article-url"
-            onCommentGuidelinesPress={() => {}}
-            onCommentsPress={() => {}}
-            onRelatedArticlePress={() => {}}
-            onTopicPress={() => {}}
+            onCommentGuidelinesPress={() => null}
+            onCommentsPress={() => null}
+            onRelatedArticlePress={() => null}
+            onTopicPress={() => null}
           />
         </ScrollView>
       </MockedProvider>
@@ -38,8 +38,8 @@ export default {
     {
       component: () => renderExtras(),
       name: "Article Extras",
-      type: "story"
-    }
+      type: "story",
+    },
   ],
-  name: "Composed/Article Extras"
+  name: "Composed/Article Extras",
 };

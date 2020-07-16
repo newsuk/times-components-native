@@ -17,10 +17,10 @@ const emptyArticle = {
   longRead: false,
   relatedArticleSlice: null,
   standfirst: null,
-  topics: null
+  topics: null,
 };
 
-export const snapshotTests = renderComponent => [
+export const snapshotTests = (renderComponent) => [
   {
     name: "an article",
     test() {
@@ -28,37 +28,37 @@ export const snapshotTests = renderComponent => [
         <ArticleMainStandard
           {...articleProps}
           adConfig={adConfig}
-          analyticsStream={() => {}}
+          analyticsStream={() => null}
           article={articleFixture(testFixture)}
-          onAuthorPress={() => {}}
-          onCommentGuidelinesPress={() => {}}
-          onCommentsPress={() => {}}
-          onLinkPress={() => {}}
-          onRelatedArticlePress={() => {}}
-          onTopicPress={() => {}}
-          onTwitterLinkPress={() => {}}
-          onVideoPress={() => {}}
-        />
+          onAuthorPress={() => null}
+          onCommentGuidelinesPress={() => null}
+          onCommentsPress={() => null}
+          onLinkPress={() => null}
+          onRelatedArticlePress={() => null}
+          onTopicPress={() => null}
+          onTwitterLinkPress={() => null}
+          onVideoPress={() => null}
+        />,
       );
 
       expect(output).toMatchSnapshot();
-    }
+    },
   },
   {
     name: "loading",
     test() {
       const output = renderComponent(
-        <ArticleMainStandard {...articleProps} isLoading />
+        <ArticleMainStandard {...articleProps} isLoading />,
       );
 
       expect(output).toMatchSnapshot();
-    }
+    },
   },
   {
     name: "an error",
     test() {
       const props = {
-        error: { message: "An example error." }
+        error: { message: "An example error." },
       };
 
       const output = renderComponent(
@@ -66,20 +66,20 @@ export const snapshotTests = renderComponent => [
           {...props}
           {...articleProps}
           adConfig={adConfig}
-          analyticsStream={() => {}}
-          onAuthorPress={() => {}}
-          onCommentGuidelinesPress={() => {}}
-          onCommentsPress={() => {}}
-          onLinkPress={() => {}}
-          onRelatedArticlePress={() => {}}
-          onTopicPress={() => {}}
-          onTwitterLinkPress={() => {}}
-          onVideoPress={() => {}}
-        />
+          analyticsStream={() => null}
+          onAuthorPress={() => null}
+          onCommentGuidelinesPress={() => null}
+          onCommentsPress={() => null}
+          onLinkPress={() => null}
+          onRelatedArticlePress={() => null}
+          onTopicPress={() => null}
+          onTwitterLinkPress={() => null}
+          onVideoPress={() => null}
+        />,
       );
 
       expect(output).toMatchSnapshot();
-    }
+    },
   },
   {
     name: "an article with no headline falls back to use shortHeadline",
@@ -88,25 +88,25 @@ export const snapshotTests = renderComponent => [
         <ArticleMainStandard
           {...articleProps}
           adConfig={adConfig}
-          analyticsStream={() => {}}
+          analyticsStream={() => null}
           article={articleFixture({
             ...testFixture,
             ...emptyArticle,
-            headline: ""
+            headline: "",
           })}
-          onAuthorPress={() => {}}
-          onCommentGuidelinesPress={() => {}}
-          onCommentsPress={() => {}}
-          onLinkPress={() => {}}
-          onRelatedArticlePress={() => {}}
-          onTopicPress={() => {}}
-          onTwitterLinkPress={() => {}}
-          onVideoPress={() => {}}
-        />
+          onAuthorPress={() => null}
+          onCommentGuidelinesPress={() => null}
+          onCommentsPress={() => null}
+          onLinkPress={() => null}
+          onRelatedArticlePress={() => null}
+          onTopicPress={() => null}
+          onTwitterLinkPress={() => null}
+          onVideoPress={() => null}
+        />,
       );
 
       expect(output).toMatchSnapshot();
-    }
+    },
   },
   {
     name: "an article with ads",
@@ -115,7 +115,7 @@ export const snapshotTests = renderComponent => [
         <ArticleMainStandard
           {...articleProps}
           adConfig={adConfig}
-          analyticsStream={() => {}}
+          analyticsStream={() => null}
           article={articleFixture({
             ...testFixture,
             ...emptyArticle,
@@ -123,24 +123,24 @@ export const snapshotTests = renderComponent => [
               {
                 attributes: {},
                 children: [],
-                name: "ad"
-              }
-            ]
+                name: "ad",
+              },
+            ],
           })}
-          onAuthorPress={() => {}}
-          onCommentGuidelinesPress={() => {}}
-          onCommentsPress={() => {}}
-          onLinkPress={() => {}}
-          onRelatedArticlePress={() => {}}
-          onTopicPress={() => {}}
-          onTwitterLinkPress={() => {}}
-          onVideoPress={() => {}}
-        />
+          onAuthorPress={() => null}
+          onCommentGuidelinesPress={() => null}
+          onCommentsPress={() => null}
+          onLinkPress={() => null}
+          onRelatedArticlePress={() => null}
+          onTopicPress={() => null}
+          onTwitterLinkPress={() => null}
+          onVideoPress={() => null}
+        />,
       );
 
       expect(output).toMatchSnapshot();
-    }
-  }
+    },
+  },
 ];
 
 const negativeTests = [
@@ -151,21 +151,21 @@ const negativeTests = [
         <ArticleMainStandard
           {...articleProps}
           adConfig={adConfig}
-          analyticsStream={() => {}}
+          analyticsStream={() => null}
           article={articleFixture({ ...testFixture, bylines: null })}
-          onAuthorPress={() => {}}
-          onCommentGuidelinesPress={() => {}}
-          onCommentsPress={() => {}}
-          onLinkPress={() => {}}
-          onRelatedArticlePress={() => {}}
-          onTopicPress={() => {}}
-          onTwitterLinkPress={() => {}}
-          onVideoPress={() => {}}
-        />
+          onAuthorPress={() => null}
+          onCommentGuidelinesPress={() => null}
+          onCommentsPress={() => null}
+          onLinkPress={() => null}
+          onRelatedArticlePress={() => null}
+          onTopicPress={() => null}
+          onTwitterLinkPress={() => null}
+          onVideoPress={() => null}
+        />,
       );
 
       expect(output).toMatchSnapshot();
-    }
+    },
   },
   {
     name: "an article with no label",
@@ -174,21 +174,21 @@ const negativeTests = [
         <ArticleMainStandard
           {...articleProps}
           adConfig={adConfig}
-          analyticsStream={() => {}}
+          analyticsStream={() => null}
           article={articleFixture({ ...testFixture, label: null })}
-          onAuthorPress={() => {}}
-          onCommentGuidelinesPress={() => {}}
-          onCommentsPress={() => {}}
-          onLinkPress={() => {}}
-          onRelatedArticlePress={() => {}}
-          onTopicPress={() => {}}
-          onTwitterLinkPress={() => {}}
-          onVideoPress={() => {}}
-        />
+          onAuthorPress={() => null}
+          onCommentGuidelinesPress={() => null}
+          onCommentsPress={() => null}
+          onLinkPress={() => null}
+          onRelatedArticlePress={() => null}
+          onTopicPress={() => null}
+          onTwitterLinkPress={() => null}
+          onVideoPress={() => null}
+        />,
       );
 
       expect(output).toMatchSnapshot();
-    }
+    },
   },
   {
     name: "an article with no standfirst",
@@ -197,23 +197,23 @@ const negativeTests = [
         <ArticleMainStandard
           {...articleProps}
           adConfig={adConfig}
-          analyticsStream={() => {}}
+          analyticsStream={() => null}
           article={articleFixture({
             ...testFixture,
-            standfirst: null
+            standfirst: null,
           })}
-          onAuthorPress={() => {}}
-          onCommentGuidelinesPress={() => {}}
-          onCommentsPress={() => {}}
-          onLinkPress={() => {}}
-          onRelatedArticlePress={() => {}}
-          onTopicPress={() => {}}
-          onTwitterLinkPress={() => {}}
-          onVideoPress={() => {}}
-        />
+          onAuthorPress={() => null}
+          onCommentGuidelinesPress={() => null}
+          onCommentsPress={() => null}
+          onLinkPress={() => null}
+          onRelatedArticlePress={() => null}
+          onTopicPress={() => null}
+          onTwitterLinkPress={() => null}
+          onVideoPress={() => null}
+        />,
       );
 
-      const textNodes = testInstance.root.findAll(node => {
+      const textNodes = testInstance.root.findAll((node) => {
         if (typeof node.type === "string") {
           return (
             node.type === "Text" &&
@@ -226,8 +226,8 @@ const negativeTests = [
       });
 
       expect(textNodes).toEqual([]);
-    }
-  }
+    },
+  },
 ];
 
 export default (renderComponent, platformTests = []) => {
@@ -236,8 +236,8 @@ export default (renderComponent, platformTests = []) => {
   beforeEach(() => {
     global.Intl = {
       DateTimeFormat: () => ({
-        resolvedOptions: () => ({ timeZone: "Europe/London" })
-      })
+        resolvedOptions: () => ({ timeZone: "Europe/London" }),
+      }),
     };
   });
 
@@ -248,7 +248,7 @@ export default (renderComponent, platformTests = []) => {
   iterator([
     ...snapshotTests(renderComponent),
     ...platformTests,
-    ...negativeTests
+    ...negativeTests,
   ]);
 };
 

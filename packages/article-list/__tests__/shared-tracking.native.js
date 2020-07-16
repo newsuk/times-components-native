@@ -21,8 +21,8 @@ export default () => {
           getChildContext() {
             return {
               tracking: {
-                analytics: stream
-              }
+                analytics: stream,
+              },
             };
           }
 
@@ -31,9 +31,9 @@ export default () => {
               <ArticleList
                 articles={articlesFixture}
                 emptyStateMessage="Empty state"
-                onArticlePress={() => {}}
+                onArticlePress={() => null}
                 pageSize={3}
-                refetch={() => {}}
+                refetch={() => null}
               />
             );
           }
@@ -41,8 +41,8 @@ export default () => {
 
         WithTrackingContext.childContextTypes = {
           tracking: PropTypes.shape({
-            analytics: PropTypes.func
-          })
+            analytics: PropTypes.func,
+          }),
         };
 
         const testInstance = TestRenderer.create(<WithTrackingContext />);
@@ -54,8 +54,8 @@ export default () => {
         const [[call]] = stream.mock.calls;
 
         expect(call).toMatchSnapshot();
-      }
-    }
+      },
+    },
   ];
 
   iterator(tests);

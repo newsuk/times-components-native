@@ -8,14 +8,14 @@ const articleSkeletonPropTypes = {
   Header: PropTypes.func.isRequired,
   navigationMode: PropTypes.shape({}),
   receiveChildList: PropTypes.func,
-  spotAccountId: PropTypes.string
+  spotAccountId: PropTypes.string,
 };
 
 const articleSkeletonDefaultProps = {
   adConfig: {},
   data: { content: [] },
   Header: () => null,
-  receiveChildList: () => {}
+  receiveChildList: () => null,
 };
 
 export { articleSkeletonPropTypes, articleSkeletonDefaultProps };

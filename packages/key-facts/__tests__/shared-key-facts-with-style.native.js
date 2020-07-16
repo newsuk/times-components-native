@@ -7,7 +7,7 @@ import {
   flattenStyleTransform,
   minimaliseTransform,
   minimalNativeTransform,
-  print
+  print,
 } from "@times-components-native/jest-serializer";
 import { scales } from "@times-components-native/styleguide";
 import { setIsTablet } from "@times-components-native/mocks/dimensions";
@@ -22,13 +22,13 @@ export default () => {
       print,
       flattenStyleTransform,
       minimaliseTransform((value, key) => key !== "style"),
-      minimalNativeTransform
-    )
+      minimalNativeTransform,
+    ),
   );
 
   it("key facts with title on mobile", () => {
     const testInstance = TestRenderer.create(
-      <KeyFacts ast={dataWithTitle} onLinkPress={() => {}} />
+      <KeyFacts ast={dataWithTitle} onLinkPress={() => null} />,
     );
 
     expect(testInstance).toMatchSnapshot();
@@ -37,7 +37,7 @@ export default () => {
   it("key facts with title on tablet", () => {
     setIsTablet(true);
     const testInstance = TestRenderer.create(
-      <KeyFacts ast={dataWithTitle} onLinkPress={() => {}} />
+      <KeyFacts ast={dataWithTitle} onLinkPress={() => null} />,
     );
 
     expect(testInstance).toMatchSnapshot();
@@ -45,7 +45,7 @@ export default () => {
 
   it("key facts without title on mobile", () => {
     const testInstance = TestRenderer.create(
-      <KeyFacts ast={dataWithoutTitle} onLinkPress={() => {}} />
+      <KeyFacts ast={dataWithoutTitle} onLinkPress={() => null} />,
     );
 
     expect(testInstance).toMatchSnapshot();
@@ -54,7 +54,7 @@ export default () => {
   it("key facts without title on tablet", () => {
     setIsTablet(true);
     const testInstance = TestRenderer.create(
-      <KeyFacts ast={dataWithoutTitle} onLinkPress={() => {}} />
+      <KeyFacts ast={dataWithoutTitle} onLinkPress={() => null} />,
     );
 
     expect(testInstance).toMatchSnapshot();
@@ -66,8 +66,8 @@ export default () => {
 
     const testInstance = TestRenderer.create(
       <ContextProviderWithDefaults value={{ theme: { scale, sectionColour } }}>
-        <KeyFacts ast={dataWithTitle} onLinkPress={() => {}} />
-      </ContextProviderWithDefaults>
+        <KeyFacts ast={dataWithTitle} onLinkPress={() => null} />
+      </ContextProviderWithDefaults>,
     );
 
     expect(testInstance).toMatchSnapshot();

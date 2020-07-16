@@ -24,11 +24,11 @@ export default () => {
       name: "group of topics",
       test: () => {
         const testInstance = TestRenderer.create(
-          <ArticleTopics onPress={() => {}} topics={topicData} />
+          <ArticleTopics onPress={() => null} topics={topicData} />,
         );
 
         expect(testInstance).toMatchSnapshot();
-      }
+      },
     },
     {
       name: "onPress handler is called with the expected args",
@@ -36,15 +36,15 @@ export default () => {
         const onPress = jest.fn();
 
         const testInstance = TestRenderer.create(
-          <ArticleTopics onPress={onPress} topics={topicData} />
+          <ArticleTopics onPress={onPress} topics={topicData} />,
         );
 
-        const [link] = testInstance.root.findAll(node => node.type === Link);
+        const [link] = testInstance.root.findAll((node) => node.type === Link);
 
         link.props.onPress("event");
 
         expect(onPress.mock.calls).toMatchSnapshot();
-      }
+      },
     },
     {
       name: "onPress sends analytics",
@@ -52,23 +52,23 @@ export default () => {
         const analyticsStream = jest.fn();
 
         const ArticleTopicsWithTracking = withTrackingContext(ArticleTopics, {
-          trackingObjectName: "Article"
+          trackingObjectName: "Article",
         });
 
         const testInstance = TestRenderer.create(
           <ArticleTopicsWithTracking
             analyticsStream={analyticsStream}
-            onPress={() => {}}
+            onPress={() => null}
             topics={topicData}
-          />
+          />,
         );
 
-        const [link] = testInstance.root.findAll(node => node.type === Link);
+        const [link] = testInstance.root.findAll((node) => node.type === Link);
 
         link.props.onPress("event");
 
         expect(analyticsStream.mock.calls).toMatchSnapshot();
-      }
+      },
     },
     {
       name: "article topic",
@@ -77,14 +77,14 @@ export default () => {
           <ArticleTopic
             key="test-slug"
             name="Test"
-            onPress={() => {}}
+            onPress={() => null}
             slug="test-slug"
-          />
+          />,
         );
 
         expect(testInstance).toMatchSnapshot();
-      }
-    }
+      },
+    },
   ];
 
   iterator(tests);

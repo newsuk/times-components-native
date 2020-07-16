@@ -3,7 +3,7 @@ import TestRenderer from "react-test-renderer";
 import {
   mockEditionSlice,
   mockDailyRegisterSlice,
-  mockPuzzleSlice
+  mockPuzzleSlice,
 } from "@times-components-native/fixture-generator";
 
 export const tile = mockEditionSlice(1).items[0];
@@ -12,7 +12,7 @@ export const puzzle = mockPuzzleSlice();
 
 export const testTile = (Tile, breakpoint, mockTile = tile) => {
   const output = TestRenderer.create(
-    <Tile onPress={() => {}} tile={mockTile} breakpoint={breakpoint} />
+    <Tile onPress={() => null} tile={mockTile} breakpoint={breakpoint} />,
   );
   expect(output).toMatchSnapshot();
 };
@@ -22,11 +22,11 @@ export const testPuzzleTile = (Tile, breakpoint) => {
     <Tile
       id={puzzle.id}
       image={puzzle.image}
-      onPress={() => {}}
+      onPress={() => null}
       title={puzzle.title}
       url={puzzle.url}
       breakpoint={breakpoint}
-    />
+    />,
   );
   expect(output).toMatchSnapshot();
 };

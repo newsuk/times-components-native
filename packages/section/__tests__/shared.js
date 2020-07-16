@@ -9,7 +9,7 @@ import {
   flattenStyleTransform,
   minimaliseTransform,
   minimalNativeTransform,
-  print
+  print,
 } from "@times-components-native/jest-serializer";
 import TestRenderer from "react-test-renderer";
 import SectionItemSeparator from "../src/section-item-separator";
@@ -19,25 +19,25 @@ import PuzzleBar from "../src/puzzle-bar";
 jest.mock("@times-components-native/edition-slices", () => {
   const slicesMock = {};
   const slicesMap = require.requireActual(
-    "@times-components-native/edition-slices"
+    "@times-components-native/edition-slices",
   ).default;
 
-  Object.keys(slicesMap).forEach(key => {
+  Object.keys(slicesMap).forEach((key) => {
     slicesMock[key] = slicesMap[key].name;
   });
 
   return {
     ...slicesMock,
-    LeadOneAndTwoSlice: "LeadOneAndTwoSlice"
+    LeadOneAndTwoSlice: "LeadOneAndTwoSlice",
   };
 });
 
 jest.mock("@times-components-native/icons", () => ({
-  IconForwardArrow: "IconForwardArrow"
+  IconForwardArrow: "IconForwardArrow",
 }));
 jest.mock("@times-components-native/image", () => ({
   __esModule: true,
-  default: "TimesImage"
+  default: "TimesImage",
 }));
 
 export default () => {
@@ -51,8 +51,8 @@ export default () => {
       print,
       flattenStyleTransform,
       minimalNativeTransform,
-      minimaliseTransform((value, key) => key !== "style")
-    )
+      minimaliseTransform((value, key) => key !== "style"),
+    ),
   );
 
   it("section page", () => {
@@ -61,15 +61,15 @@ export default () => {
     expect(
       TestRenderer.create(
         <Section
-          analyticsStream={() => {}}
-          onArticlePress={() => {}}
-          onPuzzleBarPress={() => {}}
-          onPuzzlePress={() => {}}
+          analyticsStream={() => null}
+          onArticlePress={() => null}
+          onPuzzleBarPress={() => null}
+          onPuzzlePress={() => null}
           publicationName="TIMES"
           recentlyOpenedPuzzleCount={1}
           section={edition.sections[0]}
-        />
-      ).toJSON()
+        />,
+      ).toJSON(),
     ).toMatchSnapshot();
   });
 
@@ -79,15 +79,15 @@ export default () => {
     expect(
       TestRenderer.create(
         <Section
-          analyticsStream={() => {}}
-          onArticlePress={() => {}}
-          onPuzzleBarPress={() => {}}
-          onPuzzlePress={() => {}}
+          analyticsStream={() => null}
+          onArticlePress={() => null}
+          onPuzzleBarPress={() => null}
+          onPuzzlePress={() => null}
           publicationName="TIMES"
           recentlyOpenedPuzzleCount={1}
           section={edition.sections[5]}
-        />
-      ).toJSON()
+        />,
+      ).toJSON(),
     ).toMatchSnapshot();
   });
 
@@ -100,8 +100,8 @@ export default () => {
         __esModule: true,
         getDimensions: jest.fn(() => ({
           height: 700,
-          width: 250
-        }))
+          width: 250,
+        })),
       };
     });
 
@@ -112,15 +112,15 @@ export default () => {
     expect(
       TestRenderer.create(
         <SectionWithUpdatedDimensions
-          analyticsStream={() => {}}
-          onArticlePress={() => {}}
-          onPuzzleBarPress={() => {}}
-          onPuzzlePress={() => {}}
+          analyticsStream={() => null}
+          onArticlePress={() => null}
+          onPuzzleBarPress={() => null}
+          onPuzzlePress={() => null}
           publicationName="TIMES"
           recentlyOpenedPuzzleCount={1}
           section={edition.sections[5]}
-        />
-      ).toJSON()
+        />,
+      ).toJSON(),
     ).toMatchSnapshot();
   });
 
@@ -128,9 +128,9 @@ export default () => {
     expect(
       TestRenderer.create(
         <SectionContext.Provider value={{ recentlyOpenedPuzzleCount: 0 }}>
-          <PuzzleBar onPress={() => {}} />
-        </SectionContext.Provider>
-      ).toJSON()
+          <PuzzleBar onPress={() => null} />
+        </SectionContext.Provider>,
+      ).toJSON(),
     ).toMatchSnapshot();
   });
 
@@ -138,9 +138,9 @@ export default () => {
     expect(
       TestRenderer.create(
         <SectionContext.Provider value={{ recentlyOpenedPuzzleCount: 1 }}>
-          <PuzzleBar onPress={() => {}} />
-        </SectionContext.Provider>
-      ).toJSON()
+          <PuzzleBar onPress={() => null} />
+        </SectionContext.Provider>,
+      ).toJSON(),
     ).toMatchSnapshot();
   });
 
@@ -148,9 +148,9 @@ export default () => {
     expect(
       TestRenderer.create(
         <SectionContext.Provider value={{ recentlyOpenedPuzzleCount: 3 }}>
-          <PuzzleBar onPress={() => {}} />
-        </SectionContext.Provider>
-      ).toJSON()
+          <PuzzleBar onPress={() => null} />
+        </SectionContext.Provider>,
+      ).toJSON(),
     ).toMatchSnapshot();
   });
 
@@ -160,14 +160,14 @@ export default () => {
     expect(
       TestRenderer.create(
         <Section
-          analyticsStream={() => {}}
-          onArticlePress={() => {}}
-          onPuzzleBarPress={() => {}}
-          onPuzzlePress={() => {}}
+          analyticsStream={() => null}
+          onArticlePress={() => null}
+          onPuzzleBarPress={() => null}
+          onPuzzlePress={() => null}
           publicationName="TIMES"
           section={edition.sections[4]}
-        />
-      ).toJSON()
+        />,
+      ).toJSON(),
     ).toMatchSnapshot();
   });
 
@@ -177,46 +177,46 @@ export default () => {
     expect(
       TestRenderer.create(
         <Section
-          analyticsStream={() => {}}
-          onArticlePress={() => {}}
-          onPuzzleBarPress={() => {}}
-          onPuzzlePress={() => {}}
+          analyticsStream={() => null}
+          onArticlePress={() => null}
+          onPuzzleBarPress={() => null}
+          onPuzzlePress={() => null}
           publicationName="SUNDAY TIMES"
           section={edition.sections[4]}
-        />
-      ).toJSON()
+        />,
+      ).toJSON(),
     ).toMatchSnapshot();
   });
 
   it("section item separator - small", () => {
     expect(
       TestRenderer.create(
-        <SectionItemSeparator breakpoint={editionBreakpoints.small} />
-      ).toJSON()
+        <SectionItemSeparator breakpoint={editionBreakpoints.small} />,
+      ).toJSON(),
     ).toMatchSnapshot();
   });
 
   it("section item separator - medium", () => {
     expect(
       TestRenderer.create(
-        <SectionItemSeparator breakpoint={editionBreakpoints.medium} />
-      ).toJSON()
+        <SectionItemSeparator breakpoint={editionBreakpoints.medium} />,
+      ).toJSON(),
     ).toMatchSnapshot();
   });
 
   it("section item separator - wide", () => {
     expect(
       TestRenderer.create(
-        <SectionItemSeparator breakpoint={editionBreakpoints.wide} />
-      ).toJSON()
+        <SectionItemSeparator breakpoint={editionBreakpoints.wide} />,
+      ).toJSON(),
     ).toMatchSnapshot();
   });
 
   it("section item separator - huge", () => {
     expect(
       TestRenderer.create(
-        <SectionItemSeparator breakpoint={editionBreakpoints.huge} />
-      ).toJSON()
+        <SectionItemSeparator breakpoint={editionBreakpoints.huge} />,
+      ).toJSON(),
     ).toMatchSnapshot();
   });
 };

@@ -8,18 +8,18 @@ class ListComponent extends Component {
       items: PropTypes.arrayOf(
         PropTypes.shape({
           someKey: PropTypes.string,
-          someValue: PropTypes.string
-        })
+          someValue: PropTypes.string,
+        }),
       ),
       onViewed: PropTypes.func.isRequired,
-      receiveChildList: PropTypes.func
+      receiveChildList: PropTypes.func,
     };
   }
 
   static get defaultProps() {
     return {
       items: [{ someKey: "1", someValue: "one" }],
-      receiveChildList: () => {}
+      receiveChildList: () => null,
     };
   }
 
@@ -35,8 +35,8 @@ class ListComponent extends Component {
 
   onViewableItemsChanged({ info }) {
     const { onViewed } = this.props;
-    const filtered = info.changed.filter(item => item.isViewable);
-    filtered.forEach(item => onViewed(item));
+    const filtered = info.changed.filter((item) => item.isViewable);
+    filtered.forEach((item) => onViewed(item));
   }
 
   render() {
@@ -50,7 +50,7 @@ class ListComponent extends Component {
         renderItem={({ item }) => <Text>Item {item.someValue}</Text>}
         viewabilityConfig={{
           viewAreaCoveragePercentThreshold: 100,
-          waitForInteraction: false
+          waitForInteraction: false,
         }}
       />
     );

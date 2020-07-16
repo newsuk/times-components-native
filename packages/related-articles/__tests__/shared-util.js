@@ -18,7 +18,7 @@ export const hasVideoTests = util.hasVideoTests;
 
 export const noShortHeadlineTests = util.noShortHeadlineTests;
 
-export const oneArticleTests = util.oneArticleTests(fixture => [
+export const oneArticleTests = util.oneArticleTests((fixture) => [
   {
     name: "callback triggered on related article press",
     test() {
@@ -26,7 +26,7 @@ export const oneArticleTests = util.oneArticleTests(fixture => [
       const {
         items = [],
         lead = {},
-        opinion = {}
+        opinion = {},
       } = fixture.relatedArticleSlice;
 
       if (items.length === 0 && !lead && !opinion) return;
@@ -34,21 +34,16 @@ export const oneArticleTests = util.oneArticleTests(fixture => [
       const article = lead.article || opinion.article || items[0].article;
 
       const wrapper = shallow(
-        <RelatedArticleItem article={article} onPress={onPressMock} />
+        <RelatedArticleItem article={article} onPress={onPressMock} />,
       );
 
       const eventMock = {};
-      wrapper
-        .dive()
-        .dive()
-        .find("Link")
-        .at(0)
-        .simulate("press", eventMock);
+      wrapper.dive().dive().find("Link").at(0).simulate("press", eventMock);
 
       expect(onPressMock).toHaveBeenCalledWith(eventMock, {
-        url: article.url
+        url: article.url,
       });
-    }
+    },
   },
   {
     name: "on press analytics triggered",
@@ -58,7 +53,7 @@ export const oneArticleTests = util.oneArticleTests(fixture => [
       const {
         items = [],
         lead = {},
-        opinion = {}
+        opinion = {},
       } = fixture.relatedArticleSlice;
 
       if (items.length === 0 && !lead && !opinion) return;
@@ -69,20 +64,20 @@ export const oneArticleTests = util.oneArticleTests(fixture => [
         getChildContext() {
           return {
             tracking: {
-              analytics: stream
-            }
+              analytics: stream,
+            },
           };
         }
 
         render() {
-          return <RelatedArticleItem article={article} onPress={() => {}} />;
+          return <RelatedArticleItem article={article} onPress={() => null} />;
         }
       }
 
       WithTrackingContext.childContextTypes = {
         tracking: PropTypes.shape({
-          analytics: PropTypes.func
-        })
+          analytics: PropTypes.func,
+        }),
       };
 
       const testInstance = TestRenderer.create(<WithTrackingContext />);
@@ -94,8 +89,8 @@ export const oneArticleTests = util.oneArticleTests(fixture => [
       const [[call]] = stream.mock.calls;
 
       expect(call).toMatchSnapshot();
-    }
-  }
+    },
+  },
 ]);
 
 export const twoArticlesTests = util.twoArticlesTests;

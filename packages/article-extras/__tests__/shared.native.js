@@ -6,7 +6,7 @@ import {
   compose,
   minimaliseTransform,
   minimalNativeTransform,
-  print
+  print,
 } from "@times-components-native/jest-serializer";
 import "./mocks";
 import ArticleExtrasContent from "../src/article-extras-content";
@@ -24,9 +24,9 @@ export default () => {
           key === "style" ||
           key === "testID" ||
           key === "topics" ||
-          key === "slice"
-      )
-    )
+          key === "slice",
+      ),
+    ),
   );
 
   const tests = [
@@ -35,35 +35,35 @@ export default () => {
       test: () => {
         const testInstance = TestRenderer.create(
           <ArticleExtrasContent
-            analyticsStream={() => {}}
+            analyticsStream={() => null}
             article={{
               commentCount: 123,
               commentsEnabled: true,
               relatedArticleSlice,
-              topics
+              topics,
             }}
             articleId="dummy-article-id"
             articleUrl="dummy-article-url"
-            onCommentGuidelinesPress={() => {}}
-            onCommentsPress={() => {}}
-            onRelatedArticlePress={() => {}}
-            onTopicPress={() => {}}
-          />
+            onCommentGuidelinesPress={() => null}
+            onCommentsPress={() => null}
+            onRelatedArticlePress={() => null}
+            onTopicPress={() => null}
+          />,
         );
 
         expect(testInstance.toJSON()).toMatchSnapshot();
-      }
+      },
     },
     {
       name: "article extras error",
       test: () => {
         const testInstance = TestRenderer.create(
-          <ArticleExtrasError refetch={() => {}} />
+          <ArticleExtrasError refetch={() => null} />,
         );
 
         expect(testInstance.toJSON()).toMatchSnapshot();
-      }
-    }
+      },
+    },
   ];
 
   iterator(tests);

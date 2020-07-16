@@ -7,7 +7,7 @@ import {
   compose,
   print,
   minimaliseTransform,
-  minimalNativeTransform
+  minimalNativeTransform,
 } from "@times-components-native/jest-serializer";
 import { TextLink } from "@times-components-native/link";
 import "./mocks.native";
@@ -17,26 +17,26 @@ import ArticleSkeleton from "../src/article-skeleton";
 import articleFixture, {
   testFixture,
   longContent,
-  contentWithItalicText
+  contentWithItalicText,
 } from "../fixtures/full-article";
 import { adConfig } from "./ad-mock";
 import articleSkeletonProps from "./shared-article-skeleton-props";
 
 FontStorage.registerFont(
   "TimesDigitalW04",
-  () => require("@times-components-native/test-utils").TestFont
+  () => require("@times-components-native/test-utils").TestFont,
 );
 FontStorage.registerFont(
   "TimesDigitalW04-Bold",
-  () => require("@times-components-native/test-utils").TestFont
+  () => require("@times-components-native/test-utils").TestFont,
 );
 FontStorage.registerFont(
   "TimesDigitalW04-Italic",
-  () => require("@times-components-native/test-utils").TestFont
+  () => require("@times-components-native/test-utils").TestFont,
 );
 FontStorage.registerFont(
   "TimesModern-Regular",
-  () => require("@times-components-native/test-utils").TestFont
+  () => require("@times-components-native/test-utils").TestFont,
 );
 
 const omitKeys = new Set([
@@ -46,7 +46,7 @@ const omitKeys = new Set([
   "onViewableItemsChanged",
   "testID",
   "viewabilityConfig",
-  "viewabilityConfigCallbackPairs"
+  "viewabilityConfigCallbackPairs",
 ]);
 
 export default () => {
@@ -55,8 +55,8 @@ export default () => {
     compose(
       print,
       minimalNativeTransform,
-      minimaliseTransform((value, key) => omitKeys.has(key))
-    )
+      minimaliseTransform((value, key) => omitKeys.has(key)),
+    ),
   );
 
   beforeEach(() => {
@@ -71,7 +71,7 @@ export default () => {
     <ArticleSkeleton
       {...articleSkeletonProps}
       adConfig={adConfig}
-      analyticsStream={stream || (() => {})}
+      analyticsStream={stream || (() => null)}
       data={articleFixture({
         ...testFixture,
         content: [
@@ -80,32 +80,32 @@ export default () => {
               {
                 attributes: {
                   href: "https://link.io",
-                  target: "_blank"
+                  target: "_blank",
                 },
                 children: [
                   {
                     attributes: {
-                      value: "Press Me"
+                      value: "Press Me",
                     },
                     children: [],
-                    name: "text"
-                  }
+                    name: "text",
+                  },
                 ],
-                name: "link"
-              }
+                name: "link",
+              },
             ],
-            name: "paragraph"
-          }
-        ]
+            name: "paragraph",
+          },
+        ],
       })}
-      onAuthorPress={() => {}}
-      onCommentGuidelinesPress={() => {}}
-      onCommentsPress={() => {}}
-      onLinkPress={onLinkPress || (() => {})}
-      onRelatedArticlePress={() => {}}
-      onTopicPress={() => {}}
-      onTwitterLinkPress={() => {}}
-      onVideoPress={() => {}}
+      onAuthorPress={() => null}
+      onCommentGuidelinesPress={() => null}
+      onCommentsPress={() => null}
+      onLinkPress={onLinkPress || (() => null)}
+      onRelatedArticlePress={() => null}
+      onTopicPress={() => null}
+      onTwitterLinkPress={() => null}
+      onVideoPress={() => null}
     />
   );
 
@@ -113,20 +113,20 @@ export default () => {
     <ArticleSkeleton
       {...articleSkeletonProps}
       adConfig={adConfig}
-      analyticsStream={() => {}}
+      analyticsStream={() => null}
       data={articleFixture({
         ...testFixture,
         content,
-        template
+        template,
       })}
-      onAuthorPress={() => {}}
-      onCommentGuidelinesPress={() => {}}
-      onCommentsPress={() => {}}
-      onLinkPress={() => {}}
-      onRelatedArticlePress={() => {}}
-      onTopicPress={() => {}}
-      onTwitterLinkPress={() => {}}
-      onVideoPress={() => {}}
+      onAuthorPress={() => null}
+      onCommentGuidelinesPress={() => null}
+      onCommentsPress={() => null}
+      onLinkPress={() => null}
+      onRelatedArticlePress={() => null}
+      onTopicPress={() => null}
+      onTwitterLinkPress={() => null}
+      onVideoPress={() => null}
     />
   );
 
@@ -137,7 +137,7 @@ export default () => {
         const onLinkPress = jest.fn();
 
         const testInstance = TestRenderer.create(
-          renderArticle({ onLinkPress })
+          renderArticle({ onLinkPress }),
         );
 
         const [link] = testInstance.root.findAllByType(TextLink);
@@ -145,7 +145,7 @@ export default () => {
         link.props.onPress();
 
         expect(onLinkPress).toHaveBeenCalled();
-      }
+      },
     },
     {
       name: "an inline link reports analytics event on press",
@@ -161,28 +161,28 @@ export default () => {
         const [, [call]] = stream.mock.calls;
 
         expect(call).toMatchSnapshot();
-      }
+      },
     },
     {
       name: "renders content",
       test() {
         const testInstance = TestRenderer.create(
-          renderArticleContent(longContent)
+          renderArticleContent(longContent),
         );
 
         expect(testInstance.toJSON()).toMatchSnapshot();
-      }
+      },
     },
     {
       name: "an article with inline paragraph",
       test() {
         const testInstance = TestRenderer.create(
-          renderArticleContent(contentWithItalicText, "maincomment")
+          renderArticleContent(contentWithItalicText, "maincomment"),
         );
 
         expect(testInstance.toJSON()).toMatchSnapshot();
-      }
-    }
+      },
+    },
   ];
 
   shared(TestRenderer.create, tests);

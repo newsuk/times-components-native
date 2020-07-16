@@ -4,7 +4,7 @@ import PropTypes from "prop-types";
 
 class FadeIn extends Component {
   state = {
-    fadeAnim: new Animated.Value(0)
+    fadeAnim: new Animated.Value(0),
   };
 
   componentDidMount() {
@@ -12,13 +12,13 @@ class FadeIn extends Component {
 
     Animated.timing(fadeAnim, {
       duration: 300,
-      toValue: 1
+      toValue: 1,
     }).start();
   }
 
   componentWillUnmount() {
     const { fadeAnim } = this.state;
-    fadeAnim.stopAnimation(() => {});
+    fadeAnim.stopAnimation(() => null);
   }
 
   render() {
@@ -34,8 +34,8 @@ class FadeIn extends Component {
 FadeIn.propTypes = {
   children: PropTypes.oneOfType([
     PropTypes.element,
-    PropTypes.arrayOf(PropTypes.element)
-  ]).isRequired
+    PropTypes.arrayOf(PropTypes.element),
+  ]).isRequired,
 };
 
 export default FadeIn;
