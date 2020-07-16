@@ -15,7 +15,8 @@ const ArticleExtrasContent = ({
   onCommentGuidelinesPress,
   onCommentsPress,
   onRelatedArticlePress,
-  onTopicPress
+  onTopicPress,
+  narrowContent
 }) => {
   const {
     commentCount,
@@ -25,30 +26,28 @@ const ArticleExtrasContent = ({
   } = article;
 
   return (
-    <Fragment>
-      {relatedArticleSlice ? (
-        <ResponsiveContext.Consumer>
-          {({ isTablet }) => (
-            <View style={isTablet && styles.relatedArticlesTablet}>
-              <RelatedArticles
-                analyticsStream={analyticsStream}
-                onPress={onRelatedArticlePress}
-                slice={relatedArticleSlice}
-              />
-            </View>
-          )}
-        </ResponsiveContext.Consumer>
-      ) : null}
-      {topics ? <ArticleTopics onPress={onTopicPress} topics={topics} /> : null}
-      <ArticleComments
-        articleId={articleId}
-        commentCount={commentCount}
-        commentsEnabled={commentsEnabled}
-        onCommentGuidelinesPress={onCommentGuidelinesPress}
-        onCommentsPress={onCommentsPress}
-        url={articleUrl}
-      />
-    </Fragment>
+    <ResponsiveContext.Consumer>
+      {({ isTablet }) => (
+        <View style={[isTablet && styles.extrasTablet, narrowContent && styles.narrowContent]}>
+          {relatedArticleSlice ? (
+            <RelatedArticles
+              analyticsStream={analyticsStream}
+              onPress={onRelatedArticlePress}
+              slice={relatedArticleSlice}
+            />
+          ) : null}
+          {topics ? <ArticleTopics onPress={onTopicPress} topics={topics} /> : null}
+          <ArticleComments
+            articleId={articleId}
+            commentCount={commentCount}
+            commentsEnabled={commentsEnabled}
+            onCommentGuidelinesPress={onCommentGuidelinesPress}
+            onCommentsPress={onCommentsPress}
+            url={articleUrl}
+          />
+        </View>
+      )}
+    </ResponsiveContext.Consumer>
   );
 };
 

@@ -91,7 +91,6 @@ class ArticlePage extends Component {
     bylines[0].image.crop
       ? bylines[0].image.crop.url
       : null;
-    console.log('bylines[0].image', bylines[0].image);
 
     return (
       <ResponsiveContext.Consumer>
@@ -126,6 +125,7 @@ class ArticlePage extends Component {
                   onViewableItemsChanged={
                     onViewed ? this.onViewableItemsChanged : null
                   }
+                  narrowContent={true}
                   receiveChildList={receiveChildList}
                   scale={scale}
                 />

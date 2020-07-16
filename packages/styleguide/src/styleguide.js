@@ -37,6 +37,7 @@ const {
   nativeTabletWide: tabletWidthMax
 } = breakpoints;
 const tabletRowPadding = 20;
+const narrowArticleContentWidth = 600;
 
 export {
   Animations,
@@ -51,6 +52,7 @@ export {
   fontSizes,
   getEditionBreakpoint,
   lineHeight,
+  narrowArticleContentWidth,
   scales,
   spacing,
   globalSpacingStyles,

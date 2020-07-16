@@ -35,7 +35,7 @@ export default ({
   dropcapsDisabled,
   dropCapFont = "dropCap",
   scale,
-  analyticsStream
+  analyticsStream,
 }) => {
   const styles = styleFactory(scale);
   const { fontFactory } = styleguide({ scale });
@@ -185,6 +185,7 @@ export default ({
           adConfig={adConfig}
           slotName="native-inline-ad"
           {...attributes}
+          width={300}
         />
       );
     },

@@ -6,9 +6,10 @@ import { propTypes, defaultProps } from "./article-byline-prop-types";
 import styles from "./styles";
 import withTrackEvents from "../tracking/with-track-events";
 
-const AuthorComponent = ({ slug, className, onAuthorPress, children }) => {
+const AuthorComponent = ({ centered, slug, className, onAuthorPress, children }) => {
   const url = `/profile/${slug}`;
   const name = children[0];
+  const linkStyle =  centered ? [styles.link, styles.centered] : styles.link;
 
   return (
     <TextLink
@@ -16,7 +17,7 @@ const AuthorComponent = ({ slug, className, onAuthorPress, children }) => {
       onPress={e => {
         onAuthorPress(e, { name, slug });
       }}
-      style={styles.link}
+      style={linkStyle}
       url={url}
     >
       {children}
@@ -24,8 +25,11 @@ const AuthorComponent = ({ slug, className, onAuthorPress, children }) => {
   );
 };
 
-const ArticleBylineWithLinks = ({ ast, centered, ...props }) =>
-  renderByline(withTrackEvents(AuthorComponent), ast, styles.text, props);
+const ArticleBylineWithLinks = ({ ast, ...props }) => {
+  const { centered } = props; 
+  const textStyle =  centered ? [styles.text, styles.centered] : styles.text;
+  return renderByline(withTrackEvents(AuthorComponent), ast, textStyle, props);
+};
 
 ArticleBylineWithLinks.displayName = "ArticleBylineWithLinks";
 

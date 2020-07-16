@@ -1,4 +1,4 @@
-import styleguide, { tabletWidth } from "@times-components-native/styleguide";
+import styleguide, { tabletWidth, narrowArticleContentWidth } from "@times-components-native/styleguide";
 
 const { colours, fontFactory, spacing } = styleguide();
 const sharedStyles = {
@@ -11,13 +11,7 @@ const sharedStyles = {
     marginBottom: spacing(2),
   },
   authorImage: {
-    marginBottom: spacing(5)
-  },
-  container: {
-    alignSelf: "center",
-    width: tabletWidth,
-    paddingLeft: spacing(2),
-    paddingRight: spacing(2)
+    width: "100%",
   },
   datePublication: {
     ...fontFactory({
@@ -31,15 +25,16 @@ const sharedStyles = {
     marginBottom: spacing(3),
     paddingBottom: spacing(4),
     paddingTop: spacing(7),
-    width: tabletWidth,
-    paddingLeft: "50%",
+    width: "75%",
+    marginLeft: "25%",
+    borderWidth: 1,
+  },
+  container: {
+    paddingLeft: spacing(2),
+    paddingRight: spacing(2)
   },
   label: {
     marginBottom: spacing(2)
-  },
-  meta: {
-    flexDirection: "row",
-    flexWrap: "wrap"
   },
   metaContainer: {
     flexDirection: "row",
@@ -59,11 +54,23 @@ const sharedStyles = {
     marginBottom: spacing(3),
   },
   leftColumnContainer: {
-    left: 40,
-    width: 197,
-    height: 200,
+    width: "25%",    
+    zIndex: 1111,
+    borderRightWidth: 1,
+    borderColor: colours.functional.keyline,
+    height: "100%",
+    paddingLeft: 40,
+    position: "absolute",
     borderWidth: 1,
     borderColor: "blue"
+  },
+  authorImage: {
+    width: 130,
+    marginLeft: 30,
+  },
+  bylines: {
+    paddingTop: spacing(1),
+    width: "100%",
   }
 };
 

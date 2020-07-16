@@ -3,7 +3,8 @@ import {
   colours,
   fontFactory,
   spacing,
-  tabletWidth
+  tabletWidth,
+  narrowArticleContentWidth
 } from "@times-components-native/styleguide";
 
 const styles = StyleSheet.create({
@@ -40,10 +41,19 @@ const styles = StyleSheet.create({
     paddingTop: spacing(6),
     textAlign: "center"
   },
-  relatedArticlesTablet: {
+  extrasTablet: {
     alignSelf: "center",
     maxWidth: tabletWidth,
-    width: "100%"
+    marginLeft: 0, 
+    width: "100%",
+    borderWidth: 1,
+    borderColor: "orange"
+  },
+  narrowContent: {
+    alignSelf: "flex-start",
+    marginLeft: "25%",
+    maxWidth: narrowArticleContentWidth,
+    borderColor: "blue"
   }
 });
 

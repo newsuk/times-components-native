@@ -1,6 +1,7 @@
 import styleguide, {
   scales,
   fonts,
+  narrowArticleContentWidth,
   tabletWidth
 } from "@times-components-native/styleguide";
 import { fontSize, margins } from "./drop-cap-sizes";
@@ -17,7 +18,9 @@ const sharedStyles = (dropCapFont = "dropCap", scale = scales.medium) => {
     },
     articleMainContentRowTablet: {
       marginLeft: "25%",
-      width: tabletWidth
+      width: narrowArticleContentWidth,
+      borderWidth: 1,
+      borderColor: "yellow",
     },
     articleTextElement: {
       ...fontFactory({
@@ -33,7 +36,7 @@ const sharedStyles = (dropCapFont = "dropCap", scale = scales.medium) => {
     },
     dropCapContainerTablet: {
       marginLeft: "25%",
-      width: tabletWidth
+      width: narrowArticleContentWidth
     },
     dropCapTextElement: {
       color: colours.functional.primary,

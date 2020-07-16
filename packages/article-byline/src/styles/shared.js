@@ -8,9 +8,7 @@ const shared = {
       fontSize: "cardMeta"
     }),
     color: colours.functional.action,
-    textDecorationLine: "none"
-    // TODO: put back after design signoff
-    // fontWeight: "bold"
+    textDecorationLine: "none",
   },
   nonLinkText: {
     ...fontFactory({

@@ -1,8 +1,8 @@
 import React, { Fragment } from "react";
-import { Text, View } from "react-native";
+import { View } from "react-native";
 import {
-  ArticleBylineWithLinks,
-  hasBylineData
+  hasBylineData,
+  ArticleBylineWithLinks
 } from "@times-components-native/article-byline";
 import PropTypes from "prop-types";
 import styles from "../styles";
@@ -20,19 +20,19 @@ const ArticleLeftColumn = ({
   onImagePress,
 }) => (
   <View style={styles.leftColumnContainer}>
-    {hasBylineData(bylines) && (
-      <Fragment>
-        <View style={styles.meta}>
-          <ArticleBylineWithLinks ast={bylines} onAuthorPress={onAuthorPress} />
+    <View style={styles.authorImage}>
+      <ModalImage
+      aspectRatio={1}
+      uri={authorImage}
+      onImagePress={onImagePress ? () => onImagePress(0) : undefined}
+      rounded
+      />
+      </View>
+      {hasBylineData(bylines) && (
+        <View style={styles.bylines}>
+          <ArticleBylineWithLinks ast={bylines} centered onAuthorPress={onAuthorPress} />
         </View>
-      </Fragment>
-    )}
-    <ModalImage
-    aspectRatio={1.5}
-    style={styles.authorImage}
-    uri={authorImage}
-    onImagePress={onImagePress ? () => onImagePress(0) : undefined}
-    />
+      )}
   </View>
 );
 

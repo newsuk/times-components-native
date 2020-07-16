@@ -42,7 +42,8 @@ const ArticleWithContent = props => {
     onTopicPress,
     isTablet,
     onViewed,
-    adPosition
+    adPosition,
+    narrowContent
   } = props;
 
   const { id, url, content } = data;
@@ -89,6 +90,7 @@ const ArticleWithContent = props => {
           onCommentsPress={onCommentsPress}
           onRelatedArticlePress={onRelatedArticlePress}
           onTopicPress={onTopicPress}
+          narrowContent={narrowContent}
         />
       </Gutter>
     ),

@@ -4,12 +4,9 @@ import { maxWidth } from "../gutter";
 const globalStyle = {
   articleContainer: {
     backgroundColor: colours.functional.gutter,
-    borderWidth: 1,
-    borderColor: "red",
+    top: -30,
   },
   articleMainContentRow: {
-    borderWidth: 1,
-    borderColor: "blue",
     paddingLeft: spacing(2),
     paddingRight: spacing(2)
   },
@@ -17,8 +14,8 @@ const globalStyle = {
     backgroundColor: "#ffffff",
     maxWidth: "100%",
     width: maxWidth,
-    borderWidth: 1,
-    borderColor: "orange",
+    // borderWidth: 1,
+    // borderColor: "orange",
   }
 };
 

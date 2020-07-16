@@ -12,7 +12,8 @@ const ArticleExtras = ({
   onRelatedArticlePress,
   onTopicPress,
   onCommentGuidelinesPress,
-  onCommentsPress
+  onCommentsPress,
+  narrowContent
 }) => (
   <ArticleExtrasProvider debounceTimeMs={0} id={articleId}>
     {({ article, error, isLoading, refetch }) => {
@@ -33,6 +34,7 @@ const ArticleExtras = ({
           onCommentsPress={onCommentsPress}
           onRelatedArticlePress={onRelatedArticlePress}
           onTopicPress={onTopicPress}
+          narrowContent={narrowContent}
         />
       );
     }}

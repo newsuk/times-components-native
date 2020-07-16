@@ -168,6 +168,7 @@ const ResponsiveImage = (props: ResponsiveImageProps) => {
 
   const resize = resizeMode || 'cover';
   const ratio = PixelRatio.get();
+  // console.log('image width', width);
   const closestWidth = width && findClosestWidth(width * ratio);
 
   const highRes = showOnline && (
