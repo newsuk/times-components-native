@@ -136,6 +136,7 @@ jobs:
                       yarn android:build-lib
                       yarn android:publish-lib
                   working_directory: ~/project/
+
     publish_ios:
         executor: node
         steps:
@@ -148,6 +149,14 @@ jobs:
                       yarn ios:build-lib
                       yarn ios:publish-lib
                   working_directory: ~/project/
+
+    publish_notes:
+        executor: node
+        steps:
+        - checkout
+        - run:
+            name: Tag release & generate GitHub notes
+            command: sh scripts/publish-notes.sh
 
 workflows:
     version: 2
@@ -188,3 +197,7 @@ workflows:
             - publish_ios:
                   requires:
                       - hold
+            - publish_notes:
+                requires:
+                  - publish_android
+                  - publish_ios
