@@ -17,7 +17,7 @@ const sharedStyles = (dropCapFont = "dropCap", scale = scales.medium) => {
       paddingRight: spacing(2)
     },
     articleMainContentRowTablet: {
-      marginLeft: "25%",
+      // marginLeft: "25%",
       width: narrowArticleContentWidth,
       borderWidth: 1,
       borderColor: "yellow",
@@ -35,7 +35,7 @@ const sharedStyles = (dropCapFont = "dropCap", scale = scales.medium) => {
       flexWrap: "wrap"
     },
     dropCapContainerTablet: {
-      marginLeft: "25%",
+      // marginLeft: "25%",
       width: narrowArticleContentWidth
     },
     dropCapTextElement: {

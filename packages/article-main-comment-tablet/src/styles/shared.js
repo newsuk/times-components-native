@@ -25,8 +25,7 @@ const sharedStyles = {
     marginBottom: spacing(3),
     paddingBottom: spacing(4),
     paddingTop: spacing(7),
-    width: "75%",
-    marginLeft: "25%",
+    maxWidth: narrowArticleContentWidth,
     borderWidth: 1,
   },
   container: {

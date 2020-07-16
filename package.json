@@ -21,7 +21,7 @@
     "prestorybook-native": "rnstl",
     "ios": "react-native run-ios --no-packager",
     "ios:logs": "yarn ios && react-native log-ios",
-    "ios:app": "react-native start --config ./ios-app/metro.config.js --reset-cache",
+    "ios:app": "react-native start --config ./lib/ios/metro.config.js --reset-cache",
     "ios:build-lib": "yarn ios:build-lib:js && yarn ios:build-lib:update-version",
     "ios:build-lib:js": "mkdir -p lib/ios/assets/js && mkdir -p lib/ios/assets/res/graphql && cp ./packages/provider-queries/src/*.graphql ./lib/ios/assets/res/graphql && react-native ram-bundle --platform ios --dev false --entry-file lib/ios/index.ios.js --bundle-output lib/ios/assets/js/index.ios.bundle --assets-dest lib/ios/assets/res/",
     "ios:build-lib:update-version": "cat package.json | grep version | head -1 | sed 's/[\",\t ]//g' | awk -F: '{ print \"Bundle Version: \" $2 }' > lib/ios/assets/js/version.meta",

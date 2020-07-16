@@ -4,6 +4,8 @@ import { maxWidth } from "../gutter";
 const globalStyle = {
   articleContainer: {
     backgroundColor: colours.functional.gutter,
+    marginLeft: "25%",
+    position: "relative",
     top: -30,
   },
   articleMainContentRow: {
