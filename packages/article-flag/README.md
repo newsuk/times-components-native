@@ -1,4 +1,4 @@
-# Article Flag
+ # Article Flag
 
 Article flags are attached to an article like a label to indicate the article's
 status. There are some common statuses that are exported as components from this

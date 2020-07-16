@@ -21,36 +21,3 @@ It changes colours and opacity based on the different state it has.
 `selected` would change the star colour.
 
 If `disabled` and `selected` are both true - `disabled` takes precedence.
-
-## Contributing
-
-Please read [CONTRIBUTING.md](./CONTRIBUTING.md) before contributing to this
-package
-
-## Running the code
-
-Please see our main [README.md](../README.md) to get the project running locally
-
-## Development
-
-The code can be formatted and linted in accordance with the agreed standards.
-
-```
-yarn fmt
-yarn lint
-```
-
-## Testing
-
-This package uses [yarn](https://yarnpkg.com) (latest) to run unit tests on each
-platform with [jest](https://facebook.github.io/jest/).
-
-```
-yarn test:all
-yarn test:android
-yarn test:ios
-```
-
-Visit the official
-[storybook](http://components.thetimes.co.uk)
-to see our available link templates.
