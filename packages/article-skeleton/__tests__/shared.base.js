@@ -16,34 +16,34 @@ import articleContentWithBoldItalicText from "../fixtures/boldItalic-text-articl
 import {
   paragraphWithSingleInlineMarkup,
   paragraphWithTextAndInlineMarkup,
-  paragraphWithNestedInlineMarkup
+  paragraphWithNestedInlineMarkup,
 } from "../fixtures/inline-paragraph-content";
 import {
   paragraphStartingWithSingleQuote,
-  paragraphStartingWithDoubleQuote
+  paragraphStartingWithDoubleQuote,
 } from "../fixtures/dropcap-article-content";
 
 export const renderArticle = (data, header = null, isTablet = false) => (
   <ContextProviderWithDefaults
     value={{
       theme: { scale: scales.medium, sectionColour: "#FF0000" },
-      user: { isLoggedIn: true }
+      user: { isLoggedIn: true },
     }}
   >
     <ArticleSkeleton
       adConfig={adConfig}
-      analyticsStream={() => {}}
+      analyticsStream={() => null}
       data={data}
       header={header}
       isTablet={isTablet}
-      onAuthorPress={() => {}}
-      onCommentGuidelinesPress={() => {}}
-      onCommentsPress={() => {}}
-      onLinkPress={() => {}}
-      onRelatedArticlePress={() => {}}
-      onTopicPress={() => {}}
-      onTwitterLinkPress={() => {}}
-      onVideoPress={() => {}}
+      onAuthorPress={() => null}
+      onCommentGuidelinesPress={() => null}
+      onCommentsPress={() => null}
+      onLinkPress={() => null}
+      onRelatedArticlePress={() => null}
+      onTopicPress={() => null}
+      onTwitterLinkPress={() => null}
+      onVideoPress={() => null}
       spotAccountId=""
     />
   </ContextProviderWithDefaults>
@@ -56,28 +56,28 @@ export const fixtureArgs = {
       children: [
         {
           attributes: {
-            value: "This being Black History Month, last week"
+            value: "This being Black History Month, last week",
           },
           children: [],
-          name: "text"
-        }
+          name: "text",
+        },
       ],
-      name: "paragraph"
+      name: "paragraph",
     },
     {
       attributes: {
         display: "secondary",
         element: {
           attributes: {
-            "chart-id": "csmgb"
+            "chart-id": "csmgb",
           },
-          value: "times-datawrapper"
+          value: "times-datawrapper",
         },
         id: "d2f83305-d558-4f78-f582-32115c659355",
-        url: "https://interactive.io"
+        url: "https://interactive.io",
       },
       children: [],
-      name: "interactive"
+      name: "interactive",
     },
     {
       attributes: {
@@ -86,10 +86,10 @@ export const fixtureArgs = {
         display: "primary",
         imageIndex: 1,
         ratio: "1500:1000",
-        url: "https://image.io"
+        url: "https://image.io",
       },
       children: [],
-      name: "image"
+      name: "image",
     },
     {
       attributes: {
@@ -98,10 +98,10 @@ export const fixtureArgs = {
         display: "secondary",
         imageIndex: 2,
         ratio: "1500:1000",
-        url: "https://image.io/secondary"
+        url: "https://image.io/secondary",
       },
       children: [],
-      name: "image"
+      name: "image",
     },
     {
       attributes: {
@@ -110,10 +110,10 @@ export const fixtureArgs = {
         display: "inline",
         imageIndex: 3,
         ratio: "1500:1000",
-        url: "https://image.io/inline"
+        url: "https://image.io/inline",
       },
       children: [],
-      name: "image"
+      name: "image",
     },
     {
       attributes: {},
@@ -122,57 +122,57 @@ export const fixtureArgs = {
         {
           attributes: {
             href: "https://link.io",
-            target: "_blank"
+            target: "_blank",
           },
           children: [
             {
               attributes: {
-                value: "Some Link"
+                value: "Some Link",
               },
               children: [],
-              name: "text"
-            }
+              name: "text",
+            },
           ],
-          name: "link"
-        }
-      ]
+          name: "link",
+        },
+      ],
     },
     {
       attributes: {},
       children: [
         {
           attributes: {
-            value: "Some content"
+            value: "Some content",
           },
           children: [],
-          name: "text"
-        }
+          name: "text",
+        },
       ],
-      name: "paragraph"
+      name: "paragraph",
     },
     {
       attributes: {},
       children: [],
-      name: "ad"
+      name: "ad",
     },
     {
       attributes: {
         caption: {
           name: "AName",
           text: "a text",
-          twitter: "@AName"
-        }
+          twitter: "@AName",
+        },
       },
       children: [
         {
           attributes: {
-            value: "The pull quote content"
+            value: "The pull quote content",
           },
           children: [],
-          name: "text"
-        }
+          name: "text",
+        },
       ],
-      name: "pullQuote"
+      name: "pullQuote",
     },
     {
       attributes: {
@@ -186,14 +186,14 @@ export const fixtureArgs = {
         display: "primary",
         imageIndex: 4,
         posterImageId: "0c0309d4-1aeb-11e8-9010-1eef6ba5d3de",
-        posterImageUrl: "https://image.io"
+        posterImageUrl: "https://image.io",
       },
       children: [],
-      name: "video"
+      name: "video",
     },
     {
       attributes: {
-        title: "Example title"
+        title: "Example title",
       },
       children: [
         {
@@ -202,98 +202,98 @@ export const fixtureArgs = {
               children: [
                 {
                   attributes: {
-                    value: "Example bullet text"
+                    value: "Example bullet text",
                   },
                   children: [],
-                  name: "text"
-                }
+                  name: "text",
+                },
               ],
-              name: "listElement"
+              name: "listElement",
             },
             {
               children: [
                 {
                   attributes: {
-                    value: "An example "
+                    value: "An example ",
                   },
                   children: [],
-                  name: "text"
+                  name: "text",
                 },
                 {
                   attributes: {
                     href: "https://example.io",
                     target: "_blank",
-                    type: "topic"
+                    type: "topic",
                   },
                   children: [
                     {
                       attributes: {
-                        value: "link"
+                        value: "link",
                       },
                       children: [],
-                      name: "text"
-                    }
+                      name: "text",
+                    },
                   ],
-                  name: "link"
-                }
+                  name: "link",
+                },
               ],
-              name: "listElement"
+              name: "listElement",
             },
             {
               children: [
                 {
                   attributes: {
-                    value: "More example text."
+                    value: "More example text.",
                   },
                   children: [],
-                  name: "text"
-                }
+                  name: "text",
+                },
               ],
-              name: "listElement"
+              name: "listElement",
             },
             {
               children: [
                 {
                   attributes: {
-                    value: "Example text "
+                    value: "Example text ",
                   },
                   children: [],
-                  name: "text"
+                  name: "text",
                 },
                 {
                   attributes: {},
                   children: [
                     {
                       attributes: {
-                        value: "this is bold "
+                        value: "this is bold ",
                       },
                       children: [],
-                      name: "text"
-                    }
+                      name: "text",
+                    },
                   ],
-                  name: "bold"
+                  name: "bold",
                 },
                 {
                   attributes: {},
                   children: [
                     {
                       attributes: {
-                        value: "this is in italics."
+                        value: "this is in italics.",
                       },
                       children: [],
-                      name: "text"
-                    }
+                      name: "text",
+                    },
                   ],
-                  name: "italic"
-                }
+                  name: "italic",
+                },
               ],
-              name: "listElement"
-            }
+              name: "listElement",
+            },
           ],
-          name: "unorderedList"
-        }
+          name: "unorderedList",
+        },
       ],
-      name: "keyFacts"
+      name: "keyFacts",
     },
     {
       name: "heading2",
@@ -302,10 +302,10 @@ export const fixtureArgs = {
           name: "text",
           children: [],
           attributes: {
-            value: "This is heading 2"
-          }
-        }
-      ]
+            value: "This is heading 2",
+          },
+        },
+      ],
     },
     {
       name: "heading3",
@@ -314,10 +314,10 @@ export const fixtureArgs = {
           name: "text",
           children: [],
           attributes: {
-            value: "This is heading 3"
-          }
-        }
-      ]
+            value: "This is heading 3",
+          },
+        },
+      ],
     },
     {
       name: "heading4",
@@ -326,10 +326,10 @@ export const fixtureArgs = {
           name: "text",
           children: [],
           attributes: {
-            value: "This is heading 4"
-          }
-        }
-      ]
+            value: "This is heading 4",
+          },
+        },
+      ],
     },
     {
       name: "heading5",
@@ -338,10 +338,10 @@ export const fixtureArgs = {
           name: "text",
           children: [],
           attributes: {
-            value: "This is heading 5"
-          }
-        }
-      ]
+            value: "This is heading 5",
+          },
+        },
+      ],
     },
     {
       name: "heading6",
@@ -350,15 +350,15 @@ export const fixtureArgs = {
           name: "text",
           children: [],
           attributes: {
-            value: "This is heading 6"
-          }
-        }
-      ]
-    }
-  ]
+            value: "This is heading 6",
+          },
+        },
+      ],
+    },
+  ],
 };
 
-export const snapshotTests = renderComponent => [
+export const snapshotTests = (renderComponent) => [
   {
     name: "a full article with all content items with dropcap template",
     test() {
@@ -367,7 +367,7 @@ export const snapshotTests = renderComponent => [
       const output = renderComponent(renderArticle(article));
 
       expect(output).toMatchSnapshot();
-    }
+    },
   },
   {
     name: "an article with interactives",
@@ -380,37 +380,37 @@ export const snapshotTests = renderComponent => [
               display: "secondary",
               element: {
                 attributes: {
-                  "chart-id": "csmgb"
+                  "chart-id": "csmgb",
                 },
-                value: "times-datawrapper"
+                value: "times-datawrapper",
               },
               id: "d2f83305-d558-4f78-f582-32115c659355",
-              url: "https://interactive.io"
+              url: "https://interactive.io",
             },
             children: [],
-            name: "interactive"
+            name: "interactive",
           },
           {
             attributes: {
               display: "fullwidth",
               element: {
                 attributes: {
-                  "chart-id": "csmgb"
+                  "chart-id": "csmgb",
                 },
-                value: "times-datawrapper"
+                value: "times-datawrapper",
               },
               id: "abc",
-              url: "https://interactive.io"
+              url: "https://interactive.io",
             },
             children: [],
-            name: "interactive"
-          }
-        ]
+            name: "interactive",
+          },
+        ],
       });
       const output = renderComponent(renderArticle(article));
 
       expect(output).toMatchSnapshot();
-    }
+    },
   },
   {
     name: "an article with no content",
@@ -419,7 +419,7 @@ export const snapshotTests = renderComponent => [
       const output = renderComponent(renderArticle(article));
 
       expect(output).toMatchSnapshot();
-    }
+    },
   },
   {
     name: "an article with no content if content is set as null",
@@ -428,7 +428,7 @@ export const snapshotTests = renderComponent => [
       const output = renderComponent(renderArticle(article));
 
       expect(output).toMatchSnapshot();
-    }
+    },
   },
   {
     name:
@@ -440,120 +440,120 @@ export const snapshotTests = renderComponent => [
         content: contentWithNestedFirstParagraph,
         relatedArticleSlice: null,
         template,
-        topics: []
+        topics: [],
       });
       const output = renderComponent(renderArticle(article));
 
       expect(output).toMatchSnapshot();
-    }
+    },
   },
   {
     name: "an article with heading tags",
     test() {
       const article = articleFixture({
         ...fixtureArgs,
-        content: contentWithHeadingTags
+        content: contentWithHeadingTags,
       });
       const output = renderComponent(renderArticle(article));
 
       expect(output).toMatchSnapshot();
-    }
+    },
   },
   {
     name: "an article with link",
     test() {
       const article = articleFixture({
         ...fixtureArgs,
-        content: articleContentWithLink
+        content: articleContentWithLink,
       });
       const output = renderComponent(renderArticle(article));
 
       expect(output).toMatchSnapshot();
-    }
+    },
   },
   {
     name: "an article with italic link",
     test() {
       const article = articleFixture({
         ...fixtureArgs,
-        content: articleContentWithItalicLink
+        content: articleContentWithItalicLink,
       });
       const output = renderComponent(renderArticle(article));
 
       expect(output).toMatchSnapshot();
-    }
+    },
   },
   {
     name: "an article with bold text followed by bold link",
     test() {
       const article = articleFixture({
         ...fixtureArgs,
-        content: articleContentWithTextAndBoldLink
+        content: articleContentWithTextAndBoldLink,
       });
       const output = renderComponent(renderArticle(article));
 
       expect(output).toMatchSnapshot();
-    }
+    },
   },
   {
     name: "an article with italic and normal text link",
     test() {
       const article = articleFixture({
         ...fixtureArgs,
-        content: articleContentWithMixedLink
+        content: articleContentWithMixedLink,
       });
       const output = renderComponent(renderArticle(article));
 
       expect(output).toMatchSnapshot();
-    }
+    },
   },
   {
     name: "an article with bold and italic text at the same time",
     test() {
       const article = articleFixture({
         ...fixtureArgs,
-        content: articleContentWithBoldItalicText
+        content: articleContentWithBoldItalicText,
       });
       const output = renderComponent(renderArticle(article));
 
       expect(output).toMatchSnapshot();
-    }
+    },
   },
   {
     name: "an article with text wrapped in inline element",
     test() {
       const article = articleFixture({
         ...fixtureArgs,
-        content: paragraphWithSingleInlineMarkup
+        content: paragraphWithSingleInlineMarkup,
       });
       const output = renderComponent(renderArticle(article));
 
       expect(output).toMatchSnapshot();
-    }
+    },
   },
   {
     name: "an article with paragraph with text and inline element",
     test() {
       const article = articleFixture({
         ...fixtureArgs,
-        content: paragraphWithTextAndInlineMarkup
+        content: paragraphWithTextAndInlineMarkup,
       });
       const output = renderComponent(renderArticle(article));
 
       expect(output).toMatchSnapshot();
-    }
+    },
   },
   {
     name: "an article with inline inside a bold tag",
     test() {
       const article = articleFixture({
         ...fixtureArgs,
-        content: paragraphWithNestedInlineMarkup
+        content: paragraphWithNestedInlineMarkup,
       });
       const output = renderComponent(renderArticle(article));
 
       expect(output).toMatchSnapshot();
-    }
+    },
   },
   {
     name: "an article starting with single quote",
@@ -561,12 +561,12 @@ export const snapshotTests = renderComponent => [
       const article = articleFixture({
         ...fixtureArgs,
         content: paragraphStartingWithSingleQuote,
-        template: "maincomment"
+        template: "maincomment",
       });
       const output = renderComponent(renderArticle(article));
 
       expect(output).toMatchSnapshot();
-    }
+    },
   },
   {
     name: "an article starting with double quote",
@@ -574,13 +574,13 @@ export const snapshotTests = renderComponent => [
       const article = articleFixture({
         ...fixtureArgs,
         content: paragraphStartingWithDoubleQuote,
-        template: "maincomment"
+        template: "maincomment",
       });
       const output = renderComponent(renderArticle(article));
 
       expect(output).toMatchSnapshot();
-    }
-  }
+    },
+  },
 ];
 
 export default (renderComponent, platformTests = []) => {
@@ -589,8 +589,8 @@ export default (renderComponent, platformTests = []) => {
   beforeEach(() => {
     global.Intl = {
       DateTimeFormat: () => ({
-        resolvedOptions: () => ({ timeZone: "Europe/London" })
-      })
+        resolvedOptions: () => ({ timeZone: "Europe/London" }),
+      }),
     };
   });
 

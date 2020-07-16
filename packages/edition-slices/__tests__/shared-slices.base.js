@@ -18,7 +18,7 @@ import {
   mockSecondaryTwoAndTwoSlice,
   mockSecondaryTwoNoPicAndTwoSlice,
   mockSecondaryOneAndFourSlice,
-  getPuzzleSlices
+  getPuzzleSlices,
 } from "@times-components-native/fixture-generator";
 import Responsive from "@times-components-native/responsive";
 import "./mocks";
@@ -38,103 +38,103 @@ import {
   SecondaryTwoAndTwoSlice,
   SecondaryTwoNoPicAndTwoSlice,
   PuzzleSlice,
-  StandardSlice
+  StandardSlice,
 } from "../src/slices";
 
 const slices = [
   {
     mock: mockDailyRegisterSlice(),
     name: "daily universal register",
-    Slice: DailyRegisterLeadFourSlice
+    Slice: DailyRegisterLeadFourSlice,
   },
   {
     mock: mockLeadOneFullWidthSlice(),
     name: "lead one full width",
-    Slice: LeadOneFullWidthSlice
+    Slice: LeadOneFullWidthSlice,
   },
   {
     mock: mockLeadOneAndOneSlice(),
     name: "lead one and one",
-    Slice: LeadOneAndOneSlice
+    Slice: LeadOneAndOneSlice,
   },
   {
     mock: mockLeadOneAndFourSlice(),
     name: "lead one and four",
-    Slice: LeadOneAndFourSlice
+    Slice: LeadOneAndFourSlice,
   },
   {
     mock: mockStandardSlice(),
     name: "standard",
-    Slice: StandardSlice
+    Slice: StandardSlice,
   },
   {
     mock: mockLeadTwoNoPicAndTwoSlice(),
     name: "lead Two No Pic And Two",
-    Slice: LeadTwoNoPicAndTwoSlice
+    Slice: LeadTwoNoPicAndTwoSlice,
   },
   {
     mock: mockSecondaryOneSlice(),
     name: "secondary one",
-    Slice: SecondaryOneSlice
+    Slice: SecondaryOneSlice,
   },
   {
     mock: mockSecondaryOneAndColumnistSlice(),
     name: "secondary one and columnist",
-    Slice: SecondaryOneAndColumnistSlice
+    Slice: SecondaryOneAndColumnistSlice,
   },
   {
     mock: mockSecondaryFourSlice(),
     name: "secondary four",
-    Slice: SecondaryFourSlice
+    Slice: SecondaryFourSlice,
   },
   {
     mock: mockSecondaryOneAndFourSlice(),
     name: "secondary one and four",
-    Slice: SecondaryOneAndFourSlice
+    Slice: SecondaryOneAndFourSlice,
   },
   {
     mock: mockSecondaryTwoAndTwoSlice(),
     name: "secondary two and two",
-    Slice: SecondaryTwoAndTwoSlice
+    Slice: SecondaryTwoAndTwoSlice,
   },
   {
     mock: mockSecondaryTwoNoPicAndTwoSlice(),
     name: "secondary two no pic and two",
-    Slice: SecondaryTwoNoPicAndTwoSlice
+    Slice: SecondaryTwoNoPicAndTwoSlice,
   },
   {
     mock: mockListTwoAndSixNoPicSlice(),
     name: "list two and six no pic",
-    Slice: ListTwoAndSixNoPicSlice
+    Slice: ListTwoAndSixNoPicSlice,
   },
   {
     mock: mockLeadersSlice(),
     name: "leaders",
-    Slice: LeadersSlice
+    Slice: LeadersSlice,
   },
   {
     mock: mockCommentLeadAndCartoonSlice(),
     name: "Comment lead and cartoon",
-    Slice: CommentLeadAndCartoonSlice
+    Slice: CommentLeadAndCartoonSlice,
   },
   {
     mock: { puzzles: getPuzzleSlices(3) },
     name: "puzzle",
-    Slice: PuzzleSlice
-  }
+    Slice: PuzzleSlice,
+  },
 ];
 
 const slicesWithPubLogo = [
   {
     mock: mockSecondaryOneAndFourSlice(),
     name: "secondary one and four",
-    Slice: SecondaryOneAndFourSlice
+    Slice: SecondaryOneAndFourSlice,
   },
   {
     mock: mockLeadersSlice(),
     name: "leaders",
-    Slice: LeadersSlice
-  }
+    Slice: LeadersSlice,
+  },
 ];
 
 jest.mock("@times-components-native/utils", () => {
@@ -143,24 +143,24 @@ jest.mock("@times-components-native/utils", () => {
 
   return {
     ...actualUtils,
-    getDimensions: jest.fn(() => ({ height: 700, width: 500 }))
+    getDimensions: jest.fn(() => ({ height: 700, width: 500 })),
   };
 });
 
-const testsWithPublictaion = publicationName =>
+const testsWithPublictaion = (publicationName) =>
   slicesWithPubLogo.map(({ mock, name, Slice }) => ({
     name,
     test: () => {
       const output = TestRenderer.create(
         <Responsive>
           <SectionContext.Provider value={{ publicationName }}>
-            <Slice onPress={() => {}} slice={mock} />
+            <Slice onPress={() => null} slice={mock} />
           </SectionContext.Provider>
-        </Responsive>
+        </Responsive>,
       );
 
       expect(output).toMatchSnapshot();
-    }
+    },
   }));
 
 export default () => {
@@ -169,12 +169,12 @@ export default () => {
     test: () => {
       const output = TestRenderer.create(
         <Responsive>
-          <Slice onPress={() => {}} slice={mock} />
-        </Responsive>
+          <Slice onPress={() => null} slice={mock} />
+        </Responsive>,
       );
 
       expect(output).toMatchSnapshot();
-    }
+    },
   }));
 
   const testsForTimes = testsWithPublictaion("TIMES");

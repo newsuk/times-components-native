@@ -16,7 +16,7 @@ export default () => {
       mockDate.reset();
     });
 
-    afterEach(() => {});
+    afterEach(() => null);
 
     it("renders the button with the text `Sign up to newsletter`", () => {
       const mockedOnPress = jest.fn();
@@ -27,7 +27,7 @@ export default () => {
           analyticsStream={mockedAnalyticsStream}
           updatingSubscription={false}
           onPress={mockedOnPress}
-        />
+        />,
       );
 
       expect(component).toMatchSnapshot();
@@ -44,7 +44,7 @@ export default () => {
           analyticsStream={mockedAnalyticsStream}
           updatingSubscription
           onPress={mockedOnPress}
-        />
+        />,
       );
 
       component.root.findByType(Button).props.onPress();
@@ -60,7 +60,7 @@ export default () => {
           updatingSubscription={false}
           onPress={onPress}
           analyticsStream={mockedAnalyticsStream}
-        />
+        />,
       );
 
       expect(mockedAnalyticsStream.mock.calls).toMatchSnapshot();
@@ -75,7 +75,7 @@ export default () => {
           updatingSubscription={false}
           onPress={onPress}
           analyticsStream={mockedAnalyticsStream}
-        />
+        />,
       );
 
       testInstance.root.findByType(Button).props.onPress();

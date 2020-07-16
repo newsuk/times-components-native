@@ -6,7 +6,7 @@ import styleFactory from "./styles";
 
 class MessageBar extends Component {
   state = {
-    yValue: new Animated.Value(0)
+    yValue: new Animated.Value(0),
   };
 
   constructor(props) {
@@ -19,7 +19,7 @@ class MessageBar extends Component {
   componentDidMount() {
     const { delay, close } = this.props;
 
-    this.animateOpen(() => {});
+    this.animateOpen(() => null);
     this.timeout = setTimeout(() => {
       this.animateClosed(() => {
         close();
@@ -50,14 +50,14 @@ class MessageBar extends Component {
   animateOpen(cb) {
     const { yValue } = this.state;
     Animated.spring(yValue, {
-      toValue: 1
+      toValue: 1,
     }).start(cb);
   }
 
   animateClosed(cb) {
     const { yValue } = this.state;
     Animated.spring(yValue, {
-      toValue: 0
+      toValue: 0,
     }).start(cb);
   }
 
@@ -83,10 +83,10 @@ class MessageBar extends Component {
               {
                 translateY: yValue.interpolate({
                   inputRange: [0, 1],
-                  outputRange: [-100, 0]
-                })
-              }
-            ]
+                  outputRange: [-100, 0],
+                }),
+              },
+            ],
           }
         }
       >
@@ -111,7 +111,7 @@ MessageBar.propTypes = {
   close: PropTypes.func.isRequired,
   delay: PropTypes.number.isRequired,
   message: PropTypes.string.isRequired,
-  scale: PropTypes.string.isRequired
+  scale: PropTypes.string.isRequired,
 };
 
 export default MessageBar;

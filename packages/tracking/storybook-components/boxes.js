@@ -4,7 +4,7 @@ import { Text, FlatList } from "react-native";
 
 const viewabilityConfig = {
   viewAreaCoveragePercentThreshold: 100,
-  waitForInteraction: false
+  waitForInteraction: false,
 };
 
 export default class Boxes extends Component {
@@ -19,8 +19,8 @@ export default class Boxes extends Component {
     const { boxes, onViewed } = this.props;
     if (info.changed) {
       info.changed
-        .filter(viewableItem => viewableItem.isViewable)
-        .map(viewableItem => onViewed(viewableItem.item, boxes));
+        .filter((viewableItem) => viewableItem.isViewable)
+        .map((viewableItem) => onViewed(viewableItem.item, boxes));
     }
   }
 
@@ -43,9 +43,9 @@ export default class Boxes extends Component {
 Boxes.propTypes = {
   boxes: PropTypes.arrayOf(PropTypes.object).isRequired,
   onViewed: PropTypes.func,
-  receiveChildList: PropTypes.func
+  receiveChildList: PropTypes.func,
 };
 Boxes.defaultProps = {
-  onViewed: () => {},
-  receiveChildList: () => {}
+  onViewed: () => null,
+  receiveChildList: () => null,
 };

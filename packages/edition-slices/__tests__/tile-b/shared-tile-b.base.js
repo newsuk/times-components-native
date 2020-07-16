@@ -30,11 +30,11 @@ export default () => {
     it("with more teaser", () => {
       const output = TestRenderer.create(
         <TileB
-          onPress={() => {}}
+          onPress={() => null}
           tile={tile}
           breakpoint={editionBreakpoints.medium}
           withMoreTeaser
-        />
+        />,
       );
       expect(output).toMatchSnapshot();
     });

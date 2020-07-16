@@ -10,13 +10,13 @@ const {
   getSavedArticles,
   getSectionData,
   onArticlePress: onArticlePressBridge,
-  onPuzzleBarPress = () => {},
+  onPuzzleBarPress = () => null,
   onPuzzlePress: onPuzzlePressBridge,
-  onArticleSavePress: onArticleSavePressBridge
+  onArticleSavePress: onArticleSavePressBridge,
 } = NativeModules.SectionEvents || {
-  onArticlePress: () => {},
-  onPuzzleBarPress: () => {},
-  onPuzzlePress: () => {}
+  onArticlePress: () => null,
+  onPuzzleBarPress: () => null,
+  onPuzzlePress: () => null,
 };
 
 const onArticlePress = ({ id, url }) => onArticlePressBridge(url, id);
@@ -30,7 +30,7 @@ class SectionPage extends Component {
     this.state = {
       recentlyOpenedPuzzleCount: props ? props.recentlyOpenedPuzzleCount : 0,
       savedArticles: null,
-      section
+      section,
     };
     this.onAppStateChange = this.onAppStateChange.bind(this);
     this.toggleArticleSaveStatus = this.toggleArticleSaveStatus.bind(this);
@@ -52,7 +52,7 @@ class SectionPage extends Component {
     DeviceEventEmitter.removeListener("updateSavedArticles", this.syncAppData);
     DeviceEventEmitter.removeListener(
       "updateSectionData",
-      this.updateSectionData
+      this.updateSectionData,
     );
   }
 
@@ -72,7 +72,7 @@ class SectionPage extends Component {
 
   async syncAppData() {
     const {
-      section: { name }
+      section: { name },
     } = this.state;
 
     if (this.isSyncing) {
@@ -100,7 +100,7 @@ class SectionPage extends Component {
             }, {});
 
         this.setState({
-          savedArticles
+          savedArticles,
         });
       }
     } finally {
@@ -110,10 +110,10 @@ class SectionPage extends Component {
 
   updateSectionData() {
     const {
-      section: { id }
+      section: { id },
     } = this.props;
     if (getSectionData) {
-      getSectionData(id).then(data => {
+      getSectionData(id).then((data) => {
         this.setState({ section: JSON.parse(data) });
       });
     }
@@ -137,7 +137,7 @@ class SectionPage extends Component {
             : null,
           publicationName,
           recentlyOpenedPuzzleCount,
-          savedArticles
+          savedArticles,
         }}
       >
         <Section
@@ -156,13 +156,13 @@ class SectionPage extends Component {
 SectionPage.propTypes = {
   publicationName: PropTypes.string,
   recentlyOpenedPuzzleCount: PropTypes.number,
-  section: PropTypes.shape({})
+  section: PropTypes.shape({}),
 };
 
 SectionPage.defaultProps = {
   publicationName: "TIMES",
   recentlyOpenedPuzzleCount: 0,
-  section: null
+  section: null,
 };
 
 export default SectionPage;

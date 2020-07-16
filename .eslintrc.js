@@ -77,22 +77,18 @@ module.exports = {
         "schemaJson": schemaJson
       }
     ],
+    "react/display-name": "off",
     "react/jsx-filename-extension": [1, { "extensions": [".js", ".jsx", ".ts", ".tsx"] }],
     "react-hooks/rules-of-hooks": "error",
+    "react-hooks/exhaustive-deps": "off",
+    "@typescript-eslint/no-unused-vars": ["warn", { "ignoreRestSiblings": true }],
+    "@typescript-eslint/no-inferrable-types": "off",
+    // Typescript specific to revist when majority TS codebase
     "@typescript-eslint/no-var-requires": "off",
     "@typescript-eslint/explicit-module-boundary-types": "off",
-    // Temporarily disabled rules
-    // "react-hooks/exhaustive-deps": "warn",
-    "react-hooks/exhaustive-deps": "off",
-    "@typescript-eslint/no-empty-function": "off",
-    "react/display-name": "off",
-    "@typescript-eslint/no-inferrable-types": "off",
     "@typescript-eslint/no-explicit-any": "off",
+    // Temporarily disabled rules
     "react/prop-types": "off",
-    // "react/jsx-key": "off",
-    "no-undef": "off",
-    "@typescript-eslint/ban-types": "off",
-    "@typescript-eslint/no-unused-vars": "off",
     "no-redeclare": "off",
     "@typescript-eslint/no-non-null-assertion": "off",
     "@typescript-eslint/no-this-alias": "off"

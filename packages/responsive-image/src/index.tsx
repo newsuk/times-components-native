@@ -25,7 +25,7 @@ interface ResponsiveImageProps {
   readonly resizeMode?: ImageStyle["resizeMode"];
   readonly rounded?: boolean;
   readonly style?: any;
-  readonly onLayout?: (ev: any) => {};
+  readonly onLayout?: (ev: any) => void;
   readonly onError?: () => void;
   readonly disablePlaceholder?: boolean;
 }

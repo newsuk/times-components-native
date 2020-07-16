@@ -5,7 +5,7 @@ import {
   compose,
   minimaliseTransform,
   minimalNativeTransform,
-  print
+  print,
 } from "@times-components-native/jest-serializer";
 import TestRenderer from "react-test-renderer";
 import "./mocks";
@@ -21,8 +21,8 @@ export default () => {
     compose(
       print,
       minimalNativeTransform,
-      minimaliseTransform((value, key) => omitProps.has(key))
-    )
+      minimaliseTransform((value, key) => omitProps.has(key)),
+    ),
   );
 
   const tests = [
@@ -34,15 +34,15 @@ export default () => {
             articles={articlesFixture.slice(0, 1)}
             count={1}
             emptyStateMessage="Empty state"
-            onArticlePress={() => {}}
+            onArticlePress={() => null}
             pageSize={3}
-            refetch={() => {}}
-          />
+            refetch={() => null}
+          />,
         );
 
         const headline = testInstance.root.findByType(ArticleSummaryHeadline);
         expect(headline).toBeDefined();
-      }
+      },
     },
     {
       name: "no footer with data equalling the count",
@@ -52,14 +52,14 @@ export default () => {
             articles={articlesFixture.slice(0, 1)}
             count={1}
             emptyStateMessage="Empty state"
-            onArticlePress={() => {}}
+            onArticlePress={() => null}
             pageSize={3}
-            refetch={() => {}}
-          />
+            refetch={() => null}
+          />,
         );
 
         expect(testInstance).toMatchSnapshot();
-      }
+      },
     },
     {
       name: "onViewed is called with changed items",
@@ -70,27 +70,27 @@ export default () => {
           <ArticleList
             articles={articlesFixture.slice(0, 2)}
             emptyStateMessage="Empty state"
-            onArticlePress={() => {}}
+            onArticlePress={() => null}
             onViewed={onViewed}
-            refetch={() => {}}
-          />
+            refetch={() => null}
+          />,
         );
 
         testInstance.root.findByType(FlatList).props.onViewableItemsChanged({
           changed: [
             {
               isViewable: false,
-              item: { viewed: false }
+              item: { viewed: false },
             },
             {
               isViewable: true,
-              item: { viewed: true }
-            }
-          ]
+              item: { viewed: true },
+            },
+          ],
         });
 
         expect(onViewed.mock.calls).toMatchSnapshot();
-      }
+      },
     },
     {
       name: "removes the retry button when successfully pressed",
@@ -105,16 +105,16 @@ export default () => {
             articles={articlesFixture.slice(0, 1)}
             emptyStateMessage="Empty state"
             fetchMore={fetchMore}
-            onArticlePress={() => {}}
-            refetch={() => {}}
-          />
+            onArticlePress={() => null}
+            refetch={() => null}
+          />,
         );
 
         try {
           await testInstance.root.findByType(FlatList).props.onEndReached();
         } catch (e) {
           const button = testInstance.root.find(
-            node => typeof node.type === "string" && node.type === "Button"
+            (node) => typeof node.type === "string" && node.type === "Button",
           );
 
           await button.props.onPress();
@@ -123,7 +123,7 @@ export default () => {
 
           expect(testInstance).toMatchSnapshot();
         }
-      }
+      },
     },
     {
       name: "cleans up animation on unmounting",
@@ -134,15 +134,15 @@ export default () => {
           <ArticleList
             articles={[]}
             emptyStateMessage="Empty state"
-            onArticlePress={() => {}}
-            refetch={() => {}}
-          />
+            onArticlePress={() => null}
+            refetch={() => null}
+          />,
         );
 
         testInstance.unmount();
 
         expect(global.cancelAnimationFrame).toHaveBeenCalled();
-      }
+      },
     },
     {
       name:
@@ -152,17 +152,17 @@ export default () => {
           <ArticleList
             articles={articlesFixture}
             emptyStateMessage="Empty state"
-            onArticlePress={() => {}}
-            onViewed={() => {}}
-            refetch={() => {}}
-          />
+            onArticlePress={() => null}
+            onViewed={() => null}
+            refetch={() => null}
+          />,
         );
         expect(
           testInstance.root
             .findByType(FlatList)
-            .props.onViewableItemsChanged({ changed: [] })
+            .props.onViewableItemsChanged({ changed: [] }),
         ).toEqual([]);
-      }
+      },
     },
     {
       name:
@@ -175,15 +175,15 @@ export default () => {
             articles={articlesFixture}
             emptyStateMessage="Empty state"
             fetchMore={fetchMore}
-            onArticlePress={() => {}}
-            refetch={() => {}}
-          />
+            onArticlePress={() => null}
+            refetch={() => null}
+          />,
         );
 
         testInstance.root.findByType(FlatList).props.onEndReached();
 
         expect(fetchMore).toHaveBeenCalledWith(5);
-      }
+      },
     },
     {
       name:
@@ -197,16 +197,16 @@ export default () => {
             articlesLoading
             emptyStateMessage="Empty state"
             fetchMore={fetchMore}
-            onArticlePress={() => {}}
+            onArticlePress={() => null}
             pageSize={0}
-            refetch={() => {}}
-          />
+            refetch={() => null}
+          />,
         );
 
         testInstance.root.findByType(FlatList).props.onEndReached();
 
         expect(fetchMore).not.toHaveBeenCalled();
-      }
+      },
     },
     {
       name:
@@ -219,9 +219,9 @@ export default () => {
             articles={articlesFixture.slice(0, 1)}
             emptyStateMessage="Empty state"
             fetchMore={fetchMore}
-            onArticlePress={() => {}}
-            refetch={() => {}}
-          />
+            onArticlePress={() => null}
+            refetch={() => null}
+          />,
         );
 
         try {
@@ -233,29 +233,29 @@ export default () => {
             expect(fetchMore).toHaveBeenCalledTimes(1);
           }
         }
-      }
+      },
     },
     {
       name: "fetchMore is not called when still loading more",
       async test() {
-        const fetchMore = jest.fn().mockReturnValue(new Promise(() => {}));
+        const fetchMore = jest.fn().mockReturnValue(new Promise(() => null));
 
         const testInstance = TestRenderer.create(
           <ArticleList
             articles={articlesFixture.slice(0, 1)}
             emptyStateMessage="Empty state"
             fetchMore={fetchMore}
-            onArticlePress={() => {}}
-            refetch={() => {}}
-          />
+            onArticlePress={() => null}
+            refetch={() => null}
+          />,
         );
 
         testInstance.root.findByType(FlatList).props.onEndReached();
         testInstance.root.findByType(FlatList).props.onEndReached();
 
         expect(fetchMore).toHaveBeenCalledTimes(1);
-      }
-    }
+      },
+    },
   ];
 
   shared(tests);

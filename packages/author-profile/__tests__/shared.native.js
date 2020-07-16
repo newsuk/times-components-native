@@ -5,7 +5,7 @@ import {
   minimaliseTransform,
   minimalNativeTransform,
   print,
-  replacePropTransform
+  replacePropTransform,
 } from "@times-components-native/jest-serializer";
 import TestRenderer from "react-test-renderer";
 import { hash } from "@times-components-native/test-utils";
@@ -20,19 +20,27 @@ export default () => {
       print,
       minimalNativeTransform,
       minimaliseTransform((value, key) => key === "style" || key === "testID"),
-      replacePropTransform(
-        (value, key) => (key === "emptyStateMessage" ? hash(value) : value)
-      )
-    )
+      replacePropTransform((value, key) =>
+        key === "emptyStateMessage" ? hash(value) : value,
+      ),
+    ),
   );
 
   const props = {
-    analyticsStream() {},
+    analyticsStream() {
+      return null;
+    },
     author,
-    onArticlePress() {},
-    onTwitterLinkPress() {},
-    refetch() {},
-    slug: "some-slug"
+    onArticlePress() {
+      return null;
+    },
+    onTwitterLinkPress() {
+      return null;
+    },
+    refetch() {
+      return null;
+    },
+    slug: "some-slug",
   };
 
   const tests = [
@@ -46,26 +54,26 @@ export default () => {
             {...props}
             isLoading={false}
             onTwitterLinkPress={onTwitterLinkPress}
-          />
+          />,
         );
 
         const articleList = testInstance.root.find(
-          node => node.type === "ArticleList"
+          (node) => node.type === "ArticleList",
         );
 
         const articleListHeader = TestRenderer.create(
-          articleList.props.articleListHeader
+          articleList.props.articleListHeader,
         );
 
         const twitterLink = articleListHeader.root.find(
-          node => node.props.testID === "twitterLink"
+          (node) => node.props.testID === "twitterLink",
         );
 
         twitterLink.props.onPress("event");
 
         expect(onTwitterLinkPress.mock.calls).toMatchSnapshot();
-      }
-    }
+      },
+    },
   ];
 
   shared(props, tests);

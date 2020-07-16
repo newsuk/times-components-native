@@ -16,7 +16,7 @@ export default () => {
       mockDate.reset();
     });
 
-    afterEach(() => {});
+    afterEach(() => null);
 
     it("renders the link with the text `Manage preferences here`", () => {
       const mockedOnPress = jest.fn();
@@ -26,7 +26,7 @@ export default () => {
         <NewsletterPuffLink
           analyticsStream={mockedAnalyticsStream}
           onPress={mockedOnPress}
-        />
+        />,
       );
 
       expect(component).toMatchSnapshot();
@@ -40,7 +40,7 @@ export default () => {
         <NewsletterPuffLink
           onPress={onPress}
           analyticsStream={mockedAnalyticsStream}
-        />
+        />,
       );
 
       expect(mockedAnalyticsStream.mock.calls).toMatchSnapshot({});
@@ -54,7 +54,7 @@ export default () => {
         <NewsletterPuffLink
           onPress={onPress}
           analyticsStream={mockedAnalyticsStream}
-        />
+        />,
       );
 
       testInstance.root.findByType(Link).props.onPress();

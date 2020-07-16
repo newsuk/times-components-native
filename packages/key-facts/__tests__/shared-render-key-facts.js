@@ -4,28 +4,28 @@ import KeyFacts from "../src/key-facts";
 import data from "../fixtures/key-facts-test.json";
 import dataNoTitle from "../fixtures/key-facts-no-title-test.json";
 
-export default renderComponent => {
+export default (renderComponent) => {
   const tests = [
     {
       name: "key facts with title",
       test: () => {
         const output = renderComponent(
-          <KeyFacts ast={data} onLinkPress={() => {}} />
+          <KeyFacts ast={data} onLinkPress={() => null} />,
         );
 
         expect(output).toMatchSnapshot();
-      }
+      },
     },
     {
       name: "key facts without title",
       test: () => {
         const output = renderComponent(
-          <KeyFacts ast={dataNoTitle} onLinkPress={() => {}} />
+          <KeyFacts ast={dataNoTitle} onLinkPress={() => null} />,
         );
 
         expect(output).toMatchSnapshot();
-      }
-    }
+      },
+    },
   ];
 
   iterator(tests);

@@ -9,13 +9,13 @@ export default {
           articleId="dummy-article-id"
           commentCount={123}
           commentsEnabled
-          onCommentGuidelinesPress={() => {}}
-          onCommentsPress={() => {}}
+          onCommentGuidelinesPress={() => null}
+          onCommentsPress={() => null}
           url="dummy-article-url"
         />
       ),
       name: "Enabled",
-      type: "story"
+      type: "story",
     },
     {
       component: () => (
@@ -23,14 +23,14 @@ export default {
           articleId="dummy-article-id"
           commentCount={123}
           commentsEnabled={false}
-          onCommentGuidelinesPress={() => {}}
-          onCommentsPress={() => {}}
+          onCommentGuidelinesPress={() => null}
+          onCommentsPress={() => null}
           url="dummy-article-url"
         />
       ),
       name: "Disabled",
-      type: "story"
-    }
+      type: "story",
+    },
   ],
-  name: "Composed/Article Comments"
+  name: "Composed/Article Comments",
 };

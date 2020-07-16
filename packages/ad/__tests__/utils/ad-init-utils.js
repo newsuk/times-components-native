@@ -13,12 +13,12 @@ export default () => {
   });
 
   it("adds a script tag to the DOM head", () => {
-    utils.loadScript("my-script", 0).catch(() => {});
+    utils.loadScript("my-script", 0).catch(() => null);
     const scripts = mock.window.document.head.getElementsByTagName("script");
     expect(scripts.length).toBe(1);
   });
 
-  it("resolves the promise on script element load event", done => {
+  it("resolves the promise on script element load event", (done) => {
     jest
       .spyOn(utils, "createScriptElement")
       .mockImplementation((uri, onLoad) => {
@@ -30,7 +30,7 @@ export default () => {
       .catch(done);
   });
 
-  it("rejects the promise on script element error event", done => {
+  it("rejects the promise on script element error event", (done) => {
     jest
       .spyOn(utils, "createScriptElement")
       .mockImplementation((uri, onLoad, onError) => {

@@ -11,7 +11,7 @@ export const propTypes = {
   refetch: PropTypes.func,
   scale: PropTypes.string,
   sectionName: PropTypes.string,
-  showInteractives: PropTypes.bool
+  showInteractives: PropTypes.bool,
 };
 
 export const defaultProps = {
@@ -21,8 +21,8 @@ export const defaultProps = {
   isLoading: false,
   omitErrors: false,
   referralUrl: null,
-  refetch: () => {},
+  refetch: () => null,
   scale: null,
   sectionName: null,
-  showInteractives: false
+  showInteractives: false,
 };

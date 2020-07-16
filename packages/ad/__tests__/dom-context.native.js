@@ -5,11 +5,11 @@ import DOMContextNative from "../src/dom-context";
 // prevent function sources appearing in snapshots
 jest.mock(
   "../src/utils/webview-event-callback-setup",
-  () => "mockErrorHandler"
+  () => "mockErrorHandler",
 );
-jest.mock("../src/utils/ad-init", () => {});
+jest.mock("../src/utils/ad-init", () => null);
 jest.mock("react-native-webview", () => ({
-  WebView: "WebView"
+  WebView: "WebView",
 }));
 
 export default () => {
@@ -23,20 +23,20 @@ export default () => {
       data: JSON.stringify({
         detail,
         isTngMessage: true,
-        type
-      })
-    }
+        type,
+      }),
+    },
   });
 
   it("Does not error on messages containing invalid JSON", () => {
     const component = new DOMContextNative({
-      ...DOMContextNative.defaultProps
+      ...DOMContextNative.defaultProps,
     });
     const f = () =>
       component.handleMessageEvent({
         nativeEvent: {
-          data: "Non-JSON string e.g. sent by some 3rd party lib in WebView"
-        }
+          data: "Non-JSON string e.g. sent by some 3rd party lib in WebView",
+        },
       });
     expect(f).not.toThrowError();
   });
@@ -45,7 +45,7 @@ export default () => {
     const onRenderComplete = jest.fn();
     const component = new DOMContextNative({
       ...DOMContextNative.defaultProps,
-      onRenderComplete
+      onRenderComplete,
     });
 
     expect(onRenderComplete).not.toHaveBeenCalled();
@@ -57,7 +57,7 @@ export default () => {
     const inViewport = jest.fn();
     const component = new DOMContextNative(DOMContextNative.defaultProps);
     component.state = {
-      loaded: true
+      loaded: true,
     };
     component.isVisible = true;
     component.inViewport = inViewport;
@@ -70,7 +70,7 @@ export default () => {
     const inViewport = jest.fn();
     const component = new DOMContextNative(DOMContextNative.defaultProps);
     component.state = {
-      loaded: true
+      loaded: true,
     };
     component.isVisible = false;
     component.inViewport = inViewport;
@@ -83,7 +83,7 @@ export default () => {
     const onRenderError = jest.fn();
     const component = new DOMContextNative({
       ...DOMContextNative.defaultProps,
-      onRenderError
+      onRenderError,
     });
 
     expect(onRenderError).not.toHaveBeenCalled();
@@ -101,7 +101,7 @@ export default () => {
     const props = DOMContextNative.defaultProps;
     props.data.debug = true;
     const component = new DOMContextNative({
-      ...props
+      ...props,
     });
 
     expect(console.log).not.toHaveBeenCalled();
@@ -131,7 +131,7 @@ export default () => {
     const props = DOMContextNative.defaultProps;
     props.data.debug = false;
     const component = new DOMContextNative({
-      ...props
+      ...props,
     });
 
     expect(console.log).not.toHaveBeenCalled();
@@ -154,7 +154,7 @@ export default () => {
   it("hasDifferentOrigin does not allow null origins", () => {
     const result = DOMContextNative.hasDifferentOrigin(
       null,
-      "https://mock-url.com/"
+      "https://mock-url.com/",
     );
     expect(result).toEqual(null);
   });
@@ -162,7 +162,7 @@ export default () => {
   it("hasDifferentOrigin does not allow equal origins", () => {
     const result = DOMContextNative.hasDifferentOrigin(
       "https://mock-url.com/",
-      "https://mock-url.com/"
+      "https://mock-url.com/",
     );
     expect(result).toEqual(false);
   });
@@ -170,7 +170,7 @@ export default () => {
   it("hasDifferentOrigin verifies if origin is the same", () => {
     const result = DOMContextNative.hasDifferentOrigin(
       "http://originB.com",
-      "https://mock-url.com/"
+      "https://mock-url.com/",
     );
     expect(result).toEqual(true);
   });
@@ -178,27 +178,27 @@ export default () => {
   it("hasDifferentOrigin returns false if incorrect URL was provided", () => {
     const result = DOMContextNative.hasDifferentOrigin(
       "about:blank",
-      "https://mock-url.com/"
+      "https://mock-url.com/",
     );
     expect(result).toEqual(false);
   });
 
-  const setUpNavigationTest = canOpenURLImpl => {
+  const setUpNavigationTest = (canOpenURLImpl) => {
     jest.spyOn(Linking, "canOpenURL").mockImplementation(canOpenURLImpl);
     jest
       .spyOn(Linking, "openURL")
-      .mockImplementation(() => new Promise(resolve => resolve()));
+      .mockImplementation(() => new Promise((resolve) => resolve()));
 
     const domContext = new DOMContextNative({
-      baseUrl: "http://originA.com"
+      baseUrl: "http://originA.com",
     });
     domContext.webView = {
-      stopLoading: jest.fn()
+      stopLoading: jest.fn(),
     };
     return domContext;
   };
 
-  it("openURLInBrowser should try to open a link", done => {
+  it("openURLInBrowser should try to open a link", (done) => {
     setUpNavigationTest(() => Promise.resolve(true));
 
     const navigateTo = "http://originB.com";
@@ -212,7 +212,7 @@ export default () => {
       .catch(done);
   });
 
-  it("handleNavigationStateChange should log an error if the url can't be opened", done => {
+  it("handleNavigationStateChange should log an error if the url can't be opened", (done) => {
     setUpNavigationTest(() => Promise.resolve(false));
     jest.spyOn(console, "error").mockImplementation();
 
@@ -229,13 +229,13 @@ export default () => {
       .catch(done);
   });
 
-  it("handleNavigationStateChange should return error if canOpenURL throws error", done => {
+  it("handleNavigationStateChange should return error if canOpenURL throws error", (done) => {
     setUpNavigationTest(() => Promise.reject(new Error("mock err")));
 
     const navigateTo = "http://originB.com";
 
     expect(DOMContextNative.openURLInBrowser(navigateTo)).rejects.toEqual({
-      error: new Error("mock err")
+      error: new Error("mock err"),
     });
     done();
   });
@@ -252,7 +252,7 @@ export default () => {
     const domContext = setUpNavigationTest(() => Promise.resolve(true));
     jest.spyOn(DOMContextNative, "openURLInBrowser");
     domContext.handleNavigationStateChange({
-      url: "http://originA.com/same-oigin-different-url"
+      url: "http://originA.com/same-oigin-different-url",
     });
     expect(DOMContextNative.openURLInBrowser).not.toHaveBeenCalled();
   });
@@ -261,7 +261,7 @@ export default () => {
     const domContext = setUpNavigationTest(() => Promise.resolve(true));
     jest.spyOn(DOMContextNative, "openURLInBrowser");
     domContext.handleNavigationStateChange({
-      url: "react-js-navigation://foo"
+      url: "react-js-navigation://foo",
     });
     expect(DOMContextNative.openURLInBrowser).not.toHaveBeenCalled();
   });

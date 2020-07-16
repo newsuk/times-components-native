@@ -26,11 +26,11 @@ export default () => {
     it("with default star", () => {
       const output = TestRenderer.create(
         <TileO
-          onPress={() => {}}
+          onPress={() => null}
           tile={tile}
           breakpoint={editionBreakpoints.small}
           isDarkStar={false}
-        />
+        />,
       );
       expect(output).toMatchSnapshot();
     });

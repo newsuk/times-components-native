@@ -10,18 +10,18 @@ import Section from "../src/section";
 jest.mock("@times-components-native/icons", () => ({
   IconForwardArrow: "IconForwardArrow",
   IconStar: "IconStar",
-  IconVideo: "IconVideo"
+  IconVideo: "IconVideo",
 }));
 jest.mock("react-native", () => {
   const rn = require.requireActual("react-native");
   rn.NativeModules.SectionEvents = {
-    getSavedArticles: jest.fn().mockReturnValue(Promise.resolve(true))
+    getSavedArticles: jest.fn().mockReturnValue(Promise.resolve(true)),
   };
   return rn;
 });
 jest.mock("@times-components-native/image", () => ({
   __esModule: true,
-  default: "TimesImage"
+  default: "TimesImage",
 }));
 
 class WithTrackingContext extends Component {
@@ -29,8 +29,8 @@ class WithTrackingContext extends Component {
     const { stream } = this.props;
     return {
       tracking: {
-        analytics: stream
-      }
+        analytics: stream,
+      },
     };
   }
 
@@ -38,7 +38,7 @@ class WithTrackingContext extends Component {
     const { onArticlePress, onPuzzlePress, section } = this.props;
     return (
       <Section
-        analyticsStream={() => {}}
+        analyticsStream={() => null}
         onArticlePress={onArticlePress}
         onPuzzlePress={onPuzzlePress}
         publicationName="TIMES"
@@ -50,15 +50,15 @@ class WithTrackingContext extends Component {
 
 WithTrackingContext.childContextTypes = {
   tracking: PropTypes.shape({
-    analytics: PropTypes.func
-  })
+    analytics: PropTypes.func,
+  }),
 };
 
 WithTrackingContext.propTypes = {
   onArticlePress: PropTypes.func.isRequired,
   onPuzzlePress: PropTypes.func.isRequired,
   section: PropTypes.shape({}).isRequired,
-  stream: PropTypes.func.isRequired
+  stream: PropTypes.func.isRequired,
 };
 
 export default () => {
@@ -71,10 +71,10 @@ export default () => {
     const testInstance = TestRenderer.create(
       <WithTrackingContext
         onArticlePress={onArticlePress}
-        onPuzzlePress={() => {}}
+        onPuzzlePress={() => null}
         section={edition.sections[0]}
         stream={stream}
-      />
+      />,
     );
     const [link] = testInstance.root.findAllByType(Link);
 
@@ -94,11 +94,11 @@ export default () => {
 
     const testInstance = TestRenderer.create(
       <WithTrackingContext
-        onArticlePress={() => {}}
+        onArticlePress={() => null}
         onPuzzlePress={onPuzzlePress}
         section={edition.sections[3]}
         stream={stream}
-      />
+      />,
     );
 
     const [link] = testInstance.root.findAllByType(Link);
@@ -128,11 +128,11 @@ export const saveClickTracking = () => {
       <SectionContext.Provider value={{ onArticleSavePress, savedArticles }}>
         <WithTrackingContext
           onArticlePress={onArticlePress}
-          onPuzzlePress={() => {}}
+          onPuzzlePress={() => null}
           section={edition.sections[0]}
           stream={stream}
         />
-      </SectionContext.Provider>
+      </SectionContext.Provider>,
     );
 
     const [starButton] = testInstance.root.findAllByType(StarButton);

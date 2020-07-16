@@ -6,7 +6,7 @@ import Enzyme from "enzyme";
 Enzyme.configure({ adapter: new Adapter() });
 
 if (typeof window !== "undefined")
-  window.HTMLCanvasElement.prototype.getContext = () => {};
+  window.HTMLCanvasElement.prototype.getContext = () => null;
 
 jest.mock("react-native-device-info", () => {
   return {
@@ -22,6 +22,6 @@ jest.mock("react-native-device-info", () => {
 jest.mock("@react-native-community/netinfo", () => {
   return {
     fetch: () => Promise.resolve({ isConnected: true }),
-    subscribe: () => () => {},
+    subscribe: () => () => null,
   };
 });
