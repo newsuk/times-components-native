@@ -16,9 +16,9 @@ export default () => {
     const testInstance = TestRenderer.create(
       <Responsive>
         <ResponsiveContext.Consumer>
-          {context => JSON.stringify(context)}
+          {(context) => JSON.stringify(context)}
         </ResponsiveContext.Consumer>
-      </Responsive>
+      </Responsive>,
     );
 
     expect(testInstance).toMatchSnapshot();
@@ -33,8 +33,8 @@ export default () => {
       return {
         ...actualUtils,
         __esModule: true,
-        addDimensionsListener: jest.fn().mockImplementation(() => {}),
-        removeDimensionsListener: jest.fn()
+        addDimensionsListener: jest.fn().mockImplementation(() => null),
+        removeDimensionsListener: jest.fn(),
       };
     });
 
@@ -45,9 +45,9 @@ export default () => {
     TestRenderer.create(
       <Responsive>
         <ResponsiveContext.Consumer>
-          {context => JSON.stringify(context)}
+          {(context) => JSON.stringify(context)}
         </ResponsiveContext.Consumer>
-      </Responsive>
+      </Responsive>,
     );
 
     expect(addDimensionsListener).toBeCalled();
@@ -61,12 +61,12 @@ export default () => {
         ...actualUtils,
         __esModule: true,
         addDimensionsListener: jest.fn(),
-        removeDimensionsListener: jest.fn().mockImplementation(() => {})
+        removeDimensionsListener: jest.fn().mockImplementation(() => null),
       };
     });
 
     const {
-      removeDimensionsListener
+      removeDimensionsListener,
     } = require("@times-components-native/utils");
     // eslint-disable-next-line no-shadow
     const Responsive = require("../src/responsive").default;
@@ -74,9 +74,9 @@ export default () => {
     const testInstance = TestRenderer.create(
       <Responsive>
         <ResponsiveContext.Consumer>
-          {context => JSON.stringify(context)}
+          {(context) => JSON.stringify(context)}
         </ResponsiveContext.Consumer>
-      </Responsive>
+      </Responsive>,
     );
 
     testInstance.unmount();

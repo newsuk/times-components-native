@@ -18,15 +18,15 @@ const Video = ({
   relativeWidth,
   relativeHeight,
   relativeHorizontalOffset,
-  relativeVerticalOffset
+  relativeVerticalOffset,
 }) => (
   <Touchable
     accessibilityLabel="Video Splash"
-    onPress={e => {
+    onPress={(e) => {
       onVideoPress(e, {
         accountId,
         policyKey,
-        videoId
+        videoId,
       });
     }}
     testID="splash-component"
@@ -37,7 +37,7 @@ const Video = ({
           aspectRatio={width / height}
           style={{
             height,
-            width
+            width,
           }}
           uri={poster.uri}
           relativeWidth={relativeWidth}
@@ -50,7 +50,7 @@ const Video = ({
           style={{
             backgroundColor: "black",
             height,
-            width
+            width,
           }}
         />
       )}
@@ -63,11 +63,11 @@ const Video = ({
 
 Video.defaultProps = {
   ...defaultProps,
-  onVideoPress: () => {}
+  onVideoPress: () => null,
 };
 Video.propTypes = {
   ...propTypes,
-  onVideoPress: PropTypes.func
+  onVideoPress: PropTypes.func,
 };
 
 export default Video;

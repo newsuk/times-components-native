@@ -14,7 +14,7 @@ import { TileLink, TileStar, TileSummary } from "../src/tiles/shared";
 import { ResponsiveSlice } from "../src/slices/shared";
 
 jest.mock("@times-components-native/article-flag", () => ({
-  ArticleFlags: "ArticleFlags"
+  ArticleFlags: "ArticleFlags",
 }));
 
 jest.mock("@times-components-native/image", () => "TimesImage");
@@ -31,19 +31,19 @@ export default () => {
           ...tile,
           article: {
             ...tile.article,
-            strapline: "This is strapline"
+            strapline: "This is strapline",
           },
-          strapline: ""
+          strapline: "",
         };
 
         const output = TestRenderer.create(
-          <TileX onPress={() => {}} tile={tileWithoutStrapline} />
+          <TileX onPress={() => null} tile={tileWithoutStrapline} />,
         );
 
         expect(output.root.findByType(TileSummary).props.strapline).toEqual(
-          tileWithoutStrapline.article.strapline
+          tileWithoutStrapline.article.strapline,
         );
-      }
+      },
     },
     {
       name:
@@ -53,19 +53,19 @@ export default () => {
           ...tile,
           article: {
             ...tile.article,
-            shortHeadline: "This is shortheadline"
+            shortHeadline: "This is shortheadline",
           },
-          headline: ""
+          headline: "",
         };
 
         const output = TestRenderer.create(
-          <TileSummary tile={tileWithoutShortHeadline} />
+          <TileSummary tile={tileWithoutShortHeadline} />,
         );
 
         expect(
-          output.root.findByType(ArticleSummaryHeadline).props.headline
+          output.root.findByType(ArticleSummaryHeadline).props.headline,
         ).toEqual(tileWithoutShortHeadline.article.shortHeadline);
-      }
+      },
     },
     {
       name:
@@ -75,19 +75,19 @@ export default () => {
           ...tile,
           article: {
             ...tile.article,
-            shortHeadline: ""
+            shortHeadline: "",
           },
-          headline: ""
+          headline: "",
         };
 
         const output = TestRenderer.create(
-          <TileSummary tile={tileWithoutShortHeadlineAndTileHeadline} />
+          <TileSummary tile={tileWithoutShortHeadlineAndTileHeadline} />,
         );
 
         expect(
-          output.root.findByType(ArticleSummaryHeadline).props.headline
+          output.root.findByType(ArticleSummaryHeadline).props.headline,
         ).toEqual(tileWithoutShortHeadlineAndTileHeadline.article.headline);
-      }
+      },
     },
     {
       name:
@@ -95,33 +95,33 @@ export default () => {
       test: () => {
         const tileWithTeaserOverride = {
           article: {
-            ...tile.article
+            ...tile.article,
           },
           teaser125: [
             {
               children: [
                 {
                   attributes: {
-                    value: "This is summary 125 overriden"
+                    value: "This is summary 125 overriden",
                   },
                   children: [],
-                  name: "text"
-                }
+                  name: "text",
+                },
               ],
-              name: "paragraph"
-            }
+              name: "paragraph",
+            },
           ],
-          ...tile
+          ...tile,
         };
 
         const output = TestRenderer.create(
-          <TileH onPress={() => {}} tile={tileWithTeaserOverride} />
+          <TileH onPress={() => null} tile={tileWithTeaserOverride} />,
         );
 
         expect(output.root.findByType(TileSummary).props.summary).toEqual(
-          tileWithTeaserOverride.teaser125
+          tileWithTeaserOverride.teaser125,
         );
-      }
+      },
     },
 
     {
@@ -134,30 +134,30 @@ export default () => {
               crop23: {
                 ratio: "2:3",
                 url:
-                  "//www.thetimes.co.uk/imageserver/image/methode%2Ftimes%2Fprod%2Fweb%2Fbin%2Fef809506-4b04-11e9-b472-f58a50a13bbb.jpg?crop=620%2C348%2C0%2C23"
+                  "//www.thetimes.co.uk/imageserver/image/methode%2Ftimes%2Fprod%2Fweb%2Fbin%2Fef809506-4b04-11e9-b472-f58a50a13bbb.jpg?crop=620%2C348%2C0%2C23",
               },
-              id: "ef809506-4b04-11e9-b472-f58a50a13bbb"
-            }
+              id: "ef809506-4b04-11e9-b472-f58a50a13bbb",
+            },
           },
           ...tile,
           leadAsset: {
             crop23: {
               ratio: "2:3",
               url:
-                "//www.thetimes.co.uk/imageserver/image/methode%2Ftimes%2Fprod%2Fweb%2Fbin%2Fef809506-4b04-11e9-b472-f58a50a13bbb.jpg?crop=620%2C348%2C0%2C23"
+                "//www.thetimes.co.uk/imageserver/image/methode%2Ftimes%2Fprod%2Fweb%2Fbin%2Fef809506-4b04-11e9-b472-f58a50a13bbb.jpg?crop=620%2C348%2C0%2C23",
             },
-            id: "ef809506-4b04-11e9-b472-f58a50a13bbb"
-          }
+            id: "ef809506-4b04-11e9-b472-f58a50a13bbb",
+          },
         };
 
         const output = TestRenderer.create(
-          <TileH onPress={() => {}} tile={tileWithLeadAssetOverride} />
+          <TileH onPress={() => null} tile={tileWithLeadAssetOverride} />,
         );
 
         expect(output.root.findByType(Image).props.uri).toEqual(
-          tileWithLeadAssetOverride.leadAsset.crop23.url
+          tileWithLeadAssetOverride.leadAsset.crop23.url,
         );
-      }
+      },
     },
     {
       name:
@@ -171,22 +171,22 @@ export default () => {
               crop23: {
                 ratio: "2:3",
                 url:
-                  "//www.thetimes.co.uk/imageserver/image/methode%2Ftimes%2Fprod%2Fweb%2Fbin%2Fwf809506-4b04-11e9-b472-f58a50a13bbb.jpg?crop=620%2C348%2C0%2C23"
+                  "//www.thetimes.co.uk/imageserver/image/methode%2Ftimes%2Fprod%2Fweb%2Fbin%2Fwf809506-4b04-11e9-b472-f58a50a13bbb.jpg?crop=620%2C348%2C0%2C23",
               },
-              id: "wf809506-4b04-11e9-b472-f58a50a13bbb"
-            }
+              id: "wf809506-4b04-11e9-b472-f58a50a13bbb",
+            },
           },
-          leadAsset: null
+          leadAsset: null,
         };
 
         const output = TestRenderer.create(
-          <TileH onPress={() => {}} tile={tileWithListingAssetOverride} />
+          <TileH onPress={() => null} tile={tileWithListingAssetOverride} />,
         );
 
         expect(output.root.findByType(Image).props.uri).toEqual(
-          tileWithListingAssetOverride.article.listingAsset.crop23.url
+          tileWithListingAssetOverride.article.listingAsset.crop23.url,
         );
-      }
+      },
     },
     {
       name: "Tile Link is clickable",
@@ -197,13 +197,13 @@ export default () => {
         const output = TestRenderer.create(
           <TileLink onPress={fn} tile={{ article: { url } }}>
             <Text>Test link</Text>
-          </TileLink>
+          </TileLink>,
         );
 
         output.root.findByType(TileLink).props.onPress();
 
         expect(fn).toHaveBeenCalled();
-      }
+      },
     },
     {
       name: "Tile Star is rendered as already saved in default light theme",
@@ -215,16 +215,16 @@ export default () => {
           <SectionContext.Provider
             value={{
               onArticleSavePress,
-              savedArticles
+              savedArticles,
             }}
           >
             <TileStar articleId="1" />
-          </SectionContext.Provider>
+          </SectionContext.Provider>,
         );
 
         expect(output.root.findByType(StarButton).props.selected).toEqual(true);
         expect(output.root.findByType(StarButton).props.isDark).toEqual(false);
-      }
+      },
     },
     {
       name: "Tile Star is rendered as already saved in dark theme",
@@ -236,15 +236,15 @@ export default () => {
           <SectionContext.Provider
             value={{
               onArticleSavePress,
-              savedArticles
+              savedArticles,
             }}
           >
             <TileStar articleId="1" isDark />
-          </SectionContext.Provider>
+          </SectionContext.Provider>,
         );
 
         expect(output.root.findByType(StarButton).props.isDark).toEqual(true);
-      }
+      },
     },
     {
       name: "Tile Star is rendered as not yet saved in default light theme",
@@ -256,18 +256,18 @@ export default () => {
           <SectionContext.Provider
             value={{
               onArticleSavePress,
-              savedArticles
+              savedArticles,
             }}
           >
             <TileStar articleId="I am not saved yet" />
-          </SectionContext.Provider>
+          </SectionContext.Provider>,
         );
 
         expect(output.root.findByType(StarButton).props.selected).toEqual(
-          false
+          false,
         );
         expect(output.root.findByType(StarButton).props.isDark).toEqual(false);
-      }
+      },
     },
     {
       name: "Tile Star is rendered as not yet saved in dark theme",
@@ -279,15 +279,15 @@ export default () => {
           <SectionContext.Provider
             value={{
               onArticleSavePress,
-              savedArticles
+              savedArticles,
             }}
           >
             <TileStar articleId="I am not saved yet" isDark />
-          </SectionContext.Provider>
+          </SectionContext.Provider>,
         );
 
         expect(output.root.findByType(StarButton).props.isDark).toEqual(true);
-      }
+      },
     },
     {
       name: "Tile Star is disabled in default light theme",
@@ -299,16 +299,16 @@ export default () => {
           <SectionContext.Provider
             value={{
               onArticleSavePress,
-              savedArticles
+              savedArticles,
             }}
           >
             <TileStar articleId="1" />
-          </SectionContext.Provider>
+          </SectionContext.Provider>,
         );
 
         expect(output.root.findByType(StarButton).props.disabled).toEqual(true);
         expect(output.root.findByType(StarButton).props.isDark).toEqual(false);
-      }
+      },
     },
     {
       name: "Tile Star is disabled in dark theme",
@@ -320,15 +320,15 @@ export default () => {
           <SectionContext.Provider
             value={{
               onArticleSavePress,
-              savedArticles
+              savedArticles,
             }}
           >
             <TileStar articleId="1" isDark />
-          </SectionContext.Provider>
+          </SectionContext.Provider>,
         );
 
         expect(output.root.findByType(StarButton).props.isDark).toEqual(true);
-      }
+      },
     },
     {
       name: "Responsive Slice renders small layout if no breakpoint",
@@ -346,11 +346,11 @@ export default () => {
               renderWide={renderWideMock}
               renderHuge={renderHugeMock}
             />
-          </ResponsiveContext.Provider>
+          </ResponsiveContext.Provider>,
         );
 
         expect(renderSmallMock).toHaveBeenCalled();
-      }
+      },
     },
     {
       name: "Responsive Slice renders huge layout when in huge breakpoint",
@@ -370,11 +370,11 @@ export default () => {
               renderWide={renderWideMock}
               renderHuge={renderHugeMock}
             />
-          </ResponsiveContext.Provider>
+          </ResponsiveContext.Provider>,
         );
 
         expect(renderHugeMock).toHaveBeenCalled();
-      }
+      },
     },
     {
       name:
@@ -393,11 +393,11 @@ export default () => {
               renderMedium={renderMediumMock}
               renderWide={renderWideMock}
             />
-          </ResponsiveContext.Provider>
+          </ResponsiveContext.Provider>,
         );
 
         expect(renderWideMock).toHaveBeenCalled();
-      }
+      },
     },
     {
       name:
@@ -414,11 +414,11 @@ export default () => {
               renderSmall={renderSmallMock}
               renderMedium={renderMediumMock}
             />
-          </ResponsiveContext.Provider>
+          </ResponsiveContext.Provider>,
         );
 
         expect(renderMediumMock).toHaveBeenCalled();
-      }
+      },
     },
     {
       name: "Responsive Slice renders wide layout when in wide breakpoint",
@@ -438,11 +438,11 @@ export default () => {
               renderWide={renderWideMock}
               renderHuge={renderHugeMock}
             />
-          </ResponsiveContext.Provider>
+          </ResponsiveContext.Provider>,
         );
 
         expect(renderWideMock).toHaveBeenCalled();
-      }
+      },
     },
     {
       name:
@@ -459,11 +459,11 @@ export default () => {
               renderSmall={renderSmallMock}
               renderMedium={renderMediumMock}
             />
-          </ResponsiveContext.Provider>
+          </ResponsiveContext.Provider>,
         );
 
         expect(renderMediumMock).toHaveBeenCalled();
-      }
+      },
     },
     {
       name: "Responsive Slice renders medium layout when in medium breakpoint",
@@ -483,11 +483,11 @@ export default () => {
               renderWide={renderWideMock}
               renderHuge={renderHugeMock}
             />
-          </ResponsiveContext.Provider>
+          </ResponsiveContext.Provider>,
         );
 
         expect(renderMediumMock).toHaveBeenCalled();
-      }
+      },
     },
     {
       name: "Responsive Slice renders small layout when in small breakpoint",
@@ -507,12 +507,12 @@ export default () => {
               renderWide={renderWideMock}
               renderHuge={renderHugeMock}
             />
-          </ResponsiveContext.Provider>
+          </ResponsiveContext.Provider>,
         );
 
         expect(renderSmallMock).toHaveBeenCalled();
-      }
-    }
+      },
+    },
   ];
 
   iterator(tests);

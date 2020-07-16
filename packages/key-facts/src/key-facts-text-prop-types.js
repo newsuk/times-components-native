@@ -4,9 +4,9 @@ export const propTypes = {
   fontStyle: PropTypes.object.isRequired,
   item: PropTypes.object.isRequired,
   listIndex: PropTypes.number.isRequired,
-  onLinkPress: PropTypes.func
+  onLinkPress: PropTypes.func,
 };
 
 export const defaultProps = {
-  onLinkPress: () => {}
+  onLinkPress: () => null,
 };

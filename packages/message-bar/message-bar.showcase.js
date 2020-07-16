@@ -8,15 +8,15 @@ export default {
       component: () => (
         <MessageBar
           animate
-          close={() => {}}
+          close={() => null}
           delay={3000}
           message="Article link copied"
           scale={scales.medium}
         />
       ),
       name: "MessageBar",
-      type: "story"
-    }
+      type: "story",
+    },
   ],
-  name: "Primitives/MessageBar"
+  name: "Primitives/MessageBar",
 };

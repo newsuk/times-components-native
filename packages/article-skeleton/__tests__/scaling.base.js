@@ -6,7 +6,7 @@ import articleFixture, { testFixture } from "../fixtures/full-article";
 import { adConfig } from "./ad-mock";
 import articleSkeletonProps from "./shared-article-skeleton-props";
 
-export default renderComponent => [
+export default (renderComponent) => [
   {
     name: "scaled medium full article",
     test: () => {
@@ -17,24 +17,24 @@ export default renderComponent => [
           <ArticleSkeleton
             {...articleSkeletonProps}
             adConfig={adConfig}
-            analyticsStream={() => {}}
+            analyticsStream={() => null}
             data={articleFixture({
-              ...testFixture
+              ...testFixture,
             })}
-            onAuthorPress={() => {}}
-            onCommentGuidelinesPress={() => {}}
-            onCommentsPress={() => {}}
-            onLinkPress={() => {}}
-            onRelatedArticlePress={() => {}}
-            onTopicPress={() => {}}
-            onTwitterLinkPress={() => {}}
-            onVideoPress={() => {}}
+            onAuthorPress={() => null}
+            onCommentGuidelinesPress={() => null}
+            onCommentsPress={() => null}
+            onLinkPress={() => null}
+            onRelatedArticlePress={() => null}
+            onTopicPress={() => null}
+            onTwitterLinkPress={() => null}
+            onVideoPress={() => null}
           />
-        </ContextProviderWithDefaults>
+        </ContextProviderWithDefaults>,
       );
 
       expect(output).toMatchSnapshot();
-    }
+    },
   },
   {
     name: "scaled large full article",
@@ -44,24 +44,24 @@ export default renderComponent => [
           <ArticleSkeleton
             {...articleSkeletonProps}
             adConfig={adConfig}
-            analyticsStream={() => {}}
+            analyticsStream={() => null}
             data={articleFixture({
-              ...testFixture
+              ...testFixture,
             })}
-            onAuthorPress={() => {}}
-            onCommentGuidelinesPress={() => {}}
-            onCommentsPress={() => {}}
-            onLinkPress={() => {}}
-            onRelatedArticlePress={() => {}}
-            onTopicPress={() => {}}
-            onTwitterLinkPress={() => {}}
-            onVideoPress={() => {}}
+            onAuthorPress={() => null}
+            onCommentGuidelinesPress={() => null}
+            onCommentsPress={() => null}
+            onLinkPress={() => null}
+            onRelatedArticlePress={() => null}
+            onTopicPress={() => null}
+            onTwitterLinkPress={() => null}
+            onVideoPress={() => null}
           />
-        </ContextProviderWithDefaults>
+        </ContextProviderWithDefaults>,
       );
 
       expect(output).toMatchSnapshot();
-    }
+    },
   },
   {
     name: "scaled xlarge full article",
@@ -73,23 +73,23 @@ export default renderComponent => [
           <ArticleSkeleton
             {...articleSkeletonProps}
             adConfig={adConfig}
-            analyticsStream={() => {}}
+            analyticsStream={() => null}
             data={articleFixture({
-              ...testFixture
+              ...testFixture,
             })}
-            onAuthorPress={() => {}}
-            onCommentGuidelinesPress={() => {}}
-            onCommentsPress={() => {}}
-            onLinkPress={() => {}}
-            onRelatedArticlePress={() => {}}
-            onTopicPress={() => {}}
-            onTwitterLinkPress={() => {}}
-            onVideoPress={() => {}}
+            onAuthorPress={() => null}
+            onCommentGuidelinesPress={() => null}
+            onCommentsPress={() => null}
+            onLinkPress={() => null}
+            onRelatedArticlePress={() => null}
+            onTopicPress={() => null}
+            onTwitterLinkPress={() => null}
+            onVideoPress={() => null}
           />
-        </ContextProviderWithDefaults>
+        </ContextProviderWithDefaults>,
       );
 
       expect(output).toMatchSnapshot();
-    }
-  }
+    },
+  },
 ];

@@ -5,7 +5,7 @@ import {
   addSerializers,
   justChildren,
   propsNoChildren,
-  replace
+  replace,
 } from "../../src";
 
 describe("The replace serializer should", () => {
@@ -14,11 +14,11 @@ describe("The replace serializer should", () => {
       expect,
       replace({
         Text: () => ({
-          children: [<Text>Replaced</Text>],
+          children: [<Text key="0">Replaced</Text>],
           node: { type: "Placeholder" },
-          props: {}
-        })
-      })
+          props: {},
+        }),
+      }),
     );
 
     // eslint-disable-next-line react/prop-types
@@ -29,7 +29,7 @@ describe("The replace serializer should", () => {
     const testInstance = TestRenderer.create(
       <WrapperComponent>
         <ChildComponent text="Hello world!" />
-      </WrapperComponent>
+      </WrapperComponent>,
     );
 
     expect(testInstance.toJSON()).toMatchSnapshot();
@@ -39,8 +39,8 @@ describe("The replace serializer should", () => {
     addSerializers(
       expect,
       replace({
-        Text: null
-      })
+        Text: null,
+      }),
     );
 
     // eslint-disable-next-line react/prop-types
@@ -51,7 +51,7 @@ describe("The replace serializer should", () => {
     const testInstance = TestRenderer.create(
       <WrapperComponent>
         <ChildComponent text="Hello world!" />
-      </WrapperComponent>
+      </WrapperComponent>,
     );
 
     expect(testInstance.toJSON()).toMatchSnapshot();
@@ -61,8 +61,8 @@ describe("The replace serializer should", () => {
     addSerializers(
       expect,
       replace({
-        Text: propsNoChildren
-      })
+        Text: propsNoChildren,
+      }),
     );
 
     // eslint-disable-next-line react/prop-types
@@ -73,7 +73,7 @@ describe("The replace serializer should", () => {
     const testInstance = TestRenderer.create(
       <WrapperComponent>
         <ChildComponent text="Hello world!" />
-      </WrapperComponent>
+      </WrapperComponent>,
     );
 
     expect(testInstance.toJSON()).toMatchSnapshot();
@@ -83,8 +83,8 @@ describe("The replace serializer should", () => {
     addSerializers(
       expect,
       replace({
-        Text: justChildren
-      })
+        Text: justChildren,
+      }),
     );
 
     // eslint-disable-next-line react/prop-types
@@ -95,7 +95,7 @@ describe("The replace serializer should", () => {
     const testInstance = TestRenderer.create(
       <WrapperComponent>
         <ChildComponent text="Hello world!" />
-      </WrapperComponent>
+      </WrapperComponent>,
     );
 
     expect(testInstance.toJSON()).toMatchSnapshot();
@@ -105,8 +105,8 @@ describe("The replace serializer should", () => {
     addSerializers(
       expect,
       replace({
-        View: justChildren
-      })
+        View: justChildren,
+      }),
     );
 
     // eslint-disable-next-line react/prop-types
@@ -119,7 +119,7 @@ describe("The replace serializer should", () => {
         <ChildComponent text="Hello world1!" />
         <ChildComponent text="Hello world2!" />
         <ChildComponent text="Hello world3!" />
-      </WrapperComponent>
+      </WrapperComponent>,
     );
 
     expect(testInstance.toJSON()).toMatchSnapshot();

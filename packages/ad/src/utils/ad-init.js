@@ -18,10 +18,12 @@ export default ({ el, data, platform, eventCallback, window }) => {
     init() {
       this.addToQueue("i", arguments); // eslint-disable-line prefer-rest-params
     },
-    setDisplayBids() {},
+    setDisplayBids() {
+      return null;
+    },
     targetingKeys() {
       return [];
-    }
+    },
   };
 
   const {
@@ -33,7 +35,7 @@ export default ({ el, data, platform, eventCallback, window }) => {
     pbjs,
     Promise,
     Set,
-    XMLHttpRequest
+    XMLHttpRequest,
   } = window;
   let localInitCalled = false;
   const isWeb = platform === "web";
@@ -54,7 +56,7 @@ export default ({ el, data, platform, eventCallback, window }) => {
         gptReady.push(
           this.apstag.process(),
           this.prebid.process(),
-          this.gpt.process()
+          this.gpt.process(),
         );
       }
       window.initCalled = true;
@@ -69,7 +71,7 @@ export default ({ el, data, platform, eventCallback, window }) => {
           this.gpt.refreshAd();
           eventCallback("renderComplete");
         })
-        .catch(err => {
+        .catch((err) => {
           eventCallback("error", err.stack);
           eventCallback("renderFailed");
         });
@@ -90,11 +92,11 @@ export default ({ el, data, platform, eventCallback, window }) => {
         huge: "(min-width: 1320px)",
         medium: "(min-width: 768px) and (max-width: 1023px)",
         small: "(max-width: 767px)",
-        wide: "(min-width: 1024px) and (max-width: 1319px)"
+        wide: "(min-width: 1024px) and (max-width: 1319px)",
       };
 
       if (window.matchMedia) {
-        Object.keys(breakpoints).forEach(size => {
+        Object.keys(breakpoints).forEach((size) => {
           window
             .matchMedia(breakpoints[size])
             .addListener(this.handleBreakPointChange.bind(this, size));
@@ -106,7 +108,7 @@ export default ({ el, data, platform, eventCallback, window }) => {
       if (mql.matches) {
         this.gpt.setPageTargeting({
           breakpoint,
-          refresh: "true"
+          refresh: "true",
         });
         googletag.cmd.push(() => googletag.pubads().refresh());
       }
@@ -115,13 +117,13 @@ export default ({ el, data, platform, eventCallback, window }) => {
     admantx: {
       extractNames(values) {
         const cleansedValues = new Set(
-          values.map(value =>
+          values.map((value) =>
             value.name
               .toLowerCase()
               .trim()
               .replace(/\s+/g, "_")
-              .replace(/["'=!+#*~;^()<>[\],&]/g, "")
-          )
+              .replace(/["'=!+#*~;^()<>[\],&]/g, ""),
+          ),
         );
 
         return [...cleansedValues].join(",");
@@ -138,8 +140,8 @@ export default ({ el, data, platform, eventCallback, window }) => {
             decorator: "json",
             filter: "default",
             type: "URL",
-            body: location.href
-          })
+            body: location.href,
+          }),
         );
 
         return `${baseUrl}?request=${queryParams}`;
@@ -168,7 +170,7 @@ export default ({ el, data, platform, eventCallback, window }) => {
                 admantx_bs: this.extractNames(response.admants),
                 admantx_cat: this.extractNames(response.categories),
                 admantx_emotion: this.extractNames(response.feelings),
-                admantx_ents: this.extractNames(response.entities)
+                admantx_ents: this.extractNames(response.entities),
               };
               googletag.cmd.push(() => this.gpt.setPageTargeting(option));
             }
@@ -178,7 +180,7 @@ export default ({ el, data, platform, eventCallback, window }) => {
         xhr.onerror = () => {
           eventCallback("Error in ADmantx request");
         };
-      }
+      },
     },
 
     gpt: {
@@ -186,7 +188,7 @@ export default ({ el, data, platform, eventCallback, window }) => {
 
       setSlotTargeting(
         slotConfig,
-        { networkId, adUnit, section, slotTargeting } = data
+        { networkId, adUnit, section, slotTargeting } = data,
       ) {
         googletag.cmd.push(() => {
           try {
@@ -194,7 +196,7 @@ export default ({ el, data, platform, eventCallback, window }) => {
             const slot = googletag.defineSlot(
               `/${networkId}/${adUnit}/${section}`,
               sizes,
-              slotName
+              slotName,
             );
             if (!slot) {
               return;
@@ -213,22 +215,22 @@ export default ({ el, data, platform, eventCallback, window }) => {
             }
 
             const gptMapping = googletag.sizeMapping();
-            mappings.forEach(size =>
-              gptMapping.addSize([size.width, size.height], size.sizes)
+            mappings.forEach((size) =>
+              gptMapping.addSize([size.width, size.height], size.sizes),
             );
             slot.defineSizeMapping(gptMapping.build());
-            Object.keys(slotTargeting || []).forEach(key =>
-              slot.setTargeting(key, slotTargeting[key])
+            Object.keys(slotTargeting || []).forEach((key) =>
+              slot.setTargeting(key, slotTargeting[key]),
             );
             const randomTestingGroup = Math.floor(
-              Math.random() * 10
+              Math.random() * 10,
             ).toString();
             slot.setTargeting("timestestgroup", randomTestingGroup);
             slot.setTargeting("pos", slotName);
             googletag.display(slotName);
             eventCallback(
               "warn",
-              `[Google] INFO: set slot targeting - ${slotName}`
+              `[Google] INFO: set slot targeting - ${slotName}`,
             );
           } catch (err) {
             eventCallback("error", err.stack);
@@ -240,7 +242,7 @@ export default ({ el, data, platform, eventCallback, window }) => {
         googletag.cmd.push(() => {
           try {
             const pubads = googletag.pubads();
-            Object.keys(keyValuePairs).forEach(key => {
+            Object.keys(keyValuePairs).forEach((key) => {
               pubads.setTargeting(key, keyValuePairs[key]);
             });
             eventCallback("warn", "[Google] INFO: set page target");
@@ -259,7 +261,7 @@ export default ({ el, data, platform, eventCallback, window }) => {
           pubads.enableSingleRequest();
           pubads.collapseEmptyDivs(true, true);
 
-          pubads.addEventListener("slotRenderEnded", event => {
+          pubads.addEventListener("slotRenderEnded", (event) => {
             if (
               event &&
               event.slot &&
@@ -302,12 +304,12 @@ export default ({ el, data, platform, eventCallback, window }) => {
       },
 
       waitUntilReady() {
-        return new Promise(resolve =>
+        return new Promise((resolve) =>
           googletag.cmd.push(() => {
             resolve();
-          })
+          }),
         );
-      }
+      },
     },
 
     prebid: {
@@ -320,14 +322,14 @@ export default ({ el, data, platform, eventCallback, window }) => {
               if (slots.length > 0) {
                 eventCallback("warn", "[Prebid] INFO: requesting bids");
                 eventCallback("log", slots);
-                slots.forEach(slot => pbjs.removeAdUnit(slot.code));
+                slots.forEach((slot) => pbjs.removeAdUnit(slot.code));
                 pbjs.addAdUnits(slots);
                 pbjs.requestBids({
                   bidsBackHandler(bids) {
                     eventCallback("warn", "[Prebid] INFO: bid response");
                     eventCallback("log", bids);
                     resolve(bids);
-                  }
+                  },
                 });
               } else {
                 const msg = "[Prebid] INFO: no slots are defined";
@@ -364,7 +366,7 @@ export default ({ el, data, platform, eventCallback, window }) => {
           eventCallback("warn", "[Prebid] INFO: initialised");
           eventCallback("log", init);
         });
-      }
+      },
     },
 
     apstag: {
@@ -376,19 +378,18 @@ export default ({ el, data, platform, eventCallback, window }) => {
           adUnitPathParts.push(section);
         }
 
-        const adUnitPath = adUnitPathParts.reduce(
-          (acc, cur, index) =>
-            index === 1 ? `/${acc}/${cur}` : `${acc}/${cur}`
+        const adUnitPath = adUnitPathParts.reduce((acc, cur, index) =>
+          index === 1 ? `/${acc}/${cur}` : `${acc}/${cur}`,
         );
-        return slots.map(slot => ({
+        return slots.map((slot) => ({
           sizes: slot.sizes,
           slotID: slot.code,
-          slotName: adUnitPath
+          slotName: adUnitPath,
         }));
       },
 
       bid() {
-        return new Promise(resolve => {
+        return new Promise((resolve) => {
           try {
             const amazonSlots = this.getConfig();
             if (amazonSlots.length > 0) {
@@ -396,13 +397,13 @@ export default ({ el, data, platform, eventCallback, window }) => {
               eventCallback("log", amazonSlots);
               apstag.fetchBids(
                 {
-                  slots: amazonSlots
+                  slots: amazonSlots,
                 },
-                aBids => {
+                (aBids) => {
                   eventCallback("warn", "[Amazon] INFO: bids response");
                   eventCallback("log", aBids);
                   resolve(aBids);
-                }
+                },
               );
             } else {
               const msg = "[Amazon] INFO: no slots are defined";
@@ -431,16 +432,16 @@ export default ({ el, data, platform, eventCallback, window }) => {
           adServer: "googletag",
           bidTimeout: timeout,
           gdpr: {
-            cmpTimeout: timeout
+            cmpTimeout: timeout,
           },
-          pubID: amazonAccountID
+          pubID: amazonAccountID,
         };
         eventCallback("log", apstagConfig);
         apstag.init(apstagConfig, () => {
           eventCallback("warn", "[Amazon] INFO: initialised");
           return this.bid();
         });
-      }
+      },
     },
 
     utils: {
@@ -474,10 +475,10 @@ export default ({ el, data, platform, eventCallback, window }) => {
             },
             () => {
               reject(new Error(`load error for ${scriptUri}`));
-            }
+            },
           );
         });
-      }
-    }
+      },
+    },
   };
 };

@@ -7,7 +7,7 @@ import {
   hoistStyleTransform,
   minimaliseTransform,
   minimalNativeTransform,
-  print
+  print,
 } from "@times-components-native/jest-serializer";
 import { iterator } from "@times-components-native/test-utils";
 import adInit from "../src/utils/ad-init";
@@ -16,8 +16,8 @@ import Ad, { AdComposer } from "../src/ad";
 
 jest.mock("../src/utils/ad-init");
 adInit.mockImplementation(() => ({
-  destroySlots: () => {},
-  init: () => {}
+  destroySlots: () => null,
+  init: () => null,
 }));
 
 const props = {
@@ -25,8 +25,8 @@ const props = {
     "https://www.thetimes.co.uk/edition/news/france-defies-may-over-russia-37b27qd2s",
   section: "news",
   style: {
-    backgroundColor: "red"
-  }
+    backgroundColor: "red",
+  },
 };
 
 export default () => {
@@ -38,9 +38,9 @@ export default () => {
       flattenStyleTransform,
       hoistStyleTransform,
       minimaliseTransform(
-        (value, key) => key === "source" || key === "injectedJavaScript"
-      )
-    )
+        (value, key) => key === "source" || key === "injectedJavaScript",
+      ),
+    ),
   );
 
   const tests = [
@@ -53,7 +53,7 @@ export default () => {
               <Ad {...props} slotName="header" />
               <Ad {...props} slotName="pixel" />
             </Fragment>
-          </AdComposer>
+          </AdComposer>,
         );
 
         const AdComponent = testInstance.root.findAllByType(Ad);
@@ -61,7 +61,7 @@ export default () => {
         AdComponent[1].instance.setAdReady();
 
         expect(testInstance).toMatchSnapshot();
-      }
+      },
     },
     {
       name: "return null if there is an error in the loading of scripts",
@@ -71,15 +71,15 @@ export default () => {
             <Fragment>
               <Ad {...props} slotName="header" />
             </Fragment>
-          </AdComposer>
+          </AdComposer>,
         );
 
         const AdComponent = testInstance.root.findByType(Ad);
         AdComponent.instance.setAdError();
 
         expect(testInstance).toMatchSnapshot();
-      }
-    }
+      },
+    },
   ];
 
   iterator(tests);

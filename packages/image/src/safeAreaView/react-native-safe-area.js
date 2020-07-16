@@ -5,7 +5,7 @@ import {
   InteractionManager,
   Platform,
   StyleSheet,
-  Animated
+  Animated,
 } from "react-native";
 import hoistStatics from "hoist-non-react-statics";
 
@@ -31,9 +31,6 @@ const getResolvedDimensions = () => {
 
 const { height: D_HEIGHT, width: D_WIDTH } = getResolvedDimensions();
 
-const PlatformConstants = Platform.constants || {};
-const { minor = 0 } = PlatformConstants.reactNativeVersion || {};
-
 const isIPhoneX = (() => {
   if (Platform.OS === "web") return false;
 
@@ -41,8 +38,8 @@ const isIPhoneX = (() => {
     (Platform.OS === "ios" &&
       ((D_HEIGHT === X_HEIGHT && D_WIDTH === X_WIDTH) ||
         (D_HEIGHT === X_WIDTH && D_WIDTH === X_HEIGHT))) ||
-    ((D_HEIGHT === XSMAX_HEIGHT && D_WIDTH === XSMAX_WIDTH) ||
-      (D_HEIGHT === XSMAX_WIDTH && D_WIDTH === XSMAX_HEIGHT))
+    (D_HEIGHT === XSMAX_HEIGHT && D_WIDTH === XSMAX_WIDTH) ||
+    (D_HEIGHT === XSMAX_WIDTH && D_WIDTH === XSMAX_HEIGHT)
   );
 })();
 
@@ -52,8 +49,8 @@ const isNewIPadPro = (() => {
   return (
     (D_HEIGHT === IPADPRO11_HEIGHT && D_WIDTH === IPADPRO11_WIDTH) ||
     (D_HEIGHT === IPADPRO11_WIDTH && D_WIDTH === IPADPRO11_HEIGHT) ||
-    ((D_HEIGHT === IPADPRO129_HEIGHT && D_WIDTH === IPADPRO129_WIDTH) ||
-      (D_HEIGHT === IPADPRO129_WIDTH && D_WIDTH === IPADPRO129_HEIGHT))
+    (D_HEIGHT === IPADPRO129_HEIGHT && D_WIDTH === IPADPRO129_WIDTH) ||
+    (D_HEIGHT === IPADPRO129_WIDTH && D_WIDTH === IPADPRO129_HEIGHT)
   );
 })();
 
@@ -66,7 +63,7 @@ const isIPad = (() => {
   }
 
   // if landscape and height is smaller that iPad height
-  if (D_WIDTH > D_HEIGHT && D_HEIGHT < PAD_WIDTH) {
+  if (D_WIDTH > D_HEIGHT && D_HEIGHT < PAD_HEIGHT) {
     return false;
   }
 
@@ -75,7 +72,7 @@ const isIPad = (() => {
 
 let _customStatusBarHeight = null;
 let _customStatusBarHidden = null;
-const statusBarHeight = isLandscape => {
+const statusBarHeight = (isLandscape) => {
   if (_customStatusBarHeight !== null) {
     return _customStatusBarHeight;
   }
@@ -109,7 +106,7 @@ const statusBarHeight = isLandscape => {
   return isLandscape || _customStatusBarHidden ? 0 : 20;
 };
 
-const doubleFromPercentString = percent => {
+const doubleFromPercentString = (percent) => {
   if (!percent.includes("%")) {
     return 0;
   }
@@ -122,11 +119,11 @@ const doubleFromPercentString = percent => {
 };
 
 class SafeView extends Component {
-  static setStatusBarHeight = height => {
+  static setStatusBarHeight = (height) => {
     _customStatusBarHeight = height;
   };
 
-  static setStatusBarHidden = hidden => {
+  static setStatusBarHidden = (hidden) => {
     _customStatusBarHidden = hidden;
   };
 
@@ -137,7 +134,7 @@ class SafeView extends Component {
     touchesRight: true,
     orientation: null,
     viewWidth: 0,
-    viewHeight: 0
+    viewHeight: 0,
   };
 
   componentDidMount() {
@@ -156,13 +153,13 @@ class SafeView extends Component {
   }
 
   render() {
-    const { forceInset = false, isLandscape, style, ...props } = this.props;
+    const { isLandscape, style, ...props } = this.props;
 
     const safeAreaStyle = this._getSafeAreaStyle();
 
     return (
       <Animated.View
-        ref={c => (this.view = c)}
+        ref={(c) => (this.view = c)}
         pointerEvents="box-none"
         {...props}
         onLayout={this._handleLayout}
@@ -171,7 +168,7 @@ class SafeView extends Component {
     );
   }
 
-  _handleLayout = e => {
+  _handleLayout = (e) => {
     if (this.props.onLayout) this.props.onLayout(e);
 
     this._updateMeasurements();
@@ -221,21 +218,21 @@ class SafeView extends Component {
         touchesRight,
         orientation: newOrientation,
         viewWidth: winWidth,
-        viewHeight: winHeight
+        viewHeight: winHeight,
       });
     });
   };
 
   _getSafeAreaStyle = () => {
     const { touchesTop, touchesBottom, touchesLeft, touchesRight } = this.state;
-    const { forceInset, isLandscape } = this.props;
+    const { forceInset } = this.props;
 
     const {
       paddingTop,
       paddingBottom,
       paddingLeft,
       paddingRight,
-      viewStyle
+      viewStyle,
     } = this._getViewStyles();
 
     const style = {
@@ -243,11 +240,11 @@ class SafeView extends Component {
       paddingTop: touchesTop ? this._getInset("top") : 0,
       paddingBottom: touchesBottom ? this._getInset("bottom") : 0,
       paddingLeft: touchesLeft ? this._getInset("left") : 0,
-      paddingRight: touchesRight ? this._getInset("right") : 0
+      paddingRight: touchesRight ? this._getInset("right") : 0,
     };
 
     if (forceInset) {
-      Object.keys(forceInset).forEach(key => {
+      Object.keys(forceInset).forEach((key) => {
         let inset = forceInset[key];
 
         if (inset === "always") {
@@ -335,11 +332,11 @@ class SafeView extends Component {
       paddingBottom,
       paddingLeft,
       paddingRight,
-      viewStyle
+      viewStyle,
     };
   };
 
-  _getInset = key => {
+  _getInset = (key) => {
     const { isLandscape } = this.props;
     return getInset(key, isLandscape);
   };
@@ -378,8 +375,8 @@ const SafeAreaView = withOrientation(SafeView);
 
 export default SafeAreaView;
 
-export const withSafeArea = function(forceInset = {}) {
-  return WrappedComponent => {
+export const withSafeArea = function (forceInset = {}) {
+  return (WrappedComponent) => {
     class withSafeArea extends Component {
       render() {
         return (

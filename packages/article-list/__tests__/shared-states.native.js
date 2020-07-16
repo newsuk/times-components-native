@@ -7,7 +7,7 @@ import {
   compose,
   minimaliseTransform,
   minimalNativeTransform,
-  print
+  print,
 } from "@times-components-native/jest-serializer";
 import { ApolloError } from "apollo-client";
 import "./mocks";
@@ -18,7 +18,7 @@ const omitProps = new Set([
   ...omitNative,
   "bylineProps",
   "datePublicationProps",
-  "labelProps"
+  "labelProps",
 ]);
 
 export default () => {
@@ -27,8 +27,8 @@ export default () => {
     compose(
       print,
       minimalNativeTransform,
-      minimaliseTransform((value, key) => omitProps.has(key))
-    )
+      minimaliseTransform((value, key) => omitProps.has(key)),
+    ),
   );
 
   const tests = [
@@ -40,13 +40,13 @@ export default () => {
           <ArticleList
             emptyStateMessage="Empty state"
             error={apolloError}
-            onArticlePress={() => {}}
-            refetch={() => {}}
-          />
+            onArticlePress={() => null}
+            refetch={() => null}
+          />,
         );
 
         expect(testInstance).toMatchSnapshot();
-      }
+      },
     },
     {
       name: "an error view with header",
@@ -57,13 +57,13 @@ export default () => {
             articleListHeader={<Text>Header</Text>}
             emptyStateMessage="Empty state"
             error={apolloError}
-            onArticlePress={() => {}}
-            refetch={() => {}}
-          />
+            onArticlePress={() => null}
+            refetch={() => null}
+          />,
         );
 
         expect(testInstance).toMatchSnapshot();
-      }
+      },
     },
     {
       name: "an empty list",
@@ -72,13 +72,13 @@ export default () => {
           <ArticleList
             articles={[]}
             emptyStateMessage="Empty state"
-            onArticlePress={() => {}}
-            refetch={() => {}}
-          />
+            onArticlePress={() => null}
+            refetch={() => null}
+          />,
         );
 
         expect(testInstance).toMatchSnapshot();
-      }
+      },
     },
     {
       name: "loading state",
@@ -87,15 +87,15 @@ export default () => {
           <ArticleList
             articlesLoading
             emptyStateMessage="Empty state"
-            onArticlePress={() => {}}
+            onArticlePress={() => null}
             pageSize={3}
-            refetch={() => {}}
-          />
+            refetch={() => null}
+          />,
         );
 
         expect(testInstance).toMatchSnapshot();
-      }
-    }
+      },
+    },
   ];
 
   iterator(tests);

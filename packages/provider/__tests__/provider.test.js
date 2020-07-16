@@ -16,16 +16,16 @@ const query = gql`
 const mocks = [
   {
     request: {
-      query
+      query,
     },
     result: {
       data: {
         author: {
-          name: "fiona-hamilton"
-        }
-      }
-    }
-  }
+          name: "fiona-hamilton",
+        },
+      },
+    },
+  },
 ];
 
 const constructComponent = (child, customMocks, debounceTimeMs = 0) => {
@@ -47,7 +47,7 @@ const renderComponent = (child, customMocks) =>
   renderer.create(constructComponent(child, customMocks));
 
 describe("Provider Tests", () => {
-  it("returns query result", done => {
+  it("returns query result", (done) => {
     renderComponent(({ isLoading, author }) => {
       if (!isLoading) {
         expect(author).toMatchSnapshot();
@@ -58,7 +58,7 @@ describe("Provider Tests", () => {
     });
   });
 
-  it("returns loading state with no author", done => {
+  it("returns loading state with no author", (done) => {
     renderComponent(({ isLoading, author }) => {
       if (isLoading) {
         expect(author).toMatchSnapshot();
@@ -69,7 +69,7 @@ describe("Provider Tests", () => {
     });
   });
 
-  it("returns config data", done => {
+  it("returns config data", (done) => {
     renderComponent(({ isLoading, config1, config2 }) => {
       if (!isLoading) {
         expect({ config1, config2 }).toMatchSnapshot();
@@ -80,16 +80,16 @@ describe("Provider Tests", () => {
     });
   });
 
-  it("returns an error", done => {
+  it("returns an error", (done) => {
     const customMocks = [
       {
         error: {
-          message: "some error from the server"
+          message: "some error from the server",
         },
         request: {
-          query
-        }
-      }
+          query,
+        },
+      },
     ];
 
     renderComponent(({ isLoading, error }) => {
@@ -102,28 +102,28 @@ describe("Provider Tests", () => {
     }, customMocks);
   });
 
-  it("re-renders with refetched data after error", done => {
+  it("re-renders with refetched data after error", (done) => {
     const customMocks = [
       {
         error: {
-          message: "some error from the server"
+          message: "some error from the server",
         },
         request: {
-          query
-        }
+          query,
+        },
       },
       {
         request: {
-          query
+          query,
         },
         result: {
           data: {
             author: {
-              name: "fiona-hamilton"
-            }
-          }
-        }
-      }
+              name: "fiona-hamilton",
+            },
+          },
+        },
+      },
     ];
 
     renderComponent(({ isLoading, refetch, error, author }) => {
@@ -141,36 +141,36 @@ describe("Provider Tests", () => {
     }, customMocks);
   });
 
-  it("supports another refetch after error during refetch", done => {
+  it("supports another refetch after error during refetch", (done) => {
     const customMocks = [
       {
         error: {
-          message: "some error from the server"
+          message: "some error from the server",
         },
         request: {
-          query
-        }
+          query,
+        },
       },
       {
         error: {
-          message: "some error from the server"
+          message: "some error from the server",
         },
         request: {
-          query
-        }
+          query,
+        },
       },
       {
         request: {
-          query
+          query,
         },
         result: {
           data: {
             author: {
-              name: "fiona-hamilton"
-            }
-          }
-        }
-      }
+              name: "fiona-hamilton",
+            },
+          },
+        },
+      },
     ];
 
     let errorCount = 0;
@@ -193,10 +193,10 @@ describe("Provider Tests", () => {
     }, customMocks);
   });
 
-  it("complains if you omit the debounceTimeMs parameter to a connected component", done => {
+  it("complains if you omit the debounceTimeMs parameter to a connected component", (done) => {
     const ConnectedComponent = connectGraphql(query);
 
-    jest.spyOn(console, "error").mockImplementation(() => {});
+    jest.spyOn(console, "error").mockImplementation(() => null);
 
     class ErrorSpy extends Component {
       /* eslint class-methods-use-this: "off" */
@@ -212,7 +212,7 @@ describe("Provider Tests", () => {
       }
     }
     ErrorSpy.propTypes = {
-      children: PropTypes.node.isRequired
+      children: PropTypes.node.isRequired,
     };
 
     renderer.create(
@@ -220,7 +220,7 @@ describe("Provider Tests", () => {
         <ErrorSpy>
           <ConnectedComponent />
         </ErrorSpy>
-      </MockedProvider>
+      </MockedProvider>,
     );
   });
 });

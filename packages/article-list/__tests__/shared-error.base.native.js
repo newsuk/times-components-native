@@ -20,11 +20,11 @@ export default () => {
       name: "page error",
       test() {
         const testInstance = TestRenderer.create(
-          <ArticleListPageError refetch={() => {}} />
+          <ArticleListPageError refetch={() => null} />,
         );
 
         expect(testInstance).toMatchSnapshot();
-      }
+      },
     },
     {
       name: "article list",
@@ -33,15 +33,15 @@ export default () => {
           <ArticleList
             articles={articlesFixture.slice(0, 2)}
             emptyStateMessage="Empty state"
-            onArticlePress={() => {}}
+            onArticlePress={() => null}
             pageSize={3}
-            refetch={() => {}}
-          />
+            refetch={() => null}
+          />,
         );
 
         expect(testInstance).toMatchSnapshot();
-      }
-    }
+      },
+    },
   ];
 
   iterator(tests);

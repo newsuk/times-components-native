@@ -2,7 +2,7 @@ import { MockList } from "graphql-tools";
 import { articleExtras as articleExtrasQuery } from "@times-components-native/provider-queries";
 import article from "../fixtures/article.json";
 
-const convertRatio = ratio => {
+const convertRatio = (ratio) => {
   if (ratio === "16:9") {
     return "320/180";
   }
@@ -18,7 +18,7 @@ const getMediaUrl = (obj, ratio) => {
   const crop = obj[`crop${ratio.replace(":", "")}`];
 
   return {
-    url: crop ? crop.url : `https://placeimg.com/${convertRatio(ratio)}/tech`
+    url: crop ? crop.url : `https://placeimg.com/${convertRatio(ratio)}/tech`,
   };
 };
 
@@ -26,11 +26,11 @@ export default ({
   commentCount = 100,
   commentsEnabled = true,
   chooseMedia = () => ({ __typename: "Image" }),
-  error = () => {},
-  makeArticle = x => x,
-  makeRelatedArticle = x => x,
+  error = () => null,
+  makeArticle = (x) => x,
+  makeRelatedArticle = (x) => x,
   relatedArticleCount = 3,
-  variables = () => {}
+  variables = () => null,
 }) => {
   const queryVariables = variables();
   let mediaIndex = -1;
@@ -45,19 +45,19 @@ export default ({
                 ...article,
                 commentCount,
                 commentsEnabled,
-                id
+                id,
               });
             }
 
             return makeRelatedArticle(parent);
           },
           ArticleByline: () => ({
-            __typename: "TextByline"
+            __typename: "TextByline",
           }),
           ArticleSlice: () => ({
             __typename: "StandardSlice",
             items: new MockList(relatedArticleCount),
-            sliceName: "StandardSlice"
+            sliceName: "StandardSlice",
           }),
           Crop: (parent, { ratio }) => {
             if (parent.posterImage) {
@@ -85,16 +85,16 @@ export default ({
           StandardSlice: () => ({
             __typename: "StandardSlice",
             items: [],
-            sliceName: "StandardSlice"
+            sliceName: "StandardSlice",
           }),
           Tile: () => ({}),
           URL: () => "https://test.io",
-          UUID: () => "a-u-u-i-d"
-        }
+          UUID: () => "a-u-u-i-d",
+        },
       },
       error: error(),
       query: articleExtrasQuery,
-      variables: queryVariables
-    }
+      variables: queryVariables,
+    },
   ];
 };

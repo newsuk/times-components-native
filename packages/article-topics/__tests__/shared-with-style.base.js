@@ -15,12 +15,15 @@ export default () => {
         const scale = scales.medium;
         const testInstance = TestRenderer.create(
           <ContextProviderWithDefaults value={{ theme: { scale } }}>
-            <ArticleTopics onPress={() => {}} topics={topicData.slice(0, 1)} />
-          </ContextProviderWithDefaults>
+            <ArticleTopics
+              onPress={() => null}
+              topics={topicData.slice(0, 1)}
+            />
+          </ContextProviderWithDefaults>,
         );
 
         expect(testInstance).toMatchSnapshot();
-      }
+      },
     },
     {
       name: "group of topics at large scale",
@@ -28,12 +31,15 @@ export default () => {
         const scale = scales.large;
         const testInstance = TestRenderer.create(
           <ContextProviderWithDefaults value={{ theme: { scale } }}>
-            <ArticleTopics onPress={() => {}} topics={topicData.slice(0, 1)} />
-          </ContextProviderWithDefaults>
+            <ArticleTopics
+              onPress={() => null}
+              topics={topicData.slice(0, 1)}
+            />
+          </ContextProviderWithDefaults>,
         );
 
         expect(testInstance).toMatchSnapshot();
-      }
+      },
     },
     {
       name: "group of topics at xlarge scale",
@@ -41,12 +47,15 @@ export default () => {
         const scale = scales.xlarge;
         const testInstance = TestRenderer.create(
           <ContextProviderWithDefaults value={{ theme: { scale } }}>
-            <ArticleTopics onPress={() => {}} topics={topicData.slice(0, 1)} />
-          </ContextProviderWithDefaults>
+            <ArticleTopics
+              onPress={() => null}
+              topics={topicData.slice(0, 1)}
+            />
+          </ContextProviderWithDefaults>,
         );
 
         expect(testInstance).toMatchSnapshot();
-      }
+      },
     },
     {
       name: "article topic with style",
@@ -57,13 +66,13 @@ export default () => {
             key="test-slug"
             lineHeight={20}
             name="Test"
-            onPress={() => {}}
+            onPress={() => null}
             slug="test-slug"
-          />
+          />,
         );
 
         expect(testInstance).toMatchSnapshot();
-      }
+      },
     },
     {
       name: "article topic with no additional style",
@@ -72,14 +81,14 @@ export default () => {
           <ArticleTopic
             key="test-slug"
             name="Test"
-            onPress={() => {}}
+            onPress={() => null}
             slug="test-slug"
-          />
+          />,
         );
 
         expect(testInstance).toMatchSnapshot();
-      }
-    }
+      },
+    },
   ];
 
   iterator(tests);

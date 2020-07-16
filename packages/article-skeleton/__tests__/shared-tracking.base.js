@@ -25,14 +25,14 @@ export default () => {
           analyticsStream={stream}
           data={articleFixture()}
           Header={() => null}
-          onAuthorPress={() => {}}
-          onCommentGuidelinesPress={() => {}}
-          onCommentsPress={() => {}}
-          onLinkPress={() => {}}
-          onRelatedArticlePress={() => {}}
-          onTwitterLinkPress={() => {}}
-          onVideoPress={() => {}}
-        />
+          onAuthorPress={() => null}
+          onCommentGuidelinesPress={() => null}
+          onCommentsPress={() => null}
+          onLinkPress={() => null}
+          onRelatedArticlePress={() => null}
+          onTwitterLinkPress={() => null}
+          onVideoPress={() => null}
+        />,
       );
       expect(stream.mock.calls).toMatchSnapshot();
     });
@@ -45,14 +45,14 @@ export default () => {
           data={articleFixture()}
           referralUrl="from-props.com"
           Header={() => null}
-          onAuthorPress={() => {}}
-          onCommentGuidelinesPress={() => {}}
-          onCommentsPress={() => {}}
-          onLinkPress={() => {}}
-          onRelatedArticlePress={() => {}}
-          onTwitterLinkPress={() => {}}
-          onVideoPress={() => {}}
-        />
+          onAuthorPress={() => null}
+          onCommentGuidelinesPress={() => null}
+          onCommentsPress={() => null}
+          onLinkPress={() => null}
+          onRelatedArticlePress={() => null}
+          onTwitterLinkPress={() => null}
+          onVideoPress={() => null}
+        />,
       );
       expect(stream.mock.calls).toMatchSnapshot();
     });
@@ -64,14 +64,14 @@ export default () => {
           analyticsStream={stream}
           data={articleFixture({ withAds: true, referralUrl: "from-data.com" })}
           Header={() => null}
-          onAuthorPress={() => {}}
-          onCommentGuidelinesPress={() => {}}
-          onCommentsPress={() => {}}
-          onLinkPress={() => {}}
-          onRelatedArticlePress={() => {}}
-          onTwitterLinkPress={() => {}}
-          onVideoPress={() => {}}
-        />
+          onAuthorPress={() => null}
+          onCommentGuidelinesPress={() => null}
+          onCommentsPress={() => null}
+          onLinkPress={() => null}
+          onRelatedArticlePress={() => null}
+          onTwitterLinkPress={() => null}
+          onVideoPress={() => null}
+        />,
       );
       expect(stream.mock.calls).toMatchSnapshot();
     });

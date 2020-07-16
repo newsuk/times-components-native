@@ -19,7 +19,7 @@ import {
   mockStandardSlice,
   getPuzzleSlices,
   mockSecondaryOneAndFourSlice,
-  mockListTwoAndSixNoPicSlice
+  mockListTwoAndSixNoPicSlice,
 } from "@times-components-native/fixture-generator";
 import Responsive from "@times-components-native/responsive";
 import "./mocks";
@@ -39,90 +39,90 @@ import {
   SecondaryOneAndColumnistSlice,
   SecondaryTwoAndTwoSlice,
   StandardSlice,
-  ListTwoAndSixNoPicSlice
+  ListTwoAndSixNoPicSlice,
 } from "../src/slices";
 
 const slices = [
   {
     mock: mockCommentLeadAndCartoonSlice(),
     name: "comment lead and cartoon",
-    Slice: CommentLeadAndCartoonSlice
+    Slice: CommentLeadAndCartoonSlice,
   },
   {
     mock: mockDailyRegisterSlice(),
     name: "daily universal register",
-    Slice: DailyRegisterLeadFourSlice
+    Slice: DailyRegisterLeadFourSlice,
   },
   {
     mock: mockLeadOneAndOneSlice(),
     name: "lead one and one",
-    Slice: LeadOneAndOneSlice
+    Slice: LeadOneAndOneSlice,
   },
   {
     mock: mockLeadOneFullWidthSlice(),
     name: "lead one full width",
-    Slice: LeadOneFullWidthSlice
+    Slice: LeadOneFullWidthSlice,
   },
   {
     mock: mockLeadTwoNoPicAndTwoSlice(),
     name: "lead two no pic and two",
-    Slice: LeadTwoNoPicAndTwoSlice
+    Slice: LeadTwoNoPicAndTwoSlice,
   },
   {
     mock: mockLeadersSlice(),
     name: "leaders slice",
-    Slice: LeadersSlice
+    Slice: LeadersSlice,
   },
   {
     mock: mockSecondaryOneAndFourSlice(),
     name: "secondary one and four",
-    Slice: SecondaryOneAndFourSlice
+    Slice: SecondaryOneAndFourSlice,
   },
   {
     mock: mockSecondaryOneSlice(),
     name: "secondary one",
-    Slice: SecondaryOneSlice
+    Slice: SecondaryOneSlice,
   },
   {
     mock: mockSecondaryFourSlice(),
     name: "secondary four",
-    Slice: SecondaryFourSlice
+    Slice: SecondaryFourSlice,
   },
   {
     mock: mockSecondaryOneAndColumnistSlice(),
     name: "secondary one and columnist",
-    Slice: SecondaryOneAndColumnistSlice
+    Slice: SecondaryOneAndColumnistSlice,
   },
   {
     mock: mockSecondaryTwoAndTwoSlice(),
     name: "secondary two and two",
-    Slice: SecondaryTwoAndTwoSlice
+    Slice: SecondaryTwoAndTwoSlice,
   },
   {
     mock: mockLeadOneAndFourSlice(),
     name: "lead one and four slice",
-    Slice: LeadOneAndFourSlice
+    Slice: LeadOneAndFourSlice,
   },
   {
     mock: mockStandardSlice(),
     name: "standard slice",
-    Slice: StandardSlice
+    Slice: StandardSlice,
   },
   {
     mock: mockSecondaryTwoNoPicAndTwoSlice(),
     name: "secondary two no pic and two",
-    Slice: SecondaryTwoNoPicAndTwoSlice
+    Slice: SecondaryTwoNoPicAndTwoSlice,
   },
   {
     mock: mockListTwoAndSixNoPicSlice(),
     name: "list two and six no pic",
-    Slice: ListTwoAndSixNoPicSlice
+    Slice: ListTwoAndSixNoPicSlice,
   },
   {
     mock: { puzzles: getPuzzleSlices(3) },
     name: "puzzle",
-    Slice: PuzzleSlice
-  }
+    Slice: PuzzleSlice,
+  },
 ];
 
 jest.mock("@times-components-native/utils", () => {
@@ -131,25 +131,25 @@ jest.mock("@times-components-native/utils", () => {
 
   return {
     ...actualUtils,
-    getDimensions: jest.fn()
+    getDimensions: jest.fn(),
   };
 });
 
-const tabletTester = type =>
+const tabletTester = (type) =>
   slices.map(({ mock, name, Slice }) => ({
     name: `${name} - ${type}`,
     test: () => {
       getDimensions.mockImplementation(() => ({
-        width: editionBreakpointWidths[type]
+        width: editionBreakpointWidths[type],
       }));
       const output = TestRenderer.create(
         <Responsive>
-          <Slice onPress={() => {}} slice={mock} />
-        </Responsive>
+          <Slice onPress={() => null} slice={mock} />
+        </Responsive>,
       );
 
       expect(output).toMatchSnapshot();
-    }
+    },
   }));
 
 export default () => {
@@ -160,7 +160,7 @@ export default () => {
   const tests = [
     ...tabletTester("medium"),
     ...tabletTester("wide"),
-    ...tabletTester("huge")
+    ...tabletTester("huge"),
   ];
 
   iterator(tests);

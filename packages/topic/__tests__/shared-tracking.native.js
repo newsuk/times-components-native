@@ -4,7 +4,7 @@ import {
   minimaliseTransform,
   minimalNativeTransform,
   print,
-  replacePropTransform
+  replacePropTransform,
 } from "@times-components-native/jest-serializer";
 import { hash } from "@times-components-native/test-utils";
 import shared from "./shared-tracking.base";
@@ -17,18 +17,24 @@ export default () => {
       print,
       minimalNativeTransform,
       minimaliseTransform((value, key) => key === "style" || key === "testID"),
-      replacePropTransform(
-        (value, key) => (key === "emptyStateMessage" ? hash(value) : value)
-      )
-    )
+      replacePropTransform((value, key) =>
+        key === "emptyStateMessage" ? hash(value) : value,
+      ),
+    ),
   );
 
   const props = {
-    analyticsStream() {},
-    onArticlePress() {},
-    refetch() {},
+    analyticsStream() {
+      return null;
+    },
+    onArticlePress() {
+      return null;
+    },
+    refetch() {
+      return null;
+    },
     slug: "some-slug",
-    topic
+    topic,
   };
 
   shared(props);

@@ -17,20 +17,20 @@ class DOMContext extends PureComponent {
 
   static openURLInBrowser(url) {
     return Linking.canOpenURL(url)
-      .then(supported => {
+      .then((supported) => {
         if (!supported) {
           return console.error("Cant open url", url); // eslint-disable-line no-console
         }
         return Linking.openURL(url);
       })
-      .catch(err => console.error("An error occurred", err)); // eslint-disable-line no-console
+      .catch((err) => console.error("An error occurred", err)); // eslint-disable-line no-console
   }
 
   constructor(props) {
     super(props);
     this.state = {
       loaded: false,
-      height: 0
+      height: 0,
     };
   }
 
@@ -41,7 +41,7 @@ class DOMContext extends PureComponent {
       bundleId: DeviceInfo.getBundleId(),
       deviceId: DeviceInfo.getDeviceId(),
       readableVersion: DeviceInfo.getReadableVersion(),
-      version: DeviceInfo.getVersion()
+      version: DeviceInfo.getVersion(),
     };
   }
 
@@ -57,7 +57,7 @@ class DOMContext extends PureComponent {
     }
   };
 
-  handleMessageEvent = e => {
+  handleMessageEvent = (e) => {
     const { onRenderComplete, onRenderError, data } = this.props;
     const json = e.nativeEvent.data;
 
@@ -90,7 +90,7 @@ class DOMContext extends PureComponent {
           adHeight > 1 ? adHeight + styles.containerAdditionalHeight.height : 0;
 
         this.setState({
-          height: webViewHeight
+          height: webViewHeight,
         });
         break;
       }
@@ -107,7 +107,7 @@ class DOMContext extends PureComponent {
         if (typeof unrulyViewportStatus === "function") {
           unrulyViewportStatus(${JSON.stringify({
             ...this.deviceInfo,
-            visible: false
+            visible: false,
           })});
         };
       `);
@@ -115,7 +115,7 @@ class DOMContext extends PureComponent {
 
   loadAd = () => {
     this.setState({
-      loaded: true
+      loaded: true,
     });
   };
 
@@ -125,7 +125,7 @@ class DOMContext extends PureComponent {
           if (typeof unrulyViewportStatus === "function") {
             unrulyViewportStatus(${JSON.stringify({
               ...this.deviceInfo,
-              visible: true
+              visible: true,
             })})
           };
         `);
@@ -167,7 +167,7 @@ class DOMContext extends PureComponent {
             init() {
               this.addToQueue("i", arguments);
             },
-            setDisplayBids() {},
+            setDisplayBids() { return null; },
             targetingKeys() {
               return [];
             }
@@ -202,7 +202,7 @@ class DOMContext extends PureComponent {
         onViewportEnter={this.loadAd}
         style={{
           height,
-          width
+          width,
         }}
       >
         {(Platform.OS === "ios" || loaded) && (
@@ -214,12 +214,12 @@ class DOMContext extends PureComponent {
                 ? ["http://.*", "https://.*"]
                 : undefined
             }
-            ref={ref => {
+            ref={(ref) => {
               this.webView = ref;
             }}
             source={{
               baseUrl,
-              html
+              html,
             }}
             style={{ position: "absolute", width, height }}
           />
