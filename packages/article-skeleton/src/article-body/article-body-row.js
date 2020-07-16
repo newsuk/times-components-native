@@ -36,6 +36,7 @@ export default ({
   dropCapFont = "dropCap",
   scale,
   analyticsStream,
+  narrowContent
 }) => {
   const styles = styleFactory(scale);
   const { fontFactory } = styleguide({ scale });
@@ -173,6 +174,7 @@ export default ({
           onLinkPress={onLinkPress}
           data={data}
           dropCapFont={dropCapFont}
+          narrowContent={narrowContent}
         >
           {children}
         </ArticleParagraph>

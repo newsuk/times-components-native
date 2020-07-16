@@ -2,7 +2,7 @@
 import React, { useState } from "react";
 import { View, Text } from "react-native";
 import PropTypes from "prop-types";
-import styleguide, { tabletWidth } from "@times-components-native/styleguide";
+import styleguide, { tabletWidth, narrowArticleContentWidth  } from "@times-components-native/styleguide";
 import { screenWidth } from "@times-components-native/utils";
 import {
   TextContainer,
@@ -21,7 +21,8 @@ const InlineParagraph = ({
   tree,
   key,
   defaultFont,
-  LinkComponent
+  LinkComponent,
+  narrowContent,
 }) => {
   const { spacing } = styleguide({ scale });
   const [inlineExclusion, setInlineExclusion] = useState(false);
@@ -30,8 +31,9 @@ const InlineParagraph = ({
     return null;
   }
 
-  const contentWidth = Math.min(screenWidth(), tabletWidth);
-  const gutters = (screenWidth() - contentWidth) / 2 + spacing(2);
+  const contentWidth = Math.min(screenWidth(), narrowContent ? narrowArticleContentWidth: tabletWidth);
+
+  const gutters = (screenWidth() - contentWidth / 2 + spacing(2));
 
   const container = new TextContainer(
     isTablet ? contentWidth : screenWidth() - spacing(4),
@@ -53,13 +55,15 @@ const InlineParagraph = ({
 
   return [
     dropCap && (
-      <View style={{ left: "25%" }}>{dropCap.element}</View>
+      <View>{dropCap.element}</View>
     ),
     inline && (
       <View
         style={{
           position: "absolute",
           left: gutters,
+          borderWidth: 1,
+          borderColor: "orange",
           width: contentWidth * 0.35
         }}
         onLayout={e => {
@@ -92,6 +96,7 @@ const InlineParagraph = ({
             defaultFont.lineHeight,
         inlineExclusion ? inlineExclusion.height : 0
       )}
+      narrowContent={narrowContent}
     >
       {positioned.map((p, i) => {
         const [attribute, href] = p.text.collapsedAttributes(0);

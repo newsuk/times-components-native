@@ -18,5 +18,6 @@ export {
   tabletRowPadding,
   tabletWidth,
   tabletWidthMax,
-  themeFactory
+  themeFactory,
+  narrowArticleContentWidth,
 } from './src/styleguide';

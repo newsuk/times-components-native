@@ -19,7 +19,8 @@ const ArticleParagraph = ({
   onLinkPress,
   data,
   dropCapFont,
-  LinkComponent
+  LinkComponent,
+  narrowContent,
 }) => {
   const str = AttributedString.join(
     children.filter(child => child instanceof AttributedString)
@@ -63,6 +64,7 @@ const ArticleParagraph = ({
       defaultFont={defaultFont}
       onLinkPress={onLinkPress}
       LinkComponent={LinkComponent}
+      narrowContent={narrowContent}
     />
   );
 };

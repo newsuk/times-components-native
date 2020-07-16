@@ -6,7 +6,7 @@ import styleFactory from "./styles";
 
 const styles = styleFactory();
 
-const BodyParagraph = props => (
+const BodyParagraph = ({height, narrowContent, style, children}) => (
   <ResponsiveContext.Consumer>
     {({ isTablet }) => (
       <View
@@ -14,10 +14,11 @@ const BodyParagraph = props => (
           styles.articleMainContentRow,
           styles.articleTextElement,
           isTablet && styles.articleMainContentRowTablet,
-          props.style
-        ].concat(props.height ? [{ height: props.height }] : [])}
+          narrowContent && styles.narrow,
+          style
+        ].concat(height ? [{ height: height }] : [])}
       >
-        <View>{props.children}</View>
+        <View>{children}</View>
       </View>
     )}
   </ResponsiveContext.Consumer>

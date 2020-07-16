@@ -6,7 +6,6 @@ const globalStyle = {
     backgroundColor: colours.functional.gutter,
   },
   articleContainerNarrow: {
-    marginRight: spacing(12),
     marginLeft: "25%",
     position: "relative",
   },
