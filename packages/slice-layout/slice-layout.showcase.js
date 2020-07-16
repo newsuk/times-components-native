@@ -18,29 +18,30 @@ import {
   SecondaryTwoAndTwoSlice,
   SecondaryTwoNoPicAndTwoSlice,
   Leaders,
-  ListTwoAndSixNoPic
+  ListTwoAndSixNoPic,
 } from "./src/slice-layout";
 
 const colours = [
   { backgroundColor: "yellow", id: 1 },
   { backgroundColor: "green", id: 2 },
   { backgroundColor: "red", id: 3 },
-  { backgroundColor: "blue", id: 4 }
+  { backgroundColor: "blue", id: 4 },
 ];
 
-const createItems = noOfItems =>
+const createItems = (noOfItems) =>
   colours
-    .map(colour => {
+    .map((colour) => {
       const { backgroundColor, id } = colour;
       if (id > noOfItems) return false;
       return (
         <View
+          key={id}
           id={`item-${id}`}
           style={[{ minHeight: 150 }, { backgroundColor }]}
         />
       );
     })
-    .filter(item => item !== false);
+    .filter((item) => item !== false);
 
 const Support1 = () => (
   <View style={[{ minHeight: 150 }, { backgroundColor: "green" }]} />
@@ -58,7 +59,7 @@ const Support4 = () => (
   <View style={[{ minHeight: 150 }, { backgroundColor: "blue" }]} />
 );
 
-const breakpointSelect = select =>
+const breakpointSelect = (select) =>
   select("Breakpoints:", editionBreakpoints, "small");
 
 export default {
@@ -68,15 +69,15 @@ export default {
         <ScrollView>
           <VerticalLayout
             tiles={[
-              <Support1 tileName="support1" />,
-              <Support2 tileName="support2" />
+              <Support1 key="0" tileName="support1" />,
+              <Support2 key="1" tileName="support2" />,
             ]}
           />
         </ScrollView>
       ),
       name: "Vertical Layout",
       type: "story",
-      platform: "native"
+      platform: "native",
     },
     {
       component: ({ select }) => (
@@ -93,7 +94,7 @@ export default {
       ),
       name: "LeadOneAndFour",
       type: "story",
-      platform: "native"
+      platform: "native",
     },
     {
       component: ({ select }) => (
@@ -105,7 +106,7 @@ export default {
                 id="lead"
                 style={{
                   backgroundColor: "red",
-                  minHeight: 320
+                  minHeight: 320,
                 }}
                 tileName="lead"
               />
@@ -116,7 +117,7 @@ export default {
       ),
       name: "LeadOneAndOne",
       type: "story",
-      platform: "native"
+      platform: "native",
     },
     {
       component: () => (
@@ -127,7 +128,7 @@ export default {
                 id="lead"
                 style={{
                   backgroundColor: "red",
-                  minHeight: 320
+                  minHeight: 320,
                 }}
               />
             )}
@@ -138,7 +139,7 @@ export default {
       ),
       name: "LeadOneAndTwo",
       type: "story",
-      platform: "native"
+      platform: "native",
     },
     {
       component: () => (
@@ -149,7 +150,7 @@ export default {
                 id="lead"
                 style={{
                   backgroundColor: "red",
-                  minHeight: 320
+                  minHeight: 320,
                 }}
               />
             )}
@@ -160,7 +161,7 @@ export default {
       ),
       name: "LeadOneAndTwo With 1 Support",
       type: "story",
-      platform: "native"
+      platform: "native",
     },
     {
       component: () => (
@@ -171,7 +172,7 @@ export default {
                 id="lead"
                 style={{
                   backgroundColor: "red",
-                  minHeight: 320
+                  minHeight: 320,
                 }}
               />
             )}
@@ -182,7 +183,7 @@ export default {
       ),
       name: "LeadOneAndTwo With 2 Supports",
       type: "story",
-      platform: "native"
+      platform: "native",
     },
     {
       component: () => (
@@ -193,7 +194,7 @@ export default {
                 id="opinion"
                 style={{
                   backgroundColor: "red",
-                  minHeight: 150
+                  minHeight: 150,
                 }}
               />
             )}
@@ -204,7 +205,7 @@ export default {
       ),
       name: "OpinionOneAndTwo",
       type: "story",
-      platform: "native"
+      platform: "native",
     },
     {
       component: () => (
@@ -215,7 +216,7 @@ export default {
                 id="opinion"
                 style={{
                   backgroundColor: "red",
-                  minHeight: 150
+                  minHeight: 150,
                 }}
               />
             )}
@@ -226,7 +227,7 @@ export default {
       ),
       name: "OpinionOneAndTwo With 1 Support",
       type: "story",
-      platform: "native"
+      platform: "native",
     },
     {
       component: () => (
@@ -237,7 +238,7 @@ export default {
                 id="opinion"
                 style={{
                   backgroundColor: "red",
-                  minHeight: 150
+                  minHeight: 150,
                 }}
               />
             )}
@@ -248,7 +249,7 @@ export default {
       ),
       name: "OpinionOneAndTwo With 2 Supports",
       type: "story",
-      platform: "native"
+      platform: "native",
     },
     {
       component: ({ select }) => (
@@ -264,7 +265,7 @@ export default {
       ),
       name: "SecondaryFourSlice",
       type: "story",
-      platform: "native"
+      platform: "native",
     },
     {
       component: ({ select }) => (
@@ -282,7 +283,7 @@ export default {
       ),
       name: "SecondaryTwoAndTwoSlice",
       type: "story",
-      platform: "native"
+      platform: "native",
     },
     {
       component: ({ select }) => (
@@ -299,7 +300,7 @@ export default {
       ),
       name: "SecondaryOneAndFourSlice",
       type: "story",
-      platform: "native"
+      platform: "native",
     },
     {
       component: ({ select }) => (
@@ -315,7 +316,7 @@ export default {
       ),
       name: "SecondaryTwoNoPicAndTwoSlice",
       type: "story",
-      platform: "native"
+      platform: "native",
     },
     {
       component: ({ select }) => (
@@ -331,7 +332,7 @@ export default {
       ),
       name: "LeadTwoNoPicAndTwoSlice",
       type: "story",
-      platform: "native"
+      platform: "native",
     },
     {
       component: ({ select }) => (
@@ -351,7 +352,7 @@ export default {
       ),
       name: "ListTwoAndSixNoPic",
       type: "story",
-      platform: "native"
+      platform: "native",
     },
     {
       component: ({ select }) => (
@@ -366,7 +367,7 @@ export default {
       ),
       name: "Leaders",
       type: "story",
-      platform: "native"
+      platform: "native",
     },
     {
       component: ({ select }) => (
@@ -380,7 +381,7 @@ export default {
       ),
       name: "CommentLeadAndCartoon",
       type: "story",
-      platform: "native"
+      platform: "native",
     },
     {
       component: ({ select }) => (
@@ -394,7 +395,7 @@ export default {
       ),
       name: "SecondaryOneAndColumnistSlice",
       type: "story",
-      platform: "native"
+      platform: "native",
     },
     {
       component: ({ select }) => {
@@ -402,7 +403,7 @@ export default {
           0: "0",
           1: "1",
           2: "2",
-          3: "3"
+          3: "3",
         };
 
         return (
@@ -417,8 +418,8 @@ export default {
         );
       },
       name: "Standard",
-      type: "story"
-    }
+      type: "story",
+    },
   ],
-  name: "Primitives/Slice Layout"
+  name: "Primitives/Slice Layout",
 };
