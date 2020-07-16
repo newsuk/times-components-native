@@ -39,7 +39,7 @@ class InteractiveWrapper extends Component {
 
   updateHeight = passedHeight => {
     const { height } = this.state;
-    if (passedHeight !== height && passedHeight - height > 5) {
+    if (passedHeight !== height && Math.abs(passedHeight - height) > 5) {
       this.setState({ height: passedHeight });
     }
   };
@@ -64,18 +64,12 @@ class InteractiveWrapper extends Component {
     } = this.props;
     const { height } = this.state;
     const uri = `${editorialLambdaProtocol}${editorialLambdaOrigin}/${editorialLambdaSlug}/${id}?dev=${dev}&env=${environment}&platform=${platform}&version=${version}`;
-    const scriptToInject = `
-      setTimeout(function() {
-        window.ReactNativeWebView.postMessage(document.documentElement.scrollHeight);
-      }, 500);
-      true;
-    `;
+
     return (
       <AutoHeightWebView
         onSizeUpdated={size => this.updateHeight(size.height)}
-        scalesPageToFit
+        scalesPageToFit={false}
         automaticallyAdjustContentInsets={false}
-        injectedJavaScript={scriptToInject}
         onLoadEnd={this.onLoadEnd}
         ref={ref => {
           this.webview = ref;

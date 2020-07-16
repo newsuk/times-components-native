@@ -71,7 +71,7 @@ describe("fetch gql schema should", () => {
     {
       name: "make the correct introspection query",
       async test() {
-        const testDir = path.join(process.cwd(), "__tests__", "1");
+        const testDir = path.join(__dirname, "1");
         await makeTestDir(testDir);
 
         const mockFetch = jest.fn().mockReturnValueOnce(
@@ -96,7 +96,7 @@ describe("fetch gql schema should", () => {
     {
       name: "write the expected fragment matcher",
       async test() {
-        const testDir = path.join(process.cwd(), "__tests__", "2");
+        const testDir = path.join(__dirname, "2");
         await makeTestDir(testDir);
 
         const mockFetch = jest.fn().mockReturnValueOnce(
@@ -123,7 +123,7 @@ describe("fetch gql schema should", () => {
     {
       name: "make an introspection query for the given GraphQL endpoint",
       async test() {
-        const testDir = path.join(process.cwd(), "__tests__", "3");
+        const testDir = path.join(__dirname,  "3");
         await makeTestDir(testDir);
 
         const mockFetch = jest.fn().mockReturnValueOnce(
@@ -148,7 +148,7 @@ describe("fetch gql schema should", () => {
     {
       name: "write the expected schema",
       async test() {
-        const testDir = path.join(process.cwd(), "__tests__", "4");
+        const testDir = path.join(__dirname, "4");
         await makeTestDir(testDir);
 
         const mockFetch = jest.fn().mockReturnValueOnce(

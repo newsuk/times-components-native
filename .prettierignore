@@ -16,15 +16,12 @@ yarn.lock
 
 # specific to root
 storybook-native
-storybook-static
 *.yml
 *.html
 *.sh
 *.log
-packages
-android-app
-ios-app
+lib/android
+lib/ios
 coverage
 settings.gradle
 build.gradle
-TimesReactIOS.podspec

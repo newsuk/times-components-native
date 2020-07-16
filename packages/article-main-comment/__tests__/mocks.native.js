@@ -27,7 +27,7 @@ jest.mock(
 );
 jest.mock("@times-components-native/button", () => "Button");
 jest.mock("@times-components-native/article-byline", () => {
-  const actual = jest.requireActual("@times-components-native/article-byline");
+  const actual = jest.requireActual("../../article-byline");
   return {
     __esModule: true,
     default: "ArticleByline",

@@ -1,4 +1,4 @@
-import { hash } from "../src";
+import { hash } from "../index";
 
 it("replace value with a hash", () => {
   expect(

@@ -1,4 +1,4 @@
-import { gqlRgbaToHex } from "../src";
+import { gqlRgbaToHex } from "../index";
 
 const colour = {
   rgba: {

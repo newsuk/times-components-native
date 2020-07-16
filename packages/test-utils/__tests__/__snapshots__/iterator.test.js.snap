@@ -1,25 +1,25 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`1. test example one 1`] = `
-<div>
+<Text>
   This is the 
   first
    test
-</div>
+</Text>
 `;
 
 exports[`2. text example two 1`] = `
-<div>
+<Text>
   This is the 
   second
    test
-</div>
+</Text>
 `;
 
 exports[`3. all test names should be lowercase 1`] = `
-<div>
+<Text>
   This is the 
   third
    test
-</div>
+</Text>
 `;

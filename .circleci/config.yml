@@ -12,7 +12,7 @@ commands:
         steps:
             - run:
                   name: Install Dependencies
-                  command: npx yarn@1.16.0 install --frozen-lockfile --ignore-engines
+                  command: yarn install --frozen-lockfile --ignore-engines
                   working_directory: ~/project/
 
     restore-yarn:
@@ -61,9 +61,19 @@ jobs:
                   at: ./
             - run:
                   name: Run Lint
-                  command: |
-                      npx yarn@1.16.0 lint
+                  command: yarn lint
                   working_directory: ~/project/
+
+    run_typecheck:
+      executor: node
+      steps:
+        - checkout
+        - attach_workspace:
+            at: ./
+        - run:
+            name: Run Type Check
+            command: yarn typecheck
+            working_directory: ~/project/
 
     run_noplatform_tests:
         executor: node
@@ -74,7 +84,7 @@ jobs:
             - run:
                   name: Run No Specific Platform Tests
                   command: |
-                      npx lerna run test --stream --since -- -- --ci --bail --coverage
+                      yarn test:common
                   working_directory: ~/project/
 
     run_android_tests:
@@ -86,7 +96,7 @@ jobs:
             - run:
                   name: Run Android Tests
                   command: |
-                      npx lerna run test:android --stream --since -- -- --ci --bail --coverage
+                      yarn test:android
                   working_directory: ~/project/
 
     run_ios_tests:
@@ -97,20 +107,7 @@ jobs:
                   at: ./
             - run:
                   name: Run iOS Tests
-                  command: |
-                      npx lerna run test:ios --stream --since -- -- --ci --bail --coverage
-                  working_directory: ~/project/
-
-    run_unit_tests:
-        executor: node
-        steps:
-            - checkout
-            - attach_workspace:
-                  at: ./
-            - run:
-                  name: Run Unit Tests
-                  command: |
-                      npx lerna run test:unit --stream --since -- -- --ci --bail --coverage
+                  command: yarn test:ios
                   working_directory: ~/project/
 
     publish_android:
@@ -136,8 +133,8 @@ jobs:
                       sudo chmod ugo+rwx "android-sdk"
                       cd ~/project/
                       # TODO: move above lines in a docker image
-                      npx yarn@1.16.0 android:build-lib
-                      npx yarn@1.16.0 android:publish-lib
+                      yarn android:build-lib
+                      yarn android:publish-lib
                   working_directory: ~/project/
     publish_ios:
         executor: node
@@ -148,8 +145,8 @@ jobs:
             - run:
                   name: Build and publish iOS js bundles
                   command: |
-                      npx yarn@1.16.0 ios:build-lib
-                      npx yarn@1.16.0 ios:publish-lib
+                      yarn ios:build-lib
+                      yarn ios:publish-lib
                   working_directory: ~/project/
 
 workflows:
@@ -161,6 +158,9 @@ workflows:
             - run_lint:
                   requires:
                       - setup
+            - run_typecheck:
+                requires:
+                  - setup
             - run_noplatform_tests:
                   requires:
                       - setup
@@ -170,21 +170,18 @@ workflows:
             - run_ios_tests:
                   requires:
                       - setup
-            - run_unit_tests:
-                  requires:
-                      - setup
             - hold:
                   type: approval
                   filters:
                     branches:
-                        only: 
+                        only:
                             - master
                   requires:
                       - run_lint
+                      - run_typecheck
                       - run_noplatform_tests
                       - run_android_tests
                       - run_ios_tests
-                      - run_unit_tests
             - publish_android:
                   requires:
                       - hold

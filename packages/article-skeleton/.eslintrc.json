@@ -1,9 +1,0 @@
-{
-  "extends": ["@times-components-native/thetimes"],
-  "globals": {
-    "window": true
-  },
-  "rules": {
-    "react-hooks/exhaustive-deps": false
-  }
-}

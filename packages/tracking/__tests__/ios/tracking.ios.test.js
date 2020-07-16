@@ -1,7 +1,7 @@
-import tracking from "../tracking.test";
-import trackEvents from "../track-events.test";
-import trackingContext from "../tracking-context.test";
-import resolveAttrs from "../resolve-attrs.test";
+import tracking from "../tracking";
+import trackEvents from "../track-events";
+import trackingContext from "../tracking-context";
+import resolveAttrs from "../resolve-attrs";
 
 describe("Tracking tests on iOS", () => {
   tracking();

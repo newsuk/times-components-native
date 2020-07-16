@@ -21,43 +21,6 @@ This package should only have core renderers with no dependencies beyond
 React/React Native. If a consumer would like to support more complex elements
 they'll need to provide renderers for them.
 
-## Contributing
-
-Please read [CONTRIBUTING.md](./CONTRIBUTING.md) before contributing to this
-package
-
-## Running the code
-
-Please see our main [README.md](../README.md) to get the project running locally
-
-## Development
-
-The code can be formatted and linted in accordance with the agreed standards.
-
-```
-yarn fmt
-yarn lint
-```
-
-## Testing
-
-Testing can be done on each platform individually
-
-```
-yarn test:android
-yarn test:ios
-```
-
-Or the tests for all platforms can be run
-
-```
-yarn test:all
-```
-
-Visit the official
-[storybook](http://components.thetimes.co.uk/?knob-Size%20of%20ad%20placeholder%3A=default&selectedKind=Composed%2FMarkup&selectedStory=Multiple%20paragraphs&full=0&addons=1&stories=1&panelRight=0&addonPanel=storybooks%2Fstorybook-addon-knobs)
-to see our available markup templates.
-
 ## How to use
 
 ```js
@@ -89,10 +52,5 @@ native
   Some text value here
 </Text>
 
-web
-
-<span>
-  Some text value here
-</span>
 */
 ```

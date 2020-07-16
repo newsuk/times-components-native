@@ -1,23 +1,5 @@
+// eslint-disable-next-line import/no-extraneous-dependencies
 import { createSerializer } from "enzyme-to-json";
-import minimalise, {
-  minimaliseTransform,
-  minimalWebTransform,
-  minimalWeb,
-  minimalNative,
-  minimalNativeTransform
-} from "./minimalise";
-import rnw, { rnwTransform } from "./rnw";
-import flattenStyle, { flattenStyleTransform } from "./flatten-style";
-import replace, {
-  justChildren,
-  meltNative,
-  propsNoChildren,
-  replaceTransform
-} from "./replace";
-import replaceProp, { replacePropTransform } from "./replace-prop";
-import hoistStyle, { hoistStyleTransform } from "./hoist-style";
-import traverse from "./traverse";
-import print, { stylePrinter } from "./printers";
 
 const compose = (printer, ...transformers) =>
   traverse(printer, (accum, node, props, children) =>
@@ -28,7 +10,7 @@ const compose = (printer, ...transformers) =>
             accum: a,
             children: c,
             node: n,
-            props: p
+            props: p,
           };
         }
 
@@ -38,20 +20,13 @@ const compose = (printer, ...transformers) =>
         accum,
         children,
         node,
-        props
+        props,
       }
     )
   );
 
-const minimalRnw = (AppRegistry, includeStyleProps) =>
-  compose(
-    stylePrinter,
-    minimalWebTransform,
-    rnwTransform(AppRegistry, includeStyleProps)
-  );
-
 const addSerializers = (expect, ...serializers) => {
-  serializers.forEach(serializer => expect.addSnapshotSerializer(serializer));
+  serializers.forEach((serializer) => expect.addSnapshotSerializer(serializer));
 };
 
 const enzymeRenderedSerializer = () => createSerializer({ mode: "deep" });
@@ -61,31 +36,31 @@ const enzymeRootSerializer = () => createSerializer({ mode: "shallow" });
 const enzymeTreeSerializer = () => createSerializer();
 
 export {
+  default as minimalise,
+  minimaliseTransform,
+  minimalNative,
+  minimalNativeTransform,
+} from "./minimalise";
+export {
+  default as flattenStyle,
+  flattenStyleTransform,
+} from "./flatten-style";
+export {
+  default as replace,
+  justChildren,
+  meltNative,
+  propsNoChildren,
+  replaceTransform,
+} from "./replace";
+export { default as replaceProp, replacePropTransform } from "./replace-prop";
+export { hoistStyle, hoistStyleTransform } from "./hoist-style";
+import traverse from "./traverse";
+export { default as print, stylePrinter } from "./printers";
+
+export {
   addSerializers,
   compose,
   enzymeRenderedSerializer,
   enzymeRootSerializer,
   enzymeTreeSerializer,
-  flattenStyle,
-  flattenStyleTransform,
-  hoistStyle,
-  hoistStyleTransform,
-  justChildren,
-  meltNative,
-  minimalise,
-  minimaliseTransform,
-  minimalNative,
-  minimalNativeTransform,
-  minimalRnw,
-  minimalWeb,
-  minimalWebTransform,
-  print,
-  propsNoChildren,
-  replace,
-  replaceProp,
-  replacePropTransform,
-  replaceTransform,
-  rnw,
-  rnwTransform,
-  stylePrinter
 };

@@ -93,7 +93,7 @@ export default () => {
 
   it("should render secondary 2 and 2 for mobile (small breakpoint)", () => {
     jest.doMock("@times-components-native/utils", () => {
-      const actualUtils = jest.requireActual("@times-components-native/utils");
+      const actualUtils = jest.requireActual("../../utils");
 
       return {
         ...actualUtils,

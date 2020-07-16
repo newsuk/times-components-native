@@ -18,15 +18,15 @@ const fonts = {
   TimesDigitalW04: () =>
     require("./dist/public/fonts/TimesDigitalW04.js").default,
   "TimesModern-Regular": () =>
-    require("./dist/public/fonts/TimesModern-Regular.js").default
+    require("./dist/public/fonts/TimesModern-Regular.js").default,
 };
 
 const ttf = {};
-Object.keys(fonts).forEach(name => {
+Object.keys(fonts).forEach((name) => {
   ttf[name] = () => {
     const opentype = require("opentype.js");
     return opentype.parse(new Int32Array(fonts[name]()).buffer, {
-      lowMemory: true
+      lowMemory: true,
     });
   };
 });

@@ -1,13 +1,11 @@
 import React from "react";
-import Enzyme, { shallow } from "enzyme";
-import Adapter from "enzyme-adapter-react-16";
-import { iterator } from "../src/index";
-
-Enzyme.configure({ adapter: new Adapter() });
+import { iterator } from "../index";
+import { Text }from 'react-native'
+import renderer from "react-test-renderer";
 
 const exampleTest = ordinal => {
-  const TextComponent = <div>This is the {ordinal} test</div>;
-  const wrapper = shallow(TextComponent);
+  const TextComponent = <Text>This is the {ordinal} test</Text>;
+  const wrapper = renderer.create(TextComponent);
   expect(wrapper).toMatchSnapshot();
 };
 
