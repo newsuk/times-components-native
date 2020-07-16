@@ -11,17 +11,6 @@ exports[`tile e huge 1`] = `
   }
   url="/article/123"
 >
-  <Image
-    aspectRatio={0.8}
-    fill={true}
-    style={
-      Object {
-        "marginBottom": 10,
-        "width": "100%",
-      }
-    }
-    uri="//www.thetimes.co.uk/imageserver/image/%2Fmethode%2Ftimes%2Fprod%2Fweb%2Fbin%2F5a14c64e-06db-11e9-abe2-4909b2eb0130.jpg?crop=1434%2C1792%2C627%2C0"
-  />
   <View
     style={
       Object {
@@ -72,28 +61,20 @@ exports[`tile e huge 1`] = `
           }
           longRead={true}
         />
-        <Text
-          numberOfLines={2}
-          style={
-            Object {
-              "color": "#696969",
-              "flexWrap": "wrap",
-              "fontFamily": "TimesDigitalW04",
-              "fontSize": 14,
-              "lineHeight": 20,
-              "marginBottom": 0,
-            }
-          }
-        >
-          <Text>
-            
-            Theresa May has two objectives tomorrow when MPs get to vote on Brexit — the trouble is both are fraught with difficulty.
-            ...
-          </Text>
-        </Text>
       </View>
     </View>
   </View>
+  <Image
+    aspectRatio={0.8}
+    fill={true}
+    style={
+      Object {
+        "marginTop": 10,
+        "width": "100%",
+      }
+    }
+    uri="//www.thetimes.co.uk/imageserver/image/%2Fmethode%2Ftimes%2Fprod%2Fweb%2Fbin%2F5a14c64e-06db-11e9-abe2-4909b2eb0130.jpg?crop=1434%2C1792%2C627%2C0"
+  />
 </Link>
 `;
 
@@ -107,17 +88,6 @@ exports[`tile e medium 1`] = `
   }
   url="/article/123"
 >
-  <Image
-    aspectRatio={0.8}
-    fill={true}
-    style={
-      Object {
-        "marginBottom": 10,
-        "width": "100%",
-      }
-    }
-    uri="//www.thetimes.co.uk/imageserver/image/%2Fmethode%2Ftimes%2Fprod%2Fweb%2Fbin%2F5a14c64e-06db-11e9-abe2-4909b2eb0130.jpg?crop=1434%2C1792%2C627%2C0"
-  />
   <View
     style={
       Object {
@@ -168,28 +138,20 @@ exports[`tile e medium 1`] = `
           }
           longRead={true}
         />
-        <Text
-          numberOfLines={2}
-          style={
-            Object {
-              "color": "#696969",
-              "flexWrap": "wrap",
-              "fontFamily": "TimesDigitalW04",
-              "fontSize": 14,
-              "lineHeight": 20,
-              "marginBottom": 0,
-            }
-          }
-        >
-          <Text>
-            
-            Theresa May has two objectives tomorrow when MPs get to vote on Brexit — the trouble is both are fraught with difficulty.
-            ...
-          </Text>
-        </Text>
       </View>
     </View>
   </View>
+  <Image
+    aspectRatio={0.8}
+    fill={true}
+    style={
+      Object {
+        "marginTop": 10,
+        "width": "100%",
+      }
+    }
+    uri="//www.thetimes.co.uk/imageserver/image/%2Fmethode%2Ftimes%2Fprod%2Fweb%2Fbin%2F5a14c64e-06db-11e9-abe2-4909b2eb0130.jpg?crop=1434%2C1792%2C627%2C0"
+  />
 </Link>
 `;
 
@@ -197,22 +159,12 @@ exports[`tile e small 1`] = `
 <Link
   linkStyle={
     Object {
-      "flexDirection": "row",
+      "flexDirection": "row-reverse",
       "padding": 10,
     }
   }
   url="/article/123"
 >
-  <Image
-    aspectRatio={0.8}
-    fill={true}
-    style={
-      Object {
-        "width": "50%",
-      }
-    }
-    uri="//www.thetimes.co.uk/imageserver/image/%2Fmethode%2Ftimes%2Fprod%2Fweb%2Fbin%2F5a14c64e-06db-11e9-abe2-4909b2eb0130.jpg?crop=1434%2C1792%2C627%2C0"
-  />
   <View
     style={
       Object {
@@ -292,6 +244,16 @@ exports[`tile e small 1`] = `
       </View>
     </View>
   </View>
+  <Image
+    aspectRatio={0.8}
+    fill={true}
+    style={
+      Object {
+        "width": "50%",
+      }
+    }
+    uri="//www.thetimes.co.uk/imageserver/image/%2Fmethode%2Ftimes%2Fprod%2Fweb%2Fbin%2F5a14c64e-06db-11e9-abe2-4909b2eb0130.jpg?crop=1434%2C1792%2C627%2C0"
+  />
 </Link>
 `;
 
@@ -306,17 +268,6 @@ exports[`tile e wide 1`] = `
   }
   url="/article/123"
 >
-  <Image
-    aspectRatio={0.8}
-    fill={true}
-    style={
-      Object {
-        "marginBottom": 10,
-        "width": "100%",
-      }
-    }
-    uri="//www.thetimes.co.uk/imageserver/image/%2Fmethode%2Ftimes%2Fprod%2Fweb%2Fbin%2F5a14c64e-06db-11e9-abe2-4909b2eb0130.jpg?crop=1434%2C1792%2C627%2C0"
-  />
   <View
     style={
       Object {
@@ -367,28 +318,20 @@ exports[`tile e wide 1`] = `
           }
           longRead={true}
         />
-        <Text
-          numberOfLines={2}
-          style={
-            Object {
-              "color": "#696969",
-              "flexWrap": "wrap",
-              "fontFamily": "TimesDigitalW04",
-              "fontSize": 14,
-              "lineHeight": 20,
-              "marginBottom": 0,
-            }
-          }
-        >
-          <Text>
-            
-            Theresa May has two objectives tomorrow when MPs get to vote on Brexit — the trouble is both are fraught with difficulty.
-            ...
-          </Text>
-        </Text>
       </View>
     </View>
   </View>
+  <Image
+    aspectRatio={0.8}
+    fill={true}
+    style={
+      Object {
+        "marginTop": 10,
+        "width": "100%",
+      }
+    }
+    uri="//www.thetimes.co.uk/imageserver/image/%2Fmethode%2Ftimes%2Fprod%2Fweb%2Fbin%2F5a14c64e-06db-11e9-abe2-4909b2eb0130.jpg?crop=1434%2C1792%2C627%2C0"
+  />
 </Link>
 `;
 
@@ -396,22 +339,12 @@ exports[`tile e without breakpoint should be like small 1`] = `
 <Link
   linkStyle={
     Object {
-      "flexDirection": "row",
+      "flexDirection": "row-reverse",
       "padding": 10,
     }
   }
   url="/article/123"
 >
-  <Image
-    aspectRatio={0.8}
-    fill={true}
-    style={
-      Object {
-        "width": "50%",
-      }
-    }
-    uri="//www.thetimes.co.uk/imageserver/image/%2Fmethode%2Ftimes%2Fprod%2Fweb%2Fbin%2F5a14c64e-06db-11e9-abe2-4909b2eb0130.jpg?crop=1434%2C1792%2C627%2C0"
-  />
   <View
     style={
       Object {
@@ -491,5 +424,15 @@ exports[`tile e without breakpoint should be like small 1`] = `
       </View>
     </View>
   </View>
+  <Image
+    aspectRatio={0.8}
+    fill={true}
+    style={
+      Object {
+        "width": "50%",
+      }
+    }
+    uri="//www.thetimes.co.uk/imageserver/image/%2Fmethode%2Ftimes%2Fprod%2Fweb%2Fbin%2F5a14c64e-06db-11e9-abe2-4909b2eb0130.jpg?crop=1434%2C1792%2C627%2C0"
+  />
 </Link>
 `;
