@@ -4,6 +4,7 @@ import get from "lodash.get";
 
 const PaywallPortal = ({ id, componentName }) => {
   if (typeof window !== "undefined") {
+    // eslint-disable-next-line no-undef
     const componentToRender = get(window, `paywallComponent.${componentName}`);
 
     if (componentToRender) {
@@ -19,7 +20,7 @@ const PaywallPortal = ({ id, componentName }) => {
 
 PaywallPortal.propTypes = {
   id: PropTypes.string.isRequired,
-  componentName: PropTypes.string.isRequired
+  componentName: PropTypes.string.isRequired,
 };
 
 export default PaywallPortal;

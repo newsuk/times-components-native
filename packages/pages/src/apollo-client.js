@@ -6,24 +6,25 @@ import { fragmentMatcher } from "@times-components-native/schema";
 
 const {
   NativeFetch,
-  ReactConfig: { graphqlEndPoint }
+  ReactConfig: { graphqlEndPoint },
 } = NativeModules;
 
 const link = NativeFetch
   ? createHttpLink({
       fetch: (uri, opts) =>
         NativeFetch.fetch(uri, opts).then(
-          responseBody => new Response(responseBody)
+          // eslint-disable-next-line no-undef
+          (responseBody) => new Response(responseBody),
         ),
-      uri: graphqlEndPoint
+      uri: graphqlEndPoint,
     })
   : createHttpLink({
-      uri: graphqlEndPoint
+      uri: graphqlEndPoint,
     });
 
 export default new ApolloClient({
   cache: new InMemoryCache({
-    fragmentMatcher
+    fragmentMatcher,
   }),
-  link
+  link,
 });
