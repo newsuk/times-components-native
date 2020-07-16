@@ -89,7 +89,7 @@ module.exports = {
     "@typescript-eslint/no-inferrable-types": "off",
     "@typescript-eslint/no-explicit-any": "off",
     "react/prop-types": "off",
-    "react/jsx-key": "off",
+    // "react/jsx-key": "off",
     "no-undef": "off",
     "@typescript-eslint/ban-types": "off",
     "@typescript-eslint/no-unused-vars": "off",
