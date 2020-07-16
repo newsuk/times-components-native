@@ -10,9 +10,9 @@ export default ({ count, enabled }) =>
       commentCount={count}
       commentsEnabled={enabled}
       isEnabled={enabled}
-      onCommentGuidelinesPress={() => {}}
-      onCommentsPress={() => {}}
+      onCommentGuidelinesPress={() => null}
+      onCommentsPress={() => null}
       spotAccountId=""
       url="dummy-article-url"
-    />
+    />,
   );

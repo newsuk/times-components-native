@@ -15,7 +15,7 @@ import {
   mockListTwoAndSixNoPicSlice,
   mockSecondaryOneAndFourSlice,
   mockSecondaryTwoAndTwoSlice,
-  mockSecondaryTwoNoPicAndTwoSlice
+  mockSecondaryTwoNoPicAndTwoSlice,
 } from "@times-components-native/fixture-generator";
 import { SectionContext } from "@times-components-native/context";
 import Responsive from "@times-components-native/responsive";
@@ -34,26 +34,26 @@ import {
   SecondaryTwoNoPicAndTwoSlice,
   LeadersSlice,
   DailyRegisterLeadFourSlice,
-  StandardSlice
+  StandardSlice,
 } from "./src/slices";
 
-const preventDefaultedAction = decorateAction =>
+const preventDefaultedAction = (decorateAction) =>
   decorateAction([
-    args => ["[SyntheticEvent (storybook prevented default)]", ...args]
+    (args) => ["[SyntheticEvent (storybook prevented default)]", ...args],
   ]);
 
 const publications = {
   ST: "SUNDAYTIMES",
-  TIMES: "TIMES"
+  TIMES: "TIMES",
 };
 
 const onArticleSavePress = {
   onArticleSavePressNotPresent: null,
-  onArticleSavePressPresent: () => {}
+  onArticleSavePressPresent: () => null,
 };
 const savedArticles = {
   savedArticlesNotPresent: null,
-  savedArticlesPresent: { 1: true, 2: true }
+  savedArticlesPresent: { 1: true, 2: true },
 };
 
 /* eslint-disable react/prop-types */
@@ -65,10 +65,10 @@ const renderSlice = (Component, data) => ({ select }, { decorateAction }) => (
           onArticleSavePress: select(
             "onArticleSavePress:",
             onArticleSavePress,
-            null
+            null,
           ),
           publicationName: select("Publication:", publications, "TIMES"),
-          savedArticles: select("savedArticles:", savedArticles, null)
+          savedArticles: select("savedArticles:", savedArticles, null),
         }}
       >
         <Component
@@ -84,82 +84,82 @@ const sliceStories = [
   {
     mock: mockDailyRegisterSlice(),
     name: "Daily Register Lead Four (Mobile, Tablet: S,S,S,S)",
-    Slice: DailyRegisterLeadFourSlice
+    Slice: DailyRegisterLeadFourSlice,
   },
   {
     mock: mockLeadOneAndFourSlice(),
     name: "Lead One And Four (Mobile: I,J,J,J,J, Tablet: AC,AD,AD,AD,AD)",
-    Slice: LeadOneAndFourSlice
+    Slice: LeadOneAndFourSlice,
   },
   {
     mock: mockStandardSlice(),
     name: "Standard Slice (K*)",
-    Slice: StandardSlice
+    Slice: StandardSlice,
   },
   {
     mock: mockLeadOneAndOneSlice(),
     name: "Lead One And One (Mobile: A,B, Tablet: U,C, Wide: U,C, Huge:U,AQ)",
-    Slice: LeadOneAndOneSlice
+    Slice: LeadOneAndOneSlice,
   },
   {
     mock: mockLeadOneFullWidthSlice(),
     name: "Lead One Full Width (Mobile: A, Tablet/Wide/Huge: R)",
-    Slice: LeadOneFullWidthSlice
+    Slice: LeadOneFullWidthSlice,
   },
   {
     mock: mockLeadTwoNoPicAndTwoSlice(),
     name:
       "Lead Two no pic and Two (Mobile: F,B,D,E, Tablet: X,Y,D,Z, Wide: X,Y,AL,E)",
-    Slice: LeadTwoNoPicAndTwoSlice
+    Slice: LeadTwoNoPicAndTwoSlice,
   },
   {
     mock: mockSecondaryOneSlice(),
     name: "Secondary One (Mobile:A, Tablet: W)",
-    Slice: SecondaryOneSlice
+    Slice: SecondaryOneSlice,
   },
   {
     mock: mockSecondaryOneAndColumnistSlice(),
     name: "Secondary One and Columnist (Mobile: T,H, Tablet: AA,AB)",
-    Slice: SecondaryOneAndColumnistSlice
+    Slice: SecondaryOneAndColumnistSlice,
   },
   {
     mock: mockSecondaryOneAndFourSlice(),
     name: "Supplement Secondary One And Four (Mobile, Tablet: N,O,O,O,O)",
-    Slice: SecondaryOneAndFourSlice
+    Slice: SecondaryOneAndFourSlice,
   },
   {
     mock: mockSecondaryFourSlice(),
     name: "Secondary Four (Mobile, Tablet: C,C,C,C)",
-    Slice: SecondaryFourSlice
+    Slice: SecondaryFourSlice,
   },
   {
     mock: mockSecondaryTwoAndTwoSlice(),
     name:
       "Secondary Two And Two (Mobile: C,C,G,G, Tablet: V,V,G,G, Wide Tablet/Desktop: AM,AM,AN,AN)",
-    Slice: SecondaryTwoAndTwoSlice
+    Slice: SecondaryTwoAndTwoSlice,
   },
   {
     mock: mockSecondaryTwoNoPicAndTwoSlice(),
     name:
       "Secondary Two No Pic And Two (Mobile: B,B,G,G - Tablet: AE,AE,G,G, Wide Tablet/Desktop: AE,AE,AP,AP)",
-    Slice: SecondaryTwoNoPicAndTwoSlice
+    Slice: SecondaryTwoNoPicAndTwoSlice,
   },
   {
     mock: mockListTwoAndSixNoPicSlice(),
     name:
       "List Two And Six No Pic (Mobile: : C,C,L,L,L,L,L,L, Tablet: AQ,AQ,L,L,L,L,L,L, Wide Tablet: C,C,L,L,L,L,L,L)",
-    Slice: ListTwoAndSixNoPicSlice
+    Slice: ListTwoAndSixNoPicSlice,
   },
   {
     mock: mockLeadersSlice(),
     name: "Leaders (Mobile: M,M,M,M, Tablet: AG,AG,AG,AG)",
-    Slice: LeadersSlice
+    Slice: LeadersSlice,
   },
   {
     mock: mockCommentLeadAndCartoonSlice(),
     name: "Comment Lead And Cartoon (Mobile: P,Q, Tablet: AH, AI)",
-    Slice: CommentLeadAndCartoonSlice
-  }
+    Slice: CommentLeadAndCartoonSlice,
+  },
 ];
 
 export default {
@@ -167,7 +167,7 @@ export default {
     component: renderSlice(Slice, mock),
     name,
     type: "story",
-    platform: "native"
+    platform: "native",
   })),
-  name: "Composed/Edition/Slices"
+  name: "Composed/Edition/Slices",
 };

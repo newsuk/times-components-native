@@ -32,7 +32,7 @@ const mergeStylesToClassNames = (classMap, node) => {
 };
 
 const getStyleSheet = AppRegistry => {
-  AppRegistry.registerComponent("App", () => () => {});
+  AppRegistry.registerComponent("App", () => () => null);
   const { getStyleElement } = AppRegistry.getApplication("App");
   const ssString = ReactDOMServer.renderToStaticMarkup(getStyleElement());
 

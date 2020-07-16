@@ -16,33 +16,33 @@ const emptyArticle = {
   leadAsset: null,
   relatedArticleSlice: null,
   standfirst: null,
-  topics: null
+  topics: null,
 };
 
 const renderArticle = (data, header) => (
   <ContextProviderWithDefaults
     value={{
-      theme: { scale: scales.medium, sectionColour: "#FF0000" }
+      theme: { scale: scales.medium, sectionColour: "#FF0000" },
     }}
   >
     <ArticleSkeleton
       adConfig={adConfig}
-      analyticsStream={() => {}}
+      analyticsStream={() => null}
       data={data}
       header={header}
-      onAuthorPress={() => {}}
-      onCommentGuidelinesPress={() => {}}
-      onCommentsPress={() => {}}
-      onLinkPress={() => {}}
-      onRelatedArticlePress={() => {}}
-      onTopicPress={() => {}}
-      onTwitterLinkPress={() => {}}
-      onVideoPress={() => {}}
+      onAuthorPress={() => null}
+      onCommentGuidelinesPress={() => null}
+      onCommentsPress={() => null}
+      onLinkPress={() => null}
+      onRelatedArticlePress={() => null}
+      onTopicPress={() => null}
+      onTwitterLinkPress={() => null}
+      onVideoPress={() => null}
     />
   </ContextProviderWithDefaults>
 );
 
-export const snapshotTests = renderComponent => [
+export const snapshotTests = (renderComponent) => [
   {
     name: "article with header",
     test() {
@@ -54,18 +54,18 @@ export const snapshotTests = renderComponent => [
       const article = articleFixture(emptyArticle);
       const output = renderComponent(renderArticle(article), header);
       expect(output).toMatchSnapshot();
-    }
-  }
+    },
+  },
 ];
 
-export default renderComponent => {
+export default (renderComponent) => {
   const realIntl = Intl;
 
   beforeEach(() => {
     global.Intl = {
       DateTimeFormat: () => ({
-        resolvedOptions: () => ({ timeZone: "Europe/London" })
-      })
+        resolvedOptions: () => ({ timeZone: "Europe/London" }),
+      }),
     };
   });
 

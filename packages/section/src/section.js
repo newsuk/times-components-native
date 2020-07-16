@@ -2,7 +2,7 @@ import React, { Component } from "react";
 import { FlatList, View } from "react-native";
 import PropTypes from "prop-types";
 import Responsive, {
-  ResponsiveContext
+  ResponsiveContext,
 } from "@times-components-native/responsive";
 import { withTrackScrollDepth } from "@times-components-native/tracking";
 import SectionItemSeparator from "./section-item-separator";
@@ -26,13 +26,13 @@ class Section extends Component {
   onViewableItemsChanged(info) {
     const {
       onViewed,
-      section: { slices }
+      section: { slices },
     } = this.props;
     if (!info.changed.length) return [];
 
     return info.changed
-      .filter(viewableItem => viewableItem.isViewable)
-      .map(viewableItem => onViewed(viewableItem.item, slices));
+      .filter((viewableItem) => viewableItem.isViewable)
+      .map((viewableItem) => onViewed(viewableItem.item, slices));
   }
 
   getHeaderComponent(isPuzzle, isMagazine) {
@@ -43,7 +43,7 @@ class Section extends Component {
 
     if (isMagazine) {
       const {
-        section: { cover }
+        section: { cover },
       } = this.props;
 
       return <MagazineCover cover={cover} />;
@@ -56,7 +56,7 @@ class Section extends Component {
     const {
       onArticlePress,
       onPuzzlePress,
-      section: { name, slices }
+      section: { name, slices },
     } = this.props;
     const isPuzzle = name === "PuzzleSection";
 
@@ -72,7 +72,7 @@ class Section extends Component {
 
   renderItemSeperator({ leadingItem }, editionBreakpoint) {
     const {
-      section: { name }
+      section: { name },
     } = this.props;
     const isPuzzle = name === "PuzzleSection";
     const isIgnored = leadingItem.ignoreSeparator;
@@ -92,7 +92,7 @@ class Section extends Component {
     const {
       section: { name, slices },
       onViewed,
-      receiveChildList
+      receiveChildList,
     } = this.props;
 
     const isPuzzle = name === "PuzzleSection";
@@ -116,13 +116,13 @@ class Section extends Component {
                 removeClippedSubviews
                 data={data}
                 initialNumToRender={isTablet ? 5 : 2}
-                ItemSeparatorComponent={leadingItem =>
+                ItemSeparatorComponent={(leadingItem) =>
                   this.renderItemSeperator(leadingItem, editionBreakpoint)
                 }
-                keyExtractor={item => item.elementId}
+                keyExtractor={(item) => item.elementId}
                 ListHeaderComponent={this.getHeaderComponent(
                   isPuzzle,
-                  isMagazine
+                  isMagazine,
                 )}
                 nestedScrollEnabled
                 onViewableItemsChanged={
@@ -145,15 +145,15 @@ Section.propTypes = {
   onPuzzlePress: PropTypes.func,
   onViewed: PropTypes.func,
   receiveChildList: PropTypes.func,
-  section: PropTypes.shape({}).isRequired
+  section: PropTypes.shape({}).isRequired,
 };
 
 Section.defaultProps = {
-  onArticlePress: () => {},
-  onPuzzleBarPress: () => {},
-  onPuzzlePress: () => {},
-  onViewed: () => {},
-  receiveChildList: () => {}
+  onArticlePress: () => null,
+  onPuzzleBarPress: () => null,
+  onPuzzlePress: () => null,
+  onViewed: () => null,
+  receiveChildList: () => null,
 };
 
 export default withTrackingContext(withTrackScrollDepth(Section));

@@ -16,7 +16,7 @@ const AuthorProfileHeadBase = memo(
     renderBiography,
     renderImage,
     renderName,
-    twitter
+    twitter,
   }) => {
     if (isLoading) {
       return <AuthorProfileHeadLoading />;
@@ -55,7 +55,7 @@ const AuthorProfileHeadBase = memo(
         </View>
       </Animations.FadeIn>
     );
-  }
+  },
 );
 
 AuthorProfileHeadBase.propTypes = {
@@ -65,14 +65,14 @@ AuthorProfileHeadBase.propTypes = {
   renderBiography: PropTypes.func.isRequired,
   renderImage: PropTypes.func.isRequired,
   renderName: PropTypes.func.isRequired,
-  twitter: PropTypes.string
+  twitter: PropTypes.string,
 };
 
 AuthorProfileHeadBase.defaultProps = {
   isLoading: true,
   jobTitle: "",
-  onTwitterLinkPress: () => {},
-  twitter: ""
+  onTwitterLinkPress: () => null,
+  twitter: "",
 };
 
 export default authorProfileHeadTrackingEvents(AuthorProfileHeadBase);

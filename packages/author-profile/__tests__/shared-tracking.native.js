@@ -3,10 +3,18 @@ import author from "./fixtures";
 
 export default () =>
   shared({
-    analyticsStream() {},
+    analyticsStream() {
+      return null;
+    },
     author,
-    onArticlePress() {},
-    onTwitterLinkPress() {},
-    refetch() {},
-    slug: "some-slug"
+    onArticlePress() {
+      return null;
+    },
+    onTwitterLinkPress() {
+      return null;
+    },
+    refetch() {
+      return null;
+    },
+    slug: "some-slug",
   });

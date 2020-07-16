@@ -1,6 +1,6 @@
 import {
   getSelfContainedFunctionErrors,
-  reportErrors
+  reportErrors,
 } from "../../fixtures/check-self-contained-function";
 
 export default () => {
@@ -17,13 +17,13 @@ export default () => {
   });
 
   it("does not find errors in an unnamed function", () => {
-    expect(getSelfContainedFunctionErrors(() => {})).toEqual([]);
+    expect(getSelfContainedFunctionErrors(() => null)).toEqual([]);
   });
 
   it("does not find errors in a function using console", () => {
     // eslint-disable-next-line no-console
     expect(getSelfContainedFunctionErrors(() => console.log("Hi!"))).toEqual(
-      []
+      [],
     );
   });
 
@@ -44,7 +44,7 @@ export default () => {
 
   it("logs errors to the console", () => {
     jest.spyOn(console, "error").mockImplementation();
-    reportErrors(getSelfContainedFunctionErrors(() => {}));
+    reportErrors(getSelfContainedFunctionErrors(() => null));
     // eslint-disable-next-line no-console
     expect(console.error).not.toHaveBeenCalled();
     function f() {

@@ -11,8 +11,8 @@ export default (additionalTests = []) => {
   beforeEach(() => {
     global.Intl = {
       DateTimeFormat: () => ({
-        resolvedOptions: () => ({ timeZone: "Europe/London" })
-      })
+        resolvedOptions: () => ({ timeZone: "Europe/London" }),
+      }),
     };
     jest.useFakeTimers();
   });
@@ -29,14 +29,14 @@ export default (additionalTests = []) => {
           <ArticleList
             articles={articlesFixture.slice(0, 2)}
             emptyStateMessage="Empty state"
-            onArticlePress={() => {}}
+            onArticlePress={() => null}
             pageSize={3}
-            refetch={() => {}}
-          />
+            refetch={() => null}
+          />,
         );
 
         expect(testInstance).toMatchSnapshot();
-      }
+      },
     },
     {
       name: "article list with no images",
@@ -45,15 +45,15 @@ export default (additionalTests = []) => {
           <ArticleList
             articles={articlesFixture.slice(0, 1)}
             emptyStateMessage="Empty state"
-            onArticlePress={() => {}}
+            onArticlePress={() => null}
             pageSize={3}
-            refetch={() => {}}
+            refetch={() => null}
             showImages={false}
-          />
+          />,
         );
 
         expect(testInstance).toMatchSnapshot();
-      }
+      },
     },
     {
       name: "a retry button when load more fails",
@@ -65,9 +65,9 @@ export default (additionalTests = []) => {
             articles={articlesFixture.slice(0, 1)}
             emptyStateMessage="Empty state"
             fetchMore={fetchMore}
-            onArticlePress={() => {}}
-            refetch={() => {}}
-          />
+            onArticlePress={() => null}
+            refetch={() => null}
+          />,
         );
 
         try {
@@ -75,8 +75,8 @@ export default (additionalTests = []) => {
         } catch (err) {
           expect(testInstance.toJSON()).toMatchSnapshot();
         }
-      }
-    }
+      },
+    },
   ];
 
   iterator([...tests, ...additionalTests]);

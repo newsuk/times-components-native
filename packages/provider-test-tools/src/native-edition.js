@@ -7,17 +7,17 @@ const getMediaUrl = (obj, ratio) => {
   const crop = obj[`crop${ratio.replace(":", "")}`];
   const ratios = {
     "3:2": "300/200",
-    "16:9": "320/180"
+    "16:9": "320/180",
   };
 
   return {
     url: crop
       ? crop.url
-      : `https://placeimg.com/${ratios[ratio] || "100/100"}/tech`
+      : `https://placeimg.com/${ratios[ratio] || "100/100"}/tech`,
   };
 };
 
-export default ({ variables = () => {} } = {}) => {
+export default ({ variables = () => null } = {}) => {
   const queryVariables = variables();
 
   return [
@@ -27,7 +27,7 @@ export default ({ variables = () => {} } = {}) => {
           Article: () => article,
           ArticleSlice: () => ({
             __typename: "StandardSlice",
-            items: new MockList(1)
+            items: new MockList(1),
           }),
           Crop: (parent, { ratio }) => {
             if (parent.posterImage) {
@@ -39,7 +39,7 @@ export default ({ variables = () => {} } = {}) => {
           DateTime: () => "2018-10-25",
           LeadOneFullWidthSlice: () => ({
             __typename: "LeadOneFullWidthSlice",
-            items: mockEditionSlice(1)
+            items: mockEditionSlice(1),
           }),
           Markup: (parent, { maxCharCount }) => {
             if (maxCharCount) {
@@ -53,7 +53,7 @@ export default ({ variables = () => {} } = {}) => {
           Ratio: () => "16:9",
           Section: () => ({
             __typename: "StandardSection",
-            slices: new MockList(1)
+            slices: new MockList(1),
           }),
           Slug: () => "some-slug",
           StandardSection: () => ({
@@ -62,30 +62,30 @@ export default ({ variables = () => {} } = {}) => {
                 alpha: 1,
                 blue: 255,
                 green: 255,
-                red: 255
-              }
+                red: 255,
+              },
             },
             id: "dummy-section-id",
             slices: [mockEditionSlice(1)],
             slug: "dummy-section-slug",
-            title: "News"
+            title: "News",
           }),
           StandardSectionSlice: () => ({
             __typename: "LeadOneFullWidthSlice",
-            items: new MockList(1)
+            items: new MockList(1),
           }),
           StandardSlice: () => ({
             __typename: "StandardSlice",
-            items: []
+            items: [],
           }),
           Tile: () => ({}),
           URL: () => "https://test.io",
-          UUID: () => "a-u-u-i-d"
-        }
+          UUID: () => "a-u-u-i-d",
+        },
       },
       error: null,
       query: nativeEditionQuery,
-      variables: queryVariables
-    }
+      variables: queryVariables,
+    },
   ];
 };

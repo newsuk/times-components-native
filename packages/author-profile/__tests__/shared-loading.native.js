@@ -3,7 +3,7 @@ import {
   compose,
   minimalNativeTransform,
   print,
-  replacePropTransform
+  replacePropTransform,
 } from "@times-components-native/jest-serializer";
 import { hash } from "@times-components-native/test-utils";
 import shared from "./shared-loading.base";
@@ -15,19 +15,27 @@ export default () => {
     compose(
       print,
       minimalNativeTransform,
-      replacePropTransform(
-        (value, key) => (key === "emptyStateMessage" ? hash(value) : value)
-      )
-    )
+      replacePropTransform((value, key) =>
+        key === "emptyStateMessage" ? hash(value) : value,
+      ),
+    ),
   );
 
   const props = {
-    analyticsStream() {},
+    analyticsStream() {
+      return null;
+    },
     author,
-    onArticlePress() {},
-    onTwitterLinkPress() {},
-    refetch() {},
-    slug: "some-slug"
+    onArticlePress() {
+      return null;
+    },
+    onTwitterLinkPress() {
+      return null;
+    },
+    refetch() {
+      return null;
+    },
+    slug: "some-slug",
   };
 
   shared(props);

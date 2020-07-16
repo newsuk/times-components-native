@@ -6,7 +6,7 @@ import {
   flattenStyleTransform,
   minimaliseTransform,
   minimalNativeTransform,
-  print
+  print,
 } from "@times-components-native/jest-serializer";
 import { setIsTablet } from "./mocks.native";
 import ArticleMainStandard from "../src/article-main-standard";
@@ -21,8 +21,8 @@ export default () => {
       print,
       minimalNativeTransform,
       minimaliseTransform((value, key) => key !== "style"),
-      flattenStyleTransform
-    )
+      flattenStyleTransform,
+    ),
   );
 
   it("full article with style on mobile", () => {
@@ -35,58 +35,58 @@ export default () => {
             credits: "The image credits",
             display: "primary",
             ratio: "1500:1000",
-            url: "https://image.io"
+            url: "https://image.io",
           },
           children: [],
-          name: "image"
+          name: "image",
         },
         {
           attributes: {},
           children: [
             {
               attributes: {
-                value: "Some content"
+                value: "Some content",
               },
               children: [],
-              name: "text"
+              name: "text",
             },
             {
               attributes: {
                 href: "https://link.io",
-                target: "_blank"
+                target: "_blank",
               },
               children: [
                 {
                   attributes: {
-                    value: "Some Link"
+                    value: "Some Link",
                   },
                   children: [],
-                  name: "text"
-                }
+                  name: "text",
+                },
               ],
-              name: "link"
-            }
+              name: "link",
+            },
           ],
-          name: "paragraph"
+          name: "paragraph",
         },
         {
           attributes: {
             caption: {
               name: "AName",
               text: "a text",
-              twitter: "@AName"
-            }
+              twitter: "@AName",
+            },
           },
           children: [
             {
               attributes: {
-                value: "The pull quote content"
+                value: "The pull quote content",
               },
               children: [],
-              name: "text"
-            }
+              name: "text",
+            },
           ],
-          name: "pullQuote"
+          name: "pullQuote",
         },
         {
           attributes: {
@@ -96,15 +96,15 @@ export default () => {
             caption: "This is video caption",
             display: "primary",
             posterImageId: "0c0309d4-1aeb-11e8-9010-1eef6ba5d3de",
-            posterImageUrl: "https://image.io"
+            posterImageUrl: "https://image.io",
           },
           children: [],
-          name: "video"
+          name: "video",
         },
         {
           attributes: {},
           children: [],
-          name: "ad"
+          name: "ad",
         },
         {
           attributes: {
@@ -112,10 +112,10 @@ export default () => {
             credits: "Some Credits",
             display: "secondary",
             ratio: "3:2",
-            url: "https://image-2.io"
+            url: "https://image-2.io",
           },
           children: [],
-          name: "image"
+          name: "image",
         },
         {
           attributes: {
@@ -123,29 +123,29 @@ export default () => {
             credits: "Some Credits",
             display: "inline",
             ratio: "9:4",
-            url: "https://image-inline.io"
+            url: "https://image-inline.io",
           },
           children: [],
-          name: "image"
-        }
-      ]
+          name: "image",
+        },
+      ],
     });
 
     const output = TestRenderer.create(
       <ArticleMainStandard
         {...articleProps}
         adConfig={adConfig}
-        analyticsStream={() => {}}
+        analyticsStream={() => null}
         article={article}
-        onAuthorPress={() => {}}
-        onCommentGuidelinesPress={() => {}}
-        onCommentsPress={() => {}}
-        onLinkPress={() => {}}
-        onRelatedArticlePress={() => {}}
-        onTopicPress={() => {}}
-        onTwitterLinkPress={() => {}}
-        onVideoPress={() => {}}
-      />
+        onAuthorPress={() => null}
+        onCommentGuidelinesPress={() => null}
+        onCommentsPress={() => null}
+        onLinkPress={() => null}
+        onRelatedArticlePress={() => null}
+        onTopicPress={() => null}
+        onTwitterLinkPress={() => null}
+        onVideoPress={() => null}
+      />,
     );
 
     expect(output).toMatchSnapshot();
@@ -163,58 +163,58 @@ export default () => {
             credits: "The image credits",
             display: "primary",
             ratio: "1500:1000",
-            url: "https://image.io"
+            url: "https://image.io",
           },
           children: [],
-          name: "image"
+          name: "image",
         },
         {
           attributes: {},
           children: [
             {
               attributes: {
-                value: "Some content"
+                value: "Some content",
               },
               children: [],
-              name: "text"
+              name: "text",
             },
             {
               attributes: {
                 href: "https://link.io",
-                target: "_blank"
+                target: "_blank",
               },
               children: [
                 {
                   attributes: {
-                    value: "Some Link"
+                    value: "Some Link",
                   },
                   children: [],
-                  name: "text"
-                }
+                  name: "text",
+                },
               ],
-              name: "link"
-            }
+              name: "link",
+            },
           ],
-          name: "paragraph"
+          name: "paragraph",
         },
         {
           attributes: {
             caption: {
               name: "AName",
               text: "a text",
-              twitter: "@AName"
-            }
+              twitter: "@AName",
+            },
           },
           children: [
             {
               attributes: {
-                value: "The pull quote content"
+                value: "The pull quote content",
               },
               children: [],
-              name: "text"
-            }
+              name: "text",
+            },
           ],
-          name: "pullQuote"
+          name: "pullQuote",
         },
         {
           attributes: {
@@ -224,15 +224,15 @@ export default () => {
             caption: "This is video caption",
             display: "primary",
             posterImageId: "0c0309d4-1aeb-11e8-9010-1eef6ba5d3de",
-            posterImageUrl: "https://image.io"
+            posterImageUrl: "https://image.io",
           },
           children: [],
-          name: "video"
+          name: "video",
         },
         {
           attributes: {},
           children: [],
-          name: "ad"
+          name: "ad",
         },
         {
           attributes: {
@@ -240,10 +240,10 @@ export default () => {
             credits: "Some Credits",
             display: "secondary",
             ratio: "3:2",
-            url: "https://image-2.io"
+            url: "https://image-2.io",
           },
           children: [],
-          name: "image"
+          name: "image",
         },
         {
           attributes: {
@@ -251,29 +251,29 @@ export default () => {
             credits: "Some Credits",
             display: "inline",
             ratio: "9:4",
-            url: "https://image-inline.io"
+            url: "https://image-inline.io",
           },
           children: [],
-          name: "image"
-        }
-      ]
+          name: "image",
+        },
+      ],
     });
 
     const output = TestRenderer.create(
       <ArticleMainStandard
         {...articleProps}
         adConfig={adConfig}
-        analyticsStream={() => {}}
+        analyticsStream={() => null}
         article={article}
-        onAuthorPress={() => {}}
-        onCommentGuidelinesPress={() => {}}
-        onCommentsPress={() => {}}
-        onLinkPress={() => {}}
-        onRelatedArticlePress={() => {}}
-        onTopicPress={() => {}}
-        onTwitterLinkPress={() => {}}
-        onVideoPress={() => {}}
-      />
+        onAuthorPress={() => null}
+        onCommentGuidelinesPress={() => null}
+        onCommentsPress={() => null}
+        onLinkPress={() => null}
+        onRelatedArticlePress={() => null}
+        onTopicPress={() => null}
+        onTwitterLinkPress={() => null}
+        onVideoPress={() => null}
+      />,
     );
 
     expect(output).toMatchSnapshot();

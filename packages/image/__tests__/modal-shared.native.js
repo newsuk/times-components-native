@@ -8,7 +8,7 @@ import {
   minimaliseTransform,
   minimalNativeTransform,
   print,
-  replacePropTransform
+  replacePropTransform,
 } from "@times-components-native/jest-serializer";
 import { hash, iterator } from "@times-components-native/test-utils";
 import Image, { ModalImage } from "../src";
@@ -31,19 +31,18 @@ export default () => {
       print,
       minimalNativeTransform,
       minimaliseTransform(
-        (value, key) => key === "style" || key === "nativeBackgroundAndroid"
+        (value, key) => key === "style" || key === "nativeBackgroundAndroid",
       ),
-      replacePropTransform(
-        (value, key) =>
-          key === "d" && typeof d === "string" ? hash(value) : value
-      )
-    )
+      replacePropTransform((value, key) =>
+        key === "d" && typeof d === "string" ? hash(value) : value,
+      ),
+    ),
   );
 
   const props = {
     aspectRatio: 2,
     caption: <MockCaption />,
-    uri: "http://example.com/image.jpg?crop=1016%2C677%2C0%2C0"
+    uri: "http://example.com/image.jpg?crop=1016%2C677%2C0%2C0",
   };
 
   const tests = [
@@ -56,10 +55,10 @@ export default () => {
           jest.runAllImmediates();
         });
 
-        testInstance.root.findAllByType(Image).forEach(img =>
+        testInstance.root.findAllByType(Image).forEach((img) =>
           img.children[0].props.onLayout({
-            nativeEvent: { layout: { height: 350, width: 700 } }
-          })
+            nativeEvent: { layout: { height: 350, width: 700 } },
+          }),
         );
 
         await act(async () => {
@@ -67,13 +66,13 @@ export default () => {
         });
 
         expect(testInstance).toMatchSnapshot();
-      }
+      },
     },
     {
       name: "modal image with no caption",
       async test() {
         const testInstance = TestRenderer.create(
-          <ModalImage {...props} caption={null} />
+          <ModalImage {...props} caption={null} />,
         );
 
         await act(async () => {
@@ -81,23 +80,23 @@ export default () => {
         });
 
         expect(testInstance).toMatchSnapshot();
-      }
+      },
     },
     {
       name: "modal image with custom highResSize",
       async test() {
         const testInstance = TestRenderer.create(
-          <ModalImage {...props} highResSize={900} />
+          <ModalImage {...props} highResSize={900} />,
         );
 
         await act(async () => {
           jest.runAllImmediates();
         });
 
-        testInstance.root.findAllByType(Image).forEach(img =>
+        testInstance.root.findAllByType(Image).forEach((img) =>
           img.children[0].props.onLayout({
-            nativeEvent: { layout: { height: 350, width: 700 } }
-          })
+            nativeEvent: { layout: { height: 350, width: 700 } },
+          }),
         );
 
         await act(async () => {
@@ -105,7 +104,7 @@ export default () => {
         });
 
         expect(testInstance).toMatchSnapshot();
-      }
+      },
     },
     {
       name: "handle onPress event on the link",
@@ -117,7 +116,7 @@ export default () => {
         });
 
         const [, openButton] = testInstance.root.findAll(
-          node => node.type === Link
+          (node) => node.type === Link,
         );
 
         openButton.props.onPress();
@@ -126,16 +125,16 @@ export default () => {
           jest.runAllImmediates();
         });
 
-        const modal = testInstance.root.find(node => node.type === Modal);
+        const modal = testInstance.root.find((node) => node.type === Modal);
 
         expect(modal.props.visible).toBe(true);
-      }
+      },
     },
     {
       name: "handle onPress event on the close button",
       test: async () => {
         const testInstance = TestRenderer.create(
-          <ModalImage {...props} show />
+          <ModalImage {...props} show />,
         );
 
         await act(async () => {
@@ -143,7 +142,7 @@ export default () => {
         });
 
         const [closeButton] = testInstance.root.findAll(
-          node => node.type === Link
+          (node) => node.type === Link,
         );
 
         closeButton.props.onPress();
@@ -152,18 +151,18 @@ export default () => {
           jest.runAllImmediates();
         });
 
-        const modal = testInstance.root.find(node => node.type === Modal);
+        const modal = testInstance.root.find((node) => node.type === Modal);
 
         expect(modal.props.visible).toBe(false);
-      }
+      },
     },
     {
       name: "image with onImagePress prop should not have Modal",
       test: async () => {
-        const onImagePress = () => {};
+        const onImagePress = () => null;
         const propWithImagePress = { ...props, onImagePress };
         const testInstance = TestRenderer.create(
-          <ModalImage {...propWithImagePress} />
+          <ModalImage {...propWithImagePress} />,
         );
 
         await act(async () => {
@@ -171,8 +170,8 @@ export default () => {
         });
 
         expect(testInstance.root.findAllByType(Modal).length).toBe(0);
-      }
-    }
+      },
+    },
   ];
 
   iterator(tests);

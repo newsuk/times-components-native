@@ -4,7 +4,7 @@ import {
   flattenStyleTransform,
   minimaliseTransform,
   minimalNativeTransform,
-  print
+  print,
 } from "@times-components-native/jest-serializer";
 import shared from "./shared-with-style.base";
 import topic from "./fixtures";
@@ -16,16 +16,22 @@ export default () => {
       print,
       minimalNativeTransform,
       minimaliseTransform((value, key) => key !== "style"),
-      flattenStyleTransform
-    )
+      flattenStyleTransform,
+    ),
   );
 
   const props = {
-    analyticsStream() {},
-    onArticlePress() {},
-    refetch() {},
+    analyticsStream() {
+      return null;
+    },
+    onArticlePress() {
+      return null;
+    },
+    refetch() {
+      return null;
+    },
     slug: "some-slug",
-    topic
+    topic,
   };
 
   shared(props);
