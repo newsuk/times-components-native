@@ -82,7 +82,27 @@ const ResponsiveImage = (props: ResponsiveImageProps) => {
     onError,
   } = props;
 
+  const [width, setWidth] = React.useState(0);
+  const [showOffline, setShowOffline] = React.useState(false);
+  const [showOnline, setShowOnline] = React.useState(false);
+  const [showPlaceholder, setShowPlaceholder] = React.useState(true);
+  const [checkedCache, setCheckedCache] = React.useState(false);
+  const [failed, setFailed] = React.useState(false);
+
   const borderRadius = rounded ? 9999 : 0;
+
+  const imageRef = React.useCallback((event) => {
+    const { width } = event.nativeEvent.layout;
+
+    setWidth(width);
+    if (onLayout) {
+      onLayout(event);
+    }
+  }, []);
+
+  if (!uri) {
+    return null;
+  }
 
   const url: Url = new Url(uri, true);
   if (!uri.includes("data:")) {
@@ -97,16 +117,10 @@ const ResponsiveImage = (props: ResponsiveImageProps) => {
     url.query.offline = "true";
   }
   const offlineUrl = url.toString();
-  const [width, setWidth] = React.useState(0);
   url.query.offline = "false";
   const onlineUrl = url.toString();
 
-  const [showOffline, setShowOffline] = React.useState(false);
-  const [showOnline, setShowOnline] = React.useState(false);
-  const [showPlaceholder, setShowPlaceholder] = React.useState(true);
-  const [checkedCache, setCheckedCache] = React.useState(false);
-  const [failed, setFailed] = React.useState(false);
-
+  // eslint-disable-next-line react-hooks/rules-of-hooks
   React.useEffect(() => {
     if ("queryCache" in Image && width && !checkedCache) {
       const cache =
@@ -129,19 +143,6 @@ const ResponsiveImage = (props: ResponsiveImageProps) => {
       });
     }
   }, [width]);
-
-  const imageRef = React.useCallback((event) => {
-    const { width } = event.nativeEvent.layout;
-
-    setWidth(width);
-    if (onLayout) {
-      onLayout(event);
-    }
-  }, []);
-
-  if (!uri) {
-    return null;
-  }
 
   if (!width || !checkedCache) {
     return (
