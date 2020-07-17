@@ -89,7 +89,6 @@ module.exports = {
     "@typescript-eslint/no-explicit-any": "off",
     // Temporarily disabled rules
     "react/prop-types": "off",
-    "no-redeclare": "off",
     "@typescript-eslint/no-non-null-assertion": "off",
     "@typescript-eslint/no-this-alias": "off"
   },
