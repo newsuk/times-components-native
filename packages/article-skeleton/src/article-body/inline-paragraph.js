@@ -31,7 +31,7 @@ const InlineParagraph = ({
     return null;
   }
 
-  console.log('InlineParagraph', narrowContent)
+  // console.log('InlineParagraph', narrowContent)
 
   const contentWidth = Math.min(screenWidth(), narrowContent ? narrowArticleContentWidth : tabletWidth);
   const gutters = (screenWidth() - contentWidth) / 2 + spacing(2);

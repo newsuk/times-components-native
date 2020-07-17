@@ -5,7 +5,7 @@ const globalStyle = {
   articleContainer: {
     backgroundColor: colours.functional.gutter,
   },
-  articleContainerNarrow: {
+  narrow: {
     marginLeft: "25%",
     position: "relative",
   },
