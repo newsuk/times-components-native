@@ -2,45 +2,45 @@ import {
   fonts,
   fontFactory,
   spacing,
-  editionBreakpoints
+  editionBreakpoints,
 } from "@times-components-native/styleguide";
 
 const styles = {
   container: {
-    flexDirection: "row",
-    padding: spacing(2)
+    flexDirection: "row-reverse",
+    padding: spacing(2),
   },
   headline: {
     ...fontFactory({
       font: "headline",
-      fontSize: "infoTitle"
+      fontSize: "infoTitle",
     }),
-    marginBottom: spacing(2)
+    marginBottom: spacing(2),
   },
   imageContainer: {
-    width: "50%"
+    width: "50%",
   },
   summaryContainer: {
     paddingLeft: spacing(2),
-    paddingBottom: spacing(1)
-  }
+    paddingBottom: spacing(1),
+  },
 };
 
 const mediumBreakpointStyles = {
   container: {
     padding: spacing(2),
-    paddingTop: spacing(3)
+    paddingTop: spacing(3),
   },
   headline: {
     fontFamily: fonts.headline,
     fontSize: 20,
     lineHeight: 20,
-    marginBottom: 0
+    marginBottom: 0,
   },
   imageContainer: {
     width: "100%",
-    marginBottom: spacing(2)
-  }
+    marginTop: spacing(2),
+  },
 };
 
 const wideBreakpointStyles = {
@@ -48,8 +48,8 @@ const wideBreakpointStyles = {
   container: {
     flex: 1,
     paddingHorizontal: spacing(2),
-    paddingVertical: spacing(3)
-  }
+    paddingVertical: spacing(3),
+  },
 };
 
 const hugeBreakpointStyles = {
@@ -57,15 +57,15 @@ const hugeBreakpointStyles = {
   headline: {
     ...wideBreakpointStyles.headline,
     fontSize: 20,
-    lineHeight: 20
-  }
+    lineHeight: 20,
+  },
 };
 
 const stylesResolver = {
   [editionBreakpoints.small]: styles,
   [editionBreakpoints.medium]: mediumBreakpointStyles,
   [editionBreakpoints.wide]: wideBreakpointStyles,
-  [editionBreakpoints.huge]: hugeBreakpointStyles
+  [editionBreakpoints.huge]: hugeBreakpointStyles,
 };
 
-export default breakpoint => stylesResolver[breakpoint];
+export default (breakpoint) => stylesResolver[breakpoint];

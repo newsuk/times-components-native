@@ -8,7 +8,7 @@ import {
   TileSummary,
   withTileTracking,
   TileImage,
-  getTileSummary
+  getTileSummary,
 } from "../shared";
 import stylesFactory from "./styles";
 import WithoutWhiteSpace from "../shared/without-white-space";
@@ -22,11 +22,26 @@ const TileE = ({ onPress, tile, breakpoint = editionBreakpoints.small }) => {
   }
 
   const {
-    article: { hasVideo }
+    article: { hasVideo },
   } = tile;
+
+  const summary =
+    breakpoint === editionBreakpoints.small ? getTileSummary(tile, 125) : null;
 
   return (
     <TileLink onPress={onPress} style={styles.container} tile={tile}>
+      <WithoutWhiteSpace
+        style={styles.summaryContainer}
+        render={(whiteSpaceHeight) => (
+          <TileSummary
+            headlineStyle={styles.headline}
+            summary={summary}
+            style={styles.summaryContainer}
+            tile={tile}
+            whiteSpaceHeight={whiteSpaceHeight}
+          />
+        )}
+      />
       <TileImage
         aspectRatio={4 / 5}
         relativeWidth={crop.relativeWidth}
@@ -38,18 +53,6 @@ const TileE = ({ onPress, tile, breakpoint = editionBreakpoints.small }) => {
         fill
         hasVideo={hasVideo}
       />
-      <WithoutWhiteSpace
-        style={styles.summaryContainer}
-        render={whiteSpaceHeight => (
-          <TileSummary
-            headlineStyle={styles.headline}
-            summary={getTileSummary(tile, 125)}
-            style={styles.summaryContainer}
-            tile={tile}
-            whiteSpaceHeight={whiteSpaceHeight}
-          />
-        )}
-      />
     </TileLink>
   );
 };
@@ -57,7 +60,7 @@ const TileE = ({ onPress, tile, breakpoint = editionBreakpoints.small }) => {
 TileE.propTypes = {
   onPress: PropTypes.func.isRequired,
   tile: PropTypes.shape({}).isRequired,
-  breakpoint: PropTypes.string
+  breakpoint: PropTypes.string,
 };
 
 export default withTileTracking(TileE);
