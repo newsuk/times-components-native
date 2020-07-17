@@ -1,16 +1,15 @@
 import React, { Component } from "react";
 import trackingContextTypes from "../src/tracking-context-types";
 
-export default WrappedComponent => {
+export default (WrappedComponent) => {
   class TestContext extends Component {
     getChildContext() {
-      const self = this;
       return {
         tracking: {
-          analytics(...args) {
-            self.props.analyticsStream(...args);
-          }
-        }
+          analytics: (...args) => {
+            this.props.analyticsStream(...args);
+          },
+        },
       };
     }
 
