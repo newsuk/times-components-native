@@ -90,7 +90,7 @@ module.exports = {
     // Temporarily disabled rules
     "react/prop-types": "off",
     "@typescript-eslint/no-non-null-assertion": "off",
-    "@typescript-eslint/no-this-alias": "off"
+    // "@typescript-eslint/no-this-alias": "off"
   },
   "settings": {
     "import/resolver": {
