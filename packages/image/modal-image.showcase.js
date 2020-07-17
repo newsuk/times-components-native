@@ -28,8 +28,8 @@ export default {
       ),
       name: "Default",
       platform: "native",
-      type: "story"
-    }
+      type: "story",
+    },
   ],
-  name: "Primitives/modal-image"
+  name: "Primitives/modal-image",
 };

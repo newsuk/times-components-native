@@ -1,13 +1,13 @@
 import {
   sharedPropTypes,
-  sharedDefaultProps
+  sharedDefaultProps,
 } from "./related-article-item-prop-types-base";
 
 const relatedArticleItemPropTypes = {
-  ...sharedPropTypes
+  ...sharedPropTypes,
 };
 
 export {
   relatedArticleItemPropTypes,
-  sharedDefaultProps as relatedArticleItemDefaultProps
+  sharedDefaultProps as relatedArticleItemDefaultProps,
 };

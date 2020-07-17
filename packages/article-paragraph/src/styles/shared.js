@@ -19,7 +19,7 @@ const sharedStyles = (dropCapFont = "dropCap", scale = scales.medium) => {
     articleTextElement: {
       ...fontFactory({
         font: "body",
-        fontSize: "bodyMobile"
+        fontSize: "bodyMobile",
       }),
       color: colours.functional.primary,
       marginBottom: spacing(5),
@@ -30,12 +30,12 @@ const sharedStyles = (dropCapFont = "dropCap", scale = scales.medium) => {
     },
     narrow: {
       width: "100%",
-      alignSelf: "flex-start", 
+      alignSelf: "flex-start",
       maxWidth: narrowArticleContentWidth,
     },
     dropCapContainer: {
       flexDirection: "row",
-      flexWrap: "wrap"
+      flexWrap: "wrap",
     },
     dropCapContainerTablet: {
       width: tabletWidth,
@@ -47,7 +47,7 @@ const sharedStyles = (dropCapFont = "dropCap", scale = scales.medium) => {
       marginBottom: dropCapMargins.bottom,
       marginRight: spacing(1),
       marginTop: dropCapMargins.top,
-    }
+    },
   };
 };
 

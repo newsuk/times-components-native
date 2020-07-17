@@ -7,15 +7,15 @@ export const basePropTypes = {
     PropTypes.string,
     PropTypes.element,
     PropTypes.arrayOf(PropTypes.string),
-    PropTypes.arrayOf(PropTypes.element)
+    PropTypes.arrayOf(PropTypes.element),
   ]).isRequired,
   onPress: PropTypes.func.isRequired,
   style: StylePropType,
   target: PropTypes.string,
-  url: PropTypes.string
+  url: PropTypes.string,
 };
 
 export const baseDefaultProps = {
   style: {},
-  target: null
+  target: null,
 };

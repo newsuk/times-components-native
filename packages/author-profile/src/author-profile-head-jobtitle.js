@@ -10,7 +10,7 @@ const AuthorProfileHeadJobTitle = ({ jobTitle }) => (
 );
 
 AuthorProfileHeadJobTitle.propTypes = {
-  jobTitle: PropTypes.string.isRequired
+  jobTitle: PropTypes.string.isRequired,
 };
 
 export default AuthorProfileHeadJobTitle;

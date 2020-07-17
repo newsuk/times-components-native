@@ -1,4 +1,4 @@
-import { Exclusion } from './Exclusion';
+import { Exclusion } from "./Exclusion";
 
 export default class BoxExclusion implements Exclusion {
   public x: number = 0;
@@ -19,7 +19,7 @@ export default class BoxExclusion implements Exclusion {
       [this.x + this.width, this.y],
       [this.x + this.width, this.y + this.height],
       [this.x, this.y + this.height],
-      [this.x, this.y]
+      [this.x, this.y],
     ];
   }
 

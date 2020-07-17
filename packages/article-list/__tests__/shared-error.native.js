@@ -4,7 +4,7 @@ import {
   minimaliseTransform,
   minimalNativeTransform,
   print,
-  replacePropTransform
+  replacePropTransform,
 } from "@times-components-native/jest-serializer";
 import { hash } from "@times-components-native/test-utils";
 import { omitNative as omitProps } from "./utils";
@@ -17,10 +17,10 @@ export default () => {
       print,
       minimalNativeTransform,
       minimaliseTransform((value, key) => omitProps.has(key)),
-      replacePropTransform(
-        (value, key) => (key === "source" ? hash(JSON.stringify(value)) : value)
-      )
-    )
+      replacePropTransform((value, key) =>
+        key === "source" ? hash(JSON.stringify(value)) : value,
+      ),
+    ),
   );
 
   shared();

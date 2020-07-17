@@ -13,22 +13,22 @@ jest.mock(
       if (dimensionChangeHandler) {
         dimensionChangeHandler({
           screen: dimensions,
-          window: dimensions
+          window: dimensions,
         });
       }
     };
 
-    const setIsTablet = isTablet =>
+    const setIsTablet = (isTablet) =>
       setDimension(
         isTablet
           ? {
               height: breakpoints.nativeTablet / 2,
-              width: breakpoints.nativeTablet + 1
+              width: breakpoints.nativeTablet + 1,
             }
           : {
               height: breakpoints.nativeTablet + 1,
-              width: breakpoints.nativeTablet / 2
-            }
+              width: breakpoints.nativeTablet / 2,
+            },
       );
 
     return {
@@ -39,13 +39,13 @@ jest.mock(
           dimensionChangeHandler = handler;
         }
       },
-      get: () => dimensions
+      get: () => dimensions,
     };
   },
-  { virtual: true }
+  { virtual: true },
 );
 
 export {
   __mock__setDimension as setDimension,
-  __mock__setIsTablet as setIsTablet
+  __mock__setIsTablet as setIsTablet,
 } from "Dimensions";

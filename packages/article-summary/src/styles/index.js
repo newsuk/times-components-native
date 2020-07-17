@@ -7,26 +7,26 @@ const styles = StyleSheet.create({
   headline: {
     ...sharedStyles.headline,
     fontWeight: "900",
-    includeFontPadding: false
+    includeFontPadding: false,
   },
   labelWrapper: {
-    ...sharedStyles.labelWrapper
+    ...sharedStyles.labelWrapper,
   },
   text: {
     ...sharedStyles.text,
-    marginBottom: 0
+    marginBottom: 0,
   },
   metaText: {
     ...sharedStyles.metaText,
     marginTop: 0,
-    marginBottom: 0
+    marginBottom: 0,
   },
   strapline: {
     ...sharedStyles.strapline,
     paddingBottom: spacing(1),
     paddingTop: 0,
-    includeFontPadding: false
-  }
+    includeFontPadding: false,
+  },
 });
 
 export default styles;

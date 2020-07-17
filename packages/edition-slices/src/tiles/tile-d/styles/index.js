@@ -2,51 +2,51 @@ import {
   fonts,
   fontFactory,
   spacing,
-  editionBreakpoints
+  editionBreakpoints,
 } from "@times-components-native/styleguide";
 
 const styles = {
   container: {
     flexDirection: "row",
-    padding: spacing(2)
+    padding: spacing(2),
   },
   headline: {
     ...fontFactory({
       font: "headline",
-      fontSize: "infoTitle"
+      fontSize: "infoTitle",
     }),
-    marginBottom: spacing(2)
+    marginBottom: spacing(2),
   },
   imageContainer: {
-    width: "50%"
+    width: "50%",
   },
   summaryContainer: {
     width: "50%",
     paddingLeft: spacing(2),
-    paddingBottom: spacing(1)
-  }
+    paddingBottom: spacing(1),
+  },
 };
 
 const mediumBreakpointStyles = {
   container: {
     flexDirection: "row",
     padding: spacing(2),
-    paddingBottom: spacing(3)
+    paddingBottom: spacing(3),
   },
   headline: {
     fontFamily: fonts.headline,
     fontSize: 20,
     lineHeight: 20,
-    marginBottom: 0
+    marginBottom: 0,
   },
   imageContainer: {
-    flex: 1
+    flex: 1,
   },
   summaryContainer: {
     flex: 1,
-    paddingLeft: spacing(2)
-  }
+    paddingLeft: spacing(2),
+  },
 };
 
-export default breakpoint =>
+export default (breakpoint) =>
   breakpoint === editionBreakpoints.medium ? mediumBreakpointStyles : styles;

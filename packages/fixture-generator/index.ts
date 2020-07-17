@@ -7,7 +7,7 @@ import {
   mockMagazineSection,
   mockPuzzleSection,
   mockStandardSection,
-  getPuzzleSlices
+  getPuzzleSlices,
 } from "./src/mock-section";
 import mockEditionSlice, {
   mockDailyRegisterSlice,
@@ -26,7 +26,7 @@ import mockEditionSlice, {
   mockSecondaryOneAndFourSlice,
   mockSecondaryTwoAndTwoSlice,
   mockSecondaryTwoNoPicAndTwoSlice,
-  mockPuzzleSlice
+  mockPuzzleSlice,
 } from "./src/mock-slice";
 import MockTile from "./src/mock-tile";
 import MockTopic from "./src/mock-topic";
@@ -60,5 +60,5 @@ export {
   MockAuthor,
   MockTile,
   MockTopic,
-  mockPuzzleSlice
+  mockPuzzleSlice,
 };

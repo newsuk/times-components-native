@@ -5,7 +5,7 @@ import { View, Text } from "react-native";
 import { CenteredDecorator } from "@times-components-native/storybook";
 import { fonts } from "@times-components-native/styleguide";
 import renderTrees, {
-  renderTree
+  renderTree,
 } from "@times-components-native/markup-forest";
 import coreRenderers from "./src/markup";
 
@@ -21,14 +21,14 @@ export default {
     {
       decorator: CenteredDecorator,
       platform: "native",
-      type: "decorator"
+      type: "decorator",
     },
     {
       component: () => (
         <View>{renderTrees(multiParagraph, coreRenderers)}</View>
       ),
       name: "Multiple paragraphs",
-      type: "story"
+      type: "story",
     },
     {
       component: () =>
@@ -36,7 +36,7 @@ export default {
           ...coreRenderers,
           block(key, attributes, renderedChildren) {
             return {
-              element: <View key={key}>{renderedChildren}</View>
+              element: <View key={key}>{renderedChildren}</View>,
             };
           },
           link(key, attributes, renderedChildren) {
@@ -45,32 +45,32 @@ export default {
                 <Text href={attributes.href} key={key}>
                   {renderedChildren}
                 </Text>
-              )
+              ),
             };
-          }
+          },
         }),
       name: "Mixture of tags",
-      type: "story"
+      type: "story",
     },
     {
       component: () => <Text>{renderTrees(bio, coreRenderers)}</Text>,
       name: "Biography",
-      type: "story"
+      type: "story",
     },
     {
       component: () => <View>{renderTrees(ratings, coreRenderers)}</View>,
       name: "Ratings",
-      type: "story"
+      type: "story",
     },
     {
       component: () => <View>{renderTrees(subscript, coreRenderers)}</View>,
       name: "Subscript",
-      type: "story"
+      type: "story",
     },
     {
       component: () => <View>{renderTrees(superscript, coreRenderers)}</View>,
       name: "Superscript",
-      type: "story"
+      type: "story",
     },
     {
       component: () => (
@@ -85,20 +85,20 @@ export default {
                     style={{
                       color: "red",
                       fontFamily: fonts.headline,
-                      margin: 10
+                      margin: 10,
                     }}
                   >
                     {children}
                   </Text>
-                )
+                ),
               };
-            }
+            },
           })}
         </View>
       ),
       name: "Multiple children with styling",
-      type: "story"
-    }
+      type: "story",
+    },
   ],
-  name: "Composed/Markup"
+  name: "Composed/Markup",
 };

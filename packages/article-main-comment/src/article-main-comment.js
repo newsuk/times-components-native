@@ -9,7 +9,7 @@ import Context from "@times-components-native/context";
 import ArticleHeader from "./article-header/article-header";
 import {
   articlePropTypes,
-  articleDefaultProps
+  articleDefaultProps,
 } from "./article-prop-types/article-prop-types";
 
 class ArticlePage extends Component {
@@ -30,7 +30,7 @@ class ArticlePage extends Component {
       publicationName,
       publishedTime,
       shortHeadline,
-      standfirst
+      standfirst,
     } = article;
 
     const authorImage =
@@ -87,7 +87,7 @@ class ArticlePage extends Component {
       onTwitterLinkPress,
       onVideoPress,
       onViewed,
-      receiveChildList
+      receiveChildList,
     } = this.props;
 
     return (

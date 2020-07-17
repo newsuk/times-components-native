@@ -25,14 +25,14 @@ Path.propTypes = {
   fill: PropTypes.string,
   opacity: PropTypes.string,
   stroke: PropTypes.string,
-  strokeWidth: PropTypes.string
+  strokeWidth: PropTypes.string,
 };
 
 Path.defaultProps = {
   fill: null,
   opacity: null,
   stroke: null,
-  strokeWidth: null
+  strokeWidth: null,
 };
 
 export default Path;

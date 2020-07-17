@@ -4,12 +4,12 @@ import TestRenderer from "react-test-renderer";
 import { iterator } from "@times-components-native/test-utils";
 import authorsFixture from "../fixtures/authors.json";
 
-export default Component => {
-  const renderArticleByline = props =>
+export default (Component) => {
+  const renderArticleByline = (props) =>
     TestRenderer.create(
       <View>
         <Component {...props} />
-      </View>
+      </View>,
     );
 
   const tests = [
@@ -17,22 +17,22 @@ export default Component => {
       name: "with a single author",
       test: () => {
         const testInstance = renderArticleByline({
-          ast: authorsFixture.singleAuthor
+          ast: authorsFixture.singleAuthor,
         });
 
         expect(testInstance).toMatchSnapshot();
-      }
+      },
     },
     {
       name: "with a very long byline",
       test: () => {
         const testInstance = renderArticleByline({
-          ast: authorsFixture.veryLongByline
+          ast: authorsFixture.veryLongByline,
         });
 
         expect(testInstance).toMatchSnapshot();
-      }
-    }
+      },
+    },
   ];
 
   iterator(tests);

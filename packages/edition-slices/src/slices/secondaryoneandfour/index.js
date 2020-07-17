@@ -5,7 +5,7 @@ import { SectionContext } from "@times-components-native/context";
 import { TheSTLogo, TheTimesLogo } from "@times-components-native/icons";
 import {
   SecondaryOneAndFourSlice,
-  ItemRowSeparator
+  ItemRowSeparator,
 } from "@times-components-native/slice-layout";
 import { TileO, TileN } from "../../tiles";
 import styleFactory from "./styles";
@@ -20,7 +20,7 @@ class SecondaryOneAndFour extends Component {
   renderSlice(breakpoint) {
     const {
       onPress,
-      slice: { secondary, support1, support2, support3, support4 }
+      slice: { secondary, support1, support2, support3, support4 },
     } = this.props;
 
     const styles = styleFactory(breakpoint);
@@ -103,8 +103,8 @@ SecondaryOneAndFour.propTypes = {
     support1: PropTypes.shape({}).isRequired,
     support2: PropTypes.shape({}).isRequired,
     support3: PropTypes.shape({}).isRequired,
-    support4: PropTypes.shape({}).isRequired
-  }).isRequired
+    support4: PropTypes.shape({}).isRequired,
+  }).isRequired,
 };
 
 export default SecondaryOneAndFour;

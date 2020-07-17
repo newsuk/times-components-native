@@ -5,7 +5,7 @@ import {
   flattenStyleTransform,
   minimaliseTransform,
   print,
-  replacePropTransform
+  replacePropTransform,
 } from "@times-components-native/jest-serializer";
 import { hash } from "@times-components-native/test-utils";
 import shared from "./shared.base";
@@ -18,11 +18,10 @@ export default () => {
       print,
       flattenStyleTransform,
       minimaliseTransform((value, key) => key === "opacity"),
-      replacePropTransform(
-        (value, key) =>
-          longKeysSet.has(key) ? hash(JSON.stringify(value)) : value
-      )
-    )
+      replacePropTransform((value, key) =>
+        longKeysSet.has(key) ? hash(JSON.stringify(value)) : value,
+      ),
+    ),
   );
 
   shared(TestRenderer.create);

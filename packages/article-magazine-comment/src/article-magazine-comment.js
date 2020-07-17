@@ -6,7 +6,7 @@ import ArticleSkeleton from "@times-components-native/article-skeleton";
 import {
   getHeadline,
   getLeadAsset,
-  getStandardTemplateCrop
+  getStandardTemplateCrop,
 } from "@times-components-native/utils";
 import { CentredCaption } from "@times-components-native/caption";
 import ArticleLeadAsset from "@times-components-native/article-lead-asset";
@@ -16,7 +16,7 @@ import Context from "@times-components-native/context";
 import ArticleHeader from "./article-header/article-header";
 import {
   articlePropTypes,
-  articleDefaultProps
+  articleDefaultProps,
 } from "./article-prop-types/article-prop-types";
 import styles from "./styles";
 
@@ -38,7 +38,7 @@ class ArticleMagazineComment extends Component {
       publicationName,
       publishedTime,
       shortHeadline,
-      standfirst
+      standfirst,
     } = article;
 
     const authorImage =
@@ -76,7 +76,7 @@ class ArticleMagazineComment extends Component {
               renderCaption={({ caption }) => <CentredCaption {...caption} />}
               style={[
                 styles.leadAssetContainer,
-                isTablet && styles.leadAssetContainerTablet
+                isTablet && styles.leadAssetContainerTablet,
               ]}
               width={Math.min(width, tabletWidth)}
             />
@@ -113,7 +113,7 @@ class ArticleMagazineComment extends Component {
       onTwitterLinkPress,
       onVideoPress,
       onViewed,
-      receiveChildList
+      receiveChildList,
     } = this.props;
 
     return (

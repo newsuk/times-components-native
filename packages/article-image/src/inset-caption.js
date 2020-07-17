@@ -5,8 +5,8 @@ import { propTypes, defaultProps } from "./inset-caption-prop-types";
 
 const captionStyle = {
   container: {
-    paddingHorizontal: spacing(2)
-  }
+    paddingHorizontal: spacing(2),
+  },
 };
 
 const CaptionComponentPrimaryNative = ({ text, credits, CaptionComponent }) => (

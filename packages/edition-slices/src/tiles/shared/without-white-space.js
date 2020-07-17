@@ -10,7 +10,7 @@ class WithoutWhiteSpace extends Component {
       containerHeight: 0,
       contentHeight: 0,
       isContentRendered: false,
-      isContainerRendered: false
+      isContainerRendered: false,
     };
   }
 
@@ -19,7 +19,7 @@ class WithoutWhiteSpace extends Component {
       containerHeight,
       contentHeight,
       isContentRendered,
-      isContainerRendered
+      isContainerRendered,
     } = this.state;
     const { render, styles = {} } = this.props;
     const whiteSpaceHeight = containerHeight - contentHeight;
@@ -27,20 +27,20 @@ class WithoutWhiteSpace extends Component {
     return (
       <View
         style={[styles, { flex: 1 }]}
-        onLayout={e =>
+        onLayout={(e) =>
           !isContainerRendered &&
           this.setState({
             containerHeight: e.nativeEvent.layout.height,
-            isContainerRendered: true
+            isContainerRendered: true,
           })
         }
       >
         <View
-          onLayout={e =>
+          onLayout={(e) =>
             !isContentRendered &&
             this.setState({
               contentHeight: e.nativeEvent.layout.height,
-              isContentRendered: true
+              isContentRendered: true,
             })
           }
         >
@@ -55,5 +55,5 @@ export default WithoutWhiteSpace;
 
 WithoutWhiteSpace.propTypes = {
   render: PropTypes.func.isRequired,
-  styles: PropTypes.shape({})
+  styles: PropTypes.shape({}),
 };

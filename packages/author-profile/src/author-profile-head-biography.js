@@ -2,7 +2,7 @@ import React from "react";
 import { Text } from "react-native";
 import PropTypes from "prop-types";
 import renderTrees, {
-  propTypes as treePropTypes
+  propTypes as treePropTypes,
 } from "@times-components-native/markup-forest";
 import coreRenderers from "@times-components-native/markup";
 import styles from "./styles";
@@ -14,7 +14,7 @@ const AuthorProfileHeadBiography = ({ biography }) => (
 );
 
 AuthorProfileHeadBiography.propTypes = {
-  biography: PropTypes.arrayOf(treePropTypes).isRequired
+  biography: PropTypes.arrayOf(treePropTypes).isRequired,
 };
 
 export default AuthorProfileHeadBiography;

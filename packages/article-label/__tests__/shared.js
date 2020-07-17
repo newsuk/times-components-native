@@ -2,13 +2,16 @@ import React from "react";
 import TestRenderer from "react-test-renderer";
 import ArticleLabel from "../src/article-label";
 
-import {addSerializers, flattenStyle} from "@times-components-native/jest-serializer";
+import {
+  addSerializers,
+  flattenStyle,
+} from "@times-components-native/jest-serializer";
 addSerializers(expect, flattenStyle);
 
 module.exports = () => {
   it("renders ArticleLabel", () => {
     const testInstance = TestRenderer.create(
-      <ArticleLabel color="#008347" title="swimming" />
+      <ArticleLabel color="#008347" title="swimming" />,
     );
 
     expect(testInstance.toJSON()).toMatchSnapshot();
@@ -19,11 +22,11 @@ module.exports = () => {
         alpha: 1,
         blue: 71,
         green: 131,
-        red: 0
-      }
+        red: 0,
+      },
     };
     const testInstance = TestRenderer.create(
-      <ArticleLabel color={color} title="swimming" />
+      <ArticleLabel color={color} title="swimming" />,
     );
 
     expect(testInstance.toJSON()).toMatchSnapshot();

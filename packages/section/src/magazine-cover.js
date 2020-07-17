@@ -12,7 +12,7 @@ class MagazineCoverImage extends Component {
     super(props);
 
     this.state = {
-      showModalImage: false
+      showModalImage: false,
     };
 
     this.showModal = this.showModal.bind(this);
@@ -20,7 +20,7 @@ class MagazineCoverImage extends Component {
 
   showModal() {
     this.setState({
-      showModalImage: true
+      showModalImage: true,
     });
   }
 
@@ -81,15 +81,15 @@ const MagazineCoverProvider = ({ cover }) => (
 
 MagazineCoverImage.propTypes = {
   breakpoint: PropTypes.string,
-  cover: PropTypes.shape({}).isRequired
+  cover: PropTypes.shape({}).isRequired,
 };
 
 MagazineCoverImage.defaultProps = {
-  breakpoint: editionBreakpoints.small
+  breakpoint: editionBreakpoints.small,
 };
 
 MagazineCoverProvider.propTypes = {
-  cover: PropTypes.shape({}).isRequired
+  cover: PropTypes.shape({}).isRequired,
 };
 
 export default MagazineCoverProvider;

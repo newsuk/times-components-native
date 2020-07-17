@@ -18,7 +18,7 @@ function Placeholder({ borderRadius = 0 }) {
 }
 
 Placeholder.propTypes = {
-  borderRadius: PropTypes.oneOfType([PropTypes.number, PropTypes.string])
+  borderRadius: PropTypes.oneOfType([PropTypes.number, PropTypes.string]),
 };
 
 export default Placeholder;

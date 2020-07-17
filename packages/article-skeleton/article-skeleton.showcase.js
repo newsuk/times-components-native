@@ -12,14 +12,14 @@ export default {
             boolean,
             decorateAction,
             hasScaling: true,
-            select
+            select,
           })}
         </MockedProvider>
       ),
       name: "Default",
       platform: "native",
-      type: "story"
-    }
+      type: "story",
+    },
   ],
-  name: "Composed/Article Skeleton"
+  name: "Composed/Article Skeleton",
 };

@@ -4,7 +4,7 @@ import {
   compose,
   flattenStyleTransform,
   minimalNativeTransform,
-  print
+  print,
 } from "@times-components-native/jest-serializer";
 import shared from "./shared-with-style.base";
 
@@ -14,11 +14,7 @@ jest.mock("@times-components-native/gradient", () => "Gradient");
 export default () => {
   addSerializers(
     expect,
-    compose(
-      print,
-      flattenStyleTransform,
-      minimalNativeTransform
-    )
+    compose(print, flattenStyleTransform, minimalNativeTransform),
   );
 
   shared(TestRenderer.create);

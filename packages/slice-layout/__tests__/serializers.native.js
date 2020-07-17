@@ -3,7 +3,7 @@ import {
   compose,
   minimalNativeTransform,
   minimaliseTransform,
-  print
+  print,
 } from "@times-components-native/jest-serializer";
 
 addSerializers(
@@ -11,6 +11,6 @@ addSerializers(
   compose(
     print,
     minimalNativeTransform,
-    minimaliseTransform((value, key) => key === "style")
-  )
+    minimaliseTransform((value, key) => key === "style"),
+  ),
 );

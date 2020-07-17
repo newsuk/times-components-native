@@ -6,7 +6,7 @@ import getAdTargetingConfig from "../src/article/ad-targeting-config";
 
 const Article = Page("Article");
 
-export default makeTest => {
+export default (makeTest) => {
   it("article page", () => {
     expect(
       makeTest(
@@ -14,8 +14,8 @@ export default makeTest => {
           articleId="test-article-id"
           scale={scales.large}
           sectionName="News"
-        />
-      )
+        />,
+      ),
     ).toMatchSnapshot();
   });
 
@@ -23,13 +23,13 @@ export default makeTest => {
     const article = {
       headline: "This is a headline",
       id: "this-is-a-id",
-      keywords: ["this", "is", "a", "headline"]
+      keywords: ["this", "is", "a", "headline"],
     };
 
     const adTargetingConfig = getAdTargetingConfig({
       adTestMode: "testMode",
       article,
-      sectionName: "sectionName"
+      sectionName: "sectionName",
     });
 
     expect(adTargetingConfig).toMatchSnapshot();

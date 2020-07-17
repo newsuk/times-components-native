@@ -8,16 +8,16 @@ const styles = {
   container: {
     flex: 1,
     alignItems: "center",
-    justifyContent: "center"
+    justifyContent: "center",
   },
   title: {
     fontFamily: fonts.headline,
     fontSize: fontSizes.heading2Mobile,
-    marginBottom: 20
-  }
+    marginBottom: 20,
+  },
 };
 
-const withErrorBoundaries = WrappedComponent =>
+const withErrorBoundaries = (WrappedComponent) =>
   class extends Component {
     constructor(props) {
       super(props);

@@ -25,7 +25,7 @@ export default () => {
   });
 
   it("remove undefined props", () => {
-    const Dummy = props => <Text {...props} />;
+    const Dummy = (props) => <Text {...props} />;
     const DummyRenderer = () => (
       <View>
         <Dummy False={false} Null={null} Undef={undefined} Zero={0} />
@@ -38,7 +38,7 @@ export default () => {
   });
 
   it("remove functions as props", () => {
-    const Dummy = props => <Text {...props} />;
+    const Dummy = (props) => <Text {...props} />;
     const DummyRenderer = () => (
       <View>
         <Dummy testFunc={() => 42} />

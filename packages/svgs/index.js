@@ -1,8 +1,1 @@
-export {
-  default,
-  G,
-  Path,
-  Polygon,
-  Rect,
-  Svg
-} from './src';
+export { default, G, Path, Polygon, Rect, Svg } from "./src";

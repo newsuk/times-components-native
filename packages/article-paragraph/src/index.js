@@ -3,7 +3,14 @@ import React from "react";
 import PropTypes from "prop-types";
 import ArticleParagraph from "./article-paragraph";
 
-const ArticleParagraphWrapper = ({ ast, children, uid, height, style, narrowContent }) => {
+const ArticleParagraphWrapper = ({
+  ast,
+  children,
+  uid,
+  height,
+  style,
+  narrowContent,
+}) => {
   const { children: astChildren } = ast;
   if (!astChildren || astChildren.length === 0) {
     return null;
@@ -27,11 +34,11 @@ ArticleParagraphWrapper.propTypes = {
   children: PropTypes.node.isRequired,
   uid: PropTypes.number.isRequired,
   height: PropTypes.number.isRequired,
-  style: PropTypes.objectOf({})
+  style: PropTypes.objectOf({}),
 };
 
 ArticleParagraphWrapper.defaultProps = {
-  style: {}
+  style: {},
 };
 
 export default ArticleParagraphWrapper;

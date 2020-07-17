@@ -10,8 +10,8 @@ export const propTypes = {
   slug: PropTypes.string.isRequired,
   topic: PropTypes.shape({
     description: topicHeadPropTypes.description,
-    name: topicHeadPropTypes.name
-  })
+    name: topicHeadPropTypes.name,
+  }),
 };
 
 export const defaultProps = {
@@ -19,5 +19,5 @@ export const defaultProps = {
   isLoading: true,
   page: 1,
   pageSize: 10,
-  topic: null
+  topic: null,
 };

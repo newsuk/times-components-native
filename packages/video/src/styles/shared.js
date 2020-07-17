@@ -1,7 +1,7 @@
 import {
   fontFactory,
   spacing,
-  colours
+  colours,
 } from "@times-components-native/styleguide";
 
 const styles = {
@@ -15,8 +15,8 @@ const styles = {
     textAlign: "center",
     width: 300,
     ...fontFactory({
-      font: "body"
-    })
+      font: "body",
+    }),
   },
   noSubscriptionWrapper: {
     height: 65,
@@ -24,7 +24,7 @@ const styles = {
     marginTop: -32,
     position: "absolute",
     right: 0,
-    top: "50%"
+    top: "50%",
   },
   overlay: {
     alignItems: "center",
@@ -33,11 +33,11 @@ const styles = {
     left: 0,
     position: "absolute",
     top: 0,
-    zIndex: 2
+    zIndex: 2,
   },
   videoTabletContainer: {
-    alignSelf: "center"
-  }
+    alignSelf: "center",
+  },
 };
 
 export default styles;

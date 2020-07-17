@@ -3,63 +3,63 @@ import {
   fontFactory,
   spacing,
   editionBreakpoints,
-  globalSpacingStyles
+  globalSpacingStyles,
 } from "@times-components-native/styleguide";
 
 const defaultStyles = {
   container: {
     flex: 1,
     flexDirection: "row",
-    padding: spacing(2)
+    padding: spacing(2),
   },
   headline: {
     ...fontFactory({
       font: "headline",
-      fontSize: "infoTitle"
+      fontSize: "infoTitle",
     }),
-    marginBottom: spacing(1)
+    marginBottom: spacing(1),
   },
   imageContainer: {
     overflow: "hidden",
-    width: "30%"
+    width: "30%",
   },
   summaryContainer: {
     flex: 1,
     paddingLeft: spacing(2),
     width: "70%",
-    justifyContent: "center"
+    justifyContent: "center",
   },
   outerContainer: {
     flexDirection: "column",
-    flex: 1
+    flex: 1,
   },
   innerContainer: {
     flexDirection: "row",
-    flex: 1
+    flex: 1,
   },
   customStarPosition: {
     position: "relative",
     bottom: spacing(2),
-    marginBottom: spacing(-3)
-  }
+    marginBottom: spacing(-3),
+  },
 };
 
 const mediumBreakpointStyles = {
   container: {
     ...defaultStyles.container,
     paddingHorizontal: spacing(2),
-    paddingVertical: spacing(3)
+    paddingVertical: spacing(3),
   },
   headline: {
     ...globalSpacingStyles.tabletHeadline,
     fontFamily: fonts.headline,
     fontSize: 20,
-    lineHeight: 20
+    lineHeight: 20,
   },
   imageContainer: {
     overflow: "hidden",
-    width: 97
-  }
+    width: 97,
+  },
 };
 
 const wideBreakpointStyles = {
@@ -67,8 +67,8 @@ const wideBreakpointStyles = {
   container: {
     ...defaultStyles.container,
     paddingHorizontal: spacing(2),
-    paddingVertical: spacing(2)
-  }
+    paddingVertical: spacing(2),
+  },
 };
 
 const hugeBreakpointStyles = {
@@ -77,15 +77,15 @@ const hugeBreakpointStyles = {
     fontFamily: fonts.headline,
     fontSize: 20,
     lineHeight: 20,
-    marginBottom: 0
-  }
+    marginBottom: 0,
+  },
 };
 
 const stylesResolver = {
   [editionBreakpoints.medium]: mediumBreakpointStyles,
   [editionBreakpoints.wide]: wideBreakpointStyles,
-  [editionBreakpoints.huge]: hugeBreakpointStyles
+  [editionBreakpoints.huge]: hugeBreakpointStyles,
 };
 
-export default breakpoint =>
+export default (breakpoint) =>
   Object.assign(defaultStyles, stylesResolver[breakpoint] || {});

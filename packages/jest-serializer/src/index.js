@@ -21,8 +21,8 @@ const compose = (printer, ...transformers) =>
         children,
         node,
         props,
-      }
-    )
+      },
+    ),
   );
 
 const addSerializers = (expect, ...serializers) => {

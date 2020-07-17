@@ -20,4 +20,4 @@ export {
   tabletWidthMax,
   themeFactory,
   narrowArticleContentWidth,
-} from './src/styleguide';
+} from "./src/styleguide";

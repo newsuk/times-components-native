@@ -6,7 +6,7 @@ import {
   minimalNativeTransform,
   minimaliseTransform,
   flattenStyleTransform,
-  print
+  print,
 } from "@times-components-native/jest-serializer";
 import Responsive from "@times-components-native/responsive";
 import { iterator } from "@times-components-native/test-utils";
@@ -23,8 +23,8 @@ export default () => {
       print,
       minimalNativeTransform,
       flattenStyleTransform,
-      minimaliseTransform((value, key) => key !== "style")
-    )
+      minimaliseTransform((value, key) => key !== "style"),
+    ),
   );
 
   iterator([
@@ -33,27 +33,27 @@ export default () => {
       test: async () => {
         const testInstance = TestRenderer.create(renderParagraph(dropCapData));
         expect(testInstance).toMatchSnapshot();
-      }
+      },
     },
     {
       name: "responsive tablet paragraph",
       test: async () => {
         setIsTablet(true);
         const testInstance = TestRenderer.create(
-          <Responsive>{renderParagraph(paragraphData)}</Responsive>
+          <Responsive>{renderParagraph(paragraphData)}</Responsive>,
         );
         expect(testInstance).toMatchSnapshot();
-      }
+      },
     },
     {
       name: "responsive tablet paragraph with a drop cap",
       test: async () => {
         setIsTablet(true);
         const testInstance = TestRenderer.create(
-          <Responsive>{renderParagraph(dropCapData)}</Responsive>
+          <Responsive>{renderParagraph(dropCapData)}</Responsive>,
         );
         expect(testInstance).toMatchSnapshot();
-      }
-    }
+      },
+    },
   ]);
 };

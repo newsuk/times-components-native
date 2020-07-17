@@ -10,13 +10,13 @@ import { ResponsiveContext } from "@times-components-native/responsive";
 import {
   getHeadline,
   getLeadAsset,
-  getStandardTemplateCrop
+  getStandardTemplateCrop,
 } from "@times-components-native/utils";
 import Context from "@times-components-native/context";
 import ArticleHeader from "./article-header/article-header";
 import {
   articlePropTypes,
-  articleDefaultProps
+  articleDefaultProps,
 } from "./article-prop-types/article-prop-types";
 import Meta from "./article-meta/article-meta";
 import styles from "./styles";
@@ -41,7 +41,7 @@ class ArticleInDepth extends Component {
       publishedTime,
       shortHeadline,
       standfirst,
-      textColour
+      textColour,
     } = article;
     return (
       <ResponsiveContext.Consumer>
@@ -72,7 +72,7 @@ class ArticleInDepth extends Component {
             <View
               style={[
                 styles.metaContainer,
-                isTablet && styles.metaContainerTablet
+                isTablet && styles.metaContainerTablet,
               ]}
             >
               <Meta
@@ -118,7 +118,7 @@ class ArticleInDepth extends Component {
       onTwitterLinkPress,
       onVideoPress,
       onViewed,
-      receiveChildList
+      receiveChildList,
     } = this.props;
 
     return (

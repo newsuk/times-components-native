@@ -17,7 +17,7 @@ const CommentLeadAndCartoon = ({ breakpoint, lead, cartoon }) => {
       containerStyle={styles.container}
       tiles={[
         { style: styles.lead, tile: lead },
-        { style: styles.cartoon, tile: cartoon }
+        { style: styles.cartoon, tile: cartoon },
       ]}
     />
   );
@@ -26,11 +26,11 @@ const CommentLeadAndCartoon = ({ breakpoint, lead, cartoon }) => {
 CommentLeadAndCartoon.propTypes = {
   breakpoint: PropTypes.string,
   cartoon: PropTypes.node.isRequired,
-  lead: PropTypes.node.isRequired
+  lead: PropTypes.node.isRequired,
 };
 
 CommentLeadAndCartoon.defaultProps = {
-  breakpoint: editionBreakpoints.small
+  breakpoint: editionBreakpoints.small,
 };
 
 export default CommentLeadAndCartoon;

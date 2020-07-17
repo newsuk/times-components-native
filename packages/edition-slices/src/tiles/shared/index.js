@@ -15,5 +15,5 @@ export {
   TileSummary,
   TileImage,
   withPuzzleTileTracking,
-  withTileTracking
+  withTileTracking,
 };

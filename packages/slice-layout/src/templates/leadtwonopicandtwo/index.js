@@ -11,7 +11,7 @@ const LeadTwoNoPicAndTwoSlice = ({
   lead1,
   lead2,
   support1,
-  support2
+  support2,
 }) => {
   const styles = styleFactory(breakpoint);
 
@@ -48,11 +48,11 @@ LeadTwoNoPicAndTwoSlice.propTypes = {
   lead1: PropTypes.node.isRequired,
   lead2: PropTypes.node.isRequired,
   support1: PropTypes.node.isRequired,
-  support2: PropTypes.node.isRequired
+  support2: PropTypes.node.isRequired,
 };
 
 LeadTwoNoPicAndTwoSlice.defaultProps = {
-  breakpoint: editionBreakpoints.small
+  breakpoint: editionBreakpoints.small,
 };
 
 export default LeadTwoNoPicAndTwoSlice;

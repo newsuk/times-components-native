@@ -22,7 +22,7 @@ const StarWithTracking = withArticleSaveTracking(
         selected={isSaved}
       />
     );
-  }
+  },
 );
 
 const TileStar = ({ articleId, isDark, style }) => (
@@ -44,12 +44,12 @@ const TileStar = ({ articleId, isDark, style }) => (
 TileStar.propTypes = {
   articleId: PropTypes.string.isRequired,
   style: PropTypes.shape({}),
-  isDark: PropTypes.bool
+  isDark: PropTypes.bool,
 };
 
 TileStar.defaultProps = {
   style: null,
-  isDark: false
+  isDark: false,
 };
 
 export default TileStar;

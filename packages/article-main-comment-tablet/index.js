@@ -1,1 +1,1 @@
-export { default } from './src/article-main-comment-tablet';
+export { default } from "./src/article-main-comment-tablet";

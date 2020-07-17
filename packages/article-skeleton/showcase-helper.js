@@ -10,7 +10,7 @@ import storybookReporter from "@times-components-native/tealium-utils";
 import { MockBookmarksProvider } from "@times-components-native/provider-test-tools";
 import {
   getNewsletter,
-  subscribeNewsletter
+  subscribeNewsletter,
 } from "@times-components-native/provider-queries";
 import fullArticleFixture from "./fixtures/full-article";
 import ArticleSkeleton from "./src/article-skeleton";
@@ -20,38 +20,38 @@ const mocks = [
     request: {
       query: getNewsletter,
       variables: {
-        code: "TNL-119"
-      }
+        code: "TNL-119",
+      },
     },
     result: {
       data: {
         newsletter: {
           id: "a2l6E000000CdHzQAK",
           isSubscribed: false,
-          __typename: "Newsletter"
-        }
-      }
+          __typename: "Newsletter",
+        },
+      },
     },
-    delay: 2000
+    delay: 2000,
   },
   {
     request: {
       query: subscribeNewsletter,
       variables: {
-        code: "TNL-119"
-      }
+        code: "TNL-119",
+      },
     },
     result: {
       data: {
         subscribeNewsletter: {
           id: "a2l6E000000CdHzQAK",
           isSubscribed: true,
-          __typename: "Newsletter"
-        }
-      }
+          __typename: "Newsletter",
+        },
+      },
     },
-    delay: 2000
-  }
+    delay: 2000,
+  },
 ];
 
 const TestHeader = () => (
@@ -62,30 +62,30 @@ const TestHeader = () => (
       borderWidth: 1,
       justifyContent: "center",
       margin: 20,
-      padding: 20
+      padding: 20,
     }}
   >
     <Text>THIS IS A TEST ARTICLE HEADER</Text>
   </View>
 );
 
-const preventDefaultedAction = decorateAction =>
+const preventDefaultedAction = (decorateAction) =>
   decorateAction([
     ([e, ...args]) => {
       e.preventDefault();
       return ["[SyntheticEvent (storybook prevented default)]", ...args];
-    }
+    },
   ]);
 
-const selectScales = select => select("Scale", scales, scales.medium);
-const selectSection = select =>
+const selectScales = (select) => select("Scale", scales, scales.medium);
+const selectSection = (select) =>
   select("Section", pick(colours.section, sections), colours.section.default);
 
 const renderArticleSkeleton = ({
   boolean,
   decorateAction,
   hasScaling,
-  select
+  select,
 }) => {
   const scale = hasScaling ? selectScales(select) : null;
   const sectionColour = selectSection(select);
@@ -97,7 +97,7 @@ const renderArticleSkeleton = ({
   const config = {
     commentsEnabled: commentsEnabled ? undefined : false,
     relatedArticleSlice: relatedArticleSlice ? undefined : null,
-    topics: topics ? undefined : []
+    topics: topics ? undefined : [],
   };
   const data = fullArticleFixture(config);
   const showHeader = header ? () => <TestHeader /> : () => null;
@@ -111,21 +111,21 @@ const renderArticleSkeleton = ({
           data={data}
           Header={showHeader}
           onAuthorPress={preventDefaultedAction(decorateAction)(
-            "onAuthorPress"
+            "onAuthorPress",
           )}
           onCommentGuidelinesPress={preventDefaultedAction(decorateAction)(
-            "onCommentGuidelinesPress"
+            "onCommentGuidelinesPress",
           )}
           onCommentsPress={preventDefaultedAction(decorateAction)(
-            "onCommentsPress"
+            "onCommentsPress",
           )}
           onLinkPress={preventDefaultedAction(decorateAction)("onLinkPress")}
           onRelatedArticlePress={preventDefaultedAction(decorateAction)(
-            "onRelatedArticlePress"
+            "onRelatedArticlePress",
           )}
           onTopicPress={preventDefaultedAction(decorateAction)("onTopicPress")}
           onTwitterLinkPress={preventDefaultedAction(decorateAction)(
-            "onTwitterLinkPress"
+            "onTwitterLinkPress",
           )}
           onVideoPress={preventDefaultedAction(decorateAction)("onVideoPress")}
           onViewableItemsChanged={() => null}

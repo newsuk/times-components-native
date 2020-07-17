@@ -6,7 +6,7 @@ import {
   compose,
   flattenStyleTransform,
   minimaliseTransform,
-  print
+  print,
 } from "@times-components-native/jest-serializer";
 import { iterator } from "@times-components-native/test-utils";
 import Video from "../src/video";
@@ -23,8 +23,8 @@ export default () => {
     compose(
       print,
       flattenStyleTransform,
-      minimaliseTransform((value, key) => key !== "style")
-    )
+      minimaliseTransform((value, key) => key !== "style"),
+    ),
   );
 
   const tests = [
@@ -32,32 +32,32 @@ export default () => {
       name: "video",
       test: () => {
         const testInstance = TestRenderer.create(
-          <Video {...defaultVideoProps} />
+          <Video {...defaultVideoProps} />,
         );
 
         expect(testInstance).toMatchSnapshot();
-      }
+      },
     },
     {
       name: "video without a poster image",
       test: () => {
         const testInstance = TestRenderer.create(
-          <Video {...defaultVideoProps} poster={null} />
+          <Video {...defaultVideoProps} poster={null} />,
         );
 
         expect(testInstance).toMatchSnapshot();
-      }
+      },
     },
     {
       name: "360 video",
       test: () => {
         const testInstance = TestRenderer.create(
-          <Video {...defaultVideoProps} playerId="foo" />
+          <Video {...defaultVideoProps} playerId="foo" />,
         );
 
         expect(testInstance).toMatchSnapshot();
-      }
-    }
+      },
+    },
   ];
 
   iterator(tests);
@@ -65,14 +65,14 @@ export default () => {
   it("calls onVideoPress when the component is pressed", () => {
     const onVideoPress = jest.fn();
     const component = shallow(
-      <Video {...defaultVideoProps} onVideoPress={onVideoPress} />
+      <Video {...defaultVideoProps} onVideoPress={onVideoPress} />,
     );
     expect(onVideoPress).not.toHaveBeenCalled();
     component.simulate("press");
     expect(onVideoPress).toHaveBeenCalledWith(undefined, {
       accountId: "[account id]",
       policyKey: "[policy key]",
-      videoId: "[video id]"
+      videoId: "[video id]",
     });
   });
 

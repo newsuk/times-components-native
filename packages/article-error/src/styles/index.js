@@ -3,7 +3,7 @@ import {
   colours,
   fonts,
   fontSizes,
-  spacing
+  spacing,
 } from "@times-components-native/styleguide";
 
 export default StyleSheet.create({
@@ -12,7 +12,7 @@ export default StyleSheet.create({
     justifyContent: "space-between",
     marginHorizontal: spacing(2),
     paddingBottom: spacing(14),
-    paddingTop: spacing(2)
+    paddingTop: spacing(2),
   },
   errorHeading: {
     alignSelf: "center",
@@ -21,17 +21,17 @@ export default StyleSheet.create({
     fontSize: fontSizes.leadHeadline,
     marginBottom: spacing(2),
     marginHorizontal: spacing(8),
-    textAlign: "center"
+    textAlign: "center",
   },
   errorImageContainer: {
     alignSelf: "center",
-    marginVertical: spacing(4)
+    marginVertical: spacing(4),
   },
   errorMessage: {
     color: colours.functional.secondary,
     fontFamily: fonts.bodyRegular,
     fontSize: fontSizes.infoSubText,
     marginHorizontal: spacing(8),
-    textAlign: "center"
-  }
+    textAlign: "center",
+  },
 });

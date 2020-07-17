@@ -5,7 +5,7 @@ import VideoLabel from "@times-components-native/video-label";
 
 import {
   articleLabelPropTypes,
-  articleLabelDefaultProps
+  articleLabelDefaultProps,
 } from "./article-label-prop-types";
 import styles from "../styles";
 

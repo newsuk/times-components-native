@@ -3,7 +3,7 @@ import { NativeModules, Platform } from "react-native";
 import Article from "@times-components-native/article";
 import {
   ContextProviderWithDefaults,
-  defaults
+  defaults,
 } from "@times-components-native/context";
 import { themeFactory } from "@times-components-native/styleguide";
 import adTargetConfig from "./ad-targeting-config";
@@ -20,7 +20,7 @@ const {
   onImagePress,
   onLinkPress,
   onTopicPress,
-  onVideoPress
+  onVideoPress,
 } = NativeModules.ArticleEvents;
 
 const ArticleBase = ({
@@ -34,7 +34,7 @@ const ArticleBase = ({
   refetch,
   omitErrors,
   scale,
-  sectionName: pageSection
+  sectionName: pageSection,
 }) => {
   const { section: articleSection, template } = article || {};
   const section = pageSection || articleSection || "default";
@@ -44,18 +44,18 @@ const ArticleBase = ({
       : adTargetConfig({
           adTestMode,
           article,
-          sectionName: section
+          sectionName: section,
         });
   const theme = {
     ...themeFactory(section, template),
-    scale: scale || defaults.theme.scale
+    scale: scale || defaults.theme.scale,
   };
 
   const interactiveConfig = {
     dev: devInteractives,
     environment,
     platform: Platform.OS,
-    version: appVersion
+    version: appVersion,
   };
 
   return (

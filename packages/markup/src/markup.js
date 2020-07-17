@@ -3,17 +3,17 @@ import { Text, StyleSheet, View } from "react-native";
 
 const styles = StyleSheet.create({
   bold: {
-    fontWeight: "bold"
+    fontWeight: "bold",
   },
   italic: {
-    fontStyle: "italic"
+    fontStyle: "italic",
   },
   subscript: {
-    fontSize: 10
+    fontSize: 10,
   },
   superscript: {
-    fontSize: 10
-  }
+    fontSize: 10,
+  },
 });
 
 export default {
@@ -73,5 +73,5 @@ export default {
   },
   text(key, { value }) {
     return value;
-  }
+  },
 };

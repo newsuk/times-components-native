@@ -6,7 +6,7 @@ import {
   getTileStrapline,
   TileLink,
   TileSummary,
-  getTileSummary
+  getTileSummary,
 } from "../shared";
 import stylesFactory from "./styles";
 import WithoutWhiteSpace from "../shared/without-white-space";
@@ -18,7 +18,7 @@ const TileX = ({ onPress, tile, breakpoint = editionBreakpoints.medium }) => {
   return (
     <TileLink onPress={onPress} style={styles.container} tile={tile}>
       <WithoutWhiteSpace
-        render={whiteSpaceHeight => (
+        render={(whiteSpaceHeight) => (
           <TileSummary
             headlineStyle={styles.headline}
             strapline={getTileStrapline(tile)}
@@ -39,7 +39,7 @@ const TileX = ({ onPress, tile, breakpoint = editionBreakpoints.medium }) => {
 TileX.propTypes = {
   onPress: PropTypes.func.isRequired,
   tile: PropTypes.shape({}).isRequired,
-  breakpoint: PropTypes.string
+  breakpoint: PropTypes.string,
 };
 
 export default TileX;

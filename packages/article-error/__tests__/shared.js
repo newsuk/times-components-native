@@ -5,7 +5,7 @@ import {
   compose,
   minimaliseTransform,
   minimalNativeTransform,
-  print
+  print,
 } from "@times-components-native/jest-serializer";
 import Button from "@times-components-native/button";
 import ArticleError from "../src/article-error";
@@ -14,7 +14,7 @@ const shared = () => {
   it("refetch button is clickable", () => {
     const refetch = jest.fn();
     const testInstance = TestRenderer.create(
-      <ArticleError refetch={refetch} />
+      <ArticleError refetch={refetch} />,
     );
 
     testInstance.root.findByType(Button).props.onPress();
@@ -28,8 +28,8 @@ export default () => {
     compose(
       print,
       minimalNativeTransform,
-      minimaliseTransform((value, key) => key === "style" || key === "testID")
-    )
+      minimaliseTransform((value, key) => key === "style" || key === "testID"),
+    ),
   );
 
   shared();

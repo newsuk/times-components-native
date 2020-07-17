@@ -9,7 +9,7 @@ const ArticleComments = ({
   commentsEnabled,
   onCommentGuidelinesPress,
   onCommentsPress,
-  url
+  url,
 }) =>
   commentsEnabled ? (
     <Comments
@@ -29,12 +29,12 @@ ArticleComments.propTypes = {
   commentsEnabled: PropTypes.bool,
   onCommentGuidelinesPress: PropTypes.func.isRequired,
   onCommentsPress: PropTypes.func.isRequired,
-  url: PropTypes.string.isRequired
+  url: PropTypes.string.isRequired,
 };
 
 ArticleComments.defaultProps = {
   commentCount: 0,
-  commentsEnabled: false
+  commentsEnabled: false,
 };
 
 export default ArticleComments;

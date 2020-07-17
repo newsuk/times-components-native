@@ -6,21 +6,10 @@ import DatePublication from "@times-components-native/date-publication";
 import metaPropTypes from "./article-meta-prop-types";
 import styles from "../styles";
 
-const ArticleMeta = ({
-  hasStandfirst,
-  publicationName,
-  publishedTime
-}) => (
-  <View
-    style={[
-      styles.metaContainer,
-      !hasStandfirst && styles.metaFlagSpacer
-    ]}
-  >
+const ArticleMeta = ({ hasStandfirst, publicationName, publishedTime }) => (
+  <View style={[styles.metaContainer, !hasStandfirst && styles.metaFlagSpacer]}>
     <View style={styles.meta}>
-      <Text
-        style={styles.datePublication}
-      >
+      <Text style={styles.datePublication}>
         <DatePublication date={publishedTime} publication={publicationName} />
       </Text>
     </View>
@@ -29,7 +18,7 @@ const ArticleMeta = ({
 
 ArticleMeta.propTypes = {
   ...metaPropTypes,
-  onAuthorPress: PropTypes.func.isRequired
+  onAuthorPress: PropTypes.func.isRequired,
 };
 
 export default ArticleMeta;

@@ -1,7 +1,6 @@
 /* eslint-disable consistent-return */
 
 import React, { Component } from "react";
-import { Text } from "react-native";
 import ArticleError from "@times-components-native/article-error";
 import ArticleSkeleton from "@times-components-native/article-skeleton";
 import { getHeadline } from "@times-components-native/utils";
@@ -11,7 +10,7 @@ import ArticleHeader from "./article-header/article-header";
 import ArticleLeftColumn from "./article-left-column/article-left-column";
 import {
   articlePropTypes,
-  articleDefaultProps
+  articleDefaultProps,
 } from "./article-prop-types/article-prop-types";
 
 class ArticlePage extends Component {
@@ -31,7 +30,7 @@ class ArticlePage extends Component {
       publicationName,
       publishedTime,
       shortHeadline,
-      standfirst
+      standfirst,
     } = article;
 
     return (
@@ -61,7 +60,6 @@ class ArticlePage extends Component {
       return null;
     }
 
-
     const {
       adConfig,
       adPosition,
@@ -78,19 +76,19 @@ class ArticlePage extends Component {
       onTwitterLinkPress,
       onVideoPress,
       onViewed,
-      receiveChildList
+      receiveChildList,
     } = this.props;
 
     const { bylines } = article;
 
     const authorImage =
-    bylines &&
-    bylines.length > 0 &&
-    bylines[0].image &&
-    Object.keys(bylines[0].image).length !== 0 &&
-    bylines[0].image.crop
-      ? bylines[0].image.crop.url
-      : null;
+      bylines &&
+      bylines.length > 0 &&
+      bylines[0].image &&
+      Object.keys(bylines[0].image).length !== 0 &&
+      bylines[0].image.crop
+        ? bylines[0].image.crop.url
+        : null;
 
     return (
       <ResponsiveContext.Consumer>

@@ -3,28 +3,28 @@ import { spacing } from "@times-components-native/styleguide";
 const smallBreakpointStyles = {
   leadContainer: {
     flex: 1,
-    flexDirection: "row"
+    flexDirection: "row",
   },
   leadItem: {
     paddingBottom: spacing(1),
-    width: "50%"
-  }
+    width: "50%",
+  },
 };
 
 export const sharedMediumAndWide = {
   rowItemContainer: {
-    flex: 1
+    flex: 1,
   },
   supportContainer: {
     flex: 1,
-    flexDirection: "row"
+    flexDirection: "row",
   },
   supportItem: {
-    width: "50%"
+    width: "50%",
   },
   supportsWrapper: {
-    width: "50%"
-  }
+    width: "50%",
+  },
 };
 
 const mediumBreakpointStyles = {
@@ -33,8 +33,8 @@ const mediumBreakpointStyles = {
     flex: 1,
     flexDirection: "row",
     marginHorizontal: spacing(4),
-    marginVertical: spacing(1)
-  }
+    marginVertical: spacing(1),
+  },
 };
 
 const wideBreakpointStyles = {
@@ -43,15 +43,15 @@ const wideBreakpointStyles = {
     flex: 1,
     flexDirection: "row",
     marginHorizontal: spacing(2),
-    marginVertical: spacing(1)
-  }
+    marginVertical: spacing(1),
+  },
 };
 
 const stylesResolver = {
   small: smallBreakpointStyles,
   medium: mediumBreakpointStyles,
   wide: wideBreakpointStyles,
-  huge: wideBreakpointStyles
+  huge: wideBreakpointStyles,
 };
 
-export default breakpoint => stylesResolver[breakpoint] || {};
+export default (breakpoint) => stylesResolver[breakpoint] || {};

@@ -10,18 +10,18 @@ jest.mock("@times-components-native/section", () => "Section");
 export default () => {
   it("section data gets updated through the bridge on updateSectionData event", async () => {
     const {
-      SectionEvents: { getSectionData }
+      SectionEvents: { getSectionData },
     } = NativeModules;
 
     const initialSectionData = { name: "InitialSection" };
     const updatedSectionData = { name: "UpdatedSection" };
 
     getSectionData.mockReturnValue(
-      Promise.resolve(JSON.stringify(updatedSectionData))
+      Promise.resolve(JSON.stringify(updatedSectionData)),
     );
 
     const testInstance = TestRenderer.create(
-      <Section section={JSON.stringify(initialSectionData)} />
+      <Section section={JSON.stringify(initialSectionData)} />,
     );
 
     const sectionInstance = testInstance.root.findByType("Section");

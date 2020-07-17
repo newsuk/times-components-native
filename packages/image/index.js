@@ -1,1 +1,1 @@
-export { default, ModalImage, Placeholder } from './src';
+export { default, ModalImage, Placeholder } from "./src";

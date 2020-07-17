@@ -19,12 +19,12 @@ Link.propTypes = {
   children: PropTypes.node.isRequired,
   disabled: PropTypes.bool,
   linkStyle: ViewPropTypesStyle,
-  onPress: PropTypes.func.isRequired
+  onPress: PropTypes.func.isRequired,
 };
 
 Link.defaultProps = {
   disabled: false,
-  linkStyle: {}
+  linkStyle: {},
 };
 
 export default Link;

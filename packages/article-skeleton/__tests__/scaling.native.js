@@ -6,7 +6,7 @@ import {
   flattenStyleTransform,
   print,
   minimaliseTransform,
-  minimalNativeTransform
+  minimalNativeTransform,
 } from "@times-components-native/jest-serializer";
 import { iterator } from "@times-components-native/test-utils";
 import "./mocks.native";
@@ -15,19 +15,19 @@ import snapshotTests from "./scaling.base";
 
 FontStorage.registerFont(
   "TimesDigitalW04",
-  () => require("@times-components-native/test-utils").TestFont
+  () => require("@times-components-native/test-utils").TestFont,
 );
 FontStorage.registerFont(
   "TimesDigitalW04-Bold",
-  () => require("@times-components-native/test-utils").TestFont
+  () => require("@times-components-native/test-utils").TestFont,
 );
 FontStorage.registerFont(
   "TimesDigitalW04-Italic",
-  () => require("@times-components-native/test-utils").TestFont
+  () => require("@times-components-native/test-utils").TestFont,
 );
 FontStorage.registerFont(
   "TimesModern-Regular",
-  () => require("@times-components-native/test-utils").TestFont
+  () => require("@times-components-native/test-utils").TestFont,
 );
 
 export default () => {
@@ -37,8 +37,8 @@ export default () => {
       print,
       minimalNativeTransform,
       minimaliseTransform((value, key) => key !== "style"),
-      flattenStyleTransform
-    )
+      flattenStyleTransform,
+    ),
   );
 
   iterator(snapshotTests(TestRenderer.create));

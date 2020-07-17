@@ -1,1 +1,1 @@
-export { mockNativeModules, MockArticleSkeleton } from './src';
+export { mockNativeModules, MockArticleSkeleton } from "./src";

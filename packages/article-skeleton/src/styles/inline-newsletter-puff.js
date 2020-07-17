@@ -5,7 +5,7 @@ import {
   colours,
   fonts,
   fontSizes,
-  spacing
+  spacing,
 } from "@times-components-native/styleguide";
 
 export const InpContainer = styled(View)`
@@ -139,9 +139,9 @@ export const buttonStyles = {
   height: 45,
   justifyContent: "center",
   letterSpacing: 0.2,
-  width: "100%"
+  width: "100%",
 };
 
 export const textStyle = {
-  color: colours.functional.brandColour
+  color: colours.functional.brandColour,
 };

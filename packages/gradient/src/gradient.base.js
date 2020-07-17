@@ -10,20 +10,20 @@ class GradientBase extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      dimensions: { height: null, width: null }
+      dimensions: { height: null, width: null },
     };
   }
 
   onLayout = ({
     nativeEvent: {
-      layout: { width, height }
-    }
+      layout: { width, height },
+    },
   }) => {
     this.setState({
       dimensions: {
         height,
-        width
-      }
+        width,
+      },
     });
   };
 
@@ -47,7 +47,7 @@ class GradientBase extends Component {
       endColour,
       endPoint,
       startPoint,
-      style
+      style,
     } = this.props;
 
     const { start, end } = angleToPoints(((degrees + 90) / 180) * Math.PI);
@@ -70,12 +70,12 @@ class GradientBase extends Component {
               new LinearGradient(
                 {
                   [endPoint]: endColour,
-                  [startPoint]: startColour
+                  [startPoint]: startColour,
                 },
                 width * start.x,
                 height * start.y,
                 width * end.x,
-                height * end.y
+                height * end.y,
               )
             }
           />

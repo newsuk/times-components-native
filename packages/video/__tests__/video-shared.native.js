@@ -7,7 +7,7 @@ import {
   minimaliseTransform,
   minimalNativeTransform,
   print,
-  replacePropTransform
+  replacePropTransform,
 } from "@times-components-native/jest-serializer";
 import { hash, iterator } from "@times-components-native/test-utils";
 import Video from "../src/video";
@@ -28,7 +28,7 @@ export default () => {
         (value, key) =>
           key === "style" ||
           key === "nativeBackgroundAndroid" ||
-          key.includes("Class")
+          key.includes("Class"),
       ),
       replacePropTransform((value, key) => {
         if (key === "uri") {
@@ -38,8 +38,8 @@ export default () => {
           return hash(value.uri);
         }
         return value;
-      })
-    )
+      }),
+    ),
   );
 
   const tests = [
@@ -47,32 +47,32 @@ export default () => {
       name: "video",
       test: () => {
         const testInstance = TestRenderer.create(
-          <Video {...defaultVideoProps} />
+          <Video {...defaultVideoProps} />,
         );
 
         expect(testInstance.toJSON()).toMatchSnapshot();
-      }
+      },
     },
     {
       name: "video without a poster image",
       test: () => {
         const testInstance = TestRenderer.create(
-          <Video {...defaultVideoProps} poster={null} />
+          <Video {...defaultVideoProps} poster={null} />,
         );
 
         expect(testInstance.toJSON()).toMatchSnapshot();
-      }
+      },
     },
     {
       name: "360 video",
       test: () => {
         const testInstance = TestRenderer.create(
-          <Video {...defaultVideoProps} playerId="foo" />
+          <Video {...defaultVideoProps} playerId="foo" />,
         );
 
         expect(testInstance).toMatchSnapshot();
-      }
-    }
+      },
+    },
   ];
 
   iterator(tests);

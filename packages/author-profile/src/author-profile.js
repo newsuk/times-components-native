@@ -1,12 +1,12 @@
 import React from "react";
 import get from "lodash.get";
 import ArticleList, {
-  ArticleListPageError
+  ArticleListPageError,
 } from "@times-components-native/article-list";
 import { withPageState } from "@times-components-native/pagination";
 import {
   AuthorArticlesNoImagesProvider,
-  AuthorArticlesWithImagesProvider
+  AuthorArticlesWithImagesProvider,
 } from "@times-components-native/provider";
 import Responsive from "@times-components-native/responsive";
 import { ratioTextToFloat } from "@times-components-native/utils";
@@ -26,7 +26,7 @@ const AuthorProfile = ({
   page,
   pageSize: initPageSize,
   refetch,
-  slug
+  slug,
 }) => {
   const emptyStateMessage =
     "Unfortunately, there are no articles relating to this author";
@@ -42,14 +42,14 @@ const AuthorProfile = ({
     image: uri,
     jobTitle,
     name,
-    twitter
+    twitter,
   } = isHeaderLoading
     ? {
         articles: [],
         image: "",
         jobTitle: "",
         name: "",
-        twitter: ""
+        twitter: "",
       }
     : author;
 
@@ -84,9 +84,9 @@ const AuthorProfile = ({
         pageSize,
         refetch: refetchArticles,
         fetchMore,
-        variables: { imageRatio = "3:2" }
+        variables: { imageRatio = "3:2" },
       }) => {
-        const fetchMoreArticles = length =>
+        const fetchMoreArticles = (length) =>
           fetchMore({
             updateQuery: (prev, { fetchMoreResult }) =>
               fetchMoreResult
@@ -97,15 +97,15 @@ const AuthorProfile = ({
                         ...prev.author.articles,
                         list: [
                           ...prev.author.articles.list,
-                          ...fetchMoreResult.author.articles.list
-                        ]
-                      }
-                    }
+                          ...fetchMoreResult.author.articles.list,
+                        ],
+                      },
+                    },
                   }
                 : prev,
             variables: {
-              skip: length
-            }
+              skip: length,
+            },
           });
 
         return (

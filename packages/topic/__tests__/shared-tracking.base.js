@@ -9,10 +9,10 @@ import Topic from "../src/topic";
 mockNativeModules();
 jest.mock("@times-components-native/provider", () =>
   // eslint-disable-next-line global-require
-  require("./mock-provider")
+  require("./mock-provider"),
 );
 
-export default props => {
+export default (props) => {
   const tests = [
     {
       name: "tracking information",
@@ -25,12 +25,12 @@ export default props => {
             analyticsStream={analyticsStream}
             isLoading={false}
             page={2}
-          />
+          />,
         );
 
         expect(analyticsStream.mock.calls).toMatchSnapshot();
-      }
-    }
+      },
+    },
   ];
 
   jest.useFakeTimers();

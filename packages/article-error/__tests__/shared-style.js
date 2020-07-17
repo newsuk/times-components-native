@@ -5,14 +5,14 @@ import {
   compose,
   flattenStyleTransform,
   minimalNativeTransform,
-  print
+  print,
 } from "@times-components-native/jest-serializer";
 import ArticleError from "../src/article-error";
 
 const shared = () => {
   it("renders correctly with style", () => {
     const testInstance = TestRenderer.create(
-      <ArticleError refetch={() => null} />
+      <ArticleError refetch={() => null} />,
     );
 
     expect(testInstance).toMatchSnapshot();
@@ -22,11 +22,7 @@ const shared = () => {
 export default () => {
   addSerializers(
     expect,
-    compose(
-      print,
-      flattenStyleTransform,
-      minimalNativeTransform
-    )
+    compose(print, flattenStyleTransform, minimalNativeTransform),
   );
 
   shared();

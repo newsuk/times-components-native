@@ -28,7 +28,7 @@ const functionalColours = {
   transparentBlack: "rgba(0, 0, 0, 0.6)",
   transparentWhite: "rgba(255, 255, 255, 0.3)",
   white: "#FFFFFF",
-  whiteGrey: "#F5F5F5"
+  whiteGrey: "#F5F5F5",
 };
 
 export default functionalColours;

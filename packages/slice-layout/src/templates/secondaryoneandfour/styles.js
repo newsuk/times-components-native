@@ -1,17 +1,17 @@
 import {
   colours,
   editionBreakpoints,
-  spacing
+  spacing,
 } from "@times-components-native/styleguide";
 
 const smallBreakpointStyles = {
   container: {
     backgroundColor: colours.functional.darkSupplement,
-    flex: 1
+    flex: 1,
   },
   separator: {
-    borderColor: colours.functional.tertiary
-  }
+    borderColor: colours.functional.tertiary,
+  },
 };
 
 const mediumBreakpointStyles = {
@@ -19,27 +19,27 @@ const mediumBreakpointStyles = {
     flexDirection: "row",
     flex: 1,
     padding: spacing(1),
-    paddingTop: 0
+    paddingTop: 0,
   },
   secondaryItemContainer: {
-    width: "50%"
+    width: "50%",
   },
   separator: {
-    borderColor: colours.functional.tertiary
+    borderColor: colours.functional.tertiary,
   },
   supportsWrapper: {
-    width: "50%"
+    width: "50%",
   },
   supportContainer: {
     flex: 1,
-    flexDirection: "row"
+    flexDirection: "row",
   },
   supportItem: {
-    width: "50%"
-  }
+    width: "50%",
+  },
 };
 
-export default breakpoint =>
+export default (breakpoint) =>
   breakpoint === editionBreakpoints.small
     ? smallBreakpointStyles
     : mediumBreakpointStyles;

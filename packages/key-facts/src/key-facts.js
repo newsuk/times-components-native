@@ -12,7 +12,7 @@ import styles from "./styles";
 const KeyFacts = ({ ast, onLinkPress }) => {
   const {
     children,
-    attributes: { title }
+    attributes: { title },
   } = ast;
   const { children: keyFactsItems } = children[0];
 
@@ -45,8 +45,8 @@ const KeyFacts = ({ ast, onLinkPress }) => {
               sectionColour || colours.functional.brandColour,
               themedStyles.fontFactory({
                 font: "supporting",
-                fontSize: "keyFactsTitle"
-              })
+                fontSize: "keyFactsTitle",
+              }),
             )}
             <KeyFactsWrapper>
               {keyFactsItems.map((item, index) =>
@@ -55,10 +55,10 @@ const KeyFacts = ({ ast, onLinkPress }) => {
                   index,
                   themedStyles.fontFactory({
                     font: "body",
-                    fontSize: "secondary"
+                    fontSize: "secondary",
                   }),
-                  sectionColour || colours.functional.bullet
-                )
+                  sectionColour || colours.functional.bullet,
+                ),
               )}
             </KeyFactsWrapper>
           </KeyFactsContainer>

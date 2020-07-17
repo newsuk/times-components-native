@@ -1,6 +1,6 @@
 import { withTrackEvents } from "@times-components-native/tracking";
 
-const withArticleSaveTracking = Component =>
+const withArticleSaveTracking = (Component) =>
   withTrackEvents(Component, {
     analyticsEvents: [
       {
@@ -8,11 +8,11 @@ const withArticleSaveTracking = Component =>
         eventName: "onArticleSavePress",
         getAttrs: ({ articleId, savedArticles }) => ({
           articleId,
-          isSaved: !savedArticles[articleId]
+          isSaved: !savedArticles[articleId],
         }),
-        trackingName: "ArticleSave/Unsave"
-      }
-    ]
+        trackingName: "ArticleSave/Unsave",
+      },
+    ],
   });
 
 export default withArticleSaveTracking;

@@ -6,7 +6,7 @@ import ArticleSkeleton from "@times-components-native/article-skeleton";
 import {
   getHeadline,
   getLeadAsset,
-  getStandardTemplateCrop
+  getStandardTemplateCrop,
 } from "@times-components-native/utils";
 import { CentredCaption } from "@times-components-native/caption";
 import { ResponsiveContext } from "@times-components-native/responsive";
@@ -16,7 +16,7 @@ import Context from "@times-components-native/context";
 import ArticleHeader from "./article-header/article-header";
 import {
   articlePropTypes,
-  articleDefaultProps
+  articleDefaultProps,
 } from "./article-prop-types/article-prop-types";
 import styles from "./styles";
 
@@ -38,7 +38,7 @@ class ArticleMagazineStandard extends Component {
       publicationName,
       publishedTime,
       shortHeadline,
-      standfirst
+      standfirst,
     } = article;
 
     return (
@@ -67,7 +67,7 @@ class ArticleMagazineStandard extends Component {
               style={[
                 styles.leadAssetContainer,
                 isTablet && styles.leadAssetContainerTablet,
-                isTablet && styles.tabletContainer
+                isTablet && styles.tabletContainer,
               ]}
               width={Math.min(width, tabletWidth)}
             />
@@ -104,7 +104,7 @@ class ArticleMagazineStandard extends Component {
       onTwitterLinkPress,
       onVideoPress,
       onViewed,
-      receiveChildList
+      receiveChildList,
     } = this.props;
 
     return (

@@ -13,7 +13,7 @@ const AuthorProfileHead = ({
   name,
   onTwitterLinkPress,
   twitter,
-  uri
+  uri,
 }) => {
   const renderBiography = () => {
     if (!biography) return null;

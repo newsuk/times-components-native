@@ -30,7 +30,7 @@ const primaryColoursBase = {
   todaysmagazines: "#1D1D1B",
   travel: "#2C79AD",
   weekend: "#05829A",
-  world: "#636C17"
+  world: "#636C17",
 };
 
 const primaryColours = {
@@ -63,19 +63,19 @@ const primaryColours = {
   "Today's Magazines": primaryColoursBase.todaysmagazines,
   Travel: primaryColoursBase.travel,
   Weekend: primaryColoursBase.weekend,
-  World: primaryColoursBase.world
+  World: primaryColoursBase.world,
 };
 
 const secondaryColoursBase = {
-  thesundaytimesmagazine: "#F13D00"
+  thesundaytimesmagazine: "#F13D00",
 };
 
 const secondaryColours = {
-  "The Sunday Times Magazine": secondaryColoursBase.thesundaytimesmagazine
+  "The Sunday Times Magazine": secondaryColoursBase.thesundaytimesmagazine,
 };
 
 export default { ...primaryColoursBase, ...primaryColours };
 export const secondarySectionColours = {
   ...secondaryColoursBase,
-  ...secondaryColours
+  ...secondaryColours,
 };

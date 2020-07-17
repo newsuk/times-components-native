@@ -14,8 +14,8 @@ class MessageManager extends Component {
     super(props);
     this.state = {
       message: null,
-      showMessage: message => this.addMessage(message),
-      offsetTop: 0
+      showMessage: (message) => this.addMessage(message),
+      offsetTop: 0,
     };
     this.addMessage = this.addMessage.bind(this);
     this.removeMessage = this.removeMessage.bind(this);
@@ -25,23 +25,23 @@ class MessageManager extends Component {
   onLayout(e) {
     const {
       nativeEvent: {
-        layout: { y }
-      }
+        layout: { y },
+      },
     } = e;
     this.setState({
-      offsetTop: y
+      offsetTop: y,
     });
   }
 
   removeMessage() {
     this.setState({
-      message: null
+      message: null,
     });
   }
 
   addMessage(message) {
     this.setState({
-      message
+      message,
     });
   }
 
@@ -53,7 +53,7 @@ class MessageManager extends Component {
       ? {
           position: Platform.OS === "web" ? "fixed" : "absolute",
           top: offsetTop,
-          height: message ? 50 : 0
+          height: message ? 50 : 0,
         }
       : {};
 
@@ -91,7 +91,7 @@ class MessageManager extends Component {
     animate: bool.isRequired,
     children: node.isRequired,
     delay: number.isRequired,
-    scale: string.isRequired
+    scale: string.isRequired,
   };
 }
 

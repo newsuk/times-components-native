@@ -5,8 +5,6 @@ const articleLeftColumnPropTypes = {
   bylines: PropTypes.arrayOf(PropTypes.shape({})).isRequired,
 };
 
-const articleLeftColumnDefaultProps = {
-
-};
+const articleLeftColumnDefaultProps = {};
 
 export { articleLeftColumnPropTypes, articleLeftColumnDefaultProps };

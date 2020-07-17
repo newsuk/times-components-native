@@ -4,7 +4,7 @@ import { editionBreakpoints } from "@times-components-native/styleguide";
 import createItem from "./utils";
 import { LeadOneAndFourSlice } from "../src/slice-layout";
 
-export default renderComponent => {
+export default (renderComponent) => {
   const tests = [
     {
       name: "lead one and four - small",
@@ -16,11 +16,11 @@ export default renderComponent => {
             support2={createItem("support-2")}
             support3={createItem("support-3")}
             support4={createItem("support-4")}
-          />
+          />,
         );
 
         expect(output).toMatchSnapshot();
-      }
+      },
     },
     {
       name: "lead one and four - medium",
@@ -33,12 +33,12 @@ export default renderComponent => {
             support2={createItem("support-2")}
             support3={createItem("support-3")}
             support4={createItem("support-4")}
-          />
+          />,
         );
 
         expect(output).toMatchSnapshot();
-      }
-    }
+      },
+    },
   ];
 
   iterator(tests);

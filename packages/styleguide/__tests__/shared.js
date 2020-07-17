@@ -6,7 +6,7 @@ import styleguide, { Animations, scales } from "../src/styleguide";
 import themeFactory from "../src/theme/theme-factory";
 const {
   addSerializers,
-  minimalNative
+  minimalNative,
 } = require("@times-components-native/jest-serializer");
 
 addSerializers(expect, minimalNative);
@@ -17,30 +17,30 @@ const tests = [
     test: () => {
       const testInstance = styleguide().fontFactory({
         font: "body",
-        fontSize: "secondary"
+        fontSize: "secondary",
       });
       expect(testInstance).toMatchSnapshot();
-    }
+    },
   },
   {
     name: "Font factory large scale",
     test: () => {
       const testInstance = styleguide({ scale: scales.large }).fontFactory({
         font: "body",
-        fontSize: "secondary"
+        fontSize: "secondary",
       });
       expect(testInstance).toMatchSnapshot();
-    }
+    },
   },
   {
     name: "Font factory xlarge scale",
     test: () => {
       const testInstance = styleguide({ scale: scales.xlarge }).fontFactory({
         font: "body",
-        fontSize: "secondary"
+        fontSize: "secondary",
       });
       expect(testInstance).toMatchSnapshot();
-    }
+    },
   },
   {
     name: "Animations should have a FadeIn animation wrapper component",
@@ -48,11 +48,11 @@ const tests = [
       const testInstance = TestRenderer.create(
         <Animations.FadeIn>
           <Text>Hello World</Text>
-        </Animations.FadeIn>
+        </Animations.FadeIn>,
       );
 
       expect(testInstance.toJSON()).toMatchSnapshot();
-    }
+    },
   },
   // Non snapshot tests
   {
@@ -60,7 +60,7 @@ const tests = [
       "Font factory should throw a a TypeError if no font or font size are provided",
     test: () => {
       expect(() => styleguide().fontFactory()).toThrow(TypeError);
-    }
+    },
   },
   {
     name:
@@ -69,17 +69,17 @@ const tests = [
       expect(() =>
         styleguide().fontFactory({
           font: "comicSans",
-          fontSize: "massive"
-        })
+          fontSize: "massive",
+        }),
       ).toThrow(TypeError);
-    }
+    },
   },
   {
     name:
       "Line height factory should throw a TypeError if no font or font size are provided",
     test: () => {
       expect(() => styleguide().lineHeight()).toThrow(TypeError);
-    }
+    },
   },
   {
     name:
@@ -88,116 +88,117 @@ const tests = [
       expect(() =>
         styleguide().lineHeight({
           font: "comicSans",
-          fontSize: "massive"
-        })
+          fontSize: "massive",
+        }),
       ).toThrow(TypeError);
-    }
+    },
   },
   {
     name: "Theme Factory - DropCapFont should return the correct font",
     test: () => {
       expect(themeFactory("default", "indepth").dropCapFont).toEqual("dropCap");
       expect(themeFactory("default", "maincomment").dropCapFont).toEqual(
-        "dropCap"
+        "dropCap",
       );
       expect(themeFactory("culture", "indepth").dropCapFont).toEqual(
-        "cultureMagazine"
+        "cultureMagazine",
       );
       expect(themeFactory("style", "indepth").dropCapFont).toEqual(
-        "styleMagazine"
+        "styleMagazine",
       );
       expect(
-        themeFactory("thesundaytimesmagazine", "magazinestandard").dropCapFont
+        themeFactory("thesundaytimesmagazine", "magazinestandard").dropCapFont,
       ).toEqual("stMagazine");
       expect(
-        themeFactory("thesundaytimesmagazine", "mainstandard").dropCapFont
+        themeFactory("thesundaytimesmagazine", "mainstandard").dropCapFont,
       ).toEqual("dropCap");
       expect(themeFactory("thesundaytimesmagazine", null).dropCapFont).toEqual(
-        "dropCap"
+        "dropCap",
       );
       expect(themeFactory().dropCapFont).toEqual("dropCap");
       expect(
-        themeFactory("the sunday times magazine", "indepth").dropCapFont
+        themeFactory("the sunday times magazine", "indepth").dropCapFont,
       ).toEqual("stMagazine");
-    }
+    },
   },
   {
     name: "Theme Factory - HeadlineFont should return the correct font",
     test: () => {
       expect(themeFactory("default", "indepth").headlineFont).toEqual(
-        "headline"
+        "headline",
       );
       expect(themeFactory("default", "maincomment").headlineFont).toEqual(
-        "headline"
+        "headline",
       );
       expect(themeFactory("culture", "indepth").headlineFont).toEqual(
-        "cultureMagazine"
+        "cultureMagazine",
       );
       expect(themeFactory("style", "indepth").headlineFont).toEqual(
-        "styleMagazine"
+        "styleMagazine",
       );
       expect(
-        themeFactory("thesundaytimesmagazine", "magazinestandard").headlineFont
+        themeFactory("thesundaytimesmagazine", "magazinestandard").headlineFont,
       ).toEqual("stMagazine");
       expect(
-        themeFactory("thesundaytimesmagazine", "mainstandard").headlineFont
+        themeFactory("thesundaytimesmagazine", "mainstandard").headlineFont,
       ).toEqual("headline");
       expect(themeFactory("thesundaytimesmagazine", null).headlineFont).toEqual(
-        "headline"
+        "headline",
       );
       expect(
-        themeFactory("the sunday times magazine", "indepth").headlineFont
+        themeFactory("the sunday times magazine", "indepth").headlineFont,
       ).toEqual("stMagazine");
-    }
+    },
   },
   {
     name: "Theme Factory - pullQuoteFont should return the correct font",
     test: () => {
       expect(themeFactory("default", "indepth").pullQuoteFont).toEqual(
-        "headlineRegular"
+        "headlineRegular",
       );
       expect(themeFactory("default", "maincomment").pullQuoteFont).toEqual(
-        "headlineRegular"
+        "headlineRegular",
       );
       expect(themeFactory("culture", "indepth").pullQuoteFont).toEqual(
-        "cultureMagazine"
+        "cultureMagazine",
       );
       expect(themeFactory("style", "indepth").pullQuoteFont).toEqual(
-        "styleMagazine"
+        "styleMagazine",
       );
       expect(
-        themeFactory("thesundaytimesmagazine", "magazinestandard").pullQuoteFont
+        themeFactory("thesundaytimesmagazine", "magazinestandard")
+          .pullQuoteFont,
       ).toEqual("stMagazine");
       expect(
-        themeFactory("thesundaytimesmagazine", "mainstandard").pullQuoteFont
+        themeFactory("thesundaytimesmagazine", "mainstandard").pullQuoteFont,
       ).toEqual("headlineRegular");
       expect(
-        themeFactory("thesundaytimesmagazine", null).pullQuoteFont
+        themeFactory("thesundaytimesmagazine", null).pullQuoteFont,
       ).toEqual("headlineRegular");
       expect(
-        themeFactory("the sunday times magazine", "indepth").pullQuoteFont
+        themeFactory("the sunday times magazine", "indepth").pullQuoteFont,
       ).toEqual("stMagazine");
-    }
+    },
   },
   {
     name:
       "Theme Factory - sectionColour should return the correct section with colours",
     test: () => {
       expect(themeFactory("default", "indepth").sectionColour).toEqual(
-        undefined
+        undefined,
       );
       expect(themeFactory("default", "maincomment").sectionColour).toEqual(
-        "#1D1D1B"
+        "#1D1D1B",
       );
       expect(themeFactory("news", "mainstandard").sectionColour).toEqual(
-        "#13354E"
+        "#13354E",
       );
       expect(themeFactory("news", null).sectionColour).toEqual("#13354E");
       expect(
-        themeFactory("business", "magazinestandard").sectionColour
+        themeFactory("business", "magazinestandard").sectionColour,
       ).toEqual("#005B8D");
       expect(themeFactory().sectionColour).toEqual("#1D1D1B");
-    }
+    },
   },
   {
     name:
@@ -205,12 +206,12 @@ const tests = [
     test: () => {
       expect(themeFactory("default", "indepth").headlineCase).toEqual(null);
       expect(themeFactory("style", "indepth").headlineCase).toEqual(
-        "uppercase"
+        "uppercase",
       );
       expect(themeFactory("style", "mainstandard").headlineCase).toEqual(null);
       expect(themeFactory("style", null).headlineCase).toEqual(null);
-    }
-  }
+    },
+  },
 ];
 
 export default () =>

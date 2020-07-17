@@ -3,7 +3,7 @@ import {
   spacing,
   colours,
   fonts,
-  fontSizes
+  fontSizes,
 } from "@times-components-native/styleguide";
 import sharedStyles from "./shared";
 
@@ -11,7 +11,7 @@ const nativeStyles = {
   ...sharedStyles,
   articleHeadline: {
     ...sharedStyles.articleHeadline,
-    marginBottom: spacing(2.75)
+    marginBottom: spacing(2.75),
   },
   authorImage: {
     ...sharedStyles.authorImage,
@@ -19,22 +19,22 @@ const nativeStyles = {
     borderRadius: 50,
     height: 100,
     overflow: "hidden",
-    width: 100
+    width: 100,
   },
   standFirst: {
     ...sharedStyles.standFirst,
-    lineHeight: 25
+    lineHeight: 25,
   },
   metaContainer: {
     ...sharedStyles.metaContainer,
-    marginTop: spacing(1)
+    marginTop: spacing(1),
   },
   header: {
     ...sharedStyles.header,
-    marginBottom: 0
+    marginBottom: 0,
   },
   label: {
-    marginBottom: 0
+    marginBottom: 0,
   },
   bylineOpinion: {
     color: colours.section.comment,
@@ -43,12 +43,12 @@ const nativeStyles = {
     letterSpacing: 0.6,
     lineHeight: 12,
     textTransform: "uppercase",
-    marginBottom: spacing(1)
-  }
+    marginBottom: spacing(1),
+  },
 };
 
 const styles = StyleSheet.create({
-  ...nativeStyles
+  ...nativeStyles,
 });
 
 export default styles;

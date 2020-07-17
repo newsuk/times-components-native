@@ -3,18 +3,18 @@ import {
   compose,
   minimaliseTransform,
   minimalNativeTransform,
-  print
+  print,
 } from "@times-components-native/jest-serializer";
 import shared from "./shared.base";
 
-export default Component => {
+export default (Component) => {
   addSerializers(
     expect,
     compose(
       print,
       minimalNativeTransform,
-      minimaliseTransform((value, key) => key === "style")
-    )
+      minimaliseTransform((value, key) => key === "style"),
+    ),
   );
 
   shared(Component);

@@ -13,7 +13,7 @@ const ArticleExtras = ({
   onTopicPress,
   onCommentGuidelinesPress,
   onCommentsPress,
-  narrowContent
+  narrowContent,
 }) => (
   <ArticleExtrasProvider debounceTimeMs={0} id={articleId}>
     {({ article, error, isLoading, refetch }) => {
@@ -48,7 +48,7 @@ ArticleExtras.propTypes = {
   onCommentGuidelinesPress: PropTypes.func.isRequired,
   onCommentsPress: PropTypes.func.isRequired,
   onRelatedArticlePress: PropTypes.func.isRequired,
-  onTopicPress: PropTypes.func.isRequired
+  onTopicPress: PropTypes.func.isRequired,
 };
 
 export default ArticleExtras;

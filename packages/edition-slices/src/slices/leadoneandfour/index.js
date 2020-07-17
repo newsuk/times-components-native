@@ -14,7 +14,7 @@ class LeadOneAndFour extends Component {
   renderSmall(breakpoint) {
     const {
       onPress,
-      slice: { lead, support1, support2, support3, support4 }
+      slice: { lead, support1, support2, support3, support4 },
     } = this.props;
 
     return (
@@ -40,7 +40,7 @@ class LeadOneAndFour extends Component {
   renderMedium(breakpoint) {
     const {
       onPress,
-      slice: { lead, support1, support2, support3, support4 }
+      slice: { lead, support1, support2, support3, support4 },
     } = this.props;
 
     return (
@@ -107,8 +107,8 @@ LeadOneAndFour.propTypes = {
     support1: PropTypes.shape({}).isRequired,
     support2: PropTypes.shape({}).isRequired,
     support3: PropTypes.shape({}).isRequired,
-    support4: PropTypes.shape({}).isRequired
-  }).isRequired
+    support4: PropTypes.shape({}).isRequired,
+  }).isRequired,
 };
 
 export default LeadOneAndFour;

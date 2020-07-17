@@ -1,6 +1,6 @@
 import {
   addSerializers,
-  minimalNative
+  minimalNative,
 } from "@times-components-native/jest-serializer";
 import TestRenderer from "react-test-renderer";
 import { iterator } from "@times-components-native/test-utils";
@@ -17,22 +17,22 @@ export default () => {
       name: "subscript with fallback",
       test: () => {
         const output = renderComponent(
-          renderTree(subscriptWithFallback, coreRenderers)
+          renderTree(subscriptWithFallback, coreRenderers),
         );
 
         expect(output).toMatchSnapshot();
-      }
+      },
     },
     {
       name: "superscript with fallback",
       test: () => {
         const output = renderComponent(
-          renderTree(superscriptWithFallback, coreRenderers)
+          renderTree(superscriptWithFallback, coreRenderers),
         );
 
         expect(output).toMatchSnapshot();
-      }
-    }
+      },
+    },
   ];
 
   addSerializers(expect, minimalNative);

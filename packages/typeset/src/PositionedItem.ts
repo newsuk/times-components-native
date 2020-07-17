@@ -1,5 +1,5 @@
-import AttributedString from './AttributedString';
-import Point from './Point';
+import AttributedString from "./AttributedString";
+import Point from "./Point";
 
 export default class PositionedItem {
   public text: AttributedString;

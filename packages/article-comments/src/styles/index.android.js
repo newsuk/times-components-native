@@ -5,12 +5,12 @@ const styles = StyleSheet.create({
   ...sharedStyles,
   errorBody: {
     ...sharedStyles.errorBody,
-    lineHeight: 21
+    lineHeight: 21,
   },
   supporting: {
     ...sharedStyles.supporting,
-    lineHeight: 21
-  }
+    lineHeight: 21,
+  },
 });
 
 export default styles;

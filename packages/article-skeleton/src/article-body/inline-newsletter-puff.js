@@ -18,7 +18,7 @@ import {
   InpSignupLabel,
   InpSubscribedContainer,
   InpSubscribedCopy,
-  InpSubscribedHeadline
+  InpSubscribedHeadline,
 } from "../styles/inline-newsletter-puff";
 import NewsletterPuffButton from "./newsletter-puff-button";
 import NewsletterPuffLink from "./newsletter-puff-link";
@@ -27,13 +27,13 @@ function onManagePreferencesPress() {
   if (Platform.OS !== "web") {
     const url = "https://home.thetimes.co.uk/myNews";
     Linking.canOpenURL(url)
-      .then(supported => {
+      .then((supported) => {
         if (!supported) {
           return console.error("Cant open url", url); // eslint-disable-line no-console
         }
         return Linking.openURL(url);
       })
-      .catch(err => console.error("An error occurred", err)); // eslint-disable-line no-console
+      .catch((err) => console.error("An error occurred", err)); // eslint-disable-line no-console
   }
 }
 
@@ -43,7 +43,7 @@ const InlineNewsletterPuff = ({
   copy,
   headline,
   imageUri,
-  label
+  label,
 }) => {
   const [justSubscribed, setJustSubscribed] = useState(false);
 
@@ -129,5 +129,5 @@ InlineNewsletterPuff.propTypes = {
   copy: PropTypes.string.isRequired,
   headline: PropTypes.string.isRequired,
   imageUri: PropTypes.string.isRequired,
-  label: PropTypes.string.isRequired
+  label: PropTypes.string.isRequired,
 };

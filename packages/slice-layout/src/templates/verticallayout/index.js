@@ -16,11 +16,11 @@ const VerticalLayout = ({ style, tiles }) => (
 
 VerticalLayout.propTypes = {
   style: PropTypes.shape({}),
-  tiles: PropTypes.arrayOf(PropTypes.node).isRequired
+  tiles: PropTypes.arrayOf(PropTypes.node).isRequired,
 };
 
 VerticalLayout.defaultProps = {
-  style: {}
+  style: {},
 };
 
 export default VerticalLayout;

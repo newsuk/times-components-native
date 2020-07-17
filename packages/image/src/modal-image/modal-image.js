@@ -16,7 +16,7 @@ class ModalImage extends Component {
     this.state = {
       elementsVisible: true,
       lowResImageWidth: null,
-      showModal: props.show || false
+      showModal: props.show || false,
     };
     this.hideModal = this.hideModal.bind(this);
     this.showModal = this.showModal.bind(this);
@@ -38,7 +38,7 @@ class ModalImage extends Component {
 
   toggleElements() {
     this.setState(({ elementsVisible }) => ({
-      elementsVisible: !elementsVisible
+      elementsVisible: !elementsVisible,
     }));
   }
 
@@ -68,12 +68,12 @@ class ModalImage extends Component {
     mainUrl.query.offline = "true";
     const urls = [{ url: mainUrl.toString() }].concat(
       images
-        .map(i => {
+        .map((i) => {
           const offlineUrl = new Url(i.attributes.url, true);
           offlineUrl.query.offline = "true";
           return { url: offlineUrl.toString() };
         })
-        .filter(({ url }) => url !== mainUrl.toString())
+        .filter(({ url }) => url !== mainUrl.toString()),
     );
 
     return (
@@ -92,7 +92,7 @@ class ModalImage extends Component {
                   <SafeAreaView
                     style={[
                       styles.buttonContainer,
-                      isTablet && styles.buttonContainerTablet
+                      isTablet && styles.buttonContainerTablet,
                     ]}
                   >
                     {elementsVisible ? (

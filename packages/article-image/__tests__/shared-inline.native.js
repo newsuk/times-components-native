@@ -5,7 +5,7 @@ import {
   compose,
   flattenStyleTransform,
   minimalNativeTransform,
-  print
+  print,
 } from "@times-components-native/jest-serializer";
 import TestRenderer from "react-test-renderer";
 import Responsive from "@times-components-native/responsive";
@@ -13,20 +13,16 @@ import Responsive from "@times-components-native/responsive";
 import shared from "./shared-inline.base";
 
 jest.mock("@times-components-native/image", () => ({
-  ModalImage: "ModalImage"
+  ModalImage: "ModalImage",
 }));
 
 export default () => {
   addSerializers(
     expect,
-    compose(
-      print,
-      flattenStyleTransform,
-      minimalNativeTransform
-    )
+    compose(print, flattenStyleTransform, minimalNativeTransform),
   );
 
-  shared(component =>
-    TestRenderer.create(<Responsive>{component}</Responsive>).toJSON()
+  shared((component) =>
+    TestRenderer.create(<Responsive>{component}</Responsive>).toJSON(),
   );
 };

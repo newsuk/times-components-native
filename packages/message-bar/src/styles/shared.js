@@ -10,7 +10,7 @@ const messageBarBody = {
   height,
   flexGrow: 1,
   flexShrink: 0,
-  marginHorizontal: "auto"
+  marginHorizontal: "auto",
 };
 
 const messageBarCloseButton = {
@@ -21,83 +21,83 @@ const messageBarCloseButton = {
   justifyContent: "center",
   marginLeft: "auto",
   marginRight: 20,
-  width: 28
+  width: 28,
 };
 
-const messageBarText = scale => ({
+const messageBarText = (scale) => ({
   color: colours.functional.white,
   ...fontFactory({
     font: "headline",
     fontSize: "secondary",
-    scale
+    scale,
   }),
-  marginLeft: 20
+  marginLeft: 20,
 });
 
-export const sharedStyle = scale => ({
+export const sharedStyle = (scale) => ({
   messageBarBodyContainer: {
     backgroundColor: colours.functional.articleFlagUpdated,
     shadowColor: "rgba(0, 0, 0, 0.2)",
     shadowOffset: {
       height: 2,
-      width: 0
+      width: 0,
     },
     shadowRadius: 5,
-    zIndex: 10
+    zIndex: 10,
   },
   messageBarBody,
   messageBarCloseButton,
   messageBarText: {
-    ...messageBarText(scale)
+    ...messageBarText(scale),
   },
   messageManager: {
     flex: 1,
     width: "100%",
-    zIndex: 10
-  }
+    zIndex: 10,
+  },
 });
 
-const smallBreakpointStyles = scale => ({
+const smallBreakpointStyles = (scale) => ({
   ...sharedStyle(scale),
   messageBarCloseButton: {
     ...messageBarCloseButton,
-    marginRight: 10
+    marginRight: 10,
   },
   messageBarText: {
     ...messageBarText(scale),
-    marginLeft: 10
-  }
+    marginLeft: 10,
+  },
 });
 
-const mediumBreakpointStyles = scale => ({
+const mediumBreakpointStyles = (scale) => ({
   ...sharedStyle(scale),
   messageBarCloseButton: {
     ...messageBarCloseButton,
-    marginRight: 10
+    marginRight: 10,
   },
   messageBarText: {
     ...messageBarText(scale),
-    marginLeft: 60
-  }
+    marginLeft: 60,
+  },
 });
 
-const wideBreakpointStyles = scale => ({
+const wideBreakpointStyles = (scale) => ({
   ...sharedStyle(scale),
   messageBarBody: {
     ...messageBarBody,
-    maxWidth: 1024
-  }
+    maxWidth: 1024,
+  },
 });
 
-const hugeBreakpointStyles = scale => ({
-  ...sharedStyle(scale)
+const hugeBreakpointStyles = (scale) => ({
+  ...sharedStyle(scale),
 });
 
 const stylesResolver = {
   small: smallBreakpointStyles,
   medium: mediumBreakpointStyles,
   wide: wideBreakpointStyles,
-  huge: hugeBreakpointStyles
+  huge: hugeBreakpointStyles,
 };
 
 export default (scale, breakpoint = "huge") =>

@@ -5,14 +5,14 @@ import publicationString, { publications } from "./publication";
 
 const DatePublication = ({ publication, ...props }) => (
   <DateTime {...props}>
-    {dateTime => `${dateTime}${publicationString(publication)}`}
+    {(dateTime) => `${dateTime}${publicationString(publication)}`}
   </DateTime>
 );
 
 DatePublication.propTypes = {
   date: PropTypes.string.isRequired,
   publication: PropTypes.oneOf(Object.keys(publications)),
-  showDay: PropTypes.bool
+  showDay: PropTypes.bool,
 };
 
 DatePublication.defaultProps = { ...DateTime.defaultProps, publication: null };

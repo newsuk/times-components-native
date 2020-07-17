@@ -18,40 +18,40 @@ export default () => {
       test: () => {
         const flags = [
           { expiryTime: "2020-03-13T12:00:00.000Z", type: "UPDATED" },
-          { expiryTime: "2019-03-14T12:00:00.000Z", type: "EXCLUSIVE" }
+          { expiryTime: "2019-03-14T12:00:00.000Z", type: "EXCLUSIVE" },
         ];
 
         expect(getActiveFlags(flags)).toEqual([flags[0]]);
-      }
+      },
     },
     {
       name: "returns no flags when all have expired",
       test: () => {
         const flags = [
           { expiryTime: "2019-03-14T16:22:54.000Z", type: "UPDATED" },
-          { expiryTime: "2019-03-14T12:00:00.000Z", type: "EXCLUSIVE" }
+          { expiryTime: "2019-03-14T12:00:00.000Z", type: "EXCLUSIVE" },
         ];
 
         expect(getActiveFlags(flags)).toEqual([]);
-      }
+      },
     },
     {
       name: "returns flags when expiry time is null",
       test: () => {
         const flags = [
           { expiryTime: null, type: "UPDATED" },
-          { expiryTime: null, type: "EXCLUSIVE" }
+          { expiryTime: null, type: "EXCLUSIVE" },
         ];
 
         expect(getActiveFlags(flags)).toEqual(flags);
-      }
+      },
     },
     {
       name: "returns no flags when no flags are provided",
       test: () => {
         expect(getActiveFlags([])).toEqual([]);
-      }
-    }
+      },
+    },
   ];
 
   iterator(tests);

@@ -3,7 +3,7 @@ import {
   compose,
   minimaliseTransform,
   minimalNativeTransform,
-  print
+  print,
 } from "@times-components-native/jest-serializer";
 import { mockNativeModules } from "@times-components-native/mocks";
 
@@ -20,7 +20,7 @@ addSerializers(
       (value, key) =>
         key === "style" ||
         key.toLowerCase().includes("class") ||
-        key === "testID"
-    )
-  )
+        key === "testID",
+    ),
+  ),
 );

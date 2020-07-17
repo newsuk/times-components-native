@@ -43,7 +43,7 @@ const ArticleWithContent = (props) => {
     isTablet,
     onViewed,
     adPosition,
-    narrowContent
+    narrowContent,
   } = props;
 
   const { id, url, content } = data;

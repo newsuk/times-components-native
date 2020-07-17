@@ -1,1 +1,1 @@
-export { default } from './src/video-label'
+export { default } from "./src/video-label";

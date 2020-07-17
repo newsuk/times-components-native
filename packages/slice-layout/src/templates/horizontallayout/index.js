@@ -22,14 +22,14 @@ HorizontalLayout.propTypes = {
   tiles: PropTypes.arrayOf(
     PropTypes.shape({
       style: PropTypes.object,
-      tile: PropTypes.node.isRequired
-    })
-  ).isRequired
+      tile: PropTypes.node.isRequired,
+    }),
+  ).isRequired,
 };
 
 HorizontalLayout.defaultProps = {
   containerStyle: {},
-  colSeparatorStyle: {}
+  colSeparatorStyle: {},
 };
 
 export default HorizontalLayout;

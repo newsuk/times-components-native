@@ -3,7 +3,7 @@ import { View, Text } from "react-native";
 import PropTypes from "prop-types";
 import {
   ItemRowSeparator,
-  ItemColSeparator
+  ItemColSeparator,
 } from "@times-components-native/slice-layout";
 import { ResponsiveSlice } from "../shared";
 import { TileS } from "../../tiles";
@@ -19,7 +19,7 @@ class DailyRegisterLeadFour extends Component {
 
   renderSmall(breakpoint) {
     const {
-      slice: { birthdaysToday, briefing, natureNotes, onThisDay }
+      slice: { birthdaysToday, briefing, natureNotes, onThisDay },
     } = this.props;
     const styles = styleFactory(breakpoint);
 
@@ -57,7 +57,7 @@ class DailyRegisterLeadFour extends Component {
 
   renderMedium(breakpoint) {
     const {
-      slice: { birthdaysToday, briefing, natureNotes, onThisDay }
+      slice: { birthdaysToday, briefing, natureNotes, onThisDay },
     } = this.props;
     const styles = styleFactory(breakpoint);
 
@@ -128,8 +128,8 @@ DailyRegisterLeadFour.propTypes = {
     birthdaysToday: PropTypes.shape({}).isRequired,
     briefing: PropTypes.shape({}).isRequired,
     natureNotes: PropTypes.shape({}).isRequired,
-    onThisDay: PropTypes.shape({}).isRequired
-  }).isRequired
+    onThisDay: PropTypes.shape({}).isRequired,
+  }).isRequired,
 };
 
 export default DailyRegisterLeadFour;

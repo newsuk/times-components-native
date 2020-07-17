@@ -7,7 +7,7 @@ import {
   flattenStyleTransform,
   minimaliseTransform,
   minimalNativeTransform,
-  print
+  print,
 } from "@times-components-native/jest-serializer";
 import Button from "../src/button";
 import shared from "./shared.base";
@@ -20,14 +20,14 @@ export default () => {
       print,
       minimaliseTransform((value, key) => key.startsWith("accessibility")),
       minimalNativeTransform,
-      flattenStyleTransform
-    )
+      flattenStyleTransform,
+    ),
   );
 
   it("should handle the onPress event", () => {
     const onPressMock = jest.fn();
     const wrapper = shallow(
-      <Button onPress={onPressMock} title="test button" />
+      <Button onPress={onPressMock} title="test button" />,
     );
 
     wrapper.simulate("press");
@@ -38,7 +38,7 @@ export default () => {
   it("should render a Button with custon Text styles", () => {
     const textStyle = {
       color: "green",
-      textTransform: "uppercase"
+      textTransform: "uppercase",
     };
 
     const wrapper = shallow(
@@ -46,7 +46,7 @@ export default () => {
         title="something else"
         textStyle={textStyle}
         onPress={() => null}
-      />
+      />,
     );
 
     expect(wrapper).toMatchSnapshot();

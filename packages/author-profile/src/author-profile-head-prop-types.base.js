@@ -7,7 +7,7 @@ export const propTypes = {
   jobTitle: PropTypes.string,
   name: PropTypes.string,
   twitter: PropTypes.string,
-  uri: PropTypes.string
+  uri: PropTypes.string,
 };
 
 export const defaultProps = {
@@ -16,5 +16,5 @@ export const defaultProps = {
   jobTitle: "",
   name: "",
   twitter: "",
-  uri: ""
+  uri: "",
 };

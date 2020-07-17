@@ -5,7 +5,7 @@ import { TextLink } from "@times-components-native/link";
 import styleFactory from "../styles/article-body";
 import articleLinkTrackingEvents from "./article-link-tracking-events";
 
-const ArticleLink = props => (
+const ArticleLink = (props) => (
   <Context.Consumer>
     {({ theme: { scale } }) => {
       const styles = styleFactory(scale);
@@ -17,7 +17,7 @@ const ArticleLink = props => (
             props.style
               ? {
                   ...styles.articleLink,
-                  ...props.style
+                  ...props.style,
                 }
               : styles.articleLink
           }
@@ -34,11 +34,11 @@ ArticleLink.displayName = "ArticleLink";
 
 ArticleLink.defaultProps = {
   ...TextLink.defaultProps,
-  linkType: ""
+  linkType: "",
 };
 
 ArticleLink.propTypes = {
   ...TextLink.propTypes,
-  linkType: PropTypes.string
+  linkType: PropTypes.string,
 };
 export default articleLinkTrackingEvents(ArticleLink);

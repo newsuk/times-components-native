@@ -1,25 +1,24 @@
-import styleguide, { tabletWidth, narrowArticleContentWidth } from "@times-components-native/styleguide";
+import styleguide, {
+  narrowArticleContentWidth,
+} from "@times-components-native/styleguide";
 
 const { colours, fontFactory, spacing } = styleguide();
 const sharedStyles = {
   articleHeadline: {
     ...fontFactory({
       font: "headline",
-      fontSize: "articleHeadline"
+      fontSize: "articleHeadline",
     }),
     color: colours.functional.brandColour,
     marginBottom: spacing(2),
   },
-  authorImage: {
-    width: "100%",
-  },
   datePublication: {
     ...fontFactory({
       font: "supporting",
-      fontSize: "cardMeta"
+      fontSize: "cardMeta",
     }),
     color: colours.functional.secondary,
-    marginTop: "auto"
+    marginTop: "auto",
   },
   header: {
     marginBottom: spacing(3),
@@ -28,10 +27,10 @@ const sharedStyles = {
   },
   container: {
     paddingLeft: spacing(2),
-    paddingRight: spacing(2)
+    paddingRight: spacing(2),
   },
   label: {
-    marginBottom: spacing(2)
+    marginBottom: spacing(2),
   },
   metaContainer: {
     flexDirection: "row",
@@ -40,18 +39,18 @@ const sharedStyles = {
     borderBottomColor: colours.functional.keyline,
     borderBottomWidth: 1,
     borderTopColor: colours.functional.keyline,
-    borderTopWidth: 1
+    borderTopWidth: 1,
   },
   standFirst: {
     ...fontFactory({
       font: "headlineRegular",
-      fontSize: "smallestHeadline"
+      fontSize: "smallestHeadline",
     }),
     color: colours.functional.primary,
     marginBottom: spacing(3),
   },
   leftColumnContainer: {
-    width: "25%",    
+    width: "25%",
     zIndex: 1111,
     borderRightWidth: 1,
     borderColor: colours.functional.keyline,
@@ -66,7 +65,7 @@ const sharedStyles = {
   bylines: {
     paddingTop: spacing(1),
     width: "100%",
-  }
+  },
 };
 
 export default sharedStyles;

@@ -1,6 +1,6 @@
 import { withTrackEvents } from "@times-components-native/tracking";
 
-export default Component =>
+export default (Component) =>
   withTrackEvents(Component, {
     analyticsEvents: [
       {
@@ -10,9 +10,9 @@ export default Component =>
           puzzleId: id,
           puzzleTitle: title,
           puzzleUrl: url,
-          tileName: "Puzzle"
+          tileName: "Puzzle",
         }),
-        trackingName: "Tile"
-      }
-    ]
+        trackingName: "Tile",
+      },
+    ],
   });

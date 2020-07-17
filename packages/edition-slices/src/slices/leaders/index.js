@@ -30,7 +30,7 @@ class LeadersSlice extends Component {
   renderSlice(breakpoint) {
     const {
       onPress,
-      slice: { leader1, leader2, leader3 }
+      slice: { leader1, leader2, leader3 },
     } = this.props;
     const styles = styleFactory(breakpoint);
 
@@ -83,8 +83,8 @@ LeadersSlice.propTypes = {
   slice: PropTypes.shape({
     leader1: PropTypes.shape({}).isRequired,
     leader2: PropTypes.shape({}).isRequired,
-    leader3: PropTypes.shape({}).isRequired
-  }).isRequired
+    leader3: PropTypes.shape({}).isRequired,
+  }).isRequired,
 };
 
 export default LeadersSlice;

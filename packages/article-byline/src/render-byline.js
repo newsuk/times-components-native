@@ -21,13 +21,12 @@ const bylineRenderers = (Component, textStyle, props = {}) => ({
         {children}
       </Text>
     );
-  }
+  },
 });
 
 const renderByline = (Component, ast, textStyle, props = {}) => {
-  const bylineAst = ast.map(
-    bylineObj =>
-      bylineObj.byline && bylineObj.byline.length > 0 ? bylineObj.byline[0] : {}
+  const bylineAst = ast.map((bylineObj) =>
+    bylineObj.byline && bylineObj.byline.length > 0 ? bylineObj.byline[0] : {},
   );
   return renderTrees(bylineAst, bylineRenderers(Component, textStyle, props));
 };

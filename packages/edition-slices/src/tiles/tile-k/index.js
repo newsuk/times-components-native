@@ -7,7 +7,7 @@ import {
   TileLink,
   TileSummary,
   TileImage,
-  withTileTracking
+  withTileTracking,
 } from "../shared";
 import styleFactory from "./styles";
 
@@ -20,7 +20,7 @@ const TileK = ({ onPress, tile, breakpoint = editionBreakpoints.small }) => {
   }
 
   const {
-    article: { hasVideo }
+    article: { hasVideo },
   } = tile;
 
   return (
@@ -48,7 +48,7 @@ const TileK = ({ onPress, tile, breakpoint = editionBreakpoints.small }) => {
 TileK.propTypes = {
   breakpoint: PropTypes.string,
   onPress: PropTypes.func.isRequired,
-  tile: PropTypes.shape({}).isRequired
+  tile: PropTypes.shape({}).isRequired,
 };
 
 export default withTileTracking(TileK);

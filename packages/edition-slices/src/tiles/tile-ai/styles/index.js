@@ -1,23 +1,23 @@
 import {
   spacing,
-  editionBreakpoints
+  editionBreakpoints,
 } from "@times-components-native/styleguide";
 
 const keylinePadding = {
   [editionBreakpoints.medium]: spacing(2),
   [editionBreakpoints.wide]: spacing(3),
-  [editionBreakpoints.huge]: spacing(3)
+  [editionBreakpoints.huge]: spacing(3),
 };
 
-const styles = breakpoint => ({
+const styles = (breakpoint) => ({
   container: {
     alignItems: "center",
     padding: spacing(2),
-    paddingLeft: keylinePadding[breakpoint]
+    paddingLeft: keylinePadding[breakpoint],
   },
   imageContainer: {
-    width: "100%"
-  }
+    width: "100%",
+  },
 });
 
 export default styles;

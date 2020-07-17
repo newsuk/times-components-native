@@ -5,7 +5,7 @@ import {
   getTileStrapline,
   TileLink,
   TileSummary,
-  withTileTracking
+  withTileTracking,
 } from "../shared";
 import styles from "./styles";
 
@@ -23,7 +23,7 @@ const TileF = ({ onPress, tile }) => (
 
 TileF.propTypes = {
   onPress: PropTypes.func.isRequired,
-  tile: PropTypes.shape({}).isRequired
+  tile: PropTypes.shape({}).isRequired,
 };
 
 export default withTileTracking(TileF);

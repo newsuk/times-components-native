@@ -6,7 +6,7 @@ import ArticleTopic from "./article-topic";
 import styles from "./styles";
 import {
   topicsDefaultProps,
-  topicsPropTypes
+  topicsPropTypes,
 } from "./article-topics-prop-types";
 
 const renderArticleTopics = (topics, onPress, fontStyle) =>
@@ -33,8 +33,8 @@ const ArticleTopics = ({ onPress, style, topics }) => (
             onPress,
             themedStyleguide.fontFactory({
               font: "supporting",
-              fontSize: "link"
-            })
+              fontSize: "link",
+            }),
           )}
         </View>
       );

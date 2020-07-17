@@ -5,7 +5,7 @@ const shared = {
   link: {
     ...fontFactory({
       font: "supporting",
-      fontSize: "cardMeta"
+      fontSize: "cardMeta",
     }),
     color: colours.functional.action,
     textDecorationLine: "none",
@@ -13,30 +13,30 @@ const shared = {
   nonLinkText: {
     ...fontFactory({
       font: "supporting",
-      fontSize: "cardMeta"
+      fontSize: "cardMeta",
     }),
     color: colours.functional.primary,
-    flexDirection: "row"
+    flexDirection: "row",
   },
   opinion: {
     ...fontFactory({
       font: "headline",
-      fontSize: "smallHeadline"
+      fontSize: "smallHeadline",
     }),
     color: colours.section.comment,
-    fontWeight: "400"
+    fontWeight: "400",
   },
   centered: {
-    textAlign: "center"
+    textAlign: "center",
   },
   text: {
     ...fontFactory({
       font: "supporting",
-      fontSize: "cardMeta"
+      fontSize: "cardMeta",
     }),
     color: colours.functional.secondary,
-    flexDirection: "row"
-  }
+    flexDirection: "row",
+  },
 };
 
 export default shared;

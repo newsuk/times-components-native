@@ -7,7 +7,7 @@ import {
   TileLink,
   TileSummary,
   TileImage,
-  withTileTracking
+  withTileTracking,
 } from "../shared";
 import stylesFactory from "./styles";
 
@@ -20,7 +20,7 @@ const TileAS = ({ onPress, tile, breakpoint }) => {
   }
 
   const {
-    article: { hasVideo }
+    article: { hasVideo },
   } = tile;
 
   return (
@@ -51,7 +51,7 @@ const TileAS = ({ onPress, tile, breakpoint }) => {
 TileAS.propTypes = {
   onPress: PropTypes.func.isRequired,
   tile: PropTypes.shape({}).isRequired,
-  breakpoint: PropTypes.string.isRequired
+  breakpoint: PropTypes.string.isRequired,
 };
 
 export default withTileTracking(TileAS);

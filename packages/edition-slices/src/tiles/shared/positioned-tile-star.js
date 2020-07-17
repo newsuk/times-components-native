@@ -9,7 +9,7 @@ import { isSaveSupported } from "./utils";
 import {
   starDefaultStyles,
   starCenterStyles,
-  starUnderneathTextStyles
+  starUnderneathTextStyles,
 } from "./styles";
 
 const PositionedTileStar = ({
@@ -26,7 +26,7 @@ const PositionedTileStar = ({
         customStyles,
         starDefaultStyles,
         centeredStar && starCenterStyles,
-        underneathTextStar && starUnderneathTextStyles
+        underneathTextStar && starUnderneathTextStyles,
       ]}
     >
       <TileStar {...props} />
@@ -40,7 +40,7 @@ PositionedTileStar.propTypes = {
   centeredStar: PropTypes.bool,
   isDarkStar: PropTypes.bool,
   starStyle: PropTypes.shape({}),
-  customStyles: PropTypes.shape({})
+  customStyles: PropTypes.shape({}),
 };
 
 export default PositionedTileStar;

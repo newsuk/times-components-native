@@ -14,7 +14,7 @@ const ShowTopics = ({ topics, onPress, narrowContent }) => {
             style={[
               styles.topicsContainer,
               isTablet && styles.topicsContainerTablet,
-              narrowContent && styles.narrow
+              narrowContent && styles.narrow,
             ]}
           >
             <ArticleTopics onPress={onPress} topics={topics} />
@@ -32,13 +32,13 @@ ShowTopics.propTypes = {
   topics: PropTypes.arrayOf(
     PropTypes.shape({
       name: PropTypes.string.isRequired,
-      slug: PropTypes.string.isRequired
-    }).isRequired
-  )
+      slug: PropTypes.string.isRequired,
+    }).isRequired,
+  ),
 };
 
 ShowTopics.defaultProps = {
-  topics: null
+  topics: null,
 };
 
 export default ShowTopics;

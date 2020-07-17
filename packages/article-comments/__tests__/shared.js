@@ -3,7 +3,7 @@ import {
   compose,
   print,
   minimaliseTransform,
-  minimalNativeTransform
+  minimalNativeTransform,
 } from "@times-components-native/jest-serializer";
 import shared from "./shared-base";
 import renderComments from "./renderer";
@@ -17,7 +17,7 @@ const omitKeys = new Set([
   "style",
   "testID",
   "viewabilityConfig",
-  "viewabilityConfigCallbackPairs"
+  "viewabilityConfigCallbackPairs",
 ]);
 
 export default () => {
@@ -26,8 +26,8 @@ export default () => {
     compose(
       print,
       minimalNativeTransform,
-      minimaliseTransform((value, key) => omitKeys.has(key))
-    )
+      minimaliseTransform((value, key) => omitKeys.has(key)),
+    ),
   );
 
   shared();

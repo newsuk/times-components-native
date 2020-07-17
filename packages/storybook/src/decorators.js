@@ -1,7 +1,7 @@
 import React from "react";
 import { View } from "react-native";
 
-export const CenteredDecorator = storyFn => (
+export const CenteredDecorator = (storyFn) => (
   <View
     style={{
       alignItems: "center",
@@ -12,37 +12,37 @@ export const CenteredDecorator = storyFn => (
       left: 0,
       position: "absolute",
       right: 0,
-      top: 0
+      top: 0,
     }}
   >
     {storyFn()}
   </View>
 );
 
-export const BarSpacingDecorator = storyFn => (
+export const BarSpacingDecorator = (storyFn) => (
   <View
     style={{
       flex: 1,
-      marginTop: 20
+      marginTop: 20,
     }}
   >
     {storyFn()}
   </View>
 );
 
-export const LateralSpacingDecorator = storyFn => (
+export const LateralSpacingDecorator = (storyFn) => (
   <View
     style={{
       flex: 1,
       marginLeft: 20,
-      marginRight: 20
+      marginRight: 20,
     }}
   >
     {storyFn()}
   </View>
 );
 
-export const WhiteBgColorDecorator = storyFn => (
+export const WhiteBgColorDecorator = (storyFn) => (
   <View
     style={{
       backgroundColor: "white",
@@ -51,7 +51,7 @@ export const WhiteBgColorDecorator = storyFn => (
       left: 0,
       position: "absolute",
       right: 0,
-      top: 0
+      top: 0,
     }}
   >
     {storyFn()}

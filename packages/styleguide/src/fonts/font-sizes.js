@@ -1,7 +1,7 @@
 import scales from "../scales";
 import sharedFontSizes from "./font-sizes-base";
 
-const fontSizes = scale => {
+const fontSizes = (scale) => {
   switch (scale) {
     case scales.large:
       return {
@@ -11,7 +11,7 @@ const fontSizes = scale => {
         cardMetaMobile: 17,
         keyFactsTitle: 17,
         link: 14,
-        secondary: 21
+        secondary: 21,
       };
     case scales.xlarge:
       return {
@@ -21,13 +21,13 @@ const fontSizes = scale => {
         cardMetaMobile: 19,
         keyFactsTitle: 19,
         link: 15,
-        secondary: 23
+        secondary: 23,
       };
     default:
       return {
         ...sharedFontSizes,
         bodyMobile: 18,
-        infoTitle: 20
+        infoTitle: 20,
       };
   }
 };

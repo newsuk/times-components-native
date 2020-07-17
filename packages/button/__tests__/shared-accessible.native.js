@@ -4,7 +4,7 @@ import {
   enzymeTreeSerializer,
   minimaliseTransform,
   minimalNativeTransform,
-  print
+  print,
 } from "@times-components-native/jest-serializer";
 import { shallow } from "enzyme";
 import shared from "./shared-accessible.base";
@@ -16,10 +16,10 @@ export default () => {
     compose(
       print,
       minimaliseTransform(
-        (value, key) => !key.startsWith("accessibility") || key === "style"
+        (value, key) => !key.startsWith("accessibility") || key === "style",
       ),
-      minimalNativeTransform
-    )
+      minimalNativeTransform,
+    ),
   );
 
   shared(shallow);

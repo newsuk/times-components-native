@@ -17,7 +17,7 @@ const Svg = ({ width, viewBox, children }) => {
 
   const [shapeX, shapeY, shapeWidth, shapeHeight] = viewBox
     .split(" ")
-    .map(n => Number.parseInt(n, 10));
+    .map((n) => Number.parseInt(n, 10));
   const scale = width / shapeWidth;
   const transform = new Transform().translate(-shapeX, -shapeY);
 
@@ -33,7 +33,7 @@ const Svg = ({ width, viewBox, children }) => {
 Svg.propTypes = {
   children: PropTypes.node.isRequired,
   viewBox: PropTypes.string.isRequired,
-  width: PropTypes.number.isRequired
+  width: PropTypes.number.isRequired,
 };
 
 export default Svg;

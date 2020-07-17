@@ -1,4 +1,4 @@
-import MockEdition from "../mock-edition"
+import MockEdition from "../mock-edition";
 import { StandardSection } from "../types";
 
 describe("The Mock Edition", () => {
@@ -12,7 +12,9 @@ describe("The Mock Edition", () => {
     expect(edition.sections ? edition.sections.length : 0).toBeGreaterThan(0);
     const newsSection = edition.sections![0] as StandardSection;
     expect(newsSection.title).toBe("News");
-    
-    expect(newsSection.slices ? newsSection.slices.length : 0).toBeGreaterThan(0);
+
+    expect(newsSection.slices ? newsSection.slices.length : 0).toBeGreaterThan(
+      0,
+    );
   });
 });

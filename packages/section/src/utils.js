@@ -2,12 +2,12 @@
 import memoizeOne from "memoize-one";
 import { editionBreakpoints } from "@times-components-native/styleguide";
 
-const composeSliceBuilders = (firstBuilder, secondBuilder) => slices =>
+const composeSliceBuilders = (firstBuilder, secondBuilder) => (slices) =>
   secondBuilder(firstBuilder(slices));
 
-const withIgnoredSeperator = slice => ({ ...slice, ignoreSeparator: true });
+const withIgnoredSeperator = (slice) => ({ ...slice, ignoreSeparator: true });
 
-const withIsConsecutive = slice => ({ ...slice, isConsecutive: true });
+const withIsConsecutive = (slice) => ({ ...slice, isConsecutive: true });
 
 const shouldIgnoreSeperator = ({ name }) =>
   name === "LeadersSlice" || name === "DailyUniversalRegister";
@@ -21,13 +21,13 @@ const splitPuzzlesBySlices = (puzzles, numberOfTilesPerSlice = 3) =>
 
     slices[sliceIndex].puzzles = [
       ...(slices[sliceIndex].puzzles || []),
-      puzzle
+      puzzle,
     ];
 
     return slices;
   }, []);
 
-const buildSliceData = memoizeOne(data =>
+const buildSliceData = memoizeOne((data) =>
   data.reduce((newSlices, oldSlice, idx) => {
     const nextSlice = data[idx + 1];
 
@@ -40,7 +40,7 @@ const buildSliceData = memoizeOne(data =>
 
     const currentSlice = newSlices[idx];
     let generatedId = currentSlice.id;
-    Object.keys(currentSlice).forEach(key => {
+    Object.keys(currentSlice).forEach((key) => {
       if (currentSlice[key].article) {
         generatedId += currentSlice[key].article.id;
       }
@@ -48,14 +48,14 @@ const buildSliceData = memoizeOne(data =>
 
     newSlices[idx] = {
       ...currentSlice,
-      elementId: `${generatedId}.${idx}`
+      elementId: `${generatedId}.${idx}`,
     };
 
     return newSlices;
-  }, [])
+  }, []),
 );
 
-const consecutiveItemsFlagger = memoizeOne(slices =>
+const consecutiveItemsFlagger = memoizeOne((slices) =>
   slices.reduce(
     (acc, curr, i) =>
       acc.length > 0 &&
@@ -64,17 +64,17 @@ const consecutiveItemsFlagger = memoizeOne(slices =>
       curr.name === acc[i - 1].name
         ? [...acc, withIsConsecutive(curr)]
         : [...acc, curr],
-    []
-  )
+    [],
+  ),
 );
 
 const prepareSlicesForRender = composeSliceBuilders(
   buildSliceData,
-  consecutiveItemsFlagger
+  consecutiveItemsFlagger,
 );
 
-const getRatio = ratio => {
-  const ratios = ratio.split(":").map(num => parseInt(num, 10));
+const getRatio = (ratio) => {
+  const ratios = ratio.split(":").map((num) => parseInt(num, 10));
 
   return ratios[0] / ratios[1];
 };
@@ -86,13 +86,13 @@ const getImage = ({ crops = [] }) => {
 
   return {
     ratio: getRatio(crops[0].ratio),
-    url: crops[0].url
+    url: crops[0].url,
   };
 };
 
 const filterPuzzles = (puzzles, editionBreakpoint) =>
   editionBreakpoint === editionBreakpoints.small
-    ? puzzles.filter(puzzle => !puzzle.hideOnMobile)
+    ? puzzles.filter((puzzle) => !puzzle.hideOnMobile)
     : puzzles;
 
 const createPuzzleData = (puzzles, editionBreakpoint) => {
@@ -111,5 +111,5 @@ export {
   getImage,
   createPuzzleData,
   splitPuzzlesBySlices,
-  filterPuzzles
+  filterPuzzles,
 };

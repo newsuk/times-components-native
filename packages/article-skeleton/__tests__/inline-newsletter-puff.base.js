@@ -7,14 +7,14 @@ import Button from "@times-components-native/button";
 
 import {
   getNewsletter,
-  subscribeNewsletter
+  subscribeNewsletter,
 } from "@times-components-native/provider-queries";
 import InlineNewsletterPuff from "../src/article-body/inline-newsletter-puff";
 
 jest.mock("@times-components-native/image", () => ({
   __esModule: true,
   default: ({ uri }) => `Image rendered with imageUri=${uri}`,
-  Placeholder: () => "Placeholder rendered"
+  Placeholder: () => "Placeholder rendered",
 }));
 const mockAnalyticsStream = jest.fn();
 const renderComponent = (
@@ -23,20 +23,20 @@ const renderComponent = (
       request: {
         query: getNewsletter,
         variables: {
-          code: "TNL-119"
-        }
+          code: "TNL-119",
+        },
       },
       result: {
         data: {
           newsletter: {
             id: "a2l6E000000CdHzQAK",
             isSubscribed: false,
-            __typename: "Newsletter"
-          }
-        }
-      }
-    }
-  ]
+            __typename: "Newsletter",
+          },
+        },
+      },
+    },
+  ],
 ) =>
   create(
     <MockedProvider mocks={mocks}>
@@ -50,10 +50,10 @@ const renderComponent = (
           copy:
             "Sign up to receive our brilliant Red Box newsletter, Matt Chorley`s poke at politics delivered every weekday morning at 8am.",
           imageUri:
-            "https://nuk-tnl-deck-prod-static.s3-eu-west-1.amazonaws.com/uploads/2aa9050e6c3d4de682f11a4802ebba96.jpg"
+            "https://nuk-tnl-deck-prod-static.s3-eu-west-1.amazonaws.com/uploads/2aa9050e6c3d4de682f11a4802ebba96.jpg",
         }}
       />
-    </MockedProvider>
+    </MockedProvider>,
   );
 
 export default () => {
@@ -77,19 +77,19 @@ export default () => {
           request: {
             query: getNewsletter,
             variables: {
-              code: "TNL-119"
-            }
+              code: "TNL-119",
+            },
           },
           result: {
             data: {
               newsletter: {
                 id: "a2l6E000000CdHzQAK",
                 isSubscribed: true,
-                __typename: "Newsletter"
-              }
-            }
-          }
-        }
+                __typename: "Newsletter",
+              },
+            },
+          },
+        },
       ]);
 
       await delay(0);
@@ -121,36 +121,36 @@ export default () => {
           request: {
             query: getNewsletter,
             variables: {
-              code: "TNL-119"
-            }
+              code: "TNL-119",
+            },
           },
           result: {
             data: {
               newsletter: {
                 id: "a2l6E000000CdHzQAK",
                 isSubscribed: false,
-                __typename: "Newsletter"
-              }
-            }
-          }
+                __typename: "Newsletter",
+              },
+            },
+          },
         },
         {
           request: {
             query: subscribeNewsletter,
             variables: {
-              code: "TNL-119"
-            }
+              code: "TNL-119",
+            },
           },
           result: {
             data: {
               subscribeNewsletter: {
                 id: "a2l6E000000CdHzQAK",
                 isSubscribed: true,
-                __typename: "Newsletter"
-              }
-            }
-          }
-        }
+                __typename: "Newsletter",
+              },
+            },
+          },
+        },
       ]);
 
       await delay(0);

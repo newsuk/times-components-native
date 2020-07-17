@@ -11,7 +11,7 @@ const SecondaryTwoAndTwoSlice = ({
   secondary1,
   secondary2,
   support1,
-  support2
+  support2,
 }) => {
   const styles = styleFactory(breakpoint);
   if (breakpoint === editionBreakpoints.small) {
@@ -21,7 +21,7 @@ const SecondaryTwoAndTwoSlice = ({
           containerStyle={styles.itemContainer}
           tiles={[
             { style: styles.itemHalfWidth, tile: secondary1 },
-            { style: styles.itemHalfWidth, tile: secondary2 }
+            { style: styles.itemHalfWidth, tile: secondary2 },
           ]}
         />
         <ItemRowSeparator />
@@ -39,7 +39,7 @@ const SecondaryTwoAndTwoSlice = ({
           containerStyle={styles.itemContainer}
           tiles={[
             { style: styles.item, tile: secondary1 },
-            { style: styles.item, tile: secondary2 }
+            { style: styles.item, tile: secondary2 },
           ]}
         />
         <ItemRowSeparator />
@@ -47,7 +47,7 @@ const SecondaryTwoAndTwoSlice = ({
           containerStyle={styles.itemContainer}
           tiles={[
             { style: styles.item, tile: support1 },
-            { style: styles.item, tile: support2 }
+            { style: styles.item, tile: support2 },
           ]}
         />
       </View>
@@ -61,7 +61,7 @@ const SecondaryTwoAndTwoSlice = ({
         { style: styles.secondaryItemContainer, tile: secondary1 },
         { style: styles.supportItemContainer, tile: support1 },
         { style: styles.secondaryItemContainer, tile: secondary2 },
-        { style: styles.supportItemContainer, tile: support2 }
+        { style: styles.supportItemContainer, tile: support2 },
       ]}
     />
   );
@@ -72,11 +72,11 @@ SecondaryTwoAndTwoSlice.propTypes = {
   secondary1: PropTypes.node.isRequired,
   secondary2: PropTypes.node.isRequired,
   support1: PropTypes.node.isRequired,
-  support2: PropTypes.node.isRequired
+  support2: PropTypes.node.isRequired,
 };
 
 SecondaryTwoAndTwoSlice.defaultProps = {
-  breakpoint: editionBreakpoints.small
+  breakpoint: editionBreakpoints.small,
 };
 
 export default SecondaryTwoAndTwoSlice;

@@ -1,5 +1,5 @@
-import * as opentype from 'opentype.js';
-import { TypographySettings } from './AttributedString';
+import * as opentype from "opentype.js";
+import { TypographySettings } from "./AttributedString";
 
 class FontStorage {
   private fonts: Record<string, () => opentype.Font>;
@@ -11,11 +11,11 @@ class FontStorage {
 
   public getFont(settings: TypographySettings): opentype.Font {
     const style =
-      settings.fontStyle === 'italic'
+      settings.fontStyle === "italic"
         ? settings.fontStyle
         : settings.fontWeight;
     const name = `${settings.fontFamily}${
-      style ? '-' + style[0].toUpperCase() + style.slice(1) : ''
+      style ? "-" + style[0].toUpperCase() + style.slice(1) : ""
     }`;
     if (name in this.fonts) {
       if (name in this.cache) {

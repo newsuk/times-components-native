@@ -6,31 +6,31 @@ const child = {
     {
       attributes: {
         value:
-          "As I follow Chris Reynolds Gordon down the first f…fty Shades of Grey but, he says, “I’m living it.”"
+          "As I follow Chris Reynolds Gordon down the first f…fty Shades of Grey but, he says, “I’m living it.”",
       },
       children: [],
-      name: "text"
-    }
+      name: "text",
+    },
   ],
-  name: "paragraph"
+  name: "paragraph",
 };
 
 const invalidChild = {
   attributes: {},
   children: [
     {
-      name: "break"
+      name: "break",
     },
     {
       attributes: {
         value:
-          "As I follow Chris Reynolds Gordon down the first f…fty Shades of Grey but, he says, “I’m living it.”"
+          "As I follow Chris Reynolds Gordon down the first f…fty Shades of Grey but, he says, “I’m living it.”",
       },
       children: [],
-      name: "text"
-    }
+      name: "text",
+    },
   ],
-  name: "paragraph"
+  name: "paragraph",
 };
 
 const childWithMarkup = {
@@ -42,16 +42,16 @@ const childWithMarkup = {
         {
           attributes: {
             value:
-              "As I follow Chris Reynolds Gordon down the first f…fty Shades of Grey but, he says, “I’m living it.”"
+              "As I follow Chris Reynolds Gordon down the first f…fty Shades of Grey but, he says, “I’m living it.”",
           },
           children: [],
-          name: "text"
-        }
+          name: "text",
+        },
       ],
-      name: "link"
-    }
+      name: "link",
+    },
   ],
-  name: "paragraph"
+  name: "paragraph",
 };
 
 const childWithDropCap = [
@@ -65,15 +65,15 @@ const childWithDropCap = [
           {
             attributes: {
               value: "A",
-              dropCap: true
+              dropCap: true,
             },
             children: [],
-            name: "text"
-          }
+            name: "text",
+          },
         ],
-        name: "paragraph"
-      }
-    ]
+        name: "paragraph",
+      },
+    ],
   },
   {
     attributes: {},
@@ -82,14 +82,14 @@ const childWithDropCap = [
         attributes: {
           value:
             "s I follow Chris Reynolds Gordon down the first f…fty Shades of Grey but, he says, “I’m living it.”",
-          dropCap: true
+          dropCap: true,
         },
         children: [],
-        name: "text"
-      }
+        name: "text",
+      },
     ],
-    name: "paragraph"
-  }
+    name: "paragraph",
+  },
 ];
 
 const childWithDropCapAndMarkup = [
@@ -102,48 +102,48 @@ const childWithDropCapAndMarkup = [
         children: [
           {
             attributes: {
-              dropCap: true
+              dropCap: true,
             },
             children: [
               {
                 attributes: {
                   value: "A",
-                  dropCap: true
+                  dropCap: true,
                 },
                 children: [],
-                name: "text"
-              }
+                name: "text",
+              },
             ],
-            name: "link"
-          }
+            name: "link",
+          },
         ],
-        name: "paragraph"
-      }
-    ]
+        name: "paragraph",
+      },
+    ],
   },
   {
     attributes: {},
     children: [
       {
         attributes: {
-          dropCap: true
+          dropCap: true,
         },
         children: [
           {
             attributes: {
               value:
                 "s I follow Chris Reynolds Gordon down the first f…fty Shades of Grey but, he says, “I’m living it.”",
-              dropCap: true
+              dropCap: true,
             },
             children: [],
-            name: "text"
-          }
+            name: "text",
+          },
         ],
-        name: "link"
-      }
+        name: "link",
+      },
     ],
-    name: "paragraph"
-  }
+    name: "paragraph",
+  },
 ];
 
 describe("insertDropcapIntoAST", () => {
@@ -155,14 +155,14 @@ describe("insertDropcapIntoAST", () => {
   it("should fall back to no dropcap if the markup is invalid", () => {
     const template = "indepth";
     expect(insertDropcapIntoAST([invalidChild], template)).toEqual([
-      invalidChild
+      invalidChild,
     ]);
   });
 
   it("should insert dropcap if it belongs to the right template with markup", () => {
     const template = "indepth";
     expect(insertDropcapIntoAST([childWithMarkup], template)).toEqual(
-      childWithDropCapAndMarkup
+      childWithDropCapAndMarkup,
     );
   });
 
@@ -175,7 +175,7 @@ describe("insertDropcapIntoAST", () => {
     const template = "indepth";
     const isDropcapDisabled = true;
     expect(insertDropcapIntoAST([child], template, isDropcapDisabled)).toEqual([
-      child
+      child,
     ]);
   });
 });

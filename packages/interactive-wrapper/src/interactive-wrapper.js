@@ -12,23 +12,23 @@ const editorialLambdaSlug = "prod/component";
 class InteractiveWrapper extends Component {
   static openURLInBrowser(url) {
     return Linking.canOpenURL(url)
-      .then(supported => {
+      .then((supported) => {
         if (!supported) {
           return console.error("Cant open url", url); // eslint-disable-line no-console
         }
         return Linking.openURL(url);
       })
-      .catch(err => console.error("An error occurred", err)); // eslint-disable-line no-console
+      .catch((err) => console.error("An error occurred", err)); // eslint-disable-line no-console
   }
 
   constructor() {
     super();
     this.state = {
-      height: 0
+      height: 0,
     };
     this.onMessage = this.onMessage.bind(this);
     this.handleNavigationStateChange = this.handleNavigationStateChange.bind(
-      this
+      this,
     );
     this.onLoadEnd = this.onLoadEnd.bind(this);
   }
@@ -40,10 +40,17 @@ class InteractiveWrapper extends Component {
     ) {
       const { height } = this.state;
       const newHeight = parseInt(e.nativeEvent.data, 10);
+      const minimumDifferenceInPixels = 5;
+      const smallInteractiveAdditionalHeight = 30;
 
-      if (newHeight && newHeight > height) {
+      if (
+        newHeight &&
+        Math.abs(newHeight - height) > minimumDifferenceInPixels
+      ) {
         const updateState =
-          newHeight < 30 ? { height: newHeight + 30 } : { height: newHeight };
+          newHeight < smallInteractiveAdditionalHeight
+            ? { height: newHeight + smallInteractiveAdditionalHeight }
+            : { height: newHeight };
         this.setState(updateState);
       }
     } else {
@@ -72,7 +79,7 @@ class InteractiveWrapper extends Component {
   render() {
     const {
       config: { dev, environment, platform, version },
-      id
+      id,
     } = this.props;
     const { height } = this.state;
     const uri = `${editorialLambdaProtocol}${editorialLambdaOrigin}/${editorialLambdaSlug}/${id}?dev=${dev}&env=${environment}&platform=${platform}&version=${version}`;
@@ -84,7 +91,7 @@ class InteractiveWrapper extends Component {
         onLoadEnd={this.onLoadEnd}
         onMessage={this.onMessage}
         onNavigationStateChange={this.handleNavigationStateChange}
-        ref={ref => {
+        ref={(ref) => {
           this.webview = ref;
         }}
         scrollEnabled={false}
@@ -97,11 +104,11 @@ class InteractiveWrapper extends Component {
 
 InteractiveWrapper.propTypes = {
   config: PropTypes.shape({}),
-  id: PropTypes.string.isRequired
+  id: PropTypes.string.isRequired,
 };
 
 InteractiveWrapper.defaultProps = {
-  config: {}
+  config: {},
 };
 
 InteractiveWrapper.ResponsiveImageInteractive = ResponsiveImageInteractive;

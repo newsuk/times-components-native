@@ -10,8 +10,8 @@ export const opinionConfig = {
       maxWidth: "40%",
       minWidth: "40%",
       position: "relative",
-      right: 0
-    }
+      right: 0,
+    },
   },
   isOpinionByline: true,
   isReversed: true,
@@ -19,12 +19,12 @@ export const opinionConfig = {
     lengths: [125],
     style: {
       paddingRight: spacing(2),
-      width: "60%"
-    }
-  }
+      width: "60%",
+    },
+  },
 };
 
 export const supportConfig = {
   showImage: false,
-  showSummary: false
+  showSummary: false,
 };

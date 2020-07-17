@@ -1,4 +1,4 @@
-import React, { Fragment } from "react";
+import React from "react";
 import { View } from "react-native";
 import PropTypes from "prop-types";
 import { ResponsiveContext } from "@times-components-native/responsive";
@@ -16,19 +16,24 @@ const ArticleExtrasContent = ({
   onCommentsPress,
   onRelatedArticlePress,
   onTopicPress,
-  narrowContent
+  narrowContent,
 }) => {
   const {
     commentCount,
     commentsEnabled,
     relatedArticleSlice,
-    topics
+    topics,
   } = article;
 
   return (
     <ResponsiveContext.Consumer>
       {({ isTablet }) => (
-        <View style={[isTablet && styles.extrasTablet, narrowContent && styles.narrowContent]}>
+        <View
+          style={[
+            isTablet && styles.extrasTablet,
+            narrowContent && styles.narrowContent,
+          ]}
+        >
           {relatedArticleSlice ? (
             <RelatedArticles
               analyticsStream={analyticsStream}
@@ -36,7 +41,13 @@ const ArticleExtrasContent = ({
               slice={relatedArticleSlice}
             />
           ) : null}
-          {topics ? <ArticleTopics onPress={onTopicPress} topics={topics} narrowContent={narrowContent} /> : null}
+          {topics ? (
+            <ArticleTopics
+              onPress={onTopicPress}
+              topics={topics}
+              narrowContent={narrowContent}
+            />
+          ) : null}
           <ArticleComments
             articleId={articleId}
             commentCount={commentCount}
@@ -59,7 +70,7 @@ ArticleExtrasContent.propTypes = {
   onCommentGuidelinesPress: PropTypes.func.isRequired,
   onCommentsPress: PropTypes.func.isRequired,
   onRelatedArticlePress: PropTypes.func.isRequired,
-  onTopicPress: PropTypes.func.isRequired
+  onTopicPress: PropTypes.func.isRequired,
 };
 
 export default ArticleExtrasContent;

@@ -17,5 +17,5 @@ export {
   Leaders,
   ListTwoAndSixNoPic,
   ItemColSeparator,
-  ItemRowSeparator
-} from './src/slice-layout';
+  ItemRowSeparator,
+} from "./src/slice-layout";

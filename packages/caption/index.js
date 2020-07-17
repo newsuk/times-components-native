@@ -1,1 +1,1 @@
-export { default, CentredCaption } from './src/caption';
+export { default, CentredCaption } from "./src/caption";

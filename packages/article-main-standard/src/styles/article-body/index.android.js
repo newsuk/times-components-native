@@ -3,7 +3,7 @@ import styleguide from "@times-components-native/styleguide";
 import sharedStylesFactory from "./shared";
 import globalStyle from "../shared";
 
-const androidStyles = scale => {
+const androidStyles = (scale) => {
   const { spacing } = styleguide({ scale });
   const sharedStyles = sharedStylesFactory(scale);
 
@@ -12,18 +12,18 @@ const androidStyles = scale => {
     articleTextElement: {
       ...sharedStyles.articleTextElement,
       fontStyle: "normal",
-      marginBottom: spacing(4)
+      marginBottom: spacing(4),
     },
     leadAsset: {
-      marginBottom: spacing(1)
-    }
+      marginBottom: spacing(1),
+    },
   };
 };
 
-const styles = scale =>
+const styles = (scale) =>
   StyleSheet.create({
     ...globalStyle,
-    ...androidStyles(scale)
+    ...androidStyles(scale),
   });
 
 export default styles;

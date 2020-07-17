@@ -12,7 +12,7 @@ const Comments = ({
   commentCount,
   onCommentGuidelinesPress,
   onCommentsPress,
-  url
+  url,
 }) => (
   <View style={styles.container}>
     <Text style={styles.headline}>{`${commentCount} ${
@@ -30,13 +30,13 @@ const Comments = ({
         const themedStyleguide = styleguide({ scale });
         const fontFactory = themedStyleguide.fontFactory({
           font: "supporting",
-          fontSize: "button"
+          fontSize: "button",
         });
         return (
           <Button
             fontSize={fontFactory.fontSize}
             lineHeight={fontFactory.lineHeight}
-            onPress={e => onCommentsPress(e, { articleId, url })}
+            onPress={(e) => onCommentsPress(e, { articleId, url })}
             style={styles.button}
             title={commentCount > 0 ? "View comments" : "Post a comment"}
           />
@@ -51,7 +51,7 @@ Comments.propTypes = {
   commentCount: PropTypes.number.isRequired,
   onCommentGuidelinesPress: PropTypes.func.isRequired,
   onCommentsPress: PropTypes.func.isRequired,
-  url: PropTypes.string.isRequired
+  url: PropTypes.string.isRequired,
 };
 
 export default Comments;

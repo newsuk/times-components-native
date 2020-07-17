@@ -6,12 +6,12 @@ const styles = StyleSheet.create({
     ...sharedStyles.button,
     borderRadius: 2,
     elevation: 3,
-    height: 36
+    height: 36,
   },
   text: {
     ...sharedStyles.text,
-    paddingTop: 0
-  }
+    paddingTop: 0,
+  },
 });
 
 export default styles;

@@ -6,12 +6,12 @@ const styles = StyleSheet.create({
   ...sharedStyles,
   bottomSafeView: {
     ...sharedStyles.bottomSafeView,
-    backgroundColor: colours.functional.overlayGradientFallback
+    backgroundColor: colours.functional.overlayGradientFallback,
   },
   modalImageContainer: {
     ...sharedStyles.modalImageContainer,
-    backgroundColor: colours.functional.black
-  }
+    backgroundColor: colours.functional.black,
+  },
 });
 
 export { captionStyles, tabletCaptionStyles };

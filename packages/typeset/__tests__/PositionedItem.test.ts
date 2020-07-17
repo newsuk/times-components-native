@@ -1,6 +1,6 @@
-import PositionedItem from '../src/PositionedItem';
+import PositionedItem from "../src/PositionedItem";
 
-test('PositionedItem#constructor', () => {
+test("PositionedItem#constructor", () => {
   expect(() => {
     const newItem = new PositionedItem({} as any, {} as any);
     return newItem;

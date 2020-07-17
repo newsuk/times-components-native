@@ -11,15 +11,15 @@ export default ({ getHeadline }) => {
       test: () => {
         const headlineToUse = getHeadline(headline, shortHeadline);
         expect(headlineToUse).toEqual(shortHeadline);
-      }
+      },
     },
     {
       name: "getHeadline returns a headline if shortHeadline is unavailable",
       test: () => {
         const headlineToUse = getHeadline(headline, null);
         expect(headlineToUse).toEqual(headline);
-      }
-    }
+      },
+    },
   ];
 
   iterator(tests);

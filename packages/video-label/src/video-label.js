@@ -17,12 +17,12 @@ const VideoLabel = ({ color, title }) => (
 
 VideoLabel.propTypes = {
   color: PropTypes.string,
-  title: PropTypes.string
+  title: PropTypes.string,
 };
 
 VideoLabel.defaultProps = {
   color: "black",
-  title: ""
+  title: "",
 };
 
 export default VideoLabel;

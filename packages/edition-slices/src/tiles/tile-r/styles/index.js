@@ -1,25 +1,25 @@
 import {
   fonts,
   spacing,
-  editionBreakpoints
+  editionBreakpoints,
 } from "@times-components-native/styleguide";
 
 const mediumBreakpointStyles = {
   container: {
     flex: 1,
     paddingVertical: spacing(3),
-    paddingHorizontal: spacing(6)
+    paddingHorizontal: spacing(6),
   },
   headline: {
     fontFamily: fonts.headline,
     fontSize: 40,
     lineHeight: 40,
-    marginBottom: 0
+    marginBottom: 0,
   },
   imageContainer: {
     width: "100%",
-    marginBottom: spacing(2)
-  }
+    marginBottom: spacing(2),
+  },
 };
 
 const wideBreakpointStyles = {
@@ -27,12 +27,12 @@ const wideBreakpointStyles = {
   container: {
     flex: 1,
     paddingVertical: spacing(3),
-    paddingHorizontal: spacing(4)
+    paddingHorizontal: spacing(4),
   },
   imageContainer: {
     width: "100%",
-    marginBottom: spacing(3)
-  }
+    marginBottom: spacing(3),
+  },
 };
 
 const hugeBreakpointStyles = {
@@ -41,14 +41,14 @@ const hugeBreakpointStyles = {
     fontFamily: fonts.headline,
     fontSize: 45,
     lineHeight: 45,
-    marginBottom: 0
-  }
+    marginBottom: 0,
+  },
 };
 
 const stylesResolver = {
   [editionBreakpoints.medium]: mediumBreakpointStyles,
   [editionBreakpoints.wide]: wideBreakpointStyles,
-  [editionBreakpoints.huge]: hugeBreakpointStyles
+  [editionBreakpoints.huge]: hugeBreakpointStyles,
 };
 
-export default breakpoint => stylesResolver[breakpoint];
+export default (breakpoint) => stylesResolver[breakpoint];

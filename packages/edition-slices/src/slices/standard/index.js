@@ -3,7 +3,7 @@ import { View } from "react-native";
 import PropTypes from "prop-types";
 import {
   VerticalLayout,
-  ListVerticalLayout
+  ListVerticalLayout,
 } from "@times-components-native/slice-layout";
 import { TileK } from "../../tiles";
 import { ResponsiveSlice } from "../shared";
@@ -20,7 +20,7 @@ class Standard extends Component {
   getTiles(breakpoint) {
     const {
       slice: { items },
-      onPress
+      onPress,
     } = this.props;
 
     return items.map((tile, index) => (
@@ -59,8 +59,8 @@ class Standard extends Component {
 Standard.propTypes = {
   onPress: PropTypes.func.isRequired,
   slice: PropTypes.shape({
-    items: PropTypes.array.isRequired
-  }).isRequired
+    items: PropTypes.array.isRequired,
+  }).isRequired,
 };
 
 export default Standard;

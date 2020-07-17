@@ -3,26 +3,26 @@ import {
   fonts,
   spacing,
   editionBreakpoints,
-  globalSpacingStyles
+  globalSpacingStyles,
 } from "@times-components-native/styleguide";
 
 const fontSizeResolver = {
   [editionBreakpoints.medium]: 40,
   [editionBreakpoints.wide]: 40,
-  [editionBreakpoints.huge]: 45
+  [editionBreakpoints.huge]: 45,
 };
 
-export default breakpoint => ({
+export default (breakpoint) => ({
   container: {
     flex: 1,
     padding: spacing(2),
-    paddingTop: spacing(3)
+    paddingTop: spacing(3),
   },
   headline: {
     ...globalSpacingStyles.tabletHeadline,
     fontFamily: fonts.headline,
     fontSize: fontSizeResolver[breakpoint],
-    lineHeight: fontSizeResolver[breakpoint]
+    lineHeight: fontSizeResolver[breakpoint],
   },
   strapline: {
     fontFamily: fonts.headlineRegular,
@@ -30,9 +30,9 @@ export default breakpoint => ({
     fontSize: 24,
     lineHeight: 26,
     paddingTop: spacing(2),
-    paddingBottom: 0
+    paddingBottom: 0,
   },
   summary: {
-    ...globalSpacingStyles.tabletTeaser
-  }
+    ...globalSpacingStyles.tabletTeaser,
+  },
 });

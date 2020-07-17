@@ -1,4 +1,8 @@
-import { mockMagazineSection, mockPuzzleSection, mockStandardSection } from "../mock-section";
+import {
+  mockMagazineSection,
+  mockPuzzleSection,
+  mockStandardSection,
+} from "../mock-section";
 import { Puzzle } from "../types";
 
 interface PuzzleWithName extends Puzzle {

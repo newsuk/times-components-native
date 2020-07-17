@@ -6,17 +6,17 @@ import { CardWrapper, ReversedCardWrapper } from "./card-wrapper";
 const cardProps = {
   image: {
     uri:
-      "https://www.thetimes.co.uk/imageserver/image/methode%2Fsundaytimes%2Fprod%2Fweb%2Fbin%2F9242e576-4dfc-11e7-a20e-a11097d3353d.jpg?crop=1463%2C975%2C293%2C12"
+      "https://www.thetimes.co.uk/imageserver/image/methode%2Fsundaytimes%2Fprod%2Fweb%2Fbin%2F9242e576-4dfc-11e7-a20e-a11097d3353d.jpg?crop=1463%2C975%2C293%2C12",
   },
   imageRatio: 1.5,
-  imageSize: 360
+  imageSize: 360,
 };
 
 const childStyle = {
   borderColor: "black",
   borderStyle: "solid",
   borderWidth: 1,
-  minHeight: 200
+  minHeight: 200,
 };
 
 export default {
@@ -35,7 +35,7 @@ export default {
         </CardWrapper>
       ),
       name: "Default",
-      type: "story"
+      type: "story",
     },
     {
       component: () => (
@@ -52,7 +52,7 @@ export default {
         </CardWrapper>
       ),
       name: "Default - with placeholder",
-      type: "story"
+      type: "story",
     },
     {
       component: () => (
@@ -68,7 +68,7 @@ export default {
         </CardWrapper>
       ),
       name: "Default - no image",
-      type: "story"
+      type: "story",
     },
     {
       component: () => (
@@ -85,7 +85,7 @@ export default {
         </ReversedCardWrapper>
       ),
       name: "Default - reversed",
-      type: "story"
+      type: "story",
     },
     {
       component: () => (
@@ -103,7 +103,7 @@ export default {
         </ReversedCardWrapper>
       ),
       name: "Default - reversed with placeholder",
-      type: "story"
+      type: "story",
     },
     {
       component: () => (
@@ -120,7 +120,7 @@ export default {
         </ReversedCardWrapper>
       ),
       name: "Default - reversed, no image",
-      type: "story"
+      type: "story",
     },
     {
       component: () => (
@@ -137,7 +137,7 @@ export default {
         </CardWrapper>
       ),
       name: "Loading",
-      type: "story"
+      type: "story",
     },
     {
       component: () => (
@@ -154,7 +154,7 @@ export default {
         </CardWrapper>
       ),
       name: "Loading - no image",
-      type: "story"
+      type: "story",
     },
     {
       component: () => (
@@ -172,7 +172,7 @@ export default {
         </ReversedCardWrapper>
       ),
       name: "Loading - reversed",
-      type: "story"
+      type: "story",
     },
     {
       component: () => (
@@ -190,8 +190,8 @@ export default {
         </ReversedCardWrapper>
       ),
       name: "Loading - reversed, no image",
-      type: "story"
-    }
+      type: "story",
+    },
   ],
-  name: "Composed/Card"
+  name: "Composed/Card",
 };

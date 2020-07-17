@@ -3,7 +3,7 @@ import { Text, View } from "react-native";
 import PropTypes from "prop-types";
 import {
   ArticleBylineWithLinks,
-  hasBylineData
+  hasBylineData,
 } from "@times-components-native/article-byline";
 import DatePublication from "@times-components-native/date-publication";
 
@@ -18,13 +18,13 @@ const ArticleMeta = ({
   isTablet,
   onAuthorPress,
   publicationName,
-  publishedTime
+  publishedTime,
 }) => (
   <View
     style={[
       styles.metaContainer,
       !hasStandfirst && styles.metaFlagSpacer,
-      isTablet && styles.metaContainerTablet
+      isTablet && styles.metaContainerTablet,
     ]}
   >
     {hasBylineData(bylines) && (
@@ -39,7 +39,7 @@ const ArticleMeta = ({
       <Text
         style={[
           styles.datePublication,
-          isTablet && styles.datePublicationTablet
+          isTablet && styles.datePublicationTablet,
         ]}
       >
         <DatePublication date={publishedTime} publication={publicationName} />
@@ -50,7 +50,7 @@ const ArticleMeta = ({
 
 ArticleMeta.propTypes = {
   ...metaPropTypes,
-  onAuthorPress: PropTypes.func.isRequired
+  onAuthorPress: PropTypes.func.isRequired,
 };
 
 export default ArticleMeta;

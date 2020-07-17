@@ -6,5 +6,5 @@ export {
   sections,
   showcaseConverter,
   WhiteBgColorDecorator,
-  NewTab
-} from './src/storybook';
+  NewTab,
+} from "./src/storybook";

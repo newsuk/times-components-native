@@ -9,15 +9,15 @@ const styles = StyleSheet.create({
     color: colours.functional.secondary,
     fontFamily: fonts.supporting,
     fontSize: fontSizes.cardMeta,
-    lineHeight: 15
-  }
+    lineHeight: 15,
+  },
 });
 
 const timezones = [
   "2017-07-01T04:32:00.000Z",
   "2017-01-01T04:32:00.000Z",
   "2017-07-01T14:32:00.000Z",
-  "2017-01-01T14:32:00.000Z"
+  "2017-01-01T14:32:00.000Z",
 ];
 
 export default {
@@ -32,7 +32,7 @@ export default {
         </Text>
       ),
       name: "Default",
-      type: "story"
+      type: "story",
     },
     {
       component: () => (
@@ -41,8 +41,8 @@ export default {
         </Text>
       ),
       name: "Without Publication",
-      type: "story"
-    }
+      type: "story",
+    },
   ],
-  name: "Primitives/Date Publication"
+  name: "Primitives/Date Publication",
 };

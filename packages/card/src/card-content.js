@@ -13,7 +13,7 @@ class CardContent extends Component {
       lowResQuality,
       lowResSize,
       highResSize,
-      isLoading
+      isLoading,
     } = this.props;
     return (
       imageUri !== nextProps.imageUri ||
@@ -39,10 +39,10 @@ class CardContent extends Component {
       isReversed,
       lowResQuality,
       lowResSize,
-      showImage
+      showImage,
     } = this.props;
 
-    const renderImage = isTablet => {
+    const renderImage = (isTablet) => {
       if (!showImage) return null;
 
       return (
@@ -51,7 +51,7 @@ class CardContent extends Component {
           style={[
             isTablet ? styles.imageContainerTablet : styles.imageContainer,
             imageStyle,
-            isReversed ? styles.reversedImageContainer : ""
+            isReversed ? styles.reversedImageContainer : "",
           ]}
         >
           <Image
@@ -73,7 +73,7 @@ class CardContent extends Component {
           <View
             style={[
               isTablet ? styles.cardContainerTablet : styles.cardContainer,
-              isReversed ? styles.reversedCardContainer : ""
+              isReversed ? styles.reversedCardContainer : "",
             ]}
           >
             {!isReversed ? renderImage(isTablet) : null}
@@ -84,7 +84,7 @@ class CardContent extends Component {
                   ? styles.contentContainerTablet
                   : styles.contentContainer,
                 isReversed ? styles.reversedContentContainer : "",
-                isLoading ? styles.loadingContentContainer : ""
+                isLoading ? styles.loadingContentContainer : "",
               ]}
             >
               {isLoading ? <Loading /> : children}

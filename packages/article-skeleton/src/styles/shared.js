@@ -11,13 +11,13 @@ const globalStyle = {
   },
   articleMainContentRow: {
     paddingLeft: spacing(2),
-    paddingRight: spacing(2)
+    paddingRight: spacing(2),
   },
   gutter: {
     backgroundColor: "#ffffff",
     maxWidth: "100%",
     width: maxWidth,
-  }
+  },
 };
 
 export default globalStyle;

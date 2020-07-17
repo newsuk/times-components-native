@@ -11,22 +11,22 @@ const editorialLambdaSlug = "prod/component";
 class InteractiveWrapper extends Component {
   static openURLInBrowser(url) {
     return Linking.canOpenURL(url)
-      .then(supported => {
+      .then((supported) => {
         if (!supported) {
           return console.error("Cant open url", url); // eslint-disable-line no-console
         }
         return Linking.openURL(url);
       })
-      .catch(err => console.error("An error occurred", err)); // eslint-disable-line no-console
+      .catch((err) => console.error("An error occurred", err)); // eslint-disable-line no-console
   }
 
   constructor() {
     super();
     this.state = {
-      height: 1
+      height: 1,
     };
     this.handleOnShouldStartLoadWithRequest = this.handleOnShouldStartLoadWithRequest.bind(
-      this
+      this,
     );
     this.onLoadEnd = this.onLoadEnd.bind(this);
   }
@@ -37,7 +37,7 @@ class InteractiveWrapper extends Component {
     }
   }
 
-  updateHeight = passedHeight => {
+  updateHeight = (passedHeight) => {
     const { height } = this.state;
     if (passedHeight !== height && Math.abs(passedHeight - height) > 5) {
       this.setState({ height: passedHeight });
@@ -60,18 +60,18 @@ class InteractiveWrapper extends Component {
   render() {
     const {
       config: { dev, environment, platform, version },
-      id
+      id,
     } = this.props;
     const { height } = this.state;
     const uri = `${editorialLambdaProtocol}${editorialLambdaOrigin}/${editorialLambdaSlug}/${id}?dev=${dev}&env=${environment}&platform=${platform}&version=${version}`;
 
     return (
       <AutoHeightWebView
-        onSizeUpdated={size => this.updateHeight(size.height)}
+        onSizeUpdated={(size) => this.updateHeight(size.height)}
         scalesPageToFit={false}
         automaticallyAdjustContentInsets={false}
         onLoadEnd={this.onLoadEnd}
-        ref={ref => {
+        ref={(ref) => {
           this.webview = ref;
         }}
         scrollEnabled={false}
@@ -85,11 +85,11 @@ class InteractiveWrapper extends Component {
 
 InteractiveWrapper.propTypes = {
   config: PropTypes.shape({}),
-  id: PropTypes.string.isRequired
+  id: PropTypes.string.isRequired,
 };
 
 InteractiveWrapper.defaultProps = {
-  config: {}
+  config: {},
 };
 
 InteractiveWrapper.ResponsiveImageInteractive = ResponsiveImageInteractive;

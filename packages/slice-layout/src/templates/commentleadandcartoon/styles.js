@@ -1,21 +1,21 @@
 import {
   editionBreakpoints,
-  spacing
+  spacing,
 } from "@times-components-native/styleguide";
 
 const defaultBreakpointStyles = {
   cartoon: {
-    width: "66.7%"
+    width: "66.7%",
   },
   container: {
     flex: 1,
     flexDirection: "row",
     paddingHorizontal: spacing(4),
-    paddingVertical: spacing(1)
+    paddingVertical: spacing(1),
   },
   lead: {
-    width: "33.3%"
-  }
+    width: "33.3%",
+  },
 };
 
 const wideBreakpointStyles = {
@@ -24,14 +24,14 @@ const wideBreakpointStyles = {
     flex: 1,
     flexDirection: "row",
     paddingHorizontal: spacing(2),
-    paddingVertical: spacing(1)
-  }
+    paddingVertical: spacing(1),
+  },
 };
 
 const stylesResolver = {
   [editionBreakpoints.medium]: defaultBreakpointStyles,
   [editionBreakpoints.wide]: wideBreakpointStyles,
-  [editionBreakpoints.huge]: wideBreakpointStyles
+  [editionBreakpoints.huge]: wideBreakpointStyles,
 };
 
-export default breakpoint => stylesResolver[breakpoint];
+export default (breakpoint) => stylesResolver[breakpoint];

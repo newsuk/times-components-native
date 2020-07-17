@@ -6,35 +6,36 @@ import styleFactory from "./styles";
 
 const styles = styleFactory();
 
-const BodyParagraph = ({height, narrowContent, style, children}) => {
+const BodyParagraph = ({ height, narrowContent, style, children }) => {
   // console.log('narrowContent', narrowContent);
-return (
-  <ResponsiveContext.Consumer>
-    {({ isTablet }) => (
-      <View
-        style={[
-          styles.articleMainContentRow,
-          styles.articleTextElement,
-          isTablet && styles.articleMainContentRowTablet,
-          narrowContent && styles.narrow,
-          style
-        ].concat(height ? [{ height: height }] : [])}
-      >
-        <View>{children}</View>
-      </View>
-    )}
-  </ResponsiveContext.Consumer>
-)};
+  return (
+    <ResponsiveContext.Consumer>
+      {({ isTablet }) => (
+        <View
+          style={[
+            styles.articleMainContentRow,
+            styles.articleTextElement,
+            isTablet && styles.articleMainContentRowTablet,
+            narrowContent && styles.narrow,
+            style,
+          ].concat(height ? [{ height: height }] : [])}
+        >
+          <View>{children}</View>
+        </View>
+      )}
+    </ResponsiveContext.Consumer>
+  );
+};
 
 BodyParagraph.propTypes = {
   children: PropTypes.node.isRequired,
   height: PropTypes.number,
-  style: PropTypes.objectOf({})
+  style: PropTypes.objectOf({}),
 };
 
 BodyParagraph.defaultProps = {
   height: null,
-  style: {}
+  style: {},
 };
 
 export default BodyParagraph;

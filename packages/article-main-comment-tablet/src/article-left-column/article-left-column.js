@@ -1,8 +1,8 @@
-import React, { Fragment } from "react";
+import React from "react";
 import { View } from "react-native";
 import {
   hasBylineData,
-  ArticleBylineWithLinks
+  ArticleBylineWithLinks,
 } from "@times-components-native/article-byline";
 import PropTypes from "prop-types";
 import styles from "../styles";
@@ -10,7 +10,7 @@ import styles from "../styles";
 import { ModalImage } from "@times-components-native/image";
 import {
   articleLeftColumnPropTypes,
-  articleLeftColumnDefaultProps
+  articleLeftColumnDefaultProps,
 } from "./article-left-column-prop-types";
 
 const ArticleLeftColumn = ({
@@ -22,23 +22,27 @@ const ArticleLeftColumn = ({
   <View style={styles.leftColumnContainer}>
     <View style={styles.authorImage}>
       <ModalImage
-      aspectRatio={1}
-      uri={authorImage}
-      onImagePress={onImagePress ? () => onImagePress(0) : undefined}
-      rounded
+        aspectRatio={1}
+        uri={authorImage}
+        onImagePress={onImagePress ? () => onImagePress(0) : undefined}
+        rounded
       />
+    </View>
+    {hasBylineData(bylines) && (
+      <View style={styles.bylines}>
+        <ArticleBylineWithLinks
+          ast={bylines}
+          centered
+          onAuthorPress={onAuthorPress}
+        />
       </View>
-      {hasBylineData(bylines) && (
-        <View style={styles.bylines}>
-          <ArticleBylineWithLinks ast={bylines} centered onAuthorPress={onAuthorPress} />
-        </View>
-      )}
+    )}
   </View>
 );
 
 ArticleLeftColumn.propTypes = {
   ...articleLeftColumnPropTypes,
-  onImagePress: PropTypes.func.isRequired
+  onImagePress: PropTypes.func.isRequired,
 };
 
 ArticleLeftColumn.defaultProps = articleLeftColumnDefaultProps;

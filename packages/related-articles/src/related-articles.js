@@ -34,7 +34,7 @@ class RelatedArticles extends Component {
         isReversed = false,
         showImage = true,
         showSummary = true,
-        summaryConfig = {}
+        summaryConfig = {},
       } = config;
       return (
         <RelatedArticleItem
@@ -62,9 +62,9 @@ class RelatedArticles extends Component {
         <RelatedArticlesHeading />
         <StandardSlice
           itemCount={items.length}
-          renderItems={config =>
-            items.map(item =>
-              renderArticleItem(config, item.article, item.leadAsset)
+          renderItems={(config) =>
+            items.map((item) =>
+              renderArticleItem(config, item.article, item.leadAsset),
             )
           }
         />

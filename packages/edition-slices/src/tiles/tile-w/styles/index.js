@@ -1,7 +1,7 @@
 import {
   spacing,
   fonts,
-  globalSpacingStyles
+  globalSpacingStyles,
 } from "@times-components-native/styleguide";
 
 const mediumBreakpointStyles = {
@@ -10,37 +10,37 @@ const mediumBreakpointStyles = {
     flexDirection: "row",
     marginHorizontal: spacing(4),
     paddingHorizontal: spacing(2),
-    paddingVertical: spacing(3)
+    paddingVertical: spacing(3),
   },
   headline: {
     ...globalSpacingStyles.tabletHeadline,
     fontFamily: fonts.headline,
     fontSize: 30,
-    lineHeight: 30
+    lineHeight: 30,
   },
   summaryContainer: {
     flex: 1,
-    paddingRight: spacing(4)
+    paddingRight: spacing(4),
   },
   imageContainer: {
-    flex: 1
+    flex: 1,
   },
   summary: {
-    ...globalSpacingStyles.tabletTeaser
-  }
+    ...globalSpacingStyles.tabletTeaser,
+  },
 };
 
 const wideBreakpointStyles = {
   ...mediumBreakpointStyles,
   container: {
     ...mediumBreakpointStyles.container,
-    marginHorizontal: spacing(2)
+    marginHorizontal: spacing(2),
   },
   headline: {
     ...mediumBreakpointStyles.headline,
     fontSize: 40,
-    lineHeight: 40
-  }
+    lineHeight: 40,
+  },
 };
 
 const hugeBreakpointStyles = {
@@ -48,14 +48,14 @@ const hugeBreakpointStyles = {
   headline: {
     ...wideBreakpointStyles.headline,
     fontSize: 45,
-    lineHeight: 45
-  }
+    lineHeight: 45,
+  },
 };
 
 const stylesResolver = {
   medium: mediumBreakpointStyles,
   wide: wideBreakpointStyles,
-  huge: hugeBreakpointStyles
+  huge: hugeBreakpointStyles,
 };
 
-export default breakpoint => stylesResolver[breakpoint];
+export default (breakpoint) => stylesResolver[breakpoint];

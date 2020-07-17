@@ -1,6 +1,6 @@
 import {
   addSerializers,
-  minimalNative
+  minimalNative,
 } from "@times-components-native/jest-serializer";
 import shared from "../shared";
 

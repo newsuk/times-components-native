@@ -5,7 +5,7 @@ import {
   compose,
   minimaliseTransform,
   minimalNativeTransform,
-  print
+  print,
 } from "@times-components-native/jest-serializer";
 import { iterator } from "@times-components-native/test-utils";
 import VideoLabel from "../src/video-label";
@@ -18,8 +18,8 @@ export default () => {
     compose(
       print,
       minimaliseTransform((value, key) => key === "style"),
-      minimalNativeTransform
-    )
+      minimalNativeTransform,
+    ),
   );
 
   const tests = [
@@ -27,31 +27,31 @@ export default () => {
       name: "video label with a title",
       test: () => {
         const testInstance = TestRenderer.create(
-          <VideoLabel color="#008347" title="swimming" />
+          <VideoLabel color="#008347" title="swimming" />,
         );
 
         expect(testInstance).toMatchSnapshot();
-      }
+      },
     },
     {
       name: "video label without a title shows VIDEO",
       test: () => {
         const testInstance = TestRenderer.create(
-          <VideoLabel color="#008347" />
+          <VideoLabel color="#008347" />,
         );
 
         expect(testInstance).toMatchSnapshot();
-      }
+      },
     },
     {
       name: "video label with null title shows VIDEO",
       test: () => {
         const testInstance = TestRenderer.create(
-          <VideoLabel color="#008347" title={null} />
+          <VideoLabel color="#008347" title={null} />,
         );
 
         expect(testInstance).toMatchSnapshot();
-      }
+      },
     },
     {
       name: "video label with the black default colour",
@@ -59,8 +59,8 @@ export default () => {
         const testInstance = TestRenderer.create(<VideoLabel />);
 
         expect(testInstance).toMatchSnapshot();
-      }
-    }
+      },
+    },
   ];
 
   iterator(tests);

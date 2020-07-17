@@ -15,11 +15,11 @@ import spacing from "./spacing";
 export const colours = {
   functional: functionalColours,
   secondarySectionColours,
-  section: sectionColours
+  section: sectionColours,
 };
 
 export const Animations = {
-  FadeIn
+  FadeIn,
 };
 export const fonts = timesFonts;
 export const fontFactory = timesFontFactory();
@@ -27,7 +27,7 @@ export const fontSizes = timesFontSizes();
 export const lineHeight = timesLineHeightsFactory();
 export const {
   nativeTablet: tabletWidth,
-  nativeTabletWide: tabletWidthMax
+  nativeTabletWide: tabletWidthMax,
 } = breakpoints;
 export const tabletRowPadding = 20;
 export const narrowArticleContentWidth = 532;
@@ -39,16 +39,11 @@ export {
   editionMaxWidth,
   sliceContentMaxWidth,
   getEditionBreakpoint,
-} from './breakpoints';
+} from "./breakpoints";
 
-export {
-  default as scales
-} from './scales';
+export { default as scales } from "./scales";
 
-export {
-  default as spacing,
-  globalSpacingStyles,
-} from './spacing';
+export { default as spacing, globalSpacingStyles } from "./spacing";
 
 export { default as themeFactory } from "./theme/theme-factory";
 
@@ -59,5 +54,5 @@ export default ({ scale = scales.medium } = {}) => ({
   fonts,
   fontSizes: timesFontSizes(scale),
   lineHeight: timesLineHeightsFactory(scale),
-  spacing
+  spacing,
 });

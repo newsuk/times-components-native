@@ -18,7 +18,7 @@ export default {
       },
       name: "Group of Topics",
       platform: "native",
-      type: "story"
+      type: "story",
     },
     {
       component: ({ select }, { decorateAction }) => {
@@ -31,8 +31,8 @@ export default {
       },
       name: "Single Topic",
       platform: "native",
-      type: "story"
-    }
+      type: "story",
+    },
   ],
-  name: "Primitives/Article Topics"
+  name: "Primitives/Article Topics",
 };

@@ -22,8 +22,8 @@ class ListTwoAndSixNoPicSlice extends Component {
         support3,
         support4,
         support5,
-        support6
-      }
+        support6,
+      },
     } = this.props;
 
     return (
@@ -64,8 +64,8 @@ class ListTwoAndSixNoPicSlice extends Component {
         support3,
         support4,
         support5,
-        support6
-      }
+        support6,
+      },
     } = this.props;
 
     return (
@@ -159,8 +159,8 @@ ListTwoAndSixNoPicSlice.propTypes = {
     support3: PropTypes.shape({}).isRequired,
     support4: PropTypes.shape({}).isRequired,
     support5: PropTypes.shape({}).isRequired,
-    support6: PropTypes.shape({}).isRequired
-  }).isRequired
+    support6: PropTypes.shape({}).isRequired,
+  }).isRequired,
 };
 
 export default ListTwoAndSixNoPicSlice;

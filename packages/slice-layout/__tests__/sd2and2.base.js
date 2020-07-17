@@ -5,7 +5,7 @@ import createItem from "./utils";
 import { SecondaryTwoAndTwoSlice } from "../src/slice-layout";
 import styles from "../src/templates/secondarytwoandtwo/styles";
 
-export default renderComponent => {
+export default (renderComponent) => {
   const tests = [
     {
       name: "secondary two and two - small",
@@ -16,11 +16,11 @@ export default renderComponent => {
             secondary2={createItem("secondary-2")}
             support1={createItem("support-1")}
             support2={createItem("support-2")}
-          />
+          />,
         );
 
         expect(output).toMatchSnapshot();
-      }
+      },
     },
     {
       name: "secondary two and two - medium",
@@ -32,11 +32,11 @@ export default renderComponent => {
             secondary2={createItem("secondary-2")}
             support1={createItem("support-1")}
             support2={createItem("support-2")}
-          />
+          />,
         );
 
         expect(output).toMatchSnapshot();
-      }
+      },
     },
     {
       name: "secondary two and two - wide",
@@ -48,11 +48,11 @@ export default renderComponent => {
             secondary2={createItem("secondary-2")}
             support1={createItem("support-1")}
             support2={createItem("support-2")}
-          />
+          />,
         );
 
         expect(output).toMatchSnapshot();
-      }
+      },
     },
     {
       name: "secondary two and two - huge",
@@ -64,20 +64,20 @@ export default renderComponent => {
             secondary2={createItem("secondary-2")}
             support1={createItem("support-1")}
             support2={createItem("support-2")}
-          />
+          />,
         );
 
         expect(output).toMatchSnapshot();
-      }
+      },
     },
     {
       name: "secondary two and two - wrong breakpoint",
       test() {
         expect(styles("wrong-breakpoint")).toEqual(
-          styles(editionBreakpoints.small)
+          styles(editionBreakpoints.small),
         );
-      }
-    }
+      },
+    },
   ];
 
   iterator(tests);

@@ -11,7 +11,7 @@ const SimpleParagraph = ({
   children,
   defaultFont,
   LinkComponent,
-  narrowContent
+  narrowContent,
 }) => {
   if (children.length === 0) {
     return null;
@@ -20,7 +20,12 @@ const SimpleParagraph = ({
   const { lineHeight } = defaultFont;
 
   return (
-    <ArticleParagraphWrapper ast={tree} key={key} uid={key} narrowContent={narrowContent}>
+    <ArticleParagraphWrapper
+      ast={tree}
+      key={key}
+      uid={key}
+      narrowContent={narrowContent}
+    >
       <Text allowFontScaling={false} selectable style={{ lineHeight }}>
         {children.map((child, index) =>
           child.splitByDifferenceInAttributes().map((nestedChild) => {

@@ -6,14 +6,14 @@ import AuthorProfile from "../src/author-profile";
 
 jest.mock("@times-components-native/provider", () =>
   // eslint-disable-next-line global-require
-  require("./mock-provider")
+  require("./mock-provider"),
 );
 jest.mock("@times-components-native/tracking", () => {
-  const id = x => x;
+  const id = (x) => x;
 
   return {
     withTrackEvents: id,
-    withTrackingContext: id
+    withTrackingContext: id,
   };
 });
 
@@ -23,39 +23,39 @@ export default (props, platformTests = []) => {
       name: "an article list header",
       test() {
         const testInstance = TestRenderer.create(
-          <AuthorProfile {...props} isLoading={false} page={2} />
+          <AuthorProfile {...props} isLoading={false} page={2} />,
         );
 
         const articleList = testInstance.root.find(
-          node => node.type === "ArticleList"
+          (node) => node.type === "ArticleList",
         );
 
         const articleListHeader = TestRenderer.create(
-          articleList.props.articleListHeader
+          articleList.props.articleListHeader,
         );
 
         expect(articleListHeader).toMatchSnapshot();
-      }
+      },
     },
     {
       name: "an article list header loading",
       test() {
         const testInstance = TestRenderer.create(
-          <AuthorProfile {...props} isLoading />
+          <AuthorProfile {...props} isLoading />,
         );
 
         const articleList = testInstance.root.find(
-          node => node.type === "ArticleList"
+          (node) => node.type === "ArticleList",
         );
 
         const articleListHeader = TestRenderer.create(
-          articleList.props.articleListHeader
+          articleList.props.articleListHeader,
         );
 
         expect(articleListHeader).toMatchSnapshot();
-      }
+      },
     },
-    ...platformTests
+    ...platformTests,
   ];
 
   jest.useFakeTimers();

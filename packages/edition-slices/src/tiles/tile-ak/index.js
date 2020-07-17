@@ -14,7 +14,7 @@ const TileAK = ({
   onPress,
   title,
   url,
-  breakpoint = editionBreakpoints.medium
+  breakpoint = editionBreakpoints.medium,
 }) => {
   const crop = image.crop32;
   const styles = stylesFactory(breakpoint);
@@ -54,13 +54,13 @@ TileAK.propTypes = {
   id: PropTypes.string.isRequired,
   image: PropTypes.shape({
     crop32: PropTypes.shape({
-      url: PropTypes.string
-    })
+      url: PropTypes.string,
+    }),
   }).isRequired,
   onPress: PropTypes.func.isRequired,
   title: PropTypes.string.isRequired,
   url: PropTypes.string.isRequired,
-  breakpoint: PropTypes.string
+  breakpoint: PropTypes.string,
 };
 
 export default withPuzzleTileTracking(TileAK);
