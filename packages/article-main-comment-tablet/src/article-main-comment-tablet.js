@@ -20,7 +20,8 @@ class ArticlePage extends Component {
   }
 
   renderHeader() {
-    const { article, onAuthorPress, onImagePress } = this.props;
+    const { article, onAuthorPress, onImagePress, topics } = this.props;
+    console.log("TOPIC", topics);
     const {
       expirableFlags,
       hasVideo,
@@ -79,7 +80,9 @@ class ArticlePage extends Component {
       receiveChildList,
     } = this.props;
 
-    const { bylines } = article;
+    const { bylines, topics } = article;
+    console.log('topics222', topics);
+
 
     const authorImage =
       bylines &&
@@ -102,6 +105,7 @@ class ArticlePage extends Component {
                   onAuthorPress={onAuthorPress}
                   onImagePress={onImagePress}
                   onTopicPress={onTopicPress}
+                  topics={topics}
                 />
                 <ArticleSkeleton
                   adConfig={adConfig}

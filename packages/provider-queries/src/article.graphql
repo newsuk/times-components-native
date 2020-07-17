@@ -3,7 +3,7 @@
 query ArticleQuery($id: ID!) {
   article(id: $id) {
     ...articlePageProps
-    topics(maxCount: 5) {
+    topics(maxCount: 1) {
       name
       slug
     }

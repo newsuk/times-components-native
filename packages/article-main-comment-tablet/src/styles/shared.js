@@ -51,7 +51,7 @@ const sharedStyles = {
   },
   leftColumnContainer: {
     width: "25%",
-    zIndex: 1111,
+    zIndex: 1,
     borderRightWidth: 1,
     borderColor: colours.functional.keyline,
     height: "100%",
@@ -65,6 +65,11 @@ const sharedStyles = {
   bylines: {
     paddingTop: spacing(1),
     width: "100%",
+  },
+  topicsContainer: {
+    position: "absolute",
+    bottom: 110,
+    paddingLeft: 40,
   },
 };
 

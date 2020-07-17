@@ -15,7 +15,7 @@ import {
 import { sections } from "@times-components-native/storybook";
 import { scales, themeFactory } from "@times-components-native/styleguide";
 import storybookReporter from "@times-components-native/tealium-utils";
-import ArticleMainCommment from "./src/article-main-comment";
+import ArticleMainCommmentTablet from "./src/article-main-comment-tablet";
 
 const preventDefaultedAction = (decorateAction) =>
   decorateAction([
@@ -53,7 +53,7 @@ const renderArticle = ({
               },
             }}
           >
-            <ArticleMainCommment
+            <ArticleMainCommmentTablet
               adConfig={adConfig}
               analyticsStream={analyticsStream}
               article={data}
@@ -146,7 +146,7 @@ export default {
           section,
         });
       },
-      name: "Main Comment - Error",
+      name: "Main Comment Tablet - Error",
       platform: "native",
       type: "story",
     },

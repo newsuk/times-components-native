@@ -8,6 +8,7 @@ import PropTypes from "prop-types";
 import styles from "../styles";
 
 import { ModalImage } from "@times-components-native/image";
+import ArticleTopics from "@times-components-native/article-topics";
 import {
   articleLeftColumnPropTypes,
   articleLeftColumnDefaultProps,
@@ -18,6 +19,8 @@ const ArticleLeftColumn = ({
   bylines,
   onAuthorPress,
   onImagePress,
+  onTopicPress,
+  topics,
 }) => (
   <View style={styles.leftColumnContainer}>
     <View style={styles.authorImage}>
@@ -37,6 +40,15 @@ const ArticleLeftColumn = ({
         />
       </View>
     )}
+    {topics ? (
+      <View style={styles.topicsContainer}>
+        <ArticleTopics
+          onPress={onTopicPress}
+          topics={topics}
+          style={{ justifyContent: "flex-start" }}
+        />
+      </View>
+    ) : null}
   </View>
 );
 

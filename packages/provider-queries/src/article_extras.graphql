@@ -13,7 +13,7 @@ query ArticleExtrasQuery($id: ID!) {
         }
       }
     }
-    topics(maxCount: 5) {
+    topics(maxCount: 1) {
       name
       slug
     }
