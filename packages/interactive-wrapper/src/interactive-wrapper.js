@@ -40,10 +40,17 @@ class InteractiveWrapper extends Component {
     ) {
       const { height } = this.state;
       const newHeight = parseInt(e.nativeEvent.data, 10);
+      const minimumDifferenceInPixels = 5;
+      const smallInteractiveAdditionalHeight = 30;
 
-      if (newHeight && newHeight > height) {
+      if (
+        newHeight &&
+        Math.abs(newHeight - height) > minimumDifferenceInPixels
+      ) {
         const updateState =
-          newHeight < 30 ? { height: newHeight + 30 } : { height: newHeight };
+          newHeight < smallInteractiveAdditionalHeight
+            ? { height: newHeight + smallInteractiveAdditionalHeight }
+            : { height: newHeight };
         this.setState(updateState);
       }
     } else {
