@@ -2,7 +2,7 @@
 import React, { useState } from "react";
 import { View, Text } from "react-native";
 import PropTypes from "prop-types";
-import styleguide, { tabletWidth, narrowArticleContentWidth  } from "@times-components-native/styleguide";
+import styleguide, { tabletWidth, narrowArticleContentWidth } from "@times-components-native/styleguide";
 import { screenWidth } from "@times-components-native/utils";
 import {
   TextContainer,
@@ -22,7 +22,7 @@ const InlineParagraph = ({
   key,
   defaultFont,
   LinkComponent,
-  narrowContent,
+  narrowContent
 }) => {
   const { spacing } = styleguide({ scale });
   const [inlineExclusion, setInlineExclusion] = useState(false);
@@ -31,9 +31,10 @@ const InlineParagraph = ({
     return null;
   }
 
-  const contentWidth = Math.min(screenWidth(), narrowContent ? narrowArticleContentWidth: tabletWidth);
+  console.log('InlineParagraph', narrowContent)
 
-  const gutters = (screenWidth() - contentWidth / 2 + spacing(2));
+  const contentWidth = Math.min(screenWidth(), narrowContent ? narrowArticleContentWidth : tabletWidth);
+  const gutters = (screenWidth() - contentWidth) / 2 + spacing(2);
 
   const container = new TextContainer(
     isTablet ? contentWidth : screenWidth() - spacing(4),
@@ -53,17 +54,17 @@ const InlineParagraph = ({
 
   const positioned = manager.layout();
 
+  const dropCapLeftPosition = narrowContent ? 0 : gutters - spacing(2);
+
   return [
     dropCap && (
-      <View>{dropCap.element}</View>
+      <View style={{ left: dropCapLeftPosition }}>{dropCap.element}</View>
     ),
     inline && (
       <View
         style={{
           position: "absolute",
           left: gutters,
-          borderWidth: 1,
-          borderColor: "orange",
           width: contentWidth * 0.35
         }}
         onLayout={e => {
@@ -96,7 +97,7 @@ const InlineParagraph = ({
             defaultFont.lineHeight,
         inlineExclusion ? inlineExclusion.height : 0
       )}
-      narrowContent={narrowContent}
+      narrowContent
     >
       {positioned.map((p, i) => {
         const [attribute, href] = p.text.collapsedAttributes(0);
@@ -132,7 +133,7 @@ const InlineParagraph = ({
               {
                 position: "absolute",
                 left: p.position.x,
-                top: p.position.y
+                top: p.position.y,
               },
               style
             ]}

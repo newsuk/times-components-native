@@ -36,7 +36,7 @@ const ArticleExtrasContent = ({
               slice={relatedArticleSlice}
             />
           ) : null}
-          {topics ? <ArticleTopics onPress={onTopicPress} topics={topics} /> : null}
+          {topics ? <ArticleTopics onPress={onTopicPress} topics={topics} narrowContent={narrowContent} /> : null}
           <ArticleComments
             articleId={articleId}
             commentCount={commentCount}

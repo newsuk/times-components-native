@@ -6,7 +6,9 @@ import styleFactory from "./styles";
 
 const styles = styleFactory();
 
-const BodyParagraph = ({height, narrowContent, style, children}) => (
+const BodyParagraph = ({height, narrowContent, style, children}) => {
+  // console.log('narrowContent', narrowContent);
+return (
   <ResponsiveContext.Consumer>
     {({ isTablet }) => (
       <View
@@ -22,7 +24,7 @@ const BodyParagraph = ({height, narrowContent, style, children}) => (
       </View>
     )}
   </ResponsiveContext.Consumer>
-);
+)};
 
 BodyParagraph.propTypes = {
   children: PropTypes.node.isRequired,

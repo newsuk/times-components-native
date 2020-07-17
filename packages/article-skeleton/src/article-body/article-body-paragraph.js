@@ -46,6 +46,7 @@ const ArticleParagraph = ({
         defaultFont={defaultFont}
         onLinkPress={onLinkPress}
         LinkComponent={LinkComponent}
+        narrowContent={narrowContent}
       >
         {children}
       </SimpleParagraph>

@@ -13,7 +13,7 @@ const styles = {
     borderTopColor: colours.functional.keyline,
     borderTopWidth: 1,
     marginBottom: spacing(10),
-    width: "100%"
+    width: "100%",
   },
   headline: {
     color: colours.functional.primary,

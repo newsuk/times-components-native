@@ -27,7 +27,7 @@ const styles = {
     flexDirection: "row",
     flexWrap: "wrap",
     justifyContent: "center",
-    marginBottom: spacing(2)
+    marginBottom: spacing(2),
   }
 };
 

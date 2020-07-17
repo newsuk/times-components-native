@@ -47,10 +47,9 @@ const styles = StyleSheet.create({
     width: "100%",
   },
   narrowContent: {
-    marginLeft: 0, 
+    marginLeft: spacing(2), 
     alignSelf: "flex-start",
     maxWidth: narrowArticleContentWidth,
-    borderColor: "blue"
   }
 });
 

@@ -14,7 +14,7 @@ const sharedStyles = (dropCapFont = "dropCap", scale = scales.medium) => {
   return {
     articleMainContentRow: {
       paddingLeft: spacing(2),
-      paddingRight: spacing(2)
+      paddingRight: spacing(2),
     },
     articleTextElement: {
       ...fontFactory({
@@ -22,15 +22,13 @@ const sharedStyles = (dropCapFont = "dropCap", scale = scales.medium) => {
         fontSize: "bodyMobile"
       }),
       color: colours.functional.primary,
-      marginBottom: spacing(5)
+      marginBottom: spacing(5),
     },
     articleMainContentRowTablet: {
       alignSelf: "center",
       width: tabletWidth,
     },
     narrow: {
-      borderWidth: 1,
-      borderColor: "red",
       width: "100%",
       alignSelf: "flex-start", 
       maxWidth: narrowArticleContentWidth,
@@ -48,7 +46,7 @@ const sharedStyles = (dropCapFont = "dropCap", scale = scales.medium) => {
       fontSize: dropCapFontSize,
       marginBottom: dropCapMargins.bottom,
       marginRight: spacing(1),
-      marginTop: dropCapMargins.top
+      marginTop: dropCapMargins.top,
     }
   };
 };

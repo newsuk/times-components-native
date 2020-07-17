@@ -5,7 +5,7 @@ import ArticleTopics from "@times-components-native/article-topics";
 import { ResponsiveContext } from "@times-components-native/responsive";
 import styles from "./styles";
 
-const ShowTopics = ({ topics, onPress }) => {
+const ShowTopics = ({ topics, onPress, narrowContent }) => {
   if (topics && topics.length > 0) {
     return (
       <ResponsiveContext.Consumer>
@@ -13,7 +13,8 @@ const ShowTopics = ({ topics, onPress }) => {
           <View
             style={[
               styles.topicsContainer,
-              isTablet && styles.topicsContainerTablet
+              isTablet && styles.topicsContainerTablet,
+              narrowContent && styles.narrow
             ]}
           >
             <ArticleTopics onPress={onPress} topics={topics} />
