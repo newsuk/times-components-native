@@ -23,7 +23,7 @@ const Leaders = ({ leader1, leader2, leader3, breakpoint }) => {
       tiles={[
         { style: styles.columnItems, tile: leader2 },
         { style: styles.columnItems, tile: leader1 },
-        { style: styles.columnItems, tile: leader3 }
+        { style: styles.columnItems, tile: leader3 },
       ]}
       colSeparatorStyle={styles.itemColSeparator}
     />
@@ -34,7 +34,7 @@ Leaders.propTypes = {
   leader1: PropTypes.node.isRequired,
   leader2: PropTypes.node.isRequired,
   leader3: PropTypes.node.isRequired,
-  breakpoint: PropTypes.node.isRequired
+  breakpoint: PropTypes.node.isRequired,
 };
 
 export default Leaders;

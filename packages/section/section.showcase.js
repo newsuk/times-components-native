@@ -2,14 +2,14 @@ import React from "react";
 import {
   mockPuzzleSection,
   mockStandardSection,
-  mockMagazineSection
+  mockMagazineSection,
 } from "@times-components-native/fixture-generator";
 import storybookReporter from "@times-components-native/tealium-utils";
 import Section from "./src/section";
 
-const preventDefaultedAction = decorateAction =>
+const preventDefaultedAction = (decorateAction) =>
   decorateAction([
-    args => ["[SyntheticEvent (storybook prevented default)]", ...args]
+    (args) => ["[SyntheticEvent (storybook prevented default)]", ...args],
   ]);
 export default {
   children: [
@@ -18,33 +18,33 @@ export default {
         <Section
           analyticsStream={storybookReporter}
           onArticlePress={preventDefaultedAction(decorateAction)(
-            "onArticlePress"
+            "onArticlePress",
           )}
           onPuzzleBarPress={preventDefaultedAction(decorateAction)(
-            "onPuzzleBarPress"
+            "onPuzzleBarPress",
           )}
           onPuzzlePress={preventDefaultedAction(decorateAction)(
-            "onPuzzlePress"
+            "onPuzzlePress",
           )}
           publicationName="TIMES"
           section={mockStandardSection("News")}
         />
       ),
       name: "News section",
-      type: "story"
+      type: "story",
     },
     {
       component: (_, { decorateAction }) => (
         <Section
           analyticsStream={storybookReporter}
           onArticlePress={preventDefaultedAction(decorateAction)(
-            "onArticlePress"
+            "onArticlePress",
           )}
           onPuzzleBarPress={preventDefaultedAction(decorateAction)(
-            "onPuzzleBarPress"
+            "onPuzzleBarPress",
           )}
           onPuzzlePress={preventDefaultedAction(decorateAction)(
-            "onPuzzlePress"
+            "onPuzzlePress",
           )}
           publicationName="TIMES"
           recentlyOpenedPuzzleCount={3}
@@ -52,28 +52,28 @@ export default {
         />
       ),
       name: "Puzzles section",
-      type: "story"
+      type: "story",
     },
     {
       component: (_, { decorateAction }) => (
         <Section
           analyticsStream={storybookReporter}
           onArticlePress={preventDefaultedAction(decorateAction)(
-            "onArticlePress"
+            "onArticlePress",
           )}
           onPuzzleBarPress={preventDefaultedAction(decorateAction)(
-            "onPuzzleBarPress"
+            "onPuzzleBarPress",
           )}
           onPuzzlePress={preventDefaultedAction(decorateAction)(
-            "onPuzzlePress"
+            "onPuzzlePress",
           )}
           publicationName="TIMES"
           section={mockMagazineSection("Magazine")}
         />
       ),
       name: "Magazine section",
-      type: "story"
-    }
+      type: "story",
+    },
   ],
-  name: "Pages/Section"
+  name: "Pages/Section",
 };

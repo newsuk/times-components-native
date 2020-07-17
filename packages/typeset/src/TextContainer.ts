@@ -1,7 +1,7 @@
-import inside from 'point-in-polygon';
-import { Exclusion } from './Exclusion';
-import Point from './Point';
-import Span from './Span';
+import inside from "point-in-polygon";
+import { Exclusion } from "./Exclusion";
+import Point from "./Point";
+import Span from "./Span";
 
 export default class TextContainer {
   public exclusions: Exclusion[];
@@ -17,7 +17,7 @@ export default class TextContainer {
     height: number,
     x: number,
     y: number,
-    exclusions: Exclusion[] = []
+    exclusions: Exclusion[] = [],
   ) {
     this.exclusions = exclusions;
     this.width = width;

@@ -5,8 +5,8 @@ const styles = StyleSheet.create({
   ...sharedStyles,
   text: {
     ...sharedStyles.text,
-    lineHeight: 16
-  }
+    lineHeight: 16,
+  },
 });
 
 export default styles;

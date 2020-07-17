@@ -4,7 +4,7 @@ import {
   compose,
   minimaliseTransform,
   minimalNativeTransform,
-  print
+  print,
 } from "@times-components-native/jest-serializer";
 import shared from "./shared.base";
 
@@ -14,8 +14,8 @@ export default () => {
     compose(
       print,
       minimaliseTransform((value, key) => !key.includes("stroke")),
-      minimalNativeTransform
-    )
+      minimalNativeTransform,
+    ),
   );
 
   shared(TestRenderer.create);

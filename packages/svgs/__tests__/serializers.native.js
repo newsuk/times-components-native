@@ -5,7 +5,7 @@ import {
   minimaliseTransform,
   minimalNativeTransform,
   print,
-  replacePropTransform
+  replacePropTransform,
 } from "@times-components-native/jest-serializer";
 import { hash } from "@times-components-native/test-utils";
 
@@ -16,11 +16,10 @@ addSerializers(
   compose(
     print,
     minimalNativeTransform,
-    minimaliseTransform(value => value === null),
+    minimaliseTransform((value) => value === null),
     flattenStyleTransform,
-    replacePropTransform(
-      (value, key) =>
-        longValues.has(key) ? hash(JSON.stringify(value)) : value
-    )
-  )
+    replacePropTransform((value, key) =>
+      longValues.has(key) ? hash(JSON.stringify(value)) : value,
+    ),
+  ),
 );

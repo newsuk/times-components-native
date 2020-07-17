@@ -6,19 +6,19 @@ const appStyles = {
   ...nativeStyles,
   flags: {
     ...nativeStyles.flags,
-    marginTop: spacing(2)
+    marginTop: spacing(2),
   },
   metaTablet: {
     ...nativeStyles.metaTablet,
-    paddingTop: "auto"
+    paddingTop: "auto",
   },
   label: {
-    marginBottom: 0
-  }
+    marginBottom: 0,
+  },
 };
 
 const styles = StyleSheet.create({
-  ...appStyles
+  ...appStyles,
 });
 
 export default styles;

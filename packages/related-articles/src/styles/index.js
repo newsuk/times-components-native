@@ -8,12 +8,12 @@ const styles = StyleSheet.create({
   ...sharedStyles,
   headline: {
     ...sharedStyles.headline,
-    color: colours.functional.black
+    color: colours.functional.black,
   },
   title: {
     ...sharedStyles.title,
-    paddingVertical: spacing(1)
-  }
+    paddingVertical: spacing(1),
+  },
 });
 
 export default styles;

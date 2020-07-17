@@ -16,7 +16,7 @@ const ListTwoAndSixNoPic = ({
   support3,
   support4,
   support5,
-  support6
+  support6,
 }) => {
   const styles = styleFactory(breakpoint);
   const supportItems = [
@@ -25,7 +25,7 @@ const ListTwoAndSixNoPic = ({
     support3,
     support4,
     support5,
-    support6
+    support6,
   ];
 
   if (breakpoint === editionBreakpoints.small) {
@@ -35,7 +35,7 @@ const ListTwoAndSixNoPic = ({
           containerStyle={styles.leadContainer}
           tiles={[
             { style: styles.leadItem, tile: lead1 },
-            { style: styles.leadItem, tile: lead2 }
+            { style: styles.leadItem, tile: lead2 },
           ]}
         />
         <ItemRowSeparator />
@@ -55,7 +55,7 @@ const ListTwoAndSixNoPic = ({
           containerStyle={styles.supportContainer}
           tiles={[
             { style: styles.supportItem, tile: support1 },
-            { style: styles.supportItem, tile: support2 }
+            { style: styles.supportItem, tile: support2 },
           ]}
         />
         <ItemRowSeparator style={styles.separator} />
@@ -63,7 +63,7 @@ const ListTwoAndSixNoPic = ({
           containerStyle={styles.supportContainer}
           tiles={[
             { style: styles.supportItem, tile: support3 },
-            { style: styles.supportItem, tile: support4 }
+            { style: styles.supportItem, tile: support4 },
           ]}
         />
         <ItemRowSeparator style={styles.separator} />
@@ -71,7 +71,7 @@ const ListTwoAndSixNoPic = ({
           containerStyle={styles.supportContainer}
           tiles={[
             { style: styles.supportItem, tile: support5 },
-            { style: styles.supportItem, tile: support6 }
+            { style: styles.supportItem, tile: support6 },
           ]}
         />
       </View>
@@ -88,11 +88,11 @@ ListTwoAndSixNoPic.propTypes = {
   support3: PropTypes.node.isRequired,
   support4: PropTypes.node.isRequired,
   support5: PropTypes.node.isRequired,
-  support6: PropTypes.node.isRequired
+  support6: PropTypes.node.isRequired,
 };
 
 ListTwoAndSixNoPic.defaultProps = {
-  breakpoint: editionBreakpoints.small
+  breakpoint: editionBreakpoints.small,
 };
 
 export default ListTwoAndSixNoPic;

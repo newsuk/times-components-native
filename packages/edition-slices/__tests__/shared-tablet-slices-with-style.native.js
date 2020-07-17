@@ -4,7 +4,7 @@ import {
   flattenStyleTransform,
   minimaliseTransform,
   minimalNativeTransform,
-  print
+  print,
 } from "@times-components-native/jest-serializer";
 import shared from "./shared-tablet-slices.base";
 
@@ -15,8 +15,8 @@ export default () => {
       print,
       minimalNativeTransform,
       minimaliseTransform((value, key) => key !== "style"),
-      flattenStyleTransform
-    )
+      flattenStyleTransform,
+    ),
   );
 
   shared();

@@ -7,8 +7,8 @@ const TileLink = ({
   onPress,
   style,
   tile: {
-    article: { id, url }
-  }
+    article: { id, url },
+  },
 }) => (
   <Link linkStyle={style} onPress={() => onPress({ id, url })} url={url}>
     {children}
@@ -19,11 +19,11 @@ TileLink.propTypes = {
   children: PropTypes.node.isRequired,
   onPress: PropTypes.func.isRequired,
   style: PropTypes.shape({}),
-  tile: PropTypes.shape({}).isRequired
+  tile: PropTypes.shape({}).isRequired,
 };
 
 TileLink.defaultProps = {
-  style: {}
+  style: {},
 };
 
 export default TileLink;

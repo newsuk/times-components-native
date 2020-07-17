@@ -18,11 +18,11 @@ const KeyFactsText = ({ item, listIndex, onLinkPress, fontStyle }) => (
             return (
               <TextLink
                 key={key}
-                onPress={e =>
+                onPress={(e) =>
                   onLinkPress(e, {
                     canonicalId,
                     type,
-                    url
+                    url,
                   })
                 }
                 style={styles.link}
@@ -31,10 +31,10 @@ const KeyFactsText = ({ item, listIndex, onLinkPress, fontStyle }) => (
                 {renderedChildren}
               </TextLink>
             );
-          }
+          },
         },
-        `key-facts-${listIndex}-${listItemIndex}`
-      )
+        `key-facts-${listIndex}-${listItemIndex}`,
+      ),
     )}
   </Text>
 );

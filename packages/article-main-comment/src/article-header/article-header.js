@@ -9,7 +9,7 @@ import Meta from "../article-meta/article-meta";
 import Standfirst from "../article-standfirst/article-standfirst";
 import {
   articleHeaderPropTypes,
-  articleHeaderDefaultProps
+  articleHeaderDefaultProps,
 } from "./article-header-prop-types";
 import styles from "../styles";
 
@@ -25,7 +25,7 @@ const ArticleHeader = ({
   onImagePress,
   publicationName,
   publishedTime,
-  standfirst
+  standfirst,
 }) => (
   <ResponsiveContext.Consumer>
     {({ isTablet }) => (
@@ -42,7 +42,7 @@ const ArticleHeader = ({
           <Text
             style={[
               styles.articleHeadline,
-              isTablet && styles.articleHeadlineTablet
+              isTablet && styles.articleHeadlineTablet,
             ]}
           >
             {headline}
@@ -65,7 +65,7 @@ const ArticleHeader = ({
 
 ArticleHeader.propTypes = {
   ...articleHeaderPropTypes,
-  onAuthorPress: PropTypes.func.isRequired
+  onAuthorPress: PropTypes.func.isRequired,
 };
 
 ArticleHeader.defaultProps = articleHeaderDefaultProps;

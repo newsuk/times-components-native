@@ -12,14 +12,14 @@ export default () => {
   it("flatten styles", () => {
     const styles = StyleSheet.create({
       colored: {
-        color: "red"
+        color: "red",
       },
       custom: {
-        backgroundColor: "blue"
+        backgroundColor: "blue",
       },
       padded: {
-        padding: 1
-      }
+        padding: 1,
+      },
     });
 
     const component = (

@@ -23,7 +23,7 @@ const leadOneAndOneSlice = ({ breakpoint, lead, support }) => {
       containerStyle={styles.container}
       tiles={[
         { style: styles.leadItem, tile: lead },
-        { style: styles.supportItem, tile: support }
+        { style: styles.supportItem, tile: support },
       ]}
       colSeparatorStyle={styles.colSeparatorStyle}
     />
@@ -33,11 +33,11 @@ const leadOneAndOneSlice = ({ breakpoint, lead, support }) => {
 leadOneAndOneSlice.propTypes = {
   breakpoint: PropTypes.string,
   lead: PropTypes.node.isRequired,
-  support: PropTypes.node.isRequired
+  support: PropTypes.node.isRequired,
 };
 
 leadOneAndOneSlice.defaultProps = {
-  breakpoint: editionBreakpoints.small
+  breakpoint: editionBreakpoints.small,
 };
 
 export default leadOneAndOneSlice;

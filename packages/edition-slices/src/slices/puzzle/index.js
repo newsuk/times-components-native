@@ -15,7 +15,7 @@ class Puzzle extends Component {
   renderPuzzles(breakpoint) {
     const {
       onPress,
-      slice: { puzzles }
+      slice: { puzzles },
     } = this.props;
     const { container, tileContainer } = stylesFactory(breakpoint);
 

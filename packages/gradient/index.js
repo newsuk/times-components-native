@@ -1,1 +1,1 @@
-export { default, OverlayGradient } from './src/gradient';
+export { default, OverlayGradient } from "./src/gradient";

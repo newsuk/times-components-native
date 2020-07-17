@@ -35,7 +35,7 @@ export default () => {
           title={puzzle.title}
           url={puzzle.url}
           breakpoint={editionBreakpoints.medium}
-        />
+        />,
       );
 
       output.root.findByType(Link).props.onPress();

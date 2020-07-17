@@ -10,7 +10,7 @@ export const propTypes = {
   style: ViewPropTypesStyle,
   title: PropTypes.string,
   textStyle: Text.propTypes.style,
-  underlayColor: PropTypes.string
+  underlayColor: PropTypes.string,
 };
 
 export const defaultProps = {
@@ -19,5 +19,5 @@ export const defaultProps = {
   style: null,
   textStyle: null,
   title: "Submit",
-  underlayColor: null
+  underlayColor: null,
 };

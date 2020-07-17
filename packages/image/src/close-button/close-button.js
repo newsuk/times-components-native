@@ -20,7 +20,7 @@ const CloseButton = ({ isTablet, onPress }) => (
 
 CloseButton.propTypes = {
   isTablet: PropTypes.bool.isRequired,
-  onPress: PropTypes.func.isRequired
+  onPress: PropTypes.func.isRequired,
 };
 
 export default CloseButton;

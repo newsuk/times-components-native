@@ -3,7 +3,7 @@ import PropTypes from "prop-types";
 import { Text, View } from "react-native";
 import {
   ArticleFlags,
-  getActiveFlags
+  getActiveFlags,
 } from "@times-components-native/article-flag";
 
 import HeaderLabel from "../article-header-label/article-header-label";
@@ -17,7 +17,7 @@ const ArticleHeader = ({
   isTablet,
   label,
   longRead,
-  standfirst
+  standfirst,
 }) => {
   const hasActiveFlags = getActiveFlags(flags).length > 0;
 
@@ -26,7 +26,7 @@ const ArticleHeader = ({
       style={[
         styles.articleMainContentRow,
         isTablet && styles.articleMainContentRowTablet,
-        isTablet && styles.headerTablet
+        isTablet && styles.headerTablet,
       ]}
     >
       <HeaderLabel isVideo={hasVideo} label={label} />
@@ -36,7 +36,7 @@ const ArticleHeader = ({
           styles.articleHeadLineText,
           !(hasActiveFlags || longRead || standfirst) &&
             styles.articleHeadlineSpacer,
-          isTablet && styles.articleHeadLineTextTablet
+          isTablet && styles.articleHeadLineTextTablet,
         ]}
       >
         {headline}
@@ -61,7 +61,7 @@ ArticleHeader.propTypes = {
   isTablet: PropTypes.bool,
   label: PropTypes.string,
   longRead: PropTypes.bool,
-  standfirst: PropTypes.string
+  standfirst: PropTypes.string,
 };
 
 ArticleHeader.defaultProps = {
@@ -70,7 +70,7 @@ ArticleHeader.defaultProps = {
   isTablet: false,
   label: null,
   longRead: false,
-  standfirst: null
+  standfirst: null,
 };
 
 export default ArticleHeader;

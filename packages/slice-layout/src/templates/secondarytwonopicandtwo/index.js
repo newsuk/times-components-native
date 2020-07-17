@@ -12,7 +12,7 @@ const SecondaryTwoNoPicAndTwoSlice = ({
   secondary1,
   secondary2,
   support1,
-  support2
+  support2,
 }) => {
   const styles = styleFactory(breakpoint);
 
@@ -29,7 +29,7 @@ const SecondaryTwoNoPicAndTwoSlice = ({
           containerStyle={styles.itemContainer}
           tiles={[
             { style: styles.item, tile: secondary1 },
-            { style: styles.item, tile: secondary2 }
+            { style: styles.item, tile: secondary2 },
           ]}
           colSeparatorStyle={styles.secondaryColSeparator}
         />
@@ -38,7 +38,7 @@ const SecondaryTwoNoPicAndTwoSlice = ({
           containerStyle={styles.itemContainer}
           tiles={[
             { style: styles.item, tile: support1 },
-            { style: styles.item, tile: support2 }
+            { style: styles.item, tile: support2 },
           ]}
           colSeparatorStyle={styles.supportColSeparator}
         />
@@ -52,7 +52,7 @@ const SecondaryTwoNoPicAndTwoSlice = ({
         containerStyle={styles.secondaryContainer}
         tiles={[
           { style: styles.item, tile: secondary1 },
-          { style: styles.item, tile: secondary2 }
+          { style: styles.item, tile: secondary2 },
         ]}
         colSeparatorStyle={styles.secondaryColSeparator}
       />
@@ -70,11 +70,11 @@ SecondaryTwoNoPicAndTwoSlice.propTypes = {
   secondary1: PropTypes.node.isRequired,
   secondary2: PropTypes.node.isRequired,
   support1: PropTypes.node.isRequired,
-  support2: PropTypes.node.isRequired
+  support2: PropTypes.node.isRequired,
 };
 
 SecondaryTwoNoPicAndTwoSlice.defaultProps = {
-  breakpoint: editionBreakpoints.small
+  breakpoint: editionBreakpoints.small,
 };
 
 export default SecondaryTwoNoPicAndTwoSlice;

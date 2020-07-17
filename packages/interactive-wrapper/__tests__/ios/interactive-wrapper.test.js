@@ -8,7 +8,7 @@ import {
   flattenStyleTransform,
   minimaliseTransform,
   minimalNativeTransform,
-  print
+  print,
 } from "@times-components-native/jest-serializer";
 
 import InteractiveWrapper from "../../src/interactive-wrapper";
@@ -18,7 +18,7 @@ const omitProps = new Set([
   "messagingEnabled",
   "saveFormDataDisabled",
   "scalesPageToFit",
-  "thirdPartyCookiesEnabled"
+  "thirdPartyCookiesEnabled",
 ]);
 
 addSerializers(
@@ -27,15 +27,15 @@ addSerializers(
     print,
     flattenStyleTransform,
     minimalNativeTransform,
-    minimaliseTransform((value, key) => omitProps.has(key))
-  )
+    minimaliseTransform((value, key) => omitProps.has(key)),
+  ),
 );
 
 const config = {
   dev: false,
   environment: "jest",
   platform: Platform.OS,
-  version: "0.0.0"
+  version: "0.0.0",
 };
 
 afterEach(() => {
@@ -47,24 +47,24 @@ beforeEach(() => {
   console.error = jest.fn(); // eslint-disable-line no-console
 });
 
-const setUpNavigationTest = canOpenURLImpl => {
+const setUpNavigationTest = (canOpenURLImpl) => {
   jest.spyOn(Linking, "canOpenURL").mockImplementation(canOpenURLImpl);
   jest
     .spyOn(Linking, "openURL")
-    .mockImplementation(() => new Promise(resolve => resolve()));
+    .mockImplementation(() => new Promise((resolve) => resolve()));
 
   const interactiveWrapper = new InteractiveWrapper();
   interactiveWrapper.webview = {
     postMessage: jest.fn(),
-    reload: jest.fn()
+    reload: jest.fn(),
   };
   return interactiveWrapper;
 };
 
-const makeMessageEvent = height => ({
+const makeMessageEvent = (height) => ({
   nativeEvent: {
-    data: height
-  }
+    data: height,
+  },
 });
 
 it("renders correctly", () => {
@@ -72,13 +72,13 @@ it("renders correctly", () => {
     attributes: {
       chaptercounter: "Chapter%20one",
       heading: "A heading",
-      standfirst: "A standfirst"
+      standfirst: "A standfirst",
     },
     config,
     element: "chapter-header",
     id: "a0534eee-682e-4955-8e1e-84b428ef1e79",
     source:
-      "//components.timesdev.tools/lib2/times-chapter-header-1.0.0/chapter-header.html"
+      "//components.timesdev.tools/lib2/times-chapter-header-1.0.0/chapter-header.html",
   };
   const testInstance = TestRenderer.create(<InteractiveWrapper {...props} />);
 
@@ -87,7 +87,7 @@ it("renders correctly", () => {
 
 it("When receiving a message from the webview, the height is set in state", () => {
   const component = shallow(
-    <InteractiveWrapper config={config} id="123456789" />
+    <InteractiveWrapper config={config} id="123456789" />,
   );
   component.instance().onMessage(makeMessageEvent(400));
   expect(component.state().height).toEqual(400);
@@ -99,7 +99,7 @@ it("Console errors when message object is incorrect", () => {
   expect(console.error).toHaveBeenCalled(); // eslint-disable-line no-console
 });
 
-it("openURLInBrowser should try to open a link", done => {
+it("openURLInBrowser should try to open a link", (done) => {
   setUpNavigationTest(() => Promise.resolve(true));
 
   const navigateTo = "https://www.thetimes.co.uk";
@@ -113,7 +113,7 @@ it("openURLInBrowser should try to open a link", done => {
     .catch(done);
 });
 
-it("openURLInBrowser should try to open an invalid link", done => {
+it("openURLInBrowser should try to open an invalid link", (done) => {
   setUpNavigationTest(() => Promise.resolve(false));
 
   const navigateTo = "failing url";
@@ -127,7 +127,7 @@ it("openURLInBrowser should try to open an invalid link", done => {
     .catch(done);
 });
 
-it("openURLInBrowser should try to open a link and fail", done => {
+it("openURLInBrowser should try to open a link and fail", (done) => {
   setUpNavigationTest(() => Promise.reject(new Error("mock err")));
 
   const navigateTo = "failing url";
@@ -147,13 +147,13 @@ it("onLoadEnd sends a postMessage", () => {
   expect(component.webview.postMessage).toHaveBeenCalled();
 });
 
-it("handleNavigationStateChange should return error if canOpenURL throws error", done => {
+it("handleNavigationStateChange should return error if canOpenURL throws error", (done) => {
   setUpNavigationTest(() => Promise.reject(new Error("mock err")));
 
   const navigateTo = "https://www.thetimes.co.uk";
 
   expect(InteractiveWrapper.openURLInBrowser(navigateTo)).rejects.toEqual({
-    error: new Error("mock err")
+    error: new Error("mock err"),
   });
   done();
 });
@@ -162,7 +162,7 @@ it("handleNavigationStateChange should initiate opening the URL in a browser", (
   const component = setUpNavigationTest(() => Promise.resolve(true));
   jest.spyOn(InteractiveWrapper, "openURLInBrowser");
   component.handleNavigationStateChange({
-    url: "https://www.thetimes.co.uk"
+    url: "https://www.thetimes.co.uk",
   });
   expect(InteractiveWrapper.openURLInBrowser).toHaveBeenCalled();
 });
@@ -172,7 +172,7 @@ it("handleNavigationStateChange should not open a link when the origin is the sa
   jest.spyOn(InteractiveWrapper, "openURLInBrowser");
   component.handleNavigationStateChange({
     url:
-      "http://jotn9sgpg6.execute-api.eu-west-1.amazonaws.com/same-origin-different-url"
+      "http://jotn9sgpg6.execute-api.eu-west-1.amazonaws.com/same-origin-different-url",
   });
   expect(InteractiveWrapper.openURLInBrowser).not.toHaveBeenCalled();
 });

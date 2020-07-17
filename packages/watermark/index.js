@@ -1,1 +1,1 @@
-export { default } from './src/watermark'
+export { default } from "./src/watermark";

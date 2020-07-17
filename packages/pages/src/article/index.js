@@ -8,7 +8,7 @@ import withNativeProvider from "../with-native-provider";
 
 const { refetch: refetchArticle } = NativeModules.ArticleEvents;
 
-const ArticlePage = props => {
+const ArticlePage = (props) => {
   const { article, articleId, error } = props;
 
   if (article || error) {
@@ -18,7 +18,7 @@ const ArticlePage = props => {
         article={article ? JSON.parse(article).data.article : null}
         error={error ? { message: error } : null}
         refetch={() => refetchArticle(articleId)}
-      />
+      />,
     );
     return <ArticlePageView />;
   }
@@ -33,14 +33,14 @@ const ArticlePage = props => {
           refetch={refetch}
         />
       )}
-    </ArticleProvider>
+    </ArticleProvider>,
   );
   return <ArticlePageView />;
 };
 ArticlePage.propTypes = {
   ...propTypes,
   article: PropTypes.string,
-  error: PropTypes.string
+  error: PropTypes.string,
 };
 ArticlePage.defaultProps = defaultProps;
 

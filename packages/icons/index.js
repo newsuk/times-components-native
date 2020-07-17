@@ -10,5 +10,5 @@ export {
   IconVideo360Player,
   TheSTLogo,
   TheTimesLogo,
-  CloseIcon
-} from './src/icons';
+  CloseIcon,
+} from "./src/icons";

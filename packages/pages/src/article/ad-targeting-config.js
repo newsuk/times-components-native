@@ -22,12 +22,12 @@ export default ({ adTestMode, article, sectionName }) => ({
     section: sectionName,
     Shared: "0",
     testmode: adTestMode,
-    vid: ""
+    vid: "",
   },
   slotTargeting: {
     path: `/${sectionName.toLowerCase()}`,
     section: sectionName,
     slot: sectionName.toLowerCase(),
-    zone: "current_edition"
-  }
+    zone: "current_edition",
+  },
 });

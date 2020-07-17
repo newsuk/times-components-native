@@ -8,7 +8,7 @@ import SectionPage from "../src/section/section";
 jest.mock("@times-components-native/section", () => {
   const { View: RNView } = require.requireActual("react-native");
   const { SectionContext } = require.requireActual(
-    "@times-components-native/context"
+    "@times-components-native/context",
   );
 
   return () => (
@@ -35,7 +35,7 @@ function deferred() {
 export default () => {
   beforeEach(() => {
     const {
-      SectionEvents: { getSavedArticles, onArticleSavePress }
+      SectionEvents: { getSavedArticles, onArticleSavePress },
     } = NativeModules;
 
     getSavedArticles.mockReset();
@@ -44,14 +44,14 @@ export default () => {
 
   it("saved article integration", async () => {
     const {
-      SectionEvents: { getSavedArticles, onArticleSavePress }
+      SectionEvents: { getSavedArticles, onArticleSavePress },
     } = NativeModules;
 
     getSavedArticles.mockReturnValue(Promise.resolve(["123", "456"]));
     onArticleSavePress.mockReturnValue(Promise.resolve(true));
 
     const testInstance = TestRenderer.create(
-      <SectionPage section={{ name: "News", slices: [] }} />
+      <SectionPage section={{ name: "News", slices: [] }} />,
     );
 
     await delay(0);
@@ -59,8 +59,8 @@ export default () => {
 
     const [
       {
-        props: { onPress }
-      }
+        props: { onPress },
+      },
     ] = testInstance.root.findAllByType(View);
 
     onPress(true, "789");
@@ -74,7 +74,7 @@ export default () => {
 
   it("won't trigger getSavedArticles multiple times simultaneously", async () => {
     const {
-      SectionEvents: { getSavedArticles, onArticleSavePress }
+      SectionEvents: { getSavedArticles, onArticleSavePress },
     } = NativeModules;
 
     const { resolve, promise } = deferred();
@@ -83,7 +83,7 @@ export default () => {
     onArticleSavePress.mockReturnValue(Promise.resolve(true));
 
     const testInstance = TestRenderer.create(
-      <SectionPage section={{ name: "News", slices: [] }} />
+      <SectionPage section={{ name: "News", slices: [] }} />,
     );
 
     const instance = testInstance.getInstance();

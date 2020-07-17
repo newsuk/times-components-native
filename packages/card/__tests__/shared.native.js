@@ -5,7 +5,7 @@ import {
   enzymeRenderedSerializer,
   minimaliseTransform,
   minimalNativeTransform,
-  print
+  print,
 } from "@times-components-native/jest-serializer";
 import shared from "./shared.base";
 
@@ -20,9 +20,9 @@ export default () => {
       print,
       minimalNativeTransform,
       minimaliseTransform(
-        (value, key) => key === "style" || key.includes("Class")
-      )
-    )
+        (value, key) => key === "style" || key.includes("Class"),
+      ),
+    ),
   );
 
   shared(TestRenderer.create);

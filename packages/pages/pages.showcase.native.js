@@ -14,13 +14,13 @@ export default {
       component: ({ text }) => {
         const articleId = text(
           "Article id",
-          "4938a3d4-8109-11e8-a645-f0478472c67b"
+          "4938a3d4-8109-11e8-a645-f0478472c67b",
         );
 
         return <Article articleId={articleId} />;
       },
       name: "Article",
-      type: "story"
+      type: "story",
     },
     {
       component: ({ text }) => {
@@ -29,20 +29,20 @@ export default {
         return <AuthorProfile authorSlug={authorSlug} />;
       },
       name: "AuthorProfile",
-      type: "story"
+      type: "story",
     },
     {
       component: ({ select, text }) => {
         const editionId = text(
           "Edition id",
-          "2b6e462c-225f-11e9-b782-40e94f317da5"
+          "2b6e462c-225f-11e9-b782-40e94f317da5",
         );
         const sectionTitle = select("Section", sections, "News");
 
         return <Section editionId={editionId} sectionTitle={sectionTitle} />;
       },
       name: "Section",
-      type: "story"
+      type: "story",
     },
     {
       component: ({ text }) => {
@@ -51,8 +51,8 @@ export default {
         return <Topic topicSlug={topicSlug} />;
       },
       name: "Topic",
-      type: "story"
-    }
+      type: "story",
+    },
   ],
-  name: "Pages/Pages"
+  name: "Pages/Pages",
 };

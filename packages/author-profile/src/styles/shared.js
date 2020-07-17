@@ -9,16 +9,16 @@ const styles = {
     borderBottomWidth: 1,
     flexDirection: "column",
     paddingBottom: spacing(8),
-    width: "100%"
+    width: "100%",
   },
   authorHeadContainerNative: {
     paddingBottom: spacing(4),
-    paddingTop: spacing(6)
+    paddingTop: spacing(6),
   },
   authorHeadWrapper: {
     alignItems: "center",
     backgroundColor: "transparent",
-    width: "100%"
+    width: "100%",
   },
   authorPhoto: {
     borderColor: colours.functional.contrast,
@@ -27,28 +27,28 @@ const styles = {
     marginLeft: "auto",
     marginRight: "auto",
     overflow: "hidden",
-    width: 100
+    width: 100,
   },
   biography: {
     color: colours.functional.primary,
     ...fontFactory({
       font: "body",
-      fontSize: "secondary"
+      fontSize: "secondary",
     }),
-    textAlign: "center"
+    textAlign: "center",
   },
   biographyContainer: {
     paddingBottom: spacing(6),
     paddingHorizontal: spacing(2),
-    width: "100%"
+    width: "100%",
   },
   jobTitle: {
     color: colours.functional.secondary,
     ...fontFactory({
       font: "bodyRegularSmallCaps",
-      fontSize: "meta"
+      fontSize: "meta",
     }),
-    marginTop: spacing(1)
+    marginTop: spacing(1),
   },
   loadingContainer: {
     alignItems: "center",
@@ -56,10 +56,10 @@ const styles = {
     borderBottomColor: colours.functional.border,
     borderBottomWidth: 1,
     minHeight: 264,
-    width: "100%"
+    width: "100%",
   },
   loadingGradient: {
-    flex: 1
+    flex: 1,
   },
   loadingRoundImage: {
     borderColor: colours.functional.contrast,
@@ -68,28 +68,28 @@ const styles = {
     overflow: "hidden",
     position: "absolute",
     top: spacing(6),
-    width: 100
+    width: 100,
   },
   name: {
     color: colours.functional.brandColour,
     ...fontFactory({
       font: "headline",
-      fontSize: "headline"
-    })
+      fontSize: "headline",
+    }),
   },
   twitter: {
     flexDirection: "row",
-    paddingVertical: spacing(2)
+    paddingVertical: spacing(2),
   },
   twitterLink: {
     color: colours.functional.action,
     ...fontFactory({
       font: "supporting",
-      fontSize: "tertiary"
+      fontSize: "tertiary",
     }),
     paddingLeft: spacing(1),
-    textDecorationLine: "none"
-  }
+    textDecorationLine: "none",
+  },
 };
 
 export default styles;

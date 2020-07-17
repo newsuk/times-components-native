@@ -13,7 +13,7 @@ class LeadOneFullWidthSlice extends Component {
   renderSmall() {
     const {
       slice: { lead },
-      onPress
+      onPress,
     } = this.props;
     return <TileA onPress={onPress} tile={lead} tileName="lead" />;
   }
@@ -21,7 +21,7 @@ class LeadOneFullWidthSlice extends Component {
   renderMedium(breakpoint) {
     const {
       slice: { lead },
-      onPress
+      onPress,
     } = this.props;
     return (
       <TileR
@@ -45,7 +45,7 @@ class LeadOneFullWidthSlice extends Component {
 
 LeadOneFullWidthSlice.propTypes = {
   onPress: PropTypes.func.isRequired,
-  slice: PropTypes.shape({ lead: PropTypes.shape({}).isRequired }).isRequired
+  slice: PropTypes.shape({ lead: PropTypes.shape({}).isRequired }).isRequired,
 };
 
 export default LeadOneFullWidthSlice;

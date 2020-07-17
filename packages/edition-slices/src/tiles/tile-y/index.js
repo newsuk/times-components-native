@@ -6,7 +6,7 @@ import {
   TileLink,
   TileSummary,
   withTileTracking,
-  getTileSummary
+  getTileSummary,
 } from "../shared";
 import stylesFactory from "./styles";
 
@@ -28,7 +28,7 @@ const TileY = ({ onPress, tile, breakpoint = editionBreakpoints.medium }) => {
 TileY.propTypes = {
   onPress: PropTypes.func.isRequired,
   tile: PropTypes.shape({}).isRequired,
-  breakpoint: PropTypes.string
+  breakpoint: PropTypes.string,
 };
 
 export default withTileTracking(TileY);

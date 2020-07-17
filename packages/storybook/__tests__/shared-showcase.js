@@ -20,7 +20,7 @@ describe("The showcase converter should", () => {
       add(name, componentFn) {
         this.items.push({
           component: componentFn(),
-          name
+          name,
         });
 
         return this;
@@ -35,10 +35,10 @@ describe("The showcase converter should", () => {
 
     knobs = {
       color: jest.fn(),
-      select: jest.fn()
+      select: jest.fn(),
     };
     actions = {
-      action: jest.fn()
+      action: jest.fn(),
     };
 
     converter = showcaseConverter(
@@ -48,17 +48,17 @@ describe("The showcase converter should", () => {
         return builder;
       },
       knobs,
-      actions
+      actions,
     );
   });
 
   it("create the expected builder", () => {
     const module = {
-      test: "test"
+      test: "test",
     };
 
     const showcase = {
-      name: "My Showcase"
+      name: "My Showcase",
     };
 
     converter(module, showcase);
@@ -79,10 +79,10 @@ describe("The showcase converter should", () => {
         {
           component: () => <div>Hello World!</div>,
           name: "My Story",
-          type: "story"
-        }
+          type: "story",
+        },
       ],
-      name: "My Showcase"
+      name: "My Showcase",
     };
 
     converter(module, showcase);
@@ -96,15 +96,15 @@ describe("The showcase converter should", () => {
         {
           component: () => <div>Hello World!</div>,
           name: "My Story 1",
-          type: "story"
+          type: "story",
         },
         {
           component: () => <div>Hello World Again!</div>,
           name: "My Story 2",
-          type: "story"
-        }
+          type: "story",
+        },
       ],
-      name: "My Showcase"
+      name: "My Showcase",
     };
 
     converter(module, showcase);
@@ -118,10 +118,10 @@ describe("The showcase converter should", () => {
         {
           component: () => <div>Hello World!</div>,
           name: "My Story",
-          type: "story"
-        }
+          type: "story",
+        },
       ],
-      name: "My Showcase"
+      name: "My Showcase",
     };
 
     converter(module, showcase, false);
@@ -134,15 +134,15 @@ describe("The showcase converter should", () => {
       children: [
         {
           decorator: <div>Some decorator</div>,
-          type: "decorator"
+          type: "decorator",
         },
         {
           component: () => <div>Hello World!</div>,
           name: "My Story",
-          type: "story"
-        }
+          type: "story",
+        },
       ],
-      name: "My Showcase"
+      name: "My Showcase",
     };
 
     converter(module, showcase);
@@ -156,19 +156,19 @@ describe("The showcase converter should", () => {
         {
           component: () => <div>Hello World!</div>,
           name: "My Story",
-          type: "story"
+          type: "story",
         },
         {
           decorator: <div>Some decorator</div>,
-          type: "decorator"
+          type: "decorator",
         },
         {
           component: () => <div>Hello World Again!</div>,
           name: "My Story 2",
-          type: "story"
-        }
+          type: "story",
+        },
       ],
-      name: "My Showcase"
+      name: "My Showcase",
     };
 
     converter(module, showcase);
@@ -182,34 +182,34 @@ describe("The showcase converter should", () => {
         {
           component: () => <div>All!</div>,
           name: "All platforms",
-          type: "story"
+          type: "story",
         },
         {
           component: () => <div>iOS!</div>,
           name: "iOS only",
           platform: "ios",
-          type: "story"
+          type: "story",
         },
         {
           component: () => <div>Android!</div>,
           name: "Android only",
           platform: "android",
-          type: "story"
+          type: "story",
         },
         {
           component: () => <div>Web!</div>,
           name: "Web only",
           platform: "web",
-          type: "story"
+          type: "story",
         },
         {
           component: () => <div>Native!</div>,
           name: "Native only",
           platform: "native",
-          type: "story"
-        }
+          type: "story",
+        },
       ],
-      name: "My Showcase"
+      name: "My Showcase",
     };
 
     converter(module, showcase);
@@ -230,10 +230,10 @@ describe("The showcase converter should", () => {
             <div color={color(name, initValue)}>Hello World!</div>
           ),
           name: "My Story",
-          type: "story"
-        }
+          type: "story",
+        },
       ],
-      name: "My Showcase"
+      name: "My Showcase",
     };
 
     converter(module, showcase);
@@ -246,7 +246,7 @@ describe("The showcase converter should", () => {
     const name = "Some Name";
     const options = {
       1: "red",
-      2: "green"
+      2: "green",
     };
     const initValue = 1;
 
@@ -259,10 +259,10 @@ describe("The showcase converter should", () => {
             <div color={select(name, options, initValue)}>Hello World!</div>
           ),
           name: "My Story",
-          type: "story"
-        }
+          type: "story",
+        },
       ],
-      name: "My Showcase"
+      name: "My Showcase",
     };
 
     converter(module, showcase);
@@ -273,7 +273,7 @@ describe("The showcase converter should", () => {
 
   it("provide the action to a story", () => {
     const event = {
-      test: "test"
+      test: "test",
     };
 
     const showcase = {
@@ -283,10 +283,10 @@ describe("The showcase converter should", () => {
             <div onPress={action(event)}>Hello World!</div>
           ),
           name: "My Story",
-          type: "story"
-        }
+          type: "story",
+        },
       ],
-      name: "My Showcase"
+      name: "My Showcase",
     };
 
     converter(module, showcase);

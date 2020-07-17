@@ -17,7 +17,7 @@ class Ad extends Component {
     const { slotName } = nextProps;
 
     return {
-      config: getSlotConfig(slotName, screenWidth())
+      config: getSlotConfig(slotName, screenWidth()),
     };
   }
 
@@ -32,25 +32,25 @@ class Ad extends Component {
       config: getSlotConfig(slotName, screenWidth()),
       hasError: false,
       isAdReady: false,
-      offline: false
+      offline: false,
     };
   }
 
   componentDidMount() {
     NetInfo.fetch()
-      .then(state => {
+      .then((state) => {
         const { isConnected } = state;
         this.setState({
-          offline: !isConnected
+          offline: !isConnected,
         });
       })
       .then(() => {
-        this.unsubscribe = NetInfo.addEventListener(state => {
+        this.unsubscribe = NetInfo.addEventListener((state) => {
           const { offline } = this.state;
           const { isConnected } = state;
           if (isConnected && offline) {
             this.setState({
-              offline: false
+              offline: false,
             });
           }
         });
@@ -65,13 +65,13 @@ class Ad extends Component {
 
   setAdReady = () => {
     this.setState({
-      isAdReady: true
+      isAdReady: true,
     });
   };
 
   setAdError = () => {
     this.setState({
-      hasError: true
+      hasError: true,
     });
   };
 
@@ -81,18 +81,18 @@ class Ad extends Component {
 
     if (hasError || offline) return null;
 
-    this.slots = adConfig.bidderSlots.map(slot =>
+    this.slots = adConfig.bidderSlots.map((slot) =>
       getPrebidSlotConfig(
         slot,
         adConfig.slotTargeting.section,
         config.maxSizes.width,
-        adConfig.biddersConfig.bidders
-      )
+        adConfig.biddersConfig.bidders,
+      ),
     );
 
     this.allSlotConfigs = adConfig.globalSlots
       .concat(adConfig.bidderSlots)
-      .map(slot => getSlotConfig(slot, screenWidth()));
+      .map((slot) => getSlotConfig(slot, screenWidth()));
 
     const data = {
       adUnit: adConfig.adUnit,
@@ -109,13 +109,13 @@ class Ad extends Component {
         bucketSize: adConfig.biddersConfig.bucketSize,
         maxBid: adConfig.biddersConfig.maxBid,
         minPrice: adConfig.biddersConfig.minPrice,
-        timeout: adConfig.biddersConfig.timeout
+        timeout: adConfig.biddersConfig.timeout,
       }),
       section: adConfig.slotTargeting.section,
       sizingMap: config.mappings,
       slotName,
       slots: this.slots,
-      slotTargeting: adConfig.slotTargeting
+      slotTargeting: adConfig.slotTargeting,
     };
 
     const sizeProps =
@@ -125,7 +125,7 @@ class Ad extends Component {
             width:
               Platform.OS === "ios" || Platform.OS === "android"
                 ? screenWidth()
-                : config.maxSizes.width
+                : config.maxSizes.width,
           };
 
     return (
@@ -151,7 +151,7 @@ class Ad extends Component {
     }
     return (
       <Subscriber channel="adConfig">
-        {adConfig => this.renderAd(adConfig)}
+        {(adConfig) => this.renderAd(adConfig)}
       </Subscriber>
     );
   }

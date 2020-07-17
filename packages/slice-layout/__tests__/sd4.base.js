@@ -4,7 +4,7 @@ import { iterator } from "@times-components-native/test-utils";
 import createItem from "./utils";
 import { SecondaryFourSlice } from "../src/slice-layout";
 
-export default renderComponent => {
+export default (renderComponent) => {
   const tests = [
     {
       name: "secondary four - small",
@@ -15,11 +15,11 @@ export default renderComponent => {
             secondary2={createItem("secondary-2")}
             secondary3={createItem("secondary-3")}
             secondary4={createItem("secondary-4")}
-          />
+          />,
         );
 
         expect(output).toMatchSnapshot();
-      }
+      },
     },
     {
       name: "secondary four - medium",
@@ -31,11 +31,11 @@ export default renderComponent => {
             secondary2={createItem("secondary-2")}
             secondary3={createItem("secondary-3")}
             secondary4={createItem("secondary-4")}
-          />
+          />,
         );
 
         expect(output).toMatchSnapshot();
-      }
+      },
     },
     {
       name: "secondary four - medium - with isConsecutive",
@@ -48,11 +48,11 @@ export default renderComponent => {
             secondary2={createItem("secondary-2")}
             secondary3={createItem("secondary-3")}
             secondary4={createItem("secondary-4")}
-          />
+          />,
         );
 
         expect(output).toMatchSnapshot();
-      }
+      },
     },
     {
       name: "secondary four - wide",
@@ -64,11 +64,11 @@ export default renderComponent => {
             secondary2={createItem("secondary-2")}
             secondary3={createItem("secondary-3")}
             secondary4={createItem("secondary-4")}
-          />
+          />,
         );
 
         expect(output).toMatchSnapshot();
-      }
+      },
     },
     {
       name: "secondary four - wide - with isConsecutive",
@@ -81,12 +81,12 @@ export default renderComponent => {
             secondary2={createItem("secondary-2")}
             secondary3={createItem("secondary-3")}
             secondary4={createItem("secondary-4")}
-          />
+          />,
         );
 
         expect(output).toMatchSnapshot();
-      }
-    }
+      },
+    },
   ];
 
   iterator(tests);

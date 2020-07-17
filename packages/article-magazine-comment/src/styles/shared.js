@@ -1,6 +1,6 @@
 import styleguide, {
   tabletRowPadding,
-  tabletWidth
+  tabletWidth,
 } from "@times-components-native/styleguide";
 
 const { colours, fontFactory, spacing } = styleguide();
@@ -8,77 +8,77 @@ const sharedStyles = {
   articleHeadline: {
     ...fontFactory({
       font: "headline",
-      fontSize: "headline"
+      fontSize: "headline",
     }),
     color: colours.functional.brandColour,
     marginBottom: spacing(2),
-    textAlign: "center"
+    textAlign: "center",
   },
   authorImage: {
-    marginBottom: spacing(5)
+    marginBottom: spacing(5),
   },
   container: {
     alignItems: "center",
     marginBottom: spacing(5),
     marginLeft: spacing(2),
     marginRight: spacing(2),
-    paddingTop: spacing(7)
+    paddingTop: spacing(7),
   },
   containerTablet: {
     alignSelf: "center",
-    width: tabletWidth
+    width: tabletWidth,
   },
   datePublication: {
     ...fontFactory({
       font: "supporting",
-      fontSize: "cardMeta"
+      fontSize: "cardMeta",
     }),
     color: colours.functional.secondary,
-    marginTop: spacing(3)
+    marginTop: spacing(3),
   },
   datePublicationTablet: {
-    marginTop: "auto"
+    marginTop: "auto",
   },
   label: {
-    marginBottom: spacing(2)
+    marginBottom: spacing(2),
   },
   leadAssetContainer: {
-    marginBottom: spacing(4)
+    marginBottom: spacing(4),
   },
   leadAssetContainerTablet: {
     alignSelf: "center",
-    width: tabletWidth - tabletRowPadding
+    width: tabletWidth - tabletRowPadding,
   },
   meta: {
     flexDirection: "row",
-    flexWrap: "wrap"
+    flexWrap: "wrap",
   },
   metaContainer: {
-    alignItems: "center"
+    alignItems: "center",
   },
   metaContainerTablet: {
     flexDirection: "row",
-    justifyContent: "center"
+    justifyContent: "center",
   },
   metaTablet: {
-    paddingTop: spacing(1)
+    paddingTop: spacing(1),
   },
   separator: {
     borderRightColor: colours.functional.keyline,
     borderRightWidth: 1,
     height: spacing(3),
-    marginHorizontal: spacing(2)
+    marginHorizontal: spacing(2),
   },
   standFirst: {
     ...fontFactory({
       font: "headlineRegular",
-      fontSize: "smallestHeadline"
+      fontSize: "smallestHeadline",
     }),
     color: colours.functional.primary,
     marginBottom: spacing(3),
     paddingHorizontal: spacing(2),
-    textAlign: "center"
-  }
+    textAlign: "center",
+  },
 };
 
 export default sharedStyles;

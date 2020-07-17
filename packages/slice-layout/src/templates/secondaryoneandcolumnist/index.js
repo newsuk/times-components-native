@@ -8,7 +8,7 @@ import styleFactory from "./styles";
 const SecondaryOneAndColumnistSlice = ({
   breakpoint,
   secondary,
-  columnist
+  columnist,
 }) => {
   const styles = styleFactory(breakpoint);
   if (breakpoint === editionBreakpoints.small) {
@@ -20,7 +20,7 @@ const SecondaryOneAndColumnistSlice = ({
       containerStyle={styles.container}
       tiles={[
         { style: styles.columnistContainer, tile: columnist },
-        { style: styles.secondaryContainer, tile: secondary }
+        { style: styles.secondaryContainer, tile: secondary },
       ]}
       colSeparatorStyle={styles.colSeparator}
     />
@@ -30,11 +30,11 @@ const SecondaryOneAndColumnistSlice = ({
 SecondaryOneAndColumnistSlice.propTypes = {
   breakpoint: PropTypes.string,
   columnist: PropTypes.node.isRequired,
-  secondary: PropTypes.node.isRequired
+  secondary: PropTypes.node.isRequired,
 };
 
 SecondaryOneAndColumnistSlice.defaultProps = {
-  breakpoint: editionBreakpoints.small
+  breakpoint: editionBreakpoints.small,
 };
 
 export default SecondaryOneAndColumnistSlice;

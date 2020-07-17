@@ -1,17 +1,17 @@
 // eslint-disable-next-line import/prefer-default-export
 export {
   setIsTablet,
-  setDimension
+  setDimension,
 } from "@times-components-native/mocks/dimensions";
 
 jest.mock("NativeAnimatedHelper", () => "NativeAnimatedHelper", {
-  virtual: true
+  virtual: true,
 });
 
 jest.mock("../src/safeAreaView", () => "SafeAreaView");
 
 jest.mock("@times-components-native/gradient", () => ({
-  OverlayGradient: "OverlayGradient"
+  OverlayGradient: "OverlayGradient",
 }));
 
 // eslint-disable-next-line global-require
@@ -23,6 +23,6 @@ jest.mock("@times-components-native/utils", () => {
 
   return {
     ...actualUtils,
-    convertToPixels: points => points - 1
+    convertToPixels: (points) => points - 1,
   };
 });

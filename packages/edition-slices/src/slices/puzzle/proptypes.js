@@ -5,12 +5,12 @@ const propTypes = {
   slice: PropTypes.shape({
     image: PropTypes.shape({
       crop32: PropTypes.shape({
-        url: PropTypes.string
-      })
+        url: PropTypes.string,
+      }),
     }),
     title: PropTypes.string,
-    url: PropTypes.string
-  }).isRequired
+    url: PropTypes.string,
+  }).isRequired,
 };
 
 export default propTypes;

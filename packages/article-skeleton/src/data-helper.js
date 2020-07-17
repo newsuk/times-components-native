@@ -7,12 +7,12 @@ const append = ({ data, type }, list) => {
     ...list,
     {
       data,
-      type
-    }
+      type,
+    },
   ];
 };
 
-const prepareDataForListView = articleData => {
+const prepareDataForListView = (articleData) => {
   const relatedArticleSliceData = articleData.relatedArticleSlice
     ? { relatedArticleSlice: articleData.relatedArticleSlice }
     : null;
@@ -20,7 +20,7 @@ const prepareDataForListView = articleData => {
     articleId: articleData.id,
     commentCount: articleData.commentCount,
     commentsEnabled: articleData.commentsEnabled,
-    url: articleData.url
+    url: articleData.url,
   };
 
   const data = articleData.content
@@ -29,46 +29,46 @@ const prepareDataForListView = articleData => {
           const item = {
             data: Object.assign({}, rowData),
             index,
-            type: "articleBodyRow"
+            type: "articleBodyRow",
           };
           if (rowData.name === "ad") {
             item.data.attributes = {
               ...item.data.attributes,
               ...{
                 contextUrl: articleData.url,
-                section: articleData.section
-              }
+                section: articleData.section,
+              },
             };
           }
           return item;
         }),
         {
           data: {
-            topics: articleData.topics
+            topics: articleData.topics,
           },
-          type: "topics"
-        }
+          type: "topics",
+        },
       ]
     : [];
 
   return append(
     {
       data: { articleId: articleData.id, articleUrl: articleData.url },
-      type: "articleExtrasRow"
+      type: "articleExtrasRow",
     },
     append(
       {
         data: commentsData,
-        type: "comments"
+        type: "comments",
       },
       append(
         {
           data: relatedArticleSliceData,
-          type: "relatedArticleSlice"
+          type: "relatedArticleSlice",
         },
-        data
-      )
-    )
+        data,
+      ),
+    ),
   );
 };
 

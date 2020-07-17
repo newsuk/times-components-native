@@ -6,7 +6,7 @@ import {
   flattenStyleTransform,
   minimaliseTransform,
   minimalNativeTransform,
-  print
+  print,
 } from "@times-components-native/jest-serializer";
 import { iterator } from "@times-components-native/test-utils";
 import adConfig from "../fixtures/article-ad-config.json";
@@ -19,8 +19,8 @@ export default () => {
       print,
       minimaliseTransform((value, key) => key === "style"),
       minimalNativeTransform,
-      flattenStyleTransform
-    )
+      flattenStyleTransform,
+    ),
   );
 
   const articleContextURL =
@@ -37,11 +37,11 @@ export default () => {
               section="news"
               slotName="header"
             />
-          </AdComposer>
+          </AdComposer>,
         );
 
         expect(testInstance).toMatchSnapshot();
-      }
+      },
     },
     {
       name: "two ad slots",
@@ -60,12 +60,12 @@ export default () => {
                 slotName="intervention"
               />
             </Fragment>
-          </AdComposer>
+          </AdComposer>,
         );
 
         expect(testInstance).toMatchSnapshot();
-      }
-    }
+      },
+    },
   ];
 
   iterator(tests);

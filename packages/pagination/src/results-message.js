@@ -9,10 +9,10 @@ const styles = StyleSheet.create({
     color: colours.functional.secondary,
     ...fontFactory({
       font: "supporting",
-      fontSize: "pagingMeta"
+      fontSize: "pagingMeta",
     }),
-    paddingTop: 4
-  }
+    paddingTop: 4,
+  },
 });
 
 const ResultsMessage = ({ children: message }) => (
@@ -22,7 +22,7 @@ const ResultsMessage = ({ children: message }) => (
 );
 
 ResultsMessage.propTypes = {
-  children: PropTypes.string.isRequired
+  children: PropTypes.string.isRequired,
 };
 
 export default ResultsMessage;

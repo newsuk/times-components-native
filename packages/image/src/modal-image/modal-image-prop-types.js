@@ -5,12 +5,12 @@ export const modalPropTypes = {
   ...propTypes,
   caption: PropTypes.node,
   onImagePress: PropTypes.func,
-  show: PropTypes.bool
+  show: PropTypes.bool,
 };
 
 export const modalDefaultProps = {
   ...defaultProps,
   caption: null,
   onImagePress: null,
-  show: false
+  show: false,
 };

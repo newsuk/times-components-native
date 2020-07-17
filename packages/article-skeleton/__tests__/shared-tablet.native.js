@@ -7,7 +7,7 @@ import {
   flattenStyleTransform,
   print,
   minimaliseTransform,
-  minimalNativeTransform
+  minimalNativeTransform,
 } from "@times-components-native/jest-serializer";
 import "./mocks.native";
 import Responsive from "@times-components-native/responsive";
@@ -22,8 +22,8 @@ export default () => {
       print,
       minimalNativeTransform,
       minimaliseTransform((value, key) => key !== "style"),
-      flattenStyleTransform
-    )
+      flattenStyleTransform,
+    ),
   );
 
   const tests = [
@@ -41,21 +41,21 @@ export default () => {
                 caption: "This is video caption",
                 display: "primary",
                 posterImageId: "0c0309d4-1aeb-11e8-9010-1eef6ba5d3de",
-                posterImageUrl: "https://image.io"
+                posterImageUrl: "https://image.io",
               },
               children: [],
-              name: "video"
-            }
-          ]
+              name: "video",
+            },
+          ],
         });
 
         const testInstance = TestRenderer.create(
-          <Responsive>{renderArticle(article, undefined, true)}</Responsive>
+          <Responsive>{renderArticle(article, undefined, true)}</Responsive>,
         );
 
         expect(testInstance).toMatchSnapshot();
-      }
-    }
+      },
+    },
   ];
 
   iterator(tests);

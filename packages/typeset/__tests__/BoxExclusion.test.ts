@@ -1,13 +1,13 @@
-import { BoxExclusion } from '../src';
+import { BoxExclusion } from "../src";
 
-test('BoxExclusion#constructor(number, number, number, number)', () => {
+test("BoxExclusion#constructor(number, number, number, number)", () => {
   expect(() => {
     const newBox = new BoxExclusion(10, 10, 10, 10);
     return newBox;
   }).not.toThrow();
 });
 
-test('BoxExclusion#layout()', () => {
+test("BoxExclusion#layout()", () => {
   const newBox = new BoxExclusion(10, 10, 10, 10);
   expect(newBox.layout()).toMatchInlineSnapshot(`
     Array [
@@ -35,7 +35,7 @@ test('BoxExclusion#layout()', () => {
   `);
 });
 
-test('BoxExclusion#move(number, number)', () => {
+test("BoxExclusion#move(number, number)", () => {
   const newBox = new BoxExclusion(10, 10, 10, 10);
   expect(newBox.move(10, 10)).toMatchInlineSnapshot(`
     BoxExclusion {

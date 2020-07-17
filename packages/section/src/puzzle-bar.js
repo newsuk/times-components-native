@@ -27,7 +27,7 @@ const PuzzleBar = ({ onPress }) => (
 );
 
 PuzzleBar.propTypes = {
-  onPress: PropTypes.func.isRequired
+  onPress: PropTypes.func.isRequired,
 };
 
 export default PuzzleBar;

@@ -1,7 +1,7 @@
 import React from "react";
 import get from "lodash.get";
 import ArticleList, {
-  ArticleListPageError
+  ArticleListPageError,
 } from "@times-components-native/article-list";
 import { withPageState } from "@times-components-native/pagination";
 import { TopicArticlesProvider } from "@times-components-native/provider";
@@ -23,7 +23,7 @@ const Topic = ({
   onPrev,
   refetch,
   slug,
-  topic
+  topic,
 }) => {
   const emptyStateMessage =
     "Unfortunately, there are no articles relating to this topic";
@@ -35,7 +35,7 @@ const Topic = ({
   const { name, description } = isHeaderLoading
     ? {
         description: [],
-        name: ""
+        name: "",
       }
     : topic;
 
@@ -62,9 +62,9 @@ const Topic = ({
         isLoading: articlesLoading,
         pageSize,
         refetch: refetchArticles,
-        variables: { imageRatio = "3:2" }
+        variables: { imageRatio = "3:2" },
       }) => {
-        const fetchMoreArticles = length =>
+        const fetchMoreArticles = (length) =>
           fetchMore({
             updateQuery: (prev, { fetchMoreResult }) =>
               fetchMoreResult
@@ -75,15 +75,15 @@ const Topic = ({
                         ...prev.topic.articles,
                         list: [
                           ...prev.topic.articles.list,
-                          ...fetchMoreResult.topic.articles.list
-                        ]
-                      }
-                    }
+                          ...fetchMoreResult.topic.articles.list,
+                        ],
+                      },
+                    },
                   }
                 : prev,
             variables: {
-              skip: length
-            }
+              skip: length,
+            },
           });
 
         return (

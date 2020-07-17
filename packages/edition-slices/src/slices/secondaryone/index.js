@@ -13,7 +13,7 @@ class SecondaryOneSlice extends Component {
   renderSmall() {
     const {
       onPress,
-      slice: { secondary }
+      slice: { secondary },
     } = this.props;
     return <TileA onPress={onPress} tile={secondary} tileName="secondary" />;
   }
@@ -21,7 +21,7 @@ class SecondaryOneSlice extends Component {
   renderMedium(breakpoint) {
     const {
       onPress,
-      slice: { secondary }
+      slice: { secondary },
     } = this.props;
     return (
       <TileW
@@ -46,7 +46,7 @@ class SecondaryOneSlice extends Component {
 SecondaryOneSlice.propTypes = {
   onPress: PropTypes.func.isRequired,
   slice: PropTypes.shape({ secondary: PropTypes.shape({}).isRequired })
-    .isRequired
+    .isRequired,
 };
 
 export default SecondaryOneSlice;

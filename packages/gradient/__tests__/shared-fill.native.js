@@ -5,7 +5,7 @@ import {
   compose,
   minimaliseTransform,
   minimalNativeTransform,
-  print
+  print,
 } from "@times-components-native/jest-serializer";
 import { iterator } from "@times-components-native/test-utils";
 import Gradient from "../src/gradient";
@@ -16,8 +16,8 @@ export default () => {
     compose(
       print,
       minimaliseTransform((value, key) => key !== "fill"),
-      minimalNativeTransform
-    )
+      minimalNativeTransform,
+    ),
   );
 
   const tests = [
@@ -27,7 +27,7 @@ export default () => {
         const testInstance = TestRenderer.create(<Gradient />);
 
         expect(testInstance).toMatchSnapshot();
-      }
+      },
     },
     {
       name: "gradient with an angle (-45)",
@@ -35,7 +35,7 @@ export default () => {
         const testInstance = TestRenderer.create(<Gradient degrees={-45} />);
 
         expect(testInstance).toMatchSnapshot();
-      }
+      },
     },
     {
       name: "gradient with an angle (45)",
@@ -43,7 +43,7 @@ export default () => {
         const testInstance = TestRenderer.create(<Gradient degrees={45} />);
 
         expect(testInstance).toMatchSnapshot();
-      }
+      },
     },
     {
       name: "gradient with an angle (90)",
@@ -51,7 +51,7 @@ export default () => {
         const testInstance = TestRenderer.create(<Gradient degrees={90} />);
 
         expect(testInstance).toMatchSnapshot();
-      }
+      },
     },
     {
       name: "gradient with an angle (180)",
@@ -59,7 +59,7 @@ export default () => {
         const testInstance = TestRenderer.create(<Gradient degrees={180} />);
 
         expect(testInstance).toMatchSnapshot();
-      }
+      },
     },
     {
       name: "gradient with an angle (270)",
@@ -67,28 +67,28 @@ export default () => {
         const testInstance = TestRenderer.create(<Gradient degrees={270} />);
 
         expect(testInstance).toMatchSnapshot();
-      }
+      },
     },
     {
       name: "gradient with custom colours",
       test: () => {
         const output = TestRenderer.create(
-          <Gradient endColour="#00FFFF" startColour="#FF0000" />
+          <Gradient endColour="#00FFFF" startColour="#FF0000" />,
         );
 
         expect(output).toMatchSnapshot();
-      }
+      },
     },
     {
       name: "gradient with custom points",
       test: () => {
         const output = TestRenderer.create(
-          <Gradient endPoint="0.8" startPoint="0.2" />
+          <Gradient endPoint="0.8" startPoint="0.2" />,
         );
 
         expect(output).toMatchSnapshot();
-      }
-    }
+      },
+    },
   ];
 
   iterator(tests);

@@ -45,12 +45,12 @@ TileAJ.propTypes = {
   id: PropTypes.string.isRequired,
   image: PropTypes.shape({
     crop32: PropTypes.shape({
-      url: PropTypes.string
-    })
+      url: PropTypes.string,
+    }),
   }).isRequired,
   onPress: PropTypes.func.isRequired,
   title: PropTypes.string.isRequired,
-  url: PropTypes.string.isRequired
+  url: PropTypes.string.isRequired,
 };
 
 export default withPuzzleTileTracking(TileAJ);

@@ -4,35 +4,35 @@ import { nativeEdition } from "@times-components-native/provider-queries";
 import {
   nativeEdition as makeNativeEditionParams,
   MockedProvider,
-  MockFixture
+  MockFixture,
 } from "@times-components-native/provider-test-tools";
 import connectGraphql from "../src/connect";
 
 const NativeEditionProvider = connectGraphql(nativeEdition);
 
-const renderComponent = child => {
+const renderComponent = (child) => {
   const id = "2b6e462c-225f-11e9-b782-40e94f317da5";
 
   return renderer.create(
     <MockFixture
       params={makeNativeEditionParams({
         variables: () => ({
-          id
-        })
+          id,
+        }),
       })}
-      render={mocks => (
+      render={(mocks) => (
         <MockedProvider mocks={mocks}>
           <NativeEditionProvider debounceTimeMs={0} id={id}>
             {child}
           </NativeEditionProvider>
         </MockedProvider>
       )}
-    />
+    />,
   );
 };
 
 describe("Native Edition provider", () => {
-  it("returns query result", done => {
+  it("returns query result", (done) => {
     renderComponent(({ isLoading, edition }) => {
       if (!isLoading) {
         expect(edition).toMatchSnapshot();

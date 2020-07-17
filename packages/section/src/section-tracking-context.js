@@ -2,15 +2,15 @@ import get from "lodash.get";
 import { DateTime } from "luxon";
 import { withTrackingContext } from "@times-components-native/tracking";
 
-export default Component =>
+export default (Component) =>
   withTrackingContext(Component, {
     getAttrs: ({ section, publicationName }) => {
       const { slices } = section;
       const firstSlice = slices[0];
-      const nonName = Object.keys(firstSlice).filter(n => n !== "name")[0];
+      const nonName = Object.keys(firstSlice).filter((n) => n !== "name")[0];
       const { article: data } = firstSlice[nonName] || {};
       const published = DateTime.fromJSDate(
-        new Date(get(data, "publishedTime", ""))
+        new Date(get(data, "publishedTime", "")),
       );
       const current = DateTime.local();
       const diff = current.diff(published, "days");
@@ -21,8 +21,8 @@ export default Component =>
         edition_type: editionType,
         past_edition_date:
           editionType === "past 6 days" ? get(data, "publishedTime", "") : null,
-        parent_site: publicationName || ""
+        parent_site: publicationName || "",
       };
     },
-    trackingObjectName: "Section"
+    trackingObjectName: "Section",
   });

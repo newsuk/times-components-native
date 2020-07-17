@@ -20,12 +20,12 @@ const ArticleSummaryHeadline = ({ className, headline, style }) => (
 ArticleSummaryHeadline.propTypes = {
   className: PropTypes.string,
   headline: PropTypes.string.isRequired,
-  style: TextStylePropTypes
+  style: TextStylePropTypes,
 };
 
 ArticleSummaryHeadline.defaultProps = {
   className: "",
-  style: {}
+  style: {},
 };
 
 export default ArticleSummaryHeadline;

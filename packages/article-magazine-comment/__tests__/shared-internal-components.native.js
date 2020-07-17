@@ -4,7 +4,7 @@ import {
   compose,
   print,
   minimaliseTransform,
-  minimalNativeTransform
+  minimalNativeTransform,
 } from "@times-components-native/jest-serializer";
 import "./mocks.native";
 import shared from "./shared-internal-components.base";
@@ -18,7 +18,7 @@ const omitKeys = new Set([
   "style",
   "testID",
   "viewabilityConfig",
-  "viewabilityConfigCallbackPairs"
+  "viewabilityConfigCallbackPairs",
 ]);
 
 export default () => {
@@ -27,8 +27,8 @@ export default () => {
     compose(
       print,
       minimalNativeTransform,
-      minimaliseTransform((value, key) => omitKeys.has(key))
-    )
+      minimaliseTransform((value, key) => omitKeys.has(key)),
+    ),
   );
 
   shared(TestRenderer.create);

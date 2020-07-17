@@ -33,7 +33,7 @@ const fixtures = {
   pullQuote,
   topic: topicHead,
   topicArticles,
-  video
+  video,
 };
 
 const makeMocks = mm(schema);
@@ -55,5 +55,5 @@ export {
   schemaToMocks,
   topic,
   bookmarks,
-  MockBookmarksProvider
+  MockBookmarksProvider,
 };

@@ -6,17 +6,17 @@ import { TileAJ, TileAK } from "./src/tiles";
 
 const puzzle = mockPuzzleSlice();
 
-const preventDefaultedAction = decorateAction =>
+const preventDefaultedAction = (decorateAction) =>
   decorateAction([
     ([e, ...args]) => {
       e.preventDefault();
       return ["[SyntheticEvent (storybook prevented default)]", ...args];
-    }
+    },
   ]);
 
 const renderTile = (Tile, { id, image, title, url }) => (
   _,
-  { decorateAction }
+  { decorateAction },
 ) => (
   <ScrollView>
     <Tile
@@ -32,12 +32,12 @@ const renderTile = (Tile, { id, image, title, url }) => (
 const tileStories = [
   {
     name: "Tile AJ -  Puzzle tile 22pt headline",
-    Tile: TileAJ
+    Tile: TileAJ,
   },
   {
     name: "Tile AK -  Puzzle tile 25pt headline",
-    Tile: TileAK
-  }
+    Tile: TileAK,
+  },
 ];
 
 export default {
@@ -45,7 +45,7 @@ export default {
     component: renderTile(Tile, mockTile),
     name,
     type: "story",
-    platform: "native"
+    platform: "native",
   })),
-  name: "Composed/Edition/Puzzles/Tiles"
+  name: "Composed/Edition/Puzzles/Tiles",
 };

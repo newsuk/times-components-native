@@ -5,7 +5,7 @@ import { colours, tabletWidth } from "@times-components-native/styleguide";
 import { withTrackScrollDepth } from "@times-components-native/tracking";
 import {
   normaliseWidthForAssetRequestCache,
-  screenWidthInPixels
+  screenWidthInPixels,
 } from "@times-components-native/utils";
 import ArticleListError from "./article-list-error";
 import ArticleListItemWithError from "./article-list-item-with-error";
@@ -16,7 +16,7 @@ import styles from "./styles";
 
 const viewabilityConfig = {
   viewAreaCoveragePercentThreshold: 100,
-  waitForInteraction: false
+  waitForInteraction: false,
 };
 
 class ArticleList extends Component {
@@ -28,7 +28,7 @@ class ArticleList extends Component {
     this.state = {
       loadingMore: false,
       loadMoreError: null,
-      width: normaliseWidthForAssetRequestCache(screenWidthInPixels())
+      width: normaliseWidthForAssetRequestCache(screenWidthInPixels()),
     };
   }
 
@@ -36,7 +36,7 @@ class ArticleList extends Component {
     const { articles, articleListHeader } = this.props;
     const {
       articles: nextArticles,
-      articleListHeader: nextArticleListHeader
+      articleListHeader: nextArticleListHeader,
     } = nextProps;
     return (
       !articles ||
@@ -57,8 +57,8 @@ class ArticleList extends Component {
     if (!info.changed.length) return [];
 
     return info.changed
-      .filter(viewableItem => viewableItem.isViewable)
-      .map(viewableItem => onViewed(viewableItem.item, articles));
+      .filter((viewableItem) => viewableItem.isViewable)
+      .map((viewableItem) => onViewed(viewableItem.item, articles));
   }
 
   fetchMoreOnEndReached(data) {
@@ -73,15 +73,15 @@ class ArticleList extends Component {
     return new Promise((res, rej) =>
       fetchMore(data.length)
         .then(() => this.setState({ loadingMore: false }, res))
-        .catch(error =>
+        .catch((error) =>
           this.setState(
             {
               loadingMore: false,
-              loadMoreError: error
+              loadMoreError: error,
             },
-            rej
-          )
-        )
+            rej,
+          ),
+        ),
     );
   }
 
@@ -92,7 +92,7 @@ class ArticleList extends Component {
       imageRatio,
       onArticlePress,
       pageSize,
-      showImages
+      showImages,
     } = this.props;
     const { width } = this.state;
 
@@ -122,7 +122,7 @@ class ArticleList extends Component {
       onViewed,
       pageSize,
       receiveChildList,
-      refetch
+      refetch,
     } = this.props;
     const { loadMoreError } = this.state;
 
@@ -144,11 +144,11 @@ class ArticleList extends Component {
           .map((number, index) => ({
             elementId: `empty.${index}`,
             id: index,
-            isLoading: true
+            isLoading: true,
           }))
       : articles.map((article, index) => ({
           ...article,
-          elementId: `${article.id}.${index}`
+          elementId: `${article.id}.${index}`,
         }));
 
     if (!articlesLoading) receiveChildList(data);
@@ -166,9 +166,7 @@ class ArticleList extends Component {
                 onPress={() =>
                   new Promise((res, rej) => {
                     this.setState({ loadMoreError: null }, () =>
-                      this.fetchMoreOnEndReached(data)
-                        .then(res)
-                        .catch(rej)
+                      this.fetchMoreOnEndReached(data).then(res).catch(rej),
                     );
                   })
                 }
@@ -212,7 +210,7 @@ class ArticleList extends Component {
             <ArticleListItemSeparator />
           </View>
         )}
-        keyExtractor={item => item.elementId}
+        keyExtractor={(item) => item.elementId}
         ListFooterComponent={articleListFooter}
         ListHeaderComponent={articleListHeader}
         nestedScrollEnabled

@@ -12,7 +12,7 @@ const Button = ({
   style,
   title,
   textStyle,
-  underlayColor
+  underlayColor,
 }) => {
   const transformedTitle = capitalise(title);
   const fontSizeStyle = fontSize ? { fontSize } : null;

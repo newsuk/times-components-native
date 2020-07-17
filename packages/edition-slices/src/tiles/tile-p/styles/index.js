@@ -2,7 +2,7 @@ import {
   colours,
   fonts,
   fontSizes,
-  spacing
+  spacing,
 } from "@times-components-native/styleguide";
 
 const styles = {
@@ -13,12 +13,12 @@ const styles = {
     letterSpacing: 0.6,
     lineHeight: 12,
     marginTop: spacing(3),
-    textTransform: "uppercase"
+    textTransform: "uppercase",
   },
   container: {
     alignItems: "center",
     paddingTop: spacing(4),
-    paddingBottom: spacing(2)
+    paddingBottom: spacing(2),
   },
   headline: {
     color: colours.functional.brandColour,
@@ -26,11 +26,11 @@ const styles = {
     fontSize: fontSizes.tileLeadHeadline,
     lineHeight: 35,
     paddingHorizontal: spacing(2),
-    textAlign: "center"
+    textAlign: "center",
   },
   imageContainer: {
     overflow: "hidden",
-    width: "30%"
+    width: "30%",
   },
   strapline: {
     fontFamily: fonts.bodyRegular,
@@ -38,13 +38,13 @@ const styles = {
     fontSize: fontSizes.meta,
     lineHeight: 20,
     paddingHorizontal: spacing(8),
-    textAlign: "center"
+    textAlign: "center",
   },
   summaryContainer: {
     alignItems: "center",
     paddingTop: spacing(2),
-    paddingBottom: spacing(3)
-  }
+    paddingBottom: spacing(3),
+  },
 };
 
 export default styles;

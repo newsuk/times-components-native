@@ -6,16 +6,16 @@ const styles = StyleSheet.create({
   ...sharedStyles,
   biography: {
     ...sharedStyles.biography,
-    maxWidth: tabletWidth
+    maxWidth: tabletWidth,
   },
   jobTitle: {
     ...sharedStyles.jobTitle,
-    marginTop: spacing(2)
+    marginTop: spacing(2),
   },
   twitter: {
     ...sharedStyles.twitter,
-    alignItems: "center"
-  }
+    alignItems: "center",
+  },
 });
 
 export default styles;

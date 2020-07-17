@@ -8,7 +8,7 @@ class DatePublication extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      timezone: ""
+      timezone: "",
     };
     this.updateTimezone = this.updateTimezone.bind(this);
   }
@@ -39,7 +39,7 @@ class DatePublication extends Component {
       : baseFormatString;
 
     return children(
-      `${format(datetimeLondonTimezone, formatString)}${timezone}`
+      `${format(datetimeLondonTimezone, formatString)}${timezone}`,
     );
   }
 }
@@ -47,11 +47,11 @@ class DatePublication extends Component {
 DatePublication.propTypes = {
   children: PropTypes.oneOfType([PropTypes.func, PropTypes.node]).isRequired,
   date: PropTypes.string.isRequired,
-  showDay: PropTypes.bool
+  showDay: PropTypes.bool,
 };
 
 DatePublication.defaultProps = {
-  showDay: true
+  showDay: true,
 };
 
 export default DatePublication;

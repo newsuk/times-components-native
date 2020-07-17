@@ -5,13 +5,13 @@ import PropTypes from "prop-types";
 const { Group } = ART;
 
 const G = ({ fill, stroke, strokeWidth, opacity, children }) => {
-  const onlyAssignedProps = props => key => props[key] !== null;
-  const reconstructProps = props => (obj, key) => ({
+  const onlyAssignedProps = (props) => (key) => props[key] !== null;
+  const reconstructProps = (props) => (obj, key) => ({
     [key]: props[key],
-    ...obj
+    ...obj,
   });
 
-  const childrenWithProps = React.Children.map(children, child => {
+  const childrenWithProps = React.Children.map(children, (child) => {
     const originalProps = child.props;
     const cleanProps = Object.keys(originalProps)
       .filter(onlyAssignedProps(originalProps))
@@ -22,7 +22,7 @@ const G = ({ fill, stroke, strokeWidth, opacity, children }) => {
       opacity,
       stroke,
       strokeWidth,
-      ...cleanProps
+      ...cleanProps,
     });
   });
   return (
@@ -37,14 +37,14 @@ G.propTypes = {
   fill: PropTypes.string,
   opacity: PropTypes.string,
   stroke: PropTypes.string,
-  strokeWidth: PropTypes.string
+  strokeWidth: PropTypes.string,
 };
 
 G.defaultProps = {
   fill: null,
   opacity: null,
   stroke: null,
-  strokeWidth: null
+  strokeWidth: null,
 };
 
 export default G;

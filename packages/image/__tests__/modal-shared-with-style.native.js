@@ -7,7 +7,7 @@ import {
   flattenStyleTransform,
   minimaliseTransform,
   minimalNativeTransform,
-  print
+  print,
 } from "@times-components-native/jest-serializer";
 import { iterator } from "@times-components-native/test-utils";
 import Responsive from "@times-components-native/responsive";
@@ -27,12 +27,12 @@ const MockCaption = ({ style: { text, caption, credits, container } }) => (
 
 const props = {
   caption: <MockCaption />,
-  uri: "http://example.com/image.jpg?crop=1016%2C677%2C0%2C0"
+  uri: "http://example.com/image.jpg?crop=1016%2C677%2C0%2C0",
 };
 
 function callOnLayout(testRenderer, layout = { height: 700, width: 350 }) {
   testRenderer.root.children[0].instance.onLowResLayout({
-    nativeEvent: { layout }
+    nativeEvent: { layout },
   });
 }
 
@@ -45,8 +45,8 @@ export default () => {
       print,
       minimalNativeTransform,
       minimaliseTransform((value, key) => key !== "style"),
-      flattenStyleTransform
-    )
+      flattenStyleTransform,
+    ),
   );
 
   const tests = [
@@ -56,7 +56,7 @@ export default () => {
         const testRenderer = TestRenderer.create(
           <Responsive>
             <ModalImage {...props} aspectRatio={2} />
-          </Responsive>
+          </Responsive>,
         );
 
         await act(async () => {
@@ -64,7 +64,7 @@ export default () => {
         });
 
         expect(testRenderer).toMatchSnapshot();
-      }
+      },
     },
     {
       name: "portrait default modal",
@@ -72,14 +72,14 @@ export default () => {
         const testRenderer = TestRenderer.create(
           <Responsive>
             <ModalImage {...props} aspectRatio={0.5} />
-          </Responsive>
+          </Responsive>,
         );
         await act(async () => {
           jest.runAllImmediates();
         });
 
         expect(testRenderer).toMatchSnapshot();
-      }
+      },
     },
     {
       name: "tablet landscape default modal",
@@ -88,7 +88,7 @@ export default () => {
         const testRenderer = TestRenderer.create(
           <Responsive>
             <ModalImage {...props} aspectRatio={2} />
-          </Responsive>
+          </Responsive>,
         );
 
         await act(async () => {
@@ -102,7 +102,7 @@ export default () => {
         });
 
         expect(testRenderer).toMatchSnapshot();
-      }
+      },
     },
     {
       name: "tablet portrait default modal",
@@ -111,7 +111,7 @@ export default () => {
         const testRenderer = TestRenderer.create(
           <Responsive>
             <ModalImage {...props} aspectRatio={0.5} />
-          </Responsive>
+          </Responsive>,
         );
         await act(async () => {
           jest.runAllImmediates();
@@ -124,8 +124,8 @@ export default () => {
         });
 
         expect(testRenderer).toMatchSnapshot();
-      }
-    }
+      },
+    },
   ];
 
   iterator(tests);

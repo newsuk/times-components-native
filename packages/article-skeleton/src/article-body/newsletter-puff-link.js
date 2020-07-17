@@ -5,13 +5,13 @@ import Link from "@times-components-native/link";
 import { IconForwardArrow } from "@times-components-native/icons";
 import {
   withTrackingContext,
-  withTrackEvents
+  withTrackEvents,
 } from "@times-components-native/tracking";
 import { colours } from "@times-components-native/styleguide";
 import {
   InpPreferencesView,
   InpPreferencesText,
-  InpIconContainer
+  InpIconContainer,
 } from "../styles/inline-newsletter-puff";
 
 const NewsletterPuffLink = ({ onPress }) => (
@@ -26,7 +26,7 @@ const NewsletterPuffLink = ({ onPress }) => (
 );
 
 NewsletterPuffLink.propTypes = {
-  onPress: PropTypes.func.isRequired
+  onPress: PropTypes.func.isRequired,
 };
 
 export default withTrackingContext(
@@ -35,9 +35,9 @@ export default withTrackingContext(
       {
         actionName: "onPress",
         eventName: "onPress",
-        trackingName: "widget : puff : manage preferences here"
-      }
-    ]
+        trackingName: "widget : puff : manage preferences here",
+      },
+    ],
   }),
-  { trackingObjectName: "NewsletterPuffLink" }
+  { trackingObjectName: "NewsletterPuffLink" },
 );

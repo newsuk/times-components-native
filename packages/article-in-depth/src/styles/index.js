@@ -6,28 +6,28 @@ const nativeStyles = {
   ...sharedStyles,
   container: {
     ...sharedStyles.container,
-    paddingTop: spacing(9)
+    paddingTop: spacing(9),
   },
   standFirst: {
     ...sharedStyles.standFirst,
     lineHeight: 25,
-    marginBottom: 0
+    marginBottom: 0,
   },
   metaContainer: {
     ...sharedStyles.metaContainer,
-    marginTop: spacing(4)
+    marginTop: spacing(4),
   },
   datePublication: {
     ...sharedStyles.datePublication,
-    marginTop: 0
+    marginTop: 0,
   },
   label: {
-    marginBottom: 0
-  }
+    marginBottom: 0,
+  },
 };
 
 const styles = StyleSheet.create({
-  ...nativeStyles
+  ...nativeStyles,
 });
 
 export default styles;

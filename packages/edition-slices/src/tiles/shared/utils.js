@@ -17,7 +17,7 @@ const getTileImage = (tile, crop) => {
 const getTileSummary = (tile, length) =>
   tile[`teaser${length}`] || tile.article[`summary${length}`];
 
-const getTileStrapline = tile => tile.strapline || tile.article.strapline;
+const getTileStrapline = (tile) => tile.strapline || tile.article.strapline;
 
 const isSaveSupported =
   NativeModules.SectionEvents && NativeModules.SectionEvents.getSavedArticles;

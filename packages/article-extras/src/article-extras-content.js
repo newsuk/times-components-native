@@ -15,13 +15,13 @@ const ArticleExtrasContent = ({
   onCommentGuidelinesPress,
   onCommentsPress,
   onRelatedArticlePress,
-  onTopicPress
+  onTopicPress,
 }) => {
   const {
     commentCount,
     commentsEnabled,
     relatedArticleSlice,
-    topics
+    topics,
   } = article;
 
   return (
@@ -60,7 +60,7 @@ ArticleExtrasContent.propTypes = {
   onCommentGuidelinesPress: PropTypes.func.isRequired,
   onCommentsPress: PropTypes.func.isRequired,
   onRelatedArticlePress: PropTypes.func.isRequired,
-  onTopicPress: PropTypes.func.isRequired
+  onTopicPress: PropTypes.func.isRequired,
 };
 
 export default ArticleExtrasContent;

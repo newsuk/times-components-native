@@ -10,7 +10,7 @@ export default {
   children: [
     {
       decorator: LateralSpacingDecorator,
-      type: "decorator"
+      type: "decorator",
     },
     {
       component: ({ select }) => (
@@ -20,7 +20,7 @@ export default {
       ),
       name: "with title",
       platform: "native",
-      type: "story"
+      type: "story",
     },
     {
       component: ({ select }) => (
@@ -30,8 +30,8 @@ export default {
       ),
       name: "without title",
       platform: "native",
-      type: "story"
-    }
+      type: "story",
+    },
   ],
-  name: "Composed/Key Facts"
+  name: "Composed/Key Facts",
 };

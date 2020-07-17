@@ -2,7 +2,7 @@ import React, { Component } from "react";
 import { View } from "react-native";
 import ArticleSummary, {
   ArticleSummaryHeadline,
-  ArticleSummaryContent
+  ArticleSummaryContent,
 } from "@times-components-native/article-summary";
 import Card from "@times-components-native/card";
 import { ResponsiveContext } from "@times-components-native/responsive";
@@ -32,7 +32,7 @@ class ArticleListItem extends Component {
   onItemPress(event) {
     const {
       article: { id, url },
-      onPress
+      onPress,
     } = this.props;
     onPress(event, { id, url });
   }
@@ -58,7 +58,7 @@ class ArticleListItem extends Component {
       highResSize,
       imageRatio,
       isLoading,
-      showImage
+      showImage,
     } = this.props;
 
     const {
@@ -68,7 +68,7 @@ class ArticleListItem extends Component {
       publicationName,
       publishedTime,
       section,
-      url
+      url,
     } = article || {};
 
     const imageUri = getImageUri(article);
@@ -98,21 +98,21 @@ class ArticleListItem extends Component {
                         bylines
                           ? {
                               ast: bylines,
-                              color: colours.section.default
+                              color: colours.section.default,
                             }
                           : null
                       }
                       content={this.renderContent}
                       datePublicationProps={{
                         date: publishedTime,
-                        publication: publicationName
+                        publication: publicationName,
                       }}
                       headline={this.renderHeadline()}
                       labelProps={{
                         color:
                           colours.section[section] || colours.section.default,
                         isVideo: hasVideo,
-                        title: label
+                        title: label,
                       }}
                     />
                   </Card>

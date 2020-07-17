@@ -8,7 +8,7 @@ import {
   TileLink,
   TileSummary,
   TileImage,
-  withTileTracking
+  withTileTracking,
 } from "../shared";
 import stylesFactory from "./styles";
 import WithoutWhiteSpace from "../shared/without-white-space";
@@ -23,7 +23,7 @@ const TileAL = ({ onPress, tile, breakpoint = editionBreakpoints.wide }) => {
   }
 
   const {
-    article: { hasVideo }
+    article: { hasVideo },
   } = tile;
 
   return (
@@ -40,7 +40,7 @@ const TileAL = ({ onPress, tile, breakpoint = editionBreakpoints.wide }) => {
         hasVideo={hasVideo}
       />
       <WithoutWhiteSpace
-        render={whiteSpaceHeight => (
+        render={(whiteSpaceHeight) => (
           <TileSummary
             headlineStyle={styles.headline}
             summary={getTileSummary(tile, 800)}
@@ -59,7 +59,7 @@ const TileAL = ({ onPress, tile, breakpoint = editionBreakpoints.wide }) => {
 TileAL.propTypes = {
   onPress: PropTypes.func.isRequired,
   tile: PropTypes.shape({}).isRequired,
-  breakpoint: PropTypes.string
+  breakpoint: PropTypes.string,
 };
 
 export default withTileTracking(TileAL);

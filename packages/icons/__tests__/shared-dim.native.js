@@ -6,7 +6,7 @@ import {
   minimaliseTransform,
   print,
   propsNoChildren,
-  replaceTransform
+  replaceTransform,
 } from "@times-components-native/jest-serializer";
 import shared from "./shared-dim.base";
 
@@ -18,11 +18,11 @@ export default () => {
       replaceTransform({
         ARTSurfaceView: propsNoChildren,
         RNSVGPath: propsNoChildren,
-        RNSVGSvgView: propsNoChildren
+        RNSVGSvgView: propsNoChildren,
       }),
       flattenStyleTransform,
-      minimaliseTransform((value, key) => key === "opacity")
-    )
+      minimaliseTransform((value, key) => key === "opacity"),
+    ),
   );
 
   shared(TestRenderer.create);

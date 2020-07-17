@@ -1,27 +1,27 @@
 import traverse from "./traverse";
 import print from "./printers";
 
-export const replacePropTransform = replacer => (
+export const replacePropTransform = (replacer) => (
   accum,
   node,
   props,
-  children
+  children,
 ) => {
   const transformedProps = Object.entries(props).reduce(
     (tProps, [key, value]) => ({
       ...tProps,
-      [key]: replacer(value, key)
+      [key]: replacer(value, key),
     }),
-    {}
+    {},
   );
 
   return {
     accum,
     children,
     node,
-    props: transformedProps
+    props: transformedProps,
   };
 };
 
-export default (replacer = x => x) =>
+export default (replacer = (x) => x) =>
   traverse(print, replacePropTransform(replacer));

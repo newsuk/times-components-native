@@ -2,20 +2,20 @@ import {
   editionMaxWidth,
   sliceContentMaxWidth,
   spacing,
-  editionBreakpoints
+  editionBreakpoints,
 } from "@times-components-native/styleguide";
 
 const tabletPaddingHorizontalResolver = {
   [editionBreakpoints.medium]: spacing(2),
   [editionBreakpoints.wide]: spacing(6),
-  [editionBreakpoints.huge]: spacing(2)
+  [editionBreakpoints.huge]: spacing(2),
 };
 
 export default (isTablet, breakpoint) => ({
   contentWrapperStyles: {
     flex: 1,
     alignSelf: "center",
-    width: sliceContentMaxWidth
+    width: sliceContentMaxWidth,
   },
 
   gutterStyles: {
@@ -24,6 +24,6 @@ export default (isTablet, breakpoint) => ({
     paddingHorizontal: isTablet
       ? tabletPaddingHorizontalResolver[breakpoint]
       : 0,
-    width: editionMaxWidth
-  }
+    width: editionMaxWidth,
+  },
 });

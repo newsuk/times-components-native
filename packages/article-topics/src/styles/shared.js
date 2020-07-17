@@ -9,26 +9,26 @@ const styles = {
     paddingBottom: spacing(2),
     paddingLeft: spacing(3),
     paddingRight: spacing(3),
-    paddingTop: spacing(2)
+    paddingTop: spacing(2),
   },
   spacer: {
     marginRight: spacing(2),
-    marginTop: spacing(2)
+    marginTop: spacing(2),
   },
   text: {
     color: colours.functional.secondary,
     ...fontFactory({
       font: "supporting",
-      fontSize: "link"
+      fontSize: "link",
     }),
-    position: "relative"
+    position: "relative",
   },
   topicGroup: {
     flexDirection: "row",
     flexWrap: "wrap",
     justifyContent: "center",
-    marginBottom: spacing(2)
-  }
+    marginBottom: spacing(2),
+  },
 };
 
 export default styles;

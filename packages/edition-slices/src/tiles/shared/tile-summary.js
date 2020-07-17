@@ -3,7 +3,7 @@ import PropTypes from "prop-types";
 import ArticleSummary, {
   ArticleSummaryContent,
   ArticleSummaryHeadline,
-  ArticleSummaryStrapline
+  ArticleSummaryStrapline,
 } from "@times-components-native/article-summary";
 import { ArticleFlags } from "@times-components-native/article-flag";
 import { colours } from "@times-components-native/styleguide";
@@ -24,7 +24,7 @@ class TileSummary extends Component {
       summary,
       summaryStyle,
       whiteSpaceHeight,
-      linesOfTeaserToRender
+      linesOfTeaserToRender,
     } = this.props;
 
     return (
@@ -40,10 +40,10 @@ class TileSummary extends Component {
   renderFlags() {
     const {
       tile: {
-        article: { expirableFlags, longRead }
+        article: { expirableFlags, longRead },
       },
       flagColour,
-      flagsStyle
+      flagsStyle,
     } = this.props;
 
     return (
@@ -59,12 +59,12 @@ class TileSummary extends Component {
   renderSaveStar() {
     const {
       tile: {
-        article: { id }
+        article: { id },
       },
       underneathTextStar,
       centeredStar,
       isDarkStar,
-      starStyle
+      starStyle,
     } = this.props;
 
     return (
@@ -82,9 +82,9 @@ class TileSummary extends Component {
     const {
       tile: {
         headline: tileHeadline,
-        article: { headline, shortHeadline }
+        article: { headline, shortHeadline },
       },
-      headlineStyle
+      headlineStyle,
     } = this.props;
 
     return (
@@ -106,7 +106,7 @@ class TileSummary extends Component {
   render() {
     const {
       tile: {
-        article: { hasVideo, label, section }
+        article: { hasVideo, label, section },
       },
       bylines,
       bylineStyle,
@@ -114,7 +114,7 @@ class TileSummary extends Component {
       style,
       summary,
       withStar,
-      labelColour
+      labelColour,
     } = this.props;
     return (
       <ResponsiveContext.Consumer>
@@ -128,9 +128,10 @@ class TileSummary extends Component {
             labelProps={{
               color:
                 labelColour ||
-                (colours.section[section] || colours.section.default),
+                colours.section[section] ||
+                colours.section.default,
               isVideo: hasVideo,
-              title: label
+              title: label,
             }}
             strapline={strapline ? this.renderStrapline() : undefined}
             saveStar={withStar && this.renderSaveStar()}
@@ -158,7 +159,7 @@ TileSummary.propTypes = {
   underneathTextStar: PropTypes.bool,
   centeredStar: PropTypes.bool,
   isDarkStar: PropTypes.bool,
-  starStyle: PropTypes.shape({})
+  starStyle: PropTypes.shape({}),
 };
 
 TileSummary.defaultProps = {
@@ -175,7 +176,7 @@ TileSummary.defaultProps = {
   underneathTextStar: false,
   centeredStar: false,
   isDarkStar: false,
-  starStyle: null
+  starStyle: null,
 };
 
 export default TileSummary;

@@ -5,5 +5,5 @@ export {
   ArticleSummaryStrapline,
   renderAst,
   renderer,
-  summarise
-} from './src/article-summary';
+  summarise,
+} from "./src/article-summary";

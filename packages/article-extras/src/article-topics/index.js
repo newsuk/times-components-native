@@ -13,7 +13,7 @@ const ShowTopics = ({ topics, onPress }) => {
           <View
             style={[
               styles.topicsContainer,
-              isTablet && styles.topicsContainerTablet
+              isTablet && styles.topicsContainerTablet,
             ]}
           >
             <ArticleTopics onPress={onPress} topics={topics} />
@@ -31,13 +31,13 @@ ShowTopics.propTypes = {
   topics: PropTypes.arrayOf(
     PropTypes.shape({
       name: PropTypes.string.isRequired,
-      slug: PropTypes.string.isRequired
-    }).isRequired
-  )
+      slug: PropTypes.string.isRequired,
+    }).isRequired,
+  ),
 };
 
 ShowTopics.defaultProps = {
-  topics: null
+  topics: null,
 };
 
 export default ShowTopics;

@@ -19,5 +19,5 @@ export {
   tidyEvent,
   topic,
   bookmarks,
-  MockBookmarksProvider
-} from './src';
+  MockBookmarksProvider,
+} from "./src";

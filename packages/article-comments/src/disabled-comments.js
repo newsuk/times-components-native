@@ -19,7 +19,7 @@ const DisabledComments = ({ onCommentGuidelinesPress }) => (
 );
 
 DisabledComments.propTypes = {
-  onCommentGuidelinesPress: PropTypes.func.isRequired
+  onCommentGuidelinesPress: PropTypes.func.isRequired,
 };
 
 export default DisabledComments;

@@ -6,7 +6,7 @@ import {
   TileLink,
   TileSummary,
   withTileTracking,
-  getTileSummary
+  getTileSummary,
 } from "../shared";
 import stylesFactory from "./styles";
 import WithoutWhiteSpace from "../shared/without-white-space";
@@ -18,7 +18,7 @@ const TileAD = ({ onPress, tile, breakpoint = editionBreakpoints.medium }) => {
     <TileLink onPress={onPress} style={styles.container} tile={tile}>
       <WithoutWhiteSpace
         style={styles.summaryContainer}
-        render={whiteSpaceHeight => (
+        render={(whiteSpaceHeight) => (
           <TileSummary
             headlineStyle={styles.headline}
             summary={showSummary ? getTileSummary(tile, 300) : null}
@@ -35,7 +35,7 @@ const TileAD = ({ onPress, tile, breakpoint = editionBreakpoints.medium }) => {
 TileAD.propTypes = {
   onPress: PropTypes.func.isRequired,
   tile: PropTypes.shape({}).isRequired,
-  breakpoint: PropTypes.string
+  breakpoint: PropTypes.string,
 };
 
 export default withTileTracking(TileAD);

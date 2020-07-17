@@ -5,18 +5,18 @@ const styles = {
   ...sharedStyles,
   bullet: {
     ...sharedStyles.bullet,
-    marginBottom: 3
+    marginBottom: 3,
   },
   flags: {
     ...sharedStyles.flags,
     marginBottom: spacing(1),
-    marginTop: 0
+    marginTop: 0,
   },
   title: {
     ...sharedStyles.title,
     ...fontFactory({
       font: "body",
-      fontSize: "cardMetaMobile"
+      fontSize: "cardMetaMobile",
     }),
     fontWeight: "bold",
     lineHeight: 10,
@@ -25,12 +25,12 @@ const styles = {
     letterSpacing: 0,
     includeFontPadding: false,
     paddingBottom: spacing(0),
-    marginBottom: spacing(0)
+    marginBottom: spacing(0),
   },
   view: {
     ...sharedStyles.view,
-    marginTop: 0
-  }
+    marginTop: 0,
+  },
 };
 
 export default styles;

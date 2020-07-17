@@ -14,7 +14,7 @@ const TileAI = ({ onPress, tile, breakpoint = editionBreakpoints.medium }) => {
   }
 
   const {
-    article: { hasVideo }
+    article: { hasVideo },
   } = tile;
 
   return (
@@ -37,7 +37,7 @@ const TileAI = ({ onPress, tile, breakpoint = editionBreakpoints.medium }) => {
 TileAI.propTypes = {
   onPress: PropTypes.func.isRequired,
   tile: PropTypes.shape({}).isRequired,
-  breakpoint: PropTypes.string
+  breakpoint: PropTypes.string,
 };
 
 export default withTileTracking(TileAI);

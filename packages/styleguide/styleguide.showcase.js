@@ -5,14 +5,14 @@ import timesStyleguide, {
   Animations,
   colours,
   fonts,
-  scales
+  scales,
 } from "./src/styleguide";
 import styles from "./styleguide.styles";
 
 const getStories = ({ colourMap, name }) => {
   const story = {
     component: () => {
-      const colourBoxes = Object.keys(colourMap).map(colourName => (
+      const colourBoxes = Object.keys(colourMap).map((colourName) => (
         <ColourBox
           hex={colourMap[colourName]}
           key={colourName}
@@ -23,10 +23,13 @@ const getStories = ({ colourMap, name }) => {
       return <View style={styles.display}>{colourBoxes}</View>;
     },
     name,
-    type: "story"
+    type: "story",
   };
 
-  return [{ ...story, platform: "native" }, { ...story, platform: "web" }];
+  return [
+    { ...story, platform: "native" },
+    { ...story, platform: "web" },
+  ];
 };
 
 const getBuilder = () => {
@@ -35,7 +38,7 @@ const getBuilder = () => {
       bulder.stories.push(...getStories({ colourMap, name }));
       return bulder;
     },
-    stories: []
+    stories: [],
   };
 
   return bulder;
@@ -52,17 +55,17 @@ const ColourBox = ({ name, hex }) => (
 
 ColourBox.propTypes = {
   hex: PropTypes.string.isRequired,
-  name: PropTypes.string.isRequired
+  name: PropTypes.string.isRequired,
 };
 
 const fontDisplayer = (fontFamily, phrase, fontSizes) =>
-  Object.keys(fontSizes).map(fontSize => (
+  Object.keys(fontSizes).map((fontSize) => (
     <Fragment key={fontSize}>
       <Text style={styles.subHeadline}>{fontSize}</Text>
       <Text
         style={[
           styles.showoffFonts,
-          { fontFamily, fontSize: fontSizes[fontSize] }
+          { fontFamily, fontSize: fontSizes[fontSize] },
         ]}
       >
         {phrase}
@@ -70,7 +73,7 @@ const fontDisplayer = (fontFamily, phrase, fontSizes) =>
     </Fragment>
   ));
 
-const fontFixture = select => {
+const fontFixture = (select) => {
   const scale = select("Scale", scales, scales.large);
   const styleguide = timesStyleguide({ scale });
   const phrase = "The Quick Brown Fox Jumps Over the Lazy Dog";
@@ -99,7 +102,7 @@ const fontFixture = select => {
         {fontDisplayer(
           fonts.bodyRegularSmallCaps,
           phrase.toLowerCase(),
-          styleguide.fontSizes
+          styleguide.fontSizes,
         )}
       </View>
       <View style={styles.showoffFontsContainer}>
@@ -162,7 +165,7 @@ colourStoriesBuilder
   .add({ colourMap: colours.functional, name: "Functional Colours" })
   .add({
     colourMap: colours.secondarySectionColours,
-    name: "Secondary Section Colours"
+    name: "Secondary Section Colours",
   })
   .add({ colourMap: colours.section, name: "Section Colours" });
 
@@ -178,15 +181,15 @@ export default {
         </Animations.FadeIn>
       ),
       name: "Animations",
-      type: "story"
+      type: "story",
     },
     {
       component({ select }) {
         return fontFixture(select);
       },
       name: "Fonts",
-      type: "story"
-    }
+      type: "story",
+    },
   ],
-  name: "Helpers/Styleguide"
+  name: "Helpers/Styleguide",
 };

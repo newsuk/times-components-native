@@ -6,7 +6,7 @@ import {
   justChildren,
   minimaliseTransform,
   replaceTransform,
-  print
+  print,
 } from "@times-components-native/jest-serializer";
 import shared from "./shared-colour.base";
 
@@ -17,11 +17,11 @@ export default () => {
       print,
       replaceTransform({
         ARTGroup: justChildren,
-        ARTSurfaceView: justChildren
+        ARTSurfaceView: justChildren,
       }),
       flattenStyleTransform,
-      minimaliseTransform((value, key) => key !== "stroke" && key !== "fill")
-    )
+      minimaliseTransform((value, key) => key !== "stroke" && key !== "fill"),
+    ),
   );
 
   shared(TestRenderer.create);

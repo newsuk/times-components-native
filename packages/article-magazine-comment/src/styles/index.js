@@ -6,23 +6,23 @@ const appStyles = {
   ...nativeStyles,
   articleHeadline: {
     ...nativeStyles.articleHeadline,
-    marginBottom: spacing(3)
+    marginBottom: spacing(3),
   },
   metaTablet: {
     ...nativeStyles.metaTablet,
-    paddingTop: "auto"
+    paddingTop: "auto",
   },
   standFirst: {
     ...nativeStyles.standFirst,
-    marginBottom: spacing(2.5)
+    marginBottom: spacing(2.5),
   },
   label: {
-    marginBottom: 0
-  }
+    marginBottom: 0,
+  },
 };
 
 const styles = StyleSheet.create({
-  ...appStyles
+  ...appStyles,
 });
 
 export default styles;

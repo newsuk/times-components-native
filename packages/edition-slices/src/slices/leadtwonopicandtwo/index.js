@@ -15,7 +15,7 @@ class LeadTwoNoPicAndTwo extends Component {
   renderSmall(breakpoint) {
     const {
       onPress,
-      slice: { lead1, lead2, support1, support2 }
+      slice: { lead1, lead2, support1, support2 },
     } = this.props;
     return (
       <LeadTwoNoPicAndTwoSlice
@@ -35,7 +35,7 @@ class LeadTwoNoPicAndTwo extends Component {
   renderMedium(breakpoint) {
     const {
       onPress,
-      slice: { lead1, lead2, support1, support2 }
+      slice: { lead1, lead2, support1, support2 },
     } = this.props;
     return (
       <LeadTwoNoPicAndTwoSlice
@@ -79,7 +79,7 @@ class LeadTwoNoPicAndTwo extends Component {
   renderWide(breakpoint) {
     const {
       onPress,
-      slice: { lead1, lead2, support1, support2 }
+      slice: { lead1, lead2, support1, support2 },
     } = this.props;
 
     return (
@@ -138,8 +138,8 @@ LeadTwoNoPicAndTwo.propTypes = {
     lead1: PropTypes.shape({}).isRequired,
     lead2: PropTypes.shape({}).isRequired,
     support1: PropTypes.shape({}).isRequired,
-    support2: PropTypes.shape({}).isRequired
-  }).isRequired
+    support2: PropTypes.shape({}).isRequired,
+  }).isRequired,
 };
 
 export default LeadTwoNoPicAndTwo;

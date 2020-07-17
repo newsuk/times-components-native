@@ -9,16 +9,16 @@ const nativeStyles = {
     height: 100,
     overflow: "hidden",
     width: 100,
-    marginBottom: spacing(2)
+    marginBottom: spacing(2),
   },
   authorImageTablet: {
     height: 108,
-    width: 108
+    width: 108,
   },
   standFirst: {
     ...sharedStyles.standFirst,
-    lineHeight: 25
-  }
+    lineHeight: 25,
+  },
 };
 
 export default nativeStyles;

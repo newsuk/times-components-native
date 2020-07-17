@@ -1,1 +1,1 @@
-export  { default, PlayIcon } from './src/video'
+export { default, PlayIcon } from "./src/video";

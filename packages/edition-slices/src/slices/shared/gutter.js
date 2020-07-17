@@ -15,7 +15,7 @@ const Gutter = ({ children }) => (
 );
 
 Gutter.propTypes = {
-  children: PropTypes.node.isRequired
+  children: PropTypes.node.isRequired,
 };
 
 export default Gutter;

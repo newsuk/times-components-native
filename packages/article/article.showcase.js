@@ -9,12 +9,12 @@ export default {
           boolean,
           decorateAction,
           hasScaling: true,
-          select
+          select,
         }),
       name: "Article with template choice",
       platform: "native",
-      type: "story"
-    }
+      type: "story",
+    },
   ],
-  name: "Pages/Article"
+  name: "Pages/Article",
 };

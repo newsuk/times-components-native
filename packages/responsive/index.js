@@ -1,1 +1,1 @@
-export { default, ResponsiveContext } from './src/responsive';
+export { default, ResponsiveContext } from "./src/responsive";

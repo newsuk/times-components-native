@@ -7,14 +7,14 @@ export const propTypes = {
     image: authorProfileHeadPropTypes.uri,
     jobTitle: authorProfileHeadPropTypes.jobTitle,
     name: authorProfileHeadPropTypes.name,
-    twitter: authorProfileHeadPropTypes.twitter
+    twitter: authorProfileHeadPropTypes.twitter,
   }),
   error: PropTypes.object,
   isLoading: authorProfileHeadPropTypes.isLoading,
   page: PropTypes.number,
   pageSize: PropTypes.number,
   refetch: PropTypes.func.isRequired,
-  slug: PropTypes.string.isRequired
+  slug: PropTypes.string.isRequired,
 };
 
 export const defaultProps = {
@@ -22,5 +22,5 @@ export const defaultProps = {
   error: null,
   isLoading: true,
   page: 1,
-  pageSize: 10
+  pageSize: 10,
 };

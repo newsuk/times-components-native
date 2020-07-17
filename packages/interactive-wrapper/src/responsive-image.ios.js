@@ -3,14 +3,14 @@ import { View, Image, ImageBackground } from "react-native";
 import { screenWidth } from "@times-components-native/utils";
 import PropTypes from "prop-types";
 
-const deckUrl = id =>
+const deckUrl = (id) =>
   `https://gobble.timesdev.tools/deck/api/deck-post-action/${id}`;
 
 class ResponsiveImageInteractive extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      image: undefined
+      image: undefined,
     };
   }
 
@@ -25,19 +25,19 @@ class ResponsiveImageInteractive extends Component {
     // eslint-disable-next-line no-undef
     const res = await fetch(deckUrl(id), {
       headers: {
-        "Content-Type": "application/json"
-      }
+        "Content-Type": "application/json",
+      },
     });
     const {
-      body: { data }
+      body: { data },
     } = await res.json();
     const images = data
-      .filter(dat => dat.type === "image")
-      .map(d => ({
+      .filter((dat) => dat.type === "image")
+      .map((d) => ({
         uri: d.data.Image,
-        width: parseInt(d.data.Size, 10)
+        width: parseInt(d.data.Size, 10),
       }))
-      .filter(d => d.width <= screenWidth())
+      .filter((d) => d.width <= screenWidth())
       .sort((a, b) => a.width - b.width);
     if (images.length) {
       const image = images[images.length - 1];
@@ -65,7 +65,7 @@ class ResponsiveImageInteractive extends Component {
 }
 
 ResponsiveImageInteractive.propTypes = {
-  deckId: PropTypes.number.isRequired
+  deckId: PropTypes.number.isRequired,
 };
 
 export default ResponsiveImageInteractive;

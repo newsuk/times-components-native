@@ -4,7 +4,7 @@ import {
   flattenStyleTransform,
   minimalNativeTransform,
   minimaliseTransform,
-  print
+  print,
 } from "@times-components-native/jest-serializer";
 
 addSerializers(
@@ -13,6 +13,6 @@ addSerializers(
     print,
     minimalNativeTransform,
     minimaliseTransform((value, key) => key !== "style"),
-    flattenStyleTransform
-  )
+    flattenStyleTransform,
+  ),
 );

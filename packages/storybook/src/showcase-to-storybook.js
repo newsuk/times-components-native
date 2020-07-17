@@ -4,19 +4,21 @@ import { Platform } from "react-native";
 
 React.Fragment = ({ children }) => children;
 React.Fragment.propTypes = {
-  children: PropTypes.node.isRequired
+  children: PropTypes.node.isRequired,
 };
 React.Fragment.displayName = "React.Fragment";
 
 // eslint-disable-next-line react/prop-types
-export const StrictWrapper = ({ children }) => (<StrictMode>{children}</StrictMode>);
+export const StrictWrapper = ({ children }) => (
+  <StrictMode>{children}</StrictMode>
+);
 
 const addStories = (
   builder,
   knobs,
   actions,
   [child, ...children],
-  strictMode = true
+  strictMode = true,
 ) => {
   if (!child) {
     return;
@@ -25,11 +27,12 @@ const addStories = (
   if (child.type === "story") {
     const args = [knobs, actions];
 
-    builder.add(child.name, () => strictMode ? (
+    builder.add(child.name, () =>
+      strictMode ? (
         <StrictWrapper>{child.component(...args)}</StrictWrapper>
       ) : (
         child.component(...args)
-      )
+      ),
     );
   }
 
@@ -48,14 +51,14 @@ export const isCorrectPlatform = ({ platform }) =>
 const converter = (storiesOf, knobs, actions) => (
   module,
   { name, children = [] } = {},
-  strictMode
+  strictMode,
 ) =>
   addStories(
     storiesOf(name, module),
     knobs,
     actions,
     children.filter(isCorrectPlatform),
-    strictMode
+    strictMode,
   );
 
 export default converter;

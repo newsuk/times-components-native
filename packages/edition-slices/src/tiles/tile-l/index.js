@@ -22,7 +22,7 @@ const TileL = ({ onPress, tile, breakpoint = editionBreakpoints.small }) => {
 TileL.propTypes = {
   onPress: PropTypes.func.isRequired,
   tile: PropTypes.shape({}).isRequired,
-  breakpoint: PropTypes.string
+  breakpoint: PropTypes.string,
 };
 
 export default withTileTracking(TileL);

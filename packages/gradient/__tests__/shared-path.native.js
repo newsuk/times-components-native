@@ -1,14 +1,14 @@
 import TestRenderer from "react-test-renderer";
 import {
   addSerializers,
-  minimalise
+  minimalise,
 } from "@times-components-native/jest-serializer";
 import shared from "./shared.base";
 
 export default () => {
   addSerializers(
     expect,
-    minimalise((value, key) => key !== "d" && key !== "transform")
+    minimalise((value, key) => key !== "d" && key !== "transform"),
   );
 
   shared(TestRenderer.create);

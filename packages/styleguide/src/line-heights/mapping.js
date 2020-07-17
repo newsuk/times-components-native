@@ -11,21 +11,21 @@ const mapping = ({ scale }) => {
         body: {
           ...mappingBase.body,
           bodyMobile: Math.round(fontSizes.bodyMobile * 1.44),
-          secondary: Math.round(fontSizes.secondary * 1.44)
+          secondary: Math.round(fontSizes.secondary * 1.44),
         },
         supporting: {
           button: 17,
           keyFactsTitle: 20,
-          link: 16
+          link: 16,
         },
         headline: {
           ...mappingBase.headline,
-          headline: 36
+          headline: 36,
         },
         headlineRegular: {
           ...mappingBase.headlineRegular,
-          smallestHeadline: 22
-        }
+          smallestHeadline: 22,
+        },
       };
     case scales.xlarge:
       return {
@@ -33,38 +33,38 @@ const mapping = ({ scale }) => {
         body: {
           ...mappingBase.body,
           bodyMobile: Math.round(fontSizes.bodyMobile * 1.44),
-          secondary: Math.round(fontSizes.secondary * 1.44)
+          secondary: Math.round(fontSizes.secondary * 1.44),
         },
         supporting: {
           button: 18,
           keyFactsTitle: 22,
-          link: 17
+          link: 17,
         },
         headline: {
           ...mappingBase.headline,
-          headline: 36
+          headline: 36,
         },
         headlineRegular: {
           ...mappingBase.headlineRegular,
-          smallestHeadline: 22
-        }
+          smallestHeadline: 22,
+        },
       };
     default:
       return {
         ...mappingBase,
         body: {
           ...mappingBase.body,
-          bodyMobile: Math.round(fontSizes.bodyMobile * 1.44)
+          bodyMobile: Math.round(fontSizes.bodyMobile * 1.44),
         },
         headline: {
           ...mappingBase.headline,
           headline: 36,
-          infoTitle: 20
+          infoTitle: 20,
         },
         headlineRegular: {
           ...mappingBase.headlineRegular,
-          smallestHeadline: 22
-        }
+          smallestHeadline: 22,
+        },
       };
   }
 };

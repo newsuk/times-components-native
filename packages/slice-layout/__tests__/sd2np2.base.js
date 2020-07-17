@@ -4,7 +4,7 @@ import { editionBreakpoints } from "@times-components-native/styleguide";
 import createItem from "./utils";
 import { SecondaryTwoNoPicAndTwoSlice } from "../src/slice-layout";
 
-export default renderComponent => {
+export default (renderComponent) => {
   const tests = [
     {
       name: "secondary two no pic and two - small",
@@ -16,11 +16,11 @@ export default renderComponent => {
             secondary2={createItem("secondary-2")}
             support1={createItem("support-1")}
             support2={createItem("support-2")}
-          />
+          />,
         );
 
         expect(output).toMatchSnapshot();
-      }
+      },
     },
     {
       name: "secondary two no pic and two - medium",
@@ -32,11 +32,11 @@ export default renderComponent => {
             secondary2={createItem("secondary-2")}
             support1={createItem("support-1")}
             support2={createItem("support-2")}
-          />
+          />,
         );
 
         expect(output).toMatchSnapshot();
-      }
+      },
     },
     {
       name: "secondary two no pic and two - wide",
@@ -48,11 +48,11 @@ export default renderComponent => {
             secondary2={createItem("secondary-2")}
             support1={createItem("support-1")}
             support2={createItem("support-2")}
-          />
+          />,
         );
 
         expect(output).toMatchSnapshot();
-      }
+      },
     },
     {
       name: "secondary two no pic and two - huge",
@@ -64,12 +64,12 @@ export default renderComponent => {
             secondary2={createItem("secondary-2")}
             support1={createItem("support-1")}
             support2={createItem("support-2")}
-          />
+          />,
         );
 
         expect(output).toMatchSnapshot();
-      }
-    }
+      },
+    },
   ];
 
   iterator(tests);

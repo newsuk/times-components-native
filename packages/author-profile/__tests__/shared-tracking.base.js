@@ -11,10 +11,10 @@ import author from "./fixtures";
 mockNativeModules();
 jest.mock("@times-components-native/provider", () =>
   // eslint-disable-next-line global-require
-  require("./mock-provider")
+  require("./mock-provider"),
 );
 
-export default props => {
+export default (props) => {
   const tests = [
     {
       name: "a twitter link press raises the expected tracking event",
@@ -27,15 +27,15 @@ export default props => {
             {...props}
             isLoading={false}
             onTwitterLinkPress={onTwitterLinkPress}
-          />
+          />,
         );
 
         const articleList = testInstance.root.find(
-          node => node.type === "ArticleList"
+          (node) => node.type === "ArticleList",
         );
 
         const ArticleListHeader = authorProfileTrackingContext(
-          articleList.props.articleListHeader.type
+          articleList.props.articleListHeader.type,
         );
 
         const articleListHeader = TestRenderer.create(
@@ -45,18 +45,18 @@ export default props => {
             author={author}
             page={5}
             pageSize={10}
-          />
+          />,
         );
 
         const twitterLink = articleListHeader.root.find(
-          node => node.props.testID === "twitterLink"
+          (node) => node.props.testID === "twitterLink",
         );
 
         twitterLink.props.onPress("event");
 
         expect(analyticsStream.mock.calls).toMatchSnapshot();
-      }
-    }
+      },
+    },
   ];
 
   jest.useFakeTimers();

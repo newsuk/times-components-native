@@ -4,8 +4,8 @@ import PropTypes from "prop-types";
 import { ItemRowSeparator } from "../shared";
 
 const ListVerticalLayout = ({ style, tiles }) => {
-  const ids = tiles.map(
-    (tile, index) => (tile.props.tile ? tile.props.tile.article.id : index)
+  const ids = tiles.map((tile, index) =>
+    tile.props.tile ? tile.props.tile.article.id : index,
   );
   const listKey = ids.join("");
   return (
@@ -16,7 +16,7 @@ const ListVerticalLayout = ({ style, tiles }) => {
       windowSize={3}
       listKey={listKey}
       initialNumToRender={5}
-      keyExtractor={item => item.props.tileName}
+      keyExtractor={(item) => item.props.tileName}
       renderItem={({ item, index }) => (
         <View key={`${item.props.tileName}`}>
           {item}
@@ -29,11 +29,11 @@ const ListVerticalLayout = ({ style, tiles }) => {
 
 ListVerticalLayout.propTypes = {
   style: PropTypes.shape({}),
-  tiles: PropTypes.arrayOf(PropTypes.node).isRequired
+  tiles: PropTypes.arrayOf(PropTypes.node).isRequired,
 };
 
 ListVerticalLayout.defaultProps = {
-  style: {}
+  style: {},
 };
 
 export default ListVerticalLayout;

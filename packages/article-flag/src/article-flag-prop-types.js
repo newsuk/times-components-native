@@ -9,25 +9,25 @@ const articleFlagPropTypes = {
         alpha: PropTypes.number,
         blue: PropTypes.number,
         green: PropTypes.number,
-        red: PropTypes.number
-      })
-    })
-  ])
+        red: PropTypes.number,
+      }),
+    }),
+  ]),
 };
 
 const articleFlagsPropTypes = {
   flags: PropTypes.arrayOf(
     PropTypes.shape({
       expiryTime: PropTypes.string,
-      type: PropTypes.string
-    })
+      type: PropTypes.string,
+    }),
   ),
   longRead: PropTypes.bool,
-  withContainer: PropTypes.bool
+  withContainer: PropTypes.bool,
 };
 
 const articleFlagDefaultProps = {
-  color: colours.functional.primary
+  color: colours.functional.primary,
 };
 
 export { articleFlagPropTypes, articleFlagsPropTypes, articleFlagDefaultProps };

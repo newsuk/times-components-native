@@ -20,11 +20,11 @@ const HeaderStandfirst = ({ hasFlags, standfirst }) => {
 
 HeaderStandfirst.propTypes = {
   hasFlags: PropTypes.bool.isRequired,
-  standfirst: PropTypes.string
+  standfirst: PropTypes.string,
 };
 
 HeaderStandfirst.defaultProps = {
-  standfirst: null
+  standfirst: null,
 };
 
 export default HeaderStandfirst;

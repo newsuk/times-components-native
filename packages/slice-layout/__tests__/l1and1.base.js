@@ -4,7 +4,7 @@ import { editionBreakpoints } from "@times-components-native/styleguide";
 import createItem from "./utils";
 import { LeadOneAndOneSlice } from "../src/slice-layout";
 
-export default renderComponent => {
+export default (renderComponent) => {
   const tests = [
     {
       name: "lead one and one - small",
@@ -13,11 +13,11 @@ export default renderComponent => {
           <LeadOneAndOneSlice
             lead={createItem("lead")}
             support={createItem("support")}
-          />
+          />,
         );
 
         expect(output).toMatchSnapshot();
-      }
+      },
     },
     {
       name: "lead one and one - medium",
@@ -27,11 +27,11 @@ export default renderComponent => {
             breakpoint={editionBreakpoints.medium}
             lead={createItem("lead")}
             support={createItem("support")}
-          />
+          />,
         );
 
         expect(output).toMatchSnapshot();
-      }
+      },
     },
     {
       name: "lead one and one - wide",
@@ -41,11 +41,11 @@ export default renderComponent => {
             breakpoint={editionBreakpoints.wide}
             lead={createItem("lead")}
             support={createItem("support")}
-          />
+          />,
         );
 
         expect(output).toMatchSnapshot();
-      }
+      },
     },
     {
       name: "lead one and one - huge",
@@ -55,12 +55,12 @@ export default renderComponent => {
             breakpoint={editionBreakpoints.huge}
             lead={createItem("lead")}
             support={createItem("support")}
-          />
+          />,
         );
 
         expect(output).toMatchSnapshot();
-      }
-    }
+      },
+    },
   ];
 
   iterator(tests);

@@ -9,7 +9,7 @@ const ResponsiveSlice = ({
   renderSmall,
   renderMedium,
   renderWide,
-  renderHuge
+  renderHuge,
 }) => (
   <ResponsiveContext.Consumer>
     {({ editionBreakpoint }) => {
@@ -46,12 +46,12 @@ ResponsiveSlice.propTypes = {
   renderSmall: PropTypes.func.isRequired,
   renderMedium: PropTypes.func.isRequired,
   renderWide: PropTypes.func,
-  renderHuge: PropTypes.func
+  renderHuge: PropTypes.func,
 };
 
 ResponsiveSlice.defaultProps = {
   renderWide: null,
-  renderHuge: null
+  renderHuge: null,
 };
 
 export default ResponsiveSlice;

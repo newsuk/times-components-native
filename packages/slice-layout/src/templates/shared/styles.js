@@ -5,13 +5,13 @@ const styles = {
     borderColor: colours.functional.keyline,
     borderRightWidth: 1,
     borderStyle: "solid",
-    marginVertical: spacing(2)
+    marginVertical: spacing(2),
   },
   itemRowSeparator: {
     borderBottomWidth: 1,
     borderColor: colours.functional.keyline,
-    borderStyle: "solid"
-  }
+    borderStyle: "solid",
+  },
 };
 
 export default styles;

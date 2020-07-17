@@ -5,8 +5,8 @@ const articleHeaderPropTypes = {
   flags: PropTypes.arrayOf(
     PropTypes.shape({
       expiryTime: PropTypes.string,
-      type: PropTypes.string
-    })
+      type: PropTypes.string,
+    }),
   ),
   hasVideo: PropTypes.bool,
   headline: PropTypes.string.isRequired,
@@ -14,7 +14,7 @@ const articleHeaderPropTypes = {
   longRead: PropTypes.bool,
   publicationName: PropTypes.string.isRequired,
   publishedTime: PropTypes.string.isRequired,
-  standfirst: PropTypes.string
+  standfirst: PropTypes.string,
 };
 
 const articleHeaderDefaultProps = {
@@ -22,7 +22,7 @@ const articleHeaderDefaultProps = {
   hasVideo: false,
   label: null,
   longRead: false,
-  standfirst: null
+  standfirst: null,
 };
 
 export { articleHeaderPropTypes, articleHeaderDefaultProps };

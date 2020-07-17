@@ -8,7 +8,7 @@ import {
   TileLink,
   TileSummary,
   TileImage,
-  withTileTracking
+  withTileTracking,
 } from "../shared";
 import stylesFactory from "./styles";
 import PositionedTileStar from "../shared/positioned-tile-star";
@@ -56,7 +56,7 @@ const TileG = ({ onPress, tile, breakpoint = editionBreakpoints.small }) => {
 TileG.propTypes = {
   onPress: PropTypes.func.isRequired,
   tile: PropTypes.shape({}).isRequired,
-  breakpoint: PropTypes.string
+  breakpoint: PropTypes.string,
 };
 
 export default withTileTracking(TileG);

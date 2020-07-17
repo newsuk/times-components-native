@@ -7,7 +7,7 @@ import {
   flattenStyleTransform,
   minimaliseTransform,
   minimalNativeTransform,
-  print
+  print,
 } from "@times-components-native/jest-serializer";
 import { iterator } from "@times-components-native/test-utils";
 import Gradient from "../src/gradient";
@@ -19,8 +19,8 @@ export default () => {
       print,
       flattenStyleTransform,
       minimalNativeTransform,
-      minimaliseTransform((value, key) => key !== "style")
-    )
+      minimaliseTransform((value, key) => key !== "style"),
+    ),
   );
 
   const tests = [
@@ -31,13 +31,13 @@ export default () => {
           <Gradient
             style={{
               height: 200,
-              width: 200
+              width: 200,
             }}
-          />
+          />,
         );
 
         expect(testInstance).toMatchSnapshot();
-      }
+      },
     },
     {
       name: "gradient using array prop styles",
@@ -46,25 +46,25 @@ export default () => {
           <Gradient
             style={[
               {
-                height: 300
+                height: 300,
               },
               {
-                width: 400
-              }
+                width: 400,
+              },
             ]}
-          />
+          />,
         );
 
         expect(testInstance).toMatchSnapshot();
-      }
+      },
     },
     {
       name: "gradient using stylesheets",
       test() {
         const styles = StyleSheet.create({
           container: {
-            margin: 10
-          }
+            margin: 10,
+          },
         });
 
         const testInstance = TestRenderer.create(
@@ -72,18 +72,18 @@ export default () => {
             style={[
               styles.container,
               {
-                height: 200
+                height: 200,
               },
               {
-                width: 200
-              }
+                width: 200,
+              },
             ]}
-          />
+          />,
         );
 
         expect(testInstance).toMatchSnapshot();
-      }
-    }
+      },
+    },
   ];
 
   iterator(tests);

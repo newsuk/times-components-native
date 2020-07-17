@@ -6,7 +6,7 @@ describe("the replace prop serializer should", () => {
     addSerializers(
       expect,
       enzymeRootSerializer(),
-      replaceProp((value, key) => (key === "test1" ? "somethingElse" : value))
+      replaceProp((value, key) => (key === "test1" ? "somethingElse" : value)),
     );
 
     shared();

@@ -11,11 +11,11 @@ describe("The minimal serializer should", () => {
     it("not remove styles", () => {
       const { colored, padded } = StyleSheet.create({
         colored: {
-          color: "red"
+          color: "red",
         },
         padded: {
-          padding: 1
-        }
+          padding: 1,
+        },
       });
 
       const component = <Text style={[colored, padded]} />;

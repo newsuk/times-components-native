@@ -7,12 +7,12 @@ const styles = StyleSheet.create({
   description: {
     ...sharedStyles.description,
     maxWidth: tabletWidth,
-    paddingBottom: spacing(8)
+    paddingBottom: spacing(8),
   },
   name: {
     ...sharedStyles.name,
-    paddingBottom: spacing(5)
-  }
+    paddingBottom: spacing(5),
+  },
 });
 
 export default styles;

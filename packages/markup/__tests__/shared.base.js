@@ -2,7 +2,7 @@ import React from "react";
 import { View } from "react-native";
 import { iterator } from "@times-components-native/test-utils";
 import renderTrees, {
-  renderTree
+  renderTree,
 } from "@times-components-native/markup-forest";
 import coreRenderers from "../src/markup";
 import paragraph from "../fixtures/paragraph.json";
@@ -20,7 +20,7 @@ import subscriptWithFallback from "../fixtures/subscript-fallback.json";
 import superscript from "../fixtures/superscript.json";
 import superscriptWithFallback from "../fixtures/superscript-fallback.json";
 
-export default renderComponent => {
+export default (renderComponent) => {
   const tests = [
     {
       name: "block",
@@ -28,7 +28,7 @@ export default renderComponent => {
         const output = renderComponent(renderTree(block, coreRenderers));
 
         expect(output).toMatchSnapshot();
-      }
+      },
     },
     {
       name: "bold",
@@ -36,7 +36,7 @@ export default renderComponent => {
         const output = renderComponent(renderTree(bold, coreRenderers));
 
         expect(output).toMatchSnapshot();
-      }
+      },
     },
     {
       name: "break",
@@ -44,7 +44,7 @@ export default renderComponent => {
         const output = renderComponent(renderTree(lineBreak, coreRenderers));
 
         expect(output).toMatchSnapshot();
-      }
+      },
     },
     {
       name: "emphasis",
@@ -52,17 +52,17 @@ export default renderComponent => {
         const output = renderComponent(renderTree(emphasis, coreRenderers));
 
         expect(output).toMatchSnapshot();
-      }
+      },
     },
     {
       name: "image tag",
       test: () => {
         const output = renderComponent(
-          <View>{renderTrees(image, coreRenderers)}</View>
+          <View>{renderTrees(image, coreRenderers)}</View>,
         );
 
         expect(output).toMatchSnapshot();
-      }
+      },
     },
     {
       name: "inline",
@@ -70,7 +70,7 @@ export default renderComponent => {
         const output = renderComponent(renderTree(inline, coreRenderers));
 
         expect(output).toMatchSnapshot();
-      }
+      },
     },
     {
       name: "italic",
@@ -78,7 +78,7 @@ export default renderComponent => {
         const output = renderComponent(renderTree(italic, coreRenderers));
 
         expect(output).toMatchSnapshot();
-      }
+      },
     },
     {
       name: "paragraph",
@@ -86,7 +86,7 @@ export default renderComponent => {
         const output = renderComponent(renderTree(paragraph, coreRenderers));
 
         expect(output).toMatchSnapshot();
-      }
+      },
     },
     {
       name: "strong",
@@ -94,7 +94,7 @@ export default renderComponent => {
         const output = renderComponent(renderTree(strong, coreRenderers));
 
         expect(output).toMatchSnapshot();
-      }
+      },
     },
     {
       name: "subscript",
@@ -102,17 +102,17 @@ export default renderComponent => {
         const output = renderComponent(renderTree(subscript, coreRenderers));
 
         expect(output).toMatchSnapshot();
-      }
+      },
     },
     {
       name: "subscript with fallback",
       test: () => {
         const output = renderComponent(
-          renderTree(subscriptWithFallback, coreRenderers)
+          renderTree(subscriptWithFallback, coreRenderers),
         );
 
         expect(output).toMatchSnapshot();
-      }
+      },
     },
     {
       name: "superscript",
@@ -120,28 +120,28 @@ export default renderComponent => {
         const output = renderComponent(renderTree(superscript, coreRenderers));
 
         expect(output).toMatchSnapshot();
-      }
+      },
     },
     {
       name: "superscript with fallback",
       test: () => {
         const output = renderComponent(
-          renderTree(superscriptWithFallback, coreRenderers)
+          renderTree(superscriptWithFallback, coreRenderers),
         );
 
         expect(output).toMatchSnapshot();
-      }
+      },
     },
     {
       name: "does not render a script tag",
       test: () => {
         const output = renderComponent(
-          <View>{renderTrees(script, coreRenderers)}</View>
+          <View>{renderTrees(script, coreRenderers)}</View>,
         );
 
         expect(output).toMatchSnapshot();
-      }
-    }
+      },
+    },
   ];
 
   iterator(tests);

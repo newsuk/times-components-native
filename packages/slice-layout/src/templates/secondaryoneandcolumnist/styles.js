@@ -1,70 +1,70 @@
 import {
   editionBreakpoints,
-  spacing
+  spacing,
 } from "@times-components-native/styleguide";
 
 const sharedStyles = {
   container: {
     flex: 1,
-    flexDirection: "row"
+    flexDirection: "row",
   },
   colSeparator: {
-    marginVertical: spacing(3)
+    marginVertical: spacing(3),
   },
   secondaryContainer: {
-    paddingVertical: spacing(1)
-  }
+    paddingVertical: spacing(1),
+  },
 };
 
 const mediumBreakpointStyles = {
   ...sharedStyles,
   container: {
     ...sharedStyles.container,
-    marginHorizontal: spacing(4)
+    marginHorizontal: spacing(4),
   },
   columnistContainer: {
-    width: "75%"
+    width: "75%",
   },
   secondaryContainer: {
     ...sharedStyles.secondaryContainer,
-    width: "25%"
-  }
+    width: "25%",
+  },
 };
 
 const wideBreakpointStyles = {
   ...sharedStyles,
   container: {
     ...sharedStyles.container,
-    marginHorizontal: spacing(2)
+    marginHorizontal: spacing(2),
   },
   columnistContainer: {
-    width: "66.7%"
+    width: "66.7%",
   },
   secondaryContainer: {
     ...sharedStyles.secondaryContainer,
-    width: "33.3%"
-  }
+    width: "33.3%",
+  },
 };
 
 const hugeBreakpointStyles = {
   ...sharedStyles,
   container: {
     ...sharedStyles.container,
-    marginHorizontal: spacing(2)
+    marginHorizontal: spacing(2),
   },
   columnistContainer: {
-    width: "58%"
+    width: "58%",
   },
   secondaryContainer: {
     ...sharedStyles.secondaryContainer,
-    width: "42%"
-  }
+    width: "42%",
+  },
 };
 
 const stylesResolver = {
   [editionBreakpoints.medium]: mediumBreakpointStyles,
   [editionBreakpoints.wide]: wideBreakpointStyles,
-  [editionBreakpoints.huge]: hugeBreakpointStyles
+  [editionBreakpoints.huge]: hugeBreakpointStyles,
 };
 
-export default breakpoint => stylesResolver[breakpoint] || {};
+export default (breakpoint) => stylesResolver[breakpoint] || {};

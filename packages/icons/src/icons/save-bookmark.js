@@ -10,7 +10,7 @@ const IconSaveBookmark = ({
   opacity,
   strokeColour,
   title = "Save to My Articles",
-  width
+  width,
 }) => (
   <Svg
     aria-label="icon-save-bookmark"
@@ -19,14 +19,14 @@ const IconSaveBookmark = ({
     {...clean({
       height,
       title,
-      width: width || height
+      width: width || height,
     })}
   >
     <Path
       {...clean({
         fill: fillColour,
         opacity,
-        stroke: strokeColour
+        stroke: strokeColour,
       })}
       d="M1 0h10a1 1 0 0 1 1 1v15l-5.98-4.466L0 16V1a1 1 0 0 1 1-1z"
     />
@@ -38,7 +38,7 @@ IconSaveBookmark.propTypes = propTypes;
 IconSaveBookmark.defaultProps = {
   fillColour: colours.functional.secondary,
   height: 16,
-  width: 12
+  width: 12,
 };
 
 export default IconSaveBookmark;

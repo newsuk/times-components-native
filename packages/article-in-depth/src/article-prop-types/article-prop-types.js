@@ -1,7 +1,7 @@
 import PropTypes from "prop-types";
 import {
   articlePagePropTypes,
-  articlePageDefaultProps
+  articlePageDefaultProps,
 } from "./article-prop-types.base";
 
 const articlePropTypes = {
@@ -19,12 +19,12 @@ const articlePropTypes = {
   onTwitterLinkPress: PropTypes.func.isRequired,
   onVideoPress: PropTypes.func.isRequired,
   onViewed: PropTypes.func.isRequired,
-  refetch: PropTypes.func.isRequired
+  refetch: PropTypes.func.isRequired,
 };
 
 const articleDefaultProps = {
   ...articlePageDefaultProps,
-  interactiveConfig: {}
+  interactiveConfig: {},
 };
 
 export { articlePropTypes, articleDefaultProps };

@@ -4,19 +4,13 @@ import {
   addSerializers,
   compose,
   print,
-  minimalNativeTransform
+  minimalNativeTransform,
 } from "@times-components-native/jest-serializer";
 import { iterator } from "@times-components-native/test-utils";
 import shared from "./shared.base";
 import ArticleLeadAsset from "../src/article-lead-asset";
 
-addSerializers(
-  expect,
-  compose(
-    print,
-    minimalNativeTransform
-  )
-);
+addSerializers(expect, compose(print, minimalNativeTransform));
 
 export default () =>
   iterator([
@@ -29,10 +23,10 @@ export default () =>
             getImageCrop={() => null}
             leadAsset={{}}
             width={600}
-          />
+          />,
         );
 
         expect(testRenderer).toMatchSnapshot();
-      }
-    }
+      },
+    },
   ]);

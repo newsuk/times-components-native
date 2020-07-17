@@ -6,16 +6,16 @@ const styles = StyleSheet.create({
   ...sharedStyles,
   biography: {
     ...sharedStyles.biography,
-    maxWidth: tabletWidth
+    maxWidth: tabletWidth,
   },
   twitter: {
     ...sharedStyles.twitter,
-    marginTop: spacing(1)
+    marginTop: spacing(1),
   },
   twitterIcon: {
     ...sharedStyles.twitterIcon,
-    marginTop: spacing(0.25)
-  }
+    marginTop: spacing(0.25),
+  },
 });
 
 export default styles;

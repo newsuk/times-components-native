@@ -1,1 +1,1 @@
-export { default } from './src/key-facts';
+export { default } from "./src/key-facts";

@@ -18,5 +18,5 @@ export {
   topic,
   topicArticles,
   topicArticlesPTV,
-  unsaveBookmarks
-} from './src/provider-queries';
+  unsaveBookmarks,
+} from "./src/provider-queries";

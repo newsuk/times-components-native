@@ -1,13 +1,13 @@
 import { withTrackingContext } from "@times-components-native/tracking";
 
-export default Component =>
+export default (Component) =>
   withTrackingContext(Component, {
     getAttrs: ({ index, length, slice }) => ({
       sliceDepth: {
         itemNumber: index + 1,
-        total: length
+        total: length,
       },
-      sliceName: slice.name
+      sliceName: slice.name,
     }),
-    trackingObjectName: "Slice"
+    trackingObjectName: "Slice",
   });

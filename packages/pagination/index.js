@@ -1,1 +1,1 @@
-export { withPageState } from './src/pagination';
+export { withPageState } from "./src/pagination";

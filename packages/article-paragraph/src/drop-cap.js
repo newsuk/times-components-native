@@ -5,7 +5,7 @@ import { ResponsiveContext } from "@times-components-native/responsive";
 import styleFactory from "./styles";
 import { propTypes, defaultProps } from "./drop-cap-prop-types";
 
-const DropCap = props => {
+const DropCap = (props) => {
   const { colour, dropCap, font, scale } = props;
   if (!dropCap) {
     return null;
@@ -19,8 +19,8 @@ const DropCap = props => {
           style: {
             ...withoutColor,
             lineHeight: stylesThemedAndScaled.fontSize,
-            textDecorationLine: "none"
-          }
+            textDecorationLine: "none",
+          },
         });
 
   return (
@@ -29,8 +29,8 @@ const DropCap = props => {
       style={[
         stylesThemedAndScaled.dropCapTextElement,
         {
-          color: colour
-        }
+          color: colour,
+        },
       ]}
     >
       {value}
@@ -41,12 +41,12 @@ const DropCap = props => {
 DropCap.propTypes = {
   ...propTypes,
   dropCap: PropTypes.string.isRequired,
-  scale: PropTypes.string.isRequired
+  scale: PropTypes.string.isRequired,
 };
 
 DropCap.defaultProps = defaultProps;
 
-export default props => (
+export default (props) => (
   <ResponsiveContext.Consumer>
     {({ isTablet }) => <DropCap {...props} isTablet={isTablet} />}
   </ResponsiveContext.Consumer>

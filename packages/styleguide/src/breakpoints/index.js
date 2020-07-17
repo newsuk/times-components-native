@@ -3,12 +3,12 @@ import widths, {
   editionBreakpoints,
   editionMaxWidth,
   editionBreakpointWidths,
-  sliceContentMaxWidth
+  sliceContentMaxWidth,
 } from "./index.shared";
 
 const config = (NativeModules || {}).ReactConfig;
 
-const getEditionBreakpoint = width => {
+const getEditionBreakpoint = (width) => {
   if (config && config.breakpoint) {
     return config.breakpoint;
   }
@@ -29,7 +29,7 @@ export {
   editionMaxWidth,
   editionBreakpointWidths,
   sliceContentMaxWidth,
-  getEditionBreakpoint
+  getEditionBreakpoint,
 };
 
 export default widths;

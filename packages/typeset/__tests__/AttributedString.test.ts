@@ -1,20 +1,20 @@
-import { AttributedString, AttributeTag } from '../src';
+import { AttributedString, AttributeTag } from "../src";
 
 const tag: AttributeTag = {
   settings: {
-    fontFamily: 'TimesDigitalW04',
+    fontFamily: "TimesDigitalW04",
     fontSize: 18,
-    fontStyle: 'normal',
-    fontWeight: 'normal',
-    lineHeight: 30
+    fontStyle: "normal",
+    fontWeight: "normal",
+    lineHeight: 30,
   },
-  tag: 'FONT'
+  tag: "FONT",
 };
 
 export const makeAttribute = (
   attrs: AttributeTag[][],
   start: number,
-  length: number
+  length: number,
 ): AttributeTag[][] => {
   for (let i = start; i < length; i++) {
     if (attrs[i]) {
@@ -26,50 +26,50 @@ export const makeAttribute = (
   return attrs;
 };
 
-test('AttributedString#constructor(string, [])', () => {
+test("AttributedString#constructor(string, [])", () => {
   expect(() => {
-    const newString = new AttributedString('foobar', []);
+    const newString = new AttributedString("foobar", []);
     return newString;
   }).not.toThrow();
 });
 
-test('AttributedString#charAt(number)', () => {
-  const newString = new AttributedString('foobar', []);
-  expect(newString.charAt(0)).toEqual('f');
-  expect(newString.charAt(3)).toEqual('b');
+test("AttributedString#charAt(number)", () => {
+  const newString = new AttributedString("foobar", []);
+  expect(newString.charAt(0)).toEqual("f");
+  expect(newString.charAt(3)).toEqual("b");
 });
 
-test('AttributedString.join([Self, Self])', () => {
-  const newString1 = new AttributedString('foo', []);
-  const newString2 = new AttributedString('bar', makeAttribute([], 0, 3));
+test("AttributedString.join([Self, Self])", () => {
+  const newString1 = new AttributedString("foo", []);
+  const newString2 = new AttributedString("bar", makeAttribute([], 0, 3));
   const joined = AttributedString.join([newString1, newString2]);
-  expect(joined.string).toEqual('foobar');
+  expect(joined.string).toEqual("foobar");
 });
 
-test('AttributedString.join([])', () => {
+test("AttributedString.join([])", () => {
   const joined = AttributedString.join([]);
-  expect(joined.string).toEqual('');
+  expect(joined.string).toEqual("");
 });
 
-test('AttributedString.slice(number)', () => {
+test("AttributedString.slice(number)", () => {
   const attrs: AttributeTag[][] = [];
   makeAttribute(attrs, 0, 1);
   makeAttribute(attrs, 0, 3);
   makeAttribute(attrs, 0, 7);
   makeAttribute(attrs, 7, 3);
-  const newString = new AttributedString('foobar', attrs);
+  const newString = new AttributedString("foobar", attrs);
   const slice = newString.slice(2);
-  expect(slice.string).toEqual('obar');
+  expect(slice.string).toEqual("obar");
   expect(slice.attributes.length).toEqual(4);
 });
 
-test('AttributedString.split()', () => {
+test("AttributedString.split()", () => {
   const attrs: AttributeTag[][] = [];
   makeAttribute(attrs, 0, 1);
   makeAttribute(attrs, 0, 3);
   makeAttribute(attrs, 0, 8);
   makeAttribute(attrs, 7, 3);
-  const newString = new AttributedString('foo bar', attrs);
+  const newString = new AttributedString("foo bar", attrs);
   const split = newString.split();
   expect(split.length).toEqual(4);
   expect(split).toMatchInlineSnapshot(`
@@ -230,10 +230,10 @@ test('AttributedString.split()', () => {
   `);
 });
 
-test('AttributedString.splitByDifferenceInAttributes() should return flat attributed string when attributes length is the same', () => {
+test("AttributedString.splitByDifferenceInAttributes() should return flat attributed string when attributes length is the same", () => {
   const attrs: AttributeTag[][] = [];
   makeAttribute(attrs, 0, 7);
-  const newString = new AttributedString('foo bar', attrs);
+  const newString = new AttributedString("foo bar", attrs);
   const split = newString.splitByDifferenceInAttributes();
 
   expect(split.length).toEqual(1);
@@ -334,11 +334,11 @@ test('AttributedString.splitByDifferenceInAttributes() should return flat attrib
   `);
 });
 
-test('AttributedString.splitByDifferenceInAttributes() should return attributed string with more than one element when string has nested attributes styling', () => {
+test("AttributedString.splitByDifferenceInAttributes() should return attributed string with more than one element when string has nested attributes styling", () => {
   const attrs: AttributeTag[][] = [];
   makeAttribute(attrs, 0, 7);
   makeAttribute(attrs, 4, 7);
-  const newString = new AttributedString('foo bar', attrs);
+  const newString = new AttributedString("foo bar", attrs);
   const split = newString.splitByDifferenceInAttributes();
 
   expect(split.length).toEqual(2);

@@ -8,50 +8,50 @@ export default StyleSheet.create({
     borderRadius: 2.5,
     height: 5,
     top: 2,
-    width: 5
+    width: 5,
   },
   bulletContainer: {
     flexDirection: "row",
     marginBottom: spacing(4),
     paddingLeft: 1,
-    width: "100%"
+    width: "100%",
   },
   container: {
     marginHorizontal: spacing(2),
-    marginVertical: spacing(1)
+    marginVertical: spacing(1),
   },
   containerTablet: {
     alignSelf: "center",
     flexDirection: "row",
     marginHorizontal: 0,
     marginVertical: spacing(2),
-    width: "80.8%"
+    width: "80.8%",
   },
   link: {
-    color: colours.functional.action
+    color: colours.functional.action,
   },
   text: {
     color: colours.functional.primary,
     ...fontFactory({
       font: "body",
-      fontSize: "secondary"
+      fontSize: "secondary",
     }),
     marginTop: -8,
     paddingLeft: spacing(3),
-    width: "95%"
+    width: "95%",
   },
   title: {
     fontFamily: fonts.supporting,
     fontSize: fontSizes.keyFactsTitle,
     fontWeight: "400",
     letterSpacing: 1.2,
-    marginBottom: spacing(4)
+    marginBottom: spacing(4),
   },
   titleTablet: {
     paddingRight: spacing(4),
-    width: "20%"
+    width: "20%",
   },
   wrapper: {
-    flex: 1
-  }
+    flex: 1,
+  },
 });

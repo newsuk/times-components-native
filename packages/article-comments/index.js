@@ -1,1 +1,1 @@
-export { default } from './src/article-comments';
+export { default } from "./src/article-comments";

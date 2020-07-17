@@ -4,14 +4,14 @@ jest.mock("@times-components-native/ad", () => require("./ad-mock"));
 jest.mock("@times-components-native/article-extras", () => "ArticleExtras");
 jest.mock("@times-components-native/article-byline", () => ({
   ArticleBylineWithLinks: "ArticleBylineWithLinks",
-  hasBylineData: () => true
+  hasBylineData: () => true,
 }));
 jest.mock("@times-components-native/article-error", () => "ArticleError");
 jest.mock("@times-components-native/article-flag", () => ({
   ExclusiveArticleFlag: "ExclusiveArticleFlag",
   NewArticleFlag: "NewArticleFlag",
   SponsoredArticleFlag: "SponsoredArticleFlag",
-  UpdatedArticleFlag: "UpdatedArticleFlag"
+  UpdatedArticleFlag: "UpdatedArticleFlag",
 }));
 jest.mock("@times-components-native/article-image", () => "ArticleImage");
 jest.mock("@times-components-native/article-label", () => "ArticleLabel");
@@ -19,11 +19,11 @@ jest.mock("@times-components-native/article-label", () => "ArticleLabel");
 jest.mock("@times-components-native/article-topics", () => "ArticleTopics");
 jest.mock("@times-components-native/button", () => "Button");
 jest.mock("@times-components-native/image", () => ({
-  ModalImage: "ModalImage"
+  ModalImage: "ModalImage",
 }));
 jest.mock(
   "@times-components-native/interactive-wrapper",
-  () => "InteractiveWrapper"
+  () => "InteractiveWrapper",
 );
 jest.mock("@times-components-native/pull-quote", () => "PullQuote");
 jest.mock("@times-components-native/related-articles", () => "RelatedArticles");

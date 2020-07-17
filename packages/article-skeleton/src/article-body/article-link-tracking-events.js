@@ -1,6 +1,6 @@
 import { withTrackEvents } from "@times-components-native/tracking";
 
-export default Component =>
+export default (Component) =>
   withTrackEvents(Component, {
     analyticsEvents: [
       {
@@ -8,9 +8,9 @@ export default Component =>
         eventName: "onPress",
         getAttrs: ({ linkType, url }) => ({
           linkType,
-          linkUrl: url
+          linkUrl: url,
         }),
-        trackingName: "ArticleLink"
-      }
-    ]
+        trackingName: "ArticleLink",
+      },
+    ],
   });

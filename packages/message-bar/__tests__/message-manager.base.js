@@ -15,7 +15,7 @@ const TestConsumer = () => (
   </Context.Consumer>
 );
 
-export default animate => [
+export default (animate) => [
   {
     name: "renders correctly",
     test: async () => {
@@ -24,13 +24,13 @@ export default animate => [
           <View>
             <Text>test child content</Text>
           </View>
-        </MessageManager>
+        </MessageManager>,
       );
 
       await delay(500);
 
       expect(testInstance.toJSON()).toMatchSnapshot();
-    }
+    },
   },
   {
     name: "children can show a message",
@@ -38,7 +38,7 @@ export default animate => [
       const testInstance = TestRenderer.create(
         <MessageManager animate={animate} delay={1} scale={scales.medium}>
           <TestConsumer />
-        </MessageManager>
+        </MessageManager>,
       );
 
       const touchable = testInstance.root.findByType(TouchableOpacity);
@@ -46,7 +46,7 @@ export default animate => [
       touchable.props.onPress();
 
       expect(testInstance.root.instance.state.message).toEqual("foo");
-    }
+    },
   },
   {
     name: "removes the message when the bar says it closed",
@@ -54,7 +54,7 @@ export default animate => [
       const testInstance = TestRenderer.create(
         <MessageManager animate={animate} delay={100} scale={scales.medium}>
           <TestConsumer />
-        </MessageManager>
+        </MessageManager>,
       );
 
       const touchable = testInstance.root.findByType(TouchableOpacity);
@@ -68,6 +68,6 @@ export default animate => [
       close.props.onPress();
 
       expect(testInstance.root.instance.state.message).toEqual(null);
-    }
-  }
+    },
+  },
 ];

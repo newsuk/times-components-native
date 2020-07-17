@@ -18,7 +18,7 @@ const PullQuoteTwitterLink = ({ onTwitterLinkPress, twitter }) => {
       <IconTwitter height={10} width={11} />
       <TextLink
         key={url}
-        onPress={e => onTwitterLinkPress(e, { twitter, url })}
+        onPress={(e) => onTwitterLinkPress(e, { twitter, url })}
         style={styles.link}
         target="_blank"
         url={url}

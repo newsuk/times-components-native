@@ -14,7 +14,7 @@ const SecondaryFourSlice = ({
   secondary1,
   secondary2,
   secondary3,
-  secondary4
+  secondary4,
 }) => {
   const styles = styleFactory(breakpoint);
   const containerStyles =
@@ -29,7 +29,7 @@ const SecondaryFourSlice = ({
           containerStyle={styles.itemContainer}
           tiles={[
             { style: styles.item, tile: secondary1 },
-            { style: styles.item, tile: secondary2 }
+            { style: styles.item, tile: secondary2 },
           ]}
         />
         <ItemRowSeparator />
@@ -37,7 +37,7 @@ const SecondaryFourSlice = ({
           containerStyle={styles.itemContainer}
           tiles={[
             { style: styles.item, tile: secondary3 },
-            { style: styles.item, tile: secondary4 }
+            { style: styles.item, tile: secondary4 },
           ]}
         />
       </Fragment>
@@ -50,7 +50,7 @@ const SecondaryFourSlice = ({
         containerStyle={styles.columnsContainer}
         tiles={[
           { style: styles.columnItem, tile: secondary1 },
-          { style: styles.columnItem, tile: secondary2 }
+          { style: styles.columnItem, tile: secondary2 },
         ]}
         colSeparatorStyle={styles.colSeparatorStyle}
       />
@@ -69,7 +69,7 @@ SecondaryFourSlice.propTypes = {
   secondary1: PropTypes.node.isRequired,
   secondary2: PropTypes.node.isRequired,
   secondary3: PropTypes.node.isRequired,
-  secondary4: PropTypes.node.isRequired
+  secondary4: PropTypes.node.isRequired,
 };
 
 export default SecondaryFourSlice;

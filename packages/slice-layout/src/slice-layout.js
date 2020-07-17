@@ -36,5 +36,5 @@ export {
   Leaders,
   ListTwoAndSixNoPic,
   ItemColSeparator,
-  ItemRowSeparator
+  ItemRowSeparator,
 };

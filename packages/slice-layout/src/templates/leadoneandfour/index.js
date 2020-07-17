@@ -12,7 +12,7 @@ const leadOneAndFourSlice = ({
   support1,
   support2,
   support3,
-  support4
+  support4,
 }) => {
   const styles = stylesFactory(breakpoint);
   const { container, leadContainer, supportContainer } = styles;
@@ -44,11 +44,11 @@ leadOneAndFourSlice.propTypes = {
   support1: PropTypes.node.isRequired,
   support2: PropTypes.node.isRequired,
   support3: PropTypes.node.isRequired,
-  support4: PropTypes.node.isRequired
+  support4: PropTypes.node.isRequired,
 };
 
 leadOneAndFourSlice.defaultProps = {
-  breakpoint: editionBreakpoints.small
+  breakpoint: editionBreakpoints.small,
 };
 
 export default leadOneAndFourSlice;

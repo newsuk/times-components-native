@@ -1,7 +1,7 @@
-export const capitalise = title =>
+export const capitalise = (title) =>
   title.charAt(0).toUpperCase() + title.slice(1);
 
-export const ratioTextToFloat = s => {
+export const ratioTextToFloat = (s) => {
   if (!s || !s.length) {
     return 1;
   }

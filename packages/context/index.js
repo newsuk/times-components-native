@@ -1,1 +1,6 @@
-export { default, defaults, SectionContext, ContextProviderWithDefaults } from './src/context';
+export {
+  default,
+  defaults,
+  SectionContext,
+  ContextProviderWithDefaults,
+} from "./src/context";

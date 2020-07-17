@@ -24,11 +24,11 @@ TileO.propTypes = {
   isDarkStar: PropTypes.bool,
   onPress: PropTypes.func.isRequired,
   tile: PropTypes.shape({}).isRequired,
-  breakpoint: PropTypes.string.isRequired
+  breakpoint: PropTypes.string.isRequired,
 };
 
 TileO.defaultProps = {
-  isDarkStar: true
+  isDarkStar: true,
 };
 
 export default withTileTracking(TileO);

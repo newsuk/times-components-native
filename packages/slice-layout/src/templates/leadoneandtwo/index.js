@@ -8,7 +8,7 @@ const LeadOneAndTwoSlice = ({ renderLead, renderSupport1, renderSupport2 }) => {
   const support1 = renderSupport1(supportConfig);
   const support2 = renderSupport2(supportConfig);
   const supports = [support1, support2];
-  const filteredSupports = supports.filter(support => support);
+  const filteredSupports = supports.filter((support) => support);
 
   return (
     <View style={styles.container}>
@@ -40,7 +40,7 @@ const LeadOneAndTwoSlice = ({ renderLead, renderSupport1, renderSupport2 }) => {
 LeadOneAndTwoSlice.propTypes = {
   renderLead: PropTypes.func.isRequired,
   renderSupport1: PropTypes.func.isRequired,
-  renderSupport2: PropTypes.func.isRequired
+  renderSupport2: PropTypes.func.isRequired,
 };
 
 export default LeadOneAndTwoSlice;

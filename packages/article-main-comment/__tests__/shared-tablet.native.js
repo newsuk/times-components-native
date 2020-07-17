@@ -6,7 +6,7 @@ import {
   flattenStyleTransform,
   print,
   minimaliseTransform,
-  minimalNativeTransform
+  minimalNativeTransform,
 } from "@times-components-native/jest-serializer";
 import "./mocks.native";
 import Responsive from "@times-components-native/responsive";
@@ -24,8 +24,8 @@ export default () => {
       print,
       minimalNativeTransform,
       minimaliseTransform((value, key) => key !== "style"),
-      flattenStyleTransform
-    )
+      flattenStyleTransform,
+    ),
   );
 
   const tests = [
@@ -37,12 +37,12 @@ export default () => {
         const testInstance = TestRenderer.create(
           <Responsive>
             <ArticleMainComment {...sharedProps} article={articleFixture()} />
-          </Responsive>
+          </Responsive>,
         );
 
         expect(testInstance).toMatchSnapshot();
-      }
-    }
+      },
+    },
   ];
 
   iterator(tests);
