@@ -7,7 +7,7 @@ import {
   getImage,
   filterPuzzles,
   createPuzzleData,
-  composeSliceBuilders
+  composeSliceBuilders,
 } from "../../src/utils";
 
 describe("splitPuzzlesBySlices", () => {
@@ -59,7 +59,7 @@ describe("composeSliceBuilders", () => {
       { id: "i", name: "OtherSlice" },
       { id: "j", name: "OtherSlice" },
       { id: "k", name: "OtherSlice" },
-      { id: "l", name: "DailyUniversalRegister" }
+      { id: "l", name: "DailyUniversalRegister" },
     ];
 
     const buildData = composeSliceBuilders(builderOne, builderTwo);
@@ -83,7 +83,7 @@ describe("composeSliceBuilders", () => {
       { id: "i", name: "OtherSlice" },
       { id: "j", name: "OtherSlice" },
       { id: "k", name: "OtherSlice" },
-      { id: "l", name: "DailyUniversalRegister" }
+      { id: "l", name: "DailyUniversalRegister" },
     ];
 
     const buildData = composeSliceBuilders(builderOne, builderTwo);
@@ -106,7 +106,7 @@ describe("buildSliceData", () => {
       { id: "i", name: "OtherSlice" },
       { id: "j", name: "OtherSlice" },
       { id: "k", name: "OtherSlice" },
-      { id: "l", name: "DailyUniversalRegister" }
+      { id: "l", name: "DailyUniversalRegister" },
     ];
     const newData = buildSliceData(originalData);
 
@@ -126,7 +126,7 @@ describe("buildSliceData", () => {
       { id: "i", name: "OtherSlice" },
       { id: "j", name: "OtherSlice" },
       { id: "k", name: "OtherSlice" },
-      { id: "l", name: "DailyUniversalRegister" }
+      { id: "l", name: "DailyUniversalRegister" },
     ];
     const json = JSON.stringify(originalData);
     buildSliceData(originalData);
@@ -148,7 +148,7 @@ describe("consecutiveItemsFlagger", () => {
       { id: "i", name: "OtherSlice" },
       { id: "j", name: "SecondaryFourSlice" },
       { id: "k", name: "DailyUniversalRegister" },
-      { id: "l", name: "SecondaryFourSlice" }
+      { id: "l", name: "SecondaryFourSlice" },
     ];
 
     const newData = consecutiveItemsFlagger(originalData);
@@ -169,7 +169,7 @@ describe("consecutiveItemsFlagger", () => {
       { id: "i", name: "OtherSlice" },
       { id: "j", name: "SecondaryFourSlice" },
       { id: "k", name: "DailyUniversalRegister" },
-      { id: "l", name: "DailyUniversalRegister" }
+      { id: "l", name: "DailyUniversalRegister" },
     ];
 
     const flaggedData = [
@@ -184,7 +184,7 @@ describe("consecutiveItemsFlagger", () => {
       { id: "i", name: "OtherSlice" },
       { id: "j", name: "SecondaryFourSlice" },
       { id: "k", name: "DailyUniversalRegister" },
-      { isConsecutive: true, id: "l", name: "DailyUniversalRegister" }
+      { isConsecutive: true, id: "l", name: "DailyUniversalRegister" },
     ];
 
     const newData = consecutiveItemsFlagger(originalData);
@@ -205,7 +205,7 @@ describe("consecutiveItemsFlagger", () => {
       { id: "i", name: "OtherSlice" },
       { id: "j", name: "SecondaryFourSlice" },
       { id: "k", name: "DailyUniversalRegister" },
-      { id: "l", name: "SecondaryFourSlice" }
+      { id: "l", name: "SecondaryFourSlice" },
     ];
     const json = JSON.stringify(originalData);
     consecutiveItemsFlagger(originalData);
@@ -227,15 +227,15 @@ describe("getImage", () => {
       crops: [
         {
           ratio: "35:43",
-          url: exampleUrl
-        }
+          url: exampleUrl,
+        },
       ],
-      id: "dummy-cover-id"
+      id: "dummy-cover-id",
     };
 
     expect(getImage(cover)).toEqual({
       ratio: 35 / 43,
-      url: exampleUrl
+      url: exampleUrl,
     });
   });
 });

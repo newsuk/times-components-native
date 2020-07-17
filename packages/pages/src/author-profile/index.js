@@ -8,7 +8,7 @@ import withNativeProvider from "../with-native-provider";
 const { track } = NativeModules.ReactAnalytics;
 const {
   onArticlePress,
-  onTwitterLinkPress
+  onTwitterLinkPress,
 } = NativeModules.AuthorProfileEvents;
 
 const AuthorProfilePage = ({ authorSlug }) => {
@@ -28,7 +28,7 @@ const AuthorProfilePage = ({ authorSlug }) => {
         pageSize,
         onNext,
         onPrev,
-        refetch
+        refetch,
       }) => (
         <AuthorProfile
           analyticsStream={track}
@@ -45,13 +45,13 @@ const AuthorProfilePage = ({ authorSlug }) => {
           slug={authorSlug}
         />
       )}
-    </AuthorProfileProvider>
+    </AuthorProfileProvider>,
   );
   return <AuthorProfileView />;
 };
 
 AuthorProfilePage.propTypes = {
-  authorSlug: PropTypes.string.isRequired
+  authorSlug: PropTypes.string.isRequired,
 };
 
 export default AuthorProfilePage;

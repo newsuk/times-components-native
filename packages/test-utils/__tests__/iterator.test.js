@@ -1,9 +1,9 @@
 import React from "react";
 import { iterator } from "../index";
-import { Text }from 'react-native'
+import { Text } from "react-native";
 import renderer from "react-test-renderer";
 
-const exampleTest = ordinal => {
+const exampleTest = (ordinal) => {
   const TextComponent = <Text>This is the {ordinal} test</Text>;
   const wrapper = renderer.create(TextComponent);
   expect(wrapper).toMatchSnapshot();
@@ -12,16 +12,16 @@ const exampleTest = ordinal => {
 const exampleTests = [
   {
     name: "test example one",
-    test: () => exampleTest("first")
+    test: () => exampleTest("first"),
   },
   {
     name: "text example two",
-    test: () => exampleTest("second")
+    test: () => exampleTest("second"),
   },
   {
     name: "ALL TEST NAMES SHOULD BE LOWERCASE",
-    test: () => exampleTest("third")
-  }
+    test: () => exampleTest("third"),
+  },
 ];
 
 iterator(exampleTests);

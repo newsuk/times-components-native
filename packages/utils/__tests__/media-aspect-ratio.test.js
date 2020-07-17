@@ -7,7 +7,7 @@ import {
   flattenStyleTransform,
   minimaliseTransform,
   minimalNativeTransform,
-  print
+  print,
 } from "@times-components-native/jest-serializer";
 import AspectRatioContainer from "../src/media-aspect-ratio";
 
@@ -17,8 +17,8 @@ addSerializers(
     print,
     minimalNativeTransform,
     minimaliseTransform((value, key) => key !== "style"),
-    flattenStyleTransform
-  )
+    flattenStyleTransform,
+  ),
 );
 
 describe("AspectRatioContainer should", () => {
@@ -26,7 +26,7 @@ describe("AspectRatioContainer should", () => {
     const testInstance = TestRenderer.create(
       <AspectRatioContainer aspectRatio="16:9">
         <Text>Here are some children</Text>
-      </AspectRatioContainer>
+      </AspectRatioContainer>,
     );
     expect(testInstance).toMatchSnapshot();
   });

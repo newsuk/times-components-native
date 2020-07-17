@@ -9,7 +9,7 @@ import { ResponsiveContext } from "@times-components-native/responsive";
 import {
   getHeadline,
   getLeadAsset,
-  getStandardTemplateCrop
+  getStandardTemplateCrop,
 } from "@times-components-native/utils";
 import { tabletWidth } from "@times-components-native/styleguide";
 import Caption from "@times-components-native/caption";
@@ -19,7 +19,7 @@ import ArticleMeta from "./article-meta/article-meta";
 import stylesFactory from "./styles/article-body";
 import {
   articlePropTypes,
-  articleDefaultProps
+  articleDefaultProps,
 } from "./article-prop-types/article-prop-types";
 
 class ArticlePage extends Component {
@@ -40,7 +40,7 @@ class ArticlePage extends Component {
       publicationName,
       publishedTime,
       shortHeadline,
-      standfirst
+      standfirst,
     } = article;
     const styles = stylesFactory();
 
@@ -90,7 +90,7 @@ class ArticlePage extends Component {
               style={
                 isTablet && [
                   styles.articleMainContentRow,
-                  styles.articleMainContentRowTablet
+                  styles.articleMainContentRowTablet,
                 ]
               }
             >
@@ -130,7 +130,7 @@ class ArticlePage extends Component {
       onVideoPress,
       onViewed,
       receiveChildList,
-      referralUrl
+      referralUrl,
     } = this.props;
 
     return (
@@ -182,13 +182,13 @@ ArticlePage.propTypes = {
   onTwitterLinkPress: PropTypes.func.isRequired,
   onVideoPress: PropTypes.func.isRequired,
   referralUrl: PropTypes.string,
-  refetch: PropTypes.func.isRequired
+  refetch: PropTypes.func.isRequired,
 };
 ArticlePage.defaultProps = {
   ...articleDefaultProps,
   interactiveConfig: {},
   onImagePress: null,
-  referralUrl: null
+  referralUrl: null,
 };
 
 export default ArticlePage;

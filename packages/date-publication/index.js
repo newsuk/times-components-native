@@ -1,1 +1,1 @@
-export { default } from './src/date-publication';
+export { default } from "./src/date-publication";

@@ -4,7 +4,7 @@ import { getStringBounds, setAdPosition } from "../src/body-utils";
 
 FontStorage.registerFont(
   "TimesDigitalW04",
-  () => require("@times-components-native/test-utils").TestFont
+  () => require("@times-components-native/test-utils").TestFont,
 );
 
 export default () => {
@@ -14,7 +14,7 @@ export default () => {
       fontStyle: "",
       fontWeight: "",
       fontSize: 90,
-      color: "black"
+      color: "black",
     };
     expect(getStringBounds(fontSettings, '"A')).toMatchSnapshot();
   });
@@ -26,7 +26,7 @@ export default () => {
     { name: "paragraph", children: [] },
     { name: "paragraph", children: [] },
     { name: "ad", children: [] },
-    { name: "paragraph", children: [] }
+    { name: "paragraph", children: [] },
   ];
 
   it("setAdPosition should return content untouched if no adPosition specified", () => {
@@ -43,7 +43,7 @@ export default () => {
   });
 
   it("setAdPosition should return content untouched if no ad block present in content", () => {
-    const contentWithoutAd = content.filter(item => item.name !== "ad");
+    const contentWithoutAd = content.filter((item) => item.name !== "ad");
     expect(setAdPosition(6, contentWithoutAd)).toEqual(contentWithoutAd);
   });
 
@@ -55,7 +55,7 @@ export default () => {
       { name: "paragraph", children: [] },
       { name: "paragraph", children: [] },
       { name: "paragraph", children: [] },
-      { name: "paragraph", children: [] }
+      { name: "paragraph", children: [] },
     ]);
   });
 };

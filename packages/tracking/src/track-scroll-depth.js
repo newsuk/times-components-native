@@ -6,7 +6,7 @@ import resolveAttrs from "./resolve-attrs";
 
 export default (
   WrappedComponent,
-  { trackingName, getAttrs = () => ({}) } = {}
+  { trackingName, getAttrs = () => ({}) } = {},
 ) => {
   const componentName = getDisplayName(WrappedComponent);
 
@@ -28,10 +28,10 @@ export default (
           scrollDepth: {
             itemNumber: childProps.index + 1,
             name: childProps.name,
-            total: childProps.total
-          }
+            total: childProps.total,
+          },
         },
-        component: `${trackingName || componentName}Child`
+        component: `${trackingName || componentName}Child`,
       });
     }
 
@@ -49,13 +49,13 @@ export default (
       this.viewed.add(elementId);
 
       const index = this.childList.findIndex(
-        item => item.elementId === elementId
+        (item) => item.elementId === elementId,
       );
 
       this.onChildView({
         ...childData,
         index,
-        total: this.childList.length
+        total: this.childList.length,
       });
     }
 

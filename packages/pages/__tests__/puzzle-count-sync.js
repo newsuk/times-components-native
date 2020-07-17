@@ -7,7 +7,7 @@ import SectionPage from "../src/section/section";
 
 jest.mock("@times-components-native/section", () => {
   const { SectionContext } = require.requireActual(
-    "@times-components-native/context"
+    "@times-components-native/context",
   );
 
   return () => (
@@ -20,7 +20,7 @@ jest.mock("@times-components-native/section", () => {
 export default () => {
   it("puzzle count uses initial prop and gets updated with the bridge", async () => {
     const {
-      SectionEvents: { getOpenedPuzzleCount }
+      SectionEvents: { getOpenedPuzzleCount },
     } = NativeModules;
 
     const initialCount = 1;
@@ -32,7 +32,7 @@ export default () => {
       <SectionPage
         recentlyOpenedPuzzleCount={initialCount}
         section={{ name: "PuzzleSection", slices: [] }}
-      />
+      />,
     );
 
     // Initial Count

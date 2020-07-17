@@ -8,7 +8,7 @@ import registerLogo from "../../../assets/daily-universal-register.png";
 const images = {
   birthdays: cake,
   logo: registerLogo,
-  "nature notes": leaves
+  "nature notes": leaves,
 };
 
 const Logo = ({ type, style }) => (
@@ -17,7 +17,7 @@ const Logo = ({ type, style }) => (
 
 Logo.propTypes = {
   style: PropTypes.shape({}).isRequired,
-  type: PropTypes.string.isRequired
+  type: PropTypes.string.isRequired,
 };
 
 export default Logo;

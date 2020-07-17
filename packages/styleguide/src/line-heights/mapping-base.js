@@ -4,20 +4,20 @@ const mapping = {
     puffLink: 15,
     secondary: 27,
     teaser: 20,
-    tertiary: 26
+    tertiary: 26,
   },
   bodyRegular: {
     infoSubText: 23,
     infoTitle: 30,
-    pageComponentHeadline: 25
+    pageComponentHeadline: 25,
   },
   bodyRegularSmallCaps: {
     cardMetaMobile: 12,
-    meta: 14
+    meta: 14,
   },
   cultureMagazine: {
     headline: 35,
-    pageHeadline: 42
+    pageHeadline: 42,
   },
   headline: {
     articleHeadline: 45,
@@ -32,20 +32,20 @@ const mapping = {
     heading2Mobile: 26,
     heading3Mobile: 26,
     heading4Mobile: 26,
-    heading5Mobile: 26
+    heading5Mobile: 26,
   },
   headlineRegular: {
     pageComponentHeadline: 30,
     smallestHeadline: 26,
-    strapline: 24
+    strapline: 24,
   },
   stMagazine: {
     headline: 35,
-    pageHeadline: 42
+    pageHeadline: 42,
   },
   styleMagazine: {
     headline: 35,
-    pageHeadline: 42
+    pageHeadline: 42,
   },
   supporting: {
     button: 16,
@@ -56,8 +56,8 @@ const mapping = {
     link: 13,
     meta: 14,
     pagingMeta: 15,
-    tertiary: 17
-  }
+    tertiary: 17,
+  },
 };
 
 export default mapping;

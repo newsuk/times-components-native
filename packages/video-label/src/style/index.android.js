@@ -6,14 +6,14 @@ const styles = StyleSheet.create({
   iconContainer: {
     ...sharedStyles.iconContainer,
     marginBottom: 0,
-    paddingBottom: 0
+    paddingBottom: 0,
   },
   title: {
     ...sharedStyles.title,
     lineHeight: 12,
     paddingTop: 0,
-    marginTop: 0
-  }
+    marginTop: 0,
+  },
 });
 
 export default styles;

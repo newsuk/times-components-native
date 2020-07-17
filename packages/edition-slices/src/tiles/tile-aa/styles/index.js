@@ -1,24 +1,24 @@
 import {
   fonts,
   spacing,
-  globalSpacingStyles
+  globalSpacingStyles,
 } from "@times-components-native/styleguide";
 
 const styles = {
   container: {
     flex: 1,
     paddingVertical: spacing(3),
-    paddingHorizontal: spacing(2)
+    paddingHorizontal: spacing(2),
   },
   headline: {
     ...globalSpacingStyles.tabletHeadline,
     fontFamily: fonts.headline,
     fontSize: 20,
-    lineHeight: 20
+    lineHeight: 20,
   },
   summary: {
-    ...globalSpacingStyles.tabletTeaser
-  }
+    ...globalSpacingStyles.tabletTeaser,
+  },
 };
 
 export default styles;

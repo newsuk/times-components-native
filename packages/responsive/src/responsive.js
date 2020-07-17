@@ -2,12 +2,12 @@ import React, { Component } from "react";
 import PropTypes from "prop-types";
 import {
   getEditionBreakpoint,
-  tabletWidth
+  tabletWidth,
 } from "@times-components-native/styleguide";
 import {
   getDimensions,
   addDimensionsListener,
-  removeDimensionsListener
+  removeDimensionsListener,
 } from "@times-components-native/utils";
 import { NativeModules } from "react-native";
 import ResponsiveContext from "./context";
@@ -20,7 +20,7 @@ const calculateState = (width, fontScale) => ({
   isTablet:
     (config && config.breakpoint && config.breakpoint !== "small") ||
     width >= tabletWidth,
-  screenWidth: width
+  screenWidth: width,
 });
 
 class Responsive extends Component {
@@ -59,11 +59,11 @@ class Responsive extends Component {
 }
 
 Responsive.propTypes = {
-  children: PropTypes.node
+  children: PropTypes.node,
 };
 
 Responsive.defaultProps = {
-  children: null
+  children: null,
 };
 
 export default Responsive;

@@ -2,14 +2,14 @@ import React, { Fragment } from "react";
 import { Image } from "react-native";
 import appendParamsToQuery from "../utils";
 
-const LazyLoadingImage = props => {
+const LazyLoadingImage = (props) => {
   const {
     source,
     relativeWidth,
     relativeHeight,
     relativeHorizontalOffset,
     relativeVerticalOffset,
-    fill
+    fill,
   } = props;
 
   const queryObject = {
@@ -17,10 +17,10 @@ const LazyLoadingImage = props => {
     rel_height: relativeHeight,
     rel_width: relativeWidth,
     rel_horizontal_offset: relativeHorizontalOffset,
-    rel_vertical_offset: relativeVerticalOffset
+    rel_vertical_offset: relativeVerticalOffset,
   };
 
-  Object.keys(queryObject).forEach(k => {
+  Object.keys(queryObject).forEach((k) => {
     if (queryObject[k] === undefined) {
       delete queryObject[k];
     }

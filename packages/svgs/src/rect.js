@@ -13,7 +13,7 @@ const Rect = ({
   width,
   height,
   fillOpacity,
-  strokeWidth
+  strokeWidth,
 }) => {
   const d = new Path()
     .moveTo(x, y)
@@ -41,14 +41,14 @@ Rect.propTypes = {
   strokeWidth: PropTypes.string,
   width: PropTypes.string.isRequired,
   x: PropTypes.string.isRequired,
-  y: PropTypes.string.isRequired
+  y: PropTypes.string.isRequired,
 };
 
 Rect.defaultProps = {
   fill: null,
   fillOpacity: null,
   stroke: null,
-  strokeWidth: null
+  strokeWidth: null,
 };
 
 export default Rect;

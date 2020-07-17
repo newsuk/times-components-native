@@ -14,7 +14,7 @@ class SecondaryOneAndColumnist extends Component {
   renderSmall(breakpoint) {
     const {
       onPress,
-      slice: { columnist, secondary }
+      slice: { columnist, secondary },
     } = this.props;
     return (
       <SecondaryOneAndColumnistSlice
@@ -32,7 +32,7 @@ class SecondaryOneAndColumnist extends Component {
   renderMedium(breakpoint) {
     const {
       onPress,
-      slice: { columnist, secondary }
+      slice: { columnist, secondary },
     } = this.props;
     return (
       <SecondaryOneAndColumnistSlice
@@ -72,8 +72,8 @@ SecondaryOneAndColumnist.propTypes = {
   onPress: PropTypes.func.isRequired,
   slice: PropTypes.shape({
     columnist: PropTypes.shape({}).isRequired,
-    secondary: PropTypes.shape({}).isRequired
-  }).isRequired
+    secondary: PropTypes.shape({}).isRequired,
+  }).isRequired,
 };
 
 export default SecondaryOneAndColumnist;

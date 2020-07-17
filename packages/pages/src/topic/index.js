@@ -24,13 +24,13 @@ const TopicPage = ({ topicSlug }) => {
           topic={topic}
         />
       )}
-    </TopicProvider>
+    </TopicProvider>,
   );
   return <TopicPageView />;
 };
 
 TopicPage.propTypes = {
-  topicSlug: PropTypes.string.isRequired
+  topicSlug: PropTypes.string.isRequired,
 };
 
 export default TopicPage;

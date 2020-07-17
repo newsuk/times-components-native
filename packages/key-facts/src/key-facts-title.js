@@ -12,7 +12,7 @@ const KeyFactsTitle = ({ color, fontStyle, title }) => (
           styles.title,
           isTablet && styles.titleTablet,
           { color },
-          fontStyle
+          fontStyle,
         ]}
       >
         {title.toUpperCase()}

@@ -5,7 +5,7 @@ import {
   TileLink,
   TileSummary,
   TileImage,
-  withTileTracking
+  withTileTracking,
 } from "../shared";
 import styles from "./styles";
 
@@ -17,7 +17,7 @@ const TileV = ({ onPress, tile }) => {
   }
 
   const {
-    article: { hasVideo }
+    article: { hasVideo },
   } = tile;
 
   return (
@@ -44,7 +44,7 @@ const TileV = ({ onPress, tile }) => {
 
 TileV.propTypes = {
   onPress: PropTypes.func.isRequired,
-  tile: PropTypes.shape({}).isRequired
+  tile: PropTypes.shape({}).isRequired,
 };
 
 export default withTileTracking(TileV);

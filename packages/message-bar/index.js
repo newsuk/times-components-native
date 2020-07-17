@@ -1,1 +1,1 @@
-export { MessageManager, MessageContext } from './src';
+export { MessageManager, MessageContext } from "./src";

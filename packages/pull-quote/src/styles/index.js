@@ -7,7 +7,7 @@ const styles = StyleSheet.create({
   // iOS Font hack
   caption: {
     ...sharedStyles.caption,
-    paddingTop: 4
+    paddingTop: 4,
   },
   container: {
     ...sharedStyles.container,
@@ -15,16 +15,16 @@ const styles = StyleSheet.create({
     paddingBottom: spacing(5),
     paddingLeft: spacing(2),
     paddingRight: spacing(2),
-    paddingTop: spacing(1)
+    paddingTop: spacing(1),
   },
   link: {
     ...sharedStyles.link,
-    paddingTop: 2
+    paddingTop: 2,
   },
   text: {
     ...sharedStyles.text,
-    paddingTop: 4
-  }
+    paddingTop: 4,
+  },
 });
 
 export default styles;

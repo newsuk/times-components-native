@@ -1,1 +1,5 @@
-export { withTrackEvents, withTrackingContext, withTrackScrollDepth } from './src/tracking';
+export {
+  withTrackEvents,
+  withTrackingContext,
+  withTrackScrollDepth,
+} from "./src/tracking";

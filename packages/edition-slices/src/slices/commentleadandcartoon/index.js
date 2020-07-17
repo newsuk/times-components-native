@@ -14,7 +14,7 @@ class CommentLeadAndCartoonSlice extends Component {
   renderSmall(editionBreakpoint) {
     const {
       onPress,
-      slice: { lead, cartoon }
+      slice: { lead, cartoon },
     } = this.props;
 
     return (
@@ -29,7 +29,7 @@ class CommentLeadAndCartoonSlice extends Component {
   renderMedium(editionBreakpoint) {
     const {
       onPress,
-      slice: { lead, cartoon }
+      slice: { lead, cartoon },
     } = this.props;
 
     return (
@@ -69,8 +69,8 @@ CommentLeadAndCartoonSlice.propTypes = {
   onPress: PropTypes.func.isRequired,
   slice: PropTypes.shape({
     cartoon: PropTypes.shape({}).isRequired,
-    lead: PropTypes.shape({}).isRequired
-  }).isRequired
+    lead: PropTypes.shape({}).isRequired,
+  }).isRequired,
 };
 
 export default CommentLeadAndCartoonSlice;

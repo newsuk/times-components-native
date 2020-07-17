@@ -1,1 +1,1 @@
-export { default } from './src/article-lead-asset';
+export { default } from "./src/article-lead-asset";

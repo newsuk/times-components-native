@@ -11,7 +11,7 @@ import Meta from "../article-meta/article-meta";
 import Standfirst from "../article-standfirst/article-standfirst";
 import {
   articleHeaderPropTypes,
-  articleHeaderDefaultProps
+  articleHeaderDefaultProps,
 } from "./article-header-prop-types";
 import styles from "../styles";
 
@@ -27,7 +27,7 @@ const ArticleHeader = ({
   onAuthorPress,
   publicationName,
   publishedTime,
-  standfirst
+  standfirst,
 }) => (
   <Context.Consumer>
     {({ theme: { headlineFont, headlineCase } }) => (
@@ -44,10 +44,10 @@ const ArticleHeader = ({
             {
               ...fontFactory({
                 font: headlineFont || "headline",
-                fontSize: isTablet ? "pageHeadline" : "headline"
-              })
+                fontSize: isTablet ? "pageHeadline" : "headline",
+              }),
             },
-            headlineCase ? { textTransform: headlineCase } : null
+            headlineCase ? { textTransform: headlineCase } : null,
           ]}
         >
           {headline}
@@ -69,7 +69,7 @@ const ArticleHeader = ({
 
 ArticleHeader.propTypes = {
   ...articleHeaderPropTypes,
-  onAuthorPress: PropTypes.func.isRequired
+  onAuthorPress: PropTypes.func.isRequired,
 };
 
 ArticleHeader.defaultProps = articleHeaderDefaultProps;

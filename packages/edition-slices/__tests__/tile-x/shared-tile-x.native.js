@@ -4,7 +4,7 @@ import {
   enzymeRenderedSerializer,
   flattenStyleTransform,
   minimalNativeTransform,
-  print
+  print,
 } from "@times-components-native/jest-serializer";
 import shared from "./shared-tile-x.base";
 
@@ -12,11 +12,7 @@ export default () => {
   addSerializers(
     expect,
     enzymeRenderedSerializer(),
-    compose(
-      print,
-      minimalNativeTransform,
-      flattenStyleTransform
-    )
+    compose(print, minimalNativeTransform, flattenStyleTransform),
   );
 
   shared();

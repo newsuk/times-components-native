@@ -8,7 +8,7 @@ export const calculateViewBox = ({ height, width }) => {
       marginLeft: 630,
       marginTop: -120,
       svgHeight: 50,
-      svgWidth: 1200
+      svgWidth: 1200,
     };
   }
 
@@ -17,7 +17,7 @@ export const calculateViewBox = ({ height, width }) => {
       marginLeft: 15,
       marginTop: 0,
       svgHeight: 250,
-      svgWidth: 269
+      svgWidth: 269,
     };
   }
 
@@ -25,11 +25,11 @@ export const calculateViewBox = ({ height, width }) => {
     marginLeft: 50,
     marginTop: 0,
     svgHeight: height,
-    svgWidth: width
+    svgWidth: width,
   };
 };
 
-export const calculateViewportVisible = height => {
+export const calculateViewportVisible = (height) => {
   const middle = height / 2;
   const middleOffset = 5;
   const minWidth = 10; // must be some width to render
@@ -46,23 +46,23 @@ export const calculateViewportVisible = height => {
     width: minWidth,
     height: minHeight,
     top: middle - middleOffset,
-    position: "absolute"
+    position: "absolute",
   };
 };
 
 const styles = {
   children: {
-    flex: 1
+    flex: 1,
   },
   container: {
     alignItems: "center",
-    flex: 1
+    flex: 1,
   },
   placeholderContainer: {
     alignItems: "center",
     flex: 1,
     justifyContent: "center",
-    minHeight: "auto" // Prevent flex shrinking it
+    minHeight: "auto", // Prevent flex shrinking it
   },
   placeholderText: {
     backgroundColor: colours.functional.backgroundPrimary,
@@ -72,14 +72,14 @@ const styles = {
     color: colours.functional.secondary,
     ...fontFactory({
       font: "body",
-      fontSize: "puffLink"
+      fontSize: "puffLink",
     }),
     letterSpacing: 1.5,
     paddingBottom: spacing(1),
     paddingLeft: spacing(2),
     paddingRight: spacing(2),
     paddingTop: spacing(1),
-    zIndex: 1
+    zIndex: 1,
   },
   placeholderWrapper: {
     alignItems: "center",
@@ -88,8 +88,8 @@ const styles = {
     borderStyle: "solid",
     borderWidth: 1,
     justifyContent: "center",
-    overflow: "hidden"
-  }
+    overflow: "hidden",
+  },
 };
 
 export default styles;

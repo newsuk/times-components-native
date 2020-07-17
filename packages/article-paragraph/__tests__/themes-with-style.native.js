@@ -4,7 +4,7 @@ import {
   minimalNativeTransform,
   minimaliseTransform,
   flattenStyleTransform,
-  print
+  print,
 } from "@times-components-native/jest-serializer";
 import { iterator } from "@times-components-native/test-utils";
 import tests from "./themes-with-style.base";
@@ -16,8 +16,8 @@ export default () => {
       print,
       minimalNativeTransform,
       flattenStyleTransform,
-      minimaliseTransform((value, key) => key !== "style")
-    )
+      minimaliseTransform((value, key) => key !== "style"),
+    ),
   );
 
   iterator(tests);

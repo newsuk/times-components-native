@@ -4,8 +4,8 @@ import { defaultProps, propTypes } from "./text-link-prop-types";
 
 const styles = StyleSheet.create({
   textLink: {
-    textDecorationLine: "underline"
-  }
+    textDecorationLine: "underline",
+  },
 });
 
 const TextLink = ({ children, onPress, style, target, url, ...props }) => {
@@ -14,7 +14,7 @@ const TextLink = ({ children, onPress, style, target, url, ...props }) => {
     accessibilityRole: "link",
     href: url,
     onPress,
-    style: [styles.textLink].concat(style)
+    style: [styles.textLink].concat(style),
   };
 
   return target ? (

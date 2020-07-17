@@ -7,8 +7,8 @@ export default {
       component: () => <ArticleError refetch={() => null} />,
       name: "Default",
       platform: "native",
-      type: "story"
-    }
+      type: "story",
+    },
   ],
-  name: "Primitives/Article Error"
+  name: "Primitives/Article Error",
 };

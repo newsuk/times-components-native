@@ -6,11 +6,11 @@ export default StyleSheet.create({
   ...baseStyles,
   container: {
     ...baseStyles.container,
-    marginTop: -spacing(4)
+    marginTop: -spacing(4),
   },
   containerAdditionalHeight: {
-    height: spacing(8)
-  }
+    height: spacing(8),
+  },
 });
 
 export { calculateViewBox, calculateViewportVisible } from "./index.shared";

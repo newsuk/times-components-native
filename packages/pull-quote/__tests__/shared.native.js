@@ -4,15 +4,15 @@ import {
   compose,
   minimaliseTransform,
   minimalNativeTransform,
-  print
+  print,
 } from "@times-components-native/jest-serializer";
 import shared from "./shared.base";
 
 jest.mock("@times-components-native/link", () => ({
-  TextLink: "TextLink"
+  TextLink: "TextLink",
 }));
 jest.mock("@times-components-native/icons", () => ({
-  IconTwitter: "IconTwitter"
+  IconTwitter: "IconTwitter",
 }));
 
 export default () => {
@@ -21,8 +21,8 @@ export default () => {
     compose(
       print,
       minimalNativeTransform,
-      minimaliseTransform((value, key) => key === "style")
-    )
+      minimaliseTransform((value, key) => key === "style"),
+    ),
   );
 
   shared(TestRenderer.create);

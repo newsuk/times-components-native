@@ -2,11 +2,11 @@ import get from "lodash.get";
 import { DateTime } from "luxon";
 import { withTrackingContext } from "@times-components-native/tracking";
 
-export default Component =>
+export default (Component) =>
   withTrackingContext(Component, {
     getAttrs: ({ data, pageSection, referralUrl = "" }) => {
       const published = DateTime.fromJSDate(
-        new Date(get(data, "publishedTime", ""))
+        new Date(get(data, "publishedTime", "")),
       );
       const current = DateTime.local();
       const diff = current.diff(published, "days");
@@ -15,19 +15,19 @@ export default Component =>
       return {
         articleId: get(data, "id", ""),
         article_topic_tags: data.topics
-          ? data.topics.map(topic => topic.slug)
+          ? data.topics.map((topic) => topic.slug)
           : [],
         bylines: get(
           data,
           "bylines[0].byline[0].children[0].attributes.value",
-          ""
+          "",
         ),
         headline: get(data, "headline", ""),
         label: get(data, "label", ""),
         pageName: `${get(data, "slug", "")}-${get(
           data,
           "shortIdentifier",
-          ""
+          "",
         )}`,
         edition_type: editionType,
         published_time: get(data, "publishedTime", ""),
@@ -36,8 +36,8 @@ export default Component =>
         parent_site: get(data, "publicationName", ""),
         referral_url: referralUrl || get(data, "referralUrl", ""),
         section: pageSection || get(data, "section", ""),
-        template: get(data, "template", "Default")
+        template: get(data, "template", "Default"),
       };
     },
-    trackingObjectName: "Article"
+    trackingObjectName: "Article",
   });

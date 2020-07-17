@@ -5,7 +5,7 @@ import hoistNonReactStatic from "hoist-non-react-statics";
 
 export const isOrientationLandscape = ({ width, height }) => width > height;
 
-export default function(WrappedComponent) {
+export default function (WrappedComponent) {
   class withOrientation extends Component {
     constructor() {
       super();

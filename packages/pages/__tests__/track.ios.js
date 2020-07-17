@@ -7,13 +7,13 @@ export default () => {
   it("article page view tracking calls onArticleLoaded and track", () => {
     const {
       ArticleEvents: { onArticleLoaded },
-      ReactAnalytics: { track }
+      ReactAnalytics: { track },
     } = NativeModules;
 
     trackArticle({
       action: "Viewed",
       attrs: { articleId: "dummy-article-id" },
-      object: "Article"
+      object: "Article",
     });
 
     expect(onArticleLoaded).toHaveBeenCalled();
@@ -23,13 +23,13 @@ export default () => {
   it("section page view tracking calls onSectionLoaded and track", () => {
     const {
       SectionEvents: { onSectionLoaded },
-      ReactAnalytics: { track }
+      ReactAnalytics: { track },
     } = NativeModules;
 
     trackSection({
       action: "Viewed",
       attrs: { sectionName: "dummy-section-name" },
-      object: "Section"
+      object: "Section",
     });
 
     expect(onSectionLoaded).toHaveBeenCalled();

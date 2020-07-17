@@ -11,14 +11,14 @@ import styleFactory from "./styles";
 function renderAst(ast) {
   return renderTrees(ast, {
     ...coreRenderers,
-    ...renderer
+    ...renderer,
   });
 }
 
 const TileS = ({
   tile,
   breakpoint = editionBreakpoints.small,
-  logo = null
+  logo = null,
 }) => {
   const styles = styleFactory(breakpoint);
   const headLineStyles =
@@ -33,10 +33,9 @@ const TileS = ({
         <Text style={headLineStyles}>{tile.title}</Text>
       </View>
       <Text style={styles.paragraph}>{renderAst(tile.content)}</Text>
-      {tile.byline &&
-        tile.byline.length > 0 && (
-          <Text style={styles.byline}>{renderAst(tile.byline)}</Text>
-        )}
+      {tile.byline && tile.byline.length > 0 && (
+        <Text style={styles.byline}>{renderAst(tile.byline)}</Text>
+      )}
     </View>
   );
 };
@@ -44,7 +43,7 @@ const TileS = ({
 TileS.propTypes = {
   tile: PropTypes.shape({}).isRequired,
   breakpoint: PropTypes.string,
-  logo: PropTypes.element
+  logo: PropTypes.element,
 };
 
 export default TileS;

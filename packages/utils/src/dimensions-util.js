@@ -3,7 +3,7 @@ import { Dimensions } from "react-native";
 export const getDimensions = (
   width = Dimensions.get("window").width,
   height = Dimensions.get("window").height,
-  fontScale = Dimensions.get("window").fontScale
+  fontScale = Dimensions.get("window").fontScale,
 ) => ({ width, height, fontScale });
 
 export const addDimensionsListener = (type, handler) => {

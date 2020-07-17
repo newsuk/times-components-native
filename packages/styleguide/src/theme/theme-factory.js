@@ -5,19 +5,19 @@ const sectionColourPicker = (section, template) => {
     indepth: {},
     magazinecomment: {
       ...sectionColours,
-      ...secondarySectionColours
+      ...secondarySectionColours,
     },
     magazinestandard: {
       ...sectionColours,
-      ...secondarySectionColours
+      ...secondarySectionColours,
     },
     maincomment: {
-      ...sectionColours
+      ...sectionColours,
     },
     mainstandard: {
-      ...sectionColours
+      ...sectionColours,
     },
-    takeoverpage: {}
+    takeoverpage: {},
   };
 
   return config[template][section];
@@ -31,7 +31,7 @@ const magazineFontPicker = (defaultFont, section, template) => {
     Style: "styleMagazine",
     "The Sunday Times Magazine": "stMagazine",
     thesundaytimesmagazine: "stMagazine",
-    "the sunday times magazine": "stMagazine"
+    "the sunday times magazine": "stMagazine",
   };
 
   const config = {
@@ -40,7 +40,7 @@ const magazineFontPicker = (defaultFont, section, template) => {
     magazinestandard: magazineSections,
     maincomment: {},
     mainstandard: {},
-    takeoverpage: {}
+    takeoverpage: {},
   };
 
   return config[template][section] || defaultFont;
@@ -62,6 +62,6 @@ export default (sectionParam, templateParam) => {
     headlineFont: magazineFontPicker("headline", section, template),
     pullQuoteFont: magazineFontPicker("headlineRegular", section, template),
     sectionColour: sectionColourPicker(section, template),
-    headlineCase: headlineCasePicker(section, template)
+    headlineCase: headlineCasePicker(section, template),
   };
 };

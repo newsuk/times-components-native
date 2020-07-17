@@ -1,7 +1,7 @@
 import styleguide, {
   scales,
   fonts,
-  tabletWidth
+  tabletWidth,
 } from "@times-components-native/styleguide";
 import { fontSize, margins } from "./drop-cap-sizes";
 
@@ -13,27 +13,27 @@ const sharedStyles = (dropCapFont = "dropCap", scale = scales.medium) => {
   return {
     articleMainContentRow: {
       paddingLeft: spacing(2),
-      paddingRight: spacing(2)
+      paddingRight: spacing(2),
     },
     articleMainContentRowTablet: {
       alignSelf: "center",
-      width: tabletWidth
+      width: tabletWidth,
     },
     articleTextElement: {
       ...fontFactory({
         font: "body",
-        fontSize: "bodyMobile"
+        fontSize: "bodyMobile",
       }),
       color: colours.functional.primary,
-      marginBottom: spacing(5)
+      marginBottom: spacing(5),
     },
     dropCapContainer: {
       flexDirection: "row",
-      flexWrap: "wrap"
+      flexWrap: "wrap",
     },
     dropCapContainerTablet: {
       alignSelf: "center",
-      width: tabletWidth
+      width: tabletWidth,
     },
     dropCapTextElement: {
       color: colours.functional.primary,
@@ -41,8 +41,8 @@ const sharedStyles = (dropCapFont = "dropCap", scale = scales.medium) => {
       fontSize: dropCapFontSize,
       marginBottom: dropCapMargins.bottom,
       marginRight: spacing(1),
-      marginTop: dropCapMargins.top
-    }
+      marginTop: dropCapMargins.top,
+    },
   };
 };
 

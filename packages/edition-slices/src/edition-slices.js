@@ -17,7 +17,7 @@ import {
   SecondaryOneSlice,
   SecondaryTwoAndTwoSlice,
   SecondaryTwoNoPicAndTwoSlice,
-  PuzzleSlice
+  PuzzleSlice,
 } from "./slices";
 
 const config = (NativeModules || {}).ReactConfig;
@@ -46,7 +46,7 @@ const sliceMap = {
   SecondaryTwoAndTwoSlice: SecondaryTwoAndTwoMapper,
   SecondaryTwoNoPicAndTwoSlice,
   StandardSlice,
-  TwoPicAndSixNoPicSlice: ListTwoAndSixNoPicSlice
+  TwoPicAndSixNoPicSlice: ListTwoAndSixNoPicSlice,
 };
 
 export default sliceMap;

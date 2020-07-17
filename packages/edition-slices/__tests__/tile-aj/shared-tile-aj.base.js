@@ -21,7 +21,7 @@ export default () => {
           onPress={fn}
           title={puzzle.title}
           url={puzzle.url}
-        />
+        />,
       );
 
       output.root.findByType(Link).props.onPress();

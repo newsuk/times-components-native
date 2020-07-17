@@ -4,7 +4,7 @@ import { View, Text, Dimensions, Platform } from "react-native";
 import styleguide, {
   colours,
   tabletWidth,
-  tabletRowPadding
+  tabletRowPadding,
 } from "@times-components-native/styleguide";
 import { AttributedString } from "@times-components-native/typeset";
 import { screenWidth } from "@times-components-native/utils";
@@ -35,7 +35,7 @@ export default ({
   dropcapsDisabled,
   dropCapFont = "dropCap",
   scale,
-  analyticsStream
+  analyticsStream,
 }) => {
   const styles = styleFactory(scale);
   const { fontFactory } = styleguide({ scale });
@@ -43,9 +43,9 @@ export default ({
   const defaultFont = {
     ...fontFactory({
       font: "body",
-      fontSize: "bodyMobile"
+      fontSize: "bodyMobile",
     }),
-    color: colours.functional.black
+    color: colours.functional.black,
   };
 
   const { fontScale } = Dimensions.get("window");
@@ -55,22 +55,22 @@ export default ({
   const fontConfig = {
     body: defaultFont,
     bold: {
-      fontWeight: "bold"
+      fontWeight: "bold",
     },
     italic: {
-      fontStyle: "italic"
-    }
+      fontStyle: "italic",
+    },
   };
 
   return {
     text(key, attributes) {
       const attr = {
         tag: "FONT",
-        settings: fontConfig.body
+        settings: fontConfig.body,
       };
       return new AttributedString(
         attributes.value,
-        attributes.value.split("").map(() => [attr])
+        attributes.value.split("").map(() => [attr]),
       );
     },
     inline(key, attributes, renderedChildren) {
@@ -106,7 +106,7 @@ export default ({
       const childStr = AttributedString.join(children);
       const attr = {
         tag: "FONT",
-        settings: fontConfig.bold
+        settings: fontConfig.bold,
       };
       childStr.addAttribute(0, childStr.length, attr);
       return childStr;
@@ -121,7 +121,7 @@ export default ({
       const childStr = AttributedString.join(children);
       const attr = {
         tag: "FONT",
-        settings: fontConfig.italic
+        settings: fontConfig.italic,
       };
       childStr.addAttribute(0, childStr.length, attr);
       return childStr;
@@ -135,7 +135,7 @@ export default ({
         tag: "LINK",
         href,
         canonicalId,
-        type
+        type,
       };
       childStr.addAttribute(0, childStr.length, attr);
       return childStr;
@@ -144,7 +144,7 @@ export default ({
       const childStr = AttributedString.join(children);
       const attr = {
         tag: "FONT",
-        settings: fontConfig.body
+        settings: fontConfig.body,
       };
       childStr.addAttribute(0, childStr.length, attr);
       return childStr;
@@ -153,7 +153,7 @@ export default ({
       const childStr = AttributedString.join(children);
       const attr = {
         tag: "FONT",
-        settings: fontConfig.body
+        settings: fontConfig.body,
       };
       childStr.addAttribute(0, childStr.length, attr);
       return childStr;
@@ -200,14 +200,14 @@ export default ({
         relativeHeight,
         relativeHorizontalOffset,
         relativeVerticalOffset,
-        imageIndex
-      }
+        imageIndex,
+      },
     ) {
       return (
         <ArticleImage
           captionOptions={{
             caption,
-            credits
+            credits,
           }}
           onImagePress={onImagePress}
           images={images}
@@ -223,7 +223,7 @@ export default ({
             relativeWidth,
             relativeHeight,
             relativeHorizontalOffset,
-            relativeVerticalOffset
+            relativeVerticalOffset,
           }}
         />
       );
@@ -235,7 +235,7 @@ export default ({
         element.value === "responsive-graphics"
       ) {
         const {
-          attributes: { "deck-id": deckId }
+          attributes: { "deck-id": deckId },
         } = element;
 
         return (
@@ -247,7 +247,7 @@ export default ({
       }
       if (element && element.value === "newsletter-puff") {
         const {
-          attributes: { code, copy, headline, imageUri, label }
+          attributes: { code, copy, headline, imageUri, label },
         } = element;
         return (
           <InlineNewsletterPuff
@@ -267,7 +267,7 @@ export default ({
           style={[
             styles.interactiveContainer,
             isTablet && styles.interactiveContainerTablet,
-            display === "fullwidth" && styles.interactiveContainerFullWidth
+            display === "fullwidth" && styles.interactiveContainerFullWidth,
           ]}
         >
           <InteractiveWrapper config={interactiveConfig} id={id} key={key} />
@@ -277,7 +277,7 @@ export default ({
     break() {
       const attr = {
         tag: "FONT",
-        settings: fontConfig.body
+        settings: fontConfig.body,
       };
       return new AttributedString("\n", [[attr]]);
     },
@@ -288,19 +288,13 @@ export default ({
         </View>
       );
     },
-    pullQuote(
-      key,
-      {
-        caption: { name, text, twitter }
-      },
-      children
-    ) {
+    pullQuote(key, { caption: { name, text, twitter } }, children) {
       const content = children[0].string;
       const contentWidth = Math.min(screenWidth(), tabletWidth);
       return (
         <Context.Consumer key={key}>
           {({
-            theme: { pullQuoteFont, sectionColour = colours.section.default }
+            theme: { pullQuoteFont, sectionColour = colours.section.default },
           }) => (
             <View style={[isTablet && { width: contentWidth * 0.35 }]}>
               <PullQuote
@@ -325,8 +319,8 @@ export default ({
         brightcoveVideoId,
         brightcoveAccountId,
         posterImageUrl,
-        caption
-      }
+        caption,
+      },
     ) {
       const aspectRatio = 16 / 9;
       const contentWidth =
@@ -352,6 +346,6 @@ export default ({
     },
     unknown(key, attributes, children, index, tree) {
       return tree;
-    }
+    },
   };
 };

@@ -18,15 +18,15 @@ ArticleLabel.propTypes = {
         alpha: PropTypes.number,
         blue: PropTypes.number,
         green: PropTypes.number,
-        red: PropTypes.number
-      })
-    })
+        red: PropTypes.number,
+      }),
+    }),
   ]),
-  title: PropTypes.string.isRequired
+  title: PropTypes.string.isRequired,
 };
 
 ArticleLabel.defaultProps = {
-  color: "black"
+  color: "black",
 };
 
 export default ArticleLabel;

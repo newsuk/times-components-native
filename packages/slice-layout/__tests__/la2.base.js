@@ -3,7 +3,7 @@ import { iterator } from "@times-components-native/test-utils";
 import createItem from "./utils";
 import { LeadOneAndTwoSlice } from "../src/slice-layout";
 
-export default renderComponent => {
+export default (renderComponent) => {
   const tests = [
     {
       name: "a single child element",
@@ -13,11 +13,11 @@ export default renderComponent => {
             renderLead={() => createItem("lead")}
             renderSupport1={() => null}
             renderSupport2={() => null}
-          />
+          />,
         );
 
         expect(output).toMatchSnapshot();
-      }
+      },
     },
     {
       name: "two child elements",
@@ -27,11 +27,11 @@ export default renderComponent => {
             renderLead={() => createItem("lead")}
             renderSupport1={() => createItem("support-1")}
             renderSupport2={() => null}
-          />
+          />,
         );
 
         expect(output).toMatchSnapshot();
-      }
+      },
     },
     {
       name: "three child elements",
@@ -41,12 +41,12 @@ export default renderComponent => {
             renderLead={() => createItem("lead")}
             renderSupport1={() => createItem("support-1")}
             renderSupport2={() => createItem("support-2")}
-          />
+          />,
         );
 
         expect(output).toMatchSnapshot();
-      }
-    }
+      },
+    },
   ];
 
   iterator(tests);

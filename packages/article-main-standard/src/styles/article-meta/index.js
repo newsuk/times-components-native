@@ -13,26 +13,26 @@ const styles = StyleSheet.create({
     marginBottom: spacing(4),
     ...Platform.select({
       ios: {
-        paddingBottom: spacing(1)
+        paddingBottom: spacing(1),
       },
       android: {
-        paddingBottom: spacing(2)
-      }
-    })
+        paddingBottom: spacing(2),
+      },
+    }),
   },
   articleMetaElement: {
     ...sharedStyles.articleMetaElement,
-    paddingTop: 0
+    paddingTop: 0,
   },
   byline: {
     ...sharedStyles.byline,
-    lineHeight: 26
+    lineHeight: 26,
   },
   datePublication: {
     ...sharedStyles.datePublication,
     marginTop: 0,
-    paddingTop: 0
-  }
+    paddingTop: 0,
+  },
 });
 
 export default styles;

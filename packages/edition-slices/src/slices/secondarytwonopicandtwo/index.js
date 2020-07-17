@@ -14,7 +14,7 @@ class SecondaryTwoNoPicAndTwo extends Component {
   renderSmall(breakpoint) {
     const {
       onPress,
-      slice: { secondary1, secondary2, support1, support2 }
+      slice: { secondary1, secondary2, support1, support2 },
     } = this.props;
 
     return (
@@ -39,7 +39,7 @@ class SecondaryTwoNoPicAndTwo extends Component {
   renderMedium(breakpoint) {
     const {
       onPress,
-      slice: { secondary1, secondary2, support1, support2 }
+      slice: { secondary1, secondary2, support1, support2 },
     } = this.props;
 
     return (
@@ -97,8 +97,8 @@ SecondaryTwoNoPicAndTwo.propTypes = {
     secondary1: PropTypes.shape({}).isRequired,
     secondary2: PropTypes.shape({}).isRequired,
     support1: PropTypes.shape({}).isRequired,
-    support2: PropTypes.shape({}).isRequired
-  }).isRequired
+    support2: PropTypes.shape({}).isRequired,
+  }).isRequired,
 };
 
 export default SecondaryTwoNoPicAndTwo;

@@ -29,11 +29,11 @@ export function isLinkTag(value: AttributeTag | null): value is LinkTag {
 export default class AttributedString {
   public static concat(
     string1: AttributedString,
-    string2: AttributedString
+    string2: AttributedString,
   ): AttributedString {
     const newString = new AttributedString(
       string1.string + string2.string,
-      string1.attributes.concat(string2.attributes)
+      string1.attributes.concat(string2.attributes),
     );
     return newString;
   }
@@ -122,7 +122,7 @@ export default class AttributedString {
     }
     return new AttributedString(
       this.string.slice(begin, end),
-      this.attributes.slice(begin, end)
+      this.attributes.slice(begin, end),
     );
   }
 }

@@ -1,1 +1,1 @@
-export { default, TextLink } from './src/link';
+export { default, TextLink } from "./src/link";

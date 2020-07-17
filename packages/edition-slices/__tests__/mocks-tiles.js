@@ -1,5 +1,5 @@
 jest.mock("@times-components-native/article-flag", () => ({
-  ArticleFlags: "ArticleFlags"
+  ArticleFlags: "ArticleFlags",
 }));
 jest.mock("@times-components-native/image", () => "Image");
 jest.mock("@times-components-native/link", () => "Link");

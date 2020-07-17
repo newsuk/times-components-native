@@ -8,7 +8,7 @@ const fonts = {
   headlineRegular: "TimesModern-Regular",
   stMagazine: "Tiempos-Headline-Bold",
   styleMagazine: "CenturyGothic-Bold",
-  supporting: "GillSansMTStd-Medium"
+  supporting: "GillSansMTStd-Medium",
 };
 
 export default fonts;

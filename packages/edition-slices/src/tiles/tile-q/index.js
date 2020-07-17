@@ -12,7 +12,7 @@ const TileQ = ({ onPress, tile }) => {
   }
 
   const {
-    article: { hasVideo }
+    article: { hasVideo },
   } = tile;
 
   return (
@@ -35,7 +35,7 @@ const TileQ = ({ onPress, tile }) => {
 
 TileQ.propTypes = {
   onPress: PropTypes.func.isRequired,
-  tile: PropTypes.shape({}).isRequired
+  tile: PropTypes.shape({}).isRequired,
 };
 
 export default withTileTracking(TileQ);

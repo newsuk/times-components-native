@@ -6,13 +6,13 @@ import {
   getTileStrapline,
   TileLink,
   TileSummary,
-  withTileTracking
+  withTileTracking,
 } from "../shared";
 import styleFactory from "./styles";
 
 const TileM = ({ onPress, tile, breakpoint = editionBreakpoints.small }) => {
   const {
-    article: { id, shortHeadline, url }
+    article: { id, shortHeadline, url },
   } = tile;
   const tileWithoutLabelAndFlags = { article: { id, shortHeadline, url } };
   const styles = styleFactory(breakpoint);
@@ -38,7 +38,7 @@ const TileM = ({ onPress, tile, breakpoint = editionBreakpoints.small }) => {
 TileM.propTypes = {
   onPress: PropTypes.func.isRequired,
   tile: PropTypes.shape({}).isRequired,
-  breakpoint: PropTypes.string
+  breakpoint: PropTypes.string,
 };
 
 export default withTileTracking(TileM);

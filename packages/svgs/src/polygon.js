@@ -5,10 +5,10 @@ import SVGPath from "./path";
 
 const { Path } = ART;
 
-const toCoordinates = points =>
+const toCoordinates = (points) =>
   points
     .split(/,|\s+/)
-    .map(n => Number.parseFloat(n))
+    .map((n) => Number.parseFloat(n))
     .reduce((currentPoints, coordinate, index) => {
       if (index % 2 === 0) {
         return [...currentPoints, { x: coordinate }];
@@ -35,12 +35,12 @@ const Polygon = ({ stroke, fill, points }) => {
 Polygon.propTypes = {
   fill: PropTypes.string,
   points: PropTypes.string.isRequired, // TODO validate they're even coordinates
-  stroke: PropTypes.string
+  stroke: PropTypes.string,
 };
 
 Polygon.defaultProps = {
   fill: null,
-  stroke: null
+  stroke: null,
 };
 
 export default Polygon;

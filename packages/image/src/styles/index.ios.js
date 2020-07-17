@@ -6,16 +6,16 @@ const styles = StyleSheet.create({
   ...sharedStyles,
   bottomSafeView: {
     ...sharedStyles.bottomSafeView,
-    justifyContent: "flex-end"
+    justifyContent: "flex-end",
   },
   modalImageContainer: {
     ...sharedStyles.modalImageContainer,
-    backgroundColor: colours.functional.black
+    backgroundColor: colours.functional.black,
   },
   buttonContainer: {
     ...sharedStyles.buttonContainer,
-    marginLeft: spacing(2)
-  }
+    marginLeft: spacing(2),
+  },
 });
 
 export { captionStyles, tabletCaptionStyles };

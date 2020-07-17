@@ -1,6 +1,6 @@
-import Point from '../src/Point';
+import Point from "../src/Point";
 
-test('Point#constructor', () => {
+test("Point#constructor", () => {
   expect(() => {
     const newPoint = new Point(10, 10);
     return newPoint;

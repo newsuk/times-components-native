@@ -6,32 +6,32 @@ const sharedStyles = {
     color: colours.functional.primary,
     fontFamily: fonts.headline,
     fontWeight: "900",
-    marginBottom: spacing(1)
+    marginBottom: spacing(1),
   },
   headlineWrapper: {
     ...fontFactory({
       font: "headline",
-      fontSize: "smallHeadline"
-    })
+      fontSize: "smallHeadline",
+    }),
   },
   labelWrapper: {
-    marginBottom: spacing(0)
+    marginBottom: spacing(0),
   },
   metaText: {
     color: colours.functional.secondary,
     ...fontFactory({
       font: "supporting",
-      fontSize: "cardMeta"
+      fontSize: "cardMeta",
     }),
-    marginBottom: spacing(1)
+    marginBottom: spacing(1),
   },
   strapline: {
     ...fontFactory({
       font: "headlineRegular",
-      fontSize: "strapline"
+      fontSize: "strapline",
     }),
     color: colours.functional.secondary,
-    paddingBottom: spacing(2)
+    paddingBottom: spacing(2),
   },
   text: {
     color: colours.functional.secondary,
@@ -39,9 +39,9 @@ const sharedStyles = {
     marginBottom: spacing(2),
     ...fontFactory({
       font: "body",
-      fontSize: "teaser"
-    })
-  }
+      fontSize: "teaser",
+    }),
+  },
 };
 
 export default sharedStyles;

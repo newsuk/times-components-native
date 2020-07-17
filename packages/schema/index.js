@@ -1,1 +1,1 @@
-export { fragmentMatcher } from './fragment-matcher'
+export { fragmentMatcher } from "./fragment-matcher";

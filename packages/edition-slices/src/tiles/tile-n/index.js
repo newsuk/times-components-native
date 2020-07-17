@@ -4,7 +4,7 @@ import { View } from "react-native";
 import PropTypes from "prop-types";
 import {
   colours,
-  editionBreakpoints
+  editionBreakpoints,
 } from "@times-components-native/styleguide";
 import {
   getTileImage,
@@ -12,7 +12,7 @@ import {
   TileLink,
   TileSummary,
   TileImage,
-  withTileTracking
+  withTileTracking,
 } from "../shared";
 import styleFactory from "./styles";
 import PositionedTileStar from "../shared/positioned-tile-star";
@@ -21,7 +21,7 @@ const TileN = ({
   isDarkStar,
   onPress,
   tile,
-  breakpoint = editionBreakpoints.small
+  breakpoint = editionBreakpoints.small,
 }) => {
   const styles = styleFactory(breakpoint);
   const crop = getTileImage(tile, "crop11");
@@ -33,7 +33,7 @@ const TileN = ({
   }
 
   const {
-    article: { hasVideo }
+    article: { hasVideo },
   } = tile;
 
   return (
@@ -75,11 +75,11 @@ TileN.propTypes = {
   isDarkStar: PropTypes.bool,
   onPress: PropTypes.func.isRequired,
   breakpoint: PropTypes.string,
-  tile: PropTypes.shape({}).isRequired
+  tile: PropTypes.shape({}).isRequired,
 };
 
 TileN.defaultProps = {
-  isDarkStar: true
+  isDarkStar: true,
 };
 
 export default withTileTracking(TileN);

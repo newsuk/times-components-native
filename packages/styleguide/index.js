@@ -18,5 +18,5 @@ export {
   tabletRowPadding,
   tabletWidth,
   tabletWidthMax,
-  themeFactory
-} from './src/styleguide';
+  themeFactory,
+} from "./src/styleguide";

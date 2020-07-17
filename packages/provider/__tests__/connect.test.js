@@ -2,7 +2,7 @@ import React from "react";
 import {
   addSerializers,
   enzymeRenderedSerializer,
-  minimalise
+  minimalise,
 } from "@times-components-native/jest-serializer";
 import { iterator } from "@times-components-native/test-utils";
 import renderer from "react-test-renderer";
@@ -18,16 +18,16 @@ jest.mock("react-apollo", () => ({
       error: null,
       fetchMore: () => null,
       loading: false,
-      refetch: () => null
-    })
+      refetch: () => null,
+    }),
 }));
 
 addSerializers(
   expect,
   enzymeRenderedSerializer(),
   minimalise((_, key) =>
-    ["query", "propsToVariable", "results", "propsToVariables"].includes(key)
-  )
+    ["query", "propsToVariable", "results", "propsToVariables"].includes(key),
+  ),
 );
 
 const query = gql`
@@ -48,9 +48,9 @@ const queryWithVariable = gql`
 
 const propsToVariables = () => ({});
 
-const prepareMockForSnapshot = fn => ({
+const prepareMockForSnapshot = (fn) => ({
   ...fn.mock.calls[0][0],
-  debouncedProps: omit(fn.mock.calls[0][0].debouncedProps, "children")
+  debouncedProps: omit(fn.mock.calls[0][0].debouncedProps, "children"),
 });
 
 iterator([
@@ -61,11 +61,11 @@ iterator([
       const component = shallow(
         <ConnectedComponent debounceTimeMs={1000} foo="baz">
           {() => null}
-        </ConnectedComponent>
+        </ConnectedComponent>,
       );
 
       expect(component).toMatchSnapshot();
-    }
+    },
   },
   {
     name:
@@ -75,10 +75,10 @@ iterator([
       renderer.create(
         <QueryProvider debounceTimeMs={1000} foo="bar" query={query}>
           {child}
-        </QueryProvider>
+        </QueryProvider>,
       );
       expect(prepareMockForSnapshot(child)).toMatchSnapshot();
-    }
+    },
   },
 
   {
@@ -90,14 +90,14 @@ iterator([
         <QueryProvider
           articleId="123"
           debounceTimeMs={1000}
-          propsToVariables={props => ({ id: props.articleId })}
+          propsToVariables={(props) => ({ id: props.articleId })}
           query={queryWithVariable}
         >
           {child}
-        </QueryProvider>
+        </QueryProvider>,
       );
       expect(prepareMockForSnapshot(child)).toMatchSnapshot();
-    }
+    },
   },
 
   {
@@ -106,10 +106,10 @@ iterator([
       const component = renderer.create(
         <QueryProvider debounceTimeMs={1000} query={query}>
           {() => <div>Hello, World</div>}
-        </QueryProvider>
+        </QueryProvider>,
       );
       expect(component).toMatchSnapshot();
-    }
+    },
   },
 
   {
@@ -120,15 +120,15 @@ iterator([
       const component = shallow(
         <ConnectedComponent debounceTimeMs={1000} foo="baz">
           {() => null}
-        </ConnectedComponent>
+        </ConnectedComponent>,
       );
 
       expect(component.find(QueryProvider).props()).toEqual(
         expect.objectContaining({
           propsToVariables,
-          query
-        })
+          query,
+        }),
       );
-    }
-  }
+    },
+  },
 ]);

@@ -1,5 +1,5 @@
-import Point from './Point';
-import TextContainer from './TextContainer';
+import Point from "./Point";
+import TextContainer from "./TextContainer";
 
 export default class Span {
   public start: Point;

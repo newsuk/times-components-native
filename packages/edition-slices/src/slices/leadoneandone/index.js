@@ -15,7 +15,7 @@ class LeadOneAndOne extends Component {
   renderSmall(breakpoint) {
     const {
       onPress,
-      slice: { lead, support }
+      slice: { lead, support },
     } = this.props;
     return (
       <LeadOneAndOneSlice
@@ -29,7 +29,7 @@ class LeadOneAndOne extends Component {
   renderMedium(breakpoint) {
     const {
       onPress,
-      slice: { lead, support }
+      slice: { lead, support },
     } = this.props;
     return (
       <LeadOneAndOneSlice
@@ -43,7 +43,7 @@ class LeadOneAndOne extends Component {
   renderWide(breakpoint) {
     const {
       onPress,
-      slice: { lead, support }
+      slice: { lead, support },
     } = this.props;
     return (
       <LeadOneAndOneSlice
@@ -83,8 +83,8 @@ LeadOneAndOne.propTypes = {
   onPress: PropTypes.func.isRequired,
   slice: PropTypes.shape({
     lead: PropTypes.shape({}).isRequired,
-    support: PropTypes.shape({}).isRequired
-  }).isRequired
+    support: PropTypes.shape({}).isRequired,
+  }).isRequired,
 };
 
 export default LeadOneAndOne;

@@ -13,7 +13,7 @@ const SecondaryOneAndFourSlice = ({
   support1,
   support2,
   support3,
-  support4
+  support4,
 }) => {
   const styles = styleFactory(breakpoint);
 
@@ -38,7 +38,7 @@ const SecondaryOneAndFourSlice = ({
           containerStyle={styles.supportContainer}
           tiles={[
             { style: styles.supportItem, tile: support1 },
-            { style: styles.supportItem, tile: support2 }
+            { style: styles.supportItem, tile: support2 },
           ]}
           colSeparatorStyle={styles.separator}
         />
@@ -47,7 +47,7 @@ const SecondaryOneAndFourSlice = ({
           containerStyle={styles.supportContainer}
           tiles={[
             { style: styles.supportItem, tile: support3 },
-            { style: styles.supportItem, tile: support4 }
+            { style: styles.supportItem, tile: support4 },
           ]}
           colSeparatorStyle={styles.separator}
         />
@@ -62,11 +62,11 @@ SecondaryOneAndFourSlice.propTypes = {
   support1: PropTypes.node.isRequired,
   support2: PropTypes.node.isRequired,
   support3: PropTypes.node.isRequired,
-  support4: PropTypes.node.isRequired
+  support4: PropTypes.node.isRequired,
 };
 
 SecondaryOneAndFourSlice.defaultProps = {
-  breakpoint: editionBreakpoints.small
+  breakpoint: editionBreakpoints.small,
 };
 
 export default SecondaryOneAndFourSlice;

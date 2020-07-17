@@ -28,7 +28,7 @@ const InlineImage = ({ imageOptions, captionOptions, onImagePress }) => {
     relativeWidth,
     relativeHeight,
     relativeHorizontalOffset,
-    relativeVerticalOffset
+    relativeVerticalOffset,
   } = imageOptions;
   const { caption, credits } = captionOptions;
 
@@ -57,7 +57,7 @@ const InlineImage = ({ imageOptions, captionOptions, onImagePress }) => {
         relativeVerticalOffset={relativeVerticalOffset}
       />
     </View>,
-    ...imgCaption
+    ...imgCaption,
   ];
 };
 

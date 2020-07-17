@@ -25,7 +25,9 @@ describe("The mock Article", () => {
   });
 
   it("should return a maincomment template", () => {
-    const mockArticle = new MockArticle().setTemplate('maincomment' as TemplateType).get();
+    const mockArticle = new MockArticle()
+      .setTemplate("maincomment" as TemplateType)
+      .get();
     expect(mockArticle.template).toBe("maincomment");
   });
 });

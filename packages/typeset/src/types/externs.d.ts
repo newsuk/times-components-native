@@ -1,33 +1,33 @@
-type Line = ['L', number, number];
-type Cubic = ['C', number, number];
-type Quadratic = ['Q', number, number, number, number];
+type Line = ["L", number, number];
+type Cubic = ["C", number, number];
+type Quadratic = ["Q", number, number, number, number];
 
-declare module 'parse-svg-path' {
-  export default function(path: string): SimplePath;
+declare module "parse-svg-path" {
+  export default function (path: string): SimplePath;
 
   type SimpleSegment = Line | Cubic | Quadratic;
   type SimplePath = SimpleSegment[];
 }
 
-declare module '@times-components-native/test-utils' {
+declare module "@times-components-native/test-utils" {
   export const TestFont: any;
 }
 
-declare module 'abs-svg-path' {
-  export default function(path: SimplePath): SimplePath;
+declare module "abs-svg-path" {
+  export default function (path: SimplePath): SimplePath;
 
   type SimpleSegment = Line | Cubic | Quadratic;
   type SimplePath = SimpleSegment[];
 }
 
-declare module 'simplify-geometry' {
-  export default function(
+declare module "simplify-geometry" {
+  export default function (
     path: number[][],
-    tolerance: number
+    tolerance: number,
   ): Array<[number, number]>;
 }
 
-declare module 'tex-linebreak' {
+declare module "tex-linebreak" {
   export type Font = any;
   export interface TypographySettings {
     leading: number;
@@ -36,12 +36,12 @@ declare module 'tex-linebreak' {
   }
 
   interface LinkTag {
-    tag: 'LINK';
+    tag: "LINK";
     href: string;
   }
 
   export interface FontTag {
-    tag: 'FONT';
+    tag: "FONT";
     settings: TypographySettings;
   }
 
@@ -63,7 +63,7 @@ declare module 'tex-linebreak' {
   }
 
   export interface TexItem {
-    type: 'glue' | 'box' | 'penalty';
+    type: "glue" | "box" | "penalty";
     width: number;
     shrink?: number;
     stretch?: number;
@@ -90,26 +90,26 @@ declare module 'tex-linebreak' {
   export function layoutItemsFromString(
     text: string | StringLike,
     measure: (word: StringLike) => number,
-    hyphenate?: Hyphenator
+    hyphenate?: Hyphenator,
   ): TexItem[];
   export function breakLines(
     items: TexItem[],
     width: number | number[],
-    options?: Options
+    options?: Options,
   ): BreakPoint[];
   export function positionItems(
     items: TexItem[],
     width: number | number[],
-    breaks: BreakPoint[]
+    breaks: BreakPoint[],
   ): LayoutItem[];
   export function createHyphenator(dict: any): any;
 }
 
-declare module 'hyphenation.en-gb' {
-  export default function(): any;
+declare module "hyphenation.en-gb" {
+  export default function (): any;
 }
 
-declare module 'opentype.js' {
+declare module "opentype.js" {
   export interface Bounds {
     x1: number;
     y1: number;

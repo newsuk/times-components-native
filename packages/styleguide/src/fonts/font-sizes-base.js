@@ -38,7 +38,7 @@ const fontSizes = {
   heading2Mobile: 25,
   heading3Mobile: 22,
   heading4Mobile: 19,
-  heading5Mobile: 17
+  heading5Mobile: 17,
 };
 
 export default fontSizes;

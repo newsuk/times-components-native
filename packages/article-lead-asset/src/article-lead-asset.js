@@ -5,7 +5,7 @@ import { ModalImage } from "@times-components-native/image";
 import ArticleLeadAssetVideo from "./article-lead-asset-video";
 import {
   nativePropTypes,
-  nativeDefaultProps
+  nativeDefaultProps,
 } from "./article-lead-asset-prop-types";
 import getRatio from "./get-ratio";
 
@@ -19,7 +19,7 @@ const ArticleLeadAssetModalImage = ({
   relativeWidth,
   relativeHeight,
   relativeHorizontalOffset,
-  relativeVerticalOffset
+  relativeVerticalOffset,
 }) => (
   <ModalImage
     highResSize={width}
@@ -32,7 +32,7 @@ const ArticleLeadAssetModalImage = ({
       relativeWidth,
       relativeHeight,
       relativeHorizontalOffset,
-      relativeVerticalOffset
+      relativeVerticalOffset,
     }}
     index={0}
   />
@@ -46,7 +46,7 @@ const ArticleLeadAsset = ({
   onImagePress,
   onVideoPress,
   width,
-  style
+  style,
 }) => {
   if (!leadAsset) {
     return null;
@@ -64,7 +64,7 @@ const ArticleLeadAsset = ({
 
   const caption = {
     credits: imageContainer.credits,
-    text: imageContainer.caption
+    text: imageContainer.caption,
   };
 
   return (

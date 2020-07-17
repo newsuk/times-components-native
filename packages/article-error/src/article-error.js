@@ -29,7 +29,7 @@ const ArticleError = ({ refetch }) => (
 );
 
 ArticleError.propTypes = {
-  refetch: PropTypes.func.isRequired
+  refetch: PropTypes.func.isRequired,
 };
 
 export default ArticleError;

@@ -11,7 +11,7 @@ const SectionItemSeparator = ({ breakpoint }) => {
 };
 
 SectionItemSeparator.propTypes = {
-  breakpoint: PropTypes.string
+  breakpoint: PropTypes.string,
 };
 
 export default SectionItemSeparator;

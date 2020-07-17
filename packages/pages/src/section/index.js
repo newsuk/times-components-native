@@ -5,7 +5,7 @@ import Section from "./section";
 const SectionPage = ({
   publicationName,
   recentlyOpenedPuzzleCount,
-  section
+  section,
 }) => (
   <Section
     publicationName={publicationName}
@@ -17,12 +17,12 @@ const SectionPage = ({
 SectionPage.propTypes = {
   publicationName: PropTypes.string,
   recentlyOpenedPuzzleCount: PropTypes.number,
-  section: PropTypes.string.isRequired
+  section: PropTypes.string.isRequired,
 };
 
 SectionPage.defaultProps = {
   publicationName: "TIMES",
-  recentlyOpenedPuzzleCount: 0
+  recentlyOpenedPuzzleCount: 0,
 };
 
 export default SectionPage;

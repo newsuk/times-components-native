@@ -4,7 +4,7 @@ import {
   flattenStyleTransform,
   minimaliseTransform,
   minimalNativeTransform,
-  print
+  print,
 } from "@times-components-native/jest-serializer";
 import shared from "./shared-supporting-components.base";
 
@@ -15,8 +15,8 @@ export default () => {
       print,
       flattenStyleTransform,
       minimaliseTransform((value, key) => key === "testID"),
-      minimalNativeTransform
-    )
+      minimalNativeTransform,
+    ),
   );
 
   shared();

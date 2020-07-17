@@ -19,15 +19,15 @@ const defaultVideoProps = {
   onVideoPress: () => {
     Alert.alert(
       "onVideoPress called",
-      "(Storybook does not play videos on native - it is handled by the host app)"
+      "(Storybook does not play videos on native - it is handled by the host app)",
     );
   },
   policyKey,
   poster: {
-    uri: posterImageURI
+    uri: posterImageURI,
   },
   videoId,
-  width: 320
+  width: 320,
 };
 
 const mockId = "aaaaaaaa-bbbb-cccc-dddd-eeeeeeeeeeee";
@@ -40,7 +40,7 @@ export default {
           <Text
             style={{
               marginBottom: 10,
-              marginTop: 10
+              marginTop: 10,
             }}
           >
             Mobile size:
@@ -49,7 +49,7 @@ export default {
           <Text
             style={{
               marginBottom: 10,
-              marginTop: 20
+              marginTop: 20,
             }}
           >
             Desktop size:
@@ -58,21 +58,21 @@ export default {
         </View>
       ),
       name: "default player",
-      type: "story"
+      type: "story",
     },
     {
       component: () => {
         const props = {
           playerId: "y4yoiFCf1",
           videoId: "5992442066001",
-          is360: true
+          is360: true,
         };
         return (
           <View>
             <Text
               style={{
                 marginBottom: 10,
-                marginTop: 10
+                marginTop: 10,
               }}
             >
               Mobile size:
@@ -81,7 +81,7 @@ export default {
             <Text
               style={{
                 marginBottom: 10,
-                marginTop: 20
+                marginTop: 20,
               }}
             >
               Desktop size:
@@ -98,7 +98,7 @@ export default {
       },
       name: "360 player",
       platform: "web",
-      type: "story"
+      type: "story",
     },
     {
       component: () => (
@@ -109,14 +109,14 @@ export default {
         </View>
       ),
       name: "two players with different videos",
-      type: "story"
+      type: "story",
     },
     {
       component: () => (
         <View
           style={{
             height: "100%",
-            width: "100%"
+            width: "100%",
           }}
         >
           <Video {...defaultVideoProps} height="100%" width="100%" />
@@ -124,7 +124,7 @@ export default {
       ),
       name: "100% width and height",
       platform: "native",
-      type: "story"
+      type: "story",
     },
     {
       component: () => (
@@ -132,7 +132,7 @@ export default {
           style={{
             height: "100vh",
             overflow: "hidden",
-            width: "100vw"
+            width: "100vw",
           }}
         >
           <Video {...defaultVideoProps} height="100%" width="100%" />
@@ -140,7 +140,7 @@ export default {
       ),
       name: "100% width and height",
       platform: "web",
-      type: "story"
+      type: "story",
     },
     {
       component: () => (
@@ -148,7 +148,7 @@ export default {
           <Text
             style={{
               marginBottom: 10,
-              marginTop: 10
+              marginTop: 10,
             }}
           >
             Mobile size:
@@ -157,7 +157,7 @@ export default {
           <Text
             style={{
               marginBottom: 10,
-              marginTop: 20
+              marginTop: 20,
             }}
           >
             Desktop size:
@@ -172,7 +172,7 @@ export default {
       ),
       name: "with error",
       platform: "web",
-      type: "story"
+      type: "story",
     },
     {
       component: () => (
@@ -180,7 +180,7 @@ export default {
           <Text
             style={{
               marginBottom: 10,
-              marginTop: 10
+              marginTop: 10,
             }}
           >
             Mobile size:
@@ -189,7 +189,7 @@ export default {
           <Text
             style={{
               marginBottom: 10,
-              marginTop: 20
+              marginTop: 20,
             }}
           >
             Desktop size:
@@ -203,8 +203,8 @@ export default {
         </View>
       ),
       name: "no poster image",
-      type: "story"
-    }
+      type: "story",
+    },
   ],
-  name: "Primitives/Video"
+  name: "Primitives/Video",
 };

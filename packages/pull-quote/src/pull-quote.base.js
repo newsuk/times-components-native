@@ -13,7 +13,7 @@ const PullQuotes = ({
   onTwitterLinkPress,
   quoteColour,
   text,
-  twitter
+  twitter,
 }) => (
   <View style={styles.container}>
     <Text style={[quoteStyleFactory(font), { color: quoteColour }]}>

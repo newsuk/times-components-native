@@ -8,7 +8,7 @@ import ArticleFlag, {
   UpdatedArticleFlag,
   ExclusiveArticleFlag,
   SponsoredArticleFlag,
-  LongReadArticleFlag
+  LongReadArticleFlag,
 } from "../src/article-flag";
 
 export default () => {
@@ -26,31 +26,31 @@ export default () => {
       name: "article flag",
       test: () => {
         const testInstance = TestRenderer.create(
-          <ArticleFlag title="No Colour" />
+          <ArticleFlag title="No Colour" />,
         );
 
         expect(testInstance).toMatchSnapshot();
-      }
+      },
     },
     {
       name: "red article flag",
       test: () => {
         const testInstance = TestRenderer.create(
-          <ArticleFlag color="red" title="Coloured Red" />
+          <ArticleFlag color="red" title="Coloured Red" />,
         );
 
         expect(testInstance).toMatchSnapshot();
-      }
+      },
     },
     {
       name: "hex colour article flag",
       test: () => {
         const testInstance = TestRenderer.create(
-          <ArticleFlag color="#FF0000" title="Coloured Red" />
+          <ArticleFlag color="#FF0000" title="Coloured Red" />,
         );
 
         expect(testInstance).toMatchSnapshot();
-      }
+      },
     },
     {
       name: "rgba colour article flag",
@@ -60,15 +60,15 @@ export default () => {
             alpha: 1,
             blue: 8,
             green: 3,
-            red: 11
-          }
+            red: 11,
+          },
         };
         const testInstance = TestRenderer.create(
-          <ArticleFlag color={gqlRgbaColour} title="Coloured Red" />
+          <ArticleFlag color={gqlRgbaColour} title="Coloured Red" />,
         );
 
         expect(testInstance).toMatchSnapshot();
-      }
+      },
     },
     {
       name: "new article flag",
@@ -76,7 +76,7 @@ export default () => {
         const testInstance = TestRenderer.create(<NewArticleFlag />);
 
         expect(testInstance).toMatchSnapshot();
-      }
+      },
     },
     {
       name: "updated article flag",
@@ -84,7 +84,7 @@ export default () => {
         const testInstance = TestRenderer.create(<UpdatedArticleFlag />);
 
         expect(testInstance).toMatchSnapshot();
-      }
+      },
     },
     {
       name: "exclusive article flag",
@@ -92,7 +92,7 @@ export default () => {
         const testInstance = TestRenderer.create(<ExclusiveArticleFlag />);
 
         expect(testInstance).toMatchSnapshot();
-      }
+      },
     },
     {
       name: "sponsored article flag",
@@ -100,7 +100,7 @@ export default () => {
         const testInstance = TestRenderer.create(<SponsoredArticleFlag />);
 
         expect(testInstance).toMatchSnapshot();
-      }
+      },
     },
     {
       name: "long read article flag",
@@ -108,7 +108,7 @@ export default () => {
         const testInstance = TestRenderer.create(<LongReadArticleFlag />);
 
         expect(testInstance).toMatchSnapshot();
-      }
+      },
     },
     {
       name: "article flags",
@@ -117,14 +117,14 @@ export default () => {
           <ArticleFlags
             flags={[
               { expiryTime: "2020-03-13T12:00:00.000Z", type: "UPDATED" },
-              { expiryTime: "2020-03-14T12:00:00.000Z", type: "EXCLUSIVE" }
+              { expiryTime: "2020-03-14T12:00:00.000Z", type: "EXCLUSIVE" },
             ]}
             longRead
-          />
+          />,
         );
 
         expect(testInstance).toMatchSnapshot();
-      }
+      },
     },
     {
       name: "article flags with container",
@@ -133,15 +133,15 @@ export default () => {
           <ArticleFlags
             flags={[
               { expiryTime: "2020-03-13T12:00:00.000Z", type: "UPDATED" },
-              { expiryTime: "2020-03-14T12:00:00.000Z", type: "EXCLUSIVE" }
+              { expiryTime: "2020-03-14T12:00:00.000Z", type: "EXCLUSIVE" },
             ]}
             longRead
             withContainer
-          />
+          />,
         );
 
         expect(testInstance).toMatchSnapshot();
-      }
+      },
     },
     {
       name: "article flags with no flags",
@@ -149,8 +149,8 @@ export default () => {
         const testInstance = TestRenderer.create(<ArticleFlags flags={[]} />);
 
         expect(testInstance).toMatchSnapshot();
-      }
-    }
+      },
+    },
   ];
 
   iterator(tests);

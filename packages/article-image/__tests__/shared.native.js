@@ -4,7 +4,7 @@ import {
   flattenStyleTransform,
   minimaliseTransform,
   minimalNativeTransform,
-  print
+  print,
 } from "@times-components-native/jest-serializer";
 import TestRenderer from "react-test-renderer";
 import "./mocks.native.js";
@@ -17,11 +17,11 @@ export default () => {
       print,
       flattenStyleTransform,
       minimalNativeTransform,
-      minimaliseTransform((value, key) => key === "style")
-    )
+      minimaliseTransform((value, key) => key === "style"),
+    ),
   );
 
-  shared(component => {
+  shared((component) => {
     const testInstance = TestRenderer.create(component);
 
     return testInstance.toJSON();

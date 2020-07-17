@@ -21,7 +21,7 @@ function ModalCaptionContainer({ children, style, ...props }) {
         forceInset={{
           bottom: "always",
           horizontal: "always",
-          top: "never"
+          top: "never",
         }}
       >
         {children}

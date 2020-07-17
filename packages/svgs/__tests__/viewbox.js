@@ -10,7 +10,7 @@ export default () => {
           <G fill="none" fillRule="evenodd" stroke="none" strokeWidth="1">
             <Path d="M211.26076,54" fill="#000000" />
           </G>
-        </Svg>
+        </Svg>,
       );
 
     expect(test).toThrow();

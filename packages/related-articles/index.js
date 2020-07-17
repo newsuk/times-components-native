@@ -1,1 +1,1 @@
-export { default } from './src/related-articles';
+export { default } from "./src/related-articles";

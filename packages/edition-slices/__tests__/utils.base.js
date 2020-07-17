@@ -2,7 +2,7 @@ import { mockEditionSlice } from "@times-components-native/fixture-generator";
 import {
   getTileImage,
   getTileSummary,
-  getTileStrapline
+  getTileStrapline,
 } from "../src/tiles/shared";
 
 const tile = mockEditionSlice(1).items[0];
@@ -17,9 +17,9 @@ export default () => {
         article: {
           ...tile.article,
           leadAsset: null,
-          listingAsset: null
+          listingAsset: null,
         },
-        leadAsset: null
+        leadAsset: null,
       };
       expect(getTileImage(tileWithoutLeadAsset, "crop169")).toEqual(null);
     });
@@ -32,23 +32,23 @@ export default () => {
           crop169: {
             ratio: "16:9",
             url:
-              "https://www.thetimes.co.uk/imageserver/image/%2Fmethode%2Ftimes%2Fprod%2Fweb%2Fbin%2F674e242a-3f8b-11e9-aa0a-30b9d78dd63b.jpg?crop=3483%2C1959%2C9%2C366"
+              "https://www.thetimes.co.uk/imageserver/image/%2Fmethode%2Ftimes%2Fprod%2Fweb%2Fbin%2F674e242a-3f8b-11e9-aa0a-30b9d78dd63b.jpg?crop=3483%2C1959%2C9%2C366",
           },
           id: "64806087-c6d0-4104-df61-1faf30525989",
-          title: "Potholes"
-        }
+          title: "Potholes",
+        },
       };
       const tileWithLeadAsset = {
         ...tile,
         article: {
           ...tile.article,
           leadAsset,
-          listingAsset: leadAsset
+          listingAsset: leadAsset,
         },
-        leadAsset
+        leadAsset,
       };
       expect(getTileImage(tileWithLeadAsset, "crop169")).toEqual(
-        leadAsset.posterImage.crop169
+        leadAsset.posterImage.crop169,
       );
     });
     test("getTileImage - return undefined if lead asset doesnt have the right crop", () => {
@@ -57,16 +57,16 @@ export default () => {
         credits: null,
         crop169: null,
         id: "64806087-c6d0-4104-df61-1faf30525989",
-        title: "Potholes"
+        title: "Potholes",
       };
       const tileWithLeadAsset = {
         ...tile,
         article: {
           ...tile.leadAsset,
           leadAsset,
-          listingAsset: leadAsset
+          listingAsset: leadAsset,
         },
-        leadAsset
+        leadAsset,
       };
       expect(getTileImage(tileWithLeadAsset, "crop45")).toEqual({});
     });
@@ -78,17 +78,17 @@ export default () => {
           credits: null,
           crop169: null,
           id: "64806087-c6d0-4104-df61-1faf30525989",
-          title: "Potholes"
-        }
+          title: "Potholes",
+        },
       };
       const tileWithLeadAsset = {
         ...tile,
         article: {
           ...tile.leadAsset,
           leadAsset,
-          listingAsset: leadAsset
+          listingAsset: leadAsset,
         },
-        leadAsset
+        leadAsset,
       };
       expect(getTileImage(tileWithLeadAsset, "crop45")).toEqual({});
     });
@@ -104,21 +104,21 @@ export default () => {
             {
               attributes: {
                 value:
-                  "Theresa May has two objectives tomorrow when MPs get to vote on Brexit — the trouble is both are fraught with difficulty."
+                  "Theresa May has two objectives tomorrow when MPs get to vote on Brexit — the trouble is both are fraught with difficulty.",
               },
               children: [],
-              name: "text"
-            }
+              name: "text",
+            },
           ],
-          name: "paragraph"
-        }
+          name: "paragraph",
+        },
       ];
       const tileWithSummary125 = {
         ...tile,
         article: {
           ...tile.article,
-          summary125
-        }
+          summary125,
+        },
       };
       expect(getTileSummary(tileWithSummary125, length)).toEqual(summary125);
     });
@@ -131,21 +131,21 @@ export default () => {
             {
               attributes: {
                 value:
-                  "‘The prodigal son returns.” So read a banner tied to the wall of the Paul Strank Stand at Kingsmeadow, the home of AFC Wimbledon, on Saturday, alongside the sepia-toned image of a fresh-faced Wally Downes, sporting an 80s haircut and Wimbledon strip, with a mischievous glint in his eye."
+                  "‘The prodigal son returns.” So read a banner tied to the wall of the Paul Strank Stand at Kingsmeadow, the home of AFC Wimbledon, on Saturday, alongside the sepia-toned image of a fresh-faced Wally Downes, sporting an 80s haircut and Wimbledon strip, with a mischievous glint in his eye.",
               },
               children: [],
-              name: "text"
-            }
+              name: "text",
+            },
           ],
-          name: "paragraph"
-        }
+          name: "paragraph",
+        },
       ];
       const tileWithSummary300 = {
         ...tile,
         article: {
           ...tile.article,
-          summary300
-        }
+          summary300,
+        },
       };
       expect(getTileSummary(tileWithSummary300, length)).toEqual(summary300);
     });

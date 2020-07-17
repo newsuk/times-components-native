@@ -23,7 +23,7 @@ const makeClient = () => {
 
   return new ApolloClient({
     cache: new InMemoryCache({ fragmentMatcher }),
-    link: createHttpLink(networkInterfaceOptions)
+    link: createHttpLink(networkInterfaceOptions),
   });
 };
 

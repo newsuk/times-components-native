@@ -15,7 +15,7 @@ export default () => {
         item={keyFactsItems[1]}
         listIndex={1}
         onLinkPress={mockLinkPress}
-      />
+      />,
     );
 
     wrapper.find("TextLink").simulate("press");

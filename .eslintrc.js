@@ -10,8 +10,8 @@ module.exports = {
     "plugin:react/recommended",
     "plugin:@typescript-eslint/recommended",
     "plugin:react-hooks/recommended",
-    // "prettier/@typescript-eslint",
-    // "plugin:prettier/recommended" // Must remain last
+    "prettier/@typescript-eslint",
+    "plugin:prettier/recommended" // Must remain last
   ],
   "parser": "@typescript-eslint/parser",
   "parserOptions": {
@@ -83,13 +83,12 @@ module.exports = {
     "react-hooks/exhaustive-deps": "off",
     "@typescript-eslint/no-unused-vars": ["warn", { "ignoreRestSiblings": true }],
     "@typescript-eslint/no-inferrable-types": "off",
+    "@typescript-eslint/no-non-null-assertion": "off",
     // Typescript specific to revist when majority TS codebase
     "@typescript-eslint/no-var-requires": "off",
     "@typescript-eslint/explicit-module-boundary-types": "off",
     "@typescript-eslint/no-explicit-any": "off",
-    // Temporarily disabled rules
     "react/prop-types": "off",
-    "@typescript-eslint/no-non-null-assertion": "off",
   },
   "settings": {
     "import/resolver": {

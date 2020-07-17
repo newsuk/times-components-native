@@ -11,5 +11,5 @@ export {
   GetNewsletter,
   QueryProvider,
   TopicArticlesProvider,
-  TopicProvider
-} from './src/provider';
+  TopicProvider,
+} from "./src/provider";

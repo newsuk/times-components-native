@@ -3,26 +3,26 @@ import React, { Component, Fragment } from "react";
 import articleAdConfig from "@times-components-native/ad/fixtures/article-ad-config.json";
 import {
   ContextProviderWithDefaults,
-  defaults
+  defaults,
 } from "@times-components-native/context";
 import { ArticleProvider } from "@times-components-native/provider";
 import {
   article as makeParams,
   fixtures,
   MockedProvider,
-  schemaToMocks
+  schemaToMocks,
 } from "@times-components-native/provider-test-tools";
 import { sections } from "@times-components-native/storybook";
 import { scales, themeFactory } from "@times-components-native/styleguide";
 import storybookReporter from "@times-components-native/tealium-utils";
 import Article, { templates } from "./src/article";
 
-const preventDefaultedAction = decorateAction =>
+const preventDefaultedAction = (decorateAction) =>
   decorateAction([
     ([e, ...args]) => {
       e.preventDefault();
       return ["[SyntheticEvent (storybook prevented default)]", ...args];
-    }
+    },
   ]);
 
 const FLAGS = 1;
@@ -46,7 +46,7 @@ export const makeArticleConfiguration = ({
   withPullQuote,
   withStandfirst,
   withVideo,
-  withTeasedContent
+  withTeasedContent,
 }) => {
   let mask;
 
@@ -93,7 +93,7 @@ export const makeArticleConfiguration = ({
   return mask;
 };
 
-const makeArticle = configuration => article => {
+const makeArticle = (configuration) => (article) => {
   const configuredArticle = { ...article };
   const extraContent = [];
 
@@ -109,7 +109,7 @@ const makeArticle = configuration => article => {
     configuredArticle.content = [
       ...configuredArticle.content.slice(0, 2),
       fixtures.keyFacts,
-      ...configuredArticle.content.slice(2)
+      ...configuredArticle.content.slice(2),
     ];
   }
 
@@ -154,7 +154,7 @@ class ArticleConfigurator extends Component {
     super(props);
     this.state = {
       mocks: [],
-      reRendering: false
+      reRendering: false,
     };
   }
 
@@ -164,10 +164,10 @@ class ArticleConfigurator extends Component {
       makeParams({
         makeArticle: makeArticle(configuration),
         variables: () => ({
-          id
-        })
-      })
-    ).then(mocks => this.setState({ mocks }));
+          id,
+        }),
+      }),
+    ).then((mocks) => this.setState({ mocks }));
   }
 
   componentDidUpdate(prevProps) {
@@ -176,17 +176,17 @@ class ArticleConfigurator extends Component {
       // eslint-disable-next-line react/no-did-update-set-state
       this.setState(
         {
-          reRendering: true
+          reRendering: true,
         },
         () =>
           schemaToMocks(
             makeParams({
               makeArticle: makeArticle(configuration),
               variables: () => ({
-                id
-              })
-            })
-          ).then(mocks => this.setState({ mocks, reRendering: false }))
+                id,
+              }),
+            }),
+          ).then((mocks) => this.setState({ mocks, reRendering: false })),
       );
     }
   }
@@ -213,7 +213,7 @@ const renderArticle = ({
   section,
   template,
   isTeaser,
-  isMeteredExpired
+  isMeteredExpired,
 }) => (
   <ArticleProvider debounceTimeMs={0} id={id}>
     {({ article, error, refetch }) => {
@@ -224,10 +224,12 @@ const renderArticle = ({
       const data = {
         ...article,
         backgroundColour: inDepthBackgroundColour,
-        descriptionMarkup: [article.content.find(m => m.name === "paragraph")],
+        descriptionMarkup: [
+          article.content.find((m) => m.name === "paragraph"),
+        ],
         template,
         textColour: inDepthTextColour,
-        section
+        section,
       };
 
       return (
@@ -235,12 +237,12 @@ const renderArticle = ({
           value={{
             theme: {
               ...themeFactory(section, template),
-              scale: scale || defaults.theme.scale
+              scale: scale || defaults.theme.scale,
             },
             user: {
               isLoggedIn: !isTeaser || isMeteredExpired,
-              isMeteredExpired
-            }
+              isMeteredExpired,
+            },
           }}
         >
           <Article
@@ -250,26 +252,26 @@ const renderArticle = ({
             error={error}
             isLoading={false}
             onAuthorPress={preventDefaultedAction(decorateAction)(
-              "onAuthorPress"
+              "onAuthorPress",
             )}
             onCommentGuidelinesPress={preventDefaultedAction(decorateAction)(
-              "onCommentGuidelinesPress"
+              "onCommentGuidelinesPress",
             )}
             onCommentsPress={preventDefaultedAction(decorateAction)(
-              "onCommentsPress"
+              "onCommentsPress",
             )}
             onLinkPress={preventDefaultedAction(decorateAction)("onLinkPress")}
             onRelatedArticlePress={preventDefaultedAction(decorateAction)(
-              "onRelatedArticlePress"
+              "onRelatedArticlePress",
             )}
             onTopicPress={preventDefaultedAction(decorateAction)(
-              "onTopicPress"
+              "onTopicPress",
             )}
             onTwitterLinkPress={preventDefaultedAction(decorateAction)(
-              "onTwitterLinkPress"
+              "onTwitterLinkPress",
             )}
             onVideoPress={preventDefaultedAction(decorateAction)(
-              "onVideoPress"
+              "onVideoPress",
             )}
             refetch={refetch}
           />
@@ -281,12 +283,12 @@ const renderArticle = ({
 
 const templateNames = Object.keys(templates).reduce(
   (t, key) => ({ ...t, [key]: key }),
-  {}
+  {},
 );
 
-const selectScales = select => select("Scale", scales, scales.medium);
-const selectSection = select => select("Section", sections, "News");
-const selectTemplate = select =>
+const selectScales = (select) => select("Scale", scales, scales.medium);
+const selectSection = (select) => select("Section", sections, "News");
+const selectTemplate = (select) =>
   select("Template", templateNames, templateNames.mainstandard);
 
 const renderArticleConfig = ({
@@ -294,7 +296,7 @@ const renderArticleConfig = ({
   decorateAction,
   hasScaling,
   link = null,
-  select
+  select,
 }) => {
   const id = "263b03a1-2ce6-4b94-b053-0d35316548c5";
   const withFlags = boolean("Flags", true);
@@ -338,7 +340,7 @@ const renderArticleConfig = ({
             withPullQuote,
             withStandfirst,
             withVideo,
-            withTeasedContent: isTeaser
+            withTeasedContent: isTeaser,
           })}
           id={id}
         >
@@ -353,7 +355,7 @@ const renderArticleConfig = ({
             isMeteredExpired,
             scale,
             section,
-            template
+            template,
           })}
         </ArticleConfigurator>
       }

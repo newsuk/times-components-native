@@ -3,13 +3,13 @@ import { findNodeHandle, View } from "react-native";
 import get from "lodash.get";
 import ArticleSummary, {
   ArticleSummaryContent,
-  ArticleSummaryHeadline
+  ArticleSummaryHeadline,
 } from "@times-components-native/article-summary";
 import Card from "@times-components-native/card";
 import { colours } from "@times-components-native/styleguide";
 import {
   relatedArticleItemPropTypes,
-  relatedArticleItemDefaultProps
+  relatedArticleItemDefaultProps,
 } from "./related-article-item-prop-types";
 import styles from "./styles";
 import getHeadline from "./utils";
@@ -33,7 +33,7 @@ class RelatedArticleItem extends Component {
     this.node = createRef();
 
     this.state = {
-      highResSize: null
+      highResSize: null,
     };
   }
 
@@ -56,7 +56,7 @@ class RelatedArticleItem extends Component {
 
   setHighResSize() {
     this.setState({
-      highResSize: findNodeHandle(this.node.current).clientWidth
+      highResSize: findNodeHandle(this.node.current).clientWidth,
     });
   }
 
@@ -70,7 +70,7 @@ class RelatedArticleItem extends Component {
         leadAsset,
         publishedTime,
         section,
-        shortHeadline
+        shortHeadline,
       },
       bylineClass,
       children,
@@ -79,7 +79,7 @@ class RelatedArticleItem extends Component {
       imageConfig: {
         cropSize = "169",
         imageRatio = 16 / 9,
-        style: imageStyle = {}
+        style: imageStyle = {},
       },
       imageContainerClass,
       isOpinionByline,
@@ -91,8 +91,8 @@ class RelatedArticleItem extends Component {
       summaryConfig: {
         lengths: summaryLengths = [],
         style: summaryStyle = {},
-        type: summaryType
-      }
+        type: summaryType,
+      },
     } = this.props;
     const { article } = this.props;
     const { highResSize } = this.state;
@@ -122,12 +122,12 @@ class RelatedArticleItem extends Component {
                 ast: bylines,
                 bylineClass,
                 color: colours.section[section] || colours.section.default,
-                isOpinionByline
+                isOpinionByline,
               }}
               content={
                 showSummary && (
                   <View style={summaryStyle}>
-                    {summaryLengths.map(item => {
+                    {summaryLengths.map((item) => {
                       const summaryClassSuffix = `${item}Class`;
                       const summaryClass = summaryType
                         ? `${summaryType}Summary`
@@ -154,13 +154,13 @@ class RelatedArticleItem extends Component {
               labelProps={{
                 color: colours.section[section] || colours.section.default,
                 isVideo: hasVideo,
-                title: label
+                title: label,
               }}
             />
           </Card>
         </View>
       ),
-      onPress
+      onPress,
     });
   }
 }

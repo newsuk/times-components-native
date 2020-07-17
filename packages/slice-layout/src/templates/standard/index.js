@@ -29,7 +29,7 @@ const StandardSlice = ({ itemCount, renderItems }) => {
 
 StandardSlice.propTypes = {
   itemCount: PropTypes.number.isRequired,
-  renderItems: PropTypes.func.isRequired
+  renderItems: PropTypes.func.isRequired,
 };
 
 export default StandardSlice;

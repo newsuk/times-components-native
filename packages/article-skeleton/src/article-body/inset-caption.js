@@ -4,8 +4,8 @@ import { spacing } from "@times-components-native/styleguide";
 
 const captionStyle = {
   container: {
-    paddingLeft: spacing(2)
-  }
+    paddingLeft: spacing(2),
+  },
 };
 
 const CaptionComponentPrimaryNative = ({ caption, credits }) => (
@@ -13,11 +13,11 @@ const CaptionComponentPrimaryNative = ({ caption, credits }) => (
 );
 
 CaptionComponentPrimaryNative.propTypes = {
-  ...Caption.propTypes
+  ...Caption.propTypes,
 };
 
 CaptionComponentPrimaryNative.defaultProps = {
-  ...Caption.defaultProps
+  ...Caption.defaultProps,
 };
 
 export default CaptionComponentPrimaryNative;

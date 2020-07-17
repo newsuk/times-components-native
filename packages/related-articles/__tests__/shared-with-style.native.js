@@ -4,7 +4,7 @@ import {
   flattenStyleTransform,
   minimaliseTransform,
   minimalNativeTransform,
-  print
+  print,
 } from "@times-components-native/jest-serializer";
 import { mockNativeModules } from "@times-components-native/mocks";
 
@@ -20,6 +20,6 @@ addSerializers(
     print,
     minimalNativeTransform,
     flattenStyleTransform,
-    minimaliseTransform((value, key) => key !== "style")
-  )
+    minimaliseTransform((value, key) => key !== "style"),
+  ),
 );

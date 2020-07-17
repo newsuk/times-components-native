@@ -2,17 +2,17 @@ import { fontFactory, spacing } from "@times-components-native/styleguide";
 
 const styles = {
   container: {
-    padding: spacing(2)
+    padding: spacing(2),
   },
   headline: {
     ...fontFactory({
       font: "headline",
-      fontSize: "tileLeadHeadline"
-    })
+      fontSize: "tileLeadHeadline",
+    }),
   },
   summaryContainer: {
-    marginBottom: spacing(2)
-  }
+    marginBottom: spacing(2),
+  },
 };
 
 export default styles;

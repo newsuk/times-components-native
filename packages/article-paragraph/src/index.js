@@ -26,11 +26,11 @@ ArticleParagraphWrapper.propTypes = {
   children: PropTypes.node.isRequired,
   uid: PropTypes.number.isRequired,
   height: PropTypes.number.isRequired,
-  style: PropTypes.objectOf({})
+  style: PropTypes.objectOf({}),
 };
 
 ArticleParagraphWrapper.defaultProps = {
-  style: {}
+  style: {},
 };
 
 export default ArticleParagraphWrapper;

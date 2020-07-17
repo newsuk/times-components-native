@@ -5,9 +5,9 @@ import ArticleImage from "./article-image.base";
 import { propTypes, defaultPropTypes } from "./article-image-prop-types";
 import styles from "./styles";
 
-const ArticleImageNative = props => {
+const ArticleImageNative = (props) => {
   const {
-    imageOptions: { display, uri }
+    imageOptions: { display, uri },
   } = props;
 
   return (
@@ -17,7 +17,7 @@ const ArticleImageNative = props => {
           key={uri}
           style={[
             styles[`${display}Container`],
-            isTablet && styles[`${display}ContainerTablet`]
+            isTablet && styles[`${display}ContainerTablet`],
           ]}
         >
           <ArticleImage {...props} />

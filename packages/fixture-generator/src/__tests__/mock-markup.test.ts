@@ -21,24 +21,21 @@ describe("get markup", () => {
   });
 
   it("should generate large markup shapes", () => {
-    expect(
-      new MockMarkup()
-        .addParagraphs(5)
-        .addAds()
-        .get()
-    ).toMatchObject([
+    expect(new MockMarkup().addParagraphs(5).addAds().get()).toMatchObject([
       { name: "paragraph" },
       { name: "paragraph" },
       { name: "paragraph" },
       { name: "paragraph" },
       { name: "paragraph" },
-      { name: "ad" }
-    ])
+      { name: "ad" },
+    ]);
   });
 
   it("should be able to generate summaries", () => {
     const mockMarkup = new MockMarkup().addSummary("summary125").get();
     expect(mockMarkup).toMatchObject([{ name: "paragraph" }]);
-    expect(mockMarkup[0].children[0].attributes.value.length).toBeLessThanOrEqual(125);
+    expect(
+      mockMarkup[0].children[0].attributes.value.length,
+    ).toBeLessThanOrEqual(125);
   });
 });

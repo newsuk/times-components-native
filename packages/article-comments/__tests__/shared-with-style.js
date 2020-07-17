@@ -3,7 +3,7 @@ import {
   compose,
   flattenStyleTransform,
   minimaliseTransform,
-  print
+  print,
 } from "@times-components-native/jest-serializer";
 import shared from "./shared-base";
 
@@ -13,8 +13,8 @@ export default () => {
     compose(
       print,
       flattenStyleTransform,
-      minimaliseTransform((value, key) => key !== "style")
-    )
+      minimaliseTransform((value, key) => key !== "style"),
+    ),
   );
 
   shared();

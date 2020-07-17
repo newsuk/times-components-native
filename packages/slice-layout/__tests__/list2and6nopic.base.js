@@ -5,7 +5,7 @@ import createItem from "./utils";
 import { ListTwoAndSixNoPic } from "../src/slice-layout";
 import styles from "../src/templates/listtwoandsixnopic/styles";
 
-export default renderComponent => {
+export default (renderComponent) => {
   const tests = [
     {
       name: "list two and six no pic - small",
@@ -20,11 +20,11 @@ export default renderComponent => {
             support4={createItem("support-4")}
             support5={createItem("support-5")}
             support6={createItem("support-6")}
-          />
+          />,
         );
 
         expect(output).toMatchSnapshot();
-      }
+      },
     },
     {
       name: "list two and six no pic - medium",
@@ -40,11 +40,11 @@ export default renderComponent => {
             support4={createItem("support-4")}
             support5={createItem("support-5")}
             support6={createItem("support-6")}
-          />
+          />,
         );
 
         expect(output).toMatchSnapshot();
-      }
+      },
     },
     {
       name: "list two and six no pic - wide",
@@ -60,11 +60,11 @@ export default renderComponent => {
             support4={createItem("support-4")}
             support5={createItem("support-5")}
             support6={createItem("support-6")}
-          />
+          />,
         );
 
         expect(output).toMatchSnapshot();
-      }
+      },
     },
     {
       name: "list two and six no pic - huge",
@@ -80,18 +80,18 @@ export default renderComponent => {
             support4={createItem("support-4")}
             support5={createItem("support-5")}
             support6={createItem("support-6")}
-          />
+          />,
         );
 
         expect(output).toMatchSnapshot();
-      }
+      },
     },
     {
       name: "list two and six no pic - wrong breakpoint",
       test() {
         expect(styles("wrong-breakpoint")).toEqual({});
-      }
-    }
+      },
+    },
   ];
 
   iterator(tests);

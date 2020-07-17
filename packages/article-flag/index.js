@@ -6,5 +6,5 @@ export {
   UpdatedArticleFlag,
   ExclusiveArticleFlag,
   SponsoredArticleFlag,
-  LongReadArticleFlag
-} from './src/article-flag';
+  LongReadArticleFlag,
+} from "./src/article-flag";

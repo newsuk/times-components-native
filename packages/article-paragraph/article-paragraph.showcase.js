@@ -30,7 +30,7 @@ const renderParagraphWithScale = ({ select, boolean }, ast) => {
                   font: theme.dropCapFont,
                   key,
                   dropCap: value,
-                  scale
+                  scale,
                 }}
               />
             )
@@ -48,7 +48,7 @@ const renderParagraphWithScale = ({ select, boolean }, ast) => {
               {children}
             </ArticleParagraph>
           );
-        }
+        },
       })}
     </ContextProviderWithDefaults>
   );
@@ -61,22 +61,22 @@ export default {
         renderParagraphWithScale({ select }, paragraphData),
       name: "Paragraph",
       platform: "native",
-      type: "story"
+      type: "story",
     },
     {
       component: ({ select, boolean }) =>
         renderParagraphWithScale({ select, boolean }, dropCapData),
       name: "Paragraph with dropcap",
       platform: "native",
-      type: "story"
+      type: "story",
     },
     {
       component: ({ select, boolean }) =>
         renderParagraphWithScale({ select, boolean }, dropCapShortTextData),
       name: "DropCap paragraph with short text",
       platform: "native",
-      type: "story"
-    }
+      type: "story",
+    },
   ],
-  name: "Primitives/Article Paragraph|Dropcap"
+  name: "Primitives/Article Paragraph|Dropcap",
 };

@@ -1,1 +1,1 @@
-export { default } from './src/star-button';
+export { default } from "./src/star-button";

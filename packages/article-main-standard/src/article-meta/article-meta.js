@@ -2,7 +2,7 @@ import React from "react";
 import { Text, View } from "react-native";
 import {
   ArticleBylineWithLinks,
-  hasBylineData
+  hasBylineData,
 } from "@times-components-native/article-byline";
 import DatePublication from "@times-components-native/date-publication";
 
@@ -14,7 +14,7 @@ function ArticleMeta({
   bylines,
   publicationName,
   publishedTime,
-  onAuthorPress
+  onAuthorPress,
 }) {
   return (
     <View style={[styles.articleMeta, isTablet && styles.articleMetaTablet]}>

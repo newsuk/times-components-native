@@ -9,11 +9,11 @@ const exampleImage =
   "https://www.thetimes.co.uk/imageserver/image/methode%2Ftimes%2Fprod%2Fweb%2Fbin%2Ff10d34c8-abaf-11e8-9969-06853d7144fd.jpg?crop=1688%2C949%2C0%2C88&resize=685";
 const style = {
   container: {
-    backgroundColor: "blue"
+    backgroundColor: "blue",
   },
   text: {
-    color: "white"
-  }
+    color: "white",
+  },
 };
 
 export default {
@@ -21,29 +21,29 @@ export default {
     {
       component: () => <Caption text={captionText} />,
       name: "Without credits",
-      type: "story"
+      type: "story",
     },
     {
       component: () => <Caption credits={credits} text={captionText} />,
       name: "With credits",
-      type: "story"
+      type: "story",
     },
     {
       component: () => <Caption credits={credits} />,
       name: "Credits only",
-      type: "story"
+      type: "story",
     },
     {
       component: () => <CentredCaption credits={credits} text={captionText} />,
       name: "Centred caption",
-      type: "story"
+      type: "story",
     },
     {
       component: () => (
         <Caption credits={credits} style={style} text={captionText} />
       ),
       name: "With specific styles",
-      type: "story"
+      type: "story",
     },
     {
       component: () => (
@@ -53,14 +53,14 @@ export default {
       ),
       name: "Image with caption",
       platform: "native",
-      type: "story"
+      type: "story",
     },
     {
       component: () => (
         <Caption credits={credits} text={captionText}>
           <div
             style={{
-              paddingBottom: `${100 / 16 / 9}%`
+              paddingBottom: `${100 / 16 / 9}%`,
             }}
           >
             <img alt="Man with beard" src={exampleImage} />
@@ -69,8 +69,8 @@ export default {
       ),
       name: "Image with caption",
       platform: "web",
-      type: "story"
-    }
+      type: "story",
+    },
   ],
-  name: "Primitives/Caption"
+  name: "Primitives/Caption",
 };

@@ -2,7 +2,7 @@ import styled from "styled-components";
 import {
   breakpoints,
   colours,
-  spacing
+  spacing,
 } from "@times-components-native/styleguide";
 
 export const KeylineItem = styled.div`

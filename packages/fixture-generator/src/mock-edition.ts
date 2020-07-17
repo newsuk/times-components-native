@@ -3,7 +3,7 @@ import {
   mockMagazineSection,
   mockPuzzleSection,
   mockStandardSection,
-  mockStandardSectionWithSecondaryTwoSlices
+  mockStandardSectionWithSecondaryTwoSlices,
 } from "./mock-section";
 
 class MockEdition {
@@ -20,8 +20,8 @@ class MockEdition {
       sections: this.getSections(),
       revision: 1,
       images: {
-        list: []
-      }
+        list: [],
+      },
     };
   }
 
@@ -32,7 +32,7 @@ class MockEdition {
       mockStandardSection("World"),
       mockPuzzleSection("Puzzles"),
       mockMagazineSection("Culture"),
-      mockStandardSectionWithSecondaryTwoSlices("Comment")
+      mockStandardSectionWithSecondaryTwoSlices("Comment"),
     ];
   }
 

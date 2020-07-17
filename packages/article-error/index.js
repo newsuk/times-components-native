@@ -1,1 +1,1 @@
-export { default } from './src/article-error';
+export { default } from "./src/article-error";

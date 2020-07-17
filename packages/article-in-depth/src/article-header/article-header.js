@@ -9,7 +9,7 @@ import Label from "../article-label/article-label";
 import Standfirst from "../article-standfirst/article-standfirst";
 import {
   articleHeaderPropTypes,
-  articleHeaderDefaultProps
+  articleHeaderDefaultProps,
 } from "./article-header-prop-types";
 import styles from "../styles";
 
@@ -22,7 +22,7 @@ const ArticleHeader = ({
   label,
   longRead,
   standfirst,
-  textColour: rgbTextColour
+  textColour: rgbTextColour,
 }) => {
   const backgroundColour = gqlRgbaToStyle(rgbBackgroundColour);
   const textColour = gqlRgbaToStyle(rgbTextColour);
@@ -34,7 +34,7 @@ const ArticleHeader = ({
           style={[
             styles.container,
             { backgroundColor: backgroundColour, width: "100%" },
-            isTablet && styles.containerTablet
+            isTablet && styles.containerTablet,
           ]}
         >
           <View
@@ -48,10 +48,10 @@ const ArticleHeader = ({
                   color: textColour,
                   ...fontFactory({
                     font: headlineFont || "headline",
-                    fontSize: isTablet ? "pageHeadline" : "headline"
-                  })
+                    fontSize: isTablet ? "pageHeadline" : "headline",
+                  }),
                 },
-                headlineCase ? { textTransform: headlineCase } : null
+                headlineCase ? { textTransform: headlineCase } : null,
               ]}
             >
               {headline}
@@ -71,7 +71,7 @@ const ArticleHeader = ({
 };
 
 ArticleHeader.propTypes = {
-  ...articleHeaderPropTypes
+  ...articleHeaderPropTypes,
 };
 
 ArticleHeader.defaultProps = articleHeaderDefaultProps;

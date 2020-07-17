@@ -1,53 +1,53 @@
 import {
   editionBreakpoints,
-  spacing
+  spacing,
 } from "@times-components-native/styleguide";
 
 const smallBreakpointStyles = {
   item: {
-    width: "50%"
+    width: "50%",
   },
   itemContainer: {
     flex: 1,
-    flexDirection: "row"
-  }
+    flexDirection: "row",
+  },
 };
 
 const defaultBreakpointStyles = {
   container: {
     flex: 1,
     flexDirection: "row",
-    marginHorizontal: spacing(4)
+    marginHorizontal: spacing(4),
   },
   columnsContainer: {
     flex: 2,
-    flexDirection: "row"
+    flexDirection: "row",
   },
   columnItem: {
-    flex: 1
+    flex: 1,
   },
   rowsContainer: {
     flex: 1,
-    paddingVertical: spacing(1)
+    paddingVertical: spacing(1),
   },
   colSeparatorStyle: {
-    marginVertical: spacing(3)
-  }
+    marginVertical: spacing(3),
+  },
 };
 
 const wideBreakpointStyles = {
   ...defaultBreakpointStyles,
   container: {
     ...defaultBreakpointStyles.container,
-    marginHorizontal: spacing(2)
-  }
+    marginHorizontal: spacing(2),
+  },
 };
 
 const stylesResolver = {
   [editionBreakpoints.small]: smallBreakpointStyles,
   [editionBreakpoints.medium]: defaultBreakpointStyles,
   [editionBreakpoints.wide]: wideBreakpointStyles,
-  [editionBreakpoints.huge]: wideBreakpointStyles
+  [editionBreakpoints.huge]: wideBreakpointStyles,
 };
 
-export default breakpoint => stylesResolver[breakpoint];
+export default (breakpoint) => stylesResolver[breakpoint];

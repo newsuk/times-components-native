@@ -1,25 +1,25 @@
 import {
   colours,
   spacing,
-  editionBreakpoints
+  editionBreakpoints,
 } from "@times-components-native/styleguide";
 
 export const darkBackgroundColour = {
-  backgroundColor: colours.functional.darkSupplement
+  backgroundColor: colours.functional.darkSupplement,
 };
 
 const smallBreakpointStyles = {
   logoContainer: {
     ...darkBackgroundColour,
     flexDirection: "row",
-    margin: spacing(2)
+    margin: spacing(2),
   },
   separator: {
-    borderBottomColor: colours.functional.tertiary
+    borderBottomColor: colours.functional.tertiary,
   },
   container: {
-    ...darkBackgroundColour
-  }
+    ...darkBackgroundColour,
+  },
 };
 
 const mediumBreakpointStyles = {
@@ -27,17 +27,17 @@ const mediumBreakpointStyles = {
     ...darkBackgroundColour,
     flexDirection: "row",
     margin: spacing(3),
-    marginBottom: spacing(2)
+    marginBottom: spacing(2),
   },
   separator: {
     borderBottomColor: colours.functional.tertiary,
-    marginHorizontal: spacing(3)
+    marginHorizontal: spacing(3),
   },
   container: {
     ...darkBackgroundColour,
     marginVertical: spacing(3),
-    marginHorizontal: spacing(6)
-  }
+    marginHorizontal: spacing(6),
+  },
 };
 
 const wideBreakpointStyles = {
@@ -45,16 +45,16 @@ const wideBreakpointStyles = {
   container: {
     ...darkBackgroundColour,
     marginVertical: spacing(3),
-    marginHorizontal: spacing(4)
-  }
+    marginHorizontal: spacing(4),
+  },
 };
 
 const stylesResolver = {
   [editionBreakpoints.small]: smallBreakpointStyles,
   [editionBreakpoints.medium]: mediumBreakpointStyles,
   [editionBreakpoints.wide]: wideBreakpointStyles,
-  [editionBreakpoints.huge]: wideBreakpointStyles
+  [editionBreakpoints.huge]: wideBreakpointStyles,
 };
 
-export default breakpoint =>
+export default (breakpoint) =>
   Object.assign(smallBreakpointStyles, stylesResolver[breakpoint]);

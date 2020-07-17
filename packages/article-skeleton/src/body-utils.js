@@ -22,7 +22,7 @@ const collapsed = (isTablet, content) =>
                 ...children,
                 ...next.children,
                 { name: "break", children: [] },
-                { name: "break", children: [] }
+                { name: "break", children: [] },
               ];
             } else {
               break;
@@ -31,9 +31,9 @@ const collapsed = (isTablet, content) =>
           return [
             {
               ...acc[0],
-              children
+              children,
             },
-            ...acc.slice(i)
+            ...acc.slice(i),
           ];
         }
         return [node, ...acc];
@@ -57,9 +57,9 @@ export const setAdPosition = (adPosition, content) => {
     ...contentWithoutAdSlot.slice(0, adPosition - 1),
     {
       name: "ad",
-      children: []
+      children: [],
     },
-    ...contentWithoutAdSlot.slice(adPosition - 1)
+    ...contentWithoutAdSlot.slice(adPosition - 1),
   ];
 };
 
@@ -71,7 +71,7 @@ export const getStringBounds = (fontSettings, string) => {
   let x2 = 0;
   let y1 = 0;
   let y2 = 0;
-  glyphs.forEach(glyph => {
+  glyphs.forEach((glyph) => {
     const bbox = glyph.getBoundingBox();
     x1 = Math.min(x1, bbox.x1);
     x2 = Math.max(x2, bbox.x2) + 100 * (glyphs.length - 1);
@@ -86,5 +86,5 @@ export const getStringBounds = (fontSettings, string) => {
 };
 
 export default memoize((isTablet, adPosition, content) =>
-  collapsed(isTablet, setAdPosition(adPosition, content))
+  collapsed(isTablet, setAdPosition(adPosition, content)),
 );

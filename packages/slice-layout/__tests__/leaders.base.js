@@ -4,7 +4,7 @@ import { iterator } from "@times-components-native/test-utils";
 import createItem from "./utils";
 import { Leaders } from "../src/slice-layout";
 
-export default renderComponent => {
+export default (renderComponent) => {
   const tests = [
     {
       name: "leaders - small",
@@ -15,11 +15,11 @@ export default renderComponent => {
             leader1={createItem("leader-1")}
             leader2={createItem("leader-2")}
             leader3={createItem("leader-3")}
-          />
+          />,
         );
 
         expect(output).toMatchSnapshot();
-      }
+      },
     },
     {
       name: "leaders - medium",
@@ -30,11 +30,11 @@ export default renderComponent => {
             leader1={createItem("leader-1")}
             leader2={createItem("leader-2")}
             leader3={createItem("leader-3")}
-          />
+          />,
         );
 
         expect(output).toMatchSnapshot();
-      }
+      },
     },
     {
       name: "leaders - wide",
@@ -45,12 +45,12 @@ export default renderComponent => {
             leader1={createItem("leader-1")}
             leader2={createItem("leader-2")}
             leader3={createItem("leader-3")}
-          />
+          />,
         );
 
         expect(output).toMatchSnapshot();
-      }
-    }
+      },
+    },
   ];
 
   iterator(tests);

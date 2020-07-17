@@ -19,7 +19,7 @@ export default (ast, section = "default") => {
           {children}
         </ArticleParagraph>
       );
-    }
+    },
   });
   return rendered;
 };

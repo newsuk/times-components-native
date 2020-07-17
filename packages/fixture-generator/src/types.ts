@@ -928,7 +928,7 @@ export enum Flag {
   New = "NEW",
   Exclusive = "EXCLUSIVE",
   Updated = "UPDATED",
-  Sponsored = "SPONSORED"
+  Sponsored = "SPONSORED",
 }
 
 export enum SectionName {
@@ -952,12 +952,12 @@ export enum SectionName {
   Times2 = "times2",
   Travel = "travel",
   Weekend = "weekend",
-  World = "world"
+  World = "world",
 }
 
 export enum PublicationName {
   Sundaytimes = "SUNDAYTIMES",
-  Times = "TIMES"
+  Times = "TIMES",
 }
 
 export enum TemplateType {
@@ -966,7 +966,7 @@ export enum TemplateType {
   Magazinestandard = "magazinestandard",
   Maincomment = "maincomment",
   Mainstandard = "mainstandard",
-  Takeoverpage = "takeoverpage"
+  Takeoverpage = "takeoverpage",
 }
 
 export enum WorkDeskName {
@@ -990,13 +990,13 @@ export enum WorkDeskName {
   Times2 = "times2",
   Travel = "travel",
   Weekend = "weekend",
-  World = "world"
+  World = "world",
 }
 /** Predefined template names that should be used by all systems interested in templates to denote the template layout */
 export enum Template {
   Default = "DEFAULT",
   LeadAndTwo = "LEAD_AND_TWO",
-  OpinionAndTwo = "OPINION_AND_TWO"
+  OpinionAndTwo = "OPINION_AND_TWO",
 }
 
 export enum SynonymType {
@@ -1007,28 +1007,28 @@ export enum SynonymType {
   Event = "EVENT",
   WorkOfArt = "WORK_OF_ART",
   ConsumerGood = "CONSUMER_GOOD",
-  Other = "OTHER"
+  Other = "OTHER",
 }
 
 export enum Region {
   Default = "default",
-  Ireland = "ireland"
+  Ireland = "ireland",
 }
 
 export enum EditionGroupOptions {
-  Date = "date"
+  Date = "date",
 }
 
 export enum Display {
   Primary = "primary",
   Secondary = "secondary",
   Inline = "inline",
-  Fullwidth = "fullwidth"
+  Fullwidth = "fullwidth",
 }
 
 export enum CacheControlScope {
   Public = "PUBLIC",
-  Private = "PRIVATE"
+  Private = "PRIVATE",
 }
 
 /** A lower kebab case string */

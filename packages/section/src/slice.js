@@ -10,7 +10,7 @@ const Slice = ({ slice, onPress }) => {
 
 Slice.propTypes = {
   onPress: PropTypes.func.isRequired,
-  slice: PropTypes.shape({}).isRequired
+  slice: PropTypes.shape({}).isRequired,
 };
 
 export default withSliceTrackingContext(Slice);

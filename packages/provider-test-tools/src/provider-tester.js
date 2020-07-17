@@ -8,7 +8,7 @@ import clientTester from "./client-tester";
 export default function providerTester(
   requestHandler,
   WrappedComponent,
-  defaultProps = {}
+  defaultProps = {},
 ) {
   const { link, client } = clientTester(requestHandler);
 
@@ -29,7 +29,7 @@ export default function providerTester(
           this.setState(() => {
             done(state);
             return state;
-          })
+          }),
         );
       };
     }
@@ -67,7 +67,7 @@ export default function providerTester(
           )}
         </Stateful>
       }
-    </ApolloProvider>
+    </ApolloProvider>,
   );
 
   return {

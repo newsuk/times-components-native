@@ -5,33 +5,33 @@ const styles = {
   bullet: {
     borderRadius: 2.5,
     height: 5,
-    width: 5
+    width: 5,
   },
   flagPadding: {
-    marginRight: spacing(3)
+    marginRight: spacing(3),
   },
   flagsContainer: {
     marginBottom: spacing(3),
-    marginTop: spacing(1)
+    marginTop: spacing(1),
   },
   flags: {
     flexDirection: "row",
     flexWrap: "wrap",
-    marginBottom: spacing(2)
+    marginBottom: spacing(2),
   },
   title: {
     ...fontFactory({
       font: "bodyRegularSmallCaps",
-      fontSize: "cardMetaMobile"
+      fontSize: "cardMetaMobile",
     }),
     fontWeight: "400",
     letterSpacing: 0.6,
-    marginLeft: spacing(1)
+    marginLeft: spacing(1),
   },
   view: {
     alignItems: "center",
-    flexDirection: "row"
-  }
+    flexDirection: "row",
+  },
 };
 
 export default styles;

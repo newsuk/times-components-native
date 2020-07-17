@@ -8,7 +8,7 @@ import {
   minimalNativeTransform,
   minimaliseTransform,
   flattenStyleTransform,
-  print
+  print,
 } from "@times-components-native/jest-serializer";
 import { iterator } from "@times-components-native/test-utils";
 import shared from "./shared.base";
@@ -26,8 +26,8 @@ export default () => {
       print,
       minimalNativeTransform,
       flattenStyleTransform,
-      minimaliseTransform((value, key) => key === "style")
-    )
+      minimaliseTransform((value, key) => key === "style"),
+    ),
   );
 
   iterator([
@@ -36,24 +36,28 @@ export default () => {
       name: "re-measures when scale changes",
       test: async () => {
         const testInstance = TestRenderer.create(
-          <DropCap dropCap={mockDropCap} scale={scales.large} text={mockText} />
+          <DropCap
+            dropCap={mockDropCap}
+            scale={scales.large}
+            text={mockText}
+          />,
         );
 
         expect(
-          testInstance.root.findAllByType(Text)[0].props.style[0].fontSize
+          testInstance.root.findAllByType(Text)[0].props.style[0].fontSize,
         ).toBe(115);
         testInstance.update(
           <DropCap
             dropCap={mockDropCap}
             scale={scales.xlarge}
             text={mockText}
-          />
+          />,
         );
 
         expect(
-          testInstance.root.findAllByType(Text)[0].props.style[0].fontSize
+          testInstance.root.findAllByType(Text)[0].props.style[0].fontSize,
         ).toBe(124);
-      }
-    }
+      },
+    },
   ]);
 };

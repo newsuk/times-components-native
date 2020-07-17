@@ -10,8 +10,8 @@ const styles = StyleSheet.create({
     marginTop: 0,
     letterSpacing: 1,
     includeFontPadding: false,
-    marginBottom: Platform.OS === "ios" ? -3 : 1
-  }
+    marginBottom: Platform.OS === "ios" ? -3 : 1,
+  },
 });
 
 export default styles;

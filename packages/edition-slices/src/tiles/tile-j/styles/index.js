@@ -3,22 +3,22 @@ import { fontFactory, spacing } from "@times-components-native/styleguide";
 const styles = {
   container: {
     flexDirection: "row",
-    padding: spacing(2)
+    padding: spacing(2),
   },
   headline: {
     ...fontFactory({
       font: "headline",
-      fontSize: "infoTitle"
+      fontSize: "infoTitle",
     }),
-    marginBottom: spacing(1)
+    marginBottom: spacing(1),
   },
   imageContainer: {
-    width: "40%"
+    width: "40%",
   },
   summaryContainer: {
     paddingLeft: spacing(2),
-    width: "60%"
-  }
+    width: "60%",
+  },
 };
 
 export default styles;

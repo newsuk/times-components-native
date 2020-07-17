@@ -4,12 +4,12 @@ import Responsive from "@times-components-native/responsive";
 import { getPuzzleSlices } from "@times-components-native/fixture-generator";
 import { PuzzleSlice } from "./src/slices";
 
-const preventDefaultedAction = decorateAction =>
+const preventDefaultedAction = (decorateAction) =>
   decorateAction([
     ([e, ...args]) => {
       e.preventDefault();
       return ["[SyntheticEvent (storybook prevented default)]", ...args];
-    }
+    },
   ]);
 
 /* eslint-disable react/prop-types */
@@ -28,13 +28,13 @@ const sliceStories = [
   {
     mock: { puzzles: getPuzzleSlices(1) },
     name: "Single Puzzle",
-    Slice: PuzzleSlice
+    Slice: PuzzleSlice,
   },
   {
     mock: { puzzles: getPuzzleSlices(3) },
     name: "Multiple Puzzles",
-    Slice: PuzzleSlice
-  }
+    Slice: PuzzleSlice,
+  },
 ];
 
 export default {
@@ -42,7 +42,7 @@ export default {
     component: renderSlice(Slice, mock),
     name,
     type: "story",
-    platform: "native"
+    platform: "native",
   })),
-  name: "Composed/Edition/Puzzles"
+  name: "Composed/Edition/Puzzles",
 };

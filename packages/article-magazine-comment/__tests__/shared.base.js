@@ -8,7 +8,7 @@ import sharedProps from "./shared-props";
 import { adConfig } from "./ad-mock";
 
 const findComponents = (testInstance, componentName) =>
-  testInstance.root.findAll(node => {
+  testInstance.root.findAll((node) => {
     if (typeof node.type === "string") {
       return node.type.includes(componentName);
     }
@@ -19,10 +19,10 @@ const findComponents = (testInstance, componentName) =>
 const emptyArticle = {
   expirableFlags: [],
   label: null,
-  standfirst: null
+  standfirst: null,
 };
 
-export const snapshotTests = renderComponent => [
+export const snapshotTests = (renderComponent) => [
   {
     name: "an error",
     test() {
@@ -30,21 +30,21 @@ export const snapshotTests = renderComponent => [
         <ArticleMagazineComment
           {...sharedProps}
           error={{ message: "An example error." }}
-        />
+        />,
       );
 
       expect(testRenderer).toMatchSnapshot();
-    }
+    },
   },
   {
     name: "loading",
     test() {
       const testRenderer = renderComponent(
-        <ArticleMagazineComment {...sharedProps} isLoading />
+        <ArticleMagazineComment {...sharedProps} isLoading />,
       );
 
       expect(testRenderer).toMatchSnapshot();
-    }
+    },
   },
   {
     name: "an article with no headline falls back to use shortHeadline",
@@ -55,13 +55,13 @@ export const snapshotTests = renderComponent => [
           article={articleFixture({
             ...testFixture,
             ...emptyArticle,
-            headline: ""
+            headline: "",
           })}
-        />
+        />,
       );
 
       expect(testRenderer).toMatchSnapshot();
-    }
+    },
   },
   {
     name: "an article with ads",
@@ -76,16 +76,16 @@ export const snapshotTests = renderComponent => [
               {
                 attributes: {},
                 children: [],
-                name: "ad"
-              }
-            ]
+                name: "ad",
+              },
+            ],
           })}
-        />
+        />,
       );
 
       expect(testRenderer).toMatchSnapshot();
-    }
-  }
+    },
+  },
 ];
 
 const negativeTests = [
@@ -96,13 +96,13 @@ const negativeTests = [
         <ArticleMagazineComment
           {...sharedProps}
           article={articleFixture({ ...testFixture, label: null })}
-        />
+        />,
       );
 
       const label = findComponents(testRenderer, "ArticleLabel");
 
       expect(label).toEqual([]);
-    }
+    },
   },
   {
     name: "an article with no standfirst",
@@ -112,12 +112,12 @@ const negativeTests = [
           {...sharedProps}
           article={articleFixture({
             ...testFixture,
-            standfirst: null
+            standfirst: null,
           })}
-        />
+        />,
       );
 
-      const textNodes = testRenderer.root.findAll(node => {
+      const textNodes = testRenderer.root.findAll((node) => {
         if (typeof node.type === "string") {
           return (
             node.type === "Text" &&
@@ -130,7 +130,7 @@ const negativeTests = [
       });
 
       expect(textNodes).toEqual([]);
-    }
+    },
   },
   {
     name: "an article with no author",
@@ -148,25 +148,25 @@ const negativeTests = [
                     children: [
                       {
                         attributes: {
-                          value: "Rick Broadbent"
+                          value: "Rick Broadbent",
                         },
                         children: [],
-                        name: "text"
-                      }
+                        name: "text",
+                      },
                     ],
-                    name: "inline"
-                  }
+                    name: "inline",
+                  },
                 ],
-                image: null
-              }
-            ]
+                image: null,
+              },
+            ],
           })}
-        />
+        />,
       );
 
       expect(testRenderer).toMatchSnapshot();
-    }
-  }
+    },
+  },
 ];
 
 export default (renderComponent, platformTests = []) => {
@@ -175,8 +175,8 @@ export default (renderComponent, platformTests = []) => {
   beforeEach(() => {
     global.Intl = {
       DateTimeFormat: () => ({
-        resolvedOptions: () => ({ timeZone: "Europe/London" })
-      })
+        resolvedOptions: () => ({ timeZone: "Europe/London" }),
+      }),
     };
   });
 
@@ -187,7 +187,7 @@ export default (renderComponent, platformTests = []) => {
   iterator([
     ...snapshotTests(renderComponent),
     ...platformTests,
-    ...negativeTests
+    ...negativeTests,
   ]);
 };
 
