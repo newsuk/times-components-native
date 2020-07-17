@@ -35,6 +35,7 @@ const ArticleWithContent = (props) => {
   const {
     Header,
     data,
+    adConfig,
     analyticsStream,
     onCommentGuidelinesPress,
     onCommentsPress,
@@ -82,6 +83,7 @@ const ArticleWithContent = (props) => {
     () => (
       <Gutter>
         <ArticleExtras
+          adConfig={adConfig}
           analyticsStream={analyticsStream}
           articleId={id}
           articleUrl={url}

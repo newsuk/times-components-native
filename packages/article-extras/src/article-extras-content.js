@@ -6,8 +6,10 @@ import ArticleComments from "@times-components-native/article-comments";
 import RelatedArticles from "@times-components-native/related-articles";
 import ArticleTopics from "./article-topics";
 import styles from "./styles";
+import Ad from "@times-components-native/ad";
 
 const ArticleExtrasContent = ({
+  adConfig,
   analyticsStream,
   article,
   articleId,
@@ -40,6 +42,9 @@ const ArticleExtrasContent = ({
         </ResponsiveContext.Consumer>
       ) : null}
       {topics ? <ArticleTopics onPress={onTopicPress} topics={topics} /> : null}
+      {adConfig ? (
+        <Ad adConfig={adConfig} slotName="native-below-article" />
+      ) : null}
       <ArticleComments
         articleId={articleId}
         commentCount={commentCount}
@@ -53,6 +58,7 @@ const ArticleExtrasContent = ({
 };
 
 ArticleExtrasContent.propTypes = {
+  adConfig: PropTypes.shape({}),
   analyticsStream: PropTypes.func.isRequired,
   article: PropTypes.shape({}).isRequired,
   articleId: PropTypes.string.isRequired,

@@ -80,6 +80,13 @@ const sizes = {
       width: 970,
     },
   ],
+  nativeBelowArticle: [
+    {
+      height: 250,
+      sizes: [billboard],
+      width: 970,
+    },
+  ],
   pixel: [
     {
       height: 0,

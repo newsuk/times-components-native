@@ -47,6 +47,7 @@ const omitKeys = new Set([
   "testID",
   "viewabilityConfig",
   "viewabilityConfigCallbackPairs",
+  "adConfig",
 ]);
 
 export default () => {
