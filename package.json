@@ -36,7 +36,9 @@
     "test:ios": "jest --config test-setup/jest.ios.config.js",
     "test:android": "jest --config test-setup/jest.android.config.js",
     "test:common": "jest --config test-setup/jest.common.config.js",
-    "test:all": "yarn test:ios && yarn test:android && yarn test:common"
+    "test:all": "yarn test:ios && yarn test:android && yarn test:common",
+    "test:e2e:build": "yarn detox build",
+    "test:e2e:test": "yarn detox test"
   },
   "repository": {
     "type": "git",
@@ -92,11 +94,13 @@
     "babel-plugin-styled-components": "1.10.6",
     "babel-plugin-transform-react-remove-prop-types": "0.4.24",
     "depcheck": "1.0.0",
+    "detox": "^17.2.0",
     "enzyme": "3.9.0",
     "enzyme-adapter-react-16": "1.12.1",
     "enzyme-to-json": "3.3.5",
     "eslint": "7.4.0",
     "eslint-config-prettier": "^6.11.0",
+    "eslint-plugin-detox": "^1.0.0",
     "eslint-plugin-graphql": "4.0.0",
     "eslint-plugin-import": "2.22.0",
     "eslint-plugin-jsx-a11y": "^6.3.1",
@@ -110,6 +114,7 @@
     "graphql-codegen-typescript-template": "0.14.5",
     "graphql-tag": "2.10.3",
     "jest": "24.8.0",
+    "jest-circus": "26.1.0",
     "jest-transform-graphql": "2.1.0",
     "jsdom": "9.12.0",
     "lodash.merge": "4.6.2",

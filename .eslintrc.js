@@ -4,6 +4,7 @@ module.exports = {
   "env": {
     "es6": true,
     "node": true,
+    "detox/detox": true
   },
   "extends": [
     "eslint:recommended",
@@ -27,7 +28,8 @@ module.exports = {
     "import",
     "jsx-a11y",
     "react",
-    "react-native"
+    "react-native",
+    "detox"
   ],
   "rules": {
     "import/extensions": "off",
