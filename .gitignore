@@ -58,7 +58,6 @@ buck-out/
 storybook-native/story-loader.js
 coverage
 dist
-packages/*/rnw.js
 
 # developer editor preferences
 .vscode

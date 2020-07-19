@@ -37,6 +37,7 @@
     "test:android": "jest --config test-setup/jest.android.config.js",
     "test:common": "jest --config test-setup/jest.common.config.js",
     "test:all": "yarn test:ios && yarn test:android && yarn test:common",
+    "test:e2e:server": "react-native start --config ./tests-e2e/metro.config.js",
     "test:e2e:build": "yarn detox build",
     "test:e2e:test": "yarn detox test"
   },
