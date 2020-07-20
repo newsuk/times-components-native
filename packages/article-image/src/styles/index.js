@@ -47,11 +47,7 @@ const styles = StyleSheet.create({
     width: "100%",
   },
   inlineContainerNarrow: {
-    alignItems: "flex-start",
     paddingLeft: spacing(2),
-    left: 0,
-    position: "relative",
-    borderWidth: 10,
   },
   inlineImage: {
     width: "100%",
@@ -68,7 +64,6 @@ const styles = StyleSheet.create({
     alignSelf: "flex-start",
     paddingLeft: spacing(2),
     width: narrowArticleContentWidth,
-    borderWidth: 1,
   },
   secondaryCaption: {
     paddingLeft: spacing(2),
@@ -92,7 +87,6 @@ const styles = StyleSheet.create({
     alignSelf: "flex-start",
     paddingLeft: spacing(2),
     width: narrowArticleContentWidth,
-    borderWidth: 4,
   },
   secondaryImage: {
     width: "50%",
