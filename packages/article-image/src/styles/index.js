@@ -46,6 +46,13 @@ const styles = StyleSheet.create({
     paddingTop: 0,
     width: "100%",
   },
+  inlineContainerNarrow: {
+    alignItems: "flex-start",
+    paddingLeft: spacing(2),
+    left: 0,
+    position: "relative",
+    borderWidth: 10,
+  },
   inlineImage: {
     width: "100%",
   },
@@ -56,6 +63,12 @@ const styles = StyleSheet.create({
   },
   primaryContainerTablet: {
     ...containerShared,
+  },
+  primaryContainerNarrow: {
+    alignSelf: "flex-start",
+    paddingLeft: spacing(2),
+    width: narrowArticleContentWidth,
+    borderWidth: 1,
   },
   secondaryCaption: {
     paddingLeft: spacing(2),
@@ -75,13 +88,14 @@ const styles = StyleSheet.create({
     paddingLeft: spacing(0),
     paddingRight: spacing(0),
   },
-  secondaryImage: {
-    width: "50%",
-  },
-  containerNarrow: {
+  secondaryContainerNarrow: {
     alignSelf: "flex-start",
     paddingLeft: spacing(2),
     width: narrowArticleContentWidth,
+    borderWidth: 4,
+  },
+  secondaryImage: {
+    width: "50%",
   },
 });
 

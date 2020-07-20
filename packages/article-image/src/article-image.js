@@ -18,7 +18,7 @@ const ArticleImageNative = (props) => {
           style={[
             styles[`${display}Container`],
             isTablet && styles[`${display}ContainerTablet`],
-            narrowContent && styles[`containerNarrow`],
+            narrowContent && styles[`${display}ContainerNarrow`],
           ]}
         >
           <ArticleImage {...props} />
