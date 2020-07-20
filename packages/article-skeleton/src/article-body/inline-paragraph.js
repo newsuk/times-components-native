@@ -68,7 +68,7 @@ const InlineParagraph = ({
       <View
         style={{
           position: "absolute",
-          left: gutters,
+          left: narrowContent ? 0 : gutters,
           width: contentWidth * 0.35,
         }}
         onLayout={(e) => {
