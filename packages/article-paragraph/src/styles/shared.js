@@ -29,8 +29,8 @@ const sharedStyles = (dropCapFont = "dropCap", scale = scales.medium) => {
       width: tabletWidth,
     },
     narrow: {
-      width: "100%",
       alignSelf: "flex-start",
+      width: "100%",
       maxWidth: narrowArticleContentWidth,
     },
     dropCapContainer: {

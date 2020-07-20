@@ -23,23 +23,23 @@ const ArticleLeftColumn = ({
   topics,
 }) => (
   <View style={styles.leftColumnContainer}>
-    <View style={styles.authorImage}>
+    <View style={styles.authorContainer}>
       <ModalImage
         aspectRatio={1}
         uri={authorImage}
         onImagePress={onImagePress ? () => onImagePress(0) : undefined}
         rounded
       />
+      {hasBylineData(bylines) && (
+        <View style={styles.bylines}>
+          <ArticleBylineWithLinks
+            ast={bylines}
+            centered
+            onAuthorPress={onAuthorPress}
+          />
+        </View>
+      )}
     </View>
-    {hasBylineData(bylines) && (
-      <View style={styles.bylines}>
-        <ArticleBylineWithLinks
-          ast={bylines}
-          centered
-          onAuthorPress={onAuthorPress}
-        />
-      </View>
-    )}
     {topics ? (
       <View style={styles.topicsContainer}>
         <ArticleTopics

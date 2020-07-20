@@ -1,6 +1,7 @@
 /* eslint-disable consistent-return */
 
 import React, { Component } from "react";
+import { View } from "react-native";
 import ArticleError from "@times-components-native/article-error";
 import ArticleSkeleton from "@times-components-native/article-skeleton";
 import { getHeadline } from "@times-components-native/utils";
@@ -12,6 +13,7 @@ import {
   articlePropTypes,
   articleDefaultProps,
 } from "./article-prop-types/article-prop-types";
+import styles from "./styles";
 
 class ArticlePage extends Component {
   constructor(props) {
@@ -20,8 +22,7 @@ class ArticlePage extends Component {
   }
 
   renderHeader() {
-    const { article, onAuthorPress, onImagePress, topics } = this.props;
-    console.log("TOPIC", topics);
+    const { article, onAuthorPress, onImagePress } = this.props;
     const {
       expirableFlags,
       hasVideo,
@@ -81,8 +82,6 @@ class ArticlePage extends Component {
     } = this.props;
 
     const { bylines, topics } = article;
-    console.log('topics222', topics);
-
 
     const authorImage =
       bylines &&
@@ -98,7 +97,7 @@ class ArticlePage extends Component {
         {({ isTablet }) => (
           <Context.Consumer>
             {({ theme: { scale, dropCapFont } }) => (
-              <>
+              <View style={styles.mainContainer}>
                 <ArticleLeftColumn
                   authorImage={authorImage}
                   bylines={bylines}
@@ -131,7 +130,7 @@ class ArticlePage extends Component {
                   receiveChildList={receiveChildList}
                   scale={scale}
                 />
-              </>
+              </View>
             )}
           </Context.Consumer>
         )}

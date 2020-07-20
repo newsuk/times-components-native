@@ -14,7 +14,8 @@ const sharedStyles = {
     width: tabletWidth,
   },
   narrow: {
-    width: narrowArticleContentWidth,
+    width: "100%",
+    maxWidth: narrowArticleContentWidth,
   },
   topicsMetaContainer: {
     justifyContent: "flex-start",

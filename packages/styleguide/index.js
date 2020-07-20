@@ -19,5 +19,6 @@ export {
   tabletWidth,
   tabletWidthMax,
   themeFactory,
+  narrowArticleWidth,
   narrowArticleContentWidth,
 } from "./src/styleguide";
