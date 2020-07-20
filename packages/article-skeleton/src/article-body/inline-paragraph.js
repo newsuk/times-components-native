@@ -34,8 +34,6 @@ const InlineParagraph = ({
     return null;
   }
 
-  // console.log('InlineParagraph', narrowContent)
-
   const contentWidth = Math.min(
     screenWidth(),
     narrowContent ? narrowArticleContentWidth : tabletWidth,
