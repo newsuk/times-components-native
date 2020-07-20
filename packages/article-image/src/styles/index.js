@@ -26,8 +26,7 @@ const styles = StyleSheet.create({
     maxWidth: tabletWidthMax,
   },
   inlineCaption: {
-    paddingLeft: spacing(2),
-    paddingTop: 0,
+    paddingTop: spacing(2),
   },
   inlineContainer: {
     flexDirection: "row",
