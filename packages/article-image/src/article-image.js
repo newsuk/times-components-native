@@ -7,7 +7,7 @@ import styles from "./styles";
 
 const ArticleImageNative = (props) => {
   const {
-    imageOptions: { display, uri },
+    imageOptions: { display, uri, narrowContent },
   } = props;
 
   return (
@@ -18,6 +18,7 @@ const ArticleImageNative = (props) => {
           style={[
             styles[`${display}Container`],
             isTablet && styles[`${display}ContainerTablet`],
+            narrowContent && styles[`containerNarrow`],
           ]}
         >
           <ArticleImage {...props} />

@@ -31,7 +31,7 @@ export const {
 } = breakpoints;
 export const tabletRowPadding = 20;
 export const narrowArticleWidth = 853;
-export const narrowArticleContentWidth = 572;
+export const narrowArticleContentWidth = 552;
 
 export {
   default as breakpoints,

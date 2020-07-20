@@ -6,7 +6,6 @@ const { colours, fontFactory, spacing } = styleguide();
 
 const Styles = {
   mainContainer: {
-    marginTop: spacing(8),
     marginLeft: "auto",
     marginRight: "auto",
     maxWidth: narrowArticleWidth,
@@ -29,6 +28,7 @@ const Styles = {
     marginTop: "auto",
   },
   header: {
+    paddingTop: spacing(8),
     paddingBottom: spacing(4),
     paddingRight: spacing(5),
   },
@@ -59,6 +59,7 @@ const Styles = {
     marginBottom: spacing(3),
   },
   leftColumnContainer: {
+    paddingTop: spacing(8),
     width: "25%",
     zIndex: 1,
     borderRightWidth: 1,

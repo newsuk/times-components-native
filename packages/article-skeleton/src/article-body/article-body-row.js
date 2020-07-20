@@ -227,6 +227,7 @@ export default ({
             relativeHeight,
             relativeHorizontalOffset,
             relativeVerticalOffset,
+            narrowContent,
           }}
         />
       );
