@@ -26,7 +26,7 @@ exports[`tile r huge 1`] = `
     <View
       style={
         Object {
-          "marginBottom": 0,
+          "marginBottom": 5,
         }
       }
     >
@@ -94,7 +94,7 @@ exports[`tile r medium 1`] = `
     <View
       style={
         Object {
-          "marginBottom": 0,
+          "marginBottom": 5,
         }
       }
     >
@@ -115,7 +115,7 @@ exports[`tile r medium 1`] = `
           "fontWeight": "900",
           "includeFontPadding": false,
           "lineHeight": 40,
-          "marginBottom": 0,
+          "marginBottom": 10,
         }
       }
     >
@@ -162,7 +162,7 @@ exports[`tile r wide 1`] = `
     <View
       style={
         Object {
-          "marginBottom": 0,
+          "marginBottom": 5,
         }
       }
     >
@@ -183,7 +183,7 @@ exports[`tile r wide 1`] = `
           "fontWeight": "900",
           "includeFontPadding": false,
           "lineHeight": 40,
-          "marginBottom": 0,
+          "marginBottom": 10,
         }
       }
     >
@@ -230,7 +230,7 @@ exports[`tile r without breakpoint should be like medium 1`] = `
     <View
       style={
         Object {
-          "marginBottom": 0,
+          "marginBottom": 5,
         }
       }
     >
@@ -251,7 +251,7 @@ exports[`tile r without breakpoint should be like medium 1`] = `
           "fontWeight": "900",
           "includeFontPadding": false,
           "lineHeight": 40,
-          "marginBottom": 0,
+          "marginBottom": 10,
         }
       }
     >
