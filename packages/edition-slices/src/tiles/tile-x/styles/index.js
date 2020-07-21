@@ -29,8 +29,6 @@ export default (breakpoint) => ({
     color: colours.functional.primary,
     fontSize: 24,
     lineHeight: 26,
-    // paddingTop: spacing(2),
-    // paddingBottom: 0,
   },
   summary: {
     ...globalSpacingStyles.tabletTeaser,
