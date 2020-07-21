@@ -2,10 +2,7 @@
 <Workspace
    version = "1.0">
    <FileRef
-      location = "group:storybooknative/ReactConfig.m">
-   </FileRef>
-   <FileRef
-      location = "group:storybooknative.xcodeproj">
+      location = "group:TimesComponents.xcodeproj">
    </FileRef>
    <FileRef
       location = "group:Pods/Pods.xcodeproj">
