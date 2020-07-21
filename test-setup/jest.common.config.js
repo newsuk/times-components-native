@@ -6,7 +6,7 @@ module.exports = {
   ],
   setupFilesAfterEnv: [],
   rootDir: "../",
-  testMatch: ["**/__tests__/**/*.test.js", "**/__tests__/**/*.test.ts"],
+  testMatch: ["**/__tests__/**/?(*.)+(spec|test).[jt]s?(x)"],
   testPathIgnorePatterns: ["android/", "ios/"],
   testURL: "http://localhost",
   transform: {
