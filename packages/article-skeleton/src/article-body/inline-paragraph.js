@@ -19,7 +19,7 @@ const InlineParagraph = ({
   scale,
   inline,
   tree,
-  key,
+  uid,
   defaultFont,
   LinkComponent,
 }) => {
@@ -53,10 +53,13 @@ const InlineParagraph = ({
 
   return [
     dropCap && (
-      <View style={{ left: gutters - spacing(2) }}>{dropCap.element}</View>
+      <View key={`${uid}:dropcap`} style={{ left: gutters - spacing(2) }}>
+        {dropCap.element}
+      </View>
     ),
     inline && (
       <View
+        key={`${uid}:inline-paragraph`}
         style={{
           position: "absolute",
           left: gutters,
@@ -82,8 +85,8 @@ const InlineParagraph = ({
     ),
     <ArticleParagraphWrapper
       ast={tree}
-      key={key}
-      uid={key}
+      uid={uid}
+      key={`${uid}:paragraph-wrapper`}
       height={Math.max(
         dropCap ? defaultFont.lineHeight * 3 : 0,
         !positioned.length
@@ -103,6 +106,7 @@ const InlineParagraph = ({
           return (
             <LinkComponent
               url={href}
+              key={i}
               onPress={(e) =>
                 onLinkPress(e, { canonicalId, type, url: href.href })
               }
@@ -119,7 +123,7 @@ const InlineParagraph = ({
         }
         return (
           <Text
-            key={i.toString()}
+            key={i}
             allowFontScaling={false}
             selectable
             numberOfLines={1}
@@ -148,7 +152,7 @@ InlineParagraph.propTypes = {
   scale: PropTypes.string.isRequired,
   inline: PropTypes.object.isRequired,
   tree: PropTypes.object.isRequired,
-  key: PropTypes.string.isRequired,
+  uid: PropTypes.string.isRequired,
   defaultFont: PropTypes.object.isRequired,
   LinkComponent: PropTypes.func.isRequired,
 };

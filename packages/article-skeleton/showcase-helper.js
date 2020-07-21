@@ -144,6 +144,7 @@ const renderArticleSkeleton = ({
                 )}
                 onViewableItemsChanged={() => null}
                 isTablet={isTablet}
+                scale={scale}
               />
             </ContextProviderWithDefaults>
           )}
