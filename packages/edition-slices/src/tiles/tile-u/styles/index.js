@@ -14,7 +14,6 @@ const styles = {
     fontFamily: fonts.headline,
     fontSize: 40,
     lineHeight: 40,
-    // marginBottom: 0,
   },
 };
 

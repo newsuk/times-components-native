@@ -129,7 +129,7 @@ const sliceStories = [
   },
   {
     mock: mockSecondaryFourSlice(),
-    name: "Secondary Four (Mobile, Tablet: C,C,C,C)",
+    name: "Secondary Four (Mobile: C,C,C,C, Tablet: AR,AR,B,B)",
     Slice: SecondaryFourSlice,
   },
   {

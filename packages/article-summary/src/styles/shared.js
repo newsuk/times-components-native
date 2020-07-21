@@ -6,7 +6,6 @@ const sharedStyles = {
     color: colours.functional.primary,
     fontFamily: fonts.headline,
     fontWeight: "900",
-    backgroundColor: "orange",
     marginBottom: spacing(2),
   },
   headlineWrapper: {
@@ -17,7 +16,6 @@ const sharedStyles = {
   },
   labelWrapper: {
     marginBottom: spacing(1),
-    backgroundColor: "orange",
   },
   metaText: {
     color: colours.functional.secondary,
@@ -33,8 +31,6 @@ const sharedStyles = {
       fontSize: "strapline",
     }),
     color: colours.functional.secondary,
-    backgroundColor: "orange",
-    // paddingBottom: spacing(2),
     marginBottom: spacing(2),
   },
   text: {

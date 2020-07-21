@@ -9,9 +9,6 @@ const styles = {
   },
   flags: {
     ...sharedStyles.flags,
-    backgroundColor: "orange",
-    // marginBottom: spacing(1),
-    // marginTop: 0,
   },
   title: {
     ...sharedStyles.title,
