@@ -1,8 +1,4 @@
-import {
-  colours,
-  tabletWidth,
-  narrowArticleContentWidth,
-} from "@times-components-native/styleguide";
+import { colours, tabletWidth } from "@times-components-native/styleguide";
 
 const sharedStyles = {
   topicsContainer: {
@@ -15,7 +11,6 @@ const sharedStyles = {
   },
   narrow: {
     width: "100%",
-    maxWidth: narrowArticleContentWidth,
   },
   topicsMetaContainer: {
     justifyContent: "flex-start",

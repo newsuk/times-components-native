@@ -82,6 +82,7 @@ class ArticlePage extends Component {
     } = this.props;
 
     const { bylines, topics } = article;
+    console.log('topics:', topics);
 
     const authorImage =
       bylines &&
@@ -94,10 +95,15 @@ class ArticlePage extends Component {
 
     return (
       <ResponsiveContext.Consumer>
-        {({ isTablet }) => (
+        {({ isTablet, narrowArticleBreakpoint }) => (
           <Context.Consumer>
             {({ theme: { scale, dropCapFont } }) => (
-              <View style={styles.mainContainer}>
+              <View
+                style={[
+                  styles.mainContainer,
+                  { maxWidth: narrowArticleBreakpoint.container },
+                ]}
+              >
                 <ArticleLeftColumn
                   authorImage={authorImage}
                   bylines={bylines}

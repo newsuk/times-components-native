@@ -1,7 +1,6 @@
 import styleguide, {
   scales,
   fonts,
-  narrowArticleContentWidth,
   tabletWidth,
 } from "@times-components-native/styleguide";
 import { fontSize, margins } from "./drop-cap-sizes";
@@ -31,7 +30,6 @@ const sharedStyles = (dropCapFont = "dropCap", scale = scales.medium) => {
     narrow: {
       alignSelf: "flex-start",
       width: "100%",
-      maxWidth: narrowArticleContentWidth,
     },
     dropCapContainer: {
       flexDirection: "row",

@@ -7,16 +7,19 @@ import styleFactory from "./styles";
 const styles = styleFactory();
 
 const BodyParagraph = ({ height, narrowContent, style, children }) => {
-  // console.log('narrowContent', narrowContent);
   return (
     <ResponsiveContext.Consumer>
-      {({ isTablet }) => (
+      {({ isTablet, narrowArticleBreakpoint }) => (
         <View
           style={[
             styles.articleMainContentRow,
             styles.articleTextElement,
             isTablet && styles.articleMainContentRowTablet,
-            narrowContent && styles.narrow,
+            narrowContent && styles.narrow && {
+              maxWidth: narrowArticleBreakpoint.content,
+              alignSelf: "flex-start",
+              width: "100%",
+            },
             style,
           ].concat(height ? [{ height: height }] : [])}
         >

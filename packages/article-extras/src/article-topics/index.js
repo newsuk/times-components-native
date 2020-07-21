@@ -9,12 +9,14 @@ const ShowTopics = ({ topics, onPress, narrowContent }) => {
   if (topics && topics.length > 0) {
     return (
       <ResponsiveContext.Consumer>
-        {({ isTablet }) => (
+        {({ isTablet, narrowArticleBreakpoint }) => (
           <View
             style={[
               styles.topicsContainer,
               isTablet && styles.topicsContainerTablet,
-              narrowContent && styles.narrow,
+              narrowContent && styles.narrow && {
+                  maxWidth: narrowArticleBreakpoint.content,
+                },
             ]}
           >
             <ArticleTopics onPress={onPress} topics={topics} />

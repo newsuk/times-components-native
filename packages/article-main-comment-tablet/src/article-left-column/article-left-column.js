@@ -1,5 +1,5 @@
 import React from "react";
-import { View } from "react-native";
+import { View, Text } from "react-native";
 import {
   hasBylineData,
   ArticleBylineWithLinks,
@@ -40,6 +40,7 @@ const ArticleLeftColumn = ({
         </View>
       )}
     </View>
+    <Text>w{topics}</Text>
     {topics ? (
       <View style={styles.topicsContainer}>
         <ArticleTopics

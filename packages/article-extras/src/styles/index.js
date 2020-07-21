@@ -4,7 +4,6 @@ import {
   fontFactory,
   spacing,
   tabletWidth,
-  narrowArticleContentWidth,
 } from "@times-components-native/styleguide";
 
 const styles = StyleSheet.create({
@@ -46,11 +45,9 @@ const styles = StyleSheet.create({
     maxWidth: tabletWidth,
     width: "100%",
   },
-  narrowContent: {
+  narrow: {
     marginLeft: spacing(2),
     alignSelf: "flex-start",
-    width: "100%",
-    maxWidth: narrowArticleContentWidth,
   },
 });
 

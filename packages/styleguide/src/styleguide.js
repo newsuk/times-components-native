@@ -30,8 +30,6 @@ export const {
   nativeTabletWide: tabletWidthMax,
 } = breakpoints;
 export const tabletRowPadding = 20;
-export const narrowArticleWidth = 853;
-export const narrowArticleContentWidth = 552;
 
 export {
   default as breakpoints,
@@ -40,6 +38,7 @@ export {
   editionMaxWidth,
   sliceContentMaxWidth,
   getEditionBreakpoint,
+  getNarrowArticleBreakpoint,
 } from "./breakpoints";
 
 export { default as scales } from "./scales";

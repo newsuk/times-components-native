@@ -4,7 +4,7 @@ import { View, Text } from "react-native";
 import PropTypes from "prop-types";
 import styleguide, {
   tabletWidth,
-  narrowArticleContentWidth,
+  getNarrowArticleBreakpoint,
 } from "@times-components-native/styleguide";
 import { screenWidth } from "@times-components-native/utils";
 import {
@@ -36,7 +36,9 @@ const InlineParagraph = ({
 
   const contentWidth = Math.min(
     screenWidth(),
-    narrowContent ? narrowArticleContentWidth : tabletWidth,
+    narrowContent
+      ? getNarrowArticleBreakpoint(screenWidth()).content
+      : tabletWidth,
   );
   const gutters = (screenWidth() - contentWidth) / 2 + spacing(2);
 

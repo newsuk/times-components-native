@@ -1,14 +1,11 @@
 import { StyleSheet } from "react-native";
-import styleguide, {
-  narrowArticleWidth,
-} from "@times-components-native/styleguide";
+import styleguide from "@times-components-native/styleguide";
 const { colours, fontFactory, spacing } = styleguide();
 
 const Styles = {
   mainContainer: {
     marginLeft: "auto",
     marginRight: "auto",
-    maxWidth: narrowArticleWidth,
     width: "100%",
   },
   articleHeadline: {

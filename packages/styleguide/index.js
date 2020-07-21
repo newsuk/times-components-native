@@ -11,6 +11,7 @@ export {
   fontFactory,
   fontSizes,
   getEditionBreakpoint,
+  getNarrowArticleBreakpoint,
   lineHeight,
   scales,
   spacing,
@@ -19,6 +20,4 @@ export {
   tabletWidth,
   tabletWidthMax,
   themeFactory,
-  narrowArticleWidth,
-  narrowArticleContentWidth,
 } from "./src/styleguide";

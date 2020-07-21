@@ -1,6 +1,5 @@
 import { StyleSheet } from "react-native";
 import {
-  narrowArticleContentWidth,
   spacing,
   tabletRowPadding,
   tabletWidth,
@@ -62,7 +61,6 @@ const styles = StyleSheet.create({
   primaryContainerNarrow: {
     alignSelf: "flex-start",
     paddingLeft: spacing(2),
-    width: narrowArticleContentWidth,
   },
   secondaryCaption: {
     paddingLeft: spacing(2),
@@ -85,7 +83,6 @@ const styles = StyleSheet.create({
   secondaryContainerNarrow: {
     alignSelf: "flex-start",
     paddingLeft: spacing(2),
-    width: narrowArticleContentWidth,
   },
   secondaryImage: {
     width: "50%",

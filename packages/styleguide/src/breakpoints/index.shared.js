@@ -13,6 +13,21 @@ const editionBreakpointWidths = {
 const editionMaxWidth = editionBreakpointWidths.huge;
 const sliceContentMaxWidth = 1180;
 
+const narrowArticleWidths = {
+  medium: {
+    container: 853,
+    content: 538,
+  },
+  wide: {
+    container: 900,
+    content: 636,
+  },
+  huge: {
+    container: 1025,
+    content: 700,
+  },
+};
+
 export default {
   huge: 1320,
   medium: 768,
@@ -26,4 +41,5 @@ export {
   editionMaxWidth,
   editionBreakpointWidths,
   sliceContentMaxWidth,
+  narrowArticleWidths,
 };

@@ -31,7 +31,7 @@ const ArticleExtrasContent = ({
         <View
           style={[
             isTablet && styles.extrasTablet,
-            narrowContent && styles.narrowContent,
+            narrowContent && styles.narrow,
           ]}
         >
           {relatedArticleSlice ? (
@@ -41,7 +41,7 @@ const ArticleExtrasContent = ({
               slice={relatedArticleSlice}
             />
           ) : null}
-          {topics ? (
+          {topics && !narrowContent ? (
             <ArticleTopics
               onPress={onTopicPress}
               topics={topics}

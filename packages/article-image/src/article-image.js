@@ -12,13 +12,15 @@ const ArticleImageNative = (props) => {
 
   return (
     <ResponsiveContext.Consumer>
-      {({ isTablet }) => (
+      {({ isTablet, narrowArticleBreakpoint }) => (
         <View
           key={uri}
           style={[
             styles[`${display}Container`],
             isTablet && styles[`${display}ContainerTablet`],
-            narrowContent && styles[`${display}ContainerNarrow`],
+            narrowContent && styles[`${display}ContainerNarrow`] && {
+                width: narrowArticleBreakpoint.content,
+              },
           ]}
         >
           <ArticleImage {...props} />
