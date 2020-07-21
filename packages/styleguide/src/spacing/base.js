@@ -1,4 +1,4 @@
-const spacingBase = 5;
+const spacingBase = 4;
 
 export default function (multiple) {
   return spacingBase * multiple;
@@ -6,9 +6,10 @@ export default function (multiple) {
 
 export const globalSpacingStyles = {
   tabletHeadline: {
-    marginBottom: spacingBase * 1,
+    // marginBottom: spacingBase * 1,
   },
   tabletTeaser: {
-    marginTop: spacingBase * 1,
+    backgroundColor: "orange",
+    // marginTop: spacingBase * 1,
   },
 };

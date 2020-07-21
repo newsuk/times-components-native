@@ -30,7 +30,7 @@ const sharedStyles = {
       font: "headline",
     }),
     color: colours.functional.white,
-    marginBottom: 0,
+    // marginBottom: 0,
   },
   imageContainer: {
     flex: 1,

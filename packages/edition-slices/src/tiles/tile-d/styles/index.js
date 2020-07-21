@@ -15,7 +15,7 @@ const styles = {
       font: "headline",
       fontSize: "infoTitle",
     }),
-    marginBottom: spacing(2),
+    // marginBottom: spacing(2),
   },
   imageContainer: {
     width: "50%",
@@ -37,7 +37,7 @@ const mediumBreakpointStyles = {
     fontFamily: fonts.headline,
     fontSize: 20,
     lineHeight: 20,
-    marginBottom: 0,
+    // marginBottom: 0,
   },
   imageContainer: {
     flex: 1,

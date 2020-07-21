@@ -27,7 +27,7 @@ export default (breakpoint) => ({
     fontFamily: fonts.headline,
     fontSize: fontSizeResolver[breakpoint],
     lineHeight: fontSizeResolver[breakpoint],
-    marginBottom: 0,
+    // marginBottom: 0,
     textAlign: "center",
   },
   imageContainer: {

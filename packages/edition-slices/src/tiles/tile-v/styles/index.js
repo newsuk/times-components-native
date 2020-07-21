@@ -10,7 +10,7 @@ const styles = {
     fontFamily: fonts.headline,
     fontSize: 30,
     lineHeight: 30,
-    marginBottom: spacing(2),
+    // marginBottom: spacing(2),
   },
   summaryContainer: {
     flex: 1,

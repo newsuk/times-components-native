@@ -6,7 +6,7 @@ const styles = StyleSheet.create({
   ...sharedStyles,
   headline: {
     ...sharedStyles.headline,
-    fontWeight: "900",
+    // fontWeight: "900",
     includeFontPadding: false,
   },
   labelWrapper: {
@@ -23,8 +23,8 @@ const styles = StyleSheet.create({
   },
   strapline: {
     ...sharedStyles.strapline,
-    paddingBottom: spacing(1),
-    paddingTop: 0,
+    // paddingBottom: spacing(2),
+    // paddingTop: 0,
     includeFontPadding: false,
   },
 });
