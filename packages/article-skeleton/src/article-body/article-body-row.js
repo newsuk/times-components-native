@@ -5,6 +5,8 @@ import styleguide, {
   colours,
   tabletWidth,
   tabletRowPadding,
+  getNarrowArticleBreakpoint,
+  spacing,
 } from "@times-components-native/styleguide";
 import { AttributedString } from "@times-components-native/typeset";
 import { screenWidth } from "@times-components-native/utils";
@@ -327,13 +329,29 @@ export default ({
       },
     ) {
       const aspectRatio = 16 / 9;
-      const contentWidth =
-        screenWidth(isTablet) - (isTablet && tabletRowPadding);
+      const contentWidth = narrowContent
+        ? getNarrowArticleBreakpoint(screenWidth()).content
+        : screenWidth(isTablet) - (isTablet && tabletRowPadding);
       const height = contentWidth / aspectRatio;
+
+      const captionStyle = {
+        container: {
+          paddingLeft: narrowContent ? 0 : spacing(2),
+        },
+      };
+
       return (
         <View
           key={key}
-          style={[styles.primaryContainer, isTablet && styles.containerTablet]}
+          style={[
+            styles.primaryContainer,
+            isTablet && styles.containerTablet,
+            narrowContent && {
+              alignSelf: "stretch",
+              marginLeft: spacing(2),
+              width: contentWidth,
+            },
+          ]}
         >
           <Video
             accountId={brightcoveAccountId}
@@ -344,7 +362,7 @@ export default ({
             videoId={brightcoveVideoId}
             width={contentWidth}
           />
-          <InsetCaption caption={caption} />
+          <InsetCaption caption={caption} style={captionStyle} />
         </View>
       );
     },
