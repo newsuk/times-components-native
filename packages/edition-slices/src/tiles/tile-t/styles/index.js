@@ -10,6 +10,7 @@ const styles = {
       font: "headline",
       fontSize: "infoTitle",
     }),
+    marginBottom: spacing(1),
   },
   imageContainer: {
     width: "50%",
