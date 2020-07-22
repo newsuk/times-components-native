@@ -14,6 +14,7 @@ const TileF = ({ onPress, tile }) => (
     <TileSummary
       headlineStyle={styles.headline}
       strapline={getTileStrapline(tile)}
+      straplineStyle={styles.strapline}
       summary={getTileSummary(tile, 125)}
       tile={tile}
       summaryStyle={styles.summaryContainer}

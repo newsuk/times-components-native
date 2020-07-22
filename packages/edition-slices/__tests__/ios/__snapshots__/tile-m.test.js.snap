@@ -39,8 +39,8 @@ exports[`tile m huge 1`] = `
           "fontSize": 16,
           "includeFontPadding": false,
           "lineHeight": 19,
+          "marginBottom": 10,
           "paddingBottom": 5,
-          "paddingTop": 0,
           "textAlign": "center",
         }
       }
@@ -73,7 +73,7 @@ exports[`tile m medium 1`] = `
           "fontWeight": "900",
           "includeFontPadding": false,
           "lineHeight": 20,
-          "marginBottom": 5,
+          "marginBottom": 10,
           "marginTop": 30,
           "textAlign": "center",
         }
@@ -91,8 +91,8 @@ exports[`tile m medium 1`] = `
           "fontSize": 16,
           "includeFontPadding": false,
           "lineHeight": 19,
+          "marginBottom": 10,
           "paddingBottom": 5,
-          "paddingTop": 0,
           "textAlign": "center",
         }
       }
@@ -150,9 +150,8 @@ exports[`tile m small 1`] = `
           "fontSize": 14,
           "includeFontPadding": false,
           "lineHeight": 20,
-          "paddingBottom": 5,
+          "marginBottom": 10,
           "paddingHorizontal": 40,
-          "paddingTop": 0,
           "textAlign": "center",
         }
       }
@@ -185,7 +184,7 @@ exports[`tile m wide 1`] = `
           "fontWeight": "900",
           "includeFontPadding": false,
           "lineHeight": 24,
-          "marginBottom": 5,
+          "marginBottom": 10,
           "marginTop": 30,
           "textAlign": "center",
         }
@@ -203,8 +202,8 @@ exports[`tile m wide 1`] = `
           "fontSize": 16,
           "includeFontPadding": false,
           "lineHeight": 19,
+          "marginBottom": 10,
           "paddingBottom": 5,
-          "paddingTop": 0,
           "textAlign": "center",
         }
       }
@@ -262,9 +261,8 @@ exports[`tile m without breakpoint should be like small 1`] = `
           "fontSize": 14,
           "includeFontPadding": false,
           "lineHeight": 20,
-          "paddingBottom": 5,
+          "marginBottom": 10,
           "paddingHorizontal": 40,
-          "paddingTop": 0,
           "textAlign": "center",
         }
       }

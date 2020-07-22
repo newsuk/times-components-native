@@ -12,7 +12,7 @@ exports[`1. article summary headline component 1`] = `
       "fontWeight": "900",
       "includeFontPadding": false,
       "lineHeight": 27,
-      "marginBottom": 5,
+      "marginBottom": 10,
     }
   }
 >
@@ -31,8 +31,7 @@ exports[`2. article summary strapline component 1`] = `
       "fontSize": 22,
       "includeFontPadding": false,
       "lineHeight": 24,
-      "paddingBottom": 5,
-      "paddingTop": 0,
+      "marginBottom": 10,
     }
   }
 >
