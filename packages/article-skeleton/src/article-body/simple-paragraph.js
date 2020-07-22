@@ -63,7 +63,7 @@ SimpleParagraph.propTypes = {
   onLinkPress: PropTypes.func.isRequired,
   tree: PropTypes.object.isRequired,
   uid: PropTypes.string.isRequired,
-  children: PropTypes.node.isRequired,
+  children: PropTypes.array.isRequired,
   defaultFont: PropTypes.object.isRequired,
   LinkComponent: PropTypes.func.isRequired,
 };

@@ -26,7 +26,7 @@ const BodyParagraph = (props) => (
 BodyParagraph.propTypes = {
   children: PropTypes.node.isRequired,
   height: PropTypes.number,
-  style: PropTypes.objectOf({}),
+  style: PropTypes.object,
 };
 
 BodyParagraph.defaultProps = {

@@ -12,7 +12,7 @@ export const basePropTypes = {
   onPress: PropTypes.func.isRequired,
   style: StylePropType,
   target: PropTypes.string,
-  url: PropTypes.string,
+  url: PropTypes.oneOfType([PropTypes.string, PropTypes.object]),
 };
 
 export const baseDefaultProps = {

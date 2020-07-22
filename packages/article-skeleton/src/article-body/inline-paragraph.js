@@ -147,7 +147,7 @@ const InlineParagraph = ({
 InlineParagraph.propTypes = {
   onLinkPress: PropTypes.func.isRequired,
   isTablet: PropTypes.bool.isRequired,
-  dropCap: PropTypes.object.isRequired,
+  dropCap: PropTypes.oneOfType([PropTypes.object, PropTypes.boolean]),
   str: PropTypes.object.isRequired,
   scale: PropTypes.string.isRequired,
   inline: PropTypes.object.isRequired,
