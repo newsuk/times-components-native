@@ -103,7 +103,7 @@ const InlineParagraph = ({
               defaultFont.lineHeight,
         inlineExclusion ? inlineExclusion.height : 0,
       )}
-      narrowContent
+      narrowContent={narrowContent}
     >
       {positioned.map((p, i) => {
         const [attribute, href] = p.text.collapsedAttributes(0);
