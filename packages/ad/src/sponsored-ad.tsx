@@ -6,10 +6,11 @@ import {
   WebViewNavigation,
 } from "react-native-webview/lib/WebViewTypes";
 
+const initialHeight = 250;
+
 const handleRequest = (e: WebViewNavigation) => {
-  if (e.navigationType !== "click") {
-    return true;
-  }
+  if (e.navigationType !== "click") return true;
+
   Linking.openURL(e.url);
   return false;
 };
@@ -24,7 +25,7 @@ export const updateHeight = (webViewRef: MutableRefObject<WebView | null>) => {
 };
 
 export const SponsoredAd = () => {
-  const [height, setHeight] = React.useState(250);
+  const [height, setHeight] = React.useState(initialHeight);
   const webViewRef = React.useRef<WebView>(null);
 
   const onWebViewMessage = (event: WebViewMessageEvent) => {
