@@ -85,7 +85,10 @@ export default ({
         <ArticleParagraphWrapper
           key={key}
           ast={tree}
-          style={{ marginBottom: 0 }}
+          style={[
+            { marginBottom: 0 },
+            narrowContent && { alignSelf: "flex-start" },
+          ]}
         >
           <Text selectable style={styles[tree.name]}>
             {childStr.string}
