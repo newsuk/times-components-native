@@ -3,14 +3,24 @@ set -e
 
 REPO_SLUG="newsuk/times-components-ios-artifacts"
 PACKAGE_VERSION=$(cat package.json | grep version | head -1 | sed 's/[\",\t ]//g' | awk -F: '{ print $2 }')
-
-IS_BETA=$([[ "$PACKAGE_VERSION" = *"beta"* ]] && echo 1 || echo 0)
-RELEASE_DEST=$([ $IS_BETA = 1 ]  && echo "beta" || echo "production") 
-
-ARTIFACTS_REPO_SLUG=$([ $IS_BETA = 1 ] && echo "$REPO_SLUG-beta" || echo "$REPO_SLUG")
-ARTIFACTS_REPO_SSH="git@github.com:$ARTIFACTS_REPO_SLUG.git"
 TMP_ASSET_DIR=$(mktemp -d) || { logError "Failed to create temp file" ; exit 2; }
 
+setupEnv () {
+  if [ "$CIRCLE_BRANCH" == "master" ] && [[ $PACKAGE_VERSION != *"beta"* ]]
+  then
+    echo "👉 Setting up enviroment for a production release."
+    ARTIFACTS_REPO_SLUG="$REPO_SLUG"
+    ARTIFACTS_REPO_SSH="git@github.com:$ARTIFACTS_REPO_SLUG.git"
+
+    RELEASE_DEST="production"
+  else
+    echo "👉 Setting up enviroment for a beta release."
+    ARTIFACTS_REPO_SLUG="$REPO_SLUG-beta"
+    ARTIFACTS_REPO_SSH="git@github.com:$ARTIFACTS_REPO_SLUG.git"
+
+    RELEASE_DEST="beta"
+  fi
+}
 
 setup () {
     echo "🔧 Setting up git user"
@@ -53,6 +63,7 @@ publish () {
     echo "👻 Success! Release published at https://github.com/$ARTIFACTS_REPO_SLUG/releases/tag/$PACKAGE_VERSION"
 }
 
+setupEnv
 setup
 package
 checkIfVersionExists
