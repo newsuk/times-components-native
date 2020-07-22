@@ -83,6 +83,7 @@ ArticleParagraph.propTypes = {
   data: PropTypes.object.isRequired,
   dropCapFont: PropTypes.object.isRequired,
   LinkComponent: PropTypes.func.isRequired,
+  narrowContent: PropTypes.bool.isRequired,
 };
 
 export default ArticleParagraph;

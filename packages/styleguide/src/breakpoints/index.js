@@ -1,4 +1,4 @@
-import { NativeModules, useWindowDimensions } from "react-native";
+import { NativeModules } from "react-native";
 
 import widths, {
   editionBreakpoints,

@@ -25,13 +25,16 @@ const ArticleExtrasContent = ({
     topics,
   } = article;
 
+  const getNarrowContentStyle = (width) => [styles.narrow, { width }];
+
   return (
     <ResponsiveContext.Consumer>
-      {({ isTablet }) => (
+      {({ isTablet, narrowArticleBreakpoint }) => (
         <View
           style={[
             isTablet && styles.extrasTablet,
-            narrowContent && styles.narrow,
+            narrowContent &&
+              getNarrowContentStyle(narrowArticleBreakpoint.content),
           ]}
         >
           {relatedArticleSlice ? (
@@ -71,6 +74,11 @@ ArticleExtrasContent.propTypes = {
   onCommentsPress: PropTypes.func.isRequired,
   onRelatedArticlePress: PropTypes.func.isRequired,
   onTopicPress: PropTypes.func.isRequired,
+  narrowContent: PropTypes.bool,
+};
+
+ArticleExtrasContent.defaultProps = {
+  narrowContent: false,
 };
 
 export default ArticleExtrasContent;

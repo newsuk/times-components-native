@@ -7,6 +7,8 @@ import styleFactory from "./styles";
 const styles = styleFactory();
 
 const BodyParagraph = ({ height, narrowContent, style, children }) => {
+  const getNarrowContentStyle = (width) => [styles.narrow, { maxWidth: width }];
+
   return (
     <ResponsiveContext.Consumer>
       {({ isTablet, narrowArticleBreakpoint }) => (
@@ -15,11 +17,8 @@ const BodyParagraph = ({ height, narrowContent, style, children }) => {
             styles.articleMainContentRow,
             styles.articleTextElement,
             isTablet && styles.articleMainContentRowTablet,
-            narrowContent && styles.narrow && {
-              maxWidth: narrowArticleBreakpoint.content,
-              alignSelf: "flex-start",
-              width: "100%",
-            },
+            narrowContent &&
+              getNarrowContentStyle(narrowArticleBreakpoint.content),
             style,
           ].concat(height ? [{ height: height }] : [])}
         >
@@ -33,11 +32,13 @@ const BodyParagraph = ({ height, narrowContent, style, children }) => {
 BodyParagraph.propTypes = {
   children: PropTypes.node.isRequired,
   height: PropTypes.number,
+  narrowContent: PropTypes.bool,
   style: PropTypes.objectOf({}),
 };
 
 BodyParagraph.defaultProps = {
   height: null,
+  narrowContent: false,
   style: {},
 };
 

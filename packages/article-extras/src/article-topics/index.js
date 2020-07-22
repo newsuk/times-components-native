@@ -14,7 +14,8 @@ const ShowTopics = ({ topics, onPress, narrowContent }) => {
             style={[
               styles.topicsContainer,
               isTablet && styles.topicsContainerTablet,
-              narrowContent && styles.narrow && {
+              narrowContent &&
+                styles.narrow && {
                   maxWidth: narrowArticleBreakpoint.content,
                 },
             ]}
@@ -37,10 +38,12 @@ ShowTopics.propTypes = {
       slug: PropTypes.string.isRequired,
     }).isRequired,
   ),
+  narrowContent: PropTypes.bool,
 };
 
 ShowTopics.defaultProps = {
   topics: null,
+  narrowContent: false,
 };
 
 export default ShowTopics;

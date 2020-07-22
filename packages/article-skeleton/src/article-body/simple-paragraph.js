@@ -71,6 +71,7 @@ SimpleParagraph.propTypes = {
   children: PropTypes.node.isRequired,
   defaultFont: PropTypes.object.isRequired,
   LinkComponent: PropTypes.func.isRequired,
+  narrowContent: PropTypes.bool.isRequired,
 };
 
 export default SimpleParagraph;

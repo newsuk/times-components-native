@@ -1,7 +1,6 @@
 import PropTypes from "prop-types";
 
 const articleHeaderPropTypes = {
-  bylines: PropTypes.arrayOf(PropTypes.shape({})).isRequired,
   flags: PropTypes.arrayOf(
     PropTypes.shape({
       expiryTime: PropTypes.string,

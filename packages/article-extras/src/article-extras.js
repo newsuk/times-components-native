@@ -49,6 +49,11 @@ ArticleExtras.propTypes = {
   onCommentsPress: PropTypes.func.isRequired,
   onRelatedArticlePress: PropTypes.func.isRequired,
   onTopicPress: PropTypes.func.isRequired,
+  narrowContent: PropTypes.bool,
+};
+
+ArticleExtras.defaultProps = {
+  narrowContent: false,
 };
 
 export default ArticleExtras;
