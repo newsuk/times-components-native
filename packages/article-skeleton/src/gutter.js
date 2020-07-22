@@ -12,7 +12,7 @@ const Gutter = ({ children, style }) => (
 
 Gutter.propTypes = {
   children: PropTypes.node.isRequired,
-  style: PropTypes.objectOf({
+  style: PropTypes.shape({
     overflow: PropTypes.string,
   }),
 };

@@ -33,7 +33,7 @@ BodyParagraph.propTypes = {
   children: PropTypes.node.isRequired,
   height: PropTypes.number,
   narrowContent: PropTypes.bool,
-  style: PropTypes.objectOf({}),
+  style: PropTypes.object,
 };
 
 BodyParagraph.defaultProps = {
