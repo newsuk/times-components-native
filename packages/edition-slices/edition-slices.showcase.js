@@ -109,7 +109,7 @@ const sliceStories = [
   {
     mock: mockLeadTwoNoPicAndTwoSlice(),
     name:
-      "Lead Two no pic and Two (Mobile: F,B,D,E, Tablet: X,Y,D,Z, Wide: X,Y,AL,E)",
+      "Lead Two no pic and Two (Mobile: F,B,D,E, Tablet: X,Y,D,E, Wide: X,Y,AL,E)",
     Slice: LeadTwoNoPicAndTwoSlice,
   },
   {
@@ -129,7 +129,7 @@ const sliceStories = [
   },
   {
     mock: mockSecondaryFourSlice(),
-    name: "Secondary Four (Mobile, Tablet: C,C,C,C)",
+    name: "Secondary Four (Mobile: C,C,C,C, Tablet: AR,AR,B,B)",
     Slice: SecondaryFourSlice,
   },
   {
@@ -140,19 +140,18 @@ const sliceStories = [
   },
   {
     mock: mockSecondaryTwoNoPicAndTwoSlice(),
-    name:
-      "Secondary Two No Pic And Two (Mobile: B,B,G,G - Tablet: AE,AE,G,G, Wide Tablet/Desktop: AE,AE,AP,AP)",
+    name: "Secondary Two No Pic And Two (Mobile: B,B,G,G - Tablet: AE,AE,G,G)",
     Slice: SecondaryTwoNoPicAndTwoSlice,
   },
   {
     mock: mockListTwoAndSixNoPicSlice(),
     name:
-      "List Two And Six No Pic (Mobile: : C,C,L,L,L,L,L,L, Tablet: AQ,AQ,L,L,L,L,L,L, Wide Tablet: C,C,L,L,L,L,L,L)",
+      "List Two And Six No Pic (Mobile: : C,C,L,L,L,L,L,L, Tablet: AS,AS,L,L,L,L,L,L)",
     Slice: ListTwoAndSixNoPicSlice,
   },
   {
     mock: mockLeadersSlice(),
-    name: "Leaders (Mobile: M,M,M,M, Tablet: AG,AG,AG,AG)",
+    name: "Leaders (Mobile, Tablet: M,M,M,M)",
     Slice: LeadersSlice,
   },
   {

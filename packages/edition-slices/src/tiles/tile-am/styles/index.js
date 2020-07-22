@@ -9,7 +9,6 @@ const styles = {
     fontFamily: fonts.headline,
     fontSize: 35,
     lineHeight: 35,
-    paddingBottom: spacing(1),
   },
   imageContainer: {
     marginBottom: spacing(2),

@@ -10,7 +10,7 @@ const styles = {
       font: "headline",
       fontSize: "infoTitle",
     }),
-    marginBottom: spacing(2),
+    marginBottom: spacing(1),
   },
   image: {
     alignSelf: "flex-end",

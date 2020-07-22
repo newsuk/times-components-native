@@ -9,8 +9,6 @@ const styles = {
   },
   flags: {
     ...sharedStyles.flags,
-    marginBottom: spacing(1),
-    marginTop: 0,
   },
   title: {
     ...sharedStyles.title,

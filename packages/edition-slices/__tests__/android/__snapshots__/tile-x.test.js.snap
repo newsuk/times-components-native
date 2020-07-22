@@ -23,7 +23,7 @@ exports[`tile x huge 1`] = `
         <View
           style={
             Object {
-              "marginBottom": 0,
+              "marginBottom": 5,
             }
           }
         >
@@ -44,7 +44,7 @@ exports[`tile x huge 1`] = `
               "fontWeight": "900",
               "includeFontPadding": false,
               "lineHeight": 45,
-              "marginBottom": 5,
+              "marginBottom": 10,
             }
           }
         >
@@ -60,8 +60,7 @@ exports[`tile x huge 1`] = `
               "fontSize": 24,
               "includeFontPadding": false,
               "lineHeight": 26,
-              "paddingBottom": 0,
-              "paddingTop": 10,
+              "marginBottom": 10,
             }
           }
         >
@@ -88,7 +87,6 @@ exports[`tile x huge 1`] = `
               "fontSize": 14,
               "lineHeight": 20,
               "marginBottom": 0,
-              "marginTop": 5,
             }
           }
         >
@@ -127,7 +125,7 @@ exports[`tile x medium 1`] = `
         <View
           style={
             Object {
-              "marginBottom": 0,
+              "marginBottom": 5,
             }
           }
         >
@@ -148,7 +146,7 @@ exports[`tile x medium 1`] = `
               "fontWeight": "900",
               "includeFontPadding": false,
               "lineHeight": 40,
-              "marginBottom": 5,
+              "marginBottom": 10,
             }
           }
         >
@@ -164,8 +162,7 @@ exports[`tile x medium 1`] = `
               "fontSize": 24,
               "includeFontPadding": false,
               "lineHeight": 26,
-              "paddingBottom": 0,
-              "paddingTop": 10,
+              "marginBottom": 10,
             }
           }
         >
@@ -192,7 +189,6 @@ exports[`tile x medium 1`] = `
               "fontSize": 14,
               "lineHeight": 20,
               "marginBottom": 0,
-              "marginTop": 5,
             }
           }
         >
@@ -231,7 +227,7 @@ exports[`tile x wide 1`] = `
         <View
           style={
             Object {
-              "marginBottom": 0,
+              "marginBottom": 5,
             }
           }
         >
@@ -252,7 +248,7 @@ exports[`tile x wide 1`] = `
               "fontWeight": "900",
               "includeFontPadding": false,
               "lineHeight": 40,
-              "marginBottom": 5,
+              "marginBottom": 10,
             }
           }
         >
@@ -268,8 +264,7 @@ exports[`tile x wide 1`] = `
               "fontSize": 24,
               "includeFontPadding": false,
               "lineHeight": 26,
-              "paddingBottom": 0,
-              "paddingTop": 10,
+              "marginBottom": 10,
             }
           }
         >
@@ -296,7 +291,6 @@ exports[`tile x wide 1`] = `
               "fontSize": 14,
               "lineHeight": 20,
               "marginBottom": 0,
-              "marginTop": 5,
             }
           }
         >
