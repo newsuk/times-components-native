@@ -7,7 +7,7 @@ import ArticleParagraphWrapper from "@times-components-native/article-paragraph"
 const SimpleParagraph = ({
   onLinkPress,
   tree,
-  key,
+  uid,
   children,
   defaultFont,
   LinkComponent,
@@ -19,10 +19,10 @@ const SimpleParagraph = ({
   const { lineHeight } = defaultFont;
 
   return (
-    <ArticleParagraphWrapper ast={tree} key={key} uid={key}>
+    <ArticleParagraphWrapper ast={tree} uid={uid}>
       <Text allowFontScaling={false} selectable style={{ lineHeight }}>
-        {children.map((child, index) =>
-          child.splitByDifferenceInAttributes().map((nestedChild) => {
+        {children.map((child) =>
+          child.splitByDifferenceInAttributes().map((nestedChild, index) => {
             const [attribute, href] = nestedChild.collapsedAttributes(0);
             const style = attribute ? attribute.settings : defaultFont;
             const type = href ? href.type : null;
@@ -33,6 +33,7 @@ const SimpleParagraph = ({
                 <LinkComponent
                   url={href}
                   style={linkStyle}
+                  key={`${index}`}
                   onPress={(e) =>
                     onLinkPress(e, { canonicalId, type, url: href.href })
                   }
@@ -61,8 +62,8 @@ const SimpleParagraph = ({
 SimpleParagraph.propTypes = {
   onLinkPress: PropTypes.func.isRequired,
   tree: PropTypes.object.isRequired,
-  key: PropTypes.string.isRequired,
-  children: PropTypes.node.isRequired,
+  uid: PropTypes.string.isRequired,
+  children: PropTypes.array.isRequired,
   defaultFont: PropTypes.object.isRequired,
   LinkComponent: PropTypes.func.isRequired,
 };
