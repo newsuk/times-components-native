@@ -1,4 +1,4 @@
-package com.storybooknative
+package com.timescomponents
 
 import android.view.View
 import com.facebook.react.ReactPackage

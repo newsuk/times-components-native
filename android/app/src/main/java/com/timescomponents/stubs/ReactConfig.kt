@@ -1,4 +1,4 @@
-package com.storybooknative.stubs
+package com.timescomponents.stubs
 
 import com.facebook.react.bridge.BaseJavaModule
 import java.util.*

@@ -1,4 +1,4 @@
-package com.storybooknative.stubs
+package com.timescomponents.stubs
 
 import android.view.View
 import com.facebook.react.ReactPackage
