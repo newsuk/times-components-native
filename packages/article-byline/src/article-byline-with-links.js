@@ -15,7 +15,7 @@ const AuthorComponent = ({
 }) => {
   const url = `/profile/${slug}`;
   const name = children[0];
-  const linkStyle = centered ? [styles.link, styles.centered] : styles.link;
+  const linkStyle = [styles.link, centered && styles.centered];
 
   return (
     <TextLink
