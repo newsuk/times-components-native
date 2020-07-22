@@ -1,10 +1,16 @@
 #!/usr/bin/env bash
 set -e
 
-ARTIFACTS_REPO_SLUG="newsuk/times-components-ios-artifacts"
-ARTIFACTS_REPO_SSH="git@github.com:$ARTIFACTS_REPO_SLUG.git"
+REPO_SLUG="newsuk/times-components-ios-artifacts"
 PACKAGE_VERSION=$(cat package.json | grep version | head -1 | sed 's/[\",\t ]//g' | awk -F: '{ print $2 }')
+
+IS_BETA=$([[ "$PACKAGE_VERSION" = *"beta"* ]] && echo 1 || echo 0)
+RELEASE_DEST=$([ $IS_BETA = 1 ]  && echo "beta" || echo "production") 
+
+ARTIFACTS_REPO_SLUG=$([ $IS_BETA = 1 ] && echo "$REPO_SLUG-beta" || echo "$REPO_SLUG")
+ARTIFACTS_REPO_SSH="git@github.com:$ARTIFACTS_REPO_SLUG.git"
 TMP_ASSET_DIR=$(mktemp -d) || { logError "Failed to create temp file" ; exit 2; }
+
 
 setup () {
     echo "🔧 Setting up git user"
@@ -23,7 +29,7 @@ package () {
 }
 
 checkIfVersionExists () {
-    echo "👀 Checking if the current tag exists"
+    echo "👀 Checking if the current tag($PACKAGE_VERSION) exists in $RELEASE_DEST."
 
     cd $TMP_ASSET_DIR
 
@@ -34,7 +40,7 @@ checkIfVersionExists () {
 }
 
 publish () {
-    echo "🚀 Publishing to the artifacts repo"
+    echo "🚀 Publishing ($PACKAGE_VERSION) to the artifacts repo($RELEASE_DEST)"
 
     cd $TMP_ASSET_DIR
     sed -i -e "s/PACKAGE_VERSION/\"$PACKAGE_VERSION\"/g" TimesComponents.podspec
@@ -44,7 +50,7 @@ publish () {
     git tag -a $PACKAGE_VERSION -m "Publish iOS assets for v$PACKAGE_VERSION"
     git push origin master --tags --quiet
 
-    echo "👻 Success! Release published at https://github.com/$ARTIFACTS_REPO_SLUG/releases/tag/$PACKAGE_VERSION."
+    echo "👻 Success! Release published at https://github.com/$ARTIFACTS_REPO_SLUG/releases/tag/$PACKAGE_VERSION"
 }
 
 setup

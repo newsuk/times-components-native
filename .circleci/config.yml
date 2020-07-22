@@ -134,7 +134,7 @@ jobs:
                       cd ~/project/
                       # TODO: move above lines in a docker image
                       yarn android:build-lib
-                      yarn android:publish-lib
+                      sh ./scripts/publish-android.sh
                   working_directory: ~/project/
 
     publish_ios:
@@ -147,7 +147,7 @@ jobs:
                   name: Build and publish iOS js bundles
                   command: |
                       yarn ios:build-lib
-                      yarn ios:publish-lib
+                      sh ./scripts/publish-ios.sh
                   working_directory: ~/project/
 
     publish_notes:
@@ -179,7 +179,7 @@ workflows:
             - run_ios_tests:
                   requires:
                       - setup
-            - hold:
+            - hold_release:
                   type: approval
                   filters:
                     branches:
@@ -193,11 +193,29 @@ workflows:
                       - run_ios_tests
             - publish_android:
                   requires:
-                      - hold
+                      - hold_release
             - publish_ios:
                   requires:
-                      - hold
+                      - hold_release
             - publish_notes:
                 requires:
                   - publish_android
                   - publish_ios
+            - hold_release_beta:
+                  type: approval
+                  filters:
+                    branches:
+                        ignore:
+                            - master
+                  requires:
+                      - run_lint
+                      - run_typecheck
+                      - run_noplatform_tests
+                      - run_android_tests
+                      - run_ios_tests
+            - publish_android:
+                  requires:
+                      - hold_release_beta
+            - publish_ios:
+                  requires:
+                      - hold_release_beta
