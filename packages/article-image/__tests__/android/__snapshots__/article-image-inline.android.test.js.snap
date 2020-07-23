@@ -38,8 +38,7 @@ exports[`1. inline image (landscape) with caption and credits 1`] = `
   <View
     style={
       Object {
-        "paddingLeft": 10,
-        "paddingTop": 0,
+        "paddingTop": 10,
       }
     }
   >
@@ -122,8 +121,7 @@ exports[`2. inline image (portrait) with caption and credits 1`] = `
   <View
     style={
       Object {
-        "paddingLeft": 10,
-        "paddingTop": 0,
+        "paddingTop": 10,
       }
     }
   >

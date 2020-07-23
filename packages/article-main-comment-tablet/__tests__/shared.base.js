@@ -2,7 +2,8 @@
 import React from "react";
 import TestRenderer from "react-test-renderer";
 import { iterator } from "@times-components-native/test-utils";
-import ArticleMainComment from "../src/article-main-comment";
+import { ResponsiveContext } from "@times-components-native/responsive";
+import ArticleMainCommentTablet from "../src/article-main-comment-tablet";
 import articleFixture, { testFixture } from "../fixtures/full-article";
 import sharedProps from "./shared-props";
 import { adConfig } from "./ad-mock";
@@ -22,15 +23,31 @@ const emptyArticle = {
   standfirst: null,
 };
 
+export const withTabletContext = (WrappedComponent) => (
+  <ResponsiveContext.Provider
+    value={{
+      isTablet: true,
+      narrowArticleBreakpoint: {
+        container: 800,
+        content: 600,
+      },
+    }}
+  >
+    {WrappedComponent}
+  </ResponsiveContext.Provider>
+);
+
 export const snapshotTests = (renderComponent) => [
   {
     name: "an error",
     test() {
       const testRenderer = renderComponent(
-        <ArticleMainComment
-          {...sharedProps}
-          error={{ message: "An example error." }}
-        />,
+        withTabletContext(
+          <ArticleMainCommentTablet
+            {...sharedProps}
+            error={{ message: "An example error." }}
+          />,
+        ),
       );
 
       expect(testRenderer).toMatchSnapshot();
@@ -40,7 +57,9 @@ export const snapshotTests = (renderComponent) => [
     name: "loading",
     test() {
       const testRenderer = renderComponent(
-        <ArticleMainComment {...sharedProps} isLoading />,
+        withTabletContext(
+          <ArticleMainCommentTablet {...sharedProps} isLoading />,
+        ),
       );
 
       expect(testRenderer).toMatchSnapshot();
@@ -50,14 +69,16 @@ export const snapshotTests = (renderComponent) => [
     name: "an article with no headline falls back to use shortHeadline",
     test() {
       const testRenderer = renderComponent(
-        <ArticleMainComment
-          {...sharedProps}
-          article={articleFixture({
-            ...testFixture,
-            ...emptyArticle,
-            headline: "",
-          })}
-        />,
+        withTabletContext(
+          <ArticleMainCommentTablet
+            {...sharedProps}
+            article={articleFixture({
+              ...testFixture,
+              ...emptyArticle,
+              headline: "",
+            })}
+          />,
+        ),
       );
 
       expect(testRenderer).toMatchSnapshot();
@@ -67,20 +88,22 @@ export const snapshotTests = (renderComponent) => [
     name: "an article with ads",
     test() {
       const testRenderer = renderComponent(
-        <ArticleMainComment
-          {...sharedProps}
-          article={articleFixture({
-            ...testFixture,
-            ...emptyArticle,
-            content: [
-              {
-                attributes: {},
-                children: [],
-                name: "ad",
-              },
-            ],
-          })}
-        />,
+        withTabletContext(
+          <ArticleMainCommentTablet
+            {...sharedProps}
+            article={articleFixture({
+              ...testFixture,
+              ...emptyArticle,
+              content: [
+                {
+                  attributes: {},
+                  children: [],
+                  name: "ad",
+                },
+              ],
+            })}
+          />,
+        ),
       );
 
       expect(testRenderer).toMatchSnapshot();
@@ -93,10 +116,12 @@ const negativeTests = [
     name: "an article with no label",
     test() {
       const testRenderer = TestRenderer.create(
-        <ArticleMainComment
-          {...sharedProps}
-          article={articleFixture({ ...testFixture, label: null })}
-        />,
+        withTabletContext(
+          <ArticleMainCommentTablet
+            {...sharedProps}
+            article={articleFixture({ ...testFixture, label: null })}
+          />,
+        ),
       );
 
       const label = findComponents(testRenderer, "ArticleLabel");
@@ -108,13 +133,15 @@ const negativeTests = [
     name: "an article with no standfirst",
     test() {
       const testRenderer = TestRenderer.create(
-        <ArticleMainComment
-          {...sharedProps}
-          article={articleFixture({
-            ...testFixture,
-            standfirst: null,
-          })}
-        />,
+        withTabletContext(
+          <ArticleMainCommentTablet
+            {...sharedProps}
+            article={articleFixture({
+              ...testFixture,
+              standfirst: null,
+            })}
+          />,
+        ),
       );
 
       const textNodes = testRenderer.root.findAll((node) => {

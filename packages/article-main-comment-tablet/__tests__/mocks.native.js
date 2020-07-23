@@ -3,6 +3,9 @@ import {
   MockArticleSkeleton,
 } from "@times-components-native/mocks";
 
+// eslint-disable-next-line import/prefer-default-export
+export { setIsTablet } from "@times-components-native/mocks/dimensions";
+
 // eslint-disable-next-line global-require
 jest.mock("@times-components-native/ad", () => require("./ad-mock"));
 jest.mock("@times-components-native/article-byline", () => ({

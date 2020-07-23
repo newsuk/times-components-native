@@ -9,13 +9,12 @@ import {
   minimalNativeTransform,
 } from "@times-components-native/jest-serializer";
 import "./mocks.native";
-import Responsive from "@times-components-native/responsive";
 import { iterator } from "@times-components-native/test-utils";
-import { setIsTablet } from "@times-components-native/mocks/dimensions";
 
-import ArticleMainComment from "../src/article-main-comment";
+import ArticleMainCommentTablet from "../src/article-main-comment-tablet";
 import sharedProps from "./shared-props";
 import articleFixture from "../fixtures/full-article";
+import { withTabletContext } from "./shared.base";
 
 export default () => {
   addSerializers(
@@ -32,12 +31,13 @@ export default () => {
     {
       name: "Article Main Comment Tablet",
       test() {
-        setIsTablet(true);
-
         const testInstance = TestRenderer.create(
-          <Responsive>
-            <ArticleMainComment {...sharedProps} article={articleFixture()} />
-          </Responsive>,
+          withTabletContext(
+            <ArticleMainCommentTablet
+              {...sharedProps}
+              article={articleFixture()}
+            />,
+          ),
         );
 
         expect(testInstance).toMatchSnapshot();
