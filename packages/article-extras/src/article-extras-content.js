@@ -52,9 +52,7 @@ const ArticleExtrasContent = ({
               narrowContent={narrowContent}
             />
           ) : null}
-          <ResponsiveContext.Consumer>
-            {({ isTablet }) => isTablet && <SponsoredAd />}
-          </ResponsiveContext.Consumer>
+          {isTablet && <SponsoredAd />}
           <ArticleComments
             articleId={articleId}
             commentCount={commentCount}

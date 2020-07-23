@@ -125,4 +125,18 @@ describe("Article", () => {
 
     expect(testInstance.findByType(ArticleMainCommentTablet)).toBeTruthy();
   });
+
+  it("renders with ArticleMainCommentTablet for the magazinecomment template on a tablet", () => {
+    const testRenderer = TestRenderer.create(
+      withTabletContext(
+        <Article
+          article={{ template: "magazinecomment" }}
+          {...requiredProps}
+        />,
+      ),
+    );
+    const testInstance = testRenderer.root;
+
+    expect(testInstance.findByType(ArticleMainCommentTablet)).toBeTruthy();
+  });
 });
