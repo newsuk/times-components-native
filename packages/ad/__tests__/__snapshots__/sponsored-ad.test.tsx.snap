@@ -1,0 +1,16 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`SponsoredAd checks the height periodically 1`] = `
+Array [
+  "
+      if (document && document.body && window.ReactNativeWebView) window.ReactNativeWebView.postMessage(document.body.scrollHeight)
+      ",
+]
+`;
+
+exports[`SponsoredAd renders Dianomi script tag 1`] = `
+"
+<script type=\\"text/javascript\\" id=\\"dianomi_context_script\\" src=\\"https://www.dianomi.com/js/contextfeed.js\\"></script>
+<div class=\\"dianomi_context\\" data-dianomi-context-id=\\"225\\"></div>
+"
+`;

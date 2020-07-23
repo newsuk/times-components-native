@@ -12,6 +12,13 @@ import "./mocks";
 import ArticleExtrasContent from "../src/article-extras-content";
 import ArticleExtrasError from "../src/article-extras-error";
 import { relatedArticleSlice, topics } from "../fixtures/article-extras";
+import { ResponsiveContext } from "@times-components-native/responsive";
+
+const withTabletContext = (WrappedComponent) => (
+  <ResponsiveContext.Provider value={{ isTablet: true }}>
+    {WrappedComponent}
+  </ResponsiveContext.Provider>
+);
 
 export default () => {
   addSerializers(
@@ -51,6 +58,31 @@ export default () => {
           />,
         );
 
+        expect(testInstance.toJSON()).toMatchSnapshot();
+      },
+    },
+    {
+      name: "article extras content on tablet",
+      test: () => {
+        const testInstance = TestRenderer.create(
+          withTabletContext(
+            <ArticleExtrasContent
+              analyticsStream={() => null}
+              article={{
+                commentCount: 123,
+                commentsEnabled: true,
+                relatedArticleSlice,
+                topics,
+              }}
+              articleId="dummy-article-id"
+              articleUrl="dummy-article-url"
+              onCommentGuidelinesPress={() => null}
+              onCommentsPress={() => null}
+              onRelatedArticlePress={() => null}
+              onTopicPress={() => null}
+            />,
+          ),
+        );
         expect(testInstance.toJSON()).toMatchSnapshot();
       },
     },
