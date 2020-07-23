@@ -29,7 +29,15 @@ const requiredProps = {
 };
 
 const withTabletContext = (WrappedComponent) => (
-  <ResponsiveContext.Provider value={{ isTablet: true }}>
+  <ResponsiveContext.Provider
+    value={{
+      isTablet: true,
+      narrowArticleBreakpoint: {
+        container: 800,
+        content: 600,
+      },
+    }}
+  >
     {WrappedComponent}
   </ResponsiveContext.Provider>
 );
