@@ -20,7 +20,7 @@ const isTablet =
 
 export const templates = {
   indepth: ArticleInDepth,
-  magazinecomment: ArticleMagazineComment,
+  magazinecomment: isTablet ? ArticleMainCommentTablet : ArticleMagazineComment,
   magazinestandard: ArticleMagazineStandard,
   maincomment: isTablet ? ArticleMainCommentTablet : ArticleMainComment,
   mainstandard: ArticleMainStandard,

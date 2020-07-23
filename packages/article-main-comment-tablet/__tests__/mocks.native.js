@@ -3,9 +3,6 @@ import {
   MockArticleSkeleton,
 } from "@times-components-native/mocks";
 
-// eslint-disable-next-line import/prefer-default-export
-export { setIsTablet } from "@times-components-native/mocks/dimensions";
-
 // eslint-disable-next-line global-require
 jest.mock("@times-components-native/ad", () => require("./ad-mock"));
 jest.mock("@times-components-native/article-byline", () => ({
@@ -38,7 +35,6 @@ jest.mock("@times-components-native/article-byline", () => {
 jest.mock("@times-components-native/image", () => ({
   __esModule: true,
   default: "Image",
-  ModalImage: "ModalImage",
 }));
 jest.mock("@times-components-native/pull-quote", () => "PullQuote");
 jest.mock("@times-components-native/related-articles", () => "RelatedArticles");
