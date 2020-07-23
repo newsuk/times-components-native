@@ -4,10 +4,9 @@ import {
   hasBylineData,
   ArticleBylineWithLinks,
 } from "@times-components-native/article-byline";
-import PropTypes from "prop-types";
 import styles from "../styles";
 
-import { ModalImage } from "@times-components-native/image";
+import Image from "@times-components-native/image";
 import ArticleTopics from "@times-components-native/article-topics";
 import {
   articleLeftColumnPropTypes,
@@ -18,18 +17,12 @@ const ArticleLeftColumn = ({
   authorImage,
   bylines,
   onAuthorPress,
-  onImagePress,
   onTopicPress,
   topics,
 }) => (
   <View style={styles.leftColumnContainer}>
     <View style={styles.authorContainer}>
-      <ModalImage
-        aspectRatio={1}
-        uri={authorImage}
-        onImagePress={onImagePress ? () => onImagePress(0) : undefined}
-        rounded
-      />
+      <Image aspectRatio={1} uri={authorImage} rounded />
       {hasBylineData(bylines) && (
         <View style={styles.bylines}>
           <ArticleBylineWithLinks
@@ -54,7 +47,6 @@ const ArticleLeftColumn = ({
 
 ArticleLeftColumn.propTypes = {
   ...articleLeftColumnPropTypes,
-  onImagePress: PropTypes.func.isRequired,
 };
 
 ArticleLeftColumn.defaultProps = articleLeftColumnDefaultProps;

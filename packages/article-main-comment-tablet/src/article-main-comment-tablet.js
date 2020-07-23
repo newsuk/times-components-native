@@ -82,7 +82,6 @@ class ArticlePage extends Component {
     } = this.props;
 
     const { bylines, topics } = article;
-    console.log("topics:", topics);
 
     const authorImage =
       bylines &&

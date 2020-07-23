@@ -4,7 +4,6 @@ const articleLeftColumnPropTypes = {
   authorImage: PropTypes.string.isRequired,
   bylines: PropTypes.arrayOf(PropTypes.shape({})).isRequired,
   onAuthorPress: PropTypes.func.isRequired,
-  onImagePress: PropTypes.func.isRequired,
   onTopicPress: PropTypes.func.isRequired,
   topics: PropTypes.arrayOf(
     PropTypes.shape({
