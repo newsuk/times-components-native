@@ -17,7 +17,25 @@ Array [
 ]
 `;
 
-exports[`2. article extras error 1`] = `
+exports[`2. article extras content on tablet 1`] = `
+Array [
+  <View>
+    <RelatedArticles />
+  </View>,
+  <View>
+    <ArticleTopics />
+  </View>,
+  <SponsoredAd />,
+  <ArticleComments
+    articleId="dummy-article-id"
+    commentCount={123}
+    commentsEnabled={true}
+    url="dummy-article-url"
+  />,
+]
+`;
+
+exports[`3. article extras error 1`] = `
 <View>
   <Text>
     It looks like you're offline

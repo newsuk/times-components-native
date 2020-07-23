@@ -6,6 +6,7 @@ import ArticleComments from "@times-components-native/article-comments";
 import RelatedArticles from "@times-components-native/related-articles";
 import ArticleTopics from "./article-topics";
 import styles from "./styles";
+import { SponsoredAd } from "@times-components-native/ad";
 
 const ArticleExtrasContent = ({
   analyticsStream,
@@ -28,6 +29,7 @@ const ArticleExtrasContent = ({
   const getNarrowContentStyle = (width) => [styles.narrow, { width }];
 
   return (
+<<<<<<< HEAD
     <ResponsiveContext.Consumer>
       {({ isTablet, narrowArticleBreakpoint }) => (
         <View
@@ -51,6 +53,9 @@ const ArticleExtrasContent = ({
               narrowContent={narrowContent}
             />
           ) : null}
+          <ResponsiveContext.Consumer>
+            {({ isTablet }) => isTablet && <SponsoredAd />}
+          </ResponsiveContext.Consumer>
           <ArticleComments
             articleId={articleId}
             commentCount={commentCount}
@@ -62,6 +67,35 @@ const ArticleExtrasContent = ({
         </View>
       )}
     </ResponsiveContext.Consumer>
+=======
+    <Fragment>
+      {relatedArticleSlice ? (
+        <ResponsiveContext.Consumer>
+          {({ isTablet }) => (
+            <View style={isTablet && styles.relatedArticlesTablet}>
+              <RelatedArticles
+                analyticsStream={analyticsStream}
+                onPress={onRelatedArticlePress}
+                slice={relatedArticleSlice}
+              />
+            </View>
+          )}
+        </ResponsiveContext.Consumer>
+      ) : null}
+      {topics ? <ArticleTopics onPress={onTopicPress} topics={topics} /> : null}
+      <ResponsiveContext.Consumer>
+        {({ isTablet }) => isTablet && <SponsoredAd />}
+      </ResponsiveContext.Consumer>
+      <ArticleComments
+        articleId={articleId}
+        commentCount={commentCount}
+        commentsEnabled={commentsEnabled}
+        onCommentGuidelinesPress={onCommentGuidelinesPress}
+        onCommentsPress={onCommentsPress}
+        url={articleUrl}
+      />
+    </Fragment>
+>>>>>>> master
   );
 };
 
