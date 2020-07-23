@@ -1,8 +1,8 @@
 platform :ios, '9.0'
 require_relative '../node_modules/@react-native-community/cli-platform-ios/native_modules'
 
-target 'storybooknative' do
-  # Pods for storybooknative
+target 'TimesComponents' do
+  # Pods for TimesComponents
   pod 'FBLazyVector', :path => "../node_modules/react-native/Libraries/FBLazyVector"
   pod 'FBReactNativeSpec', :path => "../node_modules/react-native/Libraries/FBReactNativeSpec"
   pod 'RCTRequired', :path => "../node_modules/react-native/Libraries/RCTRequired"
@@ -29,26 +29,26 @@ target 'storybooknative' do
   pod 'React-jsinspector', :path => '../node_modules/react-native/ReactCommon/jsinspector'
   pod 'ReactCommon/jscallinvoker', :path => "../node_modules/react-native/ReactCommon"
   pod 'ReactCommon/turbomodule/core', :path => "../node_modules/react-native/ReactCommon"
-  pod 'Yoga', :path => '../node_modules/react-native/ReactCommon/yoga', :modular_headers => true
+  pod 'Yoga', :path => '../node_modules/react-native/ReactCommon/yoga'
 
   pod 'DoubleConversion', :podspec => '../node_modules/react-native/third-party-podspecs/DoubleConversion.podspec'
   pod 'glog', :podspec => '../node_modules/react-native/third-party-podspecs/glog.podspec'
   pod 'Folly', :podspec => '../node_modules/react-native/third-party-podspecs/Folly.podspec'
 
-  target 'storybooknativeTests' do
-    inherit! :complete
+  target 'TimesComponentsTests' do
+    inherit! :search_paths
     # Pods for testing
   end
 
   use_native_modules!
-
 end
 
-target 'storybooknative-tvOS' do
-  # Pods for storybooknative-tvOS
+target 'TimesComponents-tvOS' do
+  # Pods for TimesComponents-tvOS
 
-  target 'storybooknative-tvOSTests' do
+  target 'TimesComponents-tvOSTests' do
     inherit! :search_paths
     # Pods for testing
   end
+
 end
