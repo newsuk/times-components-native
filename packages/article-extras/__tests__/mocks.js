@@ -2,4 +2,7 @@
 
 jest.mock("@times-components-native/article-comments", () => "ArticleComments");
 jest.mock("@times-components-native/article-topics", () => "ArticleTopics");
+jest.mock("@times-components-native/ad", () => ({
+  SponsoredAd: "SponsoredAd",
+}));
 jest.mock("@times-components-native/related-articles", () => "RelatedArticles");
