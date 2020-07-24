@@ -98,8 +98,8 @@ exports[`1. article main comment tablet 1`] = `
             Object {
               "color": "#1D1D1B",
               "fontFamily": "TimesModern-Bold",
-              "fontSize": 45,
-              "lineHeight": 45,
+              "fontSize": 30,
+              "lineHeight": 36,
               "marginBottom": 13.75,
             }
           }
