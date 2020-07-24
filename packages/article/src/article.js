@@ -55,11 +55,9 @@ const Article = (props) => {
   };
 
   return (
-    <Responsive>
-      <MessageManager animate delay={3000} scale={scales.medium}>
-        <Component {...newProps} onImagePress={onImagePressArticle} />
-      </MessageManager>
-    </Responsive>
+    <MessageManager animate delay={3000} scale={scales.medium}>
+      <Component {...newProps} onImagePress={onImagePressArticle} />
+    </MessageManager>
   );
 };
 

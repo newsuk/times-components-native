@@ -31,7 +31,6 @@ const requiredProps = {
 const withTabletContext = (WrappedComponent) => (
   <ResponsiveContext.Provider
     value={{
-      isTablet: true,
       narrowArticleBreakpoint: {
         container: 800,
         content: 600,
@@ -118,7 +117,11 @@ describe("Article", () => {
   it("renders with ArticleMainCommentTablet for the maincomment template on a tablet", () => {
     const testRenderer = TestRenderer.create(
       withTabletContext(
-        <Article article={{ template: "maincomment" }} {...requiredProps} />,
+        <Article
+          article={{ template: "maincomment" }}
+          {...requiredProps}
+          isTablet={true}
+        />,
       ),
     );
     const testInstance = testRenderer.root;
@@ -132,6 +135,7 @@ describe("Article", () => {
         <Article
           article={{ template: "magazinecomment" }}
           {...requiredProps}
+          isTablet={true}
         />,
       ),
     );
