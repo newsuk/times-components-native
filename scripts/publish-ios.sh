@@ -13,12 +13,16 @@ setupEnv () {
     ARTIFACTS_REPO_SSH="git@github.com:$ARTIFACTS_REPO_SLUG.git"
 
     RELEASE_DEST="production"
-  else
+  elif [[ $PACKAGE_VERSION == *"beta"* ]]
+  then
     echo "👉 Setting up enviroment for a beta release."
     ARTIFACTS_REPO_SLUG="$REPO_SLUG-beta"
     ARTIFACTS_REPO_SSH="git@github.com:$ARTIFACTS_REPO_SLUG.git"
 
     RELEASE_DEST="beta"
+  else
+    echo "✋ It looks like you are not on 'master' branch or your version number does't include 'beta'. Will not publish."
+    exit 0
   fi
 }
 

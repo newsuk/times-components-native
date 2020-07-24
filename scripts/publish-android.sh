@@ -13,13 +13,17 @@ setupEnv () {
     ARTIFACTORY_USER="$ARTIFACTORY_USER_PROD"
 
     RELEASE_DEST="production"
-  else
+  elif [[ $PACKAGE_VERSION == *"beta"* ]]
+  then
     echo "👉 Setting up enviroment for a beta release."
     ARTIFACTORY_API_KEY="$ARTIFACTORY_API_KEY_BETA"
     ARTIFACTORY_URL="$ARTIFACTORY_URL_BETA"
     ARTIFACTORY_USER="$ARTIFACTORY_USER_BETA"
 
     RELEASE_DEST="beta"
+  else
+    echo "✋ It looks like you are not on master or your version number does't include 'beta'. Will not publish."
+    exit 0
   fi
 }
 
