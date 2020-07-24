@@ -29,7 +29,7 @@ export default () => {
 
   const tests = [
     {
-      name: "Article Main Comment Tablet",
+      name: "Article Comment Tablet",
       test() {
         const testInstance = TestRenderer.create(
           withTabletContext(

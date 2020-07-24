@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`1. article main comment tablet 1`] = `
+exports[`1. article comment tablet 1`] = `
 <View
   style={
     Object {
