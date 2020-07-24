@@ -1,6 +1,8 @@
 import React from "react";
 import { Text, View } from "react-native";
+import Context from "@times-components-native/context";
 import { ArticleFlags } from "@times-components-native/article-flag";
+import { fontFactory } from "@times-components-native/styleguide";
 import Label from "../article-label/article-label";
 import Meta from "../article-meta/article-meta";
 import Standfirst from "../article-standfirst/article-standfirst";
@@ -20,19 +22,36 @@ const ArticleHeader = ({
   publishedTime,
   standfirst,
 }) => (
-  <View style={styles.header}>
-    <View style={styles.container}>
-      <Label isVideo={hasVideo} label={label} />
-      <Text style={styles.articleHeadline}>{headline}</Text>
-      <ArticleFlags flags={flags} longRead={longRead} withContainer />
-      <Standfirst standfirst={standfirst} />
-      <Meta
-        hasStandfirst={standfirst}
-        publicationName={publicationName}
-        publishedTime={publishedTime}
-      />
-    </View>
-  </View>
+  <Context.Consumer>
+    {({ theme: { headlineFont, headlineCase } }) => (
+      <View style={styles.header}>
+        <View style={styles.container}>
+          <Label isVideo={hasVideo} label={label} />
+          <Text
+            style={[
+              styles.articleHeadline,
+              {
+                ...fontFactory({
+                  font: headlineFont || "headline",
+                  fontSize: "headline",
+                }),
+              },
+              headlineCase ? { textTransform: headlineCase } : null,
+            ]}
+          >
+            {headline}
+          </Text>
+          <ArticleFlags flags={flags} longRead={longRead} withContainer />
+          <Standfirst standfirst={standfirst} />
+          <Meta
+            hasStandfirst={standfirst}
+            publicationName={publicationName}
+            publishedTime={publishedTime}
+          />
+        </View>
+      </View>
+    )}
+  </Context.Consumer>
 );
 
 ArticleHeader.propTypes = {
