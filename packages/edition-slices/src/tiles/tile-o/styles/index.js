@@ -41,7 +41,7 @@ const smallBreakpointStyles = (breakpoint) => ({
     ...sharedStyles.headlineStyle,
     fontSize: fontSizeResolver[breakpoint],
     lineHeight: fontSizeResolver[breakpoint],
-    marginBottom: 11,
+    marginBottom: spacing(1),
   },
 });
 

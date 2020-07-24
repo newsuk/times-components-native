@@ -34,7 +34,7 @@ exports[`tile al huge 1`] = `
         <View
           style={
             Object {
-              "marginBottom": 0,
+              "marginBottom": 5,
             }
           }
         >
@@ -55,7 +55,7 @@ exports[`tile al huge 1`] = `
               "fontWeight": "900",
               "includeFontPadding": false,
               "lineHeight": 22,
-              "marginBottom": 5,
+              "marginBottom": 10,
             }
           }
         >
@@ -82,7 +82,6 @@ exports[`tile al huge 1`] = `
               "fontSize": 14,
               "lineHeight": 20,
               "marginBottom": 0,
-              "marginTop": 5,
             }
           }
         >
@@ -132,7 +131,7 @@ exports[`tile al wide 1`] = `
         <View
           style={
             Object {
-              "marginBottom": 0,
+              "marginBottom": 5,
             }
           }
         >
@@ -153,7 +152,7 @@ exports[`tile al wide 1`] = `
               "fontWeight": "900",
               "includeFontPadding": false,
               "lineHeight": 20,
-              "marginBottom": 5,
+              "marginBottom": 10,
             }
           }
         >
@@ -180,7 +179,6 @@ exports[`tile al wide 1`] = `
               "fontSize": 14,
               "lineHeight": 20,
               "marginBottom": 0,
-              "marginTop": 5,
             }
           }
         >

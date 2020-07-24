@@ -5,10 +5,6 @@ export default function (multiple) {
 }
 
 export const globalSpacingStyles = {
-  tabletHeadline: {
-    marginBottom: spacingBase * 1,
-  },
-  tabletTeaser: {
-    marginTop: spacingBase * 1,
-  },
+  tabletHeadline: {},
+  tabletTeaser: {},
 };

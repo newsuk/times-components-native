@@ -142,8 +142,12 @@ const renderArticleSkeleton = ({
                 onVideoPress={preventDefaultedAction(decorateAction)(
                   "onVideoPress",
                 )}
+                onImagePress={preventDefaultedAction(decorateAction)(
+                  "onImagePress",
+                )}
                 onViewableItemsChanged={() => null}
                 isTablet={isTablet}
+                scale={scale}
               />
             </ContextProviderWithDefaults>
           )}

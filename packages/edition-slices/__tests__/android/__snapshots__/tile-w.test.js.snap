@@ -33,7 +33,7 @@ exports[`tile w huge 1`] = `
           <View
             style={
               Object {
-                "marginBottom": 0,
+                "marginBottom": 5,
               }
             }
           >
@@ -54,7 +54,7 @@ exports[`tile w huge 1`] = `
                 "fontWeight": "900",
                 "includeFontPadding": false,
                 "lineHeight": 45,
-                "marginBottom": 5,
+                "marginBottom": 10,
               }
             }
           >
@@ -81,7 +81,6 @@ exports[`tile w huge 1`] = `
                 "fontSize": 14,
                 "lineHeight": 20,
                 "marginBottom": 0,
-                "marginTop": 5,
               }
             }
           >
@@ -141,7 +140,7 @@ exports[`tile w medium 1`] = `
           <View
             style={
               Object {
-                "marginBottom": 0,
+                "marginBottom": 5,
               }
             }
           >
@@ -162,7 +161,7 @@ exports[`tile w medium 1`] = `
                 "fontWeight": "900",
                 "includeFontPadding": false,
                 "lineHeight": 30,
-                "marginBottom": 5,
+                "marginBottom": 10,
               }
             }
           >
@@ -189,7 +188,6 @@ exports[`tile w medium 1`] = `
                 "fontSize": 14,
                 "lineHeight": 20,
                 "marginBottom": 0,
-                "marginTop": 5,
               }
             }
           >
@@ -249,7 +247,7 @@ exports[`tile w wide 1`] = `
           <View
             style={
               Object {
-                "marginBottom": 0,
+                "marginBottom": 5,
               }
             }
           >
@@ -270,7 +268,7 @@ exports[`tile w wide 1`] = `
                 "fontWeight": "900",
                 "includeFontPadding": false,
                 "lineHeight": 40,
-                "marginBottom": 5,
+                "marginBottom": 10,
               }
             }
           >
@@ -297,7 +295,6 @@ exports[`tile w wide 1`] = `
                 "fontSize": 14,
                 "lineHeight": 20,
                 "marginBottom": 0,
-                "marginTop": 5,
               }
             }
           >
@@ -357,7 +354,7 @@ exports[`tile w without breakpoint should be like medium 1`] = `
           <View
             style={
               Object {
-                "marginBottom": 0,
+                "marginBottom": 5,
               }
             }
           >
@@ -378,7 +375,7 @@ exports[`tile w without breakpoint should be like medium 1`] = `
                 "fontWeight": "900",
                 "includeFontPadding": false,
                 "lineHeight": 30,
-                "marginBottom": 5,
+                "marginBottom": 10,
               }
             }
           >
@@ -405,7 +402,6 @@ exports[`tile w without breakpoint should be like medium 1`] = `
                 "fontSize": 14,
                 "lineHeight": 20,
                 "marginBottom": 0,
-                "marginTop": 5,
               }
             }
           >

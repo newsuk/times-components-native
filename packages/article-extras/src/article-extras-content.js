@@ -6,6 +6,7 @@ import ArticleComments from "@times-components-native/article-comments";
 import RelatedArticles from "@times-components-native/related-articles";
 import ArticleTopics from "./article-topics";
 import styles from "./styles";
+import { SponsoredAd } from "@times-components-native/ad";
 
 const ArticleExtrasContent = ({
   analyticsStream,
@@ -40,6 +41,9 @@ const ArticleExtrasContent = ({
         </ResponsiveContext.Consumer>
       ) : null}
       {topics ? <ArticleTopics onPress={onTopicPress} topics={topics} /> : null}
+      <ResponsiveContext.Consumer>
+        {({ isTablet }) => isTablet && <SponsoredAd />}
+      </ResponsiveContext.Consumer>
       <ArticleComments
         articleId={articleId}
         commentCount={commentCount}

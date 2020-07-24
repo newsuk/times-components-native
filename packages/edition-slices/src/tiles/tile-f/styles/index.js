@@ -9,6 +9,10 @@ const styles = {
       font: "headline",
       fontSize: "tileLeadHeadline",
     }),
+    marginBottom: spacing(1),
+  },
+  strapline: {
+    marginBottom: spacing(1),
   },
   summaryContainer: {
     marginBottom: spacing(2),

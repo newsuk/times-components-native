@@ -32,7 +32,7 @@ exports[`tile aj without breakpoint 1`] = `
           "fontWeight": "900",
           "includeFontPadding": false,
           "lineHeight": 25,
-          "marginBottom": 5,
+          "marginBottom": 10,
         }
       }
     >
