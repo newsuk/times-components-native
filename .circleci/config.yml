@@ -24,7 +24,7 @@ publish_android: &PUBLISH_ANDROID
                     cd ~/project/
                     # TODO: move above lines in a docker image
                     yarn android:build-lib
-                    sh ./scripts/publish-android.sh
+                    bash ./scripts/publish-android.sh
                 working_directory: ~/project/
 
 publish_ios: &PUBLISH_IOS
@@ -37,7 +37,7 @@ publish_ios: &PUBLISH_IOS
                 name: Build and publish iOS js bundles
                 command: |
                     yarn ios:build-lib
-                    sh ./scripts/publish-ios.sh
+                    bash ./scripts/publish-ios.sh
                 working_directory: ~/project/
 
 executors:
