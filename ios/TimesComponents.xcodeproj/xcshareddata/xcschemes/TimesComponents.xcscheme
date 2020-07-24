@@ -97,13 +97,6 @@
             ReferencedContainer = "container:TimesComponents.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
-      <EnvironmentVariables>
-         <EnvironmentVariable
-            key = "RN_ENTRYPOINT"
-            value = "storybook-native/index"
-            isEnabled = "YES">
-         </EnvironmentVariable>
-      </EnvironmentVariables>
    </LaunchAction>
    <ProfileAction
       buildConfiguration = "Release"

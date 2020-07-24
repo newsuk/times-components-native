@@ -32,10 +32,8 @@
 
 - (NSURL *)sourceURLForBridge:(RCTBridge *)bridge
 {
-
 #if DEBUG
-  NSString *rnEntrypoint = [[[NSProcessInfo processInfo] environment] objectForKey:@"RN_ENTRYPOINT"];
-  return [[RCTBundleURLProvider sharedSettings] jsBundleURLForBundleRoot:rnEntrypoint fallbackResource:nil];
+  return [[RCTBundleURLProvider sharedSettings] jsBundleURLForBundleRoot:@"storybook-native/index" fallbackResource:nil];
 #else
   return [[NSBundle mainBundle] URLForResource:@"main" withExtension:@"jsbundle"];
 #endif
