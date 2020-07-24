@@ -2,8 +2,8 @@
 import React, { Component } from "react";
 import { Subscriber } from "react-broadcast";
 import { Platform, View } from "react-native";
-import { screenWidth } from "@times-components-native/utils";
 import NetInfo from "@react-native-community/netinfo";
+import { screenWidth } from "@times-components-native/utils";
 import { getPrebidSlotConfig, getSlotConfig, prebidConfig } from "./utils";
 import adInit from "./utils/ad-init";
 import AdContainer from "./ad-container";
@@ -14,22 +14,22 @@ import styles from "./styles";
 
 class Ad extends Component {
   static getDerivedStateFromProps(nextProps) {
-    const { slotName } = nextProps;
+    const { slotName, width } = nextProps;
 
     return {
-      config: getSlotConfig(slotName, screenWidth()),
+      config: getSlotConfig(slotName, width || screenWidth()),
     };
   }
 
   constructor(props) {
     super(props);
 
-    const { slotName } = props;
+    const { slotName, width } = props;
 
     this.prebidConfig = prebidConfig;
 
     this.state = {
-      config: getSlotConfig(slotName, screenWidth()),
+      config: getSlotConfig(slotName, width || screenWidth()),
       hasError: false,
       isAdReady: false,
       offline: false,

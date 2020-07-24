@@ -9,7 +9,8 @@ const collapsed = (isTablet, content) =>
     : content.reduceRight((acc, node) => {
         // backwards
         if (
-          (node.name === "image" && node.attributes.display === "inline") ||
+          ((node.name === "image" || node.name === "ad") &&
+            node.attributes?.display === "inline") ||
           node.name === "pullQuote"
         ) {
           // forwards
@@ -39,8 +40,15 @@ const collapsed = (isTablet, content) =>
         return [node, ...acc];
       }, []);
 
-export const setAdPosition = (adPosition, content) => {
-  if (!Number.isInteger(adPosition)) return content;
+export const setupAd = (variants = {}, template, content) => {
+  const { articleMpuTest } = variants;
+
+  if (
+    !articleMpuTest ||
+    articleMpuTest.group === "A" ||
+    template !== "mainstandard"
+  )
+    return content;
 
   let currentAdSlotIndex;
 
@@ -50,13 +58,19 @@ export const setAdPosition = (adPosition, content) => {
     return !isItemAd;
   });
 
-  if (!currentAdSlotIndex || adPosition === currentAdSlotIndex + 1)
-    return content;
+  if (!currentAdSlotIndex) return content;
+
+  const { adPosition, width, height } = articleMpuTest;
 
   return [
     ...contentWithoutAdSlot.slice(0, adPosition - 1),
     {
       name: "ad",
+      attributes: {
+        display: "inline",
+        width,
+        height,
+      },
       children: [],
     },
     ...contentWithoutAdSlot.slice(adPosition - 1),
@@ -85,6 +99,6 @@ export const getStringBounds = (fontSettings, string) => {
   return { width, height };
 };
 
-export default memoize((isTablet, adPosition, content) =>
-  collapsed(isTablet, setAdPosition(adPosition, content)),
+export default memoize((isTablet, variants, template, content) =>
+  collapsed(isTablet, setupAd(variants, template, content)),
 );

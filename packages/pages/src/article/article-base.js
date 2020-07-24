@@ -6,6 +6,7 @@ import {
   defaults,
 } from "@times-components-native/context";
 import { themeFactory } from "@times-components-native/styleguide";
+import { VariantTestingProvider } from "@times-components-native/variant-testing";
 import adTargetConfig from "./ad-targeting-config";
 import { propTypes, defaultProps } from "./article-prop-types";
 import trackArticle from "./track-article";
@@ -24,7 +25,6 @@ const {
 } = NativeModules.ArticleEvents;
 
 const ArticleBase = ({
-  adPosition,
   adTestMode,
   article,
   devInteractives,
@@ -35,7 +35,13 @@ const ArticleBase = ({
   omitErrors,
   scale,
   sectionName: pageSection,
+  variants,
 }) => {
+  // TODO REMOVE ME!!!!!!!!!!!!!!!!!!!!!
+  variants = {
+    articleMpuTest: "C",
+  };
+
   const { section: articleSection, template } = article || {};
   const section = pageSection || articleSection || "default";
   const adConfig =
@@ -60,37 +66,38 @@ const ArticleBase = ({
 
   return (
     <ContextProviderWithDefaults value={{ theme }}>
-      <Article
-        adConfig={adConfig}
-        adPosition={adPosition}
-        analyticsStream={trackArticle}
-        article={article}
-        error={omitErrors ? null : error}
-        interactiveConfig={interactiveConfig}
-        isLoading={isLoading || (omitErrors && error)}
-        onAuthorPress={(event, { slug }) => onAuthorPress(slug)}
-        onCommentGuidelinesPress={() => onCommentGuidelinesPress()}
-        onCommentsPress={(event, { articleId: id, url }) =>
-          onCommentsPress(id, url)
-        }
-        onImagePress={onImagePress}
-        onLinkPress={(event, { type, url }) => {
-          if (type === "article") {
-            onArticlePress(url);
-          } else if (type === "topic") {
-            onTopicPress(url);
-          } else {
-            onLinkPress(url);
+      <VariantTestingProvider variants={variants}>
+        <Article
+          adConfig={adConfig}
+          analyticsStream={trackArticle}
+          article={article}
+          error={omitErrors ? null : error}
+          interactiveConfig={interactiveConfig}
+          isLoading={isLoading || (omitErrors && error)}
+          onAuthorPress={(event, { slug }) => onAuthorPress(slug)}
+          onCommentGuidelinesPress={() => onCommentGuidelinesPress()}
+          onCommentsPress={(event, { articleId: id, url }) =>
+            onCommentsPress(id, url)
           }
-        }}
-        onRelatedArticlePress={(event, { url }) => onArticlePress(url)}
-        onTopicPress={(event, { slug }) => onTopicPress(slug)}
-        onTwitterLinkPress={(_, { url }) => onLinkPress(url)}
-        onVideoPress={(event, info) => onVideoPress(info)}
-        pageSection={pageSection}
-        referralUrl={referralUrl}
-        refetch={refetch}
-      />
+          onImagePress={onImagePress}
+          onLinkPress={(event, { type, url }) => {
+            if (type === "article") {
+              onArticlePress(url);
+            } else if (type === "topic") {
+              onTopicPress(url);
+            } else {
+              onLinkPress(url);
+            }
+          }}
+          onRelatedArticlePress={(event, { url }) => onArticlePress(url)}
+          onTopicPress={(event, { slug }) => onTopicPress(slug)}
+          onTwitterLinkPress={(_, { url }) => onLinkPress(url)}
+          onVideoPress={(event, info) => onVideoPress(info)}
+          pageSection={pageSection}
+          referralUrl={referralUrl}
+          refetch={refetch}
+        />
+      </VariantTestingProvider>
     </ContextProviderWithDefaults>
   );
 };

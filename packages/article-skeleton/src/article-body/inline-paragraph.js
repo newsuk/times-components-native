@@ -10,6 +10,7 @@ import {
   BoxExclusion,
 } from "@times-components-native/typeset";
 import ArticleParagraphWrapper from "@times-components-native/article-paragraph";
+import { useVariantTestingContext } from "@times-components-native/variant-testing";
 
 const InlineParagraph = ({
   onLinkPress,
@@ -18,6 +19,7 @@ const InlineParagraph = ({
   str,
   scale,
   inline,
+  isInlineAd,
   tree,
   uid,
   defaultFont,
@@ -25,6 +27,7 @@ const InlineParagraph = ({
 }) => {
   const { spacing } = styleguide({ scale });
   const [inlineExclusion, setInlineExclusion] = useState(false);
+  const variants = useVariantTestingContext();
 
   if (!str.length) {
     return null;
@@ -51,6 +54,17 @@ const InlineParagraph = ({
 
   const positioned = manager.layout();
 
+  const getInlineWidthAndHeight = () => {
+    const { articleMpuTest } = variants;
+
+    if (!isInlineAd || !articleMpuTest) return { width: contentWidth * 0.35 };
+
+    return {
+      width: articleMpuTest.width,
+      height: articleMpuTest.height,
+    };
+  };
+
   return [
     dropCap && (
       <View key={`${uid}:dropcap`} style={{ left: gutters - spacing(2) }}>
@@ -63,16 +77,17 @@ const InlineParagraph = ({
         style={{
           position: "absolute",
           left: gutters,
-          width: contentWidth * 0.35,
+          ...getInlineWidthAndHeight(),
         }}
         onLayout={(e) => {
           const { height } = e.nativeEvent.layout;
           if (!inlineExclusion) {
+            const { width } = getInlineWidthAndHeight();
             setInlineExclusion({
               exclusion: new BoxExclusion(
                 0,
                 0,
-                contentWidth * 0.35 + spacing(2),
+                width + spacing(2),
                 height + spacing(2),
               ),
               height,
@@ -151,6 +166,7 @@ InlineParagraph.propTypes = {
   str: PropTypes.object.isRequired,
   scale: PropTypes.string.isRequired,
   inline: PropTypes.object.isRequired,
+  isInlineAd: PropTypes.bool.isRequired,
   tree: PropTypes.object.isRequired,
   uid: PropTypes.string.isRequired,
   defaultFont: PropTypes.object.isRequired,

@@ -1,0 +1,5 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`should create context based on variant prop 1`] = `"{\\"articleMpuTest\\":{\\"group\\":\\"B\\",\\"adPosition\\":5,\\"width\\":300,\\"height\\":250}}"`;
+
+exports[`with default values 1`] = `"{}"`;
