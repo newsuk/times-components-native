@@ -22,7 +22,7 @@ setupEnv () {
 
     RELEASE_DEST="beta"
   else
-    echo "✋ It looks like you are not on master or your version number does't include 'beta'. Will not publish."
+    echo "✋ It looks like you are not on 'master' branch or your version number does't include 'beta'. Will not publish."
     exit 0
   fi
 }
