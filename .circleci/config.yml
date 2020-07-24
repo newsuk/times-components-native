@@ -1,5 +1,45 @@
 version: 2.1
 
+publish_android: &PUBLISH_ANDROID
+    executor: node
+    steps:
+        - checkout
+        - attach_workspace:
+                at: ./
+        - run:
+                name: Build and publish android js bundles
+                command: |
+                    # Install JDK and android SDK
+                    sudo apt-get update
+                    sudo apt install default-jdk
+                    cd /home
+                    sudo wget https://dl.google.com/android/repository/sdk-tools-linux-4333796.zip
+                    sudo unzip sdk-tools-linux-4333796.zip
+                    sudo rm sdk-tools-linux-4333796.zip
+                    sudo mkdir /home/android-sdk
+                    sudo mv tools /home/android-sdk/tools
+                    export ANDROID_SDK_ROOT=/home/android-sdk
+                    echo $(yes | sudo $ANDROID_SDK_ROOT/tools/bin/sdkmanager --licenses)
+                    sudo chmod ugo+rwx "android-sdk"
+                    cd ~/project/
+                    # TODO: move above lines in a docker image
+                    yarn android:build-lib
+                    bash ./scripts/publish-android.sh
+                working_directory: ~/project/
+
+publish_ios: &PUBLISH_IOS
+    executor: node
+    steps:
+        - checkout
+        - attach_workspace:
+                at: ./
+        - run:
+                name: Build and publish iOS js bundles
+                command: |
+                    yarn ios:build-lib
+                    bash ./scripts/publish-ios.sh
+                working_directory: ~/project/
+
 executors:
     node:
         docker:
@@ -110,45 +150,17 @@ jobs:
                   command: yarn test:ios
                   working_directory: ~/project/
 
-    publish_android:
-        executor: node
-        steps:
-            - checkout
-            - attach_workspace:
-                  at: ./
-            - run:
-                  name: Build and publish android js bundles
-                  command: |
-                      # Install JDK and android SDK
-                      sudo apt-get update
-                      sudo apt install default-jdk
-                      cd /home
-                      sudo wget https://dl.google.com/android/repository/sdk-tools-linux-4333796.zip
-                      sudo unzip sdk-tools-linux-4333796.zip
-                      sudo rm sdk-tools-linux-4333796.zip
-                      sudo mkdir /home/android-sdk
-                      sudo mv tools /home/android-sdk/tools
-                      export ANDROID_SDK_ROOT=/home/android-sdk
-                      echo $(yes | sudo $ANDROID_SDK_ROOT/tools/bin/sdkmanager --licenses)
-                      sudo chmod ugo+rwx "android-sdk"
-                      cd ~/project/
-                      # TODO: move above lines in a docker image
-                      yarn android:build-lib
-                      yarn android:publish-lib
-                  working_directory: ~/project/
+    publish_android_prod:
+        <<: *PUBLISH_ANDROID
 
-    publish_ios:
-        executor: node
-        steps:
-            - checkout
-            - attach_workspace:
-                  at: ./
-            - run:
-                  name: Build and publish iOS js bundles
-                  command: |
-                      yarn ios:build-lib
-                      yarn ios:publish-lib
-                  working_directory: ~/project/
+    publish_android_beta:
+        <<: *PUBLISH_ANDROID
+
+    publish_ios_prod:
+        <<: *PUBLISH_IOS
+
+    publish_ios_beta:
+        <<: *PUBLISH_IOS
 
     publish_notes:
         executor: node
@@ -179,7 +191,8 @@ workflows:
             - run_ios_tests:
                   requires:
                       - setup
-            - hold:
+
+            - hold_release_prod:
                   type: approval
                   filters:
                     branches:
@@ -191,13 +204,32 @@ workflows:
                       - run_noplatform_tests
                       - run_android_tests
                       - run_ios_tests
-            - publish_android:
+            - publish_android_prod:
                   requires:
-                      - hold
-            - publish_ios:
+                      - hold_release_prod
+            - publish_ios_prod:
                   requires:
-                      - hold
+                      - hold_release_prod
             - publish_notes:
                 requires:
-                  - publish_android
-                  - publish_ios
+                  - publish_android_prod
+                  - publish_ios_prod
+
+            - hold_release_beta:
+                  type: approval
+                  filters:
+                    branches:
+                        ignore:
+                            - master
+                  requires:
+                      - run_lint
+                      - run_typecheck
+                      - run_noplatform_tests
+                      - run_android_tests
+                      - run_ios_tests
+            - publish_android_beta:
+                  requires:
+                      - hold_release_beta
+            - publish_ios_beta:
+                  requires:
+                      - hold_release_beta
