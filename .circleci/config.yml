@@ -212,8 +212,8 @@ workflows:
                       - hold_release_prod
             - publish_notes:
                 requires:
-                  - publish_android_beta
-                  - publish_ios_beta
+                  - publish_android_prod
+                  - publish_ios_prod
 
             - hold_release_beta:
                   type: approval
