@@ -3,7 +3,7 @@ import React from "react";
 import TestRenderer from "react-test-renderer";
 import { iterator } from "@times-components-native/test-utils";
 import { ResponsiveContext } from "@times-components-native/responsive";
-import ArticleMainCommentTablet from "../src/article-main-comment-tablet";
+import ArticleCommentTablet from "../src/article-comment-tablet";
 import articleFixture, { testFixture } from "../fixtures/full-article";
 import sharedProps from "./shared-props";
 import { adConfig } from "./ad-mock";
@@ -43,7 +43,7 @@ export const snapshotTests = (renderComponent) => [
     test() {
       const testRenderer = renderComponent(
         withTabletContext(
-          <ArticleMainCommentTablet
+          <ArticleCommentTablet
             {...sharedProps}
             error={{ message: "An example error." }}
           />,
@@ -57,9 +57,7 @@ export const snapshotTests = (renderComponent) => [
     name: "loading",
     test() {
       const testRenderer = renderComponent(
-        withTabletContext(
-          <ArticleMainCommentTablet {...sharedProps} isLoading />,
-        ),
+        withTabletContext(<ArticleCommentTablet {...sharedProps} isLoading />),
       );
 
       expect(testRenderer).toMatchSnapshot();
@@ -70,7 +68,7 @@ export const snapshotTests = (renderComponent) => [
     test() {
       const testRenderer = renderComponent(
         withTabletContext(
-          <ArticleMainCommentTablet
+          <ArticleCommentTablet
             {...sharedProps}
             article={articleFixture({
               ...testFixture,
@@ -89,7 +87,7 @@ export const snapshotTests = (renderComponent) => [
     test() {
       const testRenderer = renderComponent(
         withTabletContext(
-          <ArticleMainCommentTablet
+          <ArticleCommentTablet
             {...sharedProps}
             article={articleFixture({
               ...testFixture,
@@ -117,7 +115,7 @@ const negativeTests = [
     test() {
       const testRenderer = TestRenderer.create(
         withTabletContext(
-          <ArticleMainCommentTablet
+          <ArticleCommentTablet
             {...sharedProps}
             article={articleFixture({ ...testFixture, label: null })}
           />,
@@ -134,7 +132,7 @@ const negativeTests = [
     test() {
       const testRenderer = TestRenderer.create(
         withTabletContext(
-          <ArticleMainCommentTablet
+          <ArticleCommentTablet
             {...sharedProps}
             article={articleFixture({
               ...testFixture,

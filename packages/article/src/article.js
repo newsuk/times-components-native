@@ -4,7 +4,7 @@ import ArticleInDepth from "@times-components-native/article-in-depth";
 import ArticleMagazineStandard from "@times-components-native/article-magazine-standard";
 import ArticleMainStandard from "@times-components-native/article-main-standard";
 import ArticleMainComment from "@times-components-native/article-main-comment";
-import ArticleMainCommentTablet from "@times-components-native/article-main-comment-tablet";
+import ArticleCommentTablet from "@times-components-native/article-comment-tablet";
 import { scales } from "@times-components-native/styleguide";
 import { MessageManager } from "@times-components-native/message-bar";
 import { getMediaList, addIndexesToInlineImages } from "./utils";
@@ -12,11 +12,9 @@ import { getMediaList, addIndexesToInlineImages } from "./utils";
 export const getComponentByTemplate = (template, isTablet) => {
   const templates = {
     indepth: ArticleInDepth,
-    magazinecomment: isTablet
-      ? ArticleMainCommentTablet
-      : ArticleMagazineComment,
+    magazinecomment: isTablet ? ArticleCommentTablet : ArticleMagazineComment,
     magazinestandard: ArticleMagazineStandard,
-    maincomment: isTablet ? ArticleMainCommentTablet : ArticleMainComment,
+    maincomment: isTablet ? ArticleCommentTablet : ArticleMainComment,
     mainstandard: ArticleMainStandard,
   };
 

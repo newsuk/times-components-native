@@ -4,7 +4,7 @@ import ArticleMainStandard from "@times-components-native/article-main-standard"
 import ArticleMainComment from "@times-components-native/article-main-comment";
 import ArticleMagazineStandard from "@times-components-native/article-magazine-standard";
 import ArticleMagazineComment from "@times-components-native/article-magazine-comment";
-import ArticleMainCommentTablet from "@times-components-native/article-main-comment-tablet";
+import ArticleCommentTablet from "@times-components-native/article-comment-tablet";
 import { ResponsiveContext } from "@times-components-native/responsive";
 import Article from "../src/article";
 
@@ -114,7 +114,7 @@ describe("Article", () => {
     expect(testInstance.findByType(ArticleMagazineComment)).toBeTruthy();
   });
 
-  it("renders with ArticleMainCommentTablet for the maincomment template on a tablet", () => {
+  it("renders with ArticleCommentTablet for the maincomment template on a tablet", () => {
     const testRenderer = TestRenderer.create(
       withTabletContext(
         <Article
@@ -126,10 +126,10 @@ describe("Article", () => {
     );
     const testInstance = testRenderer.root;
 
-    expect(testInstance.findByType(ArticleMainCommentTablet)).toBeTruthy();
+    expect(testInstance.findByType(ArticleCommentTablet)).toBeTruthy();
   });
 
-  it("renders with ArticleMainCommentTablet for the magazinecomment template on a tablet", () => {
+  it("renders with ArticleCommentTablet for the magazinecomment template on a tablet", () => {
     const testRenderer = TestRenderer.create(
       withTabletContext(
         <Article
@@ -141,6 +141,6 @@ describe("Article", () => {
     );
     const testInstance = testRenderer.root;
 
-    expect(testInstance.findByType(ArticleMainCommentTablet)).toBeTruthy();
+    expect(testInstance.findByType(ArticleCommentTablet)).toBeTruthy();
   });
 });

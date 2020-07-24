@@ -11,7 +11,7 @@ import {
 import "./mocks.native";
 import { iterator } from "@times-components-native/test-utils";
 
-import ArticleMainCommentTablet from "../src/article-main-comment-tablet";
+import ArticleCommentTablet from "../src/article-comment-tablet";
 import sharedProps from "./shared-props";
 import articleFixture from "../fixtures/full-article";
 import { withTabletContext } from "./shared.base";
@@ -33,7 +33,7 @@ export default () => {
       test() {
         const testInstance = TestRenderer.create(
           withTabletContext(
-            <ArticleMainCommentTablet
+            <ArticleCommentTablet
               {...sharedProps}
               article={articleFixture()}
             />,

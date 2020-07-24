@@ -15,7 +15,7 @@ import {
 import { sections } from "@times-components-native/storybook";
 import { scales, themeFactory } from "@times-components-native/styleguide";
 import storybookReporter from "@times-components-native/tealium-utils";
-import ArticleMainCommmentTablet from "./src/article-main-comment-tablet";
+import ArticleCommmentTablet from "./src/article-comment-tablet";
 
 const preventDefaultedAction = (decorateAction) =>
   decorateAction([
@@ -53,7 +53,7 @@ const renderArticle = ({
               },
             }}
           >
-            <ArticleMainCommmentTablet
+            <ArticleCommmentTablet
               adConfig={adConfig}
               analyticsStream={analyticsStream}
               article={data}
