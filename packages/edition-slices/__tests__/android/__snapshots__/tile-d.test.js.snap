@@ -32,7 +32,7 @@ exports[`tile d medium 1`] = `
     <View
       style={
         Object {
-          "marginBottom": 0,
+          "marginBottom": 5,
         }
       }
     >
@@ -53,7 +53,7 @@ exports[`tile d medium 1`] = `
           "fontWeight": "900",
           "includeFontPadding": false,
           "lineHeight": 20,
-          "marginBottom": 0,
+          "marginBottom": 10,
         }
       }
     >
@@ -106,7 +106,7 @@ exports[`tile d small 1`] = `
     <View
       style={
         Object {
-          "marginBottom": 0,
+          "marginBottom": 5,
         }
       }
     >
@@ -127,7 +127,7 @@ exports[`tile d small 1`] = `
           "fontWeight": "900",
           "includeFontPadding": false,
           "lineHeight": 20,
-          "marginBottom": 10,
+          "marginBottom": 5,
         }
       }
     >
@@ -180,7 +180,7 @@ exports[`tile d without breakpoint should be like small 1`] = `
     <View
       style={
         Object {
-          "marginBottom": 0,
+          "marginBottom": 5,
         }
       }
     >
@@ -201,7 +201,7 @@ exports[`tile d without breakpoint should be like small 1`] = `
           "fontWeight": "900",
           "includeFontPadding": false,
           "lineHeight": 20,
-          "marginBottom": 10,
+          "marginBottom": 5,
         }
       }
     >

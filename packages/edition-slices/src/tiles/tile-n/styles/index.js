@@ -30,7 +30,6 @@ const sharedStyles = {
       font: "headline",
     }),
     color: colours.functional.white,
-    marginBottom: 0,
   },
   imageContainer: {
     flex: 1,
@@ -57,6 +56,11 @@ const smallBreakpointStyles = {
     ...sharedStyles.headline,
     fontSize: fontSizeResolver[editionBreakpoints.small],
     lineHeight: fontSizeResolver[editionBreakpoints.small],
+    marginBottom: spacing(1),
+  },
+  strapline: {
+    ...sharedStyles.strapline,
+    marginBottom: spacing(1),
   },
 };
 
@@ -68,12 +72,10 @@ const mediumBreakpointStyles = {
     lineHeight: fontSizeResolver[editionBreakpoints.medium],
   },
   strapline: {
+    ...sharedStyles.strapline,
     fontFamily: fonts.bodyRegular,
-    fontSize: 14,
     lineHeight: 20,
     color: colours.functional.greyLabel,
-    paddingTop: spacing(1),
-    paddingBottom: 0,
   },
 };
 

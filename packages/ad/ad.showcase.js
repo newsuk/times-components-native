@@ -3,7 +3,7 @@
 import React, { Fragment } from "react";
 import { Text } from "react-native";
 import { NewTab } from "@times-components-native/storybook";
-import Ad, { AdComposer } from "./src/ad";
+import Ad, { AdComposer, SponsoredAd } from "./index";
 import adConfig from "./fixtures/article-ad-config.json";
 
 const withOpenInNewWindow = (children) => (
@@ -46,6 +46,11 @@ export default {
           renderAd(select("Slot Name:", slotNames, slotNames[1])),
         ),
       name: "Ad",
+      type: "story",
+    },
+    {
+      component: () => <SponsoredAd />,
+      name: "Sponsored Ad",
       type: "story",
     },
   ],

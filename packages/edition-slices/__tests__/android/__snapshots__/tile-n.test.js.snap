@@ -39,7 +39,7 @@ exports[`tile n huge 1`] = `
       <View
         style={
           Object {
-            "marginBottom": 0,
+            "marginBottom": 5,
           }
         }
       >
@@ -60,7 +60,7 @@ exports[`tile n huge 1`] = `
             "fontWeight": "900",
             "includeFontPadding": false,
             "lineHeight": 35,
-            "marginBottom": 0,
+            "marginBottom": 10,
             "marginTop": 5,
           }
         }
@@ -123,7 +123,7 @@ exports[`tile n medium 1`] = `
       <View
         style={
           Object {
-            "marginBottom": 0,
+            "marginBottom": 5,
           }
         }
       >
@@ -144,7 +144,7 @@ exports[`tile n medium 1`] = `
             "fontWeight": "900",
             "includeFontPadding": false,
             "lineHeight": 18,
-            "marginBottom": 0,
+            "marginBottom": 10,
           }
         }
       >
@@ -160,8 +160,7 @@ exports[`tile n medium 1`] = `
             "fontSize": 14,
             "includeFontPadding": false,
             "lineHeight": 20,
-            "paddingBottom": 0,
-            "paddingTop": 5,
+            "marginBottom": 10,
           }
         }
       >
@@ -224,7 +223,7 @@ exports[`tile n small 1`] = `
       <View
         style={
           Object {
-            "marginBottom": 0,
+            "marginBottom": 5,
           }
         }
       >
@@ -245,7 +244,7 @@ exports[`tile n small 1`] = `
             "fontWeight": "900",
             "includeFontPadding": false,
             "lineHeight": 18,
-            "marginBottom": 0,
+            "marginBottom": 5,
           }
         }
       >
@@ -261,8 +260,7 @@ exports[`tile n small 1`] = `
             "fontSize": 14,
             "includeFontPadding": false,
             "lineHeight": 24,
-            "paddingBottom": 5,
-            "paddingTop": 0,
+            "marginBottom": 5,
           }
         }
       >
@@ -324,7 +322,7 @@ exports[`tile n wide 1`] = `
       <View
         style={
           Object {
-            "marginBottom": 0,
+            "marginBottom": 5,
           }
         }
       >
@@ -345,7 +343,7 @@ exports[`tile n wide 1`] = `
             "fontWeight": "900",
             "includeFontPadding": false,
             "lineHeight": 28,
-            "marginBottom": 0,
+            "marginBottom": 10,
           }
         }
       >
@@ -361,8 +359,7 @@ exports[`tile n wide 1`] = `
             "fontSize": 14,
             "includeFontPadding": false,
             "lineHeight": 20,
-            "paddingBottom": 0,
-            "paddingTop": 5,
+            "marginBottom": 10,
           }
         }
       >
@@ -425,7 +422,7 @@ exports[`tile n with default star 1`] = `
       <View
         style={
           Object {
-            "marginBottom": 0,
+            "marginBottom": 5,
           }
         }
       >
@@ -446,7 +443,7 @@ exports[`tile n with default star 1`] = `
             "fontWeight": "900",
             "includeFontPadding": false,
             "lineHeight": 18,
-            "marginBottom": 0,
+            "marginBottom": 5,
           }
         }
       >
@@ -462,8 +459,7 @@ exports[`tile n with default star 1`] = `
             "fontSize": 14,
             "includeFontPadding": false,
             "lineHeight": 24,
-            "paddingBottom": 5,
-            "paddingTop": 0,
+            "marginBottom": 5,
           }
         }
       >
@@ -526,7 +522,7 @@ exports[`tile n without breakpoint should be like small 1`] = `
       <View
         style={
           Object {
-            "marginBottom": 0,
+            "marginBottom": 5,
           }
         }
       >
@@ -547,7 +543,7 @@ exports[`tile n without breakpoint should be like small 1`] = `
             "fontWeight": "900",
             "includeFontPadding": false,
             "lineHeight": 18,
-            "marginBottom": 0,
+            "marginBottom": 5,
           }
         }
       >
@@ -563,8 +559,7 @@ exports[`tile n without breakpoint should be like small 1`] = `
             "fontSize": 14,
             "includeFontPadding": false,
             "lineHeight": 24,
-            "paddingBottom": 5,
-            "paddingTop": 0,
+            "marginBottom": 5,
           }
         }
       >

@@ -8,7 +8,6 @@ import InlineParagraph from "./inline-paragraph";
 import SimpleParagraph from "./simple-paragraph";
 
 const ArticleParagraph = ({
-  key,
   children,
   index,
   tree,
@@ -41,7 +40,7 @@ const ArticleParagraph = ({
     return (
       <SimpleParagraph
         tree={tree}
-        key={key}
+        uid={`${index}`}
         defaultFont={defaultFont}
         onLinkPress={onLinkPress}
         LinkComponent={LinkComponent}
@@ -59,7 +58,7 @@ const ArticleParagraph = ({
       scale={scale}
       inline={inline}
       tree={tree}
-      key={key}
+      uid={`${index}`}
       defaultFont={defaultFont}
       onLinkPress={onLinkPress}
       LinkComponent={LinkComponent}
@@ -68,8 +67,7 @@ const ArticleParagraph = ({
 };
 
 ArticleParagraph.propTypes = {
-  key: PropTypes.string.isRequired,
-  children: PropTypes.node.isRequired,
+  children: PropTypes.array.isRequired,
   index: PropTypes.number.isRequired,
   tree: PropTypes.object.isRequired,
   scale: PropTypes.string.isRequired,
@@ -78,7 +76,7 @@ ArticleParagraph.propTypes = {
   defaultFont: PropTypes.object.isRequired,
   onLinkPress: PropTypes.func.isRequired,
   data: PropTypes.object.isRequired,
-  dropCapFont: PropTypes.object.isRequired,
+  dropCapFont: PropTypes.string.isRequired,
   LinkComponent: PropTypes.func.isRequired,
 };
 

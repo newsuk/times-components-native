@@ -9,4 +9,4 @@ Object.keys(ttf).forEach((fontName) => {
   FontStorage.registerFont(fontName, ttf[fontName]);
 });
 
-AppRegistry.registerComponent("storybooknative", () => StorybookUIRoot);
+AppRegistry.registerComponent("TimesComponents", () => StorybookUIRoot);

@@ -26,7 +26,7 @@ exports[`tile u without breakpoint 1`] = `
     <View
       style={
         Object {
-          "marginBottom": 0,
+          "marginBottom": 5,
         }
       }
     >
@@ -47,7 +47,7 @@ exports[`tile u without breakpoint 1`] = `
           "fontWeight": "900",
           "includeFontPadding": false,
           "lineHeight": 40,
-          "marginBottom": 0,
+          "marginBottom": 10,
         }
       }
     >
