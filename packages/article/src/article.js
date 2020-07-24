@@ -1,6 +1,4 @@
 import React from "react";
-import { NativeModules } from "react-native";
-import { getDimensions } from "@times-components-native/utils";
 import ArticleMagazineComment from "@times-components-native/article-magazine-comment";
 import ArticleInDepth from "@times-components-native/article-in-depth";
 import ArticleMagazineStandard from "@times-components-native/article-magazine-standard";
@@ -8,22 +6,22 @@ import ArticleMainStandard from "@times-components-native/article-main-standard"
 import ArticleMainComment from "@times-components-native/article-main-comment";
 import ArticleMainCommentTablet from "@times-components-native/article-main-comment-tablet";
 import Responsive from "@times-components-native/responsive";
-import { scales, tabletWidth } from "@times-components-native/styleguide";
+import { scales } from "@times-components-native/styleguide";
 import { MessageManager } from "@times-components-native/message-bar";
 import { getMediaList, addIndexesToInlineImages } from "./utils";
 
-const { width } = getDimensions();
-const config = (NativeModules || {}).ReactConfig;
-const isTablet =
-  (config && config.breakpoint && config.breakpoint !== "small") ||
-  width > tabletWidth;
+export const getComponentByTemplate = (template, isTablet) => {
+  const templates = {
+    indepth: ArticleInDepth,
+    magazinecomment: isTablet
+      ? ArticleMainCommentTablet
+      : ArticleMagazineComment,
+    magazinestandard: ArticleMagazineStandard,
+    maincomment: isTablet ? ArticleMainCommentTablet : ArticleMainComment,
+    mainstandard: ArticleMainStandard,
+  };
 
-export const templates = {
-  indepth: ArticleInDepth,
-  magazinecomment: isTablet ? ArticleMainCommentTablet : ArticleMagazineComment,
-  magazinestandard: ArticleMagazineStandard,
-  maincomment: isTablet ? ArticleMainCommentTablet : ArticleMainComment,
-  mainstandard: ArticleMainStandard,
+  return templates[template] || ArticleMainStandard;
 };
 
 export class TakeoverBailout extends Error {
@@ -34,7 +32,7 @@ export class TakeoverBailout extends Error {
 }
 
 const Article = (props) => {
-  const { article, onImagePress } = props;
+  const { article, onImagePress, isTablet } = props;
   const { leadAsset, template } = article || {};
 
   let { content } = article || {};
@@ -47,7 +45,7 @@ const Article = (props) => {
     const mediaList = getMediaList(content, leadAsset);
     onImagePressArticle = (index) => onImagePress(index, mediaList);
   }
-  const Component = templates[template] || ArticleMainStandard;
+  const Component = getComponentByTemplate(template, isTablet);
   const newProps = {
     ...props,
     article: {
@@ -64,4 +62,5 @@ const Article = (props) => {
     </Responsive>
   );
 };
+
 export default Article;
