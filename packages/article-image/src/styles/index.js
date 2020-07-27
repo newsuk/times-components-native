@@ -25,8 +25,7 @@ const styles = StyleSheet.create({
     maxWidth: tabletWidthMax,
   },
   inlineCaption: {
-    paddingLeft: spacing(2),
-    paddingTop: 0,
+    paddingTop: spacing(2),
   },
   inlineContainer: {
     flexDirection: "row",
@@ -45,6 +44,9 @@ const styles = StyleSheet.create({
     paddingTop: 0,
     width: "100%",
   },
+  inlineContainerNarrow: {
+    paddingLeft: spacing(2),
+  },
   inlineImage: {
     width: "100%",
   },
@@ -55,6 +57,10 @@ const styles = StyleSheet.create({
   },
   primaryContainerTablet: {
     ...containerShared,
+  },
+  primaryContainerNarrow: {
+    alignSelf: "flex-start",
+    paddingLeft: spacing(2),
   },
   secondaryCaption: {
     paddingLeft: spacing(2),
@@ -73,6 +79,10 @@ const styles = StyleSheet.create({
     ...containerShared,
     paddingLeft: spacing(0),
     paddingRight: spacing(0),
+  },
+  secondaryContainerNarrow: {
+    alignSelf: "flex-start",
+    paddingLeft: spacing(2),
   },
   secondaryImage: {
     width: "50%",

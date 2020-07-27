@@ -117,6 +117,19 @@ export default (Component, name) => ({
       name: "Byline with style overriden",
       type: "story",
     },
+    {
+      component: (_, { decorateAction }) => (
+        <View>
+          <Component
+            ast={authorsAST.singleAuthor}
+            centered={true}
+            {...getProps(decorateAction)}
+          />
+        </View>
+      ),
+      name: "Byline centered",
+      type: "story",
+    },
   ],
   name,
 });

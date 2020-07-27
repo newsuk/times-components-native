@@ -43,6 +43,7 @@ const ArticleWithContent = (props) => {
     isTablet,
     onViewed,
     adPosition,
+    narrowContent,
   } = props;
 
   const { id, url, content } = data;
@@ -89,6 +90,7 @@ const ArticleWithContent = (props) => {
           onCommentsPress={onCommentsPress}
           onRelatedArticlePress={onRelatedArticlePress}
           onTopicPress={onTopicPress}
+          narrowContent={narrowContent}
         />
       </Gutter>
     ),
@@ -133,7 +135,7 @@ const ArticleWithContent = (props) => {
   const Scroller = Platform.OS === "ios" ? iosScroller : FlatList;
 
   return (
-    <View style={styles.articleContainer}>
+    <View style={[styles.articleContainer, narrowContent && styles.narrow]}>
       <Viewport.Tracker>
         <Scroller
           data={fixedContent}

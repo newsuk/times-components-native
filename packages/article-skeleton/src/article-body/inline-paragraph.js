@@ -2,7 +2,10 @@
 import React, { useState } from "react";
 import { View, Text } from "react-native";
 import PropTypes from "prop-types";
-import styleguide, { tabletWidth } from "@times-components-native/styleguide";
+import styleguide, {
+  tabletWidth,
+  getNarrowArticleBreakpoint,
+} from "@times-components-native/styleguide";
 import { screenWidth } from "@times-components-native/utils";
 import {
   TextContainer,
@@ -22,6 +25,7 @@ const InlineParagraph = ({
   uid,
   defaultFont,
   LinkComponent,
+  narrowContent,
 }) => {
   const { spacing } = styleguide({ scale });
   const [inlineExclusion, setInlineExclusion] = useState(false);
@@ -30,7 +34,12 @@ const InlineParagraph = ({
     return null;
   }
 
-  const contentWidth = Math.min(screenWidth(), tabletWidth);
+  const contentWidth = Math.min(
+    screenWidth(),
+    narrowContent
+      ? getNarrowArticleBreakpoint(screenWidth()).content
+      : tabletWidth,
+  );
   const gutters = (screenWidth() - contentWidth) / 2 + spacing(2);
 
   const container = new TextContainer(
@@ -51,9 +60,11 @@ const InlineParagraph = ({
 
   const positioned = manager.layout();
 
+  const dropCapLeftPosition = narrowContent ? 0 : gutters - spacing(2);
+
   return [
     dropCap && (
-      <View key={`${uid}:dropcap`} style={{ left: gutters - spacing(2) }}>
+      <View key={`${uid}:dropcap`} style={{ left: dropCapLeftPosition }}>
         {dropCap.element}
       </View>
     ),
@@ -62,7 +73,7 @@ const InlineParagraph = ({
         key={`${uid}:inline-paragraph`}
         style={{
           position: "absolute",
-          left: gutters,
+          left: narrowContent ? 0 : gutters,
           width: contentWidth * 0.35,
         }}
         onLayout={(e) => {
@@ -95,6 +106,7 @@ const InlineParagraph = ({
               defaultFont.lineHeight,
         inlineExclusion ? inlineExclusion.height : 0,
       )}
+      narrowContent={narrowContent}
     >
       {positioned.map((p, i) => {
         const [attribute, href] = p.text.collapsedAttributes(0);

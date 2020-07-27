@@ -15,10 +15,6 @@ const sharedStyles = (dropCapFont = "dropCap", scale = scales.medium) => {
       paddingLeft: spacing(2),
       paddingRight: spacing(2),
     },
-    articleMainContentRowTablet: {
-      alignSelf: "center",
-      width: tabletWidth,
-    },
     articleTextElement: {
       ...fontFactory({
         font: "body",
@@ -27,12 +23,19 @@ const sharedStyles = (dropCapFont = "dropCap", scale = scales.medium) => {
       color: colours.functional.primary,
       marginBottom: spacing(5),
     },
+    articleMainContentRowTablet: {
+      alignSelf: "center",
+      width: tabletWidth,
+    },
+    narrow: {
+      alignSelf: "flex-start",
+      width: "100%",
+    },
     dropCapContainer: {
       flexDirection: "row",
       flexWrap: "wrap",
     },
     dropCapContainerTablet: {
-      alignSelf: "center",
       width: tabletWidth,
     },
     dropCapTextElement: {

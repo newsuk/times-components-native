@@ -7,17 +7,23 @@ import styles from "./styles";
 
 const ArticleImageNative = (props) => {
   const {
-    imageOptions: { display, uri },
+    imageOptions: { display, uri, narrowContent },
   } = props;
 
   return (
     <ResponsiveContext.Consumer>
-      {({ isTablet }) => (
+      {({ isTablet, narrowArticleBreakpoint }) => (
         <View
           key={uri}
           style={[
             styles[`${display}Container`],
             isTablet && styles[`${display}ContainerTablet`],
+            narrowContent && [
+              styles[`${display}ContainerNarrow`],
+              {
+                width: narrowArticleBreakpoint.content,
+              },
+            ],
           ]}
         >
           <ArticleImage {...props} />

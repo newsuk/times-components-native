@@ -1,7 +1,7 @@
 /* eslint-disable no-undef */
 import React, { Component } from "react";
 import { Subscriber } from "react-broadcast";
-import { Platform, View } from "react-native";
+import { View } from "react-native";
 import { screenWidth } from "@times-components-native/utils";
 import NetInfo from "@react-native-community/netinfo";
 import { getPrebidSlotConfig, getSlotConfig, prebidConfig } from "./utils";
@@ -76,7 +76,14 @@ class Ad extends Component {
   };
 
   renderAd(adConfig) {
-    const { baseUrl, contextUrl, isLoading, slotName, style } = this.props;
+    const {
+      baseUrl,
+      contextUrl,
+      isLoading,
+      slotName,
+      style,
+      width,
+    } = this.props;
     const { config, hasError, isAdReady, offline } = this.state;
 
     if (hasError || offline) return null;
@@ -122,10 +129,7 @@ class Ad extends Component {
       !isAdReady || hasError
         ? { width: 0 }
         : {
-            width:
-              Platform.OS === "ios" || Platform.OS === "android"
-                ? screenWidth()
-                : config.maxSizes.width,
+            width: width || screenWidth(),
           };
 
     return (

@@ -15,7 +15,7 @@ import {
 import { sections } from "@times-components-native/storybook";
 import { scales, themeFactory } from "@times-components-native/styleguide";
 import storybookReporter from "@times-components-native/tealium-utils";
-import Article, { templates } from "./src/article";
+import Article from "./src/article";
 
 const preventDefaultedAction = (decorateAction) =>
   decorateAction([
@@ -35,6 +35,14 @@ const PULL_QUOTE = 64;
 const STANDFIRST = 128;
 const VIDEO = 256;
 const TEASED_CONTENT = 512;
+
+const templates = [
+  "mainstandard",
+  "maincomment",
+  "magazinestandard",
+  "magazinecomment",
+  "indepth",
+];
 
 export const makeArticleConfiguration = ({
   withFlags,
@@ -281,15 +289,10 @@ const renderArticle = ({
   </ArticleProvider>
 );
 
-const templateNames = Object.keys(templates).reduce(
-  (t, key) => ({ ...t, [key]: key }),
-  {},
-);
-
 const selectScales = (select) => select("Scale", scales, scales.medium);
 const selectSection = (select) => select("Section", sections, "News");
 const selectTemplate = (select) =>
-  select("Template", templateNames, templateNames.mainstandard);
+  select("Template", templates, "mainstandard");
 
 const renderArticleConfig = ({
   boolean,
