@@ -1,15 +1,8 @@
 import React from "react";
 import Caption from "@times-components-native/caption";
-import { spacing } from "@times-components-native/styleguide";
 
-const captionStyle = {
-  container: {
-    paddingLeft: spacing(2),
-  },
-};
-
-const CaptionComponentPrimaryNative = ({ caption, credits }) => (
-  <Caption credits={credits} style={captionStyle} text={caption} />
+const CaptionComponentPrimaryNative = ({ caption, credits, style }) => (
+  <Caption credits={credits} style={style} text={caption} />
 );
 
 CaptionComponentPrimaryNative.propTypes = {

@@ -4,17 +4,21 @@ import ArticleInDepth from "@times-components-native/article-in-depth";
 import ArticleMagazineStandard from "@times-components-native/article-magazine-standard";
 import ArticleMainStandard from "@times-components-native/article-main-standard";
 import ArticleMainComment from "@times-components-native/article-main-comment";
-import Responsive from "@times-components-native/responsive";
+import ArticleCommentTablet from "@times-components-native/article-comment-tablet";
 import { scales } from "@times-components-native/styleguide";
 import { MessageManager } from "@times-components-native/message-bar";
 import { getMediaList, addIndexesToInlineImages } from "./utils";
 
-export const templates = {
-  indepth: ArticleInDepth,
-  magazinecomment: ArticleMagazineComment,
-  magazinestandard: ArticleMagazineStandard,
-  maincomment: ArticleMainComment,
-  mainstandard: ArticleMainStandard,
+export const getComponentByTemplate = (template, isTablet) => {
+  const templates = {
+    indepth: ArticleInDepth,
+    magazinecomment: isTablet ? ArticleCommentTablet : ArticleMagazineComment,
+    magazinestandard: ArticleMagazineStandard,
+    maincomment: isTablet ? ArticleCommentTablet : ArticleMainComment,
+    mainstandard: ArticleMainStandard,
+  };
+
+  return templates[template] || ArticleMainStandard;
 };
 
 export class TakeoverBailout extends Error {
@@ -25,8 +29,9 @@ export class TakeoverBailout extends Error {
 }
 
 const Article = (props) => {
-  const { article, onImagePress } = props;
+  const { article, onImagePress, isTablet } = props;
   const { leadAsset, template } = article || {};
+
   let { content } = article || {};
   if (template === "takeoverpage") {
     throw new TakeoverBailout("Aborted react render: Takeover page");
@@ -37,7 +42,7 @@ const Article = (props) => {
     const mediaList = getMediaList(content, leadAsset);
     onImagePressArticle = (index) => onImagePress(index, mediaList);
   }
-  const Component = templates[template] || ArticleMainStandard;
+  const Component = getComponentByTemplate(template, isTablet);
   const newProps = {
     ...props,
     article: {
@@ -47,11 +52,10 @@ const Article = (props) => {
   };
 
   return (
-    <Responsive>
-      <MessageManager animate delay={3000} scale={scales.medium}>
-        <Component {...newProps} onImagePress={onImagePressArticle} />
-      </MessageManager>
-    </Responsive>
+    <MessageManager animate delay={3000} scale={scales.medium}>
+      <Component {...newProps} onImagePress={onImagePressArticle} />
+    </MessageManager>
   );
 };
+
 export default Article;

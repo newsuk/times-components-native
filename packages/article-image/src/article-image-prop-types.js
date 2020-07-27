@@ -12,6 +12,7 @@ export const propTypes = {
     lowResSize: PropTypes.number,
     ratio: PropTypes.string,
     uri: PropTypes.string.isRequired,
+    narrowContent: PropTypes.bool,
   }).isRequired,
   onImagePress: PropTypes.func,
 };

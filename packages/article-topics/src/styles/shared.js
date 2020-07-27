@@ -7,8 +7,8 @@ const styles = {
     borderRadius: 2,
     borderWidth: 1,
     paddingBottom: spacing(2),
-    paddingLeft: spacing(3),
-    paddingRight: spacing(3),
+    paddingLeft: spacing(2),
+    paddingRight: spacing(2),
     paddingTop: spacing(2),
   },
   spacer: {

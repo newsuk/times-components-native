@@ -40,10 +40,14 @@ const styles = StyleSheet.create({
     paddingTop: spacing(6),
     textAlign: "center",
   },
-  relatedArticlesTablet: {
+  extrasTablet: {
     alignSelf: "center",
     maxWidth: tabletWidth,
     width: "100%",
+  },
+  narrow: {
+    marginLeft: spacing(2),
+    alignSelf: "flex-start",
   },
 });
 

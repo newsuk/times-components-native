@@ -1,10 +1,30 @@
 #!/usr/bin/env bash
 set -e
 
-ARTIFACTS_REPO_SLUG="newsuk/times-components-ios-artifacts"
-ARTIFACTS_REPO_SSH="git@github.com:$ARTIFACTS_REPO_SLUG.git"
-PACKAGE_VERSION=$(cat package.json | grep version | head -1 | sed 's/[\",\t ]//g' | awk -F: '{ print $2 }')
+REPO_SLUG="newsuk/times-components-ios-artifacts"
+PACKAGE_VERSION=$(cat package.json | grep version | head -1 | awk -F: '{ print $2 }' | sed 's/[\",]//g' | tr -d '[[:space:]]')
 TMP_ASSET_DIR=$(mktemp -d) || { logError "Failed to create temp file" ; exit 2; }
+
+setupEnv () {
+  if [ "$CIRCLE_BRANCH" == "master" ] && [[ $PACKAGE_VERSION != *"beta"* ]]
+  then
+    echo "👉 Setting up enviroment for a production release."
+    ARTIFACTS_REPO_SLUG="$REPO_SLUG"
+    ARTIFACTS_REPO_SSH="git@github.com:$ARTIFACTS_REPO_SLUG.git"
+
+    RELEASE_DEST="production"
+  elif [[ $PACKAGE_VERSION == *"beta"* ]]
+  then
+    echo "👉 Setting up enviroment for a beta release."
+    ARTIFACTS_REPO_SLUG="$REPO_SLUG-beta"
+    ARTIFACTS_REPO_SSH="git@github.com:$ARTIFACTS_REPO_SLUG.git"
+
+    RELEASE_DEST="beta"
+  else
+    echo "✋ It looks like you are not on 'master' branch or your version number does't include 'beta'. Will not publish."
+    exit 0
+  fi
+}
 
 setup () {
     echo "🔧 Setting up git user"
@@ -23,7 +43,7 @@ package () {
 }
 
 checkIfVersionExists () {
-    echo "👀 Checking if the current tag exists"
+    echo "👀 Checking if the current tag($PACKAGE_VERSION) exists in $RELEASE_DEST."
 
     cd $TMP_ASSET_DIR
 
@@ -34,7 +54,7 @@ checkIfVersionExists () {
 }
 
 publish () {
-    echo "🚀 Publishing to the artifacts repo"
+    echo "🚀 Publishing ($PACKAGE_VERSION) to the artifacts repo($RELEASE_DEST)"
 
     cd $TMP_ASSET_DIR
     sed -i -e "s/PACKAGE_VERSION/\"$PACKAGE_VERSION\"/g" TimesComponents.podspec
@@ -44,9 +64,10 @@ publish () {
     git tag -a $PACKAGE_VERSION -m "Publish iOS assets for v$PACKAGE_VERSION"
     git push origin master --tags --quiet
 
-    echo "👻 Success! Release published at https://github.com/$ARTIFACTS_REPO_SLUG/releases/tag/$PACKAGE_VERSION."
+    echo "👻 Success! Release published at https://github.com/$ARTIFACTS_REPO_SLUG/releases/tag/$PACKAGE_VERSION"
 }
 
+setupEnv
 setup
 package
 checkIfVersionExists

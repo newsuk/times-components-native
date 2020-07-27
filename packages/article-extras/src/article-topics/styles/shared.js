@@ -9,6 +9,9 @@ const sharedStyles = {
     alignSelf: "center",
     width: tabletWidth,
   },
+  narrow: {
+    width: "100%",
+  },
   topicsMetaContainer: {
     justifyContent: "flex-start",
   },
