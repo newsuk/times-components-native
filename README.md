@@ -5,7 +5,7 @@ Home of The Times' `react native` components used in the mobile and tablet apps.
 ## Table of Contents
 
 - [Getting Started](#getting-started)
-- [Native Apps & TCN](#native-apps-&-tcn)
+- [Native Apps & TCN](#native-apps--tcn)
 - [Testing](#testing)
 - [Releases](#releases)
 - [Miscellaneous](#miscellaneous)
