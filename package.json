@@ -49,7 +49,7 @@
   "author": "News UK & Ireland Ltd",
   "license": "BSD-3-Clause",
   "bugs": {
-    "url": "https://github.com/newsuk/times-components/issues"
+    "url": "https://github.com/newsuk/times-components-native/issues"
   },
   "config": {
     "react-native-storybook-loader": {
@@ -60,7 +60,7 @@
       "outputFile": "./storybook-native/story-loader.js"
     }
   },
-  "homepage": "https://github.com/newsuk/times-components#readme",
+  "homepage": "https://github.com/newsuk/times-components-native#readme",
   "devDependencies": {
     "@babel/cli": "7.4.4",
     "@babel/core": "7.4.4",
@@ -68,14 +68,13 @@
     "@babel/plugin-transform-runtime": "7.4.4",
     "@babel/preset-env": "7.4.4",
     "@bam.tech/react-native-graphql-transformer": "0.1.5",
-    "@storybook/addon-actions": "5.3.18",
+    "@storybook/addon-actions": "5.3.19",
     "@storybook/addon-info": "5.3.18",
-    "@storybook/addon-knobs": "5.3.18",
-    "@storybook/addon-ondevice-knobs": "5.3.18",
-    "@storybook/addon-options": "5.3.18",
-    "@storybook/addons": "5.3.18",
-    "@storybook/react": "5.3.18",
-    "@storybook/react-native": "5.3.18",
+    "@storybook/addon-knobs": "5.3.19",
+    "@storybook/addon-ondevice-knobs": "5.3.19",
+    "@storybook/addon-options": "5.3.19",
+    "@storybook/react": "5.3.19",
+    "@storybook/react-native": "5.3.19",
     "@types/jest": "24.0.2",
     "@types/point-in-polygon": "1.0.0",
     "@types/react-native": "0.60.21",
@@ -101,7 +100,7 @@
     "eslint-plugin-import": "2.22.0",
     "eslint-plugin-jsx-a11y": "^6.3.1",
     "eslint-plugin-prettier": "^3.1.4",
-    "eslint-plugin-react": "^7.20.3",
+    "eslint-plugin-react": "^7.20.5",
     "eslint-plugin-react-hooks": "^4.0.8",
     "eslint-plugin-react-native": "^3.8.1",
     "fetch-mock": "8.3.1",
@@ -117,13 +116,11 @@
     "metro-react-native-babel-preset": "0.53.1",
     "mkdirp": "0.5.1",
     "prettier": "2.0.5",
-    "react-art": "16.6.3",
     "react-native-storybook-loader": "1.8.0",
     "react-test-renderer": "16.9.0",
     "rimraf": "2.6.1",
     "typescript": "3.7.2",
     "url": "0.11.0",
-    "url-polyfill": "1.1.0",
     "webpack": "4.30.0"
   },
   "dependencies": {
@@ -135,7 +132,6 @@
     "apollo-link": "1.2.4",
     "apollo-link-http": "1.5.14",
     "apollo-utilities": "1.2.1",
-    "chalk": "2.4.1",
     "css": "^2.2.1",
     "date-fns": "1.28.5",
     "graphql": "14.2.1",
