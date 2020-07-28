@@ -1,23 +1,11 @@
 import React, { Component } from "react";
-import { View, Text, NativeModules, Platform } from "react-native";
-import { fonts, fontSizes } from "@times-components-native/styleguide";
+import { NativeModules } from "react-native";
+
+import ArticleError from "@times-components-native/article-error";
 
 const { componentCaughtError } = NativeModules.ReactAnalytics;
 
-const styles = {
-  container: {
-    flex: 1,
-    alignItems: "center",
-    justifyContent: "center",
-  },
-  title: {
-    fontFamily: fonts.headline,
-    fontSize: fontSizes.heading2Mobile,
-    marginBottom: 20,
-  },
-};
-
-const withErrorBoundaries = (WrappedComponent) =>
+export const withErrorBoundaries = (WrappedComponent, extras = {}) =>
   class extends Component {
     constructor(props) {
       super(props);
@@ -32,18 +20,15 @@ const withErrorBoundaries = (WrappedComponent) =>
       componentCaughtError(error.message, errorInfo.componentStack);
     }
 
-    renderErrorMessage = () => (
-      <View style={styles.container}>
-        <Text style={styles.title}>Something went wrong</Text>
-      </View>
-    );
-
     render() {
       const { hasError } = this.state;
-      const isNative = Platform.OS === "ios" || Platform.OS === "android";
 
-      return isNative && hasError ? (
-        this.renderErrorMessage()
+      return hasError ? (
+        <ArticleError
+          message={extras.message}
+          buttonText={extras.buttonText}
+          refetch={extras.onAction}
+        />
       ) : (
         <WrappedComponent {...this.props} />
       );
