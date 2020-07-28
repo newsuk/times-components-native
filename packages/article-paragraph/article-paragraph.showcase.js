@@ -10,6 +10,7 @@ import dropCapData from "./fixtures/drop-cap-showcase.json";
 import dropCapShortTextData from "./fixtures/drop-cap-short-text-showcase.json";
 import ArticleParagraph from "./src";
 import DropCapView from "./src/drop-cap";
+import { Text } from "react-native";
 
 const renderParagraphWithScale = ({ select, boolean }, ast) => {
   const scale = select("Scale", scales, scales.medium);
@@ -45,7 +46,7 @@ const renderParagraphWithScale = ({ select, boolean }, ast) => {
               key={indx}
               uid={indx}
             >
-              {children}
+              <Text>{children}</Text>
             </ArticleParagraph>
           );
         },
