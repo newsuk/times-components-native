@@ -52,7 +52,6 @@ const ArticleExtrasContent = ({
               narrowContent={narrowContent}
             />
           ) : null}
-          {isTablet && <SponsoredAd />}
           <ArticleComments
             articleId={articleId}
             commentCount={commentCount}
@@ -61,6 +60,7 @@ const ArticleExtrasContent = ({
             onCommentsPress={onCommentsPress}
             url={articleUrl}
           />
+          {isTablet && <SponsoredAd />}
         </View>
       )}
     </ResponsiveContext.Consumer>
