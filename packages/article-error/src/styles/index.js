@@ -34,4 +34,10 @@ export default StyleSheet.create({
     marginHorizontal: spacing(8),
     textAlign: "center",
   },
+  buttonWrapper: {
+    marginHorizontal: spacing(8),
+  },
+  button: {
+    marginTop: 20,
+  },
 });

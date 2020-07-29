@@ -6,11 +6,18 @@ import getAdTargetingConfig from "../src/article/ad-targeting-config";
 
 const Article = Page("Article");
 
+const articleData = {
+  headline: "This is a headline",
+  id: "this-is-a-id",
+  keywords: ["this", "is", "a", "headline"],
+};
+
 export default (makeTest) => {
   it("article page", () => {
     expect(
       makeTest(
         <Article
+          article={JSON.stringify({ data: { article: articleData } })}
           articleId="test-article-id"
           scale={scales.large}
           sectionName="News"
@@ -20,15 +27,9 @@ export default (makeTest) => {
   });
 
   it("adConfig is set correctly", () => {
-    const article = {
-      headline: "This is a headline",
-      id: "this-is-a-id",
-      keywords: ["this", "is", "a", "headline"],
-    };
-
     const adTargetingConfig = getAdTargetingConfig({
       adTestMode: "testMode",
-      article,
+      article: articleData,
       sectionName: "sectionName",
     });
 

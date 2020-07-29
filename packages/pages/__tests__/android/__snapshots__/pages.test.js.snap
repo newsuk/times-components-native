@@ -39,7 +39,54 @@ Object {
 
 exports[`article page 1`] = `
 <Article
-  article={null}
+  adConfig={
+    Object {
+      "adUnit": "thetimes.mob.android",
+      "bidInitialiser": Promise {
+        "_40": 0,
+        "_55": undefined,
+        "_65": 1,
+        "_72": null,
+      },
+      "bidderSlots": Array [],
+      "biddersConfig": Object {},
+      "globalSlots": Array [],
+      "networkId": "dummy-ad-network-id",
+      "pageTargeting": Object {
+        "Shared": "0",
+        "aid": "this-is-a-id",
+        "cont_type": "art",
+        "cos": "Android",
+        "cov": "123",
+        "cpn": "dummy-cookie-eid",
+        "did": "dummy-device-id",
+        "eid": "dummy-cookie-eid",
+        "kw": "this,is,a,headline",
+        "log": "0",
+        "section": "News",
+        "testmode": undefined,
+        "vid": "",
+      },
+      "slotTargeting": Object {
+        "path": "/news",
+        "section": "News",
+        "slot": "news",
+        "zone": "current_edition",
+      },
+    }
+  }
+  article={
+    Object {
+      "headline": "This is a headline",
+      "id": "this-is-a-id",
+      "keywords": Array [
+        "this",
+        "is",
+        "a",
+        "headline",
+      ],
+    }
+  }
   error={null}
   interactiveConfig={
     Object {
@@ -49,7 +96,7 @@ exports[`article page 1`] = `
       "version": "",
     }
   }
-  isLoading={true}
+  isLoading={false}
   pageSection="News"
   referralUrl={null}
 />
