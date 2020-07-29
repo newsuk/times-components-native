@@ -1,5 +1,5 @@
 import React from "react";
-import { ScrollView } from "react-native";
+import { ScrollView, View } from "react-native";
 import {
   mockDailyRegisterSlice,
   mockLeadOneAndFourSlice,
@@ -35,6 +35,7 @@ import {
   LeadersSlice,
   DailyRegisterLeadFourSlice,
   StandardSlice,
+  FrontLeadTwoAndTwoSlice,
 } from "./src/slices";
 
 const preventDefaultedAction = (decorateAction) =>
@@ -57,28 +58,38 @@ const savedArticles = {
 };
 
 /* eslint-disable react/prop-types */
-const renderSlice = (Component, data) => ({ select }, { decorateAction }) => (
-  <Responsive>
-    <ScrollView>
-      <SectionContext.Provider
-        value={{
-          onArticleSavePress: select(
-            "onArticleSavePress:",
-            onArticleSavePress,
-            null,
-          ),
-          publicationName: select("Publication:", publications, "TIMES"),
-          savedArticles: select("savedArticles:", savedArticles, null),
-        }}
-      >
-        <Component
-          onPress={preventDefaultedAction(decorateAction)("onPress")}
-          slice={data}
-        />
-      </SectionContext.Provider>
-    </ScrollView>
-  </Responsive>
-);
+const renderSlice = (Component, data, scroll = true) => (
+  { select },
+  { decorateAction },
+) => {
+  const slice = (
+    <SectionContext.Provider
+      value={{
+        onArticleSavePress: select(
+          "onArticleSavePress:",
+          onArticleSavePress,
+          null,
+        ),
+        publicationName: select("Publication:", publications, "TIMES"),
+        savedArticles: select("savedArticles:", savedArticles, null),
+      }}
+    >
+      <Component
+        onPress={preventDefaultedAction(decorateAction)("onPress")}
+        slice={data}
+      />
+    </SectionContext.Provider>
+  );
+  return (
+    <Responsive>
+      {scroll ? (
+        <ScrollView>{slice}</ScrollView>
+      ) : (
+        <View style={{ flex: 1 }}>{slice}</View>
+      )}
+    </Responsive>
+  );
+};
 
 const sliceStories = [
   {
@@ -159,11 +170,17 @@ const sliceStories = [
     name: "Comment Lead And Cartoon (Mobile: P,Q, Tablet: AH, AI)",
     Slice: CommentLeadAndCartoonSlice,
   },
+  {
+    mock: mockLeadTwoNoPicAndTwoSlice(),
+    name: "Front Lead Two And Two (Mobile: N/A, Tablet: TODO ADD THIS HERE)",
+    Slice: FrontLeadTwoAndTwoSlice,
+    scroll: false,
+  },
 ];
 
 export default {
-  children: sliceStories.map(({ mock, name, Slice }) => ({
-    component: renderSlice(Slice, mock),
+  children: sliceStories.map(({ mock, name, Slice, scroll }) => ({
+    component: renderSlice(Slice, mock, scroll),
     name,
     type: "story",
     platform: "native",

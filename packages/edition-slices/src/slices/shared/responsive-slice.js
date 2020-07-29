@@ -10,6 +10,7 @@ const ResponsiveSlice = ({
   renderMedium,
   renderWide,
   renderHuge,
+  grow = false,
 }) => (
   <ResponsiveContext.Consumer>
     {({ editionBreakpoint }) => {
@@ -17,17 +18,17 @@ const ResponsiveSlice = ({
         case editionBreakpoints.small:
           return renderSmall(editionBreakpoint);
         case editionBreakpoints.medium:
-          return <Gutter>{renderMedium(editionBreakpoint)}</Gutter>;
+          return <Gutter grow={grow}>{renderMedium(editionBreakpoint)}</Gutter>;
         case editionBreakpoints.wide:
           return (
-            <Gutter>
+            <Gutter grow={grow}>
               {(renderWide && renderWide(editionBreakpoint)) ||
                 (renderMedium && renderMedium(editionBreakpoint))}
             </Gutter>
           );
         case editionBreakpoints.huge:
           return (
-            <Gutter>
+            <Gutter grow={grow}>
               <ContentWrapper>
                 {(renderHuge && renderHuge(editionBreakpoint)) ||
                   (renderWide && renderWide(editionBreakpoint)) ||
