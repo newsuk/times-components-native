@@ -177,59 +177,64 @@ workflows:
         jobs:
             - setup
             - run_lint:
-                  requires:
-                      - setup
+                requires:
+                    - setup
             - run_typecheck:
                 requires:
                   - setup
             - run_noplatform_tests:
-                  requires:
-                      - setup
+                requires:
+                    - setup
             - run_android_tests:
-                  requires:
-                      - setup
+                requires:
+                    - setup
             - run_ios_tests:
-                  requires:
-                      - setup
+                requires:
+                    - setup
 
             - hold_release_prod:
-                  type: approval
-                  filters:
+                type: approval
+                context: nuk-tnl-app-universal
+                filters:
                     branches:
                         only:
                             - master
-                  requires:
-                      - run_lint
-                      - run_typecheck
-                      - run_noplatform_tests
-                      - run_android_tests
-                      - run_ios_tests
-            - publish_android_prod:
-                  requires:
-                      - hold_release_prod
-            - publish_ios_prod:
-                  requires:
-                      - hold_release_prod
-            - publish_notes:
                 requires:
-                  - publish_android_prod
-                  - publish_ios_prod
+                    - run_lint
+                    - run_typecheck
+                    - run_noplatform_tests
+                    - run_android_tests
+                    - run_ios_tests
+            - publish_android_prod:
+                context: nuk-tnl-app-universal
+                requires:
+                    - hold_release_prod
+            - publish_ios_prod:
+                context: nuk-tnl-app-universal
+                requires:
+                    - hold_release_prod
+            - publish_notes:
+                context: nuk-tnl-app-universal
+                requires:
+                    - publish_android_prod
+                    - publish_ios_prod
 
             - hold_release_beta:
-                  type: approval
-                  filters:
+                type: approval
+                context: nuk-tnl-app-universal
+                filters:
                     branches:
                         ignore:
                             - master
-                  requires:
-                      - run_lint
-                      - run_typecheck
-                      - run_noplatform_tests
-                      - run_android_tests
-                      - run_ios_tests
+                requires:
+                    - run_lint
+                    - run_typecheck
+                    - run_noplatform_tests
+                    - run_android_tests
+                    - run_ios_tests
             - publish_android_beta:
-                  requires:
-                      - hold_release_beta
+                requires:
+                    - hold_release_beta
             - publish_ios_beta:
-                  requires:
-                      - hold_release_beta
+                requires:
+                    - hold_release_beta

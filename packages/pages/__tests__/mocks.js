@@ -17,7 +17,10 @@ jest.mock("react-native", () => {
     onArticlePress: () => null,
   };
   rn.NativeModules.NativeFetch = { fetch: () => null };
-  rn.NativeModules.ReactAnalytics = { track: () => null };
+  rn.NativeModules.ReactAnalytics = {
+    track: () => null,
+    componentCaughtError: () => null,
+  };
   rn.NativeModules.ReactConfig = {
     adNetworkId: "dummy-ad-network-id",
     cookieEid: "dummy-cookie-eid",
