@@ -186,13 +186,16 @@ export default ({
       );
     },
     ad(key, attributes) {
+      const template = data.template;
+
+      // temporary fix to remove ads for maincomment on tablet
+      if (isTablet && template === "maincomment") return null;
       return (
         <Ad
           key={key}
           adConfig={adConfig}
           slotName="native-inline-ad"
           {...attributes}
-          width={300}
         />
       );
     },
