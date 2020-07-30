@@ -2,7 +2,7 @@ import React from "react";
 import { Text } from "react-native";
 import PropTypes from "prop-types";
 import { propTypes as treePropType } from "@times-components-native/markup-forest";
-import styles from "../article-summary/src/styles";
+import styles from "./styles";
 import { indent } from "./indent";
 import renderTrees from "@times-components-native/markup-forest/src/markup-forest";
 import frontRenderers from "./front-renderer";

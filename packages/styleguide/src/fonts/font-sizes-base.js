@@ -33,6 +33,7 @@ const fontSizes = {
   smallHeadline: 22,
   strapline: 22,
   teaser: 14,
+  "front-teaser": 14,
   tertiary: 15,
   tileLeadHeadline: 35,
   heading2Mobile: 25,

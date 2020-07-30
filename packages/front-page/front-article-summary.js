@@ -4,15 +4,16 @@ import PropTypes from "prop-types";
 import ArticleByline, {
   articleBylinePropTypes,
 } from "@times-components-native/article-byline";
+import styles from "./styles";
 
 function Byline(props) {
-  const { ast, bylineClass } = props;
+  const { ast } = props;
 
   if (!ast || ast.length === 0) return null;
 
   return (
-    <Text>
-      <ArticleByline {...props} className={bylineClass} />
+    <Text style={styles.bylineContainer}>
+      <ArticleByline {...props} />
     </Text>
   );
 }
@@ -35,7 +36,6 @@ function FrontArticleSummary(props) {
 FrontArticleSummary.propTypes = {
   bylineProps: PropTypes.shape({
     ...articleBylinePropTypes,
-    bylineClass: PropTypes.string,
   }),
   content: PropTypes.node,
   headline: PropTypes.node,

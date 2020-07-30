@@ -4,6 +4,7 @@ const mapping = {
     puffLink: 15,
     secondary: 27,
     teaser: 20,
+    "front-teaser": 18,
     tertiary: 26,
   },
   bodyRegular: {
