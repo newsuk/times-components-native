@@ -31,7 +31,7 @@ const TileXFront = ({
             summaryStyle={styles.summary}
             tile={tile}
             whiteSpaceHeight={whiteSpaceHeight}
-            withStar={false}
+            bylines={tile.article.bylines}
           />
         )}
       />

@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import PropTypes from "prop-types";
-import ArticleSummary, {
+import {
+  FrontArticleSummary,
   ArticleSummaryContent,
   ArticleSummaryHeadline,
   ArticleSummaryStrapline,
@@ -24,6 +25,7 @@ class FrontTileSummary extends Component {
 
     return (
       <ArticleSummaryContent
+        debug={this.props.debug}
         ast={summary}
         style={summaryStyle}
         whiteSpaceHeight={whiteSpaceHeight}
@@ -59,8 +61,9 @@ class FrontTileSummary extends Component {
 
   render() {
     const { bylines, bylineStyle, strapline, style, summary } = this.props;
+
     return (
-      <ArticleSummary
+      <FrontArticleSummary
         bylineProps={bylines ? { ast: bylines, bylineStyle } : null}
         content={summary ? this.renderContent() : undefined}
         headline={this.renderHeadline()}
@@ -80,6 +83,7 @@ FrontTileSummary.propTypes = {
   summary: PropTypes.arrayOf(PropTypes.shape({})),
   summaryStyle: PropTypes.shape({}),
   tile: PropTypes.shape({}).isRequired,
+  bylines: PropTypes.shape({}).isRequired,
 };
 
 FrontTileSummary.defaultProps = {

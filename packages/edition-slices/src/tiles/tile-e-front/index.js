@@ -29,23 +29,10 @@ const TileEFront = ({
     article: { hasVideo },
   } = tile;
 
-  const summary =
-    breakpoint === editionBreakpoints.small ? getTileSummary(tile, 125) : null;
+  const summary = getTileSummary(tile, 1000);
 
   return (
     <TileLink onPress={onPress} style={styles.container} tile={tile}>
-      <WithoutWhiteSpace
-        style={styles.summaryContainer}
-        render={(whiteSpaceHeight) => (
-          <FrontTileSummary
-            headlineStyle={styles.headline}
-            summary={summary}
-            style={styles.summaryContainer}
-            tile={tile}
-            whiteSpaceHeight={whiteSpaceHeight}
-          />
-        )}
-      />
       <TileImage
         aspectRatio={4 / 5}
         relativeWidth={crop.relativeWidth}
@@ -56,6 +43,19 @@ const TileEFront = ({
         uri={crop.url}
         fill
         hasVideo={hasVideo}
+      />
+      <WithoutWhiteSpace
+        style={styles.summaryContainer}
+        render={(whiteSpaceHeight) => (
+          <FrontTileSummary
+            headlineStyle={styles.headline}
+            summary={summary}
+            style={styles.summaryContainer}
+            tile={tile}
+            whiteSpaceHeight={whiteSpaceHeight}
+            bylines={tile.article.bylines}
+          />
+        )}
       />
     </TileLink>
   );

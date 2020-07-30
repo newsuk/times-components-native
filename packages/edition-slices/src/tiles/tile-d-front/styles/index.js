@@ -9,6 +9,7 @@ const styles = {
   container: {
     flexDirection: "row",
     padding: spacing(2),
+    flex: 1,
   },
   headline: {
     ...fontFactory({
@@ -42,7 +43,6 @@ const mediumBreakpointStyles = {
     flex: 1,
   },
   summaryContainer: {
-    flex: 1,
     paddingLeft: spacing(2),
   },
 };

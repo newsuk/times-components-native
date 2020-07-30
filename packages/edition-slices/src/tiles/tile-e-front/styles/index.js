@@ -9,6 +9,7 @@ const styles = {
   container: {
     flexDirection: "row-reverse",
     padding: spacing(2),
+    flex: 1,
   },
   headline: {
     ...fontFactory({
@@ -30,6 +31,7 @@ const mediumBreakpointStyles = {
   container: {
     padding: spacing(2),
     paddingTop: spacing(3),
+    flex: 1,
   },
   headline: {
     fontFamily: fonts.headline,
@@ -38,7 +40,7 @@ const mediumBreakpointStyles = {
   },
   imageContainer: {
     width: "100%",
-    marginTop: spacing(2),
+    marginBottom: spacing(2),
   },
 };
 

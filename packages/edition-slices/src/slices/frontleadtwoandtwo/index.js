@@ -8,6 +8,7 @@ import {
   TileXFront,
   TileYFront,
 } from "@times-components-native/edition-slices/src/tiles";
+import { testSlice } from "./testSlice";
 
 function renderSmall(props) {
   return (
@@ -18,11 +19,13 @@ function renderSmall(props) {
 }
 
 function renderMedium(props, breakpoint) {
-  const {
-    onPress,
-    slice: { lead1, lead2, support1, support2 },
-  } = props;
+  // const {
+  //   onPress,
+  // slice: { lead1, lead2, support1, support2 },
+  // } = props;
 
+  const onPress = () => {};
+  const { lead1, lead2, support1, support2 } = testSlice;
   return (
     <FrontLeadTwoAndTwoSlice
       lead1={
@@ -46,17 +49,15 @@ function renderMedium(props, breakpoint) {
         </View>
       }
       support1={
-        <View style={{ flex: 2 }}>
-          <TileDFront
-            breakpoint={breakpoint}
-            onPress={onPress}
-            tile={support1}
-            tileName="support1"
-          />
-        </View>
+        <TileDFront
+          breakpoint={breakpoint}
+          onPress={onPress}
+          tile={support1}
+          tileName="support1"
+        />
       }
       support2={
-        <View style={{ flex: 8 }}>
+        <View style={{ flex: 1 }}>
           <TileEFront
             breakpoint={breakpoint}
             onPress={onPress}

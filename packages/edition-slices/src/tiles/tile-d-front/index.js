@@ -8,8 +8,10 @@ import {
   FrontTileSummary,
   withTileTracking,
   TileImage,
+  getTileSummary,
 } from "../shared";
 import stylesFactory from "./styles";
+import WithoutWhiteSpace from "@times-components-native/edition-slices/src/tiles/shared/without-white-space";
 
 const TileDFront = ({
   onPress,
@@ -40,10 +42,17 @@ const TileDFront = ({
         fill
         hasVideo={hasVideo}
       />
-      <FrontTileSummary
-        headlineStyle={styles.headline}
-        style={styles.summaryContainer}
-        tile={tile}
+      <WithoutWhiteSpace
+        render={(whiteSpaceHeight) => (
+          <FrontTileSummary
+            headlineStyle={styles.headline}
+            style={styles.summaryContainer}
+            tile={tile}
+            bylines={tile.article.bylines}
+            summary={getTileSummary(tile, 1000)}
+            whiteSpaceHeight={whiteSpaceHeight}
+          />
+        )}
       />
     </TileLink>
   );
