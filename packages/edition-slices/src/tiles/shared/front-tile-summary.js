@@ -1,11 +1,14 @@
 import React, { Component } from "react";
 import PropTypes from "prop-types";
 import {
-  FrontArticleSummary,
-  ArticleSummaryContent,
   ArticleSummaryHeadline,
   ArticleSummaryStrapline,
 } from "@times-components-native/article-summary";
+
+import {
+  FrontArticleSummary,
+  FrontArticleSummaryContent,
+} from "@times-components-native/front-page";
 
 class FrontTileSummary extends Component {
   constructor(props) {
@@ -24,8 +27,7 @@ class FrontTileSummary extends Component {
     } = this.props;
 
     return (
-      <ArticleSummaryContent
-        debug={this.props.debug}
+      <FrontArticleSummaryContent
         ast={summary}
         style={summaryStyle}
         whiteSpaceHeight={whiteSpaceHeight}
