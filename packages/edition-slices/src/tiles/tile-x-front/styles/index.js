@@ -32,5 +32,6 @@ export default (breakpoint) => ({
   },
   summary: {
     ...globalSpacingStyles.tabletTeaser,
+    textAlign: "justify",
   },
 });

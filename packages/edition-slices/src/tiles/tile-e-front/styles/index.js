@@ -42,6 +42,9 @@ const mediumBreakpointStyles = {
     width: "100%",
     marginBottom: spacing(2),
   },
+  summary: {
+    textAlign: "justify",
+  },
 };
 
 const wideBreakpointStyles = {

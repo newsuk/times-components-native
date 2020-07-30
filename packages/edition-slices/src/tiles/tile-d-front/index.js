@@ -47,6 +47,7 @@ const TileDFront = ({
           <FrontTileSummary
             headlineStyle={styles.headline}
             style={styles.summaryContainer}
+            summaryStyle={styles.summary}
             tile={tile}
             bylines={tile.article.bylines}
             summary={getTileSummary(tile, 1000)}

@@ -45,6 +45,9 @@ const mediumBreakpointStyles = {
   summaryContainer: {
     paddingLeft: spacing(2),
   },
+  summary: {
+    textAlign: "justify",
+  },
 };
 
 export default (breakpoint) =>

@@ -50,6 +50,7 @@ const TileEFront = ({
           <FrontTileSummary
             headlineStyle={styles.headline}
             summary={summary}
+            summaryStyle={styles.summary}
             style={styles.summaryContainer}
             tile={tile}
             whiteSpaceHeight={whiteSpaceHeight}
