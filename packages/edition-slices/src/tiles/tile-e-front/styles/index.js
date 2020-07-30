@@ -35,8 +35,8 @@ const mediumBreakpointStyles = {
   },
   headline: {
     fontFamily: fonts.headline,
-    fontSize: 20,
-    lineHeight: 20,
+    fontSize: 24,
+    lineHeight: 24,
   },
   imageContainer: {
     width: "100%",
