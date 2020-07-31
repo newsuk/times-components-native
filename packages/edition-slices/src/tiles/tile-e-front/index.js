@@ -16,6 +16,7 @@ import WithoutWhiteSpace from "../shared/without-white-space";
 const TileEFront = ({
   onPress,
   tile,
+  orientation,
   breakpoint = editionBreakpoints.small,
 }) => {
   const crop = getTileImage(tile, "crop45");
@@ -48,7 +49,11 @@ const TileEFront = ({
         style={styles.summaryContainer}
         render={(whiteSpaceHeight) => (
           <FrontTileSummary
-            headlineStyle={styles.headline}
+            headlineStyle={
+              orientation === "landscape"
+                ? styles.headlineLandscape
+                : styles.headlinePortrait
+            }
             summary={summary}
             summaryStyle={styles.summary}
             style={styles.summaryContainer}

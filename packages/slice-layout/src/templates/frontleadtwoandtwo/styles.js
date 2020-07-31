@@ -7,7 +7,7 @@ const sharedStyles = {
   },
 };
 
-const mediumBreakpointStyles = {
+export const portraitStyles = {
   container: {
     ...sharedStyles.container,
     marginHorizontal: spacing(4),
@@ -26,8 +26,7 @@ const mediumBreakpointStyles = {
   },
 };
 
-const wideBreakpointStyles = {
-  ...mediumBreakpointStyles,
+export const landscapeStyles = {
   container: {
     ...sharedStyles.container,
     marginHorizontal: spacing(2),
@@ -42,11 +41,3 @@ const wideBreakpointStyles = {
     marginVertical: spacing(3),
   },
 };
-
-const stylesResolver = {
-  medium: mediumBreakpointStyles,
-  wide: wideBreakpointStyles,
-  huge: wideBreakpointStyles,
-};
-
-export default (breakpoint) => stylesResolver[breakpoint] || {};

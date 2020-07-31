@@ -10,14 +10,6 @@ import {
 } from "@times-components-native/edition-slices/src/tiles";
 import { testSlice } from "./testSlice";
 
-function renderSmall(props) {
-  return (
-    <View>
-      <Text>TODO: Small frontleadtwoandtwo</Text>
-    </View>
-  );
-}
-
 function renderMedium(props, breakpoint, orientation) {
   // const {
   //   onPress,
@@ -35,6 +27,7 @@ function renderMedium(props, breakpoint, orientation) {
             onPress={onPress}
             tile={lead1}
             tileName="lead1"
+            orientation={orientation}
           />
         </View>
       }
@@ -45,6 +38,7 @@ function renderMedium(props, breakpoint, orientation) {
             onPress={onPress}
             tile={lead2}
             tileName="lead2"
+            orientation={orientation}
           />
         </View>
       }
@@ -63,28 +57,13 @@ function renderMedium(props, breakpoint, orientation) {
             onPress={onPress}
             tile={support2}
             tileName="support2"
+            orientation={orientation}
           />
         </View>
       }
       breakpoint={breakpoint}
       orientation={orientation}
     />
-  );
-}
-
-function renderHuge(props) {
-  return (
-    <View>
-      <Text>TODO: Huge frontleadtwoandtwo</Text>
-    </View>
-  );
-}
-
-function renderWide(props) {
-  return (
-    <View>
-      <Text>TODO: Wide frontleadtwoandtwo</Text>
-    </View>
   );
 }
 

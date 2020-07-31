@@ -14,6 +14,7 @@ import WithoutWhiteSpace from "@times-components-native/edition-slices/src/tiles
 const TileYFront = ({
   onPress,
   tile,
+  orientation,
   breakpoint = editionBreakpoints.medium,
 }) => {
   const styles = stylesFactory(breakpoint);
@@ -23,7 +24,11 @@ const TileYFront = ({
       <WithoutWhiteSpace
         render={(whiteSpaceHeight) => (
           <FrontTileSummary
-            headlineStyle={styles.headline}
+            headlineStyle={
+              orientation === "landscape"
+                ? styles.headlineLandscape
+                : styles.headlinePortrait
+            }
             summary={getTileSummary(tile, 1000)}
             summaryStyle={styles.summary}
             tile={tile}
