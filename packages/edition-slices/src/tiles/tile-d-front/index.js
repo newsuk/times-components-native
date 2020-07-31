@@ -10,7 +10,7 @@ import {
   TileImage,
   getTileSummary,
 } from "../shared";
-import stylesFactory from "./styles";
+import styles from "./styles";
 import WithoutWhiteSpace from "@times-components-native/edition-slices/src/tiles/shared/without-white-space";
 
 const TileDFront = ({
@@ -19,7 +19,6 @@ const TileDFront = ({
   breakpoint = editionBreakpoints.small,
 }) => {
   const crop = getTileImage(tile, "crop32");
-  const styles = stylesFactory(breakpoint);
 
   if (!crop) {
     return null;

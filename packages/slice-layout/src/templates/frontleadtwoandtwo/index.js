@@ -7,6 +7,7 @@ import VerticalLayout from "../verticallayout";
 
 const FrontLeadTwoNoPicAndTwoSlice = ({
   breakpoint,
+  orientation,
   lead1,
   lead2,
   support1,
@@ -14,10 +15,12 @@ const FrontLeadTwoNoPicAndTwoSlice = ({
 }) => {
   const styles = styleFactory(breakpoint);
 
-  if (
-    breakpoint === editionBreakpoints.wide ||
-    breakpoint === editionBreakpoints.huge
-  ) {
+  // TODO check what we want to do about small breakpoints?
+  if (breakpoint === editionBreakpoints.small) {
+    return <VerticalLayout tiles={[lead1, lead2, support1, support2]} />;
+  }
+
+  if (orientation === "landscape") {
     return (
       <View style={styles.container}>
         <VerticalLayout style={styles.column} tiles={[lead1, lead2]} />
@@ -28,21 +31,13 @@ const FrontLeadTwoNoPicAndTwoSlice = ({
       </View>
     );
   }
-
-  if (breakpoint === editionBreakpoints.medium) {
-    return (
-      <View style={styles.container}>
-        <VerticalLayout style={styles.leftColumn} tiles={[lead1, lead2]} />
-        <ItemColSeparator style={styles.colSeparatorStyle} />
-        <VerticalLayout
-          style={styles.rightColumn}
-          tiles={[support1, support2]}
-        />
-      </View>
-    );
-  }
-
-  return <VerticalLayout tiles={[lead1, lead2, support1, support2]} />;
+  return (
+    <View style={styles.container}>
+      <VerticalLayout style={styles.leftColumn} tiles={[lead1, lead2]} />
+      <ItemColSeparator style={styles.colSeparatorStyle} />
+      <VerticalLayout style={styles.rightColumn} tiles={[support1, support2]} />
+    </View>
+  );
 };
 
 export default FrontLeadTwoNoPicAndTwoSlice;

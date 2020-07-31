@@ -18,7 +18,7 @@ function renderSmall(props) {
   );
 }
 
-function renderMedium(props, breakpoint) {
+function renderMedium(props, breakpoint, orientation) {
   // const {
   //   onPress,
   // slice: { lead1, lead2, support1, support2 },
@@ -67,6 +67,7 @@ function renderMedium(props, breakpoint) {
         </View>
       }
       breakpoint={breakpoint}
+      orientation={orientation}
     />
   );
 }
@@ -90,10 +91,18 @@ function renderWide(props) {
 const FrontLeadTwoAndTwo = (props) => {
   return (
     <ResponsiveSlice
-      renderSmall={(breakpoint) => renderSmall(props, breakpoint)}
-      renderMedium={(breakpoint) => renderMedium(props, breakpoint)}
-      renderWide={(breakpoint) => renderWide(props, breakpoint)}
-      renderHuge={(breakpoint) => renderHuge(props, breakpoint)}
+      renderSmall={(breakpoint, orientation) =>
+        renderMedium(props, breakpoint, orientation)
+      }
+      renderMedium={(breakpoint, orientation) =>
+        renderMedium(props, breakpoint, orientation)
+      }
+      renderWide={(breakpoint, orientation) =>
+        renderMedium(props, breakpoint, orientation)
+      }
+      renderHuge={(breakpoint, orientation) =>
+        renderMedium(props, breakpoint, orientation)
+      }
       grow
     />
   );
