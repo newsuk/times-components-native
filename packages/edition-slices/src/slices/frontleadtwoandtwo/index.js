@@ -7,6 +7,7 @@ import {
   TileEFront,
   TileXFront,
   TileYFront,
+  TileALFront,
 } from "@times-components-native/edition-slices/src/tiles";
 import { testSlice } from "./testSlice";
 
@@ -17,7 +18,25 @@ function renderMedium(props, breakpoint, orientation) {
   // } = props;
 
   const onPress = () => {};
+
   const { lead1, lead2, support1, support2 } = testSlice;
+  const renderSupport1Component =
+    orientation === "landscape" ? (
+      <TileALFront
+        breakpoint={breakpoint}
+        onPress={onPress}
+        tile={support1}
+        tileName="support1"
+      />
+    ) : (
+      <TileDFront
+        breakpoint={breakpoint}
+        onPress={onPress}
+        tile={support1}
+        tileName="support1"
+      />
+    );
+
   return (
     <FrontLeadTwoAndTwoSlice
       lead1={
@@ -42,14 +61,7 @@ function renderMedium(props, breakpoint, orientation) {
           />
         </View>
       }
-      support1={
-        <TileDFront
-          breakpoint={breakpoint}
-          onPress={onPress}
-          tile={support1}
-          tileName="support1"
-        />
-      }
+      support1={renderSupport1Component}
       support2={
         <View style={{ flex: 1 }}>
           <TileEFront
