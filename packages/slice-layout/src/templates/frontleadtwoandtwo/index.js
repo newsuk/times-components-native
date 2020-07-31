@@ -32,9 +32,12 @@ const FrontLeadTwoNoPicAndTwoSlice = ({
   if (breakpoint === editionBreakpoints.medium) {
     return (
       <View style={styles.container}>
-        <VerticalLayout style={styles.column} tiles={[lead1, lead2]} />
+        <VerticalLayout style={styles.leftColumn} tiles={[lead1, lead2]} />
         <ItemColSeparator style={styles.colSeparatorStyle} />
-        <VerticalLayout style={styles.column} tiles={[support1, support2]} />
+        <VerticalLayout
+          style={styles.rightColumn}
+          tiles={[support1, support2]}
+        />
       </View>
     );
   }

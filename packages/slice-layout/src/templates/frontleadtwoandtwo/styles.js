@@ -12,8 +12,14 @@ const mediumBreakpointStyles = {
     ...sharedStyles.container,
     marginHorizontal: spacing(4),
   },
+  leftColumn: {
+    width: "42%",
+  },
+  rightColumn: {
+    width: "58%",
+  },
   column: {
-    width: "50%",
+    width: "42%",
   },
   colSeparatorStyle: {
     marginVertical: spacing(3),
@@ -21,6 +27,7 @@ const mediumBreakpointStyles = {
 };
 
 const wideBreakpointStyles = {
+  ...mediumBreakpointStyles,
   container: {
     ...sharedStyles.container,
     marginHorizontal: spacing(2),
