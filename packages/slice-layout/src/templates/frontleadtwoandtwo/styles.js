@@ -1,13 +1,21 @@
-import { spacing } from "@times-components-native/styleguide";
+import { colours, spacing } from "@times-components-native/styleguide";
 
 const sharedStyles = {
   container: {
     flex: 1,
     flexDirection: "row",
   },
+  colSeparatorStyle: {
+    marginVertical: spacing(3),
+    borderColor: colours.functional.darkGrey,
+  },
+  rowSeparatorStyle: {
+    borderColor: colours.functional.darkGrey,
+  },
 };
 
 export const portraitStyles = {
+  ...sharedStyles,
   container: {
     ...sharedStyles.container,
     marginHorizontal: spacing(4),
@@ -21,12 +29,10 @@ export const portraitStyles = {
   column: {
     width: "42%",
   },
-  colSeparatorStyle: {
-    marginVertical: spacing(3),
-  },
 };
 
 export const landscapeStyles = {
+  ...sharedStyles,
   container: {
     ...sharedStyles.container,
     marginHorizontal: spacing(2),
@@ -36,8 +42,5 @@ export const landscapeStyles = {
   },
   middleTile: {
     width: "16%",
-  },
-  colSeparatorStyle: {
-    marginVertical: spacing(3),
   },
 };

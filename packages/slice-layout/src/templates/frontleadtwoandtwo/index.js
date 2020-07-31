@@ -21,7 +21,11 @@ const FrontLeadTwoNoPicAndTwoSlice = ({
   if (orientation === "landscape") {
     return (
       <View style={landscapeStyles.container}>
-        <VerticalLayout style={landscapeStyles.column} tiles={[lead1, lead2]} />
+        <VerticalLayout
+          style={landscapeStyles.column}
+          tiles={[lead1, lead2]}
+          rowSeparatorStyle={landscapeStyles.rowSeparatorStyle}
+        />
         <ItemColSeparator style={landscapeStyles.colSeparatorStyle} />
         <View style={landscapeStyles.middleTile}>{support1}</View>
         <ItemColSeparator style={landscapeStyles.colSeparatorStyle} />
@@ -34,11 +38,13 @@ const FrontLeadTwoNoPicAndTwoSlice = ({
       <VerticalLayout
         style={portraitStyles.leftColumn}
         tiles={[lead1, lead2]}
+        rowSeparatorStyle={portraitStyles.rowSeparatorStyle}
       />
       <ItemColSeparator style={portraitStyles.colSeparatorStyle} />
       <VerticalLayout
         style={portraitStyles.rightColumn}
         tiles={[support1, support2]}
+        rowSeparatorStyle={portraitStyles.rowSeparatorStyle}
       />
     </View>
   );
