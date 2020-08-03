@@ -4,9 +4,9 @@ const sharedStyles = {
   container: {
     flex: 1,
     flexDirection: "row",
+    marginVertical: spacing(2),
   },
   colSeparatorStyle: {
-    marginVertical: spacing(3),
     borderColor: colours.functional.darkGrey,
   },
   rowSeparatorStyle: {

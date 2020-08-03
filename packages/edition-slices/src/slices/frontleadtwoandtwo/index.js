@@ -40,38 +40,32 @@ function renderMedium(props, breakpoint, orientation) {
   return (
     <FrontLeadTwoAndTwoSlice
       lead1={
-        <View style={{ flex: 6 }}>
-          <TileXFront
-            breakpoint={breakpoint}
-            onPress={onPress}
-            tile={lead1}
-            tileName="lead1"
-            orientation={orientation}
-          />
-        </View>
+        <TileXFront
+          breakpoint={breakpoint}
+          onPress={onPress}
+          tile={lead1}
+          tileName="lead1"
+          orientation={orientation}
+        />
       }
       lead2={
-        <View style={{ flex: 4 }}>
-          <TileYFront
-            breakpoint={breakpoint}
-            onPress={onPress}
-            tile={lead2}
-            tileName="lead2"
-            orientation={orientation}
-          />
-        </View>
+        <TileYFront
+          breakpoint={breakpoint}
+          onPress={onPress}
+          tile={lead2}
+          tileName="lead2"
+          orientation={orientation}
+        />
       }
       support1={renderSupport1Component}
       support2={
-        <View style={{ flex: 1 }}>
-          <TileEFront
-            breakpoint={breakpoint}
-            onPress={onPress}
-            tile={support2}
-            tileName="support2"
-            orientation={orientation}
-          />
-        </View>
+        <TileEFront
+          breakpoint={breakpoint}
+          onPress={onPress}
+          tile={support2}
+          tileName="support2"
+          orientation={orientation}
+        />
       }
       breakpoint={breakpoint}
       orientation={orientation}

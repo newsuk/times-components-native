@@ -8,7 +8,6 @@ const sharedStyles = {
   container: {
     flexDirection: "row",
     padding: spacing(2),
-    paddingBottom: spacing(3),
   },
   headline: {
     fontFamily: fonts.headline,

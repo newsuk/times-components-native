@@ -13,8 +13,7 @@ const fontSizeResolver = {
 export default (breakpoint) => ({
   container: {
     flex: 1,
-    paddingHorizontal: spacing(2),
-    paddingVertical: spacing(3),
+    padding: spacing(2),
   },
   headline: {
     ...globalSpacingStyles.tabletHeadline,

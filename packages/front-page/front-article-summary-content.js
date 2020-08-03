@@ -51,7 +51,7 @@ const FrontArticleSummaryContent = ({
 };
 
 FrontArticleSummaryContent.propTypes = {
-  ast: PropTypes.arrayOf(treePropType),
+  ast: PropTypes.arrayOf(PropTypes.object),
   className: PropTypes.string,
   style: PropTypes.shape({}),
 };

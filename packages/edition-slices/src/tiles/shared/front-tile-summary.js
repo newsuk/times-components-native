@@ -85,7 +85,7 @@ FrontTileSummary.propTypes = {
   summary: PropTypes.arrayOf(PropTypes.shape({})),
   summaryStyle: PropTypes.shape({}),
   tile: PropTypes.shape({}).isRequired,
-  bylines: PropTypes.shape({}).isRequired,
+  bylines: PropTypes.arrayOf(PropTypes.shape({})),
 };
 
 FrontTileSummary.defaultProps = {

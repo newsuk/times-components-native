@@ -14,9 +14,7 @@ const fontSizePortraitResolver = {
 export default (breakpoint) => ({
   container: {
     flex: 1,
-    paddingHorizontal: spacing(2),
-    paddingTop: spacing(2),
-    paddingBottom: spacing(4),
+    padding: spacing(2),
   },
   headlinePortrait: {
     ...globalSpacingStyles.tabletHeadline,

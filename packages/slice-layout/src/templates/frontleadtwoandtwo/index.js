@@ -18,18 +18,22 @@ const FrontLeadTwoNoPicAndTwoSlice = ({
     return <VerticalLayout tiles={[lead1, lead2, support1, support2]} />;
   }
 
+  const wrappedLead1 = <View style={{ flex: 6 }}>{lead1}</View>;
+  const wrappedLead2 = <View style={{ flex: 4 }}>{lead2}</View>;
+  const wrappedSupport2 = <View style={{ flex: 1 }}>{support2}</View>;
+
   if (orientation === "landscape") {
     return (
       <View style={landscapeStyles.container}>
         <VerticalLayout
           style={landscapeStyles.column}
-          tiles={[lead1, lead2]}
+          tiles={[wrappedLead1, wrappedLead2]}
           rowSeparatorStyle={landscapeStyles.rowSeparatorStyle}
         />
         <ItemColSeparator style={landscapeStyles.colSeparatorStyle} />
         <View style={landscapeStyles.middleTile}>{support1}</View>
         <ItemColSeparator style={landscapeStyles.colSeparatorStyle} />
-        <View style={landscapeStyles.column}>{support2}</View>
+        <View style={landscapeStyles.column}>{wrappedSupport2}</View>
       </View>
     );
   }
@@ -37,13 +41,13 @@ const FrontLeadTwoNoPicAndTwoSlice = ({
     <View style={portraitStyles.container}>
       <VerticalLayout
         style={portraitStyles.leftColumn}
-        tiles={[lead1, lead2]}
+        tiles={[wrappedLead1, wrappedLead2]}
         rowSeparatorStyle={portraitStyles.rowSeparatorStyle}
       />
       <ItemColSeparator style={portraitStyles.colSeparatorStyle} />
       <VerticalLayout
         style={portraitStyles.rightColumn}
-        tiles={[support1, support2]}
+        tiles={[support1, wrappedSupport2]}
         rowSeparatorStyle={portraitStyles.rowSeparatorStyle}
       />
     </View>
