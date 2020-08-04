@@ -1,4 +1,3 @@
-import { View, Text } from "react-native";
 import React from "react";
 import { ResponsiveSlice } from "@times-components-native/edition-slices/src/slices/shared";
 import { FrontLeadTwoAndTwoSlice } from "@times-components-native/slice-layout";
@@ -65,6 +64,8 @@ function renderMedium(props, breakpoint, orientation) {
           tile={support2}
           tileName="support2"
           orientation={orientation}
+          showSummary={orientation === "portrait"}
+          showByline={orientation === "portrait" || breakpoint === "huge"}
         />
       }
       breakpoint={breakpoint}

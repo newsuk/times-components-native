@@ -17,6 +17,8 @@ const TileEFront = ({
   onPress,
   tile,
   orientation,
+  showSummary,
+  showByline,
   breakpoint = editionBreakpoints.small,
 }) => {
   const crop = getTileImage(tile, "crop45");
@@ -54,12 +56,12 @@ const TileEFront = ({
                 ? styles.headlineLandscape
                 : styles.headlinePortrait
             }
-            summary={summary}
+            summary={showSummary && summary}
             summaryStyle={styles.summary}
             style={styles.summaryContainer}
             tile={tile}
             whiteSpaceHeight={whiteSpaceHeight}
-            bylines={tile.article.bylines}
+            bylines={showByline && tile.article.bylines}
           />
         )}
       />

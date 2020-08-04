@@ -1,11 +1,10 @@
-import { colours, spacing } from "@times-components-native/styleguide";
+import {
+  colours,
+  editionBreakpoints,
+  spacing,
+} from "@times-components-native/styleguide";
 
 const sharedStyles = {
-  container: {
-    flex: 1,
-    flexDirection: "row",
-    marginVertical: spacing(2),
-  },
   colSeparatorStyle: {
     borderColor: colours.functional.darkGrey,
   },
@@ -44,3 +43,56 @@ export const landscapeStyles = {
     width: "16%",
   },
 };
+
+const mediumBreakpointStyles = {
+  ...sharedStyles,
+  containerLandscape: {
+    flex: 1,
+    flexDirection: "row",
+    marginVertical: spacing(2),
+    marginHorizontal: spacing(2),
+  },
+  containerPortrait: {
+    flex: 1,
+    flexDirection: "row",
+    marginVertical: spacing(2),
+    marginHorizontal: spacing(4),
+  },
+  leftColumnPortrait: {
+    width: "42%",
+  },
+  rightColumnPortrait: {
+    width: "58%",
+  },
+  leftColumnLandscape: {
+    width: "42%",
+  },
+  rightColumnLandscape: {
+    width: "42%",
+  },
+  middleTileLandscape: {
+    width: "16%",
+  },
+};
+
+const hugeBreakpointStyles = {
+  ...mediumBreakpointStyles,
+  leftColumnLandscape: {
+    width: "35%",
+  },
+  rightColumnLandscape: {
+    width: "46%",
+  },
+  middleTileLandscape: {
+    width: "18%",
+  },
+};
+
+const stylesResolver = {
+  [editionBreakpoints.small]: {},
+  [editionBreakpoints.medium]: mediumBreakpointStyles,
+  [editionBreakpoints.wide]: mediumBreakpointStyles,
+  [editionBreakpoints.huge]: hugeBreakpointStyles,
+};
+
+export default (breakpoint) => stylesResolver[breakpoint];
