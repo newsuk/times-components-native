@@ -14,6 +14,7 @@ export default (breakpoint) => ({
   container: {
     flex: 1,
     padding: spacing(2),
+    paddingTop: 0,
   },
   headline: {
     ...globalSpacingStyles.tabletHeadline,

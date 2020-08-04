@@ -7,40 +7,10 @@ import {
 const sharedStyles = {
   colSeparatorStyle: {
     borderColor: colours.functional.darkGrey,
+    marginTop: 0,
   },
   rowSeparatorStyle: {
     borderColor: colours.functional.darkGrey,
-  },
-};
-
-export const portraitStyles = {
-  ...sharedStyles,
-  container: {
-    ...sharedStyles.container,
-    marginHorizontal: spacing(4),
-  },
-  leftColumn: {
-    width: "42%",
-  },
-  rightColumn: {
-    width: "58%",
-  },
-  column: {
-    width: "42%",
-  },
-};
-
-export const landscapeStyles = {
-  ...sharedStyles,
-  container: {
-    ...sharedStyles.container,
-    marginHorizontal: spacing(2),
-  },
-  column: {
-    width: "42%",
-  },
-  middleTile: {
-    width: "16%",
   },
 };
 
@@ -49,13 +19,11 @@ const mediumBreakpointStyles = {
   containerLandscape: {
     flex: 1,
     flexDirection: "row",
-    marginVertical: spacing(2),
-    marginHorizontal: spacing(2),
   },
   containerPortrait: {
     flex: 1,
     flexDirection: "row",
-    marginVertical: spacing(2),
+    marginTop: spacing(4),
     marginHorizontal: spacing(4),
   },
   leftColumnPortrait: {
@@ -65,13 +33,13 @@ const mediumBreakpointStyles = {
     width: "58%",
   },
   leftColumnLandscape: {
-    width: "42%",
+    width: "41.6%",
   },
   rightColumnLandscape: {
-    width: "42%",
+    width: "41.6%",
   },
   middleTileLandscape: {
-    width: "16%",
+    width: "16.8%",
   },
 };
 

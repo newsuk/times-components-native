@@ -2,8 +2,7 @@ import React from "react";
 import { Dimensions, View } from "react-native";
 import { editionBreakpoints } from "@times-components-native/styleguide";
 import { ItemColSeparator } from "../shared";
-import stylesFactory, { landscapeStyles, portraitStyles } from "./styles";
-import { spacing } from "@times-components-native/styleguide";
+import stylesFactory from "./styles";
 
 import VerticalLayout from "../verticallayout";
 
@@ -22,10 +21,31 @@ function calculateContentWidth(windowWidth) {
   }
 
   if (windowWidth >= 1024) {
-    return 890;
+    return 920;
   }
 
   return 1000;
+}
+
+function calculateMarginTop(windowWidth) {
+  if (windowWidth >= 1366) {
+    return 25;
+  }
+  if (windowWidth >= 1194) {
+    return 20;
+  }
+  if (windowWidth >= 1112) {
+    return 20;
+  }
+  if (windowWidth >= 1080) {
+    return 15;
+  }
+
+  if (windowWidth >= 1024) {
+    return 15;
+  }
+
+  return 15;
 }
 
 const FrontLeadTwoNoPicAndTwoSlice = ({
@@ -53,11 +73,11 @@ const FrontLeadTwoNoPicAndTwoSlice = ({
         style={[
           styles.containerLandscape,
           {
-            width: calculateContentWidth(windowWidth) - spacing(4),
+            width: calculateContentWidth(windowWidth),
+            paddingTop: calculateMarginTop(windowWidth),
             alignSelf: "center",
           },
         ]}
-        onLayout={(e) => console.log(e.nativeEvent.layout)}
       >
         <VerticalLayout
           style={styles.leftColumnLandscape}
