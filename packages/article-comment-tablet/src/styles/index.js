@@ -56,7 +56,7 @@ const Styles = {
     marginBottom: spacing(3),
   },
   leftColumnContainer: {
-    paddingTop: spacing(8),
+    marginTop: spacing(8),
     width: "25%",
     zIndex: 1,
     borderRightWidth: 1,
