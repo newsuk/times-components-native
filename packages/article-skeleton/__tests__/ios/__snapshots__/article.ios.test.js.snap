@@ -4465,6 +4465,7 @@ exports[`19. renders content 1`] = `
     onEndReachedThreshold={2}
     removeClippedSubviews={true}
     scrollEventThrottle={50}
+    showsVerticalScrollIndicator={false}
     updateCellsBatchingPeriod={50}
     windowSize={3}
   >
@@ -4715,6 +4716,7 @@ exports[`20. an article with inline paragraph 1`] = `
     onEndReachedThreshold={2}
     removeClippedSubviews={true}
     scrollEventThrottle={50}
+    showsVerticalScrollIndicator={false}
     updateCellsBatchingPeriod={50}
     windowSize={3}
   >
