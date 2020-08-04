@@ -3,7 +3,14 @@ import React from "react";
 import PropTypes from "prop-types";
 import ArticleParagraph from "./article-paragraph";
 
-const ArticleParagraphWrapper = ({ ast, children, uid, height, style }) => {
+const ArticleParagraphWrapper = ({
+  ast,
+  children,
+  uid,
+  height,
+  style,
+  narrowContent,
+}) => {
   const { children: astChildren } = ast;
   if (!astChildren || astChildren.length === 0) {
     return null;
@@ -15,6 +22,7 @@ const ArticleParagraphWrapper = ({ ast, children, uid, height, style }) => {
       key={`paragraph-${uid}`}
       testID={`paragraph-${uid}`}
       style={style}
+      narrowContent={narrowContent}
     >
       {children}
     </ArticleParagraph>
@@ -27,10 +35,12 @@ ArticleParagraphWrapper.propTypes = {
   uid: PropTypes.string.isRequired,
   height: PropTypes.number,
   style: PropTypes.object,
+  narrowContent: PropTypes.bool,
 };
 
 ArticleParagraphWrapper.defaultProps = {
   style: {},
+  narrowContent: false,
 };
 
 export default ArticleParagraphWrapper;

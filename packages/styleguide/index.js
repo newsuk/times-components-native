@@ -11,6 +11,7 @@ export {
   fontFactory,
   fontSizes,
   getEditionBreakpoint,
+  getNarrowArticleBreakpoint,
   lineHeight,
   scales,
   spacing,

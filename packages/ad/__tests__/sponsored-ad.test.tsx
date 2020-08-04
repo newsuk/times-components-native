@@ -1,7 +1,4 @@
-import {
-  SponsoredAd,
-  updateHeight,
-} from "@times-components-native/ad/src/sponsored-ad";
+import { SponsoredAd } from "@times-components-native/ad/src/sponsored-ad";
 import TestRenderer from "react-test-renderer";
 import React from "react";
 import WebView from "react-native-webview";
@@ -12,8 +9,6 @@ jest.mock("react-native", () => {
   rn.NativeModules.Linking = { openURL: jest.fn() };
   return rn;
 });
-
-jest.useFakeTimers();
 
 describe("SponsoredAd", () => {
   beforeEach(() => {
@@ -27,30 +22,11 @@ describe("SponsoredAd", () => {
     expect(webView.props.source.html).toMatchSnapshot();
   });
 
-  it("renders webview with default height", () => {
+  it("renders webview with height", () => {
     const ad = TestRenderer.create(<SponsoredAd />);
     const webView = ad.root.findByType(WebView);
 
-    expect(webView.props.style.height).toEqual(250);
-  });
-
-  it("updates the height of the webview", () => {
-    const ad = TestRenderer.create(<SponsoredAd />);
-    const webView = ad.root.findByType(WebView);
-
-    TestRenderer.act(() => {
-      webView.props.onMessage({ nativeEvent: { data: 300 } });
-    });
-
-    expect(webView.props.style.height).toEqual(300);
-  });
-
-  it("checks the height periodically", () => {
-    const mockInjectJavascript = jest.fn();
-    updateHeight({
-      current: { injectJavaScript: mockInjectJavascript } as any,
-    });
-    expect(mockInjectJavascript.mock.calls[0]).toMatchSnapshot();
+    expect(webView.props.style.height).toEqual(350);
   });
 
   it("opens external browser when link is clicked", () => {

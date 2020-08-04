@@ -3,9 +3,12 @@
 exports[`1. a full article with all content items with dropcap template 1`] = `
 <View
   style={
-    Object {
-      "backgroundColor": "#f0f0f0",
-    }
+    Array [
+      Object {
+        "backgroundColor": "#f0f0f0",
+      },
+      undefined,
+    ]
   }
 >
   <RCTScrollView
@@ -102,6 +105,7 @@ exports[`1. a full article with all content items with dropcap template 1`] = `
                 Object {
                   "marginBottom": 20,
                 },
+                false,
                 false,
                 Object {},
                 Object {
@@ -356,9 +360,12 @@ exports[`1. a full article with all content items with dropcap template 1`] = `
 exports[`2. an article with interactives 1`] = `
 <View
   style={
-    Object {
-      "backgroundColor": "#f0f0f0",
-    }
+    Array [
+      Object {
+        "backgroundColor": "#f0f0f0",
+      },
+      undefined,
+    ]
   }
 >
   <RCTScrollView
@@ -515,9 +522,12 @@ exports[`2. an article with interactives 1`] = `
 exports[`3. an article with no content 1`] = `
 <View
   style={
-    Object {
-      "backgroundColor": "#f0f0f0",
-    }
+    Array [
+      Object {
+        "backgroundColor": "#f0f0f0",
+      },
+      undefined,
+    ]
   }
 >
   <RCTScrollView
@@ -634,9 +644,12 @@ exports[`4. an article with no content if content is set as null 1`] = `null`;
 exports[`5. an article with a nested markup in first paragraph displays a drop cap 1`] = `
 <View
   style={
-    Object {
-      "backgroundColor": "#f0f0f0",
-    }
+    Array [
+      Object {
+        "backgroundColor": "#f0f0f0",
+      },
+      undefined,
+    ]
   }
 >
   <RCTScrollView
@@ -733,6 +746,7 @@ exports[`5. an article with a nested markup in first paragraph displays a drop c
                 Object {
                   "marginBottom": 20,
                 },
+                false,
                 false,
                 Object {},
                 Object {
@@ -1192,6 +1206,7 @@ exports[`5. an article with a nested markup in first paragraph displays a drop c
                   "marginBottom": 20,
                 },
                 false,
+                false,
                 Object {},
               ]
             }
@@ -1262,9 +1277,12 @@ exports[`5. an article with a nested markup in first paragraph displays a drop c
 exports[`6. an article with heading tags 1`] = `
 <View
   style={
-    Object {
-      "backgroundColor": "#f0f0f0",
-    }
+    Array [
+      Object {
+        "backgroundColor": "#f0f0f0",
+      },
+      undefined,
+    ]
   }
 >
   <RCTScrollView
@@ -1338,9 +1356,13 @@ exports[`6. an article with heading tags 1`] = `
                   "marginBottom": 20,
                 },
                 false,
-                Object {
-                  "marginBottom": 0,
-                },
+                false,
+                Array [
+                  Object {
+                    "marginBottom": 0,
+                  },
+                  undefined,
+                ],
               ]
             }
           >
@@ -1391,9 +1413,13 @@ exports[`6. an article with heading tags 1`] = `
                   "marginBottom": 20,
                 },
                 false,
-                Object {
-                  "marginBottom": 0,
-                },
+                false,
+                Array [
+                  Object {
+                    "marginBottom": 0,
+                  },
+                  undefined,
+                ],
               ]
             }
           >
@@ -1454,9 +1480,12 @@ exports[`6. an article with heading tags 1`] = `
 exports[`7. an article with link 1`] = `
 <View
   style={
-    Object {
-      "backgroundColor": "#f0f0f0",
-    }
+    Array [
+      Object {
+        "backgroundColor": "#f0f0f0",
+      },
+      undefined,
+    ]
   }
 >
   <RCTScrollView
@@ -1529,6 +1558,7 @@ exports[`7. an article with link 1`] = `
                 Object {
                   "marginBottom": 20,
                 },
+                false,
                 false,
                 Object {},
               ]
@@ -1650,9 +1680,12 @@ exports[`7. an article with link 1`] = `
 exports[`8. an article with italic link 1`] = `
 <View
   style={
-    Object {
-      "backgroundColor": "#f0f0f0",
-    }
+    Array [
+      Object {
+        "backgroundColor": "#f0f0f0",
+      },
+      undefined,
+    ]
   }
 >
   <RCTScrollView
@@ -1725,6 +1758,7 @@ exports[`8. an article with italic link 1`] = `
                 Object {
                   "marginBottom": 20,
                 },
+                false,
                 false,
                 Object {},
               ]
@@ -1860,9 +1894,12 @@ exports[`8. an article with italic link 1`] = `
 exports[`9. an article with bold text followed by bold link 1`] = `
 <View
   style={
-    Object {
-      "backgroundColor": "#f0f0f0",
-    }
+    Array [
+      Object {
+        "backgroundColor": "#f0f0f0",
+      },
+      undefined,
+    ]
   }
 >
   <RCTScrollView
@@ -1935,6 +1972,7 @@ exports[`9. an article with bold text followed by bold link 1`] = `
                 Object {
                   "marginBottom": 20,
                 },
+                false,
                 false,
                 Object {},
               ]
@@ -2058,9 +2096,12 @@ exports[`9. an article with bold text followed by bold link 1`] = `
 exports[`10. an article with italic and normal text link 1`] = `
 <View
   style={
-    Object {
-      "backgroundColor": "#f0f0f0",
-    }
+    Array [
+      Object {
+        "backgroundColor": "#f0f0f0",
+      },
+      undefined,
+    ]
   }
 >
   <RCTScrollView
@@ -2133,6 +2174,7 @@ exports[`10. an article with italic and normal text link 1`] = `
                 Object {
                   "marginBottom": 20,
                 },
+                false,
                 false,
                 Object {},
               ]
@@ -2288,9 +2330,12 @@ exports[`10. an article with italic and normal text link 1`] = `
 exports[`11. an article with bold and italic text at the same time 1`] = `
 <View
   style={
-    Object {
-      "backgroundColor": "#f0f0f0",
-    }
+    Array [
+      Object {
+        "backgroundColor": "#f0f0f0",
+      },
+      undefined,
+    ]
   }
 >
   <RCTScrollView
@@ -2363,6 +2408,7 @@ exports[`11. an article with bold and italic text at the same time 1`] = `
                 Object {
                   "marginBottom": 20,
                 },
+                false,
                 false,
                 Object {},
               ]
@@ -2466,9 +2512,12 @@ exports[`11. an article with bold and italic text at the same time 1`] = `
 exports[`12. an article with text wrapped in inline element 1`] = `
 <View
   style={
-    Object {
-      "backgroundColor": "#f0f0f0",
-    }
+    Array [
+      Object {
+        "backgroundColor": "#f0f0f0",
+      },
+      undefined,
+    ]
   }
 >
   <RCTScrollView
@@ -2541,6 +2590,7 @@ exports[`12. an article with text wrapped in inline element 1`] = `
                 Object {
                   "marginBottom": 20,
                 },
+                false,
                 false,
                 Object {},
               ]
@@ -2642,9 +2692,12 @@ exports[`12. an article with text wrapped in inline element 1`] = `
 exports[`13. an article with paragraph with text and inline element 1`] = `
 <View
   style={
-    Object {
-      "backgroundColor": "#f0f0f0",
-    }
+    Array [
+      Object {
+        "backgroundColor": "#f0f0f0",
+      },
+      undefined,
+    ]
   }
 >
   <RCTScrollView
@@ -2717,6 +2770,7 @@ exports[`13. an article with paragraph with text and inline element 1`] = `
                 Object {
                   "marginBottom": 20,
                 },
+                false,
                 false,
                 Object {},
               ]
@@ -2831,9 +2885,12 @@ exports[`13. an article with paragraph with text and inline element 1`] = `
 exports[`14. an article with inline inside a bold tag 1`] = `
 <View
   style={
-    Object {
-      "backgroundColor": "#f0f0f0",
-    }
+    Array [
+      Object {
+        "backgroundColor": "#f0f0f0",
+      },
+      undefined,
+    ]
   }
 >
   <RCTScrollView
@@ -2906,6 +2963,7 @@ exports[`14. an article with inline inside a bold tag 1`] = `
                 Object {
                   "marginBottom": 20,
                 },
+                false,
                 false,
                 Object {},
               ]
@@ -3008,9 +3066,12 @@ exports[`14. an article with inline inside a bold tag 1`] = `
 exports[`15. an article starting with single quote 1`] = `
 <View
   style={
-    Object {
-      "backgroundColor": "#f0f0f0",
-    }
+    Array [
+      Object {
+        "backgroundColor": "#f0f0f0",
+      },
+      undefined,
+    ]
   }
 >
   <RCTScrollView
@@ -3107,6 +3168,7 @@ exports[`15. an article starting with single quote 1`] = `
                 Object {
                   "marginBottom": 20,
                 },
+                false,
                 false,
                 Object {},
                 Object {
@@ -3672,9 +3734,12 @@ exports[`15. an article starting with single quote 1`] = `
 exports[`16. an article starting with double quote 1`] = `
 <View
   style={
-    Object {
-      "backgroundColor": "#f0f0f0",
-    }
+    Array [
+      Object {
+        "backgroundColor": "#f0f0f0",
+      },
+      undefined,
+    ]
   }
 >
   <RCTScrollView
@@ -3771,6 +3836,7 @@ exports[`16. an article starting with double quote 1`] = `
                 Object {
                   "marginBottom": 20,
                 },
+                false,
                 false,
                 Object {},
                 Object {
@@ -4369,9 +4435,12 @@ Object {
 exports[`19. renders content 1`] = `
 <View
   style={
-    Object {
-      "backgroundColor": "#f0f0f0",
-    }
+    Array [
+      Object {
+        "backgroundColor": "#f0f0f0",
+      },
+      undefined,
+    ]
   }
 >
   <RCTScrollView
@@ -4444,6 +4513,7 @@ exports[`19. renders content 1`] = `
                 Object {
                   "marginBottom": 20,
                 },
+                false,
                 false,
                 Object {},
               ]
@@ -4545,6 +4615,7 @@ exports[`19. renders content 1`] = `
                   "marginBottom": 20,
                 },
                 false,
+                false,
                 Object {},
               ]
             }
@@ -4615,9 +4686,12 @@ exports[`19. renders content 1`] = `
 exports[`20. an article with inline paragraph 1`] = `
 <View
   style={
-    Object {
-      "backgroundColor": "#f0f0f0",
-    }
+    Array [
+      Object {
+        "backgroundColor": "#f0f0f0",
+      },
+      undefined,
+    ]
   }
 >
   <RCTScrollView
@@ -4714,6 +4788,7 @@ exports[`20. an article with inline paragraph 1`] = `
                 Object {
                   "marginBottom": 20,
                 },
+                false,
                 false,
                 Object {},
                 Object {

@@ -20,6 +20,7 @@ const ArticleParagraph = ({
   data,
   dropCapFont,
   LinkComponent,
+  narrowContent,
 }) => {
   const str = AttributedString.join(
     children.filter((child) => child instanceof AttributedString),
@@ -45,6 +46,7 @@ const ArticleParagraph = ({
         defaultFont={defaultFont}
         onLinkPress={onLinkPress}
         LinkComponent={LinkComponent}
+        narrowContent={narrowContent}
       >
         {children}
       </SimpleParagraph>
@@ -64,6 +66,7 @@ const ArticleParagraph = ({
       defaultFont={defaultFont}
       onLinkPress={onLinkPress}
       LinkComponent={LinkComponent}
+      narrowContent={narrowContent}
     />
   );
 };
@@ -80,6 +83,7 @@ ArticleParagraph.propTypes = {
   data: PropTypes.object.isRequired,
   dropCapFont: PropTypes.string.isRequired,
   LinkComponent: PropTypes.func.isRequired,
+  narrowContent: PropTypes.bool.isRequired,
 };
 
 export default ArticleParagraph;

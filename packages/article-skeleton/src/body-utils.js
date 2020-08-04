@@ -60,7 +60,7 @@ export const setupAd = (variants = {}, template, content) => {
 
   if (!currentAdSlotIndex) return content;
 
-  const { adPosition, width, height } = articleMpuTest;
+  const { adPosition, width, height, slotName } = articleMpuTest;
 
   return [
     ...contentWithoutAdSlot.slice(0, adPosition - 1),
@@ -70,6 +70,7 @@ export const setupAd = (variants = {}, template, content) => {
         display: "inline",
         width,
         height,
+        slotName,
       },
       children: [],
     },

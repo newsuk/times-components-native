@@ -1,47 +1,36 @@
 # times-components-native [![circleci][circleci-image]][circleci-url]
 
-### Purpose
-
 Home of The Times' `react native` components used in the mobile and tablet apps.
 
-### Dev Environment
+## Table of Contents
 
-We require MacOS with [Node.js](https://nodejs.org) (for specific version please check package.json restrictions),
-[yarn](https://yarnpkg.com) (latest)
+- [Getting Started](#getting-started)
+- [Native Apps & TCN](#native-apps--tcn)
+- [Testing](#testing)
+- [Releases](#releases)
+- [Miscellaneous](#miscellaneous)
+- [Contributing](#contributing)
 
-Native development
-requires [Xcode](https://developer.apple.com/xcode),
-[Android Studio](https://developer.android.com/studio/index.html),
-[JDK 8](http://www.oracle.com/technetwork/java/javase/downloads/java-archive-javase8-2177648.html) and
-[pip](https://pip.pypa.io/en/stable/installing/).
+## Prerequisites
 
-You can try without these requirements, but you'd be on your own.
+- [Node 10+](https://nodejs.org/)
+- [Yarn](https://yarnpkg.com/)
+- [Xcode](https://developer.apple.com/xcode),
+- [Android Studio](https://developer.android.com/studio/index.html),
+- [JDK 8](http://www.oracle.com/technetwork/java/javase/downloads/java-archive-javase8-2177648.html)
 
-## Viewing Our Components
-
-Go to http://components.thetimes.co.uk
+For more details read the React Native [documentation](https://reactnative.dev/docs/environment-setup).
 
 ## Getting Started
 
 1. Install [fontforge](http://fontforge.github.io/en-US/): `brew install fontforge` (See [Fonts section](#fonts))
-
 2. Run `yarn install`
-
 3. Components can be seen running in a storybook:
+4. `cd ios && pod install && cd -`
+5. `yarn storybook-native` and leave it running
+6. Run the iOS app using XCode or open the Android project to run on Android.
 
-1. `cd ios && pod install && cd -`
-2. `yarn storybook-native` and leave it running
-3. `yarn ios` to start the iOS app
-4. To start the Android app:
- - [Start a virtual device](https://developer.android.com/studio/run/managing-avds.html)
- - Check Android SDK path is exported to \$ANDROID_HOME. In Mac, android sdk
-   is installed to ~/Library/Android/sdk by default. `export ANDROID_HOME="/Users/<USERNAME>/Library/Android/sdk"`
- - `yarn android`
- - If you get build errors, check your JDK version with `javac -version`,
-   which should print `javac 1.8.XXXX`. Earlier or later versions may not
-   work.
-
-## Native App Dev Server
+## Native Apps & TCN
 
 In order to run development servers for native applications, start react-native dev
 server via:
@@ -50,26 +39,37 @@ server via:
 
 For step by step guide, see the corresponding Readme documentation for [android](./android-app/README.md) and [ios](./ios-app/README.md)
 
-## Development
-
-The code can be formatted and linted in accordance with the agreed standards.
-
-```
-yarn fmt
-yarn lint
-```
-
 ## Testing
 
-This package uses [yarn](https://yarnpkg.com) (latest) to run unit tests on each
-platform with [jest](https://facebook.github.io/jest/).
+There is a mixture of different checks & tests split acrossing linting, typechecking and unit tests.
 
 ```
+yarn lint
 yarn test:all
 yarn test:android
 yarn test:ios
 yarn test:common
 ```
+
+## Releases
+
+##### Production Releases
+
+The release to production pipeline comes with a _hold_ step on CircleCI for builds running on the `master` branch. Once you bump the version in a PR, merge your PR and trigger the `hold_release_prod` step in the build. This will publish the artifacts, for iOS in the artifacts repo and for Android in JFrog.
+
+![Prod@3x](https://user-images.githubusercontent.com/6333409/88397111-64af2600-cdbb-11ea-8f7f-bbcc17d45200.png)
+
+##### Beta Releases\*\*
+
+Similar to the production releases, you can triger builds with the `hold_release_beta` step from all branches (apart from `master`) as long as the version in `package.json` is a beta version (includes the word beta). Once the "hold" step is approved, the pipeline will build and push to the beta artifacts repos (different location to prod).
+
+![Beta@3x](https://user-images.githubusercontent.com/6333409/88397120-67aa1680-cdbb-11ea-871d-ca454c0fb691.png)
+
+##### Updating the native apps\*\*:
+
+Once a release is published, you will have to bump the version in the native apps. That would be the `Podfile` for `iOS` and the `build.gradle` file for Android.
+
+## Miscellaneous
 
 ### Fonts ⚠️
 
@@ -82,69 +82,6 @@ when trying to use a broken font.
 ### Schema
 
 See [utils package](packages/utils/README.md) on how to update the schema
-
-## Debugging
-
-The components in this project can be debugged through your browser's developer
-tools. These steps assume the use of Chrome DevTools.
-
-To debug our native Storybook:
-
-1. `yarn storybook-native` and leave it running
-2. `yarn android:logs` or `yarn ios:logs` (this will build storybook app and output logs)
-   2a. Or you could just run `yarn android` or `yarn ios` to just build the apps
-3. open the developer menu on your device (Cmd + M on Android, Cmd + D on iOS)
-   and tap _Debug JS Remotely_
-4. navigate to http://localhost:8081/debugger-ui if it hasn't opened
-   automatically
-5. open DevTools
-6. click _Sources_
-7. expand _debuggerWorker.js_ => _webpack://_ => _._ => _packages_
-
-## Link times-components to the Render project
-
-Follow these steps [here](https://github.com/newsuk/cps-content-render#locally-mount-your-custom-build-of-times-components)
-
-## Debugging the tests
-
-Tests are currently using [jest](https://jestjs.io/) to run so if you want to debug any test follow these steps:
-
-1. (FIND YOUR TEST COMMAND) `jest --config="./test-setup/jest.android.config.js"`. Depending on whether you want to run android/ios/common unit tests, the `--config` directory may differ.
-
-2. (START TESTS IN DEBUG MODE) We need to start the same command but through node while in debug mode like so:
-   `node --inspect-brk ./node_modules/.bin/jest --config="./test-setup/jest.android.config.js" --runInBand`
-
-> NOTE: `--runInBand` is a `jest` flag that runs all tests serially in the current process. If we don't add this flag, only the node process that started `jest` will be debuggable.
-
-4. (ADD DEBUG STATEMENTS) Normally we would add breakpoints, but when remote debugging that's not always possible, because the files we need to put the breakpoints on aren't loaded yet by `jest`. So in order to make the debugger stop where we want it to, we need to add [`debugger;`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/debugger) statements instead of breakpoints in the code and re-transpile if necessary.
-
-5. (ATTACH TO WEB SOCKET) Once we've started the tests in debug mode, we need to attach to it:
-
-- (RECOMMENDED) use chrome remote debug for node:
-
-  1. open `chrome://inspect` in chrome address bar
-  2. `Open dedicated DevTools for Node` button
-  3. If you've started the tests with the aforementioned command it should automatically connect, but if it doesn't go to the `Connection` tab of the pop-up window and add connection `localhost:9229` or whatever your port is
-  4. The debugger should stop on the first line because of the `--inspect-brk` flag and once you press the play button (resume execution) it should stop on your `debugger;` statement
-
-  > NOTE: once it stops you may see all of your code is bundled up in one line. There's an easy fix for that: at the bottom of the debug window near the `Line: 1 Column: 1` labels you should see a `{}` button that will prettify your code and you will still be able to debug properly.
-
-- (Use VSCode) Config should look close to this:
-
-```json
-...
-    "configurations": [
-      {
-          "localRoot": "${workspaceFolder}/packages/provider", //change this depending on what test you're debugging
-          "remoteRoot": "${workspaceFolder}/packages/provider", //change this depending on what test you're debugging
-          "type": "node",
-          "request": "attach",
-          "name": "Attach to Server on 9229",
-          "address": "127.0.0.1",
-          "port": 9229
-      }
-  ]
-```
 
 ## Contributing
 

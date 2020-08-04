@@ -5,6 +5,8 @@ import styleguide, {
   colours,
   tabletWidth,
   tabletRowPadding,
+  getNarrowArticleBreakpoint,
+  spacing,
 } from "@times-components-native/styleguide";
 import { AttributedString } from "@times-components-native/typeset";
 import { screenWidth } from "@times-components-native/utils";
@@ -36,6 +38,7 @@ export default ({
   dropCapFont = "dropCap",
   scale,
   analyticsStream,
+  narrowContent,
 }) => {
   const styles = styleFactory(scale);
   const { fontFactory } = styleguide({ scale });
@@ -82,7 +85,10 @@ export default ({
         <ArticleParagraphWrapper
           key={key}
           ast={tree}
-          style={{ marginBottom: 0 }}
+          style={[
+            { marginBottom: 0 },
+            narrowContent && { alignSelf: "flex-start" },
+          ]}
         >
           <Text selectable style={styles[tree.name]}>
             {childStr.string}
@@ -173,12 +179,17 @@ export default ({
           onLinkPress={onLinkPress}
           data={data}
           dropCapFont={dropCapFont}
+          narrowContent={narrowContent}
         >
           {children}
         </ArticleParagraph>
       );
     },
     ad(key, attributes) {
+      const template = data.template;
+
+      // temporary fix to remove ads for maincomment on tablet
+      if (isTablet && template === "maincomment") return null;
       return (
         <Ad
           key={key}
@@ -224,6 +235,7 @@ export default ({
             relativeHeight,
             relativeHorizontalOffset,
             relativeVerticalOffset,
+            narrowContent,
           }}
         />
       );
@@ -323,13 +335,29 @@ export default ({
       },
     ) {
       const aspectRatio = 16 / 9;
-      const contentWidth =
-        screenWidth(isTablet) - (isTablet && tabletRowPadding);
+      const contentWidth = narrowContent
+        ? getNarrowArticleBreakpoint(screenWidth()).content
+        : screenWidth(isTablet) - (isTablet && tabletRowPadding);
       const height = contentWidth / aspectRatio;
+
+      const captionStyle = {
+        container: {
+          paddingLeft: narrowContent ? 0 : spacing(2),
+        },
+      };
+
       return (
         <View
           key={key}
-          style={[styles.primaryContainer, isTablet && styles.containerTablet]}
+          style={[
+            styles.primaryContainer,
+            isTablet && styles.containerTablet,
+            narrowContent && {
+              alignSelf: "stretch",
+              marginLeft: spacing(2),
+              width: contentWidth,
+            },
+          ]}
         >
           <Video
             accountId={brightcoveAccountId}
@@ -340,7 +368,7 @@ export default ({
             videoId={brightcoveVideoId}
             width={contentWidth}
           />
-          <InsetCaption caption={caption} />
+          <InsetCaption caption={caption} style={captionStyle} />
         </View>
       );
     },

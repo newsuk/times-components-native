@@ -8,9 +8,11 @@ export const propTypes = {
   key: PropTypes.string,
   attributes: PropTypes.array,
   slug: PropTypes.string,
+  centered: PropTypes.bool,
 };
 
 export const defaultProps = {
   onAuthorPress: () => null,
   capitalize: false,
+  centered: false,
 };

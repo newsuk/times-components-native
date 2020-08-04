@@ -39,7 +39,7 @@ const ArticleBase = ({
 }) => {
   // TODO REMOVE ME!!!!!!!!!!!!!!!!!!!!!
   variants = {
-    articleMpuTest: "C",
+    articleMpuTest: "B",
   };
 
   const { section: articleSection, template } = article || {};

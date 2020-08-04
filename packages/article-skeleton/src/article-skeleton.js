@@ -43,6 +43,7 @@ const ArticleWithContent = (props) => {
     onTopicPress,
     isTablet,
     onViewed,
+    narrowContent,
   } = props;
   const variants = useVariantTestingContext();
 
@@ -90,6 +91,7 @@ const ArticleWithContent = (props) => {
           onCommentsPress={onCommentsPress}
           onRelatedArticlePress={onRelatedArticlePress}
           onTopicPress={onTopicPress}
+          narrowContent={narrowContent}
         />
       </Gutter>
     ),
@@ -134,7 +136,7 @@ const ArticleWithContent = (props) => {
   const Scroller = Platform.OS === "ios" ? iosScroller : FlatList;
 
   return (
-    <View style={styles.articleContainer}>
+    <View style={[styles.articleContainer, narrowContent && styles.narrow]}>
       <Viewport.Tracker>
         <Scroller
           data={fixedContent}

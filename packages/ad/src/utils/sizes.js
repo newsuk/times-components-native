@@ -66,10 +66,7 @@ const sizes = {
   native: [
     {
       height: 250,
-      sizes: [
-        [300, 250],
-        [300, 600],
-      ],
+      sizes: [[300, 250]],
       width: 300,
     },
     {
@@ -81,6 +78,20 @@ const sizes = {
       height: 250,
       sizes: [billboard],
       width: 970,
+    },
+  ],
+  nativeB: [
+    {
+      height: 250,
+      sizes: [[300, 250]],
+      width: 300,
+    },
+  ],
+  nativeC: [
+    {
+      height: 600,
+      sizes: [[300, 600]],
+      width: 300,
     },
   ],
   pixel: [

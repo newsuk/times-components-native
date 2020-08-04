@@ -27,8 +27,8 @@ exports[`1. group of topics 1`] = `
             "borderRadius": 2,
             "borderWidth": 1,
             "paddingBottom": 10,
-            "paddingLeft": 15,
-            "paddingRight": 15,
+            "paddingLeft": 10,
+            "paddingRight": 10,
             "paddingTop": 10,
           }
         }
@@ -80,8 +80,8 @@ exports[`2. group of topics at large scale 1`] = `
             "borderRadius": 2,
             "borderWidth": 1,
             "paddingBottom": 10,
-            "paddingLeft": 15,
-            "paddingRight": 15,
+            "paddingLeft": 10,
+            "paddingRight": 10,
             "paddingTop": 10,
           }
         }
@@ -133,8 +133,8 @@ exports[`3. group of topics at xlarge scale 1`] = `
             "borderRadius": 2,
             "borderWidth": 1,
             "paddingBottom": 10,
-            "paddingLeft": 15,
-            "paddingRight": 15,
+            "paddingLeft": 10,
+            "paddingRight": 10,
             "paddingTop": 10,
           }
         }
@@ -176,8 +176,8 @@ exports[`4. article topic with style 1`] = `
           "borderRadius": 2,
           "borderWidth": 1,
           "paddingBottom": 10,
-          "paddingLeft": 15,
-          "paddingRight": 15,
+          "paddingLeft": 10,
+          "paddingRight": 10,
           "paddingTop": 10,
         }
       }
@@ -218,8 +218,8 @@ exports[`5. article topic with no additional style 1`] = `
           "borderRadius": 2,
           "borderWidth": 1,
           "paddingBottom": 10,
-          "paddingLeft": 15,
-          "paddingRight": 15,
+          "paddingLeft": 10,
+          "paddingRight": 10,
           "paddingTop": 10,
         }
       }

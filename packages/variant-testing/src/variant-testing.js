@@ -13,6 +13,10 @@ export const VariantTestingProvider = ({ variants = {}, children }) => {
       articleMpuTest: {
         group: articleMpuTest,
         ...(articleMpuTest !== "A" && {
+          slotName:
+            articleMpuTest === "B"
+              ? "native-inline-ad-b"
+              : "native-inline-ad-c",
           adPosition: 5,
           width: 300,
           height: articleMpuTest === "B" ? 250 : 600,

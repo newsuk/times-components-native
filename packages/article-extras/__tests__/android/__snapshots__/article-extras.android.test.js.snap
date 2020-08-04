@@ -1,38 +1,34 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`1. article extras content 1`] = `
-Array [
-  <View>
-    <RelatedArticles />
-  </View>,
+<View>
+  <RelatedArticles />
   <View>
     <ArticleTopics />
-  </View>,
+  </View>
   <ArticleComments
     articleId="dummy-article-id"
     commentCount={123}
     commentsEnabled={true}
     url="dummy-article-url"
-  />,
-]
+  />
+</View>
 `;
 
 exports[`2. article extras content on tablet 1`] = `
-Array [
-  <View>
-    <RelatedArticles />
-  </View>,
+<View>
+  <RelatedArticles />
   <View>
     <ArticleTopics />
-  </View>,
-  <SponsoredAd />,
+  </View>
   <ArticleComments
     articleId="dummy-article-id"
     commentCount={123}
     commentsEnabled={true}
     url="dummy-article-url"
-  />,
-]
+  />
+  <SponsoredAd />
+</View>
 `;
 
 exports[`3. article extras error 1`] = `

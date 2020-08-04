@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import PropTypes from "prop-types";
 import {
   getEditionBreakpoint,
+  getNarrowArticleBreakpoint,
   tabletWidth,
 } from "@times-components-native/styleguide";
 import {
@@ -16,6 +17,7 @@ const config = (NativeModules || {}).ReactConfig;
 
 const calculateState = (width, fontScale) => ({
   editionBreakpoint: getEditionBreakpoint(width),
+  narrowArticleBreakpoint: getNarrowArticleBreakpoint(width),
   fontScale,
   isTablet:
     (config && config.breakpoint && config.breakpoint !== "small") ||

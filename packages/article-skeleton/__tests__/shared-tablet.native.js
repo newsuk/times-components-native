@@ -56,6 +56,50 @@ export default () => {
         expect(testInstance).toMatchSnapshot();
       },
     },
+    {
+      name: "with ad on mainstandard",
+      test: async () => {
+        const article = articleFixture({
+          ...fixtureArgs,
+          template: "mainstandard",
+          content: [
+            {
+              attributes: {},
+              children: [],
+              name: "ad",
+            },
+          ],
+        });
+
+        const testInstance = TestRenderer.create(
+          <Responsive>{renderArticle(article, undefined, true)}</Responsive>,
+        );
+
+        expect(testInstance).toMatchSnapshot();
+      },
+    },
+    {
+      name: "with ad on maincomment",
+      test: async () => {
+        const article = articleFixture({
+          ...fixtureArgs,
+          template: "maincomment",
+          content: [
+            {
+              attributes: {},
+              children: [],
+              name: "ad",
+            },
+          ],
+        });
+
+        const testInstance = TestRenderer.create(
+          <Responsive>{renderArticle(article, undefined, true)}</Responsive>,
+        );
+
+        expect(testInstance).toMatchSnapshot();
+      },
+    },
   ];
 
   iterator(tests);

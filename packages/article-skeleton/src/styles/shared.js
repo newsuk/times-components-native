@@ -5,6 +5,10 @@ const globalStyle = {
   articleContainer: {
     backgroundColor: colours.functional.gutter,
   },
+  narrow: {
+    marginLeft: "25%",
+    position: "relative",
+  },
   articleMainContentRow: {
     paddingLeft: spacing(2),
     paddingRight: spacing(2),
