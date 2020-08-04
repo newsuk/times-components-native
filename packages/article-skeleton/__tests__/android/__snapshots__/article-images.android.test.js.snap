@@ -18,7 +18,6 @@ exports[`1. a primary image 1`] = `
     onEndReachedThreshold={2}
     removeClippedSubviews={true}
     scrollEventThrottle={50}
-    showsVerticalScrollIndicator={false}
     updateCellsBatchingPeriod={50}
     windowSize={3}
   >
@@ -110,7 +109,6 @@ exports[`2. a fullwidth image 1`] = `
     onEndReachedThreshold={2}
     removeClippedSubviews={true}
     scrollEventThrottle={50}
-    showsVerticalScrollIndicator={false}
     updateCellsBatchingPeriod={50}
     windowSize={3}
   >
@@ -202,7 +200,6 @@ exports[`3. a secondary image 1`] = `
     onEndReachedThreshold={2}
     removeClippedSubviews={true}
     scrollEventThrottle={50}
-    showsVerticalScrollIndicator={false}
     updateCellsBatchingPeriod={50}
     windowSize={3}
   >
@@ -294,7 +291,6 @@ exports[`4. an inline image 1`] = `
     onEndReachedThreshold={2}
     removeClippedSubviews={true}
     scrollEventThrottle={50}
-    showsVerticalScrollIndicator={false}
     updateCellsBatchingPeriod={50}
     windowSize={3}
   >
