@@ -126,7 +126,13 @@ const ArticleWithContent = (props) => {
         <FlatList
           {...scrollprops}
           data={scrollprops.data.map((item, index) => Child({ item, index }))}
-          renderItem={({ item }) => item}
+          renderItem={({ item }) =>
+            narrowContent ? (
+              <View style={styles.keylineWrapper}> {item}</View>
+            ) : (
+              { item }
+            )
+          }
         />
       ),
       [Child],
@@ -135,7 +141,7 @@ const ArticleWithContent = (props) => {
   const Scroller = Platform.OS === "ios" ? iosScroller : FlatList;
 
   return (
-    <View style={[styles.articleContainer, narrowContent && styles.narrow]}>
+    <View style={styles.articleContainer}>
       <Viewport.Tracker>
         <Scroller
           data={fixedContent}
@@ -145,7 +151,13 @@ const ArticleWithContent = (props) => {
           ListFooterComponent={Loading}
           onEndReached={onEndReached}
           showsVerticalScrollIndicator={!!isTablet}
-          renderItem={Child}
+          renderItem={({ Child }) =>
+            narrowContent ? (
+              <View style={styles.keylineWrapper}>{Child}</View>
+            ) : (
+              { Child }
+            )
+          }
           onViewableItemsChanged={onViewableItemsChanged}
           removeClippedSubviews
           keyExtractor={(item, index) => index.toString()}
@@ -153,6 +165,7 @@ const ArticleWithContent = (props) => {
           windowSize={3}
           nestedScrollEnabled
           testID="flat-list-article"
+          style={styles.scroller}
         />
       </Viewport.Tracker>
     </View>
