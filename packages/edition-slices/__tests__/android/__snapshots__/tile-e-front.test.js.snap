@@ -218,6 +218,53 @@ exports[`tile e front landscape wide 1`] = `
 </Link>
 `;
 
+exports[`tile e front landscape without breakpoint should be like small 1`] = `
+<Link
+  linkStyle={
+    Array [
+      undefined,
+      undefined,
+    ]
+  }
+  url="/article/123"
+>
+  <Image
+    aspectRatio={0.8}
+    fill={true}
+    uri="//www.thetimes.co.uk/imageserver/image/%2Fmethode%2Ftimes%2Fprod%2Fweb%2Fbin%2F5a14c64e-06db-11e9-abe2-4909b2eb0130.jpg?crop=1434%2C1792%2C627%2C0"
+  />
+  <View
+    style={
+      Object {
+        "flex": 1,
+      }
+    }
+  >
+    <View>
+      <View>
+        <Text
+          accessibilityRole="header"
+          aria-level="3"
+          style={
+            Object {
+              "color": "#333333",
+              "fontFamily": "TimesModern-Bold",
+              "fontSize": 22,
+              "fontWeight": "900",
+              "includeFontPadding": false,
+              "lineHeight": 27,
+              "marginBottom": 10,
+            }
+          }
+        >
+          This is tile headline
+        </Text>
+      </View>
+    </View>
+  </View>
+</Link>
+`;
+
 exports[`tile e front portrait huge 1`] = `
 <Link
   linkStyle={
@@ -424,6 +471,53 @@ exports[`tile e front portrait wide 1`] = `
               "fontWeight": "900",
               "includeFontPadding": false,
               "lineHeight": 30,
+              "marginBottom": 10,
+            }
+          }
+        >
+          This is tile headline
+        </Text>
+      </View>
+    </View>
+  </View>
+</Link>
+`;
+
+exports[`tile e front portrait without breakpoint should be like small 1`] = `
+<Link
+  linkStyle={
+    Array [
+      undefined,
+      undefined,
+    ]
+  }
+  url="/article/123"
+>
+  <Image
+    aspectRatio={0.8}
+    fill={true}
+    uri="//www.thetimes.co.uk/imageserver/image/%2Fmethode%2Ftimes%2Fprod%2Fweb%2Fbin%2F5a14c64e-06db-11e9-abe2-4909b2eb0130.jpg?crop=1434%2C1792%2C627%2C0"
+  />
+  <View
+    style={
+      Object {
+        "flex": 1,
+      }
+    }
+  >
+    <View>
+      <View>
+        <Text
+          accessibilityRole="header"
+          aria-level="3"
+          style={
+            Object {
+              "color": "#333333",
+              "fontFamily": "TimesModern-Bold",
+              "fontSize": 22,
+              "fontWeight": "900",
+              "includeFontPadding": false,
+              "lineHeight": 27,
               "marginBottom": 10,
             }
           }

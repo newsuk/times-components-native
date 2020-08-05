@@ -40,6 +40,7 @@ import {
   SecondaryTwoAndTwoSlice,
   StandardSlice,
   ListTwoAndSixNoPicSlice,
+  FrontLeadTwoAndTwoSlice,
 } from "../src/slices";
 
 const slices = [
@@ -122,6 +123,11 @@ const slices = [
     mock: { puzzles: getPuzzleSlices(3) },
     name: "puzzle",
     Slice: PuzzleSlice,
+  },
+  {
+    mock: mockLeadTwoNoPicAndTwoSlice(),
+    name: "front lead two no pic and two",
+    Slice: FrontLeadTwoAndTwoSlice,
   },
 ];
 
