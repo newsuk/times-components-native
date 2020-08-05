@@ -120,11 +120,7 @@ const ArticleWithContent = (props) => {
   );
 
   const renderItem = (item) =>
-    narrowContent ? (
-      <View style={styles.keylineWrapper}>{item}</View>
-    ) : (
-      { item }
-    );
+    narrowContent ? <View style={styles.keylineWrapper}>{item}</View> : item;
 
   const iosScroller =
     // FIXME: remove this when ios memory leaks are resolved

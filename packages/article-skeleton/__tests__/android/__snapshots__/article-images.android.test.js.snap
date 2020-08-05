@@ -26,57 +26,8 @@ exports[`1. a primary image 1`] = `
       <View>
         <View />
       </View>
-      <View>
-        <View>
-          <ArticleImage
-            captionOptions={
-              Object {
-                "caption": "A Caption",
-                "credits": "Some Credits",
-              }
-            }
-            imageOptions={
-              Object {
-                "display": "primary",
-                "index": 1,
-                "narrowContent": undefined,
-                "ratio": "3:2",
-                "relativeHeight": undefined,
-                "relativeHorizontalOffset": undefined,
-                "relativeVerticalOffset": undefined,
-                "relativeWidth": undefined,
-                "uri": "https://image-2.io",
-              }
-            }
-            images={
-              Array [
-                Object {
-                  "attributes": Object {
-                    "caption": "A Caption",
-                    "credits": "Some Credits",
-                    "display": "primary",
-                    "imageIndex": 1,
-                    "ratio": "3:2",
-                    "url": "https://image-2.io",
-                  },
-                  "children": Array [],
-                  "name": "image",
-                },
-              ]
-            }
-          />
-        </View>
-      </View>
-      <View>
-        <View>
-          <View>
-            <ArticleExtras
-              articleId="198c4b2f-ecec-4f34-be53-c89f83bc1b44"
-              articleUrl="https://url.io"
-            />
-          </View>
-        </View>
-      </View>
+      <View />
+      <View />
       <View>
         <View>
           <ActivityIndicator
@@ -118,57 +69,8 @@ exports[`2. a fullwidth image 1`] = `
       <View>
         <View />
       </View>
-      <View>
-        <View>
-          <ArticleImage
-            captionOptions={
-              Object {
-                "caption": "A Caption",
-                "credits": "Some Credits",
-              }
-            }
-            imageOptions={
-              Object {
-                "display": "fullwidth",
-                "index": 1,
-                "narrowContent": undefined,
-                "ratio": "3:2",
-                "relativeHeight": undefined,
-                "relativeHorizontalOffset": undefined,
-                "relativeVerticalOffset": undefined,
-                "relativeWidth": undefined,
-                "uri": "https://image-2.io",
-              }
-            }
-            images={
-              Array [
-                Object {
-                  "attributes": Object {
-                    "caption": "A Caption",
-                    "credits": "Some Credits",
-                    "display": "fullwidth",
-                    "imageIndex": 1,
-                    "ratio": "3:2",
-                    "url": "https://image-2.io",
-                  },
-                  "children": Array [],
-                  "name": "image",
-                },
-              ]
-            }
-          />
-        </View>
-      </View>
-      <View>
-        <View>
-          <View>
-            <ArticleExtras
-              articleId="198c4b2f-ecec-4f34-be53-c89f83bc1b44"
-              articleUrl="https://url.io"
-            />
-          </View>
-        </View>
-      </View>
+      <View />
+      <View />
       <View>
         <View>
           <ActivityIndicator
@@ -210,57 +112,8 @@ exports[`3. a secondary image 1`] = `
       <View>
         <View />
       </View>
-      <View>
-        <View>
-          <ArticleImage
-            captionOptions={
-              Object {
-                "caption": "A Caption",
-                "credits": "Some Credits",
-              }
-            }
-            imageOptions={
-              Object {
-                "display": "secondary",
-                "index": 1,
-                "narrowContent": undefined,
-                "ratio": "3:2",
-                "relativeHeight": undefined,
-                "relativeHorizontalOffset": undefined,
-                "relativeVerticalOffset": undefined,
-                "relativeWidth": undefined,
-                "uri": "https://image-2.io",
-              }
-            }
-            images={
-              Array [
-                Object {
-                  "attributes": Object {
-                    "caption": "A Caption",
-                    "credits": "Some Credits",
-                    "display": "secondary",
-                    "imageIndex": 1,
-                    "ratio": "3:2",
-                    "url": "https://image-2.io",
-                  },
-                  "children": Array [],
-                  "name": "image",
-                },
-              ]
-            }
-          />
-        </View>
-      </View>
-      <View>
-        <View>
-          <View>
-            <ArticleExtras
-              articleId="198c4b2f-ecec-4f34-be53-c89f83bc1b44"
-              articleUrl="https://url.io"
-            />
-          </View>
-        </View>
-      </View>
+      <View />
+      <View />
       <View>
         <View>
           <ActivityIndicator
@@ -302,57 +155,8 @@ exports[`4. an inline image 1`] = `
       <View>
         <View />
       </View>
-      <View>
-        <View>
-          <ArticleImage
-            captionOptions={
-              Object {
-                "caption": "A Caption",
-                "credits": "Some Credits",
-              }
-            }
-            imageOptions={
-              Object {
-                "display": "secondary",
-                "index": 1,
-                "narrowContent": undefined,
-                "ratio": "9:4",
-                "relativeHeight": undefined,
-                "relativeHorizontalOffset": undefined,
-                "relativeVerticalOffset": undefined,
-                "relativeWidth": undefined,
-                "uri": "https://image-inline.io",
-              }
-            }
-            images={
-              Array [
-                Object {
-                  "attributes": Object {
-                    "caption": "A Caption",
-                    "credits": "Some Credits",
-                    "display": "inline",
-                    "imageIndex": 1,
-                    "ratio": "9:4",
-                    "url": "https://image-inline.io",
-                  },
-                  "children": Array [],
-                  "name": "image",
-                },
-              ]
-            }
-          />
-        </View>
-      </View>
-      <View>
-        <View>
-          <View>
-            <ArticleExtras
-              articleId="198c4b2f-ecec-4f34-be53-c89f83bc1b44"
-              articleUrl="https://url.io"
-            />
-          </View>
-        </View>
-      </View>
+      <View />
+      <View />
       <View>
         <View>
           <ActivityIndicator
