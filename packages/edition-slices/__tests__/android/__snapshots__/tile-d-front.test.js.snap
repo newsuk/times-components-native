@@ -1,0 +1,499 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`tile d front huge 1`] = `
+<Link
+  linkStyle={
+    Object {
+      "flexDirection": "row",
+      "padding": 10,
+      "paddingTop": 0,
+    }
+  }
+  url="/article/123"
+>
+  <Image
+    aspectRatio={1.5}
+    fill={true}
+    style={
+      Object {
+        "flex": 1,
+      }
+    }
+    uri="//www.thetimes.co.uk/imageserver/image/%2Fmethode%2Ftimes%2Fprod%2Fweb%2Fbin%2F5a14c64e-06db-11e9-abe2-4909b2eb0130.jpg?crop=2688%2C1792%2C0%2C0"
+  />
+  <View
+    style={
+      Object {
+        "flex": 1,
+      }
+    }
+  >
+    <View>
+      <View
+        style={
+          Object {
+            "paddingLeft": 10,
+          }
+        }
+      >
+        <Text
+          accessibilityRole="header"
+          aria-level="3"
+          style={
+            Object {
+              "color": "#333333",
+              "fontFamily": "TimesModern-Bold",
+              "fontSize": 24,
+              "fontWeight": "900",
+              "includeFontPadding": false,
+              "lineHeight": 24,
+              "marginBottom": 10,
+            }
+          }
+        >
+          This is tile headline
+        </Text>
+        <Text>
+          <Text
+            style={
+              Object {
+                "color": "#333333",
+                "flexDirection": "row",
+                "fontFamily": "GillSansMTStd-Medium",
+                "fontSize": 13,
+                "lineHeight": 19,
+              }
+            }
+          >
+            Richard Lloyd Parry
+          </Text>
+          <Text
+            style={
+              Object {
+                "color": "#333333",
+                "flexDirection": "row",
+                "fontFamily": "GillSansMTStd-Medium",
+                "fontSize": 13,
+                "lineHeight": 19,
+              }
+            }
+          >
+            , Hanoi
+          </Text>
+        </Text>
+        <Text
+          numberOfLines={2}
+          style={
+            Object {
+              "color": "#333333",
+              "fontFamily": "TimesDigitalW04",
+              "fontSize": undefined,
+              "lineHeight": undefined,
+              "marginBottom": 10,
+              "textAlign": "justify",
+            }
+          }
+        >
+          <Text>
+            Senior ministers accused Labour today of trying to “frustrate and cancel Brexit” after the party announced plans to hijack Boris Johnson’s deal with amendments for a second referendum and customs union with the EU. Rishi Sunak, the chief secretary to the Treasury, warned that any attempt by MPs to add a customs union to the government’s Brexit deal would be “procedural tricks” intended to frustrate departure. His comments came as ministers announced that they planned to publish the legislation that would formally take Britain out of the European Union today. They will also apply to the Speaker to hold another so-called meaningful vote on the deal following Mr Johnson’s decision to comply with the Benn act, which forces the prime minister to request a Brexit. to “frustrate and cancel Brexit” after the party announced plans to hijack Boris Johnson’s deal with amendments for a second referendum and customs union with the EU. Rishi Sunak, the chief secretary to the Treasury, warned that any attempt by MPs to add a customs union to the government’s Brexit deal would be “procedural tricks” intended to frustrate departure. His comments came as ministers announced that they planned to publish the legislation that would formally take Britain out of the European Union today.
+            
+
+          </Text>
+        </Text>
+      </View>
+    </View>
+  </View>
+</Link>
+`;
+
+exports[`tile d front medium 1`] = `
+<Link
+  linkStyle={
+    Object {
+      "flexDirection": "row",
+      "padding": 10,
+      "paddingTop": 0,
+    }
+  }
+  url="/article/123"
+>
+  <Image
+    aspectRatio={1.5}
+    fill={true}
+    style={
+      Object {
+        "flex": 1,
+      }
+    }
+    uri="//www.thetimes.co.uk/imageserver/image/%2Fmethode%2Ftimes%2Fprod%2Fweb%2Fbin%2F5a14c64e-06db-11e9-abe2-4909b2eb0130.jpg?crop=2688%2C1792%2C0%2C0"
+  />
+  <View
+    style={
+      Object {
+        "flex": 1,
+      }
+    }
+  >
+    <View>
+      <View
+        style={
+          Object {
+            "paddingLeft": 10,
+          }
+        }
+      >
+        <Text
+          accessibilityRole="header"
+          aria-level="3"
+          style={
+            Object {
+              "color": "#333333",
+              "fontFamily": "TimesModern-Bold",
+              "fontSize": 20,
+              "fontWeight": "900",
+              "includeFontPadding": false,
+              "lineHeight": 20,
+              "marginBottom": 10,
+            }
+          }
+        >
+          This is tile headline
+        </Text>
+        <Text>
+          <Text
+            style={
+              Object {
+                "color": "#333333",
+                "flexDirection": "row",
+                "fontFamily": "GillSansMTStd-Medium",
+                "fontSize": 13,
+                "lineHeight": 19,
+              }
+            }
+          >
+            Richard Lloyd Parry
+          </Text>
+          <Text
+            style={
+              Object {
+                "color": "#333333",
+                "flexDirection": "row",
+                "fontFamily": "GillSansMTStd-Medium",
+                "fontSize": 13,
+                "lineHeight": 19,
+              }
+            }
+          >
+            , Hanoi
+          </Text>
+        </Text>
+        <Text
+          numberOfLines={2}
+          style={
+            Object {
+              "color": "#333333",
+              "fontFamily": "TimesDigitalW04",
+              "fontSize": undefined,
+              "lineHeight": undefined,
+              "marginBottom": 10,
+              "textAlign": "justify",
+            }
+          }
+        >
+          <Text>
+            Senior ministers accused Labour today of trying to “frustrate and cancel Brexit” after the party announced plans to hijack Boris Johnson’s deal with amendments for a second referendum and customs union with the EU. Rishi Sunak, the chief secretary to the Treasury, warned that any attempt by MPs to add a customs union to the government’s Brexit deal would be “procedural tricks” intended to frustrate departure. His comments came as ministers announced that they planned to publish the legislation that would formally take Britain out of the European Union today. They will also apply to the Speaker to hold another so-called meaningful vote on the deal following Mr Johnson’s decision to comply with the Benn act, which forces the prime minister to request a Brexit. to “frustrate and cancel Brexit” after the party announced plans to hijack Boris Johnson’s deal with amendments for a second referendum and customs union with the EU. Rishi Sunak, the chief secretary to the Treasury, warned that any attempt by MPs to add a customs union to the government’s Brexit deal would be “procedural tricks” intended to frustrate departure. His comments came as ministers announced that they planned to publish the legislation that would formally take Britain out of the European Union today.
+            
+
+          </Text>
+        </Text>
+      </View>
+    </View>
+  </View>
+</Link>
+`;
+
+exports[`tile d front small 1`] = `
+<Link
+  linkStyle={
+    Object {
+      "flexDirection": "row",
+      "padding": 10,
+      "paddingTop": 0,
+    }
+  }
+  url="/article/123"
+>
+  <Image
+    aspectRatio={1.5}
+    fill={true}
+    style={
+      Object {
+        "flex": 1,
+      }
+    }
+    uri="//www.thetimes.co.uk/imageserver/image/%2Fmethode%2Ftimes%2Fprod%2Fweb%2Fbin%2F5a14c64e-06db-11e9-abe2-4909b2eb0130.jpg?crop=2688%2C1792%2C0%2C0"
+  />
+  <View
+    style={
+      Object {
+        "flex": 1,
+      }
+    }
+  >
+    <View>
+      <View
+        style={
+          Object {
+            "paddingLeft": 10,
+          }
+        }
+      >
+        <Text
+          accessibilityRole="header"
+          aria-level="3"
+          style={
+            Object {
+              "color": "#333333",
+              "fontFamily": "TimesModern-Bold",
+              "fontSize": 20,
+              "fontWeight": "900",
+              "includeFontPadding": false,
+              "lineHeight": 20,
+              "marginBottom": 10,
+            }
+          }
+        >
+          This is tile headline
+        </Text>
+        <Text>
+          <Text
+            style={
+              Object {
+                "color": "#333333",
+                "flexDirection": "row",
+                "fontFamily": "GillSansMTStd-Medium",
+                "fontSize": 13,
+                "lineHeight": 19,
+              }
+            }
+          >
+            Richard Lloyd Parry
+          </Text>
+          <Text
+            style={
+              Object {
+                "color": "#333333",
+                "flexDirection": "row",
+                "fontFamily": "GillSansMTStd-Medium",
+                "fontSize": 13,
+                "lineHeight": 19,
+              }
+            }
+          >
+            , Hanoi
+          </Text>
+        </Text>
+        <Text
+          numberOfLines={2}
+          style={
+            Object {
+              "color": "#333333",
+              "fontFamily": "TimesDigitalW04",
+              "fontSize": undefined,
+              "lineHeight": undefined,
+              "marginBottom": 10,
+              "textAlign": "justify",
+            }
+          }
+        >
+          <Text>
+            Senior ministers accused Labour today of trying to “frustrate and cancel Brexit” after the party announced plans to hijack Boris Johnson’s deal with amendments for a second referendum and customs union with the EU. Rishi Sunak, the chief secretary to the Treasury, warned that any attempt by MPs to add a customs union to the government’s Brexit deal would be “procedural tricks” intended to frustrate departure. His comments came as ministers announced that they planned to publish the legislation that would formally take Britain out of the European Union today. They will also apply to the Speaker to hold another so-called meaningful vote on the deal following Mr Johnson’s decision to comply with the Benn act, which forces the prime minister to request a Brexit. to “frustrate and cancel Brexit” after the party announced plans to hijack Boris Johnson’s deal with amendments for a second referendum and customs union with the EU. Rishi Sunak, the chief secretary to the Treasury, warned that any attempt by MPs to add a customs union to the government’s Brexit deal would be “procedural tricks” intended to frustrate departure. His comments came as ministers announced that they planned to publish the legislation that would formally take Britain out of the European Union today.
+            
+
+          </Text>
+        </Text>
+      </View>
+    </View>
+  </View>
+</Link>
+`;
+
+exports[`tile d front wide 1`] = `
+<Link
+  linkStyle={
+    Object {
+      "flexDirection": "row",
+      "padding": 10,
+      "paddingTop": 0,
+    }
+  }
+  url="/article/123"
+>
+  <Image
+    aspectRatio={1.5}
+    fill={true}
+    style={
+      Object {
+        "flex": 1,
+      }
+    }
+    uri="//www.thetimes.co.uk/imageserver/image/%2Fmethode%2Ftimes%2Fprod%2Fweb%2Fbin%2F5a14c64e-06db-11e9-abe2-4909b2eb0130.jpg?crop=2688%2C1792%2C0%2C0"
+  />
+  <View
+    style={
+      Object {
+        "flex": 1,
+      }
+    }
+  >
+    <View>
+      <View
+        style={
+          Object {
+            "paddingLeft": 10,
+          }
+        }
+      >
+        <Text
+          accessibilityRole="header"
+          aria-level="3"
+          style={
+            Object {
+              "color": "#333333",
+              "fontFamily": "TimesModern-Bold",
+              "fontSize": 24,
+              "fontWeight": "900",
+              "includeFontPadding": false,
+              "lineHeight": 24,
+              "marginBottom": 10,
+            }
+          }
+        >
+          This is tile headline
+        </Text>
+        <Text>
+          <Text
+            style={
+              Object {
+                "color": "#333333",
+                "flexDirection": "row",
+                "fontFamily": "GillSansMTStd-Medium",
+                "fontSize": 13,
+                "lineHeight": 19,
+              }
+            }
+          >
+            Richard Lloyd Parry
+          </Text>
+          <Text
+            style={
+              Object {
+                "color": "#333333",
+                "flexDirection": "row",
+                "fontFamily": "GillSansMTStd-Medium",
+                "fontSize": 13,
+                "lineHeight": 19,
+              }
+            }
+          >
+            , Hanoi
+          </Text>
+        </Text>
+        <Text
+          numberOfLines={2}
+          style={
+            Object {
+              "color": "#333333",
+              "fontFamily": "TimesDigitalW04",
+              "fontSize": undefined,
+              "lineHeight": undefined,
+              "marginBottom": 10,
+              "textAlign": "justify",
+            }
+          }
+        >
+          <Text>
+            Senior ministers accused Labour today of trying to “frustrate and cancel Brexit” after the party announced plans to hijack Boris Johnson’s deal with amendments for a second referendum and customs union with the EU. Rishi Sunak, the chief secretary to the Treasury, warned that any attempt by MPs to add a customs union to the government’s Brexit deal would be “procedural tricks” intended to frustrate departure. His comments came as ministers announced that they planned to publish the legislation that would formally take Britain out of the European Union today. They will also apply to the Speaker to hold another so-called meaningful vote on the deal following Mr Johnson’s decision to comply with the Benn act, which forces the prime minister to request a Brexit. to “frustrate and cancel Brexit” after the party announced plans to hijack Boris Johnson’s deal with amendments for a second referendum and customs union with the EU. Rishi Sunak, the chief secretary to the Treasury, warned that any attempt by MPs to add a customs union to the government’s Brexit deal would be “procedural tricks” intended to frustrate departure. His comments came as ministers announced that they planned to publish the legislation that would formally take Britain out of the European Union today.
+            
+
+          </Text>
+        </Text>
+      </View>
+    </View>
+  </View>
+</Link>
+`;
+
+exports[`tile d front without breakpoint should be like small 1`] = `
+<Link
+  linkStyle={
+    Object {
+      "flexDirection": "row",
+      "padding": 10,
+    }
+  }
+  url="/article/123"
+>
+  <Image
+    aspectRatio={1.5}
+    fill={true}
+    style={
+      Object {
+        "width": "50%",
+      }
+    }
+    uri="//www.thetimes.co.uk/imageserver/image/%2Fmethode%2Ftimes%2Fprod%2Fweb%2Fbin%2F5a14c64e-06db-11e9-abe2-4909b2eb0130.jpg?crop=2688%2C1792%2C0%2C0"
+  />
+  <View
+    style={
+      Object {
+        "paddingBottom": 5,
+        "paddingLeft": 10,
+        "width": "50%",
+      }
+    }
+  >
+    <View
+      style={
+        Object {
+          "marginBottom": 5,
+        }
+      }
+    >
+      <ArticleLabel
+        color="#005B8D"
+        isVideo={false}
+        title="label"
+      />
+    </View>
+    <Text
+      accessibilityRole="header"
+      aria-level="3"
+      style={
+        Object {
+          "color": "#333333",
+          "fontFamily": "TimesModern-Bold",
+          "fontSize": 20,
+          "fontWeight": "900",
+          "includeFontPadding": false,
+          "lineHeight": 20,
+          "marginBottom": 5,
+        }
+      }
+    >
+      This is tile headline
+    </Text>
+    <ArticleFlags
+      flags={
+        Array [
+          Object {
+            "expiryTime": "2030-03-14T12:00:00.000Z",
+            "type": "EXCLUSIVE",
+          },
+        ]
+      }
+      longRead={true}
+    />
+  </View>
+</Link>
+`;

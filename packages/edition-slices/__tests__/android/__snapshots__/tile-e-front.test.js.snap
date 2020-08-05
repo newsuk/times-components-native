@@ -1,0 +1,437 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`tile e front landscape huge 1`] = `
+<Link
+  linkStyle={
+    Array [
+      undefined,
+      Object {
+        "flex": 1,
+        "padding": 10,
+        "paddingRight": 0,
+      },
+    ]
+  }
+  url="/article/123"
+>
+  <Image
+    aspectRatio={0.8}
+    fill={true}
+    style={
+      Object {
+        "marginBottom": 10,
+        "width": "100%",
+      }
+    }
+    uri="//www.thetimes.co.uk/imageserver/image/%2Fmethode%2Ftimes%2Fprod%2Fweb%2Fbin%2F5a14c64e-06db-11e9-abe2-4909b2eb0130.jpg?crop=1434%2C1792%2C627%2C0"
+  />
+  <View
+    style={
+      Object {
+        "flex": 1,
+      }
+    }
+  >
+    <View>
+      <View>
+        <Text
+          accessibilityRole="header"
+          aria-level="3"
+          style={
+            Object {
+              "color": "#333333",
+              "fontFamily": "TimesModern-Bold",
+              "fontSize": 26,
+              "fontWeight": "900",
+              "includeFontPadding": false,
+              "lineHeight": 26,
+              "marginBottom": 10,
+            }
+          }
+        >
+          This is tile headline
+        </Text>
+      </View>
+    </View>
+  </View>
+</Link>
+`;
+
+exports[`tile e front landscape medium 1`] = `
+<Link
+  linkStyle={
+    Array [
+      undefined,
+      Object {
+        "flex": 1,
+        "padding": 10,
+        "paddingRight": 0,
+      },
+    ]
+  }
+  url="/article/123"
+>
+  <Image
+    aspectRatio={0.8}
+    fill={true}
+    style={
+      Object {
+        "marginBottom": 10,
+        "width": "100%",
+      }
+    }
+    uri="//www.thetimes.co.uk/imageserver/image/%2Fmethode%2Ftimes%2Fprod%2Fweb%2Fbin%2F5a14c64e-06db-11e9-abe2-4909b2eb0130.jpg?crop=1434%2C1792%2C627%2C0"
+  />
+  <View
+    style={
+      Object {
+        "flex": 1,
+      }
+    }
+  >
+    <View>
+      <View>
+        <Text
+          accessibilityRole="header"
+          aria-level="3"
+          style={
+            Object {
+              "color": "#333333",
+              "fontFamily": "TimesModern-Bold",
+              "fontSize": 24,
+              "fontWeight": "900",
+              "includeFontPadding": false,
+              "lineHeight": 24,
+              "marginBottom": 0,
+            }
+          }
+        >
+          This is tile headline
+        </Text>
+      </View>
+    </View>
+  </View>
+</Link>
+`;
+
+exports[`tile e front landscape small 1`] = `
+<Link
+  linkStyle={
+    Array [
+      undefined,
+      undefined,
+    ]
+  }
+  url="/article/123"
+>
+  <Image
+    aspectRatio={0.8}
+    fill={true}
+    uri="//www.thetimes.co.uk/imageserver/image/%2Fmethode%2Ftimes%2Fprod%2Fweb%2Fbin%2F5a14c64e-06db-11e9-abe2-4909b2eb0130.jpg?crop=1434%2C1792%2C627%2C0"
+  />
+  <View
+    style={
+      Object {
+        "flex": 1,
+      }
+    }
+  >
+    <View>
+      <View>
+        <Text
+          accessibilityRole="header"
+          aria-level="3"
+          style={
+            Object {
+              "color": "#333333",
+              "fontFamily": "TimesModern-Bold",
+              "fontSize": 22,
+              "fontWeight": "900",
+              "includeFontPadding": false,
+              "lineHeight": 27,
+              "marginBottom": 10,
+            }
+          }
+        >
+          This is tile headline
+        </Text>
+      </View>
+    </View>
+  </View>
+</Link>
+`;
+
+exports[`tile e front landscape wide 1`] = `
+<Link
+  linkStyle={
+    Array [
+      undefined,
+      Object {
+        "flex": 1,
+        "padding": 10,
+        "paddingRight": 0,
+      },
+    ]
+  }
+  url="/article/123"
+>
+  <Image
+    aspectRatio={0.8}
+    fill={true}
+    style={
+      Object {
+        "marginBottom": 10,
+        "width": "100%",
+      }
+    }
+    uri="//www.thetimes.co.uk/imageserver/image/%2Fmethode%2Ftimes%2Fprod%2Fweb%2Fbin%2F5a14c64e-06db-11e9-abe2-4909b2eb0130.jpg?crop=1434%2C1792%2C627%2C0"
+  />
+  <View
+    style={
+      Object {
+        "flex": 1,
+      }
+    }
+  >
+    <View>
+      <View>
+        <Text
+          accessibilityRole="header"
+          aria-level="3"
+          style={
+            Object {
+              "color": "#333333",
+              "fontFamily": "TimesModern-Bold",
+              "fontSize": 20,
+              "fontWeight": "900",
+              "includeFontPadding": false,
+              "lineHeight": 20,
+              "marginBottom": 0,
+            }
+          }
+        >
+          This is tile headline
+        </Text>
+      </View>
+    </View>
+  </View>
+</Link>
+`;
+
+exports[`tile e front portrait huge 1`] = `
+<Link
+  linkStyle={
+    Array [
+      undefined,
+      Object {
+        "flex": 1,
+        "padding": 10,
+        "paddingRight": 0,
+      },
+    ]
+  }
+  url="/article/123"
+>
+  <Image
+    aspectRatio={0.8}
+    fill={true}
+    style={
+      Object {
+        "marginBottom": 10,
+        "width": "100%",
+      }
+    }
+    uri="//www.thetimes.co.uk/imageserver/image/%2Fmethode%2Ftimes%2Fprod%2Fweb%2Fbin%2F5a14c64e-06db-11e9-abe2-4909b2eb0130.jpg?crop=1434%2C1792%2C627%2C0"
+  />
+  <View
+    style={
+      Object {
+        "flex": 1,
+      }
+    }
+  >
+    <View>
+      <View>
+        <Text
+          accessibilityRole="header"
+          aria-level="3"
+          style={
+            Object {
+              "color": "#333333",
+              "fontFamily": "TimesModern-Bold",
+              "fontSize": 30,
+              "fontWeight": "900",
+              "includeFontPadding": false,
+              "lineHeight": 30,
+              "marginBottom": 10,
+            }
+          }
+        >
+          This is tile headline
+        </Text>
+      </View>
+    </View>
+  </View>
+</Link>
+`;
+
+exports[`tile e front portrait medium 1`] = `
+<Link
+  linkStyle={
+    Array [
+      undefined,
+      Object {
+        "flex": 1,
+        "padding": 10,
+        "paddingRight": 0,
+      },
+    ]
+  }
+  url="/article/123"
+>
+  <Image
+    aspectRatio={0.8}
+    fill={true}
+    style={
+      Object {
+        "marginBottom": 10,
+        "width": "100%",
+      }
+    }
+    uri="//www.thetimes.co.uk/imageserver/image/%2Fmethode%2Ftimes%2Fprod%2Fweb%2Fbin%2F5a14c64e-06db-11e9-abe2-4909b2eb0130.jpg?crop=1434%2C1792%2C627%2C0"
+  />
+  <View
+    style={
+      Object {
+        "flex": 1,
+      }
+    }
+  >
+    <View>
+      <View>
+        <Text
+          accessibilityRole="header"
+          aria-level="3"
+          style={
+            Object {
+              "color": "#333333",
+              "fontFamily": "TimesModern-Bold",
+              "fontSize": 24,
+              "fontWeight": "900",
+              "includeFontPadding": false,
+              "lineHeight": 24,
+              "marginBottom": 10,
+            }
+          }
+        >
+          This is tile headline
+        </Text>
+      </View>
+    </View>
+  </View>
+</Link>
+`;
+
+exports[`tile e front portrait small 1`] = `
+<Link
+  linkStyle={
+    Array [
+      undefined,
+      undefined,
+    ]
+  }
+  url="/article/123"
+>
+  <Image
+    aspectRatio={0.8}
+    fill={true}
+    uri="//www.thetimes.co.uk/imageserver/image/%2Fmethode%2Ftimes%2Fprod%2Fweb%2Fbin%2F5a14c64e-06db-11e9-abe2-4909b2eb0130.jpg?crop=1434%2C1792%2C627%2C0"
+  />
+  <View
+    style={
+      Object {
+        "flex": 1,
+      }
+    }
+  >
+    <View>
+      <View>
+        <Text
+          accessibilityRole="header"
+          aria-level="3"
+          style={
+            Object {
+              "color": "#333333",
+              "fontFamily": "TimesModern-Bold",
+              "fontSize": 22,
+              "fontWeight": "900",
+              "includeFontPadding": false,
+              "lineHeight": 27,
+              "marginBottom": 10,
+            }
+          }
+        >
+          This is tile headline
+        </Text>
+      </View>
+    </View>
+  </View>
+</Link>
+`;
+
+exports[`tile e front portrait wide 1`] = `
+<Link
+  linkStyle={
+    Array [
+      undefined,
+      Object {
+        "flex": 1,
+        "padding": 10,
+        "paddingRight": 0,
+      },
+    ]
+  }
+  url="/article/123"
+>
+  <Image
+    aspectRatio={0.8}
+    fill={true}
+    style={
+      Object {
+        "marginBottom": 10,
+        "width": "100%",
+      }
+    }
+    uri="//www.thetimes.co.uk/imageserver/image/%2Fmethode%2Ftimes%2Fprod%2Fweb%2Fbin%2F5a14c64e-06db-11e9-abe2-4909b2eb0130.jpg?crop=1434%2C1792%2C627%2C0"
+  />
+  <View
+    style={
+      Object {
+        "flex": 1,
+      }
+    }
+  >
+    <View>
+      <View>
+        <Text
+          accessibilityRole="header"
+          aria-level="3"
+          style={
+            Object {
+              "color": "#333333",
+              "fontFamily": "TimesModern-Bold",
+              "fontSize": 30,
+              "fontWeight": "900",
+              "includeFontPadding": false,
+              "lineHeight": 30,
+              "marginBottom": 10,
+            }
+          }
+        >
+          This is tile headline
+        </Text>
+      </View>
+    </View>
+  </View>
+</Link>
+`;
