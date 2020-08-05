@@ -15,7 +15,6 @@ yarn.lock
 *.log
 
 # specific to root
-storybook-native
 *.yml
 *.html
 *.sh
