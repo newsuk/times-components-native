@@ -119,6 +119,13 @@ const ArticleWithContent = (props) => {
     [footer],
   );
 
+  const renderItem = (item) =>
+    narrowContent ? (
+      <View style={styles.keylineWrapper}>{item}</View>
+    ) : (
+      { item }
+    );
+
   const iosScroller =
     // FIXME: remove this when ios memory leaks are resolved
     useCallback(
@@ -126,13 +133,7 @@ const ArticleWithContent = (props) => {
         <FlatList
           {...scrollprops}
           data={scrollprops.data.map((item, index) => Child({ item, index }))}
-          renderItem={({ item }) =>
-            narrowContent ? (
-              <View style={styles.keylineWrapper}> {item}</View>
-            ) : (
-              { item }
-            )
-          }
+          renderItem={({ item }) => renderItem(item)}
         />
       ),
       [Child],
@@ -151,13 +152,7 @@ const ArticleWithContent = (props) => {
           ListFooterComponent={Loading}
           onEndReached={onEndReached}
           showsVerticalScrollIndicator={!!isTablet}
-          renderItem={({ Child }) =>
-            narrowContent ? (
-              <View style={styles.keylineWrapper}>{Child}</View>
-            ) : (
-              { Child }
-            )
-          }
+          renderItem={({ Child }) => renderItem(Child)}
           onViewableItemsChanged={onViewableItemsChanged}
           removeClippedSubviews
           keyExtractor={(item, index) => index.toString()}
