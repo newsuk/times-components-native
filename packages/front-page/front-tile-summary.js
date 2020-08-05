@@ -5,10 +5,15 @@ import {
   ArticleSummaryStrapline,
 } from "@times-components-native/article-summary";
 
-import {
-  FrontArticleSummary,
-  FrontArticleSummaryContent,
-} from "@times-components-native/front-page";
+import { Text, View } from "react-native";
+import styles from "@times-components-native/front-page/styles";
+import ArticleByline from "@times-components-native/article-byline";
+import { ArticleSummaryContent } from "@times-components-native/article-summary";
+import renderTrees from "@times-components-native/markup-forest/src/markup-forest";
+import { ResponsiveContext } from "@times-components-native/responsive";
+import stylesFactory from "./styles";
+import frontRenderers from "./front-renderer";
+import { indent } from "./indent";
 
 class FrontTileSummary extends Component {
   constructor(props) {
@@ -18,7 +23,7 @@ class FrontTileSummary extends Component {
     this.renderStrapline = this.renderStrapline.bind(this);
   }
 
-  renderContent() {
+  renderContent(breakpoint) {
     const {
       summary,
       summaryStyle,
@@ -26,12 +31,17 @@ class FrontTileSummary extends Component {
       linesOfTeaserToRender,
     } = this.props;
 
+    if (!summary) return null;
+    const styles = stylesFactory(breakpoint);
+
+    const indentedAst = indent(summary);
     return (
-      <FrontArticleSummaryContent
-        ast={summary}
-        style={summaryStyle}
+      <ArticleSummaryContent
+        ast={indentedAst}
+        style={[summaryStyle, styles.textPortrait]}
         whiteSpaceHeight={whiteSpaceHeight}
         initialLines={linesOfTeaserToRender}
+        renderAst={(ast) => renderTrees(ast, frontRenderers)}
       />
     );
   }
@@ -55,23 +65,38 @@ class FrontTileSummary extends Component {
 
   renderStrapline() {
     const { strapline, straplineStyle } = this.props;
+    if (!strapline) return null;
 
     return (
       <ArticleSummaryStrapline strapline={strapline} style={straplineStyle} />
     );
   }
 
-  render() {
-    const { bylines, bylineStyle, strapline, style, summary } = this.props;
+  renderByline() {
+    const { bylines: ast, bylineStyle } = this.props;
+
+    if (!ast || ast.length === 0) return null;
 
     return (
-      <FrontArticleSummary
-        bylineProps={bylines ? { ast: bylines, bylineStyle } : null}
-        content={summary ? this.renderContent() : undefined}
-        headline={this.renderHeadline()}
-        strapline={strapline ? this.renderStrapline() : undefined}
-        style={style}
-      />
+      <Text style={styles.bylineContainer}>
+        <ArticleByline ast={ast} bylineStyle={bylineStyle} />
+      </Text>
+    );
+  }
+
+  render() {
+    const { style } = this.props;
+    return (
+      <ResponsiveContext.Consumer>
+        {({ breakpoint }) => (
+          <View style={style}>
+            {this.renderHeadline()}
+            {this.renderStrapline()}
+            {this.renderByline()}
+            {this.renderContent(breakpoint)}
+          </View>
+        )}
+      </ResponsiveContext.Consumer>
     );
   }
 }

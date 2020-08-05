@@ -2,7 +2,8 @@
 import React from "react";
 import PropTypes from "prop-types";
 import editionBreakpoints from "@times-components-native/styleguide";
-import { getTileStrapline, TileLink, FrontTileSummary } from "../shared";
+import { FrontTileSummary } from "@times-components-native/front-page";
+import { getTileStrapline, TileLink } from "../shared";
 import stylesFactory from "./styles";
 import WithoutWhiteSpace from "../shared/without-white-space";
 import PositionedTileStar from "../shared/positioned-tile-star";

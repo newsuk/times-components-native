@@ -2,10 +2,10 @@
 import React from "react";
 import PropTypes from "prop-types";
 import editionBreakpoints from "@times-components-native/styleguide";
+import { FrontTileSummary } from "@times-components-native/front-page";
 import {
   getTileImage,
   TileLink,
-  FrontTileSummary,
   withTileTracking,
   TileImage,
   getTileSummary,
