@@ -111,30 +111,32 @@ class ArticlePage extends Component {
                   onTopicPress={onTopicPress}
                   topics={topics}
                 />
-                <ArticleSkeleton
-                  adConfig={adConfig}
-                  adPosition={adPosition}
-                  analyticsStream={analyticsStream}
-                  data={article}
-                  dropCapFont={dropCapFont}
-                  Header={this.renderHeader}
-                  interactiveConfig={interactiveConfig}
-                  isTablet={isTablet}
-                  onCommentGuidelinesPress={onCommentGuidelinesPress}
-                  onCommentsPress={onCommentsPress}
-                  onImagePress={onImagePress}
-                  onLinkPress={onLinkPress}
-                  onRelatedArticlePress={onRelatedArticlePress}
-                  onTopicPress={onTopicPress}
-                  onTwitterLinkPress={onTwitterLinkPress}
-                  onVideoPress={onVideoPress}
-                  onViewableItemsChanged={
-                    onViewed ? this.onViewableItemsChanged : null
-                  }
-                  narrowContent={true}
-                  receiveChildList={receiveChildList}
-                  scale={scale}
-                />
+                <View style={styles.contentContainer}>
+                  <ArticleSkeleton
+                    adConfig={adConfig}
+                    adPosition={adPosition}
+                    analyticsStream={analyticsStream}
+                    data={article}
+                    dropCapFont={dropCapFont}
+                    Header={this.renderHeader}
+                    interactiveConfig={interactiveConfig}
+                    isTablet={isTablet}
+                    onCommentGuidelinesPress={onCommentGuidelinesPress}
+                    onCommentsPress={onCommentsPress}
+                    onImagePress={onImagePress}
+                    onLinkPress={onLinkPress}
+                    onRelatedArticlePress={onRelatedArticlePress}
+                    onTopicPress={onTopicPress}
+                    onTwitterLinkPress={onTwitterLinkPress}
+                    onVideoPress={onVideoPress}
+                    onViewableItemsChanged={
+                      onViewed ? this.onViewableItemsChanged : null
+                    }
+                    narrowContent={true}
+                    receiveChildList={receiveChildList}
+                    scale={scale}
+                  />
+                </View>
               </View>
             )}
           </Context.Consumer>

@@ -8,6 +8,10 @@ const Styles = {
     marginRight: "auto",
     width: "100%",
   },
+  contentContainer: {
+    marginLeft: "25%",
+    position: "relative",
+  },
   articleHeadline: {
     ...fontFactory({
       font: "headline",
@@ -25,9 +29,11 @@ const Styles = {
     marginTop: "auto",
   },
   header: {
-    paddingTop: spacing(8),
     paddingBottom: spacing(4),
     paddingRight: spacing(5),
+    marginTop: spacing(8),
+    borderLeftWidth: 1,
+    borderColor: colours.functional.keyline,
   },
   container: {
     paddingLeft: spacing(2),
@@ -59,10 +65,7 @@ const Styles = {
     paddingTop: spacing(8),
     width: "25%",
     zIndex: 1,
-    borderRightWidth: 1,
-    borderColor: colours.functional.keyline,
     height: "100%",
-    paddingRight: spacing(2),
     position: "absolute",
   },
   authorContainer: {
