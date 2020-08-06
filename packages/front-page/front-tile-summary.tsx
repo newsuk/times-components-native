@@ -15,7 +15,7 @@ interface Props {
   headlineStyle?: any;
   strapline?: string;
   straplineStyle?: any;
-  style: any;
+  containerStyle?: any;
   summary: Markup;
   summaryStyle?: any;
   tile: any;
@@ -90,12 +90,12 @@ class FrontTileSummary extends Component<Props> {
   }
 
   render() {
-    const { style } = this.props;
+    const { containerStyle } = this.props;
     return (
       <ResponsiveContext.Consumer>
         {(context) => {
           return (
-            <View style={style}>
+            <View style={containerStyle}>
               {this.renderHeadline()}
               {this.renderStrapline()}
               {

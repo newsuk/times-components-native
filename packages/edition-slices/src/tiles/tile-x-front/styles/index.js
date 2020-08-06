@@ -6,16 +6,19 @@ import {
   globalSpacingStyles,
 } from "@times-components-native/styleguide";
 
-const fontSizeLandscapeResolver = {
-  [editionBreakpoints.medium]: 40,
-  [editionBreakpoints.wide]: 40,
-  [editionBreakpoints.huge]: 50,
-};
-
-const fontSizePortraitResolver = {
-  [editionBreakpoints.medium]: 40,
-  [editionBreakpoints.wide]: 50,
-  [editionBreakpoints.huge]: 50,
+const fontSizeResolver = {
+  [editionBreakpoints.medium]: {
+    landscape: 40,
+    portrait: 40,
+  },
+  [editionBreakpoints.wide]: {
+    landscape: 40,
+    portrait: 50,
+  },
+  [editionBreakpoints.huge]: {
+    landscape: 50,
+    portrait: 50,
+  },
 };
 
 export default (breakpoint) => ({
@@ -27,14 +30,14 @@ export default (breakpoint) => ({
   headlineLandscape: {
     ...globalSpacingStyles.tabletHeadline,
     fontFamily: fonts.headline,
-    fontSize: fontSizeLandscapeResolver[breakpoint],
-    lineHeight: fontSizeLandscapeResolver[breakpoint],
+    fontSize: fontSizeResolver[breakpoint].landscape,
+    lineHeight: fontSizeResolver[breakpoint].landscape,
   },
   headlinePortrait: {
     ...globalSpacingStyles.tabletHeadline,
     fontFamily: fonts.headline,
-    fontSize: fontSizePortraitResolver[breakpoint],
-    lineHeight: fontSizePortraitResolver[breakpoint],
+    fontSize: fontSizeResolver[breakpoint].portrait,
+    lineHeight: fontSizeResolver[breakpoint].portrait,
   },
   strapline: {
     fontFamily: fonts.headlineRegular,

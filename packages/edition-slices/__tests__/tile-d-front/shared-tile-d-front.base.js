@@ -5,10 +5,6 @@ import { TileDFront } from "../../src/tiles";
 
 export default () => {
   describe("tile d front", () => {
-    it("small", () => {
-      testTile(TileDFront, editionBreakpoints.small);
-    });
-
     it("medium", () => {
       testTile(TileDFront, editionBreakpoints.medium);
     });

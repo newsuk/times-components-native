@@ -10,7 +10,7 @@ import { Markup } from "@times-components-native/fixture-generator/src/types";
 
 interface Props {
   summary: Markup;
-  summaryStyle: any;
+  summaryStyle?: any;
   whiteSpaceHeight: number | undefined;
   linesOfTeaserToRender: number | undefined;
 }

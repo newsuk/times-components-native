@@ -4,28 +4,34 @@ import styleguide, {
 
 const { colours, fonts, spacing } = styleguide();
 
-const fontSizeLandscapeResolver = {
-  [editionBreakpoints.medium]: 14,
-  [editionBreakpoints.wide]: 14,
-  [editionBreakpoints.huge]: 16,
+const fontSizeResolver = {
+  [editionBreakpoints.medium]: {
+    landscape: 14,
+    portrait: 14,
+  },
+  [editionBreakpoints.wide]: {
+    landscape: 14,
+    portrait: 16,
+  },
+  [editionBreakpoints.huge]: {
+    landscape: 16,
+    portrait: 16,
+  },
 };
 
-const fontSizePortraitResolver = {
-  [editionBreakpoints.medium]: 14,
-  [editionBreakpoints.wide]: 16,
-  [editionBreakpoints.huge]: 16,
-};
-
-const lineHeightLandscapeResolver = {
-  [editionBreakpoints.medium]: 18,
-  [editionBreakpoints.wide]: 18,
-  [editionBreakpoints.huge]: 20,
-};
-
-const lineHeightPortraitResolver = {
-  [editionBreakpoints.medium]: 18,
-  [editionBreakpoints.wide]: 20,
-  [editionBreakpoints.huge]: 20,
+const lineHeightResolver = {
+  [editionBreakpoints.medium]: {
+    landscape: 18,
+    portrait: 18,
+  },
+  [editionBreakpoints.wide]: {
+    landscape: 18,
+    portrait: 20,
+  },
+  [editionBreakpoints.huge]: {
+    landscape: 20,
+    portrait: 20,
+  },
 };
 
 const textStyle = {
@@ -36,13 +42,13 @@ const textStyle = {
 export default (breakpoint) => ({
   textLandscape: {
     ...textStyle,
-    fontSize: fontSizeLandscapeResolver[breakpoint],
-    lineHeight: lineHeightLandscapeResolver[breakpoint],
+    fontSize: fontSizeResolver[breakpoint].landscape,
+    lineHeight: lineHeightResolver[breakpoint].landscape,
   },
   textPortrait: {
     ...textStyle,
-    fontSize: fontSizePortraitResolver[breakpoint],
-    lineHeight: lineHeightPortraitResolver[breakpoint],
+    fontSize: fontSizeResolver[breakpoint].portrait,
+    lineHeight: lineHeightResolver[breakpoint].portrait,
   },
   bylineContainer: { marginBottom: 5 },
 });

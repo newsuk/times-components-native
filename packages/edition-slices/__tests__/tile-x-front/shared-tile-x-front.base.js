@@ -6,12 +6,6 @@ import { TileXFront } from "../../src/tiles";
 export default () => {
   describe("tile x front", () => {
     describe("landscape", () => {
-      it("small", () => {
-        testTile(TileXFront, editionBreakpoints.small, undefined, {
-          orientation: "landscape",
-        });
-      });
-
       it("medium", () => {
         testTile(TileXFront, editionBreakpoints.medium, undefined, {
           orientation: "landscape",
@@ -26,24 +20,12 @@ export default () => {
 
       it("huge", () => {
         testTile(TileXFront, editionBreakpoints.huge, undefined, {
-          orientation: "landscape",
-        });
-      });
-
-      it("without breakpoint should be like small", () => {
-        testTile(TileXFront, undefined, undefined, {
           orientation: "landscape",
         });
       });
     });
 
     describe("portrait", () => {
-      it("small", () => {
-        testTile(TileXFront, editionBreakpoints.small, undefined, {
-          orientation: "portrait",
-        });
-      });
-
       it("medium", () => {
         testTile(TileXFront, editionBreakpoints.medium, undefined, {
           orientation: "portrait",
@@ -58,12 +40,6 @@ export default () => {
 
       it("huge", () => {
         testTile(TileXFront, editionBreakpoints.huge, undefined, {
-          orientation: "portrait",
-        });
-      });
-
-      it("without breakpoint should be like small", () => {
-        testTile(TileXFront, undefined, undefined, {
           orientation: "portrait",
         });
       });

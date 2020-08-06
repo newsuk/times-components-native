@@ -58,7 +58,7 @@ const TileEFront = ({
             }
             summary={showSummary && summary}
             summaryStyle={styles.summary}
-            style={styles.summaryContainer}
+            containerStyle={styles.summaryContainer}
             tile={tile}
             whiteSpaceHeight={whiteSpaceHeight}
             linesOfTeaserToRender={1}

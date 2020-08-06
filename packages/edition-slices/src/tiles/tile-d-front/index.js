@@ -46,7 +46,7 @@ const TileDFront = ({
         render={(whiteSpaceHeight) => (
           <FrontTileSummary
             headlineStyle={styles.headline}
-            style={styles.summaryContainer}
+            containerStyle={styles.summaryContainer}
             summaryStyle={styles.summary}
             tile={tile}
             bylines={tile.article.bylines}
