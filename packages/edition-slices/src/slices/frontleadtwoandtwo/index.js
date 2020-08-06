@@ -65,7 +65,7 @@ function renderMedium(props, breakpoint, orientation) {
           tileName="support2"
           orientation={orientation}
           showSummary={orientation === "portrait"}
-          showByline={orientation === "portrait" || breakpoint === "huge"}
+          showByline={orientation === "portrait"}
         />
       }
       breakpoint={breakpoint}

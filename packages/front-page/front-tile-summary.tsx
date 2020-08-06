@@ -12,17 +12,17 @@ import { ResponsiveContext } from "@times-components-native/responsive";
 import { Markup } from "@times-components-native/fixture-generator/src/types";
 
 interface Props {
-  bylineStyle: any;
-  headlineStyle: any;
-  strapline: string;
-  straplineStyle: any;
+  bylineStyle?: any;
+  headlineStyle?: any;
+  strapline?: string;
+  straplineStyle?: any;
   style: any;
   summary: Markup;
-  summaryStyle: any;
+  summaryStyle?: any;
   tile: any;
-  bylines: Markup;
+  bylines?: Markup;
   whiteSpaceHeight: number;
-  linesOfTeaserToRender: number | undefined;
+  linesOfTeaserToRender?: number | undefined;
 }
 
 class FrontTileSummary extends Component<Props> {

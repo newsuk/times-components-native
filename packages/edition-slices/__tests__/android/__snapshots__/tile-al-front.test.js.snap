@@ -48,7 +48,13 @@ exports[`tile al front huge 1`] = `
         >
           This is tile headline
         </Text>
-        <Text>
+        <Text
+          style={
+            Object {
+              "marginBottom": 5,
+            }
+          }
+        >
           <Text
             style={
               Object {
@@ -150,7 +156,13 @@ exports[`tile al front medium 1`] = `
         >
           This is tile headline
         </Text>
-        <Text>
+        <Text
+          style={
+            Object {
+              "marginBottom": 5,
+            }
+          }
+        >
           <Text
             style={
               Object {
@@ -252,7 +264,13 @@ exports[`tile al front small 1`] = `
         >
           This is tile headline
         </Text>
-        <Text>
+        <Text
+          style={
+            Object {
+              "marginBottom": 5,
+            }
+          }
+        >
           <Text
             style={
               Object {
@@ -354,7 +372,13 @@ exports[`tile al front wide 1`] = `
         >
           This is tile headline
         </Text>
-        <Text>
+        <Text
+          style={
+            Object {
+              "marginBottom": 5,
+            }
+          }
+        >
           <Text
             style={
               Object {
@@ -456,7 +480,13 @@ exports[`tile al front without breakpoint should be like small 1`] = `
         >
           This is tile headline
         </Text>
-        <Text>
+        <Text
+          style={
+            Object {
+              "marginBottom": 5,
+            }
+          }
+        >
           <Text
             style={
               Object {

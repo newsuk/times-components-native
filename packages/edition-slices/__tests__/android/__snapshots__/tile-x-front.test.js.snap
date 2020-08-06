@@ -54,7 +54,13 @@ exports[`tile x front landscape huge 1`] = `
         >
           Three Conservative MPs resign
         </Text>
-        <Text>
+        <Text
+          style={
+            Object {
+              "marginBottom": 5,
+            }
+          }
+        >
           <Text
             style={
               Object {
@@ -174,7 +180,13 @@ exports[`tile x front landscape medium 1`] = `
         >
           Three Conservative MPs resign
         </Text>
-        <Text>
+        <Text
+          style={
+            Object {
+              "marginBottom": 5,
+            }
+          }
+        >
           <Text
             style={
               Object {
@@ -294,7 +306,13 @@ exports[`tile x front landscape small 1`] = `
         >
           Three Conservative MPs resign
         </Text>
-        <Text>
+        <Text
+          style={
+            Object {
+              "marginBottom": 5,
+            }
+          }
+        >
           <Text
             style={
               Object {
@@ -414,7 +432,13 @@ exports[`tile x front landscape wide 1`] = `
         >
           Three Conservative MPs resign
         </Text>
-        <Text>
+        <Text
+          style={
+            Object {
+              "marginBottom": 5,
+            }
+          }
+        >
           <Text
             style={
               Object {
@@ -534,7 +558,13 @@ exports[`tile x front landscape without breakpoint should be like small 1`] = `
         >
           Three Conservative MPs resign
         </Text>
-        <Text>
+        <Text
+          style={
+            Object {
+              "marginBottom": 5,
+            }
+          }
+        >
           <Text
             style={
               Object {
@@ -654,7 +684,13 @@ exports[`tile x front portrait huge 1`] = `
         >
           Three Conservative MPs resign
         </Text>
-        <Text>
+        <Text
+          style={
+            Object {
+              "marginBottom": 5,
+            }
+          }
+        >
           <Text
             style={
               Object {
@@ -774,7 +810,13 @@ exports[`tile x front portrait medium 1`] = `
         >
           Three Conservative MPs resign
         </Text>
-        <Text>
+        <Text
+          style={
+            Object {
+              "marginBottom": 5,
+            }
+          }
+        >
           <Text
             style={
               Object {
@@ -894,7 +936,13 @@ exports[`tile x front portrait small 1`] = `
         >
           Three Conservative MPs resign
         </Text>
-        <Text>
+        <Text
+          style={
+            Object {
+              "marginBottom": 5,
+            }
+          }
+        >
           <Text
             style={
               Object {
@@ -1014,7 +1062,13 @@ exports[`tile x front portrait wide 1`] = `
         >
           Three Conservative MPs resign
         </Text>
-        <Text>
+        <Text
+          style={
+            Object {
+              "marginBottom": 5,
+            }
+          }
+        >
           <Text
             style={
               Object {
@@ -1134,7 +1188,13 @@ exports[`tile x front portrait without breakpoint should be like small 1`] = `
         >
           Three Conservative MPs resign
         </Text>
-        <Text>
+        <Text
+          style={
+            Object {
+              "marginBottom": 5,
+            }
+          }
+        >
           <Text
             style={
               Object {

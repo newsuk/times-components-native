@@ -1892,7 +1892,7 @@ exports[`51. front lead two no pic and two - huge 1`] = `
           <TileEFront
             breakpoint="huge"
             orientation="landscape"
-            showByline={true}
+            showByline={false}
             showSummary={false}
             tileName="support2"
           />
