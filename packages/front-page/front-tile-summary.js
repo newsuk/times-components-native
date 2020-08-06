@@ -29,7 +29,7 @@ class FrontTileSummary extends Component {
     return (
       <FrontArticleSummaryContent
         summary={summary}
-        style={summaryStyle}
+        summaryStyle={summaryStyle}
         whiteSpaceHeight={whiteSpaceHeight}
         initialLines={linesOfTeaserToRender}
       />

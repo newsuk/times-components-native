@@ -153,15 +153,15 @@ exports[`6. front lead two no pic and two - medium - portrait 1`] = `
   </View>
   <View />
   <View>
-    <Text>
-      support-1
-    </Text>
-    <View />
     <View>
       <Text>
         support-2
       </Text>
     </View>
+    <View />
+    <Text>
+      support-1
+    </Text>
   </View>
 </View>
 `;
@@ -183,15 +183,15 @@ exports[`7. front lead two no pic and two - wide - portrait 1`] = `
   </View>
   <View />
   <View>
-    <Text>
-      support-1
-    </Text>
-    <View />
     <View>
       <Text>
         support-2
       </Text>
     </View>
+    <View />
+    <Text>
+      support-1
+    </Text>
   </View>
 </View>
 `;
@@ -213,15 +213,15 @@ exports[`8. front lead two no pic and two - huge - portrait 1`] = `
   </View>
   <View />
   <View>
-    <Text>
-      support-1
-    </Text>
-    <View />
     <View>
       <Text>
         support-2
       </Text>
     </View>
+    <View />
+    <Text>
+      support-1
+    </Text>
   </View>
 </View>
 `;

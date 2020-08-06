@@ -43,7 +43,7 @@ const FrontArticleSummaryContent = (props) => {
 FrontArticleSummaryContent.propTypes = {
   summary: PropTypes.arrayOf(PropTypes.object),
   className: PropTypes.string,
-  style: PropTypes.shape({}),
+  summaryStyle: PropTypes.shape({}),
   whiteSpaceHeight: PropTypes.number,
   linesOfTeaserToRender: PropTypes.number,
 };

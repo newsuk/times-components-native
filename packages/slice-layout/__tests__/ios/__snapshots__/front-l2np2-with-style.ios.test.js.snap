@@ -474,18 +474,6 @@ exports[`6. front lead two no pic and two - medium - portrait 1`] = `
       }
     }
   >
-    <Text>
-      support-1
-    </Text>
-    <View
-      style={
-        Object {
-          "borderBottomWidth": 1,
-          "borderColor": "#999999",
-          "borderStyle": "solid",
-        }
-      }
-    />
     <View
       style={
         Object {
@@ -497,6 +485,18 @@ exports[`6. front lead two no pic and two - medium - portrait 1`] = `
         support-2
       </Text>
     </View>
+    <View
+      style={
+        Object {
+          "borderBottomWidth": 1,
+          "borderColor": "#999999",
+          "borderStyle": "solid",
+        }
+      }
+    />
+    <Text>
+      support-1
+    </Text>
   </View>
 </View>
 `;
@@ -569,18 +569,6 @@ exports[`7. front lead two no pic and two - wide - portrait 1`] = `
       }
     }
   >
-    <Text>
-      support-1
-    </Text>
-    <View
-      style={
-        Object {
-          "borderBottomWidth": 1,
-          "borderColor": "#999999",
-          "borderStyle": "solid",
-        }
-      }
-    />
     <View
       style={
         Object {
@@ -592,6 +580,18 @@ exports[`7. front lead two no pic and two - wide - portrait 1`] = `
         support-2
       </Text>
     </View>
+    <View
+      style={
+        Object {
+          "borderBottomWidth": 1,
+          "borderColor": "#999999",
+          "borderStyle": "solid",
+        }
+      }
+    />
+    <Text>
+      support-1
+    </Text>
   </View>
 </View>
 `;
@@ -664,18 +664,6 @@ exports[`8. front lead two no pic and two - huge - portrait 1`] = `
       }
     }
   >
-    <Text>
-      support-1
-    </Text>
-    <View
-      style={
-        Object {
-          "borderBottomWidth": 1,
-          "borderColor": "#999999",
-          "borderStyle": "solid",
-        }
-      }
-    />
     <View
       style={
         Object {
@@ -687,6 +675,18 @@ exports[`8. front lead two no pic and two - huge - portrait 1`] = `
         support-2
       </Text>
     </View>
+    <View
+      style={
+        Object {
+          "borderBottomWidth": 1,
+          "borderColor": "#999999",
+          "borderStyle": "solid",
+        }
+      }
+    />
+    <Text>
+      support-1
+    </Text>
   </View>
 </View>
 `;

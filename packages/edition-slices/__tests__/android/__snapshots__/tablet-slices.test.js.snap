@@ -608,11 +608,6 @@ exports[`17. front lead two no pic and two - medium 1`] = `
       <View>
         <TileEFront
           breakpoint="medium"
-          containerStyle={
-            Object {
-              "paddingTop": 0,
-            }
-          }
           orientation="landscape"
           showByline={false}
           showSummary={false}
@@ -1238,11 +1233,6 @@ exports[`34. front lead two no pic and two - wide 1`] = `
       <View>
         <TileEFront
           breakpoint="wide"
-          containerStyle={
-            Object {
-              "paddingTop": 0,
-            }
-          }
           orientation="landscape"
           showByline={false}
           showSummary={false}
@@ -1901,11 +1891,6 @@ exports[`51. front lead two no pic and two - huge 1`] = `
         <View>
           <TileEFront
             breakpoint="huge"
-            containerStyle={
-              Object {
-                "paddingTop": 0,
-              }
-            }
             orientation="landscape"
             showByline={true}
             showSummary={false}

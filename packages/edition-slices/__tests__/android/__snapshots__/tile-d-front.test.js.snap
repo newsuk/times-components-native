@@ -6,7 +6,6 @@ exports[`tile d front huge 1`] = `
     Object {
       "flexDirection": "row",
       "padding": 10,
-      "paddingTop": 0,
     }
   }
   url="/article/123"
@@ -91,6 +90,7 @@ exports[`tile d front huge 1`] = `
               "fontSize": undefined,
               "lineHeight": undefined,
               "marginBottom": 10,
+              "textAlign": "justify",
             }
           }
         >
@@ -112,7 +112,6 @@ exports[`tile d front medium 1`] = `
     Object {
       "flexDirection": "row",
       "padding": 10,
-      "paddingTop": 0,
     }
   }
   url="/article/123"
@@ -197,6 +196,7 @@ exports[`tile d front medium 1`] = `
               "fontSize": undefined,
               "lineHeight": undefined,
               "marginBottom": 10,
+              "textAlign": "justify",
             }
           }
         >
@@ -218,7 +218,6 @@ exports[`tile d front small 1`] = `
     Object {
       "flexDirection": "row",
       "padding": 10,
-      "paddingTop": 0,
     }
   }
   url="/article/123"
@@ -303,6 +302,7 @@ exports[`tile d front small 1`] = `
               "fontSize": undefined,
               "lineHeight": undefined,
               "marginBottom": 10,
+              "textAlign": "justify",
             }
           }
         >
@@ -324,7 +324,6 @@ exports[`tile d front wide 1`] = `
     Object {
       "flexDirection": "row",
       "padding": 10,
-      "paddingTop": 0,
     }
   }
   url="/article/123"
@@ -409,6 +408,7 @@ exports[`tile d front wide 1`] = `
               "fontSize": undefined,
               "lineHeight": undefined,
               "marginBottom": 10,
+              "textAlign": "justify",
             }
           }
         >

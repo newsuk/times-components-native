@@ -12,7 +12,6 @@ import MagazineCover from "./magazine-cover";
 import Slice from "./slice";
 import styleFactory from "./styles";
 import { prepareSlicesForRender, createPuzzleData } from "./utils";
-// import FrontLeadTwoAndTwo from "@times-components-native/edition-slices/src/slices/frontleadtwoandtwo";
 
 const styles = styleFactory();
 
@@ -103,8 +102,6 @@ class Section extends Component {
       <Responsive>
         <ResponsiveContext.Consumer>
           {({ isTablet, editionBreakpoint }) => {
-            // TODO remove before merging
-            // return <FrontLeadTwoAndTwo></FrontLeadTwoAndTwo>;
             const data = isPuzzle
               ? createPuzzleData(slices, editionBreakpoint)
               : prepareSlicesForRender(slices);

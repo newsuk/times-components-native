@@ -18,7 +18,6 @@ const TileEFront = ({
   tile,
   orientation,
   showSummary,
-  containerStyle,
   showByline,
   breakpoint = editionBreakpoints.small,
 }) => {
@@ -36,11 +35,7 @@ const TileEFront = ({
   const summary = getTileSummary(tile, 1000);
 
   return (
-    <TileLink
-      onPress={onPress}
-      style={[containerStyle, styles.container]}
-      tile={tile}
-    >
+    <TileLink onPress={onPress} style={[styles.container]} tile={tile}>
       <TileImage
         aspectRatio={4 / 5}
         relativeWidth={crop.relativeWidth}

@@ -8,6 +8,7 @@ const mediumBreakpointStyles = {
   container: {
     padding: spacing(2),
     paddingRight: 0,
+    paddingTop: 0,
     flex: 1,
   },
   headlinePortrait: {

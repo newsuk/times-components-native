@@ -101,7 +101,7 @@ const FrontLeadTwoNoPicAndTwoSlice = ({
       <ItemColSeparator style={styles.colSeparatorStyle} />
       <VerticalLayout
         style={styles.rightColumnPortrait}
-        tiles={[support1, wrappedSupport2]}
+        tiles={[wrappedSupport2, support1]}
         rowSeparatorStyle={styles.rowSeparatorStyle}
       />
     </View>

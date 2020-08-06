@@ -86,6 +86,7 @@ exports[`tile al front huge 1`] = `
               "fontSize": undefined,
               "lineHeight": undefined,
               "marginBottom": 10,
+              "textAlign": "justify",
             }
           }
         >
@@ -187,6 +188,7 @@ exports[`tile al front medium 1`] = `
               "fontSize": undefined,
               "lineHeight": undefined,
               "marginBottom": 10,
+              "textAlign": "justify",
             }
           }
         >
@@ -288,6 +290,7 @@ exports[`tile al front small 1`] = `
               "fontSize": undefined,
               "lineHeight": undefined,
               "marginBottom": 10,
+              "textAlign": "justify",
             }
           }
         >
@@ -389,6 +392,7 @@ exports[`tile al front wide 1`] = `
               "fontSize": undefined,
               "lineHeight": undefined,
               "marginBottom": 10,
+              "textAlign": "justify",
             }
           }
         >
@@ -490,6 +494,7 @@ exports[`tile al front without breakpoint should be like small 1`] = `
               "fontSize": undefined,
               "lineHeight": undefined,
               "marginBottom": 10,
+              "textAlign": "justify",
             }
           }
         >

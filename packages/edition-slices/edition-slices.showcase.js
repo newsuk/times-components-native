@@ -172,7 +172,7 @@ const sliceStories = [
   },
   {
     mock: mockLeadTwoNoPicAndTwoSlice(),
-    name: "Front Lead Two And Two (Mobile: N/A, Tablet: TODO ADD THIS HERE)",
+    name: "Front Lead Two And Two",
     Slice: FrontLeadTwoAndTwoSlice,
     scroll: false,
   },
