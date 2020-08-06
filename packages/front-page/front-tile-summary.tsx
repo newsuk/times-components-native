@@ -12,7 +12,6 @@ import { ResponsiveContext } from "@times-components-native/responsive";
 import { Markup } from "@times-components-native/fixture-generator/src/types";
 
 interface Props {
-  bylineStyle?: any;
   headlineStyle?: any;
   strapline?: string;
   straplineStyle?: any;
@@ -78,14 +77,14 @@ class FrontTileSummary extends Component<Props> {
   }
 
   renderByline(breakpoint: string) {
-    const { bylines: ast, bylineStyle } = this.props;
+    const { bylines: ast } = this.props;
 
     if (!ast || ast.length === 0) return null;
 
     const styles = styleFactory(breakpoint);
     return (
       <Text style={styles.bylineContainer}>
-        <ArticleByline ast={ast} bylineStyle={bylineStyle} />
+        <ArticleByline ast={ast} bylineStyle={styles.bylineStyle} />
       </Text>
     );
   }

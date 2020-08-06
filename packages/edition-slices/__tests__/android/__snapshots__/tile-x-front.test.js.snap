@@ -67,7 +67,7 @@ exports[`tile x front landscape huge 1`] = `
                 "flexDirection": "row",
                 "fontFamily": "GillSansMTStd-Medium",
                 "fontSize": 13,
-                "lineHeight": 19,
+                "lineHeight": 13,
               }
             }
           >
@@ -80,7 +80,7 @@ exports[`tile x front landscape huge 1`] = `
                 "flexDirection": "row",
                 "fontFamily": "GillSansMTStd-Medium",
                 "fontSize": 13,
-                "lineHeight": 19,
+                "lineHeight": 13,
               }
             }
           >
@@ -192,7 +192,7 @@ exports[`tile x front landscape medium 1`] = `
                 "flexDirection": "row",
                 "fontFamily": "GillSansMTStd-Medium",
                 "fontSize": 13,
-                "lineHeight": 19,
+                "lineHeight": 13,
               }
             }
           >
@@ -205,7 +205,7 @@ exports[`tile x front landscape medium 1`] = `
                 "flexDirection": "row",
                 "fontFamily": "GillSansMTStd-Medium",
                 "fontSize": 13,
-                "lineHeight": 19,
+                "lineHeight": 13,
               }
             }
           >
@@ -317,7 +317,7 @@ exports[`tile x front landscape small 1`] = `
                 "flexDirection": "row",
                 "fontFamily": "GillSansMTStd-Medium",
                 "fontSize": 13,
-                "lineHeight": 19,
+                "lineHeight": 13,
               }
             }
           >
@@ -330,7 +330,7 @@ exports[`tile x front landscape small 1`] = `
                 "flexDirection": "row",
                 "fontFamily": "GillSansMTStd-Medium",
                 "fontSize": 13,
-                "lineHeight": 19,
+                "lineHeight": 13,
               }
             }
           >
@@ -442,7 +442,7 @@ exports[`tile x front landscape wide 1`] = `
                 "flexDirection": "row",
                 "fontFamily": "GillSansMTStd-Medium",
                 "fontSize": 13,
-                "lineHeight": 19,
+                "lineHeight": 13,
               }
             }
           >
@@ -455,7 +455,7 @@ exports[`tile x front landscape wide 1`] = `
                 "flexDirection": "row",
                 "fontFamily": "GillSansMTStd-Medium",
                 "fontSize": 13,
-                "lineHeight": 19,
+                "lineHeight": 13,
               }
             }
           >
@@ -567,7 +567,7 @@ exports[`tile x front landscape without breakpoint should be like small 1`] = `
                 "flexDirection": "row",
                 "fontFamily": "GillSansMTStd-Medium",
                 "fontSize": 13,
-                "lineHeight": 19,
+                "lineHeight": 13,
               }
             }
           >
@@ -580,7 +580,7 @@ exports[`tile x front landscape without breakpoint should be like small 1`] = `
                 "flexDirection": "row",
                 "fontFamily": "GillSansMTStd-Medium",
                 "fontSize": 13,
-                "lineHeight": 19,
+                "lineHeight": 13,
               }
             }
           >
@@ -692,7 +692,7 @@ exports[`tile x front portrait huge 1`] = `
                 "flexDirection": "row",
                 "fontFamily": "GillSansMTStd-Medium",
                 "fontSize": 13,
-                "lineHeight": 19,
+                "lineHeight": 13,
               }
             }
           >
@@ -705,7 +705,7 @@ exports[`tile x front portrait huge 1`] = `
                 "flexDirection": "row",
                 "fontFamily": "GillSansMTStd-Medium",
                 "fontSize": 13,
-                "lineHeight": 19,
+                "lineHeight": 13,
               }
             }
           >
@@ -817,7 +817,7 @@ exports[`tile x front portrait medium 1`] = `
                 "flexDirection": "row",
                 "fontFamily": "GillSansMTStd-Medium",
                 "fontSize": 13,
-                "lineHeight": 19,
+                "lineHeight": 13,
               }
             }
           >
@@ -830,7 +830,7 @@ exports[`tile x front portrait medium 1`] = `
                 "flexDirection": "row",
                 "fontFamily": "GillSansMTStd-Medium",
                 "fontSize": 13,
-                "lineHeight": 19,
+                "lineHeight": 13,
               }
             }
           >
@@ -942,7 +942,7 @@ exports[`tile x front portrait small 1`] = `
                 "flexDirection": "row",
                 "fontFamily": "GillSansMTStd-Medium",
                 "fontSize": 13,
-                "lineHeight": 19,
+                "lineHeight": 13,
               }
             }
           >
@@ -955,7 +955,7 @@ exports[`tile x front portrait small 1`] = `
                 "flexDirection": "row",
                 "fontFamily": "GillSansMTStd-Medium",
                 "fontSize": 13,
-                "lineHeight": 19,
+                "lineHeight": 13,
               }
             }
           >
@@ -1067,7 +1067,7 @@ exports[`tile x front portrait wide 1`] = `
                 "flexDirection": "row",
                 "fontFamily": "GillSansMTStd-Medium",
                 "fontSize": 13,
-                "lineHeight": 19,
+                "lineHeight": 13,
               }
             }
           >
@@ -1080,7 +1080,7 @@ exports[`tile x front portrait wide 1`] = `
                 "flexDirection": "row",
                 "fontFamily": "GillSansMTStd-Medium",
                 "fontSize": 13,
-                "lineHeight": 19,
+                "lineHeight": 13,
               }
             }
           >
@@ -1192,7 +1192,7 @@ exports[`tile x front portrait without breakpoint should be like small 1`] = `
                 "flexDirection": "row",
                 "fontFamily": "GillSansMTStd-Medium",
                 "fontSize": 13,
-                "lineHeight": 19,
+                "lineHeight": 13,
               }
             }
           >
@@ -1205,7 +1205,7 @@ exports[`tile x front portrait without breakpoint should be like small 1`] = `
                 "flexDirection": "row",
                 "fontFamily": "GillSansMTStd-Medium",
                 "fontSize": 13,
-                "lineHeight": 19,
+                "lineHeight": 13,
               }
             }
           >

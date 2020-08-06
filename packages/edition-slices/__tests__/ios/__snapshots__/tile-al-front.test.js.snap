@@ -62,7 +62,7 @@ exports[`tile al front huge 1`] = `
                 "flexDirection": "row",
                 "fontFamily": "GillSansMTStd-Medium",
                 "fontSize": 13,
-                "lineHeight": 15,
+                "lineHeight": 13,
               }
             }
           >
@@ -75,7 +75,7 @@ exports[`tile al front huge 1`] = `
                 "flexDirection": "row",
                 "fontFamily": "GillSansMTStd-Medium",
                 "fontSize": 13,
-                "lineHeight": 15,
+                "lineHeight": 13,
               }
             }
           >
@@ -170,7 +170,7 @@ exports[`tile al front medium 1`] = `
                 "flexDirection": "row",
                 "fontFamily": "GillSansMTStd-Medium",
                 "fontSize": 13,
-                "lineHeight": 15,
+                "lineHeight": 13,
               }
             }
           >
@@ -183,7 +183,7 @@ exports[`tile al front medium 1`] = `
                 "flexDirection": "row",
                 "fontFamily": "GillSansMTStd-Medium",
                 "fontSize": 13,
-                "lineHeight": 15,
+                "lineHeight": 13,
               }
             }
           >
@@ -278,7 +278,7 @@ exports[`tile al front small 1`] = `
                 "flexDirection": "row",
                 "fontFamily": "GillSansMTStd-Medium",
                 "fontSize": 13,
-                "lineHeight": 15,
+                "lineHeight": 13,
               }
             }
           >
@@ -291,7 +291,7 @@ exports[`tile al front small 1`] = `
                 "flexDirection": "row",
                 "fontFamily": "GillSansMTStd-Medium",
                 "fontSize": 13,
-                "lineHeight": 15,
+                "lineHeight": 13,
               }
             }
           >
@@ -386,7 +386,7 @@ exports[`tile al front wide 1`] = `
                 "flexDirection": "row",
                 "fontFamily": "GillSansMTStd-Medium",
                 "fontSize": 13,
-                "lineHeight": 15,
+                "lineHeight": 13,
               }
             }
           >
@@ -399,7 +399,7 @@ exports[`tile al front wide 1`] = `
                 "flexDirection": "row",
                 "fontFamily": "GillSansMTStd-Medium",
                 "fontSize": 13,
-                "lineHeight": 15,
+                "lineHeight": 13,
               }
             }
           >
@@ -494,7 +494,7 @@ exports[`tile al front without breakpoint should be like small 1`] = `
                 "flexDirection": "row",
                 "fontFamily": "GillSansMTStd-Medium",
                 "fontSize": 13,
-                "lineHeight": 15,
+                "lineHeight": 13,
               }
             }
           >
@@ -507,7 +507,7 @@ exports[`tile al front without breakpoint should be like small 1`] = `
                 "flexDirection": "row",
                 "fontFamily": "GillSansMTStd-Medium",
                 "fontSize": 13,
-                "lineHeight": 15,
+                "lineHeight": 13,
               }
             }
           >
