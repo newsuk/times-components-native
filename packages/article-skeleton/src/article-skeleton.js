@@ -144,7 +144,7 @@ const ArticleWithContent = (props) => {
           ListHeaderComponent={header}
           ListFooterComponent={Loading}
           onEndReached={onEndReached}
-          showsVerticalScrollIndicator={false}
+          showsVerticalScrollIndicator={!!isTablet}
           renderItem={Child}
           onViewableItemsChanged={onViewableItemsChanged}
           removeClippedSubviews
