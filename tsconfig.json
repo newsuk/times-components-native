@@ -19,5 +19,10 @@
     "strict": true,
     "target": "esnext"
   },
-  "exclude": ["node_modules", "babel.config.js", "metro.config.js", "app.json"]
+  "exclude": [
+    "./node_modules/*",
+    "babel.config.js",
+    "metro.config.js",
+    "app.json"
+  ]
 }

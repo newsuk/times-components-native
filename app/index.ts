@@ -1,9 +1,9 @@
-import { Navigation, OptionsBottomTab } from "react-native-navigation";
+import { Navigation } from "react-native-navigation";
 
+import { bottomTabOptions, getOptions } from "./navigation/options";
 import { FontStorage } from "@times-components-native/typeset";
 import { registerScreens } from "./navigation";
-import { TIMES_BLUE } from "./utils/colors";
-import { GillSansMTStdMedium } from "./utils/fonts";
+import { TIMES_TEAL } from "./utils/colors";
 import * as ViewsIDs from "./navigation/ids";
 import ttf from "../fonts";
 
@@ -17,15 +17,6 @@ const IconMyArticles = require("../assets/tabs/myarticles.png");
 const IconMore = require("../assets/tabs/more.png");
 
 registerScreens();
-
-const bottomTabOptions: OptionsBottomTab = {
-  iconColor: "#C2C2C2",
-  textColor: "#C2C2C2",
-  selectedIconColor: TIMES_BLUE,
-  selectedTextColor: TIMES_BLUE,
-  fontFamily: GillSansMTStdMedium,
-  fontSize: 12,
-};
 
 Navigation.events().registerAppLaunchedListener(() => {
   Navigation.setRoot({
@@ -41,14 +32,13 @@ Navigation.events().registerAppLaunchedListener(() => {
                   component: {
                     name: ViewsIDs.VIEW_ID_EDITION,
                     options: {
-                      topBar: {
-                        largeTitle: {
-                          visible: true,
+                      ...getOptions("Times Components", {
+                        topBar: {
+                          background: {
+                            color: TIMES_TEAL,
+                          },
                         },
-                        title: {
-                          text: "Times Components",
-                        },
-                      },
+                      }),
                     },
                   },
                 },
@@ -70,11 +60,7 @@ Navigation.events().registerAppLaunchedListener(() => {
                   component: {
                     name: ViewsIDs.VIEW_ID_P6D,
                     options: {
-                      topBar: {
-                        title: {
-                          text: "Past Six Days",
-                        },
-                      },
+                      ...getOptions("Past Six Days"),
                     },
                   },
                 },
@@ -96,11 +82,7 @@ Navigation.events().registerAppLaunchedListener(() => {
                   component: {
                     name: ViewsIDs.VIEW_ID_MY_ARTICLES,
                     options: {
-                      topBar: {
-                        title: {
-                          text: "My Articles",
-                        },
-                      },
+                      ...getOptions("My Articles"),
                     },
                   },
                 },
@@ -122,11 +104,19 @@ Navigation.events().registerAppLaunchedListener(() => {
                   component: {
                     name: ViewsIDs.VIEW_ID_MORE,
                     options: {
-                      topBar: {
-                        title: {
-                          text: "More",
+                      ...getOptions("More", {
+                        topBar: {
+                          background: {
+                            color: "clear",
+                          },
+                          title: {
+                            color: "black",
+                          },
                         },
-                      },
+                        statusBar: {
+                          style: "dark",
+                        },
+                      }),
                     },
                   },
                 },

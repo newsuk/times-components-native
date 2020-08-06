@@ -1,5 +1,5 @@
-import React from "react";
-import { Navigation } from "react-native-navigation";
+import * as React from "react";
+import { Navigation, NavigationComponentProps } from "react-native-navigation";
 import { Button, StyleSheet, View } from "react-native";
 
 import { VIEW_ID_STORYBOOK } from "../navigation/ids";
@@ -14,7 +14,7 @@ const styles = StyleSheet.create({
   },
 });
 
-export const EditionView = (props) => {
+export const EditionView: React.FC<NavigationComponentProps> = (props) => {
   const goToStorybook = () => {
     Navigation.push(props.componentId, {
       component: {
