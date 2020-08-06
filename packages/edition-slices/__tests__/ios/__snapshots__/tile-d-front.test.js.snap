@@ -52,7 +52,13 @@ exports[`tile d front huge 1`] = `
         >
           This is tile headline
         </Text>
-        <Text>
+        <Text
+          style={
+            Object {
+              "marginBottom": 5,
+            }
+          }
+        >
           <Text
             style={
               Object {
@@ -158,7 +164,13 @@ exports[`tile d front medium 1`] = `
         >
           This is tile headline
         </Text>
-        <Text>
+        <Text
+          style={
+            Object {
+              "marginBottom": 5,
+            }
+          }
+        >
           <Text
             style={
               Object {
@@ -264,7 +276,13 @@ exports[`tile d front small 1`] = `
         >
           This is tile headline
         </Text>
-        <Text>
+        <Text
+          style={
+            Object {
+              "marginBottom": 5,
+            }
+          }
+        >
           <Text
             style={
               Object {
@@ -370,7 +388,13 @@ exports[`tile d front wide 1`] = `
         >
           This is tile headline
         </Text>
-        <Text>
+        <Text
+          style={
+            Object {
+              "marginBottom": 5,
+            }
+          }
+        >
           <Text
             style={
               Object {

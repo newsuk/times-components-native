@@ -37,7 +37,13 @@ exports[`tile y front landscape huge 1`] = `
         >
           This is tile headline
         </Text>
-        <Text>
+        <Text
+          style={
+            Object {
+              "marginBottom": 5,
+            }
+          }
+        >
           <Text
             style={
               Object {
@@ -128,7 +134,13 @@ exports[`tile y front landscape medium 1`] = `
         >
           This is tile headline
         </Text>
-        <Text>
+        <Text
+          style={
+            Object {
+              "marginBottom": 5,
+            }
+          }
+        >
           <Text
             style={
               Object {
@@ -219,7 +231,13 @@ exports[`tile y front landscape small 1`] = `
         >
           This is tile headline
         </Text>
-        <Text>
+        <Text
+          style={
+            Object {
+              "marginBottom": 5,
+            }
+          }
+        >
           <Text
             style={
               Object {
@@ -310,7 +328,13 @@ exports[`tile y front landscape wide 1`] = `
         >
           This is tile headline
         </Text>
-        <Text>
+        <Text
+          style={
+            Object {
+              "marginBottom": 5,
+            }
+          }
+        >
           <Text
             style={
               Object {
@@ -401,7 +425,13 @@ exports[`tile y front landscape without breakpoint should be like small 1`] = `
         >
           This is tile headline
         </Text>
-        <Text>
+        <Text
+          style={
+            Object {
+              "marginBottom": 5,
+            }
+          }
+        >
           <Text
             style={
               Object {
@@ -492,7 +522,13 @@ exports[`tile y front portrait huge 1`] = `
         >
           This is tile headline
         </Text>
-        <Text>
+        <Text
+          style={
+            Object {
+              "marginBottom": 5,
+            }
+          }
+        >
           <Text
             style={
               Object {
@@ -583,7 +619,13 @@ exports[`tile y front portrait medium 1`] = `
         >
           This is tile headline
         </Text>
-        <Text>
+        <Text
+          style={
+            Object {
+              "marginBottom": 5,
+            }
+          }
+        >
           <Text
             style={
               Object {
@@ -674,7 +716,13 @@ exports[`tile y front portrait small 1`] = `
         >
           This is tile headline
         </Text>
-        <Text>
+        <Text
+          style={
+            Object {
+              "marginBottom": 5,
+            }
+          }
+        >
           <Text
             style={
               Object {
@@ -765,7 +813,13 @@ exports[`tile y front portrait wide 1`] = `
         >
           This is tile headline
         </Text>
-        <Text>
+        <Text
+          style={
+            Object {
+              "marginBottom": 5,
+            }
+          }
+        >
           <Text
             style={
               Object {
@@ -856,7 +910,13 @@ exports[`tile y front portrait without breakpoint should be like small 1`] = `
         >
           This is tile headline
         </Text>
-        <Text>
+        <Text
+          style={
+            Object {
+              "marginBottom": 5,
+            }
+          }
+        >
           <Text
             style={
               Object {
