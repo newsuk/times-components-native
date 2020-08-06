@@ -14,10 +14,7 @@ exports[`1. article comment tablet 1`] = `
   <View
     style={
       Object {
-        "borderColor": "#DBDBDB",
-        "borderRightWidth": 1,
         "height": "100%",
-        "paddingRight": 10,
         "paddingTop": 40,
         "position": "absolute",
         "width": "25%",
@@ -66,92 +63,103 @@ exports[`1. article comment tablet 1`] = `
       />
     </View>
   </View>
-  <ArticleSkeleton>
-    <View
-      style={
-        Object {
-          "paddingBottom": 20,
-          "paddingRight": 25,
-          "paddingTop": 40,
-        }
+  <View
+    style={
+      Object {
+        "marginLeft": "25%",
+        "position": "relative",
       }
-    >
+    }
+  >
+    <ArticleSkeleton>
       <View
         style={
           Object {
-            "paddingLeft": 10,
-            "paddingRight": 10,
+            "borderColor": "#DBDBDB",
+            "borderLeftWidth": 1,
+            "marginTop": 40,
+            "paddingBottom": 20,
+            "paddingRight": 25,
           }
         }
       >
         <View
           style={
             Object {
-              "marginBottom": 10,
+              "paddingLeft": 10,
+              "paddingRight": 10,
             }
           }
         >
-          <ArticleLabel />
-        </View>
-        <Text
-          style={
-            Object {
-              "color": "#1D1D1B",
-              "fontFamily": "TimesModern-Bold",
-              "fontSize": 30,
-              "lineHeight": 36,
-              "marginBottom": 13.75,
-            }
-          }
-        >
-          Caribbean islands devastated by Hurricane Irma, the worst Atlantic storm on record
-        </Text>
-        <ArticleFlags />
-        <Text
-          style={
-            Object {
-              "color": "#333333",
-              "fontFamily": "TimesModern-Regular",
-              "fontSize": 20,
-              "lineHeight": 25,
-              "marginBottom": 15,
-            }
-          }
-        >
-          How did one of Britain’s top young athletes end up running elite parties for swingers? Chris Reynolds Gordon tells Rick Broadbent about his extraordinary life
-        </Text>
-        <View
-          style={
-            Object {
-              "borderBottomColor": "#DBDBDB",
-              "borderBottomWidth": 1,
-              "borderTopColor": "#DBDBDB",
-              "borderTopWidth": 1,
-              "flexDirection": "row",
-              "marginTop": 5,
-              "paddingVertical": 10,
-              "width": "100%",
-            }
-          }
-        >
-          <View>
-            <Text
-              style={
-                Object {
-                  "color": "#696969",
-                  "fontFamily": "GillSansMTStd-Medium",
-                  "fontSize": 13,
-                  "lineHeight": 15,
-                  "marginTop": "auto",
-                }
+          <View
+            style={
+              Object {
+                "marginBottom": 10,
               }
-            >
-              Friday March 13 2015, 6.54pm, The Times
-            </Text>
+            }
+          >
+            <ArticleLabel />
+          </View>
+          <Text
+            style={
+              Object {
+                "color": "#1D1D1B",
+                "fontFamily": "TimesModern-Bold",
+                "fontSize": 30,
+                "lineHeight": 36,
+                "marginBottom": 13.75,
+              }
+            }
+          >
+            Caribbean islands devastated by Hurricane Irma, the worst Atlantic storm on record
+          </Text>
+          <ArticleFlags />
+          <Text
+            style={
+              Object {
+                "color": "#333333",
+                "fontFamily": "TimesModern-Regular",
+                "fontSize": 20,
+                "lineHeight": 25,
+                "marginBottom": 15,
+              }
+            }
+          >
+            How did one of Britain’s top young athletes end up running elite parties for swingers? Chris Reynolds Gordon tells Rick Broadbent about his extraordinary life
+          </Text>
+          <View
+            style={
+              Object {
+                "borderBottomColor": "#DBDBDB",
+                "borderBottomWidth": 1,
+                "borderTopColor": "#DBDBDB",
+                "borderTopWidth": 1,
+                "flexDirection": "row",
+                "marginTop": 5,
+                "paddingVertical": 10,
+                "width": "100%",
+              }
+            }
+          >
+            <View>
+              <Text
+                style={
+                  Object {
+                    "color": "#696969",
+                    "fontFamily": "GillSansMTStd-Medium",
+                    "fontSize": 13,
+                    "lineHeight": 15,
+                    "marginTop": "auto",
+                  }
+                }
+              >
+                Friday March 13 2015, 6.54pm, The Times
+              </Text>
+            </View>
           </View>
         </View>
       </View>
-    </View>
-  </ArticleSkeleton>
+    </ArticleSkeleton>
+  </View>
 </View>
 `;

@@ -5,9 +5,12 @@ const globalStyle = {
   articleContainer: {
     backgroundColor: colours.functional.gutter,
   },
-  narrow: {
-    marginLeft: "25%",
-    position: "relative",
+  scroller: {
+    backgroundColor: colours.functional.white,
+  },
+  keylineWrapper: {
+    borderLeftWidth: 1,
+    borderColor: colours.functional.keyline,
   },
   articleMainContentRow: {
     paddingLeft: spacing(2),
