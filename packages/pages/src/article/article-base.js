@@ -37,11 +37,6 @@ const ArticleBase = ({
   sectionName: pageSection,
   variants,
 }) => {
-  // TODO REMOVE ME!!!!!!!!!!!!!!!!!!!!!
-  variants = {
-    articleMpuTestVariant: "C",
-  };
-
   const { section: articleSection, template } = article || {};
   const section = pageSection || articleSection || "default";
   const adConfig =
