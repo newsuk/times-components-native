@@ -4432,12 +4432,9 @@ exports[`16. an article starting with double quote 1`] = `
 exports[`17. an article with variant testing 1`] = `
 <View
   style={
-    Array [
-      Object {
-        "backgroundColor": "#f0f0f0",
-      },
-      undefined,
-    ]
+    Object {
+      "backgroundColor": "#f0f0f0",
+    }
   }
 >
   <RCTScrollView
@@ -4463,6 +4460,11 @@ exports[`17. an article with variant testing 1`] = `
     removeClippedSubviews={true}
     scrollEventThrottle={50}
     showsVerticalScrollIndicator={false}
+    style={
+      Object {
+        "backgroundColor": "#FFFFFF",
+      }
+    }
     updateCellsBatchingPeriod={50}
     windowSize={3}
   >

@@ -2994,7 +2994,13 @@ exports[`17. an article with variant testing 1`] = `
     }
   }
 >
-  <RCTScrollView>
+  <RCTScrollView
+    style={
+      Object {
+        "backgroundColor": "#FFFFFF",
+      }
+    }
+  >
     <View>
       <View>
         <View
