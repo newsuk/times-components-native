@@ -27,7 +27,7 @@ For more details read the React Native [documentation](https://reactnative.dev/d
 2. Run `yarn install`
 3. Components can be seen running in a storybook:
 4. `cd ios && pod install && cd -`
-5. `yarn storybook-native` and leave it running
+5. `yarn start` and leave it running
 6. Run the iOS app using XCode or open the Android project to run on Android.
 
 ## Native Apps & TCN
@@ -35,9 +35,9 @@ For more details read the React Native [documentation](https://reactnative.dev/d
 In order to run development servers for native applications, start react-native dev
 server via:
 
-`yarn android:app` or `yarn ios:app`
+`yarn android:native` or `yarn ios:native`
 
-For step by step guide, see the corresponding Readme documentation for [android](./android-app/README.md) and [ios](./ios-app/README.md)
+For step by step guide, see the corresponding documentation for [android](./lib/android/README.md) and [iOS](./lib/ios/README.md).
 
 ## Testing
 
@@ -59,13 +59,13 @@ The release to production pipeline comes with a _hold_ step on CircleCI for buil
 
 ![Prod@3x](https://user-images.githubusercontent.com/6333409/88397111-64af2600-cdbb-11ea-8f7f-bbcc17d45200.png)
 
-##### Beta Releases\*\*
+##### Beta Releases
 
 Similar to the production releases, you can triger builds with the `hold_release_beta` step from all branches (apart from `master`) as long as the version in `package.json` is a beta version (includes the word beta). Once the "hold" step is approved, the pipeline will build and push to the beta artifacts repos (different location to prod).
 
 ![Beta@3x](https://user-images.githubusercontent.com/6333409/88397120-67aa1680-cdbb-11ea-871d-ca454c0fb691.png)
 
-##### Updating the native apps\*\*:
+##### Updating the native apps
 
 Once a release is published, you will have to bump the version in the native apps. That would be the `Podfile` for `iOS` and the `build.gradle` file for Android.
 

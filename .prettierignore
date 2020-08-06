@@ -26,5 +26,4 @@ settings.gradle
 build.gradle
 
 # app
-app/metro.config.js
 app/storybook/story-loader.js
