@@ -17,7 +17,7 @@ function renderMedium(props, breakpoint, orientation) {
   // slice: { lead1, lead2, support1, support2 },
   // } = props;
 
-  const onPress = () => {};
+  const onPress = props.onPress;
 
   const { lead1, lead2, support1, support2 } = testSlice;
   const renderSupport1Component =

@@ -15,11 +15,12 @@ const FrontArticleSummaryContent = (props) => {
     linesOfTeaserToRender,
   } = props;
 
-  if (!summary) return null;
-
   const { editionBreakpoint: breakpoint, orientation } = useContext(
     ResponsiveContext,
   );
+
+  if (!summary) return null;
+
   const styles = stylesFactory(breakpoint);
 
   const indentedAst = indent(summary);
