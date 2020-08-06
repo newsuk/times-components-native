@@ -233,5 +233,3 @@ exports[`FrontArticleSummaryContent portrait wide 1`] = `
   whiteSpaceHeight={20}
 />
 `;
-
-exports[`FrontArticleSummaryContent renders correctly 1`] = `ShallowWrapper {}`;

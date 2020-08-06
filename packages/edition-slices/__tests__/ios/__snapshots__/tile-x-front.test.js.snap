@@ -87,11 +87,11 @@ exports[`tile x front landscape huge 1`] = `
           style={
             Object {
               "color": "#333333",
+              "flexWrap": "wrap",
               "fontFamily": "TimesDigitalW04",
               "fontSize": undefined,
               "lineHeight": undefined,
               "marginBottom": 10,
-              "textAlign": "justify",
             }
           }
         >
@@ -206,11 +206,11 @@ exports[`tile x front landscape medium 1`] = `
           style={
             Object {
               "color": "#333333",
+              "flexWrap": "wrap",
               "fontFamily": "TimesDigitalW04",
               "fontSize": undefined,
               "lineHeight": undefined,
               "marginBottom": 10,
-              "textAlign": "justify",
             }
           }
         >
@@ -325,11 +325,11 @@ exports[`tile x front landscape small 1`] = `
           style={
             Object {
               "color": "#333333",
+              "flexWrap": "wrap",
               "fontFamily": "TimesDigitalW04",
               "fontSize": undefined,
               "lineHeight": undefined,
               "marginBottom": 10,
-              "textAlign": "justify",
             }
           }
         >
@@ -444,11 +444,11 @@ exports[`tile x front landscape wide 1`] = `
           style={
             Object {
               "color": "#333333",
+              "flexWrap": "wrap",
               "fontFamily": "TimesDigitalW04",
               "fontSize": undefined,
               "lineHeight": undefined,
               "marginBottom": 10,
-              "textAlign": "justify",
             }
           }
         >
@@ -563,11 +563,11 @@ exports[`tile x front landscape without breakpoint should be like small 1`] = `
           style={
             Object {
               "color": "#333333",
+              "flexWrap": "wrap",
               "fontFamily": "TimesDigitalW04",
               "fontSize": undefined,
               "lineHeight": undefined,
               "marginBottom": 10,
-              "textAlign": "justify",
             }
           }
         >
@@ -682,11 +682,11 @@ exports[`tile x front portrait huge 1`] = `
           style={
             Object {
               "color": "#333333",
+              "flexWrap": "wrap",
               "fontFamily": "TimesDigitalW04",
               "fontSize": undefined,
               "lineHeight": undefined,
               "marginBottom": 10,
-              "textAlign": "justify",
             }
           }
         >
@@ -801,11 +801,11 @@ exports[`tile x front portrait medium 1`] = `
           style={
             Object {
               "color": "#333333",
+              "flexWrap": "wrap",
               "fontFamily": "TimesDigitalW04",
               "fontSize": undefined,
               "lineHeight": undefined,
               "marginBottom": 10,
-              "textAlign": "justify",
             }
           }
         >
@@ -920,11 +920,11 @@ exports[`tile x front portrait small 1`] = `
           style={
             Object {
               "color": "#333333",
+              "flexWrap": "wrap",
               "fontFamily": "TimesDigitalW04",
               "fontSize": undefined,
               "lineHeight": undefined,
               "marginBottom": 10,
-              "textAlign": "justify",
             }
           }
         >
@@ -1039,11 +1039,11 @@ exports[`tile x front portrait wide 1`] = `
           style={
             Object {
               "color": "#333333",
+              "flexWrap": "wrap",
               "fontFamily": "TimesDigitalW04",
               "fontSize": undefined,
               "lineHeight": undefined,
               "marginBottom": 10,
-              "textAlign": "justify",
             }
           }
         >
@@ -1158,11 +1158,11 @@ exports[`tile x front portrait without breakpoint should be like small 1`] = `
           style={
             Object {
               "color": "#333333",
+              "flexWrap": "wrap",
               "fontFamily": "TimesDigitalW04",
               "fontSize": undefined,
               "lineHeight": undefined,
               "marginBottom": 10,
-              "textAlign": "justify",
             }
           }
         >

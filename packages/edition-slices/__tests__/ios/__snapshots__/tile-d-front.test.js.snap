@@ -86,11 +86,11 @@ exports[`tile d front huge 1`] = `
           style={
             Object {
               "color": "#333333",
+              "flexWrap": "wrap",
               "fontFamily": "TimesDigitalW04",
               "fontSize": undefined,
               "lineHeight": undefined,
               "marginBottom": 10,
-              "textAlign": "justify",
             }
           }
         >
@@ -192,11 +192,11 @@ exports[`tile d front medium 1`] = `
           style={
             Object {
               "color": "#333333",
+              "flexWrap": "wrap",
               "fontFamily": "TimesDigitalW04",
               "fontSize": undefined,
               "lineHeight": undefined,
               "marginBottom": 10,
-              "textAlign": "justify",
             }
           }
         >
@@ -298,11 +298,11 @@ exports[`tile d front small 1`] = `
           style={
             Object {
               "color": "#333333",
+              "flexWrap": "wrap",
               "fontFamily": "TimesDigitalW04",
               "fontSize": undefined,
               "lineHeight": undefined,
               "marginBottom": 10,
-              "textAlign": "justify",
             }
           }
         >
@@ -404,11 +404,11 @@ exports[`tile d front wide 1`] = `
           style={
             Object {
               "color": "#333333",
+              "flexWrap": "wrap",
               "fontFamily": "TimesDigitalW04",
               "fontSize": undefined,
               "lineHeight": undefined,
               "marginBottom": 10,
-              "textAlign": "justify",
             }
           }
         >
