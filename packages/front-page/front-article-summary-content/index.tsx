@@ -6,8 +6,15 @@ import PropTypes from "prop-types";
 import frontRenderers from "../front-renderer";
 import React, { useContext } from "react";
 import { ResponsiveContext } from "@times-components-native/responsive";
+import { Markup } from "@times-components-native/fixture-generator/src/types";
 
-const FrontArticleSummaryContent = (props) => {
+interface Props {
+  summary: Markup;
+  summaryStyle: any;
+  whiteSpaceHeight: number | undefined;
+  linesOfTeaserToRender: number | undefined;
+}
+const FrontArticleSummaryContent: React.FC<Props> = (props) => {
   const {
     summary,
     summaryStyle,
@@ -15,6 +22,7 @@ const FrontArticleSummaryContent = (props) => {
     linesOfTeaserToRender,
   } = props;
 
+  // @ts-ignore
   const { editionBreakpoint: breakpoint, orientation } = useContext(
     ResponsiveContext,
   );
@@ -42,16 +50,9 @@ const FrontArticleSummaryContent = (props) => {
 
 FrontArticleSummaryContent.propTypes = {
   summary: PropTypes.arrayOf(PropTypes.object),
-  className: PropTypes.string,
   summaryStyle: PropTypes.shape({}),
   whiteSpaceHeight: PropTypes.number,
   linesOfTeaserToRender: PropTypes.number,
-};
-
-FrontArticleSummaryContent.defaultProps = {
-  ast: [],
-  className: "",
-  style: null,
 };
 
 export default FrontArticleSummaryContent;

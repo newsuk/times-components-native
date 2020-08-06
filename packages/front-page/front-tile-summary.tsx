@@ -1,17 +1,32 @@
 import React, { Component } from "react";
-import PropTypes from "prop-types";
 import {
   ArticleSummaryHeadline,
   ArticleSummaryStrapline,
 } from "@times-components-native/article-summary";
 
 import { Text, View } from "react-native";
-import styles from "@times-components-native/front-page/styles";
+import styleFactory from "@times-components-native/front-page/styles";
 import ArticleByline from "@times-components-native/article-byline";
 import FrontArticleSummaryContent from "./front-article-summary-content";
+import { ResponsiveContext } from "@times-components-native/responsive";
+import { Markup } from "@times-components-native/fixture-generator/src/types";
 
-class FrontTileSummary extends Component {
-  constructor(props) {
+interface Props {
+  bylineStyle: any;
+  headlineStyle: any;
+  strapline: string;
+  straplineStyle: any;
+  style: any;
+  summary: Markup;
+  summaryStyle: any;
+  tile: any;
+  bylines: Markup;
+  whiteSpaceHeight: number;
+  linesOfTeaserToRender: number | undefined;
+}
+
+class FrontTileSummary extends Component<Props> {
+  constructor(props: Props) {
     super(props);
     this.renderContent = this.renderContent.bind(this);
     this.renderHeadline = this.renderHeadline.bind(this);
@@ -31,7 +46,7 @@ class FrontTileSummary extends Component {
         summary={summary}
         summaryStyle={summaryStyle}
         whiteSpaceHeight={whiteSpaceHeight}
-        initialLines={linesOfTeaserToRender}
+        linesOfTeaserToRender={linesOfTeaserToRender}
       />
     );
   }
@@ -62,11 +77,12 @@ class FrontTileSummary extends Component {
     );
   }
 
-  renderByline() {
+  renderByline(breakpoint: string) {
     const { bylines: ast, bylineStyle } = this.props;
 
     if (!ast || ast.length === 0) return null;
 
+    const styles = styleFactory(breakpoint);
     return (
       <Text style={styles.bylineContainer}>
         <ArticleByline ast={ast} bylineStyle={bylineStyle} />
@@ -77,36 +93,23 @@ class FrontTileSummary extends Component {
   render() {
     const { style } = this.props;
     return (
-      <View style={style}>
-        {this.renderHeadline()}
-        {this.renderStrapline()}
-        {this.renderByline()}
-        {this.renderContent()}
-      </View>
+      <ResponsiveContext.Consumer>
+        {(context) => {
+          return (
+            <View style={style}>
+              {this.renderHeadline()}
+              {this.renderStrapline()}
+              {
+                // @ts-ignore
+                this.renderByline(context.editionBreakpoint)
+              }
+              {this.renderContent()}
+            </View>
+          );
+        }}
+      </ResponsiveContext.Consumer>
     );
   }
 }
-
-FrontTileSummary.propTypes = {
-  bylineStyle: PropTypes.shape({}),
-  headlineStyle: PropTypes.shape({}),
-  strapline: PropTypes.string,
-  straplineStyle: PropTypes.shape({}),
-  style: PropTypes.shape({}),
-  summary: PropTypes.arrayOf(PropTypes.shape({})),
-  summaryStyle: PropTypes.shape({}),
-  tile: PropTypes.shape({}).isRequired,
-  bylines: PropTypes.arrayOf(PropTypes.shape({})),
-};
-
-FrontTileSummary.defaultProps = {
-  bylineStyle: null,
-  headlineStyle: null,
-  strapline: null,
-  straplineStyle: null,
-  style: null,
-  summary: null,
-  summaryStyle: null,
-};
 
 export default FrontTileSummary;
