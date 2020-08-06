@@ -40,29 +40,7 @@ const collapsed = (isTablet, content) =>
         return [node, ...acc];
       }, []);
 
-export const setupAd = (variants, template, content) => {
-  if (!variants || !Object.keys(variants).length) return content;
-
-  let currentAdSlotIndex;
-
-  const contentWithoutAdSlot = content.filter((item, index) => {
-    const isItemAd = item.name === "ad";
-    if (isItemAd) currentAdSlotIndex = index;
-    return !isItemAd;
-  });
-
-  if (!currentAdSlotIndex) return content;
-
-  // Article MPU Test
-  const { articleMpu } = variants;
-
-  if (
-    !articleMpu ||
-    articleMpu.group === "A" ||
-    (articleMpu && template !== "mainstandard")
-  )
-    return content;
-
+const setupArticleMpuTestAd = (articleMpu, contentWithoutAdSlot) => {
   const { adPosition, width, height, slotName } = articleMpu;
 
   return [
@@ -79,6 +57,31 @@ export const setupAd = (variants, template, content) => {
     },
     ...contentWithoutAdSlot.slice(adPosition - 1),
   ];
+};
+
+export const setupAd = (variants, template, content) => {
+  if (!variants || !Object.keys(variants).length) return content;
+
+  let currentAdSlotIndex;
+
+  const contentWithoutAdSlot = content.filter((item, index) => {
+    const isItemAd = item.name === "ad";
+    if (isItemAd) currentAdSlotIndex = index;
+    return !isItemAd;
+  });
+
+  if (!currentAdSlotIndex) return content;
+
+  const { articleMpu } = variants;
+
+  if (
+    !articleMpu ||
+    articleMpu.group === "A" ||
+    (articleMpu && template !== "mainstandard")
+  )
+    return content;
+
+  return setupArticleMpuTestAd(articleMpu, contentWithoutAdSlot);
 };
 
 export const getStringBounds = (fontSettings, string) => {

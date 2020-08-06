@@ -63,7 +63,7 @@ const InlineParagraph = ({
 
   const positioned = manager.layout();
 
-  const getInlineWidthAndHeight = () => {
+  const getInlineDimensions = () => {
     const { articleMpu } = variants;
 
     if (!isInlineAd || !articleMpu) return { width: contentWidth * 0.35 };
@@ -88,12 +88,12 @@ const InlineParagraph = ({
         style={{
           position: "absolute",
           left: narrowContent ? 0 : gutters,
-          ...getInlineWidthAndHeight(),
+          ...getInlineDimensions(),
         }}
         onLayout={(e) => {
           const { height } = e.nativeEvent.layout;
           if (!inlineExclusion) {
-            const { width } = getInlineWidthAndHeight();
+            const { width } = getInlineDimensions();
             setInlineExclusion({
               exclusion: new BoxExclusion(
                 0,
