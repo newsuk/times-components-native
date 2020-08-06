@@ -16,7 +16,7 @@ const sliceContentMaxWidth = 1180;
 const narrowArticleWidths = {
   medium: {
     container: 853,
-    content: 570,
+    content: 545,
   },
   wide: {
     container: 900,

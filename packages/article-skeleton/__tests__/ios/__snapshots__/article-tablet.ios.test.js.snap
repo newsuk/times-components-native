@@ -8,7 +8,13 @@ exports[`1. with inline video 1`] = `
     }
   }
 >
-  <RCTScrollView>
+  <RCTScrollView
+    style={
+      Object {
+        "backgroundColor": "#FFFFFF",
+      }
+    }
+  >
     <View>
       <View>
         <View
@@ -122,7 +128,13 @@ exports[`2. with ad on mainstandard 1`] = `
     }
   }
 >
-  <RCTScrollView>
+  <RCTScrollView
+    style={
+      Object {
+        "backgroundColor": "#FFFFFF",
+      }
+    }
+  >
     <View>
       <View>
         <View
@@ -202,7 +214,13 @@ exports[`3. with ad on maincomment 1`] = `
     }
   }
 >
-  <RCTScrollView>
+  <RCTScrollView
+    style={
+      Object {
+        "backgroundColor": "#FFFFFF",
+      }
+    }
+  >
     <View>
       <View>
         <View
