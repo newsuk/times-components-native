@@ -2,7 +2,7 @@
 import React from "react";
 import { iterator } from "@times-components-native/test-utils";
 import { ContextProviderWithDefaults } from "@times-components-native/context";
-import { VariantTestingProvider } from "@times-components-native/variant-testing"; //articleMpuTestVariant
+import { VariantTestingProvider } from "@times-components-native/variant-testing";
 import { scales } from "@times-components-native/styleguide";
 import ArticleSkeleton from "../src/article-skeleton";
 import contentWithNestedFirstParagraph from "../fixtures/bold-article-content";
