@@ -19,7 +19,7 @@ exports[`tile e front landscape huge 1`] = `
     fill={true}
     style={
       Object {
-        "marginBottom": 10,
+        "marginBottom": 9,
         "width": "100%",
       }
     }
@@ -76,7 +76,7 @@ exports[`tile e front landscape medium 1`] = `
     fill={true}
     style={
       Object {
-        "marginBottom": 10,
+        "marginBottom": 9,
         "width": "100%",
       }
     }
@@ -179,7 +179,7 @@ exports[`tile e front landscape wide 1`] = `
     fill={true}
     style={
       Object {
-        "marginBottom": 10,
+        "marginBottom": 9,
         "width": "100%",
       }
     }
@@ -282,7 +282,7 @@ exports[`tile e front portrait huge 1`] = `
     fill={true}
     style={
       Object {
-        "marginBottom": 10,
+        "marginBottom": 9,
         "width": "100%",
       }
     }
@@ -339,7 +339,7 @@ exports[`tile e front portrait medium 1`] = `
     fill={true}
     style={
       Object {
-        "marginBottom": 10,
+        "marginBottom": 9,
         "width": "100%",
       }
     }
@@ -442,7 +442,7 @@ exports[`tile e front portrait wide 1`] = `
     fill={true}
     style={
       Object {
-        "marginBottom": 10,
+        "marginBottom": 9,
         "width": "100%",
       }
     }

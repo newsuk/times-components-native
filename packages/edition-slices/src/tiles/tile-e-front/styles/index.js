@@ -24,7 +24,7 @@ const mediumBreakpointStyles = {
   },
   imageContainer: {
     width: "100%",
-    marginBottom: spacing(2),
+    marginBottom: spacing(2) - 1, // this is to make a 2-line headline fit on an iPad mini
   },
   summary: {
     textAlign: "justify",
