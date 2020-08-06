@@ -6,9 +6,8 @@ exports[`tile e front landscape huge 1`] = `
     Array [
       Object {
         "flex": 1,
-        "padding": 10,
-        "paddingRight": 0,
-        "paddingTop": 0,
+        "paddingBottom": 10,
+        "paddingLeft": 10,
       },
     ]
   }
@@ -63,9 +62,8 @@ exports[`tile e front landscape medium 1`] = `
     Array [
       Object {
         "flex": 1,
-        "padding": 10,
-        "paddingRight": 0,
-        "paddingTop": 0,
+        "paddingBottom": 10,
+        "paddingLeft": 10,
       },
     ]
   }
@@ -166,9 +164,8 @@ exports[`tile e front landscape wide 1`] = `
     Array [
       Object {
         "flex": 1,
-        "padding": 10,
-        "paddingRight": 0,
-        "paddingTop": 0,
+        "paddingBottom": 10,
+        "paddingLeft": 10,
       },
     ]
   }
@@ -269,9 +266,8 @@ exports[`tile e front portrait huge 1`] = `
     Array [
       Object {
         "flex": 1,
-        "padding": 10,
-        "paddingRight": 0,
-        "paddingTop": 0,
+        "paddingBottom": 10,
+        "paddingLeft": 10,
       },
     ]
   }
@@ -326,9 +322,8 @@ exports[`tile e front portrait medium 1`] = `
     Array [
       Object {
         "flex": 1,
-        "padding": 10,
-        "paddingRight": 0,
-        "paddingTop": 0,
+        "paddingBottom": 10,
+        "paddingLeft": 10,
       },
     ]
   }
@@ -429,9 +424,8 @@ exports[`tile e front portrait wide 1`] = `
     Array [
       Object {
         "flex": 1,
-        "padding": 10,
-        "paddingRight": 0,
-        "paddingTop": 0,
+        "paddingBottom": 10,
+        "paddingLeft": 10,
       },
     ]
   }

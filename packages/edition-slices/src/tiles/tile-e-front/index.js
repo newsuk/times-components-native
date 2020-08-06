@@ -61,6 +61,7 @@ const TileEFront = ({
             style={styles.summaryContainer}
             tile={tile}
             whiteSpaceHeight={whiteSpaceHeight}
+            linesOfTeaserToRender={1}
             bylines={showByline && tile.article.bylines}
           />
         )}

@@ -87,7 +87,7 @@ exports[`tile d front huge 1`] = `
           </Text>
         </Text>
         <Text
-          numberOfLines={2}
+          numberOfLines={1}
           style={
             Object {
               "color": "#333333",
@@ -199,7 +199,7 @@ exports[`tile d front medium 1`] = `
           </Text>
         </Text>
         <Text
-          numberOfLines={2}
+          numberOfLines={1}
           style={
             Object {
               "color": "#333333",
@@ -311,7 +311,7 @@ exports[`tile d front small 1`] = `
           </Text>
         </Text>
         <Text
-          numberOfLines={2}
+          numberOfLines={1}
           style={
             Object {
               "color": "#333333",
@@ -423,7 +423,7 @@ exports[`tile d front wide 1`] = `
           </Text>
         </Text>
         <Text
-          numberOfLines={2}
+          numberOfLines={1}
           style={
             Object {
               "color": "#333333",

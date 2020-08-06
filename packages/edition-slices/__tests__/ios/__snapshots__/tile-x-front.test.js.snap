@@ -5,9 +5,8 @@ exports[`tile x front landscape huge 1`] = `
   linkStyle={
     Object {
       "flex": 1,
-      "padding": 10,
-      "paddingLeft": 0,
-      "paddingTop": 0,
+      "paddingBottom": 10,
+      "paddingRight": 10,
     }
   }
   url="/article/123"
@@ -131,9 +130,8 @@ exports[`tile x front landscape medium 1`] = `
   linkStyle={
     Object {
       "flex": 1,
-      "padding": 10,
-      "paddingLeft": 0,
-      "paddingTop": 0,
+      "paddingBottom": 10,
+      "paddingRight": 10,
     }
   }
   url="/article/123"
@@ -257,9 +255,8 @@ exports[`tile x front landscape small 1`] = `
   linkStyle={
     Object {
       "flex": 1,
-      "padding": 10,
-      "paddingLeft": 0,
-      "paddingTop": 0,
+      "paddingBottom": 10,
+      "paddingRight": 10,
     }
   }
   url="/article/123"
@@ -383,9 +380,8 @@ exports[`tile x front landscape wide 1`] = `
   linkStyle={
     Object {
       "flex": 1,
-      "padding": 10,
-      "paddingLeft": 0,
-      "paddingTop": 0,
+      "paddingBottom": 10,
+      "paddingRight": 10,
     }
   }
   url="/article/123"
@@ -509,9 +505,8 @@ exports[`tile x front landscape without breakpoint should be like small 1`] = `
   linkStyle={
     Object {
       "flex": 1,
-      "padding": 10,
-      "paddingLeft": 0,
-      "paddingTop": 0,
+      "paddingBottom": 10,
+      "paddingRight": 10,
     }
   }
   url="/article/123"
@@ -635,9 +630,8 @@ exports[`tile x front portrait huge 1`] = `
   linkStyle={
     Object {
       "flex": 1,
-      "padding": 10,
-      "paddingLeft": 0,
-      "paddingTop": 0,
+      "paddingBottom": 10,
+      "paddingRight": 10,
     }
   }
   url="/article/123"
@@ -761,9 +755,8 @@ exports[`tile x front portrait medium 1`] = `
   linkStyle={
     Object {
       "flex": 1,
-      "padding": 10,
-      "paddingLeft": 0,
-      "paddingTop": 0,
+      "paddingBottom": 10,
+      "paddingRight": 10,
     }
   }
   url="/article/123"
@@ -887,9 +880,8 @@ exports[`tile x front portrait small 1`] = `
   linkStyle={
     Object {
       "flex": 1,
-      "padding": 10,
-      "paddingLeft": 0,
-      "paddingTop": 0,
+      "paddingBottom": 10,
+      "paddingRight": 10,
     }
   }
   url="/article/123"
@@ -1013,9 +1005,8 @@ exports[`tile x front portrait wide 1`] = `
   linkStyle={
     Object {
       "flex": 1,
-      "padding": 10,
-      "paddingLeft": 0,
-      "paddingTop": 0,
+      "paddingBottom": 10,
+      "paddingRight": 10,
     }
   }
   url="/article/123"
@@ -1139,9 +1130,8 @@ exports[`tile x front portrait without breakpoint should be like small 1`] = `
   linkStyle={
     Object {
       "flex": 1,
-      "padding": 10,
-      "paddingLeft": 0,
-      "paddingTop": 0,
+      "paddingBottom": 10,
+      "paddingRight": 10,
     }
   }
   url="/article/123"

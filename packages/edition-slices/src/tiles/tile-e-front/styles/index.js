@@ -6,9 +6,8 @@ import {
 
 const mediumBreakpointStyles = {
   container: {
-    padding: spacing(2),
-    paddingRight: 0,
-    paddingTop: 0,
+    paddingBottom: spacing(2),
+    paddingLeft: spacing(2),
     flex: 1,
   },
   headlinePortrait: {

@@ -51,6 +51,7 @@ const TileDFront = ({
             tile={tile}
             bylines={tile.article.bylines}
             summary={getTileSummary(tile, 1000)}
+            linesOfTeaserToRender={1}
             whiteSpaceHeight={whiteSpaceHeight}
           />
         )}
