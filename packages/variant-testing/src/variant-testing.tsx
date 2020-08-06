@@ -1,25 +1,31 @@
-import React, { createContext, useContext } from "react";
+import React, { createContext, useContext, ReactNode } from "react";
 import PropTypes from "prop-types";
 
 export const VariantTestingContext = createContext({});
 
-export const VariantTestingProvider = ({ variants = {}, children }) => {
-  const { articleMpuTest } = variants;
+type Props = {
+  children: ReactNode;
+  variants: Record<string, string>;
+};
+
+export const VariantTestingProvider = ({ variants = {}, children }: Props) => {
+  const { articleMpuTestVariant } = variants;
 
   let variantConfig = {};
 
-  if (articleMpuTest) {
+  if (articleMpuTestVariant) {
     variantConfig = {
-      articleMpuTest: {
-        group: articleMpuTest,
-        ...(articleMpuTest !== "A" && {
+      ...variantConfig,
+      articleMpu: {
+        group: articleMpuTestVariant,
+        ...(articleMpuTestVariant !== "A" && {
           slotName:
-            articleMpuTest === "B"
+            articleMpuTestVariant === "B"
               ? "native-inline-ad-b"
               : "native-inline-ad-c",
           adPosition: 5,
           width: 300,
-          height: articleMpuTest === "B" ? 250 : 600,
+          height: articleMpuTestVariant === "B" ? 250 : 600,
         }),
       },
     };

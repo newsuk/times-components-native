@@ -39,4 +39,16 @@ export default () => {
 
     expect(wrapper).toMatchSnapshot();
   });
+
+  it("advert with width", () => {
+    const wrapper = shallow(
+      <AdComposer adConfig={adConfig}>
+        <Fragment>
+          <Ad {...props} slotName="header" width={300} />
+        </Fragment>
+      </AdComposer>,
+    );
+
+    expect(wrapper).toMatchSnapshot();
+  });
 };

@@ -40,15 +40,8 @@ const collapsed = (isTablet, content) =>
         return [node, ...acc];
       }, []);
 
-export const setupAd = (variants = {}, template, content) => {
-  const { articleMpuTest } = variants;
-
-  if (
-    !articleMpuTest ||
-    articleMpuTest.group === "A" ||
-    template !== "mainstandard"
-  )
-    return content;
+export const setupAd = (variants, template, content) => {
+  if (!variants || !Object.keys(variants).length) return content;
 
   let currentAdSlotIndex;
 
@@ -60,7 +53,17 @@ export const setupAd = (variants = {}, template, content) => {
 
   if (!currentAdSlotIndex) return content;
 
-  const { adPosition, width, height, slotName } = articleMpuTest;
+  // Article MPU Test
+  const { articleMpu } = variants;
+
+  if (
+    !articleMpu ||
+    articleMpu.group === "A" ||
+    (articleMpu && template !== "mainstandard")
+  )
+    return content;
+
+  const { adPosition, width, height, slotName } = articleMpu;
 
   return [
     ...contentWithoutAdSlot.slice(0, adPosition - 1),

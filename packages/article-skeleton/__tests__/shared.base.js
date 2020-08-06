@@ -2,6 +2,7 @@
 import React from "react";
 import { iterator } from "@times-components-native/test-utils";
 import { ContextProviderWithDefaults } from "@times-components-native/context";
+import { VariantTestingProvider } from "@times-components-native/variant-testing"; //articleMpuTestVariant
 import { scales } from "@times-components-native/styleguide";
 import ArticleSkeleton from "../src/article-skeleton";
 import contentWithNestedFirstParagraph from "../fixtures/bold-article-content";
@@ -23,29 +24,36 @@ import {
   paragraphStartingWithDoubleQuote,
 } from "../fixtures/dropcap-article-content";
 
-export const renderArticle = (data, header = null, isTablet = false) => (
+export const renderArticle = (
+  data,
+  header = null,
+  isTablet = false,
+  variants = {},
+) => (
   <ContextProviderWithDefaults
     value={{
       theme: { scale: scales.medium, sectionColour: "#FF0000" },
       user: { isLoggedIn: true },
     }}
   >
-    <ArticleSkeleton
-      adConfig={adConfig}
-      analyticsStream={() => null}
-      data={data}
-      header={header}
-      isTablet={isTablet}
-      onAuthorPress={() => null}
-      onCommentGuidelinesPress={() => null}
-      onCommentsPress={() => null}
-      onLinkPress={() => null}
-      onRelatedArticlePress={() => null}
-      onTopicPress={() => null}
-      onTwitterLinkPress={() => null}
-      onVideoPress={() => null}
-      spotAccountId=""
-    />
+    <VariantTestingProvider variants={variants}>
+      <ArticleSkeleton
+        adConfig={adConfig}
+        analyticsStream={() => null}
+        data={data}
+        header={header}
+        isTablet={isTablet}
+        onAuthorPress={() => null}
+        onCommentGuidelinesPress={() => null}
+        onCommentsPress={() => null}
+        onLinkPress={() => null}
+        onRelatedArticlePress={() => null}
+        onTopicPress={() => null}
+        onTwitterLinkPress={() => null}
+        onVideoPress={() => null}
+        spotAccountId=""
+      />
+    </VariantTestingProvider>
   </ContextProviderWithDefaults>
 );
 
@@ -577,6 +585,22 @@ export const snapshotTests = (renderComponent) => [
         template: "maincomment",
       });
       const output = renderComponent(renderArticle(article));
+
+      expect(output).toMatchSnapshot();
+    },
+  },
+  {
+    name: "an article with variant testing",
+    test() {
+      const template = "mainstandard";
+      const article = articleFixture({
+        ...fixtureArgs,
+        template,
+        withAds: true,
+      });
+      const output = renderComponent(
+        renderArticle(article, null, false, { articleMpuTestVariant: "B" }),
+      );
 
       expect(output).toMatchSnapshot();
     },

@@ -20,7 +20,7 @@ export default () => {
 
   it("should create context based on variant prop", () => {
     const testInstance = TestRenderer.create(
-      <VariantTestingProvider variants={{ articleMpuTest: "B" }}>
+      <VariantTestingProvider variants={{ articleMpuTestVariant: "B" }}>
         <VariantTestingContext.Consumer>
           {(context) => JSON.stringify(context)}
         </VariantTestingContext.Consumer>

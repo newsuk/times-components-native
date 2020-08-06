@@ -64,13 +64,13 @@ const InlineParagraph = ({
   const positioned = manager.layout();
 
   const getInlineWidthAndHeight = () => {
-    const { articleMpuTest } = variants;
+    const { articleMpu } = variants;
 
-    if (!isInlineAd || !articleMpuTest) return { width: contentWidth * 0.35 };
+    if (!isInlineAd || !articleMpu) return { width: contentWidth * 0.35 };
 
     return {
-      width: articleMpuTest.width,
-      height: articleMpuTest.height,
+      width: articleMpu.width,
+      height: articleMpu.height,
     };
   };
 
