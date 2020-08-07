@@ -14,7 +14,7 @@ bundle, image assets and native dependencies.
 
 ## Dev Server
 
-In order to run the dev server, run `yarn android:app`. This will start react-native bundler and provide
+In order to run the dev server, run `yarn android:native`. This will start react-native bundler and provide
 on-the-fly bundles for the react development.
 
 ## Bundling and release
@@ -45,7 +45,7 @@ uploaded to maven.
 ### Step-by-step Guide
 
 - Run the mobile emulator
-- Run `yarn android:app` in `times-components` to bundles the latest code on-the-fly once the emulator request a bundle.
+- Run `yarn android:native` in `times-components` to bundles the latest code on-the-fly once the emulator request a bundle.
 - Run `./gradlew assembleGPD` in `nu-projectd-times-smartphone-android` to install the latest android app
 - Open the Times app in the mobile emulator
 - Navigate to an article page on the app

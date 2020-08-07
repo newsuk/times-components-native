@@ -1,7 +1,9 @@
 **/node_modules/*
 **/coverage/*
-**/rnw.js
 dist
-storybook-native
 lib/android
 lib/ios
+
+# app
+app/metro.config.js
+app/storybook/story-loader.js

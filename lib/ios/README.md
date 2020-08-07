@@ -13,7 +13,7 @@ bundle, image assets and native dependencies.
 
 ## Dev Server
 
-In order to run the dev server, run `yarn ios:app`. This will start react-native bundler and provide
+In order to run the dev server, run `yarn ios:native`. This will start react-native bundler and provide
 on-the-fly bundles for the react development.
 
 ## How to get the ios app set up and running on latest times-components
@@ -25,7 +25,7 @@ on-the-fly bundles for the react development.
 
 ### Step-by-step Guide
 
-- Run `yarn ios:app` in `times-components` to bundles the latest code on-the-fly once the emulator request a bundle.
+- Run `yarn ios:native` in `times-components` to bundles the latest code on-the-fly once the emulator request a bundle.
 - Open `TheTimesProjectD.xcworkspace` from [nuk-tnl-app-ios-universal](https://github.com/newsuk/nuk-tnl-app-ios-universal) in Xcode.
 - In Xcode, click `TheTimes` next to the play/stop icons.
 - Edit Scheme... -> Run -> Arguments -> Tick the `REACT_DEV_DEBUG_MODE` checkbox.

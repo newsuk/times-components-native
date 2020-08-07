@@ -150,15 +150,12 @@ Follow these steps to deploy storybook native to a real android device.
   [The Times Public Api](https://github.com/newsuk/times-public-api) (dependent
   on the stories you intend to view)
 * Run `yarn`
-* Run `yarn storybook-native`
+* Run `yarn start`
 * Run `yarn android:device` (to enable Times API)
 * Open [storybook native](http:localhost:7007) on your computer and load a story
 
 #### Troubleshooting
 
-* If your device is complaining about about `story-loader.js` not existing - run
-  `yarn storybook-native` before `yarn android`. This should generate the
-  missing file.
 * If your device is complaining about being unable to reach `localhost` or `404`
   use the `adb` commands. Shake the device to bring up the developer menu and
   reload the app
@@ -168,18 +165,6 @@ Follow these steps to deploy storybook native to a real android device.
   and that it works in web view.
 
 ### iOS
-
-#### Building on Xcode 10
-
-We are currently using React Native 0.55.4 which does not fully support Xcode
-10<sup>[1](https://github.com/facebook/react-native/issues/14382#issuecomment-313163119),
-[2](https://github.com/facebook/react-native/issues/19569#issuecomment-399652331)</sup>.
-If you need to build with Xcode 10, you will need to run the below command,
-**only after you have installed dependencies**.
-
-```
-$ yarn ios; pushd node_modules/react-native/third-party/glog-*; ../../scripts/ios-configure-glog.sh; popd; cp ios/build/Build/Products/Debug-iphonesimulator/libfishhook.a node_modules/react-native/Libraries/WebSocket/;
-```
 
 #### Other iOS Build Issues
 
