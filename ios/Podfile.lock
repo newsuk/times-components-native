@@ -240,8 +240,6 @@ PODS:
     - React
     - React-RCTImage
     - React-RCTText
-  - RNCAsyncStorage (1.11.0):
-    - React
   - RNDeviceInfo (5.3.1):
     - React
   - RNSVG (9.11.1):
@@ -280,7 +278,6 @@ DEPENDENCIES:
   - ReactCommon/jscallinvoker (from `../node_modules/react-native/ReactCommon`)
   - ReactCommon/turbomodule/core (from `../node_modules/react-native/ReactCommon`)
   - ReactNativeNavigation (from `../node_modules/react-native-navigation`)
-  - "RNCAsyncStorage (from `../node_modules/@react-native-community/async-storage`)"
   - RNDeviceInfo (from `../node_modules/react-native-device-info`)
   - RNSVG (from `../node_modules/react-native-svg`)
   - Yoga (from `../node_modules/react-native/ReactCommon/yoga`)
@@ -346,8 +343,6 @@ EXTERNAL SOURCES:
     :path: "../node_modules/react-native/ReactCommon"
   ReactNativeNavigation:
     :path: "../node_modules/react-native-navigation"
-  RNCAsyncStorage:
-    :path: "../node_modules/@react-native-community/async-storage"
   RNDeviceInfo:
     :path: "../node_modules/react-native-device-info"
   RNSVG:
@@ -385,7 +380,6 @@ SPEC CHECKSUMS:
   React-RCTVibration: a49a1f42bf8f5acf1c3e297097517c6b3af377ad
   ReactCommon: 198c7c8d3591f975e5431bec1b0b3b581aa1c5dd
   ReactNativeNavigation: b38eca44d4d85e04757a2681bfc6e1b178c6c2d1
-  RNCAsyncStorage: d059c3ee71738c39834a627476322a5a8cd5bf36
   RNDeviceInfo: 6f20764111df002b4484f90cbe0a861be29bcc6c
   RNSVG: be27aa7c58819f97399388ae53d7fa0572f32c7f
   Yoga: f2a7cd4280bfe2cca5a7aed98ba0eb3d1310f18b
