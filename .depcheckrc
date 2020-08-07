@@ -1,7 +1,8 @@
 ignores: [
   "@babel/*",
-  "*babel-*",
   "@bam.tech/react-native-graphql-transformer",
+  "*babel-*",
+  "conventional-github-releaser",
   "depcheck",
   "eslint-*",
   "global",
