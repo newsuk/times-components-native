@@ -1,4 +1,4 @@
-import * as React from "react";
+import React from "react";
 import { Navigation, NavigationComponentProps } from "react-native-navigation";
 import { Button, StyleSheet, View } from "react-native";
 

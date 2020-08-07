@@ -3,29 +3,27 @@ import { Options, OptionsBottomTab } from "react-native-navigation";
 import { TIMES_BLUE } from "../utils/colors";
 import { GillSansMTStdMedium, TimesModern } from "../utils/fonts";
 
-export const getOptions = (title: string, opts: Options = {}): Options => {
-  return {
-    ...opts,
-    topBar: {
-      ...opts.topBar,
-      background: {
-        color: "black",
-        ...(opts.topBar || {}).background,
-      },
-      title: {
-        color: "white",
-        fontFamily: TimesModern.Bold,
-        fontSize: 20,
-        text: title,
-        ...(opts.topBar || {}).title,
-      },
+export const getOptions = (title: string, opts: Options = {}): Options => ({
+  ...opts,
+  topBar: {
+    ...opts.topBar,
+    background: {
+      color: "black",
+      ...opts.topBar?.background,
     },
-    statusBar: {
-      style: "light",
-      ...opts.statusBar,
+    title: {
+      color: "white",
+      fontFamily: TimesModern.Bold,
+      fontSize: 20,
+      text: title,
+      ...opts.topBar?.title,
     },
-  };
-};
+  },
+  statusBar: {
+    style: "light",
+    ...opts.statusBar,
+  },
+});
 
 export const bottomTabOptions: OptionsBottomTab = {
   iconColor: "#C2C2C2",
