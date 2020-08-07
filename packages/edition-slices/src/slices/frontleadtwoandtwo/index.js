@@ -77,20 +77,15 @@ function renderMedium(props, breakpoint, orientation) {
 }
 
 const FrontLeadTwoAndTwo = (props) => {
+  const renderSlice = (breakpoint, orientation) =>
+    renderMedium(props, breakpoint, orientation);
+
   return (
     <ResponsiveSlice
-      renderSmall={(breakpoint, orientation) =>
-        renderMedium(props, breakpoint, orientation)
-      }
-      renderMedium={(breakpoint, orientation) =>
-        renderMedium(props, breakpoint, orientation)
-      }
-      renderWide={(breakpoint, orientation) =>
-        renderMedium(props, breakpoint, orientation)
-      }
-      renderHuge={(breakpoint, orientation) =>
-        renderMedium(props, breakpoint, orientation)
-      }
+      renderSmall={renderSlice}
+      renderMedium={renderSlice}
+      renderWide={renderSlice}
+      renderHuge={renderSlice}
       grow
     />
   );

@@ -50,5 +50,5 @@ export default (breakpoint) => ({
     fontSize: fontSizeResolver[breakpoint].portrait,
     lineHeight: lineHeightResolver[breakpoint].portrait,
   },
-  bylineContainer: { marginBottom: 5 },
+  bylineContainer: { marginBottom: spacing(1) },
 });

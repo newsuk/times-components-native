@@ -7,43 +7,21 @@ import stylesFactory from "./styles";
 import VerticalLayout from "../verticallayout";
 
 function calculateContentWidth(windowWidth) {
-  if (windowWidth >= 1366) {
-    return 1180;
-  }
-  if (windowWidth >= 1194) {
-    return 980;
-  }
-  if (windowWidth >= 1112) {
-    return 1000;
-  }
-  if (windowWidth >= 1080) {
-    return 1000;
-  }
-
-  if (windowWidth >= 1024) {
-    return 920;
-  }
+  if (windowWidth >= 1366) return 1180;
+  if (windowWidth >= 1194) return 980;
+  if (windowWidth >= 1112) return 1000;
+  if (windowWidth >= 1080) return 1000;
+  if (windowWidth >= 1024) return 920;
 
   return 1000;
 }
 
 function calculateMarginTop(windowWidth) {
-  if (windowWidth >= 1366) {
-    return 25;
-  }
-  if (windowWidth >= 1194) {
-    return 20;
-  }
-  if (windowWidth >= 1112) {
-    return 20;
-  }
-  if (windowWidth >= 1080) {
-    return 15;
-  }
-
-  if (windowWidth >= 1024) {
-    return 15;
-  }
+  if (windowWidth >= 1366) return 25;
+  if (windowWidth >= 1194) return 20;
+  if (windowWidth >= 1112) return 20;
+  if (windowWidth >= 1080) return 15;
+  if (windowWidth >= 1024) return 15;
 
   return 15;
 }

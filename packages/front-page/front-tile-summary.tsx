@@ -1,4 +1,4 @@
-import React, { Component } from "react";
+import React, { useContext } from "react";
 import {
   ArticleSummaryHeadline,
   ArticleSummaryStrapline,
@@ -24,91 +24,73 @@ interface Props {
   linesOfTeaserToRender?: number | undefined;
 }
 
-class FrontTileSummary extends Component<Props> {
-  constructor(props: Props) {
-    super(props);
-    this.renderContent = this.renderContent.bind(this);
-    this.renderHeadline = this.renderHeadline.bind(this);
-    this.renderStrapline = this.renderStrapline.bind(this);
-  }
+const renderContent = (props: Props) => {
+  const {
+    summary,
+    summaryStyle,
+    whiteSpaceHeight,
+    linesOfTeaserToRender,
+  } = props;
 
-  renderContent() {
-    const {
-      summary,
-      summaryStyle,
-      whiteSpaceHeight,
-      linesOfTeaserToRender,
-    } = this.props;
+  return (
+    <FrontArticleSummaryContent
+      summary={summary}
+      summaryStyle={summaryStyle}
+      whiteSpaceHeight={whiteSpaceHeight}
+      linesOfTeaserToRender={linesOfTeaserToRender}
+    />
+  );
+};
 
-    return (
-      <FrontArticleSummaryContent
-        summary={summary}
-        summaryStyle={summaryStyle}
-        whiteSpaceHeight={whiteSpaceHeight}
-        linesOfTeaserToRender={linesOfTeaserToRender}
-      />
-    );
-  }
+const renderHeadline = (props: Props) => {
+  const {
+    tile: {
+      headline: tileHeadline,
+      article: { headline, shortHeadline },
+    },
+    headlineStyle,
+  } = props;
 
-  renderHeadline() {
-    const {
-      tile: {
-        headline: tileHeadline,
-        article: { headline, shortHeadline },
-      },
-      headlineStyle,
-    } = this.props;
+  return (
+    <ArticleSummaryHeadline
+      headline={tileHeadline || shortHeadline || headline}
+      style={headlineStyle}
+    />
+  );
+};
 
-    return (
-      <ArticleSummaryHeadline
-        headline={tileHeadline || shortHeadline || headline}
-        style={headlineStyle}
-      />
-    );
-  }
+const renderStrapline = (props: Props) => {
+  const { strapline, straplineStyle } = props;
+  if (!strapline) return null;
 
-  renderStrapline() {
-    const { strapline, straplineStyle } = this.props;
-    if (!strapline) return null;
+  return (
+    <ArticleSummaryStrapline strapline={strapline} style={straplineStyle} />
+  );
+};
 
-    return (
-      <ArticleSummaryStrapline strapline={strapline} style={straplineStyle} />
-    );
-  }
+const renderByline = (props: Props, breakpoint: string) => {
+  const { bylines: ast } = props;
+  if (!ast || ast.length === 0) return null;
 
-  renderByline(breakpoint: string) {
-    const { bylines: ast } = this.props;
+  const styles = styleFactory(breakpoint);
+  return (
+    <Text style={styles.bylineContainer}>
+      <ArticleByline ast={ast} bylineStyle={styles.bylineStyle} />
+    </Text>
+  );
+};
 
-    if (!ast || ast.length === 0) return null;
-
-    const styles = styleFactory(breakpoint);
-    return (
-      <Text style={styles.bylineContainer}>
-        <ArticleByline ast={ast} bylineStyle={styles.bylineStyle} />
-      </Text>
-    );
-  }
-
-  render() {
-    const { containerStyle } = this.props;
-    return (
-      <ResponsiveContext.Consumer>
-        {(context) => {
-          return (
-            <View style={containerStyle}>
-              {this.renderHeadline()}
-              {this.renderStrapline()}
-              {
-                // @ts-ignore
-                this.renderByline(context.editionBreakpoint)
-              }
-              {this.renderContent()}
-            </View>
-          );
-        }}
-      </ResponsiveContext.Consumer>
-    );
-  }
-}
+const FrontTileSummary: React.FC<Props> = (props) => {
+  // @ts-ignore
+  const { editionBreakpoint } = useContext(ResponsiveContext);
+  return (
+    <View style={props.containerStyle}>
+      {renderHeadline(props)}
+      {renderStrapline(props)}
+      {renderByline(props, editionBreakpoint)}
+      {renderContent(props)}
+    </View>
+  );
+};
 
 export default FrontTileSummary;
