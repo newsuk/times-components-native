@@ -4,16 +4,6 @@ import { Button, StyleSheet, View } from "react-native";
 
 import { VIEW_ID_STORYBOOK } from "../navigation/ids";
 
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: "white",
-    justifyContent: "center",
-    alignItems: "center",
-    padding: 20,
-  },
-});
-
 export const EditionView: React.FC<NavigationComponentProps> = (props) => {
   const goToStorybook = () => {
     Navigation.push(props.componentId, {
@@ -39,3 +29,13 @@ export const EditionView: React.FC<NavigationComponentProps> = (props) => {
     </View>
   );
 };
+
+const styles = StyleSheet.create({
+  container: {
+    flex: 1,
+    backgroundColor: "white",
+    justifyContent: "center",
+    alignItems: "center",
+    padding: 20,
+  },
+});

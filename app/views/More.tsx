@@ -4,6 +4,14 @@ import { StyleSheet, Text, View } from "react-native";
 
 import { GillSansMTStdMedium } from "../utils/fonts";
 
+export const MoreView: React.FC<NavigationComponentProps> = () => (
+  <View style={styles.container}>
+    <Text style={styles.title} testID="ViewTitle">
+      More
+    </Text>
+  </View>
+);
+
 const styles = StyleSheet.create({
   container: {
     flex: 1,
@@ -17,13 +25,3 @@ const styles = StyleSheet.create({
     fontSize: 20,
   },
 });
-
-export const MoreView: React.FC<NavigationComponentProps> = () => {
-  return (
-    <View style={styles.container}>
-      <Text style={styles.title} testID="ViewTitle">
-        More
-      </Text>
-    </View>
-  );
-};
