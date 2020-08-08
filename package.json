@@ -158,11 +158,9 @@
     "jest-transform-graphql": "2.1.0",
     "jsdom": "9.12.0",
     "metro-react-native-babel-preset": "0.53.1",
-    "mkdirp": "0.5.1",
     "prettier": "2.0.5",
     "react-native-storybook-loader": "1.8.0",
     "react-test-renderer": "16.9.0",
-    "rimraf": "^3.0.2",
     "typescript": "3.7.2",
     "url": "0.11.0",
     "webpack": "4.30.0"

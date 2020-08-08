@@ -1,12 +1,9 @@
 const path = require("path");
 const fs = require("fs");
 const { promisify } = require("util");
-const rimraf = require("rimraf");
 
 import fetchGql from "../fetch-gql-schema";
 
-const mkdir = promisify(fs.mkdir);
-const rmdir = promisify(rimraf);
 const readFile = promisify(fs.readFile);
 
 const TEMP_DIR = path.join(__dirname, "tempSchema");
@@ -66,12 +63,17 @@ const mockSchema = {
 
 describe("fetch gql schema should", () => {
   beforeEach(async () => {
-    await rmdir(TEMP_DIR);
-    mkdir(TEMP_DIR);
+    try {
+      await fs.promises.rmdir(TEMP_DIR, { recursive: true });
+    } catch (_) {
+      // Skip
+    } finally {
+      await fs.promises.mkdir(TEMP_DIR, { recursive: true });
+    }
   });
 
   afterAll(async () => {
-    await rmdir(TEMP_DIR);
+    await fs.promises.rmdir(TEMP_DIR, { recursive: true });
   });
 
   it("make the correct introspection query", async () => {

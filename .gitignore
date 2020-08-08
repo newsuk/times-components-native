@@ -72,5 +72,6 @@ ios/main.jsbundle
 ios/main.jsbundle.meta
 
 # Schema
+packages/schema/__tests__/tempSchema
 packages/schema/fragment-matcher.js
 packages/schema/schema.json
