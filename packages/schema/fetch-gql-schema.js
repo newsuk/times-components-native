@@ -22,13 +22,13 @@ const fetchIntrospection = async (fetch, endpoint) => {
   return fetchResult.json();
 };
 
-const writeSchema = async (schema) =>
+const writeSchema = async (cwd, schema) =>
   writeFile(
-    path.join(__dirname, "schema.json"),
+    path.join(cwd, "schema.json"),
     prettier.format(JSON.stringify(schema), { parser: "json" }),
   );
 
-const writeFragmentMatcher = (schema) => {
+const writeFragmentMatcher = (cwd, schema) => {
   // eslint-disable-next-line no-underscore-dangle
   const filteredTypes = schema.data.__schema.types.filter(
     ({ possibleTypes }) => possibleTypes !== null,
@@ -53,11 +53,14 @@ const writeFragmentMatcher = (schema) => {
     { parser: "babel" },
   );
 
-  return writeFile(path.join(__dirname, "fragment-matcher.js"), fm);
+  return writeFile(path.join(cwd, "fragment-matcher.js"), fm);
 };
 
-module.exports = async (fetch, endpoint) => {
+module.exports = async (fetch, endpoint, cwd) => {
   const schema = await fetchIntrospection(fetch, endpoint);
 
-  return Promise.all([writeSchema(schema), writeFragmentMatcher(schema)]);
+  return Promise.all([
+    writeSchema(cwd, schema),
+    writeFragmentMatcher(cwd, schema),
+  ]);
 };

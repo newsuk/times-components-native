@@ -1,9 +1,15 @@
 const path = require("path");
 const fs = require("fs");
 const { promisify } = require("util");
-const fetchGql = require("../fetch-gql-schema");
+const rimraf = require("rimraf");
 
+import fetchGql from "../fetch-gql-schema";
+
+const mkdir = promisify(fs.mkdir);
+const rmdir = promisify(rimraf);
 const readFile = promisify(fs.readFile);
+
+const TEMP_DIR = path.join(__dirname, "tempSchema");
 
 const mockSchema = {
   data: {
@@ -58,23 +64,17 @@ const mockSchema = {
   },
 };
 
-const removeGeneratedFiles = () => {
-  try {
-    fs.unlinkSync(path.join(__dirname, "..", "schema.json"));
-    fs.unlinkSync(path.join(__dirname, "..", "fragment-matcher.js"));
-  } catch (_) {
-    // Skip
-  }
-};
-
 describe("fetch gql schema should", () => {
-  beforeEach(() => {
-    removeGeneratedFiles();
+  beforeEach(async () => {
+    await rmdir(TEMP_DIR);
+    mkdir(TEMP_DIR);
+  });
+
+  afterAll(async () => {
+    await rmdir(TEMP_DIR);
   });
 
   it("make the correct introspection query", async () => {
-    removeGeneratedFiles();
-
     const mockFetch = jest.fn().mockReturnValueOnce(
       Promise.resolve({
         json() {
@@ -84,7 +84,7 @@ describe("fetch gql schema should", () => {
     );
     const mockEndpoint = "https://graphql.io/graphql";
 
-    await fetchGql(mockFetch, mockEndpoint);
+    await fetchGql(mockFetch, mockEndpoint, TEMP_DIR);
 
     const [firstCall] = mockFetch.mock.calls;
     const [, query] = firstCall;
@@ -102,10 +102,10 @@ describe("fetch gql schema should", () => {
     );
     const mockEndpoint = "https://graphql.io/graphql";
 
-    await fetchGql(mockFetch, mockEndpoint);
+    await fetchGql(mockFetch, mockEndpoint, TEMP_DIR);
 
     const fragmentMatcher = await readFile(
-      path.join(__dirname, "..", "fragment-matcher.js"),
+      path.join(TEMP_DIR, "fragment-matcher.js"),
       "utf8",
     );
 
@@ -122,7 +122,7 @@ describe("fetch gql schema should", () => {
     );
     const mockEndpoint = "https://graphql.io/graphql";
 
-    await fetchGql(mockFetch, mockEndpoint);
+    await fetchGql(mockFetch, mockEndpoint, TEMP_DIR);
 
     const [firstCall] = mockFetch.mock.calls;
     const [endpoint] = firstCall;
@@ -140,10 +140,10 @@ describe("fetch gql schema should", () => {
     );
     const mockEndpoint = "https://graphql.io/graphql";
 
-    await fetchGql(mockFetch, mockEndpoint);
+    await fetchGql(mockFetch, mockEndpoint, TEMP_DIR);
 
     const writtenSchema = await readFile(
-      path.join(__dirname, "..", "schema.json"),
+      path.join(TEMP_DIR, "schema.json"),
       "utf8",
     );
 

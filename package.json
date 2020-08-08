@@ -162,6 +162,7 @@
     "prettier": "2.0.5",
     "react-native-storybook-loader": "1.8.0",
     "react-test-renderer": "16.9.0",
+    "rimraf": "^3.0.2",
     "typescript": "3.7.2",
     "url": "0.11.0",
     "webpack": "4.30.0"
