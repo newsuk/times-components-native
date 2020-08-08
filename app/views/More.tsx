@@ -6,7 +6,7 @@ import { GillSansMTStdMedium } from "../utils/fonts";
 
 export const MoreView: React.FC<NavigationComponentProps> = () => (
   <View style={styles.container}>
-    <Text style={styles.title} testID="ViewTitle">
+    <Text style={styles.title} accessibilityLabel="More Placeholder">
       More
     </Text>
   </View>

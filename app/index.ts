@@ -46,6 +46,7 @@ Navigation.events().registerAppLaunchedListener(() => {
               options: {
                 bottomTab: {
                   ...bottomTabOptions,
+                  testID: "HOME_TAB_ICON_ID",
                   text: "Home",
                   icon: IconEdition,
                 },
@@ -68,6 +69,7 @@ Navigation.events().registerAppLaunchedListener(() => {
               options: {
                 bottomTab: {
                   ...bottomTabOptions,
+                  testID: "P6D_TAB_ICON_ID",
                   text: "Past six days",
                   icon: IconPast6Days,
                 },
@@ -90,6 +92,7 @@ Navigation.events().registerAppLaunchedListener(() => {
               options: {
                 bottomTab: {
                   ...bottomTabOptions,
+                  testID: "MY_ARTICLES_TAB_ICON_ID",
                   text: "My articles",
                   icon: IconMyArticles,
                 },
@@ -124,6 +127,7 @@ Navigation.events().registerAppLaunchedListener(() => {
               options: {
                 bottomTab: {
                   ...bottomTabOptions,
+                  testID: "MORE_TAB_ICON_ID",
                   text: "More",
                   icon: IconMore,
                 },

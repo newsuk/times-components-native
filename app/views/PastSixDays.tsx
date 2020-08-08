@@ -6,7 +6,7 @@ import { GillSansMTStdMedium } from "../utils/fonts";
 
 export const PastSixDaysView: React.FC<NavigationComponentProps> = () => (
   <View style={styles.container}>
-    <Text style={styles.title} testID="ViewTitle">
+    <Text style={styles.title} accessibilityLabel="Past Six Days Placeholder">
       Past Six Days
     </Text>
   </View>

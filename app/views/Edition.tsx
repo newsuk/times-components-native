@@ -25,7 +25,11 @@ export const EditionView: React.FC<NavigationComponentProps> = (props) => {
 
   return (
     <View style={styles.container}>
-      <Button onPress={() => goToStorybook()} title="View Storybook" />
+      <Button
+        testID="viewStorybookButton"
+        onPress={() => goToStorybook()}
+        title="View Storybook"
+      />
     </View>
   );
 };

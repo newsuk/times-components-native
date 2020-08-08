@@ -6,7 +6,7 @@ import { GillSansMTStdMedium } from "../utils/fonts";
 
 export const MyArticlesView: React.FC<NavigationComponentProps> = () => (
   <View style={styles.container}>
-    <Text style={styles.title} testID="ViewTitle">
+    <Text style={styles.title} accessibilityLabel="My Articles Placeholder">
       My Articles
     </Text>
   </View>
