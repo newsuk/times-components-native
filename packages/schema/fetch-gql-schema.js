@@ -24,7 +24,7 @@ const fetchIntrospection = async (fetch, endpoint) => {
 
 const writeSchema = async (cwd, schema) =>
   writeFile(
-    path.join(cwd, "schema.json"),
+    path.join(__dirname, "schema.json"),
     prettier.format(JSON.stringify(schema), { parser: "json" }),
   );
 
