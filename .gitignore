@@ -71,5 +71,6 @@ ios/Pods/
 ios/main.jsbundle
 ios/main.jsbundle.meta
 
-fragment-matcher.js
-schema.json
+# Schema
+packages/schema/fragment-matcher.js
+packages/schema/schema.json

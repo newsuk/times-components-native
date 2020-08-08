@@ -1,4 +1,4 @@
-/* eslint-disable no-console, import/no-extraneous-dependencies */
+/* eslint-disable import/no-extraneous-dependencies */
 
 const { introspectionQuery } = require("graphql");
 const prettier = require("prettier");
@@ -22,13 +22,13 @@ const fetchIntrospection = async (fetch, endpoint) => {
   return fetchResult.json();
 };
 
-const writeSchema = async (cwd, schema) =>
+const writeSchema = async (schema) =>
   writeFile(
     path.join(__dirname, "schema.json"),
     prettier.format(JSON.stringify(schema), { parser: "json" }),
   );
 
-const writeFragmentMatcher = (cwd, schema) => {
+const writeFragmentMatcher = (schema) => {
   // eslint-disable-next-line no-underscore-dangle
   const filteredTypes = schema.data.__schema.types.filter(
     ({ possibleTypes }) => possibleTypes !== null,
@@ -53,14 +53,11 @@ const writeFragmentMatcher = (cwd, schema) => {
     { parser: "babel" },
   );
 
-  return writeFile(path.join(cwd, "fragment-matcher.js"), fm);
+  return writeFile(path.join(__dirname, "fragment-matcher.js"), fm);
 };
 
-module.exports = async (cwd, fetch, endpoint) => {
+module.exports = async (fetch, endpoint) => {
   const schema = await fetchIntrospection(fetch, endpoint);
 
-  return Promise.all([
-    writeSchema(cwd, schema),
-    writeFragmentMatcher(cwd, schema),
-  ]);
+  return Promise.all([writeSchema(schema), writeFragmentMatcher(schema)]);
 };
