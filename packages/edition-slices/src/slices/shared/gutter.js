@@ -4,12 +4,16 @@ import { View } from "react-native";
 import { ResponsiveContext } from "@times-components-native/responsive";
 import styleFactory from "./styles";
 
-const Gutter = ({ children }) => (
+const Gutter = ({ children, grow }) => (
   <ResponsiveContext.Consumer>
     {({ isTablet, editionBreakpoint }) => {
       const styles = styleFactory(isTablet, editionBreakpoint);
 
-      return <View style={styles.gutterStyles}>{children}</View>;
+      return (
+        <View style={[styles.gutterStyles, grow && { flexGrow: 1 }]}>
+          {children}
+        </View>
+      );
     }}
   </ResponsiveContext.Consumer>
 );

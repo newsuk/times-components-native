@@ -1367,7 +1367,117 @@ exports[`16. puzzle - medium 1`] = `
 </View>
 `;
 
-exports[`17. comment lead and cartoon - wide 1`] = `
+exports[`17. front lead two no pic and two - medium 1`] = `
+<View
+  style={
+    Object {
+      "alignSelf": "center",
+      "flexGrow": 1,
+      "maxWidth": "100%",
+      "paddingHorizontal": 10,
+      "width": 1366,
+    }
+  }
+>
+  <View
+    style={
+      Object {
+        "alignSelf": "center",
+        "flex": 1,
+        "flexDirection": "row",
+        "paddingTop": 15,
+        "width": 1000,
+      }
+    }
+  >
+    <View
+      style={
+        Object {
+          "width": "41.6%",
+        }
+      }
+    >
+      <View
+        style={
+          Object {
+            "flex": 6,
+          }
+        }
+      >
+        <TileXFront />
+      </View>
+      <View
+        style={
+          Object {
+            "borderBottomWidth": 1,
+            "borderColor": "#999999",
+            "borderStyle": "solid",
+          }
+        }
+      />
+      <View
+        style={
+          Object {
+            "flex": 4,
+          }
+        }
+      >
+        <TileYFront />
+      </View>
+    </View>
+    <View
+      style={
+        Object {
+          "borderColor": "#999999",
+          "borderRightWidth": 1,
+          "borderStyle": "solid",
+          "marginTop": 0,
+          "marginVertical": 10,
+        }
+      }
+    />
+    <View
+      style={
+        Object {
+          "width": "16.8%",
+        }
+      }
+    >
+      <TileALFront />
+    </View>
+    <View
+      style={
+        Object {
+          "borderColor": "#999999",
+          "borderRightWidth": 1,
+          "borderStyle": "solid",
+          "marginTop": 0,
+          "marginVertical": 10,
+        }
+      }
+    />
+    <View
+      style={
+        Object {
+          "width": "41.6%",
+        }
+      }
+    >
+      <View
+        style={
+          Object {
+            "flex": 1,
+          }
+        }
+      >
+        <TileEFront />
+      </View>
+    </View>
+  </View>
+</View>
+`;
+
+exports[`18. comment lead and cartoon - wide 1`] = `
 <View
   style={
     Object {
@@ -1420,7 +1530,7 @@ exports[`17. comment lead and cartoon - wide 1`] = `
 </View>
 `;
 
-exports[`18. daily universal register - wide 1`] = `
+exports[`19. daily universal register - wide 1`] = `
 <View
   style={
     Object {
@@ -1529,7 +1639,7 @@ exports[`18. daily universal register - wide 1`] = `
 </View>
 `;
 
-exports[`19. lead one and one - wide 1`] = `
+exports[`20. lead one and one - wide 1`] = `
 <View
   style={
     Object {
@@ -1581,7 +1691,7 @@ exports[`19. lead one and one - wide 1`] = `
 </View>
 `;
 
-exports[`20. lead one full width - wide 1`] = `
+exports[`21. lead one full width - wide 1`] = `
 <View
   style={
     Object {
@@ -1596,7 +1706,7 @@ exports[`20. lead one full width - wide 1`] = `
 </View>
 `;
 
-exports[`21. lead two no pic and two - wide 1`] = `
+exports[`22. lead two no pic and two - wide 1`] = `
 <View
   style={
     Object {
@@ -1677,7 +1787,7 @@ exports[`21. lead two no pic and two - wide 1`] = `
 </View>
 `;
 
-exports[`22. leaders slice - wide 1`] = `
+exports[`23. leaders slice - wide 1`] = `
 <View
   style={
     Object {
@@ -1802,7 +1912,7 @@ exports[`22. leaders slice - wide 1`] = `
 </View>
 `;
 
-exports[`23. secondary one and four - wide 1`] = `
+exports[`24. secondary one and four - wide 1`] = `
 <View
   style={
     Object {
@@ -1970,7 +2080,7 @@ exports[`23. secondary one and four - wide 1`] = `
 </View>
 `;
 
-exports[`24. secondary one - wide 1`] = `
+exports[`25. secondary one - wide 1`] = `
 <View
   style={
     Object {
@@ -1985,7 +2095,7 @@ exports[`24. secondary one - wide 1`] = `
 </View>
 `;
 
-exports[`25. secondary four - wide 1`] = `
+exports[`26. secondary four - wide 1`] = `
 <View
   style={
     Object {
@@ -2076,7 +2186,7 @@ exports[`25. secondary four - wide 1`] = `
 </View>
 `;
 
-exports[`26. secondary one and columnist - wide 1`] = `
+exports[`27. secondary one and columnist - wide 1`] = `
 <View
   style={
     Object {
@@ -2129,7 +2239,7 @@ exports[`26. secondary one and columnist - wide 1`] = `
 </View>
 `;
 
-exports[`27. secondary two and two - wide 1`] = `
+exports[`28. secondary two and two - wide 1`] = `
 <View
   style={
     Object {
@@ -2219,7 +2329,7 @@ exports[`27. secondary two and two - wide 1`] = `
 </View>
 `;
 
-exports[`28. lead one and four slice - wide 1`] = `
+exports[`29. lead one and four slice - wide 1`] = `
 <View
   style={
     Object {
@@ -2302,7 +2412,7 @@ exports[`28. lead one and four slice - wide 1`] = `
 </View>
 `;
 
-exports[`29. standard slice - wide 1`] = `
+exports[`30. standard slice - wide 1`] = `
 <View
   style={
     Object {
@@ -2369,7 +2479,7 @@ exports[`29. standard slice - wide 1`] = `
 </View>
 `;
 
-exports[`30. secondary two no pic and two - wide 1`] = `
+exports[`31. secondary two no pic and two - wide 1`] = `
 <View
   style={
     Object {
@@ -2460,7 +2570,7 @@ exports[`30. secondary two no pic and two - wide 1`] = `
 </View>
 `;
 
-exports[`31. list two and six no pic - wide 1`] = `
+exports[`32. list two and six no pic - wide 1`] = `
 <View
   style={
     Object {
@@ -2660,7 +2770,7 @@ exports[`31. list two and six no pic - wide 1`] = `
 </View>
 `;
 
-exports[`32. puzzle - wide 1`] = `
+exports[`33. puzzle - wide 1`] = `
 <View
   style={
     Object {
@@ -2712,7 +2822,117 @@ exports[`32. puzzle - wide 1`] = `
 </View>
 `;
 
-exports[`33. comment lead and cartoon - huge 1`] = `
+exports[`34. front lead two no pic and two - wide 1`] = `
+<View
+  style={
+    Object {
+      "alignSelf": "center",
+      "flexGrow": 1,
+      "maxWidth": "100%",
+      "paddingHorizontal": 30,
+      "width": 1366,
+    }
+  }
+>
+  <View
+    style={
+      Object {
+        "alignSelf": "center",
+        "flex": 1,
+        "flexDirection": "row",
+        "paddingTop": 15,
+        "width": 1000,
+      }
+    }
+  >
+    <View
+      style={
+        Object {
+          "width": "41.6%",
+        }
+      }
+    >
+      <View
+        style={
+          Object {
+            "flex": 6,
+          }
+        }
+      >
+        <TileXFront />
+      </View>
+      <View
+        style={
+          Object {
+            "borderBottomWidth": 1,
+            "borderColor": "#999999",
+            "borderStyle": "solid",
+          }
+        }
+      />
+      <View
+        style={
+          Object {
+            "flex": 4,
+          }
+        }
+      >
+        <TileYFront />
+      </View>
+    </View>
+    <View
+      style={
+        Object {
+          "borderColor": "#999999",
+          "borderRightWidth": 1,
+          "borderStyle": "solid",
+          "marginTop": 0,
+          "marginVertical": 10,
+        }
+      }
+    />
+    <View
+      style={
+        Object {
+          "width": "16.8%",
+        }
+      }
+    >
+      <TileALFront />
+    </View>
+    <View
+      style={
+        Object {
+          "borderColor": "#999999",
+          "borderRightWidth": 1,
+          "borderStyle": "solid",
+          "marginTop": 0,
+          "marginVertical": 10,
+        }
+      }
+    />
+    <View
+      style={
+        Object {
+          "width": "41.6%",
+        }
+      }
+    >
+      <View
+        style={
+          Object {
+            "flex": 1,
+          }
+        }
+      >
+        <TileEFront />
+      </View>
+    </View>
+  </View>
+</View>
+`;
+
+exports[`35. comment lead and cartoon - huge 1`] = `
 <View
   style={
     Object {
@@ -2775,7 +2995,7 @@ exports[`33. comment lead and cartoon - huge 1`] = `
 </View>
 `;
 
-exports[`34. daily universal register - huge 1`] = `
+exports[`36. daily universal register - huge 1`] = `
 <View
   style={
     Object {
@@ -2894,7 +3114,7 @@ exports[`34. daily universal register - huge 1`] = `
 </View>
 `;
 
-exports[`35. lead one and one - huge 1`] = `
+exports[`37. lead one and one - huge 1`] = `
 <View
   style={
     Object {
@@ -2956,7 +3176,7 @@ exports[`35. lead one and one - huge 1`] = `
 </View>
 `;
 
-exports[`36. lead one full width - huge 1`] = `
+exports[`38. lead one full width - huge 1`] = `
 <View
   style={
     Object {
@@ -2981,7 +3201,7 @@ exports[`36. lead one full width - huge 1`] = `
 </View>
 `;
 
-exports[`37. lead two no pic and two - huge 1`] = `
+exports[`39. lead two no pic and two - huge 1`] = `
 <View
   style={
     Object {
@@ -3072,7 +3292,7 @@ exports[`37. lead two no pic and two - huge 1`] = `
 </View>
 `;
 
-exports[`38. leaders slice - huge 1`] = `
+exports[`40. leaders slice - huge 1`] = `
 <View
   style={
     Object {
@@ -3207,7 +3427,7 @@ exports[`38. leaders slice - huge 1`] = `
 </View>
 `;
 
-exports[`39. secondary one and four - huge 1`] = `
+exports[`41. secondary one and four - huge 1`] = `
 <View
   style={
     Object {
@@ -3385,7 +3605,7 @@ exports[`39. secondary one and four - huge 1`] = `
 </View>
 `;
 
-exports[`40. secondary one - huge 1`] = `
+exports[`42. secondary one - huge 1`] = `
 <View
   style={
     Object {
@@ -3410,7 +3630,7 @@ exports[`40. secondary one - huge 1`] = `
 </View>
 `;
 
-exports[`41. secondary four - huge 1`] = `
+exports[`43. secondary four - huge 1`] = `
 <View
   style={
     Object {
@@ -3511,7 +3731,7 @@ exports[`41. secondary four - huge 1`] = `
 </View>
 `;
 
-exports[`42. secondary one and columnist - huge 1`] = `
+exports[`44. secondary one and columnist - huge 1`] = `
 <View
   style={
     Object {
@@ -3574,7 +3794,7 @@ exports[`42. secondary one and columnist - huge 1`] = `
 </View>
 `;
 
-exports[`43. secondary two and two - huge 1`] = `
+exports[`45. secondary two and two - huge 1`] = `
 <View
   style={
     Object {
@@ -3674,7 +3894,7 @@ exports[`43. secondary two and two - huge 1`] = `
 </View>
 `;
 
-exports[`44. lead one and four slice - huge 1`] = `
+exports[`46. lead one and four slice - huge 1`] = `
 <View
   style={
     Object {
@@ -3767,7 +3987,7 @@ exports[`44. lead one and four slice - huge 1`] = `
 </View>
 `;
 
-exports[`45. standard slice - huge 1`] = `
+exports[`47. standard slice - huge 1`] = `
 <View
   style={
     Object {
@@ -3844,7 +4064,7 @@ exports[`45. standard slice - huge 1`] = `
 </View>
 `;
 
-exports[`46. secondary two no pic and two - huge 1`] = `
+exports[`48. secondary two no pic and two - huge 1`] = `
 <View
   style={
     Object {
@@ -3945,7 +4165,7 @@ exports[`46. secondary two no pic and two - huge 1`] = `
 </View>
 `;
 
-exports[`47. list two and six no pic - huge 1`] = `
+exports[`49. list two and six no pic - huge 1`] = `
 <View
   style={
     Object {
@@ -4155,7 +4375,7 @@ exports[`47. list two and six no pic - huge 1`] = `
 </View>
 `;
 
-exports[`48. puzzle - huge 1`] = `
+exports[`50. puzzle - huge 1`] = `
 <View
   style={
     Object {
@@ -4211,6 +4431,126 @@ exports[`48. puzzle - huge 1`] = `
         }
       >
         <TileAK />
+      </View>
+    </View>
+  </View>
+</View>
+`;
+
+exports[`51. front lead two no pic and two - huge 1`] = `
+<View
+  style={
+    Object {
+      "alignSelf": "center",
+      "flexGrow": 1,
+      "maxWidth": "100%",
+      "paddingHorizontal": 10,
+      "width": 1366,
+    }
+  }
+>
+  <View
+    style={
+      Object {
+        "alignSelf": "center",
+        "flex": 1,
+        "width": 1180,
+      }
+    }
+  >
+    <View
+      style={
+        Object {
+          "alignSelf": "center",
+          "flex": 1,
+          "flexDirection": "row",
+          "paddingTop": 15,
+          "width": 1000,
+        }
+      }
+    >
+      <View
+        style={
+          Object {
+            "width": "35%",
+          }
+        }
+      >
+        <View
+          style={
+            Object {
+              "flex": 6,
+            }
+          }
+        >
+          <TileXFront />
+        </View>
+        <View
+          style={
+            Object {
+              "borderBottomWidth": 1,
+              "borderColor": "#999999",
+              "borderStyle": "solid",
+            }
+          }
+        />
+        <View
+          style={
+            Object {
+              "flex": 4,
+            }
+          }
+        >
+          <TileYFront />
+        </View>
+      </View>
+      <View
+        style={
+          Object {
+            "borderColor": "#999999",
+            "borderRightWidth": 1,
+            "borderStyle": "solid",
+            "marginTop": 0,
+            "marginVertical": 10,
+          }
+        }
+      />
+      <View
+        style={
+          Object {
+            "width": "18%",
+          }
+        }
+      >
+        <TileALFront />
+      </View>
+      <View
+        style={
+          Object {
+            "borderColor": "#999999",
+            "borderRightWidth": 1,
+            "borderStyle": "solid",
+            "marginTop": 0,
+            "marginVertical": 10,
+          }
+        }
+      />
+      <View
+        style={
+          Object {
+            "width": "46%",
+          }
+        }
+      >
+        <View
+          style={
+            Object {
+              "flex": 1,
+            }
+          }
+        >
+          <TileEFront />
+        </View>
       </View>
     </View>
   </View>

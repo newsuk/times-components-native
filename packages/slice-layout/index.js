@@ -18,4 +18,5 @@ export {
   ListTwoAndSixNoPic,
   ItemColSeparator,
   ItemRowSeparator,
+  FrontLeadTwoAndTwoSlice,
 } from "./src/slice-layout";

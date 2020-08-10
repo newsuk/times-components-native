@@ -1,0 +1,204 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`FrontTileSummary renders correctly 1`] = `
+<View
+  style={
+    Object {
+      "backgroundColor": "red",
+    }
+  }
+>
+  <ArticleSummaryHeadline
+    headline="This is tile headline"
+    style={
+      Object {
+        "backgroundColor": "blue",
+      }
+    }
+  />
+  <ArticleSummaryStrapline
+    strapline="Strapline Text"
+    style={
+      Object {
+        "backgroundColor": "green",
+      }
+    }
+  />
+  <Text
+    style={
+      Object {
+        "marginBottom": 5,
+      }
+    }
+  >
+    <ArticleByline
+      ast={
+        Array [
+          Object {
+            "byline": Array [
+              Object {
+                "foo": "bar",
+              },
+            ],
+          },
+        ]
+      }
+      bylineStyle={
+        Object {
+          "lineHeight": 13,
+        }
+      }
+    />
+  </Text>
+  <FrontArticleSummaryContent
+    linesOfTeaserToRender={2}
+    summary={
+      Array [
+        Object {
+          "attributes": Object {},
+          "children": Array [
+            Object {
+              "attributes": Object {
+                "value": "Test",
+              },
+              "children": Array [],
+              "name": "text",
+            },
+          ],
+          "name": "paragraph",
+        },
+      ]
+    }
+    summaryStyle={
+      Object {
+        "backgroundColor": "orange",
+      }
+    }
+    whiteSpaceHeight={40}
+  />
+</View>
+`;
+
+exports[`FrontTileSummary renders without byline 1`] = `
+<View
+  style={
+    Object {
+      "backgroundColor": "red",
+    }
+  }
+>
+  <ArticleSummaryHeadline
+    headline="This is tile headline"
+    style={
+      Object {
+        "backgroundColor": "blue",
+      }
+    }
+  />
+  <ArticleSummaryStrapline
+    strapline="Strapline Text"
+    style={
+      Object {
+        "backgroundColor": "green",
+      }
+    }
+  />
+  <FrontArticleSummaryContent
+    linesOfTeaserToRender={2}
+    summary={
+      Array [
+        Object {
+          "attributes": Object {},
+          "children": Array [
+            Object {
+              "attributes": Object {
+                "value": "Test",
+              },
+              "children": Array [],
+              "name": "text",
+            },
+          ],
+          "name": "paragraph",
+        },
+      ]
+    }
+    summaryStyle={
+      Object {
+        "backgroundColor": "orange",
+      }
+    }
+    whiteSpaceHeight={40}
+  />
+</View>
+`;
+
+exports[`FrontTileSummary renders without strapline 1`] = `
+<View
+  style={
+    Object {
+      "backgroundColor": "red",
+    }
+  }
+>
+  <ArticleSummaryHeadline
+    headline="This is tile headline"
+    style={
+      Object {
+        "backgroundColor": "blue",
+      }
+    }
+  />
+  <Text
+    style={
+      Object {
+        "marginBottom": 5,
+      }
+    }
+  >
+    <ArticleByline
+      ast={
+        Array [
+          Object {
+            "byline": Array [
+              Object {
+                "foo": "bar",
+              },
+            ],
+          },
+        ]
+      }
+      bylineStyle={
+        Object {
+          "lineHeight": 13,
+        }
+      }
+    />
+  </Text>
+  <FrontArticleSummaryContent
+    linesOfTeaserToRender={2}
+    summary={
+      Array [
+        Object {
+          "attributes": Object {},
+          "children": Array [
+            Object {
+              "attributes": Object {
+                "value": "Test",
+              },
+              "children": Array [],
+              "name": "text",
+            },
+          ],
+          "name": "paragraph",
+        },
+      ]
+    }
+    summaryStyle={
+      Object {
+        "backgroundColor": "orange",
+      }
+    }
+    whiteSpaceHeight={40}
+  />
+</View>
+`;

@@ -15,7 +15,7 @@ import ResponsiveContext from "./context";
 
 const config = (NativeModules || {}).ReactConfig;
 
-const calculateState = (width, fontScale) => ({
+const calculateState = (width, height, fontScale) => ({
   editionBreakpoint: getEditionBreakpoint(width),
   narrowArticleBreakpoint: getNarrowArticleBreakpoint(width),
   fontScale,
@@ -23,14 +23,15 @@ const calculateState = (width, fontScale) => ({
     (config && config.breakpoint && config.breakpoint !== "small") ||
     width >= tabletWidth,
   screenWidth: width,
+  orientation: height > width ? "portrait" : "landscape",
 });
 
 class Responsive extends Component {
   constructor(props) {
     super(props);
     this.onDimensionChange = this.onDimensionChange.bind(this);
-    const { fontScale, width } = getDimensions();
-    this.state = calculateState(width, fontScale);
+    const { fontScale, width, height } = getDimensions();
+    this.state = calculateState(width, height, fontScale);
   }
 
   componentDidMount() {
@@ -41,11 +42,10 @@ class Responsive extends Component {
     removeDimensionsListener("change", this.onDimensionChange);
   }
 
-  onDimensionChange({ window: { fontScale, width } }) {
+  onDimensionChange({ window: { fontScale, width, height } }) {
     const { fontScale: oldScale, screenWidth: oldWidth } = this.state;
     if (fontScale !== oldScale || (oldWidth && width !== oldWidth)) {
-      console.log("UPDATE", fontScale, oldScale, width, oldWidth);
-      this.setState(calculateState(width, fontScale));
+      this.setState(calculateState(width, height, fontScale));
     }
   }
 

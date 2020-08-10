@@ -1,0 +1,227 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`1. front lead two no pic and two - small - landscape 1`] = `
+<View>
+  <Text>
+    lead-1
+  </Text>
+  <View />
+  <Text>
+    lead-2
+  </Text>
+  <View />
+  <Text>
+    support-1
+  </Text>
+  <View />
+  <Text>
+    support-2
+  </Text>
+</View>
+`;
+
+exports[`2. front lead two no pic and two - medium - landscape 1`] = `
+<View>
+  <View>
+    <View>
+      <Text>
+        lead-1
+      </Text>
+    </View>
+    <View />
+    <View>
+      <Text>
+        lead-2
+      </Text>
+    </View>
+  </View>
+  <View />
+  <View>
+    <Text>
+      support-1
+    </Text>
+  </View>
+  <View />
+  <View>
+    <View>
+      <Text>
+        support-2
+      </Text>
+    </View>
+  </View>
+</View>
+`;
+
+exports[`3. front lead two no pic and two - wide - landscape 1`] = `
+<View>
+  <View>
+    <View>
+      <Text>
+        lead-1
+      </Text>
+    </View>
+    <View />
+    <View>
+      <Text>
+        lead-2
+      </Text>
+    </View>
+  </View>
+  <View />
+  <View>
+    <Text>
+      support-1
+    </Text>
+  </View>
+  <View />
+  <View>
+    <View>
+      <Text>
+        support-2
+      </Text>
+    </View>
+  </View>
+</View>
+`;
+
+exports[`4. front lead two no pic and two - huge - landscape 1`] = `
+<View>
+  <View>
+    <View>
+      <Text>
+        lead-1
+      </Text>
+    </View>
+    <View />
+    <View>
+      <Text>
+        lead-2
+      </Text>
+    </View>
+  </View>
+  <View />
+  <View>
+    <Text>
+      support-1
+    </Text>
+  </View>
+  <View />
+  <View>
+    <View>
+      <Text>
+        support-2
+      </Text>
+    </View>
+  </View>
+</View>
+`;
+
+exports[`5. front lead two no pic and two - small - portrait 1`] = `
+<View>
+  <Text>
+    lead-1
+  </Text>
+  <View />
+  <Text>
+    lead-2
+  </Text>
+  <View />
+  <Text>
+    support-1
+  </Text>
+  <View />
+  <Text>
+    support-2
+  </Text>
+</View>
+`;
+
+exports[`6. front lead two no pic and two - medium - portrait 1`] = `
+<View>
+  <View>
+    <View>
+      <Text>
+        lead-1
+      </Text>
+    </View>
+    <View />
+    <View>
+      <Text>
+        lead-2
+      </Text>
+    </View>
+  </View>
+  <View />
+  <View>
+    <View>
+      <Text>
+        support-2
+      </Text>
+    </View>
+    <View />
+    <Text>
+      support-1
+    </Text>
+  </View>
+</View>
+`;
+
+exports[`7. front lead two no pic and two - wide - portrait 1`] = `
+<View>
+  <View>
+    <View>
+      <Text>
+        lead-1
+      </Text>
+    </View>
+    <View />
+    <View>
+      <Text>
+        lead-2
+      </Text>
+    </View>
+  </View>
+  <View />
+  <View>
+    <View>
+      <Text>
+        support-2
+      </Text>
+    </View>
+    <View />
+    <Text>
+      support-1
+    </Text>
+  </View>
+</View>
+`;
+
+exports[`8. front lead two no pic and two - huge - portrait 1`] = `
+<View>
+  <View>
+    <View>
+      <Text>
+        lead-1
+      </Text>
+    </View>
+    <View />
+    <View>
+      <Text>
+        lead-2
+      </Text>
+    </View>
+  </View>
+  <View />
+  <View>
+    <View>
+      <Text>
+        support-2
+      </Text>
+    </View>
+    <View />
+    <Text>
+      support-1
+    </Text>
+  </View>
+</View>
+`;
