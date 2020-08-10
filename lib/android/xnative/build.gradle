@@ -93,4 +93,7 @@ dependencies {
     api("react-repo:react-native-community-netinfo:${packageInfo.dependencies.'@react-native-community/netinfo'}") {
         exclude group: "com.facebook.react"
     }
+    api("react-repo:react-native-community-art:${packageInfo.dependencies.'@react-native-community/art'}") {
+        exclude group: "com.facebook.react"
+    }
 }
