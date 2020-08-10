@@ -1,4 +1,4 @@
-/* eslint-disable no-console, import/no-extraneous-dependencies */
+/* eslint-disable import/no-extraneous-dependencies */
 
 const { introspectionQuery } = require("graphql");
 const prettier = require("prettier");
@@ -56,7 +56,7 @@ const writeFragmentMatcher = (cwd, schema) => {
   return writeFile(path.join(cwd, "fragment-matcher.js"), fm);
 };
 
-module.exports = async (cwd, fetch, endpoint) => {
+module.exports = async (fetch, endpoint, cwd) => {
   const schema = await fetchIntrospection(fetch, endpoint);
 
   return Promise.all([
