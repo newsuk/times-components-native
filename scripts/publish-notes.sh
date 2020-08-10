@@ -28,7 +28,7 @@ createAndPushTag () {
 publishNotes () {
     echo "🚀 Publishing the GitHub Release"
     export CONVENTIONAL_GITHUB_RELEASER_TOKEN="$GH_TOKEN"
-    yarn conventional-github-releaser
+    yarn run conventional-github-releaser
     echo "👻 Success! Release published at https://github.com/$REPO_SLUG/releases/tag/v$PACKAGE_VERSION"
 }
 
