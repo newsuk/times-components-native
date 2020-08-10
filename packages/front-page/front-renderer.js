@@ -2,7 +2,7 @@ import React from "react";
 import coreRenderers from "@times-components-native/markup";
 import { Text } from "react-native";
 
-export const PARAGRAPH_INDENT = `\u3000\u3000`; // approximates a tab
+export const PARAGRAPH_INDENT = `\u3000`; // approximates a tab
 
 export default {
   ...coreRenderers,
