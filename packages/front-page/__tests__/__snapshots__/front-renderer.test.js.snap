@@ -16,7 +16,7 @@ exports[`front renderers paragraph renderer renders paragraph 1`] = `
 
 exports[`front renderers paragraph renderer renders paragraph with tab 1`] = `
 <Text>
-  　　
+  　
   Some Text
   
 

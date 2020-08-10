@@ -204,6 +204,18 @@ function mockLeadTwoNoPicAndTwoSlice(): LeadTwoNoPicAndTwoSliceWithName {
   };
 }
 
+function mockFrontLeadTwoNoPicAndTwoSlice(): LeadTwoNoPicAndTwoSliceWithName {
+  const tiles = getTiles(4);
+  return <LeadTwoNoPicAndTwoSliceWithName>{
+    name: "LeadTwoNoPicandTwoFrontSlice",
+    lead1: tiles[0],
+    lead2: tiles[1],
+    support1: tiles[2],
+    support2: tiles[3],
+    items: tiles,
+  };
+}
+
 function mockSecondaryOneSlice(): SecondaryOneSliceWithName {
   const tiles = getTiles(1);
   return <SecondaryOneSliceWithName>{
@@ -375,4 +387,5 @@ export {
   mockSecondaryTwoAndTwoSlice,
   mockSecondaryTwoNoPicAndTwoSlice,
   mockPuzzleSlice,
+  mockFrontLeadTwoNoPicAndTwoSlice,
 };
