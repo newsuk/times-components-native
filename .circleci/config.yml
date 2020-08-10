@@ -228,12 +228,6 @@ workflows:
                     branches:
                         ignore:
                             - master
-                requires:
-                    - run_lint
-                    - run_typecheck
-                    - run_noplatform_tests
-                    - run_android_tests
-                    - run_ios_tests
             - publish_android_beta:
                 requires:
                     - hold_release_beta
