@@ -8,19 +8,13 @@ import {
   TileYFront,
   TileALFront,
 } from "@times-components-native/edition-slices/src/tiles";
-import { testSlice } from "./testSlice";
 
 function renderMedium(props, breakpoint, orientation) {
-  // const {
-  //   onPress,
-  // slice: { lead1, lead2, support1, support2 },
-  // } = props;
+  const {
+    onPress,
+    slice: { lead1, lead2, support1, support2 },
+  } = props;
 
-  const onPress = () => {
-    console.log("PRESSED");
-  };
-
-  const { lead1, lead2, support1, support2 } = testSlice;
   const renderSupport1Component =
     orientation === "landscape" ? (
       <TileALFront

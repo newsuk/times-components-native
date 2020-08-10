@@ -3,13 +3,7 @@ import React from "react";
 import PropTypes from "prop-types";
 import { editionBreakpoints } from "@times-components-native/styleguide";
 import { FrontTileSummary } from "@times-components-native/front-page";
-import {
-  getTileImage,
-  TileLink,
-  withTileTracking,
-  TileImage,
-  getTileSummary,
-} from "../shared";
+import { getTileImage, TileLink, withTileTracking, TileImage } from "../shared";
 import stylesFactory from "./styles";
 import WithoutWhiteSpace from "../shared/without-white-space";
 
@@ -32,7 +26,7 @@ const TileEFront = ({
     article: { hasVideo },
   } = tile;
 
-  const summary = getTileSummary(tile, 1000);
+  const summary = tile.article.content;
 
   return (
     <TileLink onPress={onPress} style={[styles.container]} tile={tile}>

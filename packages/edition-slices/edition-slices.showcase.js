@@ -35,7 +35,7 @@ import {
   LeadersSlice,
   DailyRegisterLeadFourSlice,
   StandardSlice,
-  FrontLeadTwoAndTwoSlice,
+  LeadTwoNoPicandTwoFrontSlice,
 } from "./src/slices";
 
 const preventDefaultedAction = (decorateAction) =>
@@ -172,8 +172,8 @@ const sliceStories = [
   },
   {
     mock: mockLeadTwoNoPicAndTwoSlice(),
-    name: "Front Lead Two And Two",
-    Slice: FrontLeadTwoAndTwoSlice,
+    name: "Front Lead Two No Pic And Two",
+    Slice: LeadTwoNoPicandTwoFrontSlice,
     scroll: false,
   },
 ];

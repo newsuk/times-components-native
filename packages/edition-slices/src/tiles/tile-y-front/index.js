@@ -3,7 +3,7 @@ import React from "react";
 import PropTypes from "prop-types";
 import { editionBreakpoints } from "@times-components-native/styleguide";
 import { FrontTileSummary } from "@times-components-native/front-page";
-import { TileLink, withTileTracking, getTileSummary } from "../shared";
+import { TileLink, withTileTracking } from "../shared";
 import stylesFactory from "./styles";
 import WithoutWhiteSpace from "@times-components-native/edition-slices/src/tiles/shared/without-white-space";
 
@@ -25,7 +25,7 @@ const TileYFront = ({
                 ? styles.headlineLandscape
                 : styles.headlinePortrait
             }
-            summary={getTileSummary(tile, 1000)}
+            summary={tile.article.content}
             summaryStyle={styles.summary}
             tile={tile}
             bylines={tile.article.bylines}

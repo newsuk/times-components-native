@@ -3,13 +3,7 @@ import React from "react";
 import PropTypes from "prop-types";
 import { editionBreakpoints } from "@times-components-native/styleguide";
 import { FrontTileSummary } from "@times-components-native/front-page";
-import {
-  getTileImage,
-  getTileSummary,
-  TileLink,
-  TileImage,
-  withTileTracking,
-} from "../shared";
+import { getTileImage, TileLink, TileImage, withTileTracking } from "../shared";
 import stylesFactory from "./styles";
 import WithoutWhiteSpace from "../shared/without-white-space";
 import PositionedTileStar from "../shared/positioned-tile-star";
@@ -45,7 +39,7 @@ const TileALFront = ({
         render={(whiteSpaceHeight) => (
           <FrontTileSummary
             headlineStyle={styles.headline}
-            summary={getTileSummary(tile, 800)}
+            summary={tile.article.content}
             summaryStyle={styles.summary}
             tile={tile}
             whiteSpaceHeight={whiteSpaceHeight}

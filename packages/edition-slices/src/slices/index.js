@@ -14,4 +14,4 @@ export { default as SecondaryOneAndFourSlice } from "./secondaryoneandfour";
 export { default as SecondaryTwoAndTwoSlice } from "./secondarytwoandtwo";
 export { default as PuzzleSlice } from "./puzzle";
 export { default as SecondaryTwoNoPicAndTwoSlice } from "./secondarytwonopicandtwo";
-export { default as FrontLeadTwoAndTwoSlice } from "./frontleadtwoandtwo";
+export { default as LeadTwoNoPicandTwoFrontSlice } from "./frontleadtwoandtwo";
