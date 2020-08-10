@@ -1,13 +1,12 @@
 const path = require("path");
 const fs = require("fs");
 const { promisify } = require("util");
-const rimraf = require("rimraf");
-const { iterator } = require("@times-components-native/test-utils");
-const fetchGql = require("../fetch-gql-schema");
 
-const mkdir = promisify(fs.mkdir);
-const rmdir = promisify(rimraf);
+import fetchGql from "../fetch-gql-schema";
+
 const readFile = promisify(fs.readFile);
+
+const TEMP_DIR = path.join(__dirname, "tempSchema");
 
 const mockSchema = {
   data: {
@@ -62,117 +61,94 @@ const mockSchema = {
   },
 };
 
-const makeTestDir = (name) => mkdir(name);
-
-const removeTestDir = (name) => rmdir(name);
-
 describe("fetch gql schema should", () => {
-  const tests = [
-    {
-      name: "make the correct introspection query",
-      async test() {
-        const testDir = path.join(__dirname, "1");
-        await makeTestDir(testDir);
+  beforeEach(async () => {
+    try {
+      await fs.promises.rmdir(TEMP_DIR, { recursive: true });
+    } catch (_) {
+      // Skip
+    } finally {
+      await fs.promises.mkdir(TEMP_DIR, { recursive: true });
+    }
+  });
 
-        const mockFetch = jest.fn().mockReturnValueOnce(
-          Promise.resolve({
-            json() {
-              return Promise.resolve(mockSchema);
-            },
-          }),
-        );
-        const mockEndpoint = "https://graphql.io/graphql";
+  afterAll(async () => {
+    await fs.promises.rmdir(TEMP_DIR, { recursive: true });
+  });
 
-        await fetchGql(testDir, mockFetch, mockEndpoint);
+  it("make the correct introspection query", async () => {
+    const mockFetch = jest.fn().mockReturnValueOnce(
+      Promise.resolve({
+        json() {
+          return Promise.resolve(mockSchema);
+        },
+      }),
+    );
+    const mockEndpoint = "https://graphql.io/graphql";
 
-        const [firstCall] = mockFetch.mock.calls;
-        const [, query] = firstCall;
+    await fetchGql(mockFetch, mockEndpoint, TEMP_DIR);
 
-        expect(query).toMatchSnapshot();
+    const [firstCall] = mockFetch.mock.calls;
+    const [, query] = firstCall;
 
-        await removeTestDir(testDir);
-      },
-    },
-    {
-      name: "write the expected fragment matcher",
-      async test() {
-        const testDir = path.join(__dirname, "2");
-        await makeTestDir(testDir);
+    expect(query).toMatchSnapshot();
+  });
 
-        const mockFetch = jest.fn().mockReturnValueOnce(
-          Promise.resolve({
-            json() {
-              return Promise.resolve(mockSchema);
-            },
-          }),
-        );
-        const mockEndpoint = "https://graphql.io/graphql";
+  it("write the expected fragment matcher", async () => {
+    const mockFetch = jest.fn().mockReturnValueOnce(
+      Promise.resolve({
+        json() {
+          return Promise.resolve(mockSchema);
+        },
+      }),
+    );
+    const mockEndpoint = "https://graphql.io/graphql";
 
-        await fetchGql(testDir, mockFetch, mockEndpoint);
+    await fetchGql(mockFetch, mockEndpoint, TEMP_DIR);
 
-        const fragmentMatcher = await readFile(
-          path.join(testDir, "fragment-matcher.js"),
-          "utf8",
-        );
+    const fragmentMatcher = await readFile(
+      path.join(TEMP_DIR, "fragment-matcher.js"),
+      "utf8",
+    );
 
-        expect(fragmentMatcher).toMatchSnapshot();
+    expect(fragmentMatcher).toMatchSnapshot();
+  });
 
-        await removeTestDir(testDir);
-      },
-    },
-    {
-      name: "make an introspection query for the given GraphQL endpoint",
-      async test() {
-        const testDir = path.join(__dirname, "3");
-        await makeTestDir(testDir);
+  it("make an introspection query for the given GraphQL endpoint", async () => {
+    const mockFetch = jest.fn().mockReturnValueOnce(
+      Promise.resolve({
+        json() {
+          return Promise.resolve(mockSchema);
+        },
+      }),
+    );
+    const mockEndpoint = "https://graphql.io/graphql";
 
-        const mockFetch = jest.fn().mockReturnValueOnce(
-          Promise.resolve({
-            json() {
-              return Promise.resolve(mockSchema);
-            },
-          }),
-        );
-        const mockEndpoint = "https://graphql.io/graphql";
+    await fetchGql(mockFetch, mockEndpoint, TEMP_DIR);
 
-        await fetchGql(testDir, mockFetch, mockEndpoint);
+    const [firstCall] = mockFetch.mock.calls;
+    const [endpoint] = firstCall;
 
-        const [firstCall] = mockFetch.mock.calls;
-        const [endpoint] = firstCall;
+    expect(endpoint).toEqual(mockEndpoint);
+  });
 
-        expect(endpoint).toEqual(mockEndpoint);
+  it("write the expected schema", async () => {
+    const mockFetch = jest.fn().mockReturnValueOnce(
+      Promise.resolve({
+        json() {
+          return Promise.resolve(mockSchema);
+        },
+      }),
+    );
+    const mockEndpoint = "https://graphql.io/graphql";
 
-        await removeTestDir(testDir);
-      },
-    },
-    {
-      name: "write the expected schema",
-      async test() {
-        const testDir = path.join(__dirname, "4");
-        await makeTestDir(testDir);
+    await fetchGql(mockFetch, mockEndpoint, TEMP_DIR);
 
-        const mockFetch = jest.fn().mockReturnValueOnce(
-          Promise.resolve({
-            json() {
-              return Promise.resolve(mockSchema);
-            },
-          }),
-        );
-        const mockEndpoint = "https://graphql.io/graphql";
+    const writtenSchema = await readFile(
+      path.join(TEMP_DIR, "schema.json"),
+      "utf8",
+    );
 
-        await fetchGql(testDir, mockFetch, mockEndpoint);
-
-        const writtenSchema = await readFile(
-          path.join(testDir, "schema.json"),
-          "utf8",
-        );
-
-        expect(JSON.parse(writtenSchema)).toEqual(mockSchema);
-
-        await removeTestDir(testDir);
-      },
-    },
-  ];
-
-  iterator(tests);
+    expect(JSON.parse(writtenSchema)).toEqual(mockSchema);
+  });
 });

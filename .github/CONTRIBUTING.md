@@ -246,23 +246,18 @@ eg
 
 ### Overview of project directory structure
 
-* .storybook houses the web storybook config that dynamically loads the
-  component stories and aliases the native imports to web
-* .storybook.native is home to the generated `story-loader.js` from the
-  `prestorybook-native` npm script, and the storybook bootstrapping
+* `./app/storybook/` is home to the generated `story-loader.js` from the
+  `yarn start` script, and the storybook bootstrapping
 * android, ios, .babelrc, .buckconfig, .gitattributes, .watchmanconfig, app.json
   are all from a stock react-native project in order to run the native storybook
-* lerna.json specifies that the packages are independent so different platforms
-  can control which versions they consume and allows them to develop organically
 
 ## Setting Up a Local Copy
 
 1. Clone the repo with `https://github.com/newsuk/times-components-native.git`
 
-2. Run `yarn` in the root folder. Set a `GRAPHQL_ENDPOINT` envar for linting.
+2. Run `yarn` in the root folder.
 
-Once it is done, you can run `npm run storybook` and/or `npm run
-storybook-native`
+Once it is done, you can run `yarn start` which will start the react-native server.
 
 ## Provider Queries package
 
