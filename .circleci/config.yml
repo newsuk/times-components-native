@@ -228,6 +228,8 @@ workflows:
                     branches:
                         ignore:
                             - master
+                requires:
+                    - setup
             - publish_android_beta:
                 requires:
                     - hold_release_beta
