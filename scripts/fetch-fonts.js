@@ -4,7 +4,6 @@ const fs = require("fs");
 const path = require("path");
 const { promisify } = require("util");
 const exec = promisify(require("child_process").exec);
-const mkdirp = promisify(require("mkdirp"));
 const fetch = require("node-fetch");
 const convert = require("../packages/typeset/lib/convert-fonts");
 
@@ -142,7 +141,7 @@ const generate = (file, fontName, fontFamily) =>
     `fontforge -lang=ff -c 'Open($1); SetFondName("${fontFamily}"); SetFontNames("${fontName}", "${fontFamily}", "${fontName}"); Generate("${file}");' ${file}`,
   ).catch((e) => console.error(e)); // eslint-disable-line no-console
 
-mkdirp(fontDir).then(() =>
+fs.promises.mkdir(fontDir, { recursive: true }).then(() =>
   Promise.all(
     ...fonts.map(({ fontName, fontFamily, sources, fileName }) =>
       sources.map((source) => {
