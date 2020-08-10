@@ -18,6 +18,7 @@ import {
   mockSecondaryTwoNoPicAndTwoSlice,
   mockStandardSlice,
   mockListTwoAndSixNoPicSlice,
+  mockFrontLeadTwoNoPicAndTwoSlice,
 } from "./mock-slice";
 
 function getSlices(): Array<ArticleSlice> {
@@ -145,10 +146,29 @@ function mockMagazineSection(title: string): MagazineSectionWithName {
   };
 }
 
+function mockFrontSection(): StandardSectionWithName {
+  return {
+    colour: {
+      rgba: {
+        alpha: 1,
+        blue: 255,
+        green: 255,
+        red: 255,
+      },
+    },
+    id: "front-page-section",
+    name: "FrontPageSection",
+    slices: [mockFrontLeadTwoNoPicAndTwoSlice()],
+    slug: "dummy-section-slug",
+    title: "some-title",
+  };
+}
+
 export {
   getPuzzleSlices,
   mockMagazineSection,
   mockPuzzleSection,
   mockStandardSection,
   mockStandardSectionWithSecondaryTwoSlices,
+  mockFrontSection,
 };

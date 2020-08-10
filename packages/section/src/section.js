@@ -102,6 +102,10 @@ class Section extends Component {
       <Responsive>
         <ResponsiveContext.Consumer>
           {({ isTablet, editionBreakpoint }) => {
+            if (name === "FrontPageSection") {
+              return this.renderItem({ index: 0, item: slices[0] });
+            }
+
             const data = isPuzzle
               ? createPuzzleData(slices, editionBreakpoint)
               : prepareSlicesForRender(slices);

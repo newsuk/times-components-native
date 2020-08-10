@@ -17,7 +17,7 @@ import {
   SecondaryOneSlice,
   SecondaryTwoAndTwoSlice,
   SecondaryTwoNoPicAndTwoSlice,
-  LeadTwoNoPicandTwoFrontSlice,
+  LeadTwoNoPicAndTwoFrontSlice,
   PuzzleSlice,
 } from "./slices";
 
@@ -48,7 +48,8 @@ const sliceMap = {
   SecondaryTwoNoPicAndTwoSlice,
   StandardSlice,
   TwoPicAndSixNoPicSlice: ListTwoAndSixNoPicSlice,
-  LeadTwoNoPicandTwoFrontSlice,
+  LeadTwoNoPicandTwoFrontSlice: LeadTwoNoPicAndTwoFrontSlice, // remove once typo has been addressed from TPA
+  LeadTwoNoPicAndTwoFrontSlice,
 };
 
 export default sliceMap;
