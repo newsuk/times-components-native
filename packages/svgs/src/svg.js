@@ -1,8 +1,6 @@
 import * as React from "react";
-import { ART } from "react-native";
+import { Surface, Group, Transform } from "@react-native-community/art";
 import PropTypes from "prop-types";
-
-const { Surface, Group, Transform } = ART;
 
 /*
 x and y can be negative
