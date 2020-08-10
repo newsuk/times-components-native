@@ -6,6 +6,7 @@ ignores: [
   "@typescript-eslint/eslint-plugin",
   "@typescript-eslint/parser",
   "*babel-*",
+  "conventional-github-releaser",
   "depcheck",
   "eslint-*",
   "global",
