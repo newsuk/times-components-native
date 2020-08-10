@@ -4,6 +4,7 @@ import {
   mockPuzzleSection,
   mockStandardSection,
   mockStandardSectionWithSecondaryTwoSlices,
+  mockFrontSection,
 } from "./mock-section";
 
 class MockEdition {
@@ -33,6 +34,7 @@ class MockEdition {
       mockPuzzleSection("Puzzles"),
       mockMagazineSection("Culture"),
       mockStandardSectionWithSecondaryTwoSlices("Comment"),
+      mockFrontSection(),
     ];
   }
 
