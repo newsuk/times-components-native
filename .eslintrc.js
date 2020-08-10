@@ -44,7 +44,6 @@ module.exports = {
           "**/showcase-helper*",
           "**/scripts/**",
           "**/storybook/**",
-          "webpack.config*.js"
         ],
         "optionalDependencies": false
       }

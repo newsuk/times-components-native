@@ -150,15 +150,12 @@ Follow these steps to deploy storybook native to a real android device.
   [The Times Public Api](https://github.com/newsuk/times-public-api) (dependent
   on the stories you intend to view)
 * Run `yarn`
-* Run `yarn storybook-native`
+* Run `yarn start`
 * Run `yarn android:device` (to enable Times API)
 * Open [storybook native](http:localhost:7007) on your computer and load a story
 
 #### Troubleshooting
 
-* If your device is complaining about about `story-loader.js` not existing - run
-  `yarn storybook-native` before `yarn android`. This should generate the
-  missing file.
 * If your device is complaining about being unable to reach `localhost` or `404`
   use the `adb` commands. Shake the device to bring up the developer menu and
   reload the app
@@ -168,18 +165,6 @@ Follow these steps to deploy storybook native to a real android device.
   and that it works in web view.
 
 ### iOS
-
-#### Building on Xcode 10
-
-We are currently using React Native 0.55.4 which does not fully support Xcode
-10<sup>[1](https://github.com/facebook/react-native/issues/14382#issuecomment-313163119),
-[2](https://github.com/facebook/react-native/issues/19569#issuecomment-399652331)</sup>.
-If you need to build with Xcode 10, you will need to run the below command,
-**only after you have installed dependencies**.
-
-```
-$ yarn ios; pushd node_modules/react-native/third-party/glog-*; ../../scripts/ios-configure-glog.sh; popd; cp ios/build/Build/Products/Debug-iphonesimulator/libfishhook.a node_modules/react-native/Libraries/WebSocket/;
-```
 
 #### Other iOS Build Issues
 
@@ -261,23 +246,18 @@ eg
 
 ### Overview of project directory structure
 
-* .storybook houses the web storybook config that dynamically loads the
-  component stories and aliases the native imports to web
-* .storybook.native is home to the generated `story-loader.js` from the
-  `prestorybook-native` npm script, and the storybook bootstrapping
+* `./app/storybook/` is home to the generated `story-loader.js` from the
+  `yarn start` script, and the storybook bootstrapping
 * android, ios, .babelrc, .buckconfig, .gitattributes, .watchmanconfig, app.json
   are all from a stock react-native project in order to run the native storybook
-* lerna.json specifies that the packages are independent so different platforms
-  can control which versions they consume and allows them to develop organically
 
 ## Setting Up a Local Copy
 
 1. Clone the repo with `https://github.com/newsuk/times-components-native.git`
 
-2. Run `yarn` in the root folder. Set a `GRAPHQL_ENDPOINT` envar for linting.
+2. Run `yarn` in the root folder.
 
-Once it is done, you can run `npm run storybook` and/or `npm run
-storybook-native`
+Once it is done, you can run `yarn start` which will start the react-native server.
 
 ## Provider Queries package
 

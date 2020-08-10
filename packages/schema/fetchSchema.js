@@ -12,10 +12,9 @@ const access = promisify(fs.access);
 async function main() {
   try {
     await fetchGql(
-      process.cwd(),
       fetch,
-
       process.env.GRAPHQL_ENDPOINT || "https://api.thetimes.co.uk/graphql",
+      __dirname,
     );
   } catch (e) {
     console.log(e);

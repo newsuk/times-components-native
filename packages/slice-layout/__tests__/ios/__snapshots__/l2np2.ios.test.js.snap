@@ -34,11 +34,11 @@ exports[`2. lead two no pic and two - medium 1`] = `
   <View />
   <View>
     <Text>
-      support-1
+      support-2
     </Text>
     <View />
     <Text>
-      support-2
+      support-1
     </Text>
   </View>
 </View>

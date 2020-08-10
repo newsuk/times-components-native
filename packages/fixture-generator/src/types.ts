@@ -53,6 +53,8 @@ export interface ArticleInput {
 
   commercialSection?: string | null;
 
+  parentId?: Uuid | null;
+
   publicationName: PublicationName;
 
   publishedTime: DateTime;
@@ -408,6 +410,8 @@ export interface DraftArticleInput {
   seoDescription?: string | null;
 
   commercialSection?: string | null;
+
+  parentId?: Uuid | null;
 
   publicationName: PublicationName;
   /** may appear when previewing a published article */
@@ -1019,6 +1023,12 @@ export enum EditionGroupOptions {
   Date = "date",
 }
 
+export enum AccountSubscriptionCancellationAccessExpiry {
+  Immediate = "immediate",
+  EndOfCurrentBillingPeriod = "endOfCurrentBillingPeriod",
+  EndOfNextBillingPeriod = "endOfNextBillingPeriod",
+}
+
 export enum Display {
   Primary = "primary",
   Secondary = "secondary",
@@ -1125,6 +1135,8 @@ export interface ArticleInterface {
   leadAsset?: Media | null;
 
   listingAsset?: Media | null;
+
+  parentId?: Uuid | null;
 
   publicationName: PublicationName;
 
@@ -1312,6 +1324,8 @@ export interface Article extends ArticleInterface {
   leadAsset?: Media | null;
 
   listingAsset?: Media | null;
+
+  parentId?: Uuid | null;
 
   publicationName: PublicationName;
 
@@ -1698,6 +1712,8 @@ export interface DraftArticle extends ArticleInterface {
 
   listingAsset?: Media | null;
 
+  parentId?: Uuid | null;
+
   publicationName: PublicationName;
 
   publishedTime?: DateTime | null;
@@ -1870,9 +1886,33 @@ export interface Bookmark {
 }
 
 export interface Account {
-  cpn: string;
-
   id: string;
+
+  region?: string | null;
+
+  activeSubscription?: AccountSubscription | null;
+
+  billing?: AccountBilling | null;
+}
+
+export interface AccountSubscription {
+  id?: string | null;
+
+  status?: string | null;
+
+  description?: string | null;
+
+  cancellation?: AccountSubscriptionCancellation | null;
+}
+
+export interface AccountSubscriptionCancellation {
+  accessExpiry: AccountSubscriptionCancellationAccessExpiry;
+
+  accessExpiryDate?: DateTime | null;
+}
+
+export interface AccountBilling {
+  nextBillingDate: DateTime;
 }
 
 export interface Newsletter {
@@ -1897,6 +1937,8 @@ export interface Mutation {
   subscribeNewsletter?: Newsletter | null;
 
   unsubscribeNewsletter?: Newsletter | null;
+
+  cancelSubscription?: AccountSubscription | null;
 }
 
 /** HTML anchor */
@@ -2007,6 +2049,50 @@ export interface EditionUpsertResult {
 /** A focus article (focus) */
 export interface FocusSlice extends ArticleSlice {
   main: Tile;
+
+  items: Tile[];
+
+  sections: Section[];
+}
+
+export interface FrontPageSection extends Section {
+  id: Uuid;
+
+  title: string;
+
+  slug: Slug;
+
+  colour: Colour;
+
+  slices: FrontPageSectionSlice[];
+}
+
+export interface LeadTwoNoPicandTwoFrontSlice extends ArticleSlice {
+  lead1: Tile;
+
+  lead2: Tile;
+
+  support1: Tile;
+
+  support2: Tile;
+
+  items: Tile[];
+
+  sections: Section[];
+}
+
+export interface LeadOneAndOneFrontSlice extends ArticleSlice {
+  lead1: Tile;
+
+  support1: Tile;
+
+  items: Tile[];
+
+  sections: Section[];
+}
+
+export interface LeadOneFullWidthFrontSlice extends ArticleSlice {
+  lead1: Tile;
 
   items: Tile[];
 
@@ -2621,6 +2707,9 @@ export interface SummaryDraftArticleArgs {
 export interface TeaserDraftTileArgs {
   maxCharCount?: number | null;
 }
+export interface SectionsEditionArgs {
+  includeFrontPage?: boolean | null;
+}
 export interface ListEditionsPagedArgs {
   /** The maximum number of editions you want to take, defaults to 10 */
   first?: number | null;
@@ -2651,6 +2740,11 @@ export interface SubscribeNewsletterMutationArgs {
 export interface UnsubscribeNewsletterMutationArgs {
   code: string;
 }
+export interface CancelSubscriptionMutationArgs {
+  id: string;
+
+  reason: string;
+}
 
 // ====================================================
 // Unions
@@ -2661,6 +2755,11 @@ export type ArticleByline = TextByline | AuthorByline;
 export type Media = Image | Video;
 
 export type DraftTileArticle = Article | DraftArticle;
+
+export type FrontPageSectionSlice =
+  | LeadTwoNoPicandTwoFrontSlice
+  | LeadOneAndOneFrontSlice
+  | LeadOneFullWidthFrontSlice;
 
 export type PuffMainLinkRef = ArticleLink | Link;
 

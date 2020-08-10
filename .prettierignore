@@ -15,7 +15,6 @@ yarn.lock
 *.log
 
 # specific to root
-storybook-native
 *.yml
 *.html
 *.sh
@@ -25,3 +24,6 @@ lib/ios
 coverage
 settings.gradle
 build.gradle
+
+# app
+app/storybook/story-loader.js
