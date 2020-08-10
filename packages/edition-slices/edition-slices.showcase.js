@@ -35,7 +35,7 @@ import {
   LeadersSlice,
   DailyRegisterLeadFourSlice,
   StandardSlice,
-  LeadTwoNoPicandTwoFrontSlice,
+  LeadTwoNoPicAndTwoFrontSlice,
 } from "./src/slices";
 import { mockFrontLeadTwoNoPicAndTwoSlice } from "@times-components-native/fixture-generator/src/mock-slice";
 
@@ -174,7 +174,7 @@ const sliceStories = [
   {
     mock: mockFrontLeadTwoNoPicAndTwoSlice(),
     name: "Front Lead Two No Pic And Two",
-    Slice: LeadTwoNoPicandTwoFrontSlice,
+    Slice: LeadTwoNoPicAndTwoFrontSlice,
     scroll: false,
   },
 ];
