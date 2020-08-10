@@ -37,7 +37,7 @@ const sendSlackMessage = async (notes, htmlUrl) => {
   const parsedNotes = marked(notes.trim());
 
   const body = {
-    text: "A new *Times Components* release is now _available_.",
+    text: "A new *Times Components Native* release is now _available_.",
     attachments: [
       {
         text: parsedNotes,
