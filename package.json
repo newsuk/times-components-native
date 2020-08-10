@@ -12,12 +12,6 @@
     "start": "rnstl && react-native start --config ./app/metro.config.js",
     "depcheck": "depcheck --config=./.depcheckrc",
     "lint": "eslint . && yarn depcheck",
-    "prestorybook": "yarn storybook:build-vendor",
-    "storybook": "start-storybook -p 9001 -c .storybook -s ./dist/public",
-    "storybook:build-vendor": "webpack --config ./.storybook/vendor.webpack.config.js",
-    "storybook:build": "yarn storybook:build-vendor && build-storybook -c .storybook -s ./dist/public",
-    "prestorybook:test-build": "yarn storybook:build-vendor",
-    "storybook:test-build": "build-storybook -c .storybook -s ./dist/public",
     "ios:native": "react-native start --config ./lib/ios/metro.config.js",
     "ios:build-lib": "yarn ios:build-lib:js && yarn ios:build-lib:update-version",
     "ios:build-lib:js": "mkdir -p lib/ios/assets/js && mkdir -p lib/ios/assets/res/graphql && cp ./packages/provider-queries/src/*.graphql ./lib/ios/assets/res/graphql && react-native ram-bundle --platform ios --dev false --entry-file lib/ios/index.ios.js --bundle-output lib/ios/assets/js/index.ios.bundle --assets-dest lib/ios/assets/res/",
@@ -115,11 +109,8 @@
     "@babel/preset-env": "7.4.4",
     "@bam.tech/react-native-graphql-transformer": "0.1.5",
     "@storybook/addon-actions": "5.3.19",
-    "@storybook/addon-info": "5.3.18",
     "@storybook/addon-knobs": "5.3.19",
     "@storybook/addon-ondevice-knobs": "5.3.19",
-    "@storybook/addon-options": "5.3.19",
-    "@storybook/react": "5.3.19",
     "@storybook/react-native": "5.3.19",
     "@types/jest": "24.0.2",
     "@types/point-in-polygon": "1.0.0",
@@ -159,10 +150,10 @@
     "jsdom": "9.12.0",
     "metro-react-native-babel-preset": "0.53.1",
     "prettier": "2.0.5",
-    "react-native-storybook-loader": "1.8.0",
+    "react-native-storybook-loader": "2.0.2",
     "react-test-renderer": "16.9.0",
+    "regenerator-runtime": "^0.13.7",
     "typescript": "3.7.2",
-    "url": "0.11.0",
-    "webpack": "4.30.0"
+    "url": "0.11.0"
   }
 }
