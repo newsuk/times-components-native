@@ -1,6 +1,6 @@
 jest.mock("../src/tiles", () => {
   const tileMocks = {};
-  Object.keys(require.requireActual("../src/tiles")).forEach((key) => {
+  Object.keys(jest.requireActual("../src/tiles")).forEach((key) => {
     tileMocks[key] = key;
   });
   return tileMocks;

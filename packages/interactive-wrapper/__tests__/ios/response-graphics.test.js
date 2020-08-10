@@ -67,7 +67,7 @@ it("render images", async () => {
     <ResponsiveImageInteractive deckId={100} />,
   );
   await act(async () => {
-    await jest.runAllImmediates();
+    await jest.runOnlyPendingTimers();
   });
   expect(testInstance.toJSON()).toMatchSnapshot();
 });

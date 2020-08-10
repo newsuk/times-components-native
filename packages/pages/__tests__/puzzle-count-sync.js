@@ -6,9 +6,7 @@ import "./mocks";
 import SectionPage from "../src/section/section";
 
 jest.mock("@times-components-native/section", () => {
-  const { SectionContext } = require.requireActual(
-    "@times-components-native/context",
-  );
+  const { SectionContext } = jest.requireActual("../../context");
 
   return () => (
     <SectionContext.Consumer>

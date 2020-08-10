@@ -52,7 +52,7 @@ export default () => {
         const testInstance = TestRenderer.create(<ModalImage {...props} />);
 
         await act(async () => {
-          jest.runAllImmediates();
+          jest.runOnlyPendingTimers();
         });
 
         testInstance.root.findAllByType(Image).forEach((img) =>
@@ -62,7 +62,7 @@ export default () => {
         );
 
         await act(async () => {
-          jest.runAllImmediates();
+          jest.runOnlyPendingTimers();
         });
 
         expect(testInstance).toMatchSnapshot();
@@ -76,7 +76,7 @@ export default () => {
         );
 
         await act(async () => {
-          jest.runAllImmediates();
+          jest.runOnlyPendingTimers();
         });
 
         expect(testInstance).toMatchSnapshot();
@@ -90,7 +90,7 @@ export default () => {
         );
 
         await act(async () => {
-          jest.runAllImmediates();
+          jest.runOnlyPendingTimers();
         });
 
         testInstance.root.findAllByType(Image).forEach((img) =>
@@ -100,7 +100,7 @@ export default () => {
         );
 
         await act(async () => {
-          jest.runAllImmediates();
+          jest.runOnlyPendingTimers();
         });
 
         expect(testInstance).toMatchSnapshot();
@@ -112,7 +112,7 @@ export default () => {
         const testInstance = TestRenderer.create(<ModalImage {...props} />);
 
         await act(async () => {
-          jest.runAllImmediates();
+          jest.runOnlyPendingTimers();
         });
 
         const [, openButton] = testInstance.root.findAll(
@@ -122,7 +122,7 @@ export default () => {
         openButton.props.onPress();
 
         await act(async () => {
-          jest.runAllImmediates();
+          jest.runOnlyPendingTimers();
         });
 
         const modal = testInstance.root.find((node) => node.type === Modal);
@@ -138,7 +138,7 @@ export default () => {
         );
 
         await act(async () => {
-          jest.runAllImmediates();
+          jest.runOnlyPendingTimers();
         });
 
         const [closeButton] = testInstance.root.findAll(
@@ -148,7 +148,7 @@ export default () => {
         closeButton.props.onPress();
 
         await act(async () => {
-          jest.runAllImmediates();
+          jest.runOnlyPendingTimers();
         });
 
         const modal = testInstance.root.find((node) => node.type === Modal);
@@ -166,7 +166,7 @@ export default () => {
         );
 
         await act(async () => {
-          jest.runAllImmediates();
+          jest.runOnlyPendingTimers();
         });
 
         expect(testInstance.root.findAllByType(Modal).length).toBe(0);

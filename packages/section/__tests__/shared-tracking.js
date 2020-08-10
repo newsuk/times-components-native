@@ -13,7 +13,7 @@ jest.mock("@times-components-native/icons", () => ({
   IconVideo: "IconVideo",
 }));
 jest.mock("react-native", () => {
-  const rn = require.requireActual("react-native");
+  const rn = jest.requireActual("react-native");
   rn.NativeModules.SectionEvents = {
     getSavedArticles: jest.fn().mockReturnValue(Promise.resolve(true)),
   };

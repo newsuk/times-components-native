@@ -1,5 +1,5 @@
 jest.mock("react-native", () => {
-  const rn = require.requireActual("react-native");
+  const rn = jest.requireActual("react-native");
   rn.NativeModules.ArticleEvents = {
     onArticleLoaded: jest.fn(),
   };

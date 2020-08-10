@@ -60,7 +60,7 @@ export default () => {
         );
 
         await act(async () => {
-          jest.runAllImmediates();
+          jest.runOnlyPendingTimers();
         });
 
         expect(testRenderer).toMatchSnapshot();
@@ -75,7 +75,7 @@ export default () => {
           </Responsive>,
         );
         await act(async () => {
-          jest.runAllImmediates();
+          jest.runOnlyPendingTimers();
         });
 
         expect(testRenderer).toMatchSnapshot();
@@ -92,13 +92,13 @@ export default () => {
         );
 
         await act(async () => {
-          jest.runAllImmediates();
+          jest.runOnlyPendingTimers();
         });
 
         callOnLayout(testRenderer, { height: 1400, width: 700 });
 
         await act(async () => {
-          jest.runAllImmediates();
+          jest.runOnlyPendingTimers();
         });
 
         expect(testRenderer).toMatchSnapshot();
@@ -114,13 +114,13 @@ export default () => {
           </Responsive>,
         );
         await act(async () => {
-          jest.runAllImmediates();
+          jest.runOnlyPendingTimers();
         });
 
         callOnLayout(testRenderer, { height: 700, width: 1400 });
 
         await act(async () => {
-          jest.runAllImmediates();
+          jest.runOnlyPendingTimers();
         });
 
         expect(testRenderer).toMatchSnapshot();

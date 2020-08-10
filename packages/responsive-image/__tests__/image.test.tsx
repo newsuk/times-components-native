@@ -42,12 +42,12 @@ test("Image loads high-res", async () => {
     },
   });
   await act(async () => {
-    await jest.runAllImmediates();
+    await jest.runOnlyPendingTimers();
   });
   const images = component.root.findAllByType(Image);
   images.forEach((img) => "onLoadEnd" in img.props && img.props.onLoadEnd());
   await act(async () => {
-    await jest.runAllImmediates();
+    await jest.runOnlyPendingTimers();
   });
   expect(component).toMatchSnapshot();
 });
@@ -66,7 +66,7 @@ test("Image calls onlayout", async () => {
     },
   });
   await act(async () => {
-    jest.runAllImmediates();
+    jest.runOnlyPendingTimers();
   });
   expect(onLayout).toBeCalledTimes(1);
 });
@@ -77,7 +77,7 @@ test("Image gracefully handles bad high-res url", async () => {
   const component = create(<ResponsiveImage uri={testUri} onError={onError} />);
 
   await act(async () => {
-    await jest.runAllImmediates();
+    await jest.runOnlyPendingTimers();
   });
 
   const images = component.root.findAllByType(Image);
