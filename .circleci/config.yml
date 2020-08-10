@@ -166,6 +166,8 @@ jobs:
         executor: node
         steps:
         - checkout
+        - attach_workspace:
+            at: ./
         - run:
             name: Tag release & generate GitHub notes
             command: sh scripts/publish-notes.sh
