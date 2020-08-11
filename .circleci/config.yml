@@ -170,7 +170,7 @@ jobs:
             at: ./
         - run:
             name: Tag release & generate GitHub notes
-            command: sh scripts/publish-notes.sh
+            command: bash scripts/publish-notes.sh
 
 workflows:
     version: 2
