@@ -35,7 +35,7 @@ const LeadTwoNoPicAndTwoSlice = ({
       <View style={styles.container}>
         <VerticalLayout style={styles.column} tiles={[lead1, lead2]} />
         <ItemColSeparator style={styles.colSeparatorStyle} />
-        <VerticalLayout style={styles.column} tiles={[support1, support2]} />
+        <VerticalLayout style={styles.column} tiles={[support2, support1]} />
       </View>
     );
   }

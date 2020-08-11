@@ -13,7 +13,7 @@ checkIfVersionExists () {
     echo "👀 Checking if current tag exists"
 
     if [ $(git tag -l "$PACKAGE_VERSION") ]; then
-        echo "✋ Skipping publishing: Tag $PACKAGE_VERSION already exists."
+        echo "✋ Skipping publishing: Tag $PACKAGE_VERSION already exists"
         exit 0
     fi
 }
@@ -28,11 +28,18 @@ createAndPushTag () {
 publishNotes () {
     echo "🚀 Publishing the GitHub Release"
     export CONVENTIONAL_GITHUB_RELEASER_TOKEN="$GH_TOKEN"
-    npx --quiet conventional-github-releaser
-    echo "👻 Success! Release published at https://github.com/$REPO_SLUG/releases/tag/v$PACKAGE_VERSION."
+    yarn run conventional-github-releaser
+    echo "👻 Success! Release published at https://github.com/$REPO_SLUG/releases/tag/v$PACKAGE_VERSION"
+}
+
+sendSlackNotification () {
+    export PACKAGE_VERSION
+    export REPO_SLUG
+    node ./scripts/send-slack-message.js
 }
 
 setup
 checkIfVersionExists
 createAndPushTag
 publishNotes
+sendSlackNotification

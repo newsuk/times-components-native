@@ -1,0 +1,24 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`front renderers link text renderer renders link text 1`] = `
+<Text>
+  Some Text
+</Text>
+`;
+
+exports[`front renderers paragraph renderer renders paragraph 1`] = `
+<Text>
+  Some Text
+  
+
+</Text>
+`;
+
+exports[`front renderers paragraph renderer renders paragraph with tab 1`] = `
+<Text>
+  　
+  Some Text
+  
+
+</Text>
+`;

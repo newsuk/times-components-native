@@ -12,6 +12,7 @@ fragment sectionPageProps on Section {
   ...standardSection
   ...magazineSection
   ...puzzleSection
+  ...frontPageSection
 }
 
 fragment puzzleSection on PuzzleSection {
@@ -37,6 +38,13 @@ fragment standardSection on StandardSection {
   name: __typename
   slices {
     ...commonSlicesSection
+  }
+}
+
+fragment frontPageSection on FrontPageSection {
+  name: __typename
+  slices {
+    ...frontSlicesSection
   }
 }
 
@@ -873,6 +881,60 @@ fragment commonSlicesSection on StandardSectionSlice {
     }
     birthdaysToday {
       ...durItem
+    }
+  }
+}
+
+fragment frontSlicesSection on FrontPageSectionSlice {
+  name: __typename
+  ... on LeadTwoNoPicandTwoFrontSlice {
+    lead1 {
+      headline
+      strapline
+      article {
+        ...baseArticleProps
+        strapline
+        content
+      }
+    }
+    lead2 {
+      headline
+      article {
+        ...baseArticleProps
+        content
+      }
+    }
+    support1 {
+      headline
+      leadAsset {
+        ...leadAsset32and45
+      }
+      article {
+        ...baseArticleProps
+        content
+        leadAsset {
+          ...leadAsset32and45
+        }
+        listingAsset {
+          ...leadAsset32and45
+        }
+      }
+    }
+    support2 {
+      headline
+      leadAsset {
+        ...leadAsset32and45
+      }
+      article {
+        ...baseArticleProps
+        content
+        leadAsset {
+          ...leadAsset32and45
+        }
+        listingAsset {
+          ...leadAsset32and45
+        }
+      }
     }
   }
 }

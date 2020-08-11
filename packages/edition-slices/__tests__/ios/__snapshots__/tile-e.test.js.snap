@@ -69,7 +69,8 @@ exports[`tile e huge 1`] = `
     fill={true}
     style={
       Object {
-        "marginTop": 10,
+        "marginBottom": 10,
+        "marginTop": 5,
         "width": "100%",
       }
     }
@@ -82,8 +83,9 @@ exports[`tile e medium 1`] = `
 <Link
   linkStyle={
     Object {
+      "flexDirection": "column-reverse",
       "padding": 10,
-      "paddingTop": 15,
+      "paddingBottom": 0,
     }
   }
   url="/article/123"
@@ -146,7 +148,8 @@ exports[`tile e medium 1`] = `
     fill={true}
     style={
       Object {
-        "marginTop": 10,
+        "marginBottom": 10,
+        "marginTop": 5,
         "width": "100%",
       }
     }
@@ -326,7 +329,8 @@ exports[`tile e wide 1`] = `
     fill={true}
     style={
       Object {
-        "marginTop": 10,
+        "marginBottom": 10,
+        "marginTop": 5,
         "width": "100%",
       }
     }
