@@ -170,7 +170,7 @@ jobs:
             at: ./
         - run:
             name: Tag release & generate GitHub notes
-            command: bash scripts/publish-notes.sh
+            command: sh scripts/publish-notes.sh
 
 workflows:
     version: 2
@@ -231,8 +231,10 @@ workflows:
                 requires:
                     - setup
             - publish_android_beta:
+                context: nuk-tnl-app-universal
                 requires:
                     - hold_release_beta
             - publish_ios_beta:
+                context: nuk-tnl-app-universal
                 requires:
                     - hold_release_beta
