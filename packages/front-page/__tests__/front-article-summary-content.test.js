@@ -2,7 +2,6 @@ import FrontArticleSummaryContent from "@times-components-native/front-page/fron
 import React from "react";
 import { ResponsiveContext } from "@times-components-native/responsive";
 import TestRenderer from "react-test-renderer";
-import ArticleSummaryContent from "@times-components-native/article-summary/src/article-summary-content";
 
 jest.mock("@times-components-native/article-summary", () => ({
   ArticleSummaryContent: "ArticleSummaryContent",

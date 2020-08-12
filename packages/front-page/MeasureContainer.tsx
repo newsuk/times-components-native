@@ -11,7 +11,7 @@ export const MeasureContainer: React.FC<Props> = (props) => {
     <View
       style={{ flex: 1 }}
       onLayout={(e) => {
-        let height = e.nativeEvent.layout.height;
+        const height = e.nativeEvent.layout.height;
         setWhiteSpaceHeight(height);
       }}
     >
