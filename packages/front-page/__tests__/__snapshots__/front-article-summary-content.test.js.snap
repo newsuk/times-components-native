@@ -1,235 +1,289 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`FrontArticleSummaryContent landscape huge 1`] = `
-<ArticleSummaryContent
-  ast={
-    Array [
-      Object {
-        "attributes": Object {
-          "tab": false,
-        },
-        "children": Array [
-          Object {
-            "attributes": Object {
-              "value": "Test",
-            },
-            "children": Array [],
-            "name": "text",
-          },
-        ],
-        "name": "paragraph",
-      },
-    ]
-  }
-  initialLines={1}
-  renderAst={[Function]}
+<View
+  onLayout={[Function]}
   style={
-    Array [
-      undefined,
-      Object {
-        "color": "#333333",
-        "fontFamily": "TimesDigitalW04",
-        "fontSize": 16,
-        "lineHeight": 20,
-        "marginBottom": 10,
-      },
-    ]
+    Object {
+      "flex": 1,
+    }
   }
-  whiteSpaceHeight={20}
-/>
+>
+  <ArticleSummaryContent
+    ast={
+      Array [
+        Object {
+          "attributes": Object {
+            "tab": false,
+          },
+          "children": Array [
+            Object {
+              "attributes": Object {
+                "value": "Test",
+              },
+              "children": Array [],
+              "name": "text",
+            },
+          ],
+          "name": "paragraph",
+        },
+      ]
+    }
+    initialLines={0}
+    lineHeight={20}
+    renderAst={[Function]}
+    style={
+      Array [
+        undefined,
+        Object {
+          "color": "#333333",
+          "fontFamily": "TimesDigitalW04",
+          "fontSize": 16,
+          "lineHeight": 20,
+        },
+      ]
+    }
+    whiteSpaceHeight={0}
+  />
+</View>
 `;
 
 exports[`FrontArticleSummaryContent landscape medium 1`] = `
-<ArticleSummaryContent
-  ast={
-    Array [
-      Object {
-        "attributes": Object {
-          "tab": false,
-        },
-        "children": Array [
-          Object {
-            "attributes": Object {
-              "value": "Test",
-            },
-            "children": Array [],
-            "name": "text",
-          },
-        ],
-        "name": "paragraph",
-      },
-    ]
-  }
-  initialLines={1}
-  renderAst={[Function]}
+<View
+  onLayout={[Function]}
   style={
-    Array [
-      undefined,
-      Object {
-        "color": "#333333",
-        "fontFamily": "TimesDigitalW04",
-        "fontSize": 14,
-        "lineHeight": 18,
-        "marginBottom": 10,
-      },
-    ]
+    Object {
+      "flex": 1,
+    }
   }
-  whiteSpaceHeight={20}
-/>
+>
+  <ArticleSummaryContent
+    ast={
+      Array [
+        Object {
+          "attributes": Object {
+            "tab": false,
+          },
+          "children": Array [
+            Object {
+              "attributes": Object {
+                "value": "Test",
+              },
+              "children": Array [],
+              "name": "text",
+            },
+          ],
+          "name": "paragraph",
+        },
+      ]
+    }
+    initialLines={0}
+    lineHeight={18}
+    renderAst={[Function]}
+    style={
+      Array [
+        undefined,
+        Object {
+          "color": "#333333",
+          "fontFamily": "TimesDigitalW04",
+          "fontSize": 14,
+          "lineHeight": 18,
+        },
+      ]
+    }
+    whiteSpaceHeight={0}
+  />
+</View>
 `;
 
 exports[`FrontArticleSummaryContent landscape wide 1`] = `
-<ArticleSummaryContent
-  ast={
-    Array [
-      Object {
-        "attributes": Object {
-          "tab": false,
-        },
-        "children": Array [
-          Object {
-            "attributes": Object {
-              "value": "Test",
-            },
-            "children": Array [],
-            "name": "text",
-          },
-        ],
-        "name": "paragraph",
-      },
-    ]
-  }
-  initialLines={1}
-  renderAst={[Function]}
+<View
+  onLayout={[Function]}
   style={
-    Array [
-      undefined,
-      Object {
-        "color": "#333333",
-        "fontFamily": "TimesDigitalW04",
-        "fontSize": 14,
-        "lineHeight": 18,
-        "marginBottom": 10,
-      },
-    ]
+    Object {
+      "flex": 1,
+    }
   }
-  whiteSpaceHeight={20}
-/>
+>
+  <ArticleSummaryContent
+    ast={
+      Array [
+        Object {
+          "attributes": Object {
+            "tab": false,
+          },
+          "children": Array [
+            Object {
+              "attributes": Object {
+                "value": "Test",
+              },
+              "children": Array [],
+              "name": "text",
+            },
+          ],
+          "name": "paragraph",
+        },
+      ]
+    }
+    initialLines={0}
+    lineHeight={18}
+    renderAst={[Function]}
+    style={
+      Array [
+        undefined,
+        Object {
+          "color": "#333333",
+          "fontFamily": "TimesDigitalW04",
+          "fontSize": 14,
+          "lineHeight": 18,
+        },
+      ]
+    }
+    whiteSpaceHeight={0}
+  />
+</View>
 `;
 
 exports[`FrontArticleSummaryContent portrait huge 1`] = `
-<ArticleSummaryContent
-  ast={
-    Array [
-      Object {
-        "attributes": Object {
-          "tab": false,
-        },
-        "children": Array [
-          Object {
-            "attributes": Object {
-              "value": "Test",
-            },
-            "children": Array [],
-            "name": "text",
-          },
-        ],
-        "name": "paragraph",
-      },
-    ]
-  }
-  initialLines={1}
-  renderAst={[Function]}
+<View
+  onLayout={[Function]}
   style={
-    Array [
-      undefined,
-      Object {
-        "color": "#333333",
-        "fontFamily": "TimesDigitalW04",
-        "fontSize": 16,
-        "lineHeight": 20,
-        "marginBottom": 10,
-      },
-    ]
+    Object {
+      "flex": 1,
+    }
   }
-  whiteSpaceHeight={20}
-/>
+>
+  <ArticleSummaryContent
+    ast={
+      Array [
+        Object {
+          "attributes": Object {
+            "tab": false,
+          },
+          "children": Array [
+            Object {
+              "attributes": Object {
+                "value": "Test",
+              },
+              "children": Array [],
+              "name": "text",
+            },
+          ],
+          "name": "paragraph",
+        },
+      ]
+    }
+    initialLines={0}
+    lineHeight={20}
+    renderAst={[Function]}
+    style={
+      Array [
+        undefined,
+        Object {
+          "color": "#333333",
+          "fontFamily": "TimesDigitalW04",
+          "fontSize": 16,
+          "lineHeight": 20,
+        },
+      ]
+    }
+    whiteSpaceHeight={0}
+  />
+</View>
 `;
 
 exports[`FrontArticleSummaryContent portrait medium 1`] = `
-<ArticleSummaryContent
-  ast={
-    Array [
-      Object {
-        "attributes": Object {
-          "tab": false,
-        },
-        "children": Array [
-          Object {
-            "attributes": Object {
-              "value": "Test",
-            },
-            "children": Array [],
-            "name": "text",
-          },
-        ],
-        "name": "paragraph",
-      },
-    ]
-  }
-  initialLines={1}
-  renderAst={[Function]}
+<View
+  onLayout={[Function]}
   style={
-    Array [
-      undefined,
-      Object {
-        "color": "#333333",
-        "fontFamily": "TimesDigitalW04",
-        "fontSize": 14,
-        "lineHeight": 18,
-        "marginBottom": 10,
-      },
-    ]
+    Object {
+      "flex": 1,
+    }
   }
-  whiteSpaceHeight={20}
-/>
+>
+  <ArticleSummaryContent
+    ast={
+      Array [
+        Object {
+          "attributes": Object {
+            "tab": false,
+          },
+          "children": Array [
+            Object {
+              "attributes": Object {
+                "value": "Test",
+              },
+              "children": Array [],
+              "name": "text",
+            },
+          ],
+          "name": "paragraph",
+        },
+      ]
+    }
+    initialLines={0}
+    lineHeight={18}
+    renderAst={[Function]}
+    style={
+      Array [
+        undefined,
+        Object {
+          "color": "#333333",
+          "fontFamily": "TimesDigitalW04",
+          "fontSize": 14,
+          "lineHeight": 18,
+        },
+      ]
+    }
+    whiteSpaceHeight={0}
+  />
+</View>
 `;
 
 exports[`FrontArticleSummaryContent portrait wide 1`] = `
-<ArticleSummaryContent
-  ast={
-    Array [
-      Object {
-        "attributes": Object {
-          "tab": false,
-        },
-        "children": Array [
-          Object {
-            "attributes": Object {
-              "value": "Test",
-            },
-            "children": Array [],
-            "name": "text",
-          },
-        ],
-        "name": "paragraph",
-      },
-    ]
-  }
-  initialLines={1}
-  renderAst={[Function]}
+<View
+  onLayout={[Function]}
   style={
-    Array [
-      undefined,
-      Object {
-        "color": "#333333",
-        "fontFamily": "TimesDigitalW04",
-        "fontSize": 16,
-        "lineHeight": 20,
-        "marginBottom": 10,
-      },
-    ]
+    Object {
+      "flex": 1,
+    }
   }
-  whiteSpaceHeight={20}
-/>
+>
+  <ArticleSummaryContent
+    ast={
+      Array [
+        Object {
+          "attributes": Object {
+            "tab": false,
+          },
+          "children": Array [
+            Object {
+              "attributes": Object {
+                "value": "Test",
+              },
+              "children": Array [],
+              "name": "text",
+            },
+          ],
+          "name": "paragraph",
+        },
+      ]
+    }
+    initialLines={0}
+    lineHeight={20}
+    renderAst={[Function]}
+    style={
+      Array [
+        undefined,
+        Object {
+          "color": "#333333",
+          "fontFamily": "TimesDigitalW04",
+          "fontSize": 16,
+          "lineHeight": 20,
+        },
+      ]
+    }
+    whiteSpaceHeight={0}
+  />
+</View>
 `;

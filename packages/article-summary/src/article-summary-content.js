@@ -11,9 +11,9 @@ const ArticleSummaryContent = ({
   style,
   whiteSpaceHeight,
   initialLines = 2,
+  lineHeight = styles.text.lineHeight,
   renderAst = defaultRenderAst,
 }) => {
-  const lineHeight = (style && style.lineHeight) || styles.text.lineHeight;
   const numberOfLinesToRender =
     whiteSpaceHeight > 0
       ? whiteSpaceHeight / lineHeight + initialLines

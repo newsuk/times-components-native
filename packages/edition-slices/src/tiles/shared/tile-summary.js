@@ -31,6 +31,7 @@ class TileSummary extends Component {
       <ArticleSummaryContent
         ast={summary}
         style={summaryStyle}
+        lineHeight={(summaryStyle && summaryStyle.lineHeight) || undefined}
         whiteSpaceHeight={whiteSpaceHeight}
         initialLines={linesOfTeaserToRender}
       />

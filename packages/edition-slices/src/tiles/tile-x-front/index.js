@@ -5,7 +5,6 @@ import editionBreakpoints from "@times-components-native/styleguide";
 import { FrontTileSummary } from "@times-components-native/front-page";
 import { getTileStrapline, TileLink } from "../shared";
 import stylesFactory from "./styles";
-import WithoutWhiteSpace from "../shared/without-white-space";
 import PositionedTileStar from "../shared/positioned-tile-star";
 
 const TileXFront = ({
@@ -18,23 +17,18 @@ const TileXFront = ({
 
   return (
     <TileLink onPress={onPress} style={styles.container} tile={tile}>
-      <WithoutWhiteSpace
-        render={(whiteSpaceHeight) => (
-          <FrontTileSummary
-            headlineStyle={
-              orientation === "landscape"
-                ? styles.headlineLandscape
-                : styles.headlinePortrait
-            }
-            strapline={getTileStrapline(tile)}
-            straplineStyle={styles.strapline}
-            summary={tile.article.content}
-            summaryStyle={styles.summary}
-            tile={tile}
-            whiteSpaceHeight={whiteSpaceHeight}
-            bylines={tile.article.bylines}
-          />
-        )}
+      <FrontTileSummary
+        headlineStyle={
+          orientation === "landscape"
+            ? styles.headlineLandscape
+            : styles.headlinePortrait
+        }
+        strapline={getTileStrapline(tile)}
+        straplineStyle={styles.strapline}
+        summary={tile.article.content}
+        summaryStyle={styles.summary}
+        tile={tile}
+        bylines={tile.article.bylines}
       />
       <PositionedTileStar articleId={tile.article.id} />
     </TileLink>

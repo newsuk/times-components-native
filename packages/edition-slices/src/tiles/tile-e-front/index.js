@@ -5,7 +5,6 @@ import { editionBreakpoints } from "@times-components-native/styleguide";
 import { FrontTileSummary } from "@times-components-native/front-page";
 import { getTileImage, TileLink, withTileTracking, TileImage } from "../shared";
 import stylesFactory from "./styles";
-import WithoutWhiteSpace from "../shared/without-white-space";
 
 const TileEFront = ({
   onPress,
@@ -29,7 +28,7 @@ const TileEFront = ({
   const summary = tile.article.content;
 
   return (
-    <TileLink onPress={onPress} style={[styles.container]} tile={tile}>
+    <TileLink onPress={onPress} style={styles.container} tile={tile}>
       <TileImage
         aspectRatio={4 / 5}
         relativeWidth={crop.relativeWidth}
@@ -41,24 +40,17 @@ const TileEFront = ({
         fill
         hasVideo={hasVideo}
       />
-      <WithoutWhiteSpace
-        style={styles.summaryContainer}
-        render={(whiteSpaceHeight) => (
-          <FrontTileSummary
-            headlineStyle={
-              orientation === "landscape"
-                ? styles.headlineLandscape
-                : styles.headlinePortrait
-            }
-            summary={showSummary && summary}
-            summaryStyle={styles.summary}
-            containerStyle={styles.summaryContainer}
-            tile={tile}
-            whiteSpaceHeight={whiteSpaceHeight}
-            linesOfTeaserToRender={1}
-            bylines={showByline && tile.article.bylines}
-          />
-        )}
+      <FrontTileSummary
+        headlineStyle={
+          orientation === "landscape"
+            ? styles.headlineLandscape
+            : styles.headlinePortrait
+        }
+        summary={showSummary && summary}
+        summaryStyle={styles.summary}
+        containerStyle={styles.summaryContainer}
+        tile={tile}
+        bylines={showByline && tile.article.bylines}
       />
     </TileLink>
   );

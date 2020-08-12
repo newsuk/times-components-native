@@ -36,7 +36,6 @@ const lineHeightResolver = {
 
 const textStyle = {
   color: colours.functional.primary,
-  marginBottom: spacing(2),
   fontFamily: fonts.body,
 };
 export default (breakpoint) => ({
@@ -51,4 +50,5 @@ export default (breakpoint) => ({
     lineHeight: lineHeightResolver[breakpoint].portrait,
   },
   bylineContainer: { marginBottom: spacing(1) },
+  container: { flex: 1 },
 });

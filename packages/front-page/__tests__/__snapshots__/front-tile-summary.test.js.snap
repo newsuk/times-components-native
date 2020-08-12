@@ -3,9 +3,14 @@
 exports[`FrontTileSummary renders correctly 1`] = `
 <View
   style={
-    Object {
-      "backgroundColor": "red",
-    }
+    Array [
+      Object {
+        "backgroundColor": "red",
+      },
+      Object {
+        "flex": 1,
+      },
+    ]
   }
 >
   <ArticleSummaryHeadline
@@ -51,7 +56,6 @@ exports[`FrontTileSummary renders correctly 1`] = `
     />
   </Text>
   <FrontArticleSummaryContent
-    linesOfTeaserToRender={2}
     summary={
       Array [
         Object {
@@ -74,7 +78,6 @@ exports[`FrontTileSummary renders correctly 1`] = `
         "backgroundColor": "orange",
       }
     }
-    whiteSpaceHeight={40}
   />
 </View>
 `;
@@ -82,9 +85,14 @@ exports[`FrontTileSummary renders correctly 1`] = `
 exports[`FrontTileSummary renders without byline 1`] = `
 <View
   style={
-    Object {
-      "backgroundColor": "red",
-    }
+    Array [
+      Object {
+        "backgroundColor": "red",
+      },
+      Object {
+        "flex": 1,
+      },
+    ]
   }
 >
   <ArticleSummaryHeadline
@@ -104,7 +112,6 @@ exports[`FrontTileSummary renders without byline 1`] = `
     }
   />
   <FrontArticleSummaryContent
-    linesOfTeaserToRender={2}
     summary={
       Array [
         Object {
@@ -127,7 +134,6 @@ exports[`FrontTileSummary renders without byline 1`] = `
         "backgroundColor": "orange",
       }
     }
-    whiteSpaceHeight={40}
   />
 </View>
 `;
@@ -135,9 +141,14 @@ exports[`FrontTileSummary renders without byline 1`] = `
 exports[`FrontTileSummary renders without strapline 1`] = `
 <View
   style={
-    Object {
-      "backgroundColor": "red",
-    }
+    Array [
+      Object {
+        "backgroundColor": "red",
+      },
+      Object {
+        "flex": 1,
+      },
+    ]
   }
 >
   <ArticleSummaryHeadline
@@ -175,7 +186,6 @@ exports[`FrontTileSummary renders without strapline 1`] = `
     />
   </Text>
   <FrontArticleSummaryContent
-    linesOfTeaserToRender={2}
     summary={
       Array [
         Object {
@@ -198,7 +208,6 @@ exports[`FrontTileSummary renders without strapline 1`] = `
         "backgroundColor": "orange",
       }
     }
-    whiteSpaceHeight={40}
   />
 </View>
 `;

@@ -6,6 +6,7 @@ import TestRenderer from "react-test-renderer";
 jest.mock("@times-components-native/article-summary", () => ({
   ArticleSummaryContent: "ArticleSummaryContent",
 }));
+
 const ast = [
   {
     attributes: {},
