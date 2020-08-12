@@ -5,7 +5,6 @@ import { editionBreakpoints } from "@times-components-native/styleguide";
 import { FrontTileSummary } from "@times-components-native/front-page";
 import { getTileImage, TileLink, TileImage, withTileTracking } from "../shared";
 import stylesFactory from "./styles";
-import WithoutWhiteSpace from "../shared/without-white-space";
 import PositionedTileStar from "../shared/positioned-tile-star";
 
 const TileALFront = ({
@@ -35,18 +34,12 @@ const TileALFront = ({
         fill
         hasVideo={hasVideo}
       />
-      <WithoutWhiteSpace
-        render={(whiteSpaceHeight) => (
-          <FrontTileSummary
-            headlineStyle={styles.headline}
-            summary={tile.article.content}
-            summaryStyle={styles.summary}
-            tile={tile}
-            whiteSpaceHeight={whiteSpaceHeight}
-            withStar={false}
-            bylines={tile.article.bylines}
-          />
-        )}
+      <FrontTileSummary
+        headlineStyle={styles.headline}
+        summary={tile.article.content}
+        summaryStyle={styles.summary}
+        tile={tile}
+        bylines={tile.article.bylines}
       />
       <PositionedTileStar articleId={tile.article.id} />
     </TileLink>

@@ -70,6 +70,7 @@ export default () => {
         const testInstance = TestRenderer.create(
           <ArticleSummaryContent
             ast={ast}
+            lineHeight={30}
             style={{ lineHeight: 30 }}
             whiteSpaceHeight={60}
           />,
