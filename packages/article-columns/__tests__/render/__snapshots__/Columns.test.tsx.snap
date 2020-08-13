@@ -1,0 +1,33 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`SingleColumn renders correctly 1`] = `
+<View
+  style={
+    Array [
+      Object {
+        "marginRight": 10,
+      },
+      Object {
+        "width": 100,
+      },
+    ]
+  }
+>
+  <View
+    testID="SingleColumn:Content"
+  >
+    <Text
+      style={
+        Array [
+          Object {
+            "fontSize": 14,
+            "lineHeight": 18,
+          },
+        ]
+      }
+    >
+      Paragraph text.
+    </Text>
+  </View>
+</View>
+`;

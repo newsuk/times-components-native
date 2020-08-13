@@ -5,6 +5,7 @@ declare module "@times-components-native/styleguide" {
   type Colours = Record<string, ColourMap>;
 
   export const colours: Colours;
+  export const spacing: (number) => number;
 }
 
 declare module "@times-components-native/utils" {

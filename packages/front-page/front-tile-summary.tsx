@@ -12,6 +12,7 @@ import { ResponsiveContext } from "@times-components-native/responsive";
 import { Markup } from "@times-components-native/fixture-generator/src/types";
 
 interface Props {
+  columnCount?: number;
   headlineStyle?: any;
   strapline?: string;
   straplineStyle?: any;
@@ -26,7 +27,12 @@ const renderContent = (props: Props) => {
   const { summary, summaryStyle } = props;
 
   return (
-    <FrontArticleSummaryContent summary={summary} summaryStyle={summaryStyle} />
+    <FrontArticleSummaryContent
+      summary={summary}
+      summaryStyle={summaryStyle}
+      columnCount={props.columnCount}
+      bylines={props.bylines}
+    />
   );
 };
 
