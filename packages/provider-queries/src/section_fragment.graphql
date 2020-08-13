@@ -811,7 +811,7 @@ fragment commonSlicesSection on StandardSectionSlice {
       }
     }
   }
-    ... on TopSecondaryTwoAndTwoSlice {
+  ... on TopSecondaryTwoAndTwoSlice {
     secondary1 {
       headline
       leadAsset {
@@ -929,7 +929,7 @@ fragment commonSlicesSection on StandardSectionSlice {
       }
     }
   }
-    ... on TopSecondaryTwoNoPicAndTwoSlice {
+  ... on TopSecondaryTwoNoPicAndTwoSlice {
     secondary1 {
       headline
       article {
