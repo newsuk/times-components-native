@@ -19,4 +19,5 @@ export {
   ItemColSeparator,
   ItemRowSeparator,
   FrontLeadTwoAndTwoSlice,
+  TopSecondaryFourSlice,
 } from "./src/slice-layout";

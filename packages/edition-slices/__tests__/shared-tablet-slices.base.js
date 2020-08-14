@@ -41,6 +41,7 @@ import {
   StandardSlice,
   ListTwoAndSixNoPicSlice,
   LeadTwoNoPicAndTwoFrontSlice,
+  TopSecondaryFourSlice,
 } from "../src/slices";
 
 const slices = [
@@ -128,6 +129,21 @@ const slices = [
     mock: mockLeadTwoNoPicAndTwoSlice(),
     name: "front lead two no pic and two",
     Slice: LeadTwoNoPicAndTwoFrontSlice,
+  },
+  {
+    mock: mockSecondaryFourSlice(),
+    name: "top secondary four (from TopSecondaryFourSlice)",
+    Slice: TopSecondaryFourSlice,
+  },
+  {
+    mock: mockSecondaryTwoAndTwoSlice(),
+    name: "top secondary four (from TopSecondaryTwoAndTwoSlice)",
+    Slice: TopSecondaryFourSlice,
+  },
+  {
+    mock: mockSecondaryTwoNoPicAndTwoSlice(),
+    name: "top secondary four (from TopSecondaryTwoNoPicAndTwoSlice)",
+    Slice: TopSecondaryFourSlice,
   },
 ];
 

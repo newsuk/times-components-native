@@ -15,3 +15,4 @@ export { default as SecondaryTwoAndTwoSlice } from "./secondarytwoandtwo";
 export { default as PuzzleSlice } from "./puzzle";
 export { default as SecondaryTwoNoPicAndTwoSlice } from "./secondarytwonopicandtwo";
 export { default as LeadTwoNoPicAndTwoFrontSlice } from "./frontleadtwoandtwo";
+export { default as TopSecondaryFourSlice } from "./topsecondaryfour";

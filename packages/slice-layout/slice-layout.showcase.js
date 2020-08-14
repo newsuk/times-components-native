@@ -19,6 +19,7 @@ import {
   SecondaryTwoNoPicAndTwoSlice,
   Leaders,
   ListTwoAndSixNoPic,
+  TopSecondaryFourSlice,
 } from "./src/slice-layout";
 
 const colours = [
@@ -42,6 +43,10 @@ const createItems = (noOfItems) =>
       );
     })
     .filter((item) => item !== false);
+
+const Lead = () => (
+  <View style={[{ height: "100%" }, { backgroundColor: "orange" }]} />
+);
 
 const Support1 = () => (
   <View style={[{ minHeight: 150 }, { backgroundColor: "green" }]} />
@@ -419,6 +424,21 @@ export default {
       },
       name: "Standard",
       type: "story",
+    },
+    {
+      component: () => (
+        <ScrollView>
+          <TopSecondaryFourSlice
+            lead={<Lead tileName="lead" />}
+            support1={<Support1 tileName="support1" />}
+            support2={<Support2 tileName="support2" />}
+            support3={<Support3 tileName="support3" />}
+          />
+        </ScrollView>
+      ),
+      name: "TopSecondaryFourSlice",
+      type: "story",
+      platform: "native",
     },
   ],
   name: "Primitives/Slice Layout",

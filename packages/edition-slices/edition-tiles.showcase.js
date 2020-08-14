@@ -37,6 +37,7 @@ import {
   TileZ,
   TileAA,
   TileAB,
+  TileAF,
   TileAH,
   TileAI,
   TileAL,
@@ -44,7 +45,9 @@ import {
   TileAN,
   TileAR,
   TileAS,
-  TileAF,
+  TileAT,
+  TileAU,
+  TileAV,
 } from "./src/tiles";
 
 const tile = mockEditionSlice(1).items[0];
@@ -209,6 +212,10 @@ const tileStories = [
     Tile: TileAE,
   },
   {
+    name: "Tile AF - No image, 20pt headline, with teaser",
+    Tile: TileAF,
+  },
+  {
     name:
       "Tile AH - Profile roundel image, 30pt headline, no teaser, central aligned summary",
     Tile: TileAH,
@@ -234,8 +241,16 @@ const tileStories = [
     Tile: TileAS,
   },
   {
-    name: "Tile AF - No image, 20pt headline, with teaser",
-    Tile: TileAF,
+    name: "Tile AT - Top image 3:2, 30pt headline, with teaser",
+    Tile: TileAT,
+  },
+  {
+    name: "Tile AU - Top image 16:9, 35pt headline, no teaser",
+    Tile: TileAU,
+  },
+  {
+    name: "Tile AV - 20pt headline, with teaser",
+    Tile: TileAV,
   },
 ];
 
