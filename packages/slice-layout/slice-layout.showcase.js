@@ -19,7 +19,7 @@ import {
   SecondaryTwoNoPicAndTwoSlice,
   Leaders,
   ListTwoAndSixNoPic,
-  TopSecondaryFourSlice,
+  TopSecondarySlice,
 } from "./src/slice-layout";
 
 const colours = [
@@ -428,7 +428,7 @@ export default {
     {
       component: () => (
         <ScrollView>
-          <TopSecondaryFourSlice
+          <TopSecondarySlice
             lead={<Lead tileName="lead" />}
             support1={<Support1 tileName="support1" />}
             support2={<Support2 tileName="support2" />}
@@ -436,7 +436,7 @@ export default {
           />
         </ScrollView>
       ),
-      name: "TopSecondaryFourSlice",
+      name: "TopSecondarySlice",
       type: "story",
       platform: "native",
     },

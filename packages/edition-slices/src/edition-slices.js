@@ -19,7 +19,7 @@ import {
   SecondaryTwoNoPicAndTwoSlice,
   LeadTwoNoPicAndTwoFrontSlice,
   PuzzleSlice,
-  TopSecondaryFourSlice,
+  TopSecondarySlice,
 } from "./slices";
 
 const config = (NativeModules || {}).ReactConfig;
@@ -51,9 +51,9 @@ const sliceMap = {
   TwoPicAndSixNoPicSlice: ListTwoAndSixNoPicSlice,
   LeadTwoNoPicandTwoFrontSlice: LeadTwoNoPicAndTwoFrontSlice, // remove once typo has been addressed from TPA
   LeadTwoNoPicAndTwoFrontSlice,
-  TopSecondaryTwoAndTwoSlice: TopSecondaryFourSlice,
-  TopSecondaryTwoNoPicAndTwoSlice: TopSecondaryFourSlice,
-  TopSecondaryFourSlice: TopSecondaryFourSlice,
+  TopSecondaryTwoAndTwoSlice: TopSecondarySlice,
+  TopSecondaryTwoNoPicAndTwoSlice: TopSecondarySlice,
+  TopSecondaryFourSlice: TopSecondarySlice,
 };
 
 export default sliceMap;

@@ -19,5 +19,5 @@ export {
   ItemColSeparator,
   ItemRowSeparator,
   FrontLeadTwoAndTwoSlice,
-  TopSecondaryFourSlice,
+  TopSecondarySlice,
 } from "./src/slice-layout";

@@ -4,7 +4,7 @@ import { ItemColSeparator } from "../shared";
 import VerticalLayout from "../verticallayout";
 import styles from "./styles";
 
-const TopSecondaryFourSlice = ({ lead, support1, support2, support3 }) => {
+const TopSecondarySlice = ({ lead, support1, support2, support3 }) => {
   return (
     <View style={styles.container}>
       <View style={styles.leadContainer}>{lead}</View>
@@ -17,4 +17,4 @@ const TopSecondaryFourSlice = ({ lead, support1, support2, support3 }) => {
   );
 };
 
-export default TopSecondaryFourSlice;
+export default TopSecondarySlice;

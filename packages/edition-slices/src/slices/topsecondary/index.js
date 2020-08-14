@@ -1,9 +1,9 @@
 import React, { Component } from "react";
-import { TopSecondaryFourSlice } from "@times-components-native/slice-layout";
+import { TopSecondarySlice } from "@times-components-native/slice-layout";
 import { TileAT, TileAU, TileAV } from "../../tiles";
 import { ResponsiveSlice } from "../shared";
 
-class TopSecondaryFour extends Component {
+class TopSecondary extends Component {
   constructor(props) {
     super(props);
     this.renderMedium = this.renderMedium.bind(this);
@@ -32,7 +32,7 @@ class TopSecondaryFour extends Component {
     const items = this.transformSliceItems(slice);
 
     return (
-      <TopSecondaryFourSlice
+      <TopSecondarySlice
         breakpoint={breakpoint}
         lead={
           <TileAT
@@ -74,7 +74,7 @@ class TopSecondaryFour extends Component {
     const { onPress, slice } = this.props;
     const items = this.transformSliceItems(slice);
     return (
-      <TopSecondaryFourSlice
+      <TopSecondarySlice
         breakpoint={breakpoint}
         lead={
           <TileAU
@@ -122,4 +122,4 @@ class TopSecondaryFour extends Component {
   }
 }
 
-export default TopSecondaryFour;
+export default TopSecondary;

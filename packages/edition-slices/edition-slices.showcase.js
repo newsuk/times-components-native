@@ -36,7 +36,7 @@ import {
   DailyRegisterLeadFourSlice,
   StandardSlice,
   LeadTwoNoPicAndTwoFrontSlice,
-  TopSecondaryFourSlice,
+  TopSecondarySlice,
 } from "./src/slices";
 import { mockFrontLeadTwoNoPicAndTwoSlice } from "@times-components-native/fixture-generator/src/mock-slice";
 
@@ -180,8 +180,8 @@ const sliceStories = [
   },
   {
     mock: mockSecondaryFourSlice(),
-    name: "Top Secondary Four (Medium: AS,AV,AV,AV, Wide: AT,AV,AV,AV)",
-    Slice: TopSecondaryFourSlice,
+    name: "Top Secondary (Medium: AS,AV,AV,AV, Wide: AT,AV,AV,AV)",
+    Slice: TopSecondarySlice,
   },
 ];
 
