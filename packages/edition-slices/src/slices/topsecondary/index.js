@@ -11,7 +11,7 @@ class TopSecondary extends Component {
   }
 
   transformSliceItems(slice) {
-    return slice.name === "SecondaryFourSlice"
+    return slice.name === "TopSecondaryFourSlice"
       ? {
           lead: slice.secondary1,
           support1: slice.secondary2,

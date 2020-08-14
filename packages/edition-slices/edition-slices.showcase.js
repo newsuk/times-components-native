@@ -16,6 +16,7 @@ import {
   mockSecondaryOneAndFourSlice,
   mockSecondaryTwoAndTwoSlice,
   mockSecondaryTwoNoPicAndTwoSlice,
+  mockTopSecondaryFourSlice,
 } from "@times-components-native/fixture-generator";
 import { SectionContext } from "@times-components-native/context";
 import Responsive from "@times-components-native/responsive";
@@ -179,7 +180,7 @@ const sliceStories = [
     scroll: false,
   },
   {
-    mock: mockSecondaryFourSlice(),
+    mock: mockTopSecondaryFourSlice(),
     name: "Top Secondary (Medium: AS,AV,AV,AV, Wide: AT,AV,AV,AV)",
     Slice: TopSecondarySlice,
   },
