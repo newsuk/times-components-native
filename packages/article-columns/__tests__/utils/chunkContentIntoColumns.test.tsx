@@ -25,7 +25,7 @@ const createTextWithNumberOfLines = (
 const createLinesWithNumberOfLines = (numberOfLines: number): Line[] =>
   range(numberOfLines).map((i) => ({ text: `line${i}` }));
 
-export const createParagraphWithText = (
+const createParagraphWithText = (
   text: string,
   testData: Partial<ParagraphContent> = {},
 ): ParagraphContent => ({

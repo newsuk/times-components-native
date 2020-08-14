@@ -59,7 +59,11 @@ export const InnerMeasureArticle: React.FC<
       <MeasureByline columnParameters={columnParameters} bylines={bylines} />
       <View style={{ width: columnParameters.columnWidth }}>
         {articleContents.map((content) => (
-          <MeasureContent style={style} content={content} />
+          <MeasureContent
+            key={`ContentMeasuringView:${content.id}`}
+            style={style}
+            content={content}
+          />
         ))}
       </View>
     </ScrollView>

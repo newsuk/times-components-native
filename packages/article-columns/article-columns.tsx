@@ -1,5 +1,5 @@
 import React from "react";
-import { MeasureArticle } from "./measure/MeasureArticle";
+import { MeasureArticle } from "@times-components-native/article-columns/measure/MeasureArticle";
 import {
   ArticleContent,
   Bylines,

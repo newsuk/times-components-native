@@ -1,0 +1,117 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`ArticleColumns generates columns for article content 1`] = `
+<MeasureArticle
+  articleContents={
+    Array [
+      Object {
+        "children": Array [
+          Object {
+            "attributes": Object {
+              "value": "article content",
+            },
+            "children": Array [],
+            "name": "text",
+          },
+        ],
+        "id": "0",
+        "name": "paragraph",
+      },
+    ]
+  }
+  bylines={
+    Array [
+      Object {
+        "byline": Array [
+          Object {
+            "attributes": Object {
+              "slug": "richard-lloyd-parry",
+            },
+            "children": Array [
+              Object {
+                "attributes": Object {
+                  "value": "Richard Lloyd Parry",
+                },
+                "children": Array [],
+                "name": "text",
+              },
+            ],
+            "name": "author",
+          },
+        ],
+        "image": null,
+      },
+      Object {
+        "byline": Array [
+          Object {
+            "children": Array [
+              Object {
+                "attributes": Object {
+                  "value": ", Hanoi",
+                },
+                "children": Array [],
+                "name": "text",
+              },
+            ],
+            "name": "inline",
+          },
+        ],
+        "image": null,
+      },
+    ]
+  }
+  columnParameters={
+    Object {
+      "columnCount": 3,
+      "columnHeight": 400,
+      "columnLineHeight": 18,
+      "columnWidth": 60,
+    }
+  }
+  renderMeasuredContents={[Function]}
+  style={
+    Object {
+      "fontSize": 14,
+      "lineHeight": 18,
+    }
+  }
+/>
+`;
+
+exports[`ArticleColumns renders navigator via a render-prop with generated pages 1`] = `
+<Columns>
+  <SingleColumn
+    column={
+      Array [
+        Object {
+          "children": Array [
+            Object {
+              "attributes": Object {
+                "value": "article content",
+              },
+              "children": Array [],
+              "name": "text",
+            },
+          ],
+          "id": "0",
+          "name": "paragraph",
+        },
+      ]
+    }
+    columnParameters={
+      Object {
+        "columnCount": 3,
+        "columnHeight": 400,
+        "columnLineHeight": 18,
+        "columnWidth": 60,
+      }
+    }
+    style={
+      Object {
+        "fontSize": 14,
+        "lineHeight": 18,
+      }
+    }
+  />
+</Columns>
+`;
