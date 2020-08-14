@@ -474,7 +474,7 @@ export const testSlice = {
       },
       topicConnection: { nodes: [] },
     },
-    headline: "This is tile headline This is tile headline",
+    headline: "This is tile headline",
     leadAsset: {
       id: "522abf2c-e752-11e8-9f32-f2801f1b9fd1",
       crops: [],
@@ -929,7 +929,7 @@ export const testSlice = {
       },
       topicConnection: { nodes: [] },
     },
-    headline: "This is tile headline This is tile headline",
+    headline: "This is tile headline",
     leadAsset: {
       id: "522abf2c-e752-11e8-9f32-f2801f1b9fd1",
       crops: [],
@@ -1384,7 +1384,7 @@ export const testSlice = {
       },
       topicConnection: { nodes: [] },
     },
-    headline: "This is tile headline This is tile headline",
+    headline: "This is tile headline",
     leadAsset: {
       id: "522abf2c-e752-11e8-9f32-f2801f1b9fd1",
       crops: [],
@@ -2296,7 +2296,7 @@ export const testSlice = {
         },
         topicConnection: { nodes: [] },
       },
-      headline: "This is tile headline This is tile headline",
+      headline: "This is tile headline",
       leadAsset: {
         id: "522abf2c-e752-11e8-9f32-f2801f1b9fd1",
         crops: [],
@@ -2751,7 +2751,7 @@ export const testSlice = {
         },
         topicConnection: { nodes: [] },
       },
-      headline: "This is tile headline This is tile headline",
+      headline: "This is tile headline",
       leadAsset: {
         id: "522abf2c-e752-11e8-9f32-f2801f1b9fd1",
         crops: [],
@@ -3206,7 +3206,7 @@ export const testSlice = {
         },
         topicConnection: { nodes: [] },
       },
-      headline: "This is tile headline This is tile headline",
+      headline: "This is tile headline",
       leadAsset: {
         id: "522abf2c-e752-11e8-9f32-f2801f1b9fd1",
         crops: [],
@@ -3661,7 +3661,7 @@ export const testSlice = {
         },
         topicConnection: { nodes: [] },
       },
-      headline: "This is tile headline This is tile headline",
+      headline: "This is tile headline",
       leadAsset: {
         id: "522abf2c-e752-11e8-9f32-f2801f1b9fd1",
         crops: [],

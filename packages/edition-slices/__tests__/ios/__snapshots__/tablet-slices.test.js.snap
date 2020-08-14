@@ -619,7 +619,97 @@ exports[`17. front lead two no pic and two - medium 1`] = `
 </View>
 `;
 
-exports[`18. comment lead and cartoon - wide 1`] = `
+exports[`18. top secondary (from topsecondaryfourslice) - medium 1`] = `
+<View>
+  <View>
+    <View>
+      <TileAT
+        breakpoint="medium"
+        tileName="lead"
+      />
+    </View>
+    <View />
+    <View>
+      <TileAV
+        breakpoint="medium"
+        tileName="support1"
+      />
+      <View />
+      <TileAV
+        breakpoint="medium"
+        tileName="support2"
+      />
+      <View />
+      <TileAV
+        breakpoint="medium"
+        tileName="support3"
+      />
+    </View>
+  </View>
+</View>
+`;
+
+exports[`19. top secondary (from topsecondarytwoandtwoslice) - medium 1`] = `
+<View>
+  <View>
+    <View>
+      <TileAT
+        breakpoint="medium"
+        tileName="lead"
+      />
+    </View>
+    <View />
+    <View>
+      <TileAV
+        breakpoint="medium"
+        tileName="support1"
+      />
+      <View />
+      <TileAV
+        breakpoint="medium"
+        tileName="support2"
+      />
+      <View />
+      <TileAV
+        breakpoint="medium"
+        tileName="support3"
+      />
+    </View>
+  </View>
+</View>
+`;
+
+exports[`20. top secondary (from topsecondarytwonopicandtwoslice) - medium 1`] = `
+<View>
+  <View>
+    <View>
+      <TileAT
+        breakpoint="medium"
+        tileName="lead"
+      />
+    </View>
+    <View />
+    <View>
+      <TileAV
+        breakpoint="medium"
+        tileName="support1"
+      />
+      <View />
+      <TileAV
+        breakpoint="medium"
+        tileName="support2"
+      />
+      <View />
+      <TileAV
+        breakpoint="medium"
+        tileName="support3"
+      />
+    </View>
+  </View>
+</View>
+`;
+
+exports[`21. comment lead and cartoon - wide 1`] = `
 <View>
   <View>
     <View>
@@ -639,7 +729,7 @@ exports[`18. comment lead and cartoon - wide 1`] = `
 </View>
 `;
 
-exports[`19. daily universal register - wide 1`] = `
+exports[`22. daily universal register - wide 1`] = `
 <View>
   <View>
     <Image
@@ -692,7 +782,7 @@ exports[`19. daily universal register - wide 1`] = `
 </View>
 `;
 
-exports[`20. lead one and one - wide 1`] = `
+exports[`23. lead one and one - wide 1`] = `
 <View>
   <View>
     <View>
@@ -712,7 +802,7 @@ exports[`20. lead one and one - wide 1`] = `
 </View>
 `;
 
-exports[`21. lead one full width - wide 1`] = `
+exports[`24. lead one full width - wide 1`] = `
 <View>
   <TileR
     breakpoint="wide"
@@ -721,7 +811,7 @@ exports[`21. lead one full width - wide 1`] = `
 </View>
 `;
 
-exports[`22. lead two no pic and two - wide 1`] = `
+exports[`25. lead two no pic and two - wide 1`] = `
 <View>
   <View>
     <View>
@@ -753,7 +843,7 @@ exports[`22. lead two no pic and two - wide 1`] = `
 </View>
 `;
 
-exports[`23. leaders slice - wide 1`] = `
+exports[`26. leaders slice - wide 1`] = `
 <View>
   <View>
     <View>
@@ -797,7 +887,7 @@ exports[`23. leaders slice - wide 1`] = `
 </View>
 `;
 
-exports[`24. secondary one and four - wide 1`] = `
+exports[`27. secondary one and four - wide 1`] = `
 <View>
   <View>
     <View>
@@ -853,7 +943,7 @@ exports[`24. secondary one and four - wide 1`] = `
 </View>
 `;
 
-exports[`25. secondary one - wide 1`] = `
+exports[`28. secondary one - wide 1`] = `
 <View>
   <TileW
     breakpoint="wide"
@@ -862,7 +952,7 @@ exports[`25. secondary one - wide 1`] = `
 </View>
 `;
 
-exports[`26. secondary four - wide 1`] = `
+exports[`29. secondary four - wide 1`] = `
 <View>
   <View>
     <View>
@@ -908,7 +998,7 @@ exports[`26. secondary four - wide 1`] = `
 </View>
 `;
 
-exports[`27. secondary one and columnist - wide 1`] = `
+exports[`30. secondary one and columnist - wide 1`] = `
 <View>
   <View>
     <View>
@@ -929,7 +1019,7 @@ exports[`27. secondary one and columnist - wide 1`] = `
 </View>
 `;
 
-exports[`28. secondary two and two - wide 1`] = `
+exports[`31. secondary two and two - wide 1`] = `
 <View>
   <View>
     <View>
@@ -959,7 +1049,7 @@ exports[`28. secondary two and two - wide 1`] = `
 </View>
 `;
 
-exports[`29. lead one and four slice - wide 1`] = `
+exports[`32. lead one and four slice - wide 1`] = `
 <View>
   <View>
     <View>
@@ -994,7 +1084,7 @@ exports[`29. lead one and four slice - wide 1`] = `
 </View>
 `;
 
-exports[`30. standard slice - wide 1`] = `
+exports[`33. standard slice - wide 1`] = `
 <View>
   <View>
     <View>
@@ -1027,7 +1117,7 @@ exports[`30. standard slice - wide 1`] = `
 </View>
 `;
 
-exports[`31. secondary two no pic and two - wide 1`] = `
+exports[`34. secondary two no pic and two - wide 1`] = `
 <View>
   <View>
     <View>
@@ -1061,7 +1151,7 @@ exports[`31. secondary two no pic and two - wide 1`] = `
 </View>
 `;
 
-exports[`32. list two and six no pic - wide 1`] = `
+exports[`35. list two and six no pic - wide 1`] = `
 <View>
   <View>
     <View>
@@ -1131,7 +1221,7 @@ exports[`32. list two and six no pic - wide 1`] = `
 </View>
 `;
 
-exports[`33. puzzle - wide 1`] = `
+exports[`36. puzzle - wide 1`] = `
 <View>
   <View>
     <View>
@@ -1201,7 +1291,7 @@ exports[`33. puzzle - wide 1`] = `
 </View>
 `;
 
-exports[`34. front lead two no pic and two - wide 1`] = `
+exports[`37. front lead two no pic and two - wide 1`] = `
 <View>
   <View>
     <View>
@@ -1244,7 +1334,97 @@ exports[`34. front lead two no pic and two - wide 1`] = `
 </View>
 `;
 
-exports[`35. comment lead and cartoon - huge 1`] = `
+exports[`38. top secondary (from topsecondaryfourslice) - wide 1`] = `
+<View>
+  <View>
+    <View>
+      <TileAU
+        breakpoint="wide"
+        tileName="lead"
+      />
+    </View>
+    <View />
+    <View>
+      <TileAV
+        breakpoint="wide"
+        tileName="support1"
+      />
+      <View />
+      <TileAV
+        breakpoint="wide"
+        tileName="support2"
+      />
+      <View />
+      <TileAV
+        breakpoint="wide"
+        tileName="support3"
+      />
+    </View>
+  </View>
+</View>
+`;
+
+exports[`39. top secondary (from topsecondarytwoandtwoslice) - wide 1`] = `
+<View>
+  <View>
+    <View>
+      <TileAU
+        breakpoint="wide"
+        tileName="lead"
+      />
+    </View>
+    <View />
+    <View>
+      <TileAV
+        breakpoint="wide"
+        tileName="support1"
+      />
+      <View />
+      <TileAV
+        breakpoint="wide"
+        tileName="support2"
+      />
+      <View />
+      <TileAV
+        breakpoint="wide"
+        tileName="support3"
+      />
+    </View>
+  </View>
+</View>
+`;
+
+exports[`40. top secondary (from topsecondarytwonopicandtwoslice) - wide 1`] = `
+<View>
+  <View>
+    <View>
+      <TileAU
+        breakpoint="wide"
+        tileName="lead"
+      />
+    </View>
+    <View />
+    <View>
+      <TileAV
+        breakpoint="wide"
+        tileName="support1"
+      />
+      <View />
+      <TileAV
+        breakpoint="wide"
+        tileName="support2"
+      />
+      <View />
+      <TileAV
+        breakpoint="wide"
+        tileName="support3"
+      />
+    </View>
+  </View>
+</View>
+`;
+
+exports[`41. comment lead and cartoon - huge 1`] = `
 <View>
   <View>
     <View>
@@ -1266,7 +1446,7 @@ exports[`35. comment lead and cartoon - huge 1`] = `
 </View>
 `;
 
-exports[`36. daily universal register - huge 1`] = `
+exports[`42. daily universal register - huge 1`] = `
 <View>
   <View>
     <View>
@@ -1321,7 +1501,7 @@ exports[`36. daily universal register - huge 1`] = `
 </View>
 `;
 
-exports[`37. lead one and one - huge 1`] = `
+exports[`43. lead one and one - huge 1`] = `
 <View>
   <View>
     <View>
@@ -1343,7 +1523,7 @@ exports[`37. lead one and one - huge 1`] = `
 </View>
 `;
 
-exports[`38. lead one full width - huge 1`] = `
+exports[`44. lead one full width - huge 1`] = `
 <View>
   <View>
     <TileR
@@ -1354,7 +1534,7 @@ exports[`38. lead one full width - huge 1`] = `
 </View>
 `;
 
-exports[`39. lead two no pic and two - huge 1`] = `
+exports[`45. lead two no pic and two - huge 1`] = `
 <View>
   <View>
     <View>
@@ -1388,7 +1568,7 @@ exports[`39. lead two no pic and two - huge 1`] = `
 </View>
 `;
 
-exports[`40. leaders slice - huge 1`] = `
+exports[`46. leaders slice - huge 1`] = `
 <View>
   <View>
     <View>
@@ -1434,7 +1614,7 @@ exports[`40. leaders slice - huge 1`] = `
 </View>
 `;
 
-exports[`41. secondary one and four - huge 1`] = `
+exports[`47. secondary one and four - huge 1`] = `
 <View>
   <View>
     <View>
@@ -1492,7 +1672,7 @@ exports[`41. secondary one and four - huge 1`] = `
 </View>
 `;
 
-exports[`42. secondary one - huge 1`] = `
+exports[`48. secondary one - huge 1`] = `
 <View>
   <View>
     <TileW
@@ -1503,7 +1683,7 @@ exports[`42. secondary one - huge 1`] = `
 </View>
 `;
 
-exports[`43. secondary four - huge 1`] = `
+exports[`49. secondary four - huge 1`] = `
 <View>
   <View>
     <View>
@@ -1551,7 +1731,7 @@ exports[`43. secondary four - huge 1`] = `
 </View>
 `;
 
-exports[`44. secondary one and columnist - huge 1`] = `
+exports[`50. secondary one and columnist - huge 1`] = `
 <View>
   <View>
     <View>
@@ -1574,7 +1754,7 @@ exports[`44. secondary one and columnist - huge 1`] = `
 </View>
 `;
 
-exports[`45. secondary two and two - huge 1`] = `
+exports[`51. secondary two and two - huge 1`] = `
 <View>
   <View>
     <View>
@@ -1606,7 +1786,7 @@ exports[`45. secondary two and two - huge 1`] = `
 </View>
 `;
 
-exports[`46. lead one and four slice - huge 1`] = `
+exports[`52. lead one and four slice - huge 1`] = `
 <View>
   <View>
     <View>
@@ -1643,7 +1823,7 @@ exports[`46. lead one and four slice - huge 1`] = `
 </View>
 `;
 
-exports[`47. standard slice - huge 1`] = `
+exports[`53. standard slice - huge 1`] = `
 <View>
   <View>
     <View>
@@ -1678,7 +1858,7 @@ exports[`47. standard slice - huge 1`] = `
 </View>
 `;
 
-exports[`48. secondary two no pic and two - huge 1`] = `
+exports[`54. secondary two no pic and two - huge 1`] = `
 <View>
   <View>
     <View>
@@ -1714,7 +1894,7 @@ exports[`48. secondary two no pic and two - huge 1`] = `
 </View>
 `;
 
-exports[`49. list two and six no pic - huge 1`] = `
+exports[`55. list two and six no pic - huge 1`] = `
 <View>
   <View>
     <View>
@@ -1786,7 +1966,7 @@ exports[`49. list two and six no pic - huge 1`] = `
 </View>
 `;
 
-exports[`50. puzzle - huge 1`] = `
+exports[`56. puzzle - huge 1`] = `
 <View>
   <View>
     <View>
@@ -1858,7 +2038,7 @@ exports[`50. puzzle - huge 1`] = `
 </View>
 `;
 
-exports[`51. front lead two no pic and two - huge 1`] = `
+exports[`57. front lead two no pic and two - huge 1`] = `
 <View>
   <View>
     <View>
@@ -1897,6 +2077,102 @@ exports[`51. front lead two no pic and two - huge 1`] = `
             tileName="support2"
           />
         </View>
+      </View>
+    </View>
+  </View>
+</View>
+`;
+
+exports[`58. top secondary (from topsecondaryfourslice) - huge 1`] = `
+<View>
+  <View>
+    <View>
+      <View>
+        <TileAU
+          breakpoint="huge"
+          tileName="lead"
+        />
+      </View>
+      <View />
+      <View>
+        <TileAV
+          breakpoint="huge"
+          tileName="support1"
+        />
+        <View />
+        <TileAV
+          breakpoint="huge"
+          tileName="support2"
+        />
+        <View />
+        <TileAV
+          breakpoint="huge"
+          tileName="support3"
+        />
+      </View>
+    </View>
+  </View>
+</View>
+`;
+
+exports[`59. top secondary (from topsecondarytwoandtwoslice) - huge 1`] = `
+<View>
+  <View>
+    <View>
+      <View>
+        <TileAU
+          breakpoint="huge"
+          tileName="lead"
+        />
+      </View>
+      <View />
+      <View>
+        <TileAV
+          breakpoint="huge"
+          tileName="support1"
+        />
+        <View />
+        <TileAV
+          breakpoint="huge"
+          tileName="support2"
+        />
+        <View />
+        <TileAV
+          breakpoint="huge"
+          tileName="support3"
+        />
+      </View>
+    </View>
+  </View>
+</View>
+`;
+
+exports[`60. top secondary (from topsecondarytwonopicandtwoslice) - huge 1`] = `
+<View>
+  <View>
+    <View>
+      <View>
+        <TileAU
+          breakpoint="huge"
+          tileName="lead"
+        />
+      </View>
+      <View />
+      <View>
+        <TileAV
+          breakpoint="huge"
+          tileName="support1"
+        />
+        <View />
+        <TileAV
+          breakpoint="huge"
+          tileName="support2"
+        />
+        <View />
+        <TileAV
+          breakpoint="huge"
+          tileName="support3"
+        />
       </View>
     </View>
   </View>
