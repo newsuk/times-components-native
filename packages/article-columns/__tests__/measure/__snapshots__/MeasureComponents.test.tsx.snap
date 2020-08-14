@@ -9,8 +9,8 @@ exports[`MeasureByline renders the byline 1`] = `
     }
   }
 >
-  <Byline
-    ast={
+  <FrontPageByline
+    byline={
       Array [
         Array [
           Object {
@@ -53,6 +53,12 @@ exports[`MeasureByline renders the byline 1`] = `
         ],
       ]
     }
+    containerStyle={
+      Object {
+        "marginBottom": 0,
+      }
+    }
+    withKeyline={true}
   />
 </View>
 `;

@@ -23,6 +23,7 @@ export interface ArticleMeasurements {
     heights: { [key: string]: number };
   };
   bylineHeight: number | null;
+  bylineMargin: number | null;
 }
 
 export interface ColumnParameters {

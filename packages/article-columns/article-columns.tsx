@@ -12,6 +12,7 @@ import {
 } from "@times-components-native/article-columns/render/Columns";
 import { TextStyle } from "react-native";
 import { calculateColumnWidth } from "@times-components-native/article-columns/utils/calculateColumnWidth";
+import { FrontPageByline } from "@times-components-native/front-page/front-page-byline";
 
 interface Props {
   articleContents: ArticleContent[];
@@ -69,17 +70,33 @@ export const ArticleColumns: React.FC<Props> = ({
           paragraphs,
           articleMeasurements,
           columnParameters,
-        ).slice(0, columnCount);
+        );
         return (
           <Columns>
-            {articleColumns.map((articleColumn, index) => (
-              <SingleColumn
-                key={index}
-                style={style}
-                columnParameters={columnParameters}
-                column={articleColumn}
-              />
-            ))}
+            <SingleColumn
+              style={style}
+              columnParameters={columnParameters}
+              renderBefore={() => (
+                <FrontPageByline
+                  withKeyline={true}
+                  byline={bylines}
+                  containerStyle={{
+                    marginBottom: articleMeasurements.bylineMargin ?? 0,
+                  }}
+                />
+              )}
+              column={articleColumns[0]}
+            />
+            {articleColumns
+              .slice(1, columnCount)
+              .map((articleColumn, index) => (
+                <SingleColumn
+                  key={index}
+                  style={style}
+                  columnParameters={columnParameters}
+                  column={articleColumn}
+                />
+              ))}
           </Columns>
         );
       }}

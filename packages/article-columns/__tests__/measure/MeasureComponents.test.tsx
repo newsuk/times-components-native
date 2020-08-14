@@ -10,7 +10,9 @@ import {
 import { MeasurementDispatch } from "@times-components-native/article-columns/measure/MeasurementDispatchContext";
 import { ParagraphContent } from "@times-components-native/article-columns/domain-types";
 
-jest.mock("@times-components-native/article-byline", () => "Byline");
+jest.mock("@times-components-native/front-page/front-page-byline", () => ({
+  FrontPageByline: "FrontPageByline",
+}));
 
 const columnParameters: ColumnParameters = {
   columnCount: 3,
@@ -42,7 +44,8 @@ describe("MeasureByline", () => {
     });
 
     expect(mock).toHaveBeenCalledWith({
-      payload: 10,
+      height: 10,
+      margin: 10,
       type: "SET_BYLINE_HEIGHT",
     });
   });

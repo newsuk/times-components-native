@@ -29,32 +29,20 @@ exports[`FrontTileSummary renders correctly 1`] = `
       }
     }
   />
-  <Text
-    style={
-      Object {
-        "marginBottom": 5,
-      }
-    }
-  >
-    <ArticleByline
-      ast={
-        Array [
-          Object {
-            "byline": Array [
-              Object {
-                "foo": "bar",
-              },
-            ],
-          },
-        ]
-      }
-      bylineStyle={
+  <FrontPageByline
+    byline={
+      Array [
         Object {
-          "lineHeight": 13,
-        }
-      }
-    />
-  </Text>
+          "byline": Array [
+            Object {
+              "foo": "bar",
+            },
+          ],
+        },
+      ]
+    }
+    withKeyline={false}
+  />
   <FrontArticleSummaryContent
     bylines={
       Array [
@@ -67,7 +55,74 @@ exports[`FrontTileSummary renders correctly 1`] = `
         },
       ]
     }
-    columnCount={3}
+    summary={
+      Array [
+        Object {
+          "attributes": Object {},
+          "children": Array [
+            Object {
+              "attributes": Object {
+                "value": "Test",
+              },
+              "children": Array [],
+              "name": "text",
+            },
+          ],
+          "name": "paragraph",
+        },
+      ]
+    }
+    summaryStyle={
+      Object {
+        "backgroundColor": "orange",
+      }
+    }
+  />
+</View>
+`;
+
+exports[`FrontTileSummary renders with more than 1 columns 1`] = `
+<View
+  style={
+    Array [
+      Object {
+        "backgroundColor": "red",
+      },
+      Object {
+        "flex": 1,
+      },
+    ]
+  }
+>
+  <ArticleSummaryHeadline
+    headline="This is tile headline"
+    style={
+      Object {
+        "backgroundColor": "blue",
+      }
+    }
+  />
+  <ArticleSummaryStrapline
+    strapline="Strapline Text"
+    style={
+      Object {
+        "backgroundColor": "green",
+      }
+    }
+  />
+  <FrontArticleSummaryContent
+    bylines={
+      Array [
+        Object {
+          "byline": Array [
+            Object {
+              "foo": "bar",
+            },
+          ],
+        },
+      ]
+    }
+    columnCount={2}
     summary={
       Array [
         Object {
@@ -124,7 +179,6 @@ exports[`FrontTileSummary renders without byline 1`] = `
     }
   />
   <FrontArticleSummaryContent
-    columnCount={3}
     summary={
       Array [
         Object {
@@ -172,32 +226,20 @@ exports[`FrontTileSummary renders without strapline 1`] = `
       }
     }
   />
-  <Text
-    style={
-      Object {
-        "marginBottom": 5,
-      }
-    }
-  >
-    <ArticleByline
-      ast={
-        Array [
-          Object {
-            "byline": Array [
-              Object {
-                "foo": "bar",
-              },
-            ],
-          },
-        ]
-      }
-      bylineStyle={
+  <FrontPageByline
+    byline={
+      Array [
         Object {
-          "lineHeight": 13,
-        }
-      }
-    />
-  </Text>
+          "byline": Array [
+            Object {
+              "foo": "bar",
+            },
+          ],
+        },
+      ]
+    }
+    withKeyline={false}
+  />
   <FrontArticleSummaryContent
     bylines={
       Array [
@@ -210,7 +252,6 @@ exports[`FrontTileSummary renders without strapline 1`] = `
         },
       ]
     }
-    columnCount={3}
     summary={
       Array [
         Object {

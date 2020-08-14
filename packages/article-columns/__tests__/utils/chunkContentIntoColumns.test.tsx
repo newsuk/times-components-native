@@ -42,6 +42,7 @@ describe("chunkContentIntoColumns", () => {
     });
     const articleMeasurements: ArticleMeasurements = {
       bylineHeight: 0,
+      bylineMargin: 0,
       contents: {
         lines: {
           p1: [{ text: "line1" }],
@@ -69,6 +70,7 @@ describe("chunkContentIntoColumns", () => {
 
     const articleMeasurements: ArticleMeasurements = {
       bylineHeight: 0,
+      bylineMargin: 0,
       contents: {
         lines: {
           p1: [{ text: "line1" }],
@@ -102,6 +104,7 @@ describe("chunkContentIntoColumns", () => {
 
     const articleMeasurements: ArticleMeasurements = {
       bylineHeight: 0,
+      bylineMargin: 0,
       contents: {
         lines: {
           p1: lines,
@@ -158,6 +161,7 @@ describe("chunkContentIntoColumns", () => {
     const lines = createLinesWithNumberOfLines(numberOfLinesInContent);
     const articleMeasurements: ArticleMeasurements = {
       bylineHeight: 0,
+      bylineMargin: 0,
       contents: {
         lines: {
           p1: lines,
@@ -229,6 +233,7 @@ describe("chunkContentIntoColumns", () => {
 
     const articleMeasurements: ArticleMeasurements = {
       bylineHeight: 0,
+      bylineMargin: 0,
       contents: {
         lines: {
           p1: [{ text: "line1" }, { text: "line2" }],
@@ -274,6 +279,7 @@ describe("chunkContentIntoColumns", () => {
 
     const articleMeasurements: ArticleMeasurements = {
       bylineHeight: 0,
+      bylineMargin: 0,
       contents: {
         lines: {
           p1: createLinesWithNumberOfLines(p1LineCount),
@@ -354,6 +360,7 @@ describe("chunkContentIntoColumns", () => {
 
     const articleMeasurements: ArticleMeasurements = {
       bylineHeight: 0,
+      bylineMargin: 0,
       contents: {
         lines: {
           p1: createLinesWithNumberOfLines(p1LineCount),
@@ -420,6 +427,7 @@ describe("chunkContentIntoColumns", () => {
 
     const articleMeasurements: ArticleMeasurements = {
       bylineHeight: 0,
+      bylineMargin: 0,
       contents: {
         lines: {
           p1: createLinesWithNumberOfLines(p1LineCount),
@@ -490,7 +498,6 @@ describe("chunkContentIntoColumns", () => {
     ]);
   });
 
-  // TODO fix
   it("factors in byline when chunking", () => {
     const maxLinesInColumn = 20;
     const linesInContent = 18;
@@ -502,7 +509,8 @@ describe("chunkContentIntoColumns", () => {
     );
 
     const articleMeasurements: ArticleMeasurements = {
-      bylineHeight: 20,
+      bylineHeight: 40,
+      bylineMargin: 20,
       contents: {
         lines: {
           p1: createLinesWithNumberOfLines(linesInContent),
@@ -513,14 +521,10 @@ describe("chunkContentIntoColumns", () => {
       },
     };
 
-    const [columns] = chunkContentIntoColumns(
-      [paragraph],
-      articleMeasurements,
-      {
-        ...columnParameters,
-        columnHeight: maxLinesInColumn * columnLineHeight,
-      },
-    );
+    const columns = chunkContentIntoColumns([paragraph], articleMeasurements, {
+      ...columnParameters,
+      columnHeight: maxLinesInColumn * columnLineHeight,
+    });
 
     expect(columns).toHaveLength(2);
     expect(columns[0]).toMatchObject([
@@ -528,7 +532,7 @@ describe("chunkContentIntoColumns", () => {
         children: [
           {
             attributes: {
-              value: createTextWithNumberOfLines(maxLinesInColumn - 3), // 3 lines taken by byline/headline
+              value: createTextWithNumberOfLines(maxLinesInColumn - 3), // 3 lines taken by byline
             },
             children: [],
             name: "text",

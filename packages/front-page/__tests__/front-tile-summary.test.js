@@ -13,6 +13,9 @@ jest.mock("@times-components-native/article-summary", () => ({
 }));
 
 jest.mock("@times-components-native/article-byline", () => "ArticleByline");
+jest.mock("@times-components-native/front-page/front-page-byline", () => ({
+  FrontPageByline: "FrontPageByline",
+}));
 
 const summaryContent = [
   {
@@ -50,7 +53,6 @@ const props = {
   headlineStyle: { backgroundColor: "blue" },
   straplineStyle: { backgroundColor: "green" },
   strapline: "Strapline Text",
-  columnCount: 3,
   summaryStyle: { backgroundColor: "orange" },
 };
 
@@ -72,6 +74,14 @@ describe("FrontTileSummary", () => {
   it("renders without strapline", () => {
     let renderer = ReactTestRenderer.create(
       <FrontTileSummary {...props} strapline={undefined} />,
+    );
+
+    expect(renderer.toJSON()).toMatchSnapshot();
+  });
+
+  it("renders with more than 1 columns", () => {
+    let renderer = ReactTestRenderer.create(
+      <FrontTileSummary {...props} columnCount={2} />,
     );
 
     expect(renderer.toJSON()).toMatchSnapshot();

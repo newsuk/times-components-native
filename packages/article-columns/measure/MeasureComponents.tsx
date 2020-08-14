@@ -1,7 +1,6 @@
 import renderTrees from "@times-components-native/markup-forest";
 import React, { memo } from "react";
 import { TextStyle, View } from "react-native";
-import Byline from "@times-components-native/article-byline";
 import {
   Bylines,
   ParagraphContent,
@@ -10,6 +9,7 @@ import { getRenderers } from "@times-components-native/front-page/front-renderer
 
 import { useMeasurementDispatchContext } from "./MeasurementDispatchContext";
 import { ColumnParameters } from "@times-components-native/article-columns/types";
+import { FrontPageByline } from "@times-components-native/front-page/front-page-byline";
 
 interface Props {
   content: ParagraphContent;
@@ -47,6 +47,11 @@ export const MeasureContent: React.FC<Props> = memo(({ content, style }) => {
   );
 });
 
+export const calculateDynamicSpacing = (height: number, lineHeight: number) => {
+  const padding = Math.ceil(height / lineHeight) * lineHeight - height;
+  return padding >= 7 ? padding : padding + lineHeight;
+};
+
 export const MeasureByline: React.FC<{
   bylines: Bylines;
   columnParameters: ColumnParameters;
@@ -58,10 +63,21 @@ export const MeasureByline: React.FC<{
       style={{ width: columnParameters.columnWidth }}
       onLayout={(event) => {
         const height = event.nativeEvent.layout.height;
-        dispatch({ type: "SET_BYLINE_HEIGHT", payload: height });
+        dispatch({
+          type: "SET_BYLINE_HEIGHT",
+          height,
+          margin: calculateDynamicSpacing(
+            height,
+            columnParameters.columnLineHeight,
+          ),
+        });
       }}
     >
-      <Byline ast={bylines} />
+      <FrontPageByline
+        byline={bylines}
+        withKeyline={true}
+        containerStyle={{ marginBottom: 0 }}
+      />
     </View>
   );
 });

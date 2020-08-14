@@ -60,7 +60,8 @@ describe("ArticleColumns", () => {
 
     const idWithHeight = `0-${height}`;
     const articleMeasurements: ArticleMeasurements = {
-      bylineHeight: 0,
+      bylineHeight: 20,
+      bylineMargin: 10,
       contents: {
         lines: {
           [idWithHeight]: [{ text: "line1" }],

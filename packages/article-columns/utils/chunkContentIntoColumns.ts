@@ -9,8 +9,14 @@ import { calculateContentsHeight } from "./calculateContentsHeight";
 import { ParagraphContent } from "@times-components-native/article-columns/domain-types";
 
 // TODO IMPLEMENT TO GET BYLINE HEIGHT FACTORED IN
-export const calculateHeightTakenOnPage = () => {
-  return 0;
+export const calculateHeightTakenOnPage = (
+  columnIndex: number,
+  articleMeasurements: ArticleMeasurements,
+) => {
+  if (columnIndex > 0) return 0;
+  const bylineHeight = articleMeasurements.bylineHeight ?? 0;
+  const bylineMargin = articleMeasurements.bylineMargin ?? 0;
+  return bylineHeight + bylineMargin;
 };
 
 const getColumnIndex = (columns: ColumnContents[]) =>
@@ -29,7 +35,10 @@ export const chunkContentIntoColumns = (
   const currentColumn = columns[columnIndex] || [];
   const { columnHeight } = columnParameters;
 
-  const heightTakenOnPage = calculateHeightTakenOnPage();
+  const heightTakenOnPage = calculateHeightTakenOnPage(
+    columnIndex,
+    articleMeasurements,
+  );
   const heightOfCurrentParagraph =
     articleMeasurements.contents.heights[currentContent.id!];
   const currentColumnHeight = calculateContentsHeight(

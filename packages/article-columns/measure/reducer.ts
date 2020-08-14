@@ -10,6 +10,7 @@ export const initialState: ArticleMeasurements = {
     heights: {},
   },
   bylineHeight: null,
+  bylineMargin: null,
 };
 
 interface SetContentHeightAction {
@@ -26,7 +27,8 @@ interface SetContentLinesAction {
 
 interface SetBylineAction {
   type: "SET_BYLINE_HEIGHT";
-  payload: number;
+  height: number;
+  margin: number;
 }
 
 export type Action =
@@ -58,7 +60,8 @@ export const reducer: Reducer<ArticleMeasurements, Action> = (
     case "SET_BYLINE_HEIGHT":
       return {
         ...state,
-        bylineHeight: action.payload,
+        bylineHeight: action.height,
+        bylineMargin: action.margin,
       };
     default:
       return state;

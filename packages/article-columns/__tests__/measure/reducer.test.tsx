@@ -28,6 +28,7 @@ describe("reducer", () => {
           lines: {},
         },
         bylineHeight: null,
+        bylineMargin: null,
       });
     });
 
@@ -51,6 +52,7 @@ describe("reducer", () => {
           lines: {},
         },
         bylineHeight: null,
+        bylineMargin: null,
       });
     });
   });
@@ -69,6 +71,7 @@ describe("reducer", () => {
           lines: { someId: [{ text: "some text" }] },
         },
         bylineHeight: null,
+        bylineMargin: null,
       });
     });
 
@@ -93,6 +96,7 @@ describe("reducer", () => {
           lines: { someId: [{ text: "some text" }] },
         },
         bylineHeight: null,
+        bylineMargin: null,
       });
     });
   });
@@ -100,13 +104,15 @@ describe("reducer", () => {
   describe('when dispatching the "SET_BYLINE_HEIGHT" action', () => {
     it("sets the measured height of a byline", () => {
       const nextState = reducer(initialState, {
-        payload: 5,
+        height: 5,
+        margin: 4,
         type: "SET_BYLINE_HEIGHT",
       });
 
       expect(nextState).toEqual({
         contents: { heights: {}, lines: {} },
         bylineHeight: 5,
+        bylineMargin: 4,
       });
     });
 
@@ -114,13 +120,15 @@ describe("reducer", () => {
       const prevState = { ...initialState, bylineHeight: 2 };
 
       const nextState = reducer(prevState, {
-        payload: 5,
+        height: 5,
+        margin: 4,
         type: "SET_BYLINE_HEIGHT",
       });
 
       expect(nextState).toEqual({
         contents: { heights: {}, lines: {} },
         bylineHeight: 5,
+        bylineMargin: 4,
       });
     });
   });

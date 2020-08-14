@@ -14,7 +14,7 @@ exports[`ArticleColumns generates columns for article content 1`] = `
             "name": "text",
           },
         ],
-        "id": "0",
+        "id": "0-400",
         "name": "paragraph",
       },
     ]
@@ -106,6 +106,7 @@ exports[`ArticleColumns renders navigator via a render-prop with generated pages
         "columnWidth": 60,
       }
     }
+    renderBefore={[Function]}
     style={
       Object {
         "fontSize": 14,
