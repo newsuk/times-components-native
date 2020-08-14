@@ -33,7 +33,7 @@ const paragraphA: ArticleContent = createParagraphWithText("line1", {
   id: "p1",
 });
 
-// @ts-ignore `articleMeasurements` prop is used for testing
+// eslint-disable-next-line @typescript-eslint/no-unused-vars
 const CaptureContents = ({ articleMeasurements }) => null;
 
 const columnParameters: ColumnParameters = {
