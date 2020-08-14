@@ -12,6 +12,7 @@ interface Input {
   onParagraphTextLayout?: (event: any) => void;
   leftAligned?: boolean;
   renderOptions?: TextStyle;
+  addNewLine?: boolean;
 }
 type GetRenderers = (input: Input) => { [key: string]: Renderer };
 export const PARAGRAPH_INDENT_CHAR = `\u3000`; // approximates a 2-space tab
@@ -19,6 +20,7 @@ export const PARAGRAPH_INDENT_CHAR = `\u3000`; // approximates a 2-space tab
 export const getRenderers: GetRenderers = ({
   renderOptions,
   onParagraphTextLayout,
+  addNewLine,
 }) => ({
   ...coreRenderers,
   paragraph(key, attributes, renderedChildren) {
@@ -31,6 +33,7 @@ export const getRenderers: GetRenderers = ({
       >
         {attributes?.tab && PARAGRAPH_INDENT_CHAR}
         {renderedChildren}
+        {addNewLine && `\n`}
       </Text>
     );
   },
@@ -48,6 +51,6 @@ export const getRenderers: GetRenderers = ({
 
 const styles = StyleSheet.create({
   invisible: {
-    color: "rgba(0,0,0,0)",
+    color: "rgba(1,0,0,0)",
   },
 });

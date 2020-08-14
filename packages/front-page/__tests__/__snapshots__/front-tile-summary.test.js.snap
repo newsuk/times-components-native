@@ -56,6 +56,18 @@ exports[`FrontTileSummary renders correctly 1`] = `
     />
   </Text>
   <FrontArticleSummaryContent
+    bylines={
+      Array [
+        Object {
+          "byline": Array [
+            Object {
+              "foo": "bar",
+            },
+          ],
+        },
+      ]
+    }
+    columnCount={3}
     summary={
       Array [
         Object {
@@ -112,6 +124,7 @@ exports[`FrontTileSummary renders without byline 1`] = `
     }
   />
   <FrontArticleSummaryContent
+    columnCount={3}
     summary={
       Array [
         Object {
@@ -186,6 +199,18 @@ exports[`FrontTileSummary renders without strapline 1`] = `
     />
   </Text>
   <FrontArticleSummaryContent
+    bylines={
+      Array [
+        Object {
+          "byline": Array [
+            Object {
+              "foo": "bar",
+            },
+          ],
+        },
+      ]
+    }
+    columnCount={3}
     summary={
       Array [
         Object {

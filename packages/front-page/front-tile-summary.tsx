@@ -1,4 +1,4 @@
-import React, { useContext } from "react";
+import React from "react";
 import {
   ArticleSummaryHeadline,
   ArticleSummaryStrapline,
@@ -8,7 +8,6 @@ import { Text, View } from "react-native";
 import styleFactory from "@times-components-native/front-page/styles";
 import ArticleByline from "@times-components-native/article-byline";
 import FrontArticleSummaryContent from "./front-article-summary-content";
-import { ResponsiveContext } from "@times-components-native/responsive";
 import { Markup } from "@times-components-native/fixture-generator/src/types";
 
 interface Props {
@@ -62,11 +61,11 @@ const renderStrapline = (props: Props) => {
   );
 };
 
-const renderByline = (props: Props, breakpoint: string) => {
+const renderByline = (props: Props) => {
   const { bylines: ast } = props;
   if (!ast || ast.length === 0) return null;
 
-  const styles = styleFactory(breakpoint);
+  const styles = styleFactory();
   return (
     <Text style={styles.bylineContainer}>
       <ArticleByline ast={ast} bylineStyle={styles.bylineStyle} />
@@ -75,15 +74,13 @@ const renderByline = (props: Props, breakpoint: string) => {
 };
 
 const FrontTileSummary: React.FC<Props> = (props) => {
-  // @ts-ignore
-  const { editionBreakpoint } = useContext(ResponsiveContext);
-  const styles = styleFactory(editionBreakpoint);
+  const styles = styleFactory();
 
   return (
     <View style={[props.containerStyle, styles.container]}>
       {renderHeadline(props)}
       {renderStrapline(props)}
-      {renderByline(props, editionBreakpoint)}
+      {renderByline(props)}
       {renderContent(props)}
     </View>
   );

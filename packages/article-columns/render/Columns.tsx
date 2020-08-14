@@ -42,7 +42,7 @@ export const SingleColumn: React.FC<{
       <View testID={"SingleColumn:Content"}>
         {renderTrees(
           justifyLastLine(column),
-          getRenderers({ renderOptions: style }),
+          getRenderers({ renderOptions: style, addNewLine: false }),
         )}
       </View>
     </View>

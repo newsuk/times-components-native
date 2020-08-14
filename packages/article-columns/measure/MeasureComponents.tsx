@@ -1,6 +1,6 @@
 import renderTrees from "@times-components-native/markup-forest";
 import React, { memo } from "react";
-import { View, TextStyle } from "react-native";
+import { TextStyle, View } from "react-native";
 import Byline from "@times-components-native/article-byline";
 import {
   Bylines,
@@ -18,17 +18,6 @@ interface Props {
 export const MeasureContent: React.FC<Props> = memo(({ content, style }) => {
   const dispatch = useMeasurementDispatchContext();
 
-  let renderers = getRenderers({
-    renderOptions: style,
-    onParagraphTextLayout: (event: any) => {
-      const lines = event.nativeEvent.lines;
-      dispatch({
-        type: "SET_CONTENT_LINES",
-        id: content.id!,
-        payload: lines,
-      });
-    },
-  });
   return (
     <View
       onLayout={(event) => {
@@ -40,7 +29,20 @@ export const MeasureContent: React.FC<Props> = memo(({ content, style }) => {
         });
       }}
     >
-      {renderTrees([content], renderers)}
+      {renderTrees(
+        [content],
+        getRenderers({
+          renderOptions: style,
+          onParagraphTextLayout: (event: any) => {
+            const lines = event.nativeEvent.lines;
+            dispatch({
+              type: "SET_CONTENT_LINES",
+              id: content.id!,
+              payload: lines,
+            });
+          },
+        }),
+      )}
     </View>
   );
 });

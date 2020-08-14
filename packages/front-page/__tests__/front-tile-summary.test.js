@@ -1,5 +1,4 @@
 import ReactTestRenderer from "react-test-renderer";
-import { ResponsiveContext } from "@times-components-native/responsive";
 import React from "react";
 import { FrontTileSummary } from "@times-components-native/front-page";
 import { MockTile } from "@times-components-native/fixture-generator";
@@ -41,17 +40,6 @@ const bylines = [
   },
 ];
 
-const withResponsiveContext = (WrappedComponent, editionBreakpoint) => (
-  <ResponsiveContext.Provider
-    value={{
-      editionBreakpoint,
-      orientation: "landscape",
-    }}
-  >
-    {WrappedComponent}
-  </ResponsiveContext.Provider>
-);
-
 const props = {
   summary: summaryContent,
   tile: new MockTile().get(),
@@ -62,24 +50,20 @@ const props = {
   headlineStyle: { backgroundColor: "blue" },
   straplineStyle: { backgroundColor: "green" },
   strapline: "Strapline Text",
+  columnCount: 3,
   summaryStyle: { backgroundColor: "orange" },
 };
 
 describe("FrontTileSummary", () => {
   it("renders correctly", () => {
-    let renderer = ReactTestRenderer.create(
-      withResponsiveContext(<FrontTileSummary {...props} />, "medium"),
-    );
+    let renderer = ReactTestRenderer.create(<FrontTileSummary {...props} />);
 
     expect(renderer.toJSON()).toMatchSnapshot();
   });
 
   it("renders without byline", () => {
     let renderer = ReactTestRenderer.create(
-      withResponsiveContext(
-        <FrontTileSummary {...props} bylines={undefined} />,
-        "medium",
-      ),
+      <FrontTileSummary {...props} bylines={undefined} />,
     );
 
     expect(renderer.toJSON()).toMatchSnapshot();
@@ -87,10 +71,7 @@ describe("FrontTileSummary", () => {
 
   it("renders without strapline", () => {
     let renderer = ReactTestRenderer.create(
-      withResponsiveContext(
-        <FrontTileSummary {...props} strapline={undefined} />,
-        "medium",
-      ),
+      <FrontTileSummary {...props} strapline={undefined} />,
     );
 
     expect(renderer.toJSON()).toMatchSnapshot();

@@ -76,9 +76,3 @@ exports[`MeasureContent renders the content 1`] = `
   </Text>
 </View>
 `;
-
-exports[`MeasureContent renders the headline 1`] = `
-<View
-  onLayout={[Function]}
-/>
-`;
