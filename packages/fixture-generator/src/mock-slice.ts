@@ -66,10 +66,6 @@ interface SecondaryFourSliceWithName extends SecondaryFourSlice {
   name: string;
 }
 
-interface TopSecondaryFourSliceWithName extends TopSecondaryFourSlice {
-  name: string;
-}
-
 interface SecondaryTwoAndTwoSliceWithName extends SecondaryTwoAndTwoSlice {
   name: string;
 }
@@ -372,28 +368,6 @@ function mockPuzzleSlice(hideOnMobile: boolean = false): Puzzle {
   };
 }
 
-function mockTopSecondaryFourSlice(): SecondaryFourSliceWithName {
-  const tiles = getTiles(4);
-
-  const leadTile = {
-    ...tiles[0],
-    article: {
-      ...tiles[0].article,
-      hasVideo: false,
-      label: "short label centered",
-    },
-  };
-
-  return <SecondaryFourSliceWithName>{
-    name: "TopSecondaryFourSlice",
-    lead: leadTile,
-    support1: tiles[1],
-    support2: tiles[2],
-    support3: tiles[3],
-    items: tiles,
-  };
-}
-
 export default mockArticleSlice;
 export {
   mockCommentLeadAndCartoonSlice,
@@ -414,5 +388,4 @@ export {
   mockSecondaryTwoNoPicAndTwoSlice,
   mockPuzzleSlice,
   mockFrontLeadTwoNoPicAndTwoSlice,
-  mockTopSecondaryFourSlice,
 };
