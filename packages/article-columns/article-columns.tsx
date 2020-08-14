@@ -23,9 +23,14 @@ interface Props {
   style: TextStyle;
 }
 
-const assignWithId = (c: ParagraphContent, idx: number): ParagraphContent => {
-  c.id = `${idx}`;
-  return c;
+const assignWithId = (height: number) => (
+  content: ParagraphContent,
+  idx: number,
+): ParagraphContent => {
+  return {
+    ...content,
+    id: `${idx}-${height}`, //suffixing the height ensures that we re-measure the content if the orientation changes - and that we don't unnecessarily re-measure if orientation changes back
+  };
 };
 
 export const ArticleColumns: React.FC<Props> = ({
@@ -39,7 +44,7 @@ export const ArticleColumns: React.FC<Props> = ({
 }) => {
   const paragraphs = articleContents
     .filter((c): c is ParagraphContent => c.name === "paragraph")
-    .map(assignWithId);
+    .map(assignWithId(containerHeight));
 
   const columnWidth = calculateColumnWidth({
     columnCount,

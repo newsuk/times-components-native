@@ -93,7 +93,7 @@ exports[`ArticleColumns renders navigator via a render-prop with generated pages
               "name": "text",
             },
           ],
-          "id": "0",
+          "id": "0-400",
           "name": "paragraph",
         },
       ]

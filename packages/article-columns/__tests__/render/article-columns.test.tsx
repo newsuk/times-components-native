@@ -14,6 +14,8 @@ jest.mock(
   }),
 );
 
+const height = 400;
+
 export const createParagraphWithText = (text: string): ParagraphContent => ({
   id: "some-paragraph-id",
   name: "paragraph",
@@ -31,7 +33,7 @@ describe("ArticleColumns", () => {
         style={style}
         articleContents={[contents]}
         containerWidth={200}
-        containerHeight={400}
+        containerHeight={height}
         columnCount={3}
         lineHeight={18}
         bylines={bylines}
@@ -56,14 +58,15 @@ describe("ArticleColumns", () => {
       MeasureArticle,
     ).props["renderMeasuredContents"];
 
+    const idWithHeight = `0-${height}`;
     const articleMeasurements: ArticleMeasurements = {
       bylineHeight: 0,
       contents: {
         lines: {
-          "0": [{ text: "line1" }],
+          [idWithHeight]: [{ text: "line1" }],
         },
         heights: {
-          "0": 40,
+          [idWithHeight]: 40,
         },
       },
     };
