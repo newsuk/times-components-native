@@ -14,12 +14,12 @@ exports[`1. gradient using prop styles 1`] = `
     style={
       Object {
         "bottom": 0,
-        "height": 0,
+        "height": null,
         "left": 0,
         "position": "absolute",
         "right": 0,
         "top": 0,
-        "width": 0,
+        "width": null,
       }
     }
   >
@@ -42,12 +42,12 @@ exports[`2. gradient using array prop styles 1`] = `
     style={
       Object {
         "bottom": 0,
-        "height": 0,
+        "height": null,
         "left": 0,
         "position": "absolute",
         "right": 0,
         "top": 0,
-        "width": 0,
+        "width": null,
       }
     }
   >
@@ -71,12 +71,12 @@ exports[`3. gradient using stylesheets 1`] = `
     style={
       Object {
         "bottom": 0,
-        "height": 0,
+        "height": null,
         "left": 0,
         "position": "absolute",
         "right": 0,
         "top": 0,
-        "width": 0,
+        "width": null,
       }
     }
   >

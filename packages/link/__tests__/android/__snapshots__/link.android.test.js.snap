@@ -6,6 +6,7 @@ exports[`1. renders link 1`] = `
   nativeBackgroundAndroid={
     Object {
       "attribute": "selectableItemBackground",
+      "rippleRadius": undefined,
       "type": "ThemeAttrAndroid",
     }
   }
@@ -20,6 +21,7 @@ exports[`2. renders link with target 1`] = `
   nativeBackgroundAndroid={
     Object {
       "attribute": "selectableItemBackground",
+      "rippleRadius": undefined,
       "type": "ThemeAttrAndroid",
     }
   }

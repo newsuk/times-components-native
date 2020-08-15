@@ -1,9 +1,8 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`1. button 1`] = `
-<TouchableHighlight
+<ForwardRef
   activeOpacity={1}
-  delayPressOut={100}
   style={
     Object {
       "alignItems": "center",
@@ -32,13 +31,12 @@ exports[`1. button 1`] = `
   >
     Test button
   </Text>
-</TouchableHighlight>
+</ForwardRef>
 `;
 
 exports[`2. button with font and line-height 1`] = `
-<TouchableHighlight
+<ForwardRef
   activeOpacity={1}
-  delayPressOut={100}
   style={
     Object {
       "alignItems": "center",
@@ -67,13 +65,12 @@ exports[`2. button with font and line-height 1`] = `
   >
     Test button
   </Text>
-</TouchableHighlight>
+</ForwardRef>
 `;
 
 exports[`should render a Button with custon Text styles 1`] = `
-<TouchableHighlight
+<ForwardRef
   activeOpacity={1}
-  delayPressOut={100}
   style={
     Object {
       "alignItems": "center",
@@ -103,5 +100,5 @@ exports[`should render a Button with custon Text styles 1`] = `
   >
     Something else
   </Text>
-</TouchableHighlight>
+</ForwardRef>
 `;
