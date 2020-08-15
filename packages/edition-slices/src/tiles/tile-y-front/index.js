@@ -5,7 +5,6 @@ import { editionBreakpoints } from "@times-components-native/styleguide";
 import { FrontTileSummary } from "@times-components-native/front-page";
 import { TileLink, withTileTracking } from "../shared";
 import stylesFactory from "./styles";
-import WithoutWhiteSpace from "@times-components-native/edition-slices/src/tiles/shared/without-white-space";
 
 const TileYFront = ({
   onPress,
@@ -17,21 +16,16 @@ const TileYFront = ({
 
   return (
     <TileLink onPress={onPress} style={styles.container} tile={tile}>
-      <WithoutWhiteSpace
-        render={(whiteSpaceHeight) => (
-          <FrontTileSummary
-            headlineStyle={
-              orientation === "landscape"
-                ? styles.headlineLandscape
-                : styles.headlinePortrait
-            }
-            summary={tile.article.content}
-            summaryStyle={styles.summary}
-            tile={tile}
-            bylines={tile.article.bylines}
-            whiteSpaceHeight={whiteSpaceHeight}
-          />
-        )}
+      <FrontTileSummary
+        headlineStyle={
+          orientation === "landscape"
+            ? styles.headlineLandscape
+            : styles.headlinePortrait
+        }
+        summary={tile.article.content}
+        summaryStyle={styles.summary}
+        tile={tile}
+        bylines={tile.article.bylines}
       />
     </TileLink>
   );

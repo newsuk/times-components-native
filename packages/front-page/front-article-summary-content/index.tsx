@@ -2,25 +2,18 @@ import stylesFactory from "./styles";
 import { indent } from "@times-components-native/front-page/indent";
 import { ArticleSummaryContent } from "@times-components-native/article-summary";
 import renderTrees from "@times-components-native/markup-forest/src/markup-forest";
-import PropTypes from "prop-types";
 import frontRenderers from "../front-renderer";
 import React, { useContext } from "react";
 import { ResponsiveContext } from "@times-components-native/responsive";
 import { Markup } from "@times-components-native/fixture-generator/src/types";
+import { MeasureContainer } from "@times-components-native/front-page/MeasureContainer";
 
 interface Props {
   summary: Markup;
   summaryStyle?: any;
-  whiteSpaceHeight: number | undefined;
-  linesOfTeaserToRender: number | undefined;
 }
 const FrontArticleSummaryContent: React.FC<Props> = (props) => {
-  const {
-    summary,
-    summaryStyle,
-    whiteSpaceHeight,
-    linesOfTeaserToRender,
-  } = props;
+  const { summary, summaryStyle } = props;
 
   // @ts-ignore
   const { editionBreakpoint: breakpoint, orientation } = useContext(
@@ -32,27 +25,23 @@ const FrontArticleSummaryContent: React.FC<Props> = (props) => {
   const styles = stylesFactory(breakpoint);
 
   const indentedAst = indent(summary);
+
+  const textStyle =
+    orientation === "landscape" ? styles.textLandscape : styles.textPortrait;
   return (
-    <ArticleSummaryContent
-      ast={indentedAst}
-      style={[
-        summaryStyle,
-        orientation === "landscape"
-          ? styles.textLandscape
-          : styles.textPortrait,
-      ]}
-      whiteSpaceHeight={whiteSpaceHeight}
-      initialLines={linesOfTeaserToRender}
-      renderAst={(ast) => renderTrees(ast, frontRenderers)}
+    <MeasureContainer
+      render={(whiteSpaceHeight) => (
+        <ArticleSummaryContent
+          ast={indentedAst}
+          style={[summaryStyle, textStyle]}
+          lineHeight={textStyle.lineHeight}
+          whiteSpaceHeight={whiteSpaceHeight}
+          initialLines={0}
+          renderAst={(ast) => renderTrees(ast, frontRenderers)}
+        />
+      )}
     />
   );
-};
-
-FrontArticleSummaryContent.propTypes = {
-  summary: PropTypes.arrayOf(PropTypes.object),
-  summaryStyle: PropTypes.shape({}),
-  whiteSpaceHeight: PropTypes.number,
-  linesOfTeaserToRender: PropTypes.number,
 };
 
 export default FrontArticleSummaryContent;

@@ -887,7 +887,7 @@ fragment commonSlicesSection on StandardSectionSlice {
 
 fragment frontSlicesSection on FrontPageSectionSlice {
   name: __typename
-  ... on LeadTwoNoPicandTwoFrontSlice {
+  ... on LeadTwoNoPicAndTwoFrontSlice {
     lead1 {
       headline
       strapline
