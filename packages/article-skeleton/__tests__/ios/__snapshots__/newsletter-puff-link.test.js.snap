@@ -4,7 +4,6 @@ exports[`NewsletterPuffLink renders the link with the text \`Manage preferences 
 <View
   accessible={true}
   focusable={true}
-  isTVSelectable={true}
   onClick={[Function]}
   onResponderGrant={[Function]}
   onResponderMove={[Function]}
@@ -104,7 +103,7 @@ exports[`NewsletterPuffLink renders the link with the text \`Manage preferences 
               strokeCap={1}
               strokeDash={null}
               strokeJoin={1}
-              strokeWidth={1}
+              strokeWidth={null}
               transform={
                 Array [
                   1,
