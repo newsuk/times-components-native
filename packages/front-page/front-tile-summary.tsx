@@ -66,7 +66,7 @@ const renderByline = (props: Props) => {
   if (!ast || ast.length === 0) return null;
   if (columnCount && columnCount > 1) return null;
 
-  return <FrontPageByline withKeyline={false} byline={ast} />;
+  return <FrontPageByline withKeyline={props.showKeyline} byline={ast} />;
 };
 
 const FrontTileSummary: React.FC<Props> = (props) => {

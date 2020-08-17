@@ -7,6 +7,7 @@ import { calculateColumnWidth } from "./utils/calculateColumnWidth";
 import { FrontPageByline } from "@times-components-native/front-page/front-page-byline";
 import { BylineInput } from "@times-components-native/fixture-generator/src/types";
 import { MeasureArticle } from "./measure/MeasureArticle";
+import { spacing } from "@times-components-native/styleguide";
 
 interface Props {
   articleContents: ArticleContent[];
@@ -43,7 +44,7 @@ export const ArticleColumns: React.FC<Props> = ({
 
   const columnWidth = calculateColumnWidth({
     columnCount,
-    columnGap: 10,
+    columnGap: spacing(4),
     containerWidth,
   });
   const columnParameters = {
