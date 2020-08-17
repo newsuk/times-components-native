@@ -1,4 +1,4 @@
-import { appendInvisibleLineToArticleContent } from "@times-components-native/article-columns/utils/appendInvisibleLineToArticleContent";
+import { appendInvisibleLineToArticleContent } from "../../utils/appendInvisibleLineToArticleContent";
 
 describe("appendInvisibleLineToArticleContent", () => {
   it("appends invisible line to content", () => {

@@ -1,4 +1,4 @@
-import { ArticleContent } from "@times-components-native/article-columns/domain-types";
+import { ArticleContent } from "../domain-types";
 
 export const appendInvisibleLineToArticleContent = (
   content: ArticleContent,

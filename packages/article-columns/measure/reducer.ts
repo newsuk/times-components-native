@@ -1,8 +1,5 @@
 import { Reducer } from "react";
-import {
-  ArticleMeasurements,
-  Line,
-} from "@times-components-native/article-columns/types";
+import { ArticleMeasurements, Line } from "../types";
 
 export const initialState: ArticleMeasurements = {
   contents: {

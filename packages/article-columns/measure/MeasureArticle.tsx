@@ -1,16 +1,12 @@
 import React, { useReducer } from "react";
 import { ScrollView, StyleSheet, TextStyle, View } from "react-native";
 
-import {
-  ColumnParameters,
-  Line,
-  ArticleMeasurements,
-} from "@times-components-native/article-columns/types";
+import { ColumnParameters, Line, ArticleMeasurements } from "../types";
 
 import { MeasureByline, MeasureContent } from "./MeasureComponents";
 import { MeasurementDispatch } from "./MeasurementDispatchContext";
 import { initialState, reducer } from "./reducer";
-import { ParagraphContent } from "@times-components-native/article-columns/domain-types";
+import { ParagraphContent } from "../domain-types";
 import { BylineInput } from "@times-components-native/fixture-generator/src/types";
 
 interface Props {

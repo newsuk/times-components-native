@@ -1,5 +1,5 @@
 import { ArticleMeasurements } from "../../types";
-import { calculateContentsHeight } from "@times-components-native/article-columns/utils/calculateContentsHeight";
+import { calculateContentsHeight } from "../../utils/calculateContentsHeight";
 import MockMarkup from "@times-components-native/fixture-generator/src/mock-markup";
 
 describe("calculateContentsHeight", () => {

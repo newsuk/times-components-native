@@ -2,9 +2,9 @@ import React from "react";
 import { View } from "react-native";
 import TestRenderer from "react-test-renderer";
 
-import { ArticleContent } from "@times-components-native/article-columns/domain-types";
-import { ColumnParameters } from "@times-components-native/article-columns/types";
-import { SingleColumn } from "@times-components-native/article-columns/render/Columns";
+import { ArticleContent } from "../../domain-types";
+import { ColumnParameters } from "../../types";
+import { SingleColumn } from "../../render/Columns";
 
 const articleContent: ArticleContent = {
   name: "paragraph",

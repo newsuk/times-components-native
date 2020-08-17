@@ -5,11 +5,11 @@ import {
   splitParagraphContent,
   splitParagraphContentByLine,
   splitParagraphContentChild,
-} from "@times-components-native/article-columns/utils/splitParagraphContentByLine";
-import { ParagraphContent } from "@times-components-native/article-columns/domain-types";
-import { uuid } from "@times-components-native/article-columns/utils/random";
+} from "../../utils/splitParagraphContentByLine";
+import { ParagraphContent } from "../../domain-types";
+import { uuid } from "../../utils/random";
 
-jest.mock("@times-components-native/article-columns/utils/random");
+jest.mock("../../utils/random");
 
 const columnLineHeight = 20;
 describe("calculateArticleContentSize", () => {

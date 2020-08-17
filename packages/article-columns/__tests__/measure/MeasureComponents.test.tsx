@@ -1,14 +1,11 @@
 import React from "react";
 import { Text, View } from "react-native";
 import ReactTestRenderer from "react-test-renderer";
-import { ColumnParameters } from "@times-components-native/article-columns/types";
+import { ColumnParameters } from "../../types";
 import MockMarkup from "@times-components-native/fixture-generator/src/mock-markup";
-import {
-  MeasureByline,
-  MeasureContent,
-} from "@times-components-native/article-columns/measure/MeasureComponents";
-import { MeasurementDispatch } from "@times-components-native/article-columns/measure/MeasurementDispatchContext";
-import { ParagraphContent } from "@times-components-native/article-columns/domain-types";
+import { MeasureByline, MeasureContent } from "../../measure/MeasureComponents";
+import { MeasurementDispatch } from "../../measure/MeasurementDispatchContext";
+import { ParagraphContent } from "../../domain-types";
 
 jest.mock("@times-components-native/front-page/front-page-byline", () => ({
   FrontPageByline: "FrontPageByline",

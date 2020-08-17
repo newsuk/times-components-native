@@ -1,5 +1,5 @@
-import { ParagraphContent } from "@times-components-native/article-columns/domain-types";
-import { ArticleMeasurements } from "@times-components-native/article-columns/types";
+import { ParagraphContent } from "../domain-types";
+import { ArticleMeasurements } from "../types";
 
 export const calculateContentsHeight = (
   contents: ParagraphContent[],

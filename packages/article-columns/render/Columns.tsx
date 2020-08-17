@@ -3,13 +3,10 @@ import React from "react";
 import { StyleSheet, View, TextStyle } from "react-native";
 
 import { spacing } from "@times-components-native/styleguide";
-import { ArticleContent } from "@times-components-native/article-columns/domain-types";
-import {
-  ColumnContents,
-  ColumnParameters,
-} from "@times-components-native/article-columns/types";
+import { ArticleContent } from "../domain-types";
+import { ColumnContents, ColumnParameters } from "../types";
 import { getRenderers } from "@times-components-native/front-page/front-renderer";
-import { appendInvisibleLineToArticleContent } from "@times-components-native/article-columns/utils/appendInvisibleLineToArticleContent";
+import { appendInvisibleLineToArticleContent } from "../utils/appendInvisibleLineToArticleContent";
 
 const justifyLastLine = (contents: ArticleContent[]): ArticleContent[] =>
   contents.map((content) =>

@@ -1,8 +1,5 @@
-import {
-  initialState,
-  reducer,
-} from "@times-components-native/article-columns/measure/reducer";
-import { ArticleMeasurements } from "@times-components-native/article-columns/types";
+import { initialState, reducer } from "../../measure/reducer";
+import { ArticleMeasurements } from "../../types";
 
 describe("reducer", () => {
   it("returns state when unrecognised action provided", () => {

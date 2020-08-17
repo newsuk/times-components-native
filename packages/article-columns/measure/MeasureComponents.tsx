@@ -1,11 +1,11 @@
 import renderTrees from "@times-components-native/markup-forest";
 import React, { memo } from "react";
 import { TextStyle, View } from "react-native";
-import { ParagraphContent } from "@times-components-native/article-columns/domain-types";
+import { ParagraphContent } from "../domain-types";
 import { getRenderers } from "@times-components-native/front-page/front-renderer";
 
 import { useMeasurementDispatchContext } from "./MeasurementDispatchContext";
-import { ColumnParameters } from "@times-components-native/article-columns/types";
+import { ColumnParameters } from "../types";
 import { FrontPageByline } from "@times-components-native/front-page/front-page-byline";
 import { BylineInput } from "@times-components-native/fixture-generator/src/types";
 

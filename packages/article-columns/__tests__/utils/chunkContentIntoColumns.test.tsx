@@ -1,10 +1,10 @@
 import { ColumnParameters, Line, ArticleMeasurements } from "../../types";
-import { ParagraphContent } from "@times-components-native/article-columns/domain-types";
-import { chunkContentIntoColumns } from "@times-components-native/article-columns/utils/chunkContentIntoColumns";
+import { ParagraphContent } from "../../domain-types";
+import { chunkContentIntoColumns } from "../../utils/chunkContentIntoColumns";
 
 const range = (n: number) => [...Array(n).keys()];
 
-jest.mock("@times-components-native/article-columns/utils/random");
+jest.mock("../../utils/random");
 
 const columnLineHeight = 20;
 const columnParameters: ColumnParameters = {

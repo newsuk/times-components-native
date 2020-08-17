@@ -1,4 +1,4 @@
-import { calculateColumnWidth } from "@times-components-native/article-columns/utils/calculateColumnWidth";
+import { calculateColumnWidth } from "../../utils/calculateColumnWidth";
 
 describe("calculateColumnWidth", () => {
   it("calculates column width", () => {

@@ -1,18 +1,12 @@
 import React from "react";
-import { MeasureArticle } from "@times-components-native/article-columns/measure/MeasureArticle";
-import {
-  ArticleContent,
-  ParagraphContent,
-} from "@times-components-native/article-columns/domain-types";
-import { chunkContentIntoColumns } from "@times-components-native/article-columns/utils/chunkContentIntoColumns";
-import {
-  Columns,
-  SingleColumn,
-} from "@times-components-native/article-columns/render/Columns";
+import { ArticleContent, ParagraphContent } from "./domain-types";
+import { chunkContentIntoColumns } from "./utils/chunkContentIntoColumns";
+import { Columns, SingleColumn } from "./render/Columns";
 import { TextStyle } from "react-native";
-import { calculateColumnWidth } from "@times-components-native/article-columns/utils/calculateColumnWidth";
+import { calculateColumnWidth } from "./utils/calculateColumnWidth";
 import { FrontPageByline } from "@times-components-native/front-page/front-page-byline";
 import { BylineInput } from "@times-components-native/fixture-generator/src/types";
+import { MeasureArticle } from "./measure/MeasureArticle";
 
 interface Props {
   articleContents: ArticleContent[];

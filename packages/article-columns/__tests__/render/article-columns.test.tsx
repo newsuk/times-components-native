@@ -1,18 +1,15 @@
 import React from "react";
 import TestRenderer from "react-test-renderer";
 
-import { ArticleColumns } from "@times-components-native/article-columns/article-columns";
-import { ParagraphContent } from "@times-components-native/article-columns/domain-types";
+import { ArticleColumns } from "../../article-columns";
+import { ParagraphContent } from "../../domain-types";
 import MockMarkup from "@times-components-native/fixture-generator/src/mock-markup";
-import { MeasureArticle } from "@times-components-native/article-columns/measure/MeasureArticle";
-import { ArticleMeasurements } from "@times-components-native/article-columns/types";
+import { MeasureArticle } from "../../measure/MeasureArticle";
+import { ArticleMeasurements } from "../../types";
 
-jest.mock(
-  "@times-components-native/article-columns/measure/MeasureArticle",
-  () => ({
-    MeasureArticle: "MeasureArticle",
-  }),
-);
+jest.mock("../../measure/MeasureArticle", () => ({
+  MeasureArticle: "MeasureArticle",
+}));
 
 const height = 400;
 

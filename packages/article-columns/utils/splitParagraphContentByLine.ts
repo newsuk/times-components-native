@@ -3,9 +3,9 @@ import {
   ArticleContent,
   ParagraphContent,
   ParagraphContentChild,
-} from "@times-components-native/article-columns/domain-types";
+} from "../domain-types";
 import { PARAGRAPH_INDENT_CHAR } from "@times-components-native/front-page/front-renderer";
-import { uuid } from "@times-components-native/article-columns/utils/random";
+import { uuid } from "../utils/random";
 
 const addChildToArticleContent = (
   articleContent: ParagraphContent,

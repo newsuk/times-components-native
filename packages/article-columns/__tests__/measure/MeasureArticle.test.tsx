@@ -1,23 +1,17 @@
 import React from "react";
 import TestRenderer from "react-test-renderer";
 
-import { InnerMeasureArticle as MeasureArticle } from "@times-components-native/article-columns/measure/MeasureArticle";
-import { initialState } from "@times-components-native/article-columns/measure/reducer";
-import {
-  ArticleContent,
-  ParagraphContent,
-} from "@times-components-native/article-columns/domain-types";
-import { ColumnParameters } from "@times-components-native/article-columns/types";
+import { InnerMeasureArticle as MeasureArticle } from "../../measure/MeasureArticle";
+import { initialState } from "../../measure/reducer";
+import { ArticleContent, ParagraphContent } from "../../domain-types";
+import { ColumnParameters } from "../../types";
 import MockMarkup from "@times-components-native/fixture-generator/src/mock-markup";
 
-jest.mock(
-  "@times-components-native/article-columns/measure/MeasureComponents",
-  () => ({
-    MeasureByline: "MeasureByline",
-    MeasureHeadline: "MeasureHeadline",
-    MeasureContent: "MeasureContent",
-  }),
-);
+jest.mock("../../measure/MeasureComponents", () => ({
+  MeasureByline: "MeasureByline",
+  MeasureHeadline: "MeasureHeadline",
+  MeasureContent: "MeasureContent",
+}));
 
 const createParagraphWithText = (
   text: string,

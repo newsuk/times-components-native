@@ -6,7 +6,7 @@ import {
 import { splitParagraphContentByLine } from "./splitParagraphContentByLine";
 import { calculateContentsHeight } from "./calculateContentsHeight";
 
-import { ParagraphContent } from "@times-components-native/article-columns/domain-types";
+import { ParagraphContent } from "../domain-types";
 
 // TODO IMPLEMENT TO GET BYLINE HEIGHT FACTORED IN
 export const calculateHeightTakenOnPage = (
