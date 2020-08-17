@@ -2,10 +2,18 @@ import FrontArticleSummaryContent from "@times-components-native/front-page/fron
 import React from "react";
 import { ResponsiveContext } from "@times-components-native/responsive";
 import TestRenderer from "react-test-renderer";
+import MockMarkup from "@times-components-native/fixture-generator/src/mock-markup";
 
 jest.mock("@times-components-native/article-summary", () => ({
   ArticleSummaryContent: "ArticleSummaryContent",
 }));
+
+jest.mock("@times-components-native/front-page/MeasureContainer", () => {
+  const MockMeasureContainer = ({ render }) => {
+    return render({ height: 180, width: 200 });
+  };
+  return { MeasureContainer: MockMeasureContainer };
+});
 
 const ast = [
   {
@@ -38,13 +46,14 @@ const withResponsiveContext = (
   </ResponsiveContext.Provider>
 );
 
+const bylines = new MockMarkup().addBylines().get();
 const component = (
   <FrontArticleSummaryContent
+    bylines={bylines}
     whiteSpaceHeight={20}
     linesOfTeaserToRender={1}
     style={{ backgoundColor: "red" }}
     summary={ast}
-    className={"some class name"}
   />
 );
 

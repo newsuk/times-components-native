@@ -2,20 +2,28 @@ import React, { useState } from "react";
 import { View } from "react-native";
 
 interface Props {
-  render: (whiteSpaceHeight: number) => any;
+  render: (dims: Dimensions) => any;
+}
+
+interface Dimensions {
+  width: number;
+  height: number;
 }
 export const MeasureContainer: React.FC<Props> = (props) => {
-  const [whiteSpaceHeight, setWhiteSpaceHeight] = useState(0);
+  const [
+    containerDimensions,
+    setContainerDimensions,
+  ] = useState<Dimensions | null>(null);
 
   return (
     <View
       style={{ flex: 1 }}
       onLayout={(e) => {
-        const height = e.nativeEvent.layout.height;
-        setWhiteSpaceHeight(height);
+        const { height, width } = e.nativeEvent.layout;
+        setContainerDimensions({ height, width });
       }}
     >
-      {props.render(whiteSpaceHeight)}
+      {containerDimensions ? props.render(containerDimensions) : null}
     </View>
   );
 };
