@@ -582,6 +582,7 @@ describe("splitParagraphContentByLine", () => {
 
     const articleMeasurements: ArticleMeasurements = {
       bylineHeight: 0,
+      bylineMargin: 0,
       contents: {
         lines: {
           p1: [

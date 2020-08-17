@@ -9,6 +9,7 @@ describe("calculateContentsHeight", () => {
     const paragraph2 = { ...paragraph, id: "p2" };
     const articleMeasurements: ArticleMeasurements = {
       bylineHeight: 0,
+      bylineMargin: 0,
       contents: {
         heights: {
           p1: 40,

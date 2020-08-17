@@ -34,7 +34,7 @@ const paragraphA: ArticleContent = createParagraphWithText("line1", {
 });
 
 // eslint-disable-next-line @typescript-eslint/no-unused-vars
-const CaptureContents = ({ articleMeasurements }) => null;
+const CaptureContents = ({ articleMeasurements }: any) => null;
 
 const columnParameters: ColumnParameters = {
   columnHeight: 2000,
@@ -80,6 +80,7 @@ describe("MeasureArticle", () => {
             heights: { p1: 20 },
           },
           bylineHeight: 20,
+          bylineMargin: 0,
         }}
       />,
     );

@@ -1,21 +1,3 @@
-export type Bylines = {
-  byline: Byline[];
-};
-
-type Byline = {
-  name: string;
-  attributes: any;
-  children: BylineChildren[];
-};
-
-type BylineChildren = {
-  name: string;
-  attributes: {
-    value: string;
-  };
-  children: any[];
-};
-
 interface TextContentChild {
   name: "text";
   children: ParagraphContentChild[];

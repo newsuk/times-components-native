@@ -46,8 +46,8 @@ exports[`FrontPageByline renders with keyline 1`] = `
       },
       undefined,
       Object {
-        "borderColor": "black",
-        "borderTopWidth": 0.5,
+        "borderColor": "#999999",
+        "borderTopWidth": 1,
         "paddingTop": 5,
       },
     ]

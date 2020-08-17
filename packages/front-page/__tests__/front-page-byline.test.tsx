@@ -15,7 +15,7 @@ const bylines = [
 
 describe("FrontPageByline", () => {
   it("renders without keyline", () => {
-    let renderer = ReactTestRenderer.create(
+    const renderer = ReactTestRenderer.create(
       <FrontPageByline byline={bylines} withKeyline={false} />,
     );
 
@@ -23,7 +23,7 @@ describe("FrontPageByline", () => {
   });
 
   it("renders with keyline", () => {
-    let renderer = ReactTestRenderer.create(
+    const renderer = ReactTestRenderer.create(
       <FrontPageByline byline={bylines} withKeyline={true} />,
     );
 
@@ -31,7 +31,7 @@ describe("FrontPageByline", () => {
   });
 
   it("renders with container style", () => {
-    let renderer = ReactTestRenderer.create(
+    const renderer = ReactTestRenderer.create(
       <FrontPageByline
         withKeyline={false}
         byline={bylines}

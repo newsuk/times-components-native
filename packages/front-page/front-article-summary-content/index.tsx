@@ -5,7 +5,7 @@ import { getRenderers } from "../front-renderer";
 import React, { useContext } from "react";
 import { ResponsiveContext } from "@times-components-native/responsive";
 import {
-  Byline,
+  BylineInput,
   Markup,
 } from "@times-components-native/fixture-generator/src/types";
 import { MeasureContainer } from "@times-components-native/front-page/MeasureContainer";
@@ -17,7 +17,7 @@ interface Props {
   summary: Markup;
   summaryStyle?: any;
   columnCount?: number;
-  bylines: Byline;
+  bylines: BylineInput[];
 }
 
 interface SummaryTextProps {

@@ -2,7 +2,6 @@ import React from "react";
 import { MeasureArticle } from "@times-components-native/article-columns/measure/MeasureArticle";
 import {
   ArticleContent,
-  Bylines,
   ParagraphContent,
 } from "@times-components-native/article-columns/domain-types";
 import { chunkContentIntoColumns } from "@times-components-native/article-columns/utils/chunkContentIntoColumns";
@@ -13,10 +12,11 @@ import {
 import { TextStyle } from "react-native";
 import { calculateColumnWidth } from "@times-components-native/article-columns/utils/calculateColumnWidth";
 import { FrontPageByline } from "@times-components-native/front-page/front-page-byline";
+import { BylineInput } from "@times-components-native/fixture-generator/src/types";
 
 interface Props {
   articleContents: ArticleContent[];
-  bylines: Bylines;
+  bylines: BylineInput[];
   containerWidth: number;
   containerHeight: number;
   lineHeight: number;

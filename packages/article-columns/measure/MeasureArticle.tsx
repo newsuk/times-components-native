@@ -10,14 +10,12 @@ import {
 import { MeasureByline, MeasureContent } from "./MeasureComponents";
 import { MeasurementDispatch } from "./MeasurementDispatchContext";
 import { initialState, reducer } from "./reducer";
-import {
-  Bylines,
-  ParagraphContent,
-} from "@times-components-native/article-columns/domain-types";
+import { ParagraphContent } from "@times-components-native/article-columns/domain-types";
+import { BylineInput } from "@times-components-native/fixture-generator/src/types";
 
 interface Props {
   articleContents: ParagraphContent[];
-  bylines: Bylines;
+  bylines: BylineInput[];
   columnParameters: ColumnParameters;
   renderMeasuredContents: (articleMeasurements: ArticleMeasurements) => any;
   style: TextStyle;
