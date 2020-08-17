@@ -1,0 +1,12 @@
+schema:
+  - "./packages/schema/schema.json"
+documents: []
+config: {}
+generates:
+  "./packages/fixture-generator/src/types.ts":
+    config: {}
+    plugins:
+      - "typescript-common"
+      - "typescript-client"
+      - "typescript-server"
+require: []

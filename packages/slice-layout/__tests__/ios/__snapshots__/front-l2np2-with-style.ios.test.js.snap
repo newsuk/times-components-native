@@ -1,0 +1,692 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`1. front lead two no pic and two - small - landscape 1`] = `
+<View>
+  <Text>
+    lead-1
+  </Text>
+  <View
+    style={
+      Object {
+        "borderBottomWidth": 1,
+        "borderColor": "#DBDBDB",
+        "borderStyle": "solid",
+      }
+    }
+  />
+  <Text>
+    lead-2
+  </Text>
+  <View
+    style={
+      Object {
+        "borderBottomWidth": 1,
+        "borderColor": "#DBDBDB",
+        "borderStyle": "solid",
+      }
+    }
+  />
+  <Text>
+    support-1
+  </Text>
+  <View
+    style={
+      Object {
+        "borderBottomWidth": 1,
+        "borderColor": "#DBDBDB",
+        "borderStyle": "solid",
+      }
+    }
+  />
+  <Text>
+    support-2
+  </Text>
+</View>
+`;
+
+exports[`2. front lead two no pic and two - medium - landscape 1`] = `
+<View
+  style={
+    Object {
+      "alignSelf": "center",
+      "flex": 1,
+      "flexDirection": "row",
+      "paddingTop": 15,
+      "width": 1000,
+    }
+  }
+>
+  <View
+    style={
+      Object {
+        "width": "41.6%",
+      }
+    }
+  >
+    <View
+      style={
+        Object {
+          "flex": 6,
+        }
+      }
+    >
+      <Text>
+        lead-1
+      </Text>
+    </View>
+    <View
+      style={
+        Object {
+          "borderBottomWidth": 1,
+          "borderColor": "#999999",
+          "borderStyle": "solid",
+        }
+      }
+    />
+    <View
+      style={
+        Object {
+          "flex": 4,
+        }
+      }
+    >
+      <Text>
+        lead-2
+      </Text>
+    </View>
+  </View>
+  <View
+    style={
+      Object {
+        "borderColor": "#999999",
+        "borderRightWidth": 1,
+        "borderStyle": "solid",
+        "marginTop": 0,
+        "marginVertical": 10,
+      }
+    }
+  />
+  <View
+    style={
+      Object {
+        "width": "16.8%",
+      }
+    }
+  >
+    <Text>
+      support-1
+    </Text>
+  </View>
+  <View
+    style={
+      Object {
+        "borderColor": "#999999",
+        "borderRightWidth": 1,
+        "borderStyle": "solid",
+        "marginTop": 0,
+        "marginVertical": 10,
+      }
+    }
+  />
+  <View
+    style={
+      Object {
+        "width": "41.6%",
+      }
+    }
+  >
+    <View
+      style={
+        Object {
+          "flex": 1,
+        }
+      }
+    >
+      <Text>
+        support-2
+      </Text>
+    </View>
+  </View>
+</View>
+`;
+
+exports[`3. front lead two no pic and two - wide - landscape 1`] = `
+<View
+  style={
+    Object {
+      "alignSelf": "center",
+      "flex": 1,
+      "flexDirection": "row",
+      "paddingTop": 15,
+      "width": 1000,
+    }
+  }
+>
+  <View
+    style={
+      Object {
+        "width": "41.6%",
+      }
+    }
+  >
+    <View
+      style={
+        Object {
+          "flex": 6,
+        }
+      }
+    >
+      <Text>
+        lead-1
+      </Text>
+    </View>
+    <View
+      style={
+        Object {
+          "borderBottomWidth": 1,
+          "borderColor": "#999999",
+          "borderStyle": "solid",
+        }
+      }
+    />
+    <View
+      style={
+        Object {
+          "flex": 4,
+        }
+      }
+    >
+      <Text>
+        lead-2
+      </Text>
+    </View>
+  </View>
+  <View
+    style={
+      Object {
+        "borderColor": "#999999",
+        "borderRightWidth": 1,
+        "borderStyle": "solid",
+        "marginTop": 0,
+        "marginVertical": 10,
+      }
+    }
+  />
+  <View
+    style={
+      Object {
+        "width": "16.8%",
+      }
+    }
+  >
+    <Text>
+      support-1
+    </Text>
+  </View>
+  <View
+    style={
+      Object {
+        "borderColor": "#999999",
+        "borderRightWidth": 1,
+        "borderStyle": "solid",
+        "marginTop": 0,
+        "marginVertical": 10,
+      }
+    }
+  />
+  <View
+    style={
+      Object {
+        "width": "41.6%",
+      }
+    }
+  >
+    <View
+      style={
+        Object {
+          "flex": 1,
+        }
+      }
+    >
+      <Text>
+        support-2
+      </Text>
+    </View>
+  </View>
+</View>
+`;
+
+exports[`4. front lead two no pic and two - huge - landscape 1`] = `
+<View
+  style={
+    Object {
+      "alignSelf": "center",
+      "flex": 1,
+      "flexDirection": "row",
+      "paddingTop": 15,
+      "width": 1000,
+    }
+  }
+>
+  <View
+    style={
+      Object {
+        "width": "35%",
+      }
+    }
+  >
+    <View
+      style={
+        Object {
+          "flex": 6,
+        }
+      }
+    >
+      <Text>
+        lead-1
+      </Text>
+    </View>
+    <View
+      style={
+        Object {
+          "borderBottomWidth": 1,
+          "borderColor": "#999999",
+          "borderStyle": "solid",
+        }
+      }
+    />
+    <View
+      style={
+        Object {
+          "flex": 4,
+        }
+      }
+    >
+      <Text>
+        lead-2
+      </Text>
+    </View>
+  </View>
+  <View
+    style={
+      Object {
+        "borderColor": "#999999",
+        "borderRightWidth": 1,
+        "borderStyle": "solid",
+        "marginTop": 0,
+        "marginVertical": 10,
+      }
+    }
+  />
+  <View
+    style={
+      Object {
+        "width": "18%",
+      }
+    }
+  >
+    <Text>
+      support-1
+    </Text>
+  </View>
+  <View
+    style={
+      Object {
+        "borderColor": "#999999",
+        "borderRightWidth": 1,
+        "borderStyle": "solid",
+        "marginTop": 0,
+        "marginVertical": 10,
+      }
+    }
+  />
+  <View
+    style={
+      Object {
+        "width": "46%",
+      }
+    }
+  >
+    <View
+      style={
+        Object {
+          "flex": 1,
+        }
+      }
+    >
+      <Text>
+        support-2
+      </Text>
+    </View>
+  </View>
+</View>
+`;
+
+exports[`5. front lead two no pic and two - small - portrait 1`] = `
+<View>
+  <Text>
+    lead-1
+  </Text>
+  <View
+    style={
+      Object {
+        "borderBottomWidth": 1,
+        "borderColor": "#DBDBDB",
+        "borderStyle": "solid",
+      }
+    }
+  />
+  <Text>
+    lead-2
+  </Text>
+  <View
+    style={
+      Object {
+        "borderBottomWidth": 1,
+        "borderColor": "#DBDBDB",
+        "borderStyle": "solid",
+      }
+    }
+  />
+  <Text>
+    support-1
+  </Text>
+  <View
+    style={
+      Object {
+        "borderBottomWidth": 1,
+        "borderColor": "#DBDBDB",
+        "borderStyle": "solid",
+      }
+    }
+  />
+  <Text>
+    support-2
+  </Text>
+</View>
+`;
+
+exports[`6. front lead two no pic and two - medium - portrait 1`] = `
+<View
+  style={
+    Object {
+      "flex": 1,
+      "flexDirection": "row",
+      "marginHorizontal": 20,
+      "marginTop": 20,
+    }
+  }
+>
+  <View
+    style={
+      Object {
+        "width": "42%",
+      }
+    }
+  >
+    <View
+      style={
+        Object {
+          "flex": 6,
+        }
+      }
+    >
+      <Text>
+        lead-1
+      </Text>
+    </View>
+    <View
+      style={
+        Object {
+          "borderBottomWidth": 1,
+          "borderColor": "#999999",
+          "borderStyle": "solid",
+        }
+      }
+    />
+    <View
+      style={
+        Object {
+          "flex": 4,
+        }
+      }
+    >
+      <Text>
+        lead-2
+      </Text>
+    </View>
+  </View>
+  <View
+    style={
+      Object {
+        "borderColor": "#999999",
+        "borderRightWidth": 1,
+        "borderStyle": "solid",
+        "marginTop": 0,
+        "marginVertical": 10,
+      }
+    }
+  />
+  <View
+    style={
+      Object {
+        "width": "58%",
+      }
+    }
+  >
+    <View
+      style={
+        Object {
+          "flex": 1,
+        }
+      }
+    >
+      <Text>
+        support-2
+      </Text>
+    </View>
+    <View
+      style={
+        Object {
+          "borderBottomWidth": 1,
+          "borderColor": "#999999",
+          "borderStyle": "solid",
+        }
+      }
+    />
+    <Text>
+      support-1
+    </Text>
+  </View>
+</View>
+`;
+
+exports[`7. front lead two no pic and two - wide - portrait 1`] = `
+<View
+  style={
+    Object {
+      "flex": 1,
+      "flexDirection": "row",
+      "marginHorizontal": 20,
+      "marginTop": 20,
+    }
+  }
+>
+  <View
+    style={
+      Object {
+        "width": "42%",
+      }
+    }
+  >
+    <View
+      style={
+        Object {
+          "flex": 6,
+        }
+      }
+    >
+      <Text>
+        lead-1
+      </Text>
+    </View>
+    <View
+      style={
+        Object {
+          "borderBottomWidth": 1,
+          "borderColor": "#999999",
+          "borderStyle": "solid",
+        }
+      }
+    />
+    <View
+      style={
+        Object {
+          "flex": 4,
+        }
+      }
+    >
+      <Text>
+        lead-2
+      </Text>
+    </View>
+  </View>
+  <View
+    style={
+      Object {
+        "borderColor": "#999999",
+        "borderRightWidth": 1,
+        "borderStyle": "solid",
+        "marginTop": 0,
+        "marginVertical": 10,
+      }
+    }
+  />
+  <View
+    style={
+      Object {
+        "width": "58%",
+      }
+    }
+  >
+    <View
+      style={
+        Object {
+          "flex": 1,
+        }
+      }
+    >
+      <Text>
+        support-2
+      </Text>
+    </View>
+    <View
+      style={
+        Object {
+          "borderBottomWidth": 1,
+          "borderColor": "#999999",
+          "borderStyle": "solid",
+        }
+      }
+    />
+    <Text>
+      support-1
+    </Text>
+  </View>
+</View>
+`;
+
+exports[`8. front lead two no pic and two - huge - portrait 1`] = `
+<View
+  style={
+    Object {
+      "flex": 1,
+      "flexDirection": "row",
+      "marginHorizontal": 20,
+      "marginTop": 20,
+    }
+  }
+>
+  <View
+    style={
+      Object {
+        "width": "42%",
+      }
+    }
+  >
+    <View
+      style={
+        Object {
+          "flex": 6,
+        }
+      }
+    >
+      <Text>
+        lead-1
+      </Text>
+    </View>
+    <View
+      style={
+        Object {
+          "borderBottomWidth": 1,
+          "borderColor": "#999999",
+          "borderStyle": "solid",
+        }
+      }
+    />
+    <View
+      style={
+        Object {
+          "flex": 4,
+        }
+      }
+    >
+      <Text>
+        lead-2
+      </Text>
+    </View>
+  </View>
+  <View
+    style={
+      Object {
+        "borderColor": "#999999",
+        "borderRightWidth": 1,
+        "borderStyle": "solid",
+        "marginTop": 0,
+        "marginVertical": 10,
+      }
+    }
+  />
+  <View
+    style={
+      Object {
+        "width": "58%",
+      }
+    }
+  >
+    <View
+      style={
+        Object {
+          "flex": 1,
+        }
+      }
+    >
+      <Text>
+        support-2
+      </Text>
+    </View>
+    <View
+      style={
+        Object {
+          "borderBottomWidth": 1,
+          "borderColor": "#999999",
+          "borderStyle": "solid",
+        }
+      }
+    />
+    <Text>
+      support-1
+    </Text>
+  </View>
+</View>
+`;

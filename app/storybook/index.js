@@ -6,6 +6,7 @@ import {
   addDecorator,
 } from "@storybook/react-native";
 import { withKnobs } from "@storybook/addon-knobs";
+import AsyncStorage from "@react-native-community/async-storage";
 
 import {
   BarSpacingDecorator,
@@ -26,4 +27,6 @@ addDecorator(withKnobs);
 
 configure(loadStories, module);
 
-export const StorybookUIRoot = getStorybookUI({});
+export const StorybookUIRoot = getStorybookUI({
+  asyncStorage: AsyncStorage,
+});

@@ -18,7 +18,9 @@ const IconMore = require("../assets/tabs/more.png");
 
 registerScreens();
 
-Navigation.events().registerAppLaunchedListener(() => {
+const storybookMode = true;
+
+const startTabs = () => {
   Navigation.setRoot({
     root: {
       bottomTabs: {
@@ -134,4 +136,31 @@ Navigation.events().registerAppLaunchedListener(() => {
       },
     },
   });
+};
+
+const startStorybook = () => {
+  Navigation.setRoot({
+    root: {
+      stack: {
+        children: [
+          {
+            component: {
+              name: ViewsIDs.VIEW_ID_STORYBOOK,
+              options: {
+                ...getOptions("Storybook"),
+              },
+            },
+          },
+        ],
+      },
+    },
+  });
+};
+
+Navigation.events().registerAppLaunchedListener(() => {
+  if (storybookMode) {
+    return startStorybook();
+  }
+
+  return startTabs();
 });

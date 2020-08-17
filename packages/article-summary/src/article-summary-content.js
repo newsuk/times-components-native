@@ -2,7 +2,7 @@ import React from "react";
 import { Text } from "react-native";
 import PropTypes from "prop-types";
 import { propTypes as treePropType } from "@times-components-native/markup-forest";
-import { renderAst } from "./article-summary";
+import { renderAst as defaultRenderAst } from "./article-summary";
 import styles from "./styles";
 
 const ArticleSummaryContent = ({
@@ -11,8 +11,9 @@ const ArticleSummaryContent = ({
   style,
   whiteSpaceHeight,
   initialLines = 2,
+  lineHeight = styles.text.lineHeight,
+  renderAst = defaultRenderAst,
 }) => {
-  const lineHeight = (style && style.lineHeight) || styles.text.lineHeight;
   const numberOfLinesToRender =
     whiteSpaceHeight > 0
       ? whiteSpaceHeight / lineHeight + initialLines

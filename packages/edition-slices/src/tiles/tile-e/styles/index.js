@@ -29,7 +29,8 @@ const styles = {
 const mediumBreakpointStyles = {
   container: {
     padding: spacing(2),
-    paddingTop: spacing(3),
+    paddingBottom: 0,
+    flexDirection: "column-reverse",
   },
   headline: {
     fontFamily: fonts.headline,
@@ -38,7 +39,8 @@ const mediumBreakpointStyles = {
   },
   imageContainer: {
     width: "100%",
-    marginTop: spacing(2),
+    marginTop: spacing(1),
+    marginBottom: spacing(2),
   },
 };
 

@@ -44,7 +44,6 @@ module.exports = {
           "**/showcase-helper*",
           "**/scripts/**",
           "**/storybook/**",
-          "webpack.config*.js"
         ],
         "optionalDependencies": false
       }
@@ -84,6 +83,7 @@ module.exports = {
     "@typescript-eslint/no-unused-vars": ["warn", { "ignoreRestSiblings": true }],
     "@typescript-eslint/no-inferrable-types": "off",
     "@typescript-eslint/no-non-null-assertion": "off",
+    "@typescript-eslint/ban-ts-comment": "off",
     // Typescript specific to revist when majority TS codebase
     "@typescript-eslint/no-var-requires": "off",
     "@typescript-eslint/explicit-module-boundary-types": "off",
