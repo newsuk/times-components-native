@@ -1,4 +1,4 @@
-import { ParagraphContent } from "@times-components-native/article-columns/domain-types";
+import { ParagraphContent } from "./domain-types";
 
 export type Line = {
   text: string;

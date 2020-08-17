@@ -6,6 +6,6 @@ export default () => ({
   withKeyline: {
     borderTopWidth: 1,
     borderColor: colours.functional.darkGrey,
-    paddingTop: 5,
+    paddingTop: spacing(1),
   },
 });
