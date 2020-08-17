@@ -92,6 +92,7 @@ describe("MeasureArticle", () => {
     ];
     expect(articleMeasurements).toEqual({
       bylineHeight: 20,
+      bylineMargin: 0,
       contents: {
         lines: {
           p1: [{ text: "line1" }],

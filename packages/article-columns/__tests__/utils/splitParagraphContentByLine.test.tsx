@@ -633,6 +633,7 @@ describe("splitParagraphContentByLine", () => {
     });
     expect(paragraphContents[2]).toEqual({
       bylineHeight: 0,
+      bylineMargin: 0,
       contents: {
         lines: {
           id1: [{ text: "line1" }, { text: "line2" }],
