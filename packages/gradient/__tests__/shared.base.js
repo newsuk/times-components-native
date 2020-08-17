@@ -1,5 +1,7 @@
 import React from "react";
-import { ART, Text } from "react-native";
+import { Text } from "react-native";
+import { Surface } from "@react-native-community/art";
+
 import { iterator } from "@times-components-native/test-utils";
 import Gradient, { OverlayGradient } from "../src/gradient";
 import GradientBase from "../src/gradient.base";
@@ -66,7 +68,7 @@ export default (renderMethod) => {
             width: 100,
           }),
         );
-        const surface = testInstance.findByType(ART.Surface);
+        const surface = testInstance.findByType(Surface);
 
         expect(surface.props).toEqual(
           expect.objectContaining({ height: 100, width: 100 }),
@@ -85,7 +87,7 @@ export default (renderMethod) => {
           />,
         );
         const testInstance = testRenderer.root;
-        const surface = testInstance.findByType(ART.Surface);
+        const surface = testInstance.findByType(Surface);
 
         expect(surface.props).toEqual(
           expect.objectContaining({ height: 200, width: 300 }),

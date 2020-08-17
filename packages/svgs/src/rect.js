@@ -1,9 +1,7 @@
 import React from "react";
-import { ART } from "react-native";
+import { Path } from "@react-native-community/art";
 import PropTypes from "prop-types";
 import SVGPath from "./path";
-
-const { Path } = ART;
 
 const Rect = ({
   stroke,

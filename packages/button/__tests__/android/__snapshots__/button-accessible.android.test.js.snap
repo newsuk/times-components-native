@@ -1,7 +1,7 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`accessible button 1`] = `
-<TouchableHighlight
+<ForwardRef
   accessibilityComponentType="button"
   accessibilityLabel="Test button"
   accessibilityRole="button"
@@ -10,5 +10,5 @@ exports[`accessible button 1`] = `
   <Text>
     Test button
   </Text>
-</TouchableHighlight>
+</ForwardRef>
 `;

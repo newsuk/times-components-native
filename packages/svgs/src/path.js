@@ -1,8 +1,6 @@
 import React from "react";
-import { ART } from "react-native";
+import { Path as ARTPath, Shape } from "@react-native-community/art";
 import PropTypes from "prop-types";
-
-const { Shape, Path: ARTPath } = ART;
 
 const Path = ({ d, fill, stroke, strokeWidth, opacity }) => {
   const artStroke = stroke === "none" ? null : stroke;
