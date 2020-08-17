@@ -4440,7 +4440,6 @@ exports[`17. an article with variant testing 1`] = `
     initialNumToRender={2}
     maxToRenderPerBatch={10}
     nestedScrollEnabled={true}
-    numColumns={1}
     onEndReachedThreshold={2}
     removeClippedSubviews={true}
     scrollEventThrottle={50}
