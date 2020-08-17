@@ -80,6 +80,20 @@ const sizes = {
       width: 970,
     },
   ],
+  nativeB: [
+    {
+      height: 250,
+      sizes: [[300, 250]],
+      width: 300,
+    },
+  ],
+  nativeC: [
+    {
+      height: 600,
+      sizes: [[300, 600]],
+      width: 300,
+    },
+  ],
   pixel: [
     {
       height: 0,

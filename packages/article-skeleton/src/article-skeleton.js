@@ -6,6 +6,7 @@ import { withTrackScrollDepth } from "@times-components-native/tracking";
 import { Viewport } from "@skele/components";
 import { render } from "@times-components-native/markup-forest";
 import ArticleExtras from "@times-components-native/article-extras";
+import { useVariantTestingContext } from "@times-components-native/variant-testing";
 import {
   articleSkeletonPropTypes,
   articleSkeletonDefaultProps,
@@ -42,11 +43,11 @@ const ArticleWithContent = (props) => {
     onTopicPress,
     isTablet,
     onViewed,
-    adPosition,
     narrowContent,
   } = props;
+  const variants = useVariantTestingContext();
 
-  const { id, url, content } = data;
+  const { id, url, content, template } = data;
 
   const onViewableItemsChanged = useCallback((info) => {
     if (!onViewed || !info.changed || !info.changed.length) return [];
@@ -98,7 +99,7 @@ const ArticleWithContent = (props) => {
   );
 
   const fixedContent = useMemo(
-    () => [...fixup(isTablet, adPosition, content), { name: "footer" }],
+    () => [...fixup(isTablet, variants, template, content), { name: "footer" }],
     [content, isTablet],
   );
   const images = fixedContent.filter((node) => node.name === "image");
