@@ -7,7 +7,28 @@ exports[`front renderers link text renderer renders link text 1`] = `
 `;
 
 exports[`front renderers paragraph renderer renders paragraph 1`] = `
-<Text>
+<Text
+  style={
+    Array [
+      Object {
+        "fontSize": 14,
+      },
+    ]
+  }
+>
+  Some Text
+</Text>
+`;
+
+exports[`front renderers paragraph renderer renders paragraph with new line at end 1`] = `
+<Text
+  style={
+    Array [
+      false,
+    ]
+  }
+>
+  　
   Some Text
   
 
@@ -15,10 +36,16 @@ exports[`front renderers paragraph renderer renders paragraph 1`] = `
 `;
 
 exports[`front renderers paragraph renderer renders paragraph with tab 1`] = `
-<Text>
+<Text
+  style={
+    Array [
+      Object {
+        "fontSize": 14,
+      },
+    ]
+  }
+>
   　
   Some Text
-  
-
 </Text>
 `;

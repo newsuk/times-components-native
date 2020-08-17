@@ -1,0 +1,112 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`FrontPageByline renders with container style 1`] = `
+<View
+  style={
+    Array [
+      Object {
+        "marginBottom": 5,
+      },
+      Object {
+        "marginBottom": 100,
+      },
+      false,
+    ]
+  }
+>
+  <Text>
+    <ArticleByline
+      ast={
+        Array [
+          Object {
+            "byline": Array [
+              Object {
+                "foo": "bar",
+              },
+            ],
+          },
+        ]
+      }
+      bylineStyle={
+        Object {
+          "lineHeight": 13,
+        }
+      }
+    />
+  </Text>
+</View>
+`;
+
+exports[`FrontPageByline renders with keyline 1`] = `
+<View
+  style={
+    Array [
+      Object {
+        "marginBottom": 5,
+      },
+      undefined,
+      Object {
+        "borderColor": "#999999",
+        "borderTopWidth": 1,
+        "paddingTop": 5,
+      },
+    ]
+  }
+>
+  <Text>
+    <ArticleByline
+      ast={
+        Array [
+          Object {
+            "byline": Array [
+              Object {
+                "foo": "bar",
+              },
+            ],
+          },
+        ]
+      }
+      bylineStyle={
+        Object {
+          "lineHeight": 13,
+        }
+      }
+    />
+  </Text>
+</View>
+`;
+
+exports[`FrontPageByline renders without keyline 1`] = `
+<View
+  style={
+    Array [
+      Object {
+        "marginBottom": 5,
+      },
+      undefined,
+      false,
+    ]
+  }
+>
+  <Text>
+    <ArticleByline
+      ast={
+        Array [
+          Object {
+            "byline": Array [
+              Object {
+                "foo": "bar",
+              },
+            ],
+          },
+        ]
+      }
+      bylineStyle={
+        Object {
+          "lineHeight": 13,
+        }
+      }
+    />
+  </Text>
+</View>
+`;
