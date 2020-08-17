@@ -9,6 +9,7 @@ export const propTypes = {
   isLoading: PropTypes.bool,
   section: PropTypes.string,
   slotName: PropTypes.string.isRequired,
+  width: PropTypes.number,
   style: ViewPropTypesStyle,
 };
 
