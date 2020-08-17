@@ -1,17 +1,17 @@
-import React, { useContext } from "react";
+import React from "react";
 import {
   ArticleSummaryHeadline,
   ArticleSummaryStrapline,
 } from "@times-components-native/article-summary";
 
-import { Text, View } from "react-native";
+import { View } from "react-native";
 import styleFactory from "@times-components-native/front-page/styles";
-import ArticleByline from "@times-components-native/article-byline";
 import FrontArticleSummaryContent from "./front-article-summary-content";
-import { ResponsiveContext } from "@times-components-native/responsive";
 import { Markup } from "@times-components-native/fixture-generator/src/types";
+import { FrontPageByline } from "@times-components-native/front-page/front-page-byline";
 
 interface Props {
+  columnCount?: number;
   headlineStyle?: any;
   strapline?: string;
   straplineStyle?: any;
@@ -26,7 +26,12 @@ const renderContent = (props: Props) => {
   const { summary, summaryStyle } = props;
 
   return (
-    <FrontArticleSummaryContent summary={summary} summaryStyle={summaryStyle} />
+    <FrontArticleSummaryContent
+      summary={summary}
+      summaryStyle={summaryStyle}
+      columnCount={props.columnCount}
+      bylines={props.bylines}
+    />
   );
 };
 
@@ -56,28 +61,22 @@ const renderStrapline = (props: Props) => {
   );
 };
 
-const renderByline = (props: Props, breakpoint: string) => {
-  const { bylines: ast } = props;
+const renderByline = (props: Props) => {
+  const { bylines: ast, columnCount } = props;
   if (!ast || ast.length === 0) return null;
+  if (columnCount && columnCount > 1) return null;
 
-  const styles = styleFactory(breakpoint);
-  return (
-    <Text style={styles.bylineContainer}>
-      <ArticleByline ast={ast} bylineStyle={styles.bylineStyle} />
-    </Text>
-  );
+  return <FrontPageByline withKeyline={false} byline={ast} />;
 };
 
 const FrontTileSummary: React.FC<Props> = (props) => {
-  // @ts-ignore
-  const { editionBreakpoint } = useContext(ResponsiveContext);
-  const styles = styleFactory(editionBreakpoint);
+  const styles = styleFactory();
 
   return (
     <View style={[props.containerStyle, styles.container]}>
       {renderHeadline(props)}
       {renderStrapline(props)}
-      {renderByline(props, editionBreakpoint)}
+      {renderByline(props)}
       {renderContent(props)}
     </View>
   );

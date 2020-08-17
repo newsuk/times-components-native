@@ -104,7 +104,6 @@ class ArticleInDepth extends Component {
 
     const {
       adConfig,
-      adPosition,
       analyticsStream,
       article,
       interactiveConfig,
@@ -128,7 +127,6 @@ class ArticleInDepth extends Component {
             {({ theme: { scale, dropCapFont } }) => (
               <ArticleSkeleton
                 adConfig={adConfig}
-                adPosition={adPosition}
                 analyticsStream={analyticsStream}
                 data={article}
                 dropCapFont={dropCapFont}

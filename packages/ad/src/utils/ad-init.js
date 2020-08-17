@@ -265,7 +265,7 @@ export default ({ el, data, platform, eventCallback, window }) => {
             if (
               event &&
               event.slot &&
-              event.slot.getSlotElementId() === "native-inline-ad" &&
+              /^native-inline-ad/.test(event.slot.getSlotElementId()) &&
               !event.isEmpty
             ) {
               const height =

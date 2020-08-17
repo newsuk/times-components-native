@@ -1,5 +1,6 @@
 /* eslint-disable react/forbid-prop-types */
 import React, { useMemo } from "react";
+import Ad from "@times-components-native/ad";
 import { AttributedString } from "@times-components-native/typeset";
 import { colours } from "@times-components-native/styleguide";
 import PropTypes from "prop-types";
@@ -59,6 +60,7 @@ const ArticleParagraph = ({
       str={str}
       scale={scale}
       inline={inline}
+      isInlineAd={inline?.type === Ad}
       tree={tree}
       uid={`${index}`}
       defaultFont={defaultFont}
