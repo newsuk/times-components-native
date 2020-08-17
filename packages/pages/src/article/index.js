@@ -17,7 +17,8 @@ const ArticlePage = (props) => {
     ? () => Linking.openURL(data.url)
     : undefined;
   const errorBoundaryOptions = {
-    message: "We can't load the article you have requested.",
+    title: "View online",
+    message: "This article will display on the web",
     buttonText: "Open in browser",
     onAction: openInBrowser,
   };
