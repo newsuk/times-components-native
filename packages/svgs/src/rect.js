@@ -36,7 +36,7 @@ Rect.propTypes = {
   fillOpacity: PropTypes.string,
   height: PropTypes.string.isRequired,
   stroke: PropTypes.string,
-  strokeWidth: PropTypes.string,
+  strokeWidth: PropTypes.number,
   width: PropTypes.string.isRequired,
   x: PropTypes.string.isRequired,
   y: PropTypes.string.isRequired,

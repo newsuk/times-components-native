@@ -31,7 +31,7 @@ exports[`1. an svg, g, path 1`] = `
         opacity={1}
         strokeCap={1}
         strokeJoin={1}
-        strokeWidth="1"
+        strokeWidth={1}
         transform="e4c138e0ae717832b3b923e468af04e5"
       />
     </ARTGroup>
@@ -85,7 +85,7 @@ exports[`4. a rect 1`] = `
   stroke="#ffffff"
   strokeCap={1}
   strokeJoin={1}
-  strokeWidth="8"
+  strokeWidth={8}
   transform="e4c138e0ae717832b3b923e468af04e5"
 />
 `;

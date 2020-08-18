@@ -23,7 +23,7 @@ Path.propTypes = {
   fill: PropTypes.string,
   opacity: PropTypes.string,
   stroke: PropTypes.string,
-  strokeWidth: PropTypes.string,
+  strokeWidth: PropTypes.number,
 };
 
 Path.defaultProps = {
