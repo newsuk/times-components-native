@@ -8,34 +8,34 @@
 
 /* Begin PBXBuildFile section */
 		00E356F31AD99517003FC87E /* TimesComponentsTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 00E356F21AD99517003FC87E /* TimesComponentsTests.m */; };
-		079ADCDBA431B7BA523A1053 /* libPods-TimesComponents-tvOS.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 6BAAE86D9D8E8A9CAADEE2DE /* libPods-TimesComponents-tvOS.a */; };
-		12F1559F24C76E7A00CC677E /* Tiempos-Headline-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 12F1559424C76E7A00CC677E /* Tiempos-Headline-Bold.ttf */; };
-		12F155A024C76E7A00CC677E /* TimesDigitalW04.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 12F1559524C76E7A00CC677E /* TimesDigitalW04.ttf */; };
-		12F155A124C76E7A00CC677E /* TimesModern-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 12F1559624C76E7A00CC677E /* TimesModern-Regular.ttf */; };
-		12F155A224C76E7A00CC677E /* TimesDigitalW04_bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 12F1559724C76E7A00CC677E /* TimesDigitalW04_bold.ttf */; };
-		12F155A324C76E7A00CC677E /* TimesDigitalW04_italic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 12F1559824C76E7A00CC677E /* TimesDigitalW04_italic.ttf */; };
-		12F155A424C76E7A00CC677E /* TimesModern-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 12F1559924C76E7A00CC677E /* TimesModern-Bold.ttf */; };
-		12F155A524C76E7A00CC677E /* Flama-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 12F1559A24C76E7A00CC677E /* Flama-Bold.ttf */; };
-		12F155A624C76E7A00CC677E /* CenturyGothic-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 12F1559B24C76E7A00CC677E /* CenturyGothic-Bold.ttf */; };
-		12F155A724C76E7A00CC677E /* GillSansMTStd-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 12F1559C24C76E7A00CC677E /* GillSansMTStd-Medium.ttf */; };
-		12F155A824C76E7A00CC677E /* TimesDigitalW04-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 12F1559D24C76E7A00CC677E /* TimesDigitalW04-Regular.ttf */; };
-		12F155A924C76E7A00CC677E /* TimesDigitalW04-RegularSC.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 12F1559E24C76E7A00CC677E /* TimesDigitalW04-RegularSC.ttf */; };
-		12F155B424C7704900CC677E /* ArticleEvents.m in Sources */ = {isa = PBXBuildFile; fileRef = 12F155B324C7704900CC677E /* ArticleEvents.m */; };
-		12F155B624C7707900CC677E /* AuthorProfileEvents.m in Sources */ = {isa = PBXBuildFile; fileRef = 12F155B524C7707900CC677E /* AuthorProfileEvents.m */; };
-		12F155B824C7709400CC677E /* ReactAnalytics.m in Sources */ = {isa = PBXBuildFile; fileRef = 12F155B724C7709400CC677E /* ReactAnalytics.m */; };
-		12F155BA24C770B200CC677E /* ReactConfig.m in Sources */ = {isa = PBXBuildFile; fileRef = 12F155B924C770B200CC677E /* ReactConfig.m */; };
-		12F155BC24C770CD00CC677E /* TopicEvents.m in Sources */ = {isa = PBXBuildFile; fileRef = 12F155BB24C770CD00CC677E /* TopicEvents.m */; };
+		120322B324E1A58B00D265FF /* ArticleEvents.m in Sources */ = {isa = PBXBuildFile; fileRef = 120322AE24E1A58B00D265FF /* ArticleEvents.m */; };
+		120322B424E1A58B00D265FF /* ReactAnalytics.m in Sources */ = {isa = PBXBuildFile; fileRef = 120322AF24E1A58B00D265FF /* ReactAnalytics.m */; };
+		120322B524E1A58B00D265FF /* TopicEvents.m in Sources */ = {isa = PBXBuildFile; fileRef = 120322B024E1A58B00D265FF /* TopicEvents.m */; };
+		120322B624E1A58B00D265FF /* ReactConfig.m in Sources */ = {isa = PBXBuildFile; fileRef = 120322B124E1A58B00D265FF /* ReactConfig.m */; };
+		120322B724E1A58B00D265FF /* AuthorProfileEvents.m in Sources */ = {isa = PBXBuildFile; fileRef = 120322B224E1A58B00D265FF /* AuthorProfileEvents.m */; };
+		120322E524E1A5AB00D265FF /* Flama-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 120322B924E1A5A500D265FF /* Flama-Bold.ttf */; };
+		120322E624E1A5AB00D265FF /* TimesDigitalW04_italic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 120322BA24E1A5A500D265FF /* TimesDigitalW04_italic.ttf */; };
+		120322E924E1A5AB00D265FF /* TimesModern-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 120322BD24E1A5A500D265FF /* TimesModern-Regular.ttf */; };
+		120322ED24E1A5AB00D265FF /* TimesDigitalW04.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 120322C124E1A5A500D265FF /* TimesDigitalW04.ttf */; };
+		120322EF24E1A5AB00D265FF /* TimesModern-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 120322C324E1A5A500D265FF /* TimesModern-Bold.ttf */; };
+		120322F624E1A5AB00D265FF /* TimesDigitalW04_bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 120322CA24E1A5A600D265FF /* TimesDigitalW04_bold.ttf */; };
+		120322F724E1A5AB00D265FF /* CenturyGothic-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 120322CB24E1A5A600D265FF /* CenturyGothic-Bold.ttf */; };
+		120322F824E1A5AB00D265FF /* TimesDigitalW04-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 120322CC24E1A5A600D265FF /* TimesDigitalW04-Regular.ttf */; };
+		120322F924E1A5AB00D265FF /* TimesDigitalW04-RegularSC.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 120322CD24E1A5A700D265FF /* TimesDigitalW04-RegularSC.ttf */; };
+		1203230124E1A5AB00D265FF /* Tiempos-Headline-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 120322D524E1A5A800D265FF /* Tiempos-Headline-Bold.ttf */; };
+		1203230324E1A5AB00D265FF /* GillSansMTStd-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 120322D724E1A5A800D265FF /* GillSansMTStd-Medium.ttf */; };
 		13B07FBC1A68108700A75B9A /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB01A68108700A75B9A /* AppDelegate.m */; };
-		13B07FBD1A68108700A75B9A /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 13B07FB11A68108700A75B9A /* LaunchScreen.xib */; };
 		13B07FBF1A68108700A75B9A /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 13B07FB51A68108700A75B9A /* Images.xcassets */; };
 		13B07FC11A68108700A75B9A /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB71A68108700A75B9A /* main.m */; };
+		1F853736D0AAF7BEED9D3C6F /* libPods-TimesComponents-tvOS.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 6417B4392E29356BDEABEA99 /* libPods-TimesComponents-tvOS.a */; };
 		2D02E4BC1E0B4A80006451C7 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB01A68108700A75B9A /* AppDelegate.m */; };
 		2D02E4BD1E0B4A84006451C7 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 13B07FB51A68108700A75B9A /* Images.xcassets */; };
 		2D02E4BF1E0B4AB3006451C7 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB71A68108700A75B9A /* main.m */; };
 		2DCD954D1E0B4F2C00145EB5 /* TimesComponentsTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 00E356F21AD99517003FC87E /* TimesComponentsTests.m */; };
-		46F350E056784F0EA9EF74FC /* libPods-TimesComponents-tvOSTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 062926870E8466D69F4C1462 /* libPods-TimesComponents-tvOSTests.a */; };
-		93D4EC4CD3E726EB1B50FA92 /* libPods-TimesComponents.a in Frameworks */ = {isa = PBXBuildFile; fileRef = B2E29648EB99619F6D48AE1A /* libPods-TimesComponents.a */; };
-		B54A588D89D533FF6B2C07D9 /* libPods-TimesComponentsTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 2C92ADD9B94EF1291111BEC7 /* libPods-TimesComponentsTests.a */; };
+		379DB6401F7FDB6D903130D6 /* libPods-TimesComponents-tvOSTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 068422654253BB2E6FAAF9B1 /* libPods-TimesComponents-tvOSTests.a */; };
+		7C69A534E757EE69EAE73C33 /* libPods-TimesComponents-TimesComponentsTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 7A53B0036F0C0016618E926D /* libPods-TimesComponents-TimesComponentsTests.a */; };
+		81AB9BB82411601600AC10FF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */; };
+		A6CBA86FE3C3FAE284518F4A /* libPods-TimesComponents.a in Frameworks */ = {isa = PBXBuildFile; fileRef = A780229AAC4D71C1774B1C3B /* libPods-TimesComponents.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -57,48 +57,48 @@
 
 /* Begin PBXFileReference section */
 		008F07F21AC5B25A0029DE68 /* main.jsbundle */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = main.jsbundle; sourceTree = "<group>"; };
-		00D30BC48626A135C6299E68 /* Pods-TimesComponents-tvOS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TimesComponents-tvOS.debug.xcconfig"; path = "Target Support Files/Pods-TimesComponents-tvOS/Pods-TimesComponents-tvOS.debug.xcconfig"; sourceTree = "<group>"; };
 		00E356EE1AD99517003FC87E /* TimesComponentsTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TimesComponentsTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		00E356F11AD99517003FC87E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		00E356F21AD99517003FC87E /* TimesComponentsTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TimesComponentsTests.m; sourceTree = "<group>"; };
-		062926870E8466D69F4C1462 /* libPods-TimesComponents-tvOSTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-TimesComponents-tvOSTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
-		12F1559424C76E7A00CC677E /* Tiempos-Headline-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Tiempos-Headline-Bold.ttf"; path = "../../dist/public/fonts/Tiempos-Headline-Bold.ttf"; sourceTree = "<group>"; };
-		12F1559524C76E7A00CC677E /* TimesDigitalW04.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = TimesDigitalW04.ttf; path = ../../dist/public/fonts/TimesDigitalW04.ttf; sourceTree = "<group>"; };
-		12F1559624C76E7A00CC677E /* TimesModern-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "TimesModern-Regular.ttf"; path = "../../dist/public/fonts/TimesModern-Regular.ttf"; sourceTree = "<group>"; };
-		12F1559724C76E7A00CC677E /* TimesDigitalW04_bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = TimesDigitalW04_bold.ttf; path = ../../dist/public/fonts/TimesDigitalW04_bold.ttf; sourceTree = "<group>"; };
-		12F1559824C76E7A00CC677E /* TimesDigitalW04_italic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = TimesDigitalW04_italic.ttf; path = ../../dist/public/fonts/TimesDigitalW04_italic.ttf; sourceTree = "<group>"; };
-		12F1559924C76E7A00CC677E /* TimesModern-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "TimesModern-Bold.ttf"; path = "../../dist/public/fonts/TimesModern-Bold.ttf"; sourceTree = "<group>"; };
-		12F1559A24C76E7A00CC677E /* Flama-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Flama-Bold.ttf"; path = "../../dist/public/fonts/Flama-Bold.ttf"; sourceTree = "<group>"; };
-		12F1559B24C76E7A00CC677E /* CenturyGothic-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "CenturyGothic-Bold.ttf"; path = "../../dist/public/fonts/CenturyGothic-Bold.ttf"; sourceTree = "<group>"; };
-		12F1559C24C76E7A00CC677E /* GillSansMTStd-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "GillSansMTStd-Medium.ttf"; path = "../../dist/public/fonts/GillSansMTStd-Medium.ttf"; sourceTree = "<group>"; };
-		12F1559D24C76E7A00CC677E /* TimesDigitalW04-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "TimesDigitalW04-Regular.ttf"; path = "../../dist/public/fonts/TimesDigitalW04-Regular.ttf"; sourceTree = "<group>"; };
-		12F1559E24C76E7A00CC677E /* TimesDigitalW04-RegularSC.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "TimesDigitalW04-RegularSC.ttf"; path = "../../dist/public/fonts/TimesDigitalW04-RegularSC.ttf"; sourceTree = "<group>"; };
-		12F155B324C7704900CC677E /* ArticleEvents.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ArticleEvents.m; sourceTree = "<group>"; };
-		12F155B524C7707900CC677E /* AuthorProfileEvents.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AuthorProfileEvents.m; sourceTree = "<group>"; };
-		12F155B724C7709400CC677E /* ReactAnalytics.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ReactAnalytics.m; sourceTree = "<group>"; };
-		12F155B924C770B200CC677E /* ReactConfig.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ReactConfig.m; sourceTree = "<group>"; };
-		12F155BB24C770CD00CC677E /* TopicEvents.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TopicEvents.m; sourceTree = "<group>"; };
+		068422654253BB2E6FAAF9B1 /* libPods-TimesComponents-tvOSTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-TimesComponents-tvOSTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		1179116F54A7685F738B39AA /* Pods-TimesComponents-TimesComponentsTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TimesComponents-TimesComponentsTests.release.xcconfig"; path = "Target Support Files/Pods-TimesComponents-TimesComponentsTests/Pods-TimesComponents-TimesComponentsTests.release.xcconfig"; sourceTree = "<group>"; };
+		120322AE24E1A58B00D265FF /* ArticleEvents.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ArticleEvents.m; sourceTree = "<group>"; };
+		120322AF24E1A58B00D265FF /* ReactAnalytics.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ReactAnalytics.m; sourceTree = "<group>"; };
+		120322B024E1A58B00D265FF /* TopicEvents.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TopicEvents.m; sourceTree = "<group>"; };
+		120322B124E1A58B00D265FF /* ReactConfig.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ReactConfig.m; sourceTree = "<group>"; };
+		120322B224E1A58B00D265FF /* AuthorProfileEvents.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AuthorProfileEvents.m; sourceTree = "<group>"; };
+		120322B924E1A5A500D265FF /* Flama-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Flama-Bold.ttf"; path = "../../dist/public/fonts/Flama-Bold.ttf"; sourceTree = "<group>"; };
+		120322BA24E1A5A500D265FF /* TimesDigitalW04_italic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = TimesDigitalW04_italic.ttf; path = ../../dist/public/fonts/TimesDigitalW04_italic.ttf; sourceTree = "<group>"; };
+		120322BD24E1A5A500D265FF /* TimesModern-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "TimesModern-Regular.ttf"; path = "../../dist/public/fonts/TimesModern-Regular.ttf"; sourceTree = "<group>"; };
+		120322C124E1A5A500D265FF /* TimesDigitalW04.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = TimesDigitalW04.ttf; path = ../../dist/public/fonts/TimesDigitalW04.ttf; sourceTree = "<group>"; };
+		120322C324E1A5A500D265FF /* TimesModern-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "TimesModern-Bold.ttf"; path = "../../dist/public/fonts/TimesModern-Bold.ttf"; sourceTree = "<group>"; };
+		120322CA24E1A5A600D265FF /* TimesDigitalW04_bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = TimesDigitalW04_bold.ttf; path = ../../dist/public/fonts/TimesDigitalW04_bold.ttf; sourceTree = "<group>"; };
+		120322CB24E1A5A600D265FF /* CenturyGothic-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "CenturyGothic-Bold.ttf"; path = "../../dist/public/fonts/CenturyGothic-Bold.ttf"; sourceTree = "<group>"; };
+		120322CC24E1A5A600D265FF /* TimesDigitalW04-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "TimesDigitalW04-Regular.ttf"; path = "../../dist/public/fonts/TimesDigitalW04-Regular.ttf"; sourceTree = "<group>"; };
+		120322CD24E1A5A700D265FF /* TimesDigitalW04-RegularSC.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "TimesDigitalW04-RegularSC.ttf"; path = "../../dist/public/fonts/TimesDigitalW04-RegularSC.ttf"; sourceTree = "<group>"; };
+		120322D524E1A5A800D265FF /* Tiempos-Headline-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Tiempos-Headline-Bold.ttf"; path = "../../dist/public/fonts/Tiempos-Headline-Bold.ttf"; sourceTree = "<group>"; };
+		120322D724E1A5A800D265FF /* GillSansMTStd-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "GillSansMTStd-Medium.ttf"; path = "../../dist/public/fonts/GillSansMTStd-Medium.ttf"; sourceTree = "<group>"; };
 		13B07F961A680F5B00A75B9A /* TimesComponents.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TimesComponents.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		13B07FAF1A68108700A75B9A /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AppDelegate.h; path = TimesComponents/AppDelegate.h; sourceTree = "<group>"; };
 		13B07FB01A68108700A75B9A /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AppDelegate.m; path = TimesComponents/AppDelegate.m; sourceTree = "<group>"; };
-		13B07FB21A68108700A75B9A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
 		13B07FB51A68108700A75B9A /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Images.xcassets; path = TimesComponents/Images.xcassets; sourceTree = "<group>"; };
 		13B07FB61A68108700A75B9A /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = Info.plist; path = TimesComponents/Info.plist; sourceTree = "<group>"; };
 		13B07FB71A68108700A75B9A /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = main.m; path = TimesComponents/main.m; sourceTree = "<group>"; };
-		240BD9C4CDF67BE0E35A19F0 /* Pods-TimesComponents-tvOSTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TimesComponents-tvOSTests.release.xcconfig"; path = "Target Support Files/Pods-TimesComponents-tvOSTests/Pods-TimesComponents-tvOSTests.release.xcconfig"; sourceTree = "<group>"; };
-		2C92ADD9B94EF1291111BEC7 /* libPods-TimesComponentsTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-TimesComponentsTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		2D02E47B1E0B4A5D006451C7 /* TimesComponents-tvOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "TimesComponents-tvOS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		2D02E4901E0B4A5D006451C7 /* TimesComponents-tvOSTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "TimesComponents-tvOSTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
-		404F0F0833E4C6C194A93286 /* Pods-TimesComponentsTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TimesComponentsTests.release.xcconfig"; path = "Target Support Files/Pods-TimesComponentsTests/Pods-TimesComponentsTests.release.xcconfig"; sourceTree = "<group>"; };
-		6BAAE86D9D8E8A9CAADEE2DE /* libPods-TimesComponents-tvOS.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-TimesComponents-tvOS.a"; sourceTree = BUILT_PRODUCTS_DIR; };
-		6CE05F3FEB38A33A49D9A1A0 /* Pods-TimesComponents.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TimesComponents.debug.xcconfig"; path = "Target Support Files/Pods-TimesComponents/Pods-TimesComponents.debug.xcconfig"; sourceTree = "<group>"; };
-		730EAB9DA53D8647B54983ED /* Pods-TimesComponents-tvOS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TimesComponents-tvOS.release.xcconfig"; path = "Target Support Files/Pods-TimesComponents-tvOS/Pods-TimesComponents-tvOS.release.xcconfig"; sourceTree = "<group>"; };
-		91620431A8E3A6C203D171D0 /* Pods-TimesComponents-tvOSTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TimesComponents-tvOSTests.debug.xcconfig"; path = "Target Support Files/Pods-TimesComponents-tvOSTests/Pods-TimesComponents-tvOSTests.debug.xcconfig"; sourceTree = "<group>"; };
-		9E24257B2DB6F8D7F0250617 /* Pods-TimesComponents.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TimesComponents.release.xcconfig"; path = "Target Support Files/Pods-TimesComponents/Pods-TimesComponents.release.xcconfig"; sourceTree = "<group>"; };
-		B2E29648EB99619F6D48AE1A /* libPods-TimesComponents.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-TimesComponents.a"; sourceTree = BUILT_PRODUCTS_DIR; };
-		B877A0CCB6C888337FE643C6 /* Pods-TimesComponentsTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TimesComponentsTests.debug.xcconfig"; path = "Target Support Files/Pods-TimesComponentsTests/Pods-TimesComponentsTests.debug.xcconfig"; sourceTree = "<group>"; };
+		39D686F1037CE5BC875D3AB8 /* Pods-TimesComponents-tvOSTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TimesComponents-tvOSTests.release.xcconfig"; path = "Target Support Files/Pods-TimesComponents-tvOSTests/Pods-TimesComponents-tvOSTests.release.xcconfig"; sourceTree = "<group>"; };
+		6417B4392E29356BDEABEA99 /* libPods-TimesComponents-tvOS.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-TimesComponents-tvOS.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		7A53B0036F0C0016618E926D /* libPods-TimesComponents-TimesComponentsTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-TimesComponents-TimesComponentsTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = LaunchScreen.storyboard; path = TimesComponents/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		98DE3FE59779270C45D200C9 /* Pods-TimesComponents-tvOS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TimesComponents-tvOS.release.xcconfig"; path = "Target Support Files/Pods-TimesComponents-tvOS/Pods-TimesComponents-tvOS.release.xcconfig"; sourceTree = "<group>"; };
+		A780229AAC4D71C1774B1C3B /* libPods-TimesComponents.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-TimesComponents.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		B5382007B5E2DE215910BC69 /* Pods-TimesComponents.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TimesComponents.debug.xcconfig"; path = "Target Support Files/Pods-TimesComponents/Pods-TimesComponents.debug.xcconfig"; sourceTree = "<group>"; };
+		D64F3BD61DAF3B2659F8DC6D /* Pods-TimesComponents-TimesComponentsTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TimesComponents-TimesComponentsTests.debug.xcconfig"; path = "Target Support Files/Pods-TimesComponents-TimesComponentsTests/Pods-TimesComponents-TimesComponentsTests.debug.xcconfig"; sourceTree = "<group>"; };
+		DB2FEFA28A97B26CA78469CC /* Pods-TimesComponents-tvOS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TimesComponents-tvOS.debug.xcconfig"; path = "Target Support Files/Pods-TimesComponents-tvOS/Pods-TimesComponents-tvOS.debug.xcconfig"; sourceTree = "<group>"; };
+		DE57A50E48CCB121CD6EB8CD /* Pods-TimesComponents.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TimesComponents.release.xcconfig"; path = "Target Support Files/Pods-TimesComponents/Pods-TimesComponents.release.xcconfig"; sourceTree = "<group>"; };
 		ED297162215061F000B7C4FE /* JavaScriptCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JavaScriptCore.framework; path = System/Library/Frameworks/JavaScriptCore.framework; sourceTree = SDKROOT; };
 		ED2971642150620600B7C4FE /* JavaScriptCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JavaScriptCore.framework; path = Platforms/AppleTVOS.platform/Developer/SDKs/AppleTVOS12.0.sdk/System/Library/Frameworks/JavaScriptCore.framework; sourceTree = DEVELOPER_DIR; };
+		FDE7AB11A62007C4789A9D7B /* Pods-TimesComponents-tvOSTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TimesComponents-tvOSTests.debug.xcconfig"; path = "Target Support Files/Pods-TimesComponents-tvOSTests/Pods-TimesComponents-tvOSTests.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -106,7 +106,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B54A588D89D533FF6B2C07D9 /* libPods-TimesComponentsTests.a in Frameworks */,
+				7C69A534E757EE69EAE73C33 /* libPods-TimesComponents-TimesComponentsTests.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -114,7 +114,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				93D4EC4CD3E726EB1B50FA92 /* libPods-TimesComponents.a in Frameworks */,
+				A6CBA86FE3C3FAE284518F4A /* libPods-TimesComponents.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -122,7 +122,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				079ADCDBA431B7BA523A1053 /* libPods-TimesComponents-tvOS.a in Frameworks */,
+				1F853736D0AAF7BEED9D3C6F /* libPods-TimesComponents-tvOS.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -130,7 +130,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				46F350E056784F0EA9EF74FC /* libPods-TimesComponents-tvOSTests.a in Frameworks */,
+				379DB6401F7FDB6D903130D6 /* libPods-TimesComponents-tvOSTests.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -154,46 +154,45 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
-		12F1559324C76E5700CC677E /* Fonts */ = {
+		120322AD24E1A56600D265FF /* Native Modules */ = {
 			isa = PBXGroup;
 			children = (
-				12F1559B24C76E7A00CC677E /* CenturyGothic-Bold.ttf */,
-				12F1559A24C76E7A00CC677E /* Flama-Bold.ttf */,
-				12F1559C24C76E7A00CC677E /* GillSansMTStd-Medium.ttf */,
-				12F1559424C76E7A00CC677E /* Tiempos-Headline-Bold.ttf */,
-				12F1559724C76E7A00CC677E /* TimesDigitalW04_bold.ttf */,
-				12F1559824C76E7A00CC677E /* TimesDigitalW04_italic.ttf */,
-				12F1559D24C76E7A00CC677E /* TimesDigitalW04-Regular.ttf */,
-				12F1559E24C76E7A00CC677E /* TimesDigitalW04-RegularSC.ttf */,
-				12F1559524C76E7A00CC677E /* TimesDigitalW04.ttf */,
-				12F1559924C76E7A00CC677E /* TimesModern-Bold.ttf */,
-				12F1559624C76E7A00CC677E /* TimesModern-Regular.ttf */,
-			);
-			path = Fonts;
-			sourceTree = "<group>";
-		};
-		12F155B224C7703600CC677E /* Native Modules */ = {
-			isa = PBXGroup;
-			children = (
-				12F155B324C7704900CC677E /* ArticleEvents.m */,
-				12F155B524C7707900CC677E /* AuthorProfileEvents.m */,
-				12F155B724C7709400CC677E /* ReactAnalytics.m */,
-				12F155B924C770B200CC677E /* ReactConfig.m */,
-				12F155BB24C770CD00CC677E /* TopicEvents.m */,
+				120322AE24E1A58B00D265FF /* ArticleEvents.m */,
+				120322B224E1A58B00D265FF /* AuthorProfileEvents.m */,
+				120322AF24E1A58B00D265FF /* ReactAnalytics.m */,
+				120322B124E1A58B00D265FF /* ReactConfig.m */,
+				120322B024E1A58B00D265FF /* TopicEvents.m */,
 			);
 			path = "Native Modules";
+			sourceTree = "<group>";
+		};
+		120322B824E1A59000D265FF /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				120322CB24E1A5A600D265FF /* CenturyGothic-Bold.ttf */,
+				120322B924E1A5A500D265FF /* Flama-Bold.ttf */,
+				120322D724E1A5A800D265FF /* GillSansMTStd-Medium.ttf */,
+				120322D524E1A5A800D265FF /* Tiempos-Headline-Bold.ttf */,
+				120322CA24E1A5A600D265FF /* TimesDigitalW04_bold.ttf */,
+				120322BA24E1A5A500D265FF /* TimesDigitalW04_italic.ttf */,
+				120322CC24E1A5A600D265FF /* TimesDigitalW04-Regular.ttf */,
+				120322CD24E1A5A700D265FF /* TimesDigitalW04-RegularSC.ttf */,
+				120322C124E1A5A500D265FF /* TimesDigitalW04.ttf */,
+				120322C324E1A5A500D265FF /* TimesModern-Bold.ttf */,
+				120322BD24E1A5A500D265FF /* TimesModern-Regular.ttf */,
+			);
+			path = Fonts;
 			sourceTree = "<group>";
 		};
 		13B07FAE1A68108700A75B9A /* TimesComponents */ = {
 			isa = PBXGroup;
 			children = (
-				12F155B224C7703600CC677E /* Native Modules */,
 				008F07F21AC5B25A0029DE68 /* main.jsbundle */,
 				13B07FAF1A68108700A75B9A /* AppDelegate.h */,
 				13B07FB01A68108700A75B9A /* AppDelegate.m */,
 				13B07FB51A68108700A75B9A /* Images.xcassets */,
 				13B07FB61A68108700A75B9A /* Info.plist */,
-				13B07FB11A68108700A75B9A /* LaunchScreen.xib */,
+				81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */,
 				13B07FB71A68108700A75B9A /* main.m */,
 			);
 			name = TimesComponents;
@@ -204,25 +203,25 @@
 			children = (
 				ED297162215061F000B7C4FE /* JavaScriptCore.framework */,
 				ED2971642150620600B7C4FE /* JavaScriptCore.framework */,
-				B2E29648EB99619F6D48AE1A /* libPods-TimesComponents.a */,
-				6BAAE86D9D8E8A9CAADEE2DE /* libPods-TimesComponents-tvOS.a */,
-				062926870E8466D69F4C1462 /* libPods-TimesComponents-tvOSTests.a */,
-				2C92ADD9B94EF1291111BEC7 /* libPods-TimesComponentsTests.a */,
+				A780229AAC4D71C1774B1C3B /* libPods-TimesComponents.a */,
+				7A53B0036F0C0016618E926D /* libPods-TimesComponents-TimesComponentsTests.a */,
+				6417B4392E29356BDEABEA99 /* libPods-TimesComponents-tvOS.a */,
+				068422654253BB2E6FAAF9B1 /* libPods-TimesComponents-tvOSTests.a */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		722661436FCF86892D2195ED /* Pods */ = {
+		6FE1D1E3123CE56C53CFB263 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				6CE05F3FEB38A33A49D9A1A0 /* Pods-TimesComponents.debug.xcconfig */,
-				9E24257B2DB6F8D7F0250617 /* Pods-TimesComponents.release.xcconfig */,
-				00D30BC48626A135C6299E68 /* Pods-TimesComponents-tvOS.debug.xcconfig */,
-				730EAB9DA53D8647B54983ED /* Pods-TimesComponents-tvOS.release.xcconfig */,
-				91620431A8E3A6C203D171D0 /* Pods-TimesComponents-tvOSTests.debug.xcconfig */,
-				240BD9C4CDF67BE0E35A19F0 /* Pods-TimesComponents-tvOSTests.release.xcconfig */,
-				B877A0CCB6C888337FE643C6 /* Pods-TimesComponentsTests.debug.xcconfig */,
-				404F0F0833E4C6C194A93286 /* Pods-TimesComponentsTests.release.xcconfig */,
+				B5382007B5E2DE215910BC69 /* Pods-TimesComponents.debug.xcconfig */,
+				DE57A50E48CCB121CD6EB8CD /* Pods-TimesComponents.release.xcconfig */,
+				D64F3BD61DAF3B2659F8DC6D /* Pods-TimesComponents-TimesComponentsTests.debug.xcconfig */,
+				1179116F54A7685F738B39AA /* Pods-TimesComponents-TimesComponentsTests.release.xcconfig */,
+				DB2FEFA28A97B26CA78469CC /* Pods-TimesComponents-tvOS.debug.xcconfig */,
+				98DE3FE59779270C45D200C9 /* Pods-TimesComponents-tvOS.release.xcconfig */,
+				FDE7AB11A62007C4789A9D7B /* Pods-TimesComponents-tvOSTests.debug.xcconfig */,
+				39D686F1037CE5BC875D3AB8 /* Pods-TimesComponents-tvOSTests.release.xcconfig */,
 			);
 			path = Pods;
 			sourceTree = "<group>";
@@ -239,11 +238,12 @@
 			children = (
 				13B07FAE1A68108700A75B9A /* TimesComponents */,
 				832341AE1AAA6A7D00B99B32 /* Libraries */,
+				120322AD24E1A56600D265FF /* Native Modules */,
 				00E356EF1AD99517003FC87E /* TimesComponentsTests */,
 				83CBBA001A601CBA00E9B192 /* Products */,
 				2D16E6871FA4F8E400B85C8A /* Frameworks */,
-				12F1559324C76E5700CC677E /* Fonts */,
-				722661436FCF86892D2195ED /* Pods */,
+				120322B824E1A59000D265FF /* Fonts */,
+				6FE1D1E3123CE56C53CFB263 /* Pods */,
 			);
 			indentWidth = 2;
 			sourceTree = "<group>";
@@ -268,10 +268,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 00E357021AD99517003FC87E /* Build configuration list for PBXNativeTarget "TimesComponentsTests" */;
 			buildPhases = (
-				F4C9984210F64655147AE52D /* [CP] Check Pods Manifest.lock */,
+				6564A3CEA6EA35660CB4D9FD /* [CP] Check Pods Manifest.lock */,
 				00E356EA1AD99517003FC87E /* Sources */,
 				00E356EB1AD99517003FC87E /* Frameworks */,
 				00E356EC1AD99517003FC87E /* Resources */,
+				75E359209B6B48910F1BA617 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -287,12 +288,13 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 13B07F931A680F5B00A75B9A /* Build configuration list for PBXNativeTarget "TimesComponents" */;
 			buildPhases = (
-				86F4766E13D8202AE8464829 /* [CP] Check Pods Manifest.lock */,
+				3DBF5453D1FF856120ED9CF8 /* [CP] Check Pods Manifest.lock */,
 				FD10A7F022414F080027D42C /* Start Packager */,
 				13B07F871A680F5B00A75B9A /* Sources */,
 				13B07F8C1A680F5B00A75B9A /* Frameworks */,
 				13B07F8E1A680F5B00A75B9A /* Resources */,
 				00DD1BFF1BD5951E006B06BC /* Bundle React Native code and images */,
+				D58EC6E8EB9AC7FB006B3EB4 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -307,7 +309,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 2D02E4BA1E0B4A5E006451C7 /* Build configuration list for PBXNativeTarget "TimesComponents-tvOS" */;
 			buildPhases = (
-				92FE219BAB035739C1AEA13C /* [CP] Check Pods Manifest.lock */,
+				CA4C6AC1A09F170927C50941 /* [CP] Check Pods Manifest.lock */,
 				FD10A7F122414F3F0027D42C /* Start Packager */,
 				2D02E4771E0B4A5D006451C7 /* Sources */,
 				2D02E4781E0B4A5D006451C7 /* Frameworks */,
@@ -327,7 +329,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 2D02E4BB1E0B4A5E006451C7 /* Build configuration list for PBXNativeTarget "TimesComponents-tvOSTests" */;
 			buildPhases = (
-				005F50E3CEA22637713A2671 /* [CP] Check Pods Manifest.lock */,
+				A3395C3CDBA94CC8381EE112 /* [CP] Check Pods Manifest.lock */,
 				2D02E48C1E0B4A5D006451C7 /* Sources */,
 				2D02E48D1E0B4A5D006451C7 /* Frameworks */,
 				2D02E48E1E0B4A5D006451C7 /* Resources */,
@@ -348,12 +350,14 @@
 		83CBB9F71A601CBA00E9B192 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 0940;
-				ORGANIZATIONNAME = Facebook;
+				LastUpgradeCheck = 1130;
 				TargetAttributes = {
 					00E356ED1AD99517003FC87E = {
 						CreatedOnToolsVersion = 6.2;
 						TestTargetID = 13B07F861A680F5B00A75B9A;
+					};
+					13B07F861A680F5B00A75B9A = {
+						LastSwiftMigration = 1120;
 					};
 					2D02E47A1E0B4A5D006451C7 = {
 						CreatedOnToolsVersion = 8.2.1;
@@ -368,10 +372,9 @@
 			};
 			buildConfigurationList = 83CBB9FA1A601CBA00E9B192 /* Build configuration list for PBXProject "TimesComponents" */;
 			compatibilityVersion = "Xcode 3.2";
-			developmentRegion = English;
+			developmentRegion = en;
 			hasScannedForEncodings = 0;
 			knownRegions = (
-				English,
 				en,
 				Base,
 			);
@@ -400,19 +403,19 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				12F155A724C76E7A00CC677E /* GillSansMTStd-Medium.ttf in Resources */,
-				12F155A824C76E7A00CC677E /* TimesDigitalW04-Regular.ttf in Resources */,
-				12F1559F24C76E7A00CC677E /* Tiempos-Headline-Bold.ttf in Resources */,
-				12F155A524C76E7A00CC677E /* Flama-Bold.ttf in Resources */,
-				12F155A324C76E7A00CC677E /* TimesDigitalW04_italic.ttf in Resources */,
-				12F155A224C76E7A00CC677E /* TimesDigitalW04_bold.ttf in Resources */,
-				12F155A924C76E7A00CC677E /* TimesDigitalW04-RegularSC.ttf in Resources */,
-				12F155A624C76E7A00CC677E /* CenturyGothic-Bold.ttf in Resources */,
-				12F155A124C76E7A00CC677E /* TimesModern-Regular.ttf in Resources */,
+				81AB9BB82411601600AC10FF /* LaunchScreen.storyboard in Resources */,
+				1203230124E1A5AB00D265FF /* Tiempos-Headline-Bold.ttf in Resources */,
+				120322ED24E1A5AB00D265FF /* TimesDigitalW04.ttf in Resources */,
+				120322E524E1A5AB00D265FF /* Flama-Bold.ttf in Resources */,
+				120322E624E1A5AB00D265FF /* TimesDigitalW04_italic.ttf in Resources */,
+				120322F924E1A5AB00D265FF /* TimesDigitalW04-RegularSC.ttf in Resources */,
+				1203230324E1A5AB00D265FF /* GillSansMTStd-Medium.ttf in Resources */,
+				120322EF24E1A5AB00D265FF /* TimesModern-Bold.ttf in Resources */,
 				13B07FBF1A68108700A75B9A /* Images.xcassets in Resources */,
-				12F155A424C76E7A00CC677E /* TimesModern-Bold.ttf in Resources */,
-				12F155A024C76E7A00CC677E /* TimesDigitalW04.ttf in Resources */,
-				13B07FBD1A68108700A75B9A /* LaunchScreen.xib in Resources */,
+				120322F624E1A5AB00D265FF /* TimesDigitalW04_bold.ttf in Resources */,
+				120322E924E1A5AB00D265FF /* TimesModern-Regular.ttf in Resources */,
+				120322F824E1A5AB00D265FF /* TimesDigitalW04-Regular.ttf in Resources */,
+				120322F724E1A5AB00D265FF /* CenturyGothic-Bold.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -434,28 +437,6 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		005F50E3CEA22637713A2671 /* [CP] Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-			);
-			inputPaths = (
-				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
-				"${PODS_ROOT}/Manifest.lock",
-			);
-			name = "[CP] Check Pods Manifest.lock";
-			outputFileListPaths = (
-			);
-			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-TimesComponents-tvOSTests-checkManifestLockResult.txt",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
-			showEnvVarsInLog = 0;
-		};
 		00DD1BFF1BD5951E006B06BC /* Bundle React Native code and images */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -484,7 +465,7 @@
 			shellPath = /bin/sh;
 			shellScript = "export NODE_BINARY=node\n../node_modules/react-native/scripts/react-native-xcode.sh";
 		};
-		86F4766E13D8202AE8464829 /* [CP] Check Pods Manifest.lock */ = {
+		3DBF5453D1FF856120ED9CF8 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -506,7 +487,69 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
-		92FE219BAB035739C1AEA13C /* [CP] Check Pods Manifest.lock */ = {
+		6564A3CEA6EA35660CB4D9FD /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-TimesComponents-TimesComponentsTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		75E359209B6B48910F1BA617 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-TimesComponents-TimesComponentsTests/Pods-TimesComponents-TimesComponentsTests-resources.sh",
+				"${PODS_CONFIGURATION_BUILD_DIR}/React-Core/AccessibilityResources.bundle",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/AccessibilityResources.bundle",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-TimesComponents-TimesComponentsTests/Pods-TimesComponents-TimesComponentsTests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		A3395C3CDBA94CC8381EE112 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-TimesComponents-tvOSTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		CA4C6AC1A09F170927C50941 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -528,26 +571,22 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
-		F4C9984210F64655147AE52D /* [CP] Check Pods Manifest.lock */ = {
+		D58EC6E8EB9AC7FB006B3EB4 /* [CP] Copy Pods Resources */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
-			inputFileListPaths = (
-			);
 			inputPaths = (
-				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
-				"${PODS_ROOT}/Manifest.lock",
+				"${PODS_ROOT}/Target Support Files/Pods-TimesComponents/Pods-TimesComponents-resources.sh",
+				"${PODS_CONFIGURATION_BUILD_DIR}/React-Core/AccessibilityResources.bundle",
 			);
-			name = "[CP] Check Pods Manifest.lock";
-			outputFileListPaths = (
-			);
+			name = "[CP] Copy Pods Resources";
 			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-TimesComponentsTests-checkManifestLockResult.txt",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/AccessibilityResources.bundle",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-TimesComponents/Pods-TimesComponents-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		FD10A7F022414F080027D42C /* Start Packager */ = {
@@ -603,13 +642,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				12F155BC24C770CD00CC677E /* TopicEvents.m in Sources */,
 				13B07FBC1A68108700A75B9A /* AppDelegate.m in Sources */,
-				12F155B624C7707900CC677E /* AuthorProfileEvents.m in Sources */,
-				12F155B424C7704900CC677E /* ArticleEvents.m in Sources */,
-				12F155B824C7709400CC677E /* ReactAnalytics.m in Sources */,
+				120322B524E1A58B00D265FF /* TopicEvents.m in Sources */,
+				120322B324E1A58B00D265FF /* ArticleEvents.m in Sources */,
+				120322B424E1A58B00D265FF /* ReactAnalytics.m in Sources */,
+				120322B724E1A58B00D265FF /* AuthorProfileEvents.m in Sources */,
 				13B07FC11A68108700A75B9A /* main.m in Sources */,
-				12F155BA24C770B200CC677E /* ReactConfig.m in Sources */,
+				120322B624E1A58B00D265FF /* ReactConfig.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -645,22 +684,10 @@
 		};
 /* End PBXTargetDependency section */
 
-/* Begin PBXVariantGroup section */
-		13B07FB11A68108700A75B9A /* LaunchScreen.xib */ = {
-			isa = PBXVariantGroup;
-			children = (
-				13B07FB21A68108700A75B9A /* Base */,
-			);
-			name = LaunchScreen.xib;
-			path = TimesComponents;
-			sourceTree = "<group>";
-		};
-/* End PBXVariantGroup section */
-
 /* Begin XCBuildConfiguration section */
 		00E356F61AD99517003FC87E /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = B877A0CCB6C888337FE643C6 /* Pods-TimesComponentsTests.debug.xcconfig */;
+			baseConfigurationReference = D64F3BD61DAF3B2659F8DC6D /* Pods-TimesComponents-TimesComponentsTests.debug.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				GCC_PREPROCESSOR_DEFINITIONS = (
@@ -668,7 +695,7 @@
 					"$(inherited)",
 				);
 				INFOPLIST_FILE = TimesComponentsTests/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				OTHER_LDFLAGS = (
 					"-ObjC",
@@ -683,12 +710,12 @@
 		};
 		00E356F71AD99517003FC87E /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 404F0F0833E4C6C194A93286 /* Pods-TimesComponentsTests.release.xcconfig */;
+			baseConfigurationReference = 1179116F54A7685F738B39AA /* Pods-TimesComponents-TimesComponentsTests.release.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				COPY_PHASE_STRIP = NO;
 				INFOPLIST_FILE = TimesComponentsTests/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				OTHER_LDFLAGS = (
 					"-ObjC",
@@ -703,14 +730,14 @@
 		};
 		13B07F941A680F5B00A75B9A /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 6CE05F3FEB38A33A49D9A1A0 /* Pods-TimesComponents.debug.xcconfig */;
+			baseConfigurationReference = B5382007B5E2DE215910BC69 /* Pods-TimesComponents.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CURRENT_PROJECT_VERSION = 1;
-				DEAD_CODE_STRIPPING = NO;
+				ENABLE_BITCODE = NO;
 				INFOPLIST_FILE = TimesComponents/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				MARKETING_VERSION = 0.0.1;
 				OTHER_LDFLAGS = (
 					"$(inherited)",
 					"-ObjC",
@@ -718,6 +745,8 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "org.reactjs.native.example.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = TimesComponents;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VERSIONING_SYSTEM = "apple-generic";
 			};
@@ -725,13 +754,13 @@
 		};
 		13B07F951A680F5B00A75B9A /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 9E24257B2DB6F8D7F0250617 /* Pods-TimesComponents.release.xcconfig */;
+			baseConfigurationReference = DE57A50E48CCB121CD6EB8CD /* Pods-TimesComponents.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CURRENT_PROJECT_VERSION = 1;
 				INFOPLIST_FILE = TimesComponents/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				MARKETING_VERSION = 0.0.1;
 				OTHER_LDFLAGS = (
 					"$(inherited)",
 					"-ObjC",
@@ -739,6 +768,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "org.reactjs.native.example.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = TimesComponents;
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VERSIONING_SYSTEM = "apple-generic";
 			};
@@ -746,7 +776,7 @@
 		};
 		2D02E4971E0B4A5E006451C7 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 00D30BC48626A135C6299E68 /* Pods-TimesComponents-tvOS.debug.xcconfig */;
+			baseConfigurationReference = DB2FEFA28A97B26CA78469CC /* Pods-TimesComponents-tvOS.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = "App Icon & Top Shelf Image";
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
@@ -764,17 +794,17 @@
 					"-ObjC",
 					"-lc++",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "com.facebook.REACT.TimesComponents-tvOS";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.reactjs.native.example.TimesComponents-tvOS";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = appletvos;
 				TARGETED_DEVICE_FAMILY = 3;
-				TVOS_DEPLOYMENT_TARGET = 9.2;
+				TVOS_DEPLOYMENT_TARGET = 10.0;
 			};
 			name = Debug;
 		};
 		2D02E4981E0B4A5E006451C7 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 730EAB9DA53D8647B54983ED /* Pods-TimesComponents-tvOS.release.xcconfig */;
+			baseConfigurationReference = 98DE3FE59779270C45D200C9 /* Pods-TimesComponents-tvOS.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = "App Icon & Top Shelf Image";
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
@@ -792,17 +822,17 @@
 					"-ObjC",
 					"-lc++",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "com.facebook.REACT.TimesComponents-tvOS";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.reactjs.native.example.TimesComponents-tvOS";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = appletvos;
 				TARGETED_DEVICE_FAMILY = 3;
-				TVOS_DEPLOYMENT_TARGET = 9.2;
+				TVOS_DEPLOYMENT_TARGET = 10.0;
 			};
 			name = Release;
 		};
 		2D02E4991E0B4A5E006451C7 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 91620431A8E3A6C203D171D0 /* Pods-TimesComponents-tvOSTests.debug.xcconfig */;
+			baseConfigurationReference = FDE7AB11A62007C4789A9D7B /* Pods-TimesComponents-tvOSTests.debug.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CLANG_ANALYZER_NONNULL = YES;
@@ -819,7 +849,7 @@
 					"-ObjC",
 					"-lc++",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "com.facebook.REACT.TimesComponents-tvOSTests";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.reactjs.native.example.TimesComponents-tvOSTests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = appletvos;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/TimesComponents-tvOS.app/TimesComponents-tvOS";
@@ -829,7 +859,7 @@
 		};
 		2D02E49A1E0B4A5E006451C7 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 240BD9C4CDF67BE0E35A19F0 /* Pods-TimesComponents-tvOSTests.release.xcconfig */;
+			baseConfigurationReference = 39D686F1037CE5BC875D3AB8 /* Pods-TimesComponents-tvOSTests.release.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CLANG_ANALYZER_NONNULL = YES;
@@ -846,7 +876,7 @@
 					"-ObjC",
 					"-lc++",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "com.facebook.REACT.TimesComponents-tvOSTests";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.reactjs.native.example.TimesComponents-tvOSTests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = appletvos;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/TimesComponents-tvOS.app/TimesComponents-tvOS";
@@ -858,6 +888,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = YES;
@@ -900,7 +931,13 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				LD_RUNPATH_SEARCH_PATHS = "/usr/lib/swift $(inherited)";
+				LIBRARY_SEARCH_PATHS = (
+					"\"$(TOOLCHAIN_DIR)/usr/lib/swift/$(PLATFORM_NAME)\"",
+					"\"$(TOOLCHAIN_DIR)/usr/lib/swift-5.0/$(PLATFORM_NAME)\"",
+					"\"$(inherited)\"",
+				);
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
@@ -911,6 +948,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = YES;
@@ -946,7 +984,13 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				LD_RUNPATH_SEARCH_PATHS = "/usr/lib/swift $(inherited)";
+				LIBRARY_SEARCH_PATHS = (
+					"\"$(TOOLCHAIN_DIR)/usr/lib/swift/$(PLATFORM_NAME)\"",
+					"\"$(TOOLCHAIN_DIR)/usr/lib/swift-5.0/$(PLATFORM_NAME)\"",
+					"\"$(inherited)\"",
+				);
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				VALIDATE_PRODUCT = YES;

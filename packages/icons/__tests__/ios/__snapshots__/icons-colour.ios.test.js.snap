@@ -11,14 +11,7 @@ exports[`1. iconemail renders with different colours 1`] = `
       1,
     ]
   }
-  stroke={
-    Array [
-      0.7529411764705882,
-      1,
-      0.9333333333333333,
-      1,
-    ]
-  }
+  stroke="#c0ffee"
 />
 `;
 
@@ -33,14 +26,7 @@ exports[`2. iconfacebook renders with different colours 1`] = `
       1,
     ]
   }
-  stroke={
-    Array [
-      0.7529411764705882,
-      1,
-      0.9333333333333333,
-      1,
-    ]
-  }
+  stroke="#c0ffee"
 />
 `;
 
@@ -70,14 +56,7 @@ exports[`4. iconstar renders with different colours 1`] = `
       1,
     ]
   }
-  stroke={
-    Array [
-      0.7529411764705882,
-      1,
-      0.9333333333333333,
-      1,
-    ]
-  }
+  stroke="#c0ffee"
 />
 `;
 
@@ -92,14 +71,7 @@ exports[`5. iconcopylink renders with different colours 1`] = `
       1,
     ]
   }
-  stroke={
-    Array [
-      0.7529411764705882,
-      1,
-      0.9333333333333333,
-      1,
-    ]
-  }
+  stroke="#c0ffee"
 />
 `;
 
@@ -114,14 +86,7 @@ exports[`6. iconsavebookmark renders with different colours 1`] = `
       1,
     ]
   }
-  stroke={
-    Array [
-      0.7529411764705882,
-      1,
-      0.9333333333333333,
-      1,
-    ]
-  }
+  stroke="#c0ffee"
 />
 `;
 
@@ -136,14 +101,7 @@ exports[`7. icontwitter renders with different colours 1`] = `
       1,
     ]
   }
-  stroke={
-    Array [
-      0.7529411764705882,
-      1,
-      0.9333333333333333,
-      1,
-    ]
-  }
+  stroke="#c0ffee"
 />
 `;
 
@@ -159,14 +117,7 @@ Array [
         1,
       ]
     }
-    stroke={
-      Array [
-        0.7529411764705882,
-        1,
-        0.9333333333333333,
-        1,
-      ]
-    }
+    stroke="#c0ffee"
   />,
   <ARTShape
     fill={
@@ -178,14 +129,7 @@ Array [
         1,
       ]
     }
-    stroke={
-      Array [
-        0.7529411764705882,
-        1,
-        0.9333333333333333,
-        1,
-      ]
-    }
+    stroke="#c0ffee"
   />,
 ]
 `;
@@ -201,14 +145,7 @@ exports[`9. iconvideo360player renders with different colours 1`] = `
       1,
     ]
   }
-  stroke={
-    Array [
-      0.7529411764705882,
-      1,
-      0.9333333333333333,
-      1,
-    ]
-  }
+  stroke="#c0ffee"
 />
 `;
 
@@ -223,14 +160,7 @@ exports[`10. thestlogo renders with different colours 1`] = `
       1,
     ]
   }
-  stroke={
-    Array [
-      0.7529411764705882,
-      1,
-      0.9333333333333333,
-      1,
-    ]
-  }
+  stroke="#c0ffee"
 />
 `;
 
@@ -245,14 +175,7 @@ exports[`11. thetimeslogo renders with different colours 1`] = `
       1,
     ]
   }
-  stroke={
-    Array [
-      0.7529411764705882,
-      1,
-      0.9333333333333333,
-      1,
-    ]
-  }
+  stroke="#c0ffee"
 />
 `;
 
@@ -267,13 +190,6 @@ exports[`12. closeicon renders with different colours 1`] = `
       1,
     ]
   }
-  stroke={
-    Array [
-      1,
-      1,
-      1,
-      1,
-    ]
-  }
+  stroke="#ffffff"
 />
 `;

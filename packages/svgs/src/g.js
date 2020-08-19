@@ -1,8 +1,6 @@
 import React from "react";
-import { ART } from "react-native";
+import { Group } from "@react-native-community/art";
 import PropTypes from "prop-types";
-
-const { Group } = ART;
 
 const G = ({ fill, stroke, strokeWidth, opacity, children }) => {
   const onlyAssignedProps = (props) => (key) => props[key] !== null;
@@ -37,7 +35,7 @@ G.propTypes = {
   fill: PropTypes.string,
   opacity: PropTypes.string,
   stroke: PropTypes.string,
-  strokeWidth: PropTypes.string,
+  strokeWidth: PropTypes.number,
 };
 
 G.defaultProps = {

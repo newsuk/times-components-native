@@ -1,13 +1,13 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`render correctly 1`] = `<View />`;
+exports[`responsive-graphics.test.js render correctly 1`] = `<View />`;
 
-exports[`render images 1`] = `
+exports[`responsive-graphics.test.js render images 1`] = `
 <View
   accessibilityIgnoresInvertColors={true}
   style={
     Object {
-      "aspectRatio": 1.3333333333333333,
+      "aspectRatio": 2.7666666666666666,
       "width": "100%",
     }
   }
@@ -15,7 +15,7 @@ exports[`render images 1`] = `
   <Image
     source={
       Object {
-        "aspectRatio": 1.3333333333333333,
+        "aspectRatio": 2.7666666666666666,
         "height": 240,
         "uri": "https://nuk-tnl-deck-prod-static.s3-eu-west-1.amazonaws.com/uploads/a291571a5862aa96def7e82799971d8d.jpg",
         "width": 664,
