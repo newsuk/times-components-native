@@ -12,6 +12,7 @@ import MagazineCover from "./magazine-cover";
 import Slice from "./slice";
 import styleFactory from "./styles";
 import { prepareSlicesForRender, createPuzzleData } from "./utils";
+// import FrontLeadOneAndOne from "@times-components-native/edition-slices/src/slices/frontleadoneandone";
 
 const styles = styleFactory();
 
@@ -102,6 +103,7 @@ class Section extends Component {
       <Responsive>
         <ResponsiveContext.Consumer>
           {({ isTablet, editionBreakpoint }) => {
+            // return <FrontLeadOneAndOne></FrontLeadOneAndOne>;
             if (name === "FrontPageSection") {
               return this.renderItem({ index: 0, item: slices[0] });
             }

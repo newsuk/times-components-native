@@ -86,4 +86,12 @@ describe("FrontTileSummary", () => {
 
     expect(renderer.toJSON()).toMatchSnapshot();
   });
+
+  it("renders with keyline", () => {
+    let renderer = ReactTestRenderer.create(
+      <FrontTileSummary {...props} showKeyline={true} />,
+    );
+
+    expect(renderer.toJSON()).toMatchSnapshot();
+  });
 });

@@ -5,12 +5,16 @@ import {
   TileAFront,
   TileBFront,
 } from "@times-components-native/edition-slices/src/tiles";
+// import testSlice from "./testSlice.json";
 
 function renderMedium(props, breakpoint, orientation) {
   const {
     onPress,
     slice: { lead, support },
   } = props;
+
+  // const slice = testSlice;
+  // const { lead, support } = slice;
 
   return (
     <FrontLeadOneAndOneSlice

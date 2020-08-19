@@ -3,21 +3,33 @@ import React from "react";
 import PropTypes from "prop-types";
 import { editionBreakpoints } from "@times-components-native/styleguide";
 import { FrontTileSummary } from "@times-components-native/front-page";
-import { getTileImage, TileLink, withTileTracking, TileImage } from "../shared";
+import {
+  getTileImage,
+  TileLink,
+  withTileTracking,
+  TileImage,
+  getTileStrapline,
+} from "../shared";
 import stylesFactory from "./styles";
+
+const getAspectRatio = (crop) => (crop === "crop32" ? 3 / 2 : 16 / 9);
 
 const TileAFront = ({
   onPress,
   tile,
   orientation,
-  showSummary,
-  showByline,
   breakpoint = editionBreakpoints.small,
 }) => {
-  const crop = getTileImage(tile, "crop32");
+  const showStrapline = breakpoint === editionBreakpoints.huge;
+  const columnCount = orientation === "portrait" ? 3 : 1;
+  const crop =
+    breakpoint === "huge" || orientation === "portrait" ? "crop32" : "crop169";
+  const showSummary = orientation === "portrait";
+
+  const imageCrop = getTileImage(tile, crop);
   const styles = stylesFactory(breakpoint);
 
-  if (!crop) {
+  if (!imageCrop) {
     return null;
   }
 
@@ -30,13 +42,13 @@ const TileAFront = ({
   return (
     <TileLink onPress={onPress} style={styles.container} tile={tile}>
       <TileImage
-        aspectRatio={3 / 2}
-        relativeWidth={crop.relativeWidth}
-        relativeHeight={crop.relativeHeight}
-        relativeHorizontalOffset={crop.relativeHorizontalOffset}
-        relativeVerticalOffset={crop.relativeVerticalOffset}
+        aspectRatio={getAspectRatio(crop)}
+        relativeWidth={imageCrop.relativeWidth}
+        relativeHeight={imageCrop.relativeHeight}
+        relativeHorizontalOffset={imageCrop.relativeHorizontalOffset}
+        relativeVerticalOffset={imageCrop.relativeVerticalOffset}
         style={styles.imageContainer}
-        uri={crop.url}
+        uri={imageCrop.url}
         fill
         hasVideo={hasVideo}
       />
@@ -46,11 +58,13 @@ const TileAFront = ({
             ? styles.headlineLandscape
             : styles.headlinePortrait
         }
-        summary={summary}
+        summary={showSummary && summary}
         summaryStyle={styles.summary}
+        strapline={showStrapline && getTileStrapline(tile)}
+        straplineStyle={styles.strapline}
         containerStyle={styles.summaryContainer}
         tile={tile}
-        columnCount={3}
+        columnCount={columnCount}
         bylines={tile.article.bylines}
       />
     </TileLink>

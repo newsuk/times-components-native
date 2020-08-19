@@ -10,10 +10,12 @@ import PositionedTileStar from "../shared/positioned-tile-star";
 const TileBFront = ({
   onPress,
   tile,
-  showKeyline,
+  orientation,
   breakpoint = editionBreakpoints.wide,
 }) => {
-  const crop = getTileImage(tile, "crop169");
+  const showKeyline = orientation === "portrait";
+
+  const crop = getTileImage(tile, "crop32");
   const styles = stylesFactory(breakpoint);
 
   if (!crop) return null;
@@ -36,7 +38,11 @@ const TileBFront = ({
         hasVideo={hasVideo}
       />
       <FrontTileSummary
-        headlineStyle={styles.headlinePortrait}
+        headlineStyle={
+          orientation === "portrait"
+            ? styles.headlinePortrait
+            : styles.headlineLandscape
+        }
         summary={tile.article.content}
         summaryStyle={styles.summary}
         showKeyline={showKeyline}

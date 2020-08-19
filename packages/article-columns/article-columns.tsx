@@ -38,6 +38,9 @@ export const ArticleColumns: React.FC<Props> = ({
   lineHeight = 18,
   style,
 }) => {
+  // rendering columns with 0 height results in an infinite loop when chunking the content into columns. The height can be 0 during initial page render/reorientation
+  if (containerHeight === 0) return null;
+
   const paragraphs = articleContents
     .filter((c): c is ParagraphContent => c.name === "paragraph")
     .map(assignWithId(containerHeight));
@@ -73,7 +76,6 @@ export const ArticleColumns: React.FC<Props> = ({
               columnParameters={columnParameters}
               renderBefore={() => (
                 <FrontPageByline
-                  withKeyline={true}
                   byline={bylines}
                   containerStyle={{
                     marginBottom: articleMeasurements.bylineMargin ?? 0,
