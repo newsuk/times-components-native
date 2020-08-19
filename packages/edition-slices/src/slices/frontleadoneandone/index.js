@@ -5,16 +5,12 @@ import {
   TileAFront,
   TileBFront,
 } from "@times-components-native/edition-slices/src/tiles";
-// import testSlice from "./testSlice.json";
 
 function renderMedium(props, breakpoint, orientation) {
   const {
     onPress,
     slice: { lead, support },
   } = props;
-
-  // const slice = testSlice;
-  // const { lead, support } = slice;
 
   return (
     <FrontLeadOneAndOneSlice
@@ -33,6 +29,7 @@ function renderMedium(props, breakpoint, orientation) {
           onPress={onPress}
           tile={support}
           tileName="support"
+          orientation={orientation}
           showKeyline={orientation === "portrait"}
         />
       }

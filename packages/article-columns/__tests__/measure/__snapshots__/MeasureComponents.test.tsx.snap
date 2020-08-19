@@ -58,7 +58,7 @@ exports[`MeasureByline renders the byline 1`] = `
         "marginBottom": 0,
       }
     }
-    withKeyline={true}
+    showKeyline={true}
   />
 </View>
 `;

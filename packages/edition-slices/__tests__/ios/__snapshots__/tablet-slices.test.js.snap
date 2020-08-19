@@ -633,6 +633,7 @@ exports[`18. front lead two no pic and two - medium 1`] = `
     <View>
       <TileBFront
         breakpoint="medium"
+        orientation="landscape"
         showKeyline={false}
         tileName="support"
       />
@@ -1280,6 +1281,7 @@ exports[`36. front lead two no pic and two - wide 1`] = `
     <View>
       <TileBFront
         breakpoint="wide"
+        orientation="landscape"
         showKeyline={false}
         tileName="support"
       />
@@ -1962,6 +1964,7 @@ exports[`54. front lead two no pic and two - huge 1`] = `
       <View>
         <TileBFront
           breakpoint="huge"
+          orientation="landscape"
           showKeyline={false}
           tileName="support"
         />

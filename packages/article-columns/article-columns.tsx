@@ -76,6 +76,7 @@ export const ArticleColumns: React.FC<Props> = ({
               columnParameters={columnParameters}
               renderBefore={() => (
                 <FrontPageByline
+                  showKeyline={true}
                   byline={bylines}
                   containerStyle={{
                     marginBottom: articleMeasurements.bylineMargin ?? 0,

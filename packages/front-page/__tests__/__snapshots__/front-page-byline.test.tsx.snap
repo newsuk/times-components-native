@@ -10,7 +10,7 @@ exports[`FrontPageByline renders with container style 1`] = `
       Object {
         "marginBottom": 100,
       },
-      undefined,
+      false,
     ]
   }
 >
@@ -45,7 +45,11 @@ exports[`FrontPageByline renders with keyline 1`] = `
         "marginBottom": 5,
       },
       undefined,
-      undefined,
+      Object {
+        "borderColor": "#999999",
+        "borderTopWidth": 1,
+        "paddingTop": 5,
+      },
     ]
   }
 >
@@ -80,7 +84,7 @@ exports[`FrontPageByline renders without keyline 1`] = `
         "marginBottom": 5,
       },
       undefined,
-      undefined,
+      false,
     ]
   }
 >
