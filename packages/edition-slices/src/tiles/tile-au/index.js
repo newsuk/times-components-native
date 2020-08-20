@@ -12,7 +12,7 @@ import styles from "./styles";
 import PositionedTileStar from "../shared/positioned-tile-star";
 
 const TileAT = ({ onPress, tile }) => {
-  const crop = getTileImage(tile, "crop32");
+  const crop = getTileImage(tile, "crop169");
 
   if (!crop) {
     return null;

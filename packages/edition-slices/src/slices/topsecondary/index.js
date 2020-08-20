@@ -1,125 +1,101 @@
-import React, { Component } from "react";
+import React from "react";
 import { TopSecondarySlice } from "@times-components-native/slice-layout";
 import { TileAT, TileAU, TileAV } from "../../tiles";
 import { ResponsiveSlice } from "../shared";
 
-class TopSecondary extends Component {
-  constructor(props) {
-    super(props);
-    this.renderMedium = this.renderMedium.bind(this);
-    this.renderWide = this.renderWide.bind(this);
-  }
+const renderPortrait = (props, breakpoint) => {
+  const { onPress, slice } = props;
 
-  transformSliceItems(slice) {
-    return slice.name === "TopSecondaryFourSlice"
-      ? {
-          lead: slice.secondary1,
-          support1: slice.secondary2,
-          support2: slice.secondary3,
-          support3: slice.secondary4,
-        }
-      : {
-          lead: slice.secondary1,
-          support1: slice.secondary2,
-          support2: slice.support1,
-          support3: slice.support2,
-        };
-  }
+  const items = slice.items;
 
-  renderMedium(breakpoint) {
-    const { onPress, slice } = this.props;
+  return (
+    <TopSecondarySlice
+      breakpoint={breakpoint}
+      lead={
+        <TileAT
+          onPress={onPress}
+          tile={items[0]}
+          tileName="lead"
+          breakpoint={breakpoint}
+        />
+      }
+      support1={
+        <TileAV
+          breakpoint={breakpoint}
+          onPress={onPress}
+          tile={items[1]}
+          tileName="support1"
+        />
+      }
+      support2={
+        <TileAV
+          breakpoint={breakpoint}
+          onPress={onPress}
+          tile={items[2]}
+          tileName="support2"
+        />
+      }
+      support3={
+        <TileAV
+          breakpoint={breakpoint}
+          onPress={onPress}
+          tile={items[3]}
+          tileName="support3"
+        />
+      }
+    />
+  );
+};
 
-    const items = this.transformSliceItems(slice);
+const renderLandscape = (props, breakpoint) => {
+  const { onPress, slice } = props;
+  const items = slice.items;
+  return (
+    <TopSecondarySlice
+      breakpoint={breakpoint}
+      lead={
+        <TileAU
+          onPress={onPress}
+          tile={items[0]}
+          tileName="lead"
+          breakpoint={breakpoint}
+        />
+      }
+      support1={
+        <TileAV
+          breakpoint={breakpoint}
+          onPress={onPress}
+          tile={items[1]}
+          tileName="support1"
+        />
+      }
+      support2={
+        <TileAV
+          breakpoint={breakpoint}
+          onPress={onPress}
+          tile={items[2]}
+          tileName="support2"
+        />
+      }
+      support3={
+        <TileAV
+          breakpoint={breakpoint}
+          onPress={onPress}
+          tile={items[3]}
+          tileName="support3"
+        />
+      }
+    />
+  );
+};
 
-    return (
-      <TopSecondarySlice
-        breakpoint={breakpoint}
-        lead={
-          <TileAT
-            onPress={onPress}
-            tile={items.lead}
-            tileName="lead"
-            breakpoint={breakpoint}
-          />
-        }
-        support1={
-          <TileAV
-            breakpoint={breakpoint}
-            onPress={onPress}
-            tile={items.support1}
-            tileName="support1"
-          />
-        }
-        support2={
-          <TileAV
-            breakpoint={breakpoint}
-            onPress={onPress}
-            tile={items.support2}
-            tileName="support2"
-          />
-        }
-        support3={
-          <TileAV
-            breakpoint={breakpoint}
-            onPress={onPress}
-            tile={items.support3}
-            tileName="support3"
-          />
-        }
-      />
-    );
-  }
+const TopSecondary = (props) => {
+  const renderSlice = (breakpoint, orientation) =>
+    orientation === "portrait"
+      ? renderPortrait(props, breakpoint)
+      : renderLandscape(props, breakpoint);
 
-  renderWide(breakpoint) {
-    const { onPress, slice } = this.props;
-    const items = this.transformSliceItems(slice);
-    return (
-      <TopSecondarySlice
-        breakpoint={breakpoint}
-        lead={
-          <TileAU
-            onPress={onPress}
-            tile={items.lead}
-            tileName="lead"
-            breakpoint={breakpoint}
-          />
-        }
-        support1={
-          <TileAV
-            breakpoint={breakpoint}
-            onPress={onPress}
-            tile={items.support1}
-            tileName="support1"
-          />
-        }
-        support2={
-          <TileAV
-            breakpoint={breakpoint}
-            onPress={onPress}
-            tile={items.support2}
-            tileName="support2"
-          />
-        }
-        support3={
-          <TileAV
-            breakpoint={breakpoint}
-            onPress={onPress}
-            tile={items.support3}
-            tileName="support3"
-          />
-        }
-      />
-    );
-  }
-
-  render() {
-    return (
-      <ResponsiveSlice
-        renderMedium={this.renderMedium}
-        renderWide={this.renderWide}
-      />
-    );
-  }
-}
+  return <ResponsiveSlice renderMedium={renderSlice} />;
+};
 
 export default TopSecondary;

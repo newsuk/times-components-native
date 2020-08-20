@@ -1505,7 +1505,7 @@ exports[`18. top secondary (from topsecondaryfourslice) - medium 1`] = `
         }
       }
     >
-      <TileAT />
+      <TileAU />
     </View>
     <View
       style={
@@ -1578,7 +1578,7 @@ exports[`19. top secondary (from topsecondarytwoandtwoslice) - medium 1`] = `
         }
       }
     >
-      <TileAT />
+      <TileAU />
     </View>
     <View
       style={
@@ -1651,7 +1651,7 @@ exports[`20. top secondary (from topsecondarytwonopicandtwoslice) - medium 1`] =
         }
       }
     >
-      <TileAT />
+      <TileAU />
     </View>
     <View
       style={
