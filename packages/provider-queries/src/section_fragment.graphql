@@ -1128,11 +1128,13 @@ fragment frontSlicesSection on FrontPageSectionSlice {
   ... on LeadOneAndOneFrontSlice {
     lead {
       headline
+      strapline
       leadAsset {
         ...leadAsset169and32
       }
       article {
         ...baseArticleProps
+        strapline
         content
         leadAsset {
           ...leadAsset169and32
