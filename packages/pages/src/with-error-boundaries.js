@@ -25,6 +25,7 @@ export const withErrorBoundaries = (WrappedComponent, extras = {}) =>
 
       return hasError ? (
         <ArticleError
+          title={extras.title}
           message={extras.message}
           buttonText={extras.buttonText}
           refetch={extras.onAction}

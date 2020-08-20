@@ -78,18 +78,11 @@ exports[`1. renders correctly 1`] = `
                   ]
                 }
                 opacity={1}
-                stroke={
-                  Array [
-                    1,
-                    1,
-                    1,
-                    1,
-                  ]
-                }
+                stroke="#ffffff"
                 strokeCap={1}
                 strokeDash={null}
                 strokeJoin={1}
-                strokeWidth={1}
+                strokeWidth={null}
                 transform={
                   Array [
                     1,

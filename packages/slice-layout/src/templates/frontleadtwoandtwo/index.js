@@ -40,9 +40,21 @@ const FrontLeadTwoNoPicAndTwoSlice = ({
   }
   const styles = stylesFactory(breakpoint);
 
-  const wrappedLead1 = <View style={{ flex: 6 }}>{lead1}</View>;
-  const wrappedLead2 = <View style={{ flex: 4 }}>{lead2}</View>;
-  const wrappedSupport2 = <View style={{ flex: 1 }}>{support2}</View>;
+  const wrappedLead1 = (
+    <View style={{ flex: 6 }} tileName={lead1.props.tileName}>
+      {lead1}
+    </View>
+  );
+  const wrappedLead2 = (
+    <View style={{ flex: 4 }} tileName={lead2.props.tileName}>
+      {lead2}
+    </View>
+  );
+  const wrappedSupport2 = (
+    <View style={{ flex: 1 }} tileName={support2.props.tileName}>
+      {support2}
+    </View>
+  );
   const windowWidth = Dimensions.get("window").width;
 
   if (orientation === "landscape") {

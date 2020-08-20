@@ -1,4 +1,5 @@
 import React from "react";
+import { Image } from "react-native";
 import TestRenderer, { act } from "react-test-renderer";
 import fetchMock from "fetch-mock";
 
@@ -48,26 +49,36 @@ const fakeResponse = {
   },
 };
 
-jest.useFakeTimers();
+describe("responsive-graphics.test.js", () => {
+  jest.useFakeTimers();
 
-it("render correctly", () => {
-  const testInstance = TestRenderer.create(
-    <ResponsiveImageInteractive deckId={100} />,
-  );
-  expect(testInstance.toJSON()).toMatchSnapshot();
-});
-
-it("render images", async () => {
-  fetchMock.mock(
-    "https://gobble.timesdev.tools/deck/api/deck-post-action/100",
-    fakeResponse,
-    200,
-  );
-  const testInstance = TestRenderer.create(
-    <ResponsiveImageInteractive deckId={100} />,
-  );
-  await act(async () => {
-    await jest.runAllImmediates();
+  it("render correctly", () => {
+    const testInstance = TestRenderer.create(
+      <ResponsiveImageInteractive deckId={100} />,
+    );
+    expect(testInstance.toJSON()).toMatchSnapshot();
   });
-  expect(testInstance.toJSON()).toMatchSnapshot();
+
+  it("render images", async () => {
+    fetchMock.mock(
+      "https://gobble.timesdev.tools/deck/api/deck-post-action/100",
+      fakeResponse,
+      200,
+    );
+
+    const getSizeMock = jest.spyOn(Image, "getSize");
+    getSizeMock.mockImplementation((uri, callback) => {
+      callback(664, 240);
+    });
+
+    const testInstance = TestRenderer.create(
+      <ResponsiveImageInteractive deckId={100} />,
+    );
+
+    await act(async () => {
+      await jest.runAllImmediates();
+    });
+
+    expect(testInstance.toJSON()).toMatchSnapshot();
+  });
 });
