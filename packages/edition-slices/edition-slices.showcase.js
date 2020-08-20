@@ -1,44 +1,41 @@
 import React from "react";
-import { ScrollView, View } from "react-native";
+import { ScrollView } from "react-native";
 import {
-  mockDailyRegisterSlice,
-  mockLeadOneAndFourSlice,
-  mockStandardSlice,
   mockCommentLeadAndCartoonSlice,
-  mockLeadOneFullWidthSlice,
-  mockLeadOneAndOneSlice,
-  mockLeadTwoNoPicAndTwoSlice,
+  mockDailyRegisterSlice,
   mockLeadersSlice,
-  mockSecondaryOneSlice,
-  mockSecondaryOneAndColumnistSlice,
-  mockSecondaryFourSlice,
+  mockLeadOneAndFourSlice,
+  mockLeadOneAndOneSlice,
+  mockLeadOneFullWidthSlice,
+  mockLeadTwoNoPicAndTwoSlice,
   mockListTwoAndSixNoPicSlice,
+  mockSecondaryFourSlice,
+  mockSecondaryOneAndColumnistSlice,
   mockSecondaryOneAndFourSlice,
+  mockSecondaryOneSlice,
   mockSecondaryTwoAndTwoSlice,
   mockSecondaryTwoNoPicAndTwoSlice,
+  mockStandardSlice,
 } from "@times-components-native/fixture-generator";
 import { SectionContext } from "@times-components-native/context";
 import Responsive from "@times-components-native/responsive";
 import {
   CommentLeadAndCartoonSlice,
+  DailyRegisterLeadFourSlice,
+  LeadersSlice,
   LeadOneAndFourSlice,
   LeadOneAndOneSlice,
   LeadOneFullWidthSlice,
   LeadTwoNoPicAndTwoSlice,
   ListTwoAndSixNoPicSlice,
-  SecondaryOneSlice,
-  SecondaryOneAndColumnistSlice,
   SecondaryFourSlice,
+  SecondaryOneAndColumnistSlice,
   SecondaryOneAndFourSlice,
+  SecondaryOneSlice,
   SecondaryTwoAndTwoSlice,
   SecondaryTwoNoPicAndTwoSlice,
-  LeadersSlice,
-  DailyRegisterLeadFourSlice,
   StandardSlice,
-  LeadTwoNoPicAndTwoFrontSlice,
-  LeadOneAndOneFrontSlice,
 } from "./src/slices";
-import { mockFrontLeadTwoNoPicAndTwoSlice } from "@times-components-native/fixture-generator/src/mock-slice";
 
 const preventDefaultedAction = (decorateAction) =>
   decorateAction([
@@ -60,38 +57,28 @@ const savedArticles = {
 };
 
 /* eslint-disable react/prop-types */
-const renderSlice = (Component, data, scroll = true) => (
-  { select },
-  { decorateAction },
-) => {
-  const slice = (
-    <SectionContext.Provider
-      value={{
-        onArticleSavePress: select(
-          "onArticleSavePress:",
-          onArticleSavePress,
-          null,
-        ),
-        publicationName: select("Publication:", publications, "TIMES"),
-        savedArticles: select("savedArticles:", savedArticles, null),
-      }}
-    >
-      <Component
-        onPress={preventDefaultedAction(decorateAction)("onPress")}
-        slice={data}
-      />
-    </SectionContext.Provider>
-  );
-  return (
-    <Responsive>
-      {scroll ? (
-        <ScrollView>{slice}</ScrollView>
-      ) : (
-        <View style={{ flex: 1 }}>{slice}</View>
-      )}
-    </Responsive>
-  );
-};
+const renderSlice = (Component, data) => ({ select }, { decorateAction }) => (
+  <Responsive>
+    <ScrollView>
+      <SectionContext.Provider
+        value={{
+          onArticleSavePress: select(
+            "onArticleSavePress:",
+            onArticleSavePress,
+            null,
+          ),
+          publicationName: select("Publication:", publications, "TIMES"),
+          savedArticles: select("savedArticles:", savedArticles, null),
+        }}
+      >
+        <Component
+          onPress={preventDefaultedAction(decorateAction)("onPress")}
+          slice={data}
+        />
+      </SectionContext.Provider>
+    </ScrollView>
+  </Responsive>
+);
 
 const sliceStories = [
   {
@@ -171,18 +158,6 @@ const sliceStories = [
     mock: mockCommentLeadAndCartoonSlice(),
     name: "Comment Lead And Cartoon (Mobile: P,Q, Tablet: AH, AI)",
     Slice: CommentLeadAndCartoonSlice,
-  },
-  {
-    mock: mockFrontLeadTwoNoPicAndTwoSlice(),
-    name: "Front Lead Two No Pic And Two",
-    Slice: LeadTwoNoPicAndTwoFrontSlice,
-    scroll: false,
-  },
-  {
-    mock: mockLeadOneAndOneSlice(),
-    name: "Front Lead One And One",
-    Slice: LeadOneAndOneFrontSlice,
-    scroll: false,
   },
 ];
 

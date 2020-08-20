@@ -20,8 +20,8 @@ import {
   getPuzzleSlices,
   mockSecondaryOneAndFourSlice,
   mockListTwoAndSixNoPicSlice,
-  mockFrontLeadOneAndOneSlice,
-  mockFrontLeadTwoNoPicAndTwoSlice,
+  mockLeadOneAndOneFrontSlice,
+  mockLeadTwoNoPicAndTwoFrontSlice,
 } from "@times-components-native/fixture-generator";
 import Responsive from "@times-components-native/responsive";
 import "./mocks";
@@ -128,12 +128,12 @@ const slices = [
     Slice: PuzzleSlice,
   },
   {
-    mock: mockFrontLeadTwoNoPicAndTwoSlice(),
+    mock: mockLeadTwoNoPicAndTwoFrontSlice(),
     name: "front lead two no pic and two",
     Slice: LeadTwoNoPicAndTwoFrontSlice,
   },
   {
-    mock: mockFrontLeadOneAndOneSlice(),
+    mock: mockLeadOneAndOneFrontSlice(),
     name: "front lead two no pic and two",
     Slice: LeadOneAndOneFrontSlice,
   },

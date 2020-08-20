@@ -27,8 +27,8 @@ import mockEditionSlice, {
   mockSecondaryTwoAndTwoSlice,
   mockSecondaryTwoNoPicAndTwoSlice,
   mockPuzzleSlice,
-  mockFrontLeadTwoNoPicAndTwoSlice,
-  mockFrontLeadOneAndOneSlice,
+  mockLeadTwoNoPicAndTwoFrontSlice,
+  mockLeadOneAndOneFrontSlice,
 } from "./src/mock-slice";
 import MockTile from "./src/mock-tile";
 import MockTopic from "./src/mock-topic";
@@ -63,6 +63,6 @@ export {
   MockTile,
   MockTopic,
   mockPuzzleSlice,
-  mockFrontLeadTwoNoPicAndTwoSlice,
-  mockFrontLeadOneAndOneSlice,
+  mockLeadTwoNoPicAndTwoFrontSlice,
+  mockLeadOneAndOneFrontSlice,
 };
