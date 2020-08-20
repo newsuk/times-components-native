@@ -25,6 +25,7 @@ import MockPuzzle from "./mock-puzzle";
 
 import MockTile from "./mock-tile";
 import MockDailyRegister from "./mock-daily-register";
+import MockMarkup from "@times-components-native/fixture-generator/src/mock-markup";
 
 interface LeadOneAndFourSliceWithName extends LeadOneAndFourSlice {
   name: string;
@@ -204,15 +205,48 @@ function mockLeadTwoNoPicAndTwoSlice(): LeadTwoNoPicAndTwoSliceWithName {
   };
 }
 
-function mockFrontLeadTwoNoPicAndTwoSlice(): LeadTwoNoPicAndTwoSliceWithName {
+function mockLeadTwoNoPicAndTwoFrontSlice(): LeadTwoNoPicAndTwoSliceWithName {
   const tiles = getTiles(4);
+  const leadTile = {
+    ...tiles[0],
+    article: {
+      ...tiles[0].article,
+      content: new MockMarkup().addParagraphs(20).get(),
+    },
+  };
+
   return <LeadTwoNoPicAndTwoSliceWithName>{
-    name: "LeadTwoNoPicandTwoFrontSlice",
-    lead1: tiles[0],
+    name: "LeadTwoNoPicAndTwoFrontSlice",
+    lead1: leadTile,
     lead2: tiles[1],
     support1: tiles[2],
     support2: tiles[3],
-    items: tiles,
+    items: [leadTile, ...tiles.slice(1)],
+  };
+}
+
+function mockLeadOneAndOneFrontSlice(): LeadOneAndOneSliceWithName {
+  const tiles = getTiles(2);
+  const leadTile = {
+    ...tiles[0],
+    article: {
+      ...tiles[0].article,
+      content: new MockMarkup().addParagraphs(20).get(),
+    },
+  };
+  const supportTile = {
+    ...tiles[1],
+    article: {
+      ...tiles[1].article,
+      template: "maincomment",
+      content: new MockMarkup().addParagraphs(20).get(),
+    },
+  };
+  return <LeadOneAndOneSliceWithName>{
+    name: "LeadOneAndOneFrontSlice",
+    lead: leadTile,
+    support: supportTile,
+    items: [leadTile, supportTile],
   };
 }
 
@@ -387,5 +421,6 @@ export {
   mockSecondaryTwoAndTwoSlice,
   mockSecondaryTwoNoPicAndTwoSlice,
   mockPuzzleSlice,
-  mockFrontLeadTwoNoPicAndTwoSlice,
+  mockLeadTwoNoPicAndTwoFrontSlice,
+  mockLeadOneAndOneFrontSlice,
 };

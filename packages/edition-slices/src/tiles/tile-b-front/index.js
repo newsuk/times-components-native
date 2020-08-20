@@ -6,19 +6,20 @@ import { FrontTileSummary } from "@times-components-native/front-page";
 import { getTileImage, TileLink, TileImage, withTileTracking } from "../shared";
 import stylesFactory from "./styles";
 
-const TileALFront = ({
+const TileBFront = ({
   onPress,
   tile,
+  orientation,
   breakpoint = editionBreakpoints.wide,
 }) => {
+  const showKeyline = orientation === "portrait";
+
   const crop = getTileImage(tile, "crop32");
   const styles = stylesFactory(breakpoint);
 
   if (!crop) return null;
 
-  const {
-    article: { hasVideo },
-  } = tile;
+  const { article } = tile;
 
   return (
     <TileLink onPress={onPress} style={styles.container} tile={tile}>
@@ -31,23 +32,32 @@ const TileALFront = ({
         style={styles.imageContainer}
         uri={crop.url}
         fill
-        hasVideo={hasVideo}
+        hasVideo={article.hasVideo}
       />
       <FrontTileSummary
-        headlineStyle={styles.headline}
-        summary={tile.article.content}
-        summaryStyle={styles.summary}
+        headlineStyle={
+          orientation === "portrait"
+            ? styles.headlinePortrait
+            : styles.headlineLandscape
+        }
+        summary={article.content}
+        summaryStyle={
+          article.template === "maincomment"
+            ? styles.commentSummary
+            : styles.summary
+        }
+        showKeyline={showKeyline}
         tile={tile}
-        bylines={tile.article.bylines}
+        bylines={article.bylines}
       />
     </TileLink>
   );
 };
 
-TileALFront.propTypes = {
+TileBFront.propTypes = {
   onPress: PropTypes.func.isRequired,
   tile: PropTypes.shape({}).isRequired,
   breakpoint: PropTypes.string,
 };
 
-export default withTileTracking(TileALFront);
+export default withTileTracking(TileBFront);

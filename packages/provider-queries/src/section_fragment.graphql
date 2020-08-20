@@ -1125,4 +1125,40 @@ fragment frontSlicesSection on FrontPageSectionSlice {
       }
     }
   }
+  ... on LeadOneAndOneFrontSlice {
+    lead {
+      headline
+      strapline
+      leadAsset {
+        ...leadAsset169and32
+      }
+      article {
+        ...baseArticleProps
+        strapline
+        content
+        leadAsset {
+          ...leadAsset169and32
+        }
+        listingAsset {
+          ...leadAsset169and32
+        }
+      }
+    }
+    support {
+      headline
+      leadAsset {
+        ...leadAsset169
+      }
+      article {
+        ...baseArticleProps
+        content
+        leadAsset {
+          ...leadAsset169
+        }
+        listingAsset {
+          ...leadAsset169
+        }
+      }
+    }
+  }
 }
