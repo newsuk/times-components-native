@@ -2,6 +2,9 @@ import "../mocks-tiles";
 import { editionBreakpoints } from "@times-components-native/styleguide";
 import { testTile } from "../shared-tile-utils";
 import { TileBFront } from "../../src/tiles";
+import TestRenderer from "react-test-renderer";
+import React from "react";
+import { MockArticle } from "@times-components-native/fixture-generator";
 
 export default () => {
   describe("tile b front", () => {
@@ -44,5 +47,13 @@ export default () => {
         });
       });
     });
+  });
+
+  it("renders maincomment with left aligned text", () => {
+    const article = new MockArticle().setTemplate("maincomment").get();
+    const output = TestRenderer.create(
+      <TileBFront onPress={() => null} tile={{ article }} />,
+    );
+    expect(output).toMatchSnapshot();
   });
 };

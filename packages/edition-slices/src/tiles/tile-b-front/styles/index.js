@@ -40,6 +40,10 @@ export default (breakpoint) => ({
     width: "100%",
     marginBottom: spacing(2),
   },
+  commentSummary: {
+    ...globalSpacingStyles.tabletTeaser,
+    textAlign: "left",
+  },
   summary: {
     ...globalSpacingStyles.tabletTeaser,
     textAlign: "justify",

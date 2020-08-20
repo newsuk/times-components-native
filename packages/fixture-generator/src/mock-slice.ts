@@ -238,6 +238,7 @@ function mockLeadOneAndOneFrontSlice(): LeadOneAndOneSliceWithName {
     ...tiles[1],
     article: {
       ...tiles[1].article,
+      template: "maincomment",
       content: new MockMarkup().addParagraphs(20).get(),
     },
   };

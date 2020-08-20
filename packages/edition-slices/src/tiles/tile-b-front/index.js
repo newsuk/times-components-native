@@ -5,7 +5,6 @@ import { editionBreakpoints } from "@times-components-native/styleguide";
 import { FrontTileSummary } from "@times-components-native/front-page";
 import { getTileImage, TileLink, TileImage, withTileTracking } from "../shared";
 import stylesFactory from "./styles";
-import PositionedTileStar from "../shared/positioned-tile-star";
 
 const TileBFront = ({
   onPress,
@@ -20,9 +19,7 @@ const TileBFront = ({
 
   if (!crop) return null;
 
-  const {
-    article: { hasVideo },
-  } = tile;
+  const { article } = tile;
 
   return (
     <TileLink onPress={onPress} style={styles.container} tile={tile}>
@@ -35,7 +32,7 @@ const TileBFront = ({
         style={styles.imageContainer}
         uri={crop.url}
         fill
-        hasVideo={hasVideo}
+        hasVideo={article.hasVideo}
       />
       <FrontTileSummary
         headlineStyle={
@@ -43,13 +40,16 @@ const TileBFront = ({
             ? styles.headlinePortrait
             : styles.headlineLandscape
         }
-        summary={tile.article.content}
-        summaryStyle={styles.summary}
+        summary={article.content}
+        summaryStyle={
+          article.template === "maincomment"
+            ? styles.commentSummary
+            : styles.summary
+        }
         showKeyline={showKeyline}
         tile={tile}
-        bylines={tile.article.bylines}
+        bylines={article.bylines}
       />
-      <PositionedTileStar articleId={tile.article.id} />
     </TileLink>
   );
 };
