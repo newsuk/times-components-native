@@ -29,15 +29,9 @@ const TileAFront = ({
   const imageCrop = getTileImage(tile, crop);
   const styles = stylesFactory(breakpoint);
 
-  if (!imageCrop) {
-    return null;
-  }
+  if (!imageCrop) return null;
 
-  const {
-    article: { hasVideo },
-  } = tile;
-
-  const summary = tile.article.content;
+  const { article } = tile;
 
   return (
     <TileLink onPress={onPress} style={styles.container} tile={tile}>
@@ -50,7 +44,7 @@ const TileAFront = ({
         style={styles.imageContainer}
         uri={imageCrop.url}
         fill
-        hasVideo={hasVideo}
+        hasVideo={article.hasVideo}
       />
       <FrontTileSummary
         headlineStyle={
@@ -58,14 +52,14 @@ const TileAFront = ({
             ? styles.headlineLandscape
             : styles.headlinePortrait
         }
-        summary={showSummary && summary}
+        summary={showSummary && article.content}
         summaryStyle={styles.summary}
         strapline={showStrapline && getTileStrapline(tile)}
         straplineStyle={styles.strapline}
         containerStyle={styles.summaryContainer}
         tile={tile}
         columnCount={columnCount}
-        bylines={tile.article.bylines}
+        bylines={article.bylines}
       />
     </TileLink>
   );
