@@ -3,12 +3,7 @@ import WebView from "react-native-webview";
 import { Linking, View } from "react-native";
 import { WebViewNavigation } from "react-native-webview/lib/WebViewTypes";
 
-import styleguide from "@times-components-native/styleguide";
-
-// @ts-ignore
-const { colours } = styleguide();
-
-const height = 350;
+import styles from "./styles";
 
 const handleRequest = (e: WebViewNavigation) => {
   if (e.navigationType !== "click") return true;
@@ -24,17 +19,9 @@ interface Props {
 export const SponsoredAd: React.FC<Props> = ({ narrowContent = false }) => {
   const contextId = narrowContent ? "244" : "243";
   return (
-    <View
-      style={{
-        borderTopWidth: 1,
-        borderColor: colours.functional.keyline,
-      }}
-    >
+    <View style={styles.sponsoredAdWrapper}>
       <WebView
-        style={{
-          flex: 0,
-          height,
-        }}
+        style={styles.sponsoredAd}
         originWhitelist={["*"]}
         onShouldStartLoadWithRequest={handleRequest}
         scrollEnabled={false}
