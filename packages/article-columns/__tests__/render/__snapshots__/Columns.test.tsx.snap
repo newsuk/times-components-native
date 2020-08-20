@@ -5,7 +5,7 @@ exports[`SingleColumn renders correctly 1`] = `
   style={
     Array [
       Object {
-        "marginRight": 10,
+        "marginRight": 20,
       },
       Object {
         "width": 100,

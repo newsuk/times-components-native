@@ -6,12 +6,12 @@ import { Markup } from "@times-components-native/fixture-generator/src/types";
 
 interface Props {
   byline: Markup;
-  withKeyline: boolean;
+  showKeyline?: boolean;
   containerStyle?: ViewStyle;
 }
 export const FrontPageByline: React.FC<Props> = ({
   byline,
-  withKeyline,
+  showKeyline,
   containerStyle,
 }) => {
   const styles = styleFactory();
@@ -20,7 +20,7 @@ export const FrontPageByline: React.FC<Props> = ({
       style={[
         styles.bylineContainer,
         containerStyle,
-        withKeyline && styles.withKeyline,
+        showKeyline && styles.withKeyline,
       ]}
     >
       <Text>

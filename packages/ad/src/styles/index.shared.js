@@ -90,6 +90,14 @@ const styles = {
     justifyContent: "center",
     overflow: "hidden",
   },
+  sponsoredAdWrapper: {
+    borderTopWidth: 1,
+    borderColor: colours.functional.keyline,
+  },
+  sponsoredAd: {
+    flex: 0,
+    height: 350,
+  },
 };
 
 export default styles;

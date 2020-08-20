@@ -16,11 +16,12 @@ import {
   mockSecondaryTwoNoPicAndTwoSlice,
   mockSecondaryOneAndColumnistSlice,
   mockSecondaryTwoAndTwoSlice,
-  mockFrontLeadTwoNoPicAndTwoSlice,
   mockStandardSlice,
   getPuzzleSlices,
   mockSecondaryOneAndFourSlice,
   mockListTwoAndSixNoPicSlice,
+  mockLeadOneAndOneFrontSlice,
+  mockLeadTwoNoPicAndTwoFrontSlice,
 } from "@times-components-native/fixture-generator";
 import Responsive from "@times-components-native/responsive";
 import "./mocks";
@@ -42,6 +43,7 @@ import {
   StandardSlice,
   ListTwoAndSixNoPicSlice,
   LeadTwoNoPicAndTwoFrontSlice,
+  LeadOneAndOneFrontSlice,
   TopSecondarySlice,
 } from "../src/slices";
 
@@ -127,16 +129,28 @@ const slices = [
     Slice: PuzzleSlice,
   },
   {
-    mock: mockFrontLeadTwoNoPicAndTwoSlice(),
+    mock: mockLeadTwoNoPicAndTwoFrontSlice(),
     name: "front lead two no pic and two - landscape",
     Slice: LeadTwoNoPicAndTwoFrontSlice,
     orientation: "landscape",
   },
   {
-    mock: mockFrontLeadTwoNoPicAndTwoSlice(),
+    mock: mockLeadTwoNoPicAndTwoFrontSlice(),
     name: "front lead two no pic and two - portrait",
     Slice: LeadTwoNoPicAndTwoFrontSlice,
     orientation: "portrait",
+  },
+  {
+    mock: mockLeadOneAndOneFrontSlice(),
+    name: "front lead one and one - portrait",
+    Slice: LeadOneAndOneFrontSlice,
+    orientation: "portrait",
+  },
+  {
+    mock: mockLeadOneAndOneFrontSlice(),
+    name: "front lead one and one - landscape",
+    Slice: LeadOneAndOneFrontSlice,
+    orientation: "landscape",
   },
   {
     mock: mockSecondaryFourSlice(),

@@ -27,7 +27,9 @@ exports[`2. article extras content on tablet 1`] = `
     commentsEnabled={true}
     url="dummy-article-url"
   />
-  <SponsoredAd />
+  <SponsoredAd
+    narrowContent={false}
+  />
 </View>
 `;
 
