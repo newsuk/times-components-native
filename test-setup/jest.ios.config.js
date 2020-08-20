@@ -11,7 +11,6 @@ module.exports = {
   ],
   setupFilesAfterEnv: [],
   rootDir: "../",
-  // testMatch: ["**/__tests__/**/?(*.)+(spec|test).[jt]s?(x)"],
   testMatch: ["**/__tests__/ios/*.test.js"],
   testURL: "http://localhost",
   transform: {
