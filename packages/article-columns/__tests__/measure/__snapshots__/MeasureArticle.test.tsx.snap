@@ -1,0 +1,102 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`MeasureArticle outputs rendered content once everything has been measured 1`] = `null`;
+
+exports[`MeasureArticle renders everything to be measured 1`] = `
+<RCTScrollView
+  style={
+    Object {
+      "transform": Array [
+        Object {
+          "translateX": -1000,
+        },
+      ],
+    }
+  }
+>
+  <View>
+    <MeasureByline
+      bylines={
+        Array [
+          Object {
+            "byline": Array [
+              Object {
+                "attributes": Object {
+                  "slug": "richard-lloyd-parry",
+                },
+                "children": Array [
+                  Object {
+                    "attributes": Object {
+                      "value": "Richard Lloyd Parry",
+                    },
+                    "children": Array [],
+                    "name": "text",
+                  },
+                ],
+                "name": "author",
+              },
+            ],
+            "image": null,
+          },
+          Object {
+            "byline": Array [
+              Object {
+                "children": Array [
+                  Object {
+                    "attributes": Object {
+                      "value": ", Hanoi",
+                    },
+                    "children": Array [],
+                    "name": "text",
+                  },
+                ],
+                "name": "inline",
+              },
+            ],
+            "image": null,
+          },
+        ]
+      }
+      columnParameters={
+        Object {
+          "columnCount": 3,
+          "columnHeight": 2000,
+          "columnLineHeight": 20,
+          "columnWidth": 110,
+        }
+      }
+    />
+    <View
+      style={
+        Object {
+          "width": 110,
+        }
+      }
+    >
+      <MeasureContent
+        content={
+          Object {
+            "children": Array [
+              Object {
+                "attributes": Object {
+                  "value": "line1",
+                },
+                "children": Array [],
+                "name": "text",
+              },
+            ],
+            "id": "p1",
+            "name": "paragraph",
+          }
+        }
+        style={
+          Object {
+            "fontSize": 14,
+            "lineHeight": 18,
+          }
+        }
+      />
+    </View>
+  </View>
+</RCTScrollView>
+`;

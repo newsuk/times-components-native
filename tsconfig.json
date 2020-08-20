@@ -10,7 +10,6 @@
     "moduleResolution": "node",
     "noEmit": true,
     "noUnusedLocals": true,
-    "noUnusedParameters": true,
     "paths": {
       "@times-components-native/*": ["packages/*"]
     },

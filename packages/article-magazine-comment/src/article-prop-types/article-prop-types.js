@@ -7,7 +7,6 @@ import {
 const articlePropTypes = {
   ...articlePagePropTypes,
   adConfig: PropTypes.shape({}).isRequired,
-  adPosition: PropTypes.number,
   interactiveConfig: PropTypes.shape({}),
   onAuthorPress: PropTypes.func.isRequired,
   onCommentGuidelinesPress: PropTypes.func.isRequired,

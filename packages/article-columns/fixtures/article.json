@@ -1,0 +1,516 @@
+{
+  "data": {
+    "article": {
+      "id": "744807ea-759a-11ea-be30-097bd8237f0d",
+      "publicationName": "TIMES",
+      "section": "news",
+      "updatedTime": "2020-04-04T00:34:19.000Z",
+      "commercialTags": [],
+      "commercialSectionTags": null,
+      "publishedTime": "2020-04-03T23:00:00.000Z",
+      "url": "https://www.thetimes.co.uk/article/teachers-will-calculate-a-level-and-gcse-grades-bg8v7x2s6",
+      "keywords": [
+        "coronavirus",
+        "exam",
+        "pupils",
+        "to",
+        "be",
+        "put",
+        "in",
+        "league",
+        "tables",
+        "for",
+        "results"
+      ],
+      "bylines": [
+        {
+          "byline": [
+            {
+              "name": "author",
+              "attributes": {
+                "slug": "camilla-long"
+              },
+              "children": [
+                {
+                  "name": "text",
+                  "attributes": {
+                    "value": "Camilla Long"
+                  },
+                  "children": []
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "byline": [
+            {
+              "name": "inline",
+              "attributes": {},
+              "children": [
+                {
+                  "name": "text",
+                  "attributes": {
+                    "value": ", Environment Editor"
+                  },
+                  "children": []
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "summary300": [
+        {
+          "name": "paragraph",
+          "children": [
+            {
+              "name": "text",
+              "attributes": {
+                "value": "Boris Johnson has been given oxygen but is not on a ventilator as he fights coronavirus in intensive care, the government said as Michael Gove went into isolation after a family member showed symptoms."
+              },
+              "children": []
+            }
+          ]
+        },
+        {
+          "name": "paragraph",
+          "children": [
+            {
+              "name": "text",
+              "attributes": {
+                "value": "The prime minister was taken to St Thomas’ Hospital’s intensive care unit in central London at 7pm"
+              },
+              "children": []
+            }
+          ]
+        }
+      ],
+      "summary800": [
+        {
+          "name": "paragraph",
+          "children": [
+            {
+              "name": "text",
+              "attributes": {
+                "value": "Boris Johnson has been given oxygen but is not on a ventilator as he fights coronavirus in intensive care, the government said as Michael Gove went into isolation after a family member showed symptoms."
+              },
+              "children": []
+            }
+          ]
+        },
+        {
+          "name": "paragraph",
+          "children": [
+            {
+              "name": "text",
+              "attributes": {
+                "value": "The prime minister was taken to St Thomas’ Hospital’s intensive care unit in central London at 7pm yesterday after his condition worsened and he experienced breathing difficulties. Downing Street said he was conscious and that the move was a precautionary. Pneumonia has not been diagnosed."
+              },
+              "children": []
+            }
+          ]
+        },
+        {
+          "name": "paragraph",
+          "children": [
+            {
+              "name": "text",
+              "attributes": {
+                "value": "Mr Gove, the Cabinet Office minister, discussed Mr Johnson’s condition in interviews this morning. It later emerged that Mr Gove was in isolation after a member of his family displayed symptoms of the virus. He is said to be well and continuing to work from home."
+              },
+              "children": []
+            }
+          ]
+        }
+      ],
+      "content": [
+        {
+          "name": "paragraph",
+          "children": [
+            {
+              "name": "text",
+              "children": [],
+              "attributes": {
+                "value": "Teachers will calculate GCSE and A-level grades this summer by drawing up a league table of pupils in their classes, it was announced yesterday."
+              }
+            }
+          ]
+        },
+        {
+          "name": "paragraph",
+          "children": [
+            {
+              "name": "text",
+              "children": [],
+              "attributes": {
+                "value": "Students will be given a grade based on their predictions, but will also get the chance to sit exams in the autumn."
+              }
+            }
+          ]
+        },
+        {
+          "name": "paragraph",
+          "children": [
+            {
+              "name": "text",
+              "children": [],
+              "attributes": {
+                "value": "Ofqual, the watchdog for exams, said that teenagers would be able to use the higher of the two grades. It raises the possibility of hundreds of thousands of pupils wanting to sit exams at a time when schools and universities are keen to start the next academic year, after effectively being closed for six months."
+              }
+            }
+          ]
+        },
+        {
+          "name": "interactive",
+          "attributes": {
+            "id": "744de6a3-8c95-4ac8-a32e-46f1b1922912",
+            "display": "primary",
+            "url": "https://components.timesdev.tools/lib2/in-article-puff-1.0.0/in-article-puff.html",
+            "element": {
+              "value": "in-article-puff",
+              "attributes": {
+                "deck-id": "30329"
+              }
+            }
+          },
+          "children": []
+        },
+        {
+          "name": "paragraph",
+          "children": [
+            {
+              "name": "text",
+              "children": [],
+              "attributes": {
+                "value": "Many teenagers are likely to stick with their grade from this summer so they can move on to A-level and degree courses. However, universities may allow students who retake A levels in the autumn to join courses in January, catching up through recorded lectures."
+              }
+            }
+          ]
+        },
+        {
+          "name": "paragraph",
+          "children": [
+            {
+              "name": "text",
+              "children": [],
+              "attributes": {
+                "value": "In calculating grades, Ofqual wants schools and colleges to make a “fair and objective” judgment of what they believe each pupil would have achieved. Teachers will use students’ prior attainment and how they had performed so far on their course."
+              }
+            }
+          ]
+        },
+        {
+          "name": "ad",
+          "children": []
+        },
+        {
+          "name": "paragraph",
+          "children": [
+            {
+              "name": "text",
+              "children": [],
+              "attributes": {
+                "value": "Exam officials will monitor these grades to make sure schools are not overly generous. If a school awards a lot of A* grades at A level or 9s at GCSE without having achieved them in previous years, exam boards and the watchdog could downgrade results."
+              }
+            }
+          ]
+        },
+        {
+          "name": "image",
+          "attributes": {
+            "display": "primary",
+            "caption": "Captain Tom and his daughter, Hannah, wave as the RAF planes pass overhead",
+            "credits": "Emma Sohl/Capture the Light Photography",
+            "url": "https://www.thetimes.co.uk/imageserver/image/%2Fmethode%2Ftimes%2Fprod%2Fweb%2Fbin%2F8b5bcf6e-8ab9-11ea-8030-261bf7d8ac38.jpg?crop=5705%2C3803%2C0%2C0",
+            "ratio": "1500:1000",
+            "relativeHorizontalOffset": 0,
+            "relativeVerticalOffset": 0,
+            "relativeWidth": 1,
+            "relativeHeight": 0.9647387113140538
+          },
+          "children": []
+        },
+        {
+          "name": "paragraph",
+          "children": [
+            {
+              "name": "text",
+              "children": [],
+              "attributes": {
+                "value": "The league tables from each school will be divided into grade boundaries. Within each grade teachers will rank candidates from strongest to weakest. If schools are deemed to have given too many pupils high grades, the weakest ones in each banding face being moved down to the next grade."
+              }
+            }
+          ]
+        },
+        {
+          "name": "paragraph",
+          "children": [
+            {
+              "name": "text",
+              "children": [],
+              "attributes": {
+                "value": "Teachers will not be asked to send in supporting documents, but will have to sign a declaration, as will heads of department. They have been urged to take a “holistic” approach when deciding grades, and not to use any work submitted since schools closed on March 18, as this could disadvantage poorer pupils or those who have found it harder to work from home because of family circumstances."
+              }
+            }
+          ]
+        },
+        {
+          "name": "interactive",
+          "attributes": {
+            "id": "bee3edae-8679-48be-b9ff-e1f3ee01b8a9",
+            "display": "primary",
+            "url": "https://components.timesdev.tools/lib2/in-article-puff-1.0.0/in-article-puff.html",
+            "element": {
+              "value": "in-article-puff",
+              "attributes": {
+                "deck-id": "30308"
+              }
+            }
+          },
+          "children": []
+        },
+        {
+          "name": "paragraph",
+          "children": [
+            {
+              "name": "text",
+              "children": [],
+              "attributes": {
+                "value": "In a letter to pupils and their families Sally Collier, the head of Ofqual, urged them not to ask teachers what grade they were submitting. “I understand how unsettling the past weeks have been for you, since the announcement that exams have been cancelled this summer and that you are urgently waiting for news,” she wrote."
+              }
+            }
+          ]
+        },
+        {
+          "name": "paragraph",
+          "children": [
+            {
+              "name": "text",
+              "children": [],
+              "attributes": {
+                "value": "“Our overriding aim in this is to be fair to students and to make sure you are not disadvantaged in your progress to sixth form, college, university, apprenticeships, training or work because of these unprecedented conditions.”"
+              }
+            }
+          ]
+        },
+        {
+          "name": "paragraph",
+          "children": [
+            {
+              "name": "text",
+              "children": [],
+              "attributes": {
+                "value": "Schools and colleges must take into account the “full range” of available evidence when they grade students including non-exam assessment, the results of homework or mock exams and any other records of performance."
+              }
+            }
+          ]
+        },
+        {
+          "name": "paragraph",
+          "children": [
+            {
+              "name": "text",
+              "children": [],
+              "attributes": {
+                "value": "Ms Collier added that “results won’t be delayed after the dates they were expected”. A-level results were due on August 13 and GCSEs on August 20. The deadline for teachers to submit grades will be no earlier than May 29."
+              }
+            }
+          ]
+        },
+        {
+          "name": "image",
+          "attributes": {
+            "display": "primary",
+            "caption": "A Royal Mail post box was painted blue in his honour",
+            "credits": "Paul Childs/Reuters",
+            "url": "https://www.thetimes.co.uk/imageserver/image/%2Fmethode%2Ftimes%2Fprod%2Fweb%2Fbin%2Fcf443aa4-8ab4-11ea-8030-261bf7d8ac38.jpg?crop=4305%2C2870%2C0%2C0",
+            "ratio": "1500:1000",
+            "relativeHorizontalOffset": 0,
+            "relativeVerticalOffset": 0,
+            "relativeWidth": 0.9828767123287672,
+            "relativeHeight": 1
+          },
+          "children": []
+        },
+        {
+          "name": "paragraph",
+          "children": [
+            {
+              "name": "text",
+              "children": [],
+              "attributes": {
+                "value": "Alistair Jarvis, chief executive of Universities UK, which represents vice-chancellors, said: “To provide additional reassurance to students, it is important to note that universities will also have the power to be flexible in taking an applicant’s context into account as part of the admissions process.”"
+              }
+            }
+          ]
+        },
+        {
+          "name": "paragraph",
+          "children": [
+            {
+              "name": "text",
+              "children": [],
+              "attributes": {
+                "value": "The Association of School and College Leaders also supported the plan."
+              }
+            }
+          ]
+        },
+        {
+          "name": "paragraph",
+          "children": [
+            {
+              "name": "text",
+              "children": [],
+              "attributes": {
+                "value": "Gavin Williamson, the education secretary, said: “Grades awarded this summer will accurately reflect students’ abilities and will be as valid this year as any other.”"
+              }
+            }
+          ]
+        },
+        {
+          "name": "paragraph",
+          "children": [
+            {
+              "name": "text",
+              "children": [],
+              "attributes": {
+                "value": "The University and College Union warned that poorer pupils could be disadvantaged. Jo Grady, the general secretary, said: “Research shows that they fare badly when it comes to predicted grades and they are less likely to be able to put life on hold and delay sitting exams, or have access to the tools required to navigate any appeals system.”"
+              }
+            }
+          ]
+        },
+        {
+          "name": "paragraph",
+          "children": [
+            {
+              "name": "text",
+              "children": [],
+              "attributes": {
+                "value": "Arrangements for vocational qualifications and home educators are still being finalised."
+              }
+            }
+          ]
+        },
+        {
+          "name": "paragraph",
+          "children": [
+            {
+              "name": "text",
+              "children": [],
+              "attributes": {
+                "value": "In a letter to pupils and their families Sally Collier, the head of Ofqual, urged them not to ask teachers what grade they were submitting. “I understand how unsettling the past weeks have been for you, since the announcement that exams have been cancelled this summer and that you are urgently waiting for news,” she wrote."
+              }
+            }
+          ]
+        },
+        {
+          "name": "paragraph",
+          "children": [
+            {
+              "name": "text",
+              "children": [],
+              "attributes": {
+                "value": "In a letter to pupils and their families Sally Collier, the head of Ofqual, urged them not to ask teachers what grade they were submitting. “I understand how unsettling the past weeks have been for you, since the announcement that exams have been cancelled this summer and that you are urgently waiting for news,” she wrote."
+              }
+            }
+          ]
+        },
+        {
+          "name": "paragraph",
+          "children": [
+            {
+              "name": "text",
+              "children": [],
+              "attributes": {
+                "value": "In a letter to pupils and their families Sally Collier, the head of Ofqual, urged them not to ask teachers what grade they were submitting. “I understand how unsettling the past weeks have been for you, since the announcement that exams have been cancelled this summer and that you are urgently waiting for news,” she wrote."
+              }
+            }
+          ]
+        },
+        {
+          "name": "paragraph",
+          "children": [
+            {
+              "name": "text",
+              "children": [],
+              "attributes": {
+                "value": "In a letter to pupils and their families Sally Collier, the head of Ofqual, urged them not to ask teachers what grade they were submitting. “I understand how unsettling the past weeks have been for you, since the announcement that exams have been cancelled this summer and that you are urgently waiting for news,” she wrote."
+              }
+            }
+          ]
+        },
+        {
+          "name": "paragraph",
+          "children": [
+            {
+              "name": "text",
+              "children": [],
+              "attributes": {
+                "value": "In a letter to pupils and their families Sally Collier, the head of Ofqual, urged them not to ask teachers what grade they were submitting. “I understand how unsettling the past weeks have been for you, since the announcement that exams have been cancelled this summer and that you are urgently waiting for news,” she wrote."
+              }
+            }
+          ]
+        }
+      ],
+      "flags": [],
+      "hasVideo": false,
+      "label": "coronavirus",
+      "commentsEnabled": true,
+      "shortHeadline": "Exam pupils to be put in league tables for results",
+      "leadAsset": {
+        "id": "b4517f1c-9754-47db-91e3-268f3ae0fd1f",
+        "title": "London, UK. 23rd March, 2020. A year 13, Sixth Form student works from home on her A level English despite her school being closed & exams cancelled due to the Coronavirus Outbreak Crisis. Andrew Fosker / Alamy Live News",
+        "caption": "Many students will forgo autumn exams and move on with grades set by their teachers",
+        "credits": "Andrew Fosker/Alamy",
+        "crop169": {
+          "ratio": "16:9",
+          "url": "https://www.thetimes.co.uk/imageserver/image/%2Fmethode%2Ftimes%2Fprod%2Fweb%2Fbin%2F087dc0be-896c-11ea-8f57-abf3d436b9f5.jpg?crop=5131%2C2886%2C326%2C179",
+          "relativeHorizontalOffset": 0.0539021164021164,
+          "relativeVerticalOffset": 0.0452020202020202,
+          "relativeWidth": 0.8483796296296297,
+          "relativeHeight": 0.7287878787878788,
+          "__typename": "Crop"
+        },
+        "crop32": {
+          "ratio": "3:2",
+          "url": "https://www.thetimes.co.uk/imageserver/image/%2Fmethode%2Ftimes%2Fprod%2Fweb%2Fbin%2F087dc0be-896c-11ea-8f57-abf3d436b9f5.jpg?crop=5940%2C3960%2C0%2C0",
+          "relativeHorizontalOffset": 0,
+          "relativeVerticalOffset": 0,
+          "relativeWidth": 0.9821428571428571,
+          "relativeHeight": 1,
+          "__typename": "Crop"
+        },
+        "crop11": {
+          "ratio": "1:1",
+          "url": "https://www.thetimes.co.uk/imageserver/image/%2Fmethode%2Ftimes%2Fprod%2Fweb%2Fbin%2F087dc0be-896c-11ea-8f57-abf3d436b9f5.jpg?crop=3960%2C3960%2C990%2C0",
+          "relativeHorizontalOffset": 0.1636904761904762,
+          "relativeVerticalOffset": 0,
+          "relativeWidth": 0.6547619047619048,
+          "relativeHeight": 1,
+          "__typename": "Crop"
+        },
+        "crop45": {
+          "ratio": "4:5",
+          "url": "https://www.thetimes.co.uk/imageserver/image/%2Fmethode%2Ftimes%2Fprod%2Fweb%2Fbin%2F087dc0be-896c-11ea-8f57-abf3d436b9f5.jpg?crop=3168%2C3960%2C1386%2C0",
+          "relativeHorizontalOffset": 0.22916666666666666,
+          "relativeVerticalOffset": 0,
+          "relativeWidth": 0.5238095238095238,
+          "relativeHeight": 1,
+          "__typename": "Crop"
+        },
+        "crop23": {
+          "ratio": "2:3",
+          "url": "https://www.thetimes.co.uk/imageserver/image/%2Fmethode%2Ftimes%2Fprod%2Fweb%2Fbin%2F087dc0be-896c-11ea-8f57-abf3d436b9f5.jpg?crop=2640%2C3960%2C1650%2C0",
+          "relativeHorizontalOffset": 0.2728174603174603,
+          "relativeVerticalOffset": 0,
+          "relativeWidth": 0.4365079365079365,
+          "relativeHeight": 1,
+          "__typename": "Crop"
+        },
+        "type": "Image"
+      }
+    }
+  }
+}

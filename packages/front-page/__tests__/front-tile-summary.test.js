@@ -1,5 +1,4 @@
 import ReactTestRenderer from "react-test-renderer";
-import { ResponsiveContext } from "@times-components-native/responsive";
 import React from "react";
 import { FrontTileSummary } from "@times-components-native/front-page";
 import { MockTile } from "@times-components-native/fixture-generator";
@@ -14,6 +13,9 @@ jest.mock("@times-components-native/article-summary", () => ({
 }));
 
 jest.mock("@times-components-native/article-byline", () => "ArticleByline");
+jest.mock("@times-components-native/front-page/front-page-byline", () => ({
+  FrontPageByline: "FrontPageByline",
+}));
 
 const summaryContent = [
   {
@@ -41,17 +43,6 @@ const bylines = [
   },
 ];
 
-const withResponsiveContext = (WrappedComponent, editionBreakpoint) => (
-  <ResponsiveContext.Provider
-    value={{
-      editionBreakpoint,
-      orientation: "landscape",
-    }}
-  >
-    {WrappedComponent}
-  </ResponsiveContext.Provider>
-);
-
 const props = {
   summary: summaryContent,
   tile: new MockTile().get(),
@@ -67,19 +58,14 @@ const props = {
 
 describe("FrontTileSummary", () => {
   it("renders correctly", () => {
-    let renderer = ReactTestRenderer.create(
-      withResponsiveContext(<FrontTileSummary {...props} />, "medium"),
-    );
+    let renderer = ReactTestRenderer.create(<FrontTileSummary {...props} />);
 
     expect(renderer.toJSON()).toMatchSnapshot();
   });
 
   it("renders without byline", () => {
     let renderer = ReactTestRenderer.create(
-      withResponsiveContext(
-        <FrontTileSummary {...props} bylines={undefined} />,
-        "medium",
-      ),
+      <FrontTileSummary {...props} bylines={undefined} />,
     );
 
     expect(renderer.toJSON()).toMatchSnapshot();
@@ -87,10 +73,15 @@ describe("FrontTileSummary", () => {
 
   it("renders without strapline", () => {
     let renderer = ReactTestRenderer.create(
-      withResponsiveContext(
-        <FrontTileSummary {...props} strapline={undefined} />,
-        "medium",
-      ),
+      <FrontTileSummary {...props} strapline={undefined} />,
+    );
+
+    expect(renderer.toJSON()).toMatchSnapshot();
+  });
+
+  it("renders with more than 1 columns", () => {
+    let renderer = ReactTestRenderer.create(
+      <FrontTileSummary {...props} columnCount={2} />,
     );
 
     expect(renderer.toJSON()).toMatchSnapshot();

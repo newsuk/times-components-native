@@ -580,7 +580,9 @@ exports[`17. front lead two no pic and two - medium 1`] = `
 <View>
   <View>
     <View>
-      <View>
+      <View
+        tileName="lead1"
+      >
         <TileXFront
           breakpoint="medium"
           orientation="landscape"
@@ -588,7 +590,9 @@ exports[`17. front lead two no pic and two - medium 1`] = `
         />
       </View>
       <View />
-      <View>
+      <View
+        tileName="lead2"
+      >
         <TileYFront
           breakpoint="medium"
           orientation="landscape"
@@ -605,7 +609,9 @@ exports[`17. front lead two no pic and two - medium 1`] = `
     </View>
     <View />
     <View>
-      <View>
+      <View
+        tileName="support2"
+      >
         <TileEFront
           breakpoint="medium"
           orientation="landscape"
@@ -1295,7 +1301,9 @@ exports[`37. front lead two no pic and two - wide 1`] = `
 <View>
   <View>
     <View>
-      <View>
+      <View
+        tileName="lead1"
+      >
         <TileXFront
           breakpoint="wide"
           orientation="landscape"
@@ -1303,7 +1311,9 @@ exports[`37. front lead two no pic and two - wide 1`] = `
         />
       </View>
       <View />
-      <View>
+      <View
+        tileName="lead2"
+      >
         <TileYFront
           breakpoint="wide"
           orientation="landscape"
@@ -1320,7 +1330,9 @@ exports[`37. front lead two no pic and two - wide 1`] = `
     </View>
     <View />
     <View>
-      <View>
+      <View
+        tileName="support2"
+      >
         <TileEFront
           breakpoint="wide"
           orientation="landscape"
@@ -2043,7 +2055,9 @@ exports[`57. front lead two no pic and two - huge 1`] = `
   <View>
     <View>
       <View>
-        <View>
+        <View
+          tileName="lead1"
+        >
           <TileXFront
             breakpoint="huge"
             orientation="landscape"
@@ -2051,7 +2065,9 @@ exports[`57. front lead two no pic and two - huge 1`] = `
           />
         </View>
         <View />
-        <View>
+        <View
+          tileName="lead2"
+        >
           <TileYFront
             breakpoint="huge"
             orientation="landscape"
@@ -2068,7 +2084,9 @@ exports[`57. front lead two no pic and two - huge 1`] = `
       </View>
       <View />
       <View>
-        <View>
+        <View
+          tileName="support2"
+        >
           <TileEFront
             breakpoint="huge"
             orientation="landscape"
