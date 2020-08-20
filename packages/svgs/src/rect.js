@@ -1,9 +1,7 @@
 import React from "react";
-import { ART } from "react-native";
+import { Path } from "@react-native-community/art";
 import PropTypes from "prop-types";
 import SVGPath from "./path";
-
-const { Path } = ART;
 
 const Rect = ({
   stroke,
@@ -38,7 +36,7 @@ Rect.propTypes = {
   fillOpacity: PropTypes.string,
   height: PropTypes.string.isRequired,
   stroke: PropTypes.string,
-  strokeWidth: PropTypes.string,
+  strokeWidth: PropTypes.number,
   width: PropTypes.string.isRequired,
   x: PropTypes.string.isRequired,
   y: PropTypes.string.isRequired,

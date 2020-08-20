@@ -1,10 +1,15 @@
 import React, { Component } from "react";
-import { ART, View } from "react-native";
+import { View } from "react-native";
+import {
+  LinearGradient,
+  Path,
+  Shape,
+  Surface,
+} from "@react-native-community/art";
+
 import angleToPoints from "./utils";
 import styles from "./styles";
 import { defaultProps, propTypes } from "./gradient-prop-types.base";
-
-const { LinearGradient, Path, Shape, Surface } = ART;
 
 class GradientBase extends Component {
   constructor(props) {

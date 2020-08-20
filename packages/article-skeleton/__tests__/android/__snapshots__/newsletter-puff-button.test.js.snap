@@ -6,7 +6,6 @@ exports[`NewsletterPuffButton renders the button with the text \`Saving...\` 1`]
   accessibilityRole="button"
   accessible={true}
   focusable={true}
-  isTVSelectable={true}
   onClick={[Function]}
   onResponderGrant={[Function]}
   onResponderMove={[Function]}
@@ -73,7 +72,6 @@ exports[`NewsletterPuffButton renders the button with the text \`Sign up to news
   accessibilityRole="button"
   accessible={true}
   focusable={true}
-  isTVSelectable={true}
   onClick={[Function]}
   onResponderGrant={[Function]}
   onResponderMove={[Function]}

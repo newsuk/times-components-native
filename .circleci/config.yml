@@ -166,6 +166,8 @@ jobs:
         executor: node
         steps:
         - checkout
+        - attach_workspace:
+            at: ./
         - run:
             name: Tag release & generate GitHub notes
             command: sh scripts/publish-notes.sh
@@ -227,14 +229,12 @@ workflows:
                         ignore:
                             - master
                 requires:
-                    - run_lint
-                    - run_typecheck
-                    - run_noplatform_tests
-                    - run_android_tests
-                    - run_ios_tests
+                    - setup
             - publish_android_beta:
+                context: nuk-tnl-app-universal
                 requires:
                     - hold_release_beta
             - publish_ios_beta:
+                context: nuk-tnl-app-universal
                 requires:
                     - hold_release_beta

@@ -1,0 +1,84 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`MeasureByline renders the byline 1`] = `
+<View
+  onLayout={[Function]}
+  style={
+    Object {
+      "width": 110,
+    }
+  }
+>
+  <FrontPageByline
+    byline={
+      Array [
+        Array [
+          Object {
+            "byline": Array [
+              Object {
+                "attributes": Object {
+                  "slug": "richard-lloyd-parry",
+                },
+                "children": Array [
+                  Object {
+                    "attributes": Object {
+                      "value": "Richard Lloyd Parry",
+                    },
+                    "children": Array [],
+                    "name": "text",
+                  },
+                ],
+                "name": "author",
+              },
+            ],
+            "image": null,
+          },
+          Object {
+            "byline": Array [
+              Object {
+                "children": Array [
+                  Object {
+                    "attributes": Object {
+                      "value": ", Hanoi",
+                    },
+                    "children": Array [],
+                    "name": "text",
+                  },
+                ],
+                "name": "inline",
+              },
+            ],
+            "image": null,
+          },
+        ],
+      ]
+    }
+    containerStyle={
+      Object {
+        "marginBottom": 0,
+      }
+    }
+    withKeyline={true}
+  />
+</View>
+`;
+
+exports[`MeasureContent renders the content 1`] = `
+<View
+  onLayout={[Function]}
+>
+  <Text
+    onTextLayout={[Function]}
+    style={
+      Array [
+        Object {
+          "fontSize": 14,
+          "lineHeight": 18,
+        },
+      ]
+    }
+  >
+    abc
+  </Text>
+</View>
+`;

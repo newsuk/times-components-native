@@ -4,10 +4,10 @@ exports[`NewsletterPuffLink renders the link with the text \`Manage preferences 
 <View
   accessible={true}
   focusable={true}
-  isTVSelectable={true}
   nativeBackgroundAndroid={
     Object {
       "attribute": "selectableItemBackground",
+      "rippleRadius": undefined,
       "type": "ThemeAttrAndroid",
     }
   }

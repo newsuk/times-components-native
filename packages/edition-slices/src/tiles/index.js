@@ -39,3 +39,8 @@ export { default as TileAM } from "./tile-am";
 export { default as TileAN } from "./tile-an";
 export { default as TileAR } from "./tile-ar";
 export { default as TileAS } from "./tile-as";
+export { default as TileXFront } from "./tile-x-front";
+export { default as TileDFront } from "./tile-d-front";
+export { default as TileEFront } from "./tile-e-front";
+export { default as TileYFront } from "./tile-y-front";
+export { default as TileALFront } from "./tile-al-front";

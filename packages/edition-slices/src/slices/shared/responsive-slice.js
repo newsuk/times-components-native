@@ -10,33 +10,39 @@ const ResponsiveSlice = ({
   renderMedium,
   renderWide,
   renderHuge,
+  grow = false,
 }) => (
   <ResponsiveContext.Consumer>
-    {({ editionBreakpoint }) => {
+    {({ editionBreakpoint, orientation }) => {
       switch (editionBreakpoint) {
         case editionBreakpoints.small:
-          return renderSmall(editionBreakpoint);
+          return renderSmall(editionBreakpoint, orientation);
         case editionBreakpoints.medium:
-          return <Gutter>{renderMedium(editionBreakpoint)}</Gutter>;
+          return (
+            <Gutter grow={grow}>
+              {renderMedium(editionBreakpoint, orientation)}
+            </Gutter>
+          );
         case editionBreakpoints.wide:
           return (
-            <Gutter>
-              {(renderWide && renderWide(editionBreakpoint)) ||
-                (renderMedium && renderMedium(editionBreakpoint))}
+            <Gutter grow={grow}>
+              {(renderWide && renderWide(editionBreakpoint, orientation)) ||
+                (renderMedium && renderMedium(editionBreakpoint, orientation))}
             </Gutter>
           );
         case editionBreakpoints.huge:
           return (
-            <Gutter>
+            <Gutter grow={grow}>
               <ContentWrapper>
-                {(renderHuge && renderHuge(editionBreakpoint)) ||
-                  (renderWide && renderWide(editionBreakpoint)) ||
-                  (renderMedium && renderMedium(editionBreakpoint))}
+                {(renderHuge && renderHuge(editionBreakpoint, orientation)) ||
+                  (renderWide && renderWide(editionBreakpoint, orientation)) ||
+                  (renderMedium &&
+                    renderMedium(editionBreakpoint, orientation))}
               </ContentWrapper>
             </Gutter>
           );
         default:
-          return renderSmall(editionBreakpoint);
+          return renderSmall(editionBreakpoint, orientation);
       }
     }}
   </ResponsiveContext.Consumer>

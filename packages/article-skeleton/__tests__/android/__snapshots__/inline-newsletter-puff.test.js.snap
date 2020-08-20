@@ -35,7 +35,6 @@ exports[`Inline Newsletter Puff renders 'saving' when the button is clicked 1`] 
         accessibilityRole="button"
         accessible={true}
         focusable={true}
-        isTVSelectable={true}
         onClick={[Function]}
         onResponderGrant={[Function]}
         onResponderMove={[Function]}
@@ -149,7 +148,6 @@ exports[`Inline Newsletter Puff renders signup state 1`] = `
         accessibilityRole="button"
         accessible={true}
         focusable={true}
-        isTVSelectable={true}
         onClick={[Function]}
         onResponderGrant={[Function]}
         onResponderMove={[Function]}
@@ -248,7 +246,6 @@ exports[`Inline Newsletter Puff renders signup view when not already subscribed 
         accessibilityRole="button"
         accessible={true}
         focusable={true}
-        isTVSelectable={true}
         onClick={[Function]}
         onResponderGrant={[Function]}
         onResponderMove={[Function]}
@@ -340,10 +337,10 @@ exports[`Inline Newsletter Puff renders the success view after subscribing  1`] 
       <View
         accessible={true}
         focusable={true}
-        isTVSelectable={true}
         nativeBackgroundAndroid={
           Object {
             "attribute": "selectableItemBackground",
+            "rippleRadius": undefined,
             "type": "ThemeAttrAndroid",
           }
         }

@@ -3,12 +3,14 @@ import { View } from "react-native";
 import PropTypes from "prop-types";
 import { ItemRowSeparator } from "../shared";
 
-const VerticalLayout = ({ style, tiles }) => (
+const VerticalLayout = ({ style, tiles, rowSeparatorStyle }) => (
   <View style={style}>
     {tiles.map((tile, index) => (
       <Fragment key={`${tile.props.tileName}`}>
         {tile}
-        {index !== tiles.length - 1 ? <ItemRowSeparator /> : null}
+        {index !== tiles.length - 1 ? (
+          <ItemRowSeparator style={rowSeparatorStyle} />
+        ) : null}
       </Fragment>
     ))}
   </View>

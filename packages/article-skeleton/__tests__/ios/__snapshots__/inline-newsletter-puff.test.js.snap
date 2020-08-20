@@ -35,7 +35,6 @@ exports[`Inline Newsletter Puff renders 'saving' when the button is clicked 1`] 
         accessibilityRole="button"
         accessible={true}
         focusable={true}
-        isTVSelectable={true}
         onClick={[Function]}
         onResponderGrant={[Function]}
         onResponderMove={[Function]}
@@ -148,7 +147,6 @@ exports[`Inline Newsletter Puff renders signup state 1`] = `
         accessibilityRole="button"
         accessible={true}
         focusable={true}
-        isTVSelectable={true}
         onClick={[Function]}
         onResponderGrant={[Function]}
         onResponderMove={[Function]}
@@ -246,7 +244,6 @@ exports[`Inline Newsletter Puff renders signup view when not already subscribed 
         accessibilityRole="button"
         accessible={true}
         focusable={true}
-        isTVSelectable={true}
         onClick={[Function]}
         onResponderGrant={[Function]}
         onResponderMove={[Function]}
@@ -337,7 +334,6 @@ exports[`Inline Newsletter Puff renders the success view after subscribing  1`] 
       <View
         accessible={true}
         focusable={true}
-        isTVSelectable={true}
         onClick={[Function]}
         onResponderGrant={[Function]}
         onResponderMove={[Function]}
@@ -437,7 +433,7 @@ exports[`Inline Newsletter Puff renders the success view after subscribing  1`] 
                     strokeCap={1}
                     strokeDash={null}
                     strokeJoin={1}
-                    strokeWidth={1}
+                    strokeWidth={null}
                     transform={
                       Array [
                         1,

@@ -188,6 +188,25 @@ export default () => {
     ).toMatchSnapshot();
   });
 
+  it("Front Page section", () => {
+    const edition = new MockEdition().get();
+
+    expect(
+      TestRenderer.create(
+        <Section
+          analyticsStream={() => null}
+          onArticlePress={() => null}
+          onPuzzleBarPress={() => null}
+          onPuzzlePress={() => null}
+          publicationName="TIMES"
+          recentlyOpenedPuzzleCount={1}
+          section={edition.sections[6]}
+          debug
+        />,
+      ).toJSON(),
+    ).toMatchSnapshot();
+  });
+
   it("section item separator - small", () => {
     expect(
       TestRenderer.create(
