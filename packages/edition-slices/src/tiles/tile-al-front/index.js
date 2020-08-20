@@ -5,7 +5,6 @@ import { editionBreakpoints } from "@times-components-native/styleguide";
 import { FrontTileSummary } from "@times-components-native/front-page";
 import { getTileImage, TileLink, TileImage, withTileTracking } from "../shared";
 import stylesFactory from "./styles";
-import PositionedTileStar from "../shared/positioned-tile-star";
 
 const TileALFront = ({
   onPress,
@@ -41,7 +40,6 @@ const TileALFront = ({
         tile={tile}
         bylines={tile.article.bylines}
       />
-      <PositionedTileStar articleId={tile.article.id} />
     </TileLink>
   );
 };

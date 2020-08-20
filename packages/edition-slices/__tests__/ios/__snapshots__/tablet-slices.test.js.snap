@@ -625,7 +625,30 @@ exports[`17. front lead two no pic and two - medium 1`] = `
 </View>
 `;
 
-exports[`18. comment lead and cartoon - wide 1`] = `
+exports[`18. front lead two no pic and two - medium 1`] = `
+<View>
+  <View>
+    <View>
+      <TileAFront
+        breakpoint="medium"
+        orientation="landscape"
+        tileName="lead"
+      />
+    </View>
+    <View />
+    <View>
+      <TileBFront
+        breakpoint="medium"
+        orientation="landscape"
+        showKeyline={false}
+        tileName="support"
+      />
+    </View>
+  </View>
+</View>
+`;
+
+exports[`19. comment lead and cartoon - wide 1`] = `
 <View>
   <View>
     <View>
@@ -645,7 +668,7 @@ exports[`18. comment lead and cartoon - wide 1`] = `
 </View>
 `;
 
-exports[`19. daily universal register - wide 1`] = `
+exports[`20. daily universal register - wide 1`] = `
 <View>
   <View>
     <Image
@@ -698,7 +721,7 @@ exports[`19. daily universal register - wide 1`] = `
 </View>
 `;
 
-exports[`20. lead one and one - wide 1`] = `
+exports[`21. lead one and one - wide 1`] = `
 <View>
   <View>
     <View>
@@ -718,7 +741,7 @@ exports[`20. lead one and one - wide 1`] = `
 </View>
 `;
 
-exports[`21. lead one full width - wide 1`] = `
+exports[`22. lead one full width - wide 1`] = `
 <View>
   <TileR
     breakpoint="wide"
@@ -727,7 +750,7 @@ exports[`21. lead one full width - wide 1`] = `
 </View>
 `;
 
-exports[`22. lead two no pic and two - wide 1`] = `
+exports[`23. lead two no pic and two - wide 1`] = `
 <View>
   <View>
     <View>
@@ -759,7 +782,7 @@ exports[`22. lead two no pic and two - wide 1`] = `
 </View>
 `;
 
-exports[`23. leaders slice - wide 1`] = `
+exports[`24. leaders slice - wide 1`] = `
 <View>
   <View>
     <View>
@@ -803,7 +826,7 @@ exports[`23. leaders slice - wide 1`] = `
 </View>
 `;
 
-exports[`24. secondary one and four - wide 1`] = `
+exports[`25. secondary one and four - wide 1`] = `
 <View>
   <View>
     <View>
@@ -859,7 +882,7 @@ exports[`24. secondary one and four - wide 1`] = `
 </View>
 `;
 
-exports[`25. secondary one - wide 1`] = `
+exports[`26. secondary one - wide 1`] = `
 <View>
   <TileW
     breakpoint="wide"
@@ -868,7 +891,7 @@ exports[`25. secondary one - wide 1`] = `
 </View>
 `;
 
-exports[`26. secondary four - wide 1`] = `
+exports[`27. secondary four - wide 1`] = `
 <View>
   <View>
     <View>
@@ -914,7 +937,7 @@ exports[`26. secondary four - wide 1`] = `
 </View>
 `;
 
-exports[`27. secondary one and columnist - wide 1`] = `
+exports[`28. secondary one and columnist - wide 1`] = `
 <View>
   <View>
     <View>
@@ -935,7 +958,7 @@ exports[`27. secondary one and columnist - wide 1`] = `
 </View>
 `;
 
-exports[`28. secondary two and two - wide 1`] = `
+exports[`29. secondary two and two - wide 1`] = `
 <View>
   <View>
     <View>
@@ -965,7 +988,7 @@ exports[`28. secondary two and two - wide 1`] = `
 </View>
 `;
 
-exports[`29. lead one and four slice - wide 1`] = `
+exports[`30. lead one and four slice - wide 1`] = `
 <View>
   <View>
     <View>
@@ -1000,7 +1023,7 @@ exports[`29. lead one and four slice - wide 1`] = `
 </View>
 `;
 
-exports[`30. standard slice - wide 1`] = `
+exports[`31. standard slice - wide 1`] = `
 <View>
   <View>
     <View>
@@ -1033,7 +1056,7 @@ exports[`30. standard slice - wide 1`] = `
 </View>
 `;
 
-exports[`31. secondary two no pic and two - wide 1`] = `
+exports[`32. secondary two no pic and two - wide 1`] = `
 <View>
   <View>
     <View>
@@ -1067,7 +1090,7 @@ exports[`31. secondary two no pic and two - wide 1`] = `
 </View>
 `;
 
-exports[`32. list two and six no pic - wide 1`] = `
+exports[`33. list two and six no pic - wide 1`] = `
 <View>
   <View>
     <View>
@@ -1137,7 +1160,7 @@ exports[`32. list two and six no pic - wide 1`] = `
 </View>
 `;
 
-exports[`33. puzzle - wide 1`] = `
+exports[`34. puzzle - wide 1`] = `
 <View>
   <View>
     <View>
@@ -1207,7 +1230,7 @@ exports[`33. puzzle - wide 1`] = `
 </View>
 `;
 
-exports[`34. front lead two no pic and two - wide 1`] = `
+exports[`35. front lead two no pic and two - wide 1`] = `
 <View>
   <View>
     <View>
@@ -1256,7 +1279,30 @@ exports[`34. front lead two no pic and two - wide 1`] = `
 </View>
 `;
 
-exports[`35. comment lead and cartoon - huge 1`] = `
+exports[`36. front lead two no pic and two - wide 1`] = `
+<View>
+  <View>
+    <View>
+      <TileAFront
+        breakpoint="wide"
+        orientation="landscape"
+        tileName="lead"
+      />
+    </View>
+    <View />
+    <View>
+      <TileBFront
+        breakpoint="wide"
+        orientation="landscape"
+        showKeyline={false}
+        tileName="support"
+      />
+    </View>
+  </View>
+</View>
+`;
+
+exports[`37. comment lead and cartoon - huge 1`] = `
 <View>
   <View>
     <View>
@@ -1278,7 +1324,7 @@ exports[`35. comment lead and cartoon - huge 1`] = `
 </View>
 `;
 
-exports[`36. daily universal register - huge 1`] = `
+exports[`38. daily universal register - huge 1`] = `
 <View>
   <View>
     <View>
@@ -1333,7 +1379,7 @@ exports[`36. daily universal register - huge 1`] = `
 </View>
 `;
 
-exports[`37. lead one and one - huge 1`] = `
+exports[`39. lead one and one - huge 1`] = `
 <View>
   <View>
     <View>
@@ -1355,7 +1401,7 @@ exports[`37. lead one and one - huge 1`] = `
 </View>
 `;
 
-exports[`38. lead one full width - huge 1`] = `
+exports[`40. lead one full width - huge 1`] = `
 <View>
   <View>
     <TileR
@@ -1366,7 +1412,7 @@ exports[`38. lead one full width - huge 1`] = `
 </View>
 `;
 
-exports[`39. lead two no pic and two - huge 1`] = `
+exports[`41. lead two no pic and two - huge 1`] = `
 <View>
   <View>
     <View>
@@ -1400,7 +1446,7 @@ exports[`39. lead two no pic and two - huge 1`] = `
 </View>
 `;
 
-exports[`40. leaders slice - huge 1`] = `
+exports[`42. leaders slice - huge 1`] = `
 <View>
   <View>
     <View>
@@ -1446,7 +1492,7 @@ exports[`40. leaders slice - huge 1`] = `
 </View>
 `;
 
-exports[`41. secondary one and four - huge 1`] = `
+exports[`43. secondary one and four - huge 1`] = `
 <View>
   <View>
     <View>
@@ -1504,7 +1550,7 @@ exports[`41. secondary one and four - huge 1`] = `
 </View>
 `;
 
-exports[`42. secondary one - huge 1`] = `
+exports[`44. secondary one - huge 1`] = `
 <View>
   <View>
     <TileW
@@ -1515,7 +1561,7 @@ exports[`42. secondary one - huge 1`] = `
 </View>
 `;
 
-exports[`43. secondary four - huge 1`] = `
+exports[`45. secondary four - huge 1`] = `
 <View>
   <View>
     <View>
@@ -1563,7 +1609,7 @@ exports[`43. secondary four - huge 1`] = `
 </View>
 `;
 
-exports[`44. secondary one and columnist - huge 1`] = `
+exports[`46. secondary one and columnist - huge 1`] = `
 <View>
   <View>
     <View>
@@ -1586,7 +1632,7 @@ exports[`44. secondary one and columnist - huge 1`] = `
 </View>
 `;
 
-exports[`45. secondary two and two - huge 1`] = `
+exports[`47. secondary two and two - huge 1`] = `
 <View>
   <View>
     <View>
@@ -1618,7 +1664,7 @@ exports[`45. secondary two and two - huge 1`] = `
 </View>
 `;
 
-exports[`46. lead one and four slice - huge 1`] = `
+exports[`48. lead one and four slice - huge 1`] = `
 <View>
   <View>
     <View>
@@ -1655,7 +1701,7 @@ exports[`46. lead one and four slice - huge 1`] = `
 </View>
 `;
 
-exports[`47. standard slice - huge 1`] = `
+exports[`49. standard slice - huge 1`] = `
 <View>
   <View>
     <View>
@@ -1690,7 +1736,7 @@ exports[`47. standard slice - huge 1`] = `
 </View>
 `;
 
-exports[`48. secondary two no pic and two - huge 1`] = `
+exports[`50. secondary two no pic and two - huge 1`] = `
 <View>
   <View>
     <View>
@@ -1726,7 +1772,7 @@ exports[`48. secondary two no pic and two - huge 1`] = `
 </View>
 `;
 
-exports[`49. list two and six no pic - huge 1`] = `
+exports[`51. list two and six no pic - huge 1`] = `
 <View>
   <View>
     <View>
@@ -1798,7 +1844,7 @@ exports[`49. list two and six no pic - huge 1`] = `
 </View>
 `;
 
-exports[`50. puzzle - huge 1`] = `
+exports[`52. puzzle - huge 1`] = `
 <View>
   <View>
     <View>
@@ -1870,7 +1916,7 @@ exports[`50. puzzle - huge 1`] = `
 </View>
 `;
 
-exports[`51. front lead two no pic and two - huge 1`] = `
+exports[`53. front lead two no pic and two - huge 1`] = `
 <View>
   <View>
     <View>
@@ -1915,6 +1961,31 @@ exports[`51. front lead two no pic and two - huge 1`] = `
             tileName="support2"
           />
         </View>
+      </View>
+    </View>
+  </View>
+</View>
+`;
+
+exports[`54. front lead two no pic and two - huge 1`] = `
+<View>
+  <View>
+    <View>
+      <View>
+        <TileAFront
+          breakpoint="huge"
+          orientation="landscape"
+          tileName="lead"
+        />
+      </View>
+      <View />
+      <View>
+        <TileBFront
+          breakpoint="huge"
+          orientation="landscape"
+          showKeyline={false}
+          tileName="support"
+        />
       </View>
     </View>
   </View>

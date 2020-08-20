@@ -52,6 +52,6 @@ const styles = StyleSheet.create({
     justifyContent: "flex-start",
   },
   marginRight: {
-    marginRight: spacing(2),
+    marginRight: spacing(4),
   },
 });
