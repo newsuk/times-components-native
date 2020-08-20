@@ -29,6 +29,13 @@ describe("SponsoredAd", () => {
     expect(webView.props.style.height).toEqual(350);
   });
 
+  it("renders 3 ad items when narrowContent", () => {
+    const ad = TestRenderer.create(<SponsoredAd narrowContent={true} />);
+    const webView = ad.root.findByType(WebView);
+
+    expect(webView.props.source.html).toMatchSnapshot();
+  });
+
   it("opens external browser when link is clicked", () => {
     const ad = TestRenderer.create(<SponsoredAd />);
     const webView = ad.root.findByType(WebView);
