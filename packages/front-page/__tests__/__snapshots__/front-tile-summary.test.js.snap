@@ -76,6 +76,7 @@ exports[`FrontTileSummary renders correctly 1`] = `
         "backgroundColor": "orange",
       }
     }
+    template="mainstandard"
   />
 </View>
 `;
@@ -157,6 +158,7 @@ exports[`FrontTileSummary renders with keyline 1`] = `
         "backgroundColor": "orange",
       }
     }
+    template="mainstandard"
   />
 </View>
 `;
@@ -225,6 +227,7 @@ exports[`FrontTileSummary renders with more than 1 columns 1`] = `
         "backgroundColor": "orange",
       }
     }
+    template="mainstandard"
   />
 </View>
 `;
@@ -281,6 +284,7 @@ exports[`FrontTileSummary renders without byline 1`] = `
         "backgroundColor": "orange",
       }
     }
+    template="mainstandard"
   />
 </View>
 `;
@@ -353,6 +357,7 @@ exports[`FrontTileSummary renders without strapline 1`] = `
         "backgroundColor": "orange",
       }
     }
+    template="mainstandard"
   />
 </View>
 `;

@@ -30,6 +30,7 @@ export default {
             <FrontArticleSummaryContent
               summary={markup}
               bylines={bylines}
+              template={"mainstandard"}
               summaryStyle={{
                 fontSize: 14,
                 lineHeight: 18,
@@ -50,6 +51,7 @@ export default {
             <FrontArticleSummaryContent
               summary={markup}
               bylines={bylines}
+              template={"mainstandard"}
               summaryStyle={{
                 fontSize: 14,
                 lineHeight: 18,
