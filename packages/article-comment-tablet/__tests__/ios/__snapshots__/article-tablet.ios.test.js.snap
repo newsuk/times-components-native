@@ -106,7 +106,7 @@ exports[`1. article comment tablet 1`] = `
                 "color": "#1D1D1B",
                 "fontFamily": "TimesModern-Bold",
                 "fontSize": 44,
-                "lineHeight": undefined,
+                "lineHeight": 44,
                 "marginBottom": 13.75,
               }
             }
