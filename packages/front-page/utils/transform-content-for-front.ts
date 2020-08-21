@@ -8,8 +8,7 @@ import {
 const addTab = (content: ArticleContent, index: number): Markup => {
   if (content.name !== "paragraph") return content;
 
-  const addTab = index > 0;
-  return { ...content, attributes: { ...content.attributes, tab: addTab } };
+  return { ...content, attributes: { ...content.attributes, tab: index > 0 } };
 };
 
 export const indent = (contents: Markup[]) => contents.map(addTab);
