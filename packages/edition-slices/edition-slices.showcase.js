@@ -162,7 +162,7 @@ const sliceStories = [
     Slice: CommentLeadAndCartoonSlice,
   },
   {
-    mock: mockTopSecondaryFourSlice(),
+    mock: mockSecondaryFourSlice(),
     name: "Top Secondary (Medium: AS,AV,AV,AV, Wide: AT,AV,AV,AV)",
     Slice: TopSecondarySlice,
   },
