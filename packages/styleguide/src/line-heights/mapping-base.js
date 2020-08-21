@@ -29,6 +29,7 @@ const mapping = {
     pageHeadline: 40,
     smallHeadline: 27,
     tileLeadHeadline: 35,
+    tabletCommentHeadline: 44,
     heading2Mobile: 26,
     heading3Mobile: 26,
     heading4Mobile: 26,
