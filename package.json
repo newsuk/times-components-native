@@ -70,6 +70,8 @@
     "graphql-tools": "4.0.4",
     "hoist-non-react-statics": "2.5.5",
     "hyphenate-style-name": "1.0.2",
+    "hyphenation.en-us": "^0.2.1",
+    "hypher": "^0.2.5",
     "jest-plugin-context": "2.9.0",
     "lodash.get": "4.4.2",
     "lodash.isequal": "4.4.0",

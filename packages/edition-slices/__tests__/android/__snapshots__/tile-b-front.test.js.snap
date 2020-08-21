@@ -125,6 +125,7 @@ exports[`renders maincomment with left aligned text 1`] = `
         "textAlign": "left",
       }
     }
+    template="maincomment"
     tile={
       Object {
         "article": Object {
@@ -668,6 +669,7 @@ exports[`tile b front landscape huge 1`] = `
         "textAlign": "justify",
       }
     }
+    template="mainstandard"
     tile={
       Object {
         "article": Object {
@@ -1243,6 +1245,7 @@ exports[`tile b front landscape medium 1`] = `
         "textAlign": "justify",
       }
     }
+    template="mainstandard"
     tile={
       Object {
         "article": Object {
@@ -1818,6 +1821,7 @@ exports[`tile b front landscape wide 1`] = `
         "textAlign": "justify",
       }
     }
+    template="mainstandard"
     tile={
       Object {
         "article": Object {
@@ -2393,6 +2397,7 @@ exports[`tile b front portrait huge 1`] = `
         "textAlign": "justify",
       }
     }
+    template="mainstandard"
     tile={
       Object {
         "article": Object {
@@ -2968,6 +2973,7 @@ exports[`tile b front portrait medium 1`] = `
         "textAlign": "justify",
       }
     }
+    template="mainstandard"
     tile={
       Object {
         "article": Object {
@@ -3543,6 +3549,7 @@ exports[`tile b front portrait wide 1`] = `
         "textAlign": "justify",
       }
     }
+    template="mainstandard"
     tile={
       Object {
         "article": Object {

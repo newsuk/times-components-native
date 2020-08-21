@@ -16,9 +16,7 @@ const TileDFront = ({
 
   if (!crop) return null;
 
-  const {
-    article: { hasVideo },
-  } = tile;
+  const { article } = tile;
 
   return (
     <TileLink onPress={onPress} style={styles.container} tile={tile}>
@@ -31,15 +29,16 @@ const TileDFront = ({
         style={styles.imageContainer}
         uri={crop.url}
         fill
-        hasVideo={hasVideo}
+        hasVideo={article.hasVideo}
       />
       <FrontTileSummary
         headlineStyle={styles.headline}
         containerStyle={styles.summaryContainer}
         summaryStyle={styles.summary}
         tile={tile}
-        bylines={tile.article.bylines}
-        summary={tile.article.content}
+        bylines={article.bylines}
+        summary={article.content}
+        template={article.template}
       />
     </TileLink>
   );

@@ -113,6 +113,7 @@ exports[`tile y front landscape huge 1`] = `
         "textAlign": "justify",
       }
     }
+    template="mainstandard"
     tile={
       Object {
         "article": Object {
@@ -676,6 +677,7 @@ exports[`tile y front landscape medium 1`] = `
         "textAlign": "justify",
       }
     }
+    template="mainstandard"
     tile={
       Object {
         "article": Object {
@@ -1239,6 +1241,7 @@ exports[`tile y front landscape wide 1`] = `
         "textAlign": "justify",
       }
     }
+    template="mainstandard"
     tile={
       Object {
         "article": Object {
@@ -1802,6 +1805,7 @@ exports[`tile y front landscape without breakpoint should be like small 1`] = `
         "textAlign": "justify",
       }
     }
+    template="mainstandard"
     tile={
       Object {
         "article": Object {
@@ -2365,6 +2369,7 @@ exports[`tile y front portrait huge 1`] = `
         "textAlign": "justify",
       }
     }
+    template="mainstandard"
     tile={
       Object {
         "article": Object {
@@ -2928,6 +2933,7 @@ exports[`tile y front portrait medium 1`] = `
         "textAlign": "justify",
       }
     }
+    template="mainstandard"
     tile={
       Object {
         "article": Object {
@@ -3491,6 +3497,7 @@ exports[`tile y front portrait wide 1`] = `
         "textAlign": "justify",
       }
     }
+    template="mainstandard"
     tile={
       Object {
         "article": Object {
@@ -4054,6 +4061,7 @@ exports[`tile y front portrait without breakpoint should be like small 1`] = `
         "textAlign": "justify",
       }
     }
+    template="mainstandard"
     tile={
       Object {
         "article": Object {

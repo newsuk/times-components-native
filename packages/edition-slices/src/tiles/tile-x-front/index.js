@@ -14,6 +14,7 @@ const TileXFront = ({
 }) => {
   const styles = stylesFactory(breakpoint);
 
+  const { article } = tile;
   return (
     <TileLink onPress={onPress} style={styles.container} tile={tile}>
       <FrontTileSummary
@@ -24,10 +25,11 @@ const TileXFront = ({
         }
         strapline={getTileStrapline(tile)}
         straplineStyle={styles.strapline}
-        summary={tile.article.content}
+        summary={article.content}
         summaryStyle={styles.summary}
         tile={tile}
-        bylines={tile.article.bylines}
+        bylines={article.bylines}
+        template={article.template}
       />
     </TileLink>
   );

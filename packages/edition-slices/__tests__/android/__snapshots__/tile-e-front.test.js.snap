@@ -35,6 +35,7 @@ exports[`tile e front landscape huge 1`] = `
         "textAlign": "justify",
       }
     }
+    template="mainstandard"
     tile={
       Object {
         "article": Object {
@@ -521,6 +522,7 @@ exports[`tile e front landscape medium 1`] = `
         "textAlign": "justify",
       }
     }
+    template="mainstandard"
     tile={
       Object {
         "article": Object {
@@ -1007,6 +1009,7 @@ exports[`tile e front landscape wide 1`] = `
         "textAlign": "justify",
       }
     }
+    template="mainstandard"
     tile={
       Object {
         "article": Object {
@@ -1467,6 +1470,7 @@ exports[`tile e front landscape without breakpoint should be like small 1`] = `
     uri="//www.thetimes.co.uk/imageserver/image/%2Fmethode%2Ftimes%2Fprod%2Fweb%2Fbin%2F5a14c64e-06db-11e9-abe2-4909b2eb0130.jpg?crop=1434%2C1792%2C627%2C0"
   />
   <FrontTileSummary
+    template="mainstandard"
     tile={
       Object {
         "article": Object {
@@ -1952,6 +1956,7 @@ exports[`tile e front portrait huge 1`] = `
         "textAlign": "justify",
       }
     }
+    template="mainstandard"
     tile={
       Object {
         "article": Object {
@@ -2437,6 +2442,7 @@ exports[`tile e front portrait medium 1`] = `
         "textAlign": "justify",
       }
     }
+    template="mainstandard"
     tile={
       Object {
         "article": Object {
@@ -2922,6 +2928,7 @@ exports[`tile e front portrait wide 1`] = `
         "textAlign": "justify",
       }
     }
+    template="mainstandard"
     tile={
       Object {
         "article": Object {
@@ -3382,6 +3389,7 @@ exports[`tile e front portrait without breakpoint should be like small 1`] = `
     uri="//www.thetimes.co.uk/imageserver/image/%2Fmethode%2Ftimes%2Fprod%2Fweb%2Fbin%2F5a14c64e-06db-11e9-abe2-4909b2eb0130.jpg?crop=1434%2C1792%2C627%2C0"
   />
   <FrontTileSummary
+    template="mainstandard"
     tile={
       Object {
         "article": Object {
