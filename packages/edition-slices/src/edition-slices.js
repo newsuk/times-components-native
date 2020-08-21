@@ -20,6 +20,7 @@ import {
   LeadTwoNoPicAndTwoFrontSlice,
   LeadOneAndOneFrontSlice,
   PuzzleSlice,
+  TopSecondarySlice,
 } from "./slices";
 
 const config = (NativeModules || {}).ReactConfig;
@@ -51,9 +52,9 @@ const sliceMap = {
   TwoPicAndSixNoPicSlice: ListTwoAndSixNoPicSlice,
   LeadTwoNoPicAndTwoFrontSlice,
   LeadOneAndOneFrontSlice,
-  TopSecondaryTwoAndTwoSlice: SecondaryTwoAndTwoSlice, // amend once TopSecondaryFourSlice slice has been developed
-  TopSecondaryTwoNoPicAndTwoSlice: SecondaryTwoNoPicAndTwoSlice, // amend once TopSecondaryFourSlice slice has been developed
-  TopSecondaryFourSlice: SecondaryFourSlice, // amend once TopSecondaryFourSlice slice has been developed
+  TopSecondaryTwoAndTwoSlice: TopSecondarySlice,
+  TopSecondaryTwoNoPicAndTwoSlice: TopSecondarySlice,
+  TopSecondaryFourSlice: TopSecondarySlice,
 };
 
 export default sliceMap;
