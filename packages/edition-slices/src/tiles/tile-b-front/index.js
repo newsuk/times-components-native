@@ -49,6 +49,7 @@ const TileBFront = ({
         showKeyline={showKeyline}
         tile={tile}
         bylines={article.bylines}
+        template={article.template}
       />
     </TileLink>
   );

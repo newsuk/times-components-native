@@ -58,6 +58,7 @@ const TileAFront = ({
         straplineStyle={styles.strapline}
         containerStyle={styles.summaryContainer}
         tile={tile}
+        template={article.template}
         columnCount={columnCount}
         bylines={article.bylines}
       />

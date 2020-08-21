@@ -1,6 +1,9 @@
 import { ArticleContent } from "@times-components-native/article-columns/domain-types";
 import { hyphenateArticleContent } from "@times-components-native/utils/src/hyphenate-article-content";
-import { Markup } from "@times-components-native/fixture-generator/src/types";
+import {
+  Markup,
+  TemplateType,
+} from "@times-components-native/fixture-generator/src/types";
 
 const addTab = (content: ArticleContent, index: number): Markup => {
   if (content.name !== "paragraph") return content;
@@ -11,7 +14,11 @@ const addTab = (content: ArticleContent, index: number): Markup => {
 
 export const indent = (contents: Markup[]) => contents.map(addTab);
 
-export const transformContentForFront = (contents: ArticleContent[]) => {
-  const hyphenatedContent = hyphenateArticleContent(contents);
+export const transformContentForFront = (
+  contents: ArticleContent[],
+  template: TemplateType,
+) => {
+  const hyphenatedContent =
+    template === "maincomment" ? contents : hyphenateArticleContent(contents);
   return indent(hyphenatedContent);
 };

@@ -21,11 +21,7 @@ const TileEFront = ({
     return null;
   }
 
-  const {
-    article: { hasVideo },
-  } = tile;
-
-  const summary = tile.article.content;
+  const { article } = tile;
 
   return (
     <TileLink onPress={onPress} style={styles.container} tile={tile}>
@@ -38,7 +34,7 @@ const TileEFront = ({
         style={styles.imageContainer}
         uri={crop.url}
         fill
-        hasVideo={hasVideo}
+        hasVideo={article.hasVideo}
       />
       <FrontTileSummary
         headlineStyle={
@@ -46,11 +42,12 @@ const TileEFront = ({
             ? styles.headlineLandscape
             : styles.headlinePortrait
         }
-        summary={showSummary && summary}
+        summary={showSummary && article.content}
         summaryStyle={styles.summary}
         containerStyle={styles.summaryContainer}
         tile={tile}
-        bylines={showByline && tile.article.bylines}
+        bylines={showByline && article.bylines}
+        template={article.template}
       />
     </TileLink>
   );

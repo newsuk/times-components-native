@@ -14,6 +14,7 @@ const TileYFront = ({
 }) => {
   const styles = stylesFactory(breakpoint);
 
+  const { article } = tile;
   return (
     <TileLink onPress={onPress} style={styles.container} tile={tile}>
       <FrontTileSummary
@@ -22,10 +23,11 @@ const TileYFront = ({
             ? styles.headlineLandscape
             : styles.headlinePortrait
         }
-        summary={tile.article.content}
+        summary={article.content}
         summaryStyle={styles.summary}
         tile={tile}
-        bylines={tile.article.bylines}
+        bylines={article.bylines}
+        template={article.template}
       />
     </TileLink>
   );

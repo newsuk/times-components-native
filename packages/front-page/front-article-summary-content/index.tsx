@@ -6,6 +6,7 @@ import { ResponsiveContext } from "@times-components-native/responsive";
 import {
   BylineInput,
   Markup,
+  TemplateType,
 } from "@times-components-native/fixture-generator/src/types";
 import { MeasureContainer } from "@times-components-native/front-page/MeasureContainer";
 import { ArticleColumns } from "@times-components-native/article-columns/article-columns";
@@ -18,6 +19,7 @@ interface Props {
   summaryStyle?: any;
   columnCount?: number;
   bylines: BylineInput[];
+  template: TemplateType;
 }
 
 interface SummaryTextProps {
@@ -39,7 +41,7 @@ const SummaryText: React.FC<SummaryTextProps> = ({
 };
 
 const FrontArticleSummaryContent: React.FC<Props> = (props) => {
-  const { summary, summaryStyle, columnCount = 1 } = props;
+  const { summary, summaryStyle, template, columnCount = 1 } = props;
 
   // @ts-ignore
   const { editionBreakpoint: breakpoint, orientation } = useContext(
@@ -50,7 +52,7 @@ const FrontArticleSummaryContent: React.FC<Props> = (props) => {
 
   const styles = stylesFactory(breakpoint);
 
-  const transformedAst = transformContentForFront(summary);
+  const transformedAst = transformContentForFront(summary, template);
 
   const textStyle =
     orientation === "landscape" ? styles.textLandscape : styles.textPortrait;
