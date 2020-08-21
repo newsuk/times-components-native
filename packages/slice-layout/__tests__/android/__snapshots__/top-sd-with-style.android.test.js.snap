@@ -1,0 +1,71 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`1. top secondary 1`] = `
+<View
+  style={
+    Object {
+      "flex": 1,
+      "flexDirection": "row",
+      "marginHorizontal": 20,
+      "paddingVertical": 5,
+    }
+  }
+>
+  <View
+    style={
+      Object {
+        "width": "66.6%",
+      }
+    }
+  >
+    <Text>
+      lead
+    </Text>
+  </View>
+  <View
+    style={
+      Object {
+        "borderColor": "#DBDBDB",
+        "borderRightWidth": 1,
+        "borderStyle": "solid",
+        "marginVertical": 10,
+      }
+    }
+  />
+  <View
+    style={
+      Object {
+        "width": "33.3%",
+      }
+    }
+  >
+    <Text>
+      support-1
+    </Text>
+    <View
+      style={
+        Object {
+          "borderBottomWidth": 1,
+          "borderColor": "#DBDBDB",
+          "borderStyle": "solid",
+        }
+      }
+    />
+    <Text>
+      support-2
+    </Text>
+    <View
+      style={
+        Object {
+          "borderBottomWidth": 1,
+          "borderColor": "#DBDBDB",
+          "borderStyle": "solid",
+        }
+      }
+    />
+    <Text>
+      support-3
+    </Text>
+  </View>
+</View>
+`;
