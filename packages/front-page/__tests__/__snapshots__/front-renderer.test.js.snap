@@ -15,6 +15,7 @@ exports[`front renderers paragraph renderer renders paragraph 1`] = `
       },
     ]
   }
+  textBreakStrategy="simple"
 >
   Some Text
 </Text>
@@ -27,6 +28,7 @@ exports[`front renderers paragraph renderer renders paragraph with new line at e
       false,
     ]
   }
+  textBreakStrategy="simple"
 >
   　
   Some Text
@@ -44,6 +46,7 @@ exports[`front renderers paragraph renderer renders paragraph with tab 1`] = `
       },
     ]
   }
+  textBreakStrategy="simple"
 >
   　
   Some Text

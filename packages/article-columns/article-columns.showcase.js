@@ -11,7 +11,12 @@ export default {
           containerWidth={500}
           lineHeight={18}
           bylines={article.data.article.bylines}
-          style={{ lineHeight: 18 }}
+          style={{
+            fontSize: 14,
+            lineHeight: 18,
+            textAlign: "justify",
+            fontFamily: "TimesDigitalW04",
+          }}
           columnCount={2}
         />
       ),
