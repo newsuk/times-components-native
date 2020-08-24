@@ -24,5 +24,9 @@ fragment articleProps on Article {
   shortHeadline
   shortIdentifier
   slug
+  topics(maxCount: 5) {
+    name
+    slug
+  }
   url
 }
