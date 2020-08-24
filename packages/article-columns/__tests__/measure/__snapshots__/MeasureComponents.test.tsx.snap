@@ -77,6 +77,7 @@ exports[`MeasureContent renders the content 1`] = `
         },
       ]
     }
+    textBreakStrategy="simple"
   >
     abc
   </Text>

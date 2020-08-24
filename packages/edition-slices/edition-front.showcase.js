@@ -12,25 +12,11 @@ import {
   LeadOneFrontSlice,
 } from "./src/slices";
 
-const preventDefaultedAction = (decorateAction) =>
-  decorateAction([
-    ([e, ...args]) => {
-      e.preventDefault();
-      return ["[SyntheticEvent (storybook prevented default)]", ...args];
-    },
-  ]);
-
-/* eslint-disable react/prop-types */
-const renderSlice = (Component, data) => (_, { decorateAction }) => {
+const renderSlice = (Component, data) => () => {
   return (
     <Responsive>
       <View style={{ flex: 1 }}>
-        {
-          <Component
-            onPress={preventDefaultedAction(decorateAction)("onPress")}
-            slice={data}
-          />
-        }
+        {<Component onPress={() => null} slice={data} />}
       </View>
     </Responsive>
   );

@@ -31,6 +31,7 @@ exports[`FrontArticleSummaryContent landscape huge 1`] = `
         false,
       ]
     }
+    textBreakStrategy="simple"
   >
     Test
     
@@ -70,6 +71,7 @@ exports[`FrontArticleSummaryContent landscape medium 1`] = `
         false,
       ]
     }
+    textBreakStrategy="simple"
   >
     Test
     
@@ -109,6 +111,7 @@ exports[`FrontArticleSummaryContent landscape wide 1`] = `
         false,
       ]
     }
+    textBreakStrategy="simple"
   >
     Test
     
@@ -148,6 +151,7 @@ exports[`FrontArticleSummaryContent portrait huge 1`] = `
         false,
       ]
     }
+    textBreakStrategy="simple"
   >
     Test
     
@@ -187,6 +191,7 @@ exports[`FrontArticleSummaryContent portrait medium 1`] = `
         false,
       ]
     }
+    textBreakStrategy="simple"
   >
     Test
     
@@ -226,6 +231,7 @@ exports[`FrontArticleSummaryContent portrait wide 1`] = `
         false,
       ]
     }
+    textBreakStrategy="simple"
   >
     Test
     
