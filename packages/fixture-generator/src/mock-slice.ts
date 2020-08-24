@@ -5,6 +5,7 @@ import {
   DailyUniversalRegisterItem,
   Flag,
   StandardSlice,
+  LeadOneSlice,
   LeadOneAndFourSlice,
   LeadOneFullWidthSlice,
   LeadOneAndOneSlice,
@@ -35,6 +36,10 @@ interface StandardSliceWithName extends StandardSlice {
 }
 
 interface LeadOneFullWidthSliceWithName extends LeadOneFullWidthSlice {
+  name: string;
+}
+
+interface LeadOneSliceWithName extends LeadOneSlice {
   name: string;
 }
 
@@ -250,6 +255,22 @@ function mockLeadOneAndOneFrontSlice(): LeadOneAndOneSliceWithName {
   };
 }
 
+function mockLeadOneFrontSlice(): LeadOneSliceWithName {
+  const tiles = getTiles(1);
+  const leadTile = {
+    ...tiles[0],
+    article: {
+      ...tiles[0].article,
+      content: new MockMarkup().addParagraphs(20).get(),
+    },
+  };
+  return <LeadOneSliceWithName>{
+    name: "LeadOneFrontSlice",
+    lead: leadTile,
+    items: [leadTile],
+  };
+}
+
 function mockSecondaryOneSlice(): SecondaryOneSliceWithName {
   const tiles = getTiles(1);
   return <SecondaryOneSliceWithName>{
@@ -423,4 +444,5 @@ export {
   mockPuzzleSlice,
   mockLeadTwoNoPicAndTwoFrontSlice,
   mockLeadOneAndOneFrontSlice,
+  mockLeadOneFrontSlice,
 };

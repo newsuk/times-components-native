@@ -19,6 +19,7 @@ import {
   SecondaryTwoNoPicAndTwoSlice,
   LeadTwoNoPicAndTwoFrontSlice,
   LeadOneAndOneFrontSlice,
+  LeadOneFrontSlice,
   PuzzleSlice,
   TopSecondarySlice,
 } from "./slices";
@@ -52,6 +53,7 @@ const sliceMap = {
   TwoPicAndSixNoPicSlice: ListTwoAndSixNoPicSlice,
   LeadTwoNoPicAndTwoFrontSlice,
   LeadOneAndOneFrontSlice,
+  LeadOneFrontSlice,
   TopSecondaryTwoAndTwoSlice: TopSecondarySlice,
   TopSecondaryTwoNoPicAndTwoSlice: TopSecondarySlice,
   TopSecondaryFourSlice: TopSecondarySlice,
