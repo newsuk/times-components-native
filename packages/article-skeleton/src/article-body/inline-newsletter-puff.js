@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { Linking, Platform } from "react-native";
+import { Linking, Platform, View } from "react-native";
 import { Mutation } from "react-apollo";
 import PropTypes from "prop-types";
 
@@ -46,6 +46,7 @@ const InlineNewsletterPuff = ({
   label,
 }) => {
   const [justSubscribed, setJustSubscribed] = useState(false);
+  const breakpoint = "small";
 
   return (
     <GetNewsletter code={code} ssr={false} debounceTimeMs={0}>
@@ -62,10 +63,11 @@ const InlineNewsletterPuff = ({
           );
         }
 
-        if (newsletter.isSubscribed && !justSubscribed) {
-          return null;
-        }
-
+        // if (newsletter.isSubscribed && !justSubscribed) {
+        //   return null;
+        // }
+        //
+        const justSubscribed = false;
         return (
           <Mutation
             mutation={subscribeNewsletterMutation}
@@ -74,16 +76,16 @@ const InlineNewsletterPuff = ({
             }}
           >
             {(subscribeNewsletter, { loading: updatingSubscription }) => (
-              <InpContainer>
-                <InpImageContainer>
+              <InpContainer breakpoint={breakpoint}>
+                <InpImageContainer breakpoint={breakpoint}>
                   <Image aspectRatio={1.42} uri={imageUri} />
                 </InpImageContainer>
                 {justSubscribed ? (
-                  <InpSubscribedContainer>
+                  <InpSubscribedContainer breakpoint={breakpoint}>
                     <InpSubscribedHeadline>
                       You’ve successfully signed up
                     </InpSubscribedHeadline>
-                    <InpSubscribedCopy>
+                    <InpSubscribedCopy breakpoint={breakpoint}>
                       Congratulations you can now enjoy daily updates from Red
                       Box.
                     </InpSubscribedCopy>
@@ -95,11 +97,11 @@ const InlineNewsletterPuff = ({
                     </InpPreferencesContainer>
                   </InpSubscribedContainer>
                 ) : (
-                  <InpSignupContainer>
+                  <InpSignupContainer breakpoint={breakpoint}>
                     <InpSignupLabel>{label}</InpSignupLabel>
                     <InpSignupHeadline>{headline}</InpSignupHeadline>
                     <InpCopy>{copy}</InpCopy>
-                    <InpSignupCTAContainer>
+                    <InpSignupCTAContainer breakpoint={breakpoint}>
                       <NewsletterPuffButton
                         analyticsStream={analyticsStream}
                         updatingSubscription={updatingSubscription}

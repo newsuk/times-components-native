@@ -8,6 +8,9 @@ import {
   spacing,
 } from "@times-components-native/styleguide";
 
+const minWidthMediaQuery = (threshold, style) => ({ breakpoint }) =>
+  breakpoints[breakpoint] >= threshold && style;
+
 export const InpContainer = styled(View)`
   background-color: ${colours.functional.newsletterPuffBackground};
   display: flex;
@@ -16,29 +19,31 @@ export const InpContainer = styled(View)`
   margin-bottom: ${spacing(4)};
   margin-left: ${spacing(2)};
 
-  @media (min-width: ${breakpoints.medium}px) {
+  ${minWidthMediaQuery(
+    breakpoints.medium,
+    `
     flex-direction: row;
-    margin: 0 auto ${spacing(4)};
+    margin: 0 auto;
+    margin-bottom: ${spacing(4)};
     width: 80.8%;
-  }
-  @media (min-width: ${breakpoints.wide}px) {
-    width: 56.2%;
-  }
+    `,
+  )}
+
+  ${minWidthMediaQuery(breakpoints.wide, `width: 56.2%`)}
 `;
 
 export const InpImageContainer = styled(View)`
-  @media (min-width: ${breakpoints.medium}px) {
+  ${minWidthMediaQuery(
+    breakpoints.medium,
+    `
     width: 45%;
-  }
+    `,
+  )}
 `;
 
 export const InpSubscribedContainer = styled(View)`
   justify-content: center;
   padding: ${spacing(9)}px ${spacing(8)}px;
-  @media (min-width: ${breakpoints.small}px) {
-    padding: ${spacing(0)} ${spacing(1)};
-    flex: 1;
-  }
 `;
 
 export const InpSubscribedHeadline = styled(Text)`
@@ -56,22 +61,17 @@ export const InpSubscribedCopy = styled(Text)`
   text-align: center;
   color: ${colours.functional.primary};
   margin-bottom: ${spacing(2)};
-  @media (min-width: ${breakpoints.small}px) {
-    padding: ${spacing(0)} ${spacing(1)};
-    margin-bottom: ${spacing(1)};
-  }
-  @media (min-width: ${breakpoints.medium}px) {
-    padding: ${spacing(0)} ${spacing(4)};
-  }
+  ${minWidthMediaQuery(
+    breakpoints.medium,
+    `
+    padding-horizontal: ${spacing(4)};
+    `,
+  )}
 `;
 
 export const InpSignupContainer = styled(View)`
   justify-content: center;
   padding: ${spacing(4)}px;
-  @media (min-width: ${breakpoints.small}px) {
-    padding: ${spacing(0)} ${spacing(4)};
-    flex: 1;
-  }
 `;
 
 export const InpSignupLabel = styled(Text)`
@@ -102,10 +102,13 @@ export const InpCopy = styled(Text)`
 `;
 
 export const InpSignupCTAContainer = styled(View)`
-  @media (min-width: ${breakpoints.medium}px) {
+  ${minWidthMediaQuery(
+    breakpoints.medium,
+    `
     width: 220px;
     margin: 0px auto;
-  }
+  `,
+  )}
 `;
 
 export const InpPreferencesContainer = styled(View)`
