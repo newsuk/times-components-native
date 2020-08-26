@@ -40,10 +40,6 @@ interface LeadOneFullWidthSliceWithName extends LeadOneFullWidthSlice {
   name: string;
 }
 
-interface LeadOneSliceWithName extends LeadOneSlice {
-  name: string;
-}
-
 interface LeadOneAndOneSliceWithName extends LeadOneAndOneSlice {
   name: string;
 }
