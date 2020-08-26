@@ -49,3 +49,4 @@ export { default as TileYFront } from "./tile-y-front";
 export { default as TileALFront } from "./tile-al-front";
 export { default as TileAFront } from "./tile-a-front";
 export { default as TileBFront } from "./tile-b-front";
+export { default as TileFFront } from "./tile-f-front";

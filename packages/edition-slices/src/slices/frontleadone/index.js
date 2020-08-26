@@ -1,7 +1,7 @@
 import React from "react";
 import { ResponsiveSlice } from "@times-components-native/edition-slices/src/slices/shared";
 import { FrontLeadOneSlice } from "@times-components-native/slice-layout";
-import { TileAFront } from "@times-components-native/edition-slices/src/tiles";
+import { TileFFront } from "@times-components-native/edition-slices/src/tiles";
 
 function renderMedium(props, breakpoint, orientation) {
   const {
@@ -12,7 +12,7 @@ function renderMedium(props, breakpoint, orientation) {
   return (
     <FrontLeadOneSlice
       lead={
-        <TileAFront
+        <TileFFront
           breakpoint={breakpoint}
           onPress={onPress}
           tile={lead}

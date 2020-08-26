@@ -12,6 +12,7 @@ const styles = {
   },
   iconContainer: {
     paddingBottom: spacing(1),
+    backgroundColor: "green",
   },
   title: {
     ...fontFactory({

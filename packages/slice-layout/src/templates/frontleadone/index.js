@@ -27,7 +27,7 @@ const FrontLeadOneSlice = ({ breakpoint, orientation, lead }) => {
         },
       ]}
     >
-      <View style={styles.leftColumn}>{lead}</View>
+      {lead}
     </View>
   );
 };
