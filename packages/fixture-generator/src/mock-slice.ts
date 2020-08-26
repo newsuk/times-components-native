@@ -5,7 +5,6 @@ import {
   DailyUniversalRegisterItem,
   Flag,
   StandardSlice,
-  LeadOneSlice,
   LeadOneAndFourSlice,
   LeadOneFullWidthSlice,
   LeadOneAndOneSlice,
