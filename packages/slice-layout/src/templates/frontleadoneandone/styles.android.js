@@ -8,7 +8,7 @@ export default (breakpoint) => {
     ...styles,
     container: {
       ...styles.container,
-      paddingBottom: spacing(10), // ensures content sits on top of bottom-nav bar
+      paddingBottom: spacing(20), // ensures content sits on top of bottom-nav bar
     },
   };
 };
