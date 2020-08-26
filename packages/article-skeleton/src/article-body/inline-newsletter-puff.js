@@ -1,5 +1,5 @@
-import React, { useState } from "react";
-import { Linking, Platform, View } from "react-native";
+import React, { useContext, useState } from "react";
+import { Linking, Platform } from "react-native";
 import { Mutation } from "react-apollo";
 import PropTypes from "prop-types";
 
@@ -22,6 +22,7 @@ import {
 } from "../styles/inline-newsletter-puff";
 import NewsletterPuffButton from "./newsletter-puff-button";
 import NewsletterPuffLink from "./newsletter-puff-link";
+import { ResponsiveContext } from "@times-components-native/responsive";
 
 function onManagePreferencesPress() {
   if (Platform.OS !== "web") {
@@ -45,8 +46,8 @@ const InlineNewsletterPuff = ({
   imageUri,
   label,
 }) => {
+  const { editionBreakpoint: breakpoint } = useContext(ResponsiveContext);
   const [justSubscribed, setJustSubscribed] = useState(false);
-  const breakpoint = "small";
 
   return (
     <GetNewsletter code={code} ssr={false} debounceTimeMs={0}>
@@ -63,11 +64,10 @@ const InlineNewsletterPuff = ({
           );
         }
 
-        // if (newsletter.isSubscribed && !justSubscribed) {
-        //   return null;
-        // }
-        //
-        const justSubscribed = false;
+        if (newsletter.isSubscribed && !justSubscribed) {
+          return null;
+        }
+
         return (
           <Mutation
             mutation={subscribeNewsletterMutation}

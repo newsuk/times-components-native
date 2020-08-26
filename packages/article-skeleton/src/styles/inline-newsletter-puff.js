@@ -23,8 +23,7 @@ export const InpContainer = styled(View)`
     breakpoints.medium,
     `
     flex-direction: row;
-    margin: 0 auto;
-    margin-bottom: ${spacing(4)};
+    margin: 0 auto ${spacing(4)}px;
     width: 80.8%;
     `,
   )}
@@ -44,6 +43,13 @@ export const InpImageContainer = styled(View)`
 export const InpSubscribedContainer = styled(View)`
   justify-content: center;
   padding: ${spacing(9)}px ${spacing(8)}px;
+  ${minWidthMediaQuery(
+    breakpoints.medium,
+    `
+    padding: ${spacing(0)}px ${spacing(1)}px;
+    flex: 1;
+    `,
+  )}
 `;
 
 export const InpSubscribedHeadline = styled(Text)`
@@ -60,11 +66,12 @@ export const InpSubscribedCopy = styled(Text)`
   font-size: ${fontSizes.newsletterPuffCopy}px;
   text-align: center;
   color: ${colours.functional.primary};
-  margin-bottom: ${spacing(2)};
+  margin-bottom: ${spacing(1)};
+  padding: ${spacing(0)}px ${spacing(1)}px;
   ${minWidthMediaQuery(
     breakpoints.medium,
     `
-    padding-horizontal: ${spacing(4)};
+    padding: ${spacing(0)}px ${spacing(4)}px;
     `,
   )}
 `;
@@ -72,6 +79,12 @@ export const InpSubscribedCopy = styled(Text)`
 export const InpSignupContainer = styled(View)`
   justify-content: center;
   padding: ${spacing(4)}px;
+  ${minWidthMediaQuery(
+    breakpoints.medium,
+    `
+    flex: 1;
+    `,
+  )}
 `;
 
 export const InpSignupLabel = styled(Text)`
