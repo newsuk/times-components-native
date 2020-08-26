@@ -2091,8 +2091,8 @@ export interface LeadOneAndOneFrontSlice extends ArticleSlice {
   sections: Section[];
 }
 
-export interface LeadOneFrontSlice extends ArticleSlice {
-  lead1: Tile;
+export interface LeadOneFullWidthFrontSlice extends ArticleSlice {
+  lead: Tile;
 
   items: Tile[];
 
@@ -2768,7 +2768,7 @@ export type DraftTileArticle = Article | DraftArticle;
 export type FrontPageSectionSlice =
   | LeadTwoNoPicandTwoFrontSlice
   | LeadOneAndOneFrontSlice
-  | LeadOneFrontSlice;
+  | LeadOneFullWidthFrontSlice;
 
 export type PuffMainLinkRef = ArticleLink | Link;
 

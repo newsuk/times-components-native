@@ -982,7 +982,7 @@ fragment frontSlicesSection on FrontPageSectionSlice {
       }
     }
   }
-  ... on LeadOneFrontSlice {
+  ... on LeadOneFullWidthFrontSlice {
     lead {
       headline
       strapline
