@@ -4,6 +4,7 @@ import Link from "@times-components-native/link";
 import mockDate from "mockdate";
 
 import NewsletterPuffLink from "../src/article-body/newsletter-puff-link";
+import { ResponsiveContext } from "@times-components-native/responsive";
 
 export default () => {
   describe("NewsletterPuffLink", () => {
@@ -23,10 +24,12 @@ export default () => {
       const mockedAnalyticsStream = jest.fn();
 
       const component = create(
-        <NewsletterPuffLink
-          analyticsStream={mockedAnalyticsStream}
-          onPress={mockedOnPress}
-        />,
+        <ResponsiveContext.Provider value={{ editionBreakpoint: "small" }}>
+          <NewsletterPuffLink
+            analyticsStream={mockedAnalyticsStream}
+            onPress={mockedOnPress}
+          />
+        </ResponsiveContext.Provider>,
       );
 
       expect(component).toMatchSnapshot();
@@ -37,10 +40,12 @@ export default () => {
       const onPress = jest.fn();
 
       create(
-        <NewsletterPuffLink
-          onPress={onPress}
-          analyticsStream={mockedAnalyticsStream}
-        />,
+        <ResponsiveContext.Provider value={{ editionBreakpoint: "small" }}>
+          <NewsletterPuffLink
+            onPress={onPress}
+            analyticsStream={mockedAnalyticsStream}
+          />
+        </ResponsiveContext.Provider>,
       );
 
       expect(mockedAnalyticsStream.mock.calls).toMatchSnapshot({});
@@ -51,10 +56,12 @@ export default () => {
       const onPress = jest.fn();
 
       const testInstance = create(
-        <NewsletterPuffLink
-          onPress={onPress}
-          analyticsStream={mockedAnalyticsStream}
-        />,
+        <ResponsiveContext.Provider value={{ editionBreakpoint: "small" }}>
+          <NewsletterPuffLink
+            onPress={onPress}
+            analyticsStream={mockedAnalyticsStream}
+          />
+        </ResponsiveContext.Provider>,
       );
 
       testInstance.root.findByType(Link).props.onPress();
