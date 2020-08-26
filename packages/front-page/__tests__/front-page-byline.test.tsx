@@ -16,7 +16,7 @@ const bylines = [
 describe("FrontPageByline", () => {
   it("renders without keyline", () => {
     const renderer = ReactTestRenderer.create(
-      <FrontPageByline byline={bylines} withKeyline={false} />,
+      <FrontPageByline byline={bylines} showKeyline={false} />,
     );
 
     expect(renderer.toJSON()).toMatchSnapshot();
@@ -24,7 +24,7 @@ describe("FrontPageByline", () => {
 
   it("renders with keyline", () => {
     const renderer = ReactTestRenderer.create(
-      <FrontPageByline byline={bylines} withKeyline={true} />,
+      <FrontPageByline byline={bylines} showKeyline={true} />,
     );
 
     expect(renderer.toJSON()).toMatchSnapshot();
@@ -33,7 +33,7 @@ describe("FrontPageByline", () => {
   it("renders with container style", () => {
     const renderer = ReactTestRenderer.create(
       <FrontPageByline
-        withKeyline={false}
+        showKeyline={false}
         byline={bylines}
         containerStyle={{ marginBottom: 100 }}
       />,

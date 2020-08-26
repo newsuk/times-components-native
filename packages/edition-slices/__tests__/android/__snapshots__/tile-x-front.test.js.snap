@@ -122,6 +122,7 @@ exports[`tile x front landscape huge 1`] = `
         "textAlign": "justify",
       }
     }
+    template="mainstandard"
     tile={
       Object {
         "article": Object {
@@ -694,6 +695,7 @@ exports[`tile x front landscape medium 1`] = `
         "textAlign": "justify",
       }
     }
+    template="mainstandard"
     tile={
       Object {
         "article": Object {
@@ -1266,6 +1268,7 @@ exports[`tile x front landscape wide 1`] = `
         "textAlign": "justify",
       }
     }
+    template="mainstandard"
     tile={
       Object {
         "article": Object {
@@ -1838,6 +1841,7 @@ exports[`tile x front portrait huge 1`] = `
         "textAlign": "justify",
       }
     }
+    template="mainstandard"
     tile={
       Object {
         "article": Object {
@@ -2410,6 +2414,7 @@ exports[`tile x front portrait medium 1`] = `
         "textAlign": "justify",
       }
     }
+    template="mainstandard"
     tile={
       Object {
         "article": Object {
@@ -2982,6 +2987,7 @@ exports[`tile x front portrait wide 1`] = `
         "textAlign": "justify",
       }
     }
+    template="mainstandard"
     tile={
       Object {
         "article": Object {

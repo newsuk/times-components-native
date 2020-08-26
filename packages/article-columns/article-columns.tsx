@@ -7,6 +7,7 @@ import { calculateColumnWidth } from "./utils/calculateColumnWidth";
 import { FrontPageByline } from "@times-components-native/front-page/front-page-byline";
 import { BylineInput } from "@times-components-native/fixture-generator/src/types";
 import { MeasureArticle } from "./measure/MeasureArticle";
+import { spacing } from "@times-components-native/styleguide";
 
 interface Props {
   articleContents: ArticleContent[];
@@ -37,13 +38,16 @@ export const ArticleColumns: React.FC<Props> = ({
   lineHeight = 18,
   style,
 }) => {
+  // rendering columns with 0 height results in an infinite loop when chunking the content into columns. The height can be 0 during initial page render/reorientation
+  if (containerHeight === 0) return null;
+
   const paragraphs = articleContents
     .filter((c): c is ParagraphContent => c.name === "paragraph")
     .map(assignWithId(containerHeight));
 
   const columnWidth = calculateColumnWidth({
     columnCount,
-    columnGap: 10,
+    columnGap: spacing(4),
     containerWidth,
   });
   const columnParameters = {
@@ -72,7 +76,7 @@ export const ArticleColumns: React.FC<Props> = ({
               columnParameters={columnParameters}
               renderBefore={() => (
                 <FrontPageByline
-                  withKeyline={true}
+                  showKeyline={true}
                   byline={bylines}
                   containerStyle={{
                     marginBottom: articleMeasurements.bylineMargin ?? 0,

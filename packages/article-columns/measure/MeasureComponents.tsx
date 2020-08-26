@@ -73,7 +73,7 @@ export const MeasureByline: React.FC<{
     >
       <FrontPageByline
         byline={bylines}
-        withKeyline={true}
+        showKeyline={true}
         containerStyle={{ marginBottom: 0 }}
       />
     </View>

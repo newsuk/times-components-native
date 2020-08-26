@@ -33,7 +33,7 @@ const ArticleHeader = ({
               {
                 ...fontFactory({
                   font: headlineFont || "headline",
-                  fontSize: "headline",
+                  fontSize: "tabletCommentHeadline",
                 }),
               },
               headlineCase ? { textTransform: headlineCase } : null,

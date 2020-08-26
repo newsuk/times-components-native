@@ -10,6 +10,7 @@ import {
   subscribeNewsletter,
 } from "@times-components-native/provider-queries";
 import InlineNewsletterPuff from "../src/article-body/inline-newsletter-puff";
+import { ResponsiveContext } from "@times-components-native/responsive";
 
 jest.mock("@times-components-native/image", () => ({
   __esModule: true,
@@ -17,44 +18,49 @@ jest.mock("@times-components-native/image", () => ({
   Placeholder: () => "Placeholder rendered",
 }));
 const mockAnalyticsStream = jest.fn();
-const renderComponent = (
-  mocks = [
-    {
-      request: {
-        query: getNewsletter,
-        variables: {
-          code: "TNL-119",
+const renderComponent = (options = {}) => {
+  const {
+    mocks = [
+      {
+        request: {
+          query: getNewsletter,
+          variables: {
+            code: "TNL-119",
+          },
         },
-      },
-      result: {
-        data: {
-          newsletter: {
-            id: "a2l6E000000CdHzQAK",
-            isSubscribed: false,
-            __typename: "Newsletter",
+        result: {
+          data: {
+            newsletter: {
+              id: "a2l6E000000CdHzQAK",
+              isSubscribed: false,
+              __typename: "Newsletter",
+            },
           },
         },
       },
-    },
-  ],
-) =>
-  create(
+    ],
+    breakpoint = "small",
+  } = options;
+  return create(
     <MockedProvider mocks={mocks}>
-      <InlineNewsletterPuff
-        {...{
-          analyticsStream: mockAnalyticsStream,
-          code: "TNL-119",
+      <ResponsiveContext.Provider value={{ editionBreakpoint: breakpoint }}>
+        <InlineNewsletterPuff
+          {...{
+            analyticsStream: mockAnalyticsStream,
+            code: "TNL-119",
 
-          label: "STRAIGHT IN YOUR INBOX",
-          headline: "Politics. Explained.",
-          copy:
-            "Sign up to receive our brilliant Red Box newsletter, Matt Chorley`s poke at politics delivered every weekday morning at 8am.",
-          imageUri:
-            "https://nuk-tnl-deck-prod-static.s3-eu-west-1.amazonaws.com/uploads/2aa9050e6c3d4de682f11a4802ebba96.jpg",
-        }}
-      />
+            label: "STRAIGHT IN YOUR INBOX",
+            headline: "Politics. Explained.",
+            copy:
+              "Sign up to receive our brilliant Red Box newsletter, Matt Chorley`s poke at politics delivered every weekday morning at 8am.",
+            imageUri:
+              "https://nuk-tnl-deck-prod-static.s3-eu-west-1.amazonaws.com/uploads/2aa9050e6c3d4de682f11a4802ebba96.jpg",
+          }}
+        />
+      </ResponsiveContext.Provider>
     </MockedProvider>,
   );
+};
 
 export default () => {
   describe("Inline Newsletter Puff", () => {
@@ -63,12 +69,30 @@ export default () => {
       expect(component).toMatchSnapshot();
     });
 
-    it("renders signup state", async () => {
-      const component = renderComponent();
+    describe("renders signup state: ", () => {
+      it("small", async () => {
+        const component = renderComponent({ breakpoint: "small" });
 
-      await delay(0);
+        await delay(0);
 
-      expect(component).toMatchSnapshot();
+        expect(component).toMatchSnapshot();
+      });
+
+      it("medium", async () => {
+        const component = renderComponent({ breakpoint: "medium" });
+
+        await delay(0);
+
+        expect(component).toMatchSnapshot();
+      });
+
+      it("wide", async () => {
+        const component = renderComponent({ breakpoint: "wide" });
+
+        await delay(0);
+
+        expect(component).toMatchSnapshot();
+      });
     });
 
     it("renders null when is already subscribed", async () => {
@@ -97,14 +121,6 @@ export default () => {
       expect(component).toMatchSnapshot();
     });
 
-    it("renders signup view when not already subscribed", async () => {
-      const component = renderComponent();
-
-      await delay(0);
-
-      expect(component).toMatchSnapshot();
-    });
-
     it("renders 'saving' when the button is clicked", async () => {
       const component = renderComponent();
 
@@ -115,8 +131,8 @@ export default () => {
       expect(component).toMatchSnapshot();
     });
 
-    it("renders the success view after subscribing ", async () => {
-      const component = renderComponent([
+    describe("renders the success view after subscribing: ", () => {
+      const mocks = [
         {
           request: {
             query: getNewsletter,
@@ -151,15 +167,43 @@ export default () => {
             },
           },
         },
-      ]);
+      ];
 
-      await delay(0);
+      it("small", async () => {
+        const component = renderComponent({ mocks, breakpoint: "small" });
 
-      component.root.findByType(Button).props.onPress();
+        await delay(0);
 
-      await delay(3);
+        component.root.findByType(Button).props.onPress();
 
-      expect(component).toMatchSnapshot();
+        await delay(3);
+
+        expect(component).toMatchSnapshot();
+      });
+
+      it("medium", async () => {
+        const component = renderComponent({ mocks, breakpoint: "medium" });
+
+        await delay(0);
+
+        component.root.findByType(Button).props.onPress();
+
+        await delay(3);
+
+        expect(component).toMatchSnapshot();
+      });
+
+      it("wide", async () => {
+        const component = renderComponent({ mocks, breakpoint: "wide" });
+
+        await delay(0);
+
+        component.root.findByType(Button).props.onPress();
+
+        await delay(3);
+
+        expect(component).toMatchSnapshot();
+      });
     });
   });
 };

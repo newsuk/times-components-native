@@ -20,6 +20,8 @@ import {
   getPuzzleSlices,
   mockSecondaryOneAndFourSlice,
   mockListTwoAndSixNoPicSlice,
+  mockLeadOneAndOneFrontSlice,
+  mockLeadTwoNoPicAndTwoFrontSlice,
 } from "@times-components-native/fixture-generator";
 import Responsive from "@times-components-native/responsive";
 import "./mocks";
@@ -41,6 +43,8 @@ import {
   StandardSlice,
   ListTwoAndSixNoPicSlice,
   LeadTwoNoPicAndTwoFrontSlice,
+  LeadOneAndOneFrontSlice,
+  TopSecondarySlice,
 } from "../src/slices";
 
 const slices = [
@@ -125,9 +129,64 @@ const slices = [
     Slice: PuzzleSlice,
   },
   {
-    mock: mockLeadTwoNoPicAndTwoSlice(),
-    name: "front lead two no pic and two",
+    mock: mockLeadTwoNoPicAndTwoFrontSlice(),
+    name: "front lead two no pic and two - landscape",
     Slice: LeadTwoNoPicAndTwoFrontSlice,
+    orientation: "landscape",
+  },
+  {
+    mock: mockLeadTwoNoPicAndTwoFrontSlice(),
+    name: "front lead two no pic and two - portrait",
+    Slice: LeadTwoNoPicAndTwoFrontSlice,
+    orientation: "portrait",
+  },
+  {
+    mock: mockLeadOneAndOneFrontSlice(),
+    name: "front lead one and one - portrait",
+    Slice: LeadOneAndOneFrontSlice,
+    orientation: "portrait",
+  },
+  {
+    mock: mockLeadOneAndOneFrontSlice(),
+    name: "front lead one and one - landscape",
+    Slice: LeadOneAndOneFrontSlice,
+    orientation: "landscape",
+  },
+  {
+    mock: mockSecondaryFourSlice(),
+    name: "top secondary landscape (from TopSecondaryFourSlice)",
+    Slice: TopSecondarySlice,
+    orientation: "landscape",
+  },
+  {
+    mock: mockSecondaryFourSlice(),
+    name: "top secondary portrait (from TopSecondaryFourSlice)",
+    Slice: TopSecondarySlice,
+    orientation: "portrait",
+  },
+  {
+    mock: mockSecondaryTwoAndTwoSlice(),
+    name: "top secondary landscape (from TopSecondaryTwoAndTwoSlice)",
+    Slice: TopSecondarySlice,
+    orientation: "landscape",
+  },
+  {
+    mock: mockSecondaryTwoAndTwoSlice(),
+    name: "top secondary portrait (from TopSecondaryTwoAndTwoSlice)",
+    Slice: TopSecondarySlice,
+    orientation: "portrait",
+  },
+  {
+    mock: mockSecondaryTwoNoPicAndTwoSlice(),
+    name: "top secondary landscape (from TopSecondaryTwoNoPicAndTwoSlice)",
+    Slice: TopSecondarySlice,
+    orientation: "landscape",
+  },
+  {
+    mock: mockSecondaryTwoNoPicAndTwoSlice(),
+    name: "top secondary portrait (from TopSecondaryTwoNoPicAndTwoSlice)",
+    Slice: TopSecondarySlice,
+    orientation: "portrait",
   },
 ];
 
@@ -142,11 +201,13 @@ jest.mock("@times-components-native/utils", () => {
 });
 
 const tabletTester = (type) =>
-  slices.map(({ mock, name, Slice }) => ({
+  slices.map(({ mock, name, Slice, orientation }) => ({
     name: `${name} - ${type}`,
     test: () => {
+      let width = editionBreakpointWidths[type];
       getDimensions.mockImplementation(() => ({
-        width: editionBreakpointWidths[type],
+        width,
+        height: orientation === "landscape" ? width / 2 : width * 2,
       }));
       const output = TestRenderer.create(
         <Responsive>

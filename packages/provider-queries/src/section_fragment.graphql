@@ -574,74 +574,7 @@ fragment commonSlicesSection on StandardSectionSlice {
     }
   }
   ... on TopSecondaryFourSlice {
-    secondary1 {
-      headline
-      leadAsset {
-        ...leadAsset169
-      }
-      article {
-        ...baseArticleProps
-        leadAsset {
-          ...leadAsset169
-        }
-        listingAsset {
-          ...leadAsset169
-        }
-        summary125: summary(maxCharCount: 125)
-      }
-      teaser125: teaser(maxCharCount: 125)
-    }
-    secondary2 {
-      headline
-      leadAsset {
-        ...leadAsset169
-      }
-      article {
-        ...baseArticleProps
-        leadAsset {
-          ...leadAsset169
-        }
-        listingAsset {
-          ...leadAsset169
-        }
-        summary125: summary(maxCharCount: 125)
-      }
-      teaser125: teaser(maxCharCount: 125)
-    }
-    secondary3 {
-      headline
-      leadAsset {
-        ...leadAsset169
-      }
-      article {
-        ...baseArticleProps
-        leadAsset {
-          ...leadAsset169
-        }
-        listingAsset {
-          ...leadAsset169
-        }
-        summary125: summary(maxCharCount: 125)
-      }
-      teaser125: teaser(maxCharCount: 125)
-    }
-    secondary4 {
-      headline
-      leadAsset {
-        ...leadAsset169
-      }
-      article {
-        ...baseArticleProps
-        leadAsset {
-          ...leadAsset169
-        }
-        listingAsset {
-          ...leadAsset169
-        }
-        summary125: summary(maxCharCount: 125)
-      }
-      teaser125: teaser(maxCharCount: 125)
-    }
+    ...topSecondarySlice
   }
   ... on SecondaryOneSlice {
     secondary {
@@ -812,70 +745,7 @@ fragment commonSlicesSection on StandardSectionSlice {
     }
   }
   ... on TopSecondaryTwoAndTwoSlice {
-    secondary1 {
-      headline
-      leadAsset {
-        ...leadAsset169
-      }
-      article {
-        ...baseArticleProps
-        summary800: summary(maxCharCount: 800)
-        leadAsset {
-          ...leadAsset169
-        }
-        listingAsset {
-          ...leadAsset169
-        }
-      }
-      teaser800: teaser(maxCharCount: 800)
-    }
-    secondary2 {
-      headline
-      leadAsset {
-        ...leadAsset169
-      }
-      article {
-        ...baseArticleProps
-        summary800: summary(maxCharCount: 800)
-        leadAsset {
-          ...leadAsset169
-        }
-        listingAsset {
-          ...leadAsset169
-        }
-      }
-      teaser800: teaser(maxCharCount: 800)
-    }
-    support1 {
-      headline
-      leadAsset {
-        ...leadAsset11
-      }
-      article {
-        ...baseArticleProps
-        leadAsset {
-          ...leadAsset11
-        }
-        listingAsset {
-          ...leadAsset11
-        }
-      }
-    }
-    support2 {
-      headline
-      leadAsset {
-        ...leadAsset11
-      }
-      article {
-        ...baseArticleProps
-        leadAsset {
-          ...leadAsset11
-        }
-        listingAsset {
-          ...leadAsset11
-        }
-      }
-    }
+    ...topSecondarySlice
   }
   ... on SecondaryTwoNoPicAndTwoSlice {
     secondary1 {
@@ -930,56 +800,7 @@ fragment commonSlicesSection on StandardSectionSlice {
     }
   }
   ... on TopSecondaryTwoNoPicAndTwoSlice {
-    secondary1 {
-      headline
-      article {
-        ...baseArticleProps
-        summary125: summary(maxCharCount: 125)
-        summary800: summary(maxCharCount: 800)
-      }
-      teaser125: teaser(maxCharCount: 125)
-      teaser800: teaser(maxCharCount: 800)
-    }
-    secondary2 {
-      headline
-      article {
-        ...baseArticleProps
-        summary125: summary(maxCharCount: 125)
-        summary800: summary(maxCharCount: 800)
-      }
-      teaser125: teaser(maxCharCount: 125)
-      teaser800: teaser(maxCharCount: 800)
-    }
-    support1 {
-      headline
-      leadAsset {
-        ...leadAsset11
-      }
-      article {
-        ...baseArticleProps
-        leadAsset {
-          ...leadAsset11
-        }
-        listingAsset {
-          ...leadAsset11
-        }
-      }
-    }
-    support2 {
-      headline
-      leadAsset {
-        ...leadAsset11
-      }
-      article {
-        ...baseArticleProps
-        leadAsset {
-          ...leadAsset11
-        }
-        listingAsset {
-          ...leadAsset11
-        }
-      }
-    }
+    ...topSecondarySlice
   }
   ... on TwoPicAndSixNoPicSlice {
     lead1 {
@@ -1125,4 +946,61 @@ fragment frontSlicesSection on FrontPageSectionSlice {
       }
     }
   }
+  ... on LeadOneAndOneFrontSlice {
+    lead {
+      headline
+      strapline
+      leadAsset {
+        ...leadAsset169and32
+      }
+      article {
+        ...baseArticleProps
+        strapline
+        content
+        leadAsset {
+          ...leadAsset169and32
+        }
+        listingAsset {
+          ...leadAsset169and32
+        }
+      }
+    }
+    support {
+      headline
+      leadAsset {
+        ...leadAsset169
+      }
+      article {
+        ...baseArticleProps
+        content
+        leadAsset {
+          ...leadAsset169
+        }
+        listingAsset {
+          ...leadAsset169
+        }
+      }
+    }
+  }
 }
+
+fragment topSecondarySlice on ArticleSlice {
+  items {
+    headline
+    leadAsset {
+      ...leadAsset169and32
+    }
+    article {
+      ...baseArticleProps
+      summary800: summary(maxCharCount: 800)
+      leadAsset {
+        ...leadAsset169and32
+      }
+      listingAsset {
+        ...leadAsset169and32
+      }
+    }
+    teaser800: teaser(maxCharCount: 800)
+  }
+}
+

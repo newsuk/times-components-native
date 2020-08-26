@@ -65,7 +65,7 @@ exports[`ArticleColumns generates columns for article content 1`] = `
       "columnCount": 3,
       "columnHeight": 400,
       "columnLineHeight": 18,
-      "columnWidth": 60,
+      "columnWidth": 53.333333333333336,
     }
   }
   renderMeasuredContents={[Function]}
@@ -103,7 +103,7 @@ exports[`ArticleColumns renders navigator via a render-prop with generated pages
         "columnCount": 3,
         "columnHeight": 400,
         "columnLineHeight": 18,
-        "columnWidth": 60,
+        "columnWidth": 53.333333333333336,
       }
     }
     renderBefore={[Function]}
@@ -116,3 +116,5 @@ exports[`ArticleColumns renders navigator via a render-prop with generated pages
   />
 </Columns>
 `;
+
+exports[`ArticleColumns renders nothing if height is 0 1`] = `null`;

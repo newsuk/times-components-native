@@ -60,7 +60,7 @@ const ArticleExtrasContent = ({
             onCommentsPress={onCommentsPress}
             url={articleUrl}
           />
-          {isTablet && <SponsoredAd />}
+          {isTablet && <SponsoredAd narrowContent={narrowContent} />}
         </View>
       )}
     </ResponsiveContext.Consumer>

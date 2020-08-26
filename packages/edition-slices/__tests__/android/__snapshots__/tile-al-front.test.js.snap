@@ -124,6 +124,7 @@ exports[`tile al front huge 1`] = `
         "textAlign": "justify",
       }
     }
+    template="mainstandard"
     tile={
       Object {
         "article": Object {
@@ -698,6 +699,7 @@ exports[`tile al front medium 1`] = `
         "textAlign": "justify",
       }
     }
+    template="mainstandard"
     tile={
       Object {
         "article": Object {
@@ -1272,6 +1274,7 @@ exports[`tile al front wide 1`] = `
         "textAlign": "justify",
       }
     }
+    template="mainstandard"
     tile={
       Object {
         "article": Object {

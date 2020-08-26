@@ -17,6 +17,8 @@ import ListVerticalLayout from "./templates/vertical-list";
 import HorizontalLayout from "./templates/horizontallayout";
 import { ItemColSeparator, ItemRowSeparator } from "./templates/shared";
 import FrontLeadTwoAndTwoSlice from "./templates/frontleadtwoandtwo";
+import FrontLeadOneAndOneSlice from "./templates/frontleadoneandone";
+import TopSecondarySlice from "./templates/topsecondary";
 
 export {
   VerticalLayout,
@@ -39,4 +41,6 @@ export {
   ItemColSeparator,
   ItemRowSeparator,
   FrontLeadTwoAndTwoSlice,
+  FrontLeadOneAndOneSlice,
+  TopSecondarySlice,
 };

@@ -73,4 +73,19 @@ describe("ArticleColumns", () => {
       renderMeasuredContentsRenderProp(articleMeasurements),
     ).toMatchSnapshot();
   });
+
+  it("renders nothing if height is 0", () => {
+    const renderer = TestRenderer.create(
+      <ArticleColumns
+        style={style}
+        articleContents={[contents]}
+        containerWidth={200}
+        containerHeight={0}
+        columnCount={3}
+        lineHeight={18}
+        bylines={bylines}
+      />,
+    );
+    expect(renderer.toJSON()).toMatchSnapshot();
+  });
 });

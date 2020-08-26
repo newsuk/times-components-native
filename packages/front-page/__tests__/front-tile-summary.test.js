@@ -53,6 +53,7 @@ const props = {
   headlineStyle: { backgroundColor: "blue" },
   straplineStyle: { backgroundColor: "green" },
   strapline: "Strapline Text",
+  template: "mainstandard",
   summaryStyle: { backgroundColor: "orange" },
 };
 
@@ -82,6 +83,14 @@ describe("FrontTileSummary", () => {
   it("renders with more than 1 columns", () => {
     let renderer = ReactTestRenderer.create(
       <FrontTileSummary {...props} columnCount={2} />,
+    );
+
+    expect(renderer.toJSON()).toMatchSnapshot();
+  });
+
+  it("renders with keyline", () => {
+    let renderer = ReactTestRenderer.create(
+      <FrontTileSummary {...props} showKeyline={true} />,
     );
 
     expect(renderer.toJSON()).toMatchSnapshot();

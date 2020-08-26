@@ -5,7 +5,6 @@ import editionBreakpoints from "@times-components-native/styleguide";
 import { FrontTileSummary } from "@times-components-native/front-page";
 import { getTileStrapline, TileLink } from "../shared";
 import stylesFactory from "./styles";
-import PositionedTileStar from "../shared/positioned-tile-star";
 
 const TileXFront = ({
   onPress,
@@ -15,6 +14,7 @@ const TileXFront = ({
 }) => {
   const styles = stylesFactory(breakpoint);
 
+  const { article } = tile;
   return (
     <TileLink onPress={onPress} style={styles.container} tile={tile}>
       <FrontTileSummary
@@ -25,12 +25,12 @@ const TileXFront = ({
         }
         strapline={getTileStrapline(tile)}
         straplineStyle={styles.strapline}
-        summary={tile.article.content}
+        summary={article.content}
         summaryStyle={styles.summary}
         tile={tile}
-        bylines={tile.article.bylines}
+        bylines={article.bylines}
+        template={article.template}
       />
-      <PositionedTileStar articleId={tile.article.id} />
     </TileLink>
   );
 };

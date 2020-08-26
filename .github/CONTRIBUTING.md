@@ -55,34 +55,6 @@ the storybook.
 
 ### Development gotchas
 
-## Dynamic Styled Components
-
-We use
-[styled-components](https://github.com/styled-components/styled-components) to
-give us the ability to use media queries and keyframes to improve both UX and
-DX. This allows us to server-side-render pages but provide different experiences
-without the need for JavaScript.
-
-It is possible to dynamically create a `styled-component` at runtime but this
-leads to poor SSR performance. On the server, one instance of the component will
-be created, and on the client another, which breaks the benefits of hydration
-and would result in another render. In addition, if you provide props to a
-component that does this, you can't use lifecycle hooks such as
-`componentDidUpdate` because these components are always torn down (unmounted).
-
-Avoid this pattern and use control flow to choose a specific `styled-component`
-instead.
-
-## Style Object Literals
-
-We use `react-native-web` to compile our React Native components to web friendly
-React. This relies on aggregating the given React Native styles and converting
-them into CSS classes. Not only is it best practice to
-[use a stylesheet](https://github.com/necolas/react-native-web/blob/master/packages/website/guides/style.md#defining-styles)
-whenever creating styles, it's also mandatory for hydration of SSR code. When
-using object literals, the styles can be incorrectly aggregated on the server
-and the client due to the different JS objects.
-
 > #### Caution
 >
 > There are some problems regarding the usage of native storybooks with the

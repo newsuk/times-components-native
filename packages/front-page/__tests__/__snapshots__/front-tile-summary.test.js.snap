@@ -41,7 +41,6 @@ exports[`FrontTileSummary renders correctly 1`] = `
         },
       ]
     }
-    withKeyline={false}
   />
   <FrontArticleSummaryContent
     bylines={
@@ -77,6 +76,89 @@ exports[`FrontTileSummary renders correctly 1`] = `
         "backgroundColor": "orange",
       }
     }
+    template="mainstandard"
+  />
+</View>
+`;
+
+exports[`FrontTileSummary renders with keyline 1`] = `
+<View
+  style={
+    Array [
+      Object {
+        "backgroundColor": "red",
+      },
+      Object {
+        "flex": 1,
+      },
+    ]
+  }
+>
+  <ArticleSummaryHeadline
+    headline="This is tile headline"
+    style={
+      Object {
+        "backgroundColor": "blue",
+      }
+    }
+  />
+  <ArticleSummaryStrapline
+    strapline="Strapline Text"
+    style={
+      Object {
+        "backgroundColor": "green",
+      }
+    }
+  />
+  <FrontPageByline
+    byline={
+      Array [
+        Object {
+          "byline": Array [
+            Object {
+              "foo": "bar",
+            },
+          ],
+        },
+      ]
+    }
+    showKeyline={true}
+  />
+  <FrontArticleSummaryContent
+    bylines={
+      Array [
+        Object {
+          "byline": Array [
+            Object {
+              "foo": "bar",
+            },
+          ],
+        },
+      ]
+    }
+    summary={
+      Array [
+        Object {
+          "attributes": Object {},
+          "children": Array [
+            Object {
+              "attributes": Object {
+                "value": "Test",
+              },
+              "children": Array [],
+              "name": "text",
+            },
+          ],
+          "name": "paragraph",
+        },
+      ]
+    }
+    summaryStyle={
+      Object {
+        "backgroundColor": "orange",
+      }
+    }
+    template="mainstandard"
   />
 </View>
 `;
@@ -145,6 +227,7 @@ exports[`FrontTileSummary renders with more than 1 columns 1`] = `
         "backgroundColor": "orange",
       }
     }
+    template="mainstandard"
   />
 </View>
 `;
@@ -201,6 +284,7 @@ exports[`FrontTileSummary renders without byline 1`] = `
         "backgroundColor": "orange",
       }
     }
+    template="mainstandard"
   />
 </View>
 `;
@@ -238,7 +322,6 @@ exports[`FrontTileSummary renders without strapline 1`] = `
         },
       ]
     }
-    withKeyline={false}
   />
   <FrontArticleSummaryContent
     bylines={
@@ -274,6 +357,7 @@ exports[`FrontTileSummary renders without strapline 1`] = `
         "backgroundColor": "orange",
       }
     }
+    template="mainstandard"
   />
 </View>
 `;

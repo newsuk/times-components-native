@@ -18,7 +18,7 @@ import {
   mockSecondaryTwoNoPicAndTwoSlice,
   mockStandardSlice,
   mockListTwoAndSixNoPicSlice,
-  mockFrontLeadTwoNoPicAndTwoSlice,
+  mockLeadTwoNoPicAndTwoFrontSlice,
 } from "./mock-slice";
 
 function getSlices(): Array<ArticleSlice> {
@@ -158,7 +158,7 @@ function mockFrontSection(): StandardSectionWithName {
     },
     id: "front-page-section",
     name: "FrontPageSection",
-    slices: [mockFrontLeadTwoNoPicAndTwoSlice()],
+    slices: [mockLeadTwoNoPicAndTwoFrontSlice()],
     slug: "dummy-section-slug",
     title: "some-title",
   };
