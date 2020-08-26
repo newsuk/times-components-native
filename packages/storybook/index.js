@@ -1,7 +1,6 @@
 export {
   BarSpacingDecorator,
   CenteredDecorator,
-  createScopedGlobalStyle,
   LateralSpacingDecorator,
   sections,
   showcaseConverter,
