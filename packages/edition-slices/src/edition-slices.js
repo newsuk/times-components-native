@@ -17,6 +17,7 @@ import {
   SecondaryOneSlice,
   SecondaryTwoAndTwoSlice,
   SecondaryTwoNoPicAndTwoSlice,
+  SupplementLeadOneAndFourSlice,
   LeadTwoNoPicAndTwoFrontSlice,
   LeadOneAndOneFrontSlice,
   LeadOneFullWidthFrontSlice,
@@ -38,7 +39,7 @@ const sliceMap = (isInSupplement) => {
     DailyUniversalRegister: DailyRegisterLeadFourSlice,
     LeadersSlice,
     LeadOneAndFourSlice: isInTabletSupplement
-      ? LeadOneAndFourSlice
+      ? SupplementLeadOneAndFourSlice
       : LeadOneAndFourSlice,
     LeadOneAndOneSlice,
     LeadOneFullWidthSlice,
