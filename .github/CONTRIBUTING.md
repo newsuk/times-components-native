@@ -135,6 +135,8 @@ Follow these steps to deploy storybook native to a real android device.
   on your computer for more info on the error
 * If you're still struggling verify that you are able to run `yarn storybook`
   and that it works in web view.
+* If you have issues with jest test not updating to use latest code changes, try
+  `yarn jest --clearCache` then run your tests again.
 
 ### iOS
 
