@@ -27,7 +27,6 @@
     "test:android": "jest --config test-setup/jest.android.config.js",
     "test:common": "jest --config test-setup/jest.common.config.js",
     "test:all": "yarn test:ios && yarn test:android && yarn test:common",
-    "test:clear": "jest --clearCache"
   },
   "repository": {
     "type": "git",

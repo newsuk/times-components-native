@@ -10,8 +10,8 @@ const TileImage = ({ hasVideo, style, onLayout, ...props }) => {
   }
 
   return (
-    <View style={style} onLayout={onLayout && onLayout}>
-      <Image {...props} />
+    <View style={style}>
+      <Image onLayout={onLayout && onLayout} {...props} />
       <View style={playIconStyles}>
         <PlayIcon />
       </View>
