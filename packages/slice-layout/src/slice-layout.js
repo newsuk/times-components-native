@@ -1,48 +1,23 @@
-import StandardSlice from "./templates/standard";
-import LeadOneAndFourSlice from "./templates/leadoneandfour";
-import LeadOneAndOneSlice from "./templates/leadoneandone";
-import LeadOneAndTwoSlice from "./templates/leadoneandtwo";
-import LeadTwoNoPicAndTwoSlice from "./templates/leadtwonopicandtwo";
-import OpinionOneAndTwoSlice from "./templates/opiniononeandtwo";
-import SecondaryOneAndColumnistSlice from "./templates/secondaryoneandcolumnist";
-import SecondaryFourSlice from "./templates/secondaryfour";
-import SecondaryTwoNoPicAndTwoSlice from "./templates/secondarytwonopicandtwo";
-import SecondaryTwoAndTwoSlice from "./templates/secondarytwoandtwo";
-import SecondaryOneAndFourSlice from "./templates/secondaryoneandfour";
-import ListTwoAndSixNoPic from "./templates/listtwoandsixnopic";
-import Leaders from "./templates/leaders";
-import CommentLeadAndCartoon from "./templates/commentleadandcartoon";
-import VerticalLayout from "./templates/verticallayout";
-import ListVerticalLayout from "./templates/vertical-list";
-import HorizontalLayout from "./templates/horizontallayout";
-import { ItemColSeparator, ItemRowSeparator } from "./templates/shared";
-import FrontLeadTwoAndTwoSlice from "./templates/frontleadtwoandtwo";
-import FrontLeadOneAndOneSlice from "./templates/frontleadoneandone";
-import TopSecondarySlice from "./templates/topsecondary";
-import SupplementLeadOneAndFourSlice from "./templates/supplementleadoneandfour";
-
-export {
-  VerticalLayout,
-  HorizontalLayout,
-  CommentLeadAndCartoon,
-  StandardSlice,
-  ListVerticalLayout,
-  LeadOneAndFourSlice,
-  LeadOneAndOneSlice,
-  LeadOneAndTwoSlice,
-  LeadTwoNoPicAndTwoSlice,
-  OpinionOneAndTwoSlice,
-  SecondaryOneAndColumnistSlice,
-  SecondaryFourSlice,
-  SecondaryTwoAndTwoSlice,
-  SecondaryOneAndFourSlice,
-  SecondaryTwoNoPicAndTwoSlice,
-  Leaders,
-  ListTwoAndSixNoPic,
-  ItemColSeparator,
-  ItemRowSeparator,
-  FrontLeadTwoAndTwoSlice,
-  FrontLeadOneAndOneSlice,
-  TopSecondarySlice,
-  SupplementLeadOneAndFourSlice,
-};
+export { default as StandardSlice } from "./templates/standard";
+export { default as LeadOneAndFourSlice } from "./templates/leadoneandfour";
+export { default as LeadOneAndOneSlice } from "./templates/leadoneandone";
+export { default as LeadOneAndTwoSlice } from "./templates/leadoneandtwo";
+export { default as LeadTwoNoPicAndTwoSlice } from "./templates/leadtwonopicandtwo";
+export { default as OpinionOneAndTwoSlice } from "./templates/opiniononeandtwo";
+export { default as SecondaryOneAndColumnistSlice } from "./templates/secondaryoneandcolumnist";
+export { default as SecondaryFourSlice } from "./templates/secondaryfour";
+export { default as SecondaryTwoNoPicAndTwoSlice } from "./templates/secondarytwonopicandtwo";
+export { default as SecondaryTwoAndTwoSlice } from "./templates/secondarytwoandtwo";
+export { default as SecondaryOneAndFourSlice } from "./templates/secondaryoneandfour";
+export { default as ListTwoAndSixNoPic } from "./templates/listtwoandsixnopic";
+export { default as Leaders } from "./templates/leaders";
+export { default as CommentLeadAndCartoon } from "./templates/commentleadandcartoon";
+export { default as VerticalLayout } from "./templates/verticallayout";
+export { default as ListVerticalLayout } from "./templates/vertical-list";
+export { default as HorizontalLayout } from "./templates/horizontallayout";
+export { ItemColSeparator, ItemRowSeparator } from "./templates/shared";
+export { default as FrontLeadTwoAndTwoSlice } from "./templates/frontleadtwoandtwo";
+export { default as FrontLeadOneAndOneSlice } from "./templates/frontleadoneandone";
+export { default as FrontLeadOneSlice } from "./templates/frontleadone";
+export { default as TopSecondarySlice } from "./templates/topsecondary";
+export { default as SupplementLeadOneAndFourSlice } from "./templates/supplementleadoneandfour";
