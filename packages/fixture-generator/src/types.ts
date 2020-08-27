@@ -2092,7 +2092,7 @@ export interface LeadOneAndOneFrontSlice extends ArticleSlice {
 }
 
 export interface LeadOneFullWidthFrontSlice extends ArticleSlice {
-  lead1: Tile;
+  lead: Tile;
 
   items: Tile[];
 
@@ -2154,6 +2154,15 @@ export interface LeadOneAndFourSlice extends ArticleSlice {
   support3: Tile;
 
   support4: Tile;
+
+  items: Tile[];
+
+  sections: Section[];
+}
+
+/** A lead article (lead-1) */
+export interface LeadOneSlice extends ArticleSlice {
+  lead: Tile;
 
   items: Tile[];
 

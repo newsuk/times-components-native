@@ -20,6 +20,7 @@ import {
   Tile,
   SecondaryOneAndFourSlice,
   Puzzle,
+  LeadOneFullWidthFrontSlice,
 } from "./types";
 import MockPuzzle from "./mock-puzzle";
 
@@ -90,6 +91,11 @@ interface TwoPicAndSixNoPicSliceWithName extends TwoPicAndSixNoPicSlice {
 }
 
 interface PuzzleWithName extends Puzzle {
+  name: string;
+}
+
+interface LeadOneFullWidthFrontSliceWithName
+  extends LeadOneFullWidthFrontSlice {
   name: string;
 }
 
@@ -247,6 +253,22 @@ function mockLeadOneAndOneFrontSlice(): LeadOneAndOneSliceWithName {
     lead: leadTile,
     support: supportTile,
     items: [leadTile, supportTile],
+  };
+}
+
+function mockLeadOneFullWidthFrontSlice(): LeadOneFullWidthFrontSliceWithName {
+  const tiles = getTiles(1);
+  const leadTile = {
+    ...tiles[0],
+    article: {
+      ...tiles[0].article,
+      content: new MockMarkup().addParagraphs(20).get(),
+    },
+  };
+  return <LeadOneFullWidthFrontSliceWithName>{
+    name: "LeadOneFullWidthFrontSlice",
+    lead: leadTile,
+    items: [leadTile],
   };
 }
 
@@ -423,4 +445,5 @@ export {
   mockPuzzleSlice,
   mockLeadTwoNoPicAndTwoFrontSlice,
   mockLeadOneAndOneFrontSlice,
+  mockLeadOneFullWidthFrontSlice,
 };
