@@ -1,0 +1,1003 @@
+{
+  "data": {
+    "edition": {
+      "id": "883571b6-83c1-4887-9fd4-40cd7fc882c5",
+      "date": "2020-07-01",
+      "publishedTime": "2020-07-01T16:00:00.000Z",
+      "nativeSections": [
+        {
+          "__typename": "FrontPageSection",
+          "id": "4e9d9a5a-bccf-3d7f-a4b7-2751cf182d37",
+          "title": "Front",
+          "colour": {
+            "rgba": {
+              "red": 0,
+              "green": 0,
+              "blue": 0,
+              "alpha": 1
+            }
+          },
+          "slices": [
+            {
+              "name": "LeadOneAndOneFrontSlice",
+              "lead": {
+                "headline": null,
+                "strapline": null,
+                "article": {
+                  "bylines": [
+                    {
+                      "byline": [
+                        {
+                          "name": "author",
+                          "children": [
+                            {
+                              "name": "text",
+                              "children": [],
+                              "attributes": {
+                                "value": "Catherine Philp"
+                              }
+                            }
+                          ],
+                          "attributes": {
+                            "slug": "catherine-philp"
+                          }
+                        }
+                      ],
+                      "image": null
+                    },
+                    {
+                      "byline": [
+                        {
+                          "name": "inline",
+                          "children": [
+                            {
+                              "name": "text",
+                              "children": [],
+                              "attributes": {
+                                "value": ", Diplomatic Correspondent | "
+                              }
+                            }
+                          ]
+                        }
+                      ],
+                      "image": null
+                    },
+                    {
+                      "byline": [
+                        {
+                          "name": "author",
+                          "children": [
+                            {
+                              "name": "text",
+                              "children": [],
+                              "attributes": {
+                                "value": "Richard Ford"
+                              }
+                            }
+                          ],
+                          "attributes": {
+                            "slug": "richard-ford"
+                          }
+                        }
+                      ],
+                      "image": null
+                    },
+                    {
+                      "byline": [
+                        {
+                          "name": "inline",
+                          "children": [
+                            {
+                              "name": "text",
+                              "children": [],
+                              "attributes": {
+                                "value": ", Home Correspondent"
+                              }
+                            }
+                          ]
+                        }
+                      ],
+                      "image": null
+                    }
+                  ],
+                  "expirableFlags": [
+                    {
+                      "type": "UPDATED",
+                      "expiryTime": "2020-07-02T14:00:00.000Z"
+                    }
+                  ],
+                  "hasVideo": true,
+                  "headline": "China warns Britain over passport offer to 3m Hongkongers",
+                  "id": "358b43c4-bb99-11ea-82eb-1588bf47a52f",
+                  "label": "HONG KONG",
+                  "longRead": false,
+                  "section": "news",
+                  "shortHeadline": "China warns Britain to back off over Hong Kong offer",
+                  "url": "https://www.thetimes.co.uk/article/britain-opens-its-doors-to-3m-hong-kong-migrants-9w95mt36g",
+                  "leadAsset": {
+                    "__typename": "Image",
+                    "crop32": {
+                      "ratio": "3:2",
+                      "relativeHorizontalOffset": 0,
+                      "relativeVerticalOffset": 0,
+                      "relativeWidth": 1,
+                      "relativeHeight": 1,
+                      "url": "https://www.thetimes.co.uk/imageserver/image/%2Fmethode%2Ftimes%2Fprod%2Fweb%2Fbin%2F099425f2-bbde-11ea-82eb-1588bf47a52f.jpg?crop=3333%2C2222%2C0%2C0"
+                    },
+                    "crop169": {
+                      "ratio": "16:9",
+                      "relativeHorizontalOffset": 0.045304530453045305,
+                      "relativeVerticalOffset": 0.2826282628262826,
+                      "relativeWidth": 0.8226822682268227,
+                      "relativeHeight": 0.693969396939694,
+                      "url": "https://www.thetimes.co.uk/imageserver/image/%2Fmethode%2Ftimes%2Fprod%2Fweb%2Fbin%2F099425f2-bbde-11ea-82eb-1588bf47a52f.jpg?crop=2742%2C1542%2C151%2C628"
+                    }
+                  },
+                  "strapline": "Beijing threatens to take ‘corresponding measures’",
+                  "content": [
+                    {
+                      "name": "paragraph",
+                      "children": [
+                        {
+                          "name": "text",
+                          "children": [],
+                          "attributes": {
+                            "value": "China has told the British government it has no right to offer residency to millions of Hongkongers, warning that it could take “corresponding measures” to prevent the move."
+                          }
+                        }
+                      ]
+                    },
+                    {
+                      "name": "paragraph",
+                      "children": [
+                        {
+                          "name": "text",
+                          "children": [],
+                          "attributes": {
+                            "value": "Hours after the Chinese ambassador to the UK was summoned to the Foreign Office, the embassy in London issued a statement reasserting its view that all Hong Kong residents were Chinese nationals, regardless of whether they held a British passport or a British National Overseas passport."
+                          }
+                        }
+                      ]
+                    },
+                    {
+                      "name": "paragraph",
+                      "children": [
+                        {
+                          "name": "text",
+                          "children": [],
+                          "attributes": {
+                            "value": "It accused the government of breaking its promise in a UK-China memo not to extend the right of abode to Hong Kong residents with BNO passports."
+                          }
+                        }
+                      ]
+                    },
+                    {
+                      "name": "paragraph",
+                      "children": [
+                        {
+                          "name": "text",
+                          "children": [],
+                          "attributes": {
+                            "value": "“If the British side should change the practice unilaterally, it not only goes against its own stance and promise but also violates international laws and the basic principles of international relations,” the embassy said. “We are firmly opposed to it, and we reserve the right to take corresponding measures."
+                          }
+                        }
+                      ]
+                    },
+                    {
+                      "name": "paragraph",
+                      "children": [
+                        {
+                          "name": "text",
+                          "children": [],
+                          "attributes": {
+                            "value": "“China urges the British side to view the national security issue in Hong Kong in an objective and fair manner, respect China’s stance and concerns, and not to interfere with Hong Kong affairs in any manner,” the embassy said."
+                          }
+                        }
+                      ]
+                    },
+                    {
+                      "name": "ad",
+                      "children": []
+                    },
+                    {
+                      "name": "paragraph",
+                      "children": [
+                        {
+                          "name": "text",
+                          "children": [],
+                          "attributes": {
+                            "value": "Millions of Hongkongers will be offered five-year visas and a path to British citizenship after the government stepped in to protect residents of its former colony against a draconian Chinese security law."
+                          }
+                        }
+                      ]
+                    },
+                    {
+                      "name": "paragraph",
+                      "children": [
+                        {
+                          "name": "link",
+                          "children": [
+                            {
+                              "name": "text",
+                              "children": [],
+                              "attributes": {
+                                "value": "The new law"
+                              }
+                            }
+                          ],
+                          "attributes": {
+                            "href": "https://www.thetimes.co.uk/edition/news/one-more-sign-of-chinas-growing-confidence-in-asserting-itself-cbbwcg503",
+                            "type": "article",
+                            "canonicalId": "one-more-sign-of-chinas-growing-confidence-in-asserting-itself-cbbwcg503"
+                          }
+                        },
+                        {
+                          "name": "text",
+                          "children": [],
+                          "attributes": {
+                            "value": " gives Beijing powers to crack down on dissent with a maximum penalty of life imprisonment for a range of crimes, in effect outlawing public protest."
+                          }
+                        }
+                      ]
+                    },
+                    {
+                      "name": "paragraph",
+                      "children": [
+                        {
+                          "name": "text",
+                          "children": [],
+                          "attributes": {
+                            "value": "Boris Johnson described it as a “clear and serious breach” of China’s treaty with Britain and Hong Kong’s Basic Law, which serves as its constitution. The prime minister said that in response Britain would "
+                          }
+                        },
+                        {
+                          "name": "link",
+                          "children": [
+                            {
+                              "name": "text",
+                              "children": [],
+                              "attributes": {
+                                "value": "improve its previous offer to Hongkongers"
+                              }
+                            }
+                          ],
+                          "attributes": {
+                            "href": "https://www.thetimes.co.uk/article/visas-are-only-a-lifeboat-for-hong-kong-you-must-stand-up-to-china-8tw3hjmw9",
+                            "type": "article",
+                            "canonicalId": "visas-are-only-a-lifeboat-for-hong-kong-you-must-stand-up-to-china-8tw3hjmw9"
+                          }
+                        },
+                        {
+                          "name": "text",
+                          "children": [],
+                          "attributes": {
+                            "value": " with British National (Overseas) passports."
+                          }
+                        }
+                      ]
+                    },
+                    {
+                      "name": "paragraph",
+                      "children": [
+                        {
+                          "name": "text",
+                          "children": [],
+                          "attributes": {
+                            "value": "Writing "
+                          }
+                        },
+                        {
+                          "name": "link",
+                          "children": [
+                            {
+                              "name": "text",
+                              "children": [],
+                              "attributes": {
+                                "value": "in The Times last month"
+                              }
+                            }
+                          ],
+                          "attributes": {
+                            "href": "https://www.thetimes.co.uk/article/hong-kong-crisis-we-will-meet-our-obligations-not-walk-away-zv7f70n29",
+                            "type": "article",
+                            "canonicalId": "hong-kong-crisis-we-will-meet-our-obligations-not-walk-away-zv7f70n29"
+                          }
+                        },
+                        {
+                          "name": "text",
+                          "children": [],
+                          "attributes": {
+                            "value": ", he said that such residents would be able to “come to the UK for a renewable period of 12 months and be given further immigration rights, including the right to work, which could place them on a route to citizenship”."
+                          }
+                        }
+                      ]
+                    },
+                    {
+                      "name": "paragraph",
+                      "children": [
+                        {
+                          "name": "text",
+                          "children": [],
+                          "attributes": {
+                            "value": "Yesterday Dominic Raab, the foreign secretary, announced the creation of "
+                          }
+                        },
+                        {
+                          "name": "link",
+                          "children": [
+                            {
+                              "name": "text",
+                              "children": [],
+                              "attributes": {
+                                "value": "a bespoke immigration arrangement"
+                              }
+                            }
+                          ],
+                          "attributes": {
+                            "href": "https://www.thetimes.co.uk/article/dominic-raab-says-hong-kong-security-law-violates-joint-declaration-dqgc3g9bn",
+                            "type": "article",
+                            "canonicalId": "dominic-raab-says-hong-kong-security-law-violates-joint-declaration-dqgc3g9bn"
+                          }
+                        },
+                        {
+                          "name": "text",
+                          "children": [],
+                          "attributes": {
+                            "value": " for about 350,000 of the territory’s people who hold BNO passports and the 2.5 million eligible to apply for one."
+                          }
+                        }
+                      ]
+                    },
+                    {
+                      "name": "paragraph",
+                      "children": [
+                        {
+                          "name": "text",
+                          "children": [],
+                          "attributes": {
+                            "value": "No limits are being placed on the number who could be admitted, but many will stay or would be more likely to move to places in the Pacific region such as Taiwan or Singapore. Mr Raab said: “We will not look the other way on Hong Kong, and we will not duck our historic responsibilities to its people.”"
+                          }
+                        }
+                      ]
+                    },
+                    {
+                      "name": "paragraph",
+                      "children": [
+                        {
+                          "name": "text",
+                          "children": [],
+                          "attributes": {
+                            "value": "He told the Commons: “We will grant BNOs five years’ limited leave to remain, with the right to work or study. After these five years, they will be able to apply for settled status. After a further 12 months with settled status they will be able to apply for citizenship.”"
+                          }
+                        }
+                      ]
+                    },
+                    {
+                      "name": "video",
+                      "attributes": {
+                        "display": "primary",
+                        "brightcovePolicyKey": "BCpkADawqM1d6QTQTQZNvZeQPJoanIYcUVVRuuypZErRN3_-wE6wBEkRhk0JnCMFbIDR4pNtFoO6cbWqB_IL50zx9ZcSLdfMhcNAv46bQxrMyXybmBxe3BeueHE8n6I2qFRSbna8vguRIdZd",
+                        "brightcovePlayerId": "default",
+                        "brightcoveVideoId": "6168550590001",
+                        "brightcoveAccountId": "5436121856001",
+                        "paidOnly": false,
+                        "skySports": false,
+                        "is360": null,
+                        "caption": "Dominic Raab gives a statement on Hong Kong's new security law",
+                        "posterImageUrl": "https://www.thetimes.co.uk/imageserver/image/%2Fmethode%2Ftimes%2Fprod%2Fweb%2Fbin%2Fe4db3744-bc34-11ea-95f9-b983956b27de.jpg?crop=1280%2C720%2C0%2C0",
+                        "relativeHorizontalOffset": 0,
+                        "relativeVerticalOffset": 0,
+                        "relativeWidth": 1,
+                        "relativeHeight": 1
+                      },
+                      "children": []
+                    },
+                    {
+                      "name": "paragraph",
+                      "children": [
+                        {
+                          "name": "text",
+                          "children": [],
+                          "attributes": {
+                            "value": "The offer, backed by 64 per cent of Britons in a You Gov poll, allows BNOs to come to Britain without a job or study offer but will require them to sustain themselves without recourse to public funds. They will not be required to meet the minimum salary threshold of £30,000 applied to other immigrants."
+                          }
+                        }
+                      ]
+                    },
+                    {
+                      "name": "paragraph",
+                      "children": [
+                        {
+                          "name": "text",
+                          "children": [],
+                          "attributes": {
+                            "value": "Mr Raab subsequently admitted that there was little the UK could do if Beijing tried to prevent Hong Kong citizens leaving the country."
+                          }
+                        }
+                      ]
+                    },
+                    {
+                      "name": "paragraph",
+                      "children": [
+                        {
+                          "name": "text",
+                          "children": [],
+                          "attributes": {
+                            "value": "“Ultimately if they follow through on something like that, there would be little that we could do to force them,” he told ITV’s "
+                          }
+                        },
+                        {
+                          "name": "italic",
+                          "children": [
+                            {
+                              "name": "text",
+                              "children": [],
+                              "attributes": {
+                                "value": "Peston "
+                              }
+                            }
+                          ]
+                        },
+                        {
+                          "name": "text",
+                          "children": [],
+                          "attributes": {
+                            "value": "show."
+                          }
+                        }
+                      ]
+                    },
+                    {
+                      "name": "paragraph",
+                      "children": [
+                        {
+                          "name": "text",
+                          "children": [],
+                          "attributes": {
+                            "value": "Mr Raab added: “I wouldn’t want to be naive about this: I think we need to be realistic. But I do think that China as a rising, leading member of the international community is sensitive to the reputational risk in all of this but clearly not sufficiently that it hasn’t proceeded anyway . . . There is diplomatic leverage, there are other ways that we can persuade China not to fully implement either the national security law or some of the reprisals you talk about. But ultimately we need to be honest that we wouldn’t be able to force China to allow BNOs to come to the UK.”"
+                          }
+                        }
+                      ]
+                    },
+                    {
+                      "name": "interactive",
+                      "attributes": {
+                        "id": "357323c2-be3d-4e3d-a3fd-2b0a6ef14fb4",
+                        "display": "primary",
+                        "url": "https://components.timesdev.tools/lib2/times-opinary-3.0.0/times-opinary.html",
+                        "element": {
+                          "value": "times-opinary",
+                          "attributes": {
+                            "embed-code": "%3Cdiv%20class%3D%22opinary-widget-wrapper%22%20style%3D%22width%3A%20100%25%3B%20max-width%3A%20500px%3B%20height%3A100%25%3B%20margin%3A0%20auto%3B%22%3E%20%3Cdiv%20class%3D%22opinary-widget%22%20style%3D%22position%3Arelative%3B%20padding-top%3A%20100%25%3B%22%3E%20%3Ciframe%20scrolling%3D%22no%22%20class%3D%22opinary-iframe%22%20width%3D%22100%25%22%20height%3D%22400px%22%20src%3D%22https%3A%2F%2Fcompass.pressekompass.net%2Fcompasses%2Ftimes%2Fdo-you-approve-of-the-governments-propos-vPYeZe%22%20style%3D%22position%3A%20absolute%3B%20top%3A%200%3B%20left%3A%200%3B%20width%3A%20100%25%3B%20height%3A%20100%25%22%20frameborder%3D%220%22%3E%20%3C%2Fiframe%3E%20%3C%2Fdiv%3E%20%3C%2Fdiv%3E%20%3Cscript%20src%3D%22%2F%2Fcompass.pressekompass.net%2Fstatic%2Fopinary.js%22%3E%3C%2Fscript%3E"
+                          }
+                        }
+                      },
+                      "children": []
+                    },
+                    {
+                      "name": "paragraph",
+                      "children": [
+                        {
+                          "name": "text",
+                          "children": [],
+                          "attributes": {
+                            "value": "Australia is also drawing up plans to offer safe haven to Hong Kong citizens."
+                          }
+                        }
+                      ]
+                    },
+                    {
+                      "name": "paragraph",
+                      "children": [
+                        {
+                          "name": "text",
+                          "children": [],
+                          "attributes": {
+                            "value": "Scott Morrison, the prime minister, said today that his cabinet will soon decide on how to assist Hong Kong residents wishing to start a new life in another country, risking further damage to Australia’s already-fractured relations with Beijing."
+                          }
+                        }
+                      ]
+                    },
+                    {
+                      "name": "paragraph",
+                      "children": [
+                        {
+                          "name": "text",
+                          "children": [],
+                          "attributes": {
+                            "value": "“We are considering [the issue] very actively and there are proposals that I asked to be brought forward several weeks ago and the final touches are being put on those and they’ll soon be considered by the cabinet to provide similar opportunities,” he said."
+                          }
+                        }
+                      ]
+                    },
+                    {
+                      "name": "paragraph",
+                      "children": [
+                        {
+                          "name": "text",
+                          "children": [],
+                          "attributes": {
+                            "value": "“We think that’s important and very consistent with who we are as a people, and very consistent practically with the views that we have expressed,” Mr Morrison added."
+                          }
+                        }
+                      ]
+                    },
+                    {
+                      "name": "paragraph",
+                      "children": [
+                        {
+                          "name": "text",
+                          "children": [],
+                          "attributes": {
+                            "value": "Questioned whether the support would include permanent settlement in Australia, Mr Morrison said he would announce the details once a final decision was made, but added: “If you’re asking are we prepared to step up and provide support, the answer is yes.”"
+                          }
+                        }
+                      ]
+                    },
+                    {
+                      "name": "image",
+                      "attributes": {
+                        "display": "inline",
+                        "caption": "Dominic Raab set out the support for Hongkongers in the Commons yesterday, 23 years after Chris Patten, as governor, oversaw the handover of the territory to China",
+                        "credits": "Hannah McKay/Reuters",
+                        "url": "https://www.thetimes.co.uk/imageserver/image/%2Fmethode%2Ftimes%2Fprod%2Fweb%2Fbin%2Fe0e9b020-bbc1-11ea-84a6-a03a9956ea0a.jpg?crop=1122%2C1683%2C221%2C822",
+                        "ratio": "1000:1500",
+                        "relativeHorizontalOffset": 0.14694148936170212,
+                        "relativeVerticalOffset": 0.3234946871310508,
+                        "relativeWidth": 0.7460106382978723,
+                        "relativeHeight": 0.6623376623376623
+                      },
+                      "children": []
+                    },
+                    {
+                      "name": "paragraph",
+                      "children": [
+                        {
+                          "name": "text",
+                          "children": [],
+                          "attributes": {
+                            "value": "Simon Cheng, a Hong Kong consulate worker, told "
+                          }
+                        },
+                        {
+                          "name": "italic",
+                          "children": [
+                            {
+                              "name": "text",
+                              "children": [],
+                              "attributes": {
+                                "value": "Today "
+                              }
+                            }
+                          ]
+                        },
+                        {
+                          "name": "text",
+                          "children": [],
+                          "attributes": {
+                            "value": "on BBC Radio 4 this morning that hundreds of thousands would leave HK but most would want to go somewhere culturally closer in the region. He also noted that the US and Australia were opening up offers too so others would go there."
+                          }
+                        }
+                      ]
+                    },
+                    {
+                      "name": "paragraph",
+                      "children": [
+                        {
+                          "name": "text",
+                          "children": [],
+                          "attributes": {
+                            "value": "The Foreign Office issued new travel advice warning of an increased risk of detention and deportation under "
+                          }
+                        },
+                        {
+                          "name": "link",
+                          "children": [
+                            {
+                              "name": "text",
+                              "children": [],
+                              "attributes": {
+                                "value": "the security law"
+                              }
+                            }
+                          ],
+                          "attributes": {
+                            "href": "https://www.thetimes.co.uk/article/hongkongers-could-be-extradited-to-china-under-new-security-law-s8cw2wsqp",
+                            "type": "article",
+                            "canonicalId": "hongkongers-could-be-extradited-to-china-under-new-security-law-s8cw2wsqp"
+                          }
+                        },
+                        {
+                          "name": "text",
+                          "children": [],
+                          "attributes": {
+                            "value": ". The advice reflects widespread alarm over Article 38 which appears to seek jurisdiction over anyone who criticises China, wherever they are in the world."
+                          }
+                        }
+                      ]
+                    },
+                    {
+                      "name": "paragraph",
+                      "children": [
+                        {
+                          "name": "text",
+                          "children": [],
+                          "attributes": {
+                            "value": "Mike Pompeo, the US secretary of state, said that the measure “likely includes Americans”, calling it “outrageous and an affront to all nations”. The US House of Representatives also agreed unanimously yesterday to seek tough new sanctions on Chinese officials and Hong Kong police."
+                          }
+                        }
+                      ]
+                    },
+                    {
+                      "name": "paragraph",
+                      "children": [
+                        {
+                          "name": "text",
+                          "children": [],
+                          "attributes": {
+                            "value": "In Hong Kong thousands "
+                          }
+                        },
+                        {
+                          "name": "link",
+                          "children": [
+                            {
+                              "name": "text",
+                              "children": [],
+                              "attributes": {
+                                "value": " went on the streets to defy the law"
+                              }
+                            }
+                          ],
+                          "attributes": {
+                            "href": "https://www.thetimes.co.uk/edition/news/hundreds-arrested-in-hong-kong-protests-against-draconian-chinese-law-zhhcpj3k8",
+                            "type": "article",
+                            "canonicalId": "hundreds-arrested-in-hong-kong-protests-against-draconian-chinese-law-zhhcpj3k8"
+                          }
+                        },
+                        {
+                          "name": "text",
+                          "children": [],
+                          "attributes": {
+                            "value": ", prompting police to use water cannon and tear gas."
+                          }
+                        }
+                      ]
+                    },
+                    {
+                      "name": "paragraph",
+                      "children": [
+                        {
+                          "name": "text",
+                          "children": [],
+                          "attributes": {
+                            "value": "Mr Raab said that China’s actions would undermine trust “in its willingness to keep its word”. He did not set out any plans to sanction China or comment on the potential role of Huawei, the Chinese company, in building Britain’s next generation mobile network, which is under review."
+                          }
+                        }
+                      ]
+                    },
+                    {
+                      "name": "paragraph",
+                      "children": [
+                        {
+                          "name": "text",
+                          "children": [],
+                          "attributes": {
+                            "value": "Lord Patten of Barnes, the last governor of Hong Kong, said the government’s immigration offer “went as far as it would have hoped and that’s probably further than I expected, so I’m very, very pleased”. He warned, though, that the so-called lifeboat option “doesn’t protect the great majority in a great Asian city . . . who are now going to be subject to the worst sort of communist dictatorship”."
+                          }
+                        }
+                      ]
+                    }
+                  ],
+                  "template": "mainstandard"
+                }
+              },
+              "support": {
+                "headline": null,
+                "strapline": null,
+                "article": {
+                  "bylines": [
+                    {
+                      "byline": [
+                        {
+                          "name": "author",
+                          "children": [
+                            {
+                              "name": "text",
+                              "children": [],
+                              "attributes": {
+                                "value": "Quentin Letts"
+                              }
+                            }
+                          ],
+                          "attributes": {
+                            "slug": "quentin-letts"
+                          }
+                        }
+                      ],
+                      "image": {
+                        "id": "26bd8044-db33-4657-87e3-aee4fb64037f",
+                        "caption": "",
+                        "credits": "",
+                        "title": "",
+                        "crop": {
+                          "ratio": "1:1",
+                          "url": "https://www.thetimes.co.uk/imageserver/image/%2Fmethode%2Ftimes%2Fprod%2Fweb%2Fbin%2F5f802a32-bbb2-11ea-82eb-1588bf47a52f.jpg?crop=585%2C585%2C517%2C137"
+                        }
+                      }
+                    }
+                  ],
+                  "expirableFlags": [],
+                  "hasVideo": false,
+                  "headline": "Quentin Letts: Slip of the tongue hits them where it hurts",
+                  "id": "334b6c6c-bbb0-11ea-82eb-1588bf47a52f",
+                  "label": "POLITICAL SKETCH",
+                  "longRead": false,
+                  "section": "news",
+                  "shortHeadline": "Slip of the tongue hits them where it hurts",
+                  "url": "https://www.thetimes.co.uk/article/quentin-letts-the-peppery-sino-sceptics-seized-their-chance-to-say-i-told-you-so-jnh3v2w9z",
+                  "leadAsset": {
+                    "__typename": "Image",
+                    "crop32": {
+                      "ratio": "3:2",
+                      "relativeHorizontalOffset": 0.24733333333333332,
+                      "relativeVerticalOffset": 0.137,
+                      "relativeWidth": 0.5846666666666667,
+                      "relativeHeight": 0.585,
+                      "url": "https://www.thetimes.co.uk/imageserver/image/%2Fmethode%2Ftimes%2Fprod%2Fweb%2Fbin%2F5f802a32-bbb2-11ea-82eb-1588bf47a52f.jpg?crop=877%2C585%2C371%2C137"
+                    },
+                    "crop169": {
+                      "ratio": "16:9",
+                      "relativeHorizontalOffset": 0.246,
+                      "relativeVerticalOffset": 0.154,
+                      "relativeWidth": 0.5846666666666667,
+                      "relativeHeight": 0.493,
+                      "url": "https://www.thetimes.co.uk/imageserver/image/%2Fmethode%2Ftimes%2Fprod%2Fweb%2Fbin%2F5f802a32-bbb2-11ea-82eb-1588bf47a52f.jpg?crop=877%2C493%2C369%2C154"
+                    }
+                  },
+                  "strapline": null,
+                  "content": [
+                    {
+                      "name": "paragraph",
+                      "children": [
+                        {
+                          "name": "text",
+                          "children": [],
+                          "attributes": {
+                            "value": "Events in Hong Kong brought a peppery response in the Commons. The House held an hour-long discussion about Beijing’s imposition of anti-protest laws in the one-time colony. For Sino-sceptics, this was a chance to say “told you so”. The only people who seemed relaxed about the Hong Kong crackdown, for their own tangled reasons, were a few Scots Nats. One might have expected them to be more sympathetic to a small territory struggling for autonomy."
+                          }
+                        }
+                      ]
+                    },
+                    {
+                      "name": "paragraph",
+                      "children": [
+                        {
+                          "name": "text",
+                          "children": [],
+                          "attributes": {
+                            "value": "“We learnt 80 years ago about the appeasement of dictators,” said the former Conservative leader Sir Iain Duncan Smith, long wary of letting China’s Huawei become involved in our telecoms infrastructure. Bob Seely (C, Isle of Wight), another lusty red-basher, told the foreign secretary, Dominic Raab, that “this dreadful law shows China has changed”. Whitehall must stop being naive about the Chinese regime."
+                          }
+                        }
+                      ]
+                    },
+                    {
+                      "name": "paragraph",
+                      "children": [
+                        {
+                          "name": "text",
+                          "children": [],
+                          "attributes": {
+                            "value": "Labour usually makes a din about superpowers crushing human rights. Not this time. The shadow foreign secretary, Lisa Nandy, trotted over the jumps but may have been more concerned about her local football club, Wigan Athletic, facing closure. Barry Sheerman (Lab, Huddersfield) compensated for his lacklustre comrades with a hail of princely splutters. “China is a ruthless, communist dictatorship,” he cried, spitting out the words via virtual link from his pillbox in Yorkshire. “It despises democracy. It cannot be appeased. If we do not hit them where it hurts, we will not be able to stop this tiger growing more and more ferocious.” Mr Sheerman was part of a delegation that went to Hong Kong in the 1990s to urge its people to believe that Beijing would stick to its promises on “one country, two systems”. He felt personal anger about what had now happened."
+                          }
+                        }
+                      ]
+                    },
+                    {
+                      "name": "image",
+                      "attributes": {
+                        "display": "primary",
+                        "caption": "Chris Patten, the 28th and last governor of colonial Hong Kong, receives the Union Jack flag after it was lowered for the last time",
+                        "credits": "Emmanuel Durand/AFP/Getty Images",
+                        "url": "https://www.thetimes.co.uk/imageserver/image/%2Fmethode%2Ftimes%2Fprod%2Fweb%2Fbin%2Fee145c46-bbc1-11ea-84a6-a03a9956ea0a.jpg?crop=3600%2C2400%2C0%2C0",
+                        "ratio": "1500:1000",
+                        "relativeHorizontalOffset": 0,
+                        "relativeVerticalOffset": 0,
+                        "relativeWidth": 1,
+                        "relativeHeight": 0.7789678675754625
+                      },
+                      "children": []
+                    },
+                    {
+                      "name": "paragraph",
+                      "children": [
+                        {
+                          "name": "text",
+                          "children": [],
+                          "attributes": {
+                            "value": "Tom Tugendhat (C), chairman of the foreign affairs committee, queried the future of British judges in Hong Kong. He possibly referred to Lady Hale, formerly of the Supreme Court, who currently lends her magnificence to Hong Kong’s court of final appeal. Well, “lends” is not quite the verb. She charges."
+                          }
+                        }
+                      ]
+                    },
+                    {
+                      "name": "paragraph",
+                      "children": [
+                        {
+                          "name": "text",
+                          "children": [],
+                          "attributes": {
+                            "value": "Even the Lib Dems were fired up. Alistair Carmichael (LD, Orkney and Shetland) said there comes a moment when you must pick a side and the choice here was between the people of Hong Kong and the Chinese Communist Party. That sound in the background? The crunch of open-toed sandals on a military parade ground as Lib Dems joined the colours. There was also some muffled sniggering when Mr Carmichael managed to talk of “the Hong Kong and Shanghai Bonking Corporation”. You wonder what the monitoring bods at the Chinese embassy in Marylebone made of this very British moment."
+                          }
+                        }
+                      ]
+                    },
+                    {
+                      "name": "ad",
+                      "children": []
+                    },
+                    {
+                      "name": "paragraph",
+                      "children": [
+                        {
+                          "name": "text",
+                          "children": [],
+                          "attributes": {
+                            "value": "Hit them where it hurts: a saying popular with riot-police commanders. Mr Sheerman — who meant it in the sense of trade constraints — was not alone in using it now. Sir Iain felt the West “should hit them in the one place that worries China — its economy”. For the SNP, Alyn Smith (Stirling) gloated that events had been “humiliating” for Mr Raab and “Global Britain”. It may not be long before Chairman Xi is inviting Nicola Sturgeon to a state banquet in the Great Hall of the People. Mr Smith thought the EU had been more active in its diplomacy than London. Mr Raab: “Nonsense.”"
+                          }
+                        }
+                      ]
+                    },
+                    {
+                      "name": "paragraph",
+                      "children": [
+                        {
+                          "name": "text",
+                          "children": [],
+                          "attributes": {
+                            "value": "The decision to offer a path to British citizenship to three million Hongkongers was announced at PMQs by Boris Johnson. Opposition MPs found themselves in the irritating position of having little room for umbrage. Sir Keir Starmer, Labour leader, instead attacked Mr Johnson for not preventing the Covid flare-up in Leicester. He was cross about some detail of “pillar one and pillar two” health statistics. “That may sound technical,” he conceded. Yes, it did a bit. Captain Constipation, a little enviously, later grumbled about Mr Johnson’s Pollyanna optimism. He said the PM was “flippant”. Mr Johnson: “We are the builders, they are the blockers. We are the doers, they are the ditherers.”"
+                          }
+                        }
+                      ]
+                    }
+                  ],
+                  "template": "maincomment"
+                }
+              }
+            }
+          ]
+        },
+        {
+          "__typename": "StandardSection",
+          "id": "c6c039a6-4d88-4e6d-8cf0-d1e518c49e08",
+          "title": "News",
+          "colour": {
+            "rgba": {
+              "red": 21,
+              "green": 53,
+              "blue": 77,
+              "alpha": 1
+            }
+          }
+        },
+        {
+          "__typename": "StandardSection",
+          "id": "d1cf2e95-5dc1-4b2a-b627-fe73c00107ef",
+          "title": "Comment",
+          "colour": {
+            "rgba": {
+              "red": 131,
+              "green": 4,
+              "blue": 43,
+              "alpha": 1
+            }
+          }
+        },
+        {
+          "__typename": "StandardSection",
+          "id": "3120cca3-b230-4748-9244-420c405637cd",
+          "title": "World",
+          "colour": {
+            "rgba": {
+              "red": 99,
+              "green": 107,
+              "blue": 31,
+              "alpha": 1
+            }
+          }
+        },
+        {
+          "__typename": "StandardSection",
+          "id": "7157f817-50ac-4c91-890d-62a9a7fb1c00",
+          "title": "Business",
+          "colour": {
+            "rgba": {
+              "red": 11,
+              "green": 92,
+              "blue": 139,
+              "alpha": 1
+            }
+          }
+        },
+        {
+          "__typename": "StandardSection",
+          "id": "fe948557-3e05-4533-9345-0a78f2c2d63a",
+          "title": "Sport",
+          "colour": {
+            "rgba": {
+              "red": 16,
+              "green": 130,
+              "blue": 73,
+              "alpha": 1
+            }
+          }
+        },
+        {
+          "__typename": "StandardSection",
+          "id": "fb1d0d97-a0ff-428c-b150-cad821e5c1db",
+          "title": "Register",
+          "colour": {
+            "rgba": {
+              "red": 108,
+              "green": 108,
+              "blue": 105,
+              "alpha": 1
+            }
+          }
+        },
+        {
+          "__typename": "PuzzleSection",
+          "id": "e019f184-331c-4d94-8eb3-6129a5273185",
+          "title": "Puzzles",
+          "colour": {
+            "rgba": {
+              "red": 197,
+              "green": 71,
+              "blue": 22,
+              "alpha": 1
+            }
+          }
+        },
+        {
+          "__typename": "StandardSection",
+          "id": "134fc28a-3491-4258-a737-cc34d992140e",
+          "title": "Times2",
+          "colour": {
+            "rgba": {
+              "red": 97,
+              "green": 43,
+              "blue": 85,
+              "alpha": 1
+            }
+          }
+        },
+        {
+          "__typename": "StandardSection",
+          "id": "baa397f3-118f-44bf-a6c2-d446e8d91193",
+          "title": "Scotland",
+          "colour": {
+            "rgba": {
+              "red": 2,
+              "green": 36,
+              "blue": 61,
+              "alpha": 1
+            }
+          }
+        },
+        {
+          "__typename": "StandardSection",
+          "id": "45007b56-32a5-49d7-a83a-428fde82ca39",
+          "title": "Ireland",
+          "colour": {
+            "rgba": {
+              "red": 6,
+              "green": 78,
+              "blue": 69,
+              "alpha": 1
+            }
+          }
+        }
+      ]
+    }
+  }
+}
