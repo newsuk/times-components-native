@@ -1,0 +1,49 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`1. front lead one - medium - portrait 1`] = `
+<View>
+  <Text>
+    lead
+  </Text>
+</View>
+`;
+
+exports[`2. front lead one - wide - portrait 1`] = `
+<View>
+  <Text>
+    lead
+  </Text>
+</View>
+`;
+
+exports[`3. front lead one - huge - portrait 1`] = `
+<View>
+  <Text>
+    lead
+  </Text>
+</View>
+`;
+
+exports[`4. front lead one - medium - landscape 1`] = `
+<View>
+  <Text>
+    lead
+  </Text>
+</View>
+`;
+
+exports[`5. front lead one - wide - landscape 1`] = `
+<View>
+  <Text>
+    lead
+  </Text>
+</View>
+`;
+
+exports[`6. front lead one - huge - landscape 1`] = `
+<View>
+  <Text>
+    lead
+  </Text>
+</View>
+`;

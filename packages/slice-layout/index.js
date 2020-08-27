@@ -20,5 +20,6 @@ export {
   ItemRowSeparator,
   FrontLeadTwoAndTwoSlice,
   FrontLeadOneAndOneSlice,
+  FrontLeadOneSlice,
   TopSecondarySlice,
 } from "./src/slice-layout";

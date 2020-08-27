@@ -22,6 +22,7 @@ import {
   mockListTwoAndSixNoPicSlice,
   mockLeadOneAndOneFrontSlice,
   mockLeadTwoNoPicAndTwoFrontSlice,
+  mockLeadOneFullWidthFrontSlice,
 } from "@times-components-native/fixture-generator";
 import Responsive from "@times-components-native/responsive";
 import "./mocks";
@@ -44,6 +45,7 @@ import {
   ListTwoAndSixNoPicSlice,
   LeadTwoNoPicAndTwoFrontSlice,
   LeadOneAndOneFrontSlice,
+  LeadOneFullWidthFrontSlice,
   TopSecondarySlice,
 } from "../src/slices";
 
@@ -150,6 +152,18 @@ const slices = [
     mock: mockLeadOneAndOneFrontSlice(),
     name: "front lead one and one - landscape",
     Slice: LeadOneAndOneFrontSlice,
+    orientation: "landscape",
+  },
+  {
+    mock: mockLeadOneFullWidthFrontSlice(),
+    name: "front lead one - portrait",
+    Slice: LeadOneFullWidthFrontSlice,
+    orientation: "portrait",
+  },
+  {
+    mock: mockLeadOneFullWidthFrontSlice(),
+    name: "front lead one - landscape",
+    Slice: LeadOneFullWidthFrontSlice,
     orientation: "landscape",
   },
   {
