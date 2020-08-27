@@ -25,6 +25,7 @@ interface Props {
   tile: any;
   bylines?: Markup;
   showKeyline?: boolean;
+  bylineContainerStyle?: any;
 }
 
 const renderContent = (props: Props) => {
@@ -72,7 +73,13 @@ const renderByline = (props: Props) => {
   if (!ast || ast.length === 0) return null;
   if (columnCount && columnCount > 1) return null;
 
-  return <FrontPageByline showKeyline={props.showKeyline} byline={ast} />;
+  return (
+    <FrontPageByline
+      showKeyline={props.showKeyline}
+      containerStyle={props.bylineContainerStyle}
+      byline={ast}
+    />
+  );
 };
 
 const FrontTileSummary: React.FC<Props> = (props) => {
