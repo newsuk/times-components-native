@@ -19,6 +19,7 @@ import { ItemColSeparator, ItemRowSeparator } from "./templates/shared";
 import FrontLeadTwoAndTwoSlice from "./templates/frontleadtwoandtwo";
 import FrontLeadOneAndOneSlice from "./templates/frontleadoneandone";
 import TopSecondarySlice from "./templates/topsecondary";
+import SupplementLeadOneAndFourSlice from "./templates/supplementleadoneandfour";
 
 export {
   VerticalLayout,
@@ -43,4 +44,5 @@ export {
   FrontLeadTwoAndTwoSlice,
   FrontLeadOneAndOneSlice,
   TopSecondarySlice,
+  SupplementLeadOneAndFourSlice,
 };
