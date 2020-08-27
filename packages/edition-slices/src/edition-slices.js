@@ -17,12 +17,12 @@ import {
   SecondaryOneSlice,
   SecondaryTwoAndTwoSlice,
   SecondaryTwoNoPicAndTwoSlice,
-  SupplementLeadOneAndFourSlice,
   LeadTwoNoPicAndTwoFrontSlice,
   LeadOneAndOneFrontSlice,
   LeadOneFullWidthFrontSlice,
   PuzzleSlice,
   TopSecondarySlice,
+  SupplementLeadOneAndFourSlice,
 } from "./slices";
 
 const config = (NativeModules || {}).ReactConfig;

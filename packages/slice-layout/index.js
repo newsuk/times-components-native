@@ -22,4 +22,5 @@ export {
   FrontLeadOneAndOneSlice,
   FrontLeadOneSlice,
   TopSecondarySlice,
+  SupplementLeadOneAndFourSlice,
 } from "./src/slice-layout";
