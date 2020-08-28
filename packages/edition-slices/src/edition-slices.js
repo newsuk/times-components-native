@@ -31,7 +31,7 @@ const isTablet =
   (config && config.breakpoint && config.breakpoint !== "small") ||
   width > tabletWidth;
 
-export const sliceMap = (isInSupplement) => {
+const sliceMap = (isInSupplement) => {
   const isInTabletSupplement = isInSupplement && isTablet;
   return {
     CommentLeadAndCartoonSlice,

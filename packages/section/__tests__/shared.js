@@ -16,22 +16,15 @@ import SectionItemSeparator from "../src/section-item-separator";
 import Section from "../src/section";
 import PuzzleBar from "../src/puzzle-bar";
 
-jest.mock("@times-components-native/edition-slices", () => {
+jest.mock("@times-components-native/edition-slices/src/slices", () => {
   const sliceMap = require.requireActual(
-    "@times-components-native/edition-slices",
-  ).sliceMap;
-
-  const getSlice = (isInSupplement, sliceName) => {
-    const slicesMock = {};
-    Object.entries(sliceMap(isInSupplement)).forEach(([key, value]) => {
-      slicesMock[key] = value.name;
-    });
-    slicesMock["LeadOneAndTwoSlice"] = "LeadOneAndTwoSlice";
-
-    return slicesMock[sliceName];
-  };
-
-  return { getSlice };
+    "@times-components-native/edition-slices/src/slices",
+  );
+  const slicesMock = {};
+  Object.keys(sliceMap).forEach((key) => {
+    slicesMock[key] = key;
+  });
+  return slicesMock;
 });
 
 jest.mock("@times-components-native/icons", () => ({
