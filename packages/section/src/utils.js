@@ -108,10 +108,10 @@ const createPuzzleData = (puzzles, editionBreakpoint) => {
 
 const isSupplementSection = (sectionTitle) => {
   const knownSupplementSections = [
-    "Bricksmortar",
+    "Bricks & Mortar",
     "Style",
-    "Thesundaytimesmagazine",
-    "Thetimesmagazine",
+    "The Sunday Times Magazine",
+    "The Times Magazine",
     "Times2",
     "Travel",
     "Home",

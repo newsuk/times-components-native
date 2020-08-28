@@ -1,13 +1,8 @@
-import {
-  editionBreakpoints,
-  spacing,
-} from "@times-components-native/styleguide";
+import { editionBreakpoints } from "@times-components-native/styleguide";
 
 const mediumBreakpointStyles = {
   portraitContainer: {
     flex: 1,
-    marginHorizontal: spacing(4),
-    paddingVertical: spacing(1),
   },
   landscapeContainer: {
     flexDirection: "row",
@@ -16,7 +11,7 @@ const mediumBreakpointStyles = {
     width: "100%",
   },
   landscapeLeadContainer: {
-    width: "60%",
+    width: "66.667%",
     borderColor: "red",
   },
   horizontalSupportContainer: {
@@ -25,7 +20,7 @@ const mediumBreakpointStyles = {
   },
   verticalSupportContainer: {
     flexDirection: "column",
-    width: "40%",
+    width: "33.333%",
   },
   supportItem: {
     flex: 1,

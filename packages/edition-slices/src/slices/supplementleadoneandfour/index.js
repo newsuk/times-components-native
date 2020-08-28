@@ -1,7 +1,7 @@
 import React from "react";
 import { SupplementLeadOneAndFourSlice } from "@times-components-native/slice-layout";
-import { TileAC, TileAD } from "../../tiles";
-import { ResponsiveSlice } from "../shared";
+import { TileAW, TileAX, TileD } from "../../tiles";
+import { FlushResponsiveSlice } from "../shared";
 
 function renderMedium(props, breakpoint, orientation) {
   const {
@@ -9,20 +9,30 @@ function renderMedium(props, breakpoint, orientation) {
     slice: { lead, support1, support2, support3, support4 },
   } = props;
 
+  const renderLeadComponent =
+    orientation === "landscape" ? (
+      <TileAW
+        onPress={onPress}
+        tile={lead}
+        tileName="lead"
+        breakpoint={breakpoint}
+      />
+    ) : (
+      <TileAX
+        breakpoint={breakpoint}
+        onPress={onPress}
+        tile={lead}
+        tileName="lead"
+      />
+    );
+
   return (
     <SupplementLeadOneAndFourSlice
       breakpoint={breakpoint}
       orientation={orientation}
-      lead={
-        <TileAC
-          onPress={onPress}
-          tile={lead}
-          tileName="lead"
-          breakpoint={breakpoint}
-        />
-      }
+      lead={renderLeadComponent}
       support1={
-        <TileAD
+        <TileD
           breakpoint={breakpoint}
           onPress={onPress}
           tile={support1}
@@ -30,7 +40,7 @@ function renderMedium(props, breakpoint, orientation) {
         />
       }
       support2={
-        <TileAD
+        <TileD
           breakpoint={breakpoint}
           onPress={onPress}
           tile={support2}
@@ -38,7 +48,7 @@ function renderMedium(props, breakpoint, orientation) {
         />
       }
       support3={
-        <TileAD
+        <TileD
           breakpoint={breakpoint}
           onPress={onPress}
           tile={support3}
@@ -46,7 +56,7 @@ function renderMedium(props, breakpoint, orientation) {
         />
       }
       support4={
-        <TileAD
+        <TileD
           breakpoint={breakpoint}
           onPress={onPress}
           tile={support4}
@@ -61,7 +71,7 @@ const SupplementLeadOneAndFour = (props) => {
   const renderSlice = (breakpoint, orientation) =>
     renderMedium(props, breakpoint, orientation);
 
-  return <ResponsiveSlice renderMedium={renderSlice} grow />;
+  return <FlushResponsiveSlice renderMedium={renderSlice} />;
 };
 
 export default SupplementLeadOneAndFour;
