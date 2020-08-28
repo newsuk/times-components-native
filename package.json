@@ -89,7 +89,6 @@
     "react": "16.13.1",
     "react-apollo": "2.5.5",
     "react-broadcast": "0.5.2",
-    "react-devtools": "^4.8.2",
     "react-display-name": "0.2.3",
     "react-dom": "16.9.0",
     "react-native": "0.63.2",
