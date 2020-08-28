@@ -16,7 +16,6 @@ import {
   mockSecondaryTwoAndTwoSlice,
   mockSecondaryTwoNoPicAndTwoSlice,
   mockStandardSlice,
-  mockTopSecondaryFourSlice,
 } from "@times-components-native/fixture-generator";
 import { SectionContext } from "@times-components-native/context";
 import Responsive from "@times-components-native/responsive";
@@ -37,6 +36,7 @@ import {
   SecondaryTwoNoPicAndTwoSlice,
   StandardSlice,
   TopSecondarySlice,
+  SupplementLeadOneAndOneSlice,
 } from "./src/slices";
 
 const preventDefaultedAction = (decorateAction) =>
@@ -102,6 +102,11 @@ const sliceStories = [
     mock: mockLeadOneAndOneSlice(),
     name: "Lead One And One (Mobile: A,B, Tablet: U,C, Wide: U,C, Huge:U,AQ)",
     Slice: LeadOneAndOneSlice,
+  },
+  {
+    mock: mockLeadOneAndOneSlice(),
+    name: "Supplement Lead One And One (Mobile: None, Tablet: U,AX)",
+    Slice: SupplementLeadOneAndOneSlice,
   },
   {
     mock: mockLeadOneFullWidthSlice(),
