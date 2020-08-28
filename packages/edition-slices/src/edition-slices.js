@@ -32,16 +32,14 @@ const isTablet =
   width > tabletWidth;
 
 const getSlice = (isInSupplement, sliceName) => {
-  const SecondaryTwoAndTwoMapper = isTablet
-    ? SecondaryTwoNoPicAndTwoSlice
-    : SecondaryTwoAndTwoSlice;
-
+  const isInTabletSupplement = isInSupplement && isTablet;
   const sliceMap = {
     CommentLeadAndCartoonSlice,
     DailyUniversalRegister: DailyRegisterLeadFourSlice,
     LeadersSlice,
-    LeadOneAndFourSlice:
-      isInSupplement && isTablet ? LeadOneAndFourSlice : LeadOneAndFourSlice,
+    LeadOneAndFourSlice: isInTabletSupplement
+      ? LeadOneAndFourSlice
+      : LeadOneAndFourSlice,
     LeadOneAndOneSlice,
     LeadOneFullWidthSlice,
     LeadTwoNoPicAndTwoSlice,
@@ -50,7 +48,9 @@ const getSlice = (isInSupplement, sliceName) => {
     SecondaryOneAndColumnistSlice,
     SecondaryOneAndFourSlice,
     SecondaryOneSlice,
-    SecondaryTwoAndTwoSlice: SecondaryTwoAndTwoMapper,
+    SecondaryTwoAndTwoSlice: isTablet
+      ? SecondaryTwoNoPicAndTwoSlice
+      : SecondaryTwoAndTwoSlice,
     SecondaryTwoNoPicAndTwoSlice,
     StandardSlice,
     TwoPicAndSixNoPicSlice: ListTwoAndSixNoPicSlice,

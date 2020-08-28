@@ -18,7 +18,7 @@ import PuzzleBar from "../src/puzzle-bar";
 
 jest.mock("@times-components-native/edition-slices", () => {
   const slicesMock = {};
-  const slicesMap = require.requireActual(
+  const getSlice = require.requireActual(
     "@times-components-native/edition-slices",
   ).default;
 
