@@ -1,6 +1,6 @@
 import React from "react";
 import PropTypes from "prop-types";
-import getSlice from "@times-components-native/edition-slices";
+import { getSlice } from "@times-components-native/edition-slices";
 import withSliceTrackingContext from "./slice-tracking-context";
 
 const Slice = ({ slice, onPress, isInSupplement }) => {

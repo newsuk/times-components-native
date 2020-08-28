@@ -17,19 +17,21 @@ import Section from "../src/section";
 import PuzzleBar from "../src/puzzle-bar";
 
 jest.mock("@times-components-native/edition-slices", () => {
-  const slicesMock = {};
-  const getSlice = require.requireActual(
+  const sliceMap = require.requireActual(
     "@times-components-native/edition-slices",
-  ).default;
+  ).sliceMap;
 
-  Object.keys(slicesMap).forEach((key) => {
-    slicesMock[key] = slicesMap[key].name;
-  });
+  const getSlice = (isInSupplement, sliceName) => {
+    const slicesMock = {};
+    Object.entries(sliceMap(isInSupplement)).forEach(([key, value]) => {
+      slicesMock[key] = value.name;
+    });
+    slicesMock["LeadOneAndTwoSlice"] = "LeadOneAndTwoSlice";
 
-  return {
-    ...slicesMock,
-    LeadOneAndTwoSlice: "LeadOneAndTwoSlice",
+    return slicesMock[sliceName];
   };
+
+  return { getSlice };
 });
 
 jest.mock("@times-components-native/icons", () => ({

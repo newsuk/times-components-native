@@ -31,9 +31,9 @@ const isTablet =
   (config && config.breakpoint && config.breakpoint !== "small") ||
   width > tabletWidth;
 
-const getSlice = (isInSupplement, sliceName) => {
+export const sliceMap = (isInSupplement) => {
   const isInTabletSupplement = isInSupplement && isTablet;
-  const sliceMap = {
+  return {
     CommentLeadAndCartoonSlice,
     DailyUniversalRegister: DailyRegisterLeadFourSlice,
     LeadersSlice,
@@ -61,8 +61,7 @@ const getSlice = (isInSupplement, sliceName) => {
     TopSecondaryTwoNoPicAndTwoSlice: TopSecondarySlice,
     TopSecondaryFourSlice: TopSecondarySlice,
   };
-
-  return sliceMap[sliceName];
 };
 
-export default getSlice;
+export const getSlice = (isInSupplement, sliceName) =>
+  sliceMap(isInSupplement)[sliceName];
