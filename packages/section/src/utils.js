@@ -103,6 +103,25 @@ const createPuzzleData = (puzzles, editionBreakpoint) => {
   return sliceData;
 };
 
+// temporary until EB and TPA support a SupplementType which will allow front-end
+// to know which sections are supplements
+
+const isSupplementSection = (sectionTitle) => {
+  const knownSupplementSections = [
+    "Bricksmortar",
+    "Style",
+    "Thesundaytimesmagazine",
+    "Thetimesmagazine",
+    "Times2",
+    "Travel",
+    "Home",
+    "Weekend",
+    "Culture",
+  ];
+
+  return sectionTitle && knownSupplementSections.includes(sectionTitle);
+};
+
 export {
   composeSliceBuilders,
   prepareSlicesForRender,
@@ -112,4 +131,5 @@ export {
   createPuzzleData,
   splitPuzzlesBySlices,
   filterPuzzles,
+  isSupplementSection,
 };
