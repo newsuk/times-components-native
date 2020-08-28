@@ -31,33 +31,41 @@ const { width } = getDimensions();
 const isTablet =
   (config && config.breakpoint && config.breakpoint !== "small") ||
   width > tabletWidth;
-const SecondaryTwoAndTwoMapper = isTablet
-  ? SecondaryTwoNoPicAndTwoSlice
-  : SecondaryTwoAndTwoSlice;
 
-const sliceMap = {
-  CommentLeadAndCartoonSlice,
-  DailyUniversalRegister: DailyRegisterLeadFourSlice,
-  LeadersSlice,
-  LeadOneAndFourSlice: SupplementLeadOneAndFourSlice,
-  LeadOneAndOneSlice,
-  LeadOneFullWidthSlice,
-  LeadTwoNoPicAndTwoSlice,
-  Puzzle: PuzzleSlice,
-  SecondaryFourSlice,
-  SecondaryOneAndColumnistSlice,
-  SecondaryOneAndFourSlice,
-  SecondaryOneSlice,
-  SecondaryTwoAndTwoSlice: SecondaryTwoAndTwoMapper,
-  SecondaryTwoNoPicAndTwoSlice,
-  StandardSlice,
-  TwoPicAndSixNoPicSlice: ListTwoAndSixNoPicSlice,
-  LeadTwoNoPicAndTwoFrontSlice,
-  LeadOneAndOneFrontSlice,
-  LeadOneFullWidthFrontSlice,
-  TopSecondaryTwoAndTwoSlice: TopSecondarySlice,
-  TopSecondaryTwoNoPicAndTwoSlice: TopSecondarySlice,
-  TopSecondaryFourSlice: TopSecondarySlice,
+const getSlice = (isInSupplement, sliceName) => {
+  const SecondaryTwoAndTwoMapper = isTablet
+    ? SecondaryTwoNoPicAndTwoSlice
+    : SecondaryTwoAndTwoSlice;
+
+  const sliceMap = {
+    CommentLeadAndCartoonSlice,
+    DailyUniversalRegister: DailyRegisterLeadFourSlice,
+    LeadersSlice,
+    LeadOneAndFourSlice:
+      isInSupplement && isTablet
+        ? SupplementLeadOneAndFourSlice
+        : LeadOneAndFourSlice,
+    LeadOneAndOneSlice,
+    LeadOneFullWidthSlice,
+    LeadTwoNoPicAndTwoSlice,
+    Puzzle: PuzzleSlice,
+    SecondaryFourSlice,
+    SecondaryOneAndColumnistSlice,
+    SecondaryOneAndFourSlice,
+    SecondaryOneSlice,
+    SecondaryTwoAndTwoSlice: SecondaryTwoAndTwoMapper,
+    SecondaryTwoNoPicAndTwoSlice,
+    StandardSlice,
+    TwoPicAndSixNoPicSlice: ListTwoAndSixNoPicSlice,
+    LeadTwoNoPicAndTwoFrontSlice,
+    LeadOneAndOneFrontSlice,
+    LeadOneFullWidthFrontSlice,
+    TopSecondaryTwoAndTwoSlice: TopSecondarySlice,
+    TopSecondaryTwoNoPicAndTwoSlice: TopSecondarySlice,
+    TopSecondaryFourSlice: TopSecondarySlice,
+  };
+
+  return sliceMap[sliceName];
 };
 
-export default sliceMap;
+export default getSlice;

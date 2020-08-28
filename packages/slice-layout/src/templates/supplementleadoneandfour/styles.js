@@ -3,35 +3,38 @@ import {
   spacing,
 } from "@times-components-native/styleguide";
 
-const defaultBreakpointStyles = {
-  container: {
+const mediumBreakpointStyles = {
+  portraitContainer: {
     flex: 1,
-    flexDirection: "row",
     marginHorizontal: spacing(4),
     paddingVertical: spacing(1),
   },
-  leadContainer: {
-    width: "60%",
+  landscapeContainer: {
+    flexDirection: "row",
   },
-  supportContainer: {
+  portraitLeadContainer: {
+    width: "100%",
+  },
+  landscapeLeadContainer: {
+    width: "60%",
+    borderColor: "red",
+  },
+  horizontalSupportContainer: {
+    flex: 1,
+    flexDirection: "row",
+  },
+  verticalSupportContainer: {
+    flexDirection: "column",
     width: "40%",
   },
-};
-
-const wideBreakpointStyles = {
-  container: {
-    ...defaultBreakpointStyles.container,
-    marginHorizontal: spacing(2),
+  supportItem: {
+    flex: 1,
   },
-  leadContainer: defaultBreakpointStyles.leadContainer,
-  supportContainer: defaultBreakpointStyles.supportContainer,
 };
 
-const styleResolver = {
-  [editionBreakpoints.small]: defaultBreakpointStyles,
-  [editionBreakpoints.medium]: defaultBreakpointStyles,
-  [editionBreakpoints.wide]: wideBreakpointStyles,
-  [editionBreakpoints.huge]: wideBreakpointStyles,
+const stylesResolver = {
+  [editionBreakpoints.small]: {},
+  [editionBreakpoints.medium]: mediumBreakpointStyles,
+  [editionBreakpoints.wide]: mediumBreakpointStyles,
 };
-
-export default (breakpoint) => styleResolver[breakpoint];
+export default (breakpoint) => stylesResolver[breakpoint];
