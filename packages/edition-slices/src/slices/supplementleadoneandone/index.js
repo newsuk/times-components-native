@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import PropTypes from "prop-types";
-import { LeadOneAndOneSlice } from "@times-components-native/slice-layout";
+import { SupplementLeadOneAndOneSlice } from "@times-components-native/slice-layout";
 import { TileU, TileAX } from "../../tiles";
 import { ResponsiveSlice } from "../shared";
 
@@ -12,14 +12,14 @@ class SupplementLeadOneAndOne extends Component {
     this.renderMedium = this.renderMedium.bind(this);
   }
 
-  renderMedium(breakpoint) {
+  renderMedium(breakpoint, orientation) {
     const {
       onPress,
       slice: { lead, support },
     } = this.props;
     const styles = styleFactory(breakpoint);
     return (
-      <LeadOneAndOneSlice
+      <SupplementLeadOneAndOneSlice
         breakpoint={breakpoint}
         lead={
           <TileU
@@ -34,6 +34,7 @@ class SupplementLeadOneAndOne extends Component {
             breakpoint={breakpoint}
             onPress={onPress}
             tile={support}
+            orientation={orientation}
             tileName="support"
           />
         }

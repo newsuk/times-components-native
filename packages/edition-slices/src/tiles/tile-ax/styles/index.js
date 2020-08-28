@@ -1,14 +1,31 @@
 import {
   fonts,
   spacing,
+  colours,
   globalSpacingStyles,
   editionBreakpoints,
 } from "@times-components-native/styleguide";
 
 const fontSizeResolver = {
-  [editionBreakpoints.medium]: 24,
-  [editionBreakpoints.wide]: 30,
-  [editionBreakpoints.huge]: 30,
+  [editionBreakpoints.medium]: {
+    portrait: 24,
+    landscape: 28,
+  },
+  [editionBreakpoints.wide]: {
+    portrait: 28,
+    landscape: 30,
+  },
+  [editionBreakpoints.huge]: {
+    portrait: 28,
+    landscape: 30,
+  },
+};
+
+const sharedHeadlineStyle = {
+  ...globalSpacingStyles.tabletHeadline,
+  fontFamily: fonts.headlineRegular,
+  fontWeight: "normal",
+  color: colours.functional.brandColour,
 };
 
 export default (breakpoint) => ({
@@ -17,12 +34,15 @@ export default (breakpoint) => ({
     paddingHorizontal: spacing(2),
     paddingVertical: spacing(3),
   },
-  headline: {
-    ...globalSpacingStyles.tabletHeadline,
-    fontFamily: fonts.headlineRegular,
-    fontSize: fontSizeResolver[breakpoint],
-    lineHeight: fontSizeResolver[breakpoint],
-    marginTop: spacing(1),
+  headlineLandscape: {
+    ...sharedHeadlineStyle,
+    fontSize: fontSizeResolver[breakpoint].landscape,
+    lineHeight: fontSizeResolver[breakpoint].landscape,
+  },
+  headlinePortrait: {
+    ...sharedHeadlineStyle,
+    fontSize: fontSizeResolver[breakpoint].portrait,
+    lineHeight: fontSizeResolver[breakpoint].portrait,
   },
   imageContainer: {
     width: "100%",

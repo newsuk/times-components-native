@@ -100,8 +100,9 @@ exports[`4. lead one and one - supplement - medium 1`] = `
           Object {
             "color": "#1D1D1B",
             "fontFamily": "TimesModern-Regular",
-            "fontSize": 35,
-            "marginTop": 5,
+            "fontSize": 40,
+            "fontWeight": "normal",
+            "lineHeight": 40,
           }
         }
         tileName="lead"
@@ -111,6 +112,7 @@ exports[`4. lead one and one - supplement - medium 1`] = `
     <View>
       <TileAX
         breakpoint="medium"
+        orientation="portrait"
         tileName="support"
       />
     </View>
@@ -1052,7 +1054,8 @@ exports[`33. lead one and one - supplement - wide 1`] = `
             "color": "#1D1D1B",
             "fontFamily": "TimesModern-Regular",
             "fontSize": 40,
-            "marginTop": 5,
+            "fontWeight": "normal",
+            "lineHeight": 40,
           }
         }
         tileName="lead"
@@ -1062,6 +1065,7 @@ exports[`33. lead one and one - supplement - wide 1`] = `
     <View>
       <TileAX
         breakpoint="wide"
+        orientation="portrait"
         tileName="support"
       />
     </View>
@@ -2014,7 +2018,8 @@ exports[`62. lead one and one - supplement - huge 1`] = `
               "color": "#1D1D1B",
               "fontFamily": "TimesModern-Regular",
               "fontSize": 45,
-              "marginTop": 5,
+              "fontWeight": "normal",
+              "lineHeight": 45,
             }
           }
           tileName="lead"
@@ -2024,6 +2029,7 @@ exports[`62. lead one and one - supplement - huge 1`] = `
       <View>
         <TileAX
           breakpoint="huge"
+          orientation="portrait"
           tileName="support"
         />
       </View>

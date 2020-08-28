@@ -22,6 +22,7 @@ import {
   LeadOneFullWidthFrontSlice,
   PuzzleSlice,
   TopSecondarySlice,
+  SupplementLeadOneAndOneSlice,
 } from "./slices";
 
 const config = (NativeModules || {}).ReactConfig;
@@ -40,7 +41,9 @@ const sliceMap = (isInSupplement) => {
     LeadOneAndFourSlice: isInTabletSupplement
       ? LeadOneAndFourSlice
       : LeadOneAndFourSlice,
-    LeadOneAndOneSlice,
+    LeadOneAndOneSlice: isInTabletSupplement
+      ? SupplementLeadOneAndOneSlice
+      : LeadOneAndOneSlice,
     LeadOneFullWidthSlice,
     LeadTwoNoPicAndTwoSlice,
     Puzzle: PuzzleSlice,

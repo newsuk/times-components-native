@@ -12,7 +12,12 @@ import stylesFactory from "./styles";
 import PositionedTileStar from "../shared/positioned-tile-star";
 import { editionBreakpoints } from "@times-components-native/styleguide";
 
-const TileAX = ({ onPress, tile, breakpoint = editionBreakpoints.medium }) => {
+const TileAX = ({
+  onPress,
+  tile,
+  orientation,
+  breakpoint = editionBreakpoints.medium,
+}) => {
   const styles = stylesFactory(breakpoint);
   const crop = getTileImage(tile, "crop32");
 
@@ -37,7 +42,14 @@ const TileAX = ({ onPress, tile, breakpoint = editionBreakpoints.medium }) => {
         fill
         hasVideo={hasVideo}
       />
-      <TileSummary headlineStyle={styles.headline} tile={tile} />
+      <TileSummary
+        headlineStyle={
+          orientation === "landscape"
+            ? styles.headlineLandscape
+            : styles.headlinePortrait
+        }
+        tile={tile}
+      />
       <PositionedTileStar articleId={tile.article.id} />
     </TileLink>
   );
