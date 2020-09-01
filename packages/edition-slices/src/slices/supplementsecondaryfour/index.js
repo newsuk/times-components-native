@@ -3,7 +3,6 @@ import PropTypes from "prop-types";
 import { SupplementSecondaryFourSlice } from "@times-components-native/slice-layout";
 import { TileAY } from "../../tiles";
 import { ResponsiveSlice } from "../shared";
-import stylesFactory from "./styles";
 
 const SupplementSecondaryFour = (props) => {
   const render = (breakpoint) => {

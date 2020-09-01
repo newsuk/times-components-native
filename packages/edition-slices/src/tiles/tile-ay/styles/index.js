@@ -6,9 +6,9 @@ import {
 } from "@times-components-native/styleguide";
 
 const fontSizeResolver = {
-  [editionBreakpoints.medium]: 20,
-  [editionBreakpoints.wide]: 20,
-  [editionBreakpoints.huge]: 22,
+  [editionBreakpoints.medium]: 19,
+  [editionBreakpoints.wide]: 22,
+  [editionBreakpoints.huge]: 27,
 };
 
 export default (breakpoint) => ({
@@ -19,9 +19,10 @@ export default (breakpoint) => ({
   },
   headline: {
     ...globalSpacingStyles.tabletHeadline,
-    fontFamily: fonts.headline,
+    fontFamily: fonts.headlineRegular,
     fontSize: fontSizeResolver[breakpoint],
     lineHeight: fontSizeResolver[breakpoint],
+    fontWeight: "normal",
   },
   imageContainer: {
     marginBottom: spacing(2),
