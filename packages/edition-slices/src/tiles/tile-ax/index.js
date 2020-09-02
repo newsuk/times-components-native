@@ -8,14 +8,20 @@ import {
   TileImage,
   withTileTracking,
 } from "../shared";
-import styles from "./styles";
+import stylesFactory from "./styles";
+import PositionedTileStar from "../shared/positioned-tile-star";
+import { editionBreakpoints } from "@times-components-native/styleguide";
 
-const TileU = ({ onPress, tile, headlineStyle }) => {
-  const crop = getTileImage(tile, "crop169");
+const TileAX = ({
+  onPress,
+  tile,
+  orientation,
+  breakpoint = editionBreakpoints.medium,
+}) => {
+  const styles = stylesFactory(breakpoint);
+  const crop = getTileImage(tile, "crop32");
 
-  if (!crop) {
-    return null;
-  }
+  if (!crop) return null;
 
   const {
     article: { hasVideo },
@@ -24,7 +30,7 @@ const TileU = ({ onPress, tile, headlineStyle }) => {
   return (
     <TileLink onPress={onPress} style={styles.container} tile={tile}>
       <TileImage
-        aspectRatio={16 / 9}
+        aspectRatio={3 / 2}
         relativeWidth={crop.relativeWidth}
         relativeHeight={crop.relativeHeight}
         relativeHorizontalOffset={crop.relativeHorizontalOffset}
@@ -35,17 +41,22 @@ const TileU = ({ onPress, tile, headlineStyle }) => {
         hasVideo={hasVideo}
       />
       <TileSummary
-        headlineStyle={[styles.headline, headlineStyle]}
+        headlineStyle={
+          orientation === "landscape"
+            ? styles.headlineLandscape
+            : styles.headlinePortrait
+        }
         tile={tile}
       />
+      <PositionedTileStar articleId={tile.article.id} />
     </TileLink>
   );
 };
 
-TileU.propTypes = {
+TileAX.propTypes = {
   onPress: PropTypes.func.isRequired,
   tile: PropTypes.shape({}).isRequired,
-  headlineStyle: PropTypes.shape({}),
+  breakpoint: PropTypes.string,
 };
 
-export default withTileTracking(TileU);
+export default withTileTracking(TileAX);

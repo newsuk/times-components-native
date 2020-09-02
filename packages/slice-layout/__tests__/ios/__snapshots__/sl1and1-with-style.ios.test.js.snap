@@ -1,0 +1,136 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`1. supplement lead one and one - medium 1`] = `
+<View
+  style={
+    Object {
+      "flex": 1,
+      "flexDirection": "row",
+      "marginHorizontal": 20,
+    }
+  }
+>
+  <View
+    style={
+      Object {
+        "width": "75%",
+      }
+    }
+  >
+    <Text>
+      lead
+    </Text>
+  </View>
+  <View
+    style={
+      Object {
+        "borderColor": "#DBDBDB",
+        "borderRightWidth": 1,
+        "borderStyle": "solid",
+        "marginVertical": 15,
+      }
+    }
+  />
+  <View
+    style={
+      Object {
+        "width": "25%",
+      }
+    }
+  >
+    <Text>
+      support
+    </Text>
+  </View>
+</View>
+`;
+
+exports[`2. supplement lead one and one - wide 1`] = `
+<View
+  style={
+    Object {
+      "flex": 1,
+      "flexDirection": "row",
+      "marginHorizontal": 10,
+    }
+  }
+>
+  <View
+    style={
+      Object {
+        "width": "75%",
+      }
+    }
+  >
+    <Text>
+      lead
+    </Text>
+  </View>
+  <View
+    style={
+      Object {
+        "borderColor": "#DBDBDB",
+        "borderRightWidth": 1,
+        "borderStyle": "solid",
+        "marginVertical": 15,
+      }
+    }
+  />
+  <View
+    style={
+      Object {
+        "width": "25%",
+      }
+    }
+  >
+    <Text>
+      support
+    </Text>
+  </View>
+</View>
+`;
+
+exports[`3. supplement lead one and one - huge 1`] = `
+<View
+  style={
+    Object {
+      "flex": 1,
+      "flexDirection": "row",
+      "marginHorizontal": 10,
+    }
+  }
+>
+  <View
+    style={
+      Object {
+        "width": "75%",
+      }
+    }
+  >
+    <Text>
+      lead
+    </Text>
+  </View>
+  <View
+    style={
+      Object {
+        "borderColor": "#DBDBDB",
+        "borderRightWidth": 1,
+        "borderStyle": "solid",
+        "marginVertical": 15,
+      }
+    }
+  />
+  <View
+    style={
+      Object {
+        "width": "25%",
+      }
+    }
+  >
+    <Text>
+      support
+    </Text>
+  </View>
+</View>
+`;

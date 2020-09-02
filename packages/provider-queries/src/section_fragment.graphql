@@ -405,15 +405,15 @@ fragment commonSlicesSection on StandardSectionSlice {
     support {
       headline
       leadAsset {
-        ...leadAsset169
+        ...leadAsset169and32
       }
       article {
         ...baseArticleProps
         leadAsset {
-          ...leadAsset169
+          ...leadAsset169and32
         }
         listingAsset {
-          ...leadAsset169
+          ...leadAsset169and32
         }
         summary125: summary(maxCharCount: 125)
         summary800: summary(maxCharCount: 800)

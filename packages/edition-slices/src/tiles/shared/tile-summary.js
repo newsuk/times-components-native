@@ -148,7 +148,10 @@ class TileSummary extends Component {
 TileSummary.propTypes = {
   bylineStyle: PropTypes.shape({}),
   flagColour: PropTypes.shape({}),
-  headlineStyle: PropTypes.shape({}),
+  headlineStyle: PropTypes.oneOfType([
+    PropTypes.shape({}),
+    PropTypes.arrayOf(PropTypes.shape({})),
+  ]),
   labelColour: PropTypes.string,
   strapline: PropTypes.string,
   straplineStyle: PropTypes.shape({}),

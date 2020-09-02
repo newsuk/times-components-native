@@ -48,6 +48,7 @@ import {
   TileAT,
   TileAU,
   TileAV,
+  TileAX,
   TileAY,
 } from "./src/tiles";
 
@@ -252,6 +253,10 @@ const tileStories = [
   {
     name: "Tile AV - 20pt headline, with teaser",
     Tile: TileAV,
+  },
+  {
+    name: "Tile AX - Top image 3:2, 24/30pt headline, no teaser",
+    Tile: TileAX,
   },
   {
     name: "Tile AY - Top image 16:9, 20pt headline, no teaser",

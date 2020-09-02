@@ -47,6 +47,7 @@ import {
   LeadOneAndOneFrontSlice,
   LeadOneFullWidthFrontSlice,
   TopSecondarySlice,
+  SupplementLeadOneAndOneSlice,
   SupplementSecondaryFourSlice,
 } from "../src/slices";
 
@@ -65,6 +66,11 @@ const slices = [
     mock: mockLeadOneAndOneSlice(),
     name: "lead one and one",
     Slice: LeadOneAndOneSlice,
+  },
+  {
+    mock: mockLeadOneAndOneSlice(),
+    name: "lead one and one - supplement",
+    Slice: SupplementLeadOneAndOneSlice,
   },
   {
     mock: mockLeadOneFullWidthSlice(),
