@@ -1,7 +1,7 @@
 import React from "react";
 import { ResponsiveContext } from "@times-components-native/responsive";
 import { SupplementLeadOneAndFourSlice } from "@times-components-native/slice-layout";
-import { TileAW, TileAX, TileBA, TileBB } from "../../tiles";
+import { TileAW, TileAZ, TileBA, TileBB } from "../../tiles";
 import { ResponsiveSlice, FlushResponsiveSlice } from "../shared";
 
 const renderPortrait = (props, breakpoint, orientation) => {
@@ -15,7 +15,7 @@ const renderPortrait = (props, breakpoint, orientation) => {
       breakpoint={breakpoint}
       orientation={orientation}
       lead={
-        <TileAX
+        <TileAZ
           breakpoint={breakpoint}
           onPress={onPress}
           tile={lead}
@@ -125,10 +125,7 @@ const SupplementLeadOneAndFour = (props) => {
         return orientation === "portrait" ? (
           <ResponsiveSlice renderMedium={renderPort} />
         ) : (
-          <FlushResponsiveSlice
-            renderMedium={renderPort}
-            renderWide={renderLand}
-          />
+          <FlushResponsiveSlice renderMedium={renderLand} />
         );
       }}
     </ResponsiveContext.Consumer>

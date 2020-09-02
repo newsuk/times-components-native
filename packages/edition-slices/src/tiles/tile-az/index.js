@@ -10,7 +10,7 @@ import {
 } from "../shared";
 import stylesFactory from "./styles";
 
-const TileAX = ({ onPress, tile, breakpoint = editionBreakpoints.medium }) => {
+const TileAZ = ({ onPress, tile, breakpoint = editionBreakpoints.medium }) => {
   const styles = stylesFactory(breakpoint);
   const crop = getTileImage(tile, "crop169");
 
@@ -44,4 +44,4 @@ const TileAX = ({ onPress, tile, breakpoint = editionBreakpoints.medium }) => {
   );
 };
 
-export default withTileTracking(TileAX);
+export default withTileTracking(TileAZ);
