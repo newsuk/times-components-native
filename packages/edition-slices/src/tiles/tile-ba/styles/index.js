@@ -11,9 +11,8 @@ const fontSizeResolver = {
 
 export default (breakpoint) => ({
   container: {
-    paddingTop: spacing(3),
+    paddingVertical: spacing(3),
     paddingHorizontal: spacing(2),
-    paddingBottom: spacing(3),
   },
   headline: {
     fontFamily: fonts.headlineRegular,

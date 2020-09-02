@@ -15,9 +15,7 @@ const TileBB = ({ onPress, tile, breakpoint = editionBreakpoints.small }) => {
   const crop = getTileImage(tile, "crop32");
   const styles = stylesFactory(breakpoint);
 
-  if (!crop) {
-    return null;
-  }
+  if (!crop) return null;
 
   const {
     article: { hasVideo },
