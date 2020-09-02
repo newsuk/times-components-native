@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`tile ar huge 1`] = `
+exports[`tile ay huge 1`] = `
 <Link
   linkStyle={
     Object {
@@ -81,7 +81,7 @@ exports[`tile ar huge 1`] = `
 </Link>
 `;
 
-exports[`tile ar medium 1`] = `
+exports[`tile ay medium 1`] = `
 <Link
   linkStyle={
     Object {
@@ -162,7 +162,7 @@ exports[`tile ar medium 1`] = `
 </Link>
 `;
 
-exports[`tile ar wide 1`] = `
+exports[`tile ay wide 1`] = `
 <Link
   linkStyle={
     Object {
@@ -243,7 +243,7 @@ exports[`tile ar wide 1`] = `
 </Link>
 `;
 
-exports[`tile ar without breakpoint should be like medium 1`] = `
+exports[`tile ay without breakpoint should be like medium 1`] = `
 <Link
   linkStyle={
     Object {

@@ -4,7 +4,7 @@ import { testTile } from "../shared-tile-utils";
 import { TileAY } from "../../src/tiles";
 
 export default () => {
-  describe("tile ar", () => {
+  describe("tile ay", () => {
     it("medium", () => {
       testTile(TileAY, editionBreakpoints.medium);
     });
