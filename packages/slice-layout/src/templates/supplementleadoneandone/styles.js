@@ -4,7 +4,7 @@ const styles = {
   container: {
     flex: 1,
     flexDirection: "row",
-    marginHorizontal: spacing(4), // TODO CHECK IF THIS IS WHAT DESIGNS HAVE
+    marginHorizontal: spacing(4),
   },
   leadItem: {
     width: "75%",
@@ -25,7 +25,7 @@ const wideBreakpointStyles = {
   ...styles,
   container: {
     ...styles.container,
-    marginHorizontal: spacing(2), // TODO CHECK IF THIS IS WHAT DESIGNS HAVE
+    marginHorizontal: spacing(2),
   },
 };
 
