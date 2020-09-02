@@ -22,6 +22,7 @@ import {
   LeadOneFullWidthFrontSlice,
   PuzzleSlice,
   TopSecondarySlice,
+  SupplementSecondaryFourSlice,
   SupplementLeadOneAndOneSlice,
 } from "./slices";
 
@@ -47,7 +48,9 @@ const sliceMap = (isInSupplement) => {
     LeadOneFullWidthSlice,
     LeadTwoNoPicAndTwoSlice,
     Puzzle: PuzzleSlice,
-    SecondaryFourSlice,
+    SecondaryFourSlice: isInTabletSupplement
+      ? SupplementSecondaryFourSlice
+      : SecondaryFourSlice,
     SecondaryOneAndColumnistSlice,
     SecondaryOneAndFourSlice,
     SecondaryOneSlice,

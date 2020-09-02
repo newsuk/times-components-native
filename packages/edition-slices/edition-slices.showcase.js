@@ -36,6 +36,7 @@ import {
   SecondaryTwoNoPicAndTwoSlice,
   StandardSlice,
   TopSecondarySlice,
+  SupplementSecondaryFourSlice,
   SupplementLeadOneAndOneSlice,
 } from "./src/slices";
 
@@ -138,6 +139,11 @@ const sliceStories = [
     mock: mockSecondaryFourSlice(),
     name: "Secondary Four (Mobile: C,C,C,C, Tablet: AR,AR,B,B)",
     Slice: SecondaryFourSlice,
+  },
+  {
+    mock: mockSecondaryFourSlice(),
+    name: "Supplement Secondary Four (Mobile: None, Tablet: AY,AY,AY,AY)",
+    Slice: SupplementSecondaryFourSlice,
   },
   {
     mock: mockSecondaryTwoAndTwoSlice(),
