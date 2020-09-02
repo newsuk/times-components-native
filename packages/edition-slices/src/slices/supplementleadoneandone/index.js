@@ -1,4 +1,4 @@
-import React, { Component } from "react";
+import React from "react";
 import PropTypes from "prop-types";
 import { SupplementLeadOneAndOneSlice } from "@times-components-native/slice-layout";
 import { TileU, TileAX } from "../../tiles";
@@ -6,17 +6,12 @@ import { ResponsiveSlice } from "../shared";
 
 import styleFactory from "./styles";
 
-class SupplementLeadOneAndOne extends Component {
-  constructor(props) {
-    super(props);
-    this.renderMedium = this.renderMedium.bind(this);
-  }
-
-  renderMedium(breakpoint, orientation) {
+const SupplementLeadOneAndOne = (props) => {
+  const render = (breakpoint, orientation) => {
     const {
       onPress,
       slice: { lead, support },
-    } = this.props;
+    } = props;
     const styles = styleFactory(breakpoint);
     return (
       <SupplementLeadOneAndOneSlice
@@ -40,17 +35,10 @@ class SupplementLeadOneAndOne extends Component {
         }
       />
     );
-  }
+  };
 
-  render() {
-    return (
-      <ResponsiveSlice
-        renderSmall={() => null}
-        renderMedium={this.renderMedium}
-      />
-    );
-  }
-}
+  return <ResponsiveSlice renderSmall={() => null} renderMedium={render} />;
+};
 
 SupplementLeadOneAndOne.propTypes = {
   onPress: PropTypes.func.isRequired,
