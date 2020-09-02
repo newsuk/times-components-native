@@ -6,27 +6,41 @@ import {
 } from "@times-components-native/styleguide";
 
 const paddingVerticalResolver = {
-  [editionBreakpoints.medium]: spacing(8),
-  [editionBreakpoints.wide]: spacing(6),
+  [editionBreakpoints.medium]: spacing(4),
+  [editionBreakpoints.wide]: spacing(4),
   [editionBreakpoints.huge]: spacing(14),
 };
 
 const fontSizeResolver = {
-  [editionBreakpoints.medium]: 30,
-  [editionBreakpoints.wide]: 30,
-  [editionBreakpoints.huge]: 35,
+  [editionBreakpoints.medium]: 40,
+  [editionBreakpoints.wide]: 45,
+};
+
+const horizontalMarginResolver = {
+  [editionBreakpoints.medium]: spacing(6),
+  [editionBreakpoints.wide]: spacing(10),
+};
+
+const horizontalPaddingResolver = {
+  [editionBreakpoints.medium]: spacing(10),
+  [editionBreakpoints.wide]: spacing(28),
 };
 
 export default (breakpoint) => ({
   container: {
     flex: 1,
+    borderBottomWidth: 1,
+    borderBottomColor: colours.functional.keyline,
+    marginHorizontal: -horizontalMarginResolver[breakpoint],
   },
   headline: {
     color: colours.functional.brandColour,
-    fontFamily: fonts.headline,
+    fontFamily: fonts.headlineRegular,
+    fontWeight: "normal",
     fontSize: fontSizeResolver[breakpoint],
     lineHeight: fontSizeResolver[breakpoint],
     textAlign: "center",
+    marginHorizontal: horizontalMarginResolver[breakpoint],
   },
   imageContainer: {
     width: "100%",
@@ -36,7 +50,7 @@ export default (breakpoint) => ({
     alignItems: "center",
     justifyContent: "center",
     backgroundColor: colours.functional.border,
-    paddingHorizontal: spacing(4),
+    paddingHorizontal: horizontalPaddingResolver[breakpoint],
     paddingVertical: paddingVerticalResolver[breakpoint],
   },
 });

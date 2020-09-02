@@ -32,7 +32,6 @@ const SupplementLeadOneAndFourSlice = ({
   return (
     <View style={styles.portraitContainer}>
       <View style={styles.portraitLeadContainer}>{lead}</View>
-      <ItemColSeparator />
       <HorizontalLayout
         containerStyle={styles.horizontalSupportContainer}
         tiles={[

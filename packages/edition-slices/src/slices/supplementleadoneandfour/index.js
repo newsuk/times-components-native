@@ -1,38 +1,29 @@
 import React from "react";
+import { ResponsiveContext } from "@times-components-native/responsive";
 import { SupplementLeadOneAndFourSlice } from "@times-components-native/slice-layout";
-import { TileAW, TileAX, TileD } from "../../tiles";
-import { FlushResponsiveSlice } from "../shared";
+import { TileAW, TileAX, TileBA, TileBB } from "../../tiles";
+import { ResponsiveSlice, FlushResponsiveSlice } from "../shared";
 
-function renderMedium(props, breakpoint, orientation) {
+const renderPortrait = (props, breakpoint, orientation) => {
   const {
     onPress,
     slice: { lead, support1, support2, support3, support4 },
   } = props;
 
-  const renderLeadComponent =
-    orientation === "landscape" ? (
-      <TileAW
-        onPress={onPress}
-        tile={lead}
-        tileName="lead"
-        breakpoint={breakpoint}
-      />
-    ) : (
-      <TileAX
-        breakpoint={breakpoint}
-        onPress={onPress}
-        tile={lead}
-        tileName="lead"
-      />
-    );
-
   return (
     <SupplementLeadOneAndFourSlice
       breakpoint={breakpoint}
       orientation={orientation}
-      lead={renderLeadComponent}
+      lead={
+        <TileAX
+          breakpoint={breakpoint}
+          onPress={onPress}
+          tile={lead}
+          tileName="lead"
+        />
+      }
       support1={
-        <TileD
+        <TileBA
           breakpoint={breakpoint}
           onPress={onPress}
           tile={support1}
@@ -40,7 +31,7 @@ function renderMedium(props, breakpoint, orientation) {
         />
       }
       support2={
-        <TileD
+        <TileBA
           breakpoint={breakpoint}
           onPress={onPress}
           tile={support2}
@@ -48,7 +39,7 @@ function renderMedium(props, breakpoint, orientation) {
         />
       }
       support3={
-        <TileD
+        <TileBA
           breakpoint={breakpoint}
           onPress={onPress}
           tile={support3}
@@ -56,7 +47,7 @@ function renderMedium(props, breakpoint, orientation) {
         />
       }
       support4={
-        <TileD
+        <TileBA
           breakpoint={breakpoint}
           onPress={onPress}
           tile={support4}
@@ -65,13 +56,83 @@ function renderMedium(props, breakpoint, orientation) {
       }
     />
   );
-}
+};
+
+const renderLandscape = (props, breakpoint, orientation) => {
+  const {
+    onPress,
+    slice: { lead, support1, support2, support3, support4 },
+  } = props;
+
+  return (
+    <SupplementLeadOneAndFourSlice
+      breakpoint={breakpoint}
+      orientation={orientation}
+      lead={
+        <TileAW
+          breakpoint={breakpoint}
+          onPress={onPress}
+          tile={lead}
+          tileName="lead"
+        />
+      }
+      support1={
+        <TileBB
+          breakpoint={breakpoint}
+          onPress={onPress}
+          tile={support1}
+          tileName="support1"
+        />
+      }
+      support2={
+        <TileBB
+          breakpoint={breakpoint}
+          onPress={onPress}
+          tile={support2}
+          tileName="support2"
+        />
+      }
+      support3={
+        <TileBB
+          breakpoint={breakpoint}
+          onPress={onPress}
+          tile={support3}
+          tileName="support3"
+        />
+      }
+      support4={
+        <TileBB
+          breakpoint={breakpoint}
+          onPress={onPress}
+          tile={support4}
+          tileName="support4"
+        />
+      }
+    />
+  );
+};
 
 const SupplementLeadOneAndFour = (props) => {
-  const renderSlice = (breakpoint, orientation) =>
-    renderMedium(props, breakpoint, orientation);
+  const renderPort = (breakpoint, orientation) =>
+    renderPortrait(props, breakpoint, orientation);
 
-  return <FlushResponsiveSlice renderMedium={renderSlice} />;
+  const renderLand = (breakpoint, orientation) =>
+    renderLandscape(props, breakpoint, orientation);
+
+  return (
+    <ResponsiveContext.Consumer>
+      {({ orientation }) => {
+        return orientation === "portrait" ? (
+          <ResponsiveSlice renderMedium={renderPort} />
+        ) : (
+          <FlushResponsiveSlice
+            renderMedium={renderPort}
+            renderWide={renderLand}
+          />
+        );
+      }}
+    </ResponsiveContext.Consumer>
+  );
 };
 
 export default SupplementLeadOneAndFour;

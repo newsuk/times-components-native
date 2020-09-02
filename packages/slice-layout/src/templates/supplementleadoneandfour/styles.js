@@ -1,8 +1,12 @@
-import { editionBreakpoints } from "@times-components-native/styleguide";
+import {
+  editionBreakpoints,
+  spacing,
+} from "@times-components-native/styleguide";
 
 const mediumBreakpointStyles = {
   portraitContainer: {
     flex: 1,
+    marginHorizontal: spacing(4),
   },
   landscapeContainer: {
     flexDirection: "row",
@@ -12,7 +16,6 @@ const mediumBreakpointStyles = {
   },
   landscapeLeadContainer: {
     width: "66.667%",
-    borderColor: "red",
   },
   horizontalSupportContainer: {
     flex: 1,
@@ -25,11 +28,23 @@ const mediumBreakpointStyles = {
   supportItem: {
     flex: 1,
   },
+  colSeparatorStyle: {
+    marginHorizontal: spacing(2),
+  },
+};
+
+const wideBreakpointStyles = {
+  ...mediumBreakpointStyles,
+  portraitContainer: {
+    ...mediumBreakpointStyles.container,
+    marginHorizontal: spacing(2),
+  },
 };
 
 const stylesResolver = {
   [editionBreakpoints.small]: {},
   [editionBreakpoints.medium]: mediumBreakpointStyles,
-  [editionBreakpoints.wide]: mediumBreakpointStyles,
+  [editionBreakpoints.wide]: wideBreakpointStyles,
+  [editionBreakpoints.huge]: wideBreakpointStyles,
 };
 export default (breakpoint) => stylesResolver[breakpoint];

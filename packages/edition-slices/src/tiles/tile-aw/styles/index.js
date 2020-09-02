@@ -5,16 +5,10 @@ import {
   editionBreakpoints,
 } from "@times-components-native/styleguide";
 
-const paddingVerticalResolver = {
-  [editionBreakpoints.medium]: spacing(8),
-  [editionBreakpoints.wide]: spacing(6),
-  [editionBreakpoints.huge]: spacing(14),
-};
-
 const fontSizeResolver = {
   [editionBreakpoints.medium]: 30,
-  [editionBreakpoints.wide]: 30,
-  [editionBreakpoints.huge]: 35,
+  [editionBreakpoints.wide]: 35,
+  [editionBreakpoints.huge]: 45,
 };
 
 export default (breakpoint) => ({
@@ -25,7 +19,8 @@ export default (breakpoint) => ({
   },
   headline: {
     color: colours.functional.brandColour,
-    fontFamily: fonts.headline,
+    fontFamily: fonts.headlineRegular,
+    fontWeight: "normal",
     fontSize: fontSizeResolver[breakpoint],
     lineHeight: fontSizeResolver[breakpoint],
     textAlign: "center",
@@ -38,7 +33,8 @@ export default (breakpoint) => ({
     alignItems: "center",
     justifyContent: "center",
     backgroundColor: colours.functional.border,
-    paddingHorizontal: spacing(4),
-    paddingVertical: paddingVerticalResolver[breakpoint],
+    paddingHorizontal: spacing(12),
+    paddingTop: spacing(6),
+    paddingBottom: spacing(2),
   },
 });
