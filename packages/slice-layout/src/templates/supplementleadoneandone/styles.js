@@ -29,10 +29,10 @@ const wideBreakpointStyles = {
   },
 };
 
-const stylesToreturn = {
+const stylesToReturn = {
   medium: styles,
   huge: wideBreakpointStyles,
   wide: wideBreakpointStyles,
 };
 
-export default (breakpoint) => stylesToreturn[breakpoint] || styles;
+export default (breakpoint) => stylesToReturn[breakpoint] || styles;

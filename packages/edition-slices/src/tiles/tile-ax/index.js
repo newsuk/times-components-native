@@ -21,9 +21,7 @@ const TileAX = ({
   const styles = stylesFactory(breakpoint);
   const crop = getTileImage(tile, "crop32");
 
-  if (!crop) {
-    return null;
-  }
+  if (!crop) return null;
 
   const {
     article: { hasVideo },
