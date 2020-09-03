@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Front Page section 1`] = `<FrontLeadTwoAndTwo />`;
+exports[`Front Page section 1`] = `<LeadTwoNoPicAndTwoFrontSlice />`;
 
 exports[`Sunday Times magazine section 1`] = `
 <RCTScrollView>
@@ -63,7 +63,7 @@ exports[`Sunday Times magazine section 1`] = `
       </View>
     </View>
     <View>
-      <Standard />
+      <StandardSlice />
     </View>
   </View>
 </RCTScrollView>
@@ -130,7 +130,7 @@ exports[`Times magazine section 1`] = `
       </View>
     </View>
     <View>
-      <Standard />
+      <StandardSlice />
     </View>
   </View>
 </RCTScrollView>
@@ -265,7 +265,7 @@ exports[`section page 1`] = `
 <RCTScrollView>
   <View>
     <View>
-      <LeadOneAndFour />
+      <LeadOneAndFourSlice />
       <View>
         <View
           style={
@@ -293,7 +293,7 @@ exports[`section page 1`] = `
       </View>
     </View>
     <View>
-      <LeadOneAndOne />
+      <LeadOneAndOneSlice />
       <View>
         <View
           style={
@@ -307,7 +307,6 @@ exports[`section page 1`] = `
       </View>
     </View>
     <View>
-      <LeadOneAndTwoSlice />
       <View>
         <View
           style={
@@ -321,7 +320,7 @@ exports[`section page 1`] = `
       </View>
     </View>
     <View>
-      <LeadTwoNoPicAndTwo />
+      <LeadTwoNoPicAndTwoSlice />
       <View>
         <View
           style={
@@ -349,7 +348,7 @@ exports[`should render Secondary 2 No Pic and 2 instead of Secondary 2 and 2 for
 <RCTScrollView>
   <View>
     <View>
-      <SecondaryTwoNoPicAndTwo />
+      <SecondaryTwoNoPicAndTwoSlice />
       <View>
         <View
           style={
@@ -363,7 +362,7 @@ exports[`should render Secondary 2 No Pic and 2 instead of Secondary 2 and 2 for
       </View>
     </View>
     <View>
-      <SecondaryTwoNoPicAndTwo />
+      <SecondaryTwoNoPicAndTwoSlice />
     </View>
   </View>
 </RCTScrollView>
@@ -373,7 +372,7 @@ exports[`should render secondary 2 and 2 for mobile (small breakpoint) 1`] = `
 <RCTScrollView>
   <View>
     <View>
-      <SecondaryTwoAndTwo />
+      <SecondaryTwoAndTwoSlice />
       <View>
         <View
           style={
@@ -387,7 +386,7 @@ exports[`should render secondary 2 and 2 for mobile (small breakpoint) 1`] = `
       </View>
     </View>
     <View>
-      <SecondaryTwoNoPicAndTwo />
+      <SecondaryTwoNoPicAndTwoSlice />
     </View>
   </View>
 </RCTScrollView>
