@@ -1643,7 +1643,7 @@ exports[`20. front lead two no pic and two - landscape - medium 1`] = `
         "alignSelf": "center",
         "flex": 1,
         "flexDirection": "row",
-        "paddingBottom": 100,
+        "paddingBottom": 56,
         "paddingTop": 15,
         "width": 1000,
       }
@@ -1755,7 +1755,7 @@ exports[`21. front lead two no pic and two - portrait - medium 1`] = `
         "flexDirection": "row",
         "marginHorizontal": 20,
         "marginTop": 20,
-        "paddingBottom": 100,
+        "paddingBottom": 56,
       }
     }
   >
@@ -1854,7 +1854,7 @@ exports[`22. front lead one and one - portrait - medium 1`] = `
         "flex": 1,
         "flexDirection": "row",
         "marginHorizontal": 30,
-        "paddingBottom": 100,
+        "paddingBottom": 56,
         "paddingTop": 20,
       }
     }
@@ -1910,7 +1910,7 @@ exports[`23. front lead one and one - landscape - medium 1`] = `
         "flex": 1,
         "flexDirection": "row",
         "marginHorizontal": 30,
-        "paddingBottom": 100,
+        "paddingBottom": 56,
         "paddingTop": 20,
       }
     }
@@ -1966,7 +1966,7 @@ exports[`24. front lead one - portrait - medium 1`] = `
         "flex": 1,
         "flexDirection": "row",
         "marginHorizontal": 30,
-        "paddingBottom": 100,
+        "paddingBottom": 56,
         "paddingTop": 20,
       }
     }
@@ -1994,7 +1994,7 @@ exports[`25. front lead one - landscape - medium 1`] = `
         "flex": 1,
         "flexDirection": "row",
         "marginHorizontal": 30,
-        "paddingBottom": 100,
+        "paddingBottom": 56,
         "paddingTop": 20,
       }
     }
@@ -4062,7 +4062,7 @@ exports[`51. front lead two no pic and two - landscape - wide 1`] = `
         "alignSelf": "center",
         "flex": 1,
         "flexDirection": "row",
-        "paddingBottom": 100,
+        "paddingBottom": 56,
         "paddingTop": 15,
         "width": 1000,
       }
@@ -4174,7 +4174,7 @@ exports[`52. front lead two no pic and two - portrait - wide 1`] = `
         "flexDirection": "row",
         "marginHorizontal": 20,
         "marginTop": 20,
-        "paddingBottom": 100,
+        "paddingBottom": 56,
       }
     }
   >
@@ -4273,7 +4273,7 @@ exports[`53. front lead one and one - portrait - wide 1`] = `
         "flex": 1,
         "flexDirection": "row",
         "marginHorizontal": 30,
-        "paddingBottom": 100,
+        "paddingBottom": 56,
         "paddingTop": 20,
       }
     }
@@ -4329,7 +4329,7 @@ exports[`54. front lead one and one - landscape - wide 1`] = `
         "flex": 1,
         "flexDirection": "row",
         "marginHorizontal": 30,
-        "paddingBottom": 100,
+        "paddingBottom": 56,
         "paddingTop": 20,
       }
     }
@@ -4385,7 +4385,7 @@ exports[`55. front lead one - portrait - wide 1`] = `
         "flex": 1,
         "flexDirection": "row",
         "marginHorizontal": 30,
-        "paddingBottom": 100,
+        "paddingBottom": 56,
         "paddingTop": 20,
       }
     }
@@ -4413,7 +4413,7 @@ exports[`56. front lead one - landscape - wide 1`] = `
         "flex": 1,
         "flexDirection": "row",
         "marginHorizontal": 30,
-        "paddingBottom": 100,
+        "paddingBottom": 56,
         "paddingTop": 20,
       }
     }
@@ -6680,7 +6680,7 @@ exports[`82. front lead two no pic and two - landscape - huge 1`] = `
           "alignSelf": "center",
           "flex": 1,
           "flexDirection": "row",
-          "paddingBottom": 100,
+          "paddingBottom": 56,
           "paddingTop": 15,
           "width": 1000,
         }
@@ -6802,7 +6802,7 @@ exports[`83. front lead two no pic and two - portrait - huge 1`] = `
           "flexDirection": "row",
           "marginHorizontal": 20,
           "marginTop": 20,
-          "paddingBottom": 100,
+          "paddingBottom": 56,
         }
       }
     >
@@ -6911,7 +6911,7 @@ exports[`84. front lead one and one - portrait - huge 1`] = `
           "flex": 1,
           "flexDirection": "row",
           "marginHorizontal": 30,
-          "paddingBottom": 100,
+          "paddingBottom": 56,
           "paddingTop": 20,
         }
       }
@@ -6977,7 +6977,7 @@ exports[`85. front lead one and one - landscape - huge 1`] = `
           "flex": 1,
           "flexDirection": "row",
           "marginHorizontal": 30,
-          "paddingBottom": 100,
+          "paddingBottom": 56,
           "paddingTop": 20,
         }
       }
@@ -7043,7 +7043,7 @@ exports[`86. front lead one - portrait - huge 1`] = `
           "flex": 1,
           "flexDirection": "row",
           "marginHorizontal": 30,
-          "paddingBottom": 100,
+          "paddingBottom": 56,
           "paddingTop": 20,
         }
       }
@@ -7081,7 +7081,7 @@ exports[`87. front lead one - landscape - huge 1`] = `
           "flex": 1,
           "flexDirection": "row",
           "marginHorizontal": 30,
-          "paddingBottom": 100,
+          "paddingBottom": 56,
           "paddingTop": 20,
         }
       }
