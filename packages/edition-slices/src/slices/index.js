@@ -20,3 +20,4 @@ export { default as LeadOneFullWidthFrontSlice } from "./frontleadone";
 export { default as TopSecondarySlice } from "./topsecondary";
 export { default as SupplementLeadOneAndOneSlice } from "./supplementleadoneandone";
 export { default as SupplementSecondaryFourSlice } from "./supplementsecondaryfour";
+export { default as SupplementSecondaryTwoAndTwo } from "./supplementsecondarytwoandtwo";

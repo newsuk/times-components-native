@@ -38,6 +38,7 @@ import {
   TopSecondarySlice,
   SupplementSecondaryFourSlice,
   SupplementLeadOneAndOneSlice,
+  SupplementSecondaryTwoAndTwo,
 } from "./src/slices";
 
 const preventDefaultedAction = (decorateAction) =>
@@ -150,6 +151,12 @@ const sliceStories = [
     name:
       "Secondary Two And Two (Mobile: C,C,G,G, Tablet: V,V,G,G, Wide Tablet/Desktop: AM,AM,AN,AN)",
     Slice: SecondaryTwoAndTwoSlice,
+  },
+  {
+    mock: mockSecondaryTwoAndTwoSlice(),
+    name:
+      "Supplement Secondary Two And Two (Mobile: C,C,G,G, Tablet: V,V,G,G, Wide Tablet/Desktop: AM,AM,AN,AN)",
+    Slice: SupplementSecondaryTwoAndTwo,
   },
   {
     mock: mockSecondaryTwoNoPicAndTwoSlice(),
