@@ -48,8 +48,12 @@ import {
   TileAT,
   TileAU,
   TileAV,
+  TileAW,
   TileAX,
   TileAY,
+  TileAZ,
+  TileBA,
+  TileBB,
 } from "./src/tiles";
 
 const tile = mockEditionSlice(1).items[0];
@@ -255,12 +259,28 @@ const tileStories = [
     Tile: TileAV,
   },
   {
+    name: "Tile AW - Top image 16:9, Times Modern headline, no teaser",
+    Tile: TileAW,
+  },
+  {
     name: "Tile AX - Top image 3:2, 24/30pt headline, no teaser",
     Tile: TileAX,
   },
   {
     name: "Tile AY - Top image 16:9, 20pt headline, no teaser",
     Tile: TileAY,
+  },
+  {
+    name: "Tile AZ - Top image 3:2, Times Modern headline, no teaser",
+    Tile: TileAZ,
+  },
+  {
+    name: "Tile BA - image 16:9, Times Modern headline, no teaser",
+    Tile: TileBA,
+  },
+  {
+    name: "Tile BB - image 3:2, Times Modern headline, no teaser",
+    Tile: TileBB,
   },
 ];
 
