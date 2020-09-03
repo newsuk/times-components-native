@@ -20,6 +20,7 @@ import {
   Leaders,
   ListTwoAndSixNoPic,
   TopSecondarySlice,
+  SupplementLeadOneAndFourSlice,
 } from "./src/slice-layout";
 
 const colours = [
@@ -98,6 +99,23 @@ export default {
         </ScrollView>
       ),
       name: "LeadOneAndFour",
+      type: "story",
+      platform: "native",
+    },
+    {
+      component: ({ select }) => (
+        <ScrollView>
+          <SupplementLeadOneAndFourSlice
+            breakpoint={breakpointSelect(select)}
+            lead={<Support3 tileName="lead1" />}
+            support1={<Support1 tileName="support2" />}
+            support2={<Support2 tileName="support3" />}
+            support3={<Support3 tileName="support4" />}
+            support4={<Support4 tileName="support5" />}
+          />
+        </ScrollView>
+      ),
+      name: "SupplementLeadOneAndFour",
       type: "story",
       platform: "native",
     },

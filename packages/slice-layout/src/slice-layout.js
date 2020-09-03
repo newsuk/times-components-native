@@ -20,5 +20,6 @@ export { default as FrontLeadTwoAndTwoSlice } from "./templates/frontleadtwoandt
 export { default as FrontLeadOneAndOneSlice } from "./templates/frontleadoneandone";
 export { default as FrontLeadOneSlice } from "./templates/frontleadone";
 export { default as TopSecondarySlice } from "./templates/topsecondary";
+export { default as SupplementLeadOneAndFourSlice } from "./templates/supplementleadoneandfour";
 export { default as SupplementLeadOneAndOneSlice } from "./templates/supplementleadoneandone";
 export { default as SupplementSecondaryFourSlice } from "./templates/supplementsecondaryfour";
