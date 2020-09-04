@@ -47,6 +47,8 @@ export { default as spacing, globalSpacingStyles } from "./spacing";
 
 export { default as themeFactory } from "./theme/theme-factory";
 
+export { default as columnToPercentage } from "./grid/columnToPercentage";
+
 export default ({ scale = scales.medium } = {}) => ({
   Animations,
   colours,

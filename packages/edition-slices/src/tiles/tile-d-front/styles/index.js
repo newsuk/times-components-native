@@ -1,4 +1,5 @@
 import {
+  columnToPercentage,
   editionBreakpoints,
   fonts,
   spacing,
@@ -15,7 +16,11 @@ const sharedStyles = {
     lineHeight: 20,
   },
   imageContainer: {
-    flex: 1,
+    width: columnToPercentage({
+      numberOfColumns: 3,
+      numberOfMargins: 0,
+      totalColumns: 7,
+    }),
   },
   summaryContainer: {
     paddingLeft: spacing(2),

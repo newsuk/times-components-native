@@ -2,6 +2,7 @@ export {
   default,
   Animations,
   breakpoints,
+  columnToPercentage,
   colours,
   editionBreakpoints,
   editionBreakpointWidths,
