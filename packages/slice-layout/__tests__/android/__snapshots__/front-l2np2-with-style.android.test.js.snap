@@ -51,7 +51,7 @@ exports[`2. front lead two no pic and two - medium - landscape 1`] = `
       "alignSelf": "center",
       "flex": 1,
       "flexDirection": "row",
-      "paddingBottom": 100,
+      "paddingBottom": 56,
       "paddingTop": 15,
       "width": 1000,
     }
@@ -158,7 +158,7 @@ exports[`3. front lead two no pic and two - wide - landscape 1`] = `
       "alignSelf": "center",
       "flex": 1,
       "flexDirection": "row",
-      "paddingBottom": 100,
+      "paddingBottom": 56,
       "paddingTop": 15,
       "width": 1000,
     }
@@ -265,7 +265,7 @@ exports[`4. front lead two no pic and two - huge - landscape 1`] = `
       "alignSelf": "center",
       "flex": 1,
       "flexDirection": "row",
-      "paddingBottom": 100,
+      "paddingBottom": 56,
       "paddingTop": 15,
       "width": 1000,
     }
@@ -417,7 +417,7 @@ exports[`6. front lead two no pic and two - medium - portrait 1`] = `
       "flexDirection": "row",
       "marginHorizontal": 20,
       "marginTop": 20,
-      "paddingBottom": 100,
+      "paddingBottom": 56,
     }
   }
 >
@@ -513,7 +513,7 @@ exports[`7. front lead two no pic and two - wide - portrait 1`] = `
       "flexDirection": "row",
       "marginHorizontal": 20,
       "marginTop": 20,
-      "paddingBottom": 100,
+      "paddingBottom": 56,
     }
   }
 >
@@ -609,7 +609,7 @@ exports[`8. front lead two no pic and two - huge - portrait 1`] = `
       "flexDirection": "row",
       "marginHorizontal": 20,
       "marginTop": 20,
-      "paddingBottom": 100,
+      "paddingBottom": 56,
     }
   }
 >

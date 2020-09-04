@@ -682,16 +682,16 @@ fragment commonSlicesSection on StandardSectionSlice {
     secondary1 {
       headline
       leadAsset {
-        ...leadAsset169
+        ...leadAsset169and32
       }
       article {
         ...baseArticleProps
         summary800: summary(maxCharCount: 800)
         leadAsset {
-          ...leadAsset169
+          ...leadAsset169and32
         }
         listingAsset {
-          ...leadAsset169
+          ...leadAsset169and32
         }
       }
       teaser800: teaser(maxCharCount: 800)
@@ -699,16 +699,16 @@ fragment commonSlicesSection on StandardSectionSlice {
     secondary2 {
       headline
       leadAsset {
-        ...leadAsset169
+        ...leadAsset169and32
       }
       article {
         ...baseArticleProps
         summary800: summary(maxCharCount: 800)
         leadAsset {
-          ...leadAsset169
+          ...leadAsset169and32
         }
         listingAsset {
-          ...leadAsset169
+          ...leadAsset169and32
         }
       }
       teaser800: teaser(maxCharCount: 800)

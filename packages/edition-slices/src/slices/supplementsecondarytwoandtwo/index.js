@@ -1,7 +1,7 @@
 import React from "react";
 import PropTypes from "prop-types";
 import { SupplementSecondaryTwoAndTwoSlice } from "@times-components-native/slice-layout";
-import { TileG, TileV, TileAM, TileAN } from "../../tiles";
+import { TileBC, TileBD, TileBE } from "../../tiles";
 import { ResponsiveSlice } from "../shared";
 
 const SupplementSecondaryTwoAndTwo = (props) => {
@@ -10,17 +10,27 @@ const SupplementSecondaryTwoAndTwo = (props) => {
     slice: { secondary1, secondary2, support1, support2 },
   } = props;
 
-  const renderMedium = (breakpoint) => (
+  const renderStacked = (breakpoint) => (
     <SupplementSecondaryTwoAndTwoSlice
       breakpoint={breakpoint}
       secondary1={
-        <TileV onPress={onPress} tile={secondary1} tileName="secondary1" />
+        <TileBC
+          breakpoint={breakpoint}
+          onPress={onPress}
+          tile={secondary1}
+          tileName="secondary1"
+        />
       }
       secondary2={
-        <TileV onPress={onPress} tile={secondary2} tileName="secondary2" />
+        <TileBC
+          breakpoint={breakpoint}
+          onPress={onPress}
+          tile={secondary2}
+          tileName="secondary2"
+        />
       }
       support1={
-        <TileG
+        <TileBD
           breakpoint={breakpoint}
           onPress={onPress}
           tile={support1}
@@ -28,7 +38,7 @@ const SupplementSecondaryTwoAndTwo = (props) => {
         />
       }
       support2={
-        <TileG
+        <TileBD
           breakpoint={breakpoint}
           onPress={onPress}
           tile={support2}
@@ -38,20 +48,30 @@ const SupplementSecondaryTwoAndTwo = (props) => {
     />
   );
 
-  const renderHuge = (breakpoint) => (
+  const renderHorizontal = (breakpoint) => (
     <SupplementSecondaryTwoAndTwoSlice
       breakpoint={breakpoint}
       secondary1={
-        <TileAM onPress={onPress} tile={secondary1} tileName="secondary1" />
+        <TileBC
+          breakpoint={breakpoint}
+          onPress={onPress}
+          tile={secondary1}
+          tileName="secondary1"
+        />
       }
       secondary2={
-        <TileAM onPress={onPress} tile={secondary2} tileName="secondary2" />
+        <TileBC
+          breakpoint={breakpoint}
+          onPress={onPress}
+          tile={secondary2}
+          tileName="secondary2"
+        />
       }
       support1={
-        <TileAN onPress={onPress} tile={support1} tileName="support1" />
+        <TileBE onPress={onPress} tile={support1} tileName="support1" />
       }
       support2={
-        <TileAN onPress={onPress} tile={support2} tileName="support2" />
+        <TileBE onPress={onPress} tile={support2} tileName="support2" />
       }
     />
   );
@@ -59,9 +79,9 @@ const SupplementSecondaryTwoAndTwo = (props) => {
   return (
     <ResponsiveSlice
       renderSmall={() => null}
-      renderMedium={renderMedium}
-      renderWide={renderMedium}
-      renderHuge={renderHuge}
+      renderMedium={renderStacked}
+      renderWide={renderStacked}
+      renderHuge={renderHorizontal}
     />
   );
 };

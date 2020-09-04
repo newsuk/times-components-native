@@ -1,8 +1,7 @@
-import { spacing } from "@times-components-native/styleguide";
-
 import stylesFactory from "./styles.js";
+import { getAndroidNavHeight } from "@times-components-native/utils";
 
-const bottomNavBarHeight = spacing(20); // ensures content sits on top of bottom-nav bar
+const bottomNavBarHeight = getAndroidNavHeight();
 export default (breakpoint) => {
   let styles = stylesFactory(breakpoint);
   return {
@@ -13,7 +12,7 @@ export default (breakpoint) => {
     },
     containerPortrait: {
       ...styles.containerPortrait,
-      paddingBottom: bottomNavBarHeight, // ensures content sits on top of bottom-nav bar
+      paddingBottom: bottomNavBarHeight,
     },
   };
 };
