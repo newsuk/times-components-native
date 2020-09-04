@@ -71,9 +71,9 @@ const InlineParagraph = ({
       return { left: narrowContent ? 0 : gutters, width: contentWidth * 0.35 };
 
     return {
-      left: screenWidth() - gutters - articleMpu.width,
-      width: articleMpu.width,
-      height: articleMpu.height,
+      left: screenWidth() - gutters - articleMpu.width - spacing(2) - 1,
+      width: articleMpu.width + spacing(2) + 1,
+      height: articleMpu.height + spacing(4),
     };
   };
 
@@ -99,11 +99,11 @@ const InlineParagraph = ({
             setInlineExclusion({
               exclusion: new BoxExclusion(
                 isInlineAd
-                  ? screenWidth() - 2 * gutters - width - spacing(2)
+                  ? screenWidth() - 2 * gutters - width - spacing(3) - 1
                   : 0,
                 0,
                 width + spacing(isInlineAd ? 4 : 2),
-                height + spacing(2),
+                height + spacing(3),
               ),
               height,
             });

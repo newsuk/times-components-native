@@ -90,7 +90,7 @@ class DOMContext extends PureComponent {
           adHeight > 1 ? adHeight + styles.containerAdditionalHeight.height : 0;
 
         this.setState({
-          height: webViewHeight,
+          height: adHeight,
         });
         break;
       }
