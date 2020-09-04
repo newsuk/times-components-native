@@ -54,6 +54,9 @@ import {
   TileAZ,
   TileBA,
   TileBB,
+  TileBC,
+  TileBD,
+  TileBE,
 } from "./src/tiles";
 
 const tile = mockEditionSlice(1).items[0];
@@ -281,6 +284,20 @@ const tileStories = [
   {
     name: "Tile BB - image 3:2, Times Modern headline, no teaser",
     Tile: TileBB,
+  },
+  {
+    name: "Tile BC - image 3:2 or 16:9, Times Modern headline, no teaser",
+    Tile: TileBC,
+  },
+  {
+    name:
+      "Tile BD - image 1:1 roundel, Times Modern headline, no teaser, horizontal",
+    Tile: TileBD,
+  },
+  {
+    name:
+      "Tile BE - image 1:1 roundel, Times Modern headline, no teaser, vertical",
+    Tile: TileBE,
   },
 ];
 
