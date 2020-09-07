@@ -66,14 +66,17 @@ const InlineParagraph = ({
 
   const getInlineLayout = () => {
     const { articleMpu } = variants;
+    const inlineAdTitleHeight = spacing(4);
+    const inlineAdAdditionalWidth = spacing(2) + 1;
 
     if (!isInlineAd || !articleMpu)
       return { left: narrowContent ? 0 : gutters, width: contentWidth * 0.35 };
 
     return {
-      left: screenWidth() - gutters - articleMpu.width - spacing(2) - 1,
-      width: articleMpu.width + spacing(2) + 1,
-      height: articleMpu.height + spacing(4),
+      left:
+        screenWidth() - gutters - articleMpu.width - inlineAdAdditionalWidth,
+      width: articleMpu.width + inlineAdAdditionalWidth,
+      height: articleMpu.height + inlineAdTitleHeight,
     };
   };
 
