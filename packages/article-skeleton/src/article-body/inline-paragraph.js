@@ -99,11 +99,11 @@ const InlineParagraph = ({
             setInlineExclusion({
               exclusion: new BoxExclusion(
                 isInlineAd
-                  ? screenWidth() - 2 * gutters - width - spacing(3) - 1
+                  ? screenWidth() - 2 * gutters - width - spacing(2)
                   : 0,
                 0,
                 width + spacing(isInlineAd ? 4 : 2),
-                height + spacing(3),
+                height + spacing(2),
               ),
               height,
             });
