@@ -149,6 +149,7 @@ class Ad extends Component {
             init={adInit}
             onRenderComplete={this.setAdReady}
             onRenderError={this.setAdError}
+            isInline={isInline}
             {...sizeProps}
           />
         )}
