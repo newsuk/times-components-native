@@ -1,7 +1,7 @@
 /* eslint-disable no-undef */
 import React, { Component } from "react";
 import { Subscriber } from "react-broadcast";
-import { View } from "react-native";
+import { View, Text } from "react-native";
 import NetInfo from "@react-native-community/netinfo";
 import { screenWidth } from "@times-components-native/utils";
 import { getPrebidSlotConfig, getSlotConfig, prebidConfig } from "./utils";
@@ -79,6 +79,7 @@ class Ad extends Component {
     const {
       baseUrl,
       contextUrl,
+      display,
       isLoading,
       slotName,
       style,
@@ -132,8 +133,15 @@ class Ad extends Component {
             width: width || screenWidth(),
           };
 
+    const isInline = display === "inline";
+
     return (
-      <View style={[styles.container, style]}>
+      <View style={[styles.container, style, isInline && styles.inlineAd]}>
+        {isInline ? (
+          <View style={styles.inlineAdTitle}>
+            <Text style={styles.inlineAdTitleText}>Advertisement</Text>
+          </View>
+        ) : null}
         {isLoading ? null : (
           <DOMContext
             baseUrl={baseUrl}
@@ -141,6 +149,7 @@ class Ad extends Component {
             init={adInit}
             onRenderComplete={this.setAdReady}
             onRenderError={this.setAdError}
+            isInline={isInline}
             {...sizeProps}
           />
         )}
