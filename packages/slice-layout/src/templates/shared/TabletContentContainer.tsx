@@ -1,5 +1,10 @@
-import React from "react";
+import React, { ReactNode } from "react";
 import { Dimensions, View } from "react-native";
+
+type Props = {
+  children: ReactNode;
+  style: Record<string, string>;
+};
 
 function calculateContentWidth(windowWidth: number) {
   if (windowWidth >= 1366) return 1140;
@@ -11,7 +16,7 @@ function calculateContentWidth(windowWidth: number) {
   return 688;
 }
 
-const TabletContentContainer = ({ style, children }) => {
+const TabletContentContainer = ({ style, children }: Props) => {
   const windowWidth = Dimensions.get("window").width;
 
   return (
