@@ -1,9 +1,9 @@
 import React, { ReactNode } from "react";
-import { Dimensions, View } from "react-native";
+import { Dimensions, View, StyleProp, ViewStyle } from "react-native";
 
 type Props = {
   children: ReactNode;
-  style: Record<string, string>;
+  style: StyleProp<ViewStyle>;
 };
 
 function calculateContentWidth(windowWidth: number) {
