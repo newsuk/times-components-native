@@ -139,7 +139,7 @@ class Ad extends Component {
       <View style={[styles.container, style, isInline && styles.inlineAd]}>
         {isInline ? (
           <View style={styles.inlineAdTitle}>
-            <Text style={styles.inlineAdTitleText}>Advertising</Text>
+            <Text style={styles.inlineAdTitleText}>Advertisement</Text>
           </View>
         ) : null}
         {isLoading ? null : (
