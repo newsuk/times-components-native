@@ -11,7 +11,7 @@ describe("columnToPercentage", () => {
       numberOfColumns: 2,
       numberOfMargins: 2,
     });
-    expect(percentage).toEqual("17.142857142857142%");
+    expect(percentage).toEqual("17%");
   });
 
   it("calculates percentage with specified total number of columns", () => {
