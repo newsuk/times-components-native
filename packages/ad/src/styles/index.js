@@ -111,8 +111,7 @@ const styles = {
   inlineAdTitle: {
     width: "100%",
     height: 20,
-    margin: 0,
-    justifyContent: "center",
+    paddingTop: spacing(1),
     backgroundColor: colours.functional.backgroundSecondary,
   },
   inlineAdTitleText: {
