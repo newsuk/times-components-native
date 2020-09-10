@@ -29,13 +29,34 @@ export default () => {
 
   const tests = [
     {
-      name: "Article Comment Tablet",
+      name: "Article Comment Tablet - magazinecomment template",
       test() {
         const testInstance = TestRenderer.create(
           withTabletContext(
             <ArticleCommentTablet
               {...sharedProps}
-              article={articleFixture()}
+              article={{
+                template: "magazinecomment",
+                ...articleFixture(),
+              }}
+            />,
+          ),
+        );
+
+        expect(testInstance).toMatchSnapshot();
+      },
+    },
+    {
+      name: "Article Comment Tablet - maincomment template",
+      test() {
+        const testInstance = TestRenderer.create(
+          withTabletContext(
+            <ArticleCommentTablet
+              {...sharedProps}
+              article={{
+                template: "maincomment",
+                ...articleFixture(),
+              }}
             />,
           ),
         );
