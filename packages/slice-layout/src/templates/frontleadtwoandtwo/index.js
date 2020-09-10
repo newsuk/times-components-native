@@ -1,20 +1,10 @@
 import React from "react";
 import { Dimensions, View } from "react-native";
 import { editionBreakpoints } from "@times-components-native/styleguide";
-import { ItemColSeparator } from "../shared";
+import { ItemColSeparator, TabletContentContainer } from "../shared";
 import stylesFactory from "./styles";
 
 import VerticalLayout from "../verticallayout";
-
-function calculateContentWidth(windowWidth) {
-  if (windowWidth >= 1366) return 1180;
-  if (windowWidth >= 1194) return 1024;
-  if (windowWidth >= 1112) return 1000;
-  if (windowWidth >= 1080) return 1000;
-  if (windowWidth >= 1024) return 920;
-
-  return 1000;
-}
 
 function calculateMarginTop(windowWidth) {
   if (windowWidth >= 1366) return 25;
@@ -59,14 +49,10 @@ const FrontLeadTwoNoPicAndTwoSlice = ({
 
   if (orientation === "landscape") {
     return (
-      <View
+      <TabletContentContainer
         style={[
-          styles.containerLandscape,
-          {
-            width: calculateContentWidth(windowWidth),
-            paddingTop: calculateMarginTop(windowWidth),
-            alignSelf: "center",
-          },
+          { paddingTop: calculateMarginTop(windowWidth) },
+          breakpoint === "huge" && { width: 1180 },
         ]}
       >
         <VerticalLayout
@@ -78,11 +64,11 @@ const FrontLeadTwoNoPicAndTwoSlice = ({
         <View style={styles.middleTileLandscape}>{support1}</View>
         <ItemColSeparator style={styles.colSeparatorStyle} />
         <View style={styles.rightColumnLandscape}>{wrappedSupport2}</View>
-      </View>
+      </TabletContentContainer>
     );
   }
   return (
-    <View style={styles.containerPortrait}>
+    <TabletContentContainer style={styles.containerPortrait}>
       <VerticalLayout
         style={styles.leftColumnPortrait}
         tiles={[wrappedLead1, wrappedLead2]}
@@ -94,7 +80,7 @@ const FrontLeadTwoNoPicAndTwoSlice = ({
         tiles={[wrappedSupport2, support1]}
         rowSeparatorStyle={styles.rowSeparatorStyle}
       />
-    </View>
+    </TabletContentContainer>
   );
 };
 

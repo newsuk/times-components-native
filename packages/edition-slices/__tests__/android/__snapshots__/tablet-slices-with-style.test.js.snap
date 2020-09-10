@@ -1751,16 +1751,16 @@ exports[`21. front lead two no pic and two - landscape - medium 1`] = `
         "alignSelf": "center",
         "flex": 1,
         "flexDirection": "row",
-        "paddingBottom": 56,
+        "justifyContent": "center",
         "paddingTop": 15,
-        "width": 1000,
+        "width": 688,
       }
     }
   >
     <View
       style={
         Object {
-          "width": "41.6%",
+          "width": "41%",
         }
       }
     >
@@ -1806,7 +1806,7 @@ exports[`21. front lead two no pic and two - landscape - medium 1`] = `
     <View
       style={
         Object {
-          "width": "16.8%",
+          "width": "17%",
         }
       }
     >
@@ -1826,7 +1826,7 @@ exports[`21. front lead two no pic and two - landscape - medium 1`] = `
     <View
       style={
         Object {
-          "width": "41.6%",
+          "width": "41%",
         }
       }
     >
@@ -1859,18 +1859,21 @@ exports[`22. front lead two no pic and two - portrait - medium 1`] = `
   <View
     style={
       Object {
+        "alignSelf": "center",
         "flex": 1,
         "flexDirection": "row",
+        "justifyContent": "center",
         "marginHorizontal": 20,
         "marginTop": 20,
         "paddingBottom": 56,
+        "width": 688,
       }
     }
   >
     <View
       style={
         Object {
-          "width": "42%",
+          "width": "41%",
         }
       }
     >
@@ -4278,16 +4281,16 @@ exports[`53. front lead two no pic and two - landscape - wide 1`] = `
         "alignSelf": "center",
         "flex": 1,
         "flexDirection": "row",
-        "paddingBottom": 56,
+        "justifyContent": "center",
         "paddingTop": 15,
-        "width": 1000,
+        "width": 688,
       }
     }
   >
     <View
       style={
         Object {
-          "width": "41.6%",
+          "width": "41%",
         }
       }
     >
@@ -4333,7 +4336,7 @@ exports[`53. front lead two no pic and two - landscape - wide 1`] = `
     <View
       style={
         Object {
-          "width": "16.8%",
+          "width": "17%",
         }
       }
     >
@@ -4353,7 +4356,7 @@ exports[`53. front lead two no pic and two - landscape - wide 1`] = `
     <View
       style={
         Object {
-          "width": "41.6%",
+          "width": "41%",
         }
       }
     >
@@ -4386,18 +4389,21 @@ exports[`54. front lead two no pic and two - portrait - wide 1`] = `
   <View
     style={
       Object {
+        "alignSelf": "center",
         "flex": 1,
         "flexDirection": "row",
+        "justifyContent": "center",
         "marginHorizontal": 20,
         "marginTop": 20,
         "paddingBottom": 56,
+        "width": 688,
       }
     }
   >
     <View
       style={
         Object {
-          "width": "42%",
+          "width": "41%",
         }
       }
     >
@@ -6996,9 +7002,9 @@ exports[`85. front lead two no pic and two - landscape - huge 1`] = `
           "alignSelf": "center",
           "flex": 1,
           "flexDirection": "row",
-          "paddingBottom": 56,
+          "justifyContent": "center",
           "paddingTop": 15,
-          "width": 1000,
+          "width": 1180,
         }
       }
     >
@@ -7071,7 +7077,7 @@ exports[`85. front lead two no pic and two - landscape - huge 1`] = `
       <View
         style={
           Object {
-            "width": "46%",
+            "width": "45%",
           }
         }
       >
@@ -7114,18 +7120,21 @@ exports[`86. front lead two no pic and two - portrait - huge 1`] = `
     <View
       style={
         Object {
+          "alignSelf": "center",
           "flex": 1,
           "flexDirection": "row",
+          "justifyContent": "center",
           "marginHorizontal": 20,
           "marginTop": 20,
           "paddingBottom": 56,
+          "width": 688,
         }
       }
     >
       <View
         style={
           Object {
-            "width": "42%",
+            "width": "41%",
           }
         }
       >

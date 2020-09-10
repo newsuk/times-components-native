@@ -1,4 +1,5 @@
 import {
+  columnToPercentage,
   colours,
   editionBreakpoints,
   spacing,
@@ -16,43 +17,47 @@ const sharedStyles = {
 
 const mediumBreakpointStyles = {
   ...sharedStyles,
-  containerLandscape: {
-    flex: 1,
-    flexDirection: "row",
-  },
   containerPortrait: {
-    flex: 1,
-    flexDirection: "row",
     marginTop: spacing(4),
     marginHorizontal: spacing(4),
   },
   leftColumnPortrait: {
-    width: "42%",
+    width: columnToPercentage({ numberOfColumns: 5 }),
   },
   rightColumnPortrait: {
-    width: "58%",
+    width: columnToPercentage({ numberOfColumns: 7 }),
   },
   leftColumnLandscape: {
-    width: "41.6%",
+    width: columnToPercentage({ numberOfColumns: 5 }),
   },
   rightColumnLandscape: {
-    width: "41.6%",
+    width: columnToPercentage({ numberOfColumns: 5 }),
   },
   middleTileLandscape: {
-    width: "16.8%",
+    width: columnToPercentage({ numberOfColumns: 2, numberOfMargins: 2 }),
   },
 };
 
 const hugeBreakpointStyles = {
   ...mediumBreakpointStyles,
   leftColumnLandscape: {
-    width: "35%",
+    width: columnToPercentage({
+      numberOfColumns: 4,
+      totalColumns: 11,
+    }),
   },
   rightColumnLandscape: {
-    width: "46%",
+    width: columnToPercentage({
+      numberOfColumns: 5,
+      totalColumns: 11,
+    }),
   },
   middleTileLandscape: {
-    width: "18%",
+    width: columnToPercentage({
+      numberOfColumns: 2,
+      numberOfMargins: 2,
+      totalColumns: 11,
+    }),
   },
 };
 
