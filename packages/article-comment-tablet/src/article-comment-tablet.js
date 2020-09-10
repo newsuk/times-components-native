@@ -70,7 +70,6 @@ class ArticlePage extends Component {
           />
         )}
       </Fragment>
-
     );
   }
 
