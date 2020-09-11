@@ -22,6 +22,10 @@ jest.mock("@times-components-native/article-image", () => "ArticleImage");
 jest.mock("@times-components-native/article-label", () => "ArticleLabel");
 jest.mock("@times-components-native/article-topics", () => "ArticleTopics");
 jest.mock(
+  "@times-components-native/article-lead-asset",
+  () => "ArticleLeadAsset",
+);
+jest.mock(
   "@times-components-native/article-skeleton",
   () => MockArticleSkeleton,
 );

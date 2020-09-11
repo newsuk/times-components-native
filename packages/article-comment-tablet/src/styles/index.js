@@ -84,6 +84,13 @@ const Styles = {
     paddingLeft: spacing(5),
     width: "100%",
   },
+  leadAssetContainer: {
+    paddingLeft: spacing(2),
+    paddingBottom: spacing(4),
+    paddingRight: spacing(7),
+    borderLeftWidth: 1,
+    borderColor: colours.functional.keyline,
+  },
 };
 
 const styles = StyleSheet.create(Styles);
