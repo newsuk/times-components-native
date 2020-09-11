@@ -36,8 +36,8 @@ export default () => {
             <ArticleCommentTablet
               {...sharedProps}
               article={{
-                template: "magazinecomment",
                 ...articleFixture(),
+                template: "magazinecomment",
               }}
             />,
           ),
@@ -54,8 +54,8 @@ export default () => {
             <ArticleCommentTablet
               {...sharedProps}
               article={{
-                template: "maincomment",
                 ...articleFixture(),
+                template: "maincomment",
               }}
             />,
           ),

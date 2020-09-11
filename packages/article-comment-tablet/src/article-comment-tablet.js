@@ -1,6 +1,6 @@
 /* eslint-disable consistent-return */
 
-import React, { Component, Fragment } from "react";
+import React, { Component } from "react";
 import { View } from "react-native";
 import ArticleError from "@times-components-native/article-error";
 import ArticleSkeleton from "@times-components-native/article-skeleton";
@@ -44,7 +44,7 @@ class ArticlePage extends Component {
     const showLeadAsset = template === "magazinecomment";
 
     return (
-      <Fragment>
+      <>
         <ArticleHeader
           flags={expirableFlags}
           hasVideo={hasVideo}
@@ -69,7 +69,7 @@ class ArticlePage extends Component {
             style={styles.leadAssetContainer}
           />
         )}
-      </Fragment>
+      </>
     );
   }
 
