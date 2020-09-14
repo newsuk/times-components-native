@@ -9,8 +9,9 @@ const mediumBreakpointStyles = {
   container: {
     flex: 1,
     flexDirection: "row",
-    marginHorizontal: spacing(4),
-    padding: spacing(2),
+    marginHorizontal: spacing(6),
+    marginVertical: spacing(2),
+    backgroundColor: colours.functional.whiteGrey,
   },
   headline: {
     ...globalSpacingStyles.tabletHeadline,
@@ -22,10 +23,10 @@ const mediumBreakpointStyles = {
   summaryContainer: {
     flex: 1,
     padding: spacing(3),
-    backgroundColor: colours.functional.whiteGrey,
   },
-  imageContainer: {
+  imageOuterContainer: {
     flex: 2,
+    paddingLeft: spacing(2),
   },
 };
 
@@ -33,7 +34,7 @@ const wideBreakpointStyles = {
   ...mediumBreakpointStyles,
   container: {
     ...mediumBreakpointStyles.container,
-    marginHorizontal: spacing(2),
+    marginHorizontal: spacing(4),
   },
   headline: {
     ...mediumBreakpointStyles.headline,

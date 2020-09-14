@@ -11,7 +11,6 @@ import {
   withTileTracking,
 } from "../shared";
 import stylesFactory from "./styles";
-import WithoutWhiteSpace from "../shared/without-white-space";
 import PositionedTileStar from "../shared/positioned-tile-star";
 
 const TileBF = ({ onPress, tile, breakpoint = editionBreakpoints.medium }) => {
@@ -27,30 +26,26 @@ const TileBF = ({ onPress, tile, breakpoint = editionBreakpoints.medium }) => {
   return (
     <TileLink onPress={onPress} style={styles.container} tile={tile}>
       <View style={styles.summaryContainer}>
-        {/* <WithoutWhiteSpace
-          render={(whiteSpaceHeight) => ( */}
         <TileSummary
           headlineStyle={styles.headline}
           tile={tile}
-          // whiteSpaceHeight={whiteSpaceHeight}
           withStar={false}
         />
-        {/* )}
-        /> */}
-        {/* <PositionedTileStar articleId={tile.article.id} /> */}
+        <PositionedTileStar articleId={tile.article.id} />
       </View>
 
-      <TileImage
-        aspectRatio={16 / 9}
-        relativeWidth={crop.relativeWidth}
-        relativeHeight={crop.relativeHeight}
-        relativeHorizontalOffset={crop.relativeHorizontalOffset}
-        relativeVerticalOffset={crop.relativeVerticalOffset}
-        style={styles.imageContainer}
-        uri={crop.url}
-        fill
-        hasVideo={hasVideo}
-      />
+      <View style={styles.imageOuterContainer}>
+        <TileImage
+          aspectRatio={16 / 9}
+          relativeWidth={crop.relativeWidth}
+          relativeHeight={crop.relativeHeight}
+          relativeHorizontalOffset={crop.relativeHorizontalOffset}
+          relativeVerticalOffset={crop.relativeVerticalOffset}
+          uri={crop.url}
+          fill
+          hasVideo={hasVideo}
+        />
+      </View>
     </TileLink>
   );
 };
