@@ -21,7 +21,10 @@ const ArticleImageNative = (props) => {
             narrowContent && [
               styles[`${display}ContainerNarrow`],
               {
-                width: narrowArticleBreakpoint.content,
+                width:
+                  display !== "inline"
+                    ? narrowArticleBreakpoint.content
+                    : "auto",
               },
             ],
           ]}
