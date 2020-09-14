@@ -1,7 +1,7 @@
 /* eslint-disable react/require-default-props */
 import React from "react";
 import PropTypes from "prop-types";
-import editionBreakpoints from "@times-components-native/styleguide";
+import { editionBreakpoints } from "@times-components-native/styleguide";
 import { FrontTileSummary } from "@times-components-native/front-page";
 import { getTileStrapline, TileLink } from "../shared";
 import stylesFactory from "./styles";
