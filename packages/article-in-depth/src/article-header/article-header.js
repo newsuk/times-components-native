@@ -40,7 +40,12 @@ const ArticleHeader = ({
           <View
             style={[styles.headerText, isTablet && styles.headerTextTablet]}
           >
-            <Label color={textColour} isVideo={hasVideo} label={label} />
+            <Label
+              color={textColour}
+              isVideo={hasVideo}
+              isTablet={isTablet}
+              label={label}
+            />
             <Text
               style={[
                 styles.articleHeadline,

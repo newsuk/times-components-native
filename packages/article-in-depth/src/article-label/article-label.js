@@ -9,13 +9,13 @@ import {
 } from "./article-label-prop-types";
 import styles from "../styles";
 
-const HeaderLabel = ({ color, isVideo, label }) => {
+const HeaderLabel = ({ color, isVideo, isTablet, label }) => {
   if (!isVideo && !label) return null;
 
   const Label = isVideo ? VideoLabel : ArticleLabel;
 
   return (
-    <View style={styles.label}>
+    <View style={[isTablet && styles.labelTablet]}>
       <Label color={color} title={label} />
     </View>
   );
