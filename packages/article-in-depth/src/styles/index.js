@@ -17,9 +17,9 @@ const styles = StyleSheet.create({
   },
   container: {
     alignItems: "center",
-    paddingBottom: spacing(9),
-    paddingHorizontal: spacing(4),
     paddingTop: spacing(9),
+    paddingBottom: spacing(7),
+    paddingHorizontal: spacing(4),
   },
   containerTablet: {
     alignSelf: "center",
@@ -40,8 +40,6 @@ const styles = StyleSheet.create({
   },
   headerTextTablet: {
     width: tabletWidth,
-    alignItems: "flex-start",
-    borderWidth: 4,
   },
   label: {
     marginBottom: spacing(2),
@@ -62,13 +60,12 @@ const styles = StyleSheet.create({
   metaContainer: {
     alignItems: "center",
     marginHorizontal: spacing(2),
-    paddingBottom: spacing(2),
-    marginTop: spacing(4),
+    paddingVertical: spacing(2),
+    marginVertical: spacing(4),
     borderBottomColor: colours.functional.keyline,
     borderBottomWidth: 1,
     borderTopColor: colours.functional.keyline,
     borderTopWidth: 1,
-    marginBottom: spacing(4),
   },
   metaContainerTablet: {
     alignSelf: "center",
