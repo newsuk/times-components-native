@@ -28,7 +28,11 @@ const renderByline = (Component, ast, textStyle, props = {}) => {
   const bylineAst = ast.map((bylineObj) =>
     bylineObj.byline && bylineObj.byline.length > 0 ? bylineObj.byline[0] : {},
   );
-  return renderTrees(bylineAst, bylineRenderers(Component, textStyle, props));
+  const trees = renderTrees(
+    bylineAst,
+    bylineRenderers(Component, textStyle, props),
+  );
+  return <Text>{trees}</Text>;
 };
 
 export default renderByline;
