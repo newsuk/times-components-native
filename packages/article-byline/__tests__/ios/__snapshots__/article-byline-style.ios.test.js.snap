@@ -2,101 +2,105 @@
 
 exports[`1. with a single author 1`] = `
 <View>
-  <Text
-    style={
-      Object {
-        "color": "#333333",
-        "flexDirection": "row",
-        "fontFamily": "GillSansMTStd-Medium",
-        "fontSize": 13,
-        "lineHeight": 15,
+  <Text>
+    <Text
+      style={
+        Object {
+          "color": "#333333",
+          "flexDirection": "row",
+          "fontFamily": "GillSansMTStd-Medium",
+          "fontSize": 13,
+          "lineHeight": 15,
+        }
       }
-    }
-  >
-    Alexandra Frean
+    >
+      Alexandra Frean
+    </Text>
   </Text>
 </View>
 `;
 
 exports[`2. with a very long byline 1`] = `
 <View>
-  <Text
-    style={
-      Object {
-        "color": "#333333",
-        "flexDirection": "row",
-        "fontFamily": "GillSansMTStd-Medium",
-        "fontSize": 13,
-        "lineHeight": 15,
+  <Text>
+    <Text
+      style={
+        Object {
+          "color": "#333333",
+          "flexDirection": "row",
+          "fontFamily": "GillSansMTStd-Medium",
+          "fontSize": 13,
+          "lineHeight": 15,
+        }
       }
-    }
-  >
-    Camilla Long
-  </Text>
-  <Text
-    style={
-      Object {
-        "color": "#333333",
-        "flexDirection": "row",
-        "fontFamily": "GillSansMTStd-Medium",
-        "fontSize": 13,
-        "lineHeight": 15,
+    >
+      Camilla Long
+    </Text>
+    <Text
+      style={
+        Object {
+          "color": "#333333",
+          "flexDirection": "row",
+          "fontFamily": "GillSansMTStd-Medium",
+          "fontSize": 13,
+          "lineHeight": 15,
+        }
       }
-    }
-  >
-    , Environment Editor | 
-  </Text>
-  <Text
-    style={
-      Object {
-        "color": "#333333",
-        "flexDirection": "row",
-        "fontFamily": "GillSansMTStd-Medium",
-        "fontSize": 13,
-        "lineHeight": 15,
+    >
+      , Environment Editor | 
+    </Text>
+    <Text
+      style={
+        Object {
+          "color": "#333333",
+          "flexDirection": "row",
+          "fontFamily": "GillSansMTStd-Medium",
+          "fontSize": 13,
+          "lineHeight": 15,
+        }
       }
-    }
-  >
-    Camilla Long
-  </Text>
-  <Text
-    style={
-      Object {
-        "color": "#333333",
-        "flexDirection": "row",
-        "fontFamily": "GillSansMTStd-Medium",
-        "fontSize": 13,
-        "lineHeight": 15,
+    >
+      Camilla Long
+    </Text>
+    <Text
+      style={
+        Object {
+          "color": "#333333",
+          "flexDirection": "row",
+          "fontFamily": "GillSansMTStd-Medium",
+          "fontSize": 13,
+          "lineHeight": 15,
+        }
       }
-    }
-  >
-    , Environment Editor | 
-  </Text>
-  <Text
-    style={
-      Object {
-        "color": "#333333",
-        "flexDirection": "row",
-        "fontFamily": "GillSansMTStd-Medium",
-        "fontSize": 13,
-        "lineHeight": 15,
+    >
+      , Environment Editor | 
+    </Text>
+    <Text
+      style={
+        Object {
+          "color": "#333333",
+          "flexDirection": "row",
+          "fontFamily": "GillSansMTStd-Medium",
+          "fontSize": 13,
+          "lineHeight": 15,
+        }
       }
-    }
-  >
-    Camilla Long
-  </Text>
-  <Text
-    style={
-      Object {
-        "color": "#333333",
-        "flexDirection": "row",
-        "fontFamily": "GillSansMTStd-Medium",
-        "fontSize": 13,
-        "lineHeight": 15,
+    >
+      Camilla Long
+    </Text>
+    <Text
+      style={
+        Object {
+          "color": "#333333",
+          "flexDirection": "row",
+          "fontFamily": "GillSansMTStd-Medium",
+          "fontSize": 13,
+          "lineHeight": 15,
+        }
       }
-    }
-  >
-    , Environment Editor
+    >
+      , Environment Editor
+    </Text>
   </Text>
 </View>
 `;
