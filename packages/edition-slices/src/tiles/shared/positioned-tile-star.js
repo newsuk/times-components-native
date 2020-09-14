@@ -1,5 +1,5 @@
 /* eslint-disable react/require-default-props */
-import React from "react";
+import React, { useContext } from "react";
 import { View } from "react-native";
 import PropTypes from "prop-types";
 
@@ -11,6 +11,7 @@ import {
   starCenterStyles,
   starUnderneathTextStyles,
 } from "./styles";
+import { ResponsiveContext } from "@times-components-native/responsive";
 
 const PositionedTileStar = ({
   centeredStar = false,
@@ -18,7 +19,9 @@ const PositionedTileStar = ({
   customStyles = {},
   ...props
 }) => {
-  if (!isSaveSupported) return null;
+  const { isTablet } = useContext(ResponsiveContext);
+
+  if (isTablet || !isSaveSupported) return null;
 
   return (
     <View
