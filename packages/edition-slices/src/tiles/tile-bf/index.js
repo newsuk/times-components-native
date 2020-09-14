@@ -5,7 +5,6 @@ import PropTypes from "prop-types";
 import { editionBreakpoints } from "@times-components-native/styleguide";
 import {
   getTileImage,
-  getTileSummary,
   TileLink,
   TileSummary,
   TileImage,
@@ -19,9 +18,7 @@ const TileBF = ({ onPress, tile, breakpoint = editionBreakpoints.medium }) => {
   const styles = stylesFactory(breakpoint);
   const crop = getTileImage(tile, "crop169");
 
-  if (!crop) {
-    return null;
-  }
+  if (!crop) return null;
 
   const {
     article: { hasVideo },
