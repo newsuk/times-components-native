@@ -51,6 +51,7 @@ export { default as TileBB } from "./tile-bb";
 export { default as TileBC } from "./tile-bc";
 export { default as TileBD } from "./tile-bd";
 export { default as TileBE } from "./tile-be";
+export { default as TileBF } from "./tile-bf";
 export { default as TileXFront } from "./tile-x-front";
 export { default as TileDFront } from "./tile-d-front";
 export { default as TileEFront } from "./tile-e-front";
