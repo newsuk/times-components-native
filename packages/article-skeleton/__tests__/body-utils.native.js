@@ -1,6 +1,6 @@
 /* eslint-disable global-require */
 import { FontStorage } from "@times-components-native/typeset";
-import { getStringBounds, setupAd } from "../src/body-utils";
+import { collapsed, getStringBounds, setupAd } from "../src/body-utils";
 
 FontStorage.registerFont(
   "TimesDigitalW04",
@@ -28,6 +28,51 @@ export default () => {
     { name: "ad", children: [] },
     { name: "paragraph", children: [] },
   ];
+
+  it("collapsed should remove an inline image if it is the first item in content", () => {
+    const contentWithFirstInlineImage = [
+      { name: "image", attributes: { display: "inline" }, children: [] },
+      ...content,
+    ];
+
+    expect(collapsed(true, contentWithFirstInlineImage)).toEqual(content);
+  });
+
+  it("collapsed should not remove an inline image if it is the not first item in content", () => {
+    const contentWithSomeInlineImage = [
+      ...content,
+      { name: "image", attributes: { display: "inline" }, children: [] },
+      { name: "paragraph", children: [] },
+    ];
+
+    const collapsedContentWithSomeInlineImage = [
+      ...content,
+      {
+        name: "paragraph",
+        children: [
+          {
+            attributes: {
+              display: "inline",
+            },
+            children: [],
+            name: "image",
+          },
+          {
+            children: [],
+            name: "break",
+          },
+          {
+            children: [],
+            name: "break",
+          },
+        ],
+      },
+    ];
+
+    expect(collapsed(true, contentWithSomeInlineImage)).toEqual(
+      collapsedContentWithSomeInlineImage,
+    );
+  });
 
   it("setupAd should return content untouched if no variants specified", () => {
     expect(setupAd(undefined, "mainstandard", content)).toEqual(content);

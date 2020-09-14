@@ -3,10 +3,18 @@ import memoize from "memoize-one";
 import { FontStorage } from "@times-components-native/typeset";
 
 // Collapse inlines into the following paragraphs on tablet
-const collapsed = (isTablet, content) =>
+export const collapsed = (isTablet, content) =>
   !isTablet
     ? content
-    : content.reduceRight((acc, node) => {
+    : content.reduceRight((acc, node, index) => {
+        // remove inline image if first
+        if (
+          index === 0 &&
+          node.name === "image" &&
+          node.attributes?.display === "inline"
+        )
+          return acc;
+
         // backwards
         if (
           ((node.name === "image" || node.name === "ad") &&
