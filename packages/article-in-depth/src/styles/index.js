@@ -18,7 +18,7 @@ const styles = StyleSheet.create({
   container: {
     alignItems: "center",
     paddingTop: spacing(9),
-    paddingBottom: spacing(7),
+    paddingBottom: spacing(8),
     paddingHorizontal: spacing(4),
   },
   containerTablet: {
@@ -41,7 +41,7 @@ const styles = StyleSheet.create({
   headerTextTablet: {
     width: tabletWidth,
   },
-  label: {
+  labelTablet: {
     marginBottom: spacing(2),
   },
   leadAsset: {
