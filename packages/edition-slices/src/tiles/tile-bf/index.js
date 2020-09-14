@@ -27,17 +27,17 @@ const TileBF = ({ onPress, tile, breakpoint = editionBreakpoints.medium }) => {
   return (
     <TileLink onPress={onPress} style={styles.container} tile={tile}>
       <View style={styles.summaryContainer}>
-        <WithoutWhiteSpace
-          render={(whiteSpaceHeight) => (
-            <TileSummary
-              headlineStyle={styles.headline}
-              tile={tile}
-              whiteSpaceHeight={whiteSpaceHeight}
-              withStar={false}
-            />
-          )}
+        {/* <WithoutWhiteSpace
+          render={(whiteSpaceHeight) => ( */}
+        <TileSummary
+          headlineStyle={styles.headline}
+          tile={tile}
+          // whiteSpaceHeight={whiteSpaceHeight}
+          withStar={false}
         />
-        <PositionedTileStar articleId={tile.article.id} />
+        {/* )}
+        /> */}
+        {/* <PositionedTileStar articleId={tile.article.id} /> */}
       </View>
 
       <TileImage

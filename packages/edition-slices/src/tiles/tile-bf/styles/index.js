@@ -10,6 +10,7 @@ const mediumBreakpointStyles = {
     flex: 1,
     flexDirection: "row",
     marginHorizontal: spacing(4),
+    padding: spacing(2),
   },
   headline: {
     ...globalSpacingStyles.tabletHeadline,
@@ -30,6 +31,10 @@ const mediumBreakpointStyles = {
 
 const wideBreakpointStyles = {
   ...mediumBreakpointStyles,
+  container: {
+    ...mediumBreakpointStyles.container,
+    marginHorizontal: spacing(2),
+  },
   headline: {
     ...mediumBreakpointStyles.headline,
     fontSize: 32,
