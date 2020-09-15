@@ -188,12 +188,8 @@ export default ({
     ad(key, attributes) {
       const template = data.template;
 
-      // temporary fix to remove ads for maincomment and magazinecomment on tablet
-      if (
-        isTablet &&
-        (template === "maincomment" || template === "magazinecomment")
-      )
-        return null;
+      // Don't show ads on all templates but mainstandard in tablet
+      if (isTablet && template !== "mainstandard") return null;
 
       return (
         <Ad

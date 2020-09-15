@@ -1,4 +1,4 @@
-import React, { Component } from "react";
+import React, { Component, useContext } from "react";
 import PropTypes from "prop-types";
 import {
   getEditionBreakpoint,
@@ -68,5 +68,6 @@ Responsive.defaultProps = {
   children: null,
 };
 
+const useResponsiveContext = () => useContext(ResponsiveContext);
 export default Responsive;
-export { ResponsiveContext };
+export { ResponsiveContext, useResponsiveContext };

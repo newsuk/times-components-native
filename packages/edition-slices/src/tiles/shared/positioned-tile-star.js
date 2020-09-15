@@ -11,6 +11,7 @@ import {
   starCenterStyles,
   starUnderneathTextStyles,
 } from "./styles";
+import { useResponsiveContext } from "@times-components-native/responsive";
 
 const PositionedTileStar = ({
   centeredStar = false,
@@ -18,7 +19,9 @@ const PositionedTileStar = ({
   customStyles = {},
   ...props
 }) => {
-  if (!isSaveSupported) return null;
+  const { isTablet } = useResponsiveContext();
+
+  if (isTablet || !isSaveSupported) return null;
 
   return (
     <View

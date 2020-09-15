@@ -60,7 +60,9 @@ exports[`1. two related articles 1`] = `
                 </Text>
                 <Text>
                   <Text>
-                    Camilla Long, Environment Editor
+                    <Text>
+                      Camilla Long, Environment Editor
+                    </Text>
                   </Text>
                 </Text>
               </View>
@@ -118,7 +120,9 @@ exports[`1. two related articles 1`] = `
                 </Text>
                 <Text>
                   <Text>
-                    Camilla Long, Environment Editor
+                    <Text>
+                      Camilla Long, Environment Editor
+                    </Text>
                   </Text>
                 </Text>
               </View>
