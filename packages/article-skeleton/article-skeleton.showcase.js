@@ -79,7 +79,7 @@ export default {
       type: "story",
     },
     {
-      component: () => renderNewsletterPuff(false),
+      component: () => renderNewsletterPuff(),
       name: "Inline Newsletter Puff",
       platform: "native",
       type: "story",
