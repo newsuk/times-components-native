@@ -1,0 +1,3 @@
+fragment topics on Article {
+  __typename
+}

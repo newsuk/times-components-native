@@ -1,4 +1,6 @@
 #import "./article_props.graphql"
+#import "./article_topics_mobile.graphql"
+#import "./article_topics_tablet.graphql"
 
 fragment articlePageProps on Article {
   backgroundColour {
@@ -43,11 +45,8 @@ fragment articlePageProps on Article {
       alpha
     }
   }
-  topics(maxCount: 5) {
-    name
-    slug
-  }
   ...articleProps
+  ...topics
 }
 
 fragment imageProps on Image {
