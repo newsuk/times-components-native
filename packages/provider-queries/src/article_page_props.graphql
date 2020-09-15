@@ -1,5 +1,4 @@
 #import "./article_props.graphql"
-#import "./article_topics_mobile.graphql"
 #import "./article_topics_tablet.graphql"
 
 fragment articlePageProps on Article {
