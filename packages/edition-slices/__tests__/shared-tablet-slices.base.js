@@ -50,7 +50,8 @@ import {
   SupplementLeadOneAndOneSlice,
   SupplementLeadOneAndFourSlice,
   SupplementSecondaryFourSlice,
-  SupplementSecondaryTwoAndTwo,
+  SupplementSecondaryOneSlice,
+  SupplementSecondaryTwoAndTwoSlice,
 } from "../src/slices";
 
 const slices = [
@@ -100,6 +101,11 @@ const slices = [
     Slice: SecondaryOneSlice,
   },
   {
+    mock: mockSecondaryOneSlice(),
+    name: "supplement secondary one",
+    Slice: SupplementSecondaryOneSlice,
+  },
+  {
     mock: mockSecondaryFourSlice(),
     name: "secondary four",
     Slice: SecondaryFourSlice,
@@ -122,7 +128,7 @@ const slices = [
   {
     mock: mockSecondaryTwoAndTwoSlice(),
     name: "supplement secondary two and two",
-    Slice: SupplementSecondaryTwoAndTwo,
+    Slice: SupplementSecondaryTwoAndTwoSlice,
   },
   {
     mock: mockLeadOneAndFourSlice(),
