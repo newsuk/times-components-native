@@ -1,4 +1,4 @@
-import React, { useContext } from "react";
+import React from "react";
 import PropTypes from "prop-types";
 
 import Link from "@times-components-native/link";
@@ -9,11 +9,11 @@ import {
 } from "@times-components-native/tracking";
 import { colours } from "@times-components-native/styleguide";
 import { styleFactory } from "../styles/inline-newsletter-puff";
-import { ResponsiveContext } from "@times-components-native/responsive";
+import { useResponsiveContext } from "@times-components-native/responsive";
 import { Text, View } from "react-native";
 
 const NewsletterPuffLink = ({ onPress }) => {
-  const { editionBreakpoint: breakpoint } = useContext(ResponsiveContext);
+  const { editionBreakpoint: breakpoint } = useResponsiveContext();
   const styles = styleFactory(breakpoint);
   return (
     <Link url="https://home.thetimes.co.uk/myNews" onPress={onPress}>

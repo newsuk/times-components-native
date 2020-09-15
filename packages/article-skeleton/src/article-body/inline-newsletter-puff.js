@@ -1,4 +1,4 @@
-import React, { useContext, useState } from "react";
+import React, { useState } from "react";
 import { Linking, Platform, Text, View } from "react-native";
 import { Mutation } from "react-apollo";
 import PropTypes from "prop-types";
@@ -9,7 +9,7 @@ import Image, { Placeholder } from "@times-components-native/image";
 import { styleFactory } from "../styles/inline-newsletter-puff";
 import NewsletterPuffButton from "./newsletter-puff-button";
 import NewsletterPuffLink from "./newsletter-puff-link";
-import { ResponsiveContext } from "@times-components-native/responsive";
+import { useResponsiveContext } from "@times-components-native/responsive";
 
 function onManagePreferencesPress() {
   if (Platform.OS !== "web") {
@@ -33,7 +33,7 @@ const InlineNewsletterPuff = ({
   imageUri,
   label,
 }) => {
-  const { editionBreakpoint: breakpoint } = useContext(ResponsiveContext);
+  const { editionBreakpoint: breakpoint } = useResponsiveContext();
   const [justSubscribed, setJustSubscribed] = useState(false);
   const styles = styleFactory(breakpoint);
 
