@@ -6,7 +6,6 @@ import { SectionContext } from "@times-components-native/context";
 import StarButton from "@times-components-native/star-button";
 import TestRenderer from "react-test-renderer";
 import Section from "../src/section";
-import { ResponsiveContext } from "@times-components-native/responsive";
 
 jest.mock("@times-components-native/icons", () => ({
   IconForwardArrow: "IconForwardArrow",
@@ -22,7 +21,7 @@ jest.mock("react-native", () => {
 });
 
 jest.mock("@times-components-native/responsive", () => {
-  const { ResponsiveContext } = require.requireActual(
+  const { ResponsiveContext, useResponsiveContext } = require.requireActual(
     "@times-components-native/responsive",
   );
 
@@ -35,6 +34,7 @@ jest.mock("@times-components-native/responsive", () => {
         {children}
       </ResponsiveContext.Provider>
     ),
+    useResponsiveContext,
     ResponsiveContext,
   };
 });
