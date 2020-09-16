@@ -57,6 +57,7 @@ const setUpNavigationTest = (canOpenURLImpl) => {
   interactiveWrapper.webview = {
     postMessage: jest.fn(),
     reload: jest.fn(),
+    injectJavaScript: jest.fn(),
   };
   return interactiveWrapper;
 };
@@ -141,10 +142,12 @@ it("openURLInBrowser should try to open a link and fail", (done) => {
     .catch(done);
 });
 
-it("onLoadEnd sends a postMessage", () => {
+it("onLoadEnd sends message from WebView to JS", () => {
   const component = setUpNavigationTest(() => Promise.resolve(true));
   component.onLoadEnd();
-  expect(component.webview.postMessage).toHaveBeenCalled();
+  expect(component.webview.injectJavaScript).toHaveBeenCalledWith(
+    "window.ReactNativeWebView.postMessage(`${document.body.scrollHeight}`); true;",
+  );
 });
 
 it("handleNavigationStateChange should return error if canOpenURL throws error", (done) => {

@@ -60,7 +60,9 @@ class InteractiveWrapper extends Component {
 
   onLoadEnd() {
     if (this.webview) {
-      this.webview.postMessage("thetimes.co.uk", "*");
+      this.webview.injectJavaScript(
+        "window.ReactNativeWebView.postMessage(`${document.body.scrollHeight}`); true;",
+      );
     }
   }
 
