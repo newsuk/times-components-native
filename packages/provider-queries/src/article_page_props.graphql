@@ -1,5 +1,4 @@
 #import "./article_props.graphql"
-#import "./article_topics_tablet.graphql"
 
 fragment articlePageProps on Article {
   backgroundColour {
@@ -45,7 +44,6 @@ fragment articlePageProps on Article {
     }
   }
   ...articleProps
-  ...topics
 }
 
 fragment imageProps on Image {
