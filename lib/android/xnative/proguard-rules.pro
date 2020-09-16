@@ -38,3 +38,6 @@
 -keepclassmembers class * {
     @com.facebook.soloader.DoNotOptimize *;
 }
+
+#for react-native-svg
+-keep public class com.horcrux.svg.** {*;}
