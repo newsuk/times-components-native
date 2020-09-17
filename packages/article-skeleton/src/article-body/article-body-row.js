@@ -188,7 +188,7 @@ export default ({
     ad(key, attributes) {
       const template = data.template;
 
-      // Don't show ads on all templates but mainstandard in tablet
+      // If tablet, only show on mainstandard template
       if (isTablet && template !== "mainstandard") return null;
 
       return (
