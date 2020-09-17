@@ -1,0 +1,25 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`1. top secondary 1`] = `
+<View>
+  <View>
+    <Text>
+      lead
+    </Text>
+  </View>
+  <View />
+  <View>
+    <Text>
+      support-1
+    </Text>
+    <View />
+    <Text>
+      support-2
+    </Text>
+    <View />
+    <Text>
+      support-3
+    </Text>
+  </View>
+</View>
+`;

@@ -19,6 +19,25 @@ jest.mock("react-native", () => {
   };
   return rn;
 });
+
+jest.mock("@times-components-native/responsive", () => {
+  const { ResponsiveContext, useResponsiveContext } = require.requireActual(
+    "@times-components-native/responsive",
+  );
+
+  return {
+    __esModule: true,
+    default: ({ children }) => (
+      <ResponsiveContext.Provider
+        value={{ isTablet: false, editionBreakpoint: "small" }}
+      >
+        {children}
+      </ResponsiveContext.Provider>
+    ),
+    useResponsiveContext,
+    ResponsiveContext,
+  };
+});
 jest.mock("@times-components-native/image", () => ({
   __esModule: true,
   default: "TimesImage",

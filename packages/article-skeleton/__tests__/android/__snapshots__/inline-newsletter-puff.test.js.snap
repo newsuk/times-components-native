@@ -2,33 +2,73 @@
 
 exports[`Inline Newsletter Puff renders 'saving' when the button is clicked 1`] = `
 <View
-  className="inline-newsletter-puff__InpContainer-sc-1how1ig-0 gAMKMC"
+  style={
+    Object {
+      "backgroundColor": "#F9F8F3",
+      "display": "flex",
+      "flexDirection": "column",
+      "marginBottom": 20,
+      "marginHorizontal": 10,
+    }
+  }
 >
   <View
-    className="inline-newsletter-puff__InpImageContainer-sc-1how1ig-1 llENPX"
+    style={Object {}}
   >
     Image rendered with imageUri=https://nuk-tnl-deck-prod-static.s3-eu-west-1.amazonaws.com/uploads/2aa9050e6c3d4de682f11a4802ebba96.jpg
   </View>
   <View
-    className="inline-newsletter-puff__InpSignupContainer-sc-1how1ig-5 gTbrav"
+    style={
+      Object {
+        "justifyContent": "center",
+        "padding": 20,
+      }
+    }
   >
     <Text
-      className="inline-newsletter-puff__InpSignupLabel-sc-1how1ig-6 bJyop"
+      style={
+        Object {
+          "color": "#1D1D1B",
+          "fontFamily": "GillSansMTStd-Medium",
+          "fontSize": 12,
+          "letterSpacing": 1,
+          "marginBottom": 5,
+          "textAlign": "center",
+          "textTransform": "uppercase",
+        }
+      }
     >
       STRAIGHT IN YOUR INBOX
     </Text>
     <Text
-      className="inline-newsletter-puff__InpSignupHeadline-sc-1how1ig-7 byfZOI"
+      style={
+        Object {
+          "color": "#1D1D1B",
+          "fontFamily": "TimesModern-Bold",
+          "fontSize": 28,
+          "marginBottom": 5,
+          "textAlign": "center",
+          "textDecoration": "none",
+        }
+      }
     >
       Politics. Explained.
     </Text>
     <Text
-      className="inline-newsletter-puff__InpCopy-sc-1how1ig-8 dkjBeF"
+      style={
+        Object {
+          "color": "#333333",
+          "fontFamily": "TimesDigitalW04",
+          "fontSize": 15,
+          "marginBottom": 15,
+          "textAlign": "center",
+        }
+      }
     >
       Sign up to receive our brilliant Red Box newsletter, Matt Chorley\`s poke at politics delivered every weekday morning at 8am.
     </Text>
     <View
-      className="inline-newsletter-puff__InpSignupCTAContainer-sc-1how1ig-9 lfyvXD"
+      style={Object {}}
     >
       <View
         accessibilityLabel="Saving…"
@@ -98,50 +138,248 @@ exports[`Inline Newsletter Puff renders 'saving' when the button is clicked 1`] 
 </View>
 `;
 
-exports[`Inline Newsletter Puff renders null when is already subscribed 1`] = `null`;
+exports[`Inline Newsletter Puff renders null when is already subscribed 1`] = `
+<View
+  style={
+    Object {
+      "backgroundColor": "#F9F8F3",
+      "display": "flex",
+      "flexDirection": "column",
+      "marginBottom": 20,
+      "marginHorizontal": 10,
+    }
+  }
+>
+  <View
+    style={Object {}}
+  >
+    Image rendered with imageUri=https://nuk-tnl-deck-prod-static.s3-eu-west-1.amazonaws.com/uploads/2aa9050e6c3d4de682f11a4802ebba96.jpg
+  </View>
+  <View
+    style={
+      Object {
+        "justifyContent": "center",
+        "padding": 20,
+      }
+    }
+  >
+    <Text
+      style={
+        Object {
+          "color": "#1D1D1B",
+          "fontFamily": "GillSansMTStd-Medium",
+          "fontSize": 12,
+          "letterSpacing": 1,
+          "marginBottom": 5,
+          "textAlign": "center",
+          "textTransform": "uppercase",
+        }
+      }
+    >
+      STRAIGHT IN YOUR INBOX
+    </Text>
+    <Text
+      style={
+        Object {
+          "color": "#1D1D1B",
+          "fontFamily": "TimesModern-Bold",
+          "fontSize": 28,
+          "marginBottom": 5,
+          "textAlign": "center",
+          "textDecoration": "none",
+        }
+      }
+    >
+      Politics. Explained.
+    </Text>
+    <Text
+      style={
+        Object {
+          "color": "#333333",
+          "fontFamily": "TimesDigitalW04",
+          "fontSize": 15,
+          "marginBottom": 15,
+          "textAlign": "center",
+        }
+      }
+    >
+      Sign up to receive our brilliant Red Box newsletter, Matt Chorley\`s poke at politics delivered every weekday morning at 8am.
+    </Text>
+    <View
+      style={Object {}}
+    >
+      <View
+        accessibilityLabel="Sign up now"
+        accessibilityRole="button"
+        accessible={true}
+        focusable={true}
+        onClick={[Function]}
+        onResponderGrant={[Function]}
+        onResponderMove={[Function]}
+        onResponderRelease={[Function]}
+        onResponderTerminate={[Function]}
+        onResponderTerminationRequest={[Function]}
+        onStartShouldSetResponder={[Function]}
+        style={
+          Array [
+            Object {
+              "alignItems": "center",
+              "backgroundColor": "#006699",
+              "borderRadius": 2,
+              "elevation": 3,
+              "height": 36,
+              "justifyContent": "center",
+              "minWidth": 100,
+              "width": "100%",
+            },
+            Object {
+              "alignItems": "center",
+              "backgroundColor": "transparent",
+              "borderColor": "#1D1D1B",
+              "borderStyle": "solid",
+              "borderWidth": 2,
+              "color": "#1D1D1B",
+              "elevation": 0,
+              "fontFamily": "GillSansMTStd-Medium",
+              "height": 45,
+              "justifyContent": "center",
+              "letterSpacing": 0.2,
+              "width": "100%",
+            },
+          ]
+        }
+      >
+        <Text
+          style={
+            Array [
+              Object {
+                "color": "#FFFFFF",
+                "fontFamily": "GillSansMTStd-Medium",
+                "fontSize": 16,
+                "lineHeight": 16,
+                "paddingTop": 0,
+              },
+              null,
+              null,
+              Object {
+                "color": "#1D1D1B",
+              },
+            ]
+          }
+          title="Sign up now"
+        >
+          Sign up now
+        </Text>
+      </View>
+    </View>
+  </View>
+</View>
+`;
 
 exports[`Inline Newsletter Puff renders placeholder when loading 1`] = `
 <View
-  className="inline-newsletter-puff__InpContainer-sc-1how1ig-0 gAMKMC"
   style={
-    Object {
-      "height": 257,
-    }
+    Array [
+      Object {
+        "backgroundColor": "#F9F8F3",
+        "display": "flex",
+        "flexDirection": "column",
+        "marginBottom": 20,
+        "marginHorizontal": 10,
+      },
+      Object {
+        "height": 257,
+      },
+    ]
   }
 >
   Placeholder rendered
 </View>
 `;
 
-exports[`Inline Newsletter Puff renders signup state 1`] = `
+exports[`Inline Newsletter Puff renders signup state:  medium 1`] = `
 <View
-  className="inline-newsletter-puff__InpContainer-sc-1how1ig-0 gAMKMC"
+  style={
+    Object {
+      "backgroundColor": "#F9F8F3",
+      "display": "flex",
+      "flexDirection": "row",
+      "marginBottom": 20,
+      "marginHorizontal": 10,
+      "marginLeft": "auto",
+      "marginRight": "auto",
+      "width": "80.8%",
+    }
+  }
 >
   <View
-    className="inline-newsletter-puff__InpImageContainer-sc-1how1ig-1 llENPX"
+    style={
+      Object {
+        "width": "45%",
+      }
+    }
   >
     Image rendered with imageUri=https://nuk-tnl-deck-prod-static.s3-eu-west-1.amazonaws.com/uploads/2aa9050e6c3d4de682f11a4802ebba96.jpg
   </View>
   <View
-    className="inline-newsletter-puff__InpSignupContainer-sc-1how1ig-5 gTbrav"
+    style={
+      Object {
+        "flex": 1,
+        "justifyContent": "center",
+        "padding": 20,
+      }
+    }
   >
     <Text
-      className="inline-newsletter-puff__InpSignupLabel-sc-1how1ig-6 bJyop"
+      style={
+        Object {
+          "color": "#1D1D1B",
+          "fontFamily": "GillSansMTStd-Medium",
+          "fontSize": 12,
+          "letterSpacing": 1,
+          "marginBottom": 5,
+          "textAlign": "center",
+          "textTransform": "uppercase",
+        }
+      }
     >
       STRAIGHT IN YOUR INBOX
     </Text>
     <Text
-      className="inline-newsletter-puff__InpSignupHeadline-sc-1how1ig-7 byfZOI"
+      style={
+        Object {
+          "color": "#1D1D1B",
+          "fontFamily": "TimesModern-Bold",
+          "fontSize": 28,
+          "marginBottom": 5,
+          "textAlign": "center",
+          "textDecoration": "none",
+        }
+      }
     >
       Politics. Explained.
     </Text>
     <Text
-      className="inline-newsletter-puff__InpCopy-sc-1how1ig-8 dkjBeF"
+      style={
+        Object {
+          "color": "#333333",
+          "fontFamily": "TimesDigitalW04",
+          "fontSize": 15,
+          "marginBottom": 15,
+          "textAlign": "center",
+        }
+      }
     >
       Sign up to receive our brilliant Red Box newsletter, Matt Chorley\`s poke at politics delivered every weekday morning at 8am.
     </Text>
     <View
-      className="inline-newsletter-puff__InpSignupCTAContainer-sc-1how1ig-9 lfyvXD"
+      style={
+        Object {
+          "marginLeft": "auto",
+          "marginRight": "auto",
+          "width": 220,
+        }
+      }
     >
       <View
         accessibilityLabel="Sign up now"
@@ -211,35 +449,75 @@ exports[`Inline Newsletter Puff renders signup state 1`] = `
 </View>
 `;
 
-exports[`Inline Newsletter Puff renders signup view when not already subscribed 1`] = `
+exports[`Inline Newsletter Puff renders signup state:  small 1`] = `
 <View
-  className="inline-newsletter-puff__InpContainer-sc-1how1ig-0 gAMKMC"
+  style={
+    Object {
+      "backgroundColor": "#F9F8F3",
+      "display": "flex",
+      "flexDirection": "column",
+      "marginBottom": 20,
+      "marginHorizontal": 10,
+    }
+  }
 >
   <View
-    className="inline-newsletter-puff__InpImageContainer-sc-1how1ig-1 llENPX"
+    style={Object {}}
   >
     Image rendered with imageUri=https://nuk-tnl-deck-prod-static.s3-eu-west-1.amazonaws.com/uploads/2aa9050e6c3d4de682f11a4802ebba96.jpg
   </View>
   <View
-    className="inline-newsletter-puff__InpSignupContainer-sc-1how1ig-5 gTbrav"
+    style={
+      Object {
+        "justifyContent": "center",
+        "padding": 20,
+      }
+    }
   >
     <Text
-      className="inline-newsletter-puff__InpSignupLabel-sc-1how1ig-6 bJyop"
+      style={
+        Object {
+          "color": "#1D1D1B",
+          "fontFamily": "GillSansMTStd-Medium",
+          "fontSize": 12,
+          "letterSpacing": 1,
+          "marginBottom": 5,
+          "textAlign": "center",
+          "textTransform": "uppercase",
+        }
+      }
     >
       STRAIGHT IN YOUR INBOX
     </Text>
     <Text
-      className="inline-newsletter-puff__InpSignupHeadline-sc-1how1ig-7 byfZOI"
+      style={
+        Object {
+          "color": "#1D1D1B",
+          "fontFamily": "TimesModern-Bold",
+          "fontSize": 28,
+          "marginBottom": 5,
+          "textAlign": "center",
+          "textDecoration": "none",
+        }
+      }
     >
       Politics. Explained.
     </Text>
     <Text
-      className="inline-newsletter-puff__InpCopy-sc-1how1ig-8 dkjBeF"
+      style={
+        Object {
+          "color": "#333333",
+          "fontFamily": "TimesDigitalW04",
+          "fontSize": 15,
+          "marginBottom": 15,
+          "textAlign": "center",
+        }
+      }
     >
       Sign up to receive our brilliant Red Box newsletter, Matt Chorley\`s poke at politics delivered every weekday morning at 8am.
     </Text>
     <View
-      className="inline-newsletter-puff__InpSignupCTAContainer-sc-1how1ig-9 lfyvXD"
+      style={Object {}}
     >
       <View
         accessibilityLabel="Sign up now"
@@ -309,30 +587,228 @@ exports[`Inline Newsletter Puff renders signup view when not already subscribed 
 </View>
 `;
 
-exports[`Inline Newsletter Puff renders the success view after subscribing  1`] = `
+exports[`Inline Newsletter Puff renders signup state:  wide 1`] = `
 <View
-  className="inline-newsletter-puff__InpContainer-sc-1how1ig-0 gAMKMC"
+  style={
+    Object {
+      "backgroundColor": "#F9F8F3",
+      "display": "flex",
+      "flexDirection": "row",
+      "marginBottom": 20,
+      "marginHorizontal": 10,
+      "marginLeft": "auto",
+      "marginRight": "auto",
+      "width": "56.2%",
+    }
+  }
 >
   <View
-    className="inline-newsletter-puff__InpImageContainer-sc-1how1ig-1 llENPX"
+    style={
+      Object {
+        "width": "45%",
+      }
+    }
   >
     Image rendered with imageUri=https://nuk-tnl-deck-prod-static.s3-eu-west-1.amazonaws.com/uploads/2aa9050e6c3d4de682f11a4802ebba96.jpg
   </View>
   <View
-    className="inline-newsletter-puff__InpSubscribedContainer-sc-1how1ig-2 gnAFtG"
+    style={
+      Object {
+        "flex": 1,
+        "justifyContent": "center",
+        "padding": 20,
+      }
+    }
   >
     <Text
-      className="inline-newsletter-puff__InpSubscribedHeadline-sc-1how1ig-3 jucenN"
+      style={
+        Object {
+          "color": "#1D1D1B",
+          "fontFamily": "GillSansMTStd-Medium",
+          "fontSize": 12,
+          "letterSpacing": 1,
+          "marginBottom": 5,
+          "textAlign": "center",
+          "textTransform": "uppercase",
+        }
+      }
+    >
+      STRAIGHT IN YOUR INBOX
+    </Text>
+    <Text
+      style={
+        Object {
+          "color": "#1D1D1B",
+          "fontFamily": "TimesModern-Bold",
+          "fontSize": 28,
+          "marginBottom": 5,
+          "textAlign": "center",
+          "textDecoration": "none",
+        }
+      }
+    >
+      Politics. Explained.
+    </Text>
+    <Text
+      style={
+        Object {
+          "color": "#333333",
+          "fontFamily": "TimesDigitalW04",
+          "fontSize": 15,
+          "marginBottom": 15,
+          "textAlign": "center",
+        }
+      }
+    >
+      Sign up to receive our brilliant Red Box newsletter, Matt Chorley\`s poke at politics delivered every weekday morning at 8am.
+    </Text>
+    <View
+      style={
+        Object {
+          "marginLeft": "auto",
+          "marginRight": "auto",
+          "width": 220,
+        }
+      }
+    >
+      <View
+        accessibilityLabel="Sign up now"
+        accessibilityRole="button"
+        accessible={true}
+        focusable={true}
+        onClick={[Function]}
+        onResponderGrant={[Function]}
+        onResponderMove={[Function]}
+        onResponderRelease={[Function]}
+        onResponderTerminate={[Function]}
+        onResponderTerminationRequest={[Function]}
+        onStartShouldSetResponder={[Function]}
+        style={
+          Array [
+            Object {
+              "alignItems": "center",
+              "backgroundColor": "#006699",
+              "borderRadius": 2,
+              "elevation": 3,
+              "height": 36,
+              "justifyContent": "center",
+              "minWidth": 100,
+              "width": "100%",
+            },
+            Object {
+              "alignItems": "center",
+              "backgroundColor": "transparent",
+              "borderColor": "#1D1D1B",
+              "borderStyle": "solid",
+              "borderWidth": 2,
+              "color": "#1D1D1B",
+              "elevation": 0,
+              "fontFamily": "GillSansMTStd-Medium",
+              "height": 45,
+              "justifyContent": "center",
+              "letterSpacing": 0.2,
+              "width": "100%",
+            },
+          ]
+        }
+      >
+        <Text
+          style={
+            Array [
+              Object {
+                "color": "#FFFFFF",
+                "fontFamily": "GillSansMTStd-Medium",
+                "fontSize": 16,
+                "lineHeight": 16,
+                "paddingTop": 0,
+              },
+              null,
+              null,
+              Object {
+                "color": "#1D1D1B",
+              },
+            ]
+          }
+          title="Sign up now"
+        >
+          Sign up now
+        </Text>
+      </View>
+    </View>
+  </View>
+</View>
+`;
+
+exports[`Inline Newsletter Puff renders the success view after subscribing:  medium 1`] = `
+<View
+  style={
+    Object {
+      "backgroundColor": "#F9F8F3",
+      "display": "flex",
+      "flexDirection": "row",
+      "marginBottom": 20,
+      "marginHorizontal": 10,
+      "marginLeft": "auto",
+      "marginRight": "auto",
+      "width": "80.8%",
+    }
+  }
+>
+  <View
+    style={
+      Object {
+        "width": "45%",
+      }
+    }
+  >
+    Image rendered with imageUri=https://nuk-tnl-deck-prod-static.s3-eu-west-1.amazonaws.com/uploads/2aa9050e6c3d4de682f11a4802ebba96.jpg
+  </View>
+  <View
+    style={
+      Object {
+        "flex": 1,
+        "justifyContent": "center",
+        "paddingHorizontal": 5,
+        "paddingVertical": 0,
+      }
+    }
+  >
+    <Text
+      style={
+        Object {
+          "color": "#1D1D1B",
+          "fontFamily": "TimesModern-Bold",
+          "fontSize": 28,
+          "marginBottom": 10,
+          "textAlign": "center",
+          "textDecoration": "none",
+        }
+      }
     >
       You’ve successfully signed up
     </Text>
     <Text
-      className="inline-newsletter-puff__InpSubscribedCopy-sc-1how1ig-4 bgRgqh"
+      style={
+        Object {
+          "color": "#333333",
+          "fontFamily": "TimesDigitalW04",
+          "fontSize": 15,
+          "marginBottom": 5,
+          "paddingHorizontal": 20,
+          "paddingVertical": 0,
+          "textAlign": "center",
+        }
+      }
     >
       Congratulations you can now enjoy daily updates from Red Box.
     </Text>
     <View
-      className="inline-newsletter-puff__InpPreferencesContainer-sc-1how1ig-10 cfloxs"
+      style={
+        Object {
+          "flexDirection": "row",
+          "justifyContent": "center",
+        }
+      }
     >
       <View
         accessible={true}
@@ -354,15 +830,592 @@ exports[`Inline Newsletter Puff renders the success view after subscribing  1`] 
         style={Object {}}
       >
         <View
-          className="inline-newsletter-puff__InpPreferencesView-sc-1how1ig-13 jrdxG"
+          style={
+            Object {
+              "alignItems": "center",
+              "display": "flex",
+              "flexDirection": "row",
+            }
+          }
         >
           <Text
-            className="inline-newsletter-puff__InpPreferencesText-sc-1how1ig-11 iTPTWl"
+            style={
+              Object {
+                "color": "#006699",
+              }
+            }
           >
             Manage preferences here
           </Text>
           <View
-            className="inline-newsletter-puff__InpIconContainer-sc-1how1ig-12 gSDsVb"
+            style={
+              Object {
+                "margin": "auto",
+                "paddingLeft": 8,
+              }
+            }
+          >
+            <RNSVGSvgView
+              align="xMidYMid"
+              aria-label="icon-forward-arrow"
+              bbHeight={12}
+              bbWidth={7}
+              focusable={false}
+              height={12}
+              meetOrSlice={0}
+              minX={42}
+              minY={12}
+              style={
+                Array [
+                  Object {
+                    "backgroundColor": "transparent",
+                    "borderWidth": 0,
+                  },
+                  undefined,
+                  Object {
+                    "opacity": 1,
+                  },
+                  Object {
+                    "flex": 0,
+                    "height": 12,
+                    "width": 7,
+                  },
+                ]
+              }
+              vbHeight={120}
+              vbWidth={60}
+              width={7}
+            >
+              <RNSVGGroup
+                fill={
+                  Array [
+                    0,
+                    -16777216,
+                  ]
+                }
+                fillOpacity={1}
+                fillRule={1}
+                font={Object {}}
+                matrix={
+                  Array [
+                    1,
+                    0,
+                    0,
+                    1,
+                    0,
+                    0,
+                  ]
+                }
+                opacity={1}
+                originX={0}
+                originY={0}
+                propList={Array []}
+                rotation={0}
+                scaleX={1}
+                scaleY={1}
+                skewX={0}
+                skewY={0}
+                stroke={null}
+                strokeDasharray={null}
+                strokeDashoffset={null}
+                strokeLinecap={0}
+                strokeLinejoin={0}
+                strokeMiterlimit={4}
+                strokeOpacity={1}
+                strokeWidth={1}
+                vectorEffect={0}
+                x={0}
+                y={0}
+              >
+                <RNSVGGroup
+                  fill={
+                    Array [
+                      0,
+                      -16750951,
+                    ]
+                  }
+                  fillOpacity={1}
+                  fillRule={1}
+                  font={Object {}}
+                  matrix={
+                    Array [
+                      1,
+                      0,
+                      0,
+                      1,
+                      0,
+                      0,
+                    ]
+                  }
+                  opacity={1}
+                  originX={0}
+                  originY={0}
+                  propList={
+                    Array [
+                      "fill",
+                    ]
+                  }
+                  rotation={0}
+                  scaleX={1}
+                  scaleY={1}
+                  skewX={0}
+                  skewY={0}
+                  stroke={null}
+                  strokeDasharray={null}
+                  strokeDashoffset={null}
+                  strokeLinecap={0}
+                  strokeLinejoin={0}
+                  strokeMiterlimit={4}
+                  strokeOpacity={1}
+                  strokeWidth={1}
+                  vectorEffect={0}
+                  x={0}
+                  y={0}
+                >
+                  <RNSVGPath
+                    d="M45.8,132L42,128.2,74.8,72,42,15.8,45.8,12,102,72Z"
+                    fill={
+                      Array [
+                        0,
+                        -16777216,
+                      ]
+                    }
+                    fillOpacity={1}
+                    fillRule={1}
+                    matrix={
+                      Array [
+                        1,
+                        0,
+                        0,
+                        1,
+                        0,
+                        0,
+                      ]
+                    }
+                    opacity={1}
+                    originX={0}
+                    originY={0}
+                    propList={Array []}
+                    rotation={0}
+                    scaleX={1}
+                    scaleY={1}
+                    skewX={0}
+                    skewY={0}
+                    stroke={null}
+                    strokeDasharray={null}
+                    strokeDashoffset={null}
+                    strokeLinecap={0}
+                    strokeLinejoin={0}
+                    strokeMiterlimit={4}
+                    strokeOpacity={1}
+                    strokeWidth={1}
+                    vectorEffect={0}
+                    x={0}
+                    y={0}
+                  />
+                </RNSVGGroup>
+              </RNSVGGroup>
+            </RNSVGSvgView>
+          </View>
+        </View>
+      </View>
+    </View>
+  </View>
+</View>
+`;
+
+exports[`Inline Newsletter Puff renders the success view after subscribing:  small 1`] = `
+<View
+  style={
+    Object {
+      "backgroundColor": "#F9F8F3",
+      "display": "flex",
+      "flexDirection": "column",
+      "marginBottom": 20,
+      "marginHorizontal": 10,
+    }
+  }
+>
+  <View
+    style={Object {}}
+  >
+    Image rendered with imageUri=https://nuk-tnl-deck-prod-static.s3-eu-west-1.amazonaws.com/uploads/2aa9050e6c3d4de682f11a4802ebba96.jpg
+  </View>
+  <View
+    style={
+      Object {
+        "justifyContent": "center",
+        "paddingHorizontal": 40,
+        "paddingVertical": 45,
+      }
+    }
+  >
+    <Text
+      style={
+        Object {
+          "color": "#1D1D1B",
+          "fontFamily": "TimesModern-Bold",
+          "fontSize": 28,
+          "marginBottom": 10,
+          "textAlign": "center",
+          "textDecoration": "none",
+        }
+      }
+    >
+      You’ve successfully signed up
+    </Text>
+    <Text
+      style={
+        Object {
+          "color": "#333333",
+          "fontFamily": "TimesDigitalW04",
+          "fontSize": 15,
+          "marginBottom": 5,
+          "paddingHorizontal": 5,
+          "paddingVertical": 0,
+          "textAlign": "center",
+        }
+      }
+    >
+      Congratulations you can now enjoy daily updates from Red Box.
+    </Text>
+    <View
+      style={
+        Object {
+          "flexDirection": "row",
+          "justifyContent": "center",
+        }
+      }
+    >
+      <View
+        accessible={true}
+        focusable={true}
+        nativeBackgroundAndroid={
+          Object {
+            "attribute": "selectableItemBackground",
+            "rippleRadius": undefined,
+            "type": "ThemeAttrAndroid",
+          }
+        }
+        onClick={[Function]}
+        onResponderGrant={[Function]}
+        onResponderMove={[Function]}
+        onResponderRelease={[Function]}
+        onResponderTerminate={[Function]}
+        onResponderTerminationRequest={[Function]}
+        onStartShouldSetResponder={[Function]}
+        style={Object {}}
+      >
+        <View
+          style={
+            Object {
+              "alignItems": "center",
+              "display": "flex",
+              "flexDirection": "row",
+            }
+          }
+        >
+          <Text
+            style={
+              Object {
+                "color": "#006699",
+              }
+            }
+          >
+            Manage preferences here
+          </Text>
+          <View
+            style={
+              Object {
+                "margin": "auto",
+                "paddingLeft": 8,
+              }
+            }
+          >
+            <RNSVGSvgView
+              align="xMidYMid"
+              aria-label="icon-forward-arrow"
+              bbHeight={12}
+              bbWidth={7}
+              focusable={false}
+              height={12}
+              meetOrSlice={0}
+              minX={42}
+              minY={12}
+              style={
+                Array [
+                  Object {
+                    "backgroundColor": "transparent",
+                    "borderWidth": 0,
+                  },
+                  undefined,
+                  Object {
+                    "opacity": 1,
+                  },
+                  Object {
+                    "flex": 0,
+                    "height": 12,
+                    "width": 7,
+                  },
+                ]
+              }
+              vbHeight={120}
+              vbWidth={60}
+              width={7}
+            >
+              <RNSVGGroup
+                fill={
+                  Array [
+                    0,
+                    -16777216,
+                  ]
+                }
+                fillOpacity={1}
+                fillRule={1}
+                font={Object {}}
+                matrix={
+                  Array [
+                    1,
+                    0,
+                    0,
+                    1,
+                    0,
+                    0,
+                  ]
+                }
+                opacity={1}
+                originX={0}
+                originY={0}
+                propList={Array []}
+                rotation={0}
+                scaleX={1}
+                scaleY={1}
+                skewX={0}
+                skewY={0}
+                stroke={null}
+                strokeDasharray={null}
+                strokeDashoffset={null}
+                strokeLinecap={0}
+                strokeLinejoin={0}
+                strokeMiterlimit={4}
+                strokeOpacity={1}
+                strokeWidth={1}
+                vectorEffect={0}
+                x={0}
+                y={0}
+              >
+                <RNSVGGroup
+                  fill={
+                    Array [
+                      0,
+                      -16750951,
+                    ]
+                  }
+                  fillOpacity={1}
+                  fillRule={1}
+                  font={Object {}}
+                  matrix={
+                    Array [
+                      1,
+                      0,
+                      0,
+                      1,
+                      0,
+                      0,
+                    ]
+                  }
+                  opacity={1}
+                  originX={0}
+                  originY={0}
+                  propList={
+                    Array [
+                      "fill",
+                    ]
+                  }
+                  rotation={0}
+                  scaleX={1}
+                  scaleY={1}
+                  skewX={0}
+                  skewY={0}
+                  stroke={null}
+                  strokeDasharray={null}
+                  strokeDashoffset={null}
+                  strokeLinecap={0}
+                  strokeLinejoin={0}
+                  strokeMiterlimit={4}
+                  strokeOpacity={1}
+                  strokeWidth={1}
+                  vectorEffect={0}
+                  x={0}
+                  y={0}
+                >
+                  <RNSVGPath
+                    d="M45.8,132L42,128.2,74.8,72,42,15.8,45.8,12,102,72Z"
+                    fill={
+                      Array [
+                        0,
+                        -16777216,
+                      ]
+                    }
+                    fillOpacity={1}
+                    fillRule={1}
+                    matrix={
+                      Array [
+                        1,
+                        0,
+                        0,
+                        1,
+                        0,
+                        0,
+                      ]
+                    }
+                    opacity={1}
+                    originX={0}
+                    originY={0}
+                    propList={Array []}
+                    rotation={0}
+                    scaleX={1}
+                    scaleY={1}
+                    skewX={0}
+                    skewY={0}
+                    stroke={null}
+                    strokeDasharray={null}
+                    strokeDashoffset={null}
+                    strokeLinecap={0}
+                    strokeLinejoin={0}
+                    strokeMiterlimit={4}
+                    strokeOpacity={1}
+                    strokeWidth={1}
+                    vectorEffect={0}
+                    x={0}
+                    y={0}
+                  />
+                </RNSVGGroup>
+              </RNSVGGroup>
+            </RNSVGSvgView>
+          </View>
+        </View>
+      </View>
+    </View>
+  </View>
+</View>
+`;
+
+exports[`Inline Newsletter Puff renders the success view after subscribing:  wide 1`] = `
+<View
+  style={
+    Object {
+      "backgroundColor": "#F9F8F3",
+      "display": "flex",
+      "flexDirection": "row",
+      "marginBottom": 20,
+      "marginHorizontal": 10,
+      "marginLeft": "auto",
+      "marginRight": "auto",
+      "width": "56.2%",
+    }
+  }
+>
+  <View
+    style={
+      Object {
+        "width": "45%",
+      }
+    }
+  >
+    Image rendered with imageUri=https://nuk-tnl-deck-prod-static.s3-eu-west-1.amazonaws.com/uploads/2aa9050e6c3d4de682f11a4802ebba96.jpg
+  </View>
+  <View
+    style={
+      Object {
+        "flex": 1,
+        "justifyContent": "center",
+        "paddingHorizontal": 5,
+        "paddingVertical": 0,
+      }
+    }
+  >
+    <Text
+      style={
+        Object {
+          "color": "#1D1D1B",
+          "fontFamily": "TimesModern-Bold",
+          "fontSize": 28,
+          "marginBottom": 10,
+          "textAlign": "center",
+          "textDecoration": "none",
+        }
+      }
+    >
+      You’ve successfully signed up
+    </Text>
+    <Text
+      style={
+        Object {
+          "color": "#333333",
+          "fontFamily": "TimesDigitalW04",
+          "fontSize": 15,
+          "marginBottom": 5,
+          "paddingHorizontal": 20,
+          "paddingVertical": 0,
+          "textAlign": "center",
+        }
+      }
+    >
+      Congratulations you can now enjoy daily updates from Red Box.
+    </Text>
+    <View
+      style={
+        Object {
+          "flexDirection": "row",
+          "justifyContent": "center",
+        }
+      }
+    >
+      <View
+        accessible={true}
+        focusable={true}
+        nativeBackgroundAndroid={
+          Object {
+            "attribute": "selectableItemBackground",
+            "rippleRadius": undefined,
+            "type": "ThemeAttrAndroid",
+          }
+        }
+        onClick={[Function]}
+        onResponderGrant={[Function]}
+        onResponderMove={[Function]}
+        onResponderRelease={[Function]}
+        onResponderTerminate={[Function]}
+        onResponderTerminationRequest={[Function]}
+        onStartShouldSetResponder={[Function]}
+        style={Object {}}
+      >
+        <View
+          style={
+            Object {
+              "alignItems": "center",
+              "display": "flex",
+              "flexDirection": "row",
+            }
+          }
+        >
+          <Text
+            style={
+              Object {
+                "color": "#006699",
+              }
+            }
+          >
+            Manage preferences here
+          </Text>
+          <View
+            style={
+              Object {
+                "margin": "auto",
+                "paddingLeft": 8,
+              }
+            }
           >
             <RNSVGSvgView
               align="xMidYMid"

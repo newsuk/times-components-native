@@ -37,6 +37,7 @@ import {
   TileZ,
   TileAA,
   TileAB,
+  TileAF,
   TileAH,
   TileAI,
   TileAL,
@@ -44,7 +45,19 @@ import {
   TileAN,
   TileAR,
   TileAS,
-  TileAF,
+  TileAT,
+  TileAU,
+  TileAV,
+  TileAW,
+  TileAX,
+  TileAY,
+  TileAZ,
+  TileBA,
+  TileBB,
+  TileBC,
+  TileBD,
+  TileBE,
+  TileBF,
 } from "./src/tiles";
 
 const tile = mockEditionSlice(1).items[0];
@@ -209,6 +222,10 @@ const tileStories = [
     Tile: TileAE,
   },
   {
+    name: "Tile AF - No image, 20pt headline, with teaser",
+    Tile: TileAF,
+  },
+  {
     name:
       "Tile AH - Profile roundel image, 30pt headline, no teaser, central aligned summary",
     Tile: TileAH,
@@ -234,8 +251,58 @@ const tileStories = [
     Tile: TileAS,
   },
   {
-    name: "Tile AF - No image, 20pt headline, with teaser",
-    Tile: TileAF,
+    name: "Tile AT - Top image 3:2, 30pt headline, with teaser",
+    Tile: TileAT,
+  },
+  {
+    name: "Tile AU - Top image 16:9, 35pt headline, no teaser",
+    Tile: TileAU,
+  },
+  {
+    name: "Tile AV - 20pt headline, with teaser",
+    Tile: TileAV,
+  },
+  {
+    name: "Tile AW - Top image 16:9, Times Modern headline, no teaser",
+    Tile: TileAW,
+  },
+  {
+    name: "Tile AX - Top image 3:2, 24/30pt headline, no teaser",
+    Tile: TileAX,
+  },
+  {
+    name: "Tile AY - Top image 16:9, 20pt headline, no teaser",
+    Tile: TileAY,
+  },
+  {
+    name: "Tile AZ - Top image 3:2, Times Modern headline, no teaser",
+    Tile: TileAZ,
+  },
+  {
+    name: "Tile BA - image 16:9, Times Modern headline, no teaser",
+    Tile: TileBA,
+  },
+  {
+    name: "Tile BB - image 3:2, Times Modern headline, no teaser",
+    Tile: TileBB,
+  },
+  {
+    name: "Tile BC - image 3:2 or 16:9, Times Modern headline, no teaser",
+    Tile: TileBC,
+  },
+  {
+    name:
+      "Tile BD - image 1:1 roundel, Times Modern headline, no teaser, horizontal",
+    Tile: TileBD,
+  },
+  {
+    name:
+      "Tile BE - image 1:1 roundel, Times Modern headline, no teaser, vertical",
+    Tile: TileBE,
+  },
+  {
+    name: "Tile BF - Horizontal, Flex: 1:2, Summary left, Image 16:9 right",
+    Tile: TileBF,
   },
 ];
 

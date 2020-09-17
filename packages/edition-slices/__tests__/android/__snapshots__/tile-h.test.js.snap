@@ -78,31 +78,33 @@ exports[`tile h without breakpoint 1`] = `
       </Text>
     </Text>
     <Text>
-      <Text
-        style={
-          Object {
-            "color": "#333333",
-            "flexDirection": "row",
-            "fontFamily": "GillSansMTStd-Medium",
-            "fontSize": 13,
-            "lineHeight": 19,
+      <Text>
+        <Text
+          style={
+            Object {
+              "color": "#333333",
+              "flexDirection": "row",
+              "fontFamily": "GillSansMTStd-Medium",
+              "fontSize": 13,
+              "lineHeight": 19,
+            }
           }
-        }
-      >
-        Richard Lloyd Parry
-      </Text>
-      <Text
-        style={
-          Object {
-            "color": "#333333",
-            "flexDirection": "row",
-            "fontFamily": "GillSansMTStd-Medium",
-            "fontSize": 13,
-            "lineHeight": 19,
+        >
+          Richard Lloyd Parry
+        </Text>
+        <Text
+          style={
+            Object {
+              "color": "#333333",
+              "flexDirection": "row",
+              "fontFamily": "GillSansMTStd-Medium",
+              "fontSize": 13,
+              "lineHeight": 19,
+            }
           }
-        }
-      >
-        , Hanoi
+        >
+          , Hanoi
+        </Text>
       </Text>
     </Text>
   </View>

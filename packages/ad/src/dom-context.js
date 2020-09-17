@@ -58,7 +58,7 @@ class DOMContext extends PureComponent {
   };
 
   handleMessageEvent = (e) => {
-    const { onRenderComplete, onRenderError, data } = this.props;
+    const { onRenderComplete, onRenderError, data, isInline } = this.props;
     const json = e.nativeEvent.data;
 
     if (
@@ -90,7 +90,7 @@ class DOMContext extends PureComponent {
           adHeight > 1 ? adHeight + styles.containerAdditionalHeight.height : 0;
 
         this.setState({
-          height: webViewHeight,
+          height: isInline ? adHeight : webViewHeight,
         });
         break;
       }

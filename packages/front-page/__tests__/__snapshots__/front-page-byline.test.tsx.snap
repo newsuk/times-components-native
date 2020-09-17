@@ -5,7 +5,7 @@ exports[`FrontPageByline renders with container style 1`] = `
   style={
     Array [
       Object {
-        "marginBottom": 5,
+        "marginBottom": 10,
       },
       Object {
         "marginBottom": 100,
@@ -29,6 +29,7 @@ exports[`FrontPageByline renders with container style 1`] = `
       }
       bylineStyle={
         Object {
+          "color": "#1D1D1B",
           "lineHeight": 13,
         }
       }
@@ -42,7 +43,7 @@ exports[`FrontPageByline renders with keyline 1`] = `
   style={
     Array [
       Object {
-        "marginBottom": 5,
+        "marginBottom": 10,
       },
       undefined,
       Object {
@@ -68,6 +69,7 @@ exports[`FrontPageByline renders with keyline 1`] = `
       }
       bylineStyle={
         Object {
+          "color": "#1D1D1B",
           "lineHeight": 13,
         }
       }
@@ -81,7 +83,7 @@ exports[`FrontPageByline renders without keyline 1`] = `
   style={
     Array [
       Object {
-        "marginBottom": 5,
+        "marginBottom": 10,
       },
       undefined,
       false,
@@ -103,6 +105,7 @@ exports[`FrontPageByline renders without keyline 1`] = `
       }
       bylineStyle={
         Object {
+          "color": "#1D1D1B",
           "lineHeight": 13,
         }
       }

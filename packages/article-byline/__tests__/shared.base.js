@@ -94,8 +94,8 @@ export default (Component) => {
           <ArticleBylineWithLinks ast={authorsFixture.singleAuthor} />,
         );
 
-        expect(() =>
-          wrapper.at(0).dive().find("AuthorComponent").simulate("press"),
+        expect(
+          () => wrapper.at(0).find("WithTrackEvents").props["onAuthorPress"],
         ).not.toThrow();
       },
     });

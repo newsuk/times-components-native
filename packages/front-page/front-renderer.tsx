@@ -16,6 +16,7 @@ interface Input {
 }
 type GetRenderers = (input: Input) => { [key: string]: Renderer };
 export const PARAGRAPH_INDENT_CHAR = `\u3000`; // approximates a 2-space tab
+const textBreakStrategy = "simple"; // there are several issues using other text break strategies on Android. When "highQuality"/"balanced" are used, we observed that onTextLayout was showing incorrect line breaks. Furthermore, random line breaks also appeared underneath some paragraphs.
 
 export const getRenderers: GetRenderers = ({
   renderOptions,
@@ -30,6 +31,7 @@ export const getRenderers: GetRenderers = ({
         style={[!!renderOptions && renderOptions]}
         // @ts-ignore onTextLayout does exist on Text component
         onTextLayout={onParagraphTextLayout}
+        textBreakStrategy={textBreakStrategy}
       >
         {attributes?.tab && PARAGRAPH_INDENT_CHAR}
         {renderedChildren}

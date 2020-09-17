@@ -19,7 +19,14 @@ import {
   SecondaryTwoNoPicAndTwoSlice,
   LeadTwoNoPicAndTwoFrontSlice,
   LeadOneAndOneFrontSlice,
+  LeadOneFullWidthFrontSlice,
   PuzzleSlice,
+  TopSecondarySlice,
+  SupplementLeadOneAndFourSlice,
+  SupplementLeadOneAndOneSlice,
+  SupplementSecondaryFourSlice,
+  SupplementSecondaryOneSlice,
+  SupplementSecondaryTwoAndTwoSlice,
 } from "./slices";
 
 const config = (NativeModules || {}).ReactConfig;
@@ -28,32 +35,46 @@ const { width } = getDimensions();
 const isTablet =
   (config && config.breakpoint && config.breakpoint !== "small") ||
   width > tabletWidth;
-const SecondaryTwoAndTwoMapper = isTablet
-  ? SecondaryTwoNoPicAndTwoSlice
-  : SecondaryTwoAndTwoSlice;
 
-const sliceMap = {
-  CommentLeadAndCartoonSlice,
-  DailyUniversalRegister: DailyRegisterLeadFourSlice,
-  LeadersSlice,
-  LeadOneAndFourSlice,
-  LeadOneAndOneSlice,
-  LeadOneFullWidthSlice,
-  LeadTwoNoPicAndTwoSlice,
-  Puzzle: PuzzleSlice,
-  SecondaryFourSlice,
-  SecondaryOneAndColumnistSlice,
-  SecondaryOneAndFourSlice,
-  SecondaryOneSlice,
-  SecondaryTwoAndTwoSlice: SecondaryTwoAndTwoMapper,
-  SecondaryTwoNoPicAndTwoSlice,
-  StandardSlice,
-  TwoPicAndSixNoPicSlice: ListTwoAndSixNoPicSlice,
-  LeadTwoNoPicAndTwoFrontSlice,
-  LeadOneAndOneFrontSlice,
-  TopSecondaryTwoAndTwoSlice: SecondaryTwoAndTwoSlice, // amend once TopSecondaryFourSlice slice has been developed
-  TopSecondaryTwoNoPicAndTwoSlice: SecondaryTwoNoPicAndTwoSlice, // amend once TopSecondaryFourSlice slice has been developed
-  TopSecondaryFourSlice: SecondaryFourSlice, // amend once TopSecondaryFourSlice slice has been developed
+const sliceMap = (isInSupplement) => {
+  const isInTabletSupplement = isInSupplement && isTablet;
+  return {
+    CommentLeadAndCartoonSlice,
+    DailyUniversalRegister: DailyRegisterLeadFourSlice,
+    LeadersSlice,
+    LeadOneAndFourSlice: isInTabletSupplement
+      ? SupplementLeadOneAndFourSlice
+      : LeadOneAndFourSlice,
+    LeadOneAndOneSlice: isInTabletSupplement
+      ? SupplementLeadOneAndOneSlice
+      : LeadOneAndOneSlice,
+    LeadOneFullWidthSlice,
+    LeadTwoNoPicAndTwoSlice,
+    Puzzle: PuzzleSlice,
+    SecondaryFourSlice: isInTabletSupplement
+      ? SupplementSecondaryFourSlice
+      : SecondaryFourSlice,
+    SecondaryOneAndColumnistSlice,
+    SecondaryOneAndFourSlice,
+    SecondaryOneSlice: isInTabletSupplement
+      ? SupplementSecondaryOneSlice
+      : SecondaryOneSlice,
+    SecondaryTwoAndTwoSlice: isTablet
+      ? isInSupplement
+        ? SupplementSecondaryTwoAndTwoSlice
+        : SecondaryTwoNoPicAndTwoSlice
+      : SecondaryTwoAndTwoSlice,
+    SecondaryTwoNoPicAndTwoSlice,
+    StandardSlice,
+    TwoPicAndSixNoPicSlice: ListTwoAndSixNoPicSlice,
+    LeadTwoNoPicAndTwoFrontSlice,
+    LeadOneAndOneFrontSlice,
+    LeadOneFullWidthFrontSlice,
+    TopSecondaryTwoAndTwoSlice: TopSecondarySlice,
+    TopSecondaryTwoNoPicAndTwoSlice: TopSecondarySlice,
+    TopSecondaryFourSlice: TopSecondarySlice,
+  };
 };
 
-export default sliceMap;
+export const getSlice = (isInSupplement, sliceName) =>
+  sliceMap(isInSupplement)[sliceName];

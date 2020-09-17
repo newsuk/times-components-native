@@ -1,5 +1,4 @@
 import stylesFactory from "./styles";
-import { indent } from "@times-components-native/front-page/indent";
 import renderTrees from "@times-components-native/markup-forest/src/markup-forest";
 import { getRenderers } from "../front-renderer";
 import React, { useContext } from "react";
@@ -7,17 +6,20 @@ import { ResponsiveContext } from "@times-components-native/responsive";
 import {
   BylineInput,
   Markup,
+  TemplateType,
 } from "@times-components-native/fixture-generator/src/types";
 import { MeasureContainer } from "@times-components-native/front-page/MeasureContainer";
 import { ArticleColumns } from "@times-components-native/article-columns/article-columns";
 import { Text, TextStyle } from "react-native";
 import styles from "@times-components-native/article-summary/src/styles";
+import { transformContentForFront } from "@times-components-native/front-page/utils/transform-content-for-front";
 
 interface Props {
   summary: Markup;
   summaryStyle?: any;
   columnCount?: number;
   bylines: BylineInput[];
+  template: TemplateType;
 }
 
 interface SummaryTextProps {
@@ -39,7 +41,7 @@ const SummaryText: React.FC<SummaryTextProps> = ({
 };
 
 const FrontArticleSummaryContent: React.FC<Props> = (props) => {
-  const { summary, summaryStyle, columnCount = 1 } = props;
+  const { summary, summaryStyle, template, columnCount = 1 } = props;
 
   // @ts-ignore
   const { editionBreakpoint: breakpoint, orientation } = useContext(
@@ -50,7 +52,7 @@ const FrontArticleSummaryContent: React.FC<Props> = (props) => {
 
   const styles = stylesFactory(breakpoint);
 
-  const indentedAst = indent(summary);
+  const transformedAst = transformContentForFront(summary, template);
 
   const textStyle =
     orientation === "landscape" ? styles.textLandscape : styles.textPortrait;
@@ -65,7 +67,7 @@ const FrontArticleSummaryContent: React.FC<Props> = (props) => {
           <ArticleColumns
             bylines={props.bylines}
             style={style}
-            articleContents={indentedAst}
+            articleContents={transformedAst}
             columnCount={columnCount}
             containerHeight={height}
             containerWidth={width}
@@ -80,7 +82,7 @@ const FrontArticleSummaryContent: React.FC<Props> = (props) => {
     <MeasureContainer
       render={({ height }) => (
         <SummaryText
-          ast={indentedAst}
+          ast={transformedAst}
           style={style}
           numberOfLines={numberOfLinesToRender(height)}
         />

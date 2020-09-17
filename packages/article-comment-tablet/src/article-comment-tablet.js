@@ -4,8 +4,14 @@ import React, { Component } from "react";
 import { View } from "react-native";
 import ArticleError from "@times-components-native/article-error";
 import ArticleSkeleton from "@times-components-native/article-skeleton";
-import { getHeadline } from "@times-components-native/utils";
+import {
+  getHeadline,
+  getLeadAsset,
+  getStandardTemplateCrop,
+} from "@times-components-native/utils";
+import ArticleLeadAsset from "@times-components-native/article-lead-asset";
 import { ResponsiveContext } from "@times-components-native/responsive";
+import Caption from "@times-components-native/caption";
 import Context from "@times-components-native/context";
 import ArticleHeader from "./article-header/article-header";
 import ArticleLeftColumn from "./article-left-column/article-left-column";
@@ -22,7 +28,7 @@ class ArticlePage extends Component {
   }
 
   renderHeader() {
-    const { article, onAuthorPress, onImagePress } = this.props;
+    const { article, onAuthorPress, onImagePress, onVideoPress } = this.props;
     const {
       expirableFlags,
       hasVideo,
@@ -33,21 +39,37 @@ class ArticlePage extends Component {
       publishedTime,
       shortHeadline,
       standfirst,
+      template,
     } = article;
+    const showLeadAsset = template === "magazinecomment";
 
     return (
-      <ArticleHeader
-        flags={expirableFlags}
-        hasVideo={hasVideo}
-        headline={getHeadline(headline, shortHeadline)}
-        label={label}
-        longRead={longRead}
-        onAuthorPress={onAuthorPress}
-        onImagePress={onImagePress}
-        publicationName={publicationName}
-        publishedTime={publishedTime}
-        standfirst={standfirst}
-      />
+      <>
+        <ArticleHeader
+          flags={expirableFlags}
+          hasVideo={hasVideo}
+          headline={getHeadline(headline, shortHeadline)}
+          label={label}
+          longRead={longRead}
+          onAuthorPress={onAuthorPress}
+          onImagePress={onImagePress}
+          publicationName={publicationName}
+          publishedTime={publishedTime}
+          standfirst={standfirst}
+        />
+        {showLeadAsset && (
+          <ArticleLeadAsset
+            {...getLeadAsset(article)}
+            getImageCrop={getStandardTemplateCrop}
+            onImagePress={onImagePress}
+            onVideoPress={onVideoPress}
+            renderCaption={({ caption }) => (
+              <Caption {...caption} style={styles.captionContainer} />
+            )}
+            style={styles.leadAssetContainer}
+          />
+        )}
+      </>
     );
   }
 

@@ -7,7 +7,10 @@ import {
 import { View } from "react-native";
 import styleFactory from "@times-components-native/front-page/styles";
 import FrontArticleSummaryContent from "./front-article-summary-content";
-import { Markup } from "@times-components-native/fixture-generator/src/types";
+import {
+  Markup,
+  TemplateType,
+} from "@times-components-native/fixture-generator/src/types";
 import { FrontPageByline } from "@times-components-native/front-page/front-page-byline";
 
 interface Props {
@@ -18,19 +21,22 @@ interface Props {
   containerStyle?: any;
   summary: Markup;
   summaryStyle?: any;
+  template: TemplateType;
   tile: any;
   bylines?: Markup;
   showKeyline?: boolean;
+  bylineContainerStyle?: any;
 }
 
 const renderContent = (props: Props) => {
-  const { summary, summaryStyle } = props;
+  const { summary, summaryStyle, template } = props;
 
   return (
     <FrontArticleSummaryContent
       summary={summary}
       summaryStyle={summaryStyle}
       columnCount={props.columnCount}
+      template={template}
       bylines={props.bylines}
     />
   );
@@ -67,7 +73,13 @@ const renderByline = (props: Props) => {
   if (!ast || ast.length === 0) return null;
   if (columnCount && columnCount > 1) return null;
 
-  return <FrontPageByline showKeyline={props.showKeyline} byline={ast} />;
+  return (
+    <FrontPageByline
+      showKeyline={props.showKeyline}
+      containerStyle={props.bylineContainerStyle}
+      byline={ast}
+    />
+  );
 };
 
 const FrontTileSummary: React.FC<Props> = (props) => {

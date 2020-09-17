@@ -8,22 +8,24 @@ import {
   withTrackEvents,
 } from "@times-components-native/tracking";
 import { colours } from "@times-components-native/styleguide";
-import {
-  InpPreferencesView,
-  InpPreferencesText,
-  InpIconContainer,
-} from "../styles/inline-newsletter-puff";
+import { styleFactory } from "../styles/inline-newsletter-puff";
+import { useResponsiveContext } from "@times-components-native/responsive";
+import { Text, View } from "react-native";
 
-const NewsletterPuffLink = ({ onPress }) => (
-  <Link url="https://home.thetimes.co.uk/myNews" onPress={onPress}>
-    <InpPreferencesView>
-      <InpPreferencesText>Manage preferences here</InpPreferencesText>
-      <InpIconContainer>
-        <IconForwardArrow fillColour={colours.functional.action} />
-      </InpIconContainer>
-    </InpPreferencesView>
-  </Link>
-);
+const NewsletterPuffLink = ({ onPress }) => {
+  const { editionBreakpoint: breakpoint } = useResponsiveContext();
+  const styles = styleFactory(breakpoint);
+  return (
+    <Link url="https://home.thetimes.co.uk/myNews" onPress={onPress}>
+      <View style={styles.preferencesView}>
+        <Text style={styles.preferencesText}>Manage preferences here</Text>
+        <View style={styles.iconContainer}>
+          <IconForwardArrow fillColour={colours.functional.action} />
+        </View>
+      </View>
+    </Link>
+  );
+};
 
 NewsletterPuffLink.propTypes = {
   onPress: PropTypes.func.isRequired,

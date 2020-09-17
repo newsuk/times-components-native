@@ -1,27 +1,15 @@
 import React, { useState } from "react";
-import { Linking, Platform } from "react-native";
+import { Linking, Platform, Text, View } from "react-native";
 import { Mutation } from "react-apollo";
 import PropTypes from "prop-types";
 
 import { GetNewsletter } from "@times-components-native/provider";
 import { subscribeNewsletter as subscribeNewsletterMutation } from "@times-components-native/provider-queries";
 import Image, { Placeholder } from "@times-components-native/image";
-
-import {
-  InpContainer,
-  InpCopy,
-  InpImageContainer,
-  InpPreferencesContainer,
-  InpSignupContainer,
-  InpSignupCTAContainer,
-  InpSignupHeadline,
-  InpSignupLabel,
-  InpSubscribedContainer,
-  InpSubscribedCopy,
-  InpSubscribedHeadline,
-} from "../styles/inline-newsletter-puff";
+import { styleFactory } from "../styles/inline-newsletter-puff";
 import NewsletterPuffButton from "./newsletter-puff-button";
 import NewsletterPuffLink from "./newsletter-puff-link";
+import { useResponsiveContext } from "@times-components-native/responsive";
 
 function onManagePreferencesPress() {
   if (Platform.OS !== "web") {
@@ -45,7 +33,9 @@ const InlineNewsletterPuff = ({
   imageUri,
   label,
 }) => {
+  const { editionBreakpoint: breakpoint } = useResponsiveContext();
   const [justSubscribed, setJustSubscribed] = useState(false);
+  const styles = styleFactory(breakpoint);
 
   return (
     <GetNewsletter code={code} ssr={false} debounceTimeMs={0}>
@@ -56,9 +46,9 @@ const InlineNewsletterPuff = ({
 
         if (isLoading || !newsletter) {
           return (
-            <InpContainer style={{ height: 257 }}>
+            <View style={[styles.container, { height: 257 }]}>
               <Placeholder />
-            </InpContainer>
+            </View>
           );
         }
 
@@ -74,32 +64,32 @@ const InlineNewsletterPuff = ({
             }}
           >
             {(subscribeNewsletter, { loading: updatingSubscription }) => (
-              <InpContainer>
-                <InpImageContainer>
+              <View style={styles.container}>
+                <View style={styles.imageContainer}>
                   <Image aspectRatio={1.42} uri={imageUri} />
-                </InpImageContainer>
+                </View>
                 {justSubscribed ? (
-                  <InpSubscribedContainer>
-                    <InpSubscribedHeadline>
+                  <View style={styles.subscribedContainer}>
+                    <Text style={styles.subscribedHeadline}>
                       You’ve successfully signed up
-                    </InpSubscribedHeadline>
-                    <InpSubscribedCopy>
+                    </Text>
+                    <Text style={styles.subscribedCopy}>
                       Congratulations you can now enjoy daily updates from Red
                       Box.
-                    </InpSubscribedCopy>
-                    <InpPreferencesContainer>
+                    </Text>
+                    <View style={styles.preferencesContainer}>
                       <NewsletterPuffLink
                         analyticsStream={analyticsStream}
                         onPress={() => onManagePreferencesPress()}
                       />
-                    </InpPreferencesContainer>
-                  </InpSubscribedContainer>
+                    </View>
+                  </View>
                 ) : (
-                  <InpSignupContainer>
-                    <InpSignupLabel>{label}</InpSignupLabel>
-                    <InpSignupHeadline>{headline}</InpSignupHeadline>
-                    <InpCopy>{copy}</InpCopy>
-                    <InpSignupCTAContainer>
+                  <View style={styles.signUpContainer}>
+                    <Text style={styles.signUpLabel}>{label}</Text>
+                    <Text style={styles.signUpHeadline}>{headline}</Text>
+                    <Text style={styles.copy}>{copy}</Text>
+                    <View style={styles.signUpCTAContainer}>
                       <NewsletterPuffButton
                         analyticsStream={analyticsStream}
                         updatingSubscription={updatingSubscription}
@@ -109,10 +99,10 @@ const InlineNewsletterPuff = ({
                           }
                         }}
                       />
-                    </InpSignupCTAContainer>
-                  </InpSignupContainer>
+                    </View>
+                  </View>
                 )}
-              </InpContainer>
+              </View>
             )}
           </Mutation>
         );

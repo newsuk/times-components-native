@@ -1,1 +1,1 @@
-export { default } from "./src/edition-slices";
+export { getSlice } from "./src/edition-slices";

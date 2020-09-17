@@ -15,8 +15,6 @@ const {
 
 const showcaseConverter = showcaseToStoryBook(storiesOf, builtInKnobs, actions);
 
-export * from "./styles";
-
 export {
   BarSpacingDecorator,
   CenteredDecorator,

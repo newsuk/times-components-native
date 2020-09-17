@@ -19,6 +19,8 @@ import {
   SecondaryTwoNoPicAndTwoSlice,
   Leaders,
   ListTwoAndSixNoPic,
+  TopSecondarySlice,
+  SupplementLeadOneAndFourSlice,
 } from "./src/slice-layout";
 
 const colours = [
@@ -42,6 +44,10 @@ const createItems = (noOfItems) =>
       );
     })
     .filter((item) => item !== false);
+
+const Lead = () => (
+  <View style={[{ height: "100%" }, { backgroundColor: "orange" }]} />
+);
 
 const Support1 = () => (
   <View style={[{ minHeight: 150 }, { backgroundColor: "green" }]} />
@@ -93,6 +99,23 @@ export default {
         </ScrollView>
       ),
       name: "LeadOneAndFour",
+      type: "story",
+      platform: "native",
+    },
+    {
+      component: ({ select }) => (
+        <ScrollView>
+          <SupplementLeadOneAndFourSlice
+            breakpoint={breakpointSelect(select)}
+            lead={<Support3 tileName="lead1" />}
+            support1={<Support1 tileName="support2" />}
+            support2={<Support2 tileName="support3" />}
+            support3={<Support3 tileName="support4" />}
+            support4={<Support4 tileName="support5" />}
+          />
+        </ScrollView>
+      ),
+      name: "SupplementLeadOneAndFour",
       type: "story",
       platform: "native",
     },
@@ -419,6 +442,21 @@ export default {
       },
       name: "Standard",
       type: "story",
+    },
+    {
+      component: () => (
+        <ScrollView>
+          <TopSecondarySlice
+            lead={<Lead tileName="lead" />}
+            support1={<Support1 tileName="support1" />}
+            support2={<Support2 tileName="support2" />}
+            support3={<Support3 tileName="support3" />}
+          />
+        </ScrollView>
+      ),
+      name: "TopSecondarySlice",
+      type: "story",
+      platform: "native",
     },
   ],
   name: "Primitives/Slice Layout",

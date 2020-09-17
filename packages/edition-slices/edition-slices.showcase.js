@@ -35,6 +35,12 @@ import {
   SecondaryTwoAndTwoSlice,
   SecondaryTwoNoPicAndTwoSlice,
   StandardSlice,
+  TopSecondarySlice,
+  SupplementSecondaryFourSlice,
+  SupplementLeadOneAndOneSlice,
+  SupplementLeadOneAndFourSlice,
+  SupplementSecondaryOneSlice,
+  SupplementSecondaryTwoAndTwoSlice,
 } from "./src/slices";
 
 const preventDefaultedAction = (decorateAction) =>
@@ -92,6 +98,12 @@ const sliceStories = [
     Slice: LeadOneAndFourSlice,
   },
   {
+    mock: mockLeadOneAndFourSlice(),
+    name:
+      "Supplement Lead One And Four (Mobile: None, Tablet Portrat: AZ,BA,BA,BA,BA, Tablet Landscape: AW,BB,BB,BB,BB)",
+    Slice: SupplementLeadOneAndFourSlice,
+  },
+  {
     mock: mockStandardSlice(),
     name: "Standard Slice (K*)",
     Slice: StandardSlice,
@@ -100,6 +112,11 @@ const sliceStories = [
     mock: mockLeadOneAndOneSlice(),
     name: "Lead One And One (Mobile: A,B, Tablet: U,C, Wide: U,C, Huge:U,AQ)",
     Slice: LeadOneAndOneSlice,
+  },
+  {
+    mock: mockLeadOneAndOneSlice(),
+    name: "Supplement Lead One And One (Mobile: None, Tablet: U,AX)",
+    Slice: SupplementLeadOneAndOneSlice,
   },
   {
     mock: mockLeadOneFullWidthSlice(),
@@ -118,6 +135,11 @@ const sliceStories = [
     Slice: SecondaryOneSlice,
   },
   {
+    mock: mockSecondaryOneSlice(),
+    name: "Supplement Secondary One (Mobile: None, Tablet: BF)",
+    Slice: SupplementSecondaryOneSlice,
+  },
+  {
     mock: mockSecondaryOneAndColumnistSlice(),
     name: "Secondary One and Columnist (Mobile: T,H, Tablet: AA,AB)",
     Slice: SecondaryOneAndColumnistSlice,
@@ -133,10 +155,21 @@ const sliceStories = [
     Slice: SecondaryFourSlice,
   },
   {
+    mock: mockSecondaryFourSlice(),
+    name: "Supplement Secondary Four (Mobile: None, Tablet: AY,AY,AY,AY)",
+    Slice: SupplementSecondaryFourSlice,
+  },
+  {
     mock: mockSecondaryTwoAndTwoSlice(),
     name:
       "Secondary Two And Two (Mobile: C,C,G,G, Tablet: V,V,G,G, Wide Tablet/Desktop: AM,AM,AN,AN)",
     Slice: SecondaryTwoAndTwoSlice,
+  },
+  {
+    mock: mockSecondaryTwoAndTwoSlice(),
+    name:
+      "Supplement Secondary Two And Two (Mobile: None, Tablet: BC,BC,BD,BD, Huge: BC,BC,BE,BE)",
+    Slice: SupplementSecondaryTwoAndTwoSlice,
   },
   {
     mock: mockSecondaryTwoNoPicAndTwoSlice(),
@@ -158,6 +191,11 @@ const sliceStories = [
     mock: mockCommentLeadAndCartoonSlice(),
     name: "Comment Lead And Cartoon (Mobile: P,Q, Tablet: AH, AI)",
     Slice: CommentLeadAndCartoonSlice,
+  },
+  {
+    mock: mockSecondaryFourSlice(),
+    name: "Top Secondary (Medium: AS,AV,AV,AV, Wide: AT,AV,AV,AV)",
+    Slice: TopSecondarySlice,
   },
 ];
 

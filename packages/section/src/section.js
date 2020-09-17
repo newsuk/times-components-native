@@ -11,7 +11,11 @@ import PuzzleBar from "./puzzle-bar";
 import MagazineCover from "./magazine-cover";
 import Slice from "./slice";
 import styleFactory from "./styles";
-import { prepareSlicesForRender, createPuzzleData } from "./utils";
+import {
+  prepareSlicesForRender,
+  createPuzzleData,
+  isSupplementSection,
+} from "./utils";
 
 const styles = styleFactory();
 
@@ -56,7 +60,7 @@ class Section extends Component {
     const {
       onArticlePress,
       onPuzzlePress,
-      section: { name, slices },
+      section: { name, slices, title },
     } = this.props;
     const isPuzzle = name === "PuzzleSection";
 
@@ -66,6 +70,7 @@ class Section extends Component {
         length={slices.length}
         onPress={isPuzzle ? onPuzzlePress : onArticlePress}
         slice={slice}
+        isInSupplement={isSupplementSection(title)}
       />
     );
   }

@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`1. article comment tablet 1`] = `
+exports[`1. article comment tablet - magazinecomment template 1`] = `
 <View
   style={
     Object {
@@ -105,8 +105,183 @@ exports[`1. article comment tablet 1`] = `
               Object {
                 "color": "#1D1D1B",
                 "fontFamily": "TimesModern-Bold",
-                "fontSize": 30,
-                "lineHeight": 36,
+                "fontSize": 44,
+                "lineHeight": 44,
+                "marginBottom": 13.75,
+              }
+            }
+          >
+            Caribbean islands devastated by Hurricane Irma, the worst Atlantic storm on record
+          </Text>
+          <ArticleFlags />
+          <Text
+            style={
+              Object {
+                "color": "#333333",
+                "fontFamily": "TimesModern-Regular",
+                "fontSize": 20,
+                "lineHeight": 25,
+                "marginBottom": 15,
+              }
+            }
+          >
+            How did one of Britain’s top young athletes end up running elite parties for swingers? Chris Reynolds Gordon tells Rick Broadbent about his extraordinary life
+          </Text>
+          <View
+            style={
+              Object {
+                "borderBottomColor": "#DBDBDB",
+                "borderBottomWidth": 1,
+                "borderTopColor": "#DBDBDB",
+                "borderTopWidth": 1,
+                "flexDirection": "row",
+                "marginTop": 5,
+                "paddingVertical": 10,
+                "width": "100%",
+              }
+            }
+          >
+            <View>
+              <Text
+                style={
+                  Object {
+                    "color": "#696969",
+                    "fontFamily": "GillSansMTStd-Medium",
+                    "fontSize": 13,
+                    "lineHeight": 15,
+                    "marginTop": "auto",
+                  }
+                }
+              >
+                Friday March 13 2015, 6.54pm, The Times
+              </Text>
+            </View>
+          </View>
+        </View>
+      </View>
+      <ArticleLeadAsset
+        style={
+          Object {
+            "borderColor": "#DBDBDB",
+            "borderLeftWidth": 1,
+            "paddingBottom": 20,
+            "paddingLeft": 10,
+            "paddingRight": 35,
+          }
+        }
+      />
+    </ArticleSkeleton>
+  </View>
+</View>
+`;
+
+exports[`2. article comment tablet - maincomment template 1`] = `
+<View
+  style={
+    Object {
+      "marginLeft": "auto",
+      "marginRight": "auto",
+      "maxWidth": 800,
+      "width": "100%",
+    }
+  }
+>
+  <View
+    style={
+      Object {
+        "height": "100%",
+        "paddingTop": 40,
+        "position": "absolute",
+        "width": "25%",
+        "zIndex": 1,
+      }
+    }
+  >
+    <View
+      style={
+        Object {
+          "maxWidth": 200,
+          "paddingLeft": 35,
+          "paddingRight": 15,
+          "width": "100%",
+        }
+      }
+    >
+      <Image />
+      <View
+        style={
+          Object {
+            "paddingTop": 10,
+            "width": "100%",
+          }
+        }
+      >
+        <ArticleBylineWithLinks />
+      </View>
+    </View>
+    <View
+      style={
+        Object {
+          "bottom": 60,
+          "paddingLeft": 25,
+          "position": "absolute",
+          "width": "100%",
+        }
+      }
+    >
+      <ArticleTopics
+        style={
+          Object {
+            "justifyContent": "flex-start",
+          }
+        }
+      />
+    </View>
+  </View>
+  <View
+    style={
+      Object {
+        "marginLeft": "25%",
+        "position": "relative",
+      }
+    }
+  >
+    <ArticleSkeleton>
+      <View
+        style={
+          Object {
+            "borderColor": "#DBDBDB",
+            "borderLeftWidth": 1,
+            "marginTop": 40,
+            "paddingBottom": 20,
+            "paddingRight": 25,
+          }
+        }
+      >
+        <View
+          style={
+            Object {
+              "paddingLeft": 10,
+              "paddingRight": 10,
+            }
+          }
+        >
+          <View
+            style={
+              Object {
+                "marginBottom": 10,
+              }
+            }
+          >
+            <ArticleLabel />
+          </View>
+          <Text
+            style={
+              Object {
+                "color": "#1D1D1B",
+                "fontFamily": "TimesModern-Bold",
+                "fontSize": 44,
+                "lineHeight": 44,
                 "marginBottom": 13.75,
               }
             }

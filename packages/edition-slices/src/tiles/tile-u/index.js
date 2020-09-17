@@ -10,7 +10,7 @@ import {
 } from "../shared";
 import styles from "./styles";
 
-const TileU = ({ onPress, tile }) => {
+const TileU = ({ onPress, tile, headlineStyle }) => {
   const crop = getTileImage(tile, "crop169");
 
   if (!crop) {
@@ -34,7 +34,10 @@ const TileU = ({ onPress, tile }) => {
         fill
         hasVideo={hasVideo}
       />
-      <TileSummary headlineStyle={styles.headline} tile={tile} />
+      <TileSummary
+        headlineStyle={[styles.headline, headlineStyle]}
+        tile={tile}
+      />
     </TileLink>
   );
 };
@@ -42,6 +45,7 @@ const TileU = ({ onPress, tile }) => {
 TileU.propTypes = {
   onPress: PropTypes.func.isRequired,
   tile: PropTypes.shape({}).isRequired,
+  headlineStyle: PropTypes.shape({}),
 };
 
 export default withTileTracking(TileU);

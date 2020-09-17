@@ -1,34 +1,12 @@
-import { spacing, fontFactory } from "@times-components-native/styleguide";
+import { StyleSheet } from "react-native";
 import sharedStyles from "./shared";
 
-const styles = {
+const styles = StyleSheet.create({
   ...sharedStyles,
-  bullet: {
-    ...sharedStyles.bullet,
-    marginBottom: 3,
-  },
-  flags: {
-    ...sharedStyles.flags,
-  },
   title: {
     ...sharedStyles.title,
-    ...fontFactory({
-      font: "body",
-      fontSize: "cardMetaMobile",
-    }),
-    fontWeight: "bold",
-    lineHeight: 10,
-    textTransform: "uppercase",
-    fontSize: 10,
-    letterSpacing: 0,
-    includeFontPadding: false,
-    paddingBottom: spacing(0),
-    marginBottom: spacing(0),
+    lineHeight: 11,
   },
-  view: {
-    ...sharedStyles.view,
-    marginTop: 0,
-  },
-};
+});
 
 export default styles;
