@@ -13,11 +13,18 @@ const handleRequest = (e: WebViewNavigation) => {
 };
 
 interface Props {
-  narrowContent?: boolean;
+  numberOfAds?: number;
 }
 
-export const SponsoredAd: React.FC<Props> = ({ narrowContent = false }) => {
-  const contextId = narrowContent ? "244" : "243";
+export const SponsoredAd: React.FC<Props> = ({ numberOfAds = 4 }) => {
+  const numberToContextID: Record<number, string> = {
+    1: "251",
+    2: "250",
+    3: "244",
+    4: "243",
+  };
+
+  const contextId = numberToContextID[numberOfAds] || numberToContextID[4];
   return (
     <View style={styles.sponsoredAdWrapper}>
       <WebView

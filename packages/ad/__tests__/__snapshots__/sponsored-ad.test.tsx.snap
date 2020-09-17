@@ -1,9 +1,9 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`SponsoredAd renders 3 ad items when narrowContent 1`] = `
+exports[`SponsoredAd renders 4 ad items if number not found in mapping 1`] = `
 "
 <script type=\\"text/javascript\\" id=\\"dianomi_context_script\\" src=\\"https://www.dianomi.com/js/contextfeed.js\\"></script>
-<div class=\\"dianomi_context\\" data-dianomi-context-id=\\"244\\"></div>
+<div class=\\"dianomi_context\\" data-dianomi-context-id=\\"243\\"></div>
 "
 `;
 
@@ -11,5 +11,12 @@ exports[`SponsoredAd renders Dianomi script tag 1`] = `
 "
 <script type=\\"text/javascript\\" id=\\"dianomi_context_script\\" src=\\"https://www.dianomi.com/js/contextfeed.js\\"></script>
 <div class=\\"dianomi_context\\" data-dianomi-context-id=\\"243\\"></div>
+"
+`;
+
+exports[`SponsoredAd renders the require number of ad items 1`] = `
+"
+<script type=\\"text/javascript\\" id=\\"dianomi_context_script\\" src=\\"https://www.dianomi.com/js/contextfeed.js\\"></script>
+<div class=\\"dianomi_context\\" data-dianomi-context-id=\\"250\\"></div>
 "
 `;

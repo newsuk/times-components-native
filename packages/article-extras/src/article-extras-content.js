@@ -18,6 +18,7 @@ const ArticleExtrasContent = ({
   onRelatedArticlePress,
   onTopicPress,
   narrowContent,
+  template,
 }) => {
   const {
     commentCount,
@@ -30,39 +31,47 @@ const ArticleExtrasContent = ({
 
   return (
     <ResponsiveContext.Consumer>
-      {({ isTablet, narrowArticleBreakpoint }) => (
-        <View
-          style={[
-            isTablet && styles.extrasTablet,
-            narrowContent &&
-              getNarrowContentStyle(narrowArticleBreakpoint.content),
-          ]}
-        >
-          {relatedArticleSlice ? (
-            <RelatedArticles
-              analyticsStream={analyticsStream}
-              onPress={onRelatedArticlePress}
-              slice={relatedArticleSlice}
+      {({ isTablet, narrowArticleBreakpoint }) => {
+        const isMobileMainStandard = !isTablet && template === "mainstandard";
+
+        return (
+          <View
+            style={[
+              isTablet && styles.extrasTablet,
+              narrowContent &&
+                getNarrowContentStyle(narrowArticleBreakpoint.content),
+            ]}
+          >
+            {relatedArticleSlice ? (
+              <RelatedArticles
+                analyticsStream={analyticsStream}
+                onPress={onRelatedArticlePress}
+                slice={relatedArticleSlice}
+              />
+            ) : null}
+            {topics && !narrowContent ? (
+              <ArticleTopics
+                onPress={onTopicPress}
+                topics={topics}
+                narrowContent={narrowContent}
+              />
+            ) : null}
+            <ArticleComments
+              articleId={articleId}
+              commentCount={commentCount}
+              commentsEnabled={commentsEnabled}
+              onCommentGuidelinesPress={onCommentGuidelinesPress}
+              onCommentsPress={onCommentsPress}
+              url={articleUrl}
             />
-          ) : null}
-          {topics && !narrowContent ? (
-            <ArticleTopics
-              onPress={onTopicPress}
-              topics={topics}
-              narrowContent={narrowContent}
-            />
-          ) : null}
-          <ArticleComments
-            articleId={articleId}
-            commentCount={commentCount}
-            commentsEnabled={commentsEnabled}
-            onCommentGuidelinesPress={onCommentGuidelinesPress}
-            onCommentsPress={onCommentsPress}
-            url={articleUrl}
-          />
-          {isTablet && <SponsoredAd narrowContent={narrowContent} />}
-        </View>
-      )}
+            {(isTablet || isMobileMainStandard) && (
+              <SponsoredAd
+                numberOfAds={isMobileMainStandard ? 2 : narrowContent ? 3 : 4}
+              />
+            )}
+          </View>
+        );
+      }}
     </ResponsiveContext.Consumer>
   );
 };
@@ -76,6 +85,7 @@ ArticleExtrasContent.propTypes = {
   onCommentsPress: PropTypes.func.isRequired,
   onRelatedArticlePress: PropTypes.func.isRequired,
   onTopicPress: PropTypes.func.isRequired,
+  template: PropTypes.string.isRequired,
   narrowContent: PropTypes.bool,
 };
 
