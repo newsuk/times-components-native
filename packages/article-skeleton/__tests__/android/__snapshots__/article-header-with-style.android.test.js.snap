@@ -28,6 +28,15 @@ exports[`1. article with header 1`] = `
       <View>
         <View>
           <View>
+            <InteractiveWrapper
+              id="d883baab-bac6-4572-b54f-2c136d62c34b"
+            />
+          </View>
+        </View>
+      </View>
+      <View>
+        <View>
+          <View>
             <View>
               <Text>
                 NEW BREXIT REFERENDUM
@@ -72,43 +81,6 @@ exports[`1. article with header 1`] = `
                   </Text>
                 </View>
               </View>
-            </View>
-          </View>
-        </View>
-      </View>
-      <View>
-        <View>
-          <View>
-            <View>
-              <Text
-                selectable={true}
-              >
-                <Text
-                  selectable={true}
-                >
-                  Mr Gove has previously said that memorising a poem is to “own a great work of art forever”. Andrew Motion, the former Poet Laureate, wrote in the 
-                </Text>
-                <Text
-                  accessibilityRole="link"
-                >
-                  police disclosure of evidence
-                </Text>
-                <Text
-                  selectable={true}
-                >
-                   Telegraph 
-                </Text>
-                <Text
-                  selectable={true}
-                >
-                  last year that rote learning has “a lot to be said against it”, but added: “As the phrase ‘learning by heart’ implies, this sort of remembering places the poem at a central place in ourselves and makes it precious.”
-                </Text>
-                <Text
-                  selectable={true}
-                >
-                  When Thatcher joined the campaign trail for the 2001 general election...
-                </Text>
-              </Text>
             </View>
           </View>
         </View>
