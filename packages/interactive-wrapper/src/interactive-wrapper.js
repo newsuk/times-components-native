@@ -60,9 +60,7 @@ class InteractiveWrapper extends Component {
 
   onLoadEnd() {
     if (this.webview) {
-      this.webview.injectJavaScript(
-        "window.ReactNativeWebView.postMessage(`${document.body.scrollHeight}`); true;",
-      );
+      this.webview.postMessage("thetimes.co.uk", "*");
     }
   }
 
@@ -89,7 +87,7 @@ class InteractiveWrapper extends Component {
 
     return (
       <WebView
-        injectedJavaScript={scriptToInject}
+        injectedJavaScriptBeforeContentLoaded={scriptToInject}
         onLoadEnd={this.onLoadEnd}
         onMessage={this.onMessage}
         onNavigationStateChange={this.handleNavigationStateChange}
