@@ -14,6 +14,7 @@ const ArticleExtras = ({
   onCommentGuidelinesPress,
   onCommentsPress,
   narrowContent,
+  template,
 }) => (
   <ArticleExtrasProvider debounceTimeMs={0} id={articleId}>
     {({ article, error, isLoading, refetch }) => {
@@ -35,6 +36,7 @@ const ArticleExtras = ({
           onRelatedArticlePress={onRelatedArticlePress}
           onTopicPress={onTopicPress}
           narrowContent={narrowContent}
+          template={template}
         />
       );
     }}
@@ -49,6 +51,7 @@ ArticleExtras.propTypes = {
   onCommentsPress: PropTypes.func.isRequired,
   onRelatedArticlePress: PropTypes.func.isRequired,
   onTopicPress: PropTypes.func.isRequired,
+  template: PropTypes.string.isRequired,
   narrowContent: PropTypes.bool,
 };
 

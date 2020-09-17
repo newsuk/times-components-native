@@ -92,6 +92,7 @@ const ArticleWithContent = (props) => {
           onRelatedArticlePress={onRelatedArticlePress}
           onTopicPress={onTopicPress}
           narrowContent={narrowContent}
+          template={template}
         />
       </Gutter>
     ),

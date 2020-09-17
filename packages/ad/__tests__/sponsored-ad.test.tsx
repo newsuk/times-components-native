@@ -29,8 +29,15 @@ describe("SponsoredAd", () => {
     expect(webView.props.style.height).toEqual(350);
   });
 
-  it("renders 3 ad items when narrowContent", () => {
-    const ad = TestRenderer.create(<SponsoredAd narrowContent={true} />);
+  it("renders the require number of ad items", () => {
+    const ad = TestRenderer.create(<SponsoredAd numberOfAds={2} />);
+    const webView = ad.root.findByType(WebView);
+
+    expect(webView.props.source.html).toMatchSnapshot();
+  });
+
+  it("renders 4 ad items if number not found in mapping", () => {
+    const ad = TestRenderer.create(<SponsoredAd numberOfAds={123} />);
     const webView = ad.root.findByType(WebView);
 
     expect(webView.props.source.html).toMatchSnapshot();
