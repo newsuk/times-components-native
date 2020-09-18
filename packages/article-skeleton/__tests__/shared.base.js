@@ -36,7 +36,7 @@ export const renderArticle = (
       user: { isLoggedIn: true },
     }}
   >
-    <VariantTestingProvider variants={variants}>
+    <VariantTestingProvider variants={variants} isTablet={true}>
       <ArticleSkeleton
         adConfig={adConfig}
         analyticsStream={() => null}
