@@ -1,5 +1,11 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
+exports[`articleMpuTestVariant should default to A if not recognised 1`] = `"{\\"articleMpu\\":{\\"group\\":\\"A\\",\\"slotName\\":\\"native-inline-ad-a\\"}}"`;
+
+exports[`articleMpuTestVariant should default to A if not set 1`] = `"{\\"articleMpu\\":{\\"group\\":\\"A\\",\\"slotName\\":\\"native-inline-ad-a\\"}}"`;
+
 exports[`should create context based on variant prop 1`] = `"{\\"articleMpu\\":{\\"group\\":\\"B\\",\\"slotName\\":\\"native-inline-ad-b\\",\\"adPosition\\":5,\\"width\\":300,\\"height\\":250}}"`;
+
+exports[`should create empty context if not tablet 1`] = `"{}"`;
 
 exports[`with default values 1`] = `"{}"`;

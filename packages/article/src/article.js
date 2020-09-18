@@ -5,6 +5,7 @@ import ArticleMagazineStandard from "@times-components-native/article-magazine-s
 import ArticleMainStandard from "@times-components-native/article-main-standard";
 import ArticleMainComment from "@times-components-native/article-main-comment";
 import ArticleCommentTablet from "@times-components-native/article-comment-tablet";
+import { useResponsiveContext } from "@times-components-native/responsive";
 import { scales } from "@times-components-native/styleguide";
 import { MessageManager } from "@times-components-native/message-bar";
 import { getMediaList, addIndexesToInlineImages } from "./utils";
@@ -29,7 +30,8 @@ export class TakeoverBailout extends Error {
 }
 
 const Article = (props) => {
-  const { article, onImagePress, isTablet } = props;
+  const { isTablet } = useResponsiveContext();
+  const { article, onImagePress } = props;
   const { leadAsset, template } = article || {};
 
   let { content } = article || {};

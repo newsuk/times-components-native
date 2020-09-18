@@ -35,6 +35,7 @@ const withTabletContext = (WrappedComponent) => (
         container: 800,
         content: 600,
       },
+      isTablet: true,
     }}
   >
     {WrappedComponent}

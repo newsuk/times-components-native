@@ -3,6 +3,7 @@ import PropTypes from "prop-types";
 import { Linking, NativeModules } from "react-native";
 
 import { ArticleProvider } from "@times-components-native/provider";
+import Responsive from "@times-components-native/responsive";
 import { propTypes, defaultProps } from "./article-prop-types";
 import { withErrorBoundaries } from "../with-error-boundaries";
 import ArticleBase from "./article-base";
@@ -26,12 +27,14 @@ const ArticlePage = (props) => {
   if (article || error) {
     const ArticlePageView = withErrorBoundaries(
       withNativeProvider(
-        <ArticleBase
-          {...props}
-          article={article ? JSON.parse(article).data.article : null}
-          error={error ? { message: error } : null}
-          refetch={() => refetchArticle(articleId)}
-        />,
+        <Responsive>
+          <ArticleBase
+            {...props}
+            article={article ? JSON.parse(article).data.article : null}
+            error={error ? { message: error } : null}
+            refetch={() => refetchArticle(articleId)}
+          />
+        </Responsive>,
       ),
       errorBoundaryOptions,
     );
@@ -43,13 +46,15 @@ const ArticlePage = (props) => {
     withNativeProvider(
       <ArticleProvider debounceTimeMs={100} id={articleId}>
         {({ article: articleData, isLoading, error: errorData, refetch }) => (
-          <ArticleBase
-            {...props}
-            article={articleData}
-            error={errorData}
-            isLoading={isLoading}
-            refetch={refetch}
-          />
+          <Responsive>
+            <ArticleBase
+              {...props}
+              article={articleData}
+              error={errorData}
+              isLoading={isLoading}
+              refetch={refetch}
+            />
+          </Responsive>
         )}
       </ArticleProvider>,
     ),
