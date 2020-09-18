@@ -2,7 +2,17 @@
 
 exports[`1. with a single author 1`] = `
 <View>
-  <Text>
+  <Text
+    style={
+      Object {
+        "color": "#333333",
+        "flexDirection": "row",
+        "fontFamily": "GillSansMTStd-Medium",
+        "fontSize": 13,
+        "lineHeight": 19,
+      }
+    }
+  >
     <Text
       style={
         Object {
@@ -22,7 +32,17 @@ exports[`1. with a single author 1`] = `
 
 exports[`2. with a very long byline 1`] = `
 <View>
-  <Text>
+  <Text
+    style={
+      Object {
+        "color": "#333333",
+        "flexDirection": "row",
+        "fontFamily": "GillSansMTStd-Medium",
+        "fontSize": 13,
+        "lineHeight": 19,
+      }
+    }
+  >
     <Text
       style={
         Object {
