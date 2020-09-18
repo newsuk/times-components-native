@@ -67,8 +67,8 @@ const setupArticleMpuTestAd = (articleMpu, contentWithoutAdSlot) => {
   ];
 };
 
-export const setupAd = (variants, template, content) => {
-  if (!variants || !Object.keys(variants).length) return content;
+export const setupAd = (isTablet, variants, template, content) => {
+  if (!isTablet || !variants || !Object.keys(variants).length) return content;
 
   let currentAdSlotIndex;
 
@@ -115,5 +115,5 @@ export const getStringBounds = (fontSettings, string) => {
 };
 
 export default memoize((isTablet, variants, template, content) =>
-  collapsed(isTablet, setupAd(variants, template, content)),
+  collapsed(isTablet, setupAd(isTablet, variants, template, content)),
 );

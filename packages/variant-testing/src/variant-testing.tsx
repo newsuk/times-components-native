@@ -6,23 +6,32 @@ export const VariantTestingContext = createContext({});
 type Props = {
   children: ReactNode;
   variants: Record<string, string>;
+  isTablet: boolean;
 };
 
-export const VariantTestingProvider = ({ variants = {}, children }: Props) => {
-  const { articleMpuTestVariant } = variants;
+export const VariantTestingProvider = ({
+  variants = {},
+  isTablet,
+  children,
+}: Props) => {
+  let { articleMpuTestVariant } = variants;
 
   let variantConfig = {};
 
-  if (articleMpuTestVariant) {
+  if (isTablet) {
+    if (
+      !articleMpuTestVariant ||
+      !["A", "B", "C"].includes(articleMpuTestVariant)
+    ) {
+      articleMpuTestVariant = "A";
+    }
+
     variantConfig = {
       ...variantConfig,
       articleMpu: {
         group: articleMpuTestVariant,
+        slotName: `native-inline-ad-${articleMpuTestVariant.toLowerCase()}`,
         ...(articleMpuTestVariant !== "A" && {
-          slotName:
-            articleMpuTestVariant === "B"
-              ? "native-inline-ad-b"
-              : "native-inline-ad-c",
           adPosition: 5,
           width: 300,
           height: articleMpuTestVariant === "B" ? 250 : 600,

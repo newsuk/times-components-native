@@ -78,7 +78,17 @@ exports[`tile h without breakpoint 1`] = `
       </Text>
     </Text>
     <Text>
-      <Text>
+      <Text
+        style={
+          Object {
+            "color": "#333333",
+            "flexDirection": "row",
+            "fontFamily": "GillSansMTStd-Medium",
+            "fontSize": 13,
+            "lineHeight": 15,
+          }
+        }
+      >
         <Text
           style={
             Object {
