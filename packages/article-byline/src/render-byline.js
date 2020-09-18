@@ -32,7 +32,7 @@ const renderByline = (Component, ast, textStyle, props = {}) => {
     bylineAst,
     bylineRenderers(Component, textStyle, props),
   );
-  return <Text>{trees}</Text>;
+  return <Text style={textStyle}>{trees}</Text>;
 };
 
 export default renderByline;
