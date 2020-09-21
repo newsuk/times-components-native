@@ -530,4 +530,40 @@ export default [
     ],
     name: "paragraph",
   },
+  {
+    name: "paragraph",
+    children: [
+      {
+        name: "italic",
+        children: [
+          {
+            name: "unknown",
+            children: [
+              {
+                name: "text",
+                children: [],
+                attributes: {
+                  value: "Photographs: Dan Martensen",
+                },
+              },
+              {
+                name: "break",
+                children: [],
+              },
+            ],
+            attributes: {
+              name: "credit",
+            },
+          },
+          {
+            name: "text",
+            children: [],
+            attributes: {
+              value: "Hair: Ryan Mitchell at Streeters",
+            },
+          },
+        ],
+      },
+    ],
+  },
 ];
