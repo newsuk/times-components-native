@@ -36,10 +36,7 @@ const getNarrowArticleBreakpoint = (width) => {
   if (width < editionBreakpointWidths.wide) {
     return narrowArticleWidths.medium;
   }
-  if (width < editionBreakpointWidths.huge) {
-    return narrowArticleWidths.wide;
-  }
-  return narrowArticleWidths.huge;
+  return narrowArticleWidths.wide;
 };
 
 export {
