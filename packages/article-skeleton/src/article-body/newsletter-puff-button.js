@@ -22,18 +22,28 @@ NewsletterPuffButton.propTypes = {
   onPress: PropTypes.func.isRequired,
   updatingSubscription: PropTypes.bool.isRequired,
 };
+
 export default withTrackingContext(
   withTrackEvents(NewsletterPuffButton, {
     analyticsEvents: [
       {
         actionName: "onPress",
         eventName: "onPress",
-        getAttrs: ({ updatingSubscription }) => ({
-          updatingSubscription,
+        getAttrs: ({ newsletterPuffName }) => ({
+          article_parent_name: `${newsletterPuffName}`,
+          event_navigation_name: "widget : puff : sign up now",
+          event_navigation_browsing_method: "click",
         }),
-        trackingName: "widget : puff : sign up to newsletter",
       },
     ],
   }),
-  { trackingObjectName: "NewsletterPuffButton" },
+  {
+    getAttrs: ({ newsletterPuffName }) => ({
+      event_navigation_action: "navigation",
+      event_navigation_name: "widget : puff : sign up now : displayed",
+      article_parent_name: `${newsletterPuffName}`,
+      event_navigation_browsing_method: "automated",
+    }),
+    trackingObjectName: "NewsletterPuffButton",
+  },
 );
