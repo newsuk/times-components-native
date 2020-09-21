@@ -227,6 +227,10 @@ export default ({ el, data, platform, eventCallback, window }) => {
             ).toString();
             slot.setTargeting("timestestgroup", randomTestingGroup);
             slot.setTargeting("pos", slotName);
+            if (/^native-inline-ad-/.test(slotName)) {
+              const testGroup = ["a", "b", "c"].indexOf(slotName.slice(-1)) + 1;
+              slot.setTargeting("testgroup", testGroup);
+            }
             googletag.display(slotName);
             eventCallback(
               "warn",
