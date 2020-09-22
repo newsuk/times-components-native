@@ -373,8 +373,8 @@ export default ({
         </View>
       );
     },
-    unknown(key, attributes, children, index, tree) {
-      return tree;
+    unknown(key, attributes, children) {
+      return AttributedString.join(children);
     },
   };
 };
