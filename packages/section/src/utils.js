@@ -112,6 +112,8 @@ const isSupplementSection = (sectionTitle) => {
     "Style",
     "The Sunday Times Magazine",
     "The Times Magazine",
+    "Magazine",
+    "Saturday Review",
     "Times2",
     "Travel",
     "Home",
