@@ -151,7 +151,7 @@ const ArticleWithContent = (props) => {
           onEndReached={onEndReached}
           renderItem={({ item, index }) => renderItem(Child({ item, index }))}
           onViewableItemsChanged={onViewableItemsChanged}
-          // removeClippedSubviews
+          removeClippedSubviews
           keyExtractor={(item, index) => index.toString()}
           initialNumToRender={isTablet ? 5 : 2}
           windowSize={3}

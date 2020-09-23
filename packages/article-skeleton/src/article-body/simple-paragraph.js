@@ -14,18 +14,18 @@ const SimpleParagraph = ({
   narrowContent,
 }) => {
   const [textItems, setTextItems] = useState([]);
-  const [settings, setSettings] = useState([]);
+  const [textItemSettings, setTextItemSettings] = useState([]);
   const { lineHeight } = defaultFont;
 
   useEffect(() => {
-    const mappedChildren = children.flatMap((child) =>
+    const newTextItems = children.flatMap((child) =>
       child.splitByDifferenceInAttributes(),
     );
-    const newAttributes = mappedChildren.map((child) =>
+    const newTextItemSettings = newTextItems.map((child) =>
       child.collapsedAttributes(0),
     );
-    setTextItems(mappedChildren);
-    setSettings(newAttributes);
+    setTextItems(newTextItems);
+    setTextItemSettings(newTextItemSettings);
   }, []);
 
   if (children.length === 0) {
@@ -36,7 +36,7 @@ const SimpleParagraph = ({
     <ArticleParagraphWrapper ast={tree} uid={uid} narrowContent={narrowContent}>
       <Text allowFontScaling={false} selectable style={{ lineHeight }}>
         {textItems.map((nestedChild, index) => {
-          const [attribute, href] = settings[index];
+          const [attribute, href] = textItemSettings[index];
           const style = attribute ? attribute.settings : defaultFont;
           const type = href ? href.type : null;
           const canonicalId = href ? href.canonicalId : null;

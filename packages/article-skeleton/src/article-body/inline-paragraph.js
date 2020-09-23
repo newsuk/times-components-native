@@ -31,8 +31,8 @@ const InlineParagraph = ({
 }) => {
   const { spacing } = styleguide({ scale });
   const [inlineExclusion, setInlineExclusion] = useState(false);
-  const [positioned, setPosition] = useState([]);
-  const [attributes, setAttributes] = useState([]);
+  const [positionedTextItems, setPositionedTextItems] = useState([]);
+  const [positionTextItemSettings, setPositionTextItemSettings] = useState([]);
   const variants = useVariantTestingContext();
   useEffect(() => {
     const manager = new LayoutManager(
@@ -41,12 +41,12 @@ const InlineParagraph = ({
       inlineExclusion ? [inlineExclusion.exclusion] : [],
     );
 
-    const newPositioned = manager.layout();
-    const newAttributres = newPositioned.map((p) =>
+    const newPositionedTextItems = manager.layout();
+    const newPositionItemSettings = newPositionedTextItems.map((p) =>
       p.text.collapsedAttributes(0),
     );
-    setPosition(newPositioned);
-    setAttributes(newAttributres);
+    setPositionedTextItems(newPositionedTextItems);
+    setPositionTextItemSettings(newPositionItemSettings);
   }, [inlineExclusion]);
 
   if (!str.length) {
@@ -130,16 +130,16 @@ const InlineParagraph = ({
       key={`${uid}:paragraph-wrapper`}
       height={Math.max(
         dropCap ? defaultFont.lineHeight * 3 : 0,
-        !positioned.length
+        !positionedTextItems.length
           ? 0
-          : positioned[positioned.length - 1].position.y +
+          : positionedTextItems[positionedTextItems.length - 1].position.y +
               defaultFont.lineHeight,
         inlineExclusion ? inlineExclusion.height : 0,
       )}
       narrowContent={narrowContent}
     >
-      {positioned.map((p, i) => {
-        const [attribute, href] = attributes[i];
+      {positionedTextItems.map((p, i) => {
+        const [attribute, href] = positionTextItemSettings[i];
         const style = attribute ? attribute.settings : defaultFont;
         const type = href ? href.type : null;
         const canonicalId = href ? href.canonicalId : null;
