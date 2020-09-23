@@ -32,6 +32,7 @@ const InlineParagraph = ({
   const { spacing } = styleguide({ scale });
   const [inlineExclusion, setInlineExclusion] = useState(false);
   const [positioned, setPosition] = useState([]);
+  const [attributes, setAttributes] = useState([]);
   const variants = useVariantTestingContext();
   useEffect(() => {
     const manager = new LayoutManager(
@@ -41,7 +42,11 @@ const InlineParagraph = ({
     );
 
     const newPositioned = manager.layout();
+    const newAttributres = newPositioned.map((p) =>
+      p.text.collapsedAttributes(0),
+    );
     setPosition(newPositioned);
+    setAttributes(newAttributres);
   }, [inlineExclusion]);
 
   if (!str.length) {
@@ -96,7 +101,6 @@ const InlineParagraph = ({
         key={`${uid}:inline-paragraph`}
         style={{
           position: "absolute",
-          backgroundColor: "green",
           ...getInlineLayout(),
         }}
         onLayout={(e) => {
@@ -135,7 +139,7 @@ const InlineParagraph = ({
       narrowContent={narrowContent}
     >
       {positioned.map((p, i) => {
-        const [attribute, href] = p.text.collapsedAttributes(0);
+        const [attribute, href] = attributes[i];
         const style = attribute ? attribute.settings : defaultFont;
         const type = href ? href.type : null;
         const canonicalId = href ? href.canonicalId : null;
@@ -167,7 +171,6 @@ const InlineParagraph = ({
             numberOfLines={1}
             style={[
               {
-                backgroundColor: "red",
                 position: "absolute",
                 left: p.position.x,
                 top: p.position.y,
