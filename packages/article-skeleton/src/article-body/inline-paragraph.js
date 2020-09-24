@@ -1,5 +1,5 @@
 /* eslint-disable react/forbid-prop-types */
-import React, { useState } from "react";
+import React, { useMemo, useState } from "react";
 import { View, Text } from "react-native";
 import PropTypes from "prop-types";
 import styleguide, {
@@ -14,6 +14,7 @@ import {
 } from "@times-components-native/typeset";
 import ArticleParagraphWrapper from "@times-components-native/article-paragraph";
 import { useVariantTestingContext } from "@times-components-native/variant-testing";
+import { useResponsiveContext } from "@times-components-native/responsive";
 
 const InlineParagraph = ({
   onLinkPress,
@@ -31,11 +32,8 @@ const InlineParagraph = ({
 }) => {
   const { spacing } = styleguide({ scale });
   const [inlineExclusion, setInlineExclusion] = useState(false);
+  const { orientation } = useResponsiveContext();
   const variants = useVariantTestingContext();
-
-  if (!str.length) {
-    return null;
-  }
 
   const contentWidth = Math.min(
     screenWidth(),
@@ -55,14 +53,23 @@ const InlineParagraph = ({
   );
 
   const slice = str.charAt(1) === " " ? 2 : dropCap.length;
+  const [positionedTextItems, positionTextItemSettings] = useMemo(() => {
+    const manager = new LayoutManager(
+      dropCap ? str.slice(slice) : str,
+      [container],
+      inlineExclusion ? [inlineExclusion.exclusion] : [],
+    );
 
-  const manager = new LayoutManager(
-    dropCap ? str.slice(slice) : str,
-    [container],
-    inlineExclusion ? [inlineExclusion.exclusion] : [],
-  );
+    const newPositionedTextItems = manager.layout();
+    const newPositionItemSettings = newPositionedTextItems.map((p) =>
+      p.text.collapsedAttributes(0),
+    );
+    return [newPositionedTextItems, newPositionItemSettings];
+  }, [inlineExclusion, orientation]);
 
-  const positioned = manager.layout();
+  if (!str.length) {
+    return null;
+  }
 
   const getInlineLayout = () => {
     const { articleMpu } = variants;
@@ -122,16 +129,16 @@ const InlineParagraph = ({
       key={`${uid}:paragraph-wrapper`}
       height={Math.max(
         dropCap ? defaultFont.lineHeight * 3 : 0,
-        !positioned.length
+        !positionedTextItems.length
           ? 0
-          : positioned[positioned.length - 1].position.y +
+          : positionedTextItems[positionedTextItems.length - 1].position.y +
               defaultFont.lineHeight,
         inlineExclusion ? inlineExclusion.height : 0,
       )}
       narrowContent={narrowContent}
     >
-      {positioned.map((p, i) => {
-        const [attribute, href] = p.text.collapsedAttributes(0);
+      {positionedTextItems.map((p, i) => {
+        const [attribute, href] = positionTextItemSettings[i];
         const style = attribute ? attribute.settings : defaultFont;
         const type = href ? href.type : null;
         const canonicalId = href ? href.canonicalId : null;
