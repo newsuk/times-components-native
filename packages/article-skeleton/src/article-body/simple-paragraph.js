@@ -1,8 +1,10 @@
 /* eslint-disable react/forbid-prop-types */
-import React, { useEffect, useState } from "react";
+import React, { useMemo } from "react";
 import { Text } from "react-native";
 import PropTypes from "prop-types";
 import ArticleParagraphWrapper from "@times-components-native/article-paragraph";
+
+const flatten = (arr) => [].concat.apply([], arr);
 
 const SimpleParagraph = ({
   onLinkPress,
@@ -13,19 +15,16 @@ const SimpleParagraph = ({
   LinkComponent,
   narrowContent,
 }) => {
-  const [textItems, setTextItems] = useState([]);
-  const [textItemSettings, setTextItemSettings] = useState([]);
   const { lineHeight } = defaultFont;
 
-  useEffect(() => {
-    const newTextItems = children.flatMap((child) =>
-      child.splitByDifferenceInAttributes(),
+  const [textItems, textItemSettings] = useMemo(() => {
+    const newTextItems = flatten(
+      children.map((child) => child.splitByDifferenceInAttributes()),
     );
     const newTextItemSettings = newTextItems.map((child) =>
       child.collapsedAttributes(0),
     );
-    setTextItems(newTextItems);
-    setTextItemSettings(newTextItemSettings);
+    return [newTextItems, newTextItemSettings];
   }, []);
 
   if (children.length === 0) {

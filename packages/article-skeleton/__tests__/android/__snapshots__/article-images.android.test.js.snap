@@ -11,11 +11,11 @@ exports[`1. a primary image 1`] = `
       </Gutter>
     }
     extraData={true}
-    initialNumToRender={2}
+    initialNumToRender={5}
     maxToRenderPerBatch={10}
     nestedScrollEnabled={true}
     onEndReachedThreshold={2}
-    removeClippedSubviews={true}
+    removeClippedSubviews={false}
     scrollEventThrottle={50}
     updateCellsBatchingPeriod={50}
     windowSize={3}
@@ -102,11 +102,11 @@ exports[`2. a fullwidth image 1`] = `
       </Gutter>
     }
     extraData={true}
-    initialNumToRender={2}
+    initialNumToRender={5}
     maxToRenderPerBatch={10}
     nestedScrollEnabled={true}
     onEndReachedThreshold={2}
-    removeClippedSubviews={true}
+    removeClippedSubviews={false}
     scrollEventThrottle={50}
     updateCellsBatchingPeriod={50}
     windowSize={3}
@@ -193,11 +193,11 @@ exports[`3. a secondary image 1`] = `
       </Gutter>
     }
     extraData={true}
-    initialNumToRender={2}
+    initialNumToRender={5}
     maxToRenderPerBatch={10}
     nestedScrollEnabled={true}
     onEndReachedThreshold={2}
-    removeClippedSubviews={true}
+    removeClippedSubviews={false}
     scrollEventThrottle={50}
     updateCellsBatchingPeriod={50}
     windowSize={3}
@@ -284,11 +284,11 @@ exports[`4. an inline image 1`] = `
       </Gutter>
     }
     extraData={true}
-    initialNumToRender={2}
+    initialNumToRender={5}
     maxToRenderPerBatch={10}
     nestedScrollEnabled={true}
     onEndReachedThreshold={2}
-    removeClippedSubviews={true}
+    removeClippedSubviews={false}
     scrollEventThrottle={50}
     updateCellsBatchingPeriod={50}
     windowSize={3}

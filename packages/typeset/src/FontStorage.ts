@@ -2,8 +2,7 @@ import * as opentype from "opentype.js";
 import { TypographySettings } from "./AttributedString";
 
 class FontStorage {
-  private fonts: Record<string, () => opentype.Font>;
-  private cache: Record<string, opentype.Font> = {};
+  private fonts: Record<string, opentype.Font>;
 
   constructor() {
     this.fonts = {};
@@ -17,12 +16,9 @@ class FontStorage {
     const name = `${settings.fontFamily}${
       style ? "-" + style[0].toUpperCase() + style.slice(1) : ""
     }`;
+
     if (name in this.fonts) {
-      if (name in this.cache) {
-        return this.cache[name];
-      }
-      this.cache[name] = this.fonts[name]();
-      return this.cache[name];
+      return this.fonts[name];
     } else {
       throw new Error(`Could not find font with name: ${name}`);
     }
@@ -32,7 +28,7 @@ class FontStorage {
     if (name in this.fonts) {
       throw new Error(`Font ${name} already registered`);
     }
-    this.fonts[name] = font;
+    this.fonts[name] = font();
     return true;
   }
 }

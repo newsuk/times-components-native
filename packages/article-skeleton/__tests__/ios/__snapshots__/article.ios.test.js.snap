@@ -23,11 +23,11 @@ exports[`1. a full article with all content items with dropcap template 1`] = `
       </Gutter>
     }
     extraData={true}
-    initialNumToRender={2}
+    initialNumToRender={5}
     maxToRenderPerBatch={10}
     nestedScrollEnabled={true}
     onEndReachedThreshold={2}
-    removeClippedSubviews={true}
+    removeClippedSubviews={false}
     scrollEventThrottle={50}
     style={
       Object {
@@ -323,6 +323,246 @@ exports[`1. a full article with all content items with dropcap template 1`] = `
         </View>
       </View>
       <View
+        style={null}
+      >
+        <View
+          style={
+            Array [
+              Object {
+                "overflow": "hidden",
+              },
+              Object {
+                "backgroundColor": "#ffffff",
+                "maxWidth": "100%",
+                "width": undefined,
+              },
+            ]
+          }
+        >
+          <ArticleImage
+            captionOptions={
+              Object {
+                "caption": "An image caption",
+                "credits": "The image credits",
+              }
+            }
+            imageOptions={
+              Object {
+                "display": "primary",
+                "index": 1,
+                "narrowContent": undefined,
+                "ratio": "1500:1000",
+                "relativeHeight": undefined,
+                "relativeHorizontalOffset": undefined,
+                "relativeVerticalOffset": undefined,
+                "relativeWidth": undefined,
+                "uri": "https://image.io",
+              }
+            }
+            images={
+              Array [
+                Object {
+                  "attributes": Object {
+                    "caption": "An image caption",
+                    "credits": "The image credits",
+                    "display": "primary",
+                    "imageIndex": 1,
+                    "ratio": "1500:1000",
+                    "url": "https://image.io",
+                  },
+                  "children": Array [],
+                  "name": "image",
+                },
+                Object {
+                  "attributes": Object {
+                    "caption": "A secondary image caption",
+                    "credits": "The secondary image credits",
+                    "display": "secondary",
+                    "imageIndex": 2,
+                    "ratio": "1500:1000",
+                    "url": "https://image.io/secondary",
+                  },
+                  "children": Array [],
+                  "name": "image",
+                },
+                Object {
+                  "attributes": Object {
+                    "caption": "An inline image caption",
+                    "credits": "The inline image credits",
+                    "display": "inline",
+                    "imageIndex": 3,
+                    "ratio": "1500:1000",
+                    "url": "https://image.io/inline",
+                  },
+                  "children": Array [],
+                  "name": "image",
+                },
+              ]
+            }
+          />
+        </View>
+      </View>
+      <View
+        style={null}
+      >
+        <View
+          style={
+            Array [
+              Object {
+                "overflow": "hidden",
+              },
+              Object {
+                "backgroundColor": "#ffffff",
+                "maxWidth": "100%",
+                "width": undefined,
+              },
+            ]
+          }
+        >
+          <ArticleImage
+            captionOptions={
+              Object {
+                "caption": "A secondary image caption",
+                "credits": "The secondary image credits",
+              }
+            }
+            imageOptions={
+              Object {
+                "display": "secondary",
+                "index": 2,
+                "narrowContent": undefined,
+                "ratio": "1500:1000",
+                "relativeHeight": undefined,
+                "relativeHorizontalOffset": undefined,
+                "relativeVerticalOffset": undefined,
+                "relativeWidth": undefined,
+                "uri": "https://image.io/secondary",
+              }
+            }
+            images={
+              Array [
+                Object {
+                  "attributes": Object {
+                    "caption": "An image caption",
+                    "credits": "The image credits",
+                    "display": "primary",
+                    "imageIndex": 1,
+                    "ratio": "1500:1000",
+                    "url": "https://image.io",
+                  },
+                  "children": Array [],
+                  "name": "image",
+                },
+                Object {
+                  "attributes": Object {
+                    "caption": "A secondary image caption",
+                    "credits": "The secondary image credits",
+                    "display": "secondary",
+                    "imageIndex": 2,
+                    "ratio": "1500:1000",
+                    "url": "https://image.io/secondary",
+                  },
+                  "children": Array [],
+                  "name": "image",
+                },
+                Object {
+                  "attributes": Object {
+                    "caption": "An inline image caption",
+                    "credits": "The inline image credits",
+                    "display": "inline",
+                    "imageIndex": 3,
+                    "ratio": "1500:1000",
+                    "url": "https://image.io/inline",
+                  },
+                  "children": Array [],
+                  "name": "image",
+                },
+              ]
+            }
+          />
+        </View>
+      </View>
+      <View
+        style={null}
+      >
+        <View
+          style={
+            Array [
+              Object {
+                "overflow": "hidden",
+              },
+              Object {
+                "backgroundColor": "#ffffff",
+                "maxWidth": "100%",
+                "width": undefined,
+              },
+            ]
+          }
+        >
+          <ArticleImage
+            captionOptions={
+              Object {
+                "caption": "An inline image caption",
+                "credits": "The inline image credits",
+              }
+            }
+            imageOptions={
+              Object {
+                "display": "secondary",
+                "index": 3,
+                "narrowContent": undefined,
+                "ratio": "1500:1000",
+                "relativeHeight": undefined,
+                "relativeHorizontalOffset": undefined,
+                "relativeVerticalOffset": undefined,
+                "relativeWidth": undefined,
+                "uri": "https://image.io/inline",
+              }
+            }
+            images={
+              Array [
+                Object {
+                  "attributes": Object {
+                    "caption": "An image caption",
+                    "credits": "The image credits",
+                    "display": "primary",
+                    "imageIndex": 1,
+                    "ratio": "1500:1000",
+                    "url": "https://image.io",
+                  },
+                  "children": Array [],
+                  "name": "image",
+                },
+                Object {
+                  "attributes": Object {
+                    "caption": "A secondary image caption",
+                    "credits": "The secondary image credits",
+                    "display": "secondary",
+                    "imageIndex": 2,
+                    "ratio": "1500:1000",
+                    "url": "https://image.io/secondary",
+                  },
+                  "children": Array [],
+                  "name": "image",
+                },
+                Object {
+                  "attributes": Object {
+                    "caption": "An inline image caption",
+                    "credits": "The inline image credits",
+                    "display": "inline",
+                    "imageIndex": 3,
+                    "ratio": "1500:1000",
+                    "url": "https://image.io/inline",
+                  },
+                  "children": Array [],
+                  "name": "image",
+                },
+              ]
+            }
+          />
+        </View>
+      </View>
+      <View
         style={
           Object {
             "height": 0,
@@ -380,11 +620,11 @@ exports[`2. an article with interactives 1`] = `
       </Gutter>
     }
     extraData={true}
-    initialNumToRender={2}
+    initialNumToRender={5}
     maxToRenderPerBatch={10}
     nestedScrollEnabled={true}
     onEndReachedThreshold={2}
-    removeClippedSubviews={true}
+    removeClippedSubviews={false}
     scrollEventThrottle={50}
     style={
       Object {
@@ -485,12 +725,44 @@ exports[`2. an article with interactives 1`] = `
         </View>
       </View>
       <View
-        style={
-          Object {
-            "height": 0,
+        style={null}
+      >
+        <View
+          style={
+            Array [
+              Object {
+                "overflow": "hidden",
+              },
+              Object {
+                "backgroundColor": "#ffffff",
+                "maxWidth": "100%",
+                "width": undefined,
+              },
+            ]
           }
-        }
-      />
+        >
+          <View
+            style={
+              Array [
+                Object {
+                  "overflow": "hidden",
+                },
+                Object {
+                  "backgroundColor": "#ffffff",
+                  "maxWidth": "100%",
+                  "width": undefined,
+                },
+              ]
+            }
+          >
+            <ArticleExtras
+              articleId="198c4b2f-ecec-4f34-be53-c89f83bc1b44"
+              articleUrl="https://url.io"
+              template="mainstandard"
+            />
+          </View>
+        </View>
+      </View>
       <View>
         <View
           style={
@@ -542,11 +814,11 @@ exports[`3. an article with no content 1`] = `
       </Gutter>
     }
     extraData={true}
-    initialNumToRender={2}
+    initialNumToRender={5}
     maxToRenderPerBatch={10}
     nestedScrollEnabled={true}
     onEndReachedThreshold={2}
-    removeClippedSubviews={true}
+    removeClippedSubviews={false}
     scrollEventThrottle={50}
     style={
       Object {
@@ -665,11 +937,11 @@ exports[`5. an article with a nested markup in first paragraph displays a drop c
       </Gutter>
     }
     extraData={true}
-    initialNumToRender={2}
+    initialNumToRender={5}
     maxToRenderPerBatch={10}
     nestedScrollEnabled={true}
     onEndReachedThreshold={2}
-    removeClippedSubviews={true}
+    removeClippedSubviews={false}
     scrollEventThrottle={50}
     style={
       Object {
@@ -1241,12 +1513,44 @@ exports[`5. an article with a nested markup in first paragraph displays a drop c
         </View>
       </View>
       <View
-        style={
-          Object {
-            "height": 0,
+        style={null}
+      >
+        <View
+          style={
+            Array [
+              Object {
+                "overflow": "hidden",
+              },
+              Object {
+                "backgroundColor": "#ffffff",
+                "maxWidth": "100%",
+                "width": undefined,
+              },
+            ]
           }
-        }
-      />
+        >
+          <View
+            style={
+              Array [
+                Object {
+                  "overflow": "hidden",
+                },
+                Object {
+                  "backgroundColor": "#ffffff",
+                  "maxWidth": "100%",
+                  "width": undefined,
+                },
+              ]
+            }
+          >
+            <ArticleExtras
+              articleId="198c4b2f-ecec-4f34-be53-c89f83bc1b44"
+              articleUrl="https://url.io"
+              template="maincomment"
+            />
+          </View>
+        </View>
+      </View>
       <View>
         <View
           style={
@@ -1298,11 +1602,11 @@ exports[`6. an article with heading tags 1`] = `
       </Gutter>
     }
     extraData={true}
-    initialNumToRender={2}
+    initialNumToRender={5}
     maxToRenderPerBatch={10}
     nestedScrollEnabled={true}
     onEndReachedThreshold={2}
-    removeClippedSubviews={true}
+    removeClippedSubviews={false}
     scrollEventThrottle={50}
     style={
       Object {
@@ -1444,12 +1748,44 @@ exports[`6. an article with heading tags 1`] = `
         </View>
       </View>
       <View
-        style={
-          Object {
-            "height": 0,
+        style={null}
+      >
+        <View
+          style={
+            Array [
+              Object {
+                "overflow": "hidden",
+              },
+              Object {
+                "backgroundColor": "#ffffff",
+                "maxWidth": "100%",
+                "width": undefined,
+              },
+            ]
           }
-        }
-      />
+        >
+          <View
+            style={
+              Array [
+                Object {
+                  "overflow": "hidden",
+                },
+                Object {
+                  "backgroundColor": "#ffffff",
+                  "maxWidth": "100%",
+                  "width": undefined,
+                },
+              ]
+            }
+          >
+            <ArticleExtras
+              articleId="198c4b2f-ecec-4f34-be53-c89f83bc1b44"
+              articleUrl="https://url.io"
+              template="mainstandard"
+            />
+          </View>
+        </View>
+      </View>
       <View>
         <View
           style={
@@ -1501,11 +1837,11 @@ exports[`7. an article with link 1`] = `
       </Gutter>
     }
     extraData={true}
-    initialNumToRender={2}
+    initialNumToRender={5}
     maxToRenderPerBatch={10}
     nestedScrollEnabled={true}
     onEndReachedThreshold={2}
-    removeClippedSubviews={true}
+    removeClippedSubviews={false}
     scrollEventThrottle={50}
     style={
       Object {
@@ -1702,11 +2038,11 @@ exports[`8. an article with italic link 1`] = `
       </Gutter>
     }
     extraData={true}
-    initialNumToRender={2}
+    initialNumToRender={5}
     maxToRenderPerBatch={10}
     nestedScrollEnabled={true}
     onEndReachedThreshold={2}
-    removeClippedSubviews={true}
+    removeClippedSubviews={false}
     scrollEventThrottle={50}
     style={
       Object {
@@ -1917,11 +2253,11 @@ exports[`9. an article with bold text followed by bold link 1`] = `
       </Gutter>
     }
     extraData={true}
-    initialNumToRender={2}
+    initialNumToRender={5}
     maxToRenderPerBatch={10}
     nestedScrollEnabled={true}
     onEndReachedThreshold={2}
-    removeClippedSubviews={true}
+    removeClippedSubviews={false}
     scrollEventThrottle={50}
     style={
       Object {
@@ -2120,11 +2456,11 @@ exports[`10. an article with italic and normal text link 1`] = `
       </Gutter>
     }
     extraData={true}
-    initialNumToRender={2}
+    initialNumToRender={5}
     maxToRenderPerBatch={10}
     nestedScrollEnabled={true}
     onEndReachedThreshold={2}
-    removeClippedSubviews={true}
+    removeClippedSubviews={false}
     scrollEventThrottle={50}
     style={
       Object {
@@ -2355,11 +2691,11 @@ exports[`11. an article with bold and italic text at the same time 1`] = `
       </Gutter>
     }
     extraData={true}
-    initialNumToRender={2}
+    initialNumToRender={5}
     maxToRenderPerBatch={10}
     nestedScrollEnabled={true}
     onEndReachedThreshold={2}
-    removeClippedSubviews={true}
+    removeClippedSubviews={false}
     scrollEventThrottle={50}
     style={
       Object {
@@ -2538,11 +2874,11 @@ exports[`12. an article with text wrapped in inline element 1`] = `
       </Gutter>
     }
     extraData={true}
-    initialNumToRender={2}
+    initialNumToRender={5}
     maxToRenderPerBatch={10}
     nestedScrollEnabled={true}
     onEndReachedThreshold={2}
-    removeClippedSubviews={true}
+    removeClippedSubviews={false}
     scrollEventThrottle={50}
     style={
       Object {
@@ -2719,11 +3055,11 @@ exports[`13. an article with paragraph with text and inline element 1`] = `
       </Gutter>
     }
     extraData={true}
-    initialNumToRender={2}
+    initialNumToRender={5}
     maxToRenderPerBatch={10}
     nestedScrollEnabled={true}
     onEndReachedThreshold={2}
-    removeClippedSubviews={true}
+    removeClippedSubviews={false}
     scrollEventThrottle={50}
     style={
       Object {
@@ -2913,11 +3249,11 @@ exports[`14. an article with inline inside a bold tag 1`] = `
       </Gutter>
     }
     extraData={true}
-    initialNumToRender={2}
+    initialNumToRender={5}
     maxToRenderPerBatch={10}
     nestedScrollEnabled={true}
     onEndReachedThreshold={2}
-    removeClippedSubviews={true}
+    removeClippedSubviews={false}
     scrollEventThrottle={50}
     style={
       Object {
@@ -3095,11 +3431,11 @@ exports[`15. an article starting with single quote 1`] = `
       </Gutter>
     }
     extraData={true}
-    initialNumToRender={2}
+    initialNumToRender={5}
     maxToRenderPerBatch={10}
     nestedScrollEnabled={true}
     onEndReachedThreshold={2}
-    removeClippedSubviews={true}
+    removeClippedSubviews={false}
     scrollEventThrottle={50}
     style={
       Object {
@@ -3764,11 +4100,11 @@ exports[`16. an article starting with double quote 1`] = `
       </Gutter>
     }
     extraData={true}
-    initialNumToRender={2}
+    initialNumToRender={5}
     maxToRenderPerBatch={10}
     nestedScrollEnabled={true}
     onEndReachedThreshold={2}
-    removeClippedSubviews={true}
+    removeClippedSubviews={false}
     scrollEventThrottle={50}
     style={
       Object {
@@ -4433,11 +4769,11 @@ exports[`17. an article with variant testing 1`] = `
       </Gutter>
     }
     extraData={true}
-    initialNumToRender={2}
+    initialNumToRender={5}
     maxToRenderPerBatch={10}
     nestedScrollEnabled={true}
     onEndReachedThreshold={2}
-    removeClippedSubviews={true}
+    removeClippedSubviews={false}
     scrollEventThrottle={50}
     style={
       Object {
@@ -4560,6 +4896,246 @@ exports[`17. an article with variant testing 1`] = `
         </View>
       </View>
       <View
+        style={null}
+      >
+        <View
+          style={
+            Array [
+              Object {
+                "overflow": "hidden",
+              },
+              Object {
+                "backgroundColor": "#ffffff",
+                "maxWidth": "100%",
+                "width": undefined,
+              },
+            ]
+          }
+        >
+          <ArticleImage
+            captionOptions={
+              Object {
+                "caption": "An image caption",
+                "credits": "The image credits",
+              }
+            }
+            imageOptions={
+              Object {
+                "display": "primary",
+                "index": 1,
+                "narrowContent": undefined,
+                "ratio": "1500:1000",
+                "relativeHeight": undefined,
+                "relativeHorizontalOffset": undefined,
+                "relativeVerticalOffset": undefined,
+                "relativeWidth": undefined,
+                "uri": "https://image.io",
+              }
+            }
+            images={
+              Array [
+                Object {
+                  "attributes": Object {
+                    "caption": "An image caption",
+                    "credits": "The image credits",
+                    "display": "primary",
+                    "imageIndex": 1,
+                    "ratio": "1500:1000",
+                    "url": "https://image.io",
+                  },
+                  "children": Array [],
+                  "name": "image",
+                },
+                Object {
+                  "attributes": Object {
+                    "caption": "A secondary image caption",
+                    "credits": "The secondary image credits",
+                    "display": "secondary",
+                    "imageIndex": 2,
+                    "ratio": "1500:1000",
+                    "url": "https://image.io/secondary",
+                  },
+                  "children": Array [],
+                  "name": "image",
+                },
+                Object {
+                  "attributes": Object {
+                    "caption": "An inline image caption",
+                    "credits": "The inline image credits",
+                    "display": "inline",
+                    "imageIndex": 3,
+                    "ratio": "1500:1000",
+                    "url": "https://image.io/inline",
+                  },
+                  "children": Array [],
+                  "name": "image",
+                },
+              ]
+            }
+          />
+        </View>
+      </View>
+      <View
+        style={null}
+      >
+        <View
+          style={
+            Array [
+              Object {
+                "overflow": "hidden",
+              },
+              Object {
+                "backgroundColor": "#ffffff",
+                "maxWidth": "100%",
+                "width": undefined,
+              },
+            ]
+          }
+        >
+          <ArticleImage
+            captionOptions={
+              Object {
+                "caption": "A secondary image caption",
+                "credits": "The secondary image credits",
+              }
+            }
+            imageOptions={
+              Object {
+                "display": "secondary",
+                "index": 2,
+                "narrowContent": undefined,
+                "ratio": "1500:1000",
+                "relativeHeight": undefined,
+                "relativeHorizontalOffset": undefined,
+                "relativeVerticalOffset": undefined,
+                "relativeWidth": undefined,
+                "uri": "https://image.io/secondary",
+              }
+            }
+            images={
+              Array [
+                Object {
+                  "attributes": Object {
+                    "caption": "An image caption",
+                    "credits": "The image credits",
+                    "display": "primary",
+                    "imageIndex": 1,
+                    "ratio": "1500:1000",
+                    "url": "https://image.io",
+                  },
+                  "children": Array [],
+                  "name": "image",
+                },
+                Object {
+                  "attributes": Object {
+                    "caption": "A secondary image caption",
+                    "credits": "The secondary image credits",
+                    "display": "secondary",
+                    "imageIndex": 2,
+                    "ratio": "1500:1000",
+                    "url": "https://image.io/secondary",
+                  },
+                  "children": Array [],
+                  "name": "image",
+                },
+                Object {
+                  "attributes": Object {
+                    "caption": "An inline image caption",
+                    "credits": "The inline image credits",
+                    "display": "inline",
+                    "imageIndex": 3,
+                    "ratio": "1500:1000",
+                    "url": "https://image.io/inline",
+                  },
+                  "children": Array [],
+                  "name": "image",
+                },
+              ]
+            }
+          />
+        </View>
+      </View>
+      <View
+        style={null}
+      >
+        <View
+          style={
+            Array [
+              Object {
+                "overflow": "hidden",
+              },
+              Object {
+                "backgroundColor": "#ffffff",
+                "maxWidth": "100%",
+                "width": undefined,
+              },
+            ]
+          }
+        >
+          <ArticleImage
+            captionOptions={
+              Object {
+                "caption": "An inline image caption",
+                "credits": "The inline image credits",
+              }
+            }
+            imageOptions={
+              Object {
+                "display": "secondary",
+                "index": 3,
+                "narrowContent": undefined,
+                "ratio": "1500:1000",
+                "relativeHeight": undefined,
+                "relativeHorizontalOffset": undefined,
+                "relativeVerticalOffset": undefined,
+                "relativeWidth": undefined,
+                "uri": "https://image.io/inline",
+              }
+            }
+            images={
+              Array [
+                Object {
+                  "attributes": Object {
+                    "caption": "An image caption",
+                    "credits": "The image credits",
+                    "display": "primary",
+                    "imageIndex": 1,
+                    "ratio": "1500:1000",
+                    "url": "https://image.io",
+                  },
+                  "children": Array [],
+                  "name": "image",
+                },
+                Object {
+                  "attributes": Object {
+                    "caption": "A secondary image caption",
+                    "credits": "The secondary image credits",
+                    "display": "secondary",
+                    "imageIndex": 2,
+                    "ratio": "1500:1000",
+                    "url": "https://image.io/secondary",
+                  },
+                  "children": Array [],
+                  "name": "image",
+                },
+                Object {
+                  "attributes": Object {
+                    "caption": "An inline image caption",
+                    "credits": "The inline image credits",
+                    "display": "inline",
+                    "imageIndex": 3,
+                    "ratio": "1500:1000",
+                    "url": "https://image.io/inline",
+                  },
+                  "children": Array [],
+                  "name": "image",
+                },
+              ]
+            }
+          />
+        </View>
+      </View>
+      <View
         style={
           Object {
             "height": 0,
@@ -4650,11 +5226,11 @@ exports[`20. renders content 1`] = `
       </Gutter>
     }
     extraData={true}
-    initialNumToRender={2}
+    initialNumToRender={5}
     maxToRenderPerBatch={10}
     nestedScrollEnabled={true}
     onEndReachedThreshold={2}
-    removeClippedSubviews={true}
+    removeClippedSubviews={false}
     scrollEventThrottle={50}
     style={
       Object {
@@ -4844,6 +5420,214 @@ exports[`20. renders content 1`] = `
         </View>
       </View>
       <View
+        style={null}
+      >
+        <View
+          style={
+            Array [
+              Object {
+                "overflow": "hidden",
+              },
+              Object {
+                "backgroundColor": "#ffffff",
+                "maxWidth": "100%",
+                "width": undefined,
+              },
+            ]
+          }
+        >
+          <ArticleImage
+            captionOptions={
+              Object {
+                "caption": "All the latest stories in culture and books.",
+                "credits": "The credits",
+              }
+            }
+            imageOptions={
+              Object {
+                "display": "primary",
+                "index": undefined,
+                "narrowContent": undefined,
+                "ratio": "1500:1000",
+                "relativeHeight": undefined,
+                "relativeHorizontalOffset": undefined,
+                "relativeVerticalOffset": undefined,
+                "relativeWidth": undefined,
+                "uri": "https://www.thetimes.co.uk/imageserver/image/methode%2Ftimes%2Fprod%2Fweb%2Fbin%2Fb7ac990a-d872-11e7-9b16-edd3826708d6.jpg?crop=3959%2C2639%2C0%2C0",
+              }
+            }
+            images={
+              Array [
+                Object {
+                  "attributes": Object {
+                    "caption": "All the latest stories in culture and books.",
+                    "credits": "The credits",
+                    "display": "primary",
+                    "ratio": "1500:1000",
+                    "url": "https://www.thetimes.co.uk/imageserver/image/methode%2Ftimes%2Fprod%2Fweb%2Fbin%2Fb7ac990a-d872-11e7-9b16-edd3826708d6.jpg?crop=3959%2C2639%2C0%2C0",
+                  },
+                  "children": Array [],
+                  "name": "image",
+                },
+                Object {
+                  "attributes": Object {
+                    "caption": "All the latest stories in culture and books.",
+                    "credits": "The credits",
+                    "display": "secondary",
+                    "ratio": "3:2",
+                    "url": "https://www.thetimes.co.uk/imageserver/image/methode%2Ftimes%2Fprod%2Fweb%2Fbin%2F4476fabc-be54-11e7-b58a-4186f6049f2e.jpg?crop=5760%2C3840%2C0%2C0",
+                  },
+                  "children": Array [],
+                  "name": "image",
+                },
+                Object {
+                  "attributes": Object {
+                    "caption": "All the latest stories in culture and books.",
+                    "credits": "The credits",
+                    "display": "inline",
+                    "ratio": "1:1.50",
+                    "url": "https://www.thetimes.co.uk/imageserver/image/methode%2Ftimes%2Fprod%2Fweb%2Fbin%2Fdb30ed6a-be62-11e7-b58a-4186f6049f2e.jpg?crop=384%2C576%2C0%2C0",
+                  },
+                  "children": Array [],
+                  "name": "image",
+                },
+                Object {
+                  "attributes": Object {
+                    "caption": "All the latest stories in culture and books.",
+                    "credits": "The credits",
+                    "display": "inline",
+                    "ratio": "3:2",
+                    "url": "https://www.thetimes.co.uk/imageserver/image/methode%2Ftimes%2Fprod%2Fweb%2Fbin%2F3ac674bc-beb2-11e7-8bb9-94e1372175c0.jpg?crop=5576%2C3717%2C0%2C0",
+                  },
+                  "children": Array [],
+                  "name": "image",
+                },
+              ]
+            }
+          />
+        </View>
+      </View>
+      <View
+        style={null}
+      >
+        <View
+          style={
+            Array [
+              Object {
+                "overflow": "hidden",
+              },
+              Object {
+                "backgroundColor": "#ffffff",
+                "maxWidth": "100%",
+                "width": undefined,
+              },
+            ]
+          }
+        >
+          <View
+            style={
+              Array [
+                Object {
+                  "paddingLeft": 10,
+                  "paddingRight": 10,
+                },
+                Object {
+                  "marginBottom": 20,
+                },
+                false,
+                false,
+                Object {},
+              ]
+            }
+          >
+            <View>
+              <Text
+                selectable={true}
+                style={
+                  Object {
+                    "lineHeight": 52,
+                  }
+                }
+              >
+                <Text
+                  selectable={true}
+                  style={
+                    Object {
+                      "color": "#000000",
+                      "fontFamily": "TimesDigitalW04",
+                      "fontSize": 36,
+                      "lineHeight": 52,
+                    }
+                  }
+                >
+                  When Thatcher joined the campaign trail for the 2001 general election, she was followed closely by the media. After several minor strokes, however, it was announced in 2002 that she would cut back her heavy schedule. 
+                </Text>
+              </Text>
+            </View>
+          </View>
+        </View>
+      </View>
+      <View
+        style={null}
+      >
+        <View
+          style={
+            Array [
+              Object {
+                "overflow": "hidden",
+              },
+              Object {
+                "backgroundColor": "#ffffff",
+                "maxWidth": "100%",
+                "width": undefined,
+              },
+            ]
+          }
+        >
+          <View
+            style={
+              Array [
+                Object {
+                  "paddingLeft": 10,
+                  "paddingRight": 10,
+                },
+                Object {
+                  "marginBottom": 20,
+                },
+                false,
+                false,
+                Object {},
+              ]
+            }
+          >
+            <View>
+              <Text
+                selectable={true}
+                style={
+                  Object {
+                    "lineHeight": 52,
+                  }
+                }
+              >
+                <Text
+                  selectable={true}
+                  style={
+                    Object {
+                      "color": "#000000",
+                      "fontFamily": "TimesDigitalW04",
+                      "fontSize": 36,
+                      "lineHeight": 52,
+                    }
+                  }
+                >
+                  Thatcher plainly admired the style and determination of Tony Blair, who crushed John Major’s Conservatives in the 1997 election, and he for his part seemed content from time to time to be compared with her as a strong leader. She regularly revisited some of the issues that had dominated her years in office; for example she gave strong support to the development of democracy and the protection of the rule of law in Hong Kong as promised in the treaty she had signed with China. In 1999, in her first conference speech since her resignation as leader, she defended General Augusto Pinochet, the former dictator of Chile, who was held in Britain after his arrest in 1998. 
+                </Text>
+              </Text>
+            </View>
+          </View>
+        </View>
+      </View>
+      <View
         style={
           Object {
             "height": 0,
@@ -4901,11 +5685,11 @@ exports[`21. an article with inline paragraph 1`] = `
       </Gutter>
     }
     extraData={true}
-    initialNumToRender={2}
+    initialNumToRender={5}
     maxToRenderPerBatch={10}
     nestedScrollEnabled={true}
     onEndReachedThreshold={2}
-    removeClippedSubviews={true}
+    removeClippedSubviews={false}
     scrollEventThrottle={50}
     style={
       Object {

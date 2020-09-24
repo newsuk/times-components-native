@@ -1,5 +1,5 @@
 /* eslint-disable react/forbid-prop-types */
-import React, { useEffect, useState } from "react";
+import React, { useMemo, useState } from "react";
 import { View, Text } from "react-native";
 import PropTypes from "prop-types";
 import styleguide, {
@@ -31,27 +31,7 @@ const InlineParagraph = ({
 }) => {
   const { spacing } = styleguide({ scale });
   const [inlineExclusion, setInlineExclusion] = useState(false);
-  const [positionedTextItems, setPositionedTextItems] = useState([]);
-  const [positionTextItemSettings, setPositionTextItemSettings] = useState([]);
   const variants = useVariantTestingContext();
-  useEffect(() => {
-    const manager = new LayoutManager(
-      dropCap ? str.slice(slice) : str,
-      [container],
-      inlineExclusion ? [inlineExclusion.exclusion] : [],
-    );
-
-    const newPositionedTextItems = manager.layout();
-    const newPositionItemSettings = newPositionedTextItems.map((p) =>
-      p.text.collapsedAttributes(0),
-    );
-    setPositionedTextItems(newPositionedTextItems);
-    setPositionTextItemSettings(newPositionItemSettings);
-  }, [inlineExclusion]);
-
-  if (!str.length) {
-    return null;
-  }
 
   const contentWidth = Math.min(
     screenWidth(),
@@ -71,6 +51,23 @@ const InlineParagraph = ({
   );
 
   const slice = str.charAt(1) === " " ? 2 : dropCap.length;
+  const [positionedTextItems, positionTextItemSettings] = useMemo(() => {
+    const manager = new LayoutManager(
+      dropCap ? str.slice(slice) : str,
+      [container],
+      inlineExclusion ? [inlineExclusion.exclusion] : [],
+    );
+
+    const newPositionedTextItems = manager.layout();
+    const newPositionItemSettings = newPositionedTextItems.map((p) =>
+      p.text.collapsedAttributes(0),
+    );
+    return [newPositionedTextItems, newPositionItemSettings];
+  }, [inlineExclusion]);
+
+  if (!str.length) {
+    return null;
+  }
 
   const getInlineLayout = () => {
     const { articleMpu } = variants;

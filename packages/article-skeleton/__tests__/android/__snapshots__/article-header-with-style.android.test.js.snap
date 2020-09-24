@@ -11,11 +11,11 @@ exports[`1. article with header 1`] = `
       </Gutter>
     }
     extraData={true}
-    initialNumToRender={2}
+    initialNumToRender={5}
     maxToRenderPerBatch={10}
     nestedScrollEnabled={true}
     onEndReachedThreshold={2}
-    removeClippedSubviews={true}
+    removeClippedSubviews={false}
     scrollEventThrottle={50}
     updateCellsBatchingPeriod={50}
     windowSize={3}
@@ -26,53 +26,55 @@ exports[`1. article with header 1`] = `
       </View>
       <View>
         <View>
-          <View>
-            <View>
-              <Text>
-                NEW BREXIT REFERENDUM
-              </Text>
-              <View>
-                <View>
-                  <View />
-                  <Text>
-                    Another ministerial aide,
-                    <Text
-                      accessibilityRole="link"
-                    >
-                      Robert Courts
-                    </Text>
-                    , resigned saying that he could not look himself in the mirror if he backed the Chequers proposals.
-                  </Text>
-                </View>
-                <View>
-                  <View />
-                  <Text>
-                    Downing Street and Conservative Party bosses were seeking to assess the scale of a grassroots rebellion.
-                  </Text>
-                </View>
-                <View>
-                  <View />
-                  <Text>
-                    Dennis Mitchell’s high levels of testosterone in 1998 were caused by having sex with his wife "at least four times" on her birthday, according to the sprinter. USA Track and Field believed him, the IAAF did not
-                  </Text>
-                </View>
-                <View>
-                  <View />
-                  <Text>
-                    Chuka Umunna, leader of the
-                    <Text>
-                      Labour Remainers
-                    </Text>
-                    , dismissed Mrs May’s
-                    <Text>
-                      compromise
-                    </Text>
-                     as “anti-worker and anti-business” and said that it would “royally screw” Britain’s service sector.
-                  </Text>
-                </View>
-              </View>
-            </View>
-          </View>
+          <ArticleImage
+            captionOptions={
+              Object {
+                "caption": "All the latest stories in culture and books.",
+                "credits": "The credits",
+              }
+            }
+            imageOptions={
+              Object {
+                "display": "secondary",
+                "index": 5,
+                "narrowContent": undefined,
+                "ratio": "1:1.50",
+                "relativeHeight": undefined,
+                "relativeHorizontalOffset": undefined,
+                "relativeVerticalOffset": undefined,
+                "relativeWidth": undefined,
+                "uri": "https://www.thetimes.co.uk/imageserver/image/methode%2Ftimes%2Fprod%2Fweb%2Fbin%2Fdb30ed6a-be62-11e7-b58a-4186f6049f2e.jpg?crop=384%2C576%2C0%2C0",
+              }
+            }
+            images={
+              Array [
+                Object {
+                  "attributes": Object {
+                    "caption": "All the latest stories in culture and books.",
+                    "credits": "The credits",
+                    "display": "inline",
+                    "imageIndex": 5,
+                    "ratio": "1:1.50",
+                    "url": "https://www.thetimes.co.uk/imageserver/image/methode%2Ftimes%2Fprod%2Fweb%2Fbin%2Fdb30ed6a-be62-11e7-b58a-4186f6049f2e.jpg?crop=384%2C576%2C0%2C0",
+                  },
+                  "children": Array [],
+                  "name": "image",
+                },
+                Object {
+                  "attributes": Object {
+                    "caption": "All the latest stories in culture and books.",
+                    "credits": "The credits",
+                    "display": "inline",
+                    "imageIndex": 6,
+                    "ratio": "3:2",
+                    "url": "https://www.thetimes.co.uk/imageserver/image/methode%2Ftimes%2Fprod%2Fweb%2Fbin%2F3ac674bc-beb2-11e7-8bb9-94e1372175c0.jpg?crop=5576%2C3717%2C0%2C0",
+                  },
+                  "children": Array [],
+                  "name": "image",
+                },
+              ]
+            }
+          />
         </View>
       </View>
       <View>
@@ -85,30 +87,93 @@ exports[`1. article with header 1`] = `
                 <Text
                   selectable={true}
                 >
-                  Mr Gove has previously said that memorising a poem is to “own a great work of art forever”. Andrew Motion, the former Poet Laureate, wrote in the
-                </Text>
-                <Text
-                  accessibilityRole="link"
-                >
-                  police disclosure of evidence
-                </Text>
-                <Text
-                  selectable={true}
-                >
-                   Telegraph
-                </Text>
-                <Text
-                  selectable={true}
-                >
-                  last year that rote learning has “a lot to be said against it”, but added: “As the phrase ‘learning by heart’ implies, this sort of remembering places the poem at a central place in ourselves and makes it precious.”
-                </Text>
-                <Text
-                  selectable={true}
-                >
-                  When Thatcher joined the campaign trail for the 2001 general election...
+                  Margaret Thatcher was one of the greatest British politicians of the 20th century. The first woman prime minister in Europe, she held the job for 11 years. In the 20th century no other prime minister had been in office for such a long unbroken period, and no one since Lord Liverpool (1812-27) had had such a long continuous run as Prime Minister. Margaret Thatcher was one of the greatest British politicians of the 20th century. The first woman prime minister in Europe, she held the job for 11 years. In the 20th century no other prime minister had been in office for such a long unbroken period, and no one since Lord Liverpool (1812-27) had had such a long continuous run as Prime Minister. Margaret Thatcher was one of the greatest British politicians of the 20th century. The first woman prime minister in Europe, she held the job for 11 years. In the 20th century no other prime minister had been in office for such a long unbroken period, and no one since Lord Liverpool (1812-27) had had such a long continuous run as Prime Minister. Margaret Thatcher was one of the greatest British politicians of the 20th century. The first woman prime minister in Europe, she held the job for 11 years. In the 20th century no other prime minister had been in office for such a long unbroken period, and no one since Lord Liverpool (1812-27) had had such a long continuous run as Prime Minister.
                 </Text>
               </Text>
             </View>
+          </View>
+        </View>
+      </View>
+      <View>
+        <View>
+          <ArticleImage
+            captionOptions={
+              Object {
+                "caption": "All the latest stories in culture and books.",
+                "credits": "The credits",
+              }
+            }
+            imageOptions={
+              Object {
+                "display": "secondary",
+                "index": 6,
+                "narrowContent": undefined,
+                "ratio": "3:2",
+                "relativeHeight": undefined,
+                "relativeHorizontalOffset": undefined,
+                "relativeVerticalOffset": undefined,
+                "relativeWidth": undefined,
+                "uri": "https://www.thetimes.co.uk/imageserver/image/methode%2Ftimes%2Fprod%2Fweb%2Fbin%2F3ac674bc-beb2-11e7-8bb9-94e1372175c0.jpg?crop=5576%2C3717%2C0%2C0",
+              }
+            }
+            images={
+              Array [
+                Object {
+                  "attributes": Object {
+                    "caption": "All the latest stories in culture and books.",
+                    "credits": "The credits",
+                    "display": "inline",
+                    "imageIndex": 5,
+                    "ratio": "1:1.50",
+                    "url": "https://www.thetimes.co.uk/imageserver/image/methode%2Ftimes%2Fprod%2Fweb%2Fbin%2Fdb30ed6a-be62-11e7-b58a-4186f6049f2e.jpg?crop=384%2C576%2C0%2C0",
+                  },
+                  "children": Array [],
+                  "name": "image",
+                },
+                Object {
+                  "attributes": Object {
+                    "caption": "All the latest stories in culture and books.",
+                    "credits": "The credits",
+                    "display": "inline",
+                    "imageIndex": 6,
+                    "ratio": "3:2",
+                    "url": "https://www.thetimes.co.uk/imageserver/image/methode%2Ftimes%2Fprod%2Fweb%2Fbin%2F3ac674bc-beb2-11e7-8bb9-94e1372175c0.jpg?crop=5576%2C3717%2C0%2C0",
+                  },
+                  "children": Array [],
+                  "name": "image",
+                },
+              ]
+            }
+          />
+        </View>
+      </View>
+      <View>
+        <View>
+          <View>
+            <View>
+              <Text
+                selectable={true}
+              >
+                <Text
+                  selectable={true}
+                >
+                  She led the Conservative Party for 15 years, won three general elections in succession, and never lost a significant vote in the House of Commons. Since Walpole in effect invented the role, only six men have served for longer than her as prime minister: Walpole himself, Pitt, Lord Liverpool, Lord Salisbury, Gladstone and Lord North. She fully earned her place in this company. Margaret Thatcher was one of the greatest British politicians of the 20th century. The first woman prime minister in Europe, she held the job for 11 years. In the 20th century no other prime minister had been in office for such a long unbroken period, and no one since Lord Liverpool (1812-27) had had such a long continuous run as Prime Minister.Margaret Thatcher was one of the greatest British politicians of the 20th century. The first woman prime minister in Europe, she held the job for 11 years. In the 20th century no other prime minister had been in office for such a long unbroken period, and no one since Lord Liverpool (1812-27) had had such a long continuous run as Prime Minister. Margaret Thatcher was one of the greatest British politicians of the 20th century. The first woman prime minister in Europe, she held the job for 11 years. In the 20th century no other prime minister had been in office for such a long unbroken period, and no one since Lord Liverpool (1812-27) had had such a long continuous run as Prime Minister
+                </Text>
+              </Text>
+            </View>
+          </View>
+        </View>
+      </View>
+      <View>
+        <View>
+          <View>
+            <PullQuote
+              caption="JudgeSapnara"
+              quoteColour="#FF0000"
+              twitter="@JudgeSapnara"
+            >
+              A pull quote is here.
+            </PullQuote>
           </View>
         </View>
       </View>
