@@ -5,7 +5,6 @@ export const propTypes = {
   onAuthorPress: PropTypes.func,
   capitalize: PropTypes.bool,
   children: PropTypes.array,
-  key: PropTypes.string,
   attributes: PropTypes.array,
   slug: PropTypes.string,
   centered: PropTypes.bool,

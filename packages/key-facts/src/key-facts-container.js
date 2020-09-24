@@ -1,18 +1,17 @@
 import React from "react";
 import { View } from "react-native";
-import { ResponsiveContext } from "@times-components-native/responsive";
+import { useResponsiveContext } from "@times-components-native/responsive";
 import propTypes from "./key-facts-shared-prop-types";
 import styles from "./styles";
 
-const KeyFactsContainer = ({ children }) => (
-  <ResponsiveContext.Consumer>
-    {({ isTablet }) => (
-      <View style={[styles.container, isTablet && styles.containerTablet]}>
-        {children}
-      </View>
-    )}
-  </ResponsiveContext.Consumer>
-);
+const KeyFactsContainer = ({ children }) => {
+  const { isTablet } = useResponsiveContext();
+  return (
+    <View style={[styles.container, isTablet && styles.containerTablet]}>
+      {children}
+    </View>
+  );
+};
 
 KeyFactsContainer.propTypes = propTypes;
 

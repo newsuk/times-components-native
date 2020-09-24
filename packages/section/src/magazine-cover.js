@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import { ResponsiveContext } from "@times-components-native/responsive";
+import { useResponsiveContext } from "@times-components-native/responsive";
 import { editionBreakpoints } from "@times-components-native/styleguide";
 import { Dimensions, Text, View, TouchableOpacity } from "react-native";
 import Image, { ModalImage } from "@times-components-native/image";
@@ -71,13 +71,11 @@ class MagazineCoverImage extends Component {
   }
 }
 
-const MagazineCoverProvider = ({ cover }) => (
-  <ResponsiveContext.Consumer>
-    {({ editionBreakpoint }) => (
-      <MagazineCoverImage breakpoint={editionBreakpoint} cover={cover} />
-    )}
-  </ResponsiveContext.Consumer>
-);
+const MagazineCoverProvider = ({ cover }) => {
+  const { editionBreakpoint } = useResponsiveContext();
+
+  return <MagazineCoverImage breakpoint={editionBreakpoint} cover={cover} />;
+};
 
 MagazineCoverImage.propTypes = {
   breakpoint: PropTypes.string,

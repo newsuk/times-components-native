@@ -1,5 +1,5 @@
 import React from "react";
-import { ResponsiveContext } from "@times-components-native/responsive";
+import { useResponsiveContext } from "@times-components-native/responsive";
 import { SupplementLeadOneAndFourSlice } from "@times-components-native/slice-layout";
 import { TileAW, TileAZ, TileBA, TileBB } from "../../tiles";
 import { ResponsiveSlice, FlushResponsiveSlice } from "../shared";
@@ -113,22 +113,18 @@ const renderLandscape = (props, breakpoint, orientation) => {
 };
 
 const SupplementLeadOneAndFour = (props) => {
+  const { orientation } = useResponsiveContext();
+
   const renderPort = (breakpoint, orientation) =>
     renderPortrait(props, breakpoint, orientation);
 
   const renderLand = (breakpoint, orientation) =>
     renderLandscape(props, breakpoint, orientation);
 
-  return (
-    <ResponsiveContext.Consumer>
-      {({ orientation }) => {
-        return orientation === "portrait" ? (
-          <ResponsiveSlice renderMedium={renderPort} />
-        ) : (
-          <FlushResponsiveSlice renderMedium={renderLand} />
-        );
-      }}
-    </ResponsiveContext.Consumer>
+  return orientation === "portrait" ? (
+    <ResponsiveSlice renderMedium={renderPort} />
+  ) : (
+    <FlushResponsiveSlice renderMedium={renderLand} />
   );
 };
 

@@ -1,5 +1,5 @@
 import React from "react";
-import { ResponsiveContext } from "@times-components-native/responsive";
+import { useResponsiveContext } from "@times-components-native/responsive";
 import { spacing } from "@times-components-native/styleguide";
 import { propTypes, defaultProps } from "./inset-caption-prop-types";
 
@@ -9,17 +9,16 @@ const captionStyle = {
   },
 };
 
-const CaptionComponentPrimaryNative = ({ text, credits, CaptionComponent }) => (
-  <ResponsiveContext>
-    {({ isTablet }) => (
-      <CaptionComponent
-        credits={credits}
-        style={isTablet ? {} : captionStyle}
-        text={text}
-      />
-    )}
-  </ResponsiveContext>
-);
+const CaptionComponentPrimaryNative = ({ text, credits, CaptionComponent }) => {
+  const { isTablet } = useResponsiveContext();
+  return (
+    <CaptionComponent
+      credits={credits}
+      style={isTablet ? {} : captionStyle}
+      text={text}
+    />
+  );
+};
 
 CaptionComponentPrimaryNative.propTypes = propTypes;
 CaptionComponentPrimaryNative.defaultProps = defaultProps;

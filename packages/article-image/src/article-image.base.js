@@ -30,11 +30,11 @@ function getCaptionComponent(display) {
 }
 
 const renderCaption = (caption, credits, display, theme) => {
-  const CaptionComponent = getCaptionComponent(display, theme);
-
   if (!caption && !credits) {
     return null;
   }
+
+  const CaptionComponent = getCaptionComponent(display, theme);
 
   const captionComponent = (
     <CaptionComponent

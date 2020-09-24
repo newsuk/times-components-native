@@ -1,25 +1,25 @@
 import React from "react";
 import { Text } from "react-native";
-import { ResponsiveContext } from "@times-components-native/responsive";
+import { useResponsiveContext } from "@times-components-native/responsive";
 import propTypes from "./key-facts-title-prop-types";
 import styles from "./styles";
 
-const KeyFactsTitle = ({ color, fontStyle, title }) => (
-  <ResponsiveContext.Consumer>
-    {({ isTablet }) => (
-      <Text
-        style={[
-          styles.title,
-          isTablet && styles.titleTablet,
-          { color },
-          fontStyle,
-        ]}
-      >
-        {title.toUpperCase()}
-      </Text>
-    )}
-  </ResponsiveContext.Consumer>
-);
+const KeyFactsTitle = ({ color, fontStyle, title }) => {
+  const { isTablet } = useResponsiveContext();
+
+  return (
+    <Text
+      style={[
+        styles.title,
+        isTablet && styles.titleTablet,
+        { color },
+        fontStyle,
+      ]}
+    >
+      {title.toUpperCase()}
+    </Text>
+  );
+};
 
 KeyFactsTitle.propTypes = propTypes;
 
