@@ -14,6 +14,7 @@ import {
 } from "@times-components-native/typeset";
 import ArticleParagraphWrapper from "@times-components-native/article-paragraph";
 import { useVariantTestingContext } from "@times-components-native/variant-testing";
+import { useResponsiveContext } from "@times-components-native/responsive";
 
 const InlineParagraph = ({
   onLinkPress,
@@ -31,6 +32,7 @@ const InlineParagraph = ({
 }) => {
   const { spacing } = styleguide({ scale });
   const [inlineExclusion, setInlineExclusion] = useState(false);
+  const { orientation } = useResponsiveContext();
   const variants = useVariantTestingContext();
 
   const contentWidth = Math.min(
@@ -63,7 +65,7 @@ const InlineParagraph = ({
       p.text.collapsedAttributes(0),
     );
     return [newPositionedTextItems, newPositionItemSettings];
-  }, [inlineExclusion]);
+  }, [inlineExclusion, orientation]);
 
   if (!str.length) {
     return null;
