@@ -100,6 +100,7 @@ const InlineParagraph = ({
         key={`${uid}:inline-paragraph`}
         style={{
           position: "absolute",
+          zIndex: 1000,
           ...getInlineLayout(),
         }}
         onLayout={(e) => {
