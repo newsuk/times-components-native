@@ -1,6 +1,6 @@
 import React from "react";
 import PropTypes from "prop-types";
-import { ResponsiveContext } from "@times-components-native/responsive";
+import { useResponsiveContext } from "@times-components-native/responsive";
 import { editionBreakpoints } from "@times-components-native/styleguide";
 import Gutter from "./gutter";
 import ContentWrapper from "./content-wrapper";
@@ -11,42 +11,37 @@ const ResponsiveSlice = ({
   renderWide,
   renderHuge,
   grow = false,
-}) => (
-  <ResponsiveContext.Consumer>
-    {({ editionBreakpoint, orientation }) => {
-      switch (editionBreakpoint) {
-        case editionBreakpoints.small:
-          return renderSmall(editionBreakpoint, orientation);
-        case editionBreakpoints.medium:
-          return (
-            <Gutter grow={grow}>
-              {renderMedium(editionBreakpoint, orientation)}
-            </Gutter>
-          );
-        case editionBreakpoints.wide:
-          return (
-            <Gutter grow={grow}>
-              {(renderWide && renderWide(editionBreakpoint, orientation)) ||
-                (renderMedium && renderMedium(editionBreakpoint, orientation))}
-            </Gutter>
-          );
-        case editionBreakpoints.huge:
-          return (
-            <Gutter grow={grow}>
-              <ContentWrapper>
-                {(renderHuge && renderHuge(editionBreakpoint, orientation)) ||
-                  (renderWide && renderWide(editionBreakpoint, orientation)) ||
-                  (renderMedium &&
-                    renderMedium(editionBreakpoint, orientation))}
-              </ContentWrapper>
-            </Gutter>
-          );
-        default:
-          return renderSmall(editionBreakpoint, orientation);
-      }
-    }}
-  </ResponsiveContext.Consumer>
-);
+}) => {
+  const { editionBreakpoint, orientation } = useResponsiveContext();
+  switch (editionBreakpoint) {
+    case editionBreakpoints.medium:
+      return (
+        <Gutter grow={grow}>
+          {renderMedium(editionBreakpoint, orientation)}
+        </Gutter>
+      );
+    case editionBreakpoints.wide:
+      return (
+        <Gutter grow={grow}>
+          {(renderWide && renderWide(editionBreakpoint, orientation)) ||
+            (renderMedium && renderMedium(editionBreakpoint, orientation))}
+        </Gutter>
+      );
+    case editionBreakpoints.huge:
+      return (
+        <Gutter grow={grow}>
+          <ContentWrapper>
+            {(renderHuge && renderHuge(editionBreakpoint, orientation)) ||
+              (renderWide && renderWide(editionBreakpoint, orientation)) ||
+              (renderMedium && renderMedium(editionBreakpoint, orientation))}
+          </ContentWrapper>
+        </Gutter>
+      );
+    case editionBreakpoints.small:
+    default:
+      return <>{renderSmall(editionBreakpoint, orientation)}</>;
+  }
+};
 
 ResponsiveSlice.propTypes = {
   renderSmall: PropTypes.func.isRequired,

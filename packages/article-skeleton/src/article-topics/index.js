@@ -2,24 +2,22 @@ import React from "react";
 import { View } from "react-native";
 import PropTypes from "prop-types";
 import ArticleTopics from "@times-components-native/article-topics";
-import { ResponsiveContext } from "@times-components-native/responsive";
+import { useResponsiveContext } from "@times-components-native/responsive";
 import styles from "../styles/article-topics";
 
 const ShowTopics = ({ topics, onPress }) => {
+  const { isTablet } = useResponsiveContext();
+
   if (topics && topics.length > 0) {
     return (
-      <ResponsiveContext.Consumer>
-        {({ isTablet }) => (
-          <View
-            style={[
-              styles.topicsContainer,
-              isTablet && styles.topicsContainerTablet,
-            ]}
-          >
-            <ArticleTopics onPress={onPress} topics={topics} />
-          </View>
-        )}
-      </ResponsiveContext.Consumer>
+      <View
+        style={[
+          styles.topicsContainer,
+          isTablet && styles.topicsContainerTablet,
+        ]}
+      >
+        <ArticleTopics onPress={onPress} topics={topics} />
+      </View>
     );
   }
 
