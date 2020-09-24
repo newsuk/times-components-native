@@ -153,7 +153,7 @@ const ArticleWithContent = (props) => {
           onViewableItemsChanged={onViewableItemsChanged}
           removeClippedSubviews
           keyExtractor={(item, index) => index.toString()}
-          initialNumToRender={isTablet ? 5 : 2}
+          initialNumToRender={2}
           windowSize={3}
           nestedScrollEnabled
           testID="flat-list-article"
