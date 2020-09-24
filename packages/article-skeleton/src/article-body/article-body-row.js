@@ -252,10 +252,21 @@ export default ({
         } = element;
 
         return (
-          <InteractiveWrapper.ResponsiveImageInteractive
-            deckId={deckId}
+          <View
             key={key}
-          />
+            style={[
+              styles.interactiveContainer,
+              isTablet && styles.interactiveContainerTablet,
+              isTablet &&
+                display === "fullwidth" &&
+                styles.interactiveContainerFullWidth,
+            ]}
+          >
+            <InteractiveWrapper.ResponsiveImageInteractive
+              deckId={deckId}
+              key={key}
+            />
+          </View>
         );
       }
       if (element && element.value === "newsletter-puff") {
