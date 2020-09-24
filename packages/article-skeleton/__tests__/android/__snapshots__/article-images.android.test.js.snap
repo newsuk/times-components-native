@@ -11,7 +11,7 @@ exports[`1. a primary image 1`] = `
       </Gutter>
     }
     extraData={true}
-    initialNumToRender={5}
+    initialNumToRender={10}
     maxToRenderPerBatch={10}
     nestedScrollEnabled={true}
     onEndReachedThreshold={2}
@@ -102,7 +102,7 @@ exports[`2. a fullwidth image 1`] = `
       </Gutter>
     }
     extraData={true}
-    initialNumToRender={5}
+    initialNumToRender={10}
     maxToRenderPerBatch={10}
     nestedScrollEnabled={true}
     onEndReachedThreshold={2}
@@ -193,7 +193,7 @@ exports[`3. a secondary image 1`] = `
       </Gutter>
     }
     extraData={true}
-    initialNumToRender={5}
+    initialNumToRender={10}
     maxToRenderPerBatch={10}
     nestedScrollEnabled={true}
     onEndReachedThreshold={2}
@@ -284,7 +284,7 @@ exports[`4. an inline image 1`] = `
       </Gutter>
     }
     extraData={true}
-    initialNumToRender={5}
+    initialNumToRender={10}
     maxToRenderPerBatch={10}
     nestedScrollEnabled={true}
     onEndReachedThreshold={2}
