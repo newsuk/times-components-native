@@ -2,6 +2,7 @@ import {
   spacing,
   editionBreakpoints,
 } from "@times-components-native/styleguide";
+import { getStyleByDeviceSize } from "@times-components-native/styleguide/src/styleguide";
 
 const sharedStyles = {
   container: {
@@ -46,13 +47,5 @@ const styles = {
 export default (breakpoint) => stylesResolver[breakpoint];
 
 export const getStyles = (orientation, windowWidth) => {
-  if (windowWidth >= 768) {
-    return styles[orientation]["768"];
-  }
-
-  if (windowWidth >= 810) {
-    return styles[orientation]["810"];
-  }
-
-  return styles[orientation]["768"];
+  return getStyleByDeviceSize(styles[orientation], windowWidth);
 };
