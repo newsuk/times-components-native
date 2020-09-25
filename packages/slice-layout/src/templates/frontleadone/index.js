@@ -28,6 +28,13 @@ const FrontLeadOneSlice = ({ breakpoint, orientation, lead }) => {
       ]}
     >
       {lead}
+      <View
+        style={{
+          width: "100%",
+          height: 133,
+          backgroundColor: "#f0eedf",
+        }}
+      />
     </View>
   );
 };

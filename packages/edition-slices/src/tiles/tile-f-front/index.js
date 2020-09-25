@@ -10,7 +10,8 @@ import {
   TileImage,
   getTileStrapline,
 } from "../shared";
-import stylesFactory from "./styles";
+import stylesFactory, { getStyle } from "./styles";
+import { Dimensions } from "react-native";
 
 const getAspectRatio = (crop) => (crop === "crop32" ? 3 / 2 : 16 / 9);
 
@@ -28,63 +29,32 @@ const TileFFront = ({
 
   const imageCrop = getTileImage(tile, crop);
   const styles = stylesFactory(breakpoint);
-
-  const [summaryHeight, setSummaryHeight] = useState(null);
+  const { width: windowWidth } = Dimensions.get("window");
+  const newStyles = getStyle(orientation, windowWidth);
 
   if (!imageCrop) return null;
 
   const { article } = tile;
 
   return (
-    <TileLink
-      onPress={onPress}
-      style={
-        isLandscape && breakpoint !== editionBreakpoints.huge
-          ? styles.containerLandscape
-          : styles.containerPortrait
-      }
-      tile={tile}
-    >
+    <TileLink onPress={onPress} style={newStyles.container} tile={tile}>
       <TileImage
         aspectRatio={getAspectRatio(crop)}
         relativeWidth={imageCrop.relativeWidth}
         relativeHeight={imageCrop.relativeHeight}
         relativeHorizontalOffset={imageCrop.relativeHorizontalOffset}
         relativeVerticalOffset={imageCrop.relativeVerticalOffset}
-        style={
-          isLandscape && breakpoint !== editionBreakpoints.huge
-            ? styles.imageContainerLandscape
-            : styles.imageContainerPortrait
-        }
+        style={newStyles.imageContainer}
         uri={imageCrop.url}
         fill
         hasVideo={article.hasVideo}
-        onLayout={(e) => {
-          if (isLandscape) {
-            const height = Math.floor(e.nativeEvent.layout.height);
-            setSummaryHeight(height);
-          }
-        }}
       />
       <FrontTileSummary
-        headlineStyle={
-          isLandscape ? styles.headlineLandscape : styles.headlinePortrait
-        }
+        headlineStyle={newStyles.headline}
         summary={!hideSummary && article.content}
-        summaryStyle={
-          isLandscape ? styles.summaryLandscape : styles.summaryPortrait
-        }
+        summaryStyle={newStyles.summary}
         strapline={getTileStrapline(tile)}
-        straplineStyle={styles.strapline}
-        containerStyle={
-          isLandscape &&
-          breakpoint !== editionBreakpoints.huge && {
-            ...styles.summaryContainerLandscape,
-            ...(summaryHeight && {
-              height: summaryHeight,
-            }),
-          }
-        }
+        straplineStyle={newStyles.strapline}
         tile={tile}
         template={article.template}
         columnCount={columnCount}

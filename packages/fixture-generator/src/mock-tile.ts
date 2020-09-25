@@ -10,7 +10,7 @@ class MockTile {
     this.tile = {
       articleId: "dc4ed2e8-4584-11e9-924d-9729bcd51a7f",
       article,
-      headline: "This is tile headline",
+      headline: "This is tile headline headline headline headline",
       leadAsset: article.leadAsset,
       strapline: "Three Conservative MPs resign",
     };

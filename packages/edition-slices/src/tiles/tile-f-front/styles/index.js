@@ -13,7 +13,7 @@ const mediumBreakpointStyles = {
     flexDirection: "row-reverse",
   },
   containerPortrait: {
-    paddingBottom: spacing(2),
+    paddingBottom: 0,
     flex: 1,
     flexDirection: "column",
   },
@@ -25,6 +25,7 @@ const mediumBreakpointStyles = {
   },
   headlinePortrait: {
     ...globalSpacingStyles.tabletHeadline,
+    marginBottom: 5,
     fontFamily: fonts.headline,
     fontSize: 40,
     lineHeight: 40,
@@ -99,4 +100,69 @@ const stylesResolver = {
   [editionBreakpoints.huge]: hugeBreakpointStyles,
 };
 
+const sharedStyles = {
+  imageContainer: {
+    width: "100%",
+    marginBottom: spacing(2),
+  },
+};
+
+const sharedLandscapeStyles = {
+  ...sharedStyles,
+  container: {
+    paddingBottom: spacing(2),
+    flex: 1,
+    flexDirection: "row-reverse",
+  },
+};
+
+const sharedPortraitStyles = {
+  ...sharedStyles,
+  container: {
+    paddingBottom: 0,
+    flex: 1,
+    flexDirection: "column",
+  },
+};
+
+const styles = {
+  landscape: {
+    "1024": {
+      ...sharedLandscapeStyles,
+    },
+  },
+  portrait: {
+    "768": {
+      ...sharedPortraitStyles,
+      headline: {
+        ...globalSpacingStyles.tabletHeadline,
+        fontFamily: fonts.headline,
+        fontSize: 42,
+        lineHeight: 42,
+        marginBottom: spacing(1),
+      },
+      summary: {
+        ...globalSpacingStyles.tabletTeaser,
+        textAlign: "justify",
+        fontSize: 14,
+        lineHeight: 18,
+      },
+      strapline: {
+        fontFamily: fonts.headlineRegular,
+        color: colours.functional.primary,
+        fontSize: 24,
+        lineHeight: 24,
+      },
+    },
+  },
+};
+
 export default (breakpoint) => stylesResolver[breakpoint];
+
+export const getStyle = (orientation, windowWidth) => {
+  if (windowWidth >= 768) {
+    return styles[orientation]["768"];
+  }
+
+  return styles[orientation]["768"];
+};

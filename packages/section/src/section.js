@@ -16,6 +16,8 @@ import {
   createPuzzleData,
   isSupplementSection,
 } from "./utils";
+import { mockLeadOneFullWidthSlice } from "@times-components-native/fixture-generator";
+import FrontLeadOne from "@times-components-native/edition-slices/src/slices/frontleadone";
 
 const styles = styleFactory();
 
@@ -107,6 +109,7 @@ class Section extends Component {
       <Responsive>
         <ResponsiveContext.Consumer>
           {({ isTablet, editionBreakpoint }) => {
+            return <FrontLeadOne slice={mockLeadOneFullWidthSlice()} />;
             if (name === "FrontPageSection") {
               return this.renderItem({ index: 0, item: slices[0] });
             }

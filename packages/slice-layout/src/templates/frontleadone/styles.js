@@ -6,8 +6,8 @@ import {
 const sharedStyles = {
   container: {
     flex: 1,
-    flexDirection: "row",
-    paddingTop: spacing(4),
+    flexDirection: "column",
+    paddingVertical: spacing(2),
     marginHorizontal: spacing(6),
   },
 };
