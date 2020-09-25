@@ -1,5 +1,5 @@
 /* eslint-disable react/require-default-props */
-import React, { useState } from "react";
+import React from "react";
 import PropTypes from "prop-types";
 import { editionBreakpoints } from "@times-components-native/styleguide";
 import { FrontTileSummary } from "@times-components-native/front-page";
@@ -10,7 +10,7 @@ import {
   TileImage,
   getTileStrapline,
 } from "../shared";
-import stylesFactory, { getStyle } from "./styles";
+import { getStyle } from "./styles";
 import { Dimensions } from "react-native";
 
 const getAspectRatio = (crop) => (crop === "crop32" ? 3 / 2 : 16 / 9);
@@ -28,7 +28,6 @@ const TileFFront = ({
   const hideSummary = isHugeLandscape;
 
   const imageCrop = getTileImage(tile, crop);
-  const styles = stylesFactory(breakpoint);
   const { width: windowWidth } = Dimensions.get("window");
   const newStyles = getStyle(orientation, windowWidth);
 
@@ -60,7 +59,7 @@ const TileFFront = ({
         columnCount={columnCount}
         bylines={article.bylines}
         showKeyline={!isHugeLandscape}
-        bylineContainerStyle={styles.bylineContainer}
+        bylineContainerStyle={newStyles.bylineContainer}
       />
     </TileLink>
   );

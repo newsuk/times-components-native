@@ -1,9 +1,7 @@
-import {
-  spacing,
-  editionBreakpoints,
-} from "@times-components-native/styleguide";
+import { spacing } from "@times-components-native/styleguide";
 import { getStyleByDeviceSize } from "@times-components-native/styleguide/src/styleguide";
 
+const containerPortrait = { flex: 1, flexDirection: "column" };
 const sharedStyles = {
   container: {
     flex: 1,
@@ -11,13 +9,6 @@ const sharedStyles = {
     paddingVertical: spacing(2),
     marginHorizontal: spacing(6),
   },
-};
-
-const stylesResolver = {
-  [editionBreakpoints.small]: {},
-  [editionBreakpoints.medium]: sharedStyles,
-  [editionBreakpoints.wide]: sharedStyles,
-  [editionBreakpoints.huge]: sharedStyles,
 };
 
 const styles = {
@@ -28,24 +19,50 @@ const styles = {
   },
   portrait: {
     "768": {
-      ...sharedStyles,
-      inTheNewsContainer: {
+      container: {
+        ...containerPortrait,
+        paddingTop: spacing(2),
+        paddingBottom: spacing(3),
+      },
+      inTodaysEditionContainer: {
         height: 133,
         width: "100%",
       },
     },
     "810": {
-      ...sharedStyles,
-      inTheNewsContainer: {
+      container: {
+        ...containerPortrait,
+        paddingVertical: spacing(3),
+      },
+      inTodaysEditionContainer: {
         height: 148,
+        width: "100%",
+      },
+    },
+    "834": {
+      container: {
+        ...containerPortrait,
+        paddingTop: spacing(3),
+        paddingBottom: spacing(4),
+      },
+      inTodaysEditionContainer: {
+        height: 148,
+        width: "100%",
+      },
+    },
+    "1024": {
+      container: {
+        ...containerPortrait,
+        paddingTop: spacing(3),
+        paddingBottom: spacing(4),
+      },
+      inTodaysEditionContainer: {
+        height: 174,
         width: "100%",
       },
     },
   },
 };
 
-export default (breakpoint) => stylesResolver[breakpoint];
-
-export const getStyles = (orientation, windowWidth) => {
-  return getStyleByDeviceSize(styles[orientation], windowWidth);
-};
+export const getStyles = (orientation, windowWidth) =>
+  getStyleByDeviceSize(styles[orientation], windowWidth);
