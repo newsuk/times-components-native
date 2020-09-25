@@ -21,6 +21,7 @@ function renderMedium(props, breakpoint, orientation) {
         />
       }
       breakpoint={breakpoint}
+      orientation={orientation}
     />
   );
 }

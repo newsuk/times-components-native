@@ -1,6 +1,6 @@
 import React from "react";
 import { Dimensions, View } from "react-native";
-import stylesFactory from "./styles";
+import stylesFactory, { getStyles } from "./styles";
 
 const calculateContentWidth = (windowWidth) => {
   if (windowWidth >= 1366) return 1180;
@@ -14,8 +14,8 @@ const calculateContentWidth = (windowWidth) => {
 
 const FrontLeadOneSlice = ({ breakpoint, orientation, lead }) => {
   const styles = stylesFactory(breakpoint);
-
   const windowWidth = Dimensions.get("window").width;
+  const newStyles = getStyles(orientation, windowWidth);
 
   return (
     <View
@@ -29,11 +29,12 @@ const FrontLeadOneSlice = ({ breakpoint, orientation, lead }) => {
     >
       {lead}
       <View
-        style={{
-          width: "100%",
-          height: 133,
-          backgroundColor: "#f0eedf",
-        }}
+        style={[
+          {
+            backgroundColor: "#f0eedf",
+          },
+          newStyles.inTheNewsContainer,
+        ]}
       />
     </View>
   );
