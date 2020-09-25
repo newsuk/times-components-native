@@ -8,7 +8,7 @@ const functionalColours = {
   backgroundSecondary: "#EDEDED",
   black: "#000000",
   border: "#F0F0F0",
-  biege: "#F0EEDF",
+  buff: "#F0EEDF",
   brandColour: "#1D1D1B",
   bullet: "#103546",
   contrast: "#FFFFFF",

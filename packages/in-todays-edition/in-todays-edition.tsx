@@ -5,10 +5,22 @@ import styleFactory from "./styles";
 import { ItemsContainer } from "./itemsContainer";
 import { Item } from "./item";
 
-type ItemType = {
+export type Link = {
+  url: string;
+};
+
+export type ArticleLink = {
+  articleId: string;
+};
+
+export type PuffMainLinkRef = ArticleLink | Link;
+
+export type ItemType = {
   id: string;
   title: string;
   strapline: string;
+  mainLink: PuffMainLinkRef;
+  onPress: any;
 };
 
 interface Props {

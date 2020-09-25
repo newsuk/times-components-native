@@ -5,7 +5,7 @@ const { fonts, spacing, colours } = styleguide();
 export default () => ({
   container: {
     paddingVertical: spacing(2),
-    backgroundColor: colours.functional.biege,
+    backgroundColor: colours.functional.buff,
     flex: 1,
   },
   titleContainer: {
