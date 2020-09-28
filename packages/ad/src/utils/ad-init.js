@@ -229,7 +229,7 @@ export default ({ el, data, platform, eventCallback, window }) => {
             slot.setTargeting("pos", slotName);
             if (/^native-inline-ad-/.test(slotName)) {
               const testGroup = ["a", "b", "c"].indexOf(slotName.slice(-1)) + 1;
-              slot.setTargeting("testgroup", testGroup);
+              slot.setTargeting("testgroup", testGroup.toString());
             }
             googletag.display(slotName);
             eventCallback(
