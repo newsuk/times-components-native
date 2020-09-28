@@ -42,8 +42,7 @@ const getNarrowArticleBreakpoint = (width) => {
 const getStyleByDeviceSize = (styles, windowWidth) => {
   const sizes = Object.keys(styles)
     .map(Number)
-    .sort((a, b) => a > b)
-    .reverse();
+    .sort((a, b) => b - a);
 
   const index = sizes.findIndex((size) => size <= windowWidth);
   const selectedSize = sizes[index];
