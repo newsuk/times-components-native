@@ -105,22 +105,35 @@ export default () => {
       ).toEqual(content);
     });
 
-    it("setupAd should return content untouched if articleMpu group is control group A", () => {
-      expect(
-        setupAd(true, { articleMpu: { group: "A" } }, "mainstandard", content),
-      ).toEqual(content);
-    });
-
     it("setupAd should return content untouched if template is not mainstandard", () => {
       expect(
         setupAd(true, { articleMpu: { group: "B" } }, "maincomment", content),
       ).toEqual(content);
     });
 
-    it("setupAd should return content untouched if template is not mainstandard", () => {
+    it("setupAd should return content with the slotName overriden if articleMpu group is control group A", () => {
       expect(
-        setupAd(true, { articleMpu: { group: "B" } }, "maincomment", content),
-      ).toEqual(content);
+        setupAd(
+          true,
+          { articleMpu: { group: "A", slotName: "native-inline-ad-a" } },
+          "mainstandard",
+          content,
+        ),
+      ).toEqual([
+        { name: "paragraph", children: [] },
+        { name: "paragraph", children: [] },
+        { name: "paragraph", children: [] },
+        { name: "paragraph", children: [] },
+        { name: "paragraph", children: [] },
+        {
+          name: "ad",
+          attributes: {
+            slotName: "native-inline-ad-a",
+          },
+          children: [],
+        },
+        { name: "paragraph", children: [] },
+      ]);
     });
 
     it("setupAd should return content with the ad present and attributes overriden", () => {
