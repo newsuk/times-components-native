@@ -19,6 +19,12 @@ const sharedLandscapeStyles = {
   },
 };
 
+const sharedPortraitStyles = {
+  leadContainer: {
+    flex: 1,
+  },
+};
+
 const styles = {
   landscape: {
     "1024": {
@@ -54,6 +60,7 @@ const styles = {
   },
   portrait: {
     "768": {
+      ...sharedPortraitStyles,
       container: {
         ...containerPortrait,
         paddingTop: spacing(2),
@@ -65,6 +72,7 @@ const styles = {
       },
     },
     "810": {
+      ...sharedPortraitStyles,
       container: {
         ...containerPortrait,
         paddingVertical: spacing(3),
@@ -75,6 +83,7 @@ const styles = {
       },
     },
     "834": {
+      ...sharedPortraitStyles,
       container: {
         ...containerPortrait,
         paddingTop: spacing(3),
@@ -85,7 +94,8 @@ const styles = {
         width: "100%",
       },
     },
-    "1024": {
+    1024: {
+      ...sharedPortraitStyles,
       container: {
         ...containerPortrait,
         paddingTop: spacing(3),
@@ -93,7 +103,6 @@ const styles = {
       },
       inTodaysEditionContainer: {
         height: 174,
-        width: "100%",
       },
     },
   },

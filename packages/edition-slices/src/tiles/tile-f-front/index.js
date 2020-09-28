@@ -55,7 +55,7 @@ const TileFFront = ({
         tile={tile}
         template={article.template}
         columnCount={columnCount}
-        bylines={isHugeLandscape && article.bylines}
+        bylines={(!isLandscape || isHugeLandscape) && article.bylines}
         bylineContainerStyle={newStyles.bylineContainer}
       />
     </TileLink>
