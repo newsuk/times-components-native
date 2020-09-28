@@ -39,6 +39,7 @@ export {
   sliceContentMaxWidth,
   getEditionBreakpoint,
   getNarrowArticleBreakpoint,
+  getStyleByDeviceSize,
 } from "./breakpoints";
 
 export { default as scales } from "./scales";
