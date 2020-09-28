@@ -1,6 +1,7 @@
 import React from "react";
-import { Text, View } from "react-native";
-import styleFactory from "./styles";
+import { Dimensions, Text, View } from "react-native";
+import { useResponsiveContext } from "@times-components-native/responsive";
+import { getStyles } from "./styles";
 
 import { ItemsContainer } from "./itemsContainer";
 import { Item } from "./item";
@@ -20,7 +21,8 @@ export type ItemType = {
   title: string;
   strapline: string;
   mainLink: PuffMainLinkRef;
-  onPress: any;
+  onArticlePress: any;
+  onLinkPress: any;
 };
 
 interface Props {
@@ -32,7 +34,9 @@ const text = {
 };
 
 const InTodaysEdition: React.FC<Props> = ({ items }) => {
-  const styles = styleFactory();
+  const { orientation } = useResponsiveContext();
+  const windowWidth = Dimensions.get("window").width;
+  const styles = getStyles(orientation, windowWidth);
 
   return (
     <View style={styles.container}>

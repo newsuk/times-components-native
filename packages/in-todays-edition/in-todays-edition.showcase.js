@@ -6,6 +6,14 @@ import { View } from "react-native";
 
 import InTodaysEditionData from "./fixtures/in-todays-edition.json";
 
+const preventDefaultedAction = (decorateAction) =>
+  decorateAction([
+    ([e, ...args]) => {
+      e.preventDefault();
+      return ["[SyntheticEvent (storybook prevented default)]", ...args];
+    },
+  ]);
+
 const StoryContainer = ({ children }) => (
   <View
     style={{
@@ -21,10 +29,18 @@ const StoryContainer = ({ children }) => (
 export default {
   children: [
     {
-      component: () => (
+      component: (_, { decorateAction }) => (
         <Responsive>
           <StoryContainer>
-            <InTodaysEdition items={InTodaysEditionData} />
+            <InTodaysEdition
+              items={InTodaysEditionData}
+              onArticlePress={preventDefaultedAction(decorateAction)(
+                "onArticlePress",
+              )}
+              onLinkPress={preventDefaultedAction(decorateAction)(
+                "onLinkPress",
+              )}
+            />
           </StoryContainer>
         </Responsive>
       ),

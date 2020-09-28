@@ -1,7 +1,8 @@
 import React from "react";
-import { View, Text } from "react-native";
+import { Dimensions, View, Text } from "react-native";
+import { useResponsiveContext } from "@times-components-native/responsive";
 import { TextLink } from "@times-components-native/link";
-import styleFactory from "./styles";
+import { getStyles } from "./styles";
 import { ItemType, Link, ArticleLink } from "./in-todays-edition";
 
 interface Props {
@@ -14,8 +15,7 @@ const isArticleLink = (link: ArticleLink | Link): link is ArticleLink => {
   return link.hasOwnProperty("articleId");
 };
 
-const renderLink = (item: ItemType) => {
-  const styles = styleFactory();
+const renderLink = (item: ItemType, style: any) => {
   const link = item.mainLink;
   const url = isArticleLink(link) ? link.articleId : link.url;
 
@@ -25,8 +25,9 @@ const renderLink = (item: ItemType) => {
 
   return (
     <TextLink
-      onPress={() => item.onPress}
-      style={styles.itemLink}
+      onPress={() => item.onArticlePress}
+      onLinkPress={() => item.onLinkPress}
+      style={style}
       url={url}
       target={null}
     >
@@ -36,13 +37,15 @@ const renderLink = (item: ItemType) => {
 };
 
 export const Item: React.FC<Props> = ({ item, index }) => {
-  const styles = styleFactory();
+  const { orientation } = useResponsiveContext();
+  const windowWidth = Dimensions.get("window").width;
+  const styles = getStyles(orientation, windowWidth);
   return (
     <>
       <View style={styles.item}>
         <Text style={styles.itemTitle}>{item.title}</Text>
         <Text style={styles.itemStrapline}>{item.strapline}</Text>
-        {renderLink(item)}
+        {renderLink(item, styles.itemLink)}
         {index !== 3 ? <View style={styles.horizontalDivider} /> : null}
       </View>
     </>

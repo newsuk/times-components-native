@@ -1,8 +1,11 @@
 import React from "react";
-import { View } from "react-native";
-import styleFactory from "./styles";
+import { Dimensions, View } from "react-native";
+import { useResponsiveContext } from "@times-components-native/responsive";
+import { getStyles } from "./styles";
 
 export const ItemsContainer: React.FC = (props) => {
-  const styles = styleFactory();
+  const { orientation } = useResponsiveContext();
+  const windowWidth = Dimensions.get("window").width;
+  const styles = getStyles(orientation, windowWidth);
   return <View style={styles.itemsContainer}>{props.children}</View>;
 };

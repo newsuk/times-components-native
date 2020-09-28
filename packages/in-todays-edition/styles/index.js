@@ -1,8 +1,8 @@
-import styleguide from "@times-components-native/styleguide";
+import { fonts, spacing, colours }  from "@times-components-native/styleguide";
 
-const { fonts, spacing, colours } = styleguide();
+import { getStyleByDeviceSize } from "@times-components-native/styleguide/src/styleguide";
 
-export default () => ({
+const sharedStyles = {
   container: {
     paddingVertical: spacing(2),
     backgroundColor: colours.functional.buff,
@@ -59,4 +59,29 @@ export default () => ({
     borderColor: colours.functional.keyline,
     marginBottom: spacing(1),
   },
-});
+};
+
+const styles = {
+  landscape: {
+    "768": {
+      ...sharedStyles,
+    },
+  },
+  portrait: {
+    "768": {
+      ...sharedStyles,
+    },
+    "810": {
+      ...sharedStyles,
+    },
+    "834": {
+      ...sharedStyles,
+    },
+    "1024": {
+      ...sharedStyles,
+    },
+  },
+};
+
+export const getStyles = (orientation, windowWidth) =>
+  getStyleByDeviceSize(styles[orientation], windowWidth);
