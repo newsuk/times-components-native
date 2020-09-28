@@ -13,8 +13,6 @@ import {
 import { getStyle } from "./styles";
 import { Dimensions } from "react-native";
 
-const getAspectRatio = (crop) => (crop === "crop32" ? 3 / 2 : 16 / 9);
-
 const TileFFront = ({
   onPress,
   tile,
@@ -24,8 +22,8 @@ const TileFFront = ({
   const isLandscape = orientation === "landscape";
   const isHugeLandscape = breakpoint === editionBreakpoints.huge && isLandscape;
   const columnCount = isLandscape ? 1 : 3;
-  const crop = isHugeLandscape || !isLandscape ? "crop169" : "crop32";
-  const hideSummary = isHugeLandscape;
+  const crop = "crop169";
+  const hideSummary = isLandscape;
 
   const imageCrop = getTileImage(tile, crop);
   const { width: windowWidth } = Dimensions.get("window");
@@ -38,7 +36,7 @@ const TileFFront = ({
   return (
     <TileLink onPress={onPress} style={newStyles.container} tile={tile}>
       <TileImage
-        aspectRatio={getAspectRatio(crop)}
+        aspectRatio={16 / 9}
         relativeWidth={imageCrop.relativeWidth}
         relativeHeight={imageCrop.relativeHeight}
         relativeHorizontalOffset={imageCrop.relativeHorizontalOffset}
@@ -57,8 +55,7 @@ const TileFFront = ({
         tile={tile}
         template={article.template}
         columnCount={columnCount}
-        bylines={article.bylines}
-        showKeyline={!isHugeLandscape}
+        bylines={isHugeLandscape && article.bylines}
         bylineContainerStyle={newStyles.bylineContainer}
       />
     </TileLink>

@@ -1,20 +1,55 @@
 import { spacing } from "@times-components-native/styleguide";
-import { getStyleByDeviceSize } from "@times-components-native/styleguide/src/styleguide";
+import {
+  columnToPercentage,
+  getStyleByDeviceSize,
+} from "@times-components-native/styleguide/src/styleguide";
 
 const containerPortrait = { flex: 1, flexDirection: "column" };
-const sharedStyles = {
-  container: {
-    flex: 1,
-    flexDirection: "column",
-    paddingVertical: spacing(2),
-    marginHorizontal: spacing(6),
+const containerLandscape = { flex: 1, flexDirection: "row" };
+
+const sharedLandscapeStyles = {
+  colSeparatorStyle: { marginVertical: 0 },
+  inTodaysEditionContainer: {
+    width: columnToPercentage({ numberOfColumns: 3 }),
+    marginLeft: spacing(2),
+    backgroundColor: "#f0eedf", // REMOVE BEFORE COMMITTING
+  },
+  leadContainer: {
+    width: columnToPercentage({ numberOfColumns: 9 }),
   },
 };
 
 const styles = {
   landscape: {
-    "768": {
-      ...sharedStyles,
+    "1024": {
+      ...sharedLandscapeStyles,
+      container: {
+        ...containerLandscape,
+        paddingVertical: spacing(2),
+      },
+    },
+    "1080": {
+      ...sharedLandscapeStyles,
+      container: {
+        ...containerLandscape,
+        paddingVertical: spacing(3),
+      },
+    },
+    "1366": {
+      ...sharedLandscapeStyles,
+      container: {
+        ...containerLandscape,
+        paddingTop: spacing(6),
+        paddingBottom: spacing(7),
+      },
+      inTodaysEditionContainer: {
+        width: columnToPercentage({ numberOfColumns: 2, totalColumns: 11 }),
+        marginLeft: spacing(2),
+        backgroundColor: "#f0eedf", // REMOVE BEFORE COMMITTING
+      },
+      leadContainer: {
+        width: columnToPercentage({ numberOfColumns: 9, totalColumns: 11 }),
+      },
     },
   },
   portrait: {
