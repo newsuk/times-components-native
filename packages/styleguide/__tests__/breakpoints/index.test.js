@@ -2,11 +2,11 @@ import { getStyleByDeviceSize } from "@times-components-native/styleguide/src/st
 
 describe("getStyleByDeviceSize", () => {
   const styles = {
-    "768": {
-      backgroundColor: "red",
-    },
     "810": {
       backgroundColor: "amber",
+    },
+    "768": {
+      backgroundColor: "red",
     },
     "1024": {
       backgroundColor: "green",
