@@ -1,10 +1,11 @@
 /* eslint-env browser */
 /* eslint-disable react/prop-types */
 import React, { Fragment } from "react";
-import { Text } from "react-native";
+import { Dimensions, Text, View } from "react-native";
 import { NewTab } from "@times-components-native/storybook";
 import Ad, { AdComposer, SponsoredAd } from "./index";
 import adConfig from "./fixtures/article-ad-config.json";
+import Responsive from "@times-components-native/responsive";
 
 const withOpenInNewWindow = (children) => (
   <AdComposer adConfig={adConfig}>
@@ -38,8 +39,22 @@ const renderAd = (slotName) => (
   </Fragment>
 );
 
+const ResponsiveTest = () => {
+  Dimensions.addEventListener("change", () => alert("changed orientation"));
+  return (
+    <View>
+      <Text>Rotate to test</Text>
+    </View>
+  );
+};
+
 export default {
   children: [
+    {
+      component: () => <ResponsiveTest />,
+      name: "Aaa orientation",
+      type: "story",
+    },
     {
       component: ({ select }) =>
         withOpenInNewWindow(
