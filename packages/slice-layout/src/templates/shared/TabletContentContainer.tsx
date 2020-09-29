@@ -1,6 +1,7 @@
 import React, { ReactNode } from "react";
-import { Dimensions, View, StyleProp, ViewStyle } from "react-native";
+import { View, StyleProp, ViewStyle } from "react-native";
 import { useResponsiveContext } from "@times-components-native/responsive";
+import { getDimensions } from "@times-components-native/utils";
 
 type Props = {
   children: ReactNode;
@@ -23,7 +24,7 @@ function calculateContentWidth(windowWidth: number, orientation: string) {
 
 const TabletContentContainer = ({ style, children }: Props) => {
   const { orientation } = useResponsiveContext();
-  const windowWidth = Dimensions.get("window").width;
+  const { width: windowWidth } = getDimensions();
 
   return (
     <View

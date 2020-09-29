@@ -8,6 +8,17 @@ exports[`1. front lead one - medium - portrait 1`] = `
 </View>
 `;
 
+exports[`1. front lead one - portrait - 768 1`] = `
+<View>
+  <View>
+    <Text>
+      lead
+    </Text>
+  </View>
+  <View />
+</View>
+`;
+
 exports[`2. front lead one - wide - portrait 1`] = `
 <View>
   <Text>

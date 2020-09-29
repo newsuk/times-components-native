@@ -1,16 +1,20 @@
 import React from "react";
-import { Dimensions, View } from "react-native";
+import { View } from "react-native";
 import { getStyles } from "./styles";
-import { TabletContentContainer } from "@times-components-native/slice-layout/src/templates/shared";
-import { HorizontalLayout } from "@times-components-native/slice-layout";
+import {
+  HorizontalLayout,
+  TabletContentContainer,
+} from "@times-components-native/slice-layout";
+import { getDimensions } from "@times-components-native/utils";
 
 const FrontLeadOneSlice = ({ orientation, lead }) => {
-  const windowWidth = Dimensions.get("window").width;
-  const newStyles = getStyles(orientation, windowWidth);
+  const { width: windowWidth } = getDimensions();
+  const styles = getStyles(orientation, windowWidth);
 
   if (orientation === "landscape") {
     const ite = (
       <View
+        tileName={"ite"}
         style={[
           {
             backgroundColor: "#f0eedf",
@@ -22,25 +26,25 @@ const FrontLeadOneSlice = ({ orientation, lead }) => {
     return (
       <TabletContentContainer>
         <HorizontalLayout
-          containerStyle={newStyles.container}
+          containerStyle={styles.container}
           tiles={[
-            { style: newStyles.leadContainer, tile: lead },
-            { style: newStyles.inTodaysEditionContainer, tile: ite },
+            { style: styles.leadContainer, tile: lead },
+            { style: styles.inTodaysEditionContainer, tile: ite },
           ]}
-          colSeparatorStyle={newStyles.colSeparatorStyle}
+          colSeparatorStyle={styles.colSeparatorStyle}
         />
       </TabletContentContainer>
     );
   }
   return (
-    <TabletContentContainer style={newStyles.container}>
-      <View style={newStyles.leadContainer}>{lead}</View>
+    <TabletContentContainer style={styles.container}>
+      <View style={styles.leadContainer}>{lead}</View>
       <View
         style={[
           {
             backgroundColor: "#f0eedf",
           },
-          newStyles.inTodaysEditionContainer,
+          styles.inTodaysEditionContainer,
         ]}
       />
     </TabletContentContainer>

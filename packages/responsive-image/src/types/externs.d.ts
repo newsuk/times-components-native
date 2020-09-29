@@ -16,7 +16,10 @@ declare module "@times-components-native/utils" {
     value: string | number,
   ) => string;
 
+  type getDimensions = () => any;
+
   export const appendToImageURL: appendToImageURL;
+  export const getDimensions: getDimensions;
 }
 
 declare module "react-native-hooks" {
