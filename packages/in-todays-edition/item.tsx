@@ -3,14 +3,16 @@ import React from "react";
 import { Dimensions, View, Text } from "react-native";
 import { useResponsiveContext } from "@times-components-native/responsive";
 import Link from "@times-components-native/link";
+import { IconForwardArrow } from "@times-components-native/icons";
+import { colours }  from "@times-components-native/styleguide";
 import { getStyles } from "./styles";
 import { ItemType, LinkType, ArticleLinkType } from "./in-todays-edition";
 
 interface Props {
   item: ItemType;
   index: number;
-  onArticlePress: any;
-  onLinkPress: any;
+  onArticlePress: <T = unknown, R = unknown>(args?: T) => R;
+  onLinkPress: <T = unknown, R = unknown>(args?: T) => R;
 }
 
 const isArticleLink = (
@@ -28,7 +30,6 @@ export const Item: React.FC<Props> = ({
 }) => {
   // @ts-ignore
   const { orientation } = useResponsiveContext();
-  const isPortrait = orientation === "portrait";
   const windowWidth = Dimensions.get("window").width;
   const styles = getStyles(orientation, windowWidth);
   const link = item.mainLink;
@@ -43,7 +44,12 @@ export const Item: React.FC<Props> = ({
       <Link linkStyle={styles.item} key={item.id} onPress={onPress}>
         <Text style={styles.itemTitle}>{item.title}</Text>
         <Text style={styles.itemStrapline}>{item.strapline}</Text>
-        {isPortrait && <Text style={styles.itemCTA}>{ctaText}</Text>}
+        <View style={styles.itemCTA}>
+          <Text style={styles.itemCTAText}>{ctaText}</Text>
+          <View style={styles.itemCTAIconContainer}>
+            <IconForwardArrow fillColour={colours.functional.red} height={8} />
+          </View>
+        </View>
       </Link>
       {index !== 3 ? <View style={styles.divider}></View> : null}
     </>

@@ -25,8 +25,8 @@ export type ItemType = {
 
 interface Props {
   items: [ItemType];
-  onArticlePress: any;
-  onLinkPress: any;
+  onArticlePress: <T = unknown, R = unknown>(args?: T) => R;
+  onLinkPress: <T = unknown, R = unknown>(args?: T) => R;
 }
 
 const text = {
