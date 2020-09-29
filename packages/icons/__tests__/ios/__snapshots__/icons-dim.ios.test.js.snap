@@ -26,8 +26,8 @@ exports[`3. iconforwardarrow sets a width when height is set 1`] = `
 <ARTSurfaceView
   style={
     Object {
-      "height": 14,
-      "width": 7,
+      "height": 58.333333333333336,
+      "width": 29.166666666666668,
     }
   }
 />
