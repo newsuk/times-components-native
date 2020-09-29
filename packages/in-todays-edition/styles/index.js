@@ -1,5 +1,4 @@
 import { fonts, spacing, colours } from "@times-components-native/styleguide";
-
 import { getStyleByDeviceSize } from "@times-components-native/styleguide/src/styleguide";
 
 const sharedStyles = {

@@ -2,7 +2,6 @@ import React from "react";
 import { Dimensions, Text, View } from "react-native";
 import { useResponsiveContext } from "@times-components-native/responsive";
 import { getStyles } from "./styles";
-
 import { ItemsContainer } from "./itemsContainer";
 import { Item } from "./item";
 
