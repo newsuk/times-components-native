@@ -41,7 +41,11 @@ export const Item: React.FC<Props> = ({
 
   return (
     <>
-      <Link linkStyle={styles.item} key={item.id} onPress={onPress}>
+      <Link
+        linkStyle={[styles.item, index === 3 && styles.itemLast]}
+        key={item.id}
+        onPress={onPress}
+      >
         <Text style={styles.itemTitle}>{item.title}</Text>
         <Text style={styles.itemStrapline}>{item.strapline}</Text>
         <View style={styles.itemCTA}>

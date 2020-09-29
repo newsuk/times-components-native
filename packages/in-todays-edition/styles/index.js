@@ -4,7 +4,7 @@ import { getStyleByDeviceSize } from "@times-components-native/styleguide/src/st
 
 const sharedStyles = {
   container: {
-    padding: spacing(3),
+    paddingVertical: spacing(3),
     backgroundColor: colours.functional.buff,
     flex: 1,
   },
@@ -19,13 +19,6 @@ const sharedStyles = {
     fontFamily: fonts.bodyRegular,
     letterSpacing: 1,
     color: colours.functional.brandColour,
-  },
-  itemsContainer: {
-    flex: 1,
-  },
-  item: {
-    flex: 1,
-    marginRight: spacing(2),
   },
   itemTitle: {
     fontSize: 16,
@@ -44,7 +37,7 @@ const sharedStyles = {
     flexDirection: "row",
   },
   itemCTAText: {
-    fontSize: 14,
+    fontSize: 13,
     fontFamily: fonts.supporting,
     color: colours.functional.red,
     textDecorationLine: "none",
@@ -58,9 +51,20 @@ const sharedStyles = {
 
 const sharedPortraitStyles = {
   ...sharedStyles,
+  container: {
+    ...sharedStyles.container,
+    paddingHorizontal: spacing(4),
+  },
   itemsContainer: {
-    ...sharedStyles.itemsContainer,
+    flex: 1,
     flexDirection: "row",
+  },
+  item: {
+    flex: 1,
+    marginRight: spacing(2),
+  },
+  itemLast: {
+    marginRight: 0,
   },
   divider: {
     paddingLeft: spacing(2),
@@ -72,10 +76,52 @@ const sharedPortraitStyles = {
 
 const sharedLandscapeStyles = {
   ...sharedStyles,
+  container: {
+    ...sharedStyles.container,
+    paddingHorizontal: spacing(3),
+  },
+  titleContainer: {
+    ...sharedStyles.titleContainer,
+    paddingBottom: spacing(3),
+  },
+  heading: {
+    ...sharedStyles.heading,
+    fontSize: 14,
+  },
+  item: {
+    ...sharedStyles.item,
+    marginBottom: spacing(0),
+  },
+  itemTitle: {
+    ...sharedStyles.itemTitle,
+    fontSize: 18,
+  },
+  itemStrapline: {
+    ...sharedStyles.itemStrapline,
+    fontSize: 14,
+    lineHeight: 18,
+  },
   divider: {
     borderBottomWidth: 1,
     borderColor: colours.functional.keyline,
     marginBottom: spacing(4),
+  },
+};
+
+const landscape1080Styles = {
+  ...sharedLandscapeStyles,
+  container: {
+    ...sharedLandscapeStyles.container,
+    paddingVertical: spacing(4),
+    paddingHorizontal: spacing(6),
+  },
+  itemsContainer: {
+    ...sharedLandscapeStyles.itemsContainer,
+    marginTop: spacing(2),
+  },
+  itemCTAText: {
+    ...sharedLandscapeStyles.itemCTAText,
+    fontSize: 14,
   },
 };
 
@@ -91,8 +137,7 @@ const styles = {
       ...sharedPortraitStyles,
       container: {
         ...sharedPortraitStyles.container,
-        paddingLeft: spacing(4),
-        paddingRight: spacing(4),
+        paddingHorizontal: spacing(4),
       },
     },
     "1024": {
@@ -100,8 +145,7 @@ const styles = {
       container: {
         ...sharedPortraitStyles.container,
         paddingVertical: spacing(4),
-        paddingLeft: spacing(5),
-        paddingRight: spacing(5),
+        paddingHorizontal: spacing(5),
       },
       heading: {
         ...sharedPortraitStyles.heading,
@@ -120,20 +164,55 @@ const styles = {
         fontSize: 15,
         lineHeight: 20,
       },
+      itemCTAText: {
+        ...sharedPortraitStyles.itemCTAText,
+        fontSize: 14,
+      },
+      divider: {
+        ...sharedPortraitStyles.divider,
+        paddingLeft: spacing(2),
+        marginRight: 0,
+      },
+      item: {
+        ...sharedPortraitStyles.item,
+        marginRight: spacing(1),
+      },
     },
   },
   landscape: {
-    "768": {
-      ...sharedLandscapeStyles,
+    1024: sharedLandscapeStyles,
+    1080: landscape1080Styles,
+    1112: {
+      ...landscape1080Styles,
+      item: {
+        ...landscape1080Styles.item,
+        marginBottom: spacing(1),
+      },
     },
-    "810": {
-      ...sharedLandscapeStyles,
-    },
-    "834": {
-      ...sharedLandscapeStyles,
-    },
-    "1024": {
-      ...sharedLandscapeStyles,
+    1366: {
+      ...landscape1080Styles,
+      container: {
+        ...landscape1080Styles.container,
+        paddingHorizontal: spacing(4),
+      },
+      heading: {
+        ...landscape1080Styles.heading,
+        fontSize: 15,
+        lineHeight: 15,
+      },
+      item: {
+        ...landscape1080Styles.item,
+        paddingVertical: 10,
+      },
+      itemTitle: {
+        ...landscape1080Styles.itemTitle,
+        fontSize: 20,
+      },
+      itemStrapline: {
+        ...landscape1080Styles.itemStrapline,
+        fontSize: 15,
+        lineHeight: 20,
+      },
     },
   },
 };
