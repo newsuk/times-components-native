@@ -151,9 +151,8 @@ const ArticleWithContent = (props) => {
           onEndReached={onEndReached}
           renderItem={({ item, index }) => renderItem(Child({ item, index }))}
           onViewableItemsChanged={onViewableItemsChanged}
-          removeClippedSubviews
+          removeClippedSubviews={false}
           keyExtractor={(item, index) => index.toString()}
-          initialNumToRender={2}
           windowSize={3}
           nestedScrollEnabled
           testID="flat-list-article"
