@@ -39,6 +39,13 @@ const getNarrowArticleBreakpoint = (width) => {
   return narrowArticleWidths.wide;
 };
 
+const getStyleByDeviceSize = (styles, windowWidth) => {
+  const selectedSize = Object.entries(styles)
+    .sort(([a], [b]) => b - a)
+    .find(([size]) => size <= windowWidth);
+  return selectedSize?.[1] ?? {};
+};
+
 export {
   editionBreakpoints,
   editionMaxWidth,
@@ -46,6 +53,7 @@ export {
   sliceContentMaxWidth,
   getEditionBreakpoint,
   getNarrowArticleBreakpoint,
+  getStyleByDeviceSize,
 };
 
 export default widths;
