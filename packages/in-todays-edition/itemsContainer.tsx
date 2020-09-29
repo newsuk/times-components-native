@@ -4,6 +4,7 @@ import { useResponsiveContext } from "@times-components-native/responsive";
 import { getStyles } from "./styles";
 
 export const ItemsContainer: React.FC = (props) => {
+  // @ts-ignore
   const { orientation } = useResponsiveContext();
   const windowWidth = Dimensions.get("window").width;
   const styles = getStyles(orientation, windowWidth);

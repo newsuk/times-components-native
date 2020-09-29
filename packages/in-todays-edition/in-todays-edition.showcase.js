@@ -1,7 +1,9 @@
 /* eslint-disable react/prop-types */
 import React from "react";
 import InTodaysEdition from "@times-components-native/in-todays-edition";
-import Responsive from "@times-components-native/responsive";
+import Responsive, {
+  useResponsiveContext,
+} from "@times-components-native/responsive";
 import { View } from "react-native";
 
 import InTodaysEditionData from "./fixtures/in-todays-edition.json";
@@ -14,17 +16,32 @@ const preventDefaultedAction = (decorateAction) =>
     },
   ]);
 
-const StoryContainer = ({ children }) => (
-  <View
-    style={{
+const StoryContainer = ({ children }) => {
+  const { orientation } = useResponsiveContext();
+
+  const dimensions = {
+    portrait: {
       width: 220,
       height: 521,
-      marginLeft: 20,
-    }}
-  >
-    {children}
-  </View>
-);
+    },
+    landscape: {
+      width: 688,
+      height: 133,
+    },
+  };
+
+  return (
+    <View
+      style={{
+        width: dimensions[orientation].width,
+        height: dimensions[orientation].height,
+        marginLeft: 20,
+      }}
+    >
+      {children}
+    </View>
+  );
+};
 
 export default {
   children: [

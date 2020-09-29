@@ -6,34 +6,39 @@ import { getStyles } from "./styles";
 import { ItemsContainer } from "./itemsContainer";
 import { Item } from "./item";
 
-export type Link = {
+export type LinkType = {
   url: string;
 };
 
-export type ArticleLink = {
+export type ArticleLinkType = {
   articleId: string;
 };
 
-export type PuffMainLinkRef = ArticleLink | Link;
+export type PuffMainLinkRef = ArticleLinkType | LinkType;
 
 export type ItemType = {
   id: string;
   title: string;
   strapline: string;
   mainLink: PuffMainLinkRef;
-  onArticlePress: any;
-  onLinkPress: any;
 };
 
 interface Props {
   items: [ItemType];
+  onArticlePress: any;
+  onLinkPress: any;
 }
 
 const text = {
   heading: "IN TODAY'S EDITION",
 };
 
-const InTodaysEdition: React.FC<Props> = ({ items }) => {
+const InTodaysEdition: React.FC<Props> = ({
+  items,
+  onArticlePress,
+  onLinkPress,
+}) => {
+  // @ts-ignore
   const { orientation } = useResponsiveContext();
   const windowWidth = Dimensions.get("window").width;
   const styles = getStyles(orientation, windowWidth);
@@ -45,7 +50,13 @@ const InTodaysEdition: React.FC<Props> = ({ items }) => {
       </View>
       <ItemsContainer>
         {items.map((item, index) => (
-          <Item key={`${item.id}-${index}`} item={item} index={index} />
+          <Item
+            key={`${item.id}-${index}`}
+            item={item}
+            index={index}
+            onArticlePress={onArticlePress}
+            onLinkPress={onLinkPress}
+          />
         ))}
       </ItemsContainer>
     </View>
