@@ -127,20 +127,20 @@ const landscape1080Styles = {
 
 const styles = {
   portrait: {
-    "768": {
+    768: {
       ...sharedPortraitStyles,
       itemCTAText: {
         display: "none",
       },
     },
-    "810": {
+    810: {
       ...sharedPortraitStyles,
       container: {
         ...sharedPortraitStyles.container,
         paddingHorizontal: spacing(4),
       },
     },
-    "1024": {
+    1024: {
       ...sharedPortraitStyles,
       container: {
         ...sharedPortraitStyles.container,
@@ -202,7 +202,7 @@ const styles = {
       },
       item: {
         ...landscape1080Styles.item,
-        paddingVertical: 10,
+        paddingVertical: spacing(2),
       },
       itemTitle: {
         ...landscape1080Styles.itemTitle,
