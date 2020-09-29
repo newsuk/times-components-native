@@ -48,22 +48,26 @@ export const collapsed = (isTablet, content) =>
         return [node, ...acc];
       }, []);
 
-const setupArticleMpuTestAd = (articleMpu, contentWithoutAdSlot) => {
-  const { adPosition, width, height, slotName } = articleMpu;
+const setupArticleMpuTestAd = (
+  articleMpu,
+  currentAdSlotIndex,
+  contentWithoutAdSlot,
+) => {
+  const { adPosition, group, width, height, slotName } = articleMpu;
+  const isControlGroup = group === "A";
+  const adSlotIndex = isControlGroup ? currentAdSlotIndex : adPosition - 1;
 
   return [
-    ...contentWithoutAdSlot.slice(0, adPosition - 1),
+    ...contentWithoutAdSlot.slice(0, adSlotIndex),
     {
       name: "ad",
       attributes: {
-        display: "inline",
-        width,
-        height,
         slotName,
+        ...(!isControlGroup && { display: "inline", width, height }),
       },
       children: [],
     },
-    ...contentWithoutAdSlot.slice(adPosition - 1),
+    ...contentWithoutAdSlot.slice(adSlotIndex),
   ];
 };
 
@@ -82,14 +86,14 @@ export const setupAd = (isTablet, variants, template, content) => {
 
   const { articleMpu } = variants;
 
-  if (
-    !articleMpu ||
-    articleMpu.group === "A" ||
-    (articleMpu && template !== "mainstandard")
-  )
+  if (!articleMpu || (articleMpu && template !== "mainstandard"))
     return content;
 
-  return setupArticleMpuTestAd(articleMpu, contentWithoutAdSlot);
+  return setupArticleMpuTestAd(
+    articleMpu,
+    currentAdSlotIndex,
+    contentWithoutAdSlot,
+  );
 };
 
 export const getStringBounds = (fontSettings, string) => {
