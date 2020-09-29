@@ -23,7 +23,7 @@ function calculateContentWidth(windowWidth: number, orientation: string) {
 }
 
 const TabletContentContainer = ({ style, children }: Props) => {
-  const { orientation } = useResponsiveContext();
+  const context = useResponsiveContext();
   const { width: windowWidth } = getDimensions();
 
   return (
@@ -33,7 +33,7 @@ const TabletContentContainer = ({ style, children }: Props) => {
           flex: 1,
           flexDirection: "row",
           justifyContent: "center",
-          width: calculateContentWidth(windowWidth, orientation),
+          width: calculateContentWidth(windowWidth, context.orientation),
           alignSelf: "center",
         },
         style,

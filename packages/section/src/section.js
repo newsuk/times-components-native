@@ -109,7 +109,7 @@ class Section extends Component {
       <Responsive>
         <ResponsiveContext.Consumer>
           {({ isTablet, editionBreakpoint }) => {
-            return <FrontLeadOne slice={mockLeadOneFullWidthSlice()} />;
+            // return <FrontLeadOne slice={mockLeadOneFullWidthSlice()} />; TODO REMOVE BEFORE MERGING
             if (name === "FrontPageSection") {
               return this.renderItem({ index: 0, item: slices[0] });
             }

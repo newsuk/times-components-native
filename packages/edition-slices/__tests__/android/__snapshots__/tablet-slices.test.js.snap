@@ -875,11 +875,14 @@ exports[`25. front lead one and one - landscape - medium 1`] = `
 exports[`26. front lead one - portrait - medium 1`] = `
 <View>
   <View>
-    <TileFFront
-      breakpoint="medium"
-      orientation="portrait"
-      tileName="lead"
-    />
+    <View>
+      <TileFFront
+        breakpoint="medium"
+        orientation="portrait"
+        tileName="lead"
+      />
+    </View>
+    <View />
   </View>
 </View>
 `;
@@ -887,11 +890,21 @@ exports[`26. front lead one - portrait - medium 1`] = `
 exports[`27. front lead one - landscape - medium 1`] = `
 <View>
   <View>
-    <TileFFront
-      breakpoint="medium"
-      orientation="landscape"
-      tileName="lead"
-    />
+    <View>
+      <View>
+        <TileFFront
+          breakpoint="medium"
+          orientation="landscape"
+          tileName="lead"
+        />
+      </View>
+      <View />
+      <View>
+        <View
+          tileName="ite"
+        />
+      </View>
+    </View>
   </View>
 </View>
 `;
@@ -1957,11 +1970,14 @@ exports[`58. front lead one and one - landscape - wide 1`] = `
 exports[`59. front lead one - portrait - wide 1`] = `
 <View>
   <View>
-    <TileFFront
-      breakpoint="wide"
-      orientation="portrait"
-      tileName="lead"
-    />
+    <View>
+      <TileFFront
+        breakpoint="wide"
+        orientation="portrait"
+        tileName="lead"
+      />
+    </View>
+    <View />
   </View>
 </View>
 `;
@@ -1969,11 +1985,21 @@ exports[`59. front lead one - portrait - wide 1`] = `
 exports[`60. front lead one - landscape - wide 1`] = `
 <View>
   <View>
-    <TileFFront
-      breakpoint="wide"
-      orientation="landscape"
-      tileName="lead"
-    />
+    <View>
+      <View>
+        <TileFFront
+          breakpoint="wide"
+          orientation="landscape"
+          tileName="lead"
+        />
+      </View>
+      <View />
+      <View>
+        <View
+          tileName="ite"
+        />
+      </View>
+    </View>
   </View>
 </View>
 `;
@@ -3084,11 +3110,14 @@ exports[`92. front lead one - portrait - huge 1`] = `
 <View>
   <View>
     <View>
-      <TileFFront
-        breakpoint="huge"
-        orientation="portrait"
-        tileName="lead"
-      />
+      <View>
+        <TileFFront
+          breakpoint="huge"
+          orientation="portrait"
+          tileName="lead"
+        />
+      </View>
+      <View />
     </View>
   </View>
 </View>
@@ -3098,11 +3127,21 @@ exports[`93. front lead one - landscape - huge 1`] = `
 <View>
   <View>
     <View>
-      <TileFFront
-        breakpoint="huge"
-        orientation="landscape"
-        tileName="lead"
-      />
+      <View>
+        <View>
+          <TileFFront
+            breakpoint="huge"
+            orientation="landscape"
+            tileName="lead"
+          />
+        </View>
+        <View />
+        <View>
+          <View
+            tileName="ite"
+          />
+        </View>
+      </View>
     </View>
   </View>
 </View>

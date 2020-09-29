@@ -1768,7 +1768,7 @@ exports[`22. front lead two no pic and two - landscape - medium 1`] = `
         "flexDirection": "row",
         "justifyContent": "center",
         "paddingTop": 15,
-        "width": 688,
+        "width": 944,
       }
     }
   >
@@ -2089,15 +2089,34 @@ exports[`26. front lead one - portrait - medium 1`] = `
   <View
     style={
       Object {
+        "alignSelf": "center",
         "flex": 1,
-        "flexDirection": "row",
-        "marginHorizontal": 30,
+        "flexDirection": "column",
+        "justifyContent": "center",
         "paddingBottom": 56,
-        "paddingTop": 20,
+        "paddingTop": 10,
+        "width": 688,
       }
     }
   >
-    <TileFFront />
+    <View
+      style={
+        Object {
+          "flex": 1,
+        }
+      }
+    >
+      <TileFFront />
+    </View>
+    <View
+      style={
+        Object {
+          "backgroundColor": "#f0eedf",
+          "height": 133,
+          "width": "100%",
+        }
+      }
+    />
   </View>
 </View>
 `;
@@ -2117,15 +2136,44 @@ exports[`27. front lead one - landscape - medium 1`] = `
   <View
     style={
       Object {
+        "alignSelf": "center",
         "flex": 1,
         "flexDirection": "row",
-        "marginHorizontal": 30,
-        "paddingBottom": 56,
-        "paddingTop": 20,
+        "justifyContent": "center",
+        "width": 944,
       }
     }
   >
-    <TileFFront />
+    <View
+      style={
+        Object {
+          "paddingBottom": 56,
+        }
+      }
+    >
+      <View>
+        <TileFFront />
+      </View>
+      <View
+        style={
+          Object {
+            "borderColor": "#DBDBDB",
+            "borderRightWidth": 1,
+            "borderStyle": "solid",
+            "marginVertical": 10,
+          }
+        }
+      />
+      <View>
+        <View
+          style={
+            Object {
+              "backgroundColor": "#f0eedf",
+            }
+          }
+        />
+      </View>
+    </View>
   </View>
 </View>
 `;
@@ -4313,7 +4361,7 @@ exports[`55. front lead two no pic and two - landscape - wide 1`] = `
         "flexDirection": "row",
         "justifyContent": "center",
         "paddingTop": 15,
-        "width": 688,
+        "width": 944,
       }
     }
   >
@@ -4426,7 +4474,7 @@ exports[`56. front lead two no pic and two - portrait - wide 1`] = `
         "marginHorizontal": 20,
         "marginTop": 20,
         "paddingBottom": 56,
-        "width": 688,
+        "width": 920,
       }
     }
   >
@@ -4634,15 +4682,33 @@ exports[`59. front lead one - portrait - wide 1`] = `
   <View
     style={
       Object {
+        "alignSelf": "center",
         "flex": 1,
-        "flexDirection": "row",
-        "marginHorizontal": 30,
+        "flexDirection": "column",
+        "justifyContent": "center",
         "paddingBottom": 56,
-        "paddingTop": 20,
+        "paddingTop": 15,
+        "width": 920,
       }
     }
   >
-    <TileFFront />
+    <View
+      style={
+        Object {
+          "flex": 1,
+        }
+      }
+    >
+      <TileFFront />
+    </View>
+    <View
+      style={
+        Object {
+          "backgroundColor": "#f0eedf",
+          "height": 174,
+        }
+      }
+    />
   </View>
 </View>
 `;
@@ -4662,15 +4728,61 @@ exports[`60. front lead one - landscape - wide 1`] = `
   <View
     style={
       Object {
+        "alignSelf": "center",
         "flex": 1,
         "flexDirection": "row",
-        "marginHorizontal": 30,
-        "paddingBottom": 56,
-        "paddingTop": 20,
+        "justifyContent": "center",
+        "width": 944,
       }
     }
   >
-    <TileFFront />
+    <View
+      style={
+        Object {
+          "flex": 1,
+          "flexDirection": "row",
+          "paddingBottom": 56,
+          "paddingVertical": 10,
+        }
+      }
+    >
+      <View
+        style={
+          Object {
+            "width": "75%",
+          }
+        }
+      >
+        <TileFFront />
+      </View>
+      <View
+        style={
+          Object {
+            "borderColor": "#DBDBDB",
+            "borderRightWidth": 1,
+            "borderStyle": "solid",
+            "marginVertical": 0,
+          }
+        }
+      />
+      <View
+        style={
+          Object {
+            "backgroundColor": "#f0eedf",
+            "marginLeft": 10,
+            "width": "24%",
+          }
+        }
+      >
+        <View
+          style={
+            Object {
+              "backgroundColor": "#f0eedf",
+            }
+          }
+        />
+      </View>
+    </View>
   </View>
 </View>
 `;
@@ -7182,7 +7294,7 @@ exports[`89. front lead two no pic and two - portrait - huge 1`] = `
           "marginHorizontal": 20,
           "marginTop": 20,
           "paddingBottom": 56,
-          "width": 688,
+          "width": 920,
         }
       }
     >
@@ -7420,15 +7532,33 @@ exports[`92. front lead one - portrait - huge 1`] = `
     <View
       style={
         Object {
+          "alignSelf": "center",
           "flex": 1,
-          "flexDirection": "row",
-          "marginHorizontal": 30,
+          "flexDirection": "column",
+          "justifyContent": "center",
           "paddingBottom": 56,
-          "paddingTop": 20,
+          "paddingTop": 15,
+          "width": 920,
         }
       }
     >
-      <TileFFront />
+      <View
+        style={
+          Object {
+            "flex": 1,
+          }
+        }
+      >
+        <TileFFront />
+      </View>
+      <View
+        style={
+          Object {
+            "backgroundColor": "#f0eedf",
+            "height": 174,
+          }
+        }
+      />
     </View>
   </View>
 </View>
@@ -7458,15 +7588,61 @@ exports[`93. front lead one - landscape - huge 1`] = `
     <View
       style={
         Object {
+          "alignSelf": "center",
           "flex": 1,
           "flexDirection": "row",
-          "marginHorizontal": 30,
-          "paddingBottom": 56,
-          "paddingTop": 20,
+          "justifyContent": "center",
+          "width": 1140,
         }
       }
     >
-      <TileFFront />
+      <View
+        style={
+          Object {
+            "flex": 1,
+            "flexDirection": "row",
+            "paddingBottom": 56,
+            "paddingTop": 30,
+          }
+        }
+      >
+        <View
+          style={
+            Object {
+              "width": "82%",
+            }
+          }
+        >
+          <TileFFront />
+        </View>
+        <View
+          style={
+            Object {
+              "borderColor": "#DBDBDB",
+              "borderRightWidth": 1,
+              "borderStyle": "solid",
+              "marginVertical": 0,
+            }
+          }
+        />
+        <View
+          style={
+            Object {
+              "backgroundColor": "#f0eedf",
+              "marginLeft": 10,
+              "width": "17%",
+            }
+          }
+        >
+          <View
+            style={
+              Object {
+                "backgroundColor": "#f0eedf",
+              }
+            }
+          />
+        </View>
+      </View>
     </View>
   </View>
 </View>
