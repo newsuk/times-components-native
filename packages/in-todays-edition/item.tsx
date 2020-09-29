@@ -4,7 +4,7 @@ import { Dimensions, View, Text } from "react-native";
 import { useResponsiveContext } from "@times-components-native/responsive";
 import Link from "@times-components-native/link";
 import { IconForwardArrow } from "@times-components-native/icons";
-import { colours }  from "@times-components-native/styleguide";
+import { colours } from "@times-components-native/styleguide";
 import { getStyles } from "./styles";
 import { ItemType, LinkType, ArticleLinkType } from "./in-todays-edition";
 
@@ -36,8 +36,8 @@ export const Item: React.FC<Props> = ({
 
   const ctaText = isArticleLink(link) ? "Read the full story" : "Take me there";
   const onPress = isArticleLink(link)
-    ? () => onArticlePress(item.mainLink.articleId)
-    : () => onLinkPress(item.mainLink.url);
+    ? () => onArticlePress((item.mainLink as ArticleLinkType).articleId)
+    : () => onLinkPress((item.mainLink as LinkType).url);
 
   return (
     <>
