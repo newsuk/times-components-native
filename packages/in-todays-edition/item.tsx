@@ -7,6 +7,7 @@ import { IconForwardArrow } from "@times-components-native/icons";
 import { colours } from "@times-components-native/styleguide";
 import { getStyles } from "./styles";
 import { ItemType, LinkType, ArticleLinkType } from "./in-todays-edition";
+import withTrackingEvents from "./tracking-events";
 
 interface Props {
   item: ItemType;
@@ -55,9 +56,9 @@ const Item: React.FC<Props> = ({
           </View>
         </View>
       </Link>
-      {index !== 3 ? <View style={styles.divider}></View> : null}
+      {index !== 3 && <View style={styles.divider}></View>}
     </>
   );
 };
 
-export default Item;
+export default withTrackingEvents(Item);
