@@ -10,6 +10,8 @@ import PositionedItem from "./PositionedItem";
 import Span from "./Span";
 import TextContainer from "./TextContainer";
 
+import { NativeModules } from "react-native";
+
 const getLeading = (text: AttributedString): number => {
   let leading = 0;
   for (const charAttrs of text.attributes) {
@@ -35,10 +37,10 @@ export interface MeasuredItem {
   text: AttributedString;
 }
 
-function layoutItemsFromString(
+async function layoutItemsFromString(
   s: AttributedString,
   measureFn: (word: AttributedString) => number,
-): MeasuredItem[] {
+): Promise<MeasuredItem[]> {
   const splits = s.split().filter((w) => w.length > 0);
 
   const spaceWidth = measureFn(
@@ -46,31 +48,35 @@ function layoutItemsFromString(
   );
   const isSpace = (word: AttributedString) => /\s/.test(word.charAt(0));
 
-  const items = [];
+  return NativeModules.MeasureText.widths({
+    texts: splits.map((s) => s.string),
+    fontSize: 18,
+    fontFamily: "TimesDigitalW04",
+  }).then((results) => {
+    const items = [];
 
-  for (const split of splits) {
-    if (split.string === "\n") {
+    for (let i = 0; i < splits.length; i++) {
+      const split = splits[i];
+      if (split.string === "\n") {
+        items.push({
+          text: new AttributedString("\n", []),
+          width: 0,
+        });
+      } else if (isSpace(split)) {
+        items.push({
+          text: new AttributedString(" ", split.attributes),
+          width: spaceWidth,
+        });
+      }
+
       items.push({
-        text: new AttributedString("\n", []),
-        width: 0,
+        text: split,
+        width: results[i],
       });
-      continue;
-    }
-    if (isSpace(split)) {
-      items.push({
-        text: new AttributedString(" ", split.attributes),
-        width: spaceWidth,
-      });
-      continue;
     }
 
-    items.push({
-      text: split,
-      width: measureFn(split),
-    });
-  }
-
-  return items;
+    return items;
+  });
 }
 
 export default class LayoutManager {
@@ -91,7 +97,9 @@ export default class LayoutManager {
     this.measure = this.measure.bind(this);
   }
 
-  public layout = function (this: LayoutManager): PositionedItem[] {
+  public layout = async function (
+    this: LayoutManager,
+  ): Promise<PositionedItem[]> {
     const leading = getLeading(this.text);
 
     for (const childContainer of this.containers) {
@@ -102,7 +110,7 @@ export default class LayoutManager {
       }
     }
 
-    const items = layoutItemsFromString(this.text, this.measure);
+    const items = await layoutItemsFromString(this.text, this.measure);
     const result: PositionedItem[] = [];
     const containers = this.containers.slice();
 
@@ -160,6 +168,9 @@ export default class LayoutManager {
     if (!settings.fontSize) {
       throw new Error("Invalid font size");
     }
-    return font.getAdvanceWidth(text.string, settings.fontSize);
+    let advanceWidth = font.getAdvanceWidth(text.string, settings.fontSize);
+    if (text.string === "Margaret") {
+    }
+    return advanceWidth;
   }
 }

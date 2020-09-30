@@ -36,6 +36,8 @@
 		7C69A534E757EE69EAE73C33 /* libPods-TimesComponents-TimesComponentsTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 7A53B0036F0C0016618E926D /* libPods-TimesComponents-TimesComponentsTests.a */; };
 		81AB9BB82411601600AC10FF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */; };
 		A6CBA86FE3C3FAE284518F4A /* libPods-TimesComponents.a in Frameworks */ = {isa = PBXBuildFile; fileRef = A780229AAC4D71C1774B1C3B /* libPods-TimesComponents.a */; };
+		AD27DB082523850B0059F7F7 /* MeasureText.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD27DB072523850B0059F7F7 /* MeasureText.swift */; };
+		AD27DB0A2523857B0059F7F7 /* MeasureText.m in Sources */ = {isa = PBXBuildFile; fileRef = AD27DB092523857B0059F7F7 /* MeasureText.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -74,8 +76,8 @@
 		120322C324E1A5A500D265FF /* TimesModern-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "TimesModern-Bold.ttf"; path = "../../dist/public/fonts/TimesModern-Bold.ttf"; sourceTree = "<group>"; };
 		120322CA24E1A5A600D265FF /* TimesDigitalW04_bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = TimesDigitalW04_bold.ttf; path = ../../dist/public/fonts/TimesDigitalW04_bold.ttf; sourceTree = "<group>"; };
 		120322CB24E1A5A600D265FF /* CenturyGothic-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "CenturyGothic-Bold.ttf"; path = "../../dist/public/fonts/CenturyGothic-Bold.ttf"; sourceTree = "<group>"; };
-		120322CC24E1A5A600D265FF /* TimesDigitalW04-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "TimesDigitalW04-Regular.ttf"; path = "../../dist/public/fonts/TimesDigitalW04-Regular.ttf"; sourceTree = "<group>"; };
-		120322CD24E1A5A700D265FF /* TimesDigitalW04-RegularSC.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "TimesDigitalW04-RegularSC.ttf"; path = "../../dist/public/fonts/TimesDigitalW04-RegularSC.ttf"; sourceTree = "<group>"; };
+		120322CC24E1A5A600D265FF /* TimesDigitalW04-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = text; name = "TimesDigitalW04-Regular.ttf"; path = "../../dist/public/fonts/TimesDigitalW04-Regular.ttf"; sourceTree = "<group>"; };
+		120322CD24E1A5A700D265FF /* TimesDigitalW04-RegularSC.ttf */ = {isa = PBXFileReference; lastKnownFileType = text; name = "TimesDigitalW04-RegularSC.ttf"; path = "../../dist/public/fonts/TimesDigitalW04-RegularSC.ttf"; sourceTree = "<group>"; };
 		120322D524E1A5A800D265FF /* Tiempos-Headline-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Tiempos-Headline-Bold.ttf"; path = "../../dist/public/fonts/Tiempos-Headline-Bold.ttf"; sourceTree = "<group>"; };
 		120322D724E1A5A800D265FF /* GillSansMTStd-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "GillSansMTStd-Medium.ttf"; path = "../../dist/public/fonts/GillSansMTStd-Medium.ttf"; sourceTree = "<group>"; };
 		13B07F961A680F5B00A75B9A /* TimesComponents.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TimesComponents.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -92,6 +94,10 @@
 		81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = LaunchScreen.storyboard; path = TimesComponents/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		98DE3FE59779270C45D200C9 /* Pods-TimesComponents-tvOS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TimesComponents-tvOS.release.xcconfig"; path = "Target Support Files/Pods-TimesComponents-tvOS/Pods-TimesComponents-tvOS.release.xcconfig"; sourceTree = "<group>"; };
 		A780229AAC4D71C1774B1C3B /* libPods-TimesComponents.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-TimesComponents.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		AD27DB062523850B0059F7F7 /* TimesComponents-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "TimesComponents-Bridging-Header.h"; sourceTree = "<group>"; };
+		AD27DB072523850B0059F7F7 /* MeasureText.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MeasureText.swift; sourceTree = "<group>"; };
+		AD27DB092523857B0059F7F7 /* MeasureText.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MeasureText.m; sourceTree = "<group>"; };
+		AD27DB0B25246D810059F7F7 /* MeasureText.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MeasureText.h; sourceTree = "<group>"; };
 		B5382007B5E2DE215910BC69 /* Pods-TimesComponents.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TimesComponents.debug.xcconfig"; path = "Target Support Files/Pods-TimesComponents/Pods-TimesComponents.debug.xcconfig"; sourceTree = "<group>"; };
 		D64F3BD61DAF3B2659F8DC6D /* Pods-TimesComponents-TimesComponentsTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TimesComponents-TimesComponentsTests.debug.xcconfig"; path = "Target Support Files/Pods-TimesComponents-TimesComponentsTests/Pods-TimesComponents-TimesComponentsTests.debug.xcconfig"; sourceTree = "<group>"; };
 		DB2FEFA28A97B26CA78469CC /* Pods-TimesComponents-tvOS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TimesComponents-tvOS.debug.xcconfig"; path = "Target Support Files/Pods-TimesComponents-tvOS/Pods-TimesComponents-tvOS.debug.xcconfig"; sourceTree = "<group>"; };
@@ -162,6 +168,10 @@
 				120322AF24E1A58B00D265FF /* ReactAnalytics.m */,
 				120322B124E1A58B00D265FF /* ReactConfig.m */,
 				120322B024E1A58B00D265FF /* TopicEvents.m */,
+				AD27DB072523850B0059F7F7 /* MeasureText.swift */,
+				AD27DB062523850B0059F7F7 /* TimesComponents-Bridging-Header.h */,
+				AD27DB092523857B0059F7F7 /* MeasureText.m */,
+				AD27DB0B25246D810059F7F7 /* MeasureText.h */,
 			);
 			path = "Native Modules";
 			sourceTree = "<group>";
@@ -357,7 +367,7 @@
 						TestTargetID = 13B07F861A680F5B00A75B9A;
 					};
 					13B07F861A680F5B00A75B9A = {
-						LastSwiftMigration = 1120;
+						LastSwiftMigration = 1150;
 					};
 					2D02E47A1E0B4A5D006451C7 = {
 						CreatedOnToolsVersion = 8.2.1;
@@ -644,7 +654,9 @@
 			files = (
 				13B07FBC1A68108700A75B9A /* AppDelegate.m in Sources */,
 				120322B524E1A58B00D265FF /* TopicEvents.m in Sources */,
+				AD27DB0A2523857B0059F7F7 /* MeasureText.m in Sources */,
 				120322B324E1A58B00D265FF /* ArticleEvents.m in Sources */,
+				AD27DB082523850B0059F7F7 /* MeasureText.swift in Sources */,
 				120322B424E1A58B00D265FF /* ReactAnalytics.m in Sources */,
 				120322B724E1A58B00D265FF /* AuthorProfileEvents.m in Sources */,
 				13B07FC11A68108700A75B9A /* main.m in Sources */,
@@ -689,6 +701,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = D64F3BD61DAF3B2659F8DC6D /* Pods-TimesComponents-TimesComponentsTests.debug.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					"DEBUG=1",
@@ -712,6 +725,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 1179116F54A7685F738B39AA /* Pods-TimesComponents-TimesComponentsTests.release.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				COPY_PHASE_STRIP = NO;
 				INFOPLIST_FILE = TimesComponentsTests/Info.plist;
@@ -745,6 +759,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "org.reactjs.native.example.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = TimesComponents;
+				SWIFT_OBJC_BRIDGING_HEADER = "Native Modules/TimesComponents-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -768,6 +783,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "org.reactjs.native.example.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = TimesComponents;
+				SWIFT_OBJC_BRIDGING_HEADER = "Native Modules/TimesComponents-Bridging-Header.h";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VERSIONING_SYSTEM = "apple-generic";

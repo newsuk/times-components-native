@@ -1,5 +1,5 @@
 /* eslint-disable react/forbid-prop-types */
-import React, { useMemo, useState } from "react";
+import React, { useEffect, useMemo, useState } from "react";
 import { View, Text } from "react-native";
 import PropTypes from "prop-types";
 import styleguide, {
@@ -32,6 +32,8 @@ const InlineParagraph = ({
 }) => {
   const { spacing } = styleguide({ scale });
   const [inlineExclusion, setInlineExclusion] = useState(false);
+  const [positionedTextItems, setPositionTextItems] = useState([]);
+  const [positionTextItemSettings, setNewPositionItemSettings] = useState([]);
   const { orientation } = useResponsiveContext();
   const variants = useVariantTestingContext();
 
@@ -53,19 +55,36 @@ const InlineParagraph = ({
   );
 
   const slice = str.charAt(1) === " " ? 2 : dropCap.length;
-  const [positionedTextItems, positionTextItemSettings] = useMemo(() => {
+
+  useEffect(() => {
     const manager = new LayoutManager(
       dropCap ? str.slice(slice) : str,
       [container],
       inlineExclusion ? [inlineExclusion.exclusion] : [],
     );
 
-    const newPositionedTextItems = manager.layout();
-    const newPositionItemSettings = newPositionedTextItems.map((p) =>
-      p.text.collapsedAttributes(0),
-    );
-    return [newPositionedTextItems, newPositionItemSettings];
+    manager.layout().then((newPositionedTextItems) => {
+      const newPositionItemSettings = newPositionedTextItems.map((p) =>
+        p.text.collapsedAttributes(0),
+      );
+      setPositionTextItems(newPositionedTextItems);
+      setNewPositionItemSettings(newPositionItemSettings);
+    });
   }, [inlineExclusion, orientation]);
+
+  // const [positionedTextItems, positionTextItemSettings] = useMemo(() => {
+  //   const manager = new LayoutManager(
+  //     dropCap ? str.slice(slice) : str,
+  //     [container],
+  //     inlineExclusion ? [inlineExclusion.exclusion] : [],
+  //   );
+  //
+  //   const newPositionedTextItems = manager.layout();
+  //   const newPositionItemSettings = newPositionedTextItems.map((p) =>
+  //     p.text.collapsedAttributes(0),
+  //   );
+  //   return [newPositionedTextItems, newPositionItemSettings];
+  // }, [inlineExclusion, orientation]);
 
   if (!str.length) {
     return null;
@@ -139,7 +158,9 @@ const InlineParagraph = ({
       narrowContent={narrowContent}
     >
       {positionedTextItems.map((p, i) => {
-        const [attribute, href] = positionTextItemSettings[i];
+        const [attribute, href] = positionTextItemSettings.length
+          ? positionTextItemSettings[i]
+          : [{}, undefined];
         const style = attribute ? attribute.settings : defaultFont;
         const type = href ? href.type : null;
         const canonicalId = href ? href.canonicalId : null;
@@ -174,6 +195,7 @@ const InlineParagraph = ({
                 position: "absolute",
                 left: p.position.x,
                 top: p.position.y,
+                backgroundColor: "red",
               },
               style,
             ]}
