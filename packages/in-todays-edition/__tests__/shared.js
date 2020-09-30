@@ -89,7 +89,7 @@ export default () => {
         expect(onLinkPressMock).not.toHaveBeenCalled();
       });
 
-      it("onArticlePress is called correctly for item with article link", () => {
+      it("onLinkPress is called correctly for item with non-article link", () => {
         const onArticlePressMock = jest.fn();
         const onLinkPressMock = jest.fn();
         getDimensions.mockImplementation(() => ({
