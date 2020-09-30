@@ -19,7 +19,8 @@ interface Props {
 const isArticleLink = (
   link: ArticleLinkType | LinkType,
 ): link is ArticleLinkType => {
-  return !!link.articleId;
+  // eslint-disable-next-line no-prototype-builtins
+  return link.hasOwnProperty("articleId");
 };
 
 const Item: React.FC<Props> = ({
@@ -54,7 +55,7 @@ const Item: React.FC<Props> = ({
           </View>
         </View>
       </Link>
-      {index !== 3 && <View style={styles.divider}></View>}
+      {index !== 3 ? <View style={styles.divider}></View> : null}
     </>
   );
 };
