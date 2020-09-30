@@ -28,6 +28,9 @@ jest.mock("react-native", () => {
     graphqlEndPont: "dummy-end-point",
     operatingSystemVersion: "123",
   };
+  rn.NativeModules.SearchEvents = {
+    onArticlePress: () => null,
+  };
   rn.NativeModules.SectionEvents = {
     getOpenedPuzzleCount: jest.fn(),
     getSavedArticles: jest.fn().mockReturnValue(Promise.resolve([])),

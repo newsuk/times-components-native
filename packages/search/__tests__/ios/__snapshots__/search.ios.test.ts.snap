@@ -1,0 +1,41 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`1. a default state 1`] = `
+Array [
+  <View>
+    <TextInput
+      defaultValue=""
+      keyboardType="web-search"
+      placeholder="Search"
+      rejectResponderTermination={true}
+      underlineColorAndroid="transparent"
+    />
+  </View>,
+  <ArticleList
+    articlesLoading={false}
+    emptyStateMessage="d41d8cd98f00b204e9800998ecf8427e"
+    error={false}
+    showImages={false}
+  />,
+]
+`;
+
+exports[`2. an article list 1`] = `
+Array [
+  <View>
+    <TextInput
+      defaultValue="politics"
+      keyboardType="web-search"
+      placeholder="Search"
+      rejectResponderTermination={true}
+      underlineColorAndroid="transparent"
+    />
+  </View>,
+  <ArticleList
+    articlesLoading={false}
+    emptyStateMessage="7b7ed0448af24dcf69cb837f42735bbe"
+    error={false}
+    showImages={false}
+  />,
+]
+`;
