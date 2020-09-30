@@ -2,7 +2,7 @@ import React from "react";
 import { Text, View } from "react-native";
 import { getDimensions } from "@times-components-native/utils";
 import { getStyles } from "./styles";
-import { Item } from "./item";
+import Item from "./item";
 
 export type LinkType = {
   url: string;

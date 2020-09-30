@@ -23,7 +23,7 @@ const isArticleLink = (
   return link.hasOwnProperty("articleId");
 };
 
-export const Item: React.FC<Props> = ({
+const Item: React.FC<Props> = ({
   item,
   index,
   onArticlePress,
@@ -59,3 +59,5 @@ export const Item: React.FC<Props> = ({
     </>
   );
 };
+
+export default Item;

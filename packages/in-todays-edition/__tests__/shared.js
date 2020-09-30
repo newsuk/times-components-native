@@ -1,4 +1,5 @@
 import InTodaysEdition from "../in-todays-edition";
+import Item from "../item";
 import TestRenderer from "react-test-renderer";
 import React from "react";
 import { getDimensions } from "@times-components-native/utils";
@@ -7,7 +8,6 @@ import "./serializers-with-all-styles";
 jest.mock("@times-components-native/icons", () => ({
   IconForwardArrow: "IconForwardArrow",
 }));
-
 jest.mock("@times-components-native/utils", () => {
   const actualUtils = jest.requireActual("../../utils");
 
@@ -19,13 +19,13 @@ jest.mock("@times-components-native/utils", () => {
 
 import InTodaysEditionData from "../fixtures/in-todays-edition.json";
 
-const renderComponent = (width, orientation) => {
+const renderInTodaysEdition = (width, orientation) => {
   getDimensions.mockImplementation(() => ({
     width: width,
     height: 500,
   }));
 
-  const tree = TestRenderer.create(
+  const output = TestRenderer.create(
     <InTodaysEdition
       items={InTodaysEditionData}
       onArticlePress={() => null}
@@ -33,36 +33,83 @@ const renderComponent = (width, orientation) => {
       orientation={orientation}
     />,
   );
-  expect(tree).toMatchSnapshot();
+  expect(output).toMatchSnapshot();
 };
 
 export default () => {
   describe("InTodaysEdition", () => {
     describe("portrait", () => {
       it("768", () => {
-        renderComponent(768, "portrait");
+        renderInTodaysEdition(768, "portrait");
       });
 
       it("810", () => {
-        renderComponent(810, "portrait");
+        renderInTodaysEdition(810, "portrait");
       });
 
       it("1024", () => {
-        renderComponent(1024, "portrait");
+        renderInTodaysEdition(1024, "portrait");
       });
     });
     describe("landscape", () => {
       it("1024", () => {
-        renderComponent(1024, "landscape");
+        renderInTodaysEdition(1024, "landscape");
       });
       it("1080", () => {
-        renderComponent(1080, "landscape");
+        renderInTodaysEdition(1080, "landscape");
       });
       it("1112", () => {
-        renderComponent(1112, "landscape");
+        renderInTodaysEdition(1112, "landscape");
       });
       it("1366", () => {
-        renderComponent(1366, "landscape");
+        renderInTodaysEdition(1366, "landscape");
+      });
+    });
+    describe("item", () => {
+      it("onArticlePress is called correctly for item with article link", () => {
+        const onArticlePressMock = jest.fn();
+        const onLinkPressMock = jest.fn();
+        getDimensions.mockImplementation(() => ({
+          width: 300,
+          height: 500,
+        }));
+
+        const item = TestRenderer.create(
+          <Item
+            item={InTodaysEditionData[0]}
+            onArticlePress={onArticlePressMock}
+            onLinkPress={onLinkPressMock}
+            orientation="portrait"
+          />,
+        );
+
+        item.root.findByType(Item).props.onArticlePress();
+
+        expect(onArticlePressMock).toHaveBeenCalled();
+        expect(onLinkPressMock).not.toHaveBeenCalled();
+      });
+
+      it("onArticlePress is called correctly for item with article link", () => {
+        const onArticlePressMock = jest.fn();
+        const onLinkPressMock = jest.fn();
+        getDimensions.mockImplementation(() => ({
+          width: 300,
+          height: 500,
+        }));
+
+        const item = TestRenderer.create(
+          <Item
+            item={InTodaysEditionData[3]}
+            onArticlePress={onArticlePressMock}
+            onLinkPress={onLinkPressMock}
+            orientation="portrait"
+          />,
+        );
+
+        item.root.findByType(Item).props.onLinkPress();
+
+        expect(onLinkPressMock).toHaveBeenCalled();
+        expect(onArticlePressMock).not.toHaveBeenCalled();
       });
     });
   });
