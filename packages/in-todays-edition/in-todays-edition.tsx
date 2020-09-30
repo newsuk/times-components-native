@@ -29,9 +29,7 @@ interface Props {
   orientation: string;
 }
 
-const text = {
-  heading: "IN TODAY'S EDITION",
-};
+const headingText = "IN TODAY'S EDITION";
 
 const InTodaysEdition: React.FC<Props> = ({
   items,
@@ -45,7 +43,7 @@ const InTodaysEdition: React.FC<Props> = ({
   return (
     <View style={styles.container}>
       <View style={styles.titleContainer}>
-        <Text style={styles.heading}>{text.heading}</Text>
+        <Text style={styles.heading}>{headingText}</Text>
       </View>
       <View style={styles.itemsContainer}>
         {items.map((item, index) => (
