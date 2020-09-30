@@ -9,6 +9,9 @@ export default (page) => {
     case "AuthorProfile": {
       return withErrorBoundaries(require("./author-profile").default);
     }
+    case "Search": {
+      return withErrorBoundaries(require("./search").default);
+    }
     case "Section": {
       return withErrorBoundaries(require("./section").default);
     }
