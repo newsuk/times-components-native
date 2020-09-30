@@ -1,0 +1,34 @@
+[
+  {
+    "id": "ed94946a-7838-11ea-a9b3-a42d54022bdc",
+    "title": "James Forsyth",
+    "strapline": "A hydrogen-fuelled future energises Johnson",
+    "mainLink": {
+      "articleId": "ed94946a-7838-11ea-a9b3-a42d54022bd2"
+    }
+  },
+  {
+    "id": "9473b7c2-7846-11ea-a9b3-a42d54022bdc",
+    "title": "Caitlin Moran",
+    "strapline": "At least Netflix is more low-key than Trooping the Colour",
+    "mainLink": {
+      "articleId": "ed94946a-7838-11ea-a9b3-a42d54022bd3"
+    }
+  },
+  {
+    "id": "a4b3226c-78b9-11ea-bc41-6517026e24df",
+    "title": "Matt Dickinson",
+    "strapline": "My encounter with Britain’s oldest Olympian",
+    "mainLink": {
+      "articleId": "ed94946a-7838-11ea-a9b3-a42d54022bd4"
+    }
+  },
+  {
+    "id": "65207c56-78bb-11ea-a9b3-a42d54022bdc",
+    "title": "Times Radio",
+    "strapline": "Listen free on DAB, online or via the Times Radio app",
+    "mainLink": {
+      "url": "https://www.thetimes.co.uk/radio"
+    }
+  }
+]

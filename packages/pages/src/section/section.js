@@ -10,16 +10,20 @@ const {
   getSavedArticles,
   getSectionData,
   onArticlePress: onArticlePressBridge,
+  onLinkPress: onLinkPressBridge,
   onPuzzleBarPress = () => null,
   onPuzzlePress: onPuzzlePressBridge,
   onArticleSavePress: onArticleSavePressBridge,
 } = NativeModules.SectionEvents || {
   onArticlePress: () => null,
+  onLinkPress: () => null,
   onPuzzleBarPress: () => null,
   onPuzzlePress: () => null,
 };
 
 const onArticlePress = ({ id, url }) => onArticlePressBridge(url, id);
+const onLinkPress = ({ id, url }) => onLinkPressBridge(url, id);
+
 const onPuzzlePress = ({ id, title, url }) =>
   onPuzzlePressBridge(url, title, id);
 
@@ -143,6 +147,7 @@ class SectionPage extends Component {
         <Section
           analyticsStream={trackSection}
           onArticlePress={onArticlePress}
+          onLinkPress={onLinkPress}
           onPuzzleBarPress={onPuzzleBarPress}
           onPuzzlePress={onPuzzlePress}
           section={section}

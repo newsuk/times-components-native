@@ -61,6 +61,7 @@ class Section extends Component {
   renderItem({ index, item: slice }) {
     const {
       onArticlePress,
+      onLinkPress,
       onPuzzlePress,
       section: { name, slices, title },
     } = this.props;
@@ -71,6 +72,7 @@ class Section extends Component {
         index={index}
         length={slices.length}
         onPress={isPuzzle ? onPuzzlePress : onArticlePress}
+        onLinkPress={onLinkPress}
         slice={slice}
         isInSupplement={isSupplementSection(title)}
       />
@@ -153,6 +155,7 @@ class Section extends Component {
 
 Section.propTypes = {
   onArticlePress: PropTypes.func,
+  onLinkPress: PropTypes.func,
   onPuzzleBarPress: PropTypes.func,
   onPuzzlePress: PropTypes.func,
   onViewed: PropTypes.func,
@@ -162,6 +165,7 @@ Section.propTypes = {
 
 Section.defaultProps = {
   onArticlePress: () => null,
+  onLinkPress: () => null,
   onPuzzleBarPress: () => null,
   onPuzzlePress: () => null,
   onViewed: () => null,

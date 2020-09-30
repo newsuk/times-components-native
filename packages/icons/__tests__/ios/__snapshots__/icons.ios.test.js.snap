@@ -134,20 +134,20 @@ exports[`3. iconforwardarrow renders 1`] = `
 <ARTSurfaceView
   style={
     Object {
-      "height": 14,
-      "width": 7,
+      "height": 40,
+      "width": 20,
     }
   }
 >
   <ARTGroup
     transform={
       Array [
-        0.11666666666666667,
+        0.3333333333333333,
         0,
         0,
-        0.11666666666666667,
-        -4.9,
-        -1.4,
+        0.3333333333333333,
+        -14,
+        -4,
       ]
     }
   >

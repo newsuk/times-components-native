@@ -62,10 +62,10 @@ exports[`3. iconforwardarrow sets a width when height is set 1`] = `
 <RNSVGSvgView
   align="xMidYMid"
   aria-label="icon-forward-arrow"
-  bbHeight={12}
-  bbWidth={7}
+  bbHeight={50}
+  bbWidth={29.166666666666668}
   focusable={false}
-  height={12}
+  height={50}
   meetOrSlice={0}
   minX={42}
   minY={12}
@@ -74,14 +74,14 @@ exports[`3. iconforwardarrow sets a width when height is set 1`] = `
       "backgroundColor": "transparent",
       "borderWidth": 0,
       "flex": 0,
-      "height": 12,
+      "height": 50,
       "opacity": 1,
-      "width": 7,
+      "width": 29,
     }
   }
   vbHeight={120}
   vbWidth={60}
-  width={7}
+  width={29.166666666666668}
 />
 `;
 
