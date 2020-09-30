@@ -1,8 +1,7 @@
 import React from "react";
-import { Dimensions, Text, View } from "react-native";
-import { useResponsiveContext } from "@times-components-native/responsive";
+import { Text, View } from "react-native";
+import { getDimensions } from "@times-components-native/utils";
 import { getStyles } from "./styles";
-import { ItemsContainer } from "./itemsContainer";
 import { Item } from "./item";
 
 export type LinkType = {
@@ -20,12 +19,14 @@ export type ItemType = {
   title: string;
   strapline: string;
   mainLink: PuffMainLinkRef;
+  orientation: string;
 };
 
 interface Props {
   items: [ItemType];
   onArticlePress: <T = unknown, R = unknown>(args?: T) => R;
   onLinkPress: <T = unknown, R = unknown>(args?: T) => R;
+  orientation: string;
 }
 
 const text = {
@@ -36,10 +37,9 @@ const InTodaysEdition: React.FC<Props> = ({
   items,
   onArticlePress,
   onLinkPress,
+  orientation,
 }) => {
-  // @ts-ignore
-  const { orientation } = useResponsiveContext();
-  const windowWidth = Dimensions.get("window").width;
+  const { width: windowWidth } = getDimensions();
   const styles = getStyles(orientation, windowWidth);
 
   return (
@@ -47,7 +47,7 @@ const InTodaysEdition: React.FC<Props> = ({
       <View style={styles.titleContainer}>
         <Text style={styles.heading}>{text.heading}</Text>
       </View>
-      <ItemsContainer>
+      <View style={styles.itemsContainer}>
         {items.map((item, index) => (
           <Item
             key={`${item.id}-${index}`}
@@ -55,9 +55,10 @@ const InTodaysEdition: React.FC<Props> = ({
             index={index}
             onArticlePress={onArticlePress}
             onLinkPress={onLinkPress}
+            orientation={orientation}
           />
         ))}
-      </ItemsContainer>
+      </View>
     </View>
   );
 };

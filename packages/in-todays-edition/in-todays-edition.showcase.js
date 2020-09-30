@@ -5,21 +5,19 @@ import InTodaysEdition from "@times-components-native/in-todays-edition";
 import { getStyleByDeviceSize } from "@times-components-native/styleguide/src/styleguide";
 import Responsive, {
   useResponsiveContext,
+  ResponsiveContext,
 } from "@times-components-native/responsive";
 
 import InTodaysEditionData from "./fixtures/in-todays-edition.json";
 
 const preventDefaultedAction = (decorateAction) =>
   decorateAction([
-    ([e, ...args]) => {
-      e.preventDefault();
-      return ["[SyntheticEvent (storybook prevented default)]", ...args];
-    },
+    (args) => ["[SyntheticEvent (storybook prevented default)]", ...args],
   ]);
 
 const StoryContainer = ({ children }) => {
-  const { orientation } = useResponsiveContext();
   const windowWidth = Dimensions.get("window").width;
+  const { orientation } = useResponsiveContext();
 
   const dimensions = {
     portrait: {
@@ -83,17 +81,22 @@ export default {
     {
       component: (_, { decorateAction }) => (
         <Responsive>
-          <StoryContainer>
-            <InTodaysEdition
-              items={InTodaysEditionData}
-              onArticlePress={preventDefaultedAction(decorateAction)(
-                "onArticlePress",
-              )}
-              onLinkPress={preventDefaultedAction(decorateAction)(
-                "onLinkPress",
-              )}
-            />
-          </StoryContainer>
+          <ResponsiveContext.Consumer>
+            {({ orientation }) => (
+              <StoryContainer>
+                <InTodaysEdition
+                  items={InTodaysEditionData}
+                  onArticlePress={preventDefaultedAction(decorateAction)(
+                    "onArticlePress",
+                  )}
+                  onLinkPress={preventDefaultedAction(decorateAction)(
+                    "onLinkPress",
+                  )}
+                  orientation={orientation}
+                />
+              </StoryContainer>
+            )}
+          </ResponsiveContext.Consumer>
         </Responsive>
       ),
       name: "Default",

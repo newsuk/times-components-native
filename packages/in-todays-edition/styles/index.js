@@ -128,7 +128,7 @@ const styles = {
   portrait: {
     768: {
       ...sharedPortraitStyles,
-      itemCTAText: {
+      itemCTA: {
         display: "none",
       },
     },

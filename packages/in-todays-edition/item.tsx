@@ -1,8 +1,8 @@
 /* eslint-disable jsx-a11y/anchor-is-valid */
 import React from "react";
-import { Dimensions, View, Text } from "react-native";
-import { useResponsiveContext } from "@times-components-native/responsive";
+import { View, Text } from "react-native";
 import Link from "@times-components-native/link";
+import { getDimensions } from "@times-components-native/utils";
 import { IconForwardArrow } from "@times-components-native/icons";
 import { colours } from "@times-components-native/styleguide";
 import { getStyles } from "./styles";
@@ -13,6 +13,7 @@ interface Props {
   index: number;
   onArticlePress: <T = unknown, R = unknown>(args?: T) => R;
   onLinkPress: <T = unknown, R = unknown>(args?: T) => R;
+  orientation: string;
 }
 
 const isArticleLink = (
@@ -27,10 +28,9 @@ export const Item: React.FC<Props> = ({
   index,
   onArticlePress,
   onLinkPress,
+  orientation,
 }) => {
-  // @ts-ignore
-  const { orientation } = useResponsiveContext();
-  const windowWidth = Dimensions.get("window").width;
+  const { width: windowWidth } = getDimensions();
   const styles = getStyles(orientation, windowWidth);
   const link = item.mainLink;
 
