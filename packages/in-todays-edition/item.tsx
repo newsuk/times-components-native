@@ -19,8 +19,8 @@ interface Props {
 const isArticleLink = (
   link: ArticleLinkType | LinkType,
 ): link is ArticleLinkType => {
-  // eslint-disable-next-line no-prototype-builtins
-  return link.hasOwnProperty("articleId");
+  // @ts-ignore
+  return !!link.articleId;
 };
 
 const Item: React.FC<Props> = ({
