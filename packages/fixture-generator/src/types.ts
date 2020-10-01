@@ -2067,6 +2067,16 @@ export interface FrontPageSection extends Section {
   slices: FrontPageSectionSlice[];
 }
 
+export interface LeadTwoFrontSlice extends ArticleSlice {
+  lead1: Tile;
+
+  lead2: Tile;
+
+  items: Tile[];
+
+  sections: Section[];
+}
+
 export interface LeadTwoNoPicandTwoFrontSlice extends ArticleSlice {
   lead1: Tile;
 

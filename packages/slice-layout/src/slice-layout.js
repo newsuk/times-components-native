@@ -15,10 +15,15 @@ export { default as CommentLeadAndCartoon } from "./templates/commentleadandcart
 export { default as VerticalLayout } from "./templates/verticallayout";
 export { default as ListVerticalLayout } from "./templates/vertical-list";
 export { default as HorizontalLayout } from "./templates/horizontallayout";
-export { ItemColSeparator, ItemRowSeparator } from "./templates/shared";
+export {
+  ItemColSeparator,
+  ItemRowSeparator,
+  TabletContentContainer,
+} from "./templates/shared";
 export { default as FrontLeadTwoAndTwoSlice } from "./templates/frontleadtwoandtwo";
 export { default as FrontLeadOneAndOneSlice } from "./templates/frontleadoneandone";
 export { default as FrontLeadOneSlice } from "./templates/frontleadone";
+export { default as FrontLeadTwoSlice } from "./templates/frontleadtwo";
 export { default as TopSecondarySlice } from "./templates/topsecondary";
 export { default as SupplementLeadOneAndFourSlice } from "./templates/supplementleadoneandfour";
 export { default as SupplementLeadOneAndOneSlice } from "./templates/supplementleadoneandone";
