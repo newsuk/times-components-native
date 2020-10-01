@@ -10,7 +10,8 @@ import {
   TileImage,
   getTileStrapline,
 } from "../shared";
-import stylesFactory from "./styles";
+import { getStyle } from "./styles";
+import { getDimensions } from "@times-components-native/utils";
 
 const getAspectRatio = (crop) => (crop === "crop32" ? 3 / 2 : 16 / 9);
 
@@ -20,6 +21,7 @@ const TileAFront = ({
   orientation,
   breakpoint = editionBreakpoints.small,
 }) => {
+  const { width: windowWidth } = getDimensions();
   const showStrapline = breakpoint === editionBreakpoints.huge;
   const columnCount = orientation === "portrait" ? 3 : 1;
   const crop =
@@ -27,7 +29,7 @@ const TileAFront = ({
   const showSummary = orientation === "portrait";
 
   const imageCrop = getTileImage(tile, crop);
-  const styles = stylesFactory(breakpoint);
+  const styles = getStyle(orientation, windowWidth);
 
   if (!imageCrop) return null;
 
@@ -47,11 +49,7 @@ const TileAFront = ({
         hasVideo={article.hasVideo}
       />
       <FrontTileSummary
-        headlineStyle={
-          orientation === "landscape"
-            ? styles.headlineLandscape
-            : styles.headlinePortrait
-        }
+        headlineStyle={styles.headline}
         summary={showSummary && article.content}
         summaryStyle={styles.summary}
         strapline={showStrapline && getTileStrapline(tile)}

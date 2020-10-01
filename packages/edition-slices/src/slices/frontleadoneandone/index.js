@@ -5,10 +5,13 @@ import {
   TileAFront,
   TileBFront,
 } from "@times-components-native/edition-slices/src/tiles";
+import InTodaysEdition from "@times-components-native/in-todays-edition";
+import InTodaysEditionData from "@times-components-native/in-todays-edition/fixtures/in-todays-edition.json";
 
 function renderMedium(props, breakpoint, orientation) {
   const {
     onPress,
+    onLinkPress,
     slice: { lead, support },
   } = props;
 
@@ -33,7 +36,16 @@ function renderMedium(props, breakpoint, orientation) {
           showKeyline={orientation === "portrait"}
         />
       }
+      inTodaysEdition={
+        <InTodaysEdition
+          items={InTodaysEditionData}
+          onArticlePress={onPress}
+          onLinkPress={onLinkPress}
+          orientation={orientation}
+        />
+      }
       breakpoint={breakpoint}
+      orientation={orientation}
     />
   );
 }
