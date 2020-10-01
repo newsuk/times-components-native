@@ -24,7 +24,11 @@ const testFrontSlice = (renderComponent, width, orientation) => {
   }));
 
   const output = renderComponent(
-    <FrontLeadOneSlice lead={createItem("lead")} orientation={orientation} />,
+    <FrontLeadOneSlice
+      lead={createItem("lead")}
+      orientation={orientation}
+      inTodaysEdition={createItem("inTheNews")}
+    />,
   );
 
   expect(output).toMatchSnapshot();

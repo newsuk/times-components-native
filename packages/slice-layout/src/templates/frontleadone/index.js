@@ -6,19 +6,10 @@ import {
   TabletContentContainer,
 } from "@times-components-native/slice-layout";
 import { getDimensions } from "@times-components-native/utils";
-import InTodaysEdition from "@times-components-native/in-todays-edition";
 
-const FrontLeadOneSlice = ({ orientation, lead, inTodaysEditionItems }) => {
+const FrontLeadOneSlice = ({ orientation, lead, inTodaysEdition }) => {
   const { width: windowWidth } = getDimensions();
   const styles = getStyles(orientation, windowWidth);
-  const InTodaysEditionComponent = (
-    <InTodaysEdition
-      items={inTodaysEditionItems}
-      onArticlePress={() => null}
-      onLinkPress={() => null}
-      orientation={orientation}
-    />
-  );
 
   if (orientation === "landscape") {
     return (
@@ -29,7 +20,7 @@ const FrontLeadOneSlice = ({ orientation, lead, inTodaysEditionItems }) => {
             { style: styles.leadContainer, tile: lead },
             {
               style: styles.inTodaysEditionContainer,
-              tile: InTodaysEditionComponent,
+              tile: inTodaysEdition,
             },
           ]}
           colSeparatorStyle={styles.colSeparatorStyle}
@@ -40,9 +31,7 @@ const FrontLeadOneSlice = ({ orientation, lead, inTodaysEditionItems }) => {
   return (
     <TabletContentContainer style={styles.container}>
       <View style={styles.leadContainer}>{lead}</View>
-      <View style={[styles.inTodaysEditionContainer]}>
-        {InTodaysEditionComponent}
-      </View>
+      <View style={[styles.inTodaysEditionContainer]}>{inTodaysEdition}</View>
     </TabletContentContainer>
   );
 };

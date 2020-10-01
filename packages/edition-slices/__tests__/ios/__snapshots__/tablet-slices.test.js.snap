@@ -882,7 +882,47 @@ exports[`26. front lead one - portrait - medium 1`] = `
         tileName="lead"
       />
     </View>
-    <View />
+    <View>
+      <InTodaysEdition
+        items={
+          Array [
+            Object {
+              "id": "ed94946a-7838-11ea-a9b3-a42d54022bdc",
+              "mainLink": Object {
+                "articleId": "ed94946a-7838-11ea-a9b3-a42d54022bd2",
+              },
+              "strapline": "A hydrogen-fuelled future energises Johnson",
+              "title": "James Forsyth",
+            },
+            Object {
+              "id": "9473b7c2-7846-11ea-a9b3-a42d54022bdc",
+              "mainLink": Object {
+                "articleId": "ed94946a-7838-11ea-a9b3-a42d54022bd3",
+              },
+              "strapline": "At least Netflix is more low-key than Trooping the Colour",
+              "title": "Caitlin Moran",
+            },
+            Object {
+              "id": "a4b3226c-78b9-11ea-bc41-6517026e24df",
+              "mainLink": Object {
+                "articleId": "ed94946a-7838-11ea-a9b3-a42d54022bd4",
+              },
+              "strapline": "My encounter with Britain’s oldest Olympian",
+              "title": "Matt Dickinson",
+            },
+            Object {
+              "id": "65207c56-78bb-11ea-a9b3-a42d54022bdc",
+              "mainLink": Object {
+                "url": "https://www.thetimes.co.uk/radio",
+              },
+              "strapline": "Listen free on DAB, online or via the Times Radio app",
+              "title": "Times Radio",
+            },
+          ]
+        }
+        orientation="portrait"
+      />
+    </View>
   </View>
 </View>
 `;
@@ -900,8 +940,44 @@ exports[`27. front lead one - landscape - medium 1`] = `
       </View>
       <View />
       <View>
-        <View
-          tileName="ite"
+        <InTodaysEdition
+          items={
+            Array [
+              Object {
+                "id": "ed94946a-7838-11ea-a9b3-a42d54022bdc",
+                "mainLink": Object {
+                  "articleId": "ed94946a-7838-11ea-a9b3-a42d54022bd2",
+                },
+                "strapline": "A hydrogen-fuelled future energises Johnson",
+                "title": "James Forsyth",
+              },
+              Object {
+                "id": "9473b7c2-7846-11ea-a9b3-a42d54022bdc",
+                "mainLink": Object {
+                  "articleId": "ed94946a-7838-11ea-a9b3-a42d54022bd3",
+                },
+                "strapline": "At least Netflix is more low-key than Trooping the Colour",
+                "title": "Caitlin Moran",
+              },
+              Object {
+                "id": "a4b3226c-78b9-11ea-bc41-6517026e24df",
+                "mainLink": Object {
+                  "articleId": "ed94946a-7838-11ea-a9b3-a42d54022bd4",
+                },
+                "strapline": "My encounter with Britain’s oldest Olympian",
+                "title": "Matt Dickinson",
+              },
+              Object {
+                "id": "65207c56-78bb-11ea-a9b3-a42d54022bdc",
+                "mainLink": Object {
+                  "url": "https://www.thetimes.co.uk/radio",
+                },
+                "strapline": "Listen free on DAB, online or via the Times Radio app",
+                "title": "Times Radio",
+              },
+            ]
+          }
+          orientation="landscape"
         />
       </View>
     </View>
@@ -1977,7 +2053,47 @@ exports[`59. front lead one - portrait - wide 1`] = `
         tileName="lead"
       />
     </View>
-    <View />
+    <View>
+      <InTodaysEdition
+        items={
+          Array [
+            Object {
+              "id": "ed94946a-7838-11ea-a9b3-a42d54022bdc",
+              "mainLink": Object {
+                "articleId": "ed94946a-7838-11ea-a9b3-a42d54022bd2",
+              },
+              "strapline": "A hydrogen-fuelled future energises Johnson",
+              "title": "James Forsyth",
+            },
+            Object {
+              "id": "9473b7c2-7846-11ea-a9b3-a42d54022bdc",
+              "mainLink": Object {
+                "articleId": "ed94946a-7838-11ea-a9b3-a42d54022bd3",
+              },
+              "strapline": "At least Netflix is more low-key than Trooping the Colour",
+              "title": "Caitlin Moran",
+            },
+            Object {
+              "id": "a4b3226c-78b9-11ea-bc41-6517026e24df",
+              "mainLink": Object {
+                "articleId": "ed94946a-7838-11ea-a9b3-a42d54022bd4",
+              },
+              "strapline": "My encounter with Britain’s oldest Olympian",
+              "title": "Matt Dickinson",
+            },
+            Object {
+              "id": "65207c56-78bb-11ea-a9b3-a42d54022bdc",
+              "mainLink": Object {
+                "url": "https://www.thetimes.co.uk/radio",
+              },
+              "strapline": "Listen free on DAB, online or via the Times Radio app",
+              "title": "Times Radio",
+            },
+          ]
+        }
+        orientation="portrait"
+      />
+    </View>
   </View>
 </View>
 `;
@@ -1995,8 +2111,44 @@ exports[`60. front lead one - landscape - wide 1`] = `
       </View>
       <View />
       <View>
-        <View
-          tileName="ite"
+        <InTodaysEdition
+          items={
+            Array [
+              Object {
+                "id": "ed94946a-7838-11ea-a9b3-a42d54022bdc",
+                "mainLink": Object {
+                  "articleId": "ed94946a-7838-11ea-a9b3-a42d54022bd2",
+                },
+                "strapline": "A hydrogen-fuelled future energises Johnson",
+                "title": "James Forsyth",
+              },
+              Object {
+                "id": "9473b7c2-7846-11ea-a9b3-a42d54022bdc",
+                "mainLink": Object {
+                  "articleId": "ed94946a-7838-11ea-a9b3-a42d54022bd3",
+                },
+                "strapline": "At least Netflix is more low-key than Trooping the Colour",
+                "title": "Caitlin Moran",
+              },
+              Object {
+                "id": "a4b3226c-78b9-11ea-bc41-6517026e24df",
+                "mainLink": Object {
+                  "articleId": "ed94946a-7838-11ea-a9b3-a42d54022bd4",
+                },
+                "strapline": "My encounter with Britain’s oldest Olympian",
+                "title": "Matt Dickinson",
+              },
+              Object {
+                "id": "65207c56-78bb-11ea-a9b3-a42d54022bdc",
+                "mainLink": Object {
+                  "url": "https://www.thetimes.co.uk/radio",
+                },
+                "strapline": "Listen free on DAB, online or via the Times Radio app",
+                "title": "Times Radio",
+              },
+            ]
+          }
+          orientation="landscape"
         />
       </View>
     </View>
@@ -3117,7 +3269,47 @@ exports[`92. front lead one - portrait - huge 1`] = `
           tileName="lead"
         />
       </View>
-      <View />
+      <View>
+        <InTodaysEdition
+          items={
+            Array [
+              Object {
+                "id": "ed94946a-7838-11ea-a9b3-a42d54022bdc",
+                "mainLink": Object {
+                  "articleId": "ed94946a-7838-11ea-a9b3-a42d54022bd2",
+                },
+                "strapline": "A hydrogen-fuelled future energises Johnson",
+                "title": "James Forsyth",
+              },
+              Object {
+                "id": "9473b7c2-7846-11ea-a9b3-a42d54022bdc",
+                "mainLink": Object {
+                  "articleId": "ed94946a-7838-11ea-a9b3-a42d54022bd3",
+                },
+                "strapline": "At least Netflix is more low-key than Trooping the Colour",
+                "title": "Caitlin Moran",
+              },
+              Object {
+                "id": "a4b3226c-78b9-11ea-bc41-6517026e24df",
+                "mainLink": Object {
+                  "articleId": "ed94946a-7838-11ea-a9b3-a42d54022bd4",
+                },
+                "strapline": "My encounter with Britain’s oldest Olympian",
+                "title": "Matt Dickinson",
+              },
+              Object {
+                "id": "65207c56-78bb-11ea-a9b3-a42d54022bdc",
+                "mainLink": Object {
+                  "url": "https://www.thetimes.co.uk/radio",
+                },
+                "strapline": "Listen free on DAB, online or via the Times Radio app",
+                "title": "Times Radio",
+              },
+            ]
+          }
+          orientation="portrait"
+        />
+      </View>
     </View>
   </View>
 </View>
@@ -3137,8 +3329,44 @@ exports[`93. front lead one - landscape - huge 1`] = `
         </View>
         <View />
         <View>
-          <View
-            tileName="ite"
+          <InTodaysEdition
+            items={
+              Array [
+                Object {
+                  "id": "ed94946a-7838-11ea-a9b3-a42d54022bdc",
+                  "mainLink": Object {
+                    "articleId": "ed94946a-7838-11ea-a9b3-a42d54022bd2",
+                  },
+                  "strapline": "A hydrogen-fuelled future energises Johnson",
+                  "title": "James Forsyth",
+                },
+                Object {
+                  "id": "9473b7c2-7846-11ea-a9b3-a42d54022bdc",
+                  "mainLink": Object {
+                    "articleId": "ed94946a-7838-11ea-a9b3-a42d54022bd3",
+                  },
+                  "strapline": "At least Netflix is more low-key than Trooping the Colour",
+                  "title": "Caitlin Moran",
+                },
+                Object {
+                  "id": "a4b3226c-78b9-11ea-bc41-6517026e24df",
+                  "mainLink": Object {
+                    "articleId": "ed94946a-7838-11ea-a9b3-a42d54022bd4",
+                  },
+                  "strapline": "My encounter with Britain’s oldest Olympian",
+                  "title": "Matt Dickinson",
+                },
+                Object {
+                  "id": "65207c56-78bb-11ea-a9b3-a42d54022bdc",
+                  "mainLink": Object {
+                    "url": "https://www.thetimes.co.uk/radio",
+                  },
+                  "strapline": "Listen free on DAB, online or via the Times Radio app",
+                  "title": "Times Radio",
+                },
+              ]
+            }
+            orientation="landscape"
           />
         </View>
       </View>

@@ -7,7 +7,11 @@ exports[`1. front lead one - portrait - 768 1`] = `
       lead
     </Text>
   </View>
-  <View />
+  <View>
+    <Text>
+      inTheNews
+    </Text>
+  </View>
 </TabletContentContainer>
 `;
 
@@ -18,7 +22,11 @@ exports[`2. front lead one - portrait - 810 1`] = `
       lead
     </Text>
   </View>
-  <View />
+  <View>
+    <Text>
+      inTheNews
+    </Text>
+  </View>
 </TabletContentContainer>
 `;
 
@@ -29,7 +37,11 @@ exports[`3. front lead one - portrait - 834 1`] = `
       lead
     </Text>
   </View>
-  <View />
+  <View>
+    <Text>
+      inTheNews
+    </Text>
+  </View>
 </TabletContentContainer>
 `;
 
@@ -40,7 +52,11 @@ exports[`4. front lead one - portrait - 1024 1`] = `
       lead
     </Text>
   </View>
-  <View />
+  <View>
+    <Text>
+      inTheNews
+    </Text>
+  </View>
 </TabletContentContainer>
 `;
 
@@ -78,16 +94,11 @@ exports[`5. front lead one - landscape - 1024 1`] = `
             "marginLeft": 10,
             "width": "24%",
           },
-          "tile": <View
-            style={
-              Array [
-                Object {
-                  "backgroundColor": "#f0eedf",
-                },
-              ]
-            }
-            tileName="ite"
-          />,
+          "tile": <ExampleChild
+            id="inTheNews"
+          >
+            inTheNews
+          </ExampleChild>,
         },
       ]
     }
@@ -129,16 +140,11 @@ exports[`6. front lead one - landscape - 1080 1`] = `
             "marginLeft": 10,
             "width": "24%",
           },
-          "tile": <View
-            style={
-              Array [
-                Object {
-                  "backgroundColor": "#f0eedf",
-                },
-              ]
-            }
-            tileName="ite"
-          />,
+          "tile": <ExampleChild
+            id="inTheNews"
+          >
+            inTheNews
+          </ExampleChild>,
         },
       ]
     }
@@ -180,16 +186,11 @@ exports[`7. front lead one - landscape - 1366 1`] = `
             "marginLeft": 10,
             "width": "17%",
           },
-          "tile": <View
-            style={
-              Array [
-                Object {
-                  "backgroundColor": "#f0eedf",
-                },
-              ]
-            }
-            tileName="ite"
-          />,
+          "tile": <ExampleChild
+            id="inTheNews"
+          >
+            inTheNews
+          </ExampleChild>,
         },
       ]
     }

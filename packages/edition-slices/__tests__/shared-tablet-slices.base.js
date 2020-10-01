@@ -23,6 +23,7 @@ import {
   mockLeadOneAndOneFrontSlice,
   mockLeadTwoNoPicAndTwoFrontSlice,
   mockLeadOneFullWidthFrontSlice,
+  mockInTodaysEditionSlice,
 } from "@times-components-native/fixture-generator";
 import Responsive from "@times-components-native/responsive";
 import "./mocks";
@@ -189,12 +190,18 @@ const slices = [
     name: "front lead one - portrait",
     Slice: LeadOneFullWidthFrontSlice,
     orientation: "portrait",
+    sliceProps: {
+      inTodaysEditionSlice: mockInTodaysEditionSlice(),
+    },
   },
   {
     mock: mockLeadOneFullWidthFrontSlice(),
     name: "front lead one - landscape",
     Slice: LeadOneFullWidthFrontSlice,
     orientation: "landscape",
+    sliceProps: {
+      inTodaysEditionSlice: mockInTodaysEditionSlice(),
+    },
   },
   {
     mock: mockSecondaryFourSlice(),
@@ -245,7 +252,7 @@ jest.mock("@times-components-native/utils", () => {
 });
 
 const tabletTester = (type) =>
-  slices.map(({ mock, name, Slice, orientation }) => ({
+  slices.map(({ mock, name, Slice, orientation, sliceProps }) => ({
     name: `${name} - ${type}`,
     test: () => {
       let width = editionBreakpointWidths[type];
@@ -255,7 +262,7 @@ const tabletTester = (type) =>
       }));
       const output = TestRenderer.create(
         <Responsive>
-          <Slice onPress={() => null} slice={mock} />
+          <Slice onPress={() => null} slice={mock} {...sliceProps} />
         </Responsive>,
       );
 

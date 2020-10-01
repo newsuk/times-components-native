@@ -2111,12 +2111,13 @@ exports[`26. front lead one - portrait - medium 1`] = `
     <View
       style={
         Object {
-          "backgroundColor": "#f0eedf",
           "height": 133,
-          "width": "100%",
+          "marginTop": 10,
         }
       }
-    />
+    >
+      <InTodaysEdition />
+    </View>
   </View>
 </View>
 `;
@@ -2165,13 +2166,7 @@ exports[`27. front lead one - landscape - medium 1`] = `
         }
       />
       <View>
-        <View
-          style={
-            Object {
-              "backgroundColor": "#f0eedf",
-            }
-          }
-        />
+        <InTodaysEdition />
       </View>
     </View>
   </View>
@@ -4704,11 +4699,13 @@ exports[`59. front lead one - portrait - wide 1`] = `
     <View
       style={
         Object {
-          "backgroundColor": "#f0eedf",
           "height": 174,
+          "marginTop": 10,
         }
       }
-    />
+    >
+      <InTodaysEdition />
+    </View>
   </View>
 </View>
 `;
@@ -4774,13 +4771,7 @@ exports[`60. front lead one - landscape - wide 1`] = `
           }
         }
       >
-        <View
-          style={
-            Object {
-              "backgroundColor": "#f0eedf",
-            }
-          }
-        />
+        <InTodaysEdition />
       </View>
     </View>
   </View>
@@ -7554,11 +7545,13 @@ exports[`92. front lead one - portrait - huge 1`] = `
       <View
         style={
           Object {
-            "backgroundColor": "#f0eedf",
             "height": 174,
+            "marginTop": 10,
           }
         }
-      />
+      >
+        <InTodaysEdition />
+      </View>
     </View>
   </View>
 </View>
@@ -7634,13 +7627,7 @@ exports[`93. front lead one - landscape - huge 1`] = `
             }
           }
         >
-          <View
-            style={
-              Object {
-                "backgroundColor": "#f0eedf",
-              }
-            }
-          />
+          <InTodaysEdition />
         </View>
       </View>
     </View>

@@ -2,6 +2,7 @@ import React from "react";
 import { ResponsiveSlice } from "@times-components-native/edition-slices/src/slices/shared";
 import { FrontLeadOneSlice } from "@times-components-native/slice-layout";
 import { TileFFront } from "@times-components-native/edition-slices/src/tiles";
+import InTodaysEdition from "@times-components-native/in-todays-edition";
 
 function renderMedium(props, breakpoint, orientation) {
   const {
@@ -23,7 +24,14 @@ function renderMedium(props, breakpoint, orientation) {
       }
       breakpoint={breakpoint}
       orientation={orientation}
-      inTodaysEditionItems={inTodaysEditionItems}
+      inTodaysEdition={
+        <InTodaysEdition
+          items={inTodaysEditionItems}
+          onArticlePress={onPress}
+          onLinkPress={onPress}
+          orientation={orientation}
+        />
+      }
     />
   );
 }
