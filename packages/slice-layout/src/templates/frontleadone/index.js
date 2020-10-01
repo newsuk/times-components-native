@@ -13,9 +13,9 @@ const FrontLeadOneSlice = ({ orientation, lead, inTodaysEdition }) => {
 
   if (orientation === "landscape") {
     return (
-      <TabletContentContainer>
+      <TabletContentContainer style={styles.container}>
         <HorizontalLayout
-          containerStyle={styles.container}
+          containerStyle={styles.row}
           tiles={[
             { style: styles.leadContainer, tile: lead },
             {

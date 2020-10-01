@@ -72,7 +72,6 @@ exports[`5. front lead one - landscape - 1024 1`] = `
       Object {
         "flex": 1,
         "flexDirection": "row",
-        "paddingVertical": 10,
       }
     }
     tiles={
@@ -89,7 +88,6 @@ exports[`5. front lead one - landscape - 1024 1`] = `
         },
         Object {
           "style": Object {
-            "backgroundColor": "#f0eedf",
             "marginLeft": 10,
             "width": "24%",
           },
@@ -117,7 +115,6 @@ exports[`6. front lead one - landscape - 1080 1`] = `
       Object {
         "flex": 1,
         "flexDirection": "row",
-        "paddingVertical": 15,
       }
     }
     tiles={
@@ -134,7 +131,6 @@ exports[`6. front lead one - landscape - 1080 1`] = `
         },
         Object {
           "style": Object {
-            "backgroundColor": "#f0eedf",
             "marginLeft": 10,
             "width": "24%",
           },
@@ -162,8 +158,6 @@ exports[`7. front lead one - landscape - 1366 1`] = `
       Object {
         "flex": 1,
         "flexDirection": "row",
-        "paddingBottom": 35,
-        "paddingTop": 30,
       }
     }
     tiles={
@@ -180,7 +174,6 @@ exports[`7. front lead one - landscape - 1366 1`] = `
         },
         Object {
           "style": Object {
-            "backgroundColor": "#f0eedf",
             "marginLeft": 10,
             "width": "17%",
           },

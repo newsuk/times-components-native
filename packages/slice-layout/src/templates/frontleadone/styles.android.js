@@ -7,7 +7,7 @@ export const getStyles = (orientation, windowSize) => {
     ...styles,
     container: {
       ...styles.container,
-      paddingBottom: getAndroidNavHeight(),
+      marginBottom: getAndroidNavHeight(),
     },
   };
 };

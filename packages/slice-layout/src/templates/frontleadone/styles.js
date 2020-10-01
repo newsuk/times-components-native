@@ -9,14 +9,14 @@ const inTodaysEditionContainerPortrait = {
   marginTop: spacing(2),
 };
 
-const containerLandscape = { flex: 1, flexDirection: "row" };
+const containerLandscape = { flex: 1 };
 
 const sharedLandscapeStyles = {
+  row: { flex: 1, flexDirection: "row" },
   colSeparatorStyle: { marginVertical: 0 },
   inTodaysEditionContainer: {
     width: columnToPercentage({ numberOfColumns: 3 }),
     marginLeft: spacing(2),
-    backgroundColor: "#f0eedf", // REMOVE BEFORE COMMITTING
   },
   leadContainer: {
     width: columnToPercentage({ numberOfColumns: 9 }),
@@ -55,7 +55,6 @@ const styles = {
       inTodaysEditionContainer: {
         width: columnToPercentage({ numberOfColumns: 2, totalColumns: 11 }),
         marginLeft: spacing(2),
-        backgroundColor: "#f0eedf", // REMOVE BEFORE COMMITTING
       },
       leadContainer: {
         width: columnToPercentage({ numberOfColumns: 9, totalColumns: 11 }),

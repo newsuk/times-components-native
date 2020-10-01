@@ -4717,6 +4717,7 @@ exports[`60. front lead one - landscape - wide 1`] = `
         "flex": 1,
         "flexDirection": "row",
         "justifyContent": "center",
+        "paddingVertical": 10,
         "width": 944,
       }
     }
@@ -4726,7 +4727,6 @@ exports[`60. front lead one - landscape - wide 1`] = `
         Object {
           "flex": 1,
           "flexDirection": "row",
-          "paddingVertical": 10,
         }
       }
     >
@@ -4752,7 +4752,6 @@ exports[`60. front lead one - landscape - wide 1`] = `
       <View
         style={
           Object {
-            "backgroundColor": "#f0eedf",
             "marginLeft": 10,
             "width": "24%",
           }
@@ -7569,6 +7568,8 @@ exports[`93. front lead one - landscape - huge 1`] = `
           "flex": 1,
           "flexDirection": "row",
           "justifyContent": "center",
+          "paddingBottom": 35,
+          "paddingTop": 30,
           "width": 1140,
         }
       }
@@ -7578,8 +7579,6 @@ exports[`93. front lead one - landscape - huge 1`] = `
           Object {
             "flex": 1,
             "flexDirection": "row",
-            "paddingBottom": 35,
-            "paddingTop": 30,
           }
         }
       >
@@ -7605,7 +7604,6 @@ exports[`93. front lead one - landscape - huge 1`] = `
         <View
           style={
             Object {
-              "backgroundColor": "#f0eedf",
               "marginLeft": 10,
               "width": "17%",
             }

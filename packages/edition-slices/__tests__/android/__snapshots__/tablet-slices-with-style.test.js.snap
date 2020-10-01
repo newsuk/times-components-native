@@ -2093,7 +2093,8 @@ exports[`26. front lead one - portrait - medium 1`] = `
         "flex": 1,
         "flexDirection": "column",
         "justifyContent": "center",
-        "paddingBottom": 56,
+        "marginBottom": 56,
+        "paddingBottom": 15,
         "paddingTop": 10,
         "width": 688,
       }
@@ -2141,17 +2142,12 @@ exports[`27. front lead one - landscape - medium 1`] = `
         "flex": 1,
         "flexDirection": "row",
         "justifyContent": "center",
+        "marginBottom": 56,
         "width": 944,
       }
     }
   >
-    <View
-      style={
-        Object {
-          "paddingBottom": 56,
-        }
-      }
-    >
+    <View>
       <View>
         <TileFFront />
       </View>
@@ -4681,7 +4677,8 @@ exports[`59. front lead one - portrait - wide 1`] = `
         "flex": 1,
         "flexDirection": "column",
         "justifyContent": "center",
-        "paddingBottom": 56,
+        "marginBottom": 56,
+        "paddingBottom": 20,
         "paddingTop": 15,
         "width": 920,
       }
@@ -4729,6 +4726,8 @@ exports[`60. front lead one - landscape - wide 1`] = `
         "flex": 1,
         "flexDirection": "row",
         "justifyContent": "center",
+        "marginBottom": 56,
+        "paddingVertical": 10,
         "width": 944,
       }
     }
@@ -4738,8 +4737,6 @@ exports[`60. front lead one - landscape - wide 1`] = `
         Object {
           "flex": 1,
           "flexDirection": "row",
-          "paddingBottom": 56,
-          "paddingVertical": 10,
         }
       }
     >
@@ -4765,7 +4762,6 @@ exports[`60. front lead one - landscape - wide 1`] = `
       <View
         style={
           Object {
-            "backgroundColor": "#f0eedf",
             "marginLeft": 10,
             "width": "24%",
           }
@@ -7527,7 +7523,8 @@ exports[`92. front lead one - portrait - huge 1`] = `
           "flex": 1,
           "flexDirection": "column",
           "justifyContent": "center",
-          "paddingBottom": 56,
+          "marginBottom": 56,
+          "paddingBottom": 20,
           "paddingTop": 15,
           "width": 920,
         }
@@ -7585,6 +7582,9 @@ exports[`93. front lead one - landscape - huge 1`] = `
           "flex": 1,
           "flexDirection": "row",
           "justifyContent": "center",
+          "marginBottom": 56,
+          "paddingBottom": 35,
+          "paddingTop": 30,
           "width": 1140,
         }
       }
@@ -7594,8 +7594,6 @@ exports[`93. front lead one - landscape - huge 1`] = `
           Object {
             "flex": 1,
             "flexDirection": "row",
-            "paddingBottom": 56,
-            "paddingTop": 30,
           }
         }
       >
@@ -7621,7 +7619,6 @@ exports[`93. front lead one - landscape - huge 1`] = `
         <View
           style={
             Object {
-              "backgroundColor": "#f0eedf",
               "marginLeft": 10,
               "width": "17%",
             }
