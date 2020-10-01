@@ -5,6 +5,10 @@ import {
 } from "@times-components-native/styleguide/src/styleguide";
 
 const containerPortrait = { flex: 1, flexDirection: "column" };
+const inTodaysEditionContainerPortrait = {
+  marginTop: spacing(2),
+};
+
 const containerLandscape = { flex: 1, flexDirection: "row" };
 
 const sharedLandscapeStyles = {
@@ -67,8 +71,8 @@ const styles = {
         paddingBottom: spacing(3),
       },
       inTodaysEditionContainer: {
+        ...inTodaysEditionContainerPortrait,
         height: 133,
-        width: "100%",
       },
     },
     "810": {
@@ -78,8 +82,8 @@ const styles = {
         paddingVertical: spacing(3),
       },
       inTodaysEditionContainer: {
+        ...inTodaysEditionContainerPortrait,
         height: 148,
-        width: "100%",
       },
     },
     "834": {
@@ -90,8 +94,8 @@ const styles = {
         paddingBottom: spacing(4),
       },
       inTodaysEditionContainer: {
+        ...inTodaysEditionContainerPortrait,
         height: 148,
-        width: "100%",
       },
     },
     1024: {
@@ -102,6 +106,7 @@ const styles = {
         paddingBottom: spacing(4),
       },
       inTodaysEditionContainer: {
+        ...inTodaysEditionContainerPortrait,
         height: 174,
       },
     },

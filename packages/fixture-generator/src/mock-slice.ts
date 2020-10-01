@@ -13,6 +13,7 @@ import {
   LeadersSlice,
   SecondaryOneSlice,
   SecondaryOneAndColumnistSlice,
+  InTheNewsSliceInput as InTheNewsSlice,
   SecondaryFourSlice,
   SecondaryTwoAndTwoSlice,
   SecondaryTwoNoPicAndTwoSlice,
@@ -27,6 +28,7 @@ import MockPuzzle from "./mock-puzzle";
 import MockTile from "./mock-tile";
 import MockDailyRegister from "./mock-daily-register";
 import MockMarkup from "@times-components-native/fixture-generator/src/mock-markup";
+import inTodaysEditionFixture from "@times-components-native/in-todays-edition/fixtures/in-todays-edition.json";
 
 interface LeadOneAndFourSliceWithName extends LeadOneAndFourSlice {
   name: string;
@@ -153,6 +155,12 @@ function mockLeadOneFullWidthSlice(): LeadOneFullWidthSliceWithName {
     name: "LeadOneFullWidthSlice",
     lead: tiles[0],
     items: tiles,
+  };
+}
+
+function mockInTodaysEditionSlice(): InTheNewsSlice {
+  return {
+    items: inTodaysEditionFixture,
   };
 }
 
@@ -428,6 +436,7 @@ export default mockArticleSlice;
 export {
   mockCommentLeadAndCartoonSlice,
   mockDailyRegisterSlice,
+  mockInTodaysEditionSlice,
   mockLeadOneAndFourSlice,
   mockStandardSlice,
   mockLeadOneFullWidthSlice,

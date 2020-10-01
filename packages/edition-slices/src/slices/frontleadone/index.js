@@ -7,6 +7,7 @@ function renderMedium(props, breakpoint, orientation) {
   const {
     onPress,
     slice: { lead },
+    inTodaysEditionSlice: { items: inTodaysEditionItems },
   } = props;
 
   return (
@@ -22,6 +23,7 @@ function renderMedium(props, breakpoint, orientation) {
       }
       breakpoint={breakpoint}
       orientation={orientation}
+      inTodaysEditionItems={inTodaysEditionItems}
     />
   );
 }

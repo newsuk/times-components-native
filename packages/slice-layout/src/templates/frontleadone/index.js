@@ -6,30 +6,31 @@ import {
   TabletContentContainer,
 } from "@times-components-native/slice-layout";
 import { getDimensions } from "@times-components-native/utils";
+import InTodaysEdition from "@times-components-native/in-todays-edition";
 
-const FrontLeadOneSlice = ({ orientation, lead }) => {
+const FrontLeadOneSlice = ({ orientation, lead, inTodaysEditionItems }) => {
   const { width: windowWidth } = getDimensions();
   const styles = getStyles(orientation, windowWidth);
+  const InTodaysEditionComponent = (
+    <InTodaysEdition
+      items={inTodaysEditionItems}
+      onArticlePress={() => null}
+      onLinkPress={() => null}
+      orientation={orientation}
+    />
+  );
 
   if (orientation === "landscape") {
-    const ite = (
-      <View
-        tileName={"ite"}
-        style={[
-          {
-            backgroundColor: "#f0eedf",
-          },
-        ]}
-      />
-    );
-
     return (
       <TabletContentContainer>
         <HorizontalLayout
           containerStyle={styles.container}
           tiles={[
             { style: styles.leadContainer, tile: lead },
-            { style: styles.inTodaysEditionContainer, tile: ite },
+            {
+              style: styles.inTodaysEditionContainer,
+              tile: InTodaysEditionComponent,
+            },
           ]}
           colSeparatorStyle={styles.colSeparatorStyle}
         />
@@ -39,14 +40,9 @@ const FrontLeadOneSlice = ({ orientation, lead }) => {
   return (
     <TabletContentContainer style={styles.container}>
       <View style={styles.leadContainer}>{lead}</View>
-      <View
-        style={[
-          {
-            backgroundColor: "#f0eedf",
-          },
-          styles.inTodaysEditionContainer,
-        ]}
-      />
+      <View style={[styles.inTodaysEditionContainer]}>
+        {InTodaysEditionComponent}
+      </View>
     </TabletContentContainer>
   );
 };
