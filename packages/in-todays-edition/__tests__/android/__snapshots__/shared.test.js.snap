@@ -1,0 +1,2324 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`InTodaysEdition landscape 1024 1`] = `
+<View
+  style={
+    Object {
+      "backgroundColor": "#F0EEDF",
+      "flex": 1,
+      "paddingHorizontal": 15,
+      "paddingVertical": 15,
+    }
+  }
+>
+  <View
+    style={
+      Object {
+        "borderBottomColor": "#DBDBDB",
+        "borderBottomWidth": 1,
+        "marginBottom": 10,
+        "paddingBottom": 15,
+      }
+    }
+  >
+    <Text
+      style={
+        Object {
+          "color": "#1D1D1B",
+          "fontFamily": "TimesDigitalW04-Regular",
+          "fontSize": 14,
+          "letterSpacing": 1,
+        }
+      }
+    >
+      IN TODAY'S EDITION
+    </Text>
+  </View>
+  <View>
+    <View
+      style={
+        Object {
+          "marginBottom": 0,
+        }
+      }
+    >
+      <Text
+        style={
+          Object {
+            "color": "#1D1D1B",
+            "fontFamily": "TimesModern-Bold",
+            "fontSize": 18,
+            "marginBottom": 5,
+          }
+        }
+      >
+        James Forsyth
+      </Text>
+      <Text
+        style={
+          Object {
+            "color": "#1D1D1B",
+            "fontFamily": "TimesDigitalW04-Regular",
+            "fontSize": 14,
+            "lineHeight": 18,
+            "marginBottom": 10,
+          }
+        }
+      >
+        A hydrogen-fuelled future energises Johnson
+      </Text>
+      <View
+        style={
+          Object {
+            "flexDirection": "row",
+          }
+        }
+      >
+        <Text
+          style={
+            Object {
+              "color": "#CC0000",
+              "fontFamily": "GillSansMTStd-Medium",
+              "fontSize": 13,
+              "marginBottom": 15,
+              "textDecorationLine": "none",
+            }
+          }
+        >
+          Read the full story
+        </Text>
+        <View
+          style={
+            Object {
+              "marginLeft": 5,
+              "marginTop": 2,
+            }
+          }
+        >
+          <IconForwardArrow />
+        </View>
+      </View>
+    </View>
+    <View
+      style={
+        Object {
+          "borderBottomWidth": 1,
+          "borderColor": "#DBDBDB",
+          "marginBottom": 20,
+        }
+      }
+    />
+    <View
+      style={
+        Object {
+          "marginBottom": 0,
+        }
+      }
+    >
+      <Text
+        style={
+          Object {
+            "color": "#1D1D1B",
+            "fontFamily": "TimesModern-Bold",
+            "fontSize": 18,
+            "marginBottom": 5,
+          }
+        }
+      >
+        Caitlin Moran
+      </Text>
+      <Text
+        style={
+          Object {
+            "color": "#1D1D1B",
+            "fontFamily": "TimesDigitalW04-Regular",
+            "fontSize": 14,
+            "lineHeight": 18,
+            "marginBottom": 10,
+          }
+        }
+      >
+        At least Netflix is more low-key than Trooping the Colour
+      </Text>
+      <View
+        style={
+          Object {
+            "flexDirection": "row",
+          }
+        }
+      >
+        <Text
+          style={
+            Object {
+              "color": "#CC0000",
+              "fontFamily": "GillSansMTStd-Medium",
+              "fontSize": 13,
+              "marginBottom": 15,
+              "textDecorationLine": "none",
+            }
+          }
+        >
+          Read the full story
+        </Text>
+        <View
+          style={
+            Object {
+              "marginLeft": 5,
+              "marginTop": 2,
+            }
+          }
+        >
+          <IconForwardArrow />
+        </View>
+      </View>
+    </View>
+    <View
+      style={
+        Object {
+          "borderBottomWidth": 1,
+          "borderColor": "#DBDBDB",
+          "marginBottom": 20,
+        }
+      }
+    />
+    <View
+      style={
+        Object {
+          "marginBottom": 0,
+        }
+      }
+    >
+      <Text
+        style={
+          Object {
+            "color": "#1D1D1B",
+            "fontFamily": "TimesModern-Bold",
+            "fontSize": 18,
+            "marginBottom": 5,
+          }
+        }
+      >
+        Matt Dickinson
+      </Text>
+      <Text
+        style={
+          Object {
+            "color": "#1D1D1B",
+            "fontFamily": "TimesDigitalW04-Regular",
+            "fontSize": 14,
+            "lineHeight": 18,
+            "marginBottom": 10,
+          }
+        }
+      >
+        My encounter with Britain’s oldest Olympian
+      </Text>
+      <View
+        style={
+          Object {
+            "flexDirection": "row",
+          }
+        }
+      >
+        <Text
+          style={
+            Object {
+              "color": "#CC0000",
+              "fontFamily": "GillSansMTStd-Medium",
+              "fontSize": 13,
+              "marginBottom": 15,
+              "textDecorationLine": "none",
+            }
+          }
+        >
+          Read the full story
+        </Text>
+        <View
+          style={
+            Object {
+              "marginLeft": 5,
+              "marginTop": 2,
+            }
+          }
+        >
+          <IconForwardArrow />
+        </View>
+      </View>
+    </View>
+    <View
+      style={
+        Object {
+          "borderBottomWidth": 1,
+          "borderColor": "#DBDBDB",
+          "marginBottom": 20,
+        }
+      }
+    />
+    <View
+      style={
+        Object {
+          "marginBottom": 0,
+        }
+      }
+    >
+      <Text
+        style={
+          Object {
+            "color": "#1D1D1B",
+            "fontFamily": "TimesModern-Bold",
+            "fontSize": 18,
+            "marginBottom": 5,
+          }
+        }
+      >
+        Times Radio
+      </Text>
+      <Text
+        style={
+          Object {
+            "color": "#1D1D1B",
+            "fontFamily": "TimesDigitalW04-Regular",
+            "fontSize": 14,
+            "lineHeight": 18,
+            "marginBottom": 10,
+          }
+        }
+      >
+        Listen free on DAB, online or via the Times Radio app
+      </Text>
+      <View
+        style={
+          Object {
+            "flexDirection": "row",
+          }
+        }
+      >
+        <Text
+          style={
+            Object {
+              "color": "#CC0000",
+              "fontFamily": "GillSansMTStd-Medium",
+              "fontSize": 13,
+              "marginBottom": 15,
+              "textDecorationLine": "none",
+            }
+          }
+        >
+          Take me there
+        </Text>
+        <View
+          style={
+            Object {
+              "marginLeft": 5,
+              "marginTop": 2,
+            }
+          }
+        >
+          <IconForwardArrow />
+        </View>
+      </View>
+    </View>
+  </View>
+</View>
+`;
+
+exports[`InTodaysEdition landscape 1080 1`] = `
+<View
+  style={
+    Object {
+      "backgroundColor": "#F0EEDF",
+      "flex": 1,
+      "paddingHorizontal": 30,
+      "paddingVertical": 20,
+    }
+  }
+>
+  <View
+    style={
+      Object {
+        "borderBottomColor": "#DBDBDB",
+        "borderBottomWidth": 1,
+        "marginBottom": 10,
+        "paddingBottom": 15,
+      }
+    }
+  >
+    <Text
+      style={
+        Object {
+          "color": "#1D1D1B",
+          "fontFamily": "TimesDigitalW04-Regular",
+          "fontSize": 14,
+          "letterSpacing": 1,
+        }
+      }
+    >
+      IN TODAY'S EDITION
+    </Text>
+  </View>
+  <View
+    style={
+      Object {
+        "marginTop": 10,
+      }
+    }
+  >
+    <View
+      style={
+        Object {
+          "marginBottom": 0,
+        }
+      }
+    >
+      <Text
+        style={
+          Object {
+            "color": "#1D1D1B",
+            "fontFamily": "TimesModern-Bold",
+            "fontSize": 18,
+            "marginBottom": 5,
+          }
+        }
+      >
+        James Forsyth
+      </Text>
+      <Text
+        style={
+          Object {
+            "color": "#1D1D1B",
+            "fontFamily": "TimesDigitalW04-Regular",
+            "fontSize": 14,
+            "lineHeight": 18,
+            "marginBottom": 10,
+          }
+        }
+      >
+        A hydrogen-fuelled future energises Johnson
+      </Text>
+      <View
+        style={
+          Object {
+            "flexDirection": "row",
+          }
+        }
+      >
+        <Text
+          style={
+            Object {
+              "color": "#CC0000",
+              "fontFamily": "GillSansMTStd-Medium",
+              "fontSize": 14,
+              "marginBottom": 15,
+              "textDecorationLine": "none",
+            }
+          }
+        >
+          Read the full story
+        </Text>
+        <View
+          style={
+            Object {
+              "marginLeft": 5,
+              "marginTop": 2,
+            }
+          }
+        >
+          <IconForwardArrow />
+        </View>
+      </View>
+    </View>
+    <View
+      style={
+        Object {
+          "borderBottomWidth": 1,
+          "borderColor": "#DBDBDB",
+          "marginBottom": 20,
+        }
+      }
+    />
+    <View
+      style={
+        Object {
+          "marginBottom": 0,
+        }
+      }
+    >
+      <Text
+        style={
+          Object {
+            "color": "#1D1D1B",
+            "fontFamily": "TimesModern-Bold",
+            "fontSize": 18,
+            "marginBottom": 5,
+          }
+        }
+      >
+        Caitlin Moran
+      </Text>
+      <Text
+        style={
+          Object {
+            "color": "#1D1D1B",
+            "fontFamily": "TimesDigitalW04-Regular",
+            "fontSize": 14,
+            "lineHeight": 18,
+            "marginBottom": 10,
+          }
+        }
+      >
+        At least Netflix is more low-key than Trooping the Colour
+      </Text>
+      <View
+        style={
+          Object {
+            "flexDirection": "row",
+          }
+        }
+      >
+        <Text
+          style={
+            Object {
+              "color": "#CC0000",
+              "fontFamily": "GillSansMTStd-Medium",
+              "fontSize": 14,
+              "marginBottom": 15,
+              "textDecorationLine": "none",
+            }
+          }
+        >
+          Read the full story
+        </Text>
+        <View
+          style={
+            Object {
+              "marginLeft": 5,
+              "marginTop": 2,
+            }
+          }
+        >
+          <IconForwardArrow />
+        </View>
+      </View>
+    </View>
+    <View
+      style={
+        Object {
+          "borderBottomWidth": 1,
+          "borderColor": "#DBDBDB",
+          "marginBottom": 20,
+        }
+      }
+    />
+    <View
+      style={
+        Object {
+          "marginBottom": 0,
+        }
+      }
+    >
+      <Text
+        style={
+          Object {
+            "color": "#1D1D1B",
+            "fontFamily": "TimesModern-Bold",
+            "fontSize": 18,
+            "marginBottom": 5,
+          }
+        }
+      >
+        Matt Dickinson
+      </Text>
+      <Text
+        style={
+          Object {
+            "color": "#1D1D1B",
+            "fontFamily": "TimesDigitalW04-Regular",
+            "fontSize": 14,
+            "lineHeight": 18,
+            "marginBottom": 10,
+          }
+        }
+      >
+        My encounter with Britain’s oldest Olympian
+      </Text>
+      <View
+        style={
+          Object {
+            "flexDirection": "row",
+          }
+        }
+      >
+        <Text
+          style={
+            Object {
+              "color": "#CC0000",
+              "fontFamily": "GillSansMTStd-Medium",
+              "fontSize": 14,
+              "marginBottom": 15,
+              "textDecorationLine": "none",
+            }
+          }
+        >
+          Read the full story
+        </Text>
+        <View
+          style={
+            Object {
+              "marginLeft": 5,
+              "marginTop": 2,
+            }
+          }
+        >
+          <IconForwardArrow />
+        </View>
+      </View>
+    </View>
+    <View
+      style={
+        Object {
+          "borderBottomWidth": 1,
+          "borderColor": "#DBDBDB",
+          "marginBottom": 20,
+        }
+      }
+    />
+    <View
+      style={
+        Object {
+          "marginBottom": 0,
+        }
+      }
+    >
+      <Text
+        style={
+          Object {
+            "color": "#1D1D1B",
+            "fontFamily": "TimesModern-Bold",
+            "fontSize": 18,
+            "marginBottom": 5,
+          }
+        }
+      >
+        Times Radio
+      </Text>
+      <Text
+        style={
+          Object {
+            "color": "#1D1D1B",
+            "fontFamily": "TimesDigitalW04-Regular",
+            "fontSize": 14,
+            "lineHeight": 18,
+            "marginBottom": 10,
+          }
+        }
+      >
+        Listen free on DAB, online or via the Times Radio app
+      </Text>
+      <View
+        style={
+          Object {
+            "flexDirection": "row",
+          }
+        }
+      >
+        <Text
+          style={
+            Object {
+              "color": "#CC0000",
+              "fontFamily": "GillSansMTStd-Medium",
+              "fontSize": 14,
+              "marginBottom": 15,
+              "textDecorationLine": "none",
+            }
+          }
+        >
+          Take me there
+        </Text>
+        <View
+          style={
+            Object {
+              "marginLeft": 5,
+              "marginTop": 2,
+            }
+          }
+        >
+          <IconForwardArrow />
+        </View>
+      </View>
+    </View>
+  </View>
+</View>
+`;
+
+exports[`InTodaysEdition landscape 1112 1`] = `
+<View
+  style={
+    Object {
+      "backgroundColor": "#F0EEDF",
+      "flex": 1,
+      "paddingHorizontal": 30,
+      "paddingVertical": 20,
+    }
+  }
+>
+  <View
+    style={
+      Object {
+        "borderBottomColor": "#DBDBDB",
+        "borderBottomWidth": 1,
+        "marginBottom": 10,
+        "paddingBottom": 15,
+      }
+    }
+  >
+    <Text
+      style={
+        Object {
+          "color": "#1D1D1B",
+          "fontFamily": "TimesDigitalW04-Regular",
+          "fontSize": 14,
+          "letterSpacing": 1,
+        }
+      }
+    >
+      IN TODAY'S EDITION
+    </Text>
+  </View>
+  <View
+    style={
+      Object {
+        "marginTop": 10,
+      }
+    }
+  >
+    <View
+      style={
+        Object {
+          "marginBottom": 5,
+        }
+      }
+    >
+      <Text
+        style={
+          Object {
+            "color": "#1D1D1B",
+            "fontFamily": "TimesModern-Bold",
+            "fontSize": 18,
+            "marginBottom": 5,
+          }
+        }
+      >
+        James Forsyth
+      </Text>
+      <Text
+        style={
+          Object {
+            "color": "#1D1D1B",
+            "fontFamily": "TimesDigitalW04-Regular",
+            "fontSize": 14,
+            "lineHeight": 18,
+            "marginBottom": 10,
+          }
+        }
+      >
+        A hydrogen-fuelled future energises Johnson
+      </Text>
+      <View
+        style={
+          Object {
+            "flexDirection": "row",
+          }
+        }
+      >
+        <Text
+          style={
+            Object {
+              "color": "#CC0000",
+              "fontFamily": "GillSansMTStd-Medium",
+              "fontSize": 14,
+              "marginBottom": 15,
+              "textDecorationLine": "none",
+            }
+          }
+        >
+          Read the full story
+        </Text>
+        <View
+          style={
+            Object {
+              "marginLeft": 5,
+              "marginTop": 2,
+            }
+          }
+        >
+          <IconForwardArrow />
+        </View>
+      </View>
+    </View>
+    <View
+      style={
+        Object {
+          "borderBottomWidth": 1,
+          "borderColor": "#DBDBDB",
+          "marginBottom": 20,
+        }
+      }
+    />
+    <View
+      style={
+        Object {
+          "marginBottom": 5,
+        }
+      }
+    >
+      <Text
+        style={
+          Object {
+            "color": "#1D1D1B",
+            "fontFamily": "TimesModern-Bold",
+            "fontSize": 18,
+            "marginBottom": 5,
+          }
+        }
+      >
+        Caitlin Moran
+      </Text>
+      <Text
+        style={
+          Object {
+            "color": "#1D1D1B",
+            "fontFamily": "TimesDigitalW04-Regular",
+            "fontSize": 14,
+            "lineHeight": 18,
+            "marginBottom": 10,
+          }
+        }
+      >
+        At least Netflix is more low-key than Trooping the Colour
+      </Text>
+      <View
+        style={
+          Object {
+            "flexDirection": "row",
+          }
+        }
+      >
+        <Text
+          style={
+            Object {
+              "color": "#CC0000",
+              "fontFamily": "GillSansMTStd-Medium",
+              "fontSize": 14,
+              "marginBottom": 15,
+              "textDecorationLine": "none",
+            }
+          }
+        >
+          Read the full story
+        </Text>
+        <View
+          style={
+            Object {
+              "marginLeft": 5,
+              "marginTop": 2,
+            }
+          }
+        >
+          <IconForwardArrow />
+        </View>
+      </View>
+    </View>
+    <View
+      style={
+        Object {
+          "borderBottomWidth": 1,
+          "borderColor": "#DBDBDB",
+          "marginBottom": 20,
+        }
+      }
+    />
+    <View
+      style={
+        Object {
+          "marginBottom": 5,
+        }
+      }
+    >
+      <Text
+        style={
+          Object {
+            "color": "#1D1D1B",
+            "fontFamily": "TimesModern-Bold",
+            "fontSize": 18,
+            "marginBottom": 5,
+          }
+        }
+      >
+        Matt Dickinson
+      </Text>
+      <Text
+        style={
+          Object {
+            "color": "#1D1D1B",
+            "fontFamily": "TimesDigitalW04-Regular",
+            "fontSize": 14,
+            "lineHeight": 18,
+            "marginBottom": 10,
+          }
+        }
+      >
+        My encounter with Britain’s oldest Olympian
+      </Text>
+      <View
+        style={
+          Object {
+            "flexDirection": "row",
+          }
+        }
+      >
+        <Text
+          style={
+            Object {
+              "color": "#CC0000",
+              "fontFamily": "GillSansMTStd-Medium",
+              "fontSize": 14,
+              "marginBottom": 15,
+              "textDecorationLine": "none",
+            }
+          }
+        >
+          Read the full story
+        </Text>
+        <View
+          style={
+            Object {
+              "marginLeft": 5,
+              "marginTop": 2,
+            }
+          }
+        >
+          <IconForwardArrow />
+        </View>
+      </View>
+    </View>
+    <View
+      style={
+        Object {
+          "borderBottomWidth": 1,
+          "borderColor": "#DBDBDB",
+          "marginBottom": 20,
+        }
+      }
+    />
+    <View
+      style={
+        Object {
+          "marginBottom": 5,
+        }
+      }
+    >
+      <Text
+        style={
+          Object {
+            "color": "#1D1D1B",
+            "fontFamily": "TimesModern-Bold",
+            "fontSize": 18,
+            "marginBottom": 5,
+          }
+        }
+      >
+        Times Radio
+      </Text>
+      <Text
+        style={
+          Object {
+            "color": "#1D1D1B",
+            "fontFamily": "TimesDigitalW04-Regular",
+            "fontSize": 14,
+            "lineHeight": 18,
+            "marginBottom": 10,
+          }
+        }
+      >
+        Listen free on DAB, online or via the Times Radio app
+      </Text>
+      <View
+        style={
+          Object {
+            "flexDirection": "row",
+          }
+        }
+      >
+        <Text
+          style={
+            Object {
+              "color": "#CC0000",
+              "fontFamily": "GillSansMTStd-Medium",
+              "fontSize": 14,
+              "marginBottom": 15,
+              "textDecorationLine": "none",
+            }
+          }
+        >
+          Take me there
+        </Text>
+        <View
+          style={
+            Object {
+              "marginLeft": 5,
+              "marginTop": 2,
+            }
+          }
+        >
+          <IconForwardArrow />
+        </View>
+      </View>
+    </View>
+  </View>
+</View>
+`;
+
+exports[`InTodaysEdition landscape 1366 1`] = `
+<View
+  style={
+    Object {
+      "backgroundColor": "#F0EEDF",
+      "flex": 1,
+      "paddingHorizontal": 20,
+      "paddingVertical": 20,
+    }
+  }
+>
+  <View
+    style={
+      Object {
+        "borderBottomColor": "#DBDBDB",
+        "borderBottomWidth": 1,
+        "marginBottom": 10,
+        "paddingBottom": 15,
+      }
+    }
+  >
+    <Text
+      style={
+        Object {
+          "color": "#1D1D1B",
+          "fontFamily": "TimesDigitalW04-Regular",
+          "fontSize": 15,
+          "letterSpacing": 1,
+          "lineHeight": 15,
+        }
+      }
+    >
+      IN TODAY'S EDITION
+    </Text>
+  </View>
+  <View
+    style={
+      Object {
+        "marginTop": 10,
+      }
+    }
+  >
+    <View
+      style={
+        Object {
+          "marginBottom": 0,
+          "paddingVertical": 10,
+        }
+      }
+    >
+      <Text
+        style={
+          Object {
+            "color": "#1D1D1B",
+            "fontFamily": "TimesModern-Bold",
+            "fontSize": 20,
+            "marginBottom": 5,
+          }
+        }
+      >
+        James Forsyth
+      </Text>
+      <Text
+        style={
+          Object {
+            "color": "#1D1D1B",
+            "fontFamily": "TimesDigitalW04-Regular",
+            "fontSize": 15,
+            "lineHeight": 20,
+            "marginBottom": 10,
+          }
+        }
+      >
+        A hydrogen-fuelled future energises Johnson
+      </Text>
+      <View
+        style={
+          Object {
+            "flexDirection": "row",
+          }
+        }
+      >
+        <Text
+          style={
+            Object {
+              "color": "#CC0000",
+              "fontFamily": "GillSansMTStd-Medium",
+              "fontSize": 14,
+              "marginBottom": 15,
+              "textDecorationLine": "none",
+            }
+          }
+        >
+          Read the full story
+        </Text>
+        <View
+          style={
+            Object {
+              "marginLeft": 5,
+              "marginTop": 2,
+            }
+          }
+        >
+          <IconForwardArrow />
+        </View>
+      </View>
+    </View>
+    <View
+      style={
+        Object {
+          "borderBottomWidth": 1,
+          "borderColor": "#DBDBDB",
+          "marginBottom": 20,
+        }
+      }
+    />
+    <View
+      style={
+        Object {
+          "marginBottom": 0,
+          "paddingVertical": 10,
+        }
+      }
+    >
+      <Text
+        style={
+          Object {
+            "color": "#1D1D1B",
+            "fontFamily": "TimesModern-Bold",
+            "fontSize": 20,
+            "marginBottom": 5,
+          }
+        }
+      >
+        Caitlin Moran
+      </Text>
+      <Text
+        style={
+          Object {
+            "color": "#1D1D1B",
+            "fontFamily": "TimesDigitalW04-Regular",
+            "fontSize": 15,
+            "lineHeight": 20,
+            "marginBottom": 10,
+          }
+        }
+      >
+        At least Netflix is more low-key than Trooping the Colour
+      </Text>
+      <View
+        style={
+          Object {
+            "flexDirection": "row",
+          }
+        }
+      >
+        <Text
+          style={
+            Object {
+              "color": "#CC0000",
+              "fontFamily": "GillSansMTStd-Medium",
+              "fontSize": 14,
+              "marginBottom": 15,
+              "textDecorationLine": "none",
+            }
+          }
+        >
+          Read the full story
+        </Text>
+        <View
+          style={
+            Object {
+              "marginLeft": 5,
+              "marginTop": 2,
+            }
+          }
+        >
+          <IconForwardArrow />
+        </View>
+      </View>
+    </View>
+    <View
+      style={
+        Object {
+          "borderBottomWidth": 1,
+          "borderColor": "#DBDBDB",
+          "marginBottom": 20,
+        }
+      }
+    />
+    <View
+      style={
+        Object {
+          "marginBottom": 0,
+          "paddingVertical": 10,
+        }
+      }
+    >
+      <Text
+        style={
+          Object {
+            "color": "#1D1D1B",
+            "fontFamily": "TimesModern-Bold",
+            "fontSize": 20,
+            "marginBottom": 5,
+          }
+        }
+      >
+        Matt Dickinson
+      </Text>
+      <Text
+        style={
+          Object {
+            "color": "#1D1D1B",
+            "fontFamily": "TimesDigitalW04-Regular",
+            "fontSize": 15,
+            "lineHeight": 20,
+            "marginBottom": 10,
+          }
+        }
+      >
+        My encounter with Britain’s oldest Olympian
+      </Text>
+      <View
+        style={
+          Object {
+            "flexDirection": "row",
+          }
+        }
+      >
+        <Text
+          style={
+            Object {
+              "color": "#CC0000",
+              "fontFamily": "GillSansMTStd-Medium",
+              "fontSize": 14,
+              "marginBottom": 15,
+              "textDecorationLine": "none",
+            }
+          }
+        >
+          Read the full story
+        </Text>
+        <View
+          style={
+            Object {
+              "marginLeft": 5,
+              "marginTop": 2,
+            }
+          }
+        >
+          <IconForwardArrow />
+        </View>
+      </View>
+    </View>
+    <View
+      style={
+        Object {
+          "borderBottomWidth": 1,
+          "borderColor": "#DBDBDB",
+          "marginBottom": 20,
+        }
+      }
+    />
+    <View
+      style={
+        Object {
+          "marginBottom": 0,
+          "paddingVertical": 10,
+        }
+      }
+    >
+      <Text
+        style={
+          Object {
+            "color": "#1D1D1B",
+            "fontFamily": "TimesModern-Bold",
+            "fontSize": 20,
+            "marginBottom": 5,
+          }
+        }
+      >
+        Times Radio
+      </Text>
+      <Text
+        style={
+          Object {
+            "color": "#1D1D1B",
+            "fontFamily": "TimesDigitalW04-Regular",
+            "fontSize": 15,
+            "lineHeight": 20,
+            "marginBottom": 10,
+          }
+        }
+      >
+        Listen free on DAB, online or via the Times Radio app
+      </Text>
+      <View
+        style={
+          Object {
+            "flexDirection": "row",
+          }
+        }
+      >
+        <Text
+          style={
+            Object {
+              "color": "#CC0000",
+              "fontFamily": "GillSansMTStd-Medium",
+              "fontSize": 14,
+              "marginBottom": 15,
+              "textDecorationLine": "none",
+            }
+          }
+        >
+          Take me there
+        </Text>
+        <View
+          style={
+            Object {
+              "marginLeft": 5,
+              "marginTop": 2,
+            }
+          }
+        >
+          <IconForwardArrow />
+        </View>
+      </View>
+    </View>
+  </View>
+</View>
+`;
+
+exports[`InTodaysEdition portrait 768 1`] = `
+<View
+  style={
+    Object {
+      "backgroundColor": "#F0EEDF",
+      "flex": 1,
+      "paddingHorizontal": 20,
+      "paddingVertical": 15,
+    }
+  }
+>
+  <View
+    style={
+      Object {
+        "borderBottomColor": "#DBDBDB",
+        "borderBottomWidth": 1,
+        "marginBottom": 10,
+        "paddingBottom": 2,
+      }
+    }
+  >
+    <Text
+      style={
+        Object {
+          "color": "#1D1D1B",
+          "fontFamily": "TimesDigitalW04-Regular",
+          "fontSize": 13,
+          "letterSpacing": 1,
+        }
+      }
+    >
+      IN TODAY'S EDITION
+    </Text>
+  </View>
+  <View
+    style={
+      Object {
+        "flex": 1,
+        "flexDirection": "row",
+      }
+    }
+  >
+    <View
+      style={
+        Object {
+          "flex": 1,
+          "marginRight": 10,
+        }
+      }
+    >
+      <Text
+        style={
+          Object {
+            "color": "#1D1D1B",
+            "fontFamily": "TimesModern-Bold",
+            "fontSize": 16,
+            "marginBottom": 5,
+          }
+        }
+      >
+        James Forsyth
+      </Text>
+      <Text
+        style={
+          Object {
+            "color": "#1D1D1B",
+            "fontFamily": "TimesDigitalW04-Regular",
+            "fontSize": 13,
+            "lineHeight": 16,
+            "marginBottom": 10,
+          }
+        }
+      >
+        A hydrogen-fuelled future energises Johnson
+      </Text>
+      <View
+        style={
+          Object {
+            "display": "none",
+          }
+        }
+      >
+        <Text
+          style={
+            Object {
+              "color": "#CC0000",
+              "fontFamily": "GillSansMTStd-Medium",
+              "fontSize": 13,
+              "marginBottom": 15,
+              "textDecorationLine": "none",
+            }
+          }
+        >
+          Read the full story
+        </Text>
+        <View
+          style={
+            Object {
+              "marginLeft": 5,
+              "marginTop": 2,
+            }
+          }
+        >
+          <IconForwardArrow />
+        </View>
+      </View>
+    </View>
+    <View
+      style={
+        Object {
+          "borderColor": "#DBDBDB",
+          "borderLeftWidth": 1,
+          "marginHorizontal": 5,
+          "paddingLeft": 10,
+        }
+      }
+    />
+    <View
+      style={
+        Object {
+          "flex": 1,
+          "marginRight": 10,
+        }
+      }
+    >
+      <Text
+        style={
+          Object {
+            "color": "#1D1D1B",
+            "fontFamily": "TimesModern-Bold",
+            "fontSize": 16,
+            "marginBottom": 5,
+          }
+        }
+      >
+        Caitlin Moran
+      </Text>
+      <Text
+        style={
+          Object {
+            "color": "#1D1D1B",
+            "fontFamily": "TimesDigitalW04-Regular",
+            "fontSize": 13,
+            "lineHeight": 16,
+            "marginBottom": 10,
+          }
+        }
+      >
+        At least Netflix is more low-key than Trooping the Colour
+      </Text>
+      <View
+        style={
+          Object {
+            "display": "none",
+          }
+        }
+      >
+        <Text
+          style={
+            Object {
+              "color": "#CC0000",
+              "fontFamily": "GillSansMTStd-Medium",
+              "fontSize": 13,
+              "marginBottom": 15,
+              "textDecorationLine": "none",
+            }
+          }
+        >
+          Read the full story
+        </Text>
+        <View
+          style={
+            Object {
+              "marginLeft": 5,
+              "marginTop": 2,
+            }
+          }
+        >
+          <IconForwardArrow />
+        </View>
+      </View>
+    </View>
+    <View
+      style={
+        Object {
+          "borderColor": "#DBDBDB",
+          "borderLeftWidth": 1,
+          "marginHorizontal": 5,
+          "paddingLeft": 10,
+        }
+      }
+    />
+    <View
+      style={
+        Object {
+          "flex": 1,
+          "marginRight": 10,
+        }
+      }
+    >
+      <Text
+        style={
+          Object {
+            "color": "#1D1D1B",
+            "fontFamily": "TimesModern-Bold",
+            "fontSize": 16,
+            "marginBottom": 5,
+          }
+        }
+      >
+        Matt Dickinson
+      </Text>
+      <Text
+        style={
+          Object {
+            "color": "#1D1D1B",
+            "fontFamily": "TimesDigitalW04-Regular",
+            "fontSize": 13,
+            "lineHeight": 16,
+            "marginBottom": 10,
+          }
+        }
+      >
+        My encounter with Britain’s oldest Olympian
+      </Text>
+      <View
+        style={
+          Object {
+            "display": "none",
+          }
+        }
+      >
+        <Text
+          style={
+            Object {
+              "color": "#CC0000",
+              "fontFamily": "GillSansMTStd-Medium",
+              "fontSize": 13,
+              "marginBottom": 15,
+              "textDecorationLine": "none",
+            }
+          }
+        >
+          Read the full story
+        </Text>
+        <View
+          style={
+            Object {
+              "marginLeft": 5,
+              "marginTop": 2,
+            }
+          }
+        >
+          <IconForwardArrow />
+        </View>
+      </View>
+    </View>
+    <View
+      style={
+        Object {
+          "borderColor": "#DBDBDB",
+          "borderLeftWidth": 1,
+          "marginHorizontal": 5,
+          "paddingLeft": 10,
+        }
+      }
+    />
+    <View
+      style={
+        Object {
+          "flex": 1,
+          "marginRight": 0,
+        }
+      }
+    >
+      <Text
+        style={
+          Object {
+            "color": "#1D1D1B",
+            "fontFamily": "TimesModern-Bold",
+            "fontSize": 16,
+            "marginBottom": 5,
+          }
+        }
+      >
+        Times Radio
+      </Text>
+      <Text
+        style={
+          Object {
+            "color": "#1D1D1B",
+            "fontFamily": "TimesDigitalW04-Regular",
+            "fontSize": 13,
+            "lineHeight": 16,
+            "marginBottom": 10,
+          }
+        }
+      >
+        Listen free on DAB, online or via the Times Radio app
+      </Text>
+      <View
+        style={
+          Object {
+            "display": "none",
+          }
+        }
+      >
+        <Text
+          style={
+            Object {
+              "color": "#CC0000",
+              "fontFamily": "GillSansMTStd-Medium",
+              "fontSize": 13,
+              "marginBottom": 15,
+              "textDecorationLine": "none",
+            }
+          }
+        >
+          Take me there
+        </Text>
+        <View
+          style={
+            Object {
+              "marginLeft": 5,
+              "marginTop": 2,
+            }
+          }
+        >
+          <IconForwardArrow />
+        </View>
+      </View>
+    </View>
+  </View>
+</View>
+`;
+
+exports[`InTodaysEdition portrait 810 1`] = `
+<View
+  style={
+    Object {
+      "backgroundColor": "#F0EEDF",
+      "flex": 1,
+      "paddingHorizontal": 20,
+      "paddingVertical": 15,
+    }
+  }
+>
+  <View
+    style={
+      Object {
+        "borderBottomColor": "#DBDBDB",
+        "borderBottomWidth": 1,
+        "marginBottom": 10,
+        "paddingBottom": 2,
+      }
+    }
+  >
+    <Text
+      style={
+        Object {
+          "color": "#1D1D1B",
+          "fontFamily": "TimesDigitalW04-Regular",
+          "fontSize": 13,
+          "letterSpacing": 1,
+        }
+      }
+    >
+      IN TODAY'S EDITION
+    </Text>
+  </View>
+  <View
+    style={
+      Object {
+        "flex": 1,
+        "flexDirection": "row",
+      }
+    }
+  >
+    <View
+      style={
+        Object {
+          "flex": 1,
+          "marginRight": 10,
+        }
+      }
+    >
+      <Text
+        style={
+          Object {
+            "color": "#1D1D1B",
+            "fontFamily": "TimesModern-Bold",
+            "fontSize": 16,
+            "marginBottom": 5,
+          }
+        }
+      >
+        James Forsyth
+      </Text>
+      <Text
+        style={
+          Object {
+            "color": "#1D1D1B",
+            "fontFamily": "TimesDigitalW04-Regular",
+            "fontSize": 13,
+            "lineHeight": 16,
+            "marginBottom": 10,
+          }
+        }
+      >
+        A hydrogen-fuelled future energises Johnson
+      </Text>
+      <View
+        style={
+          Object {
+            "flexDirection": "row",
+          }
+        }
+      >
+        <Text
+          style={
+            Object {
+              "color": "#CC0000",
+              "fontFamily": "GillSansMTStd-Medium",
+              "fontSize": 13,
+              "marginBottom": 15,
+              "textDecorationLine": "none",
+            }
+          }
+        >
+          Read the full story
+        </Text>
+        <View
+          style={
+            Object {
+              "marginLeft": 5,
+              "marginTop": 2,
+            }
+          }
+        >
+          <IconForwardArrow />
+        </View>
+      </View>
+    </View>
+    <View
+      style={
+        Object {
+          "borderColor": "#DBDBDB",
+          "borderLeftWidth": 1,
+          "marginHorizontal": 5,
+          "paddingLeft": 10,
+        }
+      }
+    />
+    <View
+      style={
+        Object {
+          "flex": 1,
+          "marginRight": 10,
+        }
+      }
+    >
+      <Text
+        style={
+          Object {
+            "color": "#1D1D1B",
+            "fontFamily": "TimesModern-Bold",
+            "fontSize": 16,
+            "marginBottom": 5,
+          }
+        }
+      >
+        Caitlin Moran
+      </Text>
+      <Text
+        style={
+          Object {
+            "color": "#1D1D1B",
+            "fontFamily": "TimesDigitalW04-Regular",
+            "fontSize": 13,
+            "lineHeight": 16,
+            "marginBottom": 10,
+          }
+        }
+      >
+        At least Netflix is more low-key than Trooping the Colour
+      </Text>
+      <View
+        style={
+          Object {
+            "flexDirection": "row",
+          }
+        }
+      >
+        <Text
+          style={
+            Object {
+              "color": "#CC0000",
+              "fontFamily": "GillSansMTStd-Medium",
+              "fontSize": 13,
+              "marginBottom": 15,
+              "textDecorationLine": "none",
+            }
+          }
+        >
+          Read the full story
+        </Text>
+        <View
+          style={
+            Object {
+              "marginLeft": 5,
+              "marginTop": 2,
+            }
+          }
+        >
+          <IconForwardArrow />
+        </View>
+      </View>
+    </View>
+    <View
+      style={
+        Object {
+          "borderColor": "#DBDBDB",
+          "borderLeftWidth": 1,
+          "marginHorizontal": 5,
+          "paddingLeft": 10,
+        }
+      }
+    />
+    <View
+      style={
+        Object {
+          "flex": 1,
+          "marginRight": 10,
+        }
+      }
+    >
+      <Text
+        style={
+          Object {
+            "color": "#1D1D1B",
+            "fontFamily": "TimesModern-Bold",
+            "fontSize": 16,
+            "marginBottom": 5,
+          }
+        }
+      >
+        Matt Dickinson
+      </Text>
+      <Text
+        style={
+          Object {
+            "color": "#1D1D1B",
+            "fontFamily": "TimesDigitalW04-Regular",
+            "fontSize": 13,
+            "lineHeight": 16,
+            "marginBottom": 10,
+          }
+        }
+      >
+        My encounter with Britain’s oldest Olympian
+      </Text>
+      <View
+        style={
+          Object {
+            "flexDirection": "row",
+          }
+        }
+      >
+        <Text
+          style={
+            Object {
+              "color": "#CC0000",
+              "fontFamily": "GillSansMTStd-Medium",
+              "fontSize": 13,
+              "marginBottom": 15,
+              "textDecorationLine": "none",
+            }
+          }
+        >
+          Read the full story
+        </Text>
+        <View
+          style={
+            Object {
+              "marginLeft": 5,
+              "marginTop": 2,
+            }
+          }
+        >
+          <IconForwardArrow />
+        </View>
+      </View>
+    </View>
+    <View
+      style={
+        Object {
+          "borderColor": "#DBDBDB",
+          "borderLeftWidth": 1,
+          "marginHorizontal": 5,
+          "paddingLeft": 10,
+        }
+      }
+    />
+    <View
+      style={
+        Object {
+          "flex": 1,
+          "marginRight": 0,
+        }
+      }
+    >
+      <Text
+        style={
+          Object {
+            "color": "#1D1D1B",
+            "fontFamily": "TimesModern-Bold",
+            "fontSize": 16,
+            "marginBottom": 5,
+          }
+        }
+      >
+        Times Radio
+      </Text>
+      <Text
+        style={
+          Object {
+            "color": "#1D1D1B",
+            "fontFamily": "TimesDigitalW04-Regular",
+            "fontSize": 13,
+            "lineHeight": 16,
+            "marginBottom": 10,
+          }
+        }
+      >
+        Listen free on DAB, online or via the Times Radio app
+      </Text>
+      <View
+        style={
+          Object {
+            "flexDirection": "row",
+          }
+        }
+      >
+        <Text
+          style={
+            Object {
+              "color": "#CC0000",
+              "fontFamily": "GillSansMTStd-Medium",
+              "fontSize": 13,
+              "marginBottom": 15,
+              "textDecorationLine": "none",
+            }
+          }
+        >
+          Take me there
+        </Text>
+        <View
+          style={
+            Object {
+              "marginLeft": 5,
+              "marginTop": 2,
+            }
+          }
+        >
+          <IconForwardArrow />
+        </View>
+      </View>
+    </View>
+  </View>
+</View>
+`;
+
+exports[`InTodaysEdition portrait 1024 1`] = `
+<View
+  style={
+    Object {
+      "backgroundColor": "#F0EEDF",
+      "flex": 1,
+      "paddingHorizontal": 25,
+      "paddingVertical": 20,
+    }
+  }
+>
+  <View
+    style={
+      Object {
+        "borderBottomColor": "#DBDBDB",
+        "borderBottomWidth": 1,
+        "marginBottom": 10,
+        "paddingBottom": 2,
+      }
+    }
+  >
+    <Text
+      style={
+        Object {
+          "color": "#1D1D1B",
+          "fontFamily": "TimesDigitalW04-Regular",
+          "fontSize": 16,
+          "letterSpacing": 1,
+        }
+      }
+    >
+      IN TODAY'S EDITION
+    </Text>
+  </View>
+  <View
+    style={
+      Object {
+        "flex": 1,
+        "flexDirection": "row",
+        "marginTop": 10,
+      }
+    }
+  >
+    <View
+      style={
+        Object {
+          "flex": 1,
+          "marginRight": 5,
+        }
+      }
+    >
+      <Text
+        style={
+          Object {
+            "color": "#1D1D1B",
+            "fontFamily": "TimesModern-Bold",
+            "fontSize": 20,
+            "marginBottom": 5,
+          }
+        }
+      >
+        James Forsyth
+      </Text>
+      <Text
+        style={
+          Object {
+            "color": "#1D1D1B",
+            "fontFamily": "TimesDigitalW04-Regular",
+            "fontSize": 15,
+            "lineHeight": 20,
+            "marginBottom": 10,
+          }
+        }
+      >
+        A hydrogen-fuelled future energises Johnson
+      </Text>
+      <View
+        style={
+          Object {
+            "flexDirection": "row",
+          }
+        }
+      >
+        <Text
+          style={
+            Object {
+              "color": "#CC0000",
+              "fontFamily": "GillSansMTStd-Medium",
+              "fontSize": 14,
+              "marginBottom": 15,
+              "textDecorationLine": "none",
+            }
+          }
+        >
+          Read the full story
+        </Text>
+        <View
+          style={
+            Object {
+              "marginLeft": 5,
+              "marginTop": 2,
+            }
+          }
+        >
+          <IconForwardArrow />
+        </View>
+      </View>
+    </View>
+    <View
+      style={
+        Object {
+          "borderColor": "#DBDBDB",
+          "borderLeftWidth": 1,
+          "marginHorizontal": 5,
+          "marginRight": 0,
+          "paddingLeft": 10,
+        }
+      }
+    />
+    <View
+      style={
+        Object {
+          "flex": 1,
+          "marginRight": 5,
+        }
+      }
+    >
+      <Text
+        style={
+          Object {
+            "color": "#1D1D1B",
+            "fontFamily": "TimesModern-Bold",
+            "fontSize": 20,
+            "marginBottom": 5,
+          }
+        }
+      >
+        Caitlin Moran
+      </Text>
+      <Text
+        style={
+          Object {
+            "color": "#1D1D1B",
+            "fontFamily": "TimesDigitalW04-Regular",
+            "fontSize": 15,
+            "lineHeight": 20,
+            "marginBottom": 10,
+          }
+        }
+      >
+        At least Netflix is more low-key than Trooping the Colour
+      </Text>
+      <View
+        style={
+          Object {
+            "flexDirection": "row",
+          }
+        }
+      >
+        <Text
+          style={
+            Object {
+              "color": "#CC0000",
+              "fontFamily": "GillSansMTStd-Medium",
+              "fontSize": 14,
+              "marginBottom": 15,
+              "textDecorationLine": "none",
+            }
+          }
+        >
+          Read the full story
+        </Text>
+        <View
+          style={
+            Object {
+              "marginLeft": 5,
+              "marginTop": 2,
+            }
+          }
+        >
+          <IconForwardArrow />
+        </View>
+      </View>
+    </View>
+    <View
+      style={
+        Object {
+          "borderColor": "#DBDBDB",
+          "borderLeftWidth": 1,
+          "marginHorizontal": 5,
+          "marginRight": 0,
+          "paddingLeft": 10,
+        }
+      }
+    />
+    <View
+      style={
+        Object {
+          "flex": 1,
+          "marginRight": 5,
+        }
+      }
+    >
+      <Text
+        style={
+          Object {
+            "color": "#1D1D1B",
+            "fontFamily": "TimesModern-Bold",
+            "fontSize": 20,
+            "marginBottom": 5,
+          }
+        }
+      >
+        Matt Dickinson
+      </Text>
+      <Text
+        style={
+          Object {
+            "color": "#1D1D1B",
+            "fontFamily": "TimesDigitalW04-Regular",
+            "fontSize": 15,
+            "lineHeight": 20,
+            "marginBottom": 10,
+          }
+        }
+      >
+        My encounter with Britain’s oldest Olympian
+      </Text>
+      <View
+        style={
+          Object {
+            "flexDirection": "row",
+          }
+        }
+      >
+        <Text
+          style={
+            Object {
+              "color": "#CC0000",
+              "fontFamily": "GillSansMTStd-Medium",
+              "fontSize": 14,
+              "marginBottom": 15,
+              "textDecorationLine": "none",
+            }
+          }
+        >
+          Read the full story
+        </Text>
+        <View
+          style={
+            Object {
+              "marginLeft": 5,
+              "marginTop": 2,
+            }
+          }
+        >
+          <IconForwardArrow />
+        </View>
+      </View>
+    </View>
+    <View
+      style={
+        Object {
+          "borderColor": "#DBDBDB",
+          "borderLeftWidth": 1,
+          "marginHorizontal": 5,
+          "marginRight": 0,
+          "paddingLeft": 10,
+        }
+      }
+    />
+    <View
+      style={
+        Object {
+          "flex": 1,
+          "marginRight": 0,
+        }
+      }
+    >
+      <Text
+        style={
+          Object {
+            "color": "#1D1D1B",
+            "fontFamily": "TimesModern-Bold",
+            "fontSize": 20,
+            "marginBottom": 5,
+          }
+        }
+      >
+        Times Radio
+      </Text>
+      <Text
+        style={
+          Object {
+            "color": "#1D1D1B",
+            "fontFamily": "TimesDigitalW04-Regular",
+            "fontSize": 15,
+            "lineHeight": 20,
+            "marginBottom": 10,
+          }
+        }
+      >
+        Listen free on DAB, online or via the Times Radio app
+      </Text>
+      <View
+        style={
+          Object {
+            "flexDirection": "row",
+          }
+        }
+      >
+        <Text
+          style={
+            Object {
+              "color": "#CC0000",
+              "fontFamily": "GillSansMTStd-Medium",
+              "fontSize": 14,
+              "marginBottom": 15,
+              "textDecorationLine": "none",
+            }
+          }
+        >
+          Take me there
+        </Text>
+        <View
+          style={
+            Object {
+              "marginLeft": 5,
+              "marginTop": 2,
+            }
+          }
+        >
+          <IconForwardArrow />
+        </View>
+      </View>
+    </View>
+  </View>
+</View>
+`;

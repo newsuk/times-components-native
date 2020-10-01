@@ -308,10 +308,8 @@ exports[`3. iconforwardarrow renders 1`] = `
 <RNSVGSvgView
   align="xMidYMid"
   aria-label="icon-forward-arrow"
-  bbHeight={12}
-  bbWidth={7}
+  bbWidth={20}
   focusable={false}
-  height={12}
   meetOrSlice={0}
   minX={42}
   minY={12}
@@ -319,15 +317,12 @@ exports[`3. iconforwardarrow renders 1`] = `
     Object {
       "backgroundColor": "transparent",
       "borderWidth": 0,
-      "flex": 0,
-      "height": 12,
       "opacity": 1,
-      "width": 7,
     }
   }
   vbHeight={120}
   vbWidth={60}
-  width={7}
+  width={20}
 >
   <RNSVGGroup
     fill={
