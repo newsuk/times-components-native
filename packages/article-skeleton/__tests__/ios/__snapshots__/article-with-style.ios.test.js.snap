@@ -247,20 +247,6 @@ exports[`1. a full article with all content items with dropcap template 1`] = `
           <ArticleImage />
         </View>
       </View>
-      <View>
-        <View
-          style={
-            Object {
-              "backgroundColor": "#ffffff",
-              "maxWidth": "100%",
-              "overflow": "hidden",
-              "width": undefined,
-            }
-          }
-        >
-          <ArticleImage />
-        </View>
-      </View>
       <View
         style={
           Object {
@@ -3206,20 +3192,6 @@ exports[`17. an article with variant testing 1`] = `
           <ArticleImage />
         </View>
       </View>
-      <View>
-        <View
-          style={
-            Object {
-              "backgroundColor": "#ffffff",
-              "maxWidth": "100%",
-              "overflow": "hidden",
-              "width": undefined,
-            }
-          }
-        >
-          <ArticleImage />
-        </View>
-      </View>
       <View
         style={
           Object {
@@ -3342,20 +3314,6 @@ exports[`18. an article skeleton with responsive items 1`] = `
           >
             <InteractiveWrapper />
           </View>
-        </View>
-      </View>
-      <View>
-        <View
-          style={
-            Object {
-              "backgroundColor": "#ffffff",
-              "maxWidth": "100%",
-              "overflow": "hidden",
-              "width": undefined,
-            }
-          }
-        >
-          <ArticleImage />
         </View>
       </View>
       <View>

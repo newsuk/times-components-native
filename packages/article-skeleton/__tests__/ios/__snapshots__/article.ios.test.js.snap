@@ -23,7 +23,7 @@ exports[`1. a full article with all content items with dropcap template 1`] = `
       </Gutter>
     }
     extraData={true}
-    initialNumToRender={5}
+    initialNumToRender={4}
     maxToRenderPerBatch={10}
     nestedScrollEnabled={true}
     onEndReachedThreshold={2}
@@ -483,86 +483,6 @@ exports[`1. a full article with all content items with dropcap template 1`] = `
         </View>
       </View>
       <View
-        style={null}
-      >
-        <View
-          style={
-            Array [
-              Object {
-                "overflow": "hidden",
-              },
-              Object {
-                "backgroundColor": "#ffffff",
-                "maxWidth": "100%",
-                "width": undefined,
-              },
-            ]
-          }
-        >
-          <ArticleImage
-            captionOptions={
-              Object {
-                "caption": "An inline image caption",
-                "credits": "The inline image credits",
-              }
-            }
-            imageOptions={
-              Object {
-                "display": "secondary",
-                "index": 3,
-                "narrowContent": undefined,
-                "ratio": "1500:1000",
-                "relativeHeight": undefined,
-                "relativeHorizontalOffset": undefined,
-                "relativeVerticalOffset": undefined,
-                "relativeWidth": undefined,
-                "uri": "https://image.io/inline",
-              }
-            }
-            images={
-              Array [
-                Object {
-                  "attributes": Object {
-                    "caption": "An image caption",
-                    "credits": "The image credits",
-                    "display": "primary",
-                    "imageIndex": 1,
-                    "ratio": "1500:1000",
-                    "url": "https://image.io",
-                  },
-                  "children": Array [],
-                  "name": "image",
-                },
-                Object {
-                  "attributes": Object {
-                    "caption": "A secondary image caption",
-                    "credits": "The secondary image credits",
-                    "display": "secondary",
-                    "imageIndex": 2,
-                    "ratio": "1500:1000",
-                    "url": "https://image.io/secondary",
-                  },
-                  "children": Array [],
-                  "name": "image",
-                },
-                Object {
-                  "attributes": Object {
-                    "caption": "An inline image caption",
-                    "credits": "The inline image credits",
-                    "display": "inline",
-                    "imageIndex": 3,
-                    "ratio": "1500:1000",
-                    "url": "https://image.io/inline",
-                  },
-                  "children": Array [],
-                  "name": "image",
-                },
-              ]
-            }
-          />
-        </View>
-      </View>
-      <View
         style={
           Object {
             "height": 0,
@@ -620,7 +540,7 @@ exports[`2. an article with interactives 1`] = `
       </Gutter>
     }
     extraData={true}
-    initialNumToRender={5}
+    initialNumToRender={4}
     maxToRenderPerBatch={10}
     nestedScrollEnabled={true}
     onEndReachedThreshold={2}
@@ -814,7 +734,7 @@ exports[`3. an article with no content 1`] = `
       </Gutter>
     }
     extraData={true}
-    initialNumToRender={5}
+    initialNumToRender={4}
     maxToRenderPerBatch={10}
     nestedScrollEnabled={true}
     onEndReachedThreshold={2}
@@ -937,7 +857,7 @@ exports[`5. an article with a nested markup in first paragraph displays a drop c
       </Gutter>
     }
     extraData={true}
-    initialNumToRender={5}
+    initialNumToRender={4}
     maxToRenderPerBatch={10}
     nestedScrollEnabled={true}
     onEndReachedThreshold={2}
@@ -1602,7 +1522,7 @@ exports[`6. an article with heading tags 1`] = `
       </Gutter>
     }
     extraData={true}
-    initialNumToRender={5}
+    initialNumToRender={4}
     maxToRenderPerBatch={10}
     nestedScrollEnabled={true}
     onEndReachedThreshold={2}
@@ -1837,7 +1757,7 @@ exports[`7. an article with link 1`] = `
       </Gutter>
     }
     extraData={true}
-    initialNumToRender={5}
+    initialNumToRender={4}
     maxToRenderPerBatch={10}
     nestedScrollEnabled={true}
     onEndReachedThreshold={2}
@@ -2038,7 +1958,7 @@ exports[`8. an article with italic link 1`] = `
       </Gutter>
     }
     extraData={true}
-    initialNumToRender={5}
+    initialNumToRender={4}
     maxToRenderPerBatch={10}
     nestedScrollEnabled={true}
     onEndReachedThreshold={2}
@@ -2253,7 +2173,7 @@ exports[`9. an article with bold text followed by bold link 1`] = `
       </Gutter>
     }
     extraData={true}
-    initialNumToRender={5}
+    initialNumToRender={4}
     maxToRenderPerBatch={10}
     nestedScrollEnabled={true}
     onEndReachedThreshold={2}
@@ -2456,7 +2376,7 @@ exports[`10. an article with italic and normal text link 1`] = `
       </Gutter>
     }
     extraData={true}
-    initialNumToRender={5}
+    initialNumToRender={4}
     maxToRenderPerBatch={10}
     nestedScrollEnabled={true}
     onEndReachedThreshold={2}
@@ -2691,7 +2611,7 @@ exports[`11. an article with bold and italic text at the same time 1`] = `
       </Gutter>
     }
     extraData={true}
-    initialNumToRender={5}
+    initialNumToRender={4}
     maxToRenderPerBatch={10}
     nestedScrollEnabled={true}
     onEndReachedThreshold={2}
@@ -2874,7 +2794,7 @@ exports[`12. an article with text wrapped in inline element 1`] = `
       </Gutter>
     }
     extraData={true}
-    initialNumToRender={5}
+    initialNumToRender={4}
     maxToRenderPerBatch={10}
     nestedScrollEnabled={true}
     onEndReachedThreshold={2}
@@ -3055,7 +2975,7 @@ exports[`13. an article with paragraph with text and inline element 1`] = `
       </Gutter>
     }
     extraData={true}
-    initialNumToRender={5}
+    initialNumToRender={4}
     maxToRenderPerBatch={10}
     nestedScrollEnabled={true}
     onEndReachedThreshold={2}
@@ -3249,7 +3169,7 @@ exports[`14. an article with inline inside a bold tag 1`] = `
       </Gutter>
     }
     extraData={true}
-    initialNumToRender={5}
+    initialNumToRender={4}
     maxToRenderPerBatch={10}
     nestedScrollEnabled={true}
     onEndReachedThreshold={2}
@@ -3431,7 +3351,7 @@ exports[`15. an article starting with single quote 1`] = `
       </Gutter>
     }
     extraData={true}
-    initialNumToRender={5}
+    initialNumToRender={4}
     maxToRenderPerBatch={10}
     nestedScrollEnabled={true}
     onEndReachedThreshold={2}
@@ -4100,7 +4020,7 @@ exports[`16. an article starting with double quote 1`] = `
       </Gutter>
     }
     extraData={true}
-    initialNumToRender={5}
+    initialNumToRender={4}
     maxToRenderPerBatch={10}
     nestedScrollEnabled={true}
     onEndReachedThreshold={2}
@@ -4769,7 +4689,7 @@ exports[`17. an article with variant testing 1`] = `
       </Gutter>
     }
     extraData={true}
-    initialNumToRender={5}
+    initialNumToRender={4}
     maxToRenderPerBatch={10}
     nestedScrollEnabled={true}
     onEndReachedThreshold={2}
@@ -5056,86 +4976,6 @@ exports[`17. an article with variant testing 1`] = `
         </View>
       </View>
       <View
-        style={null}
-      >
-        <View
-          style={
-            Array [
-              Object {
-                "overflow": "hidden",
-              },
-              Object {
-                "backgroundColor": "#ffffff",
-                "maxWidth": "100%",
-                "width": undefined,
-              },
-            ]
-          }
-        >
-          <ArticleImage
-            captionOptions={
-              Object {
-                "caption": "An inline image caption",
-                "credits": "The inline image credits",
-              }
-            }
-            imageOptions={
-              Object {
-                "display": "secondary",
-                "index": 3,
-                "narrowContent": undefined,
-                "ratio": "1500:1000",
-                "relativeHeight": undefined,
-                "relativeHorizontalOffset": undefined,
-                "relativeVerticalOffset": undefined,
-                "relativeWidth": undefined,
-                "uri": "https://image.io/inline",
-              }
-            }
-            images={
-              Array [
-                Object {
-                  "attributes": Object {
-                    "caption": "An image caption",
-                    "credits": "The image credits",
-                    "display": "primary",
-                    "imageIndex": 1,
-                    "ratio": "1500:1000",
-                    "url": "https://image.io",
-                  },
-                  "children": Array [],
-                  "name": "image",
-                },
-                Object {
-                  "attributes": Object {
-                    "caption": "A secondary image caption",
-                    "credits": "The secondary image credits",
-                    "display": "secondary",
-                    "imageIndex": 2,
-                    "ratio": "1500:1000",
-                    "url": "https://image.io/secondary",
-                  },
-                  "children": Array [],
-                  "name": "image",
-                },
-                Object {
-                  "attributes": Object {
-                    "caption": "An inline image caption",
-                    "credits": "The inline image credits",
-                    "display": "inline",
-                    "imageIndex": 3,
-                    "ratio": "1500:1000",
-                    "url": "https://image.io/inline",
-                  },
-                  "children": Array [],
-                  "name": "image",
-                },
-              ]
-            }
-          />
-        </View>
-      </View>
-      <View
         style={
           Object {
             "height": 0,
@@ -5226,7 +5066,7 @@ exports[`20. renders content 1`] = `
       </Gutter>
     }
     extraData={true}
-    initialNumToRender={5}
+    initialNumToRender={4}
     maxToRenderPerBatch={10}
     nestedScrollEnabled={true}
     onEndReachedThreshold={2}
@@ -5568,66 +5408,6 @@ exports[`20. renders content 1`] = `
         </View>
       </View>
       <View
-        style={null}
-      >
-        <View
-          style={
-            Array [
-              Object {
-                "overflow": "hidden",
-              },
-              Object {
-                "backgroundColor": "#ffffff",
-                "maxWidth": "100%",
-                "width": undefined,
-              },
-            ]
-          }
-        >
-          <View
-            style={
-              Array [
-                Object {
-                  "paddingLeft": 10,
-                  "paddingRight": 10,
-                },
-                Object {
-                  "marginBottom": 20,
-                },
-                false,
-                false,
-                Object {},
-              ]
-            }
-          >
-            <View>
-              <Text
-                selectable={true}
-                style={
-                  Object {
-                    "lineHeight": 52,
-                  }
-                }
-              >
-                <Text
-                  selectable={true}
-                  style={
-                    Object {
-                      "color": "#000000",
-                      "fontFamily": "TimesDigitalW04",
-                      "fontSize": 36,
-                      "lineHeight": 52,
-                    }
-                  }
-                >
-                  Thatcher plainly admired the style and determination of Tony Blair, who crushed John Major’s Conservatives in the 1997 election, and he for his part seemed content from time to time to be compared with her as a strong leader. She regularly revisited some of the issues that had dominated her years in office; for example she gave strong support to the development of democracy and the protection of the rule of law in Hong Kong as promised in the treaty she had signed with China. In 1999, in her first conference speech since her resignation as leader, she defended General Augusto Pinochet, the former dictator of Chile, who was held in Britain after his arrest in 1998. 
-                </Text>
-              </Text>
-            </View>
-          </View>
-        </View>
-      </View>
-      <View
         style={
           Object {
             "height": 0,
@@ -5685,7 +5465,7 @@ exports[`21. an article with inline paragraph 1`] = `
       </Gutter>
     }
     extraData={true}
-    initialNumToRender={5}
+    initialNumToRender={4}
     maxToRenderPerBatch={10}
     nestedScrollEnabled={true}
     onEndReachedThreshold={2}
