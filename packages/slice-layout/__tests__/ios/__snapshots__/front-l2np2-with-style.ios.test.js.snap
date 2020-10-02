@@ -53,7 +53,7 @@ exports[`2. front lead two no pic and two - medium - landscape 1`] = `
       "flexDirection": "row",
       "justifyContent": "center",
       "paddingTop": 15,
-      "width": 688,
+      "width": 944,
     }
   }
 >
@@ -160,7 +160,7 @@ exports[`3. front lead two no pic and two - wide - landscape 1`] = `
       "flexDirection": "row",
       "justifyContent": "center",
       "paddingTop": 15,
-      "width": 688,
+      "width": 944,
     }
   }
 >
@@ -419,7 +419,7 @@ exports[`6. front lead two no pic and two - medium - portrait 1`] = `
       "justifyContent": "center",
       "marginHorizontal": 20,
       "marginTop": 20,
-      "width": 688,
+      "width": 944,
     }
   }
 >
@@ -517,7 +517,7 @@ exports[`7. front lead two no pic and two - wide - portrait 1`] = `
       "justifyContent": "center",
       "marginHorizontal": 20,
       "marginTop": 20,
-      "width": 688,
+      "width": 944,
     }
   }
 >
@@ -615,7 +615,7 @@ exports[`8. front lead two no pic and two - huge - portrait 1`] = `
       "justifyContent": "center",
       "marginHorizontal": 20,
       "marginTop": 20,
-      "width": 688,
+      "width": 944,
     }
   }
 >
