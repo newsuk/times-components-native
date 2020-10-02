@@ -17,6 +17,7 @@ function calculateContentWidth(windowWidth: number, orientation: string) {
   } else {
     if (windowWidth >= 1024) return 920;
     if (windowWidth >= 810) return 730;
+
     return 688;
   }
 }

@@ -1,95 +1,55 @@
 /* eslint-disable react/require-default-props */
-import React, { useState } from "react";
+import React from "react";
 import PropTypes from "prop-types";
-import { editionBreakpoints } from "@times-components-native/styleguide";
+import { editionBreakpointWidths } from "@times-components-native/styleguide";
 import { FrontTileSummary } from "@times-components-native/front-page";
 import {
   getTileImage,
+  getTileStrapline,
+  TileImage,
   TileLink,
   withTileTracking,
-  TileImage,
-  getTileStrapline,
 } from "../shared";
-import stylesFactory from "./styles";
+import { getStyle } from "./styles";
+import { getDimensions } from "@times-components-native/utils";
 
-const getAspectRatio = (crop) => (crop === "crop32" ? 3 / 2 : 16 / 9);
-
-const TileFFront = ({
-  onPress,
-  tile,
-  orientation,
-  breakpoint = editionBreakpoints.small,
-}) => {
+const TileFFront = ({ onPress, tile, orientation }) => {
+  const { width: windowWidth } = getDimensions();
   const isLandscape = orientation === "landscape";
-  const isHugeLandscape = breakpoint === editionBreakpoints.huge && isLandscape;
   const columnCount = isLandscape ? 1 : 3;
-  const crop = isHugeLandscape || !isLandscape ? "crop169" : "crop32";
-  const hideSummary = isHugeLandscape;
+  const hideSummary = isLandscape;
 
-  const imageCrop = getTileImage(tile, crop);
-  const styles = stylesFactory(breakpoint);
-
-  const [summaryHeight, setSummaryHeight] = useState(null);
+  const isHugeLandscape = windowWidth >= editionBreakpointWidths.huge;
+  const imageCrop = getTileImage(tile, "crop169");
+  const styles = getStyle(orientation, windowWidth);
 
   if (!imageCrop) return null;
 
   const { article } = tile;
 
   return (
-    <TileLink
-      onPress={onPress}
-      style={
-        isLandscape && breakpoint !== editionBreakpoints.huge
-          ? styles.containerLandscape
-          : styles.containerPortrait
-      }
-      tile={tile}
-    >
+    <TileLink onPress={onPress} style={styles.container} tile={tile}>
       <TileImage
-        aspectRatio={getAspectRatio(crop)}
+        aspectRatio={16 / 9}
         relativeWidth={imageCrop.relativeWidth}
         relativeHeight={imageCrop.relativeHeight}
         relativeHorizontalOffset={imageCrop.relativeHorizontalOffset}
         relativeVerticalOffset={imageCrop.relativeVerticalOffset}
-        style={
-          isLandscape && breakpoint !== editionBreakpoints.huge
-            ? styles.imageContainerLandscape
-            : styles.imageContainerPortrait
-        }
+        style={styles.imageContainer}
         uri={imageCrop.url}
         fill
         hasVideo={article.hasVideo}
-        onLayout={(e) => {
-          if (isLandscape) {
-            const height = Math.floor(e.nativeEvent.layout.height);
-            setSummaryHeight(height);
-          }
-        }}
       />
       <FrontTileSummary
-        headlineStyle={
-          isLandscape ? styles.headlineLandscape : styles.headlinePortrait
-        }
+        headlineStyle={styles.headline}
         summary={!hideSummary && article.content}
-        summaryStyle={
-          isLandscape ? styles.summaryLandscape : styles.summaryPortrait
-        }
+        summaryStyle={styles.summary}
         strapline={getTileStrapline(tile)}
         straplineStyle={styles.strapline}
-        containerStyle={
-          isLandscape &&
-          breakpoint !== editionBreakpoints.huge && {
-            ...styles.summaryContainerLandscape,
-            ...(summaryHeight && {
-              height: summaryHeight,
-            }),
-          }
-        }
         tile={tile}
         template={article.template}
         columnCount={columnCount}
-        bylines={article.bylines}
-        showKeyline={!isHugeLandscape}
+        bylines={(!isLandscape || isHugeLandscape) && article.bylines}
         bylineContainerStyle={styles.bylineContainer}
       />
     </TileLink>

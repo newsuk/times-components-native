@@ -6,6 +6,7 @@ import {
   mockLeadTwoFrontSlice,
   mockLeadTwoNoPicAndTwoFrontSlice,
   mockLeadOneFullWidthFrontSlice,
+  mockInTodaysEditionSlice,
 } from "@times-components-native/fixture-generator";
 import {
   LeadOneAndOneFrontSlice,
@@ -18,7 +19,13 @@ const renderSlice = (Component, data) => () => {
   return (
     <Responsive>
       <View style={{ flex: 1 }}>
-        {<Component onPress={() => null} slice={data} />}
+        {
+          <Component
+            onPress={() => null}
+            slice={data}
+            inTodaysEditionSlice={mockInTodaysEditionSlice()}
+          />
+        }
       </View>
     </Responsive>
   );

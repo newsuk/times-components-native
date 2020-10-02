@@ -22,12 +22,14 @@ import {
   Puzzle,
   LeadOneFullWidthFrontSlice,
   LeadTwoFrontSlice,
+  PuffLiteInput,
 } from "./types";
 import MockPuzzle from "./mock-puzzle";
 
 import MockTile from "./mock-tile";
 import MockDailyRegister from "./mock-daily-register";
-import MockMarkup from "@times-components-native/fixture-generator/src/mock-markup";
+import MockMarkup from "./mock-markup";
+import inTodaysEditionFixture from "@times-components-native/in-todays-edition/fixtures/in-todays-edition.json";
 
 interface LeadOneAndFourSliceWithName extends LeadOneAndFourSlice {
   name: string;
@@ -158,6 +160,19 @@ function mockLeadOneFullWidthSlice(): LeadOneFullWidthSliceWithName {
     name: "LeadOneFullWidthSlice",
     lead: tiles[0],
     items: tiles,
+  };
+}
+
+// This needs to be replaced once TPA has updated the schema to include InTodaysEdition in the front section.
+type InTodaysEditionItem = PuffLiteInput & { leadImage?: any };
+
+interface InTodaysEditionSlice {
+  items: InTodaysEditionItem[];
+}
+
+function mockInTodaysEditionSlice(): InTodaysEditionSlice {
+  return {
+    items: inTodaysEditionFixture,
   };
 }
 
@@ -451,6 +466,7 @@ export default mockArticleSlice;
 export {
   mockCommentLeadAndCartoonSlice,
   mockDailyRegisterSlice,
+  mockInTodaysEditionSlice,
   mockLeadOneAndFourSlice,
   mockStandardSlice,
   mockLeadOneFullWidthSlice,
