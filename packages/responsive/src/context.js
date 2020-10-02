@@ -1,3 +1,6 @@
 import { createContext } from "react";
 
-export default createContext({ isTablet: false, orientation: "landscape" });
+export default createContext({
+  isTablet: false,
+  orientation: "landscape",
+});

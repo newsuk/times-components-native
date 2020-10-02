@@ -15,16 +15,20 @@ import ResponsiveContext from "./context";
 
 const config = (NativeModules || {}).ReactConfig;
 
-const calculateState = (width, height, fontScale) => ({
-  editionBreakpoint: getEditionBreakpoint(width),
-  narrowArticleBreakpoint: getNarrowArticleBreakpoint(width),
-  fontScale,
-  isTablet:
-    (config && config.breakpoint && config.breakpoint !== "small") ||
-    width >= tabletWidth,
-  screenWidth: width,
-  orientation: height > width ? "portrait" : "landscape",
-});
+const calculateState = (width, height, fontScale) => {
+  const orientation = height > width ? "portrait" : "landscape";
+
+  return {
+    editionBreakpoint: getEditionBreakpoint(width),
+    narrowArticleBreakpoint: getNarrowArticleBreakpoint(width),
+    fontScale,
+    isTablet:
+      (config && config.breakpoint && config.breakpoint !== "small") ||
+      width >= tabletWidth,
+    screenWidth: width,
+    orientation,
+  };
+};
 
 class Responsive extends Component {
   constructor(props) {

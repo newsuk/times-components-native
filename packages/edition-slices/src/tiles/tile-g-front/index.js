@@ -42,7 +42,6 @@ const TileGFront = ({
         headlineStyle={styles.headline}
         summary={showSummary && article.content}
         summaryStyle={styles.summary}
-        // containerStyle={styles.summaryContainer}
         tile={tile}
         bylines={showByline && article.bylines}
         template={article.template}

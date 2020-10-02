@@ -5,11 +5,13 @@ import {
   TileGFront,
   TileHFront,
 } from "@times-components-native/edition-slices/src/tiles";
+import InTodaysEdition from "@times-components-native/in-todays-edition";
 
 function renderMedium(props, breakpoint, orientation) {
   const {
     onPress,
     slice: { lead1, lead2 },
+    inTodaysEditionSlice: { items: inTodaysEditionItems },
   } = props;
 
   return (
@@ -34,6 +36,14 @@ function renderMedium(props, breakpoint, orientation) {
           // }
           showSummary={true}
           showByline={true}
+        />
+      }
+      inTodaysEdition={
+        <InTodaysEdition
+          items={inTodaysEditionItems}
+          onArticlePress={onPress}
+          onLinkPress={onPress}
+          orientation={orientation}
         />
       }
       breakpoint={breakpoint}

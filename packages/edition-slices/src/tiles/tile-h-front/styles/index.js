@@ -33,7 +33,6 @@ const sharedLandscapeStyles = {
     paddingBottom: spacing(2),
     paddingRight: spacing(2),
     flex: 1,
-    // backgroundColor: "red",
   },
 };
 
@@ -43,7 +42,6 @@ const sharedPortraitStyles = {
     paddingBottom: spacing(2),
     paddingRight: spacing(2),
     flex: 1,
-    // backgroundColor: "red",
   },
 };
 

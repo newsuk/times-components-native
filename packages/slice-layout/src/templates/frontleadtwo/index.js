@@ -1,26 +1,13 @@
 import React from "react";
 import { Dimensions, View } from "react-native";
-import { editionBreakpoints } from "@times-components-native/styleguide";
 
-import { ItemColSeparator, TabletContentContainer } from "../shared";
-import VerticalLayout from "../verticallayout";
+import { TabletContentContainer } from "../shared";
 import HorizontalLayout from "../horizontallayout";
 import { getStyles } from "./styles";
 
-const FrontLeadTwoSlice = ({ breakpoint, orientation, lead1, lead2 }) => {
+const FrontLeadTwoSlice = ({ orientation, lead1, lead2, inTodaysEdition }) => {
   const windowWidth = Dimensions.get("window").width;
   const styles = getStyles(orientation, windowWidth);
-
-  const ite = (
-    <View
-      style={[
-        {
-          backgroundColor: "#f0eedf",
-        },
-        styles.inTodaysEditionContainer,
-      ]}
-    />
-  );
 
   if (orientation === "landscape") {
     return (
@@ -30,7 +17,10 @@ const FrontLeadTwoSlice = ({ breakpoint, orientation, lead1, lead2 }) => {
           tiles={[
             { style: styles.lead1Container, tile: lead1 },
             { style: styles.lead2Container, tile: lead2 },
-            { style: styles.inTodaysEditionContainer, tile: ite },
+            {
+              style: styles.inTodaysEditionContainer,
+              tile: inTodaysEdition,
+            },
           ]}
           colSeparatorStyle={styles.colSeparatorStyle}
         />
@@ -47,7 +37,7 @@ const FrontLeadTwoSlice = ({ breakpoint, orientation, lead1, lead2 }) => {
         ]}
         colSeparatorStyle={styles.colSeparatorStyle}
       />
-      {ite}
+      <View style={[styles.inTodaysEditionContainer]}>{inTodaysEdition}</View>
     </TabletContentContainer>
   );
 };

@@ -778,6 +778,10 @@ export interface InTheNewsSliceInput {
   items: PuffLiteInput[];
 }
 
+export interface InTodaysEditionSliceInput {
+  items: PuffLiteInput[];
+}
+
 export interface PuffLiteInput {
   title: string;
 
@@ -785,7 +789,7 @@ export interface PuffLiteInput {
 
   mainLink: PuffMainLinkInput;
 
-  leadImage: ImageInput;
+  leadImage?: ImageInput;
 }
 
 export interface PuzzleSectionInput {
