@@ -18,7 +18,7 @@ const summary = {
 
 const strapline = {
   fontFamily: fonts.headlineRegular,
-  color: colours.functional.brandColour,
+  color: colours.functional.primary,
 };
 
 const sharedLandscapeStyles = {
@@ -57,6 +57,11 @@ const styles = {
         lineHeight: 40,
         marginBottom: spacing(2),
       },
+      strapline: {
+        ...strapline,
+        fontSize: 24,
+        lineHeight: 24,
+      },
     },
     "1080": {
       ...sharedLandscapeStyles,
@@ -66,6 +71,11 @@ const styles = {
         lineHeight: 45,
         marginBottom: spacing(2),
       },
+      strapline: {
+        ...strapline,
+        fontSize: 24,
+        lineHeight: 24,
+      },
     },
     "1194": {
       ...sharedLandscapeStyles,
@@ -74,6 +84,11 @@ const styles = {
         fontSize: 50,
         lineHeight: 50,
         marginBottom: spacing(2),
+      },
+      strapline: {
+        ...strapline,
+        fontSize: 24,
+        lineHeight: 24,
       },
     },
     "1366": {
