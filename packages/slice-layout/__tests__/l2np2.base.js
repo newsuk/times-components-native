@@ -22,27 +22,12 @@ export default (renderComponent) => {
       },
     },
     {
-      name: "lead two no pic and two - medium",
-      test() {
-        const output = renderComponent(
-          <LeadTwoNoPicAndTwoSlice
-            breakpoint={editionBreakpoints.medium}
-            lead1={createItem("lead-1")}
-            lead2={createItem("lead-2")}
-            support1={createItem("support-1")}
-            support2={createItem("support-2")}
-          />,
-        );
-
-        expect(output).toMatchSnapshot();
-      },
-    },
-    {
-      name: "lead two no pic and two - wide",
+      name: "lead two no pic and two - tablet - landscape",
       test() {
         const output = renderComponent(
           <LeadTwoNoPicAndTwoSlice
             breakpoint={editionBreakpoints.wide}
+            orientation={"landscape"}
             lead1={createItem("lead-1")}
             lead2={createItem("lead-2")}
             support1={createItem("support-1")}
@@ -54,11 +39,12 @@ export default (renderComponent) => {
       },
     },
     {
-      name: "lead two no pic and two - huge",
+      name: "lead two no pic and two - tablet - portrait",
       test() {
         const output = renderComponent(
           <LeadTwoNoPicAndTwoSlice
-            breakpoint={editionBreakpoints.huge}
+            breakpoint={editionBreakpoints.wide}
+            orientation={"portrait"}
             lead1={createItem("lead-1")}
             lead2={createItem("lead-2")}
             support1={createItem("support-1")}
