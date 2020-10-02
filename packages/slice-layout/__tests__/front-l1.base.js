@@ -3,10 +3,12 @@ import { iterator } from "@times-components-native/test-utils";
 import createItem from "./utils";
 import { FrontLeadOneSlice } from "../src/slice-layout";
 import { getDimensions } from "@times-components-native/utils";
-jest.mock("@times-components-native/slice-layout", () => ({
-  HorizontalLayout: "HorizontalLayout",
-  TabletContentContainer: "TabletContentContainer",
-}));
+
+jest.mock("../src/templates/horizontallayout", () => "HorizontalLayout");
+jest.mock(
+  "../src/templates/shared/TabletContentContainer",
+  () => "TabletContentContainer",
+);
 
 jest.mock("@times-components-native/utils", () => {
   const actualUtils = jest.requireActual("../../utils");

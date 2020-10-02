@@ -16,7 +16,7 @@ jest.mock("@times-components-native/icons", () => ({
 jest.mock("@times-components-native/image", () => "Image");
 jest.mock("@times-components-native/link", () => "Link");
 jest.mock("@times-components-native/gradient", () => "Gradient");
-jest.mock("@times-components-native/in-todays-edition", () => ({
-  __esModule: true,
-  default: "InTodaysEdition",
-}));
+jest.mock(
+  "@times-components-native/in-todays-edition",
+  () => "InTodaysEdition",
+);

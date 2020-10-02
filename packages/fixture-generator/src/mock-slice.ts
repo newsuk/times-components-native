@@ -27,7 +27,7 @@ import MockPuzzle from "./mock-puzzle";
 
 import MockTile from "./mock-tile";
 import MockDailyRegister from "./mock-daily-register";
-import MockMarkup from "@times-components-native/fixture-generator/src/mock-markup";
+import MockMarkup from "./mock-markup";
 import inTodaysEditionFixture from "@times-components-native/in-todays-edition/fixtures/in-todays-edition.json";
 
 interface LeadOneAndFourSliceWithName extends LeadOneAndFourSlice {

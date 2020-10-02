@@ -1,10 +1,8 @@
 import React from "react";
 import { View } from "react-native";
 import { getStyles } from "./styles";
-import {
-  HorizontalLayout,
-  TabletContentContainer,
-} from "@times-components-native/slice-layout";
+import HorizontalLayout from "../horizontallayout";
+import TabletContentContainer from "../shared/TabletContentContainer";
 import { getDimensions } from "@times-components-native/utils";
 
 const FrontLeadOneSlice = ({ orientation, lead, inTodaysEdition }) => {
@@ -31,7 +29,7 @@ const FrontLeadOneSlice = ({ orientation, lead, inTodaysEdition }) => {
   return (
     <TabletContentContainer style={styles.container}>
       <View style={styles.leadContainer}>{lead}</View>
-      <View style={[styles.inTodaysEditionContainer]}>{inTodaysEdition}</View>
+      <View style={styles.inTodaysEditionContainer}>{inTodaysEdition}</View>
     </TabletContentContainer>
   );
 };
