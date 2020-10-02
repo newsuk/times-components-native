@@ -1,7 +1,7 @@
-import { spacing } from "@times-components-native/styleguide";
 import {
   columnToPercentage,
   getStyleByDeviceSize,
+  spacing,
 } from "@times-components-native/styleguide";
 
 const containerPortrait = { flex: 1, flexDirection: "column" };
