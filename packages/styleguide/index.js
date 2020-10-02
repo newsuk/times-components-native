@@ -13,6 +13,7 @@ export {
   fontSizes,
   getEditionBreakpoint,
   getNarrowArticleBreakpoint,
+  getStyleByDeviceSize,
   lineHeight,
   scales,
   spacing,

@@ -1768,7 +1768,7 @@ exports[`22. front lead two no pic and two - landscape - medium 1`] = `
         "flexDirection": "row",
         "justifyContent": "center",
         "paddingTop": 15,
-        "width": 688,
+        "width": 944,
       }
     }
   >
@@ -2086,14 +2086,35 @@ exports[`26. front lead one - portrait - medium 1`] = `
   <View
     style={
       Object {
+        "alignSelf": "center",
         "flex": 1,
-        "flexDirection": "row",
-        "marginHorizontal": 30,
-        "paddingTop": 20,
+        "flexDirection": "column",
+        "justifyContent": "center",
+        "paddingBottom": 15,
+        "paddingTop": 10,
+        "width": 688,
       }
     }
   >
-    <TileFFront />
+    <View
+      style={
+        Object {
+          "flex": 1,
+        }
+      }
+    >
+      <TileFFront />
+    </View>
+    <View
+      style={
+        Object {
+          "height": 133,
+          "marginTop": 10,
+        }
+      }
+    >
+      <InTodaysEdition />
+    </View>
   </View>
 </View>
 `;
@@ -2113,14 +2134,32 @@ exports[`27. front lead one - landscape - medium 1`] = `
   <View
     style={
       Object {
+        "alignSelf": "center",
         "flex": 1,
         "flexDirection": "row",
-        "marginHorizontal": 30,
-        "paddingTop": 20,
+        "justifyContent": "center",
+        "width": 944,
       }
     }
   >
-    <TileFFront />
+    <View>
+      <View>
+        <TileFFront />
+      </View>
+      <View
+        style={
+          Object {
+            "borderColor": "#DBDBDB",
+            "borderRightWidth": 1,
+            "borderStyle": "solid",
+            "marginVertical": 10,
+          }
+        }
+      />
+      <View>
+        <InTodaysEdition />
+      </View>
+    </View>
   </View>
 </View>
 `;
@@ -4308,7 +4347,7 @@ exports[`55. front lead two no pic and two - landscape - wide 1`] = `
         "flexDirection": "row",
         "justifyContent": "center",
         "paddingTop": 15,
-        "width": 688,
+        "width": 944,
       }
     }
   >
@@ -4420,7 +4459,7 @@ exports[`56. front lead two no pic and two - portrait - wide 1`] = `
         "justifyContent": "center",
         "marginHorizontal": 20,
         "marginTop": 20,
-        "width": 688,
+        "width": 920,
       }
     }
   >
@@ -4626,14 +4665,35 @@ exports[`59. front lead one - portrait - wide 1`] = `
   <View
     style={
       Object {
+        "alignSelf": "center",
         "flex": 1,
-        "flexDirection": "row",
-        "marginHorizontal": 30,
-        "paddingTop": 20,
+        "flexDirection": "column",
+        "justifyContent": "center",
+        "paddingBottom": 20,
+        "paddingTop": 15,
+        "width": 920,
       }
     }
   >
-    <TileFFront />
+    <View
+      style={
+        Object {
+          "flex": 1,
+        }
+      }
+    >
+      <TileFFront />
+    </View>
+    <View
+      style={
+        Object {
+          "height": 174,
+          "marginTop": 10,
+        }
+      }
+    >
+      <InTodaysEdition />
+    </View>
   </View>
 </View>
 `;
@@ -4653,14 +4713,53 @@ exports[`60. front lead one - landscape - wide 1`] = `
   <View
     style={
       Object {
+        "alignSelf": "center",
         "flex": 1,
         "flexDirection": "row",
-        "marginHorizontal": 30,
-        "paddingTop": 20,
+        "justifyContent": "center",
+        "paddingVertical": 10,
+        "width": 944,
       }
     }
   >
-    <TileFFront />
+    <View
+      style={
+        Object {
+          "flex": 1,
+          "flexDirection": "row",
+        }
+      }
+    >
+      <View
+        style={
+          Object {
+            "width": "75%",
+          }
+        }
+      >
+        <TileFFront />
+      </View>
+      <View
+        style={
+          Object {
+            "borderColor": "#DBDBDB",
+            "borderRightWidth": 1,
+            "borderStyle": "solid",
+            "marginVertical": 0,
+          }
+        }
+      />
+      <View
+        style={
+          Object {
+            "marginLeft": 10,
+            "width": "24%",
+          }
+        }
+      >
+        <InTodaysEdition />
+      </View>
+    </View>
   </View>
 </View>
 `;
@@ -7171,7 +7270,7 @@ exports[`89. front lead two no pic and two - portrait - huge 1`] = `
           "justifyContent": "center",
           "marginHorizontal": 20,
           "marginTop": 20,
-          "width": 688,
+          "width": 920,
         }
       }
     >
@@ -7407,14 +7506,35 @@ exports[`92. front lead one - portrait - huge 1`] = `
     <View
       style={
         Object {
+          "alignSelf": "center",
           "flex": 1,
-          "flexDirection": "row",
-          "marginHorizontal": 30,
-          "paddingTop": 20,
+          "flexDirection": "column",
+          "justifyContent": "center",
+          "paddingBottom": 20,
+          "paddingTop": 15,
+          "width": 920,
         }
       }
     >
-      <TileFFront />
+      <View
+        style={
+          Object {
+            "flex": 1,
+          }
+        }
+      >
+        <TileFFront />
+      </View>
+      <View
+        style={
+          Object {
+            "height": 174,
+            "marginTop": 10,
+          }
+        }
+      >
+        <InTodaysEdition />
+      </View>
     </View>
   </View>
 </View>
@@ -7444,14 +7564,54 @@ exports[`93. front lead one - landscape - huge 1`] = `
     <View
       style={
         Object {
+          "alignSelf": "center",
           "flex": 1,
           "flexDirection": "row",
-          "marginHorizontal": 30,
-          "paddingTop": 20,
+          "justifyContent": "center",
+          "paddingBottom": 35,
+          "paddingTop": 30,
+          "width": 1140,
         }
       }
     >
-      <TileFFront />
+      <View
+        style={
+          Object {
+            "flex": 1,
+            "flexDirection": "row",
+          }
+        }
+      >
+        <View
+          style={
+            Object {
+              "width": "82%",
+            }
+          }
+        >
+          <TileFFront />
+        </View>
+        <View
+          style={
+            Object {
+              "borderColor": "#DBDBDB",
+              "borderRightWidth": 1,
+              "borderStyle": "solid",
+              "marginVertical": 0,
+            }
+          }
+        />
+        <View
+          style={
+            Object {
+              "marginLeft": 10,
+              "width": "17%",
+            }
+          }
+        >
+          <InTodaysEdition />
+        </View>
+      </View>
     </View>
   </View>
 </View>
