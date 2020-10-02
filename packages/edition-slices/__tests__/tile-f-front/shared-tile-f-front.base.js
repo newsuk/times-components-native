@@ -57,6 +57,10 @@ export default () => {
         testFrontTile("810", "portrait");
       });
 
+      it("834", () => {
+        testFrontTile("834", "portrait");
+      });
+
       it("1024", () => {
         testFrontTile("1024", "portrait");
       });

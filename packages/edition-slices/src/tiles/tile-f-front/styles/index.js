@@ -127,6 +127,30 @@ const styles = {
         ...headline,
         fontSize: 45,
         lineHeight: 45,
+        marginBottom: spacing(1),
+      },
+      imageContainer: {
+        width: "100%",
+        marginBottom: spacing(2),
+      },
+      strapline: {
+        ...strapline,
+        fontSize: 24,
+        lineHeight: 24,
+        marginBottom: spacing(3),
+      },
+      summary: {
+        ...summary,
+        fontSize: 14,
+        lineHeight: 18,
+      },
+    },
+    "834": {
+      ...sharedPortraitStyles,
+      headline: {
+        ...headline,
+        fontSize: 45,
+        lineHeight: 45,
         marginBottom: spacing(2),
       },
       imageContainer: {
