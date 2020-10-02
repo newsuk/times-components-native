@@ -13,7 +13,6 @@ import {
   LeadersSlice,
   SecondaryOneSlice,
   SecondaryOneAndColumnistSlice,
-  InTheNewsSliceInput as InTheNewsSlice,
   SecondaryFourSlice,
   SecondaryTwoAndTwoSlice,
   SecondaryTwoNoPicAndTwoSlice,
@@ -22,6 +21,7 @@ import {
   SecondaryOneAndFourSlice,
   Puzzle,
   LeadOneFullWidthFrontSlice,
+  PuffLiteInput,
 } from "./types";
 import MockPuzzle from "./mock-puzzle";
 
@@ -158,7 +158,14 @@ function mockLeadOneFullWidthSlice(): LeadOneFullWidthSliceWithName {
   };
 }
 
-function mockInTodaysEditionSlice(): InTheNewsSlice {
+// This needs to be replaced once TPA has updated the schema to include InTodaysEdition in the front section.
+type InTodaysEditionItem = PuffLiteInput & { leadImage?: any };
+
+interface InTodaysEditionSlice {
+  items: InTodaysEditionItem[];
+}
+
+function mockInTodaysEditionSlice(): InTodaysEditionSlice {
   return {
     items: inTodaysEditionFixture,
   };
