@@ -87,6 +87,13 @@ const slices = [
     mock: mockLeadTwoNoPicAndTwoSlice(),
     name: "lead two no pic and two",
     Slice: LeadTwoNoPicAndTwoSlice,
+    orientation: "landscape",
+  },
+  {
+    mock: mockLeadTwoNoPicAndTwoSlice(),
+    name: "lead two no pic and two",
+    Slice: LeadTwoNoPicAndTwoSlice,
+    orientation: "portrait",
   },
   {
     mock: mockLeadersSlice(),
