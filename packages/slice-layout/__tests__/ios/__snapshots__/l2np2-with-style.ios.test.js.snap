@@ -44,7 +44,85 @@ exports[`1. lead two no pic and two - small 1`] = `
 </View>
 `;
 
-exports[`2. lead two no pic and two - medium 1`] = `
+exports[`2. lead two no pic and two - tablet - landscape 1`] = `
+<View
+  style={
+    Object {
+      "flex": 1,
+      "flexDirection": "row",
+      "marginHorizontal": 10,
+    }
+  }
+>
+  <View
+    style={
+      Object {
+        "width": "42%",
+      }
+    }
+  >
+    <Text>
+      lead-1
+    </Text>
+    <View
+      style={
+        Object {
+          "borderBottomWidth": 1,
+          "borderColor": "#DBDBDB",
+          "borderStyle": "solid",
+        }
+      }
+    />
+    <Text>
+      lead-2
+    </Text>
+  </View>
+  <View
+    style={
+      Object {
+        "borderColor": "#DBDBDB",
+        "borderRightWidth": 1,
+        "borderStyle": "solid",
+        "marginVertical": 15,
+      }
+    }
+  />
+  <View
+    style={
+      Object {
+        "width": "16%",
+      }
+    }
+  >
+    <Text>
+      support-1
+    </Text>
+  </View>
+  <View
+    style={
+      Object {
+        "borderColor": "#DBDBDB",
+        "borderRightWidth": 1,
+        "borderStyle": "solid",
+        "marginVertical": 15,
+      }
+    }
+  />
+  <View
+    style={
+      Object {
+        "width": "42%",
+      }
+    }
+  >
+    <Text>
+      support-2
+    </Text>
+  </View>
+</View>
+`;
+
+exports[`3. lead two no pic and two - tablet - portrait 1`] = `
 <View
   style={
     Object {
@@ -108,162 +186,6 @@ exports[`2. lead two no pic and two - medium 1`] = `
     />
     <Text>
       support-1
-    </Text>
-  </View>
-</View>
-`;
-
-exports[`3. lead two no pic and two - wide 1`] = `
-<View
-  style={
-    Object {
-      "flex": 1,
-      "flexDirection": "row",
-      "marginHorizontal": 10,
-    }
-  }
->
-  <View
-    style={
-      Object {
-        "width": "42%",
-      }
-    }
-  >
-    <Text>
-      lead-1
-    </Text>
-    <View
-      style={
-        Object {
-          "borderBottomWidth": 1,
-          "borderColor": "#DBDBDB",
-          "borderStyle": "solid",
-        }
-      }
-    />
-    <Text>
-      lead-2
-    </Text>
-  </View>
-  <View
-    style={
-      Object {
-        "borderColor": "#DBDBDB",
-        "borderRightWidth": 1,
-        "borderStyle": "solid",
-        "marginVertical": 15,
-      }
-    }
-  />
-  <View
-    style={
-      Object {
-        "width": "16%",
-      }
-    }
-  >
-    <Text>
-      support-1
-    </Text>
-  </View>
-  <View
-    style={
-      Object {
-        "borderColor": "#DBDBDB",
-        "borderRightWidth": 1,
-        "borderStyle": "solid",
-        "marginVertical": 15,
-      }
-    }
-  />
-  <View
-    style={
-      Object {
-        "width": "42%",
-      }
-    }
-  >
-    <Text>
-      support-2
-    </Text>
-  </View>
-</View>
-`;
-
-exports[`4. lead two no pic and two - huge 1`] = `
-<View
-  style={
-    Object {
-      "flex": 1,
-      "flexDirection": "row",
-      "marginHorizontal": 10,
-    }
-  }
->
-  <View
-    style={
-      Object {
-        "width": "42%",
-      }
-    }
-  >
-    <Text>
-      lead-1
-    </Text>
-    <View
-      style={
-        Object {
-          "borderBottomWidth": 1,
-          "borderColor": "#DBDBDB",
-          "borderStyle": "solid",
-        }
-      }
-    />
-    <Text>
-      lead-2
-    </Text>
-  </View>
-  <View
-    style={
-      Object {
-        "borderColor": "#DBDBDB",
-        "borderRightWidth": 1,
-        "borderStyle": "solid",
-        "marginVertical": 15,
-      }
-    }
-  />
-  <View
-    style={
-      Object {
-        "width": "16%",
-      }
-    }
-  >
-    <Text>
-      support-1
-    </Text>
-  </View>
-  <View
-    style={
-      Object {
-        "borderColor": "#DBDBDB",
-        "borderRightWidth": 1,
-        "borderStyle": "solid",
-        "marginVertical": 15,
-      }
-    }
-  />
-  <View
-    style={
-      Object {
-        "width": "42%",
-      }
-    }
-  >
-    <Text>
-      support-2
     </Text>
   </View>
 </View>
