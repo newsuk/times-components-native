@@ -9,10 +9,9 @@ class LeadTwoNoPicAndTwo extends Component {
     super(props);
     this.renderSmall = this.renderSmall.bind(this);
     this.renderMedium = this.renderMedium.bind(this);
-    this.renderWide = this.renderWide.bind(this);
   }
 
-  renderSmall(breakpoint) {
+  renderSmall(breakpoint, orientation) {
     const {
       onPress,
       slice: { lead1, lead2, support1, support2 },
@@ -20,6 +19,7 @@ class LeadTwoNoPicAndTwo extends Component {
     return (
       <LeadTwoNoPicAndTwoSlice
         breakpoint={breakpoint}
+        orientation={orientation}
         lead1={<TileF onPress={onPress} tile={lead1} tileName="lead1" />}
         lead2={<TileB onPress={onPress} tile={lead2} tileName="lead2" />}
         support1={
@@ -32,13 +32,16 @@ class LeadTwoNoPicAndTwo extends Component {
     );
   }
 
-  renderMedium(breakpoint) {
+  renderMedium(breakpoint, orientation) {
     const {
       onPress,
       slice: { lead1, lead2, support1, support2 },
     } = this.props;
+
+    const Support1 = orientation === "landscape" ? TileAL : TileD;
     return (
       <LeadTwoNoPicAndTwoSlice
+        orientation={orientation}
         breakpoint={breakpoint}
         lead1={
           <TileX
@@ -57,52 +60,7 @@ class LeadTwoNoPicAndTwo extends Component {
           />
         }
         support1={
-          <TileD
-            breakpoint={breakpoint}
-            onPress={onPress}
-            tile={support1}
-            tileName="support1"
-          />
-        }
-        support2={
-          <TileE
-            breakpoint={breakpoint}
-            onPress={onPress}
-            tile={support2}
-            tileName="support2"
-          />
-        }
-      />
-    );
-  }
-
-  renderWide(breakpoint) {
-    const {
-      onPress,
-      slice: { lead1, lead2, support1, support2 },
-    } = this.props;
-
-    return (
-      <LeadTwoNoPicAndTwoSlice
-        breakpoint={breakpoint}
-        lead1={
-          <TileX
-            breakpoint={breakpoint}
-            onPress={onPress}
-            tile={lead1}
-            tileName="lead1"
-          />
-        }
-        lead2={
-          <TileY
-            breakpoint={breakpoint}
-            onPress={onPress}
-            tile={lead2}
-            tileName="lead2"
-          />
-        }
-        support1={
-          <TileAL
+          <Support1
             breakpoint={breakpoint}
             onPress={onPress}
             tile={support1}
@@ -126,7 +84,6 @@ class LeadTwoNoPicAndTwo extends Component {
       <ResponsiveSlice
         renderSmall={this.renderSmall}
         renderMedium={this.renderMedium}
-        renderWide={this.renderWide}
       />
     );
   }
