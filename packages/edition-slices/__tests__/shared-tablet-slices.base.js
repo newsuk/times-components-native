@@ -20,6 +20,7 @@ import {
   getPuzzleSlices,
   mockSecondaryOneAndFourSlice,
   mockListTwoAndSixNoPicSlice,
+  mockLeadTwoFrontSlice,
   mockLeadOneAndOneFrontSlice,
   mockLeadTwoNoPicAndTwoFrontSlice,
   mockLeadOneFullWidthFrontSlice,
@@ -44,6 +45,7 @@ import {
   SecondaryTwoAndTwoSlice,
   StandardSlice,
   ListTwoAndSixNoPicSlice,
+  LeadTwoFrontSlice,
   LeadTwoNoPicAndTwoFrontSlice,
   LeadOneAndOneFrontSlice,
   LeadOneFullWidthFrontSlice,
@@ -160,6 +162,24 @@ const slices = [
     mock: { puzzles: getPuzzleSlices(3) },
     name: "puzzle",
     Slice: PuzzleSlice,
+  },
+  {
+    mock: mockLeadTwoFrontSlice(),
+    name: "front lead two - portrait",
+    Slice: LeadTwoFrontSlice,
+    orientation: "portrait",
+    sliceProps: {
+      inTodaysEditionSlice: mockInTodaysEditionSlice(),
+    },
+  },
+  {
+    mock: mockLeadTwoFrontSlice(),
+    name: "front lead two - landscape",
+    Slice: LeadTwoFrontSlice,
+    orientation: "landscape",
+    sliceProps: {
+      inTodaysEditionSlice: mockInTodaysEditionSlice(),
+    },
   },
   {
     mock: mockLeadTwoNoPicAndTwoFrontSlice(),

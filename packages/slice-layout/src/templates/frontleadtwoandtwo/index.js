@@ -50,6 +50,8 @@ const FrontLeadTwoNoPicAndTwoSlice = ({
   if (orientation === "landscape") {
     return (
       <TabletContentContainer
+        orientation={orientation}
+        windowWidth={windowWidth}
         style={[
           { paddingTop: calculateMarginTop(windowWidth) },
           breakpoint === "huge" && { width: 1180 },
@@ -68,7 +70,11 @@ const FrontLeadTwoNoPicAndTwoSlice = ({
     );
   }
   return (
-    <TabletContentContainer style={styles.containerPortrait}>
+    <TabletContentContainer
+      orientation={orientation}
+      windowWidth={windowWidth}
+      style={styles.containerPortrait}
+    >
       <VerticalLayout
         style={styles.leftColumnPortrait}
         tiles={[wrappedLead1, wrappedLead2]}

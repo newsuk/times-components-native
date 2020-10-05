@@ -20,10 +20,10 @@ const gridColToPercentage: GridColToPercentage = (orientation) => ({
   const contentWidth = calculateContentWidth(windowWidth, orientation);
 
   const gapWidth = 21;
+  const marginWidth = 10;
   const allGapsWidth = (totalColumns - 1) * gapWidth;
   const allColumnsWidth = contentWidth - allGapsWidth;
   const columnWidth = allColumnsWidth / totalColumns;
-  const marginWidth = 10;
 
   const widthOfColumns = numberOfColumns * columnWidth;
   const widthOfGaps = (numberOfColumns - 1) * gapWidth;

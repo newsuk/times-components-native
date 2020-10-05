@@ -11,7 +11,11 @@ const FrontLeadTwoSlice = ({ orientation, lead1, lead2, inTodaysEdition }) => {
 
   if (orientation === "landscape") {
     return (
-      <TabletContentContainer style={styles.container}>
+      <TabletContentContainer
+        orientation={orientation}
+        windowWidth={windowWidth}
+        style={styles.container}
+      >
         <HorizontalLayout
           containerStyle={styles.horizontalContainer}
           tiles={[
@@ -28,7 +32,11 @@ const FrontLeadTwoSlice = ({ orientation, lead1, lead2, inTodaysEdition }) => {
     );
   }
   return (
-    <TabletContentContainer style={styles.container}>
+    <TabletContentContainer
+      orientation={orientation}
+      windowWidth={windowWidth}
+      style={styles.container}
+    >
       <HorizontalLayout
         containerStyle={styles.horizontalContainer}
         tiles={[
