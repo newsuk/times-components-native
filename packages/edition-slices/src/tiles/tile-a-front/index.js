@@ -50,7 +50,6 @@ const TileAFront = ({ onPress, tile, orientation }) => {
         summaryStyle={styles.summary}
         strapline={showStrapline && getTileStrapline(tile)}
         straplineStyle={styles.strapline}
-        containerStyle={styles.summaryContainer}
         tile={tile}
         template={article.template}
         columnCount={columnCount}

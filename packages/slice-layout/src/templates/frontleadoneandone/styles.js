@@ -1,5 +1,6 @@
 import {
   colours,
+  columnToPercentage,
   getStyleByDeviceSize,
   spacing,
 } from "@times-components-native/styleguide";
@@ -20,10 +21,10 @@ const sharedPortraitStyles = {
     paddingTop: spacing(4),
   },
   leftColumn: {
-    width: "75%",
+    width: columnToPercentage({ numberOfColumns: 9 }),
   },
   rightColumn: {
-    width: "25%",
+    width: columnToPercentage({ numberOfColumns: 3 }),
   },
   inTodaysEditionContainer: {
     width: "100%",
@@ -65,7 +66,8 @@ const styles = {
       inTodaysEditionContainer: {
         ...sharedPortraitStyles.inTodaysEditionContainer,
         height: 174,
-        marginBottom: spacing(6),
+        marginBottom: spacing(5),
+        marginTop: spacing(2),
       },
     },
   },

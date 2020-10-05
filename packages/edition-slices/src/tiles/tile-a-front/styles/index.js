@@ -11,34 +11,83 @@ const summary = {
   textAlign: "justify",
 };
 
+const strapline = {
+  fontFamily: fonts.headlineRegular,
+  color: colours.functional.primary,
+  fontSize: 24,
+  lineHeight: 26,
+};
+
+const sharedPortraitStyles = {
+  container: {
+    paddingBottom: spacing(2),
+    paddingRight: spacing(2),
+    flex: 1,
+  },
+  imageContainer: {
+    width: "100%",
+    marginBottom: spacing(2),
+  },
+};
+
 const styles = {
   portrait: {
-    "768": {
-      container: {
-        paddingRight: spacing(2),
-        paddingBottom: spacing(2),
-        flex: 1,
-      },
+    768: {
+      ...sharedPortraitStyles,
       headline: {
         ...globalSpacingStyles.tabletHeadline,
         fontFamily: fonts.headline,
         fontSize: 42,
         lineHeight: 42,
+        marginBottom: spacing(1),
       },
       strapline: {
-        fontFamily: fonts.headlineRegular,
-        color: colours.functional.primary,
-        fontSize: 24,
-        lineHeight: 26,
-      },
-      imageContainer: {
-        width: "100%",
-        marginBottom: spacing(2),
+        ...strapline,
       },
       summary: {
         ...summary,
         fontSize: 14,
-        lineHeight: 28,
+        lineHeight: 18,
+      },
+    },
+    810: {
+      ...sharedPortraitStyles,
+      headline: {
+        ...globalSpacingStyles.tabletHeadline,
+        fontFamily: fonts.headline,
+        fontSize: 45,
+        lineHeight: 45,
+        marginBottom: spacing(1),
+      },
+      strapline: {
+        ...strapline,
+      },
+      summary: {
+        ...summary,
+        fontSize: 14,
+        lineHeight: 8,
+      },
+    },
+    1024: {
+      ...sharedPortraitStyles,
+      imageContainer: {
+        ...sharedPortraitStyles.imageContainer,
+        marginBottom: spacing(3),
+      },
+      headline: {
+        ...globalSpacingStyles.tabletHeadline,
+        fontFamily: fonts.headline,
+        fontSize: 55,
+        lineHeight: 55,
+        marginBottom: spacing(4),
+      },
+      strapline: {
+        ...strapline,
+      },
+      summary: {
+        ...summary,
+        fontSize: 15,
+        lineHeight: 18,
       },
     },
   },

@@ -5,31 +5,65 @@ import {
 } from "@times-components-native/styleguide";
 import { getStyleByDeviceSize } from "@times-components-native/styleguide/src/styleguide";
 
+const summary = {
+  ...globalSpacingStyles.tabletTeaser,
+  textAlign: "justify",
+};
+
+const commentSummary = {
+  ...summary,
+  textAlign: "left",
+};
+
+const sharedPortraitStyles = {
+  container: {
+    flex: 1,
+    padding: spacing(2),
+    paddingTop: 0,
+  },
+  imageContainer: {
+    width: "100%",
+    marginBottom: spacing(2),
+  },
+};
+
 const styles = {
   portrait: {
-    "768": {
-      container: {
-        flex: 1,
-        padding: spacing(2),
-        paddingTop: 0,
-      },
-      headlinePortrait: {
+    768: {
+      ...sharedPortraitStyles,
+      headline: {
         fontFamily: fonts.headline,
-        fontSize: 11,
-        lineHeight: 11,
-      },
-
-      imageContainer: {
-        width: "100%",
-        marginBottom: spacing(2),
-      },
-      commentSummary: {
-        ...globalSpacingStyles.tabletTeaser,
-        textAlign: "left",
+        fontSize: 22,
+        lineHeight: 22,
       },
       summary: {
-        ...globalSpacingStyles.tabletTeaser,
-        textAlign: "justify",
+        ...summary,
+        fontSize: 14,
+        lineHeight: 18,
+      },
+      commentSummary: {
+        ...commentSummary,
+        fontSize: 14,
+        lineHeight: 18,
+      },
+    },
+    1024: {
+      ...sharedPortraitStyles,
+      headline: {
+        fontFamily: fonts.headline,
+        fontSize: 26,
+        lineHeight: 26,
+        marginBottom: spacing(3),
+      },
+      summary: {
+        ...summary,
+        fontSize: 15,
+        lineHeight: 18,
+      },
+      commentSummary: {
+        ...commentSummary,
+        fontSize: 15,
+        lineHeight: 18,
       },
     },
   },
