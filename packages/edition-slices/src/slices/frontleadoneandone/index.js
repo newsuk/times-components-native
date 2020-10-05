@@ -6,20 +6,19 @@ import {
   TileBFront,
 } from "@times-components-native/edition-slices/src/tiles";
 import InTodaysEdition from "@times-components-native/in-todays-edition";
-import InTodaysEditionData from "@times-components-native/in-todays-edition/fixtures/in-todays-edition.json";
 
 function renderMedium(props, breakpoint, orientation) {
   const {
     onPress,
     onLinkPress,
     slice: { lead, support },
+    inTodaysEditionSlice: { items: inTodaysEditionItems },
   } = props;
 
   return (
     <FrontLeadOneAndOneSlice
       lead={
         <TileAFront
-          breakpoint={breakpoint}
           onPress={onPress}
           tile={lead}
           tileName="lead"
@@ -38,7 +37,7 @@ function renderMedium(props, breakpoint, orientation) {
       }
       inTodaysEdition={
         <InTodaysEdition
-          items={InTodaysEditionData}
+          items={inTodaysEditionItems}
           onArticlePress={onPress}
           onLinkPress={onLinkPress}
           orientation={orientation}

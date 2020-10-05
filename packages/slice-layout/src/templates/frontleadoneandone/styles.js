@@ -1,5 +1,8 @@
-import { colours, spacing } from "@times-components-native/styleguide";
-import { getStyleByDeviceSize } from "@times-components-native/styleguide/src/styleguide";
+import {
+  colours,
+  getStyleByDeviceSize,
+  spacing,
+} from "@times-components-native/styleguide";
 
 const sharedPortraitStyles = {
   colSeparatorStyle: {
@@ -22,6 +25,13 @@ const sharedPortraitStyles = {
   rightColumn: {
     width: "25%",
   },
+  inTodaysEditionContainer: {
+    width: "100%",
+  },
+};
+
+const sharedLandscapeStyles = {
+
 };
 
 const styles = {
@@ -29,39 +39,45 @@ const styles = {
     768: {
       ...sharedPortraitStyles,
       inTodaysEditionContainer: {
+        ...sharedPortraitStyles.inTodaysEditionContainer,
         height: 133,
-        width: "100%",
         marginBottom: spacing(4),
       },
     },
     810: {
       ...sharedPortraitStyles,
       inTodaysEditionContainer: {
+        ...sharedPortraitStyles.inTodaysEditionContainer,
         height: 148,
-        width: "100%",
         marginBottom: spacing(3),
       },
     },
     834: {
       ...sharedPortraitStyles,
       inTodaysEditionContainer: {
+        ...sharedPortraitStyles.inTodaysEditionContainer,
         height: 148,
-        width: "100%",
         marginBottom: spacing(4),
       },
     },
     1024: {
       ...sharedPortraitStyles,
       inTodaysEditionContainer: {
+        ...sharedPortraitStyles.inTodaysEditionContainer,
         height: 174,
-        width: "100%",
         marginBottom: spacing(6),
       },
     },
   },
   landscape: {
-    1024: {
-      ...sharedPortraitStyles,
+    "1024": {
+      ...sharedLandscapeStyles,
+    },
+    "1080": {
+      ...sharedLandscapeStyles,
+    },
+    "1366": {
+      ...sharedLandscapeStyles,
     },
   },
 };

@@ -7,7 +7,7 @@ export default (breakpoint) => {
     ...styles,
     container: {
       ...styles.container,
-      paddingBottom: getAndroidNavHeight(),
+      marginBottom: getAndroidNavHeight(),
     },
   };
 };
