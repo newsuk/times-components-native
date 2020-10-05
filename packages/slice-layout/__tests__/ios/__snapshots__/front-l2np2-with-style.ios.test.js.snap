@@ -1,101 +1,22 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`1. front lead two no pic and two - small - landscape 1`] = `
-<View>
-  <Text>
-    lead-1
-  </Text>
-  <View
-    style={
-      Object {
-        "borderBottomWidth": 1,
-        "borderColor": "#DBDBDB",
-        "borderStyle": "solid",
-      }
-    }
-  />
-  <Text>
-    lead-2
-  </Text>
-  <View
-    style={
-      Object {
-        "borderBottomWidth": 1,
-        "borderColor": "#DBDBDB",
-        "borderStyle": "solid",
-      }
-    }
-  />
-  <Text>
-    support-1
-  </Text>
-  <View
-    style={
-      Object {
-        "borderBottomWidth": 1,
-        "borderColor": "#DBDBDB",
-        "borderStyle": "solid",
-      }
-    }
-  />
-  <Text>
-    support-2
-  </Text>
-</View>
-`;
+exports[`1. front lead two no pic and two - small - landscape 1`] = `<VerticalLayout />`;
 
 exports[`2. front lead two no pic and two - medium - landscape 1`] = `
-<View
+<TabletContentContainer
   style={
     Object {
-      "alignSelf": "center",
-      "flex": 1,
-      "flexDirection": "row",
-      "justifyContent": "center",
       "paddingTop": 15,
-      "width": 944,
     }
   }
 >
-  <View
+  <VerticalLayout
     style={
       Object {
-        "width": "41%",
+        "width": [Function],
       }
     }
-  >
-    <View
-      style={
-        Object {
-          "flex": 6,
-        }
-      }
-    >
-      <Text>
-        lead-1
-      </Text>
-    </View>
-    <View
-      style={
-        Object {
-          "borderBottomWidth": 1,
-          "borderColor": "#999999",
-          "borderStyle": "solid",
-        }
-      }
-    />
-    <View
-      style={
-        Object {
-          "flex": 4,
-        }
-      }
-    >
-      <Text>
-        lead-2
-      </Text>
-    </View>
-  </View>
+  />
   <View
     style={
       Object {
@@ -110,7 +31,7 @@ exports[`2. front lead two no pic and two - medium - landscape 1`] = `
   <View
     style={
       Object {
-        "width": "17%",
+        "width": [Function],
       }
     }
   >
@@ -132,7 +53,7 @@ exports[`2. front lead two no pic and two - medium - landscape 1`] = `
   <View
     style={
       Object {
-        "width": "41%",
+        "width": [Function],
       }
     }
   >
@@ -148,61 +69,24 @@ exports[`2. front lead two no pic and two - medium - landscape 1`] = `
       </Text>
     </View>
   </View>
-</View>
+</TabletContentContainer>
 `;
 
 exports[`3. front lead two no pic and two - wide - landscape 1`] = `
-<View
+<TabletContentContainer
   style={
     Object {
-      "alignSelf": "center",
-      "flex": 1,
-      "flexDirection": "row",
-      "justifyContent": "center",
       "paddingTop": 15,
-      "width": 944,
     }
   }
 >
-  <View
+  <VerticalLayout
     style={
       Object {
-        "width": "41%",
+        "width": [Function],
       }
     }
-  >
-    <View
-      style={
-        Object {
-          "flex": 6,
-        }
-      }
-    >
-      <Text>
-        lead-1
-      </Text>
-    </View>
-    <View
-      style={
-        Object {
-          "borderBottomWidth": 1,
-          "borderColor": "#999999",
-          "borderStyle": "solid",
-        }
-      }
-    />
-    <View
-      style={
-        Object {
-          "flex": 4,
-        }
-      }
-    >
-      <Text>
-        lead-2
-      </Text>
-    </View>
-  </View>
+  />
   <View
     style={
       Object {
@@ -217,7 +101,7 @@ exports[`3. front lead two no pic and two - wide - landscape 1`] = `
   <View
     style={
       Object {
-        "width": "17%",
+        "width": [Function],
       }
     }
   >
@@ -239,7 +123,7 @@ exports[`3. front lead two no pic and two - wide - landscape 1`] = `
   <View
     style={
       Object {
-        "width": "41%",
+        "width": [Function],
       }
     }
   >
@@ -255,61 +139,25 @@ exports[`3. front lead two no pic and two - wide - landscape 1`] = `
       </Text>
     </View>
   </View>
-</View>
+</TabletContentContainer>
 `;
 
 exports[`4. front lead two no pic and two - huge - landscape 1`] = `
-<View
+<TabletContentContainer
   style={
     Object {
-      "alignSelf": "center",
-      "flex": 1,
-      "flexDirection": "row",
-      "justifyContent": "center",
       "paddingTop": 15,
       "width": 1180,
     }
   }
 >
-  <View
+  <VerticalLayout
     style={
       Object {
-        "width": "35%",
+        "width": [Function],
       }
     }
-  >
-    <View
-      style={
-        Object {
-          "flex": 6,
-        }
-      }
-    >
-      <Text>
-        lead-1
-      </Text>
-    </View>
-    <View
-      style={
-        Object {
-          "borderBottomWidth": 1,
-          "borderColor": "#999999",
-          "borderStyle": "solid",
-        }
-      }
-    />
-    <View
-      style={
-        Object {
-          "flex": 4,
-        }
-      }
-    >
-      <Text>
-        lead-2
-      </Text>
-    </View>
-  </View>
+  />
   <View
     style={
       Object {
@@ -324,7 +172,7 @@ exports[`4. front lead two no pic and two - huge - landscape 1`] = `
   <View
     style={
       Object {
-        "width": "18%",
+        "width": [Function],
       }
     }
   >
@@ -346,7 +194,7 @@ exports[`4. front lead two no pic and two - huge - landscape 1`] = `
   <View
     style={
       Object {
-        "width": "45%",
+        "width": [Function],
       }
     }
   >
@@ -362,106 +210,27 @@ exports[`4. front lead two no pic and two - huge - landscape 1`] = `
       </Text>
     </View>
   </View>
-</View>
+</TabletContentContainer>
 `;
 
-exports[`5. front lead two no pic and two - small - portrait 1`] = `
-<View>
-  <Text>
-    lead-1
-  </Text>
-  <View
-    style={
-      Object {
-        "borderBottomWidth": 1,
-        "borderColor": "#DBDBDB",
-        "borderStyle": "solid",
-      }
-    }
-  />
-  <Text>
-    lead-2
-  </Text>
-  <View
-    style={
-      Object {
-        "borderBottomWidth": 1,
-        "borderColor": "#DBDBDB",
-        "borderStyle": "solid",
-      }
-    }
-  />
-  <Text>
-    support-1
-  </Text>
-  <View
-    style={
-      Object {
-        "borderBottomWidth": 1,
-        "borderColor": "#DBDBDB",
-        "borderStyle": "solid",
-      }
-    }
-  />
-  <Text>
-    support-2
-  </Text>
-</View>
-`;
+exports[`5. front lead two no pic and two - small - portrait 1`] = `<VerticalLayout />`;
 
 exports[`6. front lead two no pic and two - medium - portrait 1`] = `
-<View
+<TabletContentContainer
   style={
     Object {
-      "alignSelf": "center",
-      "flex": 1,
-      "flexDirection": "row",
-      "justifyContent": "center",
       "marginHorizontal": 20,
       "marginTop": 20,
-      "width": 944,
     }
   }
 >
-  <View
+  <VerticalLayout
     style={
       Object {
-        "width": "41%",
+        "width": [Function],
       }
     }
-  >
-    <View
-      style={
-        Object {
-          "flex": 6,
-        }
-      }
-    >
-      <Text>
-        lead-1
-      </Text>
-    </View>
-    <View
-      style={
-        Object {
-          "borderBottomWidth": 1,
-          "borderColor": "#999999",
-          "borderStyle": "solid",
-        }
-      }
-    />
-    <View
-      style={
-        Object {
-          "flex": 4,
-        }
-      }
-    >
-      <Text>
-        lead-2
-      </Text>
-    </View>
-  </View>
+  />
   <View
     style={
       Object {
@@ -473,93 +242,32 @@ exports[`6. front lead two no pic and two - medium - portrait 1`] = `
       }
     }
   />
-  <View
+  <VerticalLayout
     style={
       Object {
-        "width": "58%",
+        "width": [Function],
       }
     }
-  >
-    <View
-      style={
-        Object {
-          "flex": 1,
-        }
-      }
-    >
-      <Text>
-        support-2
-      </Text>
-    </View>
-    <View
-      style={
-        Object {
-          "borderBottomWidth": 1,
-          "borderColor": "#999999",
-          "borderStyle": "solid",
-        }
-      }
-    />
-    <Text>
-      support-1
-    </Text>
-  </View>
-</View>
+  />
+</TabletContentContainer>
 `;
 
 exports[`7. front lead two no pic and two - wide - portrait 1`] = `
-<View
+<TabletContentContainer
   style={
     Object {
-      "alignSelf": "center",
-      "flex": 1,
-      "flexDirection": "row",
-      "justifyContent": "center",
       "marginHorizontal": 20,
       "marginTop": 20,
-      "width": 944,
     }
   }
 >
-  <View
+  <VerticalLayout
     style={
       Object {
-        "width": "41%",
+        "width": [Function],
       }
     }
-  >
-    <View
-      style={
-        Object {
-          "flex": 6,
-        }
-      }
-    >
-      <Text>
-        lead-1
-      </Text>
-    </View>
-    <View
-      style={
-        Object {
-          "borderBottomWidth": 1,
-          "borderColor": "#999999",
-          "borderStyle": "solid",
-        }
-      }
-    />
-    <View
-      style={
-        Object {
-          "flex": 4,
-        }
-      }
-    >
-      <Text>
-        lead-2
-      </Text>
-    </View>
-  </View>
+  />
   <View
     style={
       Object {
@@ -571,93 +279,32 @@ exports[`7. front lead two no pic and two - wide - portrait 1`] = `
       }
     }
   />
-  <View
+  <VerticalLayout
     style={
       Object {
-        "width": "58%",
+        "width": [Function],
       }
     }
-  >
-    <View
-      style={
-        Object {
-          "flex": 1,
-        }
-      }
-    >
-      <Text>
-        support-2
-      </Text>
-    </View>
-    <View
-      style={
-        Object {
-          "borderBottomWidth": 1,
-          "borderColor": "#999999",
-          "borderStyle": "solid",
-        }
-      }
-    />
-    <Text>
-      support-1
-    </Text>
-  </View>
-</View>
+  />
+</TabletContentContainer>
 `;
 
 exports[`8. front lead two no pic and two - huge - portrait 1`] = `
-<View
+<TabletContentContainer
   style={
     Object {
-      "alignSelf": "center",
-      "flex": 1,
-      "flexDirection": "row",
-      "justifyContent": "center",
       "marginHorizontal": 20,
       "marginTop": 20,
-      "width": 944,
     }
   }
 >
-  <View
+  <VerticalLayout
     style={
       Object {
-        "width": "41%",
+        "width": [Function],
       }
     }
-  >
-    <View
-      style={
-        Object {
-          "flex": 6,
-        }
-      }
-    >
-      <Text>
-        lead-1
-      </Text>
-    </View>
-    <View
-      style={
-        Object {
-          "borderBottomWidth": 1,
-          "borderColor": "#999999",
-          "borderStyle": "solid",
-        }
-      }
-    />
-    <View
-      style={
-        Object {
-          "flex": 4,
-        }
-      }
-    >
-      <Text>
-        lead-2
-      </Text>
-    </View>
-  </View>
+  />
   <View
     style={
       Object {
@@ -669,36 +316,12 @@ exports[`8. front lead two no pic and two - huge - portrait 1`] = `
       }
     }
   />
-  <View
+  <VerticalLayout
     style={
       Object {
-        "width": "58%",
+        "width": [Function],
       }
     }
-  >
-    <View
-      style={
-        Object {
-          "flex": 1,
-        }
-      }
-    >
-      <Text>
-        support-2
-      </Text>
-    </View>
-    <View
-      style={
-        Object {
-          "borderBottomWidth": 1,
-          "borderColor": "#999999",
-          "borderStyle": "solid",
-        }
-      }
-    />
-    <Text>
-      support-1
-    </Text>
-  </View>
-</View>
+  />
+</TabletContentContainer>
 `;

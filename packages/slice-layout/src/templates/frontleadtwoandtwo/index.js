@@ -24,6 +24,8 @@ const FrontLeadTwoNoPicAndTwoSlice = ({
   support1,
   support2,
 }) => {
+  const windowWidth = Dimensions.get("window").width;
+
   // TODO check what we want to do about small breakpoints?
   if (breakpoint === editionBreakpoints.small) {
     return <VerticalLayout tiles={[lead1, lead2, support1, support2]} />;
@@ -45,7 +47,6 @@ const FrontLeadTwoNoPicAndTwoSlice = ({
       {support2}
     </View>
   );
-  const windowWidth = Dimensions.get("window").width;
 
   if (orientation === "landscape") {
     return (
