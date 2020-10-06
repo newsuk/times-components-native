@@ -38,6 +38,11 @@ class MockImage {
         url:
           "//www.thetimes.co.uk/imageserver/image/%2Fmethode%2Ftimes%2Fprod%2Fweb%2Fbin%2F5a14c64e-06db-11e9-abe2-4909b2eb0130.jpg?crop=1434%2C1792%2C627%2C0",
       },
+      crop1251: {
+        ratio: "1.25:1",
+        url:
+          "//www.thetimes.co.uk/imageserver/image/%2Fmethode%2Ftimes%2Fprod%2Fweb%2Fbin%2F5a14c64e-06db-11e9-abe2-4909b2eb0130.jpg?crop=1434%2C1792%2C627%2C0",
+      },
       title: "Rise of centenarian drivers as elderly push on",
     };
   }

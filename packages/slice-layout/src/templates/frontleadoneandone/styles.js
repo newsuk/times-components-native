@@ -32,10 +32,42 @@ const sharedPortraitStyles = {
 };
 
 const sharedLandscapeStyles = {
-
+  row: { flex: 1, flexDirection: "row" },
+  colSeparatorStyle: {
+    borderColor: colours.functional.keyline,
+    marginTop: 0,
+  },
+  container: {
+    paddingTop: spacing(4),
+  },
+  leadContainer: {
+    width: columnToPercentage({ numberOfColumns: 6 }),
+  },
+  supportContainer: {
+    width: columnToPercentage({ numberOfColumns: 3 }),
+  },
+  inTodaysEditionContainer: {
+    marginLeft: spacing(2),
+    marginBottom: spacing(2),
+    width: columnToPercentage({ numberOfColumns: 3 }),
+  },
 };
 
 const styles = {
+  landscape: {
+    "1024": {
+      ...sharedLandscapeStyles,
+      inTodaysEditionContainer: {
+        ...sharedLandscapeStyles.inTodaysEditionContainer,
+      },
+    },
+    "1080": {
+      ...sharedLandscapeStyles,
+    },
+    "1366": {
+      ...sharedLandscapeStyles,
+    },
+  },
   portrait: {
     768: {
       ...sharedPortraitStyles,
@@ -69,17 +101,6 @@ const styles = {
         marginBottom: spacing(5),
         marginTop: spacing(2),
       },
-    },
-  },
-  landscape: {
-    "1024": {
-      ...sharedLandscapeStyles,
-    },
-    "1080": {
-      ...sharedLandscapeStyles,
-    },
-    "1366": {
-      ...sharedLandscapeStyles,
     },
   },
 };

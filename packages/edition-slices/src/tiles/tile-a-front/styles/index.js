@@ -11,14 +11,12 @@ const summary = {
   textAlign: "justify",
 };
 
-const strapline = {
-  fontFamily: fonts.headlineRegular,
-  color: colours.functional.primary,
-  fontSize: 24,
-  lineHeight: 26,
+const headline = {
+  ...globalSpacingStyles.tabletHeadline,
+  fontFamily: fonts.headline,
 };
 
-const sharedPortraitStyles = {
+const sharedStyles = {
   container: {
     paddingBottom: spacing(2),
     paddingRight: spacing(2),
@@ -31,18 +29,34 @@ const sharedPortraitStyles = {
 };
 
 const styles = {
-  portrait: {
-    768: {
-      ...sharedPortraitStyles,
+  landscape: {
+    1024: {
+      ...sharedStyles,
       headline: {
-        ...globalSpacingStyles.tabletHeadline,
-        fontFamily: fonts.headline,
+        ...headline,
         fontSize: 42,
         lineHeight: 42,
         marginBottom: spacing(1),
       },
-      strapline: {
-        ...strapline,
+    },
+    1080: {
+      ...sharedStyles,
+      headline: {
+        ...headline,
+        fontSize: 45,
+        lineHeight: 45,
+        marginBottom: spacing(1),
+      },
+    },
+  },
+  portrait: {
+    768: {
+      ...sharedStyles,
+      headline: {
+        ...headline,
+        fontSize: 42,
+        lineHeight: 42,
+        marginBottom: spacing(1),
       },
       summary: {
         ...summary,
@@ -51,16 +65,12 @@ const styles = {
       },
     },
     810: {
-      ...sharedPortraitStyles,
+      ...sharedStyles,
       headline: {
-        ...globalSpacingStyles.tabletHeadline,
-        fontFamily: fonts.headline,
+        ...headline,
         fontSize: 45,
         lineHeight: 45,
         marginBottom: spacing(1),
-      },
-      strapline: {
-        ...strapline,
       },
       summary: {
         ...summary,
@@ -69,20 +79,16 @@ const styles = {
       },
     },
     1024: {
-      ...sharedPortraitStyles,
+      ...sharedStyles,
       imageContainer: {
-        ...sharedPortraitStyles.imageContainer,
+        ...sharedStyles.imageContainer,
         marginBottom: spacing(3),
       },
       headline: {
-        ...globalSpacingStyles.tabletHeadline,
-        fontFamily: fonts.headline,
+        ...headline,
         fontSize: 55,
         lineHeight: 55,
         marginBottom: spacing(4),
-      },
-      strapline: {
-        ...strapline,
       },
       summary: {
         ...summary,

@@ -15,6 +15,18 @@ const commentSummary = {
   textAlign: "left",
 };
 
+const sharedLandscapeStyles = {
+  container: {
+    flex: 1,
+    padding: spacing(2),
+    paddingTop: 0,
+  },
+  imageContainer: {
+    width: "100%",
+    marginBottom: spacing(2),
+  },
+};
+
 const sharedPortraitStyles = {
   container: {
     flex: 1,
@@ -28,6 +40,23 @@ const sharedPortraitStyles = {
 };
 
 const styles = {
+  landscape: {
+    1024: {
+      ...sharedLandscapeStyles,
+      headline: {
+        ...globalSpacingStyles.tabletHeadline,
+        fontFamily: fonts.headline,
+        fontSize: 22,
+        lineHeight: 22,
+        marginBottom: spacing(2),
+      },
+      summary: {
+        ...summary,
+        fontSize: 14,
+        lineHeight: 20,
+      },
+    },
+  },
   portrait: {
     768: {
       ...sharedPortraitStyles,
