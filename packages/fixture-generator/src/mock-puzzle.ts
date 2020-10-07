@@ -17,6 +17,7 @@ class PuzzleImage {
       crop23: null,
       crop169: null,
       crop45: null,
+      crop1251: null,
     };
   }
 
