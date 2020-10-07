@@ -30,8 +30,8 @@ const sharedLandscapeStyles = {
 const sharedPortraitStyles = {
   container: {
     flex: 1,
-    padding: spacing(2),
-    paddingTop: 0,
+    paddingLeft: spacing(2),
+    paddingBottom: spacing(2),
   },
   imageContainer: {
     width: "100%",
@@ -53,6 +53,36 @@ const styles = {
       summary: {
         ...summary,
         fontSize: 14,
+        lineHeight: 20,
+      },
+    },
+    1080: {
+      ...sharedLandscapeStyles,
+      headline: {
+        ...globalSpacingStyles.tabletHeadline,
+        fontFamily: fonts.headline,
+        fontSize: 25,
+        lineHeight: 25,
+        marginBottom: spacing(2),
+      },
+      summary: {
+        ...summary,
+        fontSize: 14,
+        lineHeight: 20,
+      },
+    },
+    1366: {
+      ...sharedLandscapeStyles,
+      headline: {
+        ...globalSpacingStyles.tabletHeadline,
+        fontFamily: fonts.headline,
+        fontSize: 25,
+        lineHeight: 25,
+        marginBottom: spacing(2),
+      },
+      summary: {
+        ...summary,
+        fontSize: 15,
         lineHeight: 20,
       },
     },
@@ -85,7 +115,6 @@ const styles = {
         marginBottom: spacing(3),
       },
       summary: {
-        ...summary,
         fontSize: 15,
         lineHeight: 18,
       },

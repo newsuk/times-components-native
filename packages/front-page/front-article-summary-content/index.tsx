@@ -1,8 +1,7 @@
-import stylesFactory from "./styles";
+import styles from "./styles";
 import renderTrees from "@times-components-native/markup-forest/src/markup-forest";
 import { getRenderers } from "../front-renderer";
-import React, { useContext } from "react";
-import { ResponsiveContext } from "@times-components-native/responsive";
+import React from "react";
 import {
   BylineInput,
   Markup,
@@ -11,9 +10,7 @@ import {
 import { MeasureContainer } from "@times-components-native/front-page/MeasureContainer";
 import { ArticleColumns } from "@times-components-native/article-columns/article-columns";
 import { Text, TextStyle } from "react-native";
-import styles from "@times-components-native/article-summary/src/styles";
 import { transformContentForFront } from "@times-components-native/front-page/utils/transform-content-for-front";
-
 interface Props {
   summary: Markup;
   summaryStyle?: any;
@@ -21,45 +18,29 @@ interface Props {
   bylines: BylineInput[];
   template: TemplateType;
 }
-
 interface SummaryTextProps {
   ast: Markup;
   style: TextStyle;
   numberOfLines: number;
 }
-
 const SummaryText: React.FC<SummaryTextProps> = ({
   ast,
   style,
   numberOfLines,
 }) => {
   return ast.length > 0 ? (
-    <Text numberOfLines={numberOfLines} style={[styles.text, style]}>
+    <Text numberOfLines={numberOfLines} style={style}>
       {renderTrees(ast, getRenderers({ addNewLine: true }))}
     </Text>
   ) : null;
 };
-
 const FrontArticleSummaryContent: React.FC<Props> = (props) => {
   const { summary, summaryStyle, template, columnCount = 1 } = props;
-
-  // @ts-ignore
-  const { editionBreakpoint: breakpoint, orientation } = useContext(
-    ResponsiveContext,
-  );
-
   if (!summary) return null;
-
-  const styles = stylesFactory(breakpoint);
-
   const transformedAst = transformContentForFront(summary, template);
-
-  const textStyle =
-    orientation === "landscape" ? styles.textLandscape : styles.textPortrait;
-  const lineHeight = textStyle.lineHeight;
-  const style = [summaryStyle, textStyle] as TextStyle;
+  const style = { ...styles.summary, ...summaryStyle } as TextStyle;
+  const lineHeight = style.lineHeight || 20;
   const numberOfLinesToRender = (height: number) => height / lineHeight;
-
   if (columnCount > 1) {
     return (
       <MeasureContainer
@@ -77,7 +58,6 @@ const FrontArticleSummaryContent: React.FC<Props> = (props) => {
       />
     );
   }
-
   return (
     <MeasureContainer
       render={({ height }) => (
@@ -90,5 +70,4 @@ const FrontArticleSummaryContent: React.FC<Props> = (props) => {
     />
   );
 };
-
 export default FrontArticleSummaryContent;

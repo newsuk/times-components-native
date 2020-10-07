@@ -57,15 +57,23 @@ const styles = {
   landscape: {
     "1024": {
       ...sharedLandscapeStyles,
-      inTodaysEditionContainer: {
-        ...sharedLandscapeStyles.inTodaysEditionContainer,
-      },
-    },
-    "1080": {
-      ...sharedLandscapeStyles,
     },
     "1366": {
       ...sharedLandscapeStyles,
+      container: {
+        paddingTop: spacing(3),
+        paddingBottom: spacing(5),
+      },
+      leadContainer: {
+        width: columnToPercentage({ numberOfColumns: 7, totalColumns: 11 }),
+      },
+      supportContainer: {
+        width: columnToPercentage({ numberOfColumns: 2, totalColumns: 11 }),
+      },
+      inTodaysEditionContainer: {
+        ...sharedLandscapeStyles.inTodaysEditionContainer,
+        width: columnToPercentage({ numberOfColumns: 2, totalColumns: 11 }),
+      },
     },
   },
   portrait: {

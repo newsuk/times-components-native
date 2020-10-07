@@ -2,7 +2,6 @@ import {
   fonts,
   spacing,
   globalSpacingStyles,
-  colours,
 } from "@times-components-native/styleguide";
 import { getStyleByDeviceSize } from "@times-components-native/styleguide/src/styleguide";
 
@@ -45,6 +44,24 @@ const styles = {
         ...headline,
         fontSize: 45,
         lineHeight: 45,
+        marginBottom: spacing(2),
+      },
+    },
+    1112: {
+      ...sharedStyles,
+      headline: {
+        ...headline,
+        fontSize: 45,
+        lineHeight: 45,
+        marginBottom: spacing(1),
+      },
+    },
+    1366: {
+      ...sharedStyles,
+      headline: {
+        ...headline,
+        fontSize: 55,
+        lineHeight: 55,
         marginBottom: spacing(1),
       },
     },
@@ -68,14 +85,14 @@ const styles = {
       ...sharedStyles,
       headline: {
         ...headline,
-        fontSize: 45,
-        lineHeight: 45,
+        fontSize: 14,
+        lineHeight: 18,
         marginBottom: spacing(1),
       },
       summary: {
         ...summary,
         fontSize: 14,
-        lineHeight: 8,
+        lineHeight: 18,
       },
     },
     1024: {

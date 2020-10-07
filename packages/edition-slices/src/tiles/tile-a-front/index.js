@@ -13,8 +13,7 @@ const TileAFront = ({ onPress, tile, orientation }) => {
   const isPortrait = orientation === "portrait";
   const columnCount = isPortrait ? 3 : 1;
   const crop = isPortrait ? "crop32" : "crop1251";
-  const showSummary = !!isPortrait;
-
+  const showSummary = isPortrait || (1080 < windowWidth && windowWidth < 1366);
   const imageCrop = getTileImage(tile, crop);
   const styles = getStyle(orientation, windowWidth);
 
