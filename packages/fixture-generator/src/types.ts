@@ -2081,20 +2081,6 @@ export interface LeadTwoFrontSlice extends ArticleSlice {
   sections: Section[];
 }
 
-export interface LeadTwoNoPicandTwoFrontSlice extends ArticleSlice {
-  lead1: Tile;
-
-  lead2: Tile;
-
-  support1: Tile;
-
-  support2: Tile;
-
-  items: Tile[];
-
-  sections: Section[];
-}
-
 export interface LeadOneAndOneFrontSlice extends ArticleSlice {
   lead1: Tile;
 
@@ -2780,7 +2766,7 @@ export type Media = Image | Video;
 export type DraftTileArticle = Article | DraftArticle;
 
 export type FrontPageSectionSlice =
-  | LeadTwoNoPicandTwoFrontSlice
+  | LeadTwoFrontSlice
   | LeadOneAndOneFrontSlice
   | LeadOneFullWidthFrontSlice;
 

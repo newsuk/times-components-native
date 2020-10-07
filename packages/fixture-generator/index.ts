@@ -29,7 +29,6 @@ import mockEditionSlice, {
   mockSecondaryTwoNoPicAndTwoSlice,
   mockPuzzleSlice,
   mockLeadTwoFrontSlice,
-  mockLeadTwoNoPicAndTwoFrontSlice,
   mockLeadOneAndOneFrontSlice,
   mockLeadOneFullWidthFrontSlice,
 } from "./src/mock-slice";
@@ -68,7 +67,6 @@ export {
   MockTopic,
   mockPuzzleSlice,
   mockLeadTwoFrontSlice,
-  mockLeadTwoNoPicAndTwoFrontSlice,
   mockLeadOneAndOneFrontSlice,
   mockLeadOneFullWidthFrontSlice,
 };

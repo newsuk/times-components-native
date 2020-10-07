@@ -4,14 +4,12 @@ import Responsive from "@times-components-native/responsive";
 import {
   mockLeadOneAndOneFrontSlice,
   mockLeadTwoFrontSlice,
-  mockLeadTwoNoPicAndTwoFrontSlice,
   mockLeadOneFullWidthFrontSlice,
   mockInTodaysEditionSlice,
 } from "@times-components-native/fixture-generator";
 import {
   LeadOneAndOneFrontSlice,
   LeadTwoFrontSlice,
-  LeadTwoNoPicAndTwoFrontSlice,
   LeadOneFullWidthFrontSlice,
 } from "./src/slices";
 
@@ -35,11 +33,6 @@ const sliceStories = [
     mock: mockLeadTwoFrontSlice(),
     name: "Front Lead Two",
     Slice: LeadTwoFrontSlice,
-  },
-  {
-    mock: mockLeadTwoNoPicAndTwoFrontSlice(),
-    name: "Front Lead Two No Pic And Two",
-    Slice: LeadTwoNoPicAndTwoFrontSlice,
   },
   {
     mock: mockLeadOneAndOneFrontSlice(),

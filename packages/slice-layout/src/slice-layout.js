@@ -20,7 +20,6 @@ export {
   ItemRowSeparator,
   TabletContentContainer,
 } from "./templates/shared";
-export { default as FrontLeadTwoAndTwoSlice } from "./templates/frontleadtwoandtwo";
 export { default as FrontLeadOneAndOneSlice } from "./templates/frontleadoneandone";
 export { default as FrontLeadOneSlice } from "./templates/frontleadone";
 export { default as FrontLeadTwoSlice } from "./templates/frontleadtwo";

@@ -1,6 +1,6 @@
 import { Dimensions } from "react-native";
 
-import { calculateContentWidth } from "@times-components-native/utils";
+import calculateContentWidth from "@times-components-native/utils/src/calculate-content-width";
 
 type Options = {
   numberOfColumns: number;

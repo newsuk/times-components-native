@@ -22,7 +22,6 @@ import {
   mockListTwoAndSixNoPicSlice,
   mockLeadTwoFrontSlice,
   mockLeadOneAndOneFrontSlice,
-  mockLeadTwoNoPicAndTwoFrontSlice,
   mockLeadOneFullWidthFrontSlice,
   mockInTodaysEditionSlice,
 } from "@times-components-native/fixture-generator";
@@ -46,7 +45,6 @@ import {
   StandardSlice,
   ListTwoAndSixNoPicSlice,
   LeadTwoFrontSlice,
-  LeadTwoNoPicAndTwoFrontSlice,
   LeadOneAndOneFrontSlice,
   LeadOneFullWidthFrontSlice,
   TopSecondarySlice,
@@ -187,18 +185,6 @@ const slices = [
     sliceProps: {
       inTodaysEditionSlice: mockInTodaysEditionSlice(),
     },
-  },
-  {
-    mock: mockLeadTwoNoPicAndTwoFrontSlice(),
-    name: "front lead two no pic and two - landscape",
-    Slice: LeadTwoNoPicAndTwoFrontSlice,
-    orientation: "landscape",
-  },
-  {
-    mock: mockLeadTwoNoPicAndTwoFrontSlice(),
-    name: "front lead two no pic and two - portrait",
-    Slice: LeadTwoNoPicAndTwoFrontSlice,
-    orientation: "portrait",
   },
   {
     mock: mockLeadOneAndOneFrontSlice(),

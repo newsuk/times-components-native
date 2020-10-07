@@ -15,4 +15,3 @@ export { default as gqlRgbaToStyle } from "./src/gql-rgba-to-style";
 export { default as getSectionFromTiles } from "./src/get-section-from-tiles";
 export { default as appendToImageURL } from "./src/append-to-image-url";
 export { default as getAndroidNavHeight } from "./src/get-android-nav-height";
-export { default as calculateContentWidth } from "./src/calculate-content-width";

@@ -249,26 +249,6 @@ function mockLeadTwoFrontSlice(): LeadTwoFrontSliceWithName {
   };
 }
 
-function mockLeadTwoNoPicAndTwoFrontSlice(): LeadTwoNoPicAndTwoSliceWithName {
-  const tiles = getTiles(4);
-  const leadTile = {
-    ...tiles[0],
-    article: {
-      ...tiles[0].article,
-      content: new MockMarkup().addParagraphs(20).get(),
-    },
-  };
-
-  return <LeadTwoNoPicAndTwoSliceWithName>{
-    name: "LeadTwoNoPicAndTwoFrontSlice",
-    lead1: leadTile,
-    lead2: tiles[1],
-    support1: tiles[2],
-    support2: tiles[3],
-    items: [leadTile, ...tiles.slice(1)],
-  };
-}
-
 function mockLeadOneAndOneFrontSlice(): LeadOneAndOneSliceWithName {
   const tiles = getTiles(2);
   const leadTile = {
@@ -483,7 +463,6 @@ export {
   mockSecondaryTwoNoPicAndTwoSlice,
   mockPuzzleSlice,
   mockLeadTwoFrontSlice,
-  mockLeadTwoNoPicAndTwoFrontSlice,
   mockLeadOneAndOneFrontSlice,
   mockLeadOneFullWidthFrontSlice,
 };

@@ -1,6 +1,6 @@
 import React, { ReactNode } from "react";
 import { View, StyleProp, ViewStyle } from "react-native";
-import { calculateContentWidth } from "@times-components-native/utils";
+import calculateContentWidth from "@times-components-native/utils/src/calculate-content-width";
 
 type Props = {
   orientation: string;

@@ -1,10 +1,10 @@
+import "../mocks-tiles";
 import TestRenderer from "react-test-renderer";
 import React from "react";
 
 import { mockEditionSlice } from "@times-components-native/fixture-generator";
 import { getDimensions } from "@times-components-native/utils";
 import { TileGFront } from "../../src/tiles";
-import "../mocks-tiles";
 
 jest.mock("@times-components-native/utils", () => {
   const actualUtils = jest.requireActual("../../../utils");
