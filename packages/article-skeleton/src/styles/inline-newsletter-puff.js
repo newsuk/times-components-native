@@ -28,16 +28,6 @@ const smallBreakpointStyles = {
     textDecoration: "none",
     marginBottom: spacing(2),
   },
-  subscribedCopy: {
-    fontFamily: fonts.body,
-    fontSize: fontSizes.newsletterPuffCopy,
-    textAlign: "center",
-    color: colours.functional.primary,
-    marginBottom: spacing(1),
-    paddingVertical: 0,
-    paddingHorizontal: spacing(1),
-  },
-
   signUpContainer: {
     justifyContent: "center",
     padding: spacing(4),
