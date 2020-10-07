@@ -85,8 +85,8 @@ const styles = {
       ...sharedStyles,
       headline: {
         ...headline,
-        fontSize: 14,
-        lineHeight: 18,
+        fontSize: 45,
+        lineHeight: 45,
         marginBottom: spacing(1),
       },
       summary: {

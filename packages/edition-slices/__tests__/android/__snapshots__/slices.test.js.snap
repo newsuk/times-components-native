@@ -2892,6 +2892,7 @@ exports[`16. puzzle 1`] = `
       image={
         Object {
           "crop11": null,
+          "crop1251": null,
           "crop169": null,
           "crop23": null,
           "crop32": Object {
@@ -2912,6 +2913,7 @@ exports[`16. puzzle 1`] = `
       image={
         Object {
           "crop11": null,
+          "crop1251": null,
           "crop169": null,
           "crop23": null,
           "crop32": Object {
@@ -2932,6 +2934,7 @@ exports[`16. puzzle 1`] = `
       image={
         Object {
           "crop11": null,
+          "crop1251": null,
           "crop169": null,
           "crop23": null,
           "crop32": Object {
