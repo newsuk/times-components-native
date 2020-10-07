@@ -7,7 +7,7 @@ import {
 } from "@times-components-native/edition-slices/src/tiles";
 import InTodaysEdition from "@times-components-native/in-todays-edition";
 
-function renderMedium(props, breakpoint, orientation) {
+function renderMedium(props, orientation) {
   const {
     onPress,
     onLinkPress,
@@ -27,7 +27,6 @@ function renderMedium(props, breakpoint, orientation) {
       }
       support={
         <TileBFront
-          breakpoint={breakpoint}
           onPress={onPress}
           tile={support}
           tileName="support"
@@ -43,15 +42,13 @@ function renderMedium(props, breakpoint, orientation) {
           orientation={orientation}
         />
       }
-      breakpoint={breakpoint}
       orientation={orientation}
     />
   );
 }
 
 const FrontLeadOneAndOne = (props) => {
-  const renderSlice = (breakpoint, orientation) =>
-    renderMedium(props, breakpoint, orientation);
+  const renderSlice = (orientation) => renderMedium(props, orientation);
 
   return (
     <ResponsiveSlice

@@ -55,10 +55,10 @@ const sharedLandscapeStyles = {
 
 const styles = {
   landscape: {
-    "1024": {
+    1024: {
       ...sharedLandscapeStyles,
     },
-    "1366": {
+    1366: {
       ...sharedLandscapeStyles,
       container: {
         paddingTop: spacing(3),
