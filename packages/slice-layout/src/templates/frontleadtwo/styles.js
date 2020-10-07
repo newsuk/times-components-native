@@ -78,7 +78,7 @@ const calculateStyles = (orientation) => {
         container: {
           ...container,
           paddingTop: spacing(4),
-          paddingBottom: spacing(6),
+          paddingBottom: spacing(3),
         },
       },
       "1194": {
@@ -96,11 +96,25 @@ const calculateStyles = (orientation) => {
           paddingTop: spacing(4),
           paddingBottom: spacing(5),
         },
+        lead1Container: {
+          width: columnToPercentageWithOrientation({
+            numberOfColumns: 4,
+            totalColumns: 11,
+          }),
+        },
+        lead2Container: {
+          width: columnToPercentageWithOrientation({
+            numberOfColumns: 5,
+            totalColumns: 11,
+            numberOfMargins: 2,
+          }),
+        },
         inTodaysEditionContainer: {
           width: columnToPercentageWithOrientation({
             numberOfColumns: 2,
             totalColumns: 11,
           }),
+          paddingLeft: spacing(2),
         },
       },
     },

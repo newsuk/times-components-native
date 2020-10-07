@@ -78,7 +78,7 @@ const styles = {
         ...sharedHeadline,
         fontSize: 25,
         lineHeight: 25,
-        marginBottom: spacing(2),
+        marginBottom: spacing(1),
       },
     },
     "1366": {

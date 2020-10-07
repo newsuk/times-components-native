@@ -30,7 +30,7 @@ const sharedStyles = {
 const sharedLandscapeStyles = {
   ...sharedStyles,
   container: {
-    paddingBottom: spacing(2),
+    paddingBottom: 0,
     paddingRight: spacing(2),
     flex: 1,
   },
@@ -39,7 +39,7 @@ const sharedLandscapeStyles = {
 const sharedPortraitStyles = {
   ...sharedStyles,
   container: {
-    paddingBottom: spacing(2),
+    paddingBottom: 0,
     paddingRight: spacing(2),
     flex: 1,
   },
@@ -153,6 +153,10 @@ const styles = {
     },
     "834": {
       ...sharedPortraitStyles,
+      container: {
+        ...sharedPortraitStyles.container,
+        paddingBottom: spacing(1),
+      },
       headline: {
         ...sharedHeadline,
         fontSize: 30,
@@ -167,6 +171,10 @@ const styles = {
     },
     "1024": {
       ...sharedPortraitStyles,
+      container: {
+        ...sharedPortraitStyles.container,
+        paddingBottom: spacing(1),
+      },
       headline: {
         ...sharedHeadline,
         fontSize: 40,
