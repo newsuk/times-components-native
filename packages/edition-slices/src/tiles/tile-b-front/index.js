@@ -8,7 +8,7 @@ import { getStyle } from "./styles";
 
 const TileBFront = ({ onPress, tile, orientation }) => {
   const isPortrait = orientation === "portrait";
-  const showKeyline = !!isPortrait;
+  const showKeyline = isPortrait;
 
   const crop = getTileImage(tile, "crop32");
   const { width: windowWidth } = getDimensions();
