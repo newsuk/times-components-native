@@ -50,7 +50,7 @@ interface LeadOneAndTwoSliceWithName extends LeadOneAndTwoSlice {
   name: string;
 }
 
-interface LeadTwoSliceWithName extends LeadTwoFrontSlice {
+interface LeadTwoFrontSliceWithName extends LeadTwoFrontSlice {
   name: string;
 }
 
@@ -231,7 +231,7 @@ function mockLeadTwoNoPicAndTwoSlice(): LeadTwoNoPicAndTwoSliceWithName {
   };
 }
 
-function mockLeadTwoFrontSlice(): LeadTwoSliceWithName {
+function mockLeadTwoFrontSlice(): LeadTwoFrontSliceWithName {
   const tiles = getTiles(2);
   const leadTile = {
     ...tiles[0],
@@ -241,7 +241,7 @@ function mockLeadTwoFrontSlice(): LeadTwoSliceWithName {
     },
   };
 
-  return <LeadTwoSliceWithName>{
+  return <LeadTwoFrontSliceWithName>{
     name: "LeadTwoFrontSlice",
     lead1: leadTile,
     lead2: tiles[1],
