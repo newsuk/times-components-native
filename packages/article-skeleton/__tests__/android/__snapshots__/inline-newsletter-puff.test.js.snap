@@ -785,22 +785,7 @@ exports[`Inline Newsletter Puff renders the success view after subscribing:  med
         }
       }
     >
-      You’ve successfully signed up
-    </Text>
-    <Text
-      style={
-        Object {
-          "color": "#333333",
-          "fontFamily": "TimesDigitalW04",
-          "fontSize": 15,
-          "marginBottom": 5,
-          "paddingHorizontal": 20,
-          "paddingVertical": 0,
-          "textAlign": "center",
-        }
-      }
-    >
-      Congratulations you can now enjoy daily updates from Red Box.
+      You’ve successfully signed up to RED BOX
     </Text>
     <View
       style={
@@ -1062,22 +1047,7 @@ exports[`Inline Newsletter Puff renders the success view after subscribing:  sma
         }
       }
     >
-      You’ve successfully signed up
-    </Text>
-    <Text
-      style={
-        Object {
-          "color": "#333333",
-          "fontFamily": "TimesDigitalW04",
-          "fontSize": 15,
-          "marginBottom": 5,
-          "paddingHorizontal": 5,
-          "paddingVertical": 0,
-          "textAlign": "center",
-        }
-      }
-    >
-      Congratulations you can now enjoy daily updates from Red Box.
+      You’ve successfully signed up to RED BOX
     </Text>
     <View
       style={
@@ -1347,22 +1317,7 @@ exports[`Inline Newsletter Puff renders the success view after subscribing:  wid
         }
       }
     >
-      You’ve successfully signed up
-    </Text>
-    <Text
-      style={
-        Object {
-          "color": "#333333",
-          "fontFamily": "TimesDigitalW04",
-          "fontSize": 15,
-          "marginBottom": 5,
-          "paddingHorizontal": 20,
-          "paddingVertical": 0,
-          "textAlign": "center",
-        }
-      }
-    >
-      Congratulations you can now enjoy daily updates from Red Box.
+      You’ve successfully signed up to RED BOX
     </Text>
     <View
       style={
