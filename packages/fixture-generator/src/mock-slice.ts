@@ -21,6 +21,7 @@ import {
   SecondaryOneAndFourSlice,
   Puzzle,
   LeadOneFullWidthFrontSlice,
+  LeadTwoFrontSlice,
   PuffLiteInput,
 } from "./types";
 import MockPuzzle from "./mock-puzzle";
@@ -46,6 +47,10 @@ interface LeadOneAndOneSliceWithName extends LeadOneAndOneSlice {
 }
 
 interface LeadOneAndTwoSliceWithName extends LeadOneAndTwoSlice {
+  name: string;
+}
+
+interface LeadTwoFrontSliceWithName extends LeadTwoFrontSlice {
   name: string;
 }
 
@@ -226,8 +231,8 @@ function mockLeadTwoNoPicAndTwoSlice(): LeadTwoNoPicAndTwoSliceWithName {
   };
 }
 
-function mockLeadTwoNoPicAndTwoFrontSlice(): LeadTwoNoPicAndTwoSliceWithName {
-  const tiles = getTiles(4);
+function mockLeadTwoFrontSlice(): LeadTwoFrontSliceWithName {
+  const tiles = getTiles(2);
   const leadTile = {
     ...tiles[0],
     article: {
@@ -236,12 +241,10 @@ function mockLeadTwoNoPicAndTwoFrontSlice(): LeadTwoNoPicAndTwoSliceWithName {
     },
   };
 
-  return <LeadTwoNoPicAndTwoSliceWithName>{
-    name: "LeadTwoNoPicAndTwoFrontSlice",
+  return <LeadTwoFrontSliceWithName>{
+    name: "LeadTwoFrontSlice",
     lead1: leadTile,
     lead2: tiles[1],
-    support1: tiles[2],
-    support2: tiles[3],
     items: [leadTile, ...tiles.slice(1)],
   };
 }
@@ -459,7 +462,7 @@ export {
   mockSecondaryTwoAndTwoSlice,
   mockSecondaryTwoNoPicAndTwoSlice,
   mockPuzzleSlice,
-  mockLeadTwoNoPicAndTwoFrontSlice,
+  mockLeadTwoFrontSlice,
   mockLeadOneAndOneFrontSlice,
   mockLeadOneFullWidthFrontSlice,
 };

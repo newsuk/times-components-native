@@ -111,7 +111,7 @@ exports[`5. front lead one - landscape - 1024 1`] = `
       Array [
         Object {
           "style": Object {
-            "width": "50%",
+            "width": [Function],
           },
           "tile": <ExampleChild
             id="lead"
@@ -121,7 +121,7 @@ exports[`5. front lead one - landscape - 1024 1`] = `
         },
         Object {
           "style": Object {
-            "width": "24%",
+            "width": [Function],
           },
           "tile": <ExampleChild
             id="support"
@@ -133,7 +133,7 @@ exports[`5. front lead one - landscape - 1024 1`] = `
           "style": Object {
             "marginBottom": 10,
             "marginLeft": 10,
-            "width": "24%",
+            "width": [Function],
           },
           "tile": <ExampleChild
             id="inTheNews"
@@ -166,7 +166,7 @@ exports[`6. front lead one - landscape - 1080 1`] = `
       Array [
         Object {
           "style": Object {
-            "width": "50%",
+            "width": [Function],
           },
           "tile": <ExampleChild
             id="lead"
@@ -176,7 +176,7 @@ exports[`6. front lead one - landscape - 1080 1`] = `
         },
         Object {
           "style": Object {
-            "width": "24%",
+            "width": [Function],
           },
           "tile": <ExampleChild
             id="support"
@@ -188,7 +188,7 @@ exports[`6. front lead one - landscape - 1080 1`] = `
           "style": Object {
             "marginBottom": 10,
             "marginLeft": 10,
-            "width": "24%",
+            "width": [Function],
           },
           "tile": <ExampleChild
             id="inTheNews"
@@ -221,7 +221,7 @@ exports[`7. front lead one - landscape - 1366 1`] = `
       Array [
         Object {
           "style": Object {
-            "width": "64%",
+            "width": [Function],
           },
           "tile": <ExampleChild
             id="lead"
@@ -231,7 +231,7 @@ exports[`7. front lead one - landscape - 1366 1`] = `
         },
         Object {
           "style": Object {
-            "width": "17%",
+            "width": [Function],
           },
           "tile": <ExampleChild
             id="support"
@@ -243,7 +243,7 @@ exports[`7. front lead one - landscape - 1366 1`] = `
           "style": Object {
             "marginBottom": 10,
             "marginLeft": 10,
-            "width": "17%",
+            "width": [Function],
           },
           "tile": <ExampleChild
             id="inTheNews"

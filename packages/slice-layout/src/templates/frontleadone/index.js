@@ -11,7 +11,11 @@ const FrontLeadOneSlice = ({ orientation, lead, inTodaysEdition }) => {
 
   if (orientation === "landscape") {
     return (
-      <TabletContentContainer style={styles.container}>
+      <TabletContentContainer
+        orientation={orientation}
+        windowWidth={windowWidth}
+        style={styles.container}
+      >
         <HorizontalLayout
           containerStyle={styles.row}
           tiles={[
@@ -27,7 +31,11 @@ const FrontLeadOneSlice = ({ orientation, lead, inTodaysEdition }) => {
     );
   }
   return (
-    <TabletContentContainer style={styles.container}>
+    <TabletContentContainer
+      orientation={orientation}
+      windowWidth={windowWidth}
+      style={styles.container}
+    >
       <View style={styles.leadContainer}>{lead}</View>
       <View style={styles.inTodaysEditionContainer}>{inTodaysEdition}</View>
     </TabletContentContainer>

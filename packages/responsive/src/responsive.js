@@ -69,5 +69,6 @@ Responsive.defaultProps = {
 };
 
 const useResponsiveContext = () => useContext(ResponsiveContext);
-export default Responsive;
+
 export { ResponsiveContext, useResponsiveContext };
+export default Responsive;

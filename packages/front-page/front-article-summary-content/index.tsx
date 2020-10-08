@@ -36,8 +36,11 @@ const SummaryText: React.FC<SummaryTextProps> = ({
 };
 const FrontArticleSummaryContent: React.FC<Props> = (props) => {
   const { summary, summaryStyle, template, columnCount = 1 } = props;
+
   if (!summary) return null;
+
   const transformedAst = transformContentForFront(summary, template);
+
   const style = { ...styles.summary, ...summaryStyle } as TextStyle;
   const lineHeight = style.lineHeight || 20;
   const numberOfLinesToRender = (height: number) => height / lineHeight;

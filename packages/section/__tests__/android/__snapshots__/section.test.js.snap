@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Front Page section 1`] = `<LeadTwoNoPicAndTwoFrontSlice />`;
+exports[`Front Page section 1`] = `<LeadTwoFrontSlice />`;
 
 exports[`Sunday Times magazine section 1`] = `
 <RCTScrollView>
