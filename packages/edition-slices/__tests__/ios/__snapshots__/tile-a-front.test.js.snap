@@ -70,7 +70,7 @@ exports[`tile a front landscape 1024 1`] = `
         "fontFamily": "TimesModern-Bold",
         "fontSize": 42,
         "lineHeight": 42,
-        "marginBottom": 5,
+        "marginBottom": 10,
       }
     }
     summary={false}
@@ -1144,7 +1144,7 @@ exports[`tile a front landscape 1194 1`] = `
         "fontFamily": "TimesModern-Bold",
         "fontSize": 45,
         "lineHeight": 45,
-        "marginBottom": 5,
+        "marginBottom": 15,
       }
     }
     summary={
@@ -1728,7 +1728,7 @@ exports[`tile a front landscape 1366 1`] = `
         "fontFamily": "TimesModern-Bold",
         "fontSize": 55,
         "lineHeight": 55,
-        "marginBottom": 5,
+        "marginBottom": 15,
       }
     }
     summary={false}

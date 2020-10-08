@@ -17,7 +17,11 @@ const FrontLeadOneAndOneSlice = ({
 
   if (orientation === "landscape") {
     return (
-      <TabletContentContainer style={styles.container}>
+      <TabletContentContainer
+        orientation={orientation}
+        windowWidth={windowWidth}
+        style={styles.container}
+      >
         <HorizontalLayout
           containerStyle={styles.row}
           tiles={[
@@ -35,7 +39,11 @@ const FrontLeadOneAndOneSlice = ({
   }
 
   return (
-    <TabletContentContainer style={styles.container}>
+    <TabletContentContainer
+      orientation={orientation}
+      windowWidth={windowWidth}
+      style={styles.container}
+    >
       <View style={styles.tilesContainer}>
         <View style={styles.leftColumn}>{lead}</View>
         <ItemColSeparator style={styles.colSeparatorStyle} />

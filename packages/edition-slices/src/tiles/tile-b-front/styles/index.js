@@ -15,6 +15,18 @@ const commentSummary = {
   textAlign: "left",
 };
 
+const headlineLandscape = {
+  ...globalSpacingStyles.tabletHeadline,
+  fontFamily: fonts.headline,
+  marginBottom: spacing(2),
+};
+
+const headlinePortrait = {
+  ...globalSpacingStyles.tabletHeadline,
+  fontFamily: fonts.headline,
+  marginBottom: spacing(3),
+};
+
 const sharedLandscapeStyles = {
   container: {
     flex: 1,
@@ -35,20 +47,18 @@ const sharedPortraitStyles = {
   },
   imageContainer: {
     width: "100%",
-    marginBottom: spacing(2),
+    marginBottom: spacing(1),
   },
 };
 
 const styles = {
   landscape: {
-    1024: {
+    "1024": {
       ...sharedLandscapeStyles,
       headline: {
-        ...globalSpacingStyles.tabletHeadline,
-        fontFamily: fonts.headline,
+        ...headlineLandscape,
         fontSize: 22,
         lineHeight: 22,
-        marginBottom: spacing(2),
       },
       summary: {
         ...summary,
@@ -56,14 +66,12 @@ const styles = {
         lineHeight: 20,
       },
     },
-    1080: {
+    "1080": {
       ...sharedLandscapeStyles,
       headline: {
-        ...globalSpacingStyles.tabletHeadline,
-        fontFamily: fonts.headline,
+        ...headlineLandscape,
         fontSize: 25,
         lineHeight: 25,
-        marginBottom: spacing(2),
       },
       summary: {
         ...summary,
@@ -71,14 +79,12 @@ const styles = {
         lineHeight: 20,
       },
     },
-    1366: {
+    "1366": {
       ...sharedLandscapeStyles,
       headline: {
-        ...globalSpacingStyles.tabletHeadline,
-        fontFamily: fonts.headline,
+        ...headlineLandscape,
         fontSize: 25,
         lineHeight: 25,
-        marginBottom: spacing(2),
       },
       summary: {
         ...summary,
@@ -88,10 +94,10 @@ const styles = {
     },
   },
   portrait: {
-    768: {
+    "768": {
       ...sharedPortraitStyles,
       headline: {
-        fontFamily: fonts.headline,
+        ...headlinePortrait,
         fontSize: 22,
         lineHeight: 22,
       },
@@ -106,13 +112,16 @@ const styles = {
         lineHeight: 18,
       },
     },
-    1024: {
+    "1024": {
       ...sharedPortraitStyles,
+      imageContainer: {
+        ...sharedPortraitStyles.imageContainer,
+        marginBottom: spacing(2),
+      },
       headline: {
-        fontFamily: fonts.headline,
+        ...headlinePortrait,
         fontSize: 26,
         lineHeight: 26,
-        marginBottom: spacing(3),
       },
       summary: {
         fontSize: 15,

@@ -13,6 +13,12 @@ const summary = {
 const headline = {
   ...globalSpacingStyles.tabletHeadline,
   fontFamily: fonts.headline,
+  marginBottom: spacing(2),
+};
+
+const headlinePortrait = {
+  ...headline,
+  marginBottom: spacing(4),
 };
 
 const sharedStyles = {
@@ -29,51 +35,48 @@ const sharedStyles = {
 
 const styles = {
   landscape: {
-    1024: {
+    "1024": {
       ...sharedStyles,
       headline: {
         ...headline,
         fontSize: 42,
         lineHeight: 42,
-        marginBottom: spacing(1),
       },
     },
-    1080: {
+    "1080": {
       ...sharedStyles,
       headline: {
         ...headline,
         fontSize: 45,
         lineHeight: 45,
-        marginBottom: spacing(2),
       },
     },
-    1112: {
+    "1112": {
       ...sharedStyles,
       headline: {
         ...headline,
         fontSize: 45,
         lineHeight: 45,
-        marginBottom: spacing(1),
+        marginBottom: spacing(3),
       },
     },
-    1366: {
+    "1366": {
       ...sharedStyles,
       headline: {
         ...headline,
         fontSize: 55,
         lineHeight: 55,
-        marginBottom: spacing(1),
+        marginBottom: spacing(3),
       },
     },
   },
   portrait: {
-    768: {
+    "768": {
       ...sharedStyles,
       headline: {
-        ...headline,
+        ...headlinePortrait,
         fontSize: 42,
         lineHeight: 42,
-        marginBottom: spacing(1),
       },
       summary: {
         ...summary,
@@ -81,13 +84,12 @@ const styles = {
         lineHeight: 18,
       },
     },
-    810: {
+    "810": {
       ...sharedStyles,
       headline: {
-        ...headline,
+        ...headlinePortrait,
         fontSize: 45,
         lineHeight: 45,
-        marginBottom: spacing(1),
       },
       summary: {
         ...summary,
@@ -95,17 +97,16 @@ const styles = {
         lineHeight: 18,
       },
     },
-    1024: {
+    "1024": {
       ...sharedStyles,
       imageContainer: {
         ...sharedStyles.imageContainer,
         marginBottom: spacing(3),
       },
       headline: {
-        ...headline,
+        ...headlinePortrait,
         fontSize: 55,
         lineHeight: 55,
-        marginBottom: spacing(4),
       },
       summary: {
         ...summary,

@@ -75,6 +75,18 @@ export default (renderComponent) => {
       },
     },
     {
+      name: "front lead one - landscape - 1112",
+      test() {
+        testFrontSlice(renderComponent, 1112, "landscape");
+      },
+    },
+    {
+      name: "front lead one - landscape - 1194",
+      test() {
+        testFrontSlice(renderComponent, 1194, "landscape");
+      },
+    },
+    {
       name: "front lead one - landscape - 1366",
       test() {
         testFrontSlice(renderComponent, 1366, "landscape");

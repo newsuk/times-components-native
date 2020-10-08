@@ -1,7 +1,10 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`1. front lead one - portrait - 768 1`] = `
-<TabletContentContainer>
+<TabletContentContainer
+  orientation="portrait"
+  windowWidth={768}
+>
   <View>
     <View>
       <Text>
@@ -24,7 +27,10 @@ exports[`1. front lead one - portrait - 768 1`] = `
 `;
 
 exports[`2. front lead one - portrait - 810 1`] = `
-<TabletContentContainer>
+<TabletContentContainer
+  orientation="portrait"
+  windowWidth={810}
+>
   <View>
     <View>
       <Text>
@@ -47,7 +53,10 @@ exports[`2. front lead one - portrait - 810 1`] = `
 `;
 
 exports[`3. front lead one - portrait - 834 1`] = `
-<TabletContentContainer>
+<TabletContentContainer
+  orientation="portrait"
+  windowWidth={834}
+>
   <View>
     <View>
       <Text>
@@ -70,7 +79,10 @@ exports[`3. front lead one - portrait - 834 1`] = `
 `;
 
 exports[`4. front lead one - portrait - 1024 1`] = `
-<TabletContentContainer>
+<TabletContentContainer
+  orientation="portrait"
+  windowWidth={1024}
+>
   <View>
     <View>
       <Text>
@@ -93,7 +105,10 @@ exports[`4. front lead one - portrait - 1024 1`] = `
 `;
 
 exports[`5. front lead one - landscape - 1024 1`] = `
-<TabletContentContainer>
+<TabletContentContainer
+  orientation="landscape"
+  windowWidth={1024}
+>
   <HorizontalLayout
     colSeparatorStyle={
       Object {
@@ -111,7 +126,7 @@ exports[`5. front lead one - landscape - 1024 1`] = `
       Array [
         Object {
           "style": Object {
-            "width": [Function],
+            "width": "49.94703389830508%",
           },
           "tile": <ExampleChild
             id="lead"
@@ -121,7 +136,7 @@ exports[`5. front lead one - landscape - 1024 1`] = `
         },
         Object {
           "style": Object {
-            "width": [Function],
+            "width": "24.390889830508474%",
           },
           "tile": <ExampleChild
             id="support"
@@ -131,9 +146,8 @@ exports[`5. front lead one - landscape - 1024 1`] = `
         },
         Object {
           "style": Object {
-            "marginBottom": 10,
             "marginLeft": 10,
-            "width": [Function],
+            "width": "24.390889830508474%",
           },
           "tile": <ExampleChild
             id="inTheNews"
@@ -148,7 +162,10 @@ exports[`5. front lead one - landscape - 1024 1`] = `
 `;
 
 exports[`6. front lead one - landscape - 1080 1`] = `
-<TabletContentContainer>
+<TabletContentContainer
+  orientation="landscape"
+  windowWidth={1080}
+>
   <HorizontalLayout
     colSeparatorStyle={
       Object {
@@ -166,7 +183,7 @@ exports[`6. front lead one - landscape - 1080 1`] = `
       Array [
         Object {
           "style": Object {
-            "width": [Function],
+            "width": "49.94703389830508%",
           },
           "tile": <ExampleChild
             id="lead"
@@ -176,7 +193,7 @@ exports[`6. front lead one - landscape - 1080 1`] = `
         },
         Object {
           "style": Object {
-            "width": [Function],
+            "width": "24.390889830508474%",
           },
           "tile": <ExampleChild
             id="support"
@@ -186,9 +203,8 @@ exports[`6. front lead one - landscape - 1080 1`] = `
         },
         Object {
           "style": Object {
-            "marginBottom": 10,
             "marginLeft": 10,
-            "width": [Function],
+            "width": "24.390889830508474%",
           },
           "tile": <ExampleChild
             id="inTheNews"
@@ -202,8 +218,11 @@ exports[`6. front lead one - landscape - 1080 1`] = `
 </TabletContentContainer>
 `;
 
-exports[`7. front lead one - landscape - 1366 1`] = `
-<TabletContentContainer>
+exports[`7. front lead one - landscape - 1112 1`] = `
+<TabletContentContainer
+  orientation="landscape"
+  windowWidth={1112}
+>
   <HorizontalLayout
     colSeparatorStyle={
       Object {
@@ -221,7 +240,7 @@ exports[`7. front lead one - landscape - 1366 1`] = `
       Array [
         Object {
           "style": Object {
-            "width": [Function],
+            "width": "49.94703389830508%",
           },
           "tile": <ExampleChild
             id="lead"
@@ -231,7 +250,7 @@ exports[`7. front lead one - landscape - 1366 1`] = `
         },
         Object {
           "style": Object {
-            "width": [Function],
+            "width": "24.390889830508474%",
           },
           "tile": <ExampleChild
             id="support"
@@ -241,9 +260,122 @@ exports[`7. front lead one - landscape - 1366 1`] = `
         },
         Object {
           "style": Object {
-            "marginBottom": 10,
             "marginLeft": 10,
-            "width": [Function],
+            "width": "24.390889830508474%",
+          },
+          "tile": <ExampleChild
+            id="inTheNews"
+          >
+            inTheNews
+          </ExampleChild>,
+        },
+      ]
+    }
+  />
+</TabletContentContainer>
+`;
+
+exports[`8. front lead one - landscape - 1194 1`] = `
+<TabletContentContainer
+  orientation="landscape"
+  windowWidth={1194}
+>
+  <HorizontalLayout
+    colSeparatorStyle={
+      Object {
+        "borderColor": "#DBDBDB",
+        "marginTop": 0,
+      }
+    }
+    containerStyle={
+      Object {
+        "flex": 1,
+        "flexDirection": "row",
+      }
+    }
+    tiles={
+      Array [
+        Object {
+          "style": Object {
+            "width": "49.94703389830508%",
+          },
+          "tile": <ExampleChild
+            id="lead"
+          >
+            lead
+          </ExampleChild>,
+        },
+        Object {
+          "style": Object {
+            "width": "24.390889830508474%",
+          },
+          "tile": <ExampleChild
+            id="support"
+          >
+            support
+          </ExampleChild>,
+        },
+        Object {
+          "style": Object {
+            "marginLeft": 10,
+            "width": "24.390889830508474%",
+          },
+          "tile": <ExampleChild
+            id="inTheNews"
+          >
+            inTheNews
+          </ExampleChild>,
+        },
+      ]
+    }
+  />
+</TabletContentContainer>
+`;
+
+exports[`9. front lead one - landscape - 1366 1`] = `
+<TabletContentContainer
+  orientation="landscape"
+  windowWidth={1366}
+>
+  <HorizontalLayout
+    colSeparatorStyle={
+      Object {
+        "borderColor": "#DBDBDB",
+        "marginTop": 0,
+      }
+    }
+    containerStyle={
+      Object {
+        "flex": 1,
+        "flexDirection": "row",
+      }
+    }
+    tiles={
+      Array [
+        Object {
+          "style": Object {
+            "width": "63.886748844375965%",
+          },
+          "tile": <ExampleChild
+            id="lead"
+          >
+            lead
+          </ExampleChild>,
+        },
+        Object {
+          "style": Object {
+            "width": "17.421032357473038%",
+          },
+          "tile": <ExampleChild
+            id="support"
+          >
+            support
+          </ExampleChild>,
+        },
+        Object {
+          "style": Object {
+            "marginLeft": 10,
+            "width": "17.421032357473038%",
           },
           "tile": <ExampleChild
             id="inTheNews"
