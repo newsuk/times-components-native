@@ -1829,7 +1829,7 @@ exports[`22. puzzle - medium 1`] = `
 </View>
 `;
 
-exports[`23. front lead two no pic and two - landscape - medium 1`] = `
+exports[`23. front lead two - portrait - medium 1`] = `
 <View
   style={
     Object {
@@ -1848,99 +1848,37 @@ exports[`23. front lead two no pic and two - landscape - medium 1`] = `
         "flex": 1,
         "flexDirection": "row",
         "justifyContent": "center",
-        "paddingTop": 15,
-        "width": 944,
+        "marginBottom": 56,
+        "width": 688,
       }
     }
   >
-    <View
-      style={
-        Object {
-          "width": "41%",
-        }
-      }
-    >
-      <View
-        style={
-          Object {
-            "flex": 6,
-          }
-        }
-      >
-        <TileXFront />
+    <View>
+      <View>
+        <TileHFront />
       </View>
       <View
         style={
           Object {
-            "borderBottomWidth": 1,
-            "borderColor": "#999999",
+            "borderColor": "#DBDBDB",
+            "borderRightWidth": 1,
             "borderStyle": "solid",
+            "marginVertical": 10,
           }
         }
       />
-      <View
-        style={
-          Object {
-            "flex": 4,
-          }
-        }
-      >
-        <TileYFront />
+      <View>
+        <TileGFront />
       </View>
     </View>
-    <View
-      style={
-        Object {
-          "borderColor": "#999999",
-          "borderRightWidth": 1,
-          "borderStyle": "solid",
-          "marginTop": 0,
-          "marginVertical": 10,
-        }
-      }
-    />
-    <View
-      style={
-        Object {
-          "width": "17%",
-        }
-      }
-    >
-      <TileALFront />
-    </View>
-    <View
-      style={
-        Object {
-          "borderColor": "#999999",
-          "borderRightWidth": 1,
-          "borderStyle": "solid",
-          "marginTop": 0,
-          "marginVertical": 10,
-        }
-      }
-    />
-    <View
-      style={
-        Object {
-          "width": "41%",
-        }
-      }
-    >
-      <View
-        style={
-          Object {
-            "flex": 1,
-          }
-        }
-      >
-        <TileEFront />
-      </View>
+    <View>
+      <InTodaysEdition />
     </View>
   </View>
 </View>
 `;
 
-exports[`24. front lead two no pic and two - portrait - medium 1`] = `
+exports[`24. front lead two - landscape - medium 1`] = `
 <View
   style={
     Object {
@@ -1959,85 +1897,41 @@ exports[`24. front lead two no pic and two - portrait - medium 1`] = `
         "flex": 1,
         "flexDirection": "row",
         "justifyContent": "center",
-        "marginHorizontal": 20,
-        "marginTop": 20,
-        "paddingBottom": 56,
-        "width": 688,
+        "marginBottom": 56,
+        "width": 944,
       }
     }
   >
-    <View
-      style={
-        Object {
-          "width": "41%",
-        }
-      }
-    >
-      <View
-        style={
-          Object {
-            "flex": 6,
-          }
-        }
-      >
-        <TileXFront />
+    <View>
+      <View>
+        <TileHFront />
       </View>
       <View
         style={
           Object {
-            "borderBottomWidth": 1,
-            "borderColor": "#999999",
+            "borderColor": "#DBDBDB",
+            "borderRightWidth": 1,
             "borderStyle": "solid",
+            "marginVertical": 10,
           }
         }
       />
-      <View
-        style={
-          Object {
-            "flex": 4,
-          }
-        }
-      >
-        <TileYFront />
-      </View>
-    </View>
-    <View
-      style={
-        Object {
-          "borderColor": "#999999",
-          "borderRightWidth": 1,
-          "borderStyle": "solid",
-          "marginTop": 0,
-          "marginVertical": 10,
-        }
-      }
-    />
-    <View
-      style={
-        Object {
-          "width": "58%",
-        }
-      }
-    >
-      <View
-        style={
-          Object {
-            "flex": 1,
-          }
-        }
-      >
-        <TileEFront />
+      <View>
+        <TileGFront />
       </View>
       <View
         style={
           Object {
-            "borderBottomWidth": 1,
-            "borderColor": "#999999",
+            "borderColor": "#DBDBDB",
+            "borderRightWidth": 1,
             "borderStyle": "solid",
+            "marginVertical": 10,
           }
         }
       />
-      <TileDFront />
+      <View>
+        <InTodaysEdition />
+      </View>
     </View>
   </View>
 </View>
@@ -4485,7 +4379,7 @@ exports[`56. puzzle - wide 1`] = `
 </View>
 `;
 
-exports[`57. front lead two no pic and two - landscape - wide 1`] = `
+exports[`57. front lead two - portrait - wide 1`] = `
 <View
   style={
     Object {
@@ -4504,99 +4398,37 @@ exports[`57. front lead two no pic and two - landscape - wide 1`] = `
         "flex": 1,
         "flexDirection": "row",
         "justifyContent": "center",
-        "paddingTop": 15,
-        "width": 944,
+        "marginBottom": 56,
+        "width": 688,
       }
     }
   >
-    <View
-      style={
-        Object {
-          "width": "41%",
-        }
-      }
-    >
-      <View
-        style={
-          Object {
-            "flex": 6,
-          }
-        }
-      >
-        <TileXFront />
+    <View>
+      <View>
+        <TileHFront />
       </View>
       <View
         style={
           Object {
-            "borderBottomWidth": 1,
-            "borderColor": "#999999",
+            "borderColor": "#DBDBDB",
+            "borderRightWidth": 1,
             "borderStyle": "solid",
+            "marginVertical": 10,
           }
         }
       />
-      <View
-        style={
-          Object {
-            "flex": 4,
-          }
-        }
-      >
-        <TileYFront />
+      <View>
+        <TileGFront />
       </View>
     </View>
-    <View
-      style={
-        Object {
-          "borderColor": "#999999",
-          "borderRightWidth": 1,
-          "borderStyle": "solid",
-          "marginTop": 0,
-          "marginVertical": 10,
-        }
-      }
-    />
-    <View
-      style={
-        Object {
-          "width": "17%",
-        }
-      }
-    >
-      <TileALFront />
-    </View>
-    <View
-      style={
-        Object {
-          "borderColor": "#999999",
-          "borderRightWidth": 1,
-          "borderStyle": "solid",
-          "marginTop": 0,
-          "marginVertical": 10,
-        }
-      }
-    />
-    <View
-      style={
-        Object {
-          "width": "41%",
-        }
-      }
-    >
-      <View
-        style={
-          Object {
-            "flex": 1,
-          }
-        }
-      >
-        <TileEFront />
-      </View>
+    <View>
+      <InTodaysEdition />
     </View>
   </View>
 </View>
 `;
 
-exports[`58. front lead two no pic and two - portrait - wide 1`] = `
+exports[`58. front lead two - landscape - wide 1`] = `
 <View
   style={
     Object {
@@ -4615,85 +4447,41 @@ exports[`58. front lead two no pic and two - portrait - wide 1`] = `
         "flex": 1,
         "flexDirection": "row",
         "justifyContent": "center",
-        "marginHorizontal": 20,
-        "marginTop": 20,
-        "paddingBottom": 56,
-        "width": 920,
+        "marginBottom": 56,
+        "width": 944,
       }
     }
   >
-    <View
-      style={
-        Object {
-          "width": "41%",
-        }
-      }
-    >
-      <View
-        style={
-          Object {
-            "flex": 6,
-          }
-        }
-      >
-        <TileXFront />
+    <View>
+      <View>
+        <TileHFront />
       </View>
       <View
         style={
           Object {
-            "borderBottomWidth": 1,
-            "borderColor": "#999999",
+            "borderColor": "#DBDBDB",
+            "borderRightWidth": 1,
             "borderStyle": "solid",
+            "marginVertical": 10,
           }
         }
       />
-      <View
-        style={
-          Object {
-            "flex": 4,
-          }
-        }
-      >
-        <TileYFront />
-      </View>
-    </View>
-    <View
-      style={
-        Object {
-          "borderColor": "#999999",
-          "borderRightWidth": 1,
-          "borderStyle": "solid",
-          "marginTop": 0,
-          "marginVertical": 10,
-        }
-      }
-    />
-    <View
-      style={
-        Object {
-          "width": "58%",
-        }
-      }
-    >
-      <View
-        style={
-          Object {
-            "flex": 1,
-          }
-        }
-      >
-        <TileEFront />
+      <View>
+        <TileGFront />
       </View>
       <View
         style={
           Object {
-            "borderBottomWidth": 1,
-            "borderColor": "#999999",
+            "borderColor": "#DBDBDB",
+            "borderRightWidth": 1,
             "borderStyle": "solid",
+            "marginVertical": 10,
           }
         }
       />
-      <TileDFront />
+      <View>
+        <InTodaysEdition />
+      </View>
     </View>
   </View>
 </View>
@@ -4896,7 +4684,7 @@ exports[`62. front lead one - landscape - wide 1`] = `
       <View
         style={
           Object {
-            "width": "75%",
+            "width": "75.5031779661017%",
           }
         }
       >
@@ -4916,7 +4704,7 @@ exports[`62. front lead one - landscape - wide 1`] = `
         style={
           Object {
             "marginLeft": 10,
-            "width": "24%",
+            "width": "24.390889830508474%",
           }
         }
       >
@@ -7364,7 +7152,7 @@ exports[`90. puzzle - huge 1`] = `
 </View>
 `;
 
-exports[`91. front lead two no pic and two - landscape - huge 1`] = `
+exports[`91. front lead two - portrait - huge 1`] = `
 <View
   style={
     Object {
@@ -7392,100 +7180,38 @@ exports[`91. front lead two no pic and two - landscape - huge 1`] = `
           "flex": 1,
           "flexDirection": "row",
           "justifyContent": "center",
-          "paddingTop": 15,
-          "width": 1180,
+          "marginBottom": 56,
+          "width": 688,
         }
       }
     >
-      <View
-        style={
-          Object {
-            "width": "35%",
-          }
-        }
-      >
-        <View
-          style={
-            Object {
-              "flex": 6,
-            }
-          }
-        >
-          <TileXFront />
+      <View>
+        <View>
+          <TileHFront />
         </View>
         <View
           style={
             Object {
-              "borderBottomWidth": 1,
-              "borderColor": "#999999",
+              "borderColor": "#DBDBDB",
+              "borderRightWidth": 1,
               "borderStyle": "solid",
+              "marginVertical": 10,
             }
           }
         />
-        <View
-          style={
-            Object {
-              "flex": 4,
-            }
-          }
-        >
-          <TileYFront />
+        <View>
+          <TileGFront />
         </View>
       </View>
-      <View
-        style={
-          Object {
-            "borderColor": "#999999",
-            "borderRightWidth": 1,
-            "borderStyle": "solid",
-            "marginTop": 0,
-            "marginVertical": 10,
-          }
-        }
-      />
-      <View
-        style={
-          Object {
-            "width": "18%",
-          }
-        }
-      >
-        <TileALFront />
-      </View>
-      <View
-        style={
-          Object {
-            "borderColor": "#999999",
-            "borderRightWidth": 1,
-            "borderStyle": "solid",
-            "marginTop": 0,
-            "marginVertical": 10,
-          }
-        }
-      />
-      <View
-        style={
-          Object {
-            "width": "45%",
-          }
-        }
-      >
-        <View
-          style={
-            Object {
-              "flex": 1,
-            }
-          }
-        >
-          <TileEFront />
-        </View>
+      <View>
+        <InTodaysEdition />
       </View>
     </View>
   </View>
 </View>
 `;
 
-exports[`92. front lead two no pic and two - portrait - huge 1`] = `
+exports[`92. front lead two - landscape - huge 1`] = `
 <View
   style={
     Object {
@@ -7513,85 +7239,41 @@ exports[`92. front lead two no pic and two - portrait - huge 1`] = `
           "flex": 1,
           "flexDirection": "row",
           "justifyContent": "center",
-          "marginHorizontal": 20,
-          "marginTop": 20,
-          "paddingBottom": 56,
-          "width": 920,
+          "marginBottom": 56,
+          "width": 944,
         }
       }
     >
-      <View
-        style={
-          Object {
-            "width": "41%",
-          }
-        }
-      >
-        <View
-          style={
-            Object {
-              "flex": 6,
-            }
-          }
-        >
-          <TileXFront />
+      <View>
+        <View>
+          <TileHFront />
         </View>
         <View
           style={
             Object {
-              "borderBottomWidth": 1,
-              "borderColor": "#999999",
+              "borderColor": "#DBDBDB",
+              "borderRightWidth": 1,
               "borderStyle": "solid",
+              "marginVertical": 10,
             }
           }
         />
-        <View
-          style={
-            Object {
-              "flex": 4,
-            }
-          }
-        >
-          <TileYFront />
-        </View>
-      </View>
-      <View
-        style={
-          Object {
-            "borderColor": "#999999",
-            "borderRightWidth": 1,
-            "borderStyle": "solid",
-            "marginTop": 0,
-            "marginVertical": 10,
-          }
-        }
-      />
-      <View
-        style={
-          Object {
-            "width": "58%",
-          }
-        }
-      >
-        <View
-          style={
-            Object {
-              "flex": 1,
-            }
-          }
-        >
-          <TileEFront />
+        <View>
+          <TileGFront />
         </View>
         <View
           style={
             Object {
-              "borderBottomWidth": 1,
-              "borderColor": "#999999",
+              "borderColor": "#DBDBDB",
+              "borderRightWidth": 1,
               "borderStyle": "solid",
+              "marginVertical": 10,
             }
           }
         />
-        <TileDFront />
+        <View>
+          <InTodaysEdition />
+        </View>
       </View>
     </View>
   </View>
@@ -7835,7 +7517,7 @@ exports[`96. front lead one - landscape - huge 1`] = `
         <View
           style={
             Object {
-              "width": "82%",
+              "width": "82.47303543913715%",
             }
           }
         >
@@ -7855,7 +7537,7 @@ exports[`96. front lead one - landscape - huge 1`] = `
           style={
             Object {
               "marginLeft": 10,
-              "width": "17%",
+              "width": "17.421032357473038%",
             }
           }
         >

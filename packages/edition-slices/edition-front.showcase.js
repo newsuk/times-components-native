@@ -3,13 +3,13 @@ import { View } from "react-native";
 import Responsive from "@times-components-native/responsive";
 import {
   mockLeadOneAndOneFrontSlice,
-  mockLeadTwoNoPicAndTwoFrontSlice,
+  mockLeadTwoFrontSlice,
   mockLeadOneFullWidthFrontSlice,
   mockInTodaysEditionSlice,
 } from "@times-components-native/fixture-generator";
 import {
   LeadOneAndOneFrontSlice,
-  LeadTwoNoPicAndTwoFrontSlice,
+  LeadTwoFrontSlice,
   LeadOneFullWidthFrontSlice,
 } from "./src/slices";
 
@@ -30,9 +30,9 @@ const renderSlice = (Component, data) => () => {
 };
 const sliceStories = [
   {
-    mock: mockLeadTwoNoPicAndTwoFrontSlice(),
-    name: "Front Lead Two No Pic And Two",
-    Slice: LeadTwoNoPicAndTwoFrontSlice,
+    mock: mockLeadTwoFrontSlice(),
+    name: "Front Lead Two",
+    Slice: LeadTwoFrontSlice,
   },
   {
     mock: mockLeadOneAndOneFrontSlice(),

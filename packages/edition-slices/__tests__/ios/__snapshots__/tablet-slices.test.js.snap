@@ -762,97 +762,60 @@ exports[`22. puzzle - medium 1`] = `
 </View>
 `;
 
-exports[`23. front lead two no pic and two - landscape - medium 1`] = `
+exports[`23. front lead two - portrait - medium 1`] = `
 <View>
   <View>
     <View>
-      <View
-        tileName="lead1"
-      >
-        <TileXFront
-          breakpoint="medium"
-          orientation="landscape"
+      <View>
+        <TileHFront
+          orientation="portrait"
           tileName="lead1"
         />
       </View>
       <View />
-      <View
-        tileName="lead2"
-      >
-        <TileYFront
-          breakpoint="medium"
-          orientation="landscape"
+      <View>
+        <TileGFront
+          orientation="portrait"
+          showByline={false}
+          showSummary={false}
           tileName="lead2"
         />
       </View>
     </View>
-    <View />
     <View>
-      <TileALFront
-        breakpoint="medium"
-        tileName="support1"
+      <InTodaysEdition
+        orientation="portrait"
       />
-    </View>
-    <View />
-    <View>
-      <View
-        tileName="support2"
-      >
-        <TileEFront
-          breakpoint="medium"
-          orientation="landscape"
-          showByline={false}
-          showSummary={false}
-          tileName="support2"
-        />
-      </View>
     </View>
   </View>
 </View>
 `;
 
-exports[`24. front lead two no pic and two - portrait - medium 1`] = `
+exports[`24. front lead two - landscape - medium 1`] = `
 <View>
   <View>
     <View>
-      <View
-        tileName="lead1"
-      >
-        <TileXFront
-          breakpoint="medium"
-          orientation="portrait"
+      <View>
+        <TileHFront
+          orientation="landscape"
           tileName="lead1"
         />
       </View>
       <View />
-      <View
-        tileName="lead2"
-      >
-        <TileYFront
-          breakpoint="medium"
-          orientation="portrait"
+      <View>
+        <TileGFront
+          orientation="landscape"
+          showByline={false}
+          showSummary={false}
           tileName="lead2"
         />
       </View>
-    </View>
-    <View />
-    <View>
-      <View
-        tileName="support2"
-      >
-        <TileEFront
-          breakpoint="medium"
-          orientation="portrait"
-          showByline={true}
-          showSummary={true}
-          tileName="support2"
+      <View />
+      <View>
+        <InTodaysEdition
+          orientation="landscape"
         />
       </View>
-      <View />
-      <TileDFront
-        breakpoint="medium"
-        tileName="support1"
-      />
     </View>
   </View>
 </View>
@@ -1891,97 +1854,60 @@ exports[`56. puzzle - wide 1`] = `
 </View>
 `;
 
-exports[`57. front lead two no pic and two - landscape - wide 1`] = `
+exports[`57. front lead two - portrait - wide 1`] = `
 <View>
   <View>
     <View>
-      <View
-        tileName="lead1"
-      >
-        <TileXFront
-          breakpoint="wide"
-          orientation="landscape"
+      <View>
+        <TileHFront
+          orientation="portrait"
           tileName="lead1"
         />
       </View>
       <View />
-      <View
-        tileName="lead2"
-      >
-        <TileYFront
-          breakpoint="wide"
-          orientation="landscape"
+      <View>
+        <TileGFront
+          orientation="portrait"
+          showByline={true}
+          showSummary={false}
           tileName="lead2"
         />
       </View>
     </View>
-    <View />
     <View>
-      <TileALFront
-        breakpoint="wide"
-        tileName="support1"
+      <InTodaysEdition
+        orientation="portrait"
       />
-    </View>
-    <View />
-    <View>
-      <View
-        tileName="support2"
-      >
-        <TileEFront
-          breakpoint="wide"
-          orientation="landscape"
-          showByline={false}
-          showSummary={false}
-          tileName="support2"
-        />
-      </View>
     </View>
   </View>
 </View>
 `;
 
-exports[`58. front lead two no pic and two - portrait - wide 1`] = `
+exports[`58. front lead two - landscape - wide 1`] = `
 <View>
   <View>
     <View>
-      <View
-        tileName="lead1"
-      >
-        <TileXFront
-          breakpoint="wide"
-          orientation="portrait"
+      <View>
+        <TileHFront
+          orientation="landscape"
           tileName="lead1"
         />
       </View>
       <View />
-      <View
-        tileName="lead2"
-      >
-        <TileYFront
-          breakpoint="wide"
-          orientation="portrait"
+      <View>
+        <TileGFront
+          orientation="landscape"
+          showByline={false}
+          showSummary={false}
           tileName="lead2"
         />
       </View>
-    </View>
-    <View />
-    <View>
-      <View
-        tileName="support2"
-      >
-        <TileEFront
-          breakpoint="wide"
-          orientation="portrait"
-          showByline={true}
-          showSummary={true}
-          tileName="support2"
+      <View />
+      <View>
+        <InTodaysEdition
+          orientation="landscape"
         />
       </View>
-      <View />
-      <TileDFront
-        breakpoint="wide"
-        tileName="support1"
-      />
     </View>
   </View>
 </View>
@@ -3058,100 +2984,63 @@ exports[`90. puzzle - huge 1`] = `
 </View>
 `;
 
-exports[`91. front lead two no pic and two - landscape - huge 1`] = `
+exports[`91. front lead two - portrait - huge 1`] = `
 <View>
   <View>
     <View>
       <View>
-        <View
-          tileName="lead1"
-        >
-          <TileXFront
-            breakpoint="huge"
-            orientation="landscape"
+        <View>
+          <TileHFront
+            orientation="portrait"
             tileName="lead1"
           />
         </View>
         <View />
-        <View
-          tileName="lead2"
-        >
-          <TileYFront
-            breakpoint="huge"
-            orientation="landscape"
+        <View>
+          <TileGFront
+            orientation="portrait"
+            showByline={true}
+            showSummary={false}
             tileName="lead2"
           />
         </View>
       </View>
-      <View />
       <View>
-        <TileALFront
-          breakpoint="huge"
-          tileName="support1"
+        <InTodaysEdition
+          orientation="portrait"
         />
-      </View>
-      <View />
-      <View>
-        <View
-          tileName="support2"
-        >
-          <TileEFront
-            breakpoint="huge"
-            orientation="landscape"
-            showByline={false}
-            showSummary={false}
-            tileName="support2"
-          />
-        </View>
       </View>
     </View>
   </View>
 </View>
 `;
 
-exports[`92. front lead two no pic and two - portrait - huge 1`] = `
+exports[`92. front lead two - landscape - huge 1`] = `
 <View>
   <View>
     <View>
       <View>
-        <View
-          tileName="lead1"
-        >
-          <TileXFront
-            breakpoint="huge"
-            orientation="portrait"
+        <View>
+          <TileHFront
+            orientation="landscape"
             tileName="lead1"
           />
         </View>
         <View />
-        <View
-          tileName="lead2"
-        >
-          <TileYFront
-            breakpoint="huge"
-            orientation="portrait"
+        <View>
+          <TileGFront
+            orientation="landscape"
+            showByline={true}
+            showSummary={true}
             tileName="lead2"
           />
         </View>
-      </View>
-      <View />
-      <View>
-        <View
-          tileName="support2"
-        >
-          <TileEFront
-            breakpoint="huge"
-            orientation="portrait"
-            showByline={true}
-            showSummary={true}
-            tileName="support2"
+        <View />
+        <View>
+          <InTodaysEdition
+            orientation="landscape"
           />
         </View>
-        <View />
-        <TileDFront
-          breakpoint="huge"
-          tileName="support1"
-        />
       </View>
     </View>
   </View>

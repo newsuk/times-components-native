@@ -18,8 +18,11 @@ declare module "@times-components-native/utils" {
 
   type getDimensions = () => any;
 
+  type calculateContentWidth = (number, string) => number;
+
   export const appendToImageURL: appendToImageURL;
   export const getDimensions: getDimensions;
+  export const calculateContentWidth: calculateContentWidth;
 }
 
 declare module "react-native-hooks" {
