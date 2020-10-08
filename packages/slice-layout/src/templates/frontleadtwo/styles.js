@@ -85,8 +85,7 @@ const calculateStyles = (orientation) => {
         ...sharedLandscapeStyles,
         container: {
           ...container,
-          paddingTop: spacing(3),
-          paddingBottom: spacing(3),
+          paddingVertical: spacing(3),
         },
       },
       "1366": {
@@ -159,8 +158,7 @@ const calculateStyles = (orientation) => {
         ...sharedPortraitStyles,
         container: {
           ...container,
-          paddingTop: spacing(6),
-          paddingBottom: spacing(6),
+          paddingVertical: spacing(6),
         },
         inTodaysEditionContainer: {
           ...inTodaysEditionContainerPortrait,
