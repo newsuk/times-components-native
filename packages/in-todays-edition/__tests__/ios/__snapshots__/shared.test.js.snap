@@ -6,7 +6,7 @@ exports[`InTodaysEdition landscape 1024 1`] = `
     Object {
       "backgroundColor": "#F0EEDF",
       "flex": 1,
-      "paddingHorizontal": 15,
+      "paddingHorizontal": 20,
       "paddingVertical": 15,
     }
   }
@@ -16,8 +16,7 @@ exports[`InTodaysEdition landscape 1024 1`] = `
       Object {
         "borderBottomColor": "#DBDBDB",
         "borderBottomWidth": 1,
-        "marginBottom": 10,
-        "paddingBottom": 15,
+        "paddingBottom": 10,
       }
     }
   >
@@ -38,8 +37,9 @@ exports[`InTodaysEdition landscape 1024 1`] = `
     <View
       style={
         Object {
-          "marginBottom": 0,
           "opacity": 1,
+          "paddingRight": 20,
+          "paddingTop": 10,
         }
       }
     >
@@ -105,15 +105,15 @@ exports[`InTodaysEdition landscape 1024 1`] = `
         Object {
           "borderBottomWidth": 1,
           "borderColor": "#DBDBDB",
-          "marginBottom": 20,
         }
       }
     />
     <View
       style={
         Object {
-          "marginBottom": 0,
           "opacity": 1,
+          "paddingRight": 20,
+          "paddingTop": 10,
         }
       }
     >
@@ -179,15 +179,15 @@ exports[`InTodaysEdition landscape 1024 1`] = `
         Object {
           "borderBottomWidth": 1,
           "borderColor": "#DBDBDB",
-          "marginBottom": 20,
         }
       }
     />
     <View
       style={
         Object {
-          "marginBottom": 0,
           "opacity": 1,
+          "paddingRight": 20,
+          "paddingTop": 10,
         }
       }
     >
@@ -253,15 +253,15 @@ exports[`InTodaysEdition landscape 1024 1`] = `
         Object {
           "borderBottomWidth": 1,
           "borderColor": "#DBDBDB",
-          "marginBottom": 20,
         }
       }
     />
     <View
       style={
         Object {
-          "marginBottom": 0,
           "opacity": 1,
+          "paddingRight": 20,
+          "paddingTop": 10,
         }
       }
     >
@@ -342,8 +342,7 @@ exports[`InTodaysEdition landscape 1080 1`] = `
       Object {
         "borderBottomColor": "#DBDBDB",
         "borderBottomWidth": 1,
-        "marginBottom": 10,
-        "paddingBottom": 15,
+        "paddingBottom": 10,
       }
     }
   >
@@ -360,18 +359,13 @@ exports[`InTodaysEdition landscape 1080 1`] = `
       IN TODAY'S EDITION
     </Text>
   </View>
-  <View
-    style={
-      Object {
-        "marginTop": 10,
-      }
-    }
-  >
+  <View>
     <View
       style={
         Object {
-          "marginBottom": 0,
           "opacity": 1,
+          "paddingRight": 20,
+          "paddingTop": 15,
         }
       }
     >
@@ -437,15 +431,15 @@ exports[`InTodaysEdition landscape 1080 1`] = `
         Object {
           "borderBottomWidth": 1,
           "borderColor": "#DBDBDB",
-          "marginBottom": 20,
         }
       }
     />
     <View
       style={
         Object {
-          "marginBottom": 0,
           "opacity": 1,
+          "paddingRight": 20,
+          "paddingTop": 15,
         }
       }
     >
@@ -511,15 +505,15 @@ exports[`InTodaysEdition landscape 1080 1`] = `
         Object {
           "borderBottomWidth": 1,
           "borderColor": "#DBDBDB",
-          "marginBottom": 20,
         }
       }
     />
     <View
       style={
         Object {
-          "marginBottom": 0,
           "opacity": 1,
+          "paddingRight": 20,
+          "paddingTop": 15,
         }
       }
     >
@@ -585,15 +579,15 @@ exports[`InTodaysEdition landscape 1080 1`] = `
         Object {
           "borderBottomWidth": 1,
           "borderColor": "#DBDBDB",
-          "marginBottom": 20,
         }
       }
     />
     <View
       style={
         Object {
-          "marginBottom": 0,
           "opacity": 1,
+          "paddingRight": 20,
+          "paddingTop": 15,
         }
       }
     >
@@ -674,7 +668,6 @@ exports[`InTodaysEdition landscape 1112 1`] = `
       Object {
         "borderBottomColor": "#DBDBDB",
         "borderBottomWidth": 1,
-        "marginBottom": 10,
         "paddingBottom": 15,
       }
     }
@@ -692,18 +685,14 @@ exports[`InTodaysEdition landscape 1112 1`] = `
       IN TODAY'S EDITION
     </Text>
   </View>
-  <View
-    style={
-      Object {
-        "marginTop": 10,
-      }
-    }
-  >
+  <View>
     <View
       style={
         Object {
           "marginBottom": 5,
           "opacity": 1,
+          "paddingRight": 20,
+          "paddingTop": 15,
         }
       }
     >
@@ -769,7 +758,6 @@ exports[`InTodaysEdition landscape 1112 1`] = `
         Object {
           "borderBottomWidth": 1,
           "borderColor": "#DBDBDB",
-          "marginBottom": 20,
         }
       }
     />
@@ -778,6 +766,8 @@ exports[`InTodaysEdition landscape 1112 1`] = `
         Object {
           "marginBottom": 5,
           "opacity": 1,
+          "paddingRight": 20,
+          "paddingTop": 15,
         }
       }
     >
@@ -843,7 +833,6 @@ exports[`InTodaysEdition landscape 1112 1`] = `
         Object {
           "borderBottomWidth": 1,
           "borderColor": "#DBDBDB",
-          "marginBottom": 20,
         }
       }
     />
@@ -852,6 +841,8 @@ exports[`InTodaysEdition landscape 1112 1`] = `
         Object {
           "marginBottom": 5,
           "opacity": 1,
+          "paddingRight": 20,
+          "paddingTop": 15,
         }
       }
     >
@@ -917,7 +908,6 @@ exports[`InTodaysEdition landscape 1112 1`] = `
         Object {
           "borderBottomWidth": 1,
           "borderColor": "#DBDBDB",
-          "marginBottom": 20,
         }
       }
     />
@@ -926,6 +916,8 @@ exports[`InTodaysEdition landscape 1112 1`] = `
         Object {
           "marginBottom": 5,
           "opacity": 1,
+          "paddingRight": 20,
+          "paddingTop": 15,
         }
       }
     >
@@ -1006,8 +998,7 @@ exports[`InTodaysEdition landscape 1366 1`] = `
       Object {
         "borderBottomColor": "#DBDBDB",
         "borderBottomWidth": 1,
-        "marginBottom": 10,
-        "paddingBottom": 15,
+        "paddingBottom": 20,
       }
     }
   >
@@ -1025,19 +1016,14 @@ exports[`InTodaysEdition landscape 1366 1`] = `
       IN TODAY'S EDITION
     </Text>
   </View>
-  <View
-    style={
-      Object {
-        "marginTop": 10,
-      }
-    }
-  >
+  <View>
     <View
       style={
         Object {
-          "marginBottom": 0,
+          "marginBottom": 10,
           "opacity": 1,
-          "paddingVertical": 10,
+          "paddingRight": 20,
+          "paddingTop": 25,
         }
       }
     >
@@ -1103,16 +1089,16 @@ exports[`InTodaysEdition landscape 1366 1`] = `
         Object {
           "borderBottomWidth": 1,
           "borderColor": "#DBDBDB",
-          "marginBottom": 20,
         }
       }
     />
     <View
       style={
         Object {
-          "marginBottom": 0,
+          "marginBottom": 10,
           "opacity": 1,
-          "paddingVertical": 10,
+          "paddingRight": 20,
+          "paddingTop": 25,
         }
       }
     >
@@ -1178,16 +1164,16 @@ exports[`InTodaysEdition landscape 1366 1`] = `
         Object {
           "borderBottomWidth": 1,
           "borderColor": "#DBDBDB",
-          "marginBottom": 20,
         }
       }
     />
     <View
       style={
         Object {
-          "marginBottom": 0,
+          "marginBottom": 10,
           "opacity": 1,
-          "paddingVertical": 10,
+          "paddingRight": 20,
+          "paddingTop": 25,
         }
       }
     >
@@ -1253,16 +1239,16 @@ exports[`InTodaysEdition landscape 1366 1`] = `
         Object {
           "borderBottomWidth": 1,
           "borderColor": "#DBDBDB",
-          "marginBottom": 20,
         }
       }
     />
     <View
       style={
         Object {
-          "marginBottom": 0,
+          "marginBottom": 10,
           "opacity": 1,
-          "paddingVertical": 10,
+          "paddingRight": 20,
+          "paddingTop": 25,
         }
       }
     >
@@ -1343,7 +1329,6 @@ exports[`InTodaysEdition portrait 768 1`] = `
       Object {
         "borderBottomColor": "#DBDBDB",
         "borderBottomWidth": 1,
-        "marginBottom": 10,
         "paddingBottom": 2,
       }
     }
@@ -1366,6 +1351,7 @@ exports[`InTodaysEdition portrait 768 1`] = `
       Object {
         "flex": 1,
         "flexDirection": "row",
+        "marginTop": 10,
       }
     }
   >
@@ -1397,7 +1383,7 @@ exports[`InTodaysEdition portrait 768 1`] = `
             "fontFamily": "TimesDigitalW04-Regular",
             "fontSize": 13,
             "lineHeight": 16,
-            "marginBottom": 10,
+            "marginBottom": 5,
           }
         }
       >
@@ -1473,7 +1459,7 @@ exports[`InTodaysEdition portrait 768 1`] = `
             "fontFamily": "TimesDigitalW04-Regular",
             "fontSize": 13,
             "lineHeight": 16,
-            "marginBottom": 10,
+            "marginBottom": 5,
           }
         }
       >
@@ -1549,7 +1535,7 @@ exports[`InTodaysEdition portrait 768 1`] = `
             "fontFamily": "TimesDigitalW04-Regular",
             "fontSize": 13,
             "lineHeight": 16,
-            "marginBottom": 10,
+            "marginBottom": 5,
           }
         }
       >
@@ -1625,7 +1611,7 @@ exports[`InTodaysEdition portrait 768 1`] = `
             "fontFamily": "TimesDigitalW04-Regular",
             "fontSize": 13,
             "lineHeight": 16,
-            "marginBottom": 10,
+            "marginBottom": 5,
           }
         }
       >
@@ -1683,7 +1669,6 @@ exports[`InTodaysEdition portrait 810 1`] = `
       Object {
         "borderBottomColor": "#DBDBDB",
         "borderBottomWidth": 1,
-        "marginBottom": 10,
         "paddingBottom": 2,
       }
     }
@@ -1706,6 +1691,7 @@ exports[`InTodaysEdition portrait 810 1`] = `
       Object {
         "flex": 1,
         "flexDirection": "row",
+        "marginTop": 10,
       }
     }
   >
@@ -1737,7 +1723,7 @@ exports[`InTodaysEdition portrait 810 1`] = `
             "fontFamily": "TimesDigitalW04-Regular",
             "fontSize": 13,
             "lineHeight": 16,
-            "marginBottom": 10,
+            "marginBottom": 5,
           }
         }
       >
@@ -1813,7 +1799,7 @@ exports[`InTodaysEdition portrait 810 1`] = `
             "fontFamily": "TimesDigitalW04-Regular",
             "fontSize": 13,
             "lineHeight": 16,
-            "marginBottom": 10,
+            "marginBottom": 5,
           }
         }
       >
@@ -1889,7 +1875,7 @@ exports[`InTodaysEdition portrait 810 1`] = `
             "fontFamily": "TimesDigitalW04-Regular",
             "fontSize": 13,
             "lineHeight": 16,
-            "marginBottom": 10,
+            "marginBottom": 5,
           }
         }
       >
@@ -1965,7 +1951,7 @@ exports[`InTodaysEdition portrait 810 1`] = `
             "fontFamily": "TimesDigitalW04-Regular",
             "fontSize": 13,
             "lineHeight": 16,
-            "marginBottom": 10,
+            "marginBottom": 5,
           }
         }
       >
@@ -2023,7 +2009,6 @@ exports[`InTodaysEdition portrait 1024 1`] = `
       Object {
         "borderBottomColor": "#DBDBDB",
         "borderBottomWidth": 1,
-        "marginBottom": 10,
         "paddingBottom": 2,
       }
     }
@@ -2046,7 +2031,7 @@ exports[`InTodaysEdition portrait 1024 1`] = `
       Object {
         "flex": 1,
         "flexDirection": "row",
-        "marginTop": 10,
+        "marginTop": 17,
       }
     }
   >
@@ -2078,7 +2063,7 @@ exports[`InTodaysEdition portrait 1024 1`] = `
             "fontFamily": "TimesDigitalW04-Regular",
             "fontSize": 15,
             "lineHeight": 20,
-            "marginBottom": 10,
+            "marginBottom": 5,
           }
         }
       >
@@ -2122,7 +2107,6 @@ exports[`InTodaysEdition portrait 1024 1`] = `
           "borderColor": "#DBDBDB",
           "borderLeftWidth": 1,
           "marginHorizontal": 5,
-          "marginRight": 0,
           "paddingLeft": 10,
         }
       }
@@ -2155,7 +2139,7 @@ exports[`InTodaysEdition portrait 1024 1`] = `
             "fontFamily": "TimesDigitalW04-Regular",
             "fontSize": 15,
             "lineHeight": 20,
-            "marginBottom": 10,
+            "marginBottom": 5,
           }
         }
       >
@@ -2199,7 +2183,6 @@ exports[`InTodaysEdition portrait 1024 1`] = `
           "borderColor": "#DBDBDB",
           "borderLeftWidth": 1,
           "marginHorizontal": 5,
-          "marginRight": 0,
           "paddingLeft": 10,
         }
       }
@@ -2232,7 +2215,7 @@ exports[`InTodaysEdition portrait 1024 1`] = `
             "fontFamily": "TimesDigitalW04-Regular",
             "fontSize": 15,
             "lineHeight": 20,
-            "marginBottom": 10,
+            "marginBottom": 5,
           }
         }
       >
@@ -2276,7 +2259,6 @@ exports[`InTodaysEdition portrait 1024 1`] = `
           "borderColor": "#DBDBDB",
           "borderLeftWidth": 1,
           "marginHorizontal": 5,
-          "marginRight": 0,
           "paddingLeft": 10,
         }
       }
@@ -2309,7 +2291,7 @@ exports[`InTodaysEdition portrait 1024 1`] = `
             "fontFamily": "TimesDigitalW04-Regular",
             "fontSize": 15,
             "lineHeight": 20,
-            "marginBottom": 10,
+            "marginBottom": 5,
           }
         }
       >
