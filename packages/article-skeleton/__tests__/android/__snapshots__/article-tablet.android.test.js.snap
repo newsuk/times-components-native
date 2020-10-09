@@ -244,7 +244,9 @@ exports[`3. with ad on maincomment 1`] = `
               "width": undefined,
             }
           }
-        />
+        >
+          <Ad />
+        </View>
       </View>
       <View>
         <View
