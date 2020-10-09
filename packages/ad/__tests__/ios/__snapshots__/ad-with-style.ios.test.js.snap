@@ -3,44 +3,20 @@
 exports[`1. multiple ad slots 1`] = `
 Array [
   <View
-    className="IS4"
+    className="IS2"
   >
     <View
-      className="IS3"
+      className="IS1"
       inViewport={false}
-    >
-      <View
-        className="IS2"
-      >
-        <RNCWebView
-          cacheEnabled={true}
-          className="IS1"
-          javaScriptEnabled={true}
-          messagingEnabled={true}
-          useSharedProcessPool={true}
-        />
-      </View>
-    </View>
+    />
   </View>,
   <View
-    className="IS4"
+    className="IS2"
   >
     <View
-      className="IS3"
+      className="IS1"
       inViewport={false}
-    >
-      <View
-        className="IS2"
-      >
-        <RNCWebView
-          cacheEnabled={true}
-          className="IS1"
-          javaScriptEnabled={true}
-          messagingEnabled={true}
-          useSharedProcessPool={true}
-        />
-      </View>
-    </View>
+    />
   </View>,
 ]
 `;
