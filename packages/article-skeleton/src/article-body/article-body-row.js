@@ -186,11 +186,6 @@ export default ({
       );
     },
     ad(key, attributes) {
-      const template = data.template;
-
-      // If tablet, only show on mainstandard template
-      if (isTablet && template !== "mainstandard") return null;
-
       return (
         <Ad
           key={key}

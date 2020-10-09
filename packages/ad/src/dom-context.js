@@ -31,6 +31,7 @@ class DOMContext extends PureComponent {
     this.state = {
       loaded: false,
       height: 0,
+      ready: false,
     };
   }
 
@@ -43,6 +44,10 @@ class DOMContext extends PureComponent {
       readableVersion: DeviceInfo.getReadableVersion(),
       version: DeviceInfo.getVersion(),
     };
+
+    setTimeout(() => {
+      this.setState({ ready: true });
+    }, 500);
   }
 
   handleNavigationStateChange = ({ url }) => {
@@ -196,7 +201,8 @@ class DOMContext extends PureComponent {
       </html>
     `;
 
-    const { loaded } = this.state;
+    const { loaded, ready } = this.state;
+
     return (
       <ViewportAwareView
         onViewportEnter={this.loadAd}
@@ -205,7 +211,7 @@ class DOMContext extends PureComponent {
           width,
         }}
       >
-        {(Platform.OS === "ios" || loaded) && (
+        {ready && (Platform.OS === "ios" || loaded) && (
           <WebView
             onMessage={this.handleMessageEvent}
             onNavigationStateChange={this.handleNavigationStateChange}

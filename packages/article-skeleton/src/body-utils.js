@@ -24,7 +24,8 @@ export const collapsed = (isTablet, content) =>
           // forwards
           let i;
           let children = [node];
-          for (i = 0; i < acc.length; i += 1) {
+          const maxNodesToInline = Math.min(4, acc.length);
+          for (i = 0; i < maxNodesToInline; i += 1) {
             const next = acc[i];
             if (next && next.name === "paragraph") {
               children = [
@@ -83,6 +84,9 @@ export const setupAd = (isTablet, variants, template, content) => {
   });
 
   if (!currentAdSlotIndex) return content;
+
+  // Temporary for duration of test - Only show ads on mainstandard template
+  if (template !== "mainstandard") return contentWithoutAdSlot;
 
   const { articleMpu } = variants;
 

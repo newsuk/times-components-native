@@ -121,41 +121,31 @@ const ArticleWithContent = (props) => {
     [footer],
   );
 
-  const renderItem = (item) =>
-    narrowContent ? <View style={styles.keylineWrapper}>{item}</View> : item;
-
-  const iosScroller =
-    // FIXME: remove this when ios memory leaks are resolved
-    useCallback(
-      (scrollprops) => (
-        <FlatList
-          {...scrollprops}
-          data={scrollprops.data.map((item, index) => Child({ item, index }))}
-          renderItem={({ item }) => renderItem(item)}
-        />
-      ),
-      [Child],
+  const renderItem = ({ item, index }) => {
+    const toRender = Child({ item, index });
+    return narrowContent ? (
+      <View style={styles.keylineWrapper}>{toRender}</View>
+    ) : (
+      toRender
     );
-
-  const Scroller = Platform.OS === "ios" ? iosScroller : FlatList;
+  };
 
   return (
     <View style={styles.articleContainer}>
       <Viewport.Tracker>
-        <Scroller
+        <FlatList
           data={fixedContent}
           extraData={loading}
           ListEmptyComponent={Loading}
           ListHeaderComponent={header}
           ListFooterComponent={Loading}
           onEndReached={onEndReached}
-          renderItem={({ item, index }) => renderItem(Child({ item, index }))}
+          renderItem={renderItem}
           onViewableItemsChanged={onViewableItemsChanged}
           removeClippedSubviews={false}
           keyExtractor={(item, index) => index.toString()}
           initialNumToRender={4}
           windowSize={3}
-          nestedScrollEnabled
           testID="flat-list-article"
           style={styles.scroller}
         />
