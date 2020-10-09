@@ -6,7 +6,7 @@ interface TimesImage extends Image {
   crop23: Crop | null;
   crop32: Crop | null;
   crop45: Crop | null;
-  crop1251: Crop | null;
+  crop54: Crop | null;
 }
 
 export default TimesImage;

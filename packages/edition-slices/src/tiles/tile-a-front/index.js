@@ -6,13 +6,13 @@ import { getTileImage, TileLink, withTileTracking, TileImage } from "../shared";
 import { getStyle } from "./styles";
 import { getDimensions } from "@times-components-native/utils";
 
-const getAspectRatio = (crop) => (crop === "crop32" ? 3 / 2 : 1.25 / 1);
+const getAspectRatio = (crop) => (crop === "crop32" ? 3 / 2 : 5 / 4);
 
 const TileAFront = ({ onPress, tile, orientation }) => {
   const { width: windowWidth } = getDimensions();
   const isPortrait = orientation === "portrait";
   const columnCount = isPortrait ? 3 : 1;
-  const crop = isPortrait ? "crop32" : "crop1251";
+  const crop = isPortrait ? "crop32" : "crop54";
   const showSummary = isPortrait || (1080 < windowWidth && windowWidth < 1366);
   const imageCrop = getTileImage(tile, crop);
   const styles = getStyle(orientation, windowWidth);
