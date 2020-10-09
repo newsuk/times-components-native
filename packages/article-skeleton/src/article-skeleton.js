@@ -145,6 +145,7 @@ const ArticleWithContent = (props) => {
           removeClippedSubviews={false}
           keyExtractor={(item, index) => index.toString()}
           initialNumToRender={4}
+          nestedScrollEnabled
           windowSize={3}
           testID="flat-list-article"
           style={styles.scroller}

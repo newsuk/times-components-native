@@ -105,10 +105,17 @@ export default () => {
       ).toEqual(content);
     });
 
-    it("setupAd should return content untouched if template is not mainstandard", () => {
+    it("setupAd should remove the ad if template is not mainstandard", () => {
       expect(
         setupAd(true, { articleMpu: { group: "B" } }, "maincomment", content),
-      ).toEqual(content);
+      ).toEqual([
+        { name: "paragraph", children: [] },
+        { name: "paragraph", children: [] },
+        { name: "paragraph", children: [] },
+        { name: "paragraph", children: [] },
+        { name: "paragraph", children: [] },
+        { name: "paragraph", children: [] },
+      ]);
     });
 
     it("setupAd should return content with the slotName overriden if articleMpu group is control group A", () => {
