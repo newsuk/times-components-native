@@ -1,0 +1,3377 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`1. comment lead and cartoon - medium 1`] = `
+<View>
+  <View>
+    <View>
+      <TileAH
+        breakpoint="medium"
+        tileName="lead"
+      />
+    </View>
+    <View />
+    <View>
+      <TileAI
+        breakpoint="medium"
+        tileName="cartoon"
+      />
+    </View>
+  </View>
+</View>
+`;
+
+exports[`2. daily universal register - medium 1`] = `
+<View>
+  <View>
+    <Image
+      resizeMode="contain"
+      source={
+        Object {
+          "testUri": "../../../packages/edition-slices/assets/daily-universal-register.png",
+        }
+      }
+    />
+    <Text>
+      Daily Universal Register
+    </Text>
+    <View>
+      <View>
+        <TileS
+          breakpoint="medium"
+        />
+        <View />
+        <TileS
+          breakpoint="medium"
+          logo={
+            <Logo
+              imageUri="https://www.thetimes.co.uk/d/img/DUR-nature-80d36dd1cd.png"
+              ratio={1}
+              type="nature notes"
+            />
+          }
+        />
+      </View>
+      <View />
+      <View>
+        <TileS
+          breakpoint="medium"
+        />
+        <View />
+        <TileS
+          breakpoint="medium"
+          logo={
+            <Logo
+              imageUri="https://www.thetimes.co.uk/d/img/DUR-birthdays-94b2272911.png"
+              ratio={1}
+              type="birthdays"
+            />
+          }
+        />
+      </View>
+    </View>
+  </View>
+</View>
+`;
+
+exports[`3. lead one and one - medium 1`] = `
+<View>
+  <View>
+    <View>
+      <TileU
+        tileName="lead"
+      />
+    </View>
+    <View />
+    <View>
+      <TileAA
+        tileName="support"
+      />
+    </View>
+  </View>
+</View>
+`;
+
+exports[`4. lead one and one - supplement - medium 1`] = `
+<View>
+  <View>
+    <View>
+      <TileU
+        headlineStyle={
+          Object {
+            "color": "#1D1D1B",
+            "fontFamily": "TimesModern-Regular",
+            "fontSize": 40,
+            "fontWeight": "normal",
+            "lineHeight": 40,
+          }
+        }
+        tileName="lead"
+      />
+    </View>
+    <View />
+    <View>
+      <TileAX
+        breakpoint="medium"
+        orientation="portrait"
+        tileName="support"
+      />
+    </View>
+  </View>
+</View>
+`;
+
+exports[`5. lead one full width - medium 1`] = `
+<View>
+  <TileR
+    breakpoint="medium"
+    tileName="lead"
+  />
+</View>
+`;
+
+exports[`6. lead two no pic and two - medium 1`] = `
+<View>
+  <View>
+    <View>
+      <TileX
+        breakpoint="medium"
+        tileName="lead1"
+      />
+      <View />
+      <TileY
+        breakpoint="medium"
+        tileName="lead2"
+      />
+    </View>
+    <View />
+    <View>
+      <TileAL
+        breakpoint="medium"
+        tileName="support1"
+      />
+    </View>
+    <View />
+    <View>
+      <TileE
+        breakpoint="medium"
+        tileName="support2"
+      />
+    </View>
+  </View>
+</View>
+`;
+
+exports[`7. lead two no pic and two - medium 1`] = `
+<View>
+  <View>
+    <View>
+      <TileX
+        breakpoint="medium"
+        tileName="lead1"
+      />
+      <View />
+      <TileY
+        breakpoint="medium"
+        tileName="lead2"
+      />
+    </View>
+    <View />
+    <View>
+      <TileE
+        breakpoint="medium"
+        tileName="support2"
+      />
+      <View />
+      <TileD
+        breakpoint="medium"
+        tileName="support1"
+      />
+    </View>
+  </View>
+</View>
+`;
+
+exports[`8. leaders slice - medium 1`] = `
+<View>
+  <View>
+    <View>
+      <Image
+        resizeMode="contain"
+        source={
+          Object {
+            "testUri": "../../../packages/edition-slices/assets/times-leading-header.png",
+          }
+        }
+      />
+      <View>
+        <Text>
+           Leading Articles 
+        </Text>
+      </View>
+    </View>
+    <View>
+      <View>
+        <TileM
+          breakpoint="medium"
+          tileName="leader2"
+        />
+      </View>
+      <View />
+      <View>
+        <TileM
+          breakpoint="medium"
+          tileName="leader1"
+        />
+      </View>
+      <View />
+      <View>
+        <TileM
+          breakpoint="medium"
+          tileName="leader3"
+        />
+      </View>
+    </View>
+  </View>
+</View>
+`;
+
+exports[`9. secondary one and four - medium 1`] = `
+<View>
+  <View>
+    <View>
+      <TheTimesLogo
+        height={37}
+        width={35}
+      />
+    </View>
+    <View />
+    <View>
+      <View>
+        <TileN
+          breakpoint="medium"
+          tileName="secondary"
+        />
+      </View>
+      <View />
+      <View>
+        <View>
+          <View>
+            <TileO
+              breakpoint="medium"
+              tileName="support1"
+            />
+          </View>
+          <View />
+          <View>
+            <TileO
+              breakpoint="medium"
+              tileName="support2"
+            />
+          </View>
+        </View>
+        <View />
+        <View>
+          <View>
+            <TileO
+              breakpoint="medium"
+              tileName="support3"
+            />
+          </View>
+          <View />
+          <View>
+            <TileO
+              breakpoint="medium"
+              tileName="support4"
+            />
+          </View>
+        </View>
+      </View>
+    </View>
+  </View>
+</View>
+`;
+
+exports[`10. secondary one - medium 1`] = `
+<View>
+  <TileW
+    breakpoint="medium"
+    tileName="secondary"
+  />
+</View>
+`;
+
+exports[`11. supplement secondary one - medium 1`] = `
+<View>
+  <TileBF
+    breakpoint="medium"
+    tileName="secondary"
+  />
+</View>
+`;
+
+exports[`12. secondary four - medium 1`] = `
+<View>
+  <View>
+    <View>
+      <View>
+        <TileAR
+          breakpoint="medium"
+          tileName="secondary1"
+        />
+      </View>
+      <View />
+      <View>
+        <TileAR
+          breakpoint="medium"
+          tileName="secondary2"
+        />
+      </View>
+    </View>
+    <View />
+    <View>
+      <TileB
+        breakpoint="medium"
+        tileName="secondary3"
+      />
+      <View />
+      <TileB
+        breakpoint="medium"
+        tileName="secondary4"
+      />
+    </View>
+  </View>
+</View>
+`;
+
+exports[`13. secondary four - supplement - medium 1`] = `
+<View>
+  <View>
+    <View>
+      <View>
+        <TileAY
+          breakpoint="medium"
+          tileName="secondary1"
+        />
+      </View>
+      <View />
+      <View>
+        <TileAY
+          breakpoint="medium"
+          tileName="secondary2"
+        />
+      </View>
+      <View />
+      <View>
+        <TileAY
+          breakpoint="medium"
+          tileName="secondary3"
+        />
+      </View>
+      <View />
+      <View>
+        <TileAY
+          breakpoint="medium"
+          tileName="secondary4"
+        />
+      </View>
+    </View>
+  </View>
+</View>
+`;
+
+exports[`14. secondary one and columnist - medium 1`] = `
+<View>
+  <View>
+    <View>
+      <TileAB
+        breakpoint="medium"
+        tileName="columnist"
+      />
+    </View>
+    <View />
+    <View>
+      <TileB
+        breakpoint="medium"
+        tileName="secondary"
+        withMoreTeaser={true}
+      />
+    </View>
+  </View>
+</View>
+`;
+
+exports[`15. secondary two and two - medium 1`] = `
+<View>
+  <View>
+    <View>
+      <View>
+        <TileV
+          tileName="secondary1"
+        />
+      </View>
+      <View />
+      <View>
+        <TileV
+          tileName="secondary2"
+        />
+      </View>
+    </View>
+    <View />
+    <View>
+      <View>
+        <TileG
+          breakpoint="medium"
+          tileName="support1"
+        />
+      </View>
+      <View />
+      <View>
+        <TileG
+          breakpoint="medium"
+          tileName="support2"
+        />
+      </View>
+    </View>
+  </View>
+</View>
+`;
+
+exports[`16. supplement secondary two and two - medium 1`] = `
+<View>
+  <View>
+    <View>
+      <View>
+        <TileBC
+          breakpoint="medium"
+          tileName="secondary1"
+        />
+      </View>
+      <View />
+      <View>
+        <TileBC
+          breakpoint="medium"
+          tileName="secondary2"
+        />
+      </View>
+    </View>
+    <View />
+    <View>
+      <View>
+        <TileBD
+          breakpoint="medium"
+          tileName="support1"
+        />
+      </View>
+      <View />
+      <View>
+        <TileBD
+          breakpoint="medium"
+          tileName="support2"
+        />
+      </View>
+    </View>
+  </View>
+</View>
+`;
+
+exports[`17. lead one and four slice - medium 1`] = `
+<View>
+  <View>
+    <View>
+      <TileAC
+        breakpoint="medium"
+        tileName="lead"
+      />
+    </View>
+    <View />
+    <View>
+      <TileAD
+        breakpoint="medium"
+        tileName="support1"
+      />
+      <View />
+      <TileAD
+        breakpoint="medium"
+        tileName="support2"
+      />
+      <View />
+      <TileAD
+        breakpoint="medium"
+        tileName="support3"
+      />
+      <View />
+      <TileAD
+        breakpoint="medium"
+        tileName="support4"
+      />
+    </View>
+  </View>
+</View>
+`;
+
+exports[`18. supplement lead one and four slice - medium 1`] = `
+<View>
+  <View>
+    <View>
+      <TileAZ
+        breakpoint="medium"
+        tileName="lead"
+      />
+    </View>
+    <View>
+      <View>
+        <TileBA
+          breakpoint="medium"
+          tileName="support1"
+        />
+      </View>
+      <View />
+      <View>
+        <TileBA
+          breakpoint="medium"
+          tileName="support2"
+        />
+      </View>
+      <View />
+      <View>
+        <TileBA
+          breakpoint="medium"
+          tileName="support3"
+        />
+      </View>
+      <View />
+      <View>
+        <TileBA
+          breakpoint="medium"
+          tileName="support4"
+        />
+      </View>
+    </View>
+  </View>
+</View>
+`;
+
+exports[`19. standard slice - medium 1`] = `
+<View>
+  <View>
+    <View>
+      <TileK
+        breakpoint="medium"
+        tileName="standardItem1"
+      />
+      <View />
+      <TileK
+        breakpoint="medium"
+        tileName="standardItem2"
+      />
+      <View />
+      <TileK
+        breakpoint="medium"
+        tileName="standardItem3"
+      />
+      <View />
+      <TileK
+        breakpoint="medium"
+        tileName="standardItem4"
+      />
+      <View />
+      <TileK
+        breakpoint="medium"
+        tileName="standardItem5"
+      />
+    </View>
+  </View>
+</View>
+`;
+
+exports[`20. secondary two no pic and two - medium 1`] = `
+<View>
+  <View>
+    <View>
+      <View>
+        <TileAE
+          breakpoint="medium"
+          tileName="secondary1"
+        />
+      </View>
+      <View />
+      <View>
+        <TileAE
+          breakpoint="medium"
+          tileName="secondary2"
+        />
+      </View>
+    </View>
+    <View />
+    <View>
+      <View>
+        <TileG
+          breakpoint="medium"
+          tileName="support1"
+        />
+      </View>
+      <View />
+      <View>
+        <TileG
+          breakpoint="medium"
+          tileName="support2"
+        />
+      </View>
+    </View>
+  </View>
+</View>
+`;
+
+exports[`21. list two and six no pic - medium 1`] = `
+<View>
+  <View>
+    <View>
+      <TileAS
+        breakpoint="medium"
+        tileName="lead1"
+      />
+    </View>
+    <View />
+    <View>
+      <TileAS
+        breakpoint="medium"
+        tileName="lead2"
+      />
+    </View>
+    <View />
+    <View>
+      <View>
+        <View>
+          <TileL
+            breakpoint="medium"
+            tileName="support1"
+          />
+        </View>
+        <View />
+        <View>
+          <TileL
+            breakpoint="medium"
+            tileName="support2"
+          />
+        </View>
+      </View>
+      <View />
+      <View>
+        <View>
+          <TileL
+            breakpoint="medium"
+            tileName="support3"
+          />
+        </View>
+        <View />
+        <View>
+          <TileL
+            breakpoint="medium"
+            tileName="support4"
+          />
+        </View>
+      </View>
+      <View />
+      <View>
+        <View>
+          <TileL
+            breakpoint="medium"
+            tileName="support5"
+          />
+        </View>
+        <View />
+        <View>
+          <TileL
+            breakpoint="medium"
+            tileName="support6"
+          />
+        </View>
+      </View>
+    </View>
+  </View>
+</View>
+`;
+
+exports[`22. puzzle - medium 1`] = `
+<View>
+  <View>
+    <View>
+      <TileAK
+        breakpoint="medium"
+        id="0"
+        image={
+          Object {
+            "crop11": null,
+            "crop169": null,
+            "crop23": null,
+            "crop32": Object {
+              "url": "https://www.thetimes.co.uk/imageserver/image/%2Fpuzzles%2Ficons%2F33b27655-dcc9-421f-906f-b2b10dd26865.png?crop=1250%2C833%2C0%2C0",
+            },
+            "crop45": null,
+            "crop54": null,
+            "crops": Array [],
+            "id": "522abf2c-e752-11e8-9f32-f2801f1b9fd1",
+          }
+        }
+        title="Times Concise medium No 7881"
+        url="/crossword/123"
+      />
+    </View>
+    <View>
+      <TileAK
+        breakpoint="medium"
+        id="1"
+        image={
+          Object {
+            "crop11": null,
+            "crop169": null,
+            "crop23": null,
+            "crop32": Object {
+              "url": "https://www.thetimes.co.uk/imageserver/image/%2Fpuzzles%2Ficons%2F33b27655-dcc9-421f-906f-b2b10dd26865.png?crop=1250%2C833%2C0%2C0",
+            },
+            "crop45": null,
+            "crop54": null,
+            "crops": Array [],
+            "id": "522abf2c-e752-11e8-9f32-f2801f1b9fd1",
+          }
+        }
+        title="Times Concise medium No 7881"
+        url="/crossword/123"
+      />
+    </View>
+    <View>
+      <TileAK
+        breakpoint="medium"
+        id="2"
+        image={
+          Object {
+            "crop11": null,
+            "crop169": null,
+            "crop23": null,
+            "crop32": Object {
+              "url": "https://www.thetimes.co.uk/imageserver/image/%2Fpuzzles%2Ficons%2F33b27655-dcc9-421f-906f-b2b10dd26865.png?crop=1250%2C833%2C0%2C0",
+            },
+            "crop45": null,
+            "crop54": null,
+            "crops": Array [],
+            "id": "522abf2c-e752-11e8-9f32-f2801f1b9fd1",
+          }
+        }
+        title="Times Concise medium No 7881"
+        url="/crossword/123"
+      />
+    </View>
+  </View>
+</View>
+`;
+
+exports[`23. front lead two - portrait - medium 1`] = `
+<View>
+  <View>
+    <View>
+      <View>
+        <TileHFront
+          orientation="portrait"
+          tileName="lead1"
+        />
+      </View>
+      <View />
+      <View>
+        <TileGFront
+          orientation="portrait"
+          showByline={false}
+          showSummary={false}
+          tileName="lead2"
+        />
+      </View>
+    </View>
+    <View>
+      <InTodaysEdition
+        orientation="portrait"
+      />
+    </View>
+  </View>
+</View>
+`;
+
+exports[`24. front lead two - landscape - medium 1`] = `
+<View>
+  <View>
+    <View>
+      <View>
+        <TileHFront
+          orientation="landscape"
+          tileName="lead1"
+        />
+      </View>
+      <View />
+      <View>
+        <TileGFront
+          orientation="landscape"
+          showByline={false}
+          showSummary={false}
+          tileName="lead2"
+        />
+      </View>
+      <View />
+      <View>
+        <InTodaysEdition
+          orientation="landscape"
+        />
+      </View>
+    </View>
+  </View>
+</View>
+`;
+
+exports[`25. front lead one and one - portrait - medium 1`] = `
+<View>
+  <View>
+    <View>
+      <View>
+        <TileAFront
+          orientation="portrait"
+          tileName="lead"
+        />
+      </View>
+      <View />
+      <View>
+        <TileBFront
+          orientation="portrait"
+          showKeyline={true}
+          tileName="support"
+        />
+      </View>
+    </View>
+    <View>
+      <InTodaysEdition
+        orientation="portrait"
+      />
+    </View>
+  </View>
+</View>
+`;
+
+exports[`26. front lead one and one - landscape - medium 1`] = `
+<View>
+  <View>
+    <View>
+      <View>
+        <TileAFront
+          orientation="landscape"
+          tileName="lead"
+        />
+      </View>
+      <View />
+      <View>
+        <TileBFront
+          orientation="landscape"
+          showKeyline={false}
+          tileName="support"
+        />
+      </View>
+      <View />
+      <View>
+        <InTodaysEdition
+          orientation="landscape"
+        />
+      </View>
+    </View>
+  </View>
+</View>
+`;
+
+exports[`27. front lead one - portrait - medium 1`] = `
+<View>
+  <View>
+    <View>
+      <TileFFront
+        breakpoint="medium"
+        orientation="portrait"
+        tileName="lead"
+      />
+    </View>
+    <View>
+      <InTodaysEdition
+        orientation="portrait"
+      />
+    </View>
+  </View>
+</View>
+`;
+
+exports[`28. front lead one - landscape - medium 1`] = `
+<View>
+  <View>
+    <View>
+      <View>
+        <TileFFront
+          breakpoint="medium"
+          orientation="landscape"
+          tileName="lead"
+        />
+      </View>
+      <View />
+      <View>
+        <InTodaysEdition
+          orientation="landscape"
+        />
+      </View>
+    </View>
+  </View>
+</View>
+`;
+
+exports[`29. top secondary landscape (from topsecondaryfourslice) - medium 1`] = `
+<View>
+  <View>
+    <View>
+      <TileAU
+        breakpoint="medium"
+        tileName="lead"
+      />
+    </View>
+    <View />
+    <View>
+      <TileAV
+        breakpoint="medium"
+        tileName="support1"
+      />
+      <View />
+      <TileAV
+        breakpoint="medium"
+        tileName="support2"
+      />
+      <View />
+      <TileAV
+        breakpoint="medium"
+        tileName="support3"
+      />
+    </View>
+  </View>
+</View>
+`;
+
+exports[`30. top secondary portrait (from topsecondaryfourslice) - medium 1`] = `
+<View>
+  <View>
+    <View>
+      <TileAT
+        breakpoint="medium"
+        tileName="lead"
+      />
+    </View>
+    <View />
+    <View>
+      <TileAV
+        breakpoint="medium"
+        tileName="support1"
+      />
+      <View />
+      <TileAV
+        breakpoint="medium"
+        tileName="support2"
+      />
+      <View />
+      <TileAV
+        breakpoint="medium"
+        tileName="support3"
+      />
+    </View>
+  </View>
+</View>
+`;
+
+exports[`31. top secondary landscape (from topsecondarytwoandtwoslice) - medium 1`] = `
+<View>
+  <View>
+    <View>
+      <TileAU
+        breakpoint="medium"
+        tileName="lead"
+      />
+    </View>
+    <View />
+    <View>
+      <TileAV
+        breakpoint="medium"
+        tileName="support1"
+      />
+      <View />
+      <TileAV
+        breakpoint="medium"
+        tileName="support2"
+      />
+      <View />
+      <TileAV
+        breakpoint="medium"
+        tileName="support3"
+      />
+    </View>
+  </View>
+</View>
+`;
+
+exports[`32. top secondary portrait (from topsecondarytwoandtwoslice) - medium 1`] = `
+<View>
+  <View>
+    <View>
+      <TileAT
+        breakpoint="medium"
+        tileName="lead"
+      />
+    </View>
+    <View />
+    <View>
+      <TileAV
+        breakpoint="medium"
+        tileName="support1"
+      />
+      <View />
+      <TileAV
+        breakpoint="medium"
+        tileName="support2"
+      />
+      <View />
+      <TileAV
+        breakpoint="medium"
+        tileName="support3"
+      />
+    </View>
+  </View>
+</View>
+`;
+
+exports[`33. top secondary landscape (from topsecondarytwonopicandtwoslice) - medium 1`] = `
+<View>
+  <View>
+    <View>
+      <TileAU
+        breakpoint="medium"
+        tileName="lead"
+      />
+    </View>
+    <View />
+    <View>
+      <TileAV
+        breakpoint="medium"
+        tileName="support1"
+      />
+      <View />
+      <TileAV
+        breakpoint="medium"
+        tileName="support2"
+      />
+      <View />
+      <TileAV
+        breakpoint="medium"
+        tileName="support3"
+      />
+    </View>
+  </View>
+</View>
+`;
+
+exports[`34. top secondary portrait (from topsecondarytwonopicandtwoslice) - medium 1`] = `
+<View>
+  <View>
+    <View>
+      <TileAT
+        breakpoint="medium"
+        tileName="lead"
+      />
+    </View>
+    <View />
+    <View>
+      <TileAV
+        breakpoint="medium"
+        tileName="support1"
+      />
+      <View />
+      <TileAV
+        breakpoint="medium"
+        tileName="support2"
+      />
+      <View />
+      <TileAV
+        breakpoint="medium"
+        tileName="support3"
+      />
+    </View>
+  </View>
+</View>
+`;
+
+exports[`35. comment lead and cartoon - wide 1`] = `
+<View>
+  <View>
+    <View>
+      <TileAH
+        breakpoint="wide"
+        tileName="lead"
+      />
+    </View>
+    <View />
+    <View>
+      <TileAI
+        breakpoint="wide"
+        tileName="cartoon"
+      />
+    </View>
+  </View>
+</View>
+`;
+
+exports[`36. daily universal register - wide 1`] = `
+<View>
+  <View>
+    <Image
+      resizeMode="contain"
+      source={
+        Object {
+          "testUri": "../../../packages/edition-slices/assets/daily-universal-register.png",
+        }
+      }
+    />
+    <Text>
+      Daily Universal Register
+    </Text>
+    <View>
+      <View>
+        <TileS
+          breakpoint="wide"
+        />
+        <View />
+        <TileS
+          breakpoint="wide"
+          logo={
+            <Logo
+              imageUri="https://www.thetimes.co.uk/d/img/DUR-nature-80d36dd1cd.png"
+              ratio={1}
+              type="nature notes"
+            />
+          }
+        />
+      </View>
+      <View />
+      <View>
+        <TileS
+          breakpoint="wide"
+        />
+        <View />
+        <TileS
+          breakpoint="wide"
+          logo={
+            <Logo
+              imageUri="https://www.thetimes.co.uk/d/img/DUR-birthdays-94b2272911.png"
+              ratio={1}
+              type="birthdays"
+            />
+          }
+        />
+      </View>
+    </View>
+  </View>
+</View>
+`;
+
+exports[`37. lead one and one - wide 1`] = `
+<View>
+  <View>
+    <View>
+      <TileZ
+        breakpoint="wide"
+        tileName="lead"
+      />
+    </View>
+    <View />
+    <View>
+      <TileAF
+        breakpoint="wide"
+        tileName="support"
+      />
+    </View>
+  </View>
+</View>
+`;
+
+exports[`38. lead one and one - supplement - wide 1`] = `
+<View>
+  <View>
+    <View>
+      <TileU
+        headlineStyle={
+          Object {
+            "color": "#1D1D1B",
+            "fontFamily": "TimesModern-Regular",
+            "fontSize": 40,
+            "fontWeight": "normal",
+            "lineHeight": 40,
+          }
+        }
+        tileName="lead"
+      />
+    </View>
+    <View />
+    <View>
+      <TileAX
+        breakpoint="wide"
+        orientation="portrait"
+        tileName="support"
+      />
+    </View>
+  </View>
+</View>
+`;
+
+exports[`39. lead one full width - wide 1`] = `
+<View>
+  <TileR
+    breakpoint="wide"
+    tileName="lead"
+  />
+</View>
+`;
+
+exports[`40. lead two no pic and two - wide 1`] = `
+<View>
+  <View>
+    <View>
+      <TileX
+        breakpoint="wide"
+        tileName="lead1"
+      />
+      <View />
+      <TileY
+        breakpoint="wide"
+        tileName="lead2"
+      />
+    </View>
+    <View />
+    <View>
+      <TileAL
+        breakpoint="wide"
+        tileName="support1"
+      />
+    </View>
+    <View />
+    <View>
+      <TileE
+        breakpoint="wide"
+        tileName="support2"
+      />
+    </View>
+  </View>
+</View>
+`;
+
+exports[`41. lead two no pic and two - wide 1`] = `
+<View>
+  <View>
+    <View>
+      <TileX
+        breakpoint="wide"
+        tileName="lead1"
+      />
+      <View />
+      <TileY
+        breakpoint="wide"
+        tileName="lead2"
+      />
+    </View>
+    <View />
+    <View>
+      <TileE
+        breakpoint="wide"
+        tileName="support2"
+      />
+      <View />
+      <TileD
+        breakpoint="wide"
+        tileName="support1"
+      />
+    </View>
+  </View>
+</View>
+`;
+
+exports[`42. leaders slice - wide 1`] = `
+<View>
+  <View>
+    <View>
+      <Image
+        resizeMode="contain"
+        source={
+          Object {
+            "testUri": "../../../packages/edition-slices/assets/times-leading-header.png",
+          }
+        }
+      />
+      <View>
+        <Text>
+           Leading Articles 
+        </Text>
+      </View>
+    </View>
+    <View>
+      <View>
+        <TileM
+          breakpoint="wide"
+          tileName="leader2"
+        />
+      </View>
+      <View />
+      <View>
+        <TileM
+          breakpoint="wide"
+          tileName="leader1"
+        />
+      </View>
+      <View />
+      <View>
+        <TileM
+          breakpoint="wide"
+          tileName="leader3"
+        />
+      </View>
+    </View>
+  </View>
+</View>
+`;
+
+exports[`43. secondary one and four - wide 1`] = `
+<View>
+  <View>
+    <View>
+      <TheTimesLogo
+        height={37}
+        width={35}
+      />
+    </View>
+    <View />
+    <View>
+      <View>
+        <TileN
+          breakpoint="wide"
+          tileName="secondary"
+        />
+      </View>
+      <View />
+      <View>
+        <View>
+          <View>
+            <TileO
+              breakpoint="wide"
+              tileName="support1"
+            />
+          </View>
+          <View />
+          <View>
+            <TileO
+              breakpoint="wide"
+              tileName="support2"
+            />
+          </View>
+        </View>
+        <View />
+        <View>
+          <View>
+            <TileO
+              breakpoint="wide"
+              tileName="support3"
+            />
+          </View>
+          <View />
+          <View>
+            <TileO
+              breakpoint="wide"
+              tileName="support4"
+            />
+          </View>
+        </View>
+      </View>
+    </View>
+  </View>
+</View>
+`;
+
+exports[`44. secondary one - wide 1`] = `
+<View>
+  <TileW
+    breakpoint="wide"
+    tileName="secondary"
+  />
+</View>
+`;
+
+exports[`45. supplement secondary one - wide 1`] = `
+<View>
+  <TileBF
+    breakpoint="wide"
+    tileName="secondary"
+  />
+</View>
+`;
+
+exports[`46. secondary four - wide 1`] = `
+<View>
+  <View>
+    <View>
+      <View>
+        <TileAR
+          breakpoint="wide"
+          tileName="secondary1"
+        />
+      </View>
+      <View />
+      <View>
+        <TileAR
+          breakpoint="wide"
+          tileName="secondary2"
+        />
+      </View>
+    </View>
+    <View />
+    <View>
+      <TileB
+        additionalHeadlineStyles={
+          Object {
+            "fontSize": 20,
+            "lineHeight": 20,
+          }
+        }
+        breakpoint="wide"
+        tileName="secondary3"
+      />
+      <View />
+      <TileB
+        additionalHeadlineStyles={
+          Object {
+            "fontSize": 20,
+            "lineHeight": 20,
+          }
+        }
+        breakpoint="wide"
+        tileName="secondary4"
+      />
+    </View>
+  </View>
+</View>
+`;
+
+exports[`47. secondary four - supplement - wide 1`] = `
+<View>
+  <View>
+    <View>
+      <View>
+        <TileAY
+          breakpoint="wide"
+          tileName="secondary1"
+        />
+      </View>
+      <View />
+      <View>
+        <TileAY
+          breakpoint="wide"
+          tileName="secondary2"
+        />
+      </View>
+      <View />
+      <View>
+        <TileAY
+          breakpoint="wide"
+          tileName="secondary3"
+        />
+      </View>
+      <View />
+      <View>
+        <TileAY
+          breakpoint="wide"
+          tileName="secondary4"
+        />
+      </View>
+    </View>
+  </View>
+</View>
+`;
+
+exports[`48. secondary one and columnist - wide 1`] = `
+<View>
+  <View>
+    <View>
+      <TileAB
+        breakpoint="wide"
+        tileName="columnist"
+      />
+    </View>
+    <View />
+    <View>
+      <TileB
+        breakpoint="wide"
+        tileName="secondary"
+        withMoreTeaser={true}
+      />
+    </View>
+  </View>
+</View>
+`;
+
+exports[`49. secondary two and two - wide 1`] = `
+<View>
+  <View>
+    <View>
+      <TileAM
+        tileName="secondary1"
+      />
+    </View>
+    <View />
+    <View>
+      <TileAN
+        tileName="support1"
+      />
+    </View>
+    <View />
+    <View>
+      <TileAM
+        tileName="secondary2"
+      />
+    </View>
+    <View />
+    <View>
+      <TileAN
+        tileName="support2"
+      />
+    </View>
+  </View>
+</View>
+`;
+
+exports[`50. supplement secondary two and two - wide 1`] = `
+<View>
+  <View>
+    <View>
+      <View>
+        <TileBC
+          breakpoint="wide"
+          tileName="secondary1"
+        />
+      </View>
+      <View />
+      <View>
+        <TileBC
+          breakpoint="wide"
+          tileName="secondary2"
+        />
+      </View>
+    </View>
+    <View />
+    <View>
+      <View>
+        <TileBD
+          breakpoint="wide"
+          tileName="support1"
+        />
+      </View>
+      <View />
+      <View>
+        <TileBD
+          breakpoint="wide"
+          tileName="support2"
+        />
+      </View>
+    </View>
+  </View>
+</View>
+`;
+
+exports[`51. lead one and four slice - wide 1`] = `
+<View>
+  <View>
+    <View>
+      <TileAC
+        breakpoint="wide"
+        tileName="lead"
+      />
+    </View>
+    <View />
+    <View>
+      <TileAD
+        breakpoint="wide"
+        tileName="support1"
+      />
+      <View />
+      <TileAD
+        breakpoint="wide"
+        tileName="support2"
+      />
+      <View />
+      <TileAD
+        breakpoint="wide"
+        tileName="support3"
+      />
+      <View />
+      <TileAD
+        breakpoint="wide"
+        tileName="support4"
+      />
+    </View>
+  </View>
+</View>
+`;
+
+exports[`52. supplement lead one and four slice - wide 1`] = `
+<View>
+  <View>
+    <View>
+      <TileAZ
+        breakpoint="wide"
+        tileName="lead"
+      />
+    </View>
+    <View>
+      <View>
+        <TileBA
+          breakpoint="wide"
+          tileName="support1"
+        />
+      </View>
+      <View />
+      <View>
+        <TileBA
+          breakpoint="wide"
+          tileName="support2"
+        />
+      </View>
+      <View />
+      <View>
+        <TileBA
+          breakpoint="wide"
+          tileName="support3"
+        />
+      </View>
+      <View />
+      <View>
+        <TileBA
+          breakpoint="wide"
+          tileName="support4"
+        />
+      </View>
+    </View>
+  </View>
+</View>
+`;
+
+exports[`53. standard slice - wide 1`] = `
+<View>
+  <View>
+    <View>
+      <TileK
+        breakpoint="wide"
+        tileName="standardItem1"
+      />
+      <View />
+      <TileK
+        breakpoint="wide"
+        tileName="standardItem2"
+      />
+      <View />
+      <TileK
+        breakpoint="wide"
+        tileName="standardItem3"
+      />
+      <View />
+      <TileK
+        breakpoint="wide"
+        tileName="standardItem4"
+      />
+      <View />
+      <TileK
+        breakpoint="wide"
+        tileName="standardItem5"
+      />
+    </View>
+  </View>
+</View>
+`;
+
+exports[`54. secondary two no pic and two - wide 1`] = `
+<View>
+  <View>
+    <View>
+      <View>
+        <TileAE
+          breakpoint="wide"
+          tileName="secondary1"
+        />
+      </View>
+      <View />
+      <View>
+        <TileAE
+          breakpoint="wide"
+          tileName="secondary2"
+        />
+      </View>
+    </View>
+    <View />
+    <View>
+      <TileG
+        breakpoint="wide"
+        tileName="support1"
+      />
+      <View />
+      <TileG
+        breakpoint="wide"
+        tileName="support2"
+      />
+    </View>
+  </View>
+</View>
+`;
+
+exports[`55. list two and six no pic - wide 1`] = `
+<View>
+  <View>
+    <View>
+      <TileAS
+        breakpoint="wide"
+        tileName="lead1"
+      />
+    </View>
+    <View />
+    <View>
+      <TileAS
+        breakpoint="wide"
+        tileName="lead2"
+      />
+    </View>
+    <View />
+    <View>
+      <View>
+        <View>
+          <TileL
+            breakpoint="wide"
+            tileName="support1"
+          />
+        </View>
+        <View />
+        <View>
+          <TileL
+            breakpoint="wide"
+            tileName="support2"
+          />
+        </View>
+      </View>
+      <View />
+      <View>
+        <View>
+          <TileL
+            breakpoint="wide"
+            tileName="support3"
+          />
+        </View>
+        <View />
+        <View>
+          <TileL
+            breakpoint="wide"
+            tileName="support4"
+          />
+        </View>
+      </View>
+      <View />
+      <View>
+        <View>
+          <TileL
+            breakpoint="wide"
+            tileName="support5"
+          />
+        </View>
+        <View />
+        <View>
+          <TileL
+            breakpoint="wide"
+            tileName="support6"
+          />
+        </View>
+      </View>
+    </View>
+  </View>
+</View>
+`;
+
+exports[`56. puzzle - wide 1`] = `
+<View>
+  <View>
+    <View>
+      <TileAK
+        breakpoint="wide"
+        id="0"
+        image={
+          Object {
+            "crop11": null,
+            "crop169": null,
+            "crop23": null,
+            "crop32": Object {
+              "url": "https://www.thetimes.co.uk/imageserver/image/%2Fpuzzles%2Ficons%2F33b27655-dcc9-421f-906f-b2b10dd26865.png?crop=1250%2C833%2C0%2C0",
+            },
+            "crop45": null,
+            "crop54": null,
+            "crops": Array [],
+            "id": "522abf2c-e752-11e8-9f32-f2801f1b9fd1",
+          }
+        }
+        title="Times Concise medium No 7881"
+        url="/crossword/123"
+      />
+    </View>
+    <View>
+      <TileAK
+        breakpoint="wide"
+        id="1"
+        image={
+          Object {
+            "crop11": null,
+            "crop169": null,
+            "crop23": null,
+            "crop32": Object {
+              "url": "https://www.thetimes.co.uk/imageserver/image/%2Fpuzzles%2Ficons%2F33b27655-dcc9-421f-906f-b2b10dd26865.png?crop=1250%2C833%2C0%2C0",
+            },
+            "crop45": null,
+            "crop54": null,
+            "crops": Array [],
+            "id": "522abf2c-e752-11e8-9f32-f2801f1b9fd1",
+          }
+        }
+        title="Times Concise medium No 7881"
+        url="/crossword/123"
+      />
+    </View>
+    <View>
+      <TileAK
+        breakpoint="wide"
+        id="2"
+        image={
+          Object {
+            "crop11": null,
+            "crop169": null,
+            "crop23": null,
+            "crop32": Object {
+              "url": "https://www.thetimes.co.uk/imageserver/image/%2Fpuzzles%2Ficons%2F33b27655-dcc9-421f-906f-b2b10dd26865.png?crop=1250%2C833%2C0%2C0",
+            },
+            "crop45": null,
+            "crop54": null,
+            "crops": Array [],
+            "id": "522abf2c-e752-11e8-9f32-f2801f1b9fd1",
+          }
+        }
+        title="Times Concise medium No 7881"
+        url="/crossword/123"
+      />
+    </View>
+  </View>
+</View>
+`;
+
+exports[`57. front lead two - portrait - wide 1`] = `
+<View>
+  <View>
+    <View>
+      <View>
+        <TileHFront
+          orientation="portrait"
+          tileName="lead1"
+        />
+      </View>
+      <View />
+      <View>
+        <TileGFront
+          orientation="portrait"
+          showByline={true}
+          showSummary={false}
+          tileName="lead2"
+        />
+      </View>
+    </View>
+    <View>
+      <InTodaysEdition
+        orientation="portrait"
+      />
+    </View>
+  </View>
+</View>
+`;
+
+exports[`58. front lead two - landscape - wide 1`] = `
+<View>
+  <View>
+    <View>
+      <View>
+        <TileHFront
+          orientation="landscape"
+          tileName="lead1"
+        />
+      </View>
+      <View />
+      <View>
+        <TileGFront
+          orientation="landscape"
+          showByline={false}
+          showSummary={false}
+          tileName="lead2"
+        />
+      </View>
+      <View />
+      <View>
+        <InTodaysEdition
+          orientation="landscape"
+        />
+      </View>
+    </View>
+  </View>
+</View>
+`;
+
+exports[`59. front lead one and one - portrait - wide 1`] = `
+<View>
+  <View>
+    <View>
+      <View>
+        <TileAFront
+          orientation="portrait"
+          tileName="lead"
+        />
+      </View>
+      <View />
+      <View>
+        <TileBFront
+          orientation="portrait"
+          showKeyline={true}
+          tileName="support"
+        />
+      </View>
+    </View>
+    <View>
+      <InTodaysEdition
+        orientation="portrait"
+      />
+    </View>
+  </View>
+</View>
+`;
+
+exports[`60. front lead one and one - landscape - wide 1`] = `
+<View>
+  <View>
+    <View>
+      <View>
+        <TileAFront
+          orientation="landscape"
+          tileName="lead"
+        />
+      </View>
+      <View />
+      <View>
+        <TileBFront
+          orientation="landscape"
+          showKeyline={false}
+          tileName="support"
+        />
+      </View>
+      <View />
+      <View>
+        <InTodaysEdition
+          orientation="landscape"
+        />
+      </View>
+    </View>
+  </View>
+</View>
+`;
+
+exports[`61. front lead one - portrait - wide 1`] = `
+<View>
+  <View>
+    <View>
+      <TileFFront
+        breakpoint="wide"
+        orientation="portrait"
+        tileName="lead"
+      />
+    </View>
+    <View>
+      <InTodaysEdition
+        orientation="portrait"
+      />
+    </View>
+  </View>
+</View>
+`;
+
+exports[`62. front lead one - landscape - wide 1`] = `
+<View>
+  <View>
+    <View>
+      <View>
+        <TileFFront
+          breakpoint="wide"
+          orientation="landscape"
+          tileName="lead"
+        />
+      </View>
+      <View />
+      <View>
+        <InTodaysEdition
+          orientation="landscape"
+        />
+      </View>
+    </View>
+  </View>
+</View>
+`;
+
+exports[`63. top secondary landscape (from topsecondaryfourslice) - wide 1`] = `
+<View>
+  <View>
+    <View>
+      <TileAU
+        breakpoint="wide"
+        tileName="lead"
+      />
+    </View>
+    <View />
+    <View>
+      <TileAV
+        breakpoint="wide"
+        tileName="support1"
+      />
+      <View />
+      <TileAV
+        breakpoint="wide"
+        tileName="support2"
+      />
+      <View />
+      <TileAV
+        breakpoint="wide"
+        tileName="support3"
+      />
+    </View>
+  </View>
+</View>
+`;
+
+exports[`64. top secondary portrait (from topsecondaryfourslice) - wide 1`] = `
+<View>
+  <View>
+    <View>
+      <TileAT
+        breakpoint="wide"
+        tileName="lead"
+      />
+    </View>
+    <View />
+    <View>
+      <TileAV
+        breakpoint="wide"
+        tileName="support1"
+      />
+      <View />
+      <TileAV
+        breakpoint="wide"
+        tileName="support2"
+      />
+      <View />
+      <TileAV
+        breakpoint="wide"
+        tileName="support3"
+      />
+    </View>
+  </View>
+</View>
+`;
+
+exports[`65. top secondary landscape (from topsecondarytwoandtwoslice) - wide 1`] = `
+<View>
+  <View>
+    <View>
+      <TileAU
+        breakpoint="wide"
+        tileName="lead"
+      />
+    </View>
+    <View />
+    <View>
+      <TileAV
+        breakpoint="wide"
+        tileName="support1"
+      />
+      <View />
+      <TileAV
+        breakpoint="wide"
+        tileName="support2"
+      />
+      <View />
+      <TileAV
+        breakpoint="wide"
+        tileName="support3"
+      />
+    </View>
+  </View>
+</View>
+`;
+
+exports[`66. top secondary portrait (from topsecondarytwoandtwoslice) - wide 1`] = `
+<View>
+  <View>
+    <View>
+      <TileAT
+        breakpoint="wide"
+        tileName="lead"
+      />
+    </View>
+    <View />
+    <View>
+      <TileAV
+        breakpoint="wide"
+        tileName="support1"
+      />
+      <View />
+      <TileAV
+        breakpoint="wide"
+        tileName="support2"
+      />
+      <View />
+      <TileAV
+        breakpoint="wide"
+        tileName="support3"
+      />
+    </View>
+  </View>
+</View>
+`;
+
+exports[`67. top secondary landscape (from topsecondarytwonopicandtwoslice) - wide 1`] = `
+<View>
+  <View>
+    <View>
+      <TileAU
+        breakpoint="wide"
+        tileName="lead"
+      />
+    </View>
+    <View />
+    <View>
+      <TileAV
+        breakpoint="wide"
+        tileName="support1"
+      />
+      <View />
+      <TileAV
+        breakpoint="wide"
+        tileName="support2"
+      />
+      <View />
+      <TileAV
+        breakpoint="wide"
+        tileName="support3"
+      />
+    </View>
+  </View>
+</View>
+`;
+
+exports[`68. top secondary portrait (from topsecondarytwonopicandtwoslice) - wide 1`] = `
+<View>
+  <View>
+    <View>
+      <TileAT
+        breakpoint="wide"
+        tileName="lead"
+      />
+    </View>
+    <View />
+    <View>
+      <TileAV
+        breakpoint="wide"
+        tileName="support1"
+      />
+      <View />
+      <TileAV
+        breakpoint="wide"
+        tileName="support2"
+      />
+      <View />
+      <TileAV
+        breakpoint="wide"
+        tileName="support3"
+      />
+    </View>
+  </View>
+</View>
+`;
+
+exports[`69. comment lead and cartoon - huge 1`] = `
+<View>
+  <View>
+    <View>
+      <View>
+        <TileAH
+          breakpoint="huge"
+          tileName="lead"
+        />
+      </View>
+      <View />
+      <View>
+        <TileAI
+          breakpoint="huge"
+          tileName="cartoon"
+        />
+      </View>
+    </View>
+  </View>
+</View>
+`;
+
+exports[`70. daily universal register - huge 1`] = `
+<View>
+  <View>
+    <View>
+      <Image
+        resizeMode="contain"
+        source={
+          Object {
+            "testUri": "../../../packages/edition-slices/assets/daily-universal-register.png",
+          }
+        }
+      />
+      <Text>
+        Daily Universal Register
+      </Text>
+      <View>
+        <View>
+          <TileS
+            breakpoint="huge"
+          />
+          <View />
+          <TileS
+            breakpoint="huge"
+            logo={
+              <Logo
+                imageUri="https://www.thetimes.co.uk/d/img/DUR-nature-80d36dd1cd.png"
+                ratio={1}
+                type="nature notes"
+              />
+            }
+          />
+        </View>
+        <View />
+        <View>
+          <TileS
+            breakpoint="huge"
+          />
+          <View />
+          <TileS
+            breakpoint="huge"
+            logo={
+              <Logo
+                imageUri="https://www.thetimes.co.uk/d/img/DUR-birthdays-94b2272911.png"
+                ratio={1}
+                type="birthdays"
+              />
+            }
+          />
+        </View>
+      </View>
+    </View>
+  </View>
+</View>
+`;
+
+exports[`71. lead one and one - huge 1`] = `
+<View>
+  <View>
+    <View>
+      <View>
+        <TileZ
+          breakpoint="huge"
+          tileName="lead"
+        />
+      </View>
+      <View />
+      <View>
+        <TileAF
+          breakpoint="huge"
+          tileName="support"
+        />
+      </View>
+    </View>
+  </View>
+</View>
+`;
+
+exports[`72. lead one and one - supplement - huge 1`] = `
+<View>
+  <View>
+    <View>
+      <View>
+        <TileU
+          headlineStyle={
+            Object {
+              "color": "#1D1D1B",
+              "fontFamily": "TimesModern-Regular",
+              "fontSize": 45,
+              "fontWeight": "normal",
+              "lineHeight": 45,
+            }
+          }
+          tileName="lead"
+        />
+      </View>
+      <View />
+      <View>
+        <TileAX
+          breakpoint="huge"
+          orientation="portrait"
+          tileName="support"
+        />
+      </View>
+    </View>
+  </View>
+</View>
+`;
+
+exports[`73. lead one full width - huge 1`] = `
+<View>
+  <View>
+    <TileR
+      breakpoint="huge"
+      tileName="lead"
+    />
+  </View>
+</View>
+`;
+
+exports[`74. lead two no pic and two - huge 1`] = `
+<View>
+  <View>
+    <View>
+      <View>
+        <TileX
+          breakpoint="huge"
+          tileName="lead1"
+        />
+        <View />
+        <TileY
+          breakpoint="huge"
+          tileName="lead2"
+        />
+      </View>
+      <View />
+      <View>
+        <TileAL
+          breakpoint="huge"
+          tileName="support1"
+        />
+      </View>
+      <View />
+      <View>
+        <TileE
+          breakpoint="huge"
+          tileName="support2"
+        />
+      </View>
+    </View>
+  </View>
+</View>
+`;
+
+exports[`75. lead two no pic and two - huge 1`] = `
+<View>
+  <View>
+    <View>
+      <View>
+        <TileX
+          breakpoint="huge"
+          tileName="lead1"
+        />
+        <View />
+        <TileY
+          breakpoint="huge"
+          tileName="lead2"
+        />
+      </View>
+      <View />
+      <View>
+        <TileE
+          breakpoint="huge"
+          tileName="support2"
+        />
+        <View />
+        <TileD
+          breakpoint="huge"
+          tileName="support1"
+        />
+      </View>
+    </View>
+  </View>
+</View>
+`;
+
+exports[`76. leaders slice - huge 1`] = `
+<View>
+  <View>
+    <View>
+      <View>
+        <Image
+          resizeMode="contain"
+          source={
+            Object {
+              "testUri": "../../../packages/edition-slices/assets/times-leading-header.png",
+            }
+          }
+        />
+        <View>
+          <Text>
+             Leading Articles 
+          </Text>
+        </View>
+      </View>
+      <View>
+        <View>
+          <TileM
+            breakpoint="huge"
+            tileName="leader2"
+          />
+        </View>
+        <View />
+        <View>
+          <TileM
+            breakpoint="huge"
+            tileName="leader1"
+          />
+        </View>
+        <View />
+        <View>
+          <TileM
+            breakpoint="huge"
+            tileName="leader3"
+          />
+        </View>
+      </View>
+    </View>
+  </View>
+</View>
+`;
+
+exports[`77. secondary one and four - huge 1`] = `
+<View>
+  <View>
+    <View>
+      <View>
+        <TheTimesLogo
+          height={37}
+          width={35}
+        />
+      </View>
+      <View />
+      <View>
+        <View>
+          <TileN
+            breakpoint="huge"
+            tileName="secondary"
+          />
+        </View>
+        <View />
+        <View>
+          <View>
+            <View>
+              <TileO
+                breakpoint="huge"
+                tileName="support1"
+              />
+            </View>
+            <View />
+            <View>
+              <TileO
+                breakpoint="huge"
+                tileName="support2"
+              />
+            </View>
+          </View>
+          <View />
+          <View>
+            <View>
+              <TileO
+                breakpoint="huge"
+                tileName="support3"
+              />
+            </View>
+            <View />
+            <View>
+              <TileO
+                breakpoint="huge"
+                tileName="support4"
+              />
+            </View>
+          </View>
+        </View>
+      </View>
+    </View>
+  </View>
+</View>
+`;
+
+exports[`78. secondary one - huge 1`] = `
+<View>
+  <View>
+    <TileW
+      breakpoint="huge"
+      tileName="secondary"
+    />
+  </View>
+</View>
+`;
+
+exports[`79. supplement secondary one - huge 1`] = `
+<View>
+  <View>
+    <TileBF
+      breakpoint="huge"
+      tileName="secondary"
+    />
+  </View>
+</View>
+`;
+
+exports[`80. secondary four - huge 1`] = `
+<View>
+  <View>
+    <View>
+      <View>
+        <View>
+          <TileAR
+            breakpoint="huge"
+            tileName="secondary1"
+          />
+        </View>
+        <View />
+        <View>
+          <TileAR
+            breakpoint="huge"
+            tileName="secondary2"
+          />
+        </View>
+      </View>
+      <View />
+      <View>
+        <TileB
+          additionalHeadlineStyles={
+            Object {
+              "fontSize": 22,
+              "lineHeight": 22,
+            }
+          }
+          breakpoint="huge"
+          tileName="secondary3"
+        />
+        <View />
+        <TileB
+          additionalHeadlineStyles={
+            Object {
+              "fontSize": 22,
+              "lineHeight": 22,
+            }
+          }
+          breakpoint="huge"
+          tileName="secondary4"
+        />
+      </View>
+    </View>
+  </View>
+</View>
+`;
+
+exports[`81. secondary four - supplement - huge 1`] = `
+<View>
+  <View>
+    <View>
+      <View>
+        <View>
+          <TileAY
+            breakpoint="huge"
+            tileName="secondary1"
+          />
+        </View>
+        <View />
+        <View>
+          <TileAY
+            breakpoint="huge"
+            tileName="secondary2"
+          />
+        </View>
+        <View />
+        <View>
+          <TileAY
+            breakpoint="huge"
+            tileName="secondary3"
+          />
+        </View>
+        <View />
+        <View>
+          <TileAY
+            breakpoint="huge"
+            tileName="secondary4"
+          />
+        </View>
+      </View>
+    </View>
+  </View>
+</View>
+`;
+
+exports[`82. secondary one and columnist - huge 1`] = `
+<View>
+  <View>
+    <View>
+      <View>
+        <TileAB
+          breakpoint="huge"
+          tileName="columnist"
+        />
+      </View>
+      <View />
+      <View>
+        <TileB
+          breakpoint="huge"
+          tileName="secondary"
+          withMoreTeaser={true}
+        />
+      </View>
+    </View>
+  </View>
+</View>
+`;
+
+exports[`83. secondary two and two - huge 1`] = `
+<View>
+  <View>
+    <View>
+      <View>
+        <TileAM
+          tileName="secondary1"
+        />
+      </View>
+      <View />
+      <View>
+        <TileAN
+          tileName="support1"
+        />
+      </View>
+      <View />
+      <View>
+        <TileAM
+          tileName="secondary2"
+        />
+      </View>
+      <View />
+      <View>
+        <TileAN
+          tileName="support2"
+        />
+      </View>
+    </View>
+  </View>
+</View>
+`;
+
+exports[`84. supplement secondary two and two - huge 1`] = `
+<View>
+  <View>
+    <View>
+      <View>
+        <TileBC
+          breakpoint="huge"
+          tileName="secondary1"
+        />
+      </View>
+      <View />
+      <View>
+        <TileBE
+          tileName="support1"
+        />
+      </View>
+      <View />
+      <View>
+        <TileBC
+          breakpoint="huge"
+          tileName="secondary2"
+        />
+      </View>
+      <View />
+      <View>
+        <TileBE
+          tileName="support2"
+        />
+      </View>
+    </View>
+  </View>
+</View>
+`;
+
+exports[`85. lead one and four slice - huge 1`] = `
+<View>
+  <View>
+    <View>
+      <View>
+        <TileAC
+          breakpoint="huge"
+          tileName="lead"
+        />
+      </View>
+      <View />
+      <View>
+        <TileAD
+          breakpoint="huge"
+          tileName="support1"
+        />
+        <View />
+        <TileAD
+          breakpoint="huge"
+          tileName="support2"
+        />
+        <View />
+        <TileAD
+          breakpoint="huge"
+          tileName="support3"
+        />
+        <View />
+        <TileAD
+          breakpoint="huge"
+          tileName="support4"
+        />
+      </View>
+    </View>
+  </View>
+</View>
+`;
+
+exports[`86. supplement lead one and four slice - huge 1`] = `
+<View>
+  <View>
+    <View>
+      <View>
+        <TileAZ
+          breakpoint="huge"
+          tileName="lead"
+        />
+      </View>
+      <View>
+        <View>
+          <TileBA
+            breakpoint="huge"
+            tileName="support1"
+          />
+        </View>
+        <View />
+        <View>
+          <TileBA
+            breakpoint="huge"
+            tileName="support2"
+          />
+        </View>
+        <View />
+        <View>
+          <TileBA
+            breakpoint="huge"
+            tileName="support3"
+          />
+        </View>
+        <View />
+        <View>
+          <TileBA
+            breakpoint="huge"
+            tileName="support4"
+          />
+        </View>
+      </View>
+    </View>
+  </View>
+</View>
+`;
+
+exports[`87. standard slice - huge 1`] = `
+<View>
+  <View>
+    <View>
+      <View>
+        <TileK
+          breakpoint="huge"
+          tileName="standardItem1"
+        />
+        <View />
+        <TileK
+          breakpoint="huge"
+          tileName="standardItem2"
+        />
+        <View />
+        <TileK
+          breakpoint="huge"
+          tileName="standardItem3"
+        />
+        <View />
+        <TileK
+          breakpoint="huge"
+          tileName="standardItem4"
+        />
+        <View />
+        <TileK
+          breakpoint="huge"
+          tileName="standardItem5"
+        />
+      </View>
+    </View>
+  </View>
+</View>
+`;
+
+exports[`88. secondary two no pic and two - huge 1`] = `
+<View>
+  <View>
+    <View>
+      <View>
+        <View>
+          <TileAE
+            breakpoint="huge"
+            tileName="secondary1"
+          />
+        </View>
+        <View />
+        <View>
+          <TileAE
+            breakpoint="huge"
+            tileName="secondary2"
+          />
+        </View>
+      </View>
+      <View />
+      <View>
+        <TileG
+          breakpoint="huge"
+          tileName="support1"
+        />
+        <View />
+        <TileG
+          breakpoint="huge"
+          tileName="support2"
+        />
+      </View>
+    </View>
+  </View>
+</View>
+`;
+
+exports[`89. list two and six no pic - huge 1`] = `
+<View>
+  <View>
+    <View>
+      <View>
+        <TileAS
+          breakpoint="huge"
+          tileName="lead1"
+        />
+      </View>
+      <View />
+      <View>
+        <TileAS
+          breakpoint="huge"
+          tileName="lead2"
+        />
+      </View>
+      <View />
+      <View>
+        <View>
+          <View>
+            <TileL
+              breakpoint="huge"
+              tileName="support1"
+            />
+          </View>
+          <View />
+          <View>
+            <TileL
+              breakpoint="huge"
+              tileName="support2"
+            />
+          </View>
+        </View>
+        <View />
+        <View>
+          <View>
+            <TileL
+              breakpoint="huge"
+              tileName="support3"
+            />
+          </View>
+          <View />
+          <View>
+            <TileL
+              breakpoint="huge"
+              tileName="support4"
+            />
+          </View>
+        </View>
+        <View />
+        <View>
+          <View>
+            <TileL
+              breakpoint="huge"
+              tileName="support5"
+            />
+          </View>
+          <View />
+          <View>
+            <TileL
+              breakpoint="huge"
+              tileName="support6"
+            />
+          </View>
+        </View>
+      </View>
+    </View>
+  </View>
+</View>
+`;
+
+exports[`90. puzzle - huge 1`] = `
+<View>
+  <View>
+    <View>
+      <View>
+        <TileAK
+          breakpoint="huge"
+          id="0"
+          image={
+            Object {
+              "crop11": null,
+              "crop169": null,
+              "crop23": null,
+              "crop32": Object {
+                "url": "https://www.thetimes.co.uk/imageserver/image/%2Fpuzzles%2Ficons%2F33b27655-dcc9-421f-906f-b2b10dd26865.png?crop=1250%2C833%2C0%2C0",
+              },
+              "crop45": null,
+              "crop54": null,
+              "crops": Array [],
+              "id": "522abf2c-e752-11e8-9f32-f2801f1b9fd1",
+            }
+          }
+          title="Times Concise medium No 7881"
+          url="/crossword/123"
+        />
+      </View>
+      <View>
+        <TileAK
+          breakpoint="huge"
+          id="1"
+          image={
+            Object {
+              "crop11": null,
+              "crop169": null,
+              "crop23": null,
+              "crop32": Object {
+                "url": "https://www.thetimes.co.uk/imageserver/image/%2Fpuzzles%2Ficons%2F33b27655-dcc9-421f-906f-b2b10dd26865.png?crop=1250%2C833%2C0%2C0",
+              },
+              "crop45": null,
+              "crop54": null,
+              "crops": Array [],
+              "id": "522abf2c-e752-11e8-9f32-f2801f1b9fd1",
+            }
+          }
+          title="Times Concise medium No 7881"
+          url="/crossword/123"
+        />
+      </View>
+      <View>
+        <TileAK
+          breakpoint="huge"
+          id="2"
+          image={
+            Object {
+              "crop11": null,
+              "crop169": null,
+              "crop23": null,
+              "crop32": Object {
+                "url": "https://www.thetimes.co.uk/imageserver/image/%2Fpuzzles%2Ficons%2F33b27655-dcc9-421f-906f-b2b10dd26865.png?crop=1250%2C833%2C0%2C0",
+              },
+              "crop45": null,
+              "crop54": null,
+              "crops": Array [],
+              "id": "522abf2c-e752-11e8-9f32-f2801f1b9fd1",
+            }
+          }
+          title="Times Concise medium No 7881"
+          url="/crossword/123"
+        />
+      </View>
+    </View>
+  </View>
+</View>
+`;
+
+exports[`91. front lead two - portrait - huge 1`] = `
+<View>
+  <View>
+    <View>
+      <View>
+        <View>
+          <TileHFront
+            orientation="portrait"
+            tileName="lead1"
+          />
+        </View>
+        <View />
+        <View>
+          <TileGFront
+            orientation="portrait"
+            showByline={true}
+            showSummary={false}
+            tileName="lead2"
+          />
+        </View>
+      </View>
+      <View>
+        <InTodaysEdition
+          orientation="portrait"
+        />
+      </View>
+    </View>
+  </View>
+</View>
+`;
+
+exports[`92. front lead two - landscape - huge 1`] = `
+<View>
+  <View>
+    <View>
+      <View>
+        <View>
+          <TileHFront
+            orientation="landscape"
+            tileName="lead1"
+          />
+        </View>
+        <View />
+        <View>
+          <TileGFront
+            orientation="landscape"
+            showByline={true}
+            showSummary={true}
+            tileName="lead2"
+          />
+        </View>
+        <View />
+        <View>
+          <InTodaysEdition
+            orientation="landscape"
+          />
+        </View>
+      </View>
+    </View>
+  </View>
+</View>
+`;
+
+exports[`93. front lead one and one - portrait - huge 1`] = `
+<View>
+  <View>
+    <View>
+      <View>
+        <View>
+          <TileAFront
+            orientation="portrait"
+            tileName="lead"
+          />
+        </View>
+        <View />
+        <View>
+          <TileBFront
+            orientation="portrait"
+            showKeyline={true}
+            tileName="support"
+          />
+        </View>
+      </View>
+      <View>
+        <InTodaysEdition
+          orientation="portrait"
+        />
+      </View>
+    </View>
+  </View>
+</View>
+`;
+
+exports[`94. front lead one and one - landscape - huge 1`] = `
+<View>
+  <View>
+    <View>
+      <View>
+        <View>
+          <TileAFront
+            orientation="landscape"
+            tileName="lead"
+          />
+        </View>
+        <View />
+        <View>
+          <TileBFront
+            orientation="landscape"
+            showKeyline={false}
+            tileName="support"
+          />
+        </View>
+        <View />
+        <View>
+          <InTodaysEdition
+            orientation="landscape"
+          />
+        </View>
+      </View>
+    </View>
+  </View>
+</View>
+`;
+
+exports[`95. front lead one - portrait - huge 1`] = `
+<View>
+  <View>
+    <View>
+      <View>
+        <TileFFront
+          breakpoint="huge"
+          orientation="portrait"
+          tileName="lead"
+        />
+      </View>
+      <View>
+        <InTodaysEdition
+          orientation="portrait"
+        />
+      </View>
+    </View>
+  </View>
+</View>
+`;
+
+exports[`96. front lead one - landscape - huge 1`] = `
+<View>
+  <View>
+    <View>
+      <View>
+        <View>
+          <TileFFront
+            breakpoint="huge"
+            orientation="landscape"
+            tileName="lead"
+          />
+        </View>
+        <View />
+        <View>
+          <InTodaysEdition
+            orientation="landscape"
+          />
+        </View>
+      </View>
+    </View>
+  </View>
+</View>
+`;
+
+exports[`97. top secondary landscape (from topsecondaryfourslice) - huge 1`] = `
+<View>
+  <View>
+    <View>
+      <View>
+        <TileAU
+          breakpoint="huge"
+          tileName="lead"
+        />
+      </View>
+      <View />
+      <View>
+        <TileAV
+          breakpoint="huge"
+          tileName="support1"
+        />
+        <View />
+        <TileAV
+          breakpoint="huge"
+          tileName="support2"
+        />
+        <View />
+        <TileAV
+          breakpoint="huge"
+          tileName="support3"
+        />
+      </View>
+    </View>
+  </View>
+</View>
+`;
+
+exports[`98. top secondary portrait (from topsecondaryfourslice) - huge 1`] = `
+<View>
+  <View>
+    <View>
+      <View>
+        <TileAT
+          breakpoint="huge"
+          tileName="lead"
+        />
+      </View>
+      <View />
+      <View>
+        <TileAV
+          breakpoint="huge"
+          tileName="support1"
+        />
+        <View />
+        <TileAV
+          breakpoint="huge"
+          tileName="support2"
+        />
+        <View />
+        <TileAV
+          breakpoint="huge"
+          tileName="support3"
+        />
+      </View>
+    </View>
+  </View>
+</View>
+`;
+
+exports[`99. top secondary landscape (from topsecondarytwoandtwoslice) - huge 1`] = `
+<View>
+  <View>
+    <View>
+      <View>
+        <TileAU
+          breakpoint="huge"
+          tileName="lead"
+        />
+      </View>
+      <View />
+      <View>
+        <TileAV
+          breakpoint="huge"
+          tileName="support1"
+        />
+        <View />
+        <TileAV
+          breakpoint="huge"
+          tileName="support2"
+        />
+        <View />
+        <TileAV
+          breakpoint="huge"
+          tileName="support3"
+        />
+      </View>
+    </View>
+  </View>
+</View>
+`;
+
+exports[`100. top secondary portrait (from topsecondarytwoandtwoslice) - huge 1`] = `
+<View>
+  <View>
+    <View>
+      <View>
+        <TileAT
+          breakpoint="huge"
+          tileName="lead"
+        />
+      </View>
+      <View />
+      <View>
+        <TileAV
+          breakpoint="huge"
+          tileName="support1"
+        />
+        <View />
+        <TileAV
+          breakpoint="huge"
+          tileName="support2"
+        />
+        <View />
+        <TileAV
+          breakpoint="huge"
+          tileName="support3"
+        />
+      </View>
+    </View>
+  </View>
+</View>
+`;
+
+exports[`101. top secondary landscape (from topsecondarytwonopicandtwoslice) - huge 1`] = `
+<View>
+  <View>
+    <View>
+      <View>
+        <TileAU
+          breakpoint="huge"
+          tileName="lead"
+        />
+      </View>
+      <View />
+      <View>
+        <TileAV
+          breakpoint="huge"
+          tileName="support1"
+        />
+        <View />
+        <TileAV
+          breakpoint="huge"
+          tileName="support2"
+        />
+        <View />
+        <TileAV
+          breakpoint="huge"
+          tileName="support3"
+        />
+      </View>
+    </View>
+  </View>
+</View>
+`;
+
+exports[`102. top secondary portrait (from topsecondarytwonopicandtwoslice) - huge 1`] = `
+<View>
+  <View>
+    <View>
+      <View>
+        <TileAT
+          breakpoint="huge"
+          tileName="lead"
+        />
+      </View>
+      <View />
+      <View>
+        <TileAV
+          breakpoint="huge"
+          tileName="support1"
+        />
+        <View />
+        <TileAV
+          breakpoint="huge"
+          tileName="support2"
+        />
+        <View />
+        <TileAV
+          breakpoint="huge"
+          tileName="support3"
+        />
+      </View>
+    </View>
+  </View>
+</View>
+`;
