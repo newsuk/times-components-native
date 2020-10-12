@@ -20,10 +20,6 @@ import {
   getPuzzleSlices,
   mockSecondaryOneAndFourSlice,
   mockListTwoAndSixNoPicSlice,
-  mockLeadTwoFrontSlice,
-  mockLeadOneAndOneFrontSlice,
-  mockLeadOneFullWidthFrontSlice,
-  mockInTodaysEditionSlice,
 } from "@times-components-native/fixture-generator";
 import Responsive from "@times-components-native/responsive";
 import "./mocks";
@@ -44,9 +40,6 @@ import {
   SecondaryTwoAndTwoSlice,
   StandardSlice,
   ListTwoAndSixNoPicSlice,
-  LeadTwoFrontSlice,
-  LeadOneAndOneFrontSlice,
-  LeadOneFullWidthFrontSlice,
   TopSecondarySlice,
   SupplementLeadOneAndOneSlice,
   SupplementLeadOneAndFourSlice,
@@ -167,54 +160,6 @@ const slices = [
     mock: { puzzles: getPuzzleSlices(3) },
     name: "puzzle",
     Slice: PuzzleSlice,
-  },
-  {
-    mock: mockLeadTwoFrontSlice(),
-    name: "front lead two - portrait",
-    Slice: LeadTwoFrontSlice,
-    orientation: "portrait",
-    sliceProps: {
-      inTodaysEditionSlice: mockInTodaysEditionSlice(),
-    },
-  },
-  {
-    mock: mockLeadTwoFrontSlice(),
-    name: "front lead two - landscape",
-    Slice: LeadTwoFrontSlice,
-    orientation: "landscape",
-    sliceProps: {
-      inTodaysEditionSlice: mockInTodaysEditionSlice(),
-    },
-  },
-  {
-    mock: mockLeadOneAndOneFrontSlice(),
-    name: "front lead one and one - portrait",
-    Slice: LeadOneAndOneFrontSlice,
-    orientation: "portrait",
-  },
-  {
-    mock: mockLeadOneAndOneFrontSlice(),
-    name: "front lead one and one - landscape",
-    Slice: LeadOneAndOneFrontSlice,
-    orientation: "landscape",
-  },
-  {
-    mock: mockLeadOneFullWidthFrontSlice(),
-    name: "front lead one - portrait",
-    Slice: LeadOneFullWidthFrontSlice,
-    orientation: "portrait",
-    sliceProps: {
-      inTodaysEditionSlice: mockInTodaysEditionSlice(),
-    },
-  },
-  {
-    mock: mockLeadOneFullWidthFrontSlice(),
-    name: "front lead one - landscape",
-    Slice: LeadOneFullWidthFrontSlice,
-    orientation: "landscape",
-    sliceProps: {
-      inTodaysEditionSlice: mockInTodaysEditionSlice(),
-    },
   },
   {
     mock: mockSecondaryFourSlice(),
