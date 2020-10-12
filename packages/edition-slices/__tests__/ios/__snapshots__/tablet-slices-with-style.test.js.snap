@@ -1829,7 +1829,343 @@ exports[`22. puzzle - medium 1`] = `
 </View>
 `;
 
-exports[`23. top secondary landscape (from topsecondaryfourslice) - medium 1`] = `
+exports[`23. front lead two - portrait - medium 1`] = `
+<View
+  style={
+    Object {
+      "alignSelf": "center",
+      "flexGrow": 1,
+      "maxWidth": "100%",
+      "paddingHorizontal": 10,
+      "width": 1366,
+    }
+  }
+>
+  <View
+    style={
+      Object {
+        "alignSelf": "center",
+        "flex": 1,
+        "flexDirection": "row",
+        "justifyContent": "center",
+        "width": 688,
+      }
+    }
+  >
+    <View>
+      <View>
+        <TileHFront />
+      </View>
+      <View
+        style={
+          Object {
+            "borderColor": "#DBDBDB",
+            "borderRightWidth": 1,
+            "borderStyle": "solid",
+            "marginVertical": 10,
+          }
+        }
+      />
+      <View>
+        <TileGFront />
+      </View>
+    </View>
+    <View>
+      <InTodaysEdition />
+    </View>
+  </View>
+</View>
+`;
+
+exports[`24. front lead two - landscape - medium 1`] = `
+<View
+  style={
+    Object {
+      "alignSelf": "center",
+      "flexGrow": 1,
+      "maxWidth": "100%",
+      "paddingHorizontal": 10,
+      "width": 1366,
+    }
+  }
+>
+  <View
+    style={
+      Object {
+        "alignSelf": "center",
+        "flex": 1,
+        "flexDirection": "row",
+        "justifyContent": "center",
+        "width": 944,
+      }
+    }
+  >
+    <View>
+      <View>
+        <TileHFront />
+      </View>
+      <View
+        style={
+          Object {
+            "borderColor": "#DBDBDB",
+            "borderRightWidth": 1,
+            "borderStyle": "solid",
+            "marginVertical": 10,
+          }
+        }
+      />
+      <View>
+        <TileGFront />
+      </View>
+      <View
+        style={
+          Object {
+            "borderColor": "#DBDBDB",
+            "borderRightWidth": 1,
+            "borderStyle": "solid",
+            "marginVertical": 10,
+          }
+        }
+      />
+      <View>
+        <InTodaysEdition />
+      </View>
+    </View>
+  </View>
+</View>
+`;
+
+exports[`25. front lead one and one - portrait - medium 1`] = `
+<View
+  style={
+    Object {
+      "alignSelf": "center",
+      "flexGrow": 1,
+      "maxWidth": "100%",
+      "paddingHorizontal": 10,
+      "width": 1366,
+    }
+  }
+>
+  <View
+    style={
+      Object {
+        "alignSelf": "center",
+        "flex": 1,
+        "flexDirection": "column",
+        "justifyContent": "center",
+        "marginBottom": 20,
+        "marginHorizontal": 30,
+        "marginTop": 15,
+        "width": 688,
+      }
+    }
+  >
+    <View
+      style={
+        Object {
+          "flex": 1,
+          "flexDirection": "row",
+        }
+      }
+    >
+      <View
+        style={
+          Object {
+            "width": "75.69040697674419%",
+          }
+        }
+      >
+        <TileAFront />
+      </View>
+      <View
+        style={
+          Object {
+            "borderColor": "#DBDBDB",
+            "borderRightWidth": 1,
+            "borderStyle": "solid",
+            "marginTop": 0,
+            "marginVertical": 10,
+          }
+        }
+      />
+      <View
+        style={
+          Object {
+            "width": "24.164244186046513%",
+          }
+        }
+      >
+        <TileBFront />
+      </View>
+    </View>
+    <View
+      style={
+        Object {
+          "height": 133,
+          "marginTop": 15,
+          "width": "100%",
+        }
+      }
+    >
+      <InTodaysEdition />
+    </View>
+  </View>
+</View>
+`;
+
+exports[`26. front lead one and one - landscape - medium 1`] = `
+<View
+  style={
+    Object {
+      "alignSelf": "center",
+      "flexGrow": 1,
+      "maxWidth": "100%",
+      "paddingHorizontal": 10,
+      "width": 1366,
+    }
+  }
+>
+  <View
+    style={
+      Object {
+        "alignSelf": "center",
+        "flex": 1,
+        "flexDirection": "row",
+        "justifyContent": "center",
+        "width": 944,
+      }
+    }
+  >
+    <View>
+      <View>
+        <TileAFront />
+      </View>
+      <View
+        style={
+          Object {
+            "borderColor": "#DBDBDB",
+            "borderRightWidth": 1,
+            "borderStyle": "solid",
+            "marginVertical": 10,
+          }
+        }
+      />
+      <View>
+        <TileBFront />
+      </View>
+      <View
+        style={
+          Object {
+            "borderColor": "#DBDBDB",
+            "borderRightWidth": 1,
+            "borderStyle": "solid",
+            "marginVertical": 10,
+          }
+        }
+      />
+      <View>
+        <InTodaysEdition />
+      </View>
+    </View>
+  </View>
+</View>
+`;
+
+exports[`27. front lead one - portrait - medium 1`] = `
+<View
+  style={
+    Object {
+      "alignSelf": "center",
+      "flexGrow": 1,
+      "maxWidth": "100%",
+      "paddingHorizontal": 10,
+      "width": 1366,
+    }
+  }
+>
+  <View
+    style={
+      Object {
+        "alignSelf": "center",
+        "flex": 1,
+        "flexDirection": "column",
+        "justifyContent": "center",
+        "paddingBottom": 15,
+        "paddingTop": 10,
+        "width": 688,
+      }
+    }
+  >
+    <View
+      style={
+        Object {
+          "flex": 1,
+        }
+      }
+    >
+      <TileFFront />
+    </View>
+    <View
+      style={
+        Object {
+          "height": 133,
+          "marginTop": 10,
+        }
+      }
+    >
+      <InTodaysEdition />
+    </View>
+  </View>
+</View>
+`;
+
+exports[`28. front lead one - landscape - medium 1`] = `
+<View
+  style={
+    Object {
+      "alignSelf": "center",
+      "flexGrow": 1,
+      "maxWidth": "100%",
+      "paddingHorizontal": 10,
+      "width": 1366,
+    }
+  }
+>
+  <View
+    style={
+      Object {
+        "alignSelf": "center",
+        "flex": 1,
+        "flexDirection": "row",
+        "justifyContent": "center",
+        "width": 944,
+      }
+    }
+  >
+    <View>
+      <View>
+        <TileFFront />
+      </View>
+      <View
+        style={
+          Object {
+            "borderColor": "#DBDBDB",
+            "borderRightWidth": 1,
+            "borderStyle": "solid",
+            "marginVertical": 10,
+          }
+        }
+      />
+      <View>
+        <InTodaysEdition />
+      </View>
+    </View>
+  </View>
+</View>
+`;
+
+exports[`29. top secondary landscape (from topsecondaryfourslice) - medium 1`] = `
 <View
   style={
     Object {
@@ -1902,7 +2238,7 @@ exports[`23. top secondary landscape (from topsecondaryfourslice) - medium 1`] =
 </View>
 `;
 
-exports[`24. top secondary portrait (from topsecondaryfourslice) - medium 1`] = `
+exports[`30. top secondary portrait (from topsecondaryfourslice) - medium 1`] = `
 <View
   style={
     Object {
@@ -1975,7 +2311,7 @@ exports[`24. top secondary portrait (from topsecondaryfourslice) - medium 1`] = 
 </View>
 `;
 
-exports[`25. top secondary landscape (from topsecondarytwoandtwoslice) - medium 1`] = `
+exports[`31. top secondary landscape (from topsecondarytwoandtwoslice) - medium 1`] = `
 <View
   style={
     Object {
@@ -2048,7 +2384,7 @@ exports[`25. top secondary landscape (from topsecondarytwoandtwoslice) - medium 
 </View>
 `;
 
-exports[`26. top secondary portrait (from topsecondarytwoandtwoslice) - medium 1`] = `
+exports[`32. top secondary portrait (from topsecondarytwoandtwoslice) - medium 1`] = `
 <View
   style={
     Object {
@@ -2121,7 +2457,7 @@ exports[`26. top secondary portrait (from topsecondarytwoandtwoslice) - medium 1
 </View>
 `;
 
-exports[`27. top secondary landscape (from topsecondarytwonopicandtwoslice) - medium 1`] = `
+exports[`33. top secondary landscape (from topsecondarytwonopicandtwoslice) - medium 1`] = `
 <View
   style={
     Object {
@@ -2194,7 +2530,7 @@ exports[`27. top secondary landscape (from topsecondarytwonopicandtwoslice) - me
 </View>
 `;
 
-exports[`28. top secondary portrait (from topsecondarytwonopicandtwoslice) - medium 1`] = `
+exports[`34. top secondary portrait (from topsecondarytwonopicandtwoslice) - medium 1`] = `
 <View
   style={
     Object {
@@ -2267,7 +2603,7 @@ exports[`28. top secondary portrait (from topsecondarytwonopicandtwoslice) - med
 </View>
 `;
 
-exports[`29. comment lead and cartoon - wide 1`] = `
+exports[`35. comment lead and cartoon - wide 1`] = `
 <View
   style={
     Object {
@@ -2320,7 +2656,7 @@ exports[`29. comment lead and cartoon - wide 1`] = `
 </View>
 `;
 
-exports[`30. daily universal register - wide 1`] = `
+exports[`36. daily universal register - wide 1`] = `
 <View
   style={
     Object {
@@ -2429,7 +2765,7 @@ exports[`30. daily universal register - wide 1`] = `
 </View>
 `;
 
-exports[`31. lead one and one - wide 1`] = `
+exports[`37. lead one and one - wide 1`] = `
 <View
   style={
     Object {
@@ -2481,7 +2817,7 @@ exports[`31. lead one and one - wide 1`] = `
 </View>
 `;
 
-exports[`32. lead one and one - supplement - wide 1`] = `
+exports[`38. lead one and one - supplement - wide 1`] = `
 <View
   style={
     Object {
@@ -2533,7 +2869,7 @@ exports[`32. lead one and one - supplement - wide 1`] = `
 </View>
 `;
 
-exports[`33. lead one full width - wide 1`] = `
+exports[`39. lead one full width - wide 1`] = `
 <View
   style={
     Object {
@@ -2548,7 +2884,7 @@ exports[`33. lead one full width - wide 1`] = `
 </View>
 `;
 
-exports[`34. lead two no pic and two - wide 1`] = `
+exports[`40. lead two no pic and two - wide 1`] = `
 <View
   style={
     Object {
@@ -2629,7 +2965,7 @@ exports[`34. lead two no pic and two - wide 1`] = `
 </View>
 `;
 
-exports[`35. lead two no pic and two - wide 1`] = `
+exports[`41. lead two no pic and two - wide 1`] = `
 <View
   style={
     Object {
@@ -2701,7 +3037,7 @@ exports[`35. lead two no pic and two - wide 1`] = `
 </View>
 `;
 
-exports[`36. leaders slice - wide 1`] = `
+exports[`42. leaders slice - wide 1`] = `
 <View
   style={
     Object {
@@ -2826,7 +3162,7 @@ exports[`36. leaders slice - wide 1`] = `
 </View>
 `;
 
-exports[`37. secondary one and four - wide 1`] = `
+exports[`43. secondary one and four - wide 1`] = `
 <View
   style={
     Object {
@@ -2994,7 +3330,7 @@ exports[`37. secondary one and four - wide 1`] = `
 </View>
 `;
 
-exports[`38. secondary one - wide 1`] = `
+exports[`44. secondary one - wide 1`] = `
 <View
   style={
     Object {
@@ -3009,7 +3345,7 @@ exports[`38. secondary one - wide 1`] = `
 </View>
 `;
 
-exports[`39. supplement secondary one - wide 1`] = `
+exports[`45. supplement secondary one - wide 1`] = `
 <View
   style={
     Object {
@@ -3024,7 +3360,7 @@ exports[`39. supplement secondary one - wide 1`] = `
 </View>
 `;
 
-exports[`40. secondary four - wide 1`] = `
+exports[`46. secondary four - wide 1`] = `
 <View
   style={
     Object {
@@ -3115,7 +3451,7 @@ exports[`40. secondary four - wide 1`] = `
 </View>
 `;
 
-exports[`41. secondary four - supplement - wide 1`] = `
+exports[`47. secondary four - supplement - wide 1`] = `
 <View
   style={
     Object {
@@ -3214,7 +3550,7 @@ exports[`41. secondary four - supplement - wide 1`] = `
 </View>
 `;
 
-exports[`42. secondary one and columnist - wide 1`] = `
+exports[`48. secondary one and columnist - wide 1`] = `
 <View
   style={
     Object {
@@ -3267,7 +3603,7 @@ exports[`42. secondary one and columnist - wide 1`] = `
 </View>
 `;
 
-exports[`43. secondary two and two - wide 1`] = `
+exports[`49. secondary two and two - wide 1`] = `
 <View
   style={
     Object {
@@ -3357,7 +3693,7 @@ exports[`43. secondary two and two - wide 1`] = `
 </View>
 `;
 
-exports[`44. supplement secondary two and two - wide 1`] = `
+exports[`50. supplement secondary two and two - wide 1`] = `
 <View
   style={
     Object {
@@ -3465,7 +3801,7 @@ exports[`44. supplement secondary two and two - wide 1`] = `
 </View>
 `;
 
-exports[`45. lead one and four slice - wide 1`] = `
+exports[`51. lead one and four slice - wide 1`] = `
 <View
   style={
     Object {
@@ -3548,7 +3884,7 @@ exports[`45. lead one and four slice - wide 1`] = `
 </View>
 `;
 
-exports[`46. supplement lead one and four slice - wide 1`] = `
+exports[`52. supplement lead one and four slice - wide 1`] = `
 <View
   style={
     Object {
@@ -3654,7 +3990,7 @@ exports[`46. supplement lead one and four slice - wide 1`] = `
 </View>
 `;
 
-exports[`47. standard slice - wide 1`] = `
+exports[`53. standard slice - wide 1`] = `
 <View
   style={
     Object {
@@ -3721,7 +4057,7 @@ exports[`47. standard slice - wide 1`] = `
 </View>
 `;
 
-exports[`48. secondary two no pic and two - wide 1`] = `
+exports[`54. secondary two no pic and two - wide 1`] = `
 <View
   style={
     Object {
@@ -3812,7 +4148,7 @@ exports[`48. secondary two no pic and two - wide 1`] = `
 </View>
 `;
 
-exports[`49. list two and six no pic - wide 1`] = `
+exports[`55. list two and six no pic - wide 1`] = `
 <View
   style={
     Object {
@@ -4012,7 +4348,7 @@ exports[`49. list two and six no pic - wide 1`] = `
 </View>
 `;
 
-exports[`50. puzzle - wide 1`] = `
+exports[`56. puzzle - wide 1`] = `
 <View
   style={
     Object {
@@ -4064,7 +4400,394 @@ exports[`50. puzzle - wide 1`] = `
 </View>
 `;
 
-exports[`51. top secondary landscape (from topsecondaryfourslice) - wide 1`] = `
+exports[`57. front lead two - portrait - wide 1`] = `
+<View
+  style={
+    Object {
+      "alignSelf": "center",
+      "flexGrow": 1,
+      "maxWidth": "100%",
+      "paddingHorizontal": 30,
+      "width": 1366,
+    }
+  }
+>
+  <View
+    style={
+      Object {
+        "alignSelf": "center",
+        "flex": 1,
+        "flexDirection": "row",
+        "justifyContent": "center",
+        "width": 688,
+      }
+    }
+  >
+    <View>
+      <View>
+        <TileHFront />
+      </View>
+      <View
+        style={
+          Object {
+            "borderColor": "#DBDBDB",
+            "borderRightWidth": 1,
+            "borderStyle": "solid",
+            "marginVertical": 10,
+          }
+        }
+      />
+      <View>
+        <TileGFront />
+      </View>
+    </View>
+    <View>
+      <InTodaysEdition />
+    </View>
+  </View>
+</View>
+`;
+
+exports[`58. front lead two - landscape - wide 1`] = `
+<View
+  style={
+    Object {
+      "alignSelf": "center",
+      "flexGrow": 1,
+      "maxWidth": "100%",
+      "paddingHorizontal": 30,
+      "width": 1366,
+    }
+  }
+>
+  <View
+    style={
+      Object {
+        "alignSelf": "center",
+        "flex": 1,
+        "flexDirection": "row",
+        "justifyContent": "center",
+        "width": 944,
+      }
+    }
+  >
+    <View>
+      <View>
+        <TileHFront />
+      </View>
+      <View
+        style={
+          Object {
+            "borderColor": "#DBDBDB",
+            "borderRightWidth": 1,
+            "borderStyle": "solid",
+            "marginVertical": 10,
+          }
+        }
+      />
+      <View>
+        <TileGFront />
+      </View>
+      <View
+        style={
+          Object {
+            "borderColor": "#DBDBDB",
+            "borderRightWidth": 1,
+            "borderStyle": "solid",
+            "marginVertical": 10,
+          }
+        }
+      />
+      <View>
+        <InTodaysEdition />
+      </View>
+    </View>
+  </View>
+</View>
+`;
+
+exports[`59. front lead one and one - portrait - wide 1`] = `
+<View
+  style={
+    Object {
+      "alignSelf": "center",
+      "flexGrow": 1,
+      "maxWidth": "100%",
+      "paddingHorizontal": 30,
+      "width": 1366,
+    }
+  }
+>
+  <View
+    style={
+      Object {
+        "alignSelf": "center",
+        "flex": 1,
+        "flexDirection": "column",
+        "justifyContent": "center",
+        "marginBottom": 20,
+        "marginHorizontal": 30,
+        "marginTop": 20,
+        "width": 920,
+      }
+    }
+  >
+    <View
+      style={
+        Object {
+          "flex": 1,
+          "flexDirection": "row",
+        }
+      }
+    >
+      <View
+        style={
+          Object {
+            "width": "75.69040697674419%",
+          }
+        }
+      >
+        <TileAFront />
+      </View>
+      <View
+        style={
+          Object {
+            "borderColor": "#DBDBDB",
+            "borderRightWidth": 1,
+            "borderStyle": "solid",
+            "marginTop": 0,
+            "marginVertical": 10,
+          }
+        }
+      />
+      <View
+        style={
+          Object {
+            "width": "24.164244186046513%",
+          }
+        }
+      >
+        <TileBFront />
+      </View>
+    </View>
+    <View
+      style={
+        Object {
+          "height": 174,
+          "marginTop": 15,
+          "width": "100%",
+        }
+      }
+    >
+      <InTodaysEdition />
+    </View>
+  </View>
+</View>
+`;
+
+exports[`60. front lead one and one - landscape - wide 1`] = `
+<View
+  style={
+    Object {
+      "alignSelf": "center",
+      "flexGrow": 1,
+      "maxWidth": "100%",
+      "paddingHorizontal": 30,
+      "width": 1366,
+    }
+  }
+>
+  <View
+    style={
+      Object {
+        "alignSelf": "center",
+        "flex": 1,
+        "flexDirection": "row",
+        "justifyContent": "center",
+        "marginBottom": 15,
+        "marginTop": 15,
+        "width": 944,
+      }
+    }
+  >
+    <View
+      style={
+        Object {
+          "flex": 1,
+          "flexDirection": "row",
+        }
+      }
+    >
+      <View
+        style={
+          Object {
+            "width": "49.94703389830508%",
+          }
+        }
+      >
+        <TileAFront />
+      </View>
+      <View
+        style={
+          Object {
+            "borderColor": "#DBDBDB",
+            "borderRightWidth": 1,
+            "borderStyle": "solid",
+            "marginTop": 0,
+            "marginVertical": 10,
+          }
+        }
+      />
+      <View
+        style={
+          Object {
+            "width": "24.390889830508474%",
+          }
+        }
+      >
+        <TileBFront />
+      </View>
+      <View
+        style={
+          Object {
+            "borderColor": "#DBDBDB",
+            "borderRightWidth": 1,
+            "borderStyle": "solid",
+            "marginTop": 0,
+            "marginVertical": 10,
+          }
+        }
+      />
+      <View
+        style={
+          Object {
+            "marginLeft": 10,
+            "width": "24.390889830508474%",
+          }
+        }
+      >
+        <InTodaysEdition />
+      </View>
+    </View>
+  </View>
+</View>
+`;
+
+exports[`61. front lead one - portrait - wide 1`] = `
+<View
+  style={
+    Object {
+      "alignSelf": "center",
+      "flexGrow": 1,
+      "maxWidth": "100%",
+      "paddingHorizontal": 30,
+      "width": 1366,
+    }
+  }
+>
+  <View
+    style={
+      Object {
+        "alignSelf": "center",
+        "flex": 1,
+        "flexDirection": "column",
+        "justifyContent": "center",
+        "paddingBottom": 20,
+        "paddingTop": 15,
+        "width": 920,
+      }
+    }
+  >
+    <View
+      style={
+        Object {
+          "flex": 1,
+        }
+      }
+    >
+      <TileFFront />
+    </View>
+    <View
+      style={
+        Object {
+          "height": 174,
+          "marginTop": 10,
+        }
+      }
+    >
+      <InTodaysEdition />
+    </View>
+  </View>
+</View>
+`;
+
+exports[`62. front lead one - landscape - wide 1`] = `
+<View
+  style={
+    Object {
+      "alignSelf": "center",
+      "flexGrow": 1,
+      "maxWidth": "100%",
+      "paddingHorizontal": 30,
+      "width": 1366,
+    }
+  }
+>
+  <View
+    style={
+      Object {
+        "alignSelf": "center",
+        "flex": 1,
+        "flexDirection": "row",
+        "justifyContent": "center",
+        "paddingVertical": 10,
+        "width": 944,
+      }
+    }
+  >
+    <View
+      style={
+        Object {
+          "flex": 1,
+          "flexDirection": "row",
+        }
+      }
+    >
+      <View
+        style={
+          Object {
+            "width": "75.5031779661017%",
+          }
+        }
+      >
+        <TileFFront />
+      </View>
+      <View
+        style={
+          Object {
+            "borderColor": "#DBDBDB",
+            "borderRightWidth": 1,
+            "borderStyle": "solid",
+            "marginVertical": 0,
+          }
+        }
+      />
+      <View
+        style={
+          Object {
+            "marginLeft": 10,
+            "width": "24.390889830508474%",
+          }
+        }
+      >
+        <InTodaysEdition />
+      </View>
+    </View>
+  </View>
+</View>
+`;
+
+exports[`63. top secondary landscape (from topsecondaryfourslice) - wide 1`] = `
 <View
   style={
     Object {
@@ -4137,7 +4860,7 @@ exports[`51. top secondary landscape (from topsecondaryfourslice) - wide 1`] = `
 </View>
 `;
 
-exports[`52. top secondary portrait (from topsecondaryfourslice) - wide 1`] = `
+exports[`64. top secondary portrait (from topsecondaryfourslice) - wide 1`] = `
 <View
   style={
     Object {
@@ -4210,7 +4933,7 @@ exports[`52. top secondary portrait (from topsecondaryfourslice) - wide 1`] = `
 </View>
 `;
 
-exports[`53. top secondary landscape (from topsecondarytwoandtwoslice) - wide 1`] = `
+exports[`65. top secondary landscape (from topsecondarytwoandtwoslice) - wide 1`] = `
 <View
   style={
     Object {
@@ -4283,7 +5006,7 @@ exports[`53. top secondary landscape (from topsecondarytwoandtwoslice) - wide 1`
 </View>
 `;
 
-exports[`54. top secondary portrait (from topsecondarytwoandtwoslice) - wide 1`] = `
+exports[`66. top secondary portrait (from topsecondarytwoandtwoslice) - wide 1`] = `
 <View
   style={
     Object {
@@ -4356,7 +5079,7 @@ exports[`54. top secondary portrait (from topsecondarytwoandtwoslice) - wide 1`]
 </View>
 `;
 
-exports[`55. top secondary landscape (from topsecondarytwonopicandtwoslice) - wide 1`] = `
+exports[`67. top secondary landscape (from topsecondarytwonopicandtwoslice) - wide 1`] = `
 <View
   style={
     Object {
@@ -4429,7 +5152,7 @@ exports[`55. top secondary landscape (from topsecondarytwonopicandtwoslice) - wi
 </View>
 `;
 
-exports[`56. top secondary portrait (from topsecondarytwonopicandtwoslice) - wide 1`] = `
+exports[`68. top secondary portrait (from topsecondarytwonopicandtwoslice) - wide 1`] = `
 <View
   style={
     Object {
@@ -4502,7 +5225,7 @@ exports[`56. top secondary portrait (from topsecondarytwonopicandtwoslice) - wid
 </View>
 `;
 
-exports[`57. comment lead and cartoon - huge 1`] = `
+exports[`69. comment lead and cartoon - huge 1`] = `
 <View
   style={
     Object {
@@ -4565,7 +5288,7 @@ exports[`57. comment lead and cartoon - huge 1`] = `
 </View>
 `;
 
-exports[`58. daily universal register - huge 1`] = `
+exports[`70. daily universal register - huge 1`] = `
 <View
   style={
     Object {
@@ -4684,7 +5407,7 @@ exports[`58. daily universal register - huge 1`] = `
 </View>
 `;
 
-exports[`59. lead one and one - huge 1`] = `
+exports[`71. lead one and one - huge 1`] = `
 <View
   style={
     Object {
@@ -4746,7 +5469,7 @@ exports[`59. lead one and one - huge 1`] = `
 </View>
 `;
 
-exports[`60. lead one and one - supplement - huge 1`] = `
+exports[`72. lead one and one - supplement - huge 1`] = `
 <View
   style={
     Object {
@@ -4808,7 +5531,7 @@ exports[`60. lead one and one - supplement - huge 1`] = `
 </View>
 `;
 
-exports[`61. lead one full width - huge 1`] = `
+exports[`73. lead one full width - huge 1`] = `
 <View
   style={
     Object {
@@ -4833,7 +5556,7 @@ exports[`61. lead one full width - huge 1`] = `
 </View>
 `;
 
-exports[`62. lead two no pic and two - huge 1`] = `
+exports[`74. lead two no pic and two - huge 1`] = `
 <View
   style={
     Object {
@@ -4924,7 +5647,7 @@ exports[`62. lead two no pic and two - huge 1`] = `
 </View>
 `;
 
-exports[`63. lead two no pic and two - huge 1`] = `
+exports[`75. lead two no pic and two - huge 1`] = `
 <View
   style={
     Object {
@@ -5006,7 +5729,7 @@ exports[`63. lead two no pic and two - huge 1`] = `
 </View>
 `;
 
-exports[`64. leaders slice - huge 1`] = `
+exports[`76. leaders slice - huge 1`] = `
 <View
   style={
     Object {
@@ -5141,7 +5864,7 @@ exports[`64. leaders slice - huge 1`] = `
 </View>
 `;
 
-exports[`65. secondary one and four - huge 1`] = `
+exports[`77. secondary one and four - huge 1`] = `
 <View
   style={
     Object {
@@ -5319,7 +6042,7 @@ exports[`65. secondary one and four - huge 1`] = `
 </View>
 `;
 
-exports[`66. secondary one - huge 1`] = `
+exports[`78. secondary one - huge 1`] = `
 <View
   style={
     Object {
@@ -5344,7 +6067,7 @@ exports[`66. secondary one - huge 1`] = `
 </View>
 `;
 
-exports[`67. supplement secondary one - huge 1`] = `
+exports[`79. supplement secondary one - huge 1`] = `
 <View
   style={
     Object {
@@ -5369,7 +6092,7 @@ exports[`67. supplement secondary one - huge 1`] = `
 </View>
 `;
 
-exports[`68. secondary four - huge 1`] = `
+exports[`80. secondary four - huge 1`] = `
 <View
   style={
     Object {
@@ -5470,7 +6193,7 @@ exports[`68. secondary four - huge 1`] = `
 </View>
 `;
 
-exports[`69. secondary four - supplement - huge 1`] = `
+exports[`81. secondary four - supplement - huge 1`] = `
 <View
   style={
     Object {
@@ -5579,7 +6302,7 @@ exports[`69. secondary four - supplement - huge 1`] = `
 </View>
 `;
 
-exports[`70. secondary one and columnist - huge 1`] = `
+exports[`82. secondary one and columnist - huge 1`] = `
 <View
   style={
     Object {
@@ -5642,7 +6365,7 @@ exports[`70. secondary one and columnist - huge 1`] = `
 </View>
 `;
 
-exports[`71. secondary two and two - huge 1`] = `
+exports[`83. secondary two and two - huge 1`] = `
 <View
   style={
     Object {
@@ -5742,7 +6465,7 @@ exports[`71. secondary two and two - huge 1`] = `
 </View>
 `;
 
-exports[`72. supplement secondary two and two - huge 1`] = `
+exports[`84. supplement secondary two and two - huge 1`] = `
 <View
   style={
     Object {
@@ -5842,7 +6565,7 @@ exports[`72. supplement secondary two and two - huge 1`] = `
 </View>
 `;
 
-exports[`73. lead one and four slice - huge 1`] = `
+exports[`85. lead one and four slice - huge 1`] = `
 <View
   style={
     Object {
@@ -5935,7 +6658,7 @@ exports[`73. lead one and four slice - huge 1`] = `
 </View>
 `;
 
-exports[`74. supplement lead one and four slice - huge 1`] = `
+exports[`86. supplement lead one and four slice - huge 1`] = `
 <View
   style={
     Object {
@@ -6051,7 +6774,7 @@ exports[`74. supplement lead one and four slice - huge 1`] = `
 </View>
 `;
 
-exports[`75. standard slice - huge 1`] = `
+exports[`87. standard slice - huge 1`] = `
 <View
   style={
     Object {
@@ -6128,7 +6851,7 @@ exports[`75. standard slice - huge 1`] = `
 </View>
 `;
 
-exports[`76. secondary two no pic and two - huge 1`] = `
+exports[`88. secondary two no pic and two - huge 1`] = `
 <View
   style={
     Object {
@@ -6229,7 +6952,7 @@ exports[`76. secondary two no pic and two - huge 1`] = `
 </View>
 `;
 
-exports[`77. list two and six no pic - huge 1`] = `
+exports[`89. list two and six no pic - huge 1`] = `
 <View
   style={
     Object {
@@ -6439,7 +7162,7 @@ exports[`77. list two and six no pic - huge 1`] = `
 </View>
 `;
 
-exports[`78. puzzle - huge 1`] = `
+exports[`90. puzzle - huge 1`] = `
 <View
   style={
     Object {
@@ -6501,7 +7224,455 @@ exports[`78. puzzle - huge 1`] = `
 </View>
 `;
 
-exports[`79. top secondary landscape (from topsecondaryfourslice) - huge 1`] = `
+exports[`91. front lead two - portrait - huge 1`] = `
+<View
+  style={
+    Object {
+      "alignSelf": "center",
+      "flexGrow": 1,
+      "maxWidth": "100%",
+      "paddingHorizontal": 10,
+      "width": 1366,
+    }
+  }
+>
+  <View
+    style={
+      Object {
+        "alignSelf": "center",
+        "flex": 1,
+        "width": 1180,
+      }
+    }
+  >
+    <View
+      style={
+        Object {
+          "alignSelf": "center",
+          "flex": 1,
+          "flexDirection": "row",
+          "justifyContent": "center",
+          "width": 688,
+        }
+      }
+    >
+      <View>
+        <View>
+          <TileHFront />
+        </View>
+        <View
+          style={
+            Object {
+              "borderColor": "#DBDBDB",
+              "borderRightWidth": 1,
+              "borderStyle": "solid",
+              "marginVertical": 10,
+            }
+          }
+        />
+        <View>
+          <TileGFront />
+        </View>
+      </View>
+      <View>
+        <InTodaysEdition />
+      </View>
+    </View>
+  </View>
+</View>
+`;
+
+exports[`92. front lead two - landscape - huge 1`] = `
+<View
+  style={
+    Object {
+      "alignSelf": "center",
+      "flexGrow": 1,
+      "maxWidth": "100%",
+      "paddingHorizontal": 10,
+      "width": 1366,
+    }
+  }
+>
+  <View
+    style={
+      Object {
+        "alignSelf": "center",
+        "flex": 1,
+        "width": 1180,
+      }
+    }
+  >
+    <View
+      style={
+        Object {
+          "alignSelf": "center",
+          "flex": 1,
+          "flexDirection": "row",
+          "justifyContent": "center",
+          "width": 944,
+        }
+      }
+    >
+      <View>
+        <View>
+          <TileHFront />
+        </View>
+        <View
+          style={
+            Object {
+              "borderColor": "#DBDBDB",
+              "borderRightWidth": 1,
+              "borderStyle": "solid",
+              "marginVertical": 10,
+            }
+          }
+        />
+        <View>
+          <TileGFront />
+        </View>
+        <View
+          style={
+            Object {
+              "borderColor": "#DBDBDB",
+              "borderRightWidth": 1,
+              "borderStyle": "solid",
+              "marginVertical": 10,
+            }
+          }
+        />
+        <View>
+          <InTodaysEdition />
+        </View>
+      </View>
+    </View>
+  </View>
+</View>
+`;
+
+exports[`93. front lead one and one - portrait - huge 1`] = `
+<View
+  style={
+    Object {
+      "alignSelf": "center",
+      "flexGrow": 1,
+      "maxWidth": "100%",
+      "paddingHorizontal": 10,
+      "width": 1366,
+    }
+  }
+>
+  <View
+    style={
+      Object {
+        "alignSelf": "center",
+        "flex": 1,
+        "width": 1180,
+      }
+    }
+  >
+    <View
+      style={
+        Object {
+          "alignSelf": "center",
+          "flex": 1,
+          "flexDirection": "column",
+          "justifyContent": "center",
+          "marginBottom": 20,
+          "marginHorizontal": 30,
+          "marginTop": 20,
+          "width": 920,
+        }
+      }
+    >
+      <View
+        style={
+          Object {
+            "flex": 1,
+            "flexDirection": "row",
+          }
+        }
+      >
+        <View
+          style={
+            Object {
+              "width": "75.69040697674419%",
+            }
+          }
+        >
+          <TileAFront />
+        </View>
+        <View
+          style={
+            Object {
+              "borderColor": "#DBDBDB",
+              "borderRightWidth": 1,
+              "borderStyle": "solid",
+              "marginTop": 0,
+              "marginVertical": 10,
+            }
+          }
+        />
+        <View
+          style={
+            Object {
+              "width": "24.164244186046513%",
+            }
+          }
+        >
+          <TileBFront />
+        </View>
+      </View>
+      <View
+        style={
+          Object {
+            "height": 174,
+            "marginTop": 15,
+            "width": "100%",
+          }
+        }
+      >
+        <InTodaysEdition />
+      </View>
+    </View>
+  </View>
+</View>
+`;
+
+exports[`94. front lead one and one - landscape - huge 1`] = `
+<View
+  style={
+    Object {
+      "alignSelf": "center",
+      "flexGrow": 1,
+      "maxWidth": "100%",
+      "paddingHorizontal": 10,
+      "width": 1366,
+    }
+  }
+>
+  <View
+    style={
+      Object {
+        "alignSelf": "center",
+        "flex": 1,
+        "width": 1180,
+      }
+    }
+  >
+    <View
+      style={
+        Object {
+          "alignSelf": "center",
+          "flex": 1,
+          "flexDirection": "row",
+          "justifyContent": "center",
+          "marginBottom": 20,
+          "marginTop": 20,
+          "width": 1140,
+        }
+      }
+    >
+      <View
+        style={
+          Object {
+            "flex": 1,
+            "flexDirection": "row",
+          }
+        }
+      >
+        <View
+          style={
+            Object {
+              "width": "63.886748844375965%",
+            }
+          }
+        >
+          <TileAFront />
+        </View>
+        <View
+          style={
+            Object {
+              "borderColor": "#DBDBDB",
+              "borderRightWidth": 1,
+              "borderStyle": "solid",
+              "marginTop": 0,
+              "marginVertical": 10,
+            }
+          }
+        />
+        <View
+          style={
+            Object {
+              "width": "17.421032357473038%",
+            }
+          }
+        >
+          <TileBFront />
+        </View>
+        <View
+          style={
+            Object {
+              "borderColor": "#DBDBDB",
+              "borderRightWidth": 1,
+              "borderStyle": "solid",
+              "marginTop": 0,
+              "marginVertical": 10,
+            }
+          }
+        />
+        <View
+          style={
+            Object {
+              "marginLeft": 10,
+              "width": "17.421032357473038%",
+            }
+          }
+        >
+          <InTodaysEdition />
+        </View>
+      </View>
+    </View>
+  </View>
+</View>
+`;
+
+exports[`95. front lead one - portrait - huge 1`] = `
+<View
+  style={
+    Object {
+      "alignSelf": "center",
+      "flexGrow": 1,
+      "maxWidth": "100%",
+      "paddingHorizontal": 10,
+      "width": 1366,
+    }
+  }
+>
+  <View
+    style={
+      Object {
+        "alignSelf": "center",
+        "flex": 1,
+        "width": 1180,
+      }
+    }
+  >
+    <View
+      style={
+        Object {
+          "alignSelf": "center",
+          "flex": 1,
+          "flexDirection": "column",
+          "justifyContent": "center",
+          "paddingBottom": 20,
+          "paddingTop": 15,
+          "width": 920,
+        }
+      }
+    >
+      <View
+        style={
+          Object {
+            "flex": 1,
+          }
+        }
+      >
+        <TileFFront />
+      </View>
+      <View
+        style={
+          Object {
+            "height": 174,
+            "marginTop": 10,
+          }
+        }
+      >
+        <InTodaysEdition />
+      </View>
+    </View>
+  </View>
+</View>
+`;
+
+exports[`96. front lead one - landscape - huge 1`] = `
+<View
+  style={
+    Object {
+      "alignSelf": "center",
+      "flexGrow": 1,
+      "maxWidth": "100%",
+      "paddingHorizontal": 10,
+      "width": 1366,
+    }
+  }
+>
+  <View
+    style={
+      Object {
+        "alignSelf": "center",
+        "flex": 1,
+        "width": 1180,
+      }
+    }
+  >
+    <View
+      style={
+        Object {
+          "alignSelf": "center",
+          "flex": 1,
+          "flexDirection": "row",
+          "justifyContent": "center",
+          "paddingBottom": 35,
+          "paddingTop": 30,
+          "width": 1140,
+        }
+      }
+    >
+      <View
+        style={
+          Object {
+            "flex": 1,
+            "flexDirection": "row",
+          }
+        }
+      >
+        <View
+          style={
+            Object {
+              "width": "82.47303543913715%",
+            }
+          }
+        >
+          <TileFFront />
+        </View>
+        <View
+          style={
+            Object {
+              "borderColor": "#DBDBDB",
+              "borderRightWidth": 1,
+              "borderStyle": "solid",
+              "marginVertical": 0,
+            }
+          }
+        />
+        <View
+          style={
+            Object {
+              "marginLeft": 10,
+              "width": "17.421032357473038%",
+            }
+          }
+        >
+          <InTodaysEdition />
+        </View>
+      </View>
+    </View>
+  </View>
+</View>
+`;
+
+exports[`97. top secondary landscape (from topsecondaryfourslice) - huge 1`] = `
 <View
   style={
     Object {
@@ -6584,7 +7755,7 @@ exports[`79. top secondary landscape (from topsecondaryfourslice) - huge 1`] = `
 </View>
 `;
 
-exports[`80. top secondary portrait (from topsecondaryfourslice) - huge 1`] = `
+exports[`98. top secondary portrait (from topsecondaryfourslice) - huge 1`] = `
 <View
   style={
     Object {
@@ -6667,7 +7838,7 @@ exports[`80. top secondary portrait (from topsecondaryfourslice) - huge 1`] = `
 </View>
 `;
 
-exports[`81. top secondary landscape (from topsecondarytwoandtwoslice) - huge 1`] = `
+exports[`99. top secondary landscape (from topsecondarytwoandtwoslice) - huge 1`] = `
 <View
   style={
     Object {
@@ -6750,7 +7921,7 @@ exports[`81. top secondary landscape (from topsecondarytwoandtwoslice) - huge 1`
 </View>
 `;
 
-exports[`82. top secondary portrait (from topsecondarytwoandtwoslice) - huge 1`] = `
+exports[`100. top secondary portrait (from topsecondarytwoandtwoslice) - huge 1`] = `
 <View
   style={
     Object {
@@ -6833,7 +8004,7 @@ exports[`82. top secondary portrait (from topsecondarytwoandtwoslice) - huge 1`]
 </View>
 `;
 
-exports[`83. top secondary landscape (from topsecondarytwonopicandtwoslice) - huge 1`] = `
+exports[`101. top secondary landscape (from topsecondarytwonopicandtwoslice) - huge 1`] = `
 <View
   style={
     Object {
@@ -6916,7 +8087,7 @@ exports[`83. top secondary landscape (from topsecondarytwonopicandtwoslice) - hu
 </View>
 `;
 
-exports[`84. top secondary portrait (from topsecondarytwonopicandtwoslice) - huge 1`] = `
+exports[`102. top secondary portrait (from topsecondarytwonopicandtwoslice) - huge 1`] = `
 <View
   style={
     Object {
