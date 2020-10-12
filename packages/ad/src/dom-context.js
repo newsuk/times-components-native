@@ -31,7 +31,7 @@ class DOMContext extends PureComponent {
     this.state = {
       loaded: false,
       height: 0,
-      ready: false,
+      ready: true,
     };
   }
 
@@ -45,9 +45,9 @@ class DOMContext extends PureComponent {
       version: DeviceInfo.getVersion(),
     };
 
-    setTimeout(() => {
-      this.setState({ ready: true });
-    }, 500);
+    // setTimeout(() => {
+    //   this.setState({ ready: true });
+    // }, 500);
   }
 
   handleNavigationStateChange = ({ url }) => {
