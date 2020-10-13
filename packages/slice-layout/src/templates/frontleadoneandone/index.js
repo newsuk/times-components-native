@@ -44,11 +44,14 @@ const FrontLeadOneAndOneSlice = ({
       windowWidth={windowWidth}
       style={styles.container}
     >
-      <View style={styles.tilesContainer}>
-        <View style={styles.leftColumn}>{lead}</View>
-        <ItemColSeparator style={styles.colSeparatorStyle} />
-        <View style={styles.rightColumn}>{support}</View>
-      </View>
+      <HorizontalLayout
+        containerStyle={styles.row}
+        tiles={[
+          { style: styles.leadContainer, tile: lead },
+          { style: styles.supportContainer, tile: support },
+        ]}
+        colSeparatorStyle={styles.colSeparatorStyle}
+      />
       <View style={styles.inTodaysEditionContainer}>{inTodaysEdition}</View>
     </TabletContentContainer>
   );

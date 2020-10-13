@@ -20,14 +20,14 @@ const calculateStyles = (orientation) => {
       marginTop: spacing(3),
       marginBottom: spacing(4),
     },
-    tilesContainer: {
+    row: {
       flex: 1,
       flexDirection: "row",
     },
-    leftColumn: {
+    leadContainer: {
       width: columnToPercentageWithOrientation({ numberOfColumns: 9 }),
     },
-    rightColumn: {
+    supportContainer: {
       width: columnToPercentageWithOrientation({ numberOfColumns: 3 }),
     },
     inTodaysEditionContainer: {
@@ -37,7 +37,10 @@ const calculateStyles = (orientation) => {
   };
 
   const sharedLandscapeStyles = {
-    row: { flex: 1, flexDirection: "row" },
+    row: {
+      flex: 1,
+      flexDirection: "row",
+    },
     colSeparatorStyle: {
       borderColor: colours.functional.keyline,
       marginTop: 0,

@@ -12,48 +12,7 @@ exports[`1. front lead one - portrait - 768 1`] = `
     }
   }
 >
-  <View
-    style={
-      Object {
-        "flex": 1,
-        "flexDirection": "row",
-      }
-    }
-  >
-    <View
-      style={
-        Object {
-          "width": "75.69040697674419%",
-        }
-      }
-    >
-      <Text>
-        lead
-      </Text>
-    </View>
-    <View
-      style={
-        Object {
-          "borderColor": "#DBDBDB",
-          "borderRightWidth": 1,
-          "borderStyle": "solid",
-          "marginTop": 0,
-          "marginVertical": 10,
-        }
-      }
-    />
-    <View
-      style={
-        Object {
-          "width": "24.164244186046513%",
-        }
-      }
-    >
-      <Text>
-        support
-      </Text>
-    </View>
-  </View>
+  <HorizontalLayout />
   <View
     style={
       Object {
@@ -82,48 +41,7 @@ exports[`2. front lead one - portrait - 810 1`] = `
     }
   }
 >
-  <View
-    style={
-      Object {
-        "flex": 1,
-        "flexDirection": "row",
-      }
-    }
-  >
-    <View
-      style={
-        Object {
-          "width": "75.69040697674419%",
-        }
-      }
-    >
-      <Text>
-        lead
-      </Text>
-    </View>
-    <View
-      style={
-        Object {
-          "borderColor": "#DBDBDB",
-          "borderRightWidth": 1,
-          "borderStyle": "solid",
-          "marginTop": 0,
-          "marginVertical": 10,
-        }
-      }
-    />
-    <View
-      style={
-        Object {
-          "width": "24.164244186046513%",
-        }
-      }
-    >
-      <Text>
-        support
-      </Text>
-    </View>
-  </View>
+  <HorizontalLayout />
   <View
     style={
       Object {
@@ -152,48 +70,7 @@ exports[`3. front lead one - portrait - 834 1`] = `
     }
   }
 >
-  <View
-    style={
-      Object {
-        "flex": 1,
-        "flexDirection": "row",
-      }
-    }
-  >
-    <View
-      style={
-        Object {
-          "width": "75.69040697674419%",
-        }
-      }
-    >
-      <Text>
-        lead
-      </Text>
-    </View>
-    <View
-      style={
-        Object {
-          "borderColor": "#DBDBDB",
-          "borderRightWidth": 1,
-          "borderStyle": "solid",
-          "marginTop": 0,
-          "marginVertical": 10,
-        }
-      }
-    />
-    <View
-      style={
-        Object {
-          "width": "24.164244186046513%",
-        }
-      }
-    >
-      <Text>
-        support
-      </Text>
-    </View>
-  </View>
+  <HorizontalLayout />
   <View
     style={
       Object {
@@ -222,48 +99,7 @@ exports[`4. front lead one - portrait - 1024 1`] = `
     }
   }
 >
-  <View
-    style={
-      Object {
-        "flex": 1,
-        "flexDirection": "row",
-      }
-    }
-  >
-    <View
-      style={
-        Object {
-          "width": "75.69040697674419%",
-        }
-      }
-    >
-      <Text>
-        lead
-      </Text>
-    </View>
-    <View
-      style={
-        Object {
-          "borderColor": "#DBDBDB",
-          "borderRightWidth": 1,
-          "borderStyle": "solid",
-          "marginTop": 0,
-          "marginVertical": 10,
-        }
-      }
-    />
-    <View
-      style={
-        Object {
-          "width": "24.164244186046513%",
-        }
-      }
-    >
-      <Text>
-        support
-      </Text>
-    </View>
-  </View>
+  <HorizontalLayout />
   <View
     style={
       Object {
