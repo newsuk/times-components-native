@@ -23,6 +23,7 @@ const TileHFront = ({ onPress, tile, orientation }) => {
         tile={tile}
         bylines={article.bylines}
         template={article.template}
+        bylineContainerStyle={styles.bylineContainerStyle}
       />
     </TileLink>
   );

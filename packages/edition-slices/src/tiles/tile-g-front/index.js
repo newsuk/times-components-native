@@ -8,13 +8,7 @@ import { getDimensions } from "@times-components-native/utils";
 import { getTileImage, TileLink, withTileTracking, TileImage } from "../shared";
 import { getStyle } from "./styles";
 
-const TileGFront = ({
-  onPress,
-  tile,
-  orientation,
-  showSummary,
-  showByline,
-}) => {
+const TileGFront = ({ onPress, tile, orientation }) => {
   const { width: windowWidth } = getDimensions();
   const crop = getTileImage(tile, "crop45");
   const styles = getStyle(orientation, windowWidth);
@@ -40,11 +34,12 @@ const TileGFront = ({
       />
       <FrontTileSummary
         headlineStyle={styles.headline}
-        summary={showSummary && article.content}
+        summary={article.content}
         summaryStyle={styles.summary}
         tile={tile}
-        bylines={showByline && article.bylines}
+        bylines={article.bylines}
         template={article.template}
+        bylineContainerStyle={styles.bylineContainerStyle}
       />
     </TileLink>
   );

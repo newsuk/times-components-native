@@ -1,29 +1,19 @@
 import React from "react";
 import { ResponsiveSlice } from "@times-components-native/edition-slices/src/slices/shared";
 import { FrontLeadTwoSlice } from "@times-components-native/slice-layout";
-import { editionBreakpoints } from "@times-components-native/styleguide";
 import {
   TileGFront,
   TileHFront,
 } from "@times-components-native/edition-slices/src/tiles";
 import InTodaysEdition from "@times-components-native/in-todays-edition";
-import { getDimensions } from "@times-components-native/utils";
 
-function renderMedium(props, breakpoint, orientation) {
-  const { width: windowWidth } = getDimensions();
+function renderMedium(props, orientation) {
   const {
     onPress,
     onLinkPress,
     slice: { lead1, lead2 },
     inTodaysEditionSlice: { items: inTodaysEditionItems },
   } = props;
-
-  const showSummary =
-    breakpoint === editionBreakpoints.huge && orientation === "landscape";
-
-  const showByline =
-    (breakpoint === editionBreakpoints.huge && orientation === "landscape") ||
-    (orientation === "portrait" && windowWidth >= 834);
 
   return (
     <FrontLeadTwoSlice
@@ -41,8 +31,6 @@ function renderMedium(props, breakpoint, orientation) {
           tile={lead2}
           tileName="lead2"
           orientation={orientation}
-          showSummary={showSummary}
-          showByline={showByline}
         />
       }
       inTodaysEdition={
@@ -53,15 +41,14 @@ function renderMedium(props, breakpoint, orientation) {
           orientation={orientation}
         />
       }
-      breakpoint={breakpoint}
       orientation={orientation}
     />
   );
 }
 
 const FrontLeadTwo = (props) => {
-  const renderSlice = (breakpoint, orientation) =>
-    renderMedium(props, breakpoint, orientation);
+  const renderSlice = (_breakpoint, orientation) =>
+    renderMedium(props, orientation);
 
   return (
     <ResponsiveSlice

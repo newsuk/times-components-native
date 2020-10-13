@@ -19,6 +19,7 @@ const summary = {
 const strapline = {
   fontFamily: fonts.headlineRegular,
   color: colours.functional.primary,
+  marginBottom: spacing(3),
 };
 
 const sharedLandscapeStyles = {

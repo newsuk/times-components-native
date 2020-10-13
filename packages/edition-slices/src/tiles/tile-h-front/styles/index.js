@@ -25,6 +25,9 @@ const sharedSummary = {
 
 const sharedStyles = {
   summary: { ...sharedSummary },
+  bylineContainerStyle: {
+    marginBottom: spacing(3),
+  },
 };
 
 const sharedLandscapeStyles = {
