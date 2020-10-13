@@ -1,6 +1,5 @@
 import FrontArticleSummaryContent from "@times-components-native/front-page/front-article-summary-content";
 import React from "react";
-import { ResponsiveContext } from "@times-components-native/responsive";
 import TestRenderer from "react-test-renderer";
 import MockMarkup from "@times-components-native/fixture-generator/src/mock-markup";
 
@@ -31,21 +30,6 @@ const ast = [
   },
 ];
 
-const withResponsiveContext = (
-  WrappedComponent,
-  editionBreakpoint,
-  orientation,
-) => (
-  <ResponsiveContext.Provider
-    value={{
-      editionBreakpoint,
-      orientation,
-    }}
-  >
-    {WrappedComponent}
-  </ResponsiveContext.Provider>
-);
-
 const bylines = new MockMarkup().addBylines().get();
 const component = (
   <FrontArticleSummaryContent
@@ -59,49 +43,8 @@ const component = (
 );
 
 describe("FrontArticleSummaryContent", () => {
-  describe("landscape", () => {
-    it("medium", () => {
-      const tree = TestRenderer.create(
-        withResponsiveContext(component, "medium", "landscape"),
-      );
-      expect(tree).toMatchSnapshot();
-    });
-
-    it("wide", () => {
-      const tree = TestRenderer.create(
-        withResponsiveContext(component, "wide", "landscape"),
-      );
-      expect(tree).toMatchSnapshot();
-    });
-
-    it("huge", () => {
-      const tree = TestRenderer.create(
-        withResponsiveContext(component, "huge", "landscape"),
-      );
-      expect(tree).toMatchSnapshot();
-    });
-  });
-
-  describe("portrait", () => {
-    it("medium", () => {
-      const tree = TestRenderer.create(
-        withResponsiveContext(component, "medium", "portrait"),
-      );
-      expect(tree).toMatchSnapshot();
-    });
-
-    it("wide", () => {
-      const tree = TestRenderer.create(
-        withResponsiveContext(component, "wide", "portrait"),
-      );
-      expect(tree).toMatchSnapshot();
-    });
-
-    it("huge", () => {
-      const tree = TestRenderer.create(
-        withResponsiveContext(component, "huge", "portrait"),
-      );
-      expect(tree).toMatchSnapshot();
-    });
+  it("renders correctly", () => {
+    const tree = TestRenderer.create(component);
+    expect(tree).toMatchSnapshot();
   });
 });

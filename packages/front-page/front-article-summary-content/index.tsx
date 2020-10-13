@@ -11,7 +11,6 @@ import { MeasureContainer } from "@times-components-native/front-page/MeasureCon
 import { ArticleColumns } from "@times-components-native/article-columns/article-columns";
 import { Text, TextStyle } from "react-native";
 import { transformContentForFront } from "@times-components-native/front-page/utils/transform-content-for-front";
-
 interface Props {
   summary: Markup;
   summaryStyle?: any;
@@ -19,13 +18,11 @@ interface Props {
   bylines: BylineInput[];
   template: TemplateType;
 }
-
 interface SummaryTextProps {
   ast: Markup;
   style: TextStyle;
   numberOfLines: number;
 }
-
 const SummaryText: React.FC<SummaryTextProps> = ({
   ast,
   style,
@@ -37,7 +34,6 @@ const SummaryText: React.FC<SummaryTextProps> = ({
     </Text>
   ) : null;
 };
-
 const FrontArticleSummaryContent: React.FC<Props> = (props) => {
   const { summary, summaryStyle, template, columnCount = 1 } = props;
 
@@ -48,7 +44,6 @@ const FrontArticleSummaryContent: React.FC<Props> = (props) => {
   const style = { ...styles.summary, ...summaryStyle } as TextStyle;
   const lineHeight = style.lineHeight || 20;
   const numberOfLinesToRender = (height: number) => height / lineHeight;
-
   if (columnCount > 1) {
     return (
       <MeasureContainer
@@ -66,7 +61,6 @@ const FrontArticleSummaryContent: React.FC<Props> = (props) => {
       />
     );
   }
-
   return (
     <MeasureContainer
       render={({ height }) => (
@@ -79,5 +73,4 @@ const FrontArticleSummaryContent: React.FC<Props> = (props) => {
     />
   );
 };
-
 export default FrontArticleSummaryContent;

@@ -708,6 +708,7 @@ exports[`22. puzzle - medium 1`] = `
               "url": "https://www.thetimes.co.uk/imageserver/image/%2Fpuzzles%2Ficons%2F33b27655-dcc9-421f-906f-b2b10dd26865.png?crop=1250%2C833%2C0%2C0",
             },
             "crop45": null,
+            "crop54": null,
             "crops": Array [],
             "id": "522abf2c-e752-11e8-9f32-f2801f1b9fd1",
           }
@@ -729,6 +730,7 @@ exports[`22. puzzle - medium 1`] = `
               "url": "https://www.thetimes.co.uk/imageserver/image/%2Fpuzzles%2Ficons%2F33b27655-dcc9-421f-906f-b2b10dd26865.png?crop=1250%2C833%2C0%2C0",
             },
             "crop45": null,
+            "crop54": null,
             "crops": Array [],
             "id": "522abf2c-e752-11e8-9f32-f2801f1b9fd1",
           }
@@ -750,6 +752,7 @@ exports[`22. puzzle - medium 1`] = `
               "url": "https://www.thetimes.co.uk/imageserver/image/%2Fpuzzles%2Ficons%2F33b27655-dcc9-421f-906f-b2b10dd26865.png?crop=1250%2C833%2C0%2C0",
             },
             "crop45": null,
+            "crop54": null,
             "crops": Array [],
             "id": "522abf2c-e752-11e8-9f32-f2801f1b9fd1",
           }
@@ -825,19 +828,24 @@ exports[`25. front lead one and one - portrait - medium 1`] = `
 <View>
   <View>
     <View>
-      <TileAFront
-        breakpoint="medium"
-        orientation="portrait"
-        tileName="lead"
-      />
+      <View>
+        <TileAFront
+          orientation="portrait"
+          tileName="lead"
+        />
+      </View>
+      <View />
+      <View>
+        <TileBFront
+          orientation="portrait"
+          showKeyline={true}
+          tileName="support"
+        />
+      </View>
     </View>
-    <View />
     <View>
-      <TileBFront
-        breakpoint="medium"
+      <InTodaysEdition
         orientation="portrait"
-        showKeyline={true}
-        tileName="support"
       />
     </View>
   </View>
@@ -848,20 +856,26 @@ exports[`26. front lead one and one - landscape - medium 1`] = `
 <View>
   <View>
     <View>
-      <TileAFront
-        breakpoint="medium"
-        orientation="landscape"
-        tileName="lead"
-      />
-    </View>
-    <View />
-    <View>
-      <TileBFront
-        breakpoint="medium"
-        orientation="landscape"
-        showKeyline={false}
-        tileName="support"
-      />
+      <View>
+        <TileAFront
+          orientation="landscape"
+          tileName="lead"
+        />
+      </View>
+      <View />
+      <View>
+        <TileBFront
+          orientation="landscape"
+          showKeyline={false}
+          tileName="support"
+        />
+      </View>
+      <View />
+      <View>
+        <InTodaysEdition
+          orientation="landscape"
+        />
+      </View>
     </View>
   </View>
 </View>
@@ -1800,6 +1814,7 @@ exports[`56. puzzle - wide 1`] = `
               "url": "https://www.thetimes.co.uk/imageserver/image/%2Fpuzzles%2Ficons%2F33b27655-dcc9-421f-906f-b2b10dd26865.png?crop=1250%2C833%2C0%2C0",
             },
             "crop45": null,
+            "crop54": null,
             "crops": Array [],
             "id": "522abf2c-e752-11e8-9f32-f2801f1b9fd1",
           }
@@ -1821,6 +1836,7 @@ exports[`56. puzzle - wide 1`] = `
               "url": "https://www.thetimes.co.uk/imageserver/image/%2Fpuzzles%2Ficons%2F33b27655-dcc9-421f-906f-b2b10dd26865.png?crop=1250%2C833%2C0%2C0",
             },
             "crop45": null,
+            "crop54": null,
             "crops": Array [],
             "id": "522abf2c-e752-11e8-9f32-f2801f1b9fd1",
           }
@@ -1842,6 +1858,7 @@ exports[`56. puzzle - wide 1`] = `
               "url": "https://www.thetimes.co.uk/imageserver/image/%2Fpuzzles%2Ficons%2F33b27655-dcc9-421f-906f-b2b10dd26865.png?crop=1250%2C833%2C0%2C0",
             },
             "crop45": null,
+            "crop54": null,
             "crops": Array [],
             "id": "522abf2c-e752-11e8-9f32-f2801f1b9fd1",
           }
@@ -1917,19 +1934,24 @@ exports[`59. front lead one and one - portrait - wide 1`] = `
 <View>
   <View>
     <View>
-      <TileAFront
-        breakpoint="wide"
-        orientation="portrait"
-        tileName="lead"
-      />
+      <View>
+        <TileAFront
+          orientation="portrait"
+          tileName="lead"
+        />
+      </View>
+      <View />
+      <View>
+        <TileBFront
+          orientation="portrait"
+          showKeyline={true}
+          tileName="support"
+        />
+      </View>
     </View>
-    <View />
     <View>
-      <TileBFront
-        breakpoint="wide"
+      <InTodaysEdition
         orientation="portrait"
-        showKeyline={true}
-        tileName="support"
       />
     </View>
   </View>
@@ -1940,20 +1962,26 @@ exports[`60. front lead one and one - landscape - wide 1`] = `
 <View>
   <View>
     <View>
-      <TileAFront
-        breakpoint="wide"
-        orientation="landscape"
-        tileName="lead"
-      />
-    </View>
-    <View />
-    <View>
-      <TileBFront
-        breakpoint="wide"
-        orientation="landscape"
-        showKeyline={false}
-        tileName="support"
-      />
+      <View>
+        <TileAFront
+          orientation="landscape"
+          tileName="lead"
+        />
+      </View>
+      <View />
+      <View>
+        <TileBFront
+          orientation="landscape"
+          showKeyline={false}
+          tileName="support"
+        />
+      </View>
+      <View />
+      <View>
+        <InTodaysEdition
+          orientation="landscape"
+        />
+      </View>
     </View>
   </View>
 </View>
@@ -2929,6 +2957,7 @@ exports[`90. puzzle - huge 1`] = `
                 "url": "https://www.thetimes.co.uk/imageserver/image/%2Fpuzzles%2Ficons%2F33b27655-dcc9-421f-906f-b2b10dd26865.png?crop=1250%2C833%2C0%2C0",
               },
               "crop45": null,
+              "crop54": null,
               "crops": Array [],
               "id": "522abf2c-e752-11e8-9f32-f2801f1b9fd1",
             }
@@ -2950,6 +2979,7 @@ exports[`90. puzzle - huge 1`] = `
                 "url": "https://www.thetimes.co.uk/imageserver/image/%2Fpuzzles%2Ficons%2F33b27655-dcc9-421f-906f-b2b10dd26865.png?crop=1250%2C833%2C0%2C0",
               },
               "crop45": null,
+              "crop54": null,
               "crops": Array [],
               "id": "522abf2c-e752-11e8-9f32-f2801f1b9fd1",
             }
@@ -2971,6 +3001,7 @@ exports[`90. puzzle - huge 1`] = `
                 "url": "https://www.thetimes.co.uk/imageserver/image/%2Fpuzzles%2Ficons%2F33b27655-dcc9-421f-906f-b2b10dd26865.png?crop=1250%2C833%2C0%2C0",
               },
               "crop45": null,
+              "crop54": null,
               "crops": Array [],
               "id": "522abf2c-e752-11e8-9f32-f2801f1b9fd1",
             }
@@ -3052,19 +3083,24 @@ exports[`93. front lead one and one - portrait - huge 1`] = `
   <View>
     <View>
       <View>
-        <TileAFront
-          breakpoint="huge"
-          orientation="portrait"
-          tileName="lead"
-        />
+        <View>
+          <TileAFront
+            orientation="portrait"
+            tileName="lead"
+          />
+        </View>
+        <View />
+        <View>
+          <TileBFront
+            orientation="portrait"
+            showKeyline={true}
+            tileName="support"
+          />
+        </View>
       </View>
-      <View />
       <View>
-        <TileBFront
-          breakpoint="huge"
+        <InTodaysEdition
           orientation="portrait"
-          showKeyline={true}
-          tileName="support"
         />
       </View>
     </View>
@@ -3077,20 +3113,26 @@ exports[`94. front lead one and one - landscape - huge 1`] = `
   <View>
     <View>
       <View>
-        <TileAFront
-          breakpoint="huge"
-          orientation="landscape"
-          tileName="lead"
-        />
-      </View>
-      <View />
-      <View>
-        <TileBFront
-          breakpoint="huge"
-          orientation="landscape"
-          showKeyline={false}
-          tileName="support"
-        />
+        <View>
+          <TileAFront
+            orientation="landscape"
+            tileName="lead"
+          />
+        </View>
+        <View />
+        <View>
+          <TileBFront
+            orientation="landscape"
+            showKeyline={false}
+            tileName="support"
+          />
+        </View>
+        <View />
+        <View>
+          <InTodaysEdition
+            orientation="landscape"
+          />
+        </View>
       </View>
     </View>
   </View>

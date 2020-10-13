@@ -1,21 +1,18 @@
 /* eslint-disable react/require-default-props */
 import React from "react";
 import PropTypes from "prop-types";
-import { editionBreakpoints } from "@times-components-native/styleguide";
 import { FrontTileSummary } from "@times-components-native/front-page";
+import { getDimensions } from "@times-components-native/utils";
 import { getTileImage, TileLink, TileImage, withTileTracking } from "../shared";
-import stylesFactory from "./styles";
+import { getStyle } from "./styles";
 
-const TileBFront = ({
-  onPress,
-  tile,
-  orientation,
-  breakpoint = editionBreakpoints.wide,
-}) => {
-  const showKeyline = orientation === "portrait";
+const TileBFront = ({ onPress, tile, orientation }) => {
+  const isPortrait = orientation === "portrait";
+  const showKeyline = isPortrait;
 
   const crop = getTileImage(tile, "crop32");
-  const styles = stylesFactory(breakpoint);
+  const { width: windowWidth } = getDimensions();
+  const styles = getStyle(orientation, windowWidth);
 
   if (!crop) return null;
 
@@ -35,11 +32,7 @@ const TileBFront = ({
         hasVideo={article.hasVideo}
       />
       <FrontTileSummary
-        headlineStyle={
-          orientation === "portrait"
-            ? styles.headlinePortrait
-            : styles.headlineLandscape
-        }
+        headlineStyle={styles.headline}
         summary={article.content}
         summaryStyle={
           article.template === "maincomment"

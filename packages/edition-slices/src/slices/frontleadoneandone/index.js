@@ -5,18 +5,20 @@ import {
   TileAFront,
   TileBFront,
 } from "@times-components-native/edition-slices/src/tiles";
+import InTodaysEdition from "@times-components-native/in-todays-edition";
 
-function renderMedium(props, breakpoint, orientation) {
+function renderMedium(props, orientation) {
   const {
     onPress,
+    onLinkPress,
     slice: { lead, support },
+    inTodaysEditionSlice: { items: inTodaysEditionItems },
   } = props;
 
   return (
     <FrontLeadOneAndOneSlice
       lead={
         <TileAFront
-          breakpoint={breakpoint}
           onPress={onPress}
           tile={lead}
           tileName="lead"
@@ -25,7 +27,6 @@ function renderMedium(props, breakpoint, orientation) {
       }
       support={
         <TileBFront
-          breakpoint={breakpoint}
           onPress={onPress}
           tile={support}
           tileName="support"
@@ -33,14 +34,22 @@ function renderMedium(props, breakpoint, orientation) {
           showKeyline={orientation === "portrait"}
         />
       }
-      breakpoint={breakpoint}
+      inTodaysEdition={
+        <InTodaysEdition
+          items={inTodaysEditionItems}
+          onArticlePress={onPress}
+          onLinkPress={onLinkPress}
+          orientation={orientation}
+        />
+      }
+      orientation={orientation}
     />
   );
 }
 
 const FrontLeadOneAndOne = (props) => {
-  const renderSlice = (breakpoint, orientation) =>
-    renderMedium(props, breakpoint, orientation);
+  const renderSlice = (_breakpoint, orientation) =>
+    renderMedium(props, orientation);
 
   return (
     <ResponsiveSlice

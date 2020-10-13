@@ -8,13 +8,11 @@ const sharedStyles = {
     flex: 1,
   },
   titleContainer: {
-    marginBottom: spacing(2),
     borderBottomWidth: 1,
     borderBottomColor: colours.functional.keyline,
     paddingBottom: 2,
   },
   heading: {
-    fontSize: 13,
     fontFamily: fonts.bodyRegular,
     letterSpacing: 1,
     color: colours.functional.brandColour,
@@ -30,7 +28,6 @@ const sharedStyles = {
     lineHeight: 16,
     fontFamily: fonts.bodyRegular,
     color: colours.functional.brandColour,
-    marginBottom: spacing(2),
   },
   itemCTA: {
     flexDirection: "row",
@@ -54,13 +51,22 @@ const sharedPortraitStyles = {
     ...sharedStyles.container,
     paddingHorizontal: spacing(4),
   },
+  heading: {
+    ...sharedStyles.heading,
+    fontSize: 13,
+  },
   itemsContainer: {
     flex: 1,
     flexDirection: "row",
+    marginTop: spacing(2),
   },
   item: {
     flex: 1,
     marginRight: spacing(2),
+  },
+  itemStrapline: {
+    ...sharedStyles.itemStrapline,
+    marginBottom: spacing(1),
   },
   itemLast: {
     marginRight: 0,
@@ -77,11 +83,11 @@ const sharedLandscapeStyles = {
   ...sharedStyles,
   container: {
     ...sharedStyles.container,
-    paddingHorizontal: spacing(3),
+    paddingHorizontal: spacing(4),
   },
   titleContainer: {
     ...sharedStyles.titleContainer,
-    paddingBottom: spacing(3),
+    paddingBottom: spacing(2),
   },
   heading: {
     ...sharedStyles.heading,
@@ -89,7 +95,8 @@ const sharedLandscapeStyles = {
   },
   item: {
     ...sharedStyles.item,
-    marginBottom: spacing(0),
+    paddingTop: spacing(2),
+    paddingRight: spacing(4),
   },
   itemTitle: {
     ...sharedStyles.itemTitle,
@@ -99,11 +106,11 @@ const sharedLandscapeStyles = {
     ...sharedStyles.itemStrapline,
     fontSize: 14,
     lineHeight: 18,
+    marginBottom: spacing(2),
   },
   divider: {
     borderBottomWidth: 1,
     borderColor: colours.functional.keyline,
-    marginBottom: spacing(4),
   },
 };
 
@@ -114,9 +121,9 @@ const landscape1080Styles = {
     paddingVertical: spacing(4),
     paddingHorizontal: spacing(6),
   },
-  itemsContainer: {
-    ...sharedLandscapeStyles.itemsContainer,
-    marginTop: spacing(2),
+  item: {
+    ...sharedLandscapeStyles.item,
+    paddingTop: spacing(3),
   },
   itemCTAText: {
     ...sharedLandscapeStyles.itemCTAText,
@@ -152,7 +159,7 @@ const styles = {
       },
       itemsContainer: {
         ...sharedPortraitStyles.itemsContainer,
-        marginTop: spacing(2),
+        marginTop: 17,
       },
       itemTitle: {
         ...sharedPortraitStyles.itemTitle,
@@ -170,7 +177,6 @@ const styles = {
       divider: {
         ...sharedPortraitStyles.divider,
         paddingLeft: spacing(2),
-        marginRight: 0,
       },
       item: {
         ...sharedPortraitStyles.item,
@@ -183,6 +189,10 @@ const styles = {
     1080: landscape1080Styles,
     1112: {
       ...landscape1080Styles,
+      titleContainer: {
+        ...landscape1080Styles.titleContainer,
+        paddingBottom: spacing(3),
+      },
       item: {
         ...landscape1080Styles.item,
         marginBottom: spacing(1),
@@ -194,6 +204,10 @@ const styles = {
         ...landscape1080Styles.container,
         paddingHorizontal: spacing(4),
       },
+      titleContainer: {
+        ...landscape1080Styles.titleContainer,
+        paddingBottom: spacing(4),
+      },
       heading: {
         ...landscape1080Styles.heading,
         fontSize: 15,
@@ -201,7 +215,8 @@ const styles = {
       },
       item: {
         ...landscape1080Styles.item,
-        paddingVertical: spacing(2),
+        paddingTop: spacing(5),
+        marginBottom: spacing(2),
       },
       itemTitle: {
         ...landscape1080Styles.itemTitle,

@@ -205,6 +205,28 @@ fragment leadAsset32and45 on Media {
   }
 }
 
+fragment leadAsset54and32 on Media {
+  __typename
+  ... on Video {
+    posterImage {
+      crop32: crop(ratio: "3:2") {
+        ...sectionCropProps
+      }
+      crop45: crop(ratio: "5:4") {
+        ...sectionCropProps
+      }
+    }
+  }
+  ... on Image {
+    crop32: crop(ratio: "3:2") {
+      ...sectionCropProps
+    }
+    crop45: crop(ratio: "5:4") {
+      ...sectionCropProps
+    }
+  }
+}
+
 fragment sectionCropProps on Crop {
   ratio
   relativeHorizontalOffset
@@ -928,33 +950,33 @@ fragment frontSlicesSection on FrontPageSectionSlice {
       headline
       strapline
       leadAsset {
-        ...leadAsset169and32
+        ...leadAsset54and32
       }
       article {
         ...baseArticleProps
         strapline
         content
         leadAsset {
-          ...leadAsset169and32
+          ...leadAsset54and32
         }
         listingAsset {
-          ...leadAsset169and32
+          ...leadAsset54and32
         }
       }
     }
     support {
       headline
       leadAsset {
-        ...leadAsset169
+        ...leadAsset32
       }
       article {
         ...baseArticleProps
         content
         leadAsset {
-          ...leadAsset169
+          ...leadAsset32
         }
         listingAsset {
-          ...leadAsset169
+          ...leadAsset32
         }
       }
     }

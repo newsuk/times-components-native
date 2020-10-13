@@ -191,12 +191,18 @@ const slices = [
     name: "front lead one and one - portrait",
     Slice: LeadOneAndOneFrontSlice,
     orientation: "portrait",
+    sliceProps: {
+      inTodaysEditionSlice: mockInTodaysEditionSlice(),
+    },
   },
   {
     mock: mockLeadOneAndOneFrontSlice(),
     name: "front lead one and one - landscape",
     Slice: LeadOneAndOneFrontSlice,
     orientation: "landscape",
+    sliceProps: {
+      inTodaysEditionSlice: mockInTodaysEditionSlice(),
+    },
   },
   {
     mock: mockLeadOneFullWidthFrontSlice(),

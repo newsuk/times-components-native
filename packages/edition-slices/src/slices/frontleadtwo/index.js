@@ -13,6 +13,7 @@ function renderMedium(props, breakpoint, orientation) {
   const { width: windowWidth } = getDimensions();
   const {
     onPress,
+    onLinkPress,
     slice: { lead1, lead2 },
     inTodaysEditionSlice: { items: inTodaysEditionItems },
   } = props;
@@ -48,7 +49,7 @@ function renderMedium(props, breakpoint, orientation) {
         <InTodaysEdition
           items={inTodaysEditionItems}
           onArticlePress={onPress}
-          onLinkPress={onPress}
+          onLinkPress={onLinkPress}
           orientation={orientation}
         />
       }
