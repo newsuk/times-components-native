@@ -1,42 +1,59 @@
 import React from "react";
-import { Dimensions, View } from "react-native";
+import { View } from "react-native";
+import { TabletContentContainer } from "@times-components-native/slice-layout";
+import { getDimensions } from "@times-components-native/utils";
+import HorizontalLayout from "../horizontallayout";
 import { ItemColSeparator } from "../shared";
-import stylesFactory from "./styles";
-
-const calculateContentWidth = (windowWidth) => {
-  if (windowWidth >= 1366) return 1180;
-  if (windowWidth >= 1194) return 1024;
-  if (windowWidth >= 1112) return 1000;
-  if (windowWidth >= 1080) return 1000;
-  if (windowWidth >= 1024) return 920;
-
-  return 1000;
-};
+import { getStyles } from "./styles";
 
 const FrontLeadOneAndOneSlice = ({
-  breakpoint,
   orientation,
   lead,
   support,
+  inTodaysEdition,
 }) => {
-  const styles = stylesFactory(breakpoint);
+  const { width: windowWidth } = getDimensions();
+  const styles = getStyles(orientation, windowWidth);
 
-  const windowWidth = Dimensions.get("window").width;
+  if (orientation === "landscape") {
+    return (
+      <TabletContentContainer
+        orientation={orientation}
+        windowWidth={windowWidth}
+        style={styles.container}
+      >
+        <HorizontalLayout
+          containerStyle={styles.row}
+          tiles={[
+            { style: styles.leadContainer, tile: lead },
+            { style: styles.supportContainer, tile: support },
+            {
+              style: styles.inTodaysEditionContainer,
+              tile: inTodaysEdition,
+            },
+          ]}
+          colSeparatorStyle={styles.colSeparatorStyle}
+        />
+      </TabletContentContainer>
+    );
+  }
 
   return (
-    <View
-      style={[
-        styles.container,
-        orientation === "landscape" && {
-          width: calculateContentWidth(windowWidth),
-          alignSelf: "center",
-        },
-      ]}
+    <TabletContentContainer
+      orientation={orientation}
+      windowWidth={windowWidth}
+      style={styles.container}
     >
-      <View style={styles.leftColumn}>{lead}</View>
-      <ItemColSeparator style={styles.colSeparatorStyle} />
-      <View style={styles.rightColumn}>{support}</View>
-    </View>
+      <HorizontalLayout
+        containerStyle={styles.row}
+        tiles={[
+          { style: styles.leadContainer, tile: lead },
+          { style: styles.supportContainer, tile: support },
+        ]}
+        colSeparatorStyle={styles.colSeparatorStyle}
+      />
+      <View style={styles.inTodaysEditionContainer}>{inTodaysEdition}</View>
+    </TabletContentContainer>
   );
 };
 

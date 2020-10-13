@@ -1,33 +1,21 @@
 /* eslint-disable react/require-default-props */
 import React from "react";
 import PropTypes from "prop-types";
-import { editionBreakpoints } from "@times-components-native/styleguide";
 import { FrontTileSummary } from "@times-components-native/front-page";
-import {
-  getTileImage,
-  TileLink,
-  withTileTracking,
-  TileImage,
-  getTileStrapline,
-} from "../shared";
-import stylesFactory from "./styles";
+import { getTileImage, TileLink, withTileTracking, TileImage } from "../shared";
+import { getStyle } from "./styles";
+import { getDimensions } from "@times-components-native/utils";
 
-const getAspectRatio = (crop) => (crop === "crop32" ? 3 / 2 : 16 / 9);
+const getAspectRatio = (crop) => (crop === "crop32" ? 3 / 2 : 5 / 4);
 
-const TileAFront = ({
-  onPress,
-  tile,
-  orientation,
-  breakpoint = editionBreakpoints.small,
-}) => {
-  const showStrapline = breakpoint === editionBreakpoints.huge;
-  const columnCount = orientation === "portrait" ? 3 : 1;
-  const crop =
-    breakpoint === "huge" || orientation === "portrait" ? "crop32" : "crop169";
-  const showSummary = orientation === "portrait";
-
+const TileAFront = ({ onPress, tile, orientation }) => {
+  const { width: windowWidth } = getDimensions();
+  const isPortrait = orientation === "portrait";
+  const columnCount = isPortrait ? 3 : 1;
+  const crop = isPortrait ? "crop32" : "crop54";
+  const showSummary = isPortrait || (1080 < windowWidth && windowWidth < 1366);
   const imageCrop = getTileImage(tile, crop);
-  const styles = stylesFactory(breakpoint);
+  const styles = getStyle(orientation, windowWidth);
 
   if (!imageCrop) return null;
 
@@ -47,16 +35,9 @@ const TileAFront = ({
         hasVideo={article.hasVideo}
       />
       <FrontTileSummary
-        headlineStyle={
-          orientation === "landscape"
-            ? styles.headlineLandscape
-            : styles.headlinePortrait
-        }
+        headlineStyle={styles.headline}
         summary={showSummary && article.content}
         summaryStyle={styles.summary}
-        strapline={showStrapline && getTileStrapline(tile)}
-        straplineStyle={styles.strapline}
-        containerStyle={styles.summaryContainer}
         tile={tile}
         template={article.template}
         columnCount={columnCount}

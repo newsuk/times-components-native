@@ -7,6 +7,7 @@ import InTodaysEdition from "@times-components-native/in-todays-edition";
 function renderMedium(props, breakpoint, orientation) {
   const {
     onPress,
+    onLinkPress,
     slice: { lead },
     inTodaysEditionSlice: { items: inTodaysEditionItems },
   } = props;
@@ -28,7 +29,7 @@ function renderMedium(props, breakpoint, orientation) {
         <InTodaysEdition
           items={inTodaysEditionItems}
           onArticlePress={onPress}
-          onLinkPress={onPress}
+          onLinkPress={onLinkPress}
           orientation={orientation}
         />
       }

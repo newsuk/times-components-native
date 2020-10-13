@@ -1,51 +1,140 @@
 import {
   fonts,
   spacing,
-  editionBreakpoints,
   globalSpacingStyles,
 } from "@times-components-native/styleguide";
+import { getStyleByDeviceSize } from "@times-components-native/styleguide/src/styleguide";
 
-const fontSizeResolver = {
-  [editionBreakpoints.medium]: {
-    portrait: 22,
-    landscape: 22,
-  },
-  [editionBreakpoints.wide]: {
-    landscape: 22,
-    portrait: 26,
-  },
-  [editionBreakpoints.huge]: {
-    portrait: 26,
-    landscape: 26,
-  },
+const summary = {
+  ...globalSpacingStyles.tabletTeaser,
+  textAlign: "justify",
 };
 
-export default (breakpoint) => ({
+const commentSummary = {
+  ...summary,
+  textAlign: "left",
+};
+
+const headlineLandscape = {
+  ...globalSpacingStyles.tabletHeadline,
+  fontFamily: fonts.headline,
+  marginBottom: spacing(2),
+};
+
+const headlinePortrait = {
+  ...globalSpacingStyles.tabletHeadline,
+  fontFamily: fonts.headline,
+  marginBottom: spacing(3),
+};
+
+const sharedLandscapeStyles = {
   container: {
     flex: 1,
     padding: spacing(2),
     paddingTop: 0,
   },
-  headlinePortrait: {
-    fontFamily: fonts.headline,
-    fontSize: fontSizeResolver[breakpoint].portrait,
-    lineHeight: fontSizeResolver[breakpoint].portrait,
-  },
-  headlineLandscape: {
-    fontFamily: fonts.headline,
-    fontSize: fontSizeResolver[breakpoint].landscape,
-    lineHeight: fontSizeResolver[breakpoint].landscape,
-  },
   imageContainer: {
     width: "100%",
     marginBottom: spacing(2),
   },
-  commentSummary: {
-    ...globalSpacingStyles.tabletTeaser,
-    textAlign: "left",
+};
+
+const sharedPortraitStyles = {
+  container: {
+    flex: 1,
+    paddingLeft: spacing(2),
+    paddingBottom: spacing(2),
   },
-  summary: {
-    ...globalSpacingStyles.tabletTeaser,
-    textAlign: "justify",
+  imageContainer: {
+    width: "100%",
+    marginBottom: spacing(1),
   },
-});
+};
+
+const styles = {
+  landscape: {
+    "1024": {
+      ...sharedLandscapeStyles,
+      headline: {
+        ...headlineLandscape,
+        fontSize: 22,
+        lineHeight: 22,
+      },
+      summary: {
+        ...summary,
+        fontSize: 14,
+        lineHeight: 20,
+      },
+    },
+    "1080": {
+      ...sharedLandscapeStyles,
+      headline: {
+        ...headlineLandscape,
+        fontSize: 25,
+        lineHeight: 25,
+      },
+      summary: {
+        ...summary,
+        fontSize: 14,
+        lineHeight: 20,
+      },
+    },
+    "1366": {
+      ...sharedLandscapeStyles,
+      headline: {
+        ...headlineLandscape,
+        fontSize: 25,
+        lineHeight: 25,
+      },
+      summary: {
+        ...summary,
+        fontSize: 15,
+        lineHeight: 20,
+      },
+    },
+  },
+  portrait: {
+    "768": {
+      ...sharedPortraitStyles,
+      headline: {
+        ...headlinePortrait,
+        fontSize: 22,
+        lineHeight: 22,
+      },
+      summary: {
+        ...summary,
+        fontSize: 14,
+        lineHeight: 18,
+      },
+      commentSummary: {
+        ...commentSummary,
+        fontSize: 14,
+        lineHeight: 18,
+      },
+    },
+    "1024": {
+      ...sharedPortraitStyles,
+      imageContainer: {
+        ...sharedPortraitStyles.imageContainer,
+        marginBottom: spacing(2),
+      },
+      headline: {
+        ...headlinePortrait,
+        fontSize: 26,
+        lineHeight: 26,
+      },
+      summary: {
+        fontSize: 15,
+        lineHeight: 18,
+      },
+      commentSummary: {
+        ...commentSummary,
+        fontSize: 15,
+        lineHeight: 18,
+      },
+    },
+  },
+};
+
+export const getStyle = (orientation, windowWidth) =>
+  getStyleByDeviceSize(styles[orientation], windowWidth);
