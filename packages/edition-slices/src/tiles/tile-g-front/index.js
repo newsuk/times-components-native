@@ -15,9 +15,9 @@ const TileGFront = ({
   showSummary,
   showByline,
 }) => {
-  const { width: windowWidth } = getDimensions();
+  const { width: windowWidth, height: windowHeight } = getDimensions();
   const crop = getTileImage(tile, "crop45");
-  const styles = getStyle(orientation, windowWidth);
+  const styles = getStyle(orientation, windowWidth, windowHeight);
 
   if (!crop) {
     return null;
