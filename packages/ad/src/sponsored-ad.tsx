@@ -33,7 +33,6 @@ export const SponsoredAd: React.FC<Props> = ({ numberOfAds = 4 }) => {
       <WebView
         style={styles.sponsoredAd}
         originWhitelist={["*"]}
-        // onNavigationStateChange={handleNavChange}
         onShouldStartLoadWithRequest={handleRequest}
         scrollEnabled={false}
         source={{
