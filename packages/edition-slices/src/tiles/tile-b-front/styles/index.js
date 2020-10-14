@@ -18,13 +18,11 @@ const commentSummary = {
 const headlineLandscape = {
   ...globalSpacingStyles.tabletHeadline,
   fontFamily: fonts.headline,
-  marginBottom: spacing(2),
 };
 
 const headlinePortrait = {
   ...globalSpacingStyles.tabletHeadline,
   fontFamily: fonts.headline,
-  marginBottom: spacing(3),
 };
 
 const sharedLandscapeStyles = {
@@ -37,6 +35,8 @@ const sharedLandscapeStyles = {
     width: "100%",
     marginBottom: spacing(2),
   },
+  headlineMarginBottom: spacing(2),
+  bylineMarginBottom: spacing(2),
 };
 
 const sharedPortraitStyles = {
@@ -49,6 +49,8 @@ const sharedPortraitStyles = {
     width: "100%",
     marginBottom: spacing(1),
   },
+  headlineMarginBottom: spacing(3),
+  bylineMarginBottom: spacing(3),
 };
 
 const styles = {

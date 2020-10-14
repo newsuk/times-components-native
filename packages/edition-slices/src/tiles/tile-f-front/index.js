@@ -40,15 +40,18 @@ const TileFFront = ({ onPress, tile, orientation }) => {
       />
       <FrontTileSummary
         headlineStyle={styles.headline}
+        headlineMarginBottom={styles.headlineMarginBottom}
         summary={!hideSummary && article.content}
         summaryStyle={styles.summary}
+        summaryLineHeight={styles.summary.lineHeight}
         strapline={getTileStrapline(tile)}
         straplineStyle={styles.strapline}
+        straplineMarginBottom={styles.straplineMarginBottom}
         tile={tile}
         template={article.template}
         columnCount={columnCount}
         bylines={article.bylines}
-        bylineContainerStyle={styles.bylineContainer}
+        bylineMarginBottom={styles.bylineMarginBottom}
       />
     </TileLink>
   );

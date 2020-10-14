@@ -122,7 +122,7 @@ const FrontTileSummary: React.FC<Props> = (props) => {
             marginBottom: props.bylineMarginBottom,
           },
           content: {
-            lineHeight: props.summaryStyle.lineHeight,
+            lineHeight: props.summaryLineHeight,
           },
         });
 

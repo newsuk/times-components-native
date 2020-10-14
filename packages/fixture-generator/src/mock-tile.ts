@@ -10,7 +10,7 @@ class MockTile {
     this.tile = {
       articleId: "dc4ed2e8-4584-11e9-924d-9729bcd51a7f",
       article,
-      headline: "Three Conservative MPs resign Three Conservative MPs resign",
+      headline: "Three Conservative MPs resign",
       leadAsset: article.leadAsset,
       strapline: "Three Conservative MPs resign",
     };
