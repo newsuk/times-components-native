@@ -1001,6 +1001,24 @@ fragment frontSlicesSection on FrontPageSectionSlice {
       }
     }
   }
+  ... on InTheNewsSlice {
+    items {
+      strapline
+      title
+      mainLink {
+        __typename
+        ... on PuffMainLinkRef {
+          __typename
+          ... on ArticleLink {
+            articleId
+          }
+           ... on Link {
+            url
+          }
+        }
+      }
+    }
+  }
 }
 
 fragment topSecondarySlice on ArticleSlice {
