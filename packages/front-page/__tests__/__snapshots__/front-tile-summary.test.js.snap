@@ -10,74 +10,88 @@ exports[`FrontTileSummary renders correctly 1`] = `
       Object {
         "flex": 1,
       },
+      Object {
+        "opacity": 0,
+      },
     ]
   }
 >
-  <ArticleSummaryHeadline
-    headline="This is tile headline"
+  <View
+    onLayout={[Function]}
     style={
       Object {
-        "backgroundColor": "blue",
+        "marginBottom": 0,
       }
     }
-  />
-  <ArticleSummaryStrapline
-    strapline="Strapline Text"
+  >
+    <ArticleSummaryHeadline
+      headline="Three Conservative MPs resign Three Conservative MPs resign"
+      style={
+        Array [
+          Object {
+            "backgroundColor": "blue",
+          },
+          Object {
+            "marginBottom": 0,
+          },
+        ]
+      }
+    />
+  </View>
+  <View
+    onLayout={[Function]}
     style={
       Object {
-        "backgroundColor": "green",
+        "marginBottom": 0,
+        "opacity": 0,
       }
     }
-  />
-  <FrontPageByline
-    byline={
-      Array [
-        Object {
-          "byline": Array [
-            Object {
-              "foo": "bar",
-            },
-          ],
-        },
-      ]
+  >
+    <ArticleSummaryStrapline
+      strapline="Strapline Text"
+      style={
+        Array [
+          Object {
+            "backgroundColor": "green",
+          },
+          Object {
+            "marginBottom": 0,
+          },
+        ]
+      }
+    />
+  </View>
+  <View
+    onLayout={[Function]}
+    style={
+      Object {
+        "marginBottom": 0,
+        "opacity": 0,
+      }
     }
-  />
-  <FrontArticleSummaryContent
-    bylines={
-      Array [
-        Object {
-          "byline": Array [
-            Object {
-              "foo": "bar",
-            },
-          ],
-        },
-      ]
-    }
-    summary={
-      Array [
-        Object {
-          "attributes": Object {},
-          "children": Array [
-            Object {
-              "attributes": Object {
-                "value": "Test",
+  >
+    <FrontPageByline
+      byline={
+        Array [
+          Object {
+            "byline": Array [
+              Object {
+                "foo": "bar",
               },
-              "children": Array [],
-              "name": "text",
-            },
-          ],
-          "name": "paragraph",
-        },
-      ]
-    }
-    summaryStyle={
-      Object {
-        "backgroundColor": "orange",
+            ],
+          },
+        ]
       }
-    }
-    template="mainstandard"
-  />
+      containerStyle={
+        Array [
+          undefined,
+          Object {
+            "marginBottom": 0,
+          },
+        ]
+      }
+    />
+  </View>
 </View>
 `;
 
@@ -91,75 +105,89 @@ exports[`FrontTileSummary renders with keyline 1`] = `
       Object {
         "flex": 1,
       },
+      Object {
+        "opacity": 0,
+      },
     ]
   }
 >
-  <ArticleSummaryHeadline
-    headline="This is tile headline"
+  <View
+    onLayout={[Function]}
     style={
       Object {
-        "backgroundColor": "blue",
+        "marginBottom": 0,
       }
     }
-  />
-  <ArticleSummaryStrapline
-    strapline="Strapline Text"
+  >
+    <ArticleSummaryHeadline
+      headline="Three Conservative MPs resign Three Conservative MPs resign"
+      style={
+        Array [
+          Object {
+            "backgroundColor": "blue",
+          },
+          Object {
+            "marginBottom": 0,
+          },
+        ]
+      }
+    />
+  </View>
+  <View
+    onLayout={[Function]}
     style={
       Object {
-        "backgroundColor": "green",
+        "marginBottom": 0,
+        "opacity": 0,
       }
     }
-  />
-  <FrontPageByline
-    byline={
-      Array [
-        Object {
-          "byline": Array [
-            Object {
-              "foo": "bar",
-            },
-          ],
-        },
-      ]
+  >
+    <ArticleSummaryStrapline
+      strapline="Strapline Text"
+      style={
+        Array [
+          Object {
+            "backgroundColor": "green",
+          },
+          Object {
+            "marginBottom": 0,
+          },
+        ]
+      }
+    />
+  </View>
+  <View
+    onLayout={[Function]}
+    style={
+      Object {
+        "marginBottom": 0,
+        "opacity": 0,
+      }
     }
-    showKeyline={true}
-  />
-  <FrontArticleSummaryContent
-    bylines={
-      Array [
-        Object {
-          "byline": Array [
-            Object {
-              "foo": "bar",
-            },
-          ],
-        },
-      ]
-    }
-    summary={
-      Array [
-        Object {
-          "attributes": Object {},
-          "children": Array [
-            Object {
-              "attributes": Object {
-                "value": "Test",
+  >
+    <FrontPageByline
+      byline={
+        Array [
+          Object {
+            "byline": Array [
+              Object {
+                "foo": "bar",
               },
-              "children": Array [],
-              "name": "text",
-            },
-          ],
-          "name": "paragraph",
-        },
-      ]
-    }
-    summaryStyle={
-      Object {
-        "backgroundColor": "orange",
+            ],
+          },
+        ]
       }
-    }
-    template="mainstandard"
-  />
+      containerStyle={
+        Array [
+          undefined,
+          Object {
+            "marginBottom": 0,
+          },
+        ]
+      }
+      showKeyline={true}
+    />
+  </View>
 </View>
 `;
 
@@ -173,61 +201,65 @@ exports[`FrontTileSummary renders with more than 1 columns 1`] = `
       Object {
         "flex": 1,
       },
+      Object {
+        "opacity": 0,
+      },
     ]
   }
 >
-  <ArticleSummaryHeadline
-    headline="This is tile headline"
+  <View
+    onLayout={[Function]}
     style={
       Object {
-        "backgroundColor": "blue",
+        "marginBottom": 0,
       }
     }
-  />
-  <ArticleSummaryStrapline
-    strapline="Strapline Text"
+  >
+    <ArticleSummaryHeadline
+      headline="Three Conservative MPs resign Three Conservative MPs resign"
+      style={
+        Array [
+          Object {
+            "backgroundColor": "blue",
+          },
+          Object {
+            "marginBottom": 0,
+          },
+        ]
+      }
+    />
+  </View>
+  <View
+    onLayout={[Function]}
     style={
       Object {
-        "backgroundColor": "green",
+        "marginBottom": 0,
+        "opacity": 0,
       }
     }
-  />
-  <FrontArticleSummaryContent
-    bylines={
-      Array [
-        Object {
-          "byline": Array [
-            Object {
-              "foo": "bar",
-            },
-          ],
-        },
-      ]
-    }
-    columnCount={2}
-    summary={
-      Array [
-        Object {
-          "attributes": Object {},
-          "children": Array [
-            Object {
-              "attributes": Object {
-                "value": "Test",
-              },
-              "children": Array [],
-              "name": "text",
-            },
-          ],
-          "name": "paragraph",
-        },
-      ]
-    }
-    summaryStyle={
+  >
+    <ArticleSummaryStrapline
+      strapline="Strapline Text"
+      style={
+        Array [
+          Object {
+            "backgroundColor": "green",
+          },
+          Object {
+            "marginBottom": 0,
+          },
+        ]
+      }
+    />
+  </View>
+  <View
+    onLayout={[Function]}
+    style={
       Object {
-        "backgroundColor": "orange",
+        "marginBottom": 0,
+        "opacity": 0,
       }
     }
-    template="mainstandard"
   />
 </View>
 `;
@@ -242,49 +274,65 @@ exports[`FrontTileSummary renders without byline 1`] = `
       Object {
         "flex": 1,
       },
+      Object {
+        "opacity": 0,
+      },
     ]
   }
 >
-  <ArticleSummaryHeadline
-    headline="This is tile headline"
+  <View
+    onLayout={[Function]}
     style={
       Object {
-        "backgroundColor": "blue",
+        "marginBottom": 0,
       }
     }
-  />
-  <ArticleSummaryStrapline
-    strapline="Strapline Text"
+  >
+    <ArticleSummaryHeadline
+      headline="Three Conservative MPs resign Three Conservative MPs resign"
+      style={
+        Array [
+          Object {
+            "backgroundColor": "blue",
+          },
+          Object {
+            "marginBottom": 0,
+          },
+        ]
+      }
+    />
+  </View>
+  <View
+    onLayout={[Function]}
     style={
       Object {
-        "backgroundColor": "green",
+        "marginBottom": 0,
+        "opacity": 0,
       }
     }
-  />
-  <FrontArticleSummaryContent
-    summary={
-      Array [
-        Object {
-          "attributes": Object {},
-          "children": Array [
-            Object {
-              "attributes": Object {
-                "value": "Test",
-              },
-              "children": Array [],
-              "name": "text",
-            },
-          ],
-          "name": "paragraph",
-        },
-      ]
-    }
-    summaryStyle={
+  >
+    <ArticleSummaryStrapline
+      strapline="Strapline Text"
+      style={
+        Array [
+          Object {
+            "backgroundColor": "green",
+          },
+          Object {
+            "marginBottom": 0,
+          },
+        ]
+      }
+    />
+  </View>
+  <View
+    onLayout={[Function]}
+    style={
       Object {
-        "backgroundColor": "orange",
+        "marginBottom": 0,
+        "opacity": 0,
       }
     }
-    template="mainstandard"
   />
 </View>
 `;
@@ -299,65 +347,73 @@ exports[`FrontTileSummary renders without strapline 1`] = `
       Object {
         "flex": 1,
       },
+      Object {
+        "opacity": 0,
+      },
     ]
   }
 >
-  <ArticleSummaryHeadline
-    headline="This is tile headline"
+  <View
+    onLayout={[Function]}
     style={
       Object {
-        "backgroundColor": "blue",
+        "marginBottom": 0,
       }
     }
-  />
-  <FrontPageByline
-    byline={
-      Array [
-        Object {
-          "byline": Array [
-            Object {
-              "foo": "bar",
-            },
-          ],
-        },
-      ]
-    }
-  />
-  <FrontArticleSummaryContent
-    bylines={
-      Array [
-        Object {
-          "byline": Array [
-            Object {
-              "foo": "bar",
-            },
-          ],
-        },
-      ]
-    }
-    summary={
-      Array [
-        Object {
-          "attributes": Object {},
-          "children": Array [
-            Object {
-              "attributes": Object {
-                "value": "Test",
-              },
-              "children": Array [],
-              "name": "text",
-            },
-          ],
-          "name": "paragraph",
-        },
-      ]
-    }
-    summaryStyle={
+  >
+    <ArticleSummaryHeadline
+      headline="Three Conservative MPs resign Three Conservative MPs resign"
+      style={
+        Array [
+          Object {
+            "backgroundColor": "blue",
+          },
+          Object {
+            "marginBottom": 0,
+          },
+        ]
+      }
+    />
+  </View>
+  <View
+    onLayout={[Function]}
+    style={
       Object {
-        "backgroundColor": "orange",
+        "marginBottom": 0,
+        "opacity": 0,
       }
     }
-    template="mainstandard"
   />
+  <View
+    onLayout={[Function]}
+    style={
+      Object {
+        "marginBottom": 0,
+        "opacity": 0,
+      }
+    }
+  >
+    <FrontPageByline
+      byline={
+        Array [
+          Object {
+            "byline": Array [
+              Object {
+                "foo": "bar",
+              },
+            ],
+          },
+        ]
+      }
+      containerStyle={
+        Array [
+          undefined,
+          Object {
+            "marginBottom": 0,
+          },
+        ]
+      }
+    />
+  </View>
 </View>
 `;

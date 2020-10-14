@@ -22,7 +22,7 @@ const sharedStyles = {
     marginBottom: spacing(1),
   },
   summary: { ...sharedSummary },
-  bylineContainerStyle: { marginBottom: spacing(3) },
+  bylineMarginBottom: spacing(3),
 };
 
 const sharedLandscapeStyles = {
@@ -33,6 +33,7 @@ const sharedLandscapeStyles = {
     paddingRight: spacing(2),
     flex: 1,
   },
+  headlineMarginBottom: spacing(1),
 };
 
 const sharedPortraitStyles = {
@@ -42,6 +43,7 @@ const sharedPortraitStyles = {
     paddingLeft: spacing(2),
     flex: 1,
   },
+  headlineMarginBottom: spacing(2),
 };
 
 const styles = {
@@ -52,7 +54,6 @@ const styles = {
         ...sharedHeadline,
         fontSize: 22,
         lineHeight: 22,
-        marginBottom: spacing(1),
       },
     },
     "1080": {
@@ -61,7 +62,6 @@ const styles = {
         ...sharedHeadline,
         fontSize: 25,
         lineHeight: 25,
-        marginBottom: spacing(1),
       },
     },
     "1112": {
@@ -70,7 +70,6 @@ const styles = {
         ...sharedHeadline,
         fontSize: 25,
         lineHeight: 25,
-        marginBottom: spacing(1),
       },
     },
     "1194": {
@@ -79,7 +78,6 @@ const styles = {
         ...sharedHeadline,
         fontSize: 25,
         lineHeight: 25,
-        marginBottom: spacing(1),
       },
     },
     "1366": {
@@ -88,8 +86,8 @@ const styles = {
         ...sharedHeadline,
         fontSize: 35,
         lineHeight: 35,
-        marginBottom: spacing(3),
       },
+      headlineMarginBottom: spacing(3),
       summary: {
         ...sharedSummary,
         fontSize: 15,
@@ -103,7 +101,6 @@ const styles = {
         ...sharedHeadline,
         fontSize: 28,
         lineHeight: 28,
-        marginBottom: spacing(2),
       },
     },
     "810": {
@@ -112,7 +109,6 @@ const styles = {
         ...sharedHeadline,
         fontSize: 28,
         lineHeight: 28,
-        marginBottom: spacing(2),
       },
     },
     "834": {
@@ -121,7 +117,6 @@ const styles = {
         ...sharedHeadline,
         fontSize: 30,
         lineHeight: 30,
-        marginBottom: spacing(2),
       },
     },
     "1024": {
@@ -134,8 +129,8 @@ const styles = {
         ...sharedHeadline,
         fontSize: 40,
         lineHeight: 40,
-        marginBottom: spacing(3),
       },
+      headlineMarginBottom: spacing(3),
       summary: {
         ...sharedSummary,
         fontSize: 15,

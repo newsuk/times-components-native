@@ -5,14 +5,15 @@ import {
 } from "@times-components-native/article-summary";
 
 import { View } from "react-native";
-import styleFactory from "@times-components-native/front-page/styles";
+import styleFactory from "./styles";
 import FrontArticleSummaryContent from "./front-article-summary-content";
 import {
   Markup,
   TemplateType,
 } from "@times-components-native/fixture-generator/src/types";
-import { FrontPageByline } from "@times-components-native/front-page/front-page-byline";
-import { MeasureContainer } from "@times-components-native/front-page/MeasureContainer";
+import { FrontPageByline } from "./front-page-byline";
+import { MeasureContainer } from "./MeasureContainer";
+import { getFrontTileConfig } from "./utils/get-front-tile-config";
 
 interface Props {
   columnCount?: number;
@@ -27,6 +28,10 @@ interface Props {
   bylines?: Markup;
   showKeyline?: boolean;
   bylineContainerStyle?: any;
+  headlineMarginBottom: number;
+  straplineMarginBottom: number;
+  bylineMarginBottom: number;
+  summaryLineHeight: number;
 }
 
 const renderContent = (props: Props) => {
@@ -86,48 +91,6 @@ const renderByline = (props: Props) => {
   );
 };
 
-const getFrontTileConfig = (
-  props: Props,
-  height: number,
-  headlineHeight: any,
-  straplineHeight: any,
-  bylineHeight: any,
-) => {
-  const roomForStrapline = height > headlineHeight + straplineHeight;
-
-  const roomForByline =
-    height > headlineHeight + straplineHeight + bylineHeight;
-
-  const roomForContent =
-    height - (headlineHeight + straplineHeight + bylineHeight) >
-    props.summaryStyle.lineHeight * 2;
-
-  return {
-    headline: {
-      show: true,
-      marginBottom:
-        roomForStrapline || roomForByline || roomForContent
-          ? props.headlineStyle.marginBottom
-          : 0,
-    },
-    strapline: {
-      show: roomForStrapline,
-      marginBottom:
-        props.strapline && (roomForByline || roomForContent)
-          ? props.straplineStyle.marginBottom
-          : 0,
-    },
-    byline: {
-      show: roomForByline,
-      marginBottom:
-        props.bylines && props.bylines.length && roomForContent
-          ? props.bylineContainerStyle.marginBottom
-          : 0,
-    },
-    content: { show: roomForContent, marginBottom: 0 },
-  };
-};
-
 const FrontTileSummary: React.FC<Props> = (props) => {
   const styles = styleFactory();
   const [headlineHeight, setHeadlineHeight] = useState();
@@ -142,13 +105,26 @@ const FrontTileSummary: React.FC<Props> = (props) => {
   return (
     <MeasureContainer
       render={({ height }) => {
-        const frontTileConfig = getFrontTileConfig(
-          props,
-          height,
-          headlineHeight,
-          straplineHeight,
-          bylineHeight,
-        );
+        const frontTileConfig = getFrontTileConfig({
+          container: {
+            height,
+          },
+          headline: {
+            height: headlineHeight,
+            marginBottom: props.headlineMarginBottom,
+          },
+          strapline: {
+            height: straplineHeight,
+            marginBottom: props.straplineMarginBottom,
+          },
+          bylines: {
+            height: bylineHeight,
+            marginBottom: props.bylineMarginBottom,
+          },
+          content: {
+            lineHeight: props.summaryStyle.lineHeight,
+          },
+        });
 
         return (
           <View

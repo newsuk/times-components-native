@@ -39,7 +39,10 @@ const TileGFront = ({ onPress, tile, orientation }) => {
         tile={tile}
         bylines={article.bylines}
         template={article.template}
-        bylineContainerStyle={styles.bylineContainerStyle}
+        bylineMarginBottom={styles.bylineMarginBottom}
+        headlineMarginBottom={styles.headlineMarginBottom}
+        straplineMarginBottom={0}
+        summaryLineHeight={styles.summary.lineHeight}
       />
     </TileLink>
   );

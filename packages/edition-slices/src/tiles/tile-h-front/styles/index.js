@@ -14,7 +14,6 @@ const sharedHeadline = {
 const sharedStrapline = {
   fontFamily: fonts.headlineRegular,
   color: colours.functional.primary,
-  marginBottom: spacing(3),
 };
 
 const sharedSummary = {
@@ -25,9 +24,9 @@ const sharedSummary = {
 
 const sharedStyles = {
   summary: { ...sharedSummary },
-  bylineContainerStyle: {
-    marginBottom: spacing(3),
-  },
+  bylineMarginBottom: spacing(3),
+  headlineMarginBottom: spacing(2),
+  straplineMarginBottom: spacing(3),
 };
 
 const sharedLandscapeStyles = {
@@ -56,7 +55,6 @@ const styles = {
         ...sharedHeadline,
         fontSize: 42,
         lineHeight: 42,
-        marginBottom: spacing(2),
       },
       strapline: {
         ...sharedStrapline,
@@ -70,7 +68,6 @@ const styles = {
         ...sharedHeadline,
         fontSize: 45,
         lineHeight: 45,
-        marginBottom: spacing(2),
       },
       strapline: {
         ...sharedStrapline,
@@ -84,7 +81,6 @@ const styles = {
         ...sharedHeadline,
         fontSize: 45,
         lineHeight: 45,
-        marginBottom: spacing(2),
       },
       strapline: {
         ...sharedStrapline,
@@ -98,7 +94,6 @@ const styles = {
         ...sharedHeadline,
         fontSize: 48,
         lineHeight: 48,
-        marginBottom: spacing(2),
       },
       strapline: {
         ...sharedStrapline,
@@ -112,8 +107,8 @@ const styles = {
         ...sharedHeadline,
         fontSize: 55,
         lineHeight: 55,
-        marginBottom: spacing(3),
       },
+      headlineMarginBottom: spacing(3),
       strapline: {
         ...sharedStrapline,
         fontSize: 24,
@@ -132,7 +127,6 @@ const styles = {
         ...sharedHeadline,
         fontSize: 28,
         lineHeight: 28,
-        marginBottom: spacing(2),
       },
       strapline: {
         ...sharedStrapline,
@@ -146,7 +140,6 @@ const styles = {
         ...sharedHeadline,
         fontSize: 28,
         lineHeight: 28,
-        marginBottom: spacing(2),
       },
       strapline: {
         ...sharedStrapline,
@@ -164,7 +157,6 @@ const styles = {
         ...sharedHeadline,
         fontSize: 30,
         lineHeight: 30,
-        marginBottom: spacing(2),
       },
       strapline: {
         ...sharedStrapline,
@@ -182,7 +174,6 @@ const styles = {
         ...sharedHeadline,
         fontSize: 40,
         lineHeight: 40,
-        marginBottom: spacing(2),
       },
       strapline: {
         ...sharedStrapline,

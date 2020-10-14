@@ -1,6 +1,6 @@
 import ReactTestRenderer from "react-test-renderer";
 import React from "react";
-import { FrontTileSummary } from "@times-components-native/front-page";
+import FrontTileSummary from "../front-tile-summary";
 import { MockTile } from "@times-components-native/fixture-generator";
 
 jest.mock(
@@ -16,6 +16,13 @@ jest.mock("@times-components-native/article-byline", () => "ArticleByline");
 jest.mock("@times-components-native/front-page/front-page-byline", () => ({
   FrontPageByline: "FrontPageByline",
 }));
+
+jest.mock("@times-components-native/front-page/MeasureContainer", () => {
+  const MockMeasureContainer = ({ render }) => {
+    return render({ height: 180, width: 200 });
+  };
+  return { MeasureContainer: MockMeasureContainer };
+});
 
 const summaryContent = [
   {
