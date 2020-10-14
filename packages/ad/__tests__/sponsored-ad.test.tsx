@@ -2,7 +2,6 @@ import { SponsoredAd } from "@times-components-native/ad/src/sponsored-ad";
 import TestRenderer from "react-test-renderer";
 import React from "react";
 import WebView from "react-native-webview";
-import { Linking } from "react-native";
 
 jest.mock("react-native", () => {
   const rn = jest.requireActual("react-native");
