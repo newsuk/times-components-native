@@ -42,36 +42,4 @@ describe("SponsoredAd", () => {
 
     expect(webView.props.source.html).toMatchSnapshot();
   });
-
-  it("opens external browser when link is clicked", () => {
-    const ad = TestRenderer.create(<SponsoredAd />);
-    const webView = ad.root.findByType(WebView);
-
-    TestRenderer.act(() => {
-      const result = webView.props.onShouldStartLoadWithRequest({
-        navigationType: "click",
-        url: "https://some-test-url",
-      });
-
-      expect(result).toEqual(false);
-    });
-
-    expect(Linking.openURL).toHaveBeenCalledWith(`https://some-test-url`);
-  });
-
-  it("handles network requests inside webview if not initiated with a click", () => {
-    const ad = TestRenderer.create(<SponsoredAd />);
-    const webView = ad.root.findByType(WebView);
-
-    TestRenderer.act(() => {
-      const result = webView.props.onShouldStartLoadWithRequest({
-        navigationType: "other",
-        url: "https://some-test-url",
-      });
-
-      expect(result).toEqual(true);
-    });
-
-    expect(Linking.openURL).not.toHaveBeenCalled();
-  });
 });

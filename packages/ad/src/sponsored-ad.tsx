@@ -1,12 +1,15 @@
 import React from "react";
 import WebView from "react-native-webview";
-import { Linking, View } from "react-native";
+import { Linking, Platform, View } from "react-native";
 import { WebViewNavigation } from "react-native-webview/lib/WebViewTypes";
 
 import styles from "./styles";
 
+const isIOS = Platform.OS === "ios";
+
 const handleRequest = (e: WebViewNavigation) => {
-  if (e.navigationType !== "click") return true;
+  if (isIOS && e.navigationType !== "click") return true;
+  if (!isIOS && e.url.slice(0, 4) !== "http") return true;
 
   Linking.openURL(e.url);
   return false;
@@ -30,6 +33,7 @@ export const SponsoredAd: React.FC<Props> = ({ numberOfAds = 4 }) => {
       <WebView
         style={styles.sponsoredAd}
         originWhitelist={["*"]}
+        // onNavigationStateChange={handleNavChange}
         onShouldStartLoadWithRequest={handleRequest}
         scrollEnabled={false}
         source={{
