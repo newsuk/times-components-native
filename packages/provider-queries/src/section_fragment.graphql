@@ -986,17 +986,17 @@ fragment frontSlicesSection on FrontPageSectionSlice {
       headline
       strapline
       leadAsset {
-        ...leadAsset169and32
+        ...leadAsset169
       }
       article {
         ...baseArticleProps
         strapline
         content
         leadAsset {
-          ...leadAsset169and32
+          ...leadAsset169
         }
         listingAsset {
-          ...leadAsset169and32
+          ...leadAsset169
         }
       }
     }
