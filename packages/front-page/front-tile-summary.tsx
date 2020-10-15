@@ -135,6 +135,7 @@ const FrontTileSummary: React.FC<Props> = (props) => {
             ]}
           >
             <View
+              testID={"headlineWrapper"}
               onLayout={(e) => setHeadlineHeight(e.nativeEvent.layout.height)}
               style={{
                 marginBottom: frontTileConfig.headline.marginBottom,
@@ -143,6 +144,7 @@ const FrontTileSummary: React.FC<Props> = (props) => {
               {renderHeadline(props)}
             </View>
             <View
+              testID={"straplineWrapper"}
               onLayout={(e) => setStraplineHeight(e.nativeEvent.layout.height)}
               style={{
                 opacity: frontTileConfig.strapline.show ? 1 : 0,
@@ -152,6 +154,7 @@ const FrontTileSummary: React.FC<Props> = (props) => {
               {renderStrapline(props)}
             </View>
             <View
+              testID={"bylineWrapper"}
               style={{
                 opacity: frontTileConfig.byline.show ? 1 : 0,
                 marginBottom: frontTileConfig.byline.marginBottom,

@@ -23,9 +23,10 @@ exports[`FrontTileSummary renders correctly 1`] = `
         "marginBottom": 0,
       }
     }
+    testID="headlineWrapper"
   >
     <ArticleSummaryHeadline
-      headline="Three Conservative MPs resign Three Conservative MPs resign"
+      headline="This is tile headline"
       style={
         Array [
           Object {
@@ -46,6 +47,7 @@ exports[`FrontTileSummary renders correctly 1`] = `
         "opacity": 0,
       }
     }
+    testID="straplineWrapper"
   >
     <ArticleSummaryStrapline
       strapline="Strapline Text"
@@ -69,6 +71,7 @@ exports[`FrontTileSummary renders correctly 1`] = `
         "opacity": 0,
       }
     }
+    testID="bylineWrapper"
   >
     <FrontPageByline
       byline={
@@ -118,9 +121,10 @@ exports[`FrontTileSummary renders with keyline 1`] = `
         "marginBottom": 0,
       }
     }
+    testID="headlineWrapper"
   >
     <ArticleSummaryHeadline
-      headline="Three Conservative MPs resign Three Conservative MPs resign"
+      headline="This is tile headline"
       style={
         Array [
           Object {
@@ -141,6 +145,7 @@ exports[`FrontTileSummary renders with keyline 1`] = `
         "opacity": 0,
       }
     }
+    testID="straplineWrapper"
   >
     <ArticleSummaryStrapline
       strapline="Strapline Text"
@@ -164,6 +169,7 @@ exports[`FrontTileSummary renders with keyline 1`] = `
         "opacity": 0,
       }
     }
+    testID="bylineWrapper"
   >
     <FrontPageByline
       byline={
@@ -214,9 +220,10 @@ exports[`FrontTileSummary renders with more than 1 columns 1`] = `
         "marginBottom": 0,
       }
     }
+    testID="headlineWrapper"
   >
     <ArticleSummaryHeadline
-      headline="Three Conservative MPs resign Three Conservative MPs resign"
+      headline="This is tile headline"
       style={
         Array [
           Object {
@@ -237,6 +244,7 @@ exports[`FrontTileSummary renders with more than 1 columns 1`] = `
         "opacity": 0,
       }
     }
+    testID="straplineWrapper"
   >
     <ArticleSummaryStrapline
       strapline="Strapline Text"
@@ -260,6 +268,7 @@ exports[`FrontTileSummary renders with more than 1 columns 1`] = `
         "opacity": 0,
       }
     }
+    testID="bylineWrapper"
   />
 </View>
 `;
@@ -287,9 +296,10 @@ exports[`FrontTileSummary renders without byline 1`] = `
         "marginBottom": 0,
       }
     }
+    testID="headlineWrapper"
   >
     <ArticleSummaryHeadline
-      headline="Three Conservative MPs resign Three Conservative MPs resign"
+      headline="This is tile headline"
       style={
         Array [
           Object {
@@ -310,6 +320,7 @@ exports[`FrontTileSummary renders without byline 1`] = `
         "opacity": 0,
       }
     }
+    testID="straplineWrapper"
   >
     <ArticleSummaryStrapline
       strapline="Strapline Text"
@@ -333,6 +344,7 @@ exports[`FrontTileSummary renders without byline 1`] = `
         "opacity": 0,
       }
     }
+    testID="bylineWrapper"
   />
 </View>
 `;
@@ -360,9 +372,10 @@ exports[`FrontTileSummary renders without strapline 1`] = `
         "marginBottom": 0,
       }
     }
+    testID="headlineWrapper"
   >
     <ArticleSummaryHeadline
-      headline="Three Conservative MPs resign Three Conservative MPs resign"
+      headline="This is tile headline"
       style={
         Array [
           Object {
@@ -383,6 +396,7 @@ exports[`FrontTileSummary renders without strapline 1`] = `
         "opacity": 0,
       }
     }
+    testID="straplineWrapper"
   />
   <View
     onLayout={[Function]}
@@ -392,6 +406,239 @@ exports[`FrontTileSummary renders without strapline 1`] = `
         "opacity": 0,
       }
     }
+    testID="bylineWrapper"
+  >
+    <FrontPageByline
+      byline={
+        Array [
+          Object {
+            "byline": Array [
+              Object {
+                "foo": "bar",
+              },
+            ],
+          },
+        ]
+      }
+      containerStyle={
+        Array [
+          undefined,
+          Object {
+            "marginBottom": 0,
+          },
+        ]
+      }
+    />
+  </View>
+</View>
+`;
+
+exports[`FrontTileSummary shows front tile summary with content once headline/strapline/byline are measured 1`] = `
+<View
+  style={
+    Array [
+      Object {
+        "backgroundColor": "red",
+      },
+      Object {
+        "flex": 1,
+      },
+      Object {
+        "opacity": 1,
+      },
+    ]
+  }
+>
+  <View
+    onLayout={[Function]}
+    style={
+      Object {
+        "marginBottom": 10,
+      }
+    }
+    testID="headlineWrapper"
+  >
+    <ArticleSummaryHeadline
+      headline="This is tile headline"
+      style={
+        Array [
+          Object {
+            "backgroundColor": "blue",
+          },
+          Object {
+            "marginBottom": 0,
+          },
+        ]
+      }
+    />
+  </View>
+  <View
+    onLayout={[Function]}
+    style={
+      Object {
+        "marginBottom": 20,
+        "opacity": 1,
+      }
+    }
+    testID="straplineWrapper"
+  >
+    <ArticleSummaryStrapline
+      strapline="Strapline Text"
+      style={
+        Array [
+          Object {
+            "backgroundColor": "green",
+          },
+          Object {
+            "marginBottom": 0,
+          },
+        ]
+      }
+    />
+  </View>
+  <View
+    onLayout={[Function]}
+    style={
+      Object {
+        "marginBottom": 15,
+        "opacity": 1,
+      }
+    }
+    testID="bylineWrapper"
+  >
+    <FrontPageByline
+      byline={
+        Array [
+          Object {
+            "byline": Array [
+              Object {
+                "foo": "bar",
+              },
+            ],
+          },
+        ]
+      }
+      containerStyle={
+        Array [
+          undefined,
+          Object {
+            "marginBottom": 0,
+          },
+        ]
+      }
+    />
+  </View>
+  <FrontArticleSummaryContent
+    bylines={
+      Array [
+        Object {
+          "byline": Array [
+            Object {
+              "foo": "bar",
+            },
+          ],
+        },
+      ]
+    }
+    summary={
+      Array [
+        Object {
+          "attributes": Object {},
+          "children": Array [
+            Object {
+              "attributes": Object {
+                "value": "Test",
+              },
+              "children": Array [],
+              "name": "text",
+            },
+          ],
+          "name": "paragraph",
+        },
+      ]
+    }
+    summaryStyle={
+      Object {
+        "backgroundColor": "orange",
+      }
+    }
+    template="mainstandard"
+  />
+</View>
+`;
+
+exports[`FrontTileSummary shows front tile summary without content once headline/strapline/byline are measured 1`] = `
+<View
+  style={
+    Array [
+      Object {
+        "backgroundColor": "red",
+      },
+      Object {
+        "flex": 1,
+      },
+      Object {
+        "opacity": 1,
+      },
+    ]
+  }
+>
+  <View
+    onLayout={[Function]}
+    style={
+      Object {
+        "marginBottom": 10,
+      }
+    }
+    testID="headlineWrapper"
+  >
+    <ArticleSummaryHeadline
+      headline="This is tile headline"
+      style={
+        Array [
+          Object {
+            "backgroundColor": "blue",
+          },
+          Object {
+            "marginBottom": 0,
+          },
+        ]
+      }
+    />
+  </View>
+  <View
+    onLayout={[Function]}
+    style={
+      Object {
+        "marginBottom": 0,
+        "opacity": 1,
+      }
+    }
+    testID="straplineWrapper"
+  >
+    <ArticleSummaryStrapline
+      strapline="Strapline Text"
+      style={
+        Array [
+          Object {
+            "backgroundColor": "green",
+          },
+          Object {
+            "marginBottom": 0,
+          },
+        ]
+      }
+    />
+  </View>
+  <View
+    onLayout={[Function]}
+    style={
+      Object {
+        "marginBottom": 0,
+        "opacity": 0,
+      }
+    }
+    testID="bylineWrapper"
   >
     <FrontPageByline
       byline={

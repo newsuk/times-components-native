@@ -19,7 +19,7 @@ jest.mock("@times-components-native/front-page/front-page-byline", () => ({
 
 jest.mock("@times-components-native/front-page/MeasureContainer", () => {
   const MockMeasureContainer = ({ render }) => {
-    return render({ height: 180, width: 200 });
+    return render({ height: 200, width: 200 });
   };
   return { MeasureContainer: MockMeasureContainer };
 });
@@ -62,6 +62,10 @@ const props = {
   strapline: "Strapline Text",
   template: "mainstandard",
   summaryStyle: { backgroundColor: "orange" },
+  headlineMarginBottom: 10,
+  straplineMarginBottom: 20,
+  bylineMarginBottom: 15,
+  summaryLineHeight: 20,
 };
 
 describe("FrontTileSummary", () => {
@@ -100,6 +104,56 @@ describe("FrontTileSummary", () => {
       <FrontTileSummary {...props} showKeyline={true} />,
     );
 
+    expect(renderer.toJSON()).toMatchSnapshot();
+  });
+
+  it("shows front tile summary without content once headline/strapline/byline are measured", () => {
+    let renderer = ReactTestRenderer.create(<FrontTileSummary {...props} />);
+
+    ReactTestRenderer.act(() => {
+      renderer.root
+        .findByProps({
+          testID: "headlineWrapper",
+        })
+        .props["onLayout"]({ nativeEvent: { layout: { height: 120 } } });
+
+      renderer.root
+        .findByProps({
+          testID: "straplineWrapper",
+        })
+        .props["onLayout"]({ nativeEvent: { layout: { height: 40 } } });
+
+      renderer.root
+        .findByProps({
+          testID: "bylineWrapper",
+        })
+        .props["onLayout"]({ nativeEvent: { layout: { height: 40 } } });
+    });
+    expect(renderer.toJSON()).toMatchSnapshot();
+  });
+
+  it("shows front tile summary with content once headline/strapline/byline are measured", () => {
+    let renderer = ReactTestRenderer.create(<FrontTileSummary {...props} />);
+
+    ReactTestRenderer.act(() => {
+      renderer.root
+        .findByProps({
+          testID: "headlineWrapper",
+        })
+        .props["onLayout"]({ nativeEvent: { layout: { height: 10 } } });
+
+      renderer.root
+        .findByProps({
+          testID: "straplineWrapper",
+        })
+        .props["onLayout"]({ nativeEvent: { layout: { height: 10 } } });
+
+      renderer.root
+        .findByProps({
+          testID: "bylineWrapper",
+        })
+        .props["onLayout"]({ nativeEvent: { layout: { height: 10 } } });
+    });
     expect(renderer.toJSON()).toMatchSnapshot();
   });
 });
