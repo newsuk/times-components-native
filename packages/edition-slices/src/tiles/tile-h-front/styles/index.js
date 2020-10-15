@@ -45,6 +45,23 @@ const sharedPortraitStyles = {
   },
 };
 
+const portrait834 = {
+  ...sharedPortraitStyles,
+  container: {
+    ...sharedPortraitStyles.container,
+    paddingBottom: spacing(1),
+  },
+  headline: {
+    ...sharedHeadline,
+    marginBottom: spacing(2),
+  },
+  strapline: {
+    ...sharedStrapline,
+    fontSize: 22,
+    lineHeight: 22,
+  },
+};
+
 const styles = {
   landscape: {
     "1024": {
@@ -152,21 +169,23 @@ const styles = {
       },
     },
     "834": {
-      ...sharedPortraitStyles,
-      container: {
-        ...sharedPortraitStyles.container,
-        paddingBottom: spacing(1),
-      },
-      headline: {
-        ...sharedHeadline,
-        fontSize: 30,
-        lineHeight: 30,
-        marginBottom: spacing(2),
-      },
-      strapline: {
-        ...sharedStrapline,
-        fontSize: 22,
-        lineHeight: 22,
+      ratios: {
+        0: {
+          ...portrait834,
+          headline: {
+            ...portrait834.headline,
+            fontSize: 45,
+            lineHeight: 45,
+          },
+        },
+        0.75: {
+          ...portrait834,
+          headline: {
+            ...portrait834.headline,
+            fontSize: 42,
+            lineHeight: 42,
+          },
+        },
       },
     },
     "1024": {
@@ -194,5 +213,5 @@ const styles = {
   },
 };
 
-export const getStyle = (orientation, windowWidth) =>
-  getStyleByDeviceSize(styles[orientation], windowWidth);
+export const getStyle = (orientation, windowWidth, windowHeight) =>
+  getStyleByDeviceSize(styles[orientation], windowWidth, windowHeight);

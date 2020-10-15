@@ -11,8 +11,8 @@ const TileBFront = ({ onPress, tile, orientation }) => {
   const showKeyline = isPortrait;
 
   const crop = getTileImage(tile, "crop32");
-  const { width: windowWidth } = getDimensions();
-  const styles = getStyle(orientation, windowWidth);
+  const { width: windowWidth, height: windowHeight } = getDimensions();
+  const styles = getStyle(orientation, windowWidth, windowHeight);
 
   if (!crop) return null;
 

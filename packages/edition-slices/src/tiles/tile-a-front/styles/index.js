@@ -33,6 +33,15 @@ const sharedStyles = {
   },
 };
 
+const portrait834 = {
+  ...sharedStyles,
+  summary: {
+    ...summary,
+    fontSize: 14,
+    lineHeight: 18,
+  },
+};
+
 const styles = {
   landscape: {
     "1024": {
@@ -97,6 +106,26 @@ const styles = {
         lineHeight: 18,
       },
     },
+    "834": {
+      ratios: {
+        0: {
+          ...portrait834,
+          headline: {
+            ...headlinePortrait,
+            fontSize: 48,
+            lineHeight: 48,
+          },
+        },
+        0.75: {
+          ...portrait834,
+          headline: {
+            ...headlinePortrait,
+            fontSize: 45,
+            lineHeight: 45,
+          },
+        },
+      },
+    },
     "1024": {
       ...sharedStyles,
       imageContainer: {
@@ -117,5 +146,5 @@ const styles = {
   },
 };
 
-export const getStyle = (orientation, windowWidth) =>
-  getStyleByDeviceSize(styles[orientation], windowWidth);
+export const getStyle = (orientation, windowWidth, windowHeight) =>
+  getStyleByDeviceSize(styles[orientation], windowWidth, windowHeight);

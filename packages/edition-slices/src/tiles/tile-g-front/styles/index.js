@@ -143,5 +143,5 @@ const styles = {
   },
 };
 
-export const getStyle = (orientation, windowWidth) =>
-  getStyleByDeviceSize(styles[orientation], windowWidth);
+export const getStyle = (orientation, windowWidth, windowHeight) =>
+  getStyleByDeviceSize(styles[orientation], windowWidth, windowHeight);
