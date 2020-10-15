@@ -7,8 +7,8 @@ import { getTileStrapline, TileLink } from "../shared";
 import { getStyle } from "./styles";
 
 const TileHFront = ({ onPress, tile, orientation }) => {
-  const { width: windowWidth } = getDimensions();
-  const styles = getStyle(orientation, windowWidth);
+  const { width: windowWidth, height: windowHeight } = getDimensions();
+  const styles = getStyle(orientation, windowWidth, windowHeight);
 
   const { article } = tile;
 
