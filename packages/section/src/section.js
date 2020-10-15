@@ -56,7 +56,7 @@ class Section extends Component {
     return null;
   }
 
-  renderItem({ index, item: slice }) {
+  renderItem({ index, item: slice, inTodaysEditionSlice }) {
     const {
       onArticlePress,
       onLinkPress,
@@ -73,6 +73,7 @@ class Section extends Component {
         onLinkPress={onLinkPress}
         slice={slice}
         isInSupplement={isSupplementSection(title)}
+        inTodaysEditionSlice={inTodaysEditionSlice}
       />
     );
   }
@@ -110,7 +111,19 @@ class Section extends Component {
         <ResponsiveContext.Consumer>
           {({ isTablet, editionBreakpoint }) => {
             if (name === "FrontPageSection") {
-              return this.renderItem({ index: 0, item: slices[0] });
+              const inTheNewsSlice = slices.find(
+                (slice) => slice.name === "InTheNewsSlice",
+              );
+
+              const frontSlice = slices.find(
+                (slice) => slice.name !== "InTheNewsSlice",
+              );
+
+              return this.renderItem({
+                index: 0,
+                item: frontSlice,
+                inTodaysEditionSlice: inTheNewsSlice,
+              });
             }
 
             const data = isPuzzle

@@ -2762,6 +2762,7 @@ export type Media = Image | Video;
 export type DraftTileArticle = Article | DraftArticle;
 
 export type FrontPageSectionSlice =
+  | InTheNewsSlice
   | LeadTwoFrontSlice
   | LeadOneAndOneFrontSlice
   | LeadOneFullWidthFrontSlice;
