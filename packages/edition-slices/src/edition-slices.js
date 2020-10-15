@@ -69,7 +69,7 @@ const sliceMap = (isInSupplement) => {
     TwoPicAndSixNoPicSlice: ListTwoAndSixNoPicSlice,
     LeadTwoFrontSlice,
     LeadOneAndOneFrontSlice,
-    LeadOneFullWidthFrontSlice,
+    LeadOneFullWidthFrontSlice: LeadOneFullWidthFrontSlice,
     TopSecondaryTwoAndTwoSlice: TopSecondarySlice,
     TopSecondaryTwoNoPicAndTwoSlice: TopSecondarySlice,
     TopSecondaryFourSlice: TopSecondarySlice,
