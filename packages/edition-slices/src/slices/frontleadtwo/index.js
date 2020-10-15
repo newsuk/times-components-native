@@ -15,8 +15,12 @@ function renderMedium(props, breakpoint, orientation) {
     onPress,
     onLinkPress,
     slice: { lead1, lead2 },
-    inTodaysEditionSlice: { items: inTodaysEditionItems },
+    inTodaysEditionSlice,
   } = props;
+
+  if (!inTodaysEditionSlice?.items.length) return null;
+
+  const { items: inTodaysEditionItems } = inTodaysEditionSlice;
 
   const showSummary =
     breakpoint === editionBreakpoints.huge && orientation === "landscape";

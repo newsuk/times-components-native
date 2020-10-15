@@ -121,8 +121,8 @@ class Section extends Component {
 
               return this.renderItem({
                 index: 0,
-                item: frontSlice,
-                inTodaysEditionSlice: inTheNewsSlice,
+                item: frontSlice || {},
+                inTodaysEditionSlice: inTheNewsSlice || {},
               });
             }
 

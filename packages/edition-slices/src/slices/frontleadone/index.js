@@ -9,8 +9,12 @@ function renderMedium(props, breakpoint, orientation) {
     onPress,
     onLinkPress,
     slice: { lead },
-    inTodaysEditionSlice: { items: inTodaysEditionItems },
+    inTodaysEditionSlice,
   } = props;
+
+  if (!inTodaysEditionSlice?.items.length) return null;
+
+  const { items: inTodaysEditionItems } = inTodaysEditionSlice;
 
   return (
     <FrontLeadOneSlice
