@@ -1,5 +1,11 @@
 import React, { useCallback, useState, useMemo } from "react";
-import { View, FlatList, ActivityIndicator, Platform } from "react-native";
+import {
+  View,
+  FlatList,
+  ActivityIndicator,
+  Platform,
+  ScrollView,
+} from "react-native";
 import PropTypes from "prop-types";
 import { screenWidth } from "@times-components-native/utils";
 import { withTrackScrollDepth } from "@times-components-native/tracking";
@@ -100,9 +106,13 @@ const ArticleWithContent = (props) => {
   );
 
   const fixedContent = useMemo(
-    () => [...fixup(isTablet, variants, template, content), { name: "footer" }],
+    () => [
+      ...fixup(isTablet, variants, template, content, props),
+      { name: "footer" },
+    ],
     [content, isTablet],
   );
+
   const images = fixedContent.filter((node) => node.name === "image");
 
   const dropcapsDisabled = isDropcapsDisabled(data);
@@ -121,35 +131,41 @@ const ArticleWithContent = (props) => {
     [footer],
   );
 
-  const renderItem = (item) =>
-    narrowContent ? <View style={styles.keylineWrapper}>{item}</View> : item;
-
-  const iosScroller =
-    // FIXME: remove this when ios memory leaks are resolved
-    useCallback(
-      (scrollprops) => (
-        <FlatList
-          {...scrollprops}
-          data={scrollprops.data.map((item, index) => Child({ item, index }))}
-          renderItem={({ item }) => renderItem(item)}
-        />
-      ),
-      [Child],
+  const renderItem = (item, index) => {
+    const toRender = Child({ item, index });
+    return narrowContent ? (
+      <View style={styles.keylineWrapper}>{toRender}</View>
+    ) : (
+      toRender
     );
+  };
 
-  const Scroller = Platform.OS === "ios" ? iosScroller : FlatList;
+  const processedContent = fixedContent.map(renderItem);
+
+  const renderFlatListItem = ({ item, index }) => {
+    const toRender = Child({ item, index });
+    return narrowContent ? (
+      <View style={styles.keylineWrapper}>{toRender}</View>
+    ) : (
+      toRender
+    );
+  };
 
   return (
     <View style={styles.articleContainer}>
       <Viewport.Tracker>
-        <Scroller
+        <ScrollView>
+          {header}
+          {processedContent}
+        </ScrollView>
+        {/* <FlatList
           data={fixedContent}
           extraData={loading}
           ListEmptyComponent={Loading}
           ListHeaderComponent={header}
           ListFooterComponent={Loading}
           onEndReached={onEndReached}
-          renderItem={({ item, index }) => renderItem(Child({ item, index }))}
+          renderItem={renderFlatListItem}
           onViewableItemsChanged={onViewableItemsChanged}
           removeClippedSubviews={false}
           keyExtractor={(item, index) => index.toString()}
@@ -158,7 +174,7 @@ const ArticleWithContent = (props) => {
           nestedScrollEnabled
           testID="flat-list-article"
           style={styles.scroller}
-        />
+        /> */}
       </Viewport.Tracker>
     </View>
   );

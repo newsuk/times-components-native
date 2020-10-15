@@ -138,7 +138,7 @@ class Ad extends Component {
     return (
       <View style={[styles.container, style, isInline && styles.inlineAd]}>
         {isInline ? (
-          <View style={styles.inlineAdTitle}>
+          <View style={[styles.inlineAdTitle, { width: sizeProps.width }]}>
             <Text style={styles.inlineAdTitleText}>Advertisement</Text>
           </View>
         ) : null}
