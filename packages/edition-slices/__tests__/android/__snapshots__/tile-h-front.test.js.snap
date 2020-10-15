@@ -12,6 +12,7 @@ exports[`tile h front landscape 1024 1`] = `
   url="/article/123"
 >
   <FrontTileSummary
+    bylineMarginBottom={15}
     bylines={
       Array [
         Object {
@@ -53,22 +54,22 @@ exports[`tile h front landscape 1024 1`] = `
         },
       ]
     }
+    headlineMarginBottom={10}
     headlineStyle={
       Object {
         "fontFamily": "TimesModern-Bold",
         "fontSize": 42,
         "lineHeight": 42,
-        "marginBottom": 10,
       }
     }
     strapline="Three Conservative MPs resign"
+    straplineMarginBottom={15}
     straplineStyle={
       Object {
         "color": "#333333",
         "fontFamily": "TimesModern-Regular",
         "fontSize": 20,
         "lineHeight": 20,
-        "marginBottom": 15,
       }
     }
     summary={
@@ -119,6 +120,7 @@ exports[`tile h front landscape 1024 1`] = `
         },
       ]
     }
+    summaryLineHeight={20}
     summaryStyle={
       Object {
         "fontSize": 14,
@@ -600,6 +602,7 @@ exports[`tile h front landscape 1080 1`] = `
   url="/article/123"
 >
   <FrontTileSummary
+    bylineMarginBottom={15}
     bylines={
       Array [
         Object {
@@ -641,22 +644,22 @@ exports[`tile h front landscape 1080 1`] = `
         },
       ]
     }
+    headlineMarginBottom={10}
     headlineStyle={
       Object {
         "fontFamily": "TimesModern-Bold",
         "fontSize": 45,
         "lineHeight": 45,
-        "marginBottom": 10,
       }
     }
     strapline="Three Conservative MPs resign"
+    straplineMarginBottom={15}
     straplineStyle={
       Object {
         "color": "#333333",
         "fontFamily": "TimesModern-Regular",
         "fontSize": 22,
         "lineHeight": 22,
-        "marginBottom": 15,
       }
     }
     summary={
@@ -707,6 +710,7 @@ exports[`tile h front landscape 1080 1`] = `
         },
       ]
     }
+    summaryLineHeight={20}
     summaryStyle={
       Object {
         "fontSize": 14,
@@ -1188,6 +1192,7 @@ exports[`tile h front landscape 1112 1`] = `
   url="/article/123"
 >
   <FrontTileSummary
+    bylineMarginBottom={15}
     bylines={
       Array [
         Object {
@@ -1229,22 +1234,22 @@ exports[`tile h front landscape 1112 1`] = `
         },
       ]
     }
+    headlineMarginBottom={10}
     headlineStyle={
       Object {
         "fontFamily": "TimesModern-Bold",
         "fontSize": 45,
         "lineHeight": 45,
-        "marginBottom": 10,
       }
     }
     strapline="Three Conservative MPs resign"
+    straplineMarginBottom={15}
     straplineStyle={
       Object {
         "color": "#333333",
         "fontFamily": "TimesModern-Regular",
         "fontSize": 22,
         "lineHeight": 22,
-        "marginBottom": 15,
       }
     }
     summary={
@@ -1295,6 +1300,7 @@ exports[`tile h front landscape 1112 1`] = `
         },
       ]
     }
+    summaryLineHeight={20}
     summaryStyle={
       Object {
         "fontSize": 14,
@@ -1776,6 +1782,7 @@ exports[`tile h front landscape 1194 1`] = `
   url="/article/123"
 >
   <FrontTileSummary
+    bylineMarginBottom={15}
     bylines={
       Array [
         Object {
@@ -1817,22 +1824,22 @@ exports[`tile h front landscape 1194 1`] = `
         },
       ]
     }
+    headlineMarginBottom={10}
     headlineStyle={
       Object {
         "fontFamily": "TimesModern-Bold",
         "fontSize": 48,
         "lineHeight": 48,
-        "marginBottom": 10,
       }
     }
     strapline="Three Conservative MPs resign"
+    straplineMarginBottom={15}
     straplineStyle={
       Object {
         "color": "#333333",
         "fontFamily": "TimesModern-Regular",
         "fontSize": 22,
         "lineHeight": 22,
-        "marginBottom": 15,
       }
     }
     summary={
@@ -1883,6 +1890,7 @@ exports[`tile h front landscape 1194 1`] = `
         },
       ]
     }
+    summaryLineHeight={20}
     summaryStyle={
       Object {
         "fontSize": 14,
@@ -2364,6 +2372,7 @@ exports[`tile h front landscape 1366 1`] = `
   url="/article/123"
 >
   <FrontTileSummary
+    bylineMarginBottom={15}
     bylines={
       Array [
         Object {
@@ -2405,22 +2414,22 @@ exports[`tile h front landscape 1366 1`] = `
         },
       ]
     }
+    headlineMarginBottom={15}
     headlineStyle={
       Object {
         "fontFamily": "TimesModern-Bold",
         "fontSize": 55,
         "lineHeight": 55,
-        "marginBottom": 15,
       }
     }
     strapline="Three Conservative MPs resign"
+    straplineMarginBottom={15}
     straplineStyle={
       Object {
         "color": "#333333",
         "fontFamily": "TimesModern-Regular",
         "fontSize": 24,
         "lineHeight": 24,
-        "marginBottom": 15,
       }
     }
     summary={
@@ -2471,6 +2480,7 @@ exports[`tile h front landscape 1366 1`] = `
         },
       ]
     }
+    summaryLineHeight={20}
     summaryStyle={
       Object {
         "fontSize": 15,
@@ -2952,6 +2962,7 @@ exports[`tile h front portrait 768 1`] = `
   url="/article/123"
 >
   <FrontTileSummary
+    bylineMarginBottom={15}
     bylines={
       Array [
         Object {
@@ -2993,22 +3004,22 @@ exports[`tile h front portrait 768 1`] = `
         },
       ]
     }
+    headlineMarginBottom={10}
     headlineStyle={
       Object {
         "fontFamily": "TimesModern-Bold",
         "fontSize": 40,
         "lineHeight": 40,
-        "marginBottom": 10,
       }
     }
     strapline="Three Conservative MPs resign"
+    straplineMarginBottom={15}
     straplineStyle={
       Object {
         "color": "#333333",
         "fontFamily": "TimesModern-Regular",
         "fontSize": 24,
         "lineHeight": 24,
-        "marginBottom": 15,
       }
     }
     summary={
@@ -3059,6 +3070,7 @@ exports[`tile h front portrait 768 1`] = `
         },
       ]
     }
+    summaryLineHeight={20}
     summaryStyle={
       Object {
         "fontSize": 15,
@@ -3540,6 +3552,7 @@ exports[`tile h front portrait 810 1`] = `
   url="/article/123"
 >
   <FrontTileSummary
+    bylineMarginBottom={15}
     bylines={
       Array [
         Object {
@@ -3581,22 +3594,22 @@ exports[`tile h front portrait 810 1`] = `
         },
       ]
     }
+    headlineMarginBottom={10}
     headlineStyle={
       Object {
         "fontFamily": "TimesModern-Bold",
         "fontSize": 40,
         "lineHeight": 40,
-        "marginBottom": 10,
       }
     }
     strapline="Three Conservative MPs resign"
+    straplineMarginBottom={15}
     straplineStyle={
       Object {
         "color": "#333333",
         "fontFamily": "TimesModern-Regular",
         "fontSize": 24,
         "lineHeight": 24,
-        "marginBottom": 15,
       }
     }
     summary={
@@ -3647,6 +3660,7 @@ exports[`tile h front portrait 810 1`] = `
         },
       ]
     }
+    summaryLineHeight={20}
     summaryStyle={
       Object {
         "fontSize": 15,
@@ -4128,6 +4142,7 @@ exports[`tile h front portrait 834 1`] = `
   url="/article/123"
 >
   <FrontTileSummary
+    bylineMarginBottom={15}
     bylines={
       Array [
         Object {
@@ -4169,22 +4184,22 @@ exports[`tile h front portrait 834 1`] = `
         },
       ]
     }
+    headlineMarginBottom={10}
     headlineStyle={
       Object {
         "fontFamily": "TimesModern-Bold",
         "fontSize": 40,
         "lineHeight": 40,
-        "marginBottom": 10,
       }
     }
     strapline="Three Conservative MPs resign"
+    straplineMarginBottom={15}
     straplineStyle={
       Object {
         "color": "#333333",
         "fontFamily": "TimesModern-Regular",
         "fontSize": 24,
         "lineHeight": 24,
-        "marginBottom": 15,
       }
     }
     summary={
@@ -4235,6 +4250,7 @@ exports[`tile h front portrait 834 1`] = `
         },
       ]
     }
+    summaryLineHeight={20}
     summaryStyle={
       Object {
         "fontSize": 15,
@@ -4716,6 +4732,7 @@ exports[`tile h front portrait 1024 1`] = `
   url="/article/123"
 >
   <FrontTileSummary
+    bylineMarginBottom={15}
     bylines={
       Array [
         Object {
@@ -4757,22 +4774,22 @@ exports[`tile h front portrait 1024 1`] = `
         },
       ]
     }
+    headlineMarginBottom={10}
     headlineStyle={
       Object {
         "fontFamily": "TimesModern-Bold",
         "fontSize": 40,
         "lineHeight": 40,
-        "marginBottom": 10,
       }
     }
     strapline="Three Conservative MPs resign"
+    straplineMarginBottom={15}
     straplineStyle={
       Object {
         "color": "#333333",
         "fontFamily": "TimesModern-Regular",
         "fontSize": 24,
         "lineHeight": 24,
-        "marginBottom": 15,
       }
     }
     summary={
@@ -4823,6 +4840,7 @@ exports[`tile h front portrait 1024 1`] = `
         },
       ]
     }
+    summaryLineHeight={20}
     summaryStyle={
       Object {
         "fontSize": 15,

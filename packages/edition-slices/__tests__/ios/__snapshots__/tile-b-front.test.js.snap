@@ -23,6 +23,7 @@ exports[`tile b front landscape 1024 1`] = `
     uri="https://www.thetimes.co.uk/imageserver/image/%2Fmethode%2Ftimes%2Fprod%2Fweb%2Fbin%2F5a14c64e-06db-11e9-abe2-4909b2eb0130.jpg?crop=2688%2C1792%2C0%2C0"
   />
   <FrontTileSummary
+    bylineMarginBottom={10}
     bylines={
       Array [
         Object {
@@ -64,15 +65,16 @@ exports[`tile b front landscape 1024 1`] = `
         },
       ]
     }
+    headlineMarginBottom={10}
     headlineStyle={
       Object {
         "fontFamily": "TimesModern-Bold",
         "fontSize": 22,
         "lineHeight": 22,
-        "marginBottom": 10,
       }
     }
     showKeyline={false}
+    straplineMarginBottom={0}
     summary={
       Array [
         Object {
@@ -121,6 +123,7 @@ exports[`tile b front landscape 1024 1`] = `
         },
       ]
     }
+    summaryLineHeight={20}
     summaryStyle={
       Object {
         "fontSize": 14,
@@ -614,6 +617,7 @@ exports[`tile b front landscape 1080 1`] = `
     uri="https://www.thetimes.co.uk/imageserver/image/%2Fmethode%2Ftimes%2Fprod%2Fweb%2Fbin%2F5a14c64e-06db-11e9-abe2-4909b2eb0130.jpg?crop=2688%2C1792%2C0%2C0"
   />
   <FrontTileSummary
+    bylineMarginBottom={10}
     bylines={
       Array [
         Object {
@@ -655,15 +659,16 @@ exports[`tile b front landscape 1080 1`] = `
         },
       ]
     }
+    headlineMarginBottom={10}
     headlineStyle={
       Object {
         "fontFamily": "TimesModern-Bold",
         "fontSize": 25,
         "lineHeight": 25,
-        "marginBottom": 10,
       }
     }
     showKeyline={false}
+    straplineMarginBottom={0}
     summary={
       Array [
         Object {
@@ -712,6 +717,7 @@ exports[`tile b front landscape 1080 1`] = `
         },
       ]
     }
+    summaryLineHeight={20}
     summaryStyle={
       Object {
         "fontSize": 14,
@@ -1205,6 +1211,7 @@ exports[`tile b front landscape 1194 1`] = `
     uri="https://www.thetimes.co.uk/imageserver/image/%2Fmethode%2Ftimes%2Fprod%2Fweb%2Fbin%2F5a14c64e-06db-11e9-abe2-4909b2eb0130.jpg?crop=2688%2C1792%2C0%2C0"
   />
   <FrontTileSummary
+    bylineMarginBottom={10}
     bylines={
       Array [
         Object {
@@ -1246,15 +1253,16 @@ exports[`tile b front landscape 1194 1`] = `
         },
       ]
     }
+    headlineMarginBottom={10}
     headlineStyle={
       Object {
         "fontFamily": "TimesModern-Bold",
         "fontSize": 25,
         "lineHeight": 25,
-        "marginBottom": 10,
       }
     }
     showKeyline={false}
+    straplineMarginBottom={0}
     summary={
       Array [
         Object {
@@ -1303,6 +1311,7 @@ exports[`tile b front landscape 1194 1`] = `
         },
       ]
     }
+    summaryLineHeight={20}
     summaryStyle={
       Object {
         "fontSize": 14,
@@ -1796,6 +1805,7 @@ exports[`tile b front landscape 1366 1`] = `
     uri="https://www.thetimes.co.uk/imageserver/image/%2Fmethode%2Ftimes%2Fprod%2Fweb%2Fbin%2F5a14c64e-06db-11e9-abe2-4909b2eb0130.jpg?crop=2688%2C1792%2C0%2C0"
   />
   <FrontTileSummary
+    bylineMarginBottom={10}
     bylines={
       Array [
         Object {
@@ -1837,15 +1847,16 @@ exports[`tile b front landscape 1366 1`] = `
         },
       ]
     }
+    headlineMarginBottom={10}
     headlineStyle={
       Object {
         "fontFamily": "TimesModern-Bold",
         "fontSize": 25,
         "lineHeight": 25,
-        "marginBottom": 10,
       }
     }
     showKeyline={false}
+    straplineMarginBottom={0}
     summary={
       Array [
         Object {
@@ -1894,6 +1905,7 @@ exports[`tile b front landscape 1366 1`] = `
         },
       ]
     }
+    summaryLineHeight={20}
     summaryStyle={
       Object {
         "fontSize": 15,
@@ -2387,6 +2399,7 @@ exports[`tile b front portrait 768 1`] = `
     uri="https://www.thetimes.co.uk/imageserver/image/%2Fmethode%2Ftimes%2Fprod%2Fweb%2Fbin%2F5a14c64e-06db-11e9-abe2-4909b2eb0130.jpg?crop=2688%2C1792%2C0%2C0"
   />
   <FrontTileSummary
+    bylineMarginBottom={15}
     bylines={
       Array [
         Object {
@@ -2428,15 +2441,16 @@ exports[`tile b front portrait 768 1`] = `
         },
       ]
     }
+    headlineMarginBottom={15}
     headlineStyle={
       Object {
         "fontFamily": "TimesModern-Bold",
         "fontSize": 26,
         "lineHeight": 26,
-        "marginBottom": 15,
       }
     }
     showKeyline={true}
+    straplineMarginBottom={0}
     summary={
       Array [
         Object {
@@ -2485,6 +2499,7 @@ exports[`tile b front portrait 768 1`] = `
         },
       ]
     }
+    summaryLineHeight={18}
     summaryStyle={
       Object {
         "fontSize": 15,
@@ -2977,6 +2992,7 @@ exports[`tile b front portrait 810 1`] = `
     uri="https://www.thetimes.co.uk/imageserver/image/%2Fmethode%2Ftimes%2Fprod%2Fweb%2Fbin%2F5a14c64e-06db-11e9-abe2-4909b2eb0130.jpg?crop=2688%2C1792%2C0%2C0"
   />
   <FrontTileSummary
+    bylineMarginBottom={15}
     bylines={
       Array [
         Object {
@@ -3018,15 +3034,16 @@ exports[`tile b front portrait 810 1`] = `
         },
       ]
     }
+    headlineMarginBottom={15}
     headlineStyle={
       Object {
         "fontFamily": "TimesModern-Bold",
         "fontSize": 26,
         "lineHeight": 26,
-        "marginBottom": 15,
       }
     }
     showKeyline={true}
+    straplineMarginBottom={0}
     summary={
       Array [
         Object {
@@ -3075,6 +3092,7 @@ exports[`tile b front portrait 810 1`] = `
         },
       ]
     }
+    summaryLineHeight={18}
     summaryStyle={
       Object {
         "fontSize": 15,
@@ -3567,6 +3585,7 @@ exports[`tile b front portrait 834 1`] = `
     uri="https://www.thetimes.co.uk/imageserver/image/%2Fmethode%2Ftimes%2Fprod%2Fweb%2Fbin%2F5a14c64e-06db-11e9-abe2-4909b2eb0130.jpg?crop=2688%2C1792%2C0%2C0"
   />
   <FrontTileSummary
+    bylineMarginBottom={15}
     bylines={
       Array [
         Object {
@@ -3608,15 +3627,16 @@ exports[`tile b front portrait 834 1`] = `
         },
       ]
     }
+    headlineMarginBottom={15}
     headlineStyle={
       Object {
         "fontFamily": "TimesModern-Bold",
         "fontSize": 26,
         "lineHeight": 26,
-        "marginBottom": 15,
       }
     }
     showKeyline={true}
+    straplineMarginBottom={0}
     summary={
       Array [
         Object {
@@ -3665,6 +3685,7 @@ exports[`tile b front portrait 834 1`] = `
         },
       ]
     }
+    summaryLineHeight={18}
     summaryStyle={
       Object {
         "fontSize": 15,
@@ -4157,6 +4178,7 @@ exports[`tile b front portrait 1024 1`] = `
     uri="https://www.thetimes.co.uk/imageserver/image/%2Fmethode%2Ftimes%2Fprod%2Fweb%2Fbin%2F5a14c64e-06db-11e9-abe2-4909b2eb0130.jpg?crop=2688%2C1792%2C0%2C0"
   />
   <FrontTileSummary
+    bylineMarginBottom={15}
     bylines={
       Array [
         Object {
@@ -4198,15 +4220,16 @@ exports[`tile b front portrait 1024 1`] = `
         },
       ]
     }
+    headlineMarginBottom={15}
     headlineStyle={
       Object {
         "fontFamily": "TimesModern-Bold",
         "fontSize": 26,
         "lineHeight": 26,
-        "marginBottom": 15,
       }
     }
     showKeyline={true}
+    straplineMarginBottom={0}
     summary={
       Array [
         Object {
@@ -4255,6 +4278,7 @@ exports[`tile b front portrait 1024 1`] = `
         },
       ]
     }
+    summaryLineHeight={18}
     summaryStyle={
       Object {
         "fontSize": 15,
