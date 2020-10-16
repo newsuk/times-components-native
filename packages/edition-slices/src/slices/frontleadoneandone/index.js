@@ -12,12 +12,8 @@ function renderMedium(props, orientation) {
     onPress,
     onLinkPress,
     slice: { lead, support },
-    inTodaysEditionSlice,
+    inTodaysEditionSlice: { items: inTodaysEditionItems = [] },
   } = props;
-
-  if (!inTodaysEditionSlice?.items.length) return null;
-
-  const { items: inTodaysEditionItems } = inTodaysEditionSlice;
 
   return (
     <FrontLeadOneAndOneSlice
