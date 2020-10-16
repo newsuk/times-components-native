@@ -222,7 +222,7 @@ describe("getFrontTileConfig", () => {
       },
       strapline: {
         height: 0,
-        marginBottom: 0,
+        marginBottom: 20,
       },
       bylines: {
         height: 100,
@@ -243,7 +243,7 @@ describe("getFrontTileConfig", () => {
         show: true,
       },
       strapline: {
-        marginBottom: 0,
+        marginBottom: 20,
         show: false,
       },
       content: {
@@ -264,11 +264,11 @@ describe("getFrontTileConfig", () => {
       },
       strapline: {
         height: 0,
-        marginBottom: 0,
+        marginBottom: 20,
       },
       bylines: {
         height: 0,
-        marginBottom: 0,
+        marginBottom: 20,
       },
       content: {
         lineHeight: 20,
@@ -281,11 +281,11 @@ describe("getFrontTileConfig", () => {
         show: true,
       },
       byline: {
-        marginBottom: 0,
+        marginBottom: 20,
         show: false,
       },
       strapline: {
-        marginBottom: 0,
+        marginBottom: 20,
         show: false,
       },
       content: {

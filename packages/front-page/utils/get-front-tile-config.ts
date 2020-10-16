@@ -24,26 +24,24 @@ interface SummaryConfig {
 export const getFrontTileConfig = (summaryConfig: SummaryConfig) => {
   const { container, headline, strapline, bylines, content } = summaryConfig;
 
+  const headlineWithMargin = headline.height + headline.marginBottom;
+
+  const straplineWithMargin =
+    strapline.height > 0 ? strapline.height + strapline.marginBottom : 0;
+
+  const bylineWithMargin =
+    bylines.height > 0 ? bylines.height + bylines.marginBottom : 0;
+
   const canAccommodateStrapline =
-    container.height >=
-    headline.height + headline.marginBottom + strapline.height;
+    container.height >= headlineWithMargin + strapline.height;
 
   const canAccommodateByline =
     container.height >=
-    headline.height +
-      headline.marginBottom +
-      strapline.height +
-      strapline.marginBottom +
-      bylines.height;
+    headlineWithMargin + straplineWithMargin + bylines.height;
 
   const canAccommodateContent =
     container.height -
-      (headline.height +
-        headline.marginBottom +
-        strapline.height +
-        strapline.marginBottom +
-        bylines.height +
-        bylines.marginBottom) >=
+      (headlineWithMargin + straplineWithMargin + bylineWithMargin) >=
     content.lineHeight * minimumNumberOfTeaserTextLines;
 
   return {
