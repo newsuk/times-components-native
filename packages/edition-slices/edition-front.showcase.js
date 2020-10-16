@@ -12,11 +12,20 @@ import {
   LeadTwoFrontSlice,
   LeadOneFullWidthFrontSlice,
 } from "./src/slices";
+import { getDimensions } from "@times-components-native/utils";
 
+const topNavHeight = 178;
+const bottomNavHeight = 48;
 const renderSlice = (Component, data) => () => {
+  const { height } = getDimensions("window");
   return (
     <Responsive>
-      <View style={{ flex: 1 }}>
+      <View
+        style={{
+          width: "100%",
+          height: height - topNavHeight - bottomNavHeight,
+        }}
+      >
         {
           <Component
             onPress={() => null}

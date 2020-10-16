@@ -33,6 +33,10 @@ const TileBFront = ({ onPress, tile, orientation }) => {
       />
       <FrontTileSummary
         headlineStyle={styles.headline}
+        headlineMarginBottom={styles.headlineMarginBottom}
+        bylineMarginBottom={styles.bylineMarginBottom}
+        straplineMarginBottom={0}
+        summaryLineHeight={styles.summary.lineHeight}
         summary={article.content}
         summaryStyle={
           article.template === "maincomment"

@@ -3,7 +3,6 @@ import { View } from "react-native";
 import { TabletContentContainer } from "@times-components-native/slice-layout";
 import { getDimensions } from "@times-components-native/utils";
 import HorizontalLayout from "../horizontallayout";
-import { ItemColSeparator } from "../shared";
 import { getStyles } from "./styles";
 
 const FrontLeadOneAndOneSlice = ({

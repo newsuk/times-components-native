@@ -779,8 +779,6 @@ exports[`23. front lead two - portrait - medium 1`] = `
       <View>
         <TileGFront
           orientation="portrait"
-          showByline={false}
-          showSummary={false}
           tileName="lead2"
         />
       </View>
@@ -808,8 +806,6 @@ exports[`24. front lead two - landscape - medium 1`] = `
       <View>
         <TileGFront
           orientation="landscape"
-          showByline={false}
-          showSummary={false}
           tileName="lead2"
         />
       </View>
@@ -1885,8 +1881,6 @@ exports[`57. front lead two - portrait - wide 1`] = `
       <View>
         <TileGFront
           orientation="portrait"
-          showByline={true}
-          showSummary={false}
           tileName="lead2"
         />
       </View>
@@ -1914,8 +1908,6 @@ exports[`58. front lead two - landscape - wide 1`] = `
       <View>
         <TileGFront
           orientation="landscape"
-          showByline={false}
-          showSummary={false}
           tileName="lead2"
         />
       </View>
@@ -3030,8 +3022,6 @@ exports[`91. front lead two - portrait - huge 1`] = `
         <View>
           <TileGFront
             orientation="portrait"
-            showByline={true}
-            showSummary={false}
             tileName="lead2"
           />
         </View>
@@ -3061,8 +3051,6 @@ exports[`92. front lead two - landscape - huge 1`] = `
         <View>
           <TileGFront
             orientation="landscape"
-            showByline={true}
-            showSummary={true}
             tileName="lead2"
           />
         </View>
