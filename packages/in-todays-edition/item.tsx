@@ -37,14 +37,8 @@ const Item: React.FC<Props> = ({
 
   const ctaText = isArticleLink(link) ? "Read the full story" : "Take me there";
   const onPress = isArticleLink(link)
-    ? () =>
-        onArticlePress({
-          id: (item.mainLink as ArticleLinkType).articleId,
-        })
-    : () =>
-        onLinkPress({
-          url: (item.mainLink as LinkType).url,
-        });
+    ? () => onArticlePress({ id: (item.mainLink as ArticleLinkType).articleId })
+    : () => onLinkPress({ url: (item.mainLink as LinkType).url });
 
   return (
     <>
