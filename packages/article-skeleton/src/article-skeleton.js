@@ -142,14 +142,14 @@ const ArticleWithContent = (props) => {
 
   const processedContent = fixedContent.map(renderItem);
 
-  const renderFlatListItem = ({ item, index }) => {
-    const toRender = Child({ item, index });
-    return narrowContent ? (
-      <View style={styles.keylineWrapper}>{toRender}</View>
-    ) : (
-      toRender
-    );
-  };
+  // const renderFlatListItem = ({ item, index }) => {
+  //   const toRender = Child({ item, index });
+  //   return narrowContent ? (
+  //     <View style={styles.keylineWrapper}>{toRender}</View>
+  //   ) : (
+  //     toRender
+  //   );
+  // };
 
   return (
     <View style={styles.articleContainer}>
