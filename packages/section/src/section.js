@@ -16,15 +16,6 @@ import {
   createPuzzleData,
   isSupplementSection,
 } from "./utils";
-// import {
-//   mockInTodaysEditionSlice,
-//   mockLeadOneAndOneFrontSlice,
-//   mockLeadOneFullWidthFrontSlice,
-//   mockLeadTwoFrontSlice,
-// } from "@times-components-native/fixture-generator";
-// import FrontLeadTwo from "@times-components-native/edition-slices/src/slices/frontleadtwo";
-// import FrontLeadOne from "@times-components-native/edition-slices/src/slices/frontleadone";
-// import FrontLeadOneAndOne from "@times-components-native/edition-slices/src/slices/frontleadoneandone";
 
 const styles = styleFactory();
 
@@ -118,26 +109,6 @@ class Section extends Component {
       <Responsive>
         <ResponsiveContext.Consumer>
           {({ isTablet, editionBreakpoint }) => {
-            // return (
-            //   <FrontLeadOneAndOne
-            //     slice={mockLeadOneAndOneFrontSlice()}
-            //     inTodaysEditionSlice={mockInTodaysEditionSlice()}
-            //   />
-            // );
-
-            // return (
-            //   <FrontLeadOne
-            //     slice={mockLeadOneFullWidthFrontSlice()}
-            //     inTodaysEditionSlice={mockInTodaysEditionSlice()}
-            //   />
-            // );
-            //
-            // return (
-            //   <FrontLeadTwo
-            //     slice={mockLeadTwoFrontSlice()}
-            //     inTodaysEditionSlice={mockInTodaysEditionSlice()}
-            //   />
-            // );
             if (name === "FrontPageSection") {
               return this.renderItem({ index: 0, item: slices[0] });
             }

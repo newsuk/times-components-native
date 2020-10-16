@@ -92,6 +92,12 @@ const renderByline = (props: Props) => {
 };
 
 const FrontTileSummary: React.FC<Props> = (props) => {
+  const {
+    bylineMarginBottom,
+    straplineMarginBottom,
+    headlineMarginBottom,
+    summaryLineHeight,
+  } = props;
   const styles = styleFactory();
   const [headlineHeight, setHeadlineHeight] = useState();
   const [straplineHeight, setStraplineHeight] = useState();
@@ -102,73 +108,103 @@ const FrontTileSummary: React.FC<Props> = (props) => {
     straplineHeight !== undefined &&
     bylineHeight !== undefined;
 
-  return (
-    <MeasureContainer
-      render={({ height }) => {
-        const frontTileConfig = getFrontTileConfig({
-          container: {
-            height,
-          },
-          headline: {
-            height: headlineHeight,
-            marginBottom: props.headlineMarginBottom,
-          },
-          strapline: {
-            height: straplineHeight,
-            marginBottom: props.straplineMarginBottom,
-          },
-          bylines: {
-            height: bylineHeight,
-            marginBottom: props.bylineMarginBottom,
-          },
-          content: {
-            lineHeight: props.summaryLineHeight,
-          },
-        });
-
-        return (
-          <View
-            style={[
-              props.containerStyle,
-              styles.container,
-              { opacity: allMeasured ? 1 : 0 },
-            ]}
-          >
-            <View
-              testID={"headlineWrapper"}
-              onLayout={(e) => setHeadlineHeight(e.nativeEvent.layout.height)}
-              style={{
-                marginBottom: frontTileConfig.headline.marginBottom,
-              }}
-            >
-              {renderHeadline(props)}
-            </View>
-            <View
-              testID={"straplineWrapper"}
-              onLayout={(e) => setStraplineHeight(e.nativeEvent.layout.height)}
-              style={{
-                opacity: frontTileConfig.strapline.show ? 1 : 0,
-                marginBottom: frontTileConfig.strapline.marginBottom,
-              }}
-            >
-              {renderStrapline(props)}
-            </View>
-            <View
-              testID={"bylineWrapper"}
-              style={{
-                opacity: frontTileConfig.byline.show ? 1 : 0,
-                marginBottom: frontTileConfig.byline.marginBottom,
-              }}
-              onLayout={(e) => setBylineHeight(e.nativeEvent.layout.height)}
-            >
-              {renderByline(props)}
-            </View>
-            {frontTileConfig.content.show && renderContent(props)}
-          </View>
-        );
-      }}
-    />
+  const TileSummaryContainer: React.FC<{ hidden: boolean }> = ({
+    children,
+    hidden,
+  }) => (
+    <View
+      style={[
+        props.containerStyle,
+        styles.container,
+        { opacity: hidden ? 0 : 1 },
+      ]}
+    >
+      {children}
+    </View>
   );
+
+  return [
+    !allMeasured && (
+      <TileSummaryContainer hidden key={"unmeasured"}>
+        <View
+          testID={"headlineWrapper"}
+          onLayout={(e) => setHeadlineHeight(e.nativeEvent.layout.height)}
+        >
+          {renderHeadline(props)}
+        </View>
+        <View
+          testID={"straplineWrapper"}
+          onLayout={(e) => setStraplineHeight(e.nativeEvent.layout.height)}
+        >
+          {renderStrapline(props)}
+        </View>
+        <View
+          testID={"bylineWrapper"}
+          onLayout={(e) => setBylineHeight(e.nativeEvent.layout.height)}
+        >
+          {renderByline(props)}
+        </View>
+      </TileSummaryContainer>
+    ),
+    allMeasured && (
+      <MeasureContainer
+        key={"measured"}
+        render={({ height }) => {
+          const frontTileConfig = getFrontTileConfig({
+            container: {
+              height,
+            },
+            headline: {
+              height: headlineHeight,
+              marginBottom: headlineMarginBottom,
+            },
+            strapline: {
+              height: straplineHeight,
+              marginBottom: straplineMarginBottom,
+            },
+            bylines: {
+              height: bylineHeight,
+              marginBottom: bylineMarginBottom,
+            },
+            content: {
+              lineHeight: summaryLineHeight,
+            },
+          });
+
+          return (
+            <TileSummaryContainer hidden={false}>
+              <View
+                style={{
+                  marginBottom: frontTileConfig.headline.marginBottom,
+                }}
+              >
+                {renderHeadline(props)}
+              </View>
+              {frontTileConfig.strapline.show && (
+                <View
+                  style={{
+                    marginBottom: frontTileConfig.strapline.marginBottom,
+                  }}
+                >
+                  {renderStrapline(props)}
+                </View>
+              )}
+              {frontTileConfig.byline.show && (
+                <View
+                  style={{
+                    marginBottom: frontTileConfig.byline.marginBottom,
+                  }}
+                >
+                  {renderByline(props)}
+                </View>
+              )}
+              {frontTileConfig.content.show && renderContent(props)}
+            </TileSummaryContainer>
+          );
+        }}
+      />
+    ),
+  ];
 };
 
 export default FrontTileSummary;

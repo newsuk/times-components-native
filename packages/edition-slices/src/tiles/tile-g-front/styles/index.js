@@ -28,7 +28,6 @@ const sharedStyles = {
 const sharedLandscapeStyles = {
   ...sharedStyles,
   container: {
-    paddingBottom: spacing(2),
     paddingLeft: spacing(2),
     paddingRight: spacing(2),
     flex: 1,
@@ -39,7 +38,6 @@ const sharedLandscapeStyles = {
 const sharedPortraitStyles = {
   ...sharedStyles,
   container: {
-    paddingBottom: spacing(2),
     paddingLeft: spacing(2),
     flex: 1,
   },

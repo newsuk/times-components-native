@@ -55,14 +55,14 @@ export const getFrontTileConfig = (summaryConfig: SummaryConfig) => {
           : 0,
     },
     strapline: {
-      show: canAccommodateStrapline,
+      show: strapline.height > 0 && canAccommodateStrapline,
       marginBottom:
         canAccommodateByline || canAccommodateContent
           ? strapline.marginBottom
           : 0,
     },
     byline: {
-      show: canAccommodateByline,
+      show: bylines.height > 0 && canAccommodateByline,
       marginBottom: canAccommodateContent ? bylines.marginBottom : 0,
     },
     content: { show: canAccommodateContent, marginBottom: 0 },

@@ -17,9 +17,10 @@ jest.mock("@times-components-native/front-page/front-page-byline", () => ({
   FrontPageByline: "FrontPageByline",
 }));
 
+const mockContainerHeight = 200;
 jest.mock("@times-components-native/front-page/MeasureContainer", () => {
   const MockMeasureContainer = ({ render }) => {
-    return render({ height: 200, width: 200 });
+    return render({ height: mockContainerHeight, width: 200 });
   };
   return { MeasureContainer: MockMeasureContainer };
 });
@@ -68,92 +69,116 @@ const props = {
   summaryLineHeight: 20,
 };
 
+const simulateMeasurement = (
+  renderer,
+  { headlineHeight = 20, straplineHeight = 20, bylineHeight = 20 },
+) => {
+  ReactTestRenderer.act(() => {
+    renderer.root
+      .findByProps({
+        testID: "headlineWrapper",
+      })
+      .props["onLayout"]({
+        nativeEvent: { layout: { height: headlineHeight } },
+      });
+
+    renderer.root
+      .findByProps({
+        testID: "straplineWrapper",
+      })
+      .props["onLayout"]({
+        nativeEvent: { layout: { height: straplineHeight } },
+      });
+
+    renderer.root
+      .findByProps({
+        testID: "bylineWrapper",
+      })
+      .props["onLayout"]({ nativeEvent: { layout: { height: bylineHeight } } });
+  });
+};
+
 describe("FrontTileSummary", () => {
-  it("renders correctly", () => {
+  it("performs measurements before rendering front tile summary", () => {
     let renderer = ReactTestRenderer.create(<FrontTileSummary {...props} />);
 
     expect(renderer.toJSON()).toMatchSnapshot();
   });
 
-  it("renders without byline", () => {
+  it("shows front tile summary with headline only after measurement has been taken", () => {
+    let renderer = ReactTestRenderer.create(<FrontTileSummary {...props} />);
+    simulateMeasurement(renderer, {
+      headlineHeight: mockContainerHeight,
+      bylineHeight: 20,
+      straplineHeight: 20,
+    });
+
+    expect(renderer.toJSON()).toMatchSnapshot();
+  });
+
+  it("shows front tile summary with headline/strapline/byline/content after measurement has been taken", () => {
+    let renderer = ReactTestRenderer.create(<FrontTileSummary {...props} />);
+    simulateMeasurement(renderer, {
+      headlineHeight: 20,
+      bylineHeight: 20,
+      straplineHeight: 20,
+    });
+    expect(renderer.toJSON()).toMatchSnapshot();
+  });
+
+  it("renders with a missing byline", () => {
     let renderer = ReactTestRenderer.create(
       <FrontTileSummary {...props} bylines={undefined} />,
     );
 
+    simulateMeasurement(renderer, {
+      headlineHeight: 20,
+      bylineHeight: 0,
+      straplineHeight: 20,
+    });
+
     expect(renderer.toJSON()).toMatchSnapshot();
   });
 
-  it("renders without strapline", () => {
+  it("renders with a missing strapline", () => {
     let renderer = ReactTestRenderer.create(
       <FrontTileSummary {...props} strapline={undefined} />,
     );
 
+    simulateMeasurement(renderer, {
+      headlineHeight: 20,
+      bylineHeight: 20,
+      straplineHeight: 0,
+    });
+
     expect(renderer.toJSON()).toMatchSnapshot();
   });
 
-  it("renders with more than 1 columns", () => {
+  it("renders with 2 columns", () => {
     let renderer = ReactTestRenderer.create(
       <FrontTileSummary {...props} columnCount={2} />,
     );
 
+    simulateMeasurement(renderer, {
+      headlineHeight: 20,
+      bylineHeight: 20,
+      straplineHeight: 20,
+    });
+
     expect(renderer.toJSON()).toMatchSnapshot();
   });
 
-  it("renders with keyline", () => {
+  it("renders byline with keyline", () => {
     let renderer = ReactTestRenderer.create(
       <FrontTileSummary {...props} showKeyline={true} />,
     );
 
-    expect(renderer.toJSON()).toMatchSnapshot();
-  });
-
-  it("shows front tile summary without content once headline/strapline/byline are measured", () => {
-    let renderer = ReactTestRenderer.create(<FrontTileSummary {...props} />);
-
-    ReactTestRenderer.act(() => {
-      renderer.root
-        .findByProps({
-          testID: "headlineWrapper",
-        })
-        .props["onLayout"]({ nativeEvent: { layout: { height: 120 } } });
-
-      renderer.root
-        .findByProps({
-          testID: "straplineWrapper",
-        })
-        .props["onLayout"]({ nativeEvent: { layout: { height: 40 } } });
-
-      renderer.root
-        .findByProps({
-          testID: "bylineWrapper",
-        })
-        .props["onLayout"]({ nativeEvent: { layout: { height: 40 } } });
+    simulateMeasurement(renderer, {
+      headlineHeight: 20,
+      bylineHeight: 20,
+      straplineHeight: 20,
     });
-    expect(renderer.toJSON()).toMatchSnapshot();
-  });
 
-  it("shows front tile summary with content once headline/strapline/byline are measured", () => {
-    let renderer = ReactTestRenderer.create(<FrontTileSummary {...props} />);
-
-    ReactTestRenderer.act(() => {
-      renderer.root
-        .findByProps({
-          testID: "headlineWrapper",
-        })
-        .props["onLayout"]({ nativeEvent: { layout: { height: 10 } } });
-
-      renderer.root
-        .findByProps({
-          testID: "straplineWrapper",
-        })
-        .props["onLayout"]({ nativeEvent: { layout: { height: 10 } } });
-
-      renderer.root
-        .findByProps({
-          testID: "bylineWrapper",
-        })
-        .props["onLayout"]({ nativeEvent: { layout: { height: 10 } } });
-    });
     expect(renderer.toJSON()).toMatchSnapshot();
   });
 });

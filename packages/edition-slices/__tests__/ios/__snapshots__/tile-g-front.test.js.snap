@@ -5,7 +5,6 @@ exports[`tile g front landscape 1024 1`] = `
   linkStyle={
     Object {
       "flex": 1,
-      "paddingBottom": 10,
       "paddingLeft": 10,
       "paddingRight": 10,
     }
@@ -598,7 +597,6 @@ exports[`tile g front landscape 1080 1`] = `
   linkStyle={
     Object {
       "flex": 1,
-      "paddingBottom": 10,
       "paddingLeft": 10,
       "paddingRight": 10,
     }
@@ -1191,7 +1189,6 @@ exports[`tile g front landscape 1112 1`] = `
   linkStyle={
     Object {
       "flex": 1,
-      "paddingBottom": 10,
       "paddingLeft": 10,
       "paddingRight": 10,
     }
@@ -1784,7 +1781,6 @@ exports[`tile g front landscape 1194 1`] = `
   linkStyle={
     Object {
       "flex": 1,
-      "paddingBottom": 10,
       "paddingLeft": 10,
       "paddingRight": 10,
     }
@@ -2377,7 +2373,6 @@ exports[`tile g front landscape 1366 1`] = `
   linkStyle={
     Object {
       "flex": 1,
-      "paddingBottom": 10,
       "paddingLeft": 10,
       "paddingRight": 10,
     }
@@ -2970,7 +2965,6 @@ exports[`tile g front portrait 768 1`] = `
   linkStyle={
     Object {
       "flex": 1,
-      "paddingBottom": 10,
       "paddingLeft": 10,
     }
   }
@@ -3562,7 +3556,6 @@ exports[`tile g front portrait 810 1`] = `
   linkStyle={
     Object {
       "flex": 1,
-      "paddingBottom": 10,
       "paddingLeft": 10,
     }
   }
@@ -4154,7 +4147,6 @@ exports[`tile g front portrait 834 1`] = `
   linkStyle={
     Object {
       "flex": 1,
-      "paddingBottom": 10,
       "paddingLeft": 10,
     }
   }
@@ -4746,7 +4738,6 @@ exports[`tile g front portrait 1024 1`] = `
   linkStyle={
     Object {
       "flex": 1,
-      "paddingBottom": 10,
       "paddingLeft": 10,
     }
   }
