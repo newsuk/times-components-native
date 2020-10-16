@@ -40,11 +40,9 @@ const Item: React.FC<Props> = ({
     ? () =>
         onArticlePress({
           id: (item.mainLink as ArticleLinkType).articleId,
-          url: (item.mainLink as ArticleLinkType).articleId,
         })
     : () =>
         onLinkPress({
-          id: (item.mainLink as LinkType).url,
           url: (item.mainLink as LinkType).url,
         });
 
