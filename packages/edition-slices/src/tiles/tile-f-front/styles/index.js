@@ -50,6 +50,26 @@ const sharedPortraitStyles = {
   headlineMarginBottom: spacing(1),
   straplineMarginBottom: spacing(3),
   bylineMarginBottom: 0,
+  summary: {
+    ...summary,
+    fontSize: 14,
+    lineHeight: 18,
+  },
+};
+
+const portrait834 = {
+  ...sharedPortraitStyles,
+  headlineMarginBottom: spacing(2),
+  headline: {
+    ...headline,
+  },
+  imageContainer: {
+    width: "100%",
+    marginBottom: spacing(2),
+  },
+  strapline: {
+    ...strapline,
+  },
 };
 
 const styles = {
@@ -129,11 +149,6 @@ const styles = {
         lineHeight: 24,
       },
       straplineMarginBottom: spacing(2),
-      summary: {
-        ...summary,
-        fontSize: 14,
-        lineHeight: 18,
-      },
     },
     "810": {
       ...sharedPortraitStyles,
@@ -152,33 +167,35 @@ const styles = {
         lineHeight: 24,
       },
       straplineMarginBottom: spacing(3),
-      summary: {
-        ...summary,
-        fontSize: 14,
-        lineHeight: 18,
-      },
     },
     "834": {
-      ...sharedPortraitStyles,
-      headline: {
-        ...headline,
-        fontSize: 45,
-        lineHeight: 45,
-      },
-      imageContainer: {
-        width: "100%",
-        marginBottom: spacing(2),
-      },
-      strapline: {
-        ...strapline,
-        fontSize: 24,
-        lineHeight: 24,
-      },
-      straplineMarginBottom: spacing(3),
-      summary: {
-        ...summary,
-        fontSize: 14,
-        lineHeight: 18,
+      ratios: {
+        0: {
+          ...portrait834,
+          headline: {
+            ...portrait834.headline,
+            fontSize: 50,
+            lineHeight: 50,
+          },
+          strapline: {
+            ...portrait834.strapline,
+            fontSize: 26,
+            lineHeight: 26,
+          },
+        },
+        0.75: {
+          ...portrait834,
+          headline: {
+            ...portrait834.headline,
+            fontSize: 45,
+            lineHeight: 45,
+          },
+          strapline: {
+            ...portrait834.strapline,
+            fontSize: 24,
+            lineHeight: 24,
+          },
+        },
       },
     },
     "1024": {
@@ -207,5 +224,5 @@ const styles = {
   },
 };
 
-export const getStyle = (orientation, windowWidth) =>
-  getStyleByDeviceSize(styles[orientation], windowWidth);
+export const getStyle = (orientation, windowWidth, windowHeight) =>
+  getStyleByDeviceSize(styles[orientation], windowWidth, windowHeight);

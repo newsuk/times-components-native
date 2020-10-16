@@ -13,13 +13,13 @@ import { getStyle } from "./styles";
 import { getDimensions } from "@times-components-native/utils";
 
 const TileFFront = ({ onPress, tile, orientation }) => {
-  const { width: windowWidth } = getDimensions();
+  const { width: windowWidth, height: windowHeight } = getDimensions();
   const isLandscape = orientation === "landscape";
   const columnCount = isLandscape ? 1 : 3;
   const hideSummary = isLandscape;
 
   const imageCrop = getTileImage(tile, "crop169");
-  const styles = getStyle(orientation, windowWidth);
+  const styles = getStyle(orientation, windowWidth, windowHeight);
 
   if (!imageCrop) return null;
 

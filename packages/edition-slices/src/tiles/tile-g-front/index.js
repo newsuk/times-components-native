@@ -8,10 +8,14 @@ import { getDimensions } from "@times-components-native/utils";
 import { getTileImage, TileLink, withTileTracking, TileImage } from "../shared";
 import { getStyle } from "./styles";
 
-const TileGFront = ({ onPress, tile, orientation }) => {
-  const { width: windowWidth } = getDimensions();
+const TileGFront = ({
+  onPress,
+  tile,
+  orientation,
+}) => {
+  const { width: windowWidth, height: windowHeight } = getDimensions();
   const crop = getTileImage(tile, "crop45");
-  const styles = getStyle(orientation, windowWidth);
+  const styles = getStyle(orientation, windowWidth, windowHeight);
 
   if (!crop) {
     return null;
