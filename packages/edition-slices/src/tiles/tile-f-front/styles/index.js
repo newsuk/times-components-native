@@ -27,13 +27,18 @@ const sharedLandscapeStyles = {
     paddingRight: spacing(2),
     flex: 1,
   },
-  bylineContainer: {
-    marginBottom: spacing(3),
-  },
   imageContainer: {
     width: "100%",
     marginBottom: spacing(1),
   },
+  summary: {
+    ...summary,
+    fontSize: 14,
+    lineHeight: 18,
+  },
+  straplineMarginBottom: spacing(3),
+  headlineMarginBottom: spacing(2),
+  bylineMarginBottom: spacing(3),
 };
 
 const sharedPortraitStyles = {
@@ -42,16 +47,21 @@ const sharedPortraitStyles = {
     flex: 1,
     flexDirection: "column",
   },
-  bylineContainer: {
-    marginBottom: spacing(3),
+  headlineMarginBottom: spacing(1),
+  straplineMarginBottom: spacing(3),
+  bylineMarginBottom: 0,
+  summary: {
+    ...summary,
+    fontSize: 14,
+    lineHeight: 18,
   },
 };
 
 const portrait834 = {
   ...sharedPortraitStyles,
+  headlineMarginBottom: spacing(2),
   headline: {
     ...headline,
-    marginBottom: spacing(2),
   },
   imageContainer: {
     width: "100%",
@@ -59,12 +69,6 @@ const portrait834 = {
   },
   strapline: {
     ...strapline,
-    marginBottom: spacing(3),
-  },
-  summary: {
-    ...summary,
-    fontSize: 14,
-    lineHeight: 18,
   },
 };
 
@@ -76,7 +80,6 @@ const styles = {
         ...headline,
         fontSize: 40,
         lineHeight: 40,
-        marginBottom: spacing(2),
       },
       strapline: {
         ...strapline,
@@ -90,7 +93,6 @@ const styles = {
         ...headline,
         fontSize: 45,
         lineHeight: 45,
-        marginBottom: spacing(2),
       },
       strapline: {
         ...strapline,
@@ -104,7 +106,6 @@ const styles = {
         ...headline,
         fontSize: 50,
         lineHeight: 50,
-        marginBottom: spacing(2),
       },
       strapline: {
         ...strapline,
@@ -122,13 +123,11 @@ const styles = {
         ...headline,
         fontSize: 55,
         lineHeight: 55,
-        marginBottom: spacing(2),
       },
       strapline: {
         ...strapline,
         fontSize: 26,
         lineHeight: 26,
-        marginBottom: spacing(3),
       },
     },
   },
@@ -139,7 +138,6 @@ const styles = {
         ...headline,
         fontSize: 42,
         lineHeight: 42,
-        marginBottom: spacing(1),
       },
       imageContainer: {
         width: "100%",
@@ -149,13 +147,8 @@ const styles = {
         ...strapline,
         fontSize: 24,
         lineHeight: 24,
-        marginBottom: spacing(2),
       },
-      summary: {
-        ...summary,
-        fontSize: 14,
-        lineHeight: 18,
-      },
+      straplineMarginBottom: spacing(2),
     },
     "810": {
       ...sharedPortraitStyles,
@@ -163,7 +156,6 @@ const styles = {
         ...headline,
         fontSize: 45,
         lineHeight: 45,
-        marginBottom: spacing(1),
       },
       imageContainer: {
         width: "100%",
@@ -173,13 +165,8 @@ const styles = {
         ...strapline,
         fontSize: 24,
         lineHeight: 24,
-        marginBottom: spacing(3),
       },
-      summary: {
-        ...summary,
-        fontSize: 14,
-        lineHeight: 18,
-      },
+      straplineMarginBottom: spacing(3),
     },
     "834": {
       ratios: {
@@ -217,7 +204,6 @@ const styles = {
         ...headline,
         fontSize: 55,
         lineHeight: 55,
-        marginBottom: spacing(1),
       },
       imageContainer: {
         width: "100%",
@@ -227,8 +213,8 @@ const styles = {
         ...strapline,
         fontSize: 30,
         lineHeight: 30,
-        marginBottom: spacing(5),
       },
+      straplineMarginBottom: spacing(5),
       summary: {
         ...summary,
         fontSize: 15,

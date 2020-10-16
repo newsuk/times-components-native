@@ -5,7 +5,6 @@ exports[`tile g front landscape 1024 1`] = `
   linkStyle={
     Object {
       "flex": 1,
-      "paddingBottom": 10,
       "paddingLeft": 10,
       "paddingRight": 10,
     }
@@ -24,14 +23,106 @@ exports[`tile g front landscape 1024 1`] = `
     uri="https://www.thetimes.co.uk/imageserver/image/%2Fmethode%2Ftimes%2Fprod%2Fweb%2Fbin%2F5a14c64e-06db-11e9-abe2-4909b2eb0130.jpg?crop=1434%2C1792%2C627%2C0"
   />
   <FrontTileSummary
+    bylineMarginBottom={15}
+    bylines={
+      Array [
+        Object {
+          "byline": Array [
+            Object {
+              "attributes": Object {
+                "slug": "richard-lloyd-parry",
+              },
+              "children": Array [
+                Object {
+                  "attributes": Object {
+                    "value": "Richard Lloyd Parry",
+                  },
+                  "children": Array [],
+                  "name": "text",
+                },
+              ],
+              "name": "author",
+            },
+          ],
+          "image": null,
+        },
+        Object {
+          "byline": Array [
+            Object {
+              "children": Array [
+                Object {
+                  "attributes": Object {
+                    "value": ", Hanoi",
+                  },
+                  "children": Array [],
+                  "name": "text",
+                },
+              ],
+              "name": "inline",
+            },
+          ],
+          "image": null,
+        },
+      ]
+    }
+    headlineMarginBottom={5}
     headlineStyle={
       Object {
         "fontFamily": "TimesModern-Bold",
         "fontSize": 22,
         "lineHeight": 22,
-        "marginBottom": 5,
       }
     }
+    straplineMarginBottom={0}
+    summary={
+      Array [
+        Object {
+          "attributes": Object {},
+          "children": Array [
+            Object {
+              "attributes": Object {
+                "value": "Critically, he said this would not necessarily require the withdrawal agreement to be reopened but could instead be done by a legally binding codicil. He added that should his amendment be passed in a Commons vote tomorrow it would give “enormous firepower” to the prime minister when she returned to Brussels.",
+              },
+              "children": Array [],
+              "name": "text",
+            },
+          ],
+          "name": "paragraph",
+        },
+        Object {
+          "attributes": Object {},
+          "children": Array [
+            Object {
+              "attributes": Object {
+                "value": "Critically, he said this would not necessarily require the withdrawal agreement to be reopened but could instead be done by a legally binding codicil. He added that should his amendment be passed in a Commons vote tomorrow it would give “enormous firepower” to the prime minister when she returned to Brussels.",
+              },
+              "children": Array [],
+              "name": "text",
+            },
+          ],
+          "name": "paragraph",
+        },
+        Object {
+          "attributes": Object {},
+          "children": Array [
+            Object {
+              "attributes": Object {
+                "value": "Critically, he said this would not necessarily require the withdrawal agreement to be reopened but could instead be done by a legally binding codicil. He added that should his amendment be passed in a Commons vote tomorrow it would give “enormous firepower” to the prime minister when she returned to Brussels.",
+              },
+              "children": Array [],
+              "name": "text",
+            },
+          ],
+          "name": "paragraph",
+        },
+        Object {
+          "attributes": Object {},
+          "children": Array [],
+          "name": "ad",
+        },
+      ]
+    }
+    summaryLineHeight={20}
     summaryStyle={
       Object {
         "fontSize": 14,
@@ -506,7 +597,6 @@ exports[`tile g front landscape 1080 1`] = `
   linkStyle={
     Object {
       "flex": 1,
-      "paddingBottom": 10,
       "paddingLeft": 10,
       "paddingRight": 10,
     }
@@ -525,14 +615,106 @@ exports[`tile g front landscape 1080 1`] = `
     uri="https://www.thetimes.co.uk/imageserver/image/%2Fmethode%2Ftimes%2Fprod%2Fweb%2Fbin%2F5a14c64e-06db-11e9-abe2-4909b2eb0130.jpg?crop=1434%2C1792%2C627%2C0"
   />
   <FrontTileSummary
+    bylineMarginBottom={15}
+    bylines={
+      Array [
+        Object {
+          "byline": Array [
+            Object {
+              "attributes": Object {
+                "slug": "richard-lloyd-parry",
+              },
+              "children": Array [
+                Object {
+                  "attributes": Object {
+                    "value": "Richard Lloyd Parry",
+                  },
+                  "children": Array [],
+                  "name": "text",
+                },
+              ],
+              "name": "author",
+            },
+          ],
+          "image": null,
+        },
+        Object {
+          "byline": Array [
+            Object {
+              "children": Array [
+                Object {
+                  "attributes": Object {
+                    "value": ", Hanoi",
+                  },
+                  "children": Array [],
+                  "name": "text",
+                },
+              ],
+              "name": "inline",
+            },
+          ],
+          "image": null,
+        },
+      ]
+    }
+    headlineMarginBottom={5}
     headlineStyle={
       Object {
         "fontFamily": "TimesModern-Bold",
         "fontSize": 25,
         "lineHeight": 25,
-        "marginBottom": 5,
       }
     }
+    straplineMarginBottom={0}
+    summary={
+      Array [
+        Object {
+          "attributes": Object {},
+          "children": Array [
+            Object {
+              "attributes": Object {
+                "value": "Critically, he said this would not necessarily require the withdrawal agreement to be reopened but could instead be done by a legally binding codicil. He added that should his amendment be passed in a Commons vote tomorrow it would give “enormous firepower” to the prime minister when she returned to Brussels.",
+              },
+              "children": Array [],
+              "name": "text",
+            },
+          ],
+          "name": "paragraph",
+        },
+        Object {
+          "attributes": Object {},
+          "children": Array [
+            Object {
+              "attributes": Object {
+                "value": "Critically, he said this would not necessarily require the withdrawal agreement to be reopened but could instead be done by a legally binding codicil. He added that should his amendment be passed in a Commons vote tomorrow it would give “enormous firepower” to the prime minister when she returned to Brussels.",
+              },
+              "children": Array [],
+              "name": "text",
+            },
+          ],
+          "name": "paragraph",
+        },
+        Object {
+          "attributes": Object {},
+          "children": Array [
+            Object {
+              "attributes": Object {
+                "value": "Critically, he said this would not necessarily require the withdrawal agreement to be reopened but could instead be done by a legally binding codicil. He added that should his amendment be passed in a Commons vote tomorrow it would give “enormous firepower” to the prime minister when she returned to Brussels.",
+              },
+              "children": Array [],
+              "name": "text",
+            },
+          ],
+          "name": "paragraph",
+        },
+        Object {
+          "attributes": Object {},
+          "children": Array [],
+          "name": "ad",
+        },
+      ]
+    }
+    summaryLineHeight={20}
     summaryStyle={
       Object {
         "fontSize": 14,
@@ -1007,7 +1189,6 @@ exports[`tile g front landscape 1194 1`] = `
   linkStyle={
     Object {
       "flex": 1,
-      "paddingBottom": 10,
       "paddingLeft": 10,
       "paddingRight": 10,
     }
@@ -1026,14 +1207,106 @@ exports[`tile g front landscape 1194 1`] = `
     uri="https://www.thetimes.co.uk/imageserver/image/%2Fmethode%2Ftimes%2Fprod%2Fweb%2Fbin%2F5a14c64e-06db-11e9-abe2-4909b2eb0130.jpg?crop=1434%2C1792%2C627%2C0"
   />
   <FrontTileSummary
+    bylineMarginBottom={15}
+    bylines={
+      Array [
+        Object {
+          "byline": Array [
+            Object {
+              "attributes": Object {
+                "slug": "richard-lloyd-parry",
+              },
+              "children": Array [
+                Object {
+                  "attributes": Object {
+                    "value": "Richard Lloyd Parry",
+                  },
+                  "children": Array [],
+                  "name": "text",
+                },
+              ],
+              "name": "author",
+            },
+          ],
+          "image": null,
+        },
+        Object {
+          "byline": Array [
+            Object {
+              "children": Array [
+                Object {
+                  "attributes": Object {
+                    "value": ", Hanoi",
+                  },
+                  "children": Array [],
+                  "name": "text",
+                },
+              ],
+              "name": "inline",
+            },
+          ],
+          "image": null,
+        },
+      ]
+    }
+    headlineMarginBottom={5}
     headlineStyle={
       Object {
         "fontFamily": "TimesModern-Bold",
         "fontSize": 25,
         "lineHeight": 25,
-        "marginBottom": 5,
       }
     }
+    straplineMarginBottom={0}
+    summary={
+      Array [
+        Object {
+          "attributes": Object {},
+          "children": Array [
+            Object {
+              "attributes": Object {
+                "value": "Critically, he said this would not necessarily require the withdrawal agreement to be reopened but could instead be done by a legally binding codicil. He added that should his amendment be passed in a Commons vote tomorrow it would give “enormous firepower” to the prime minister when she returned to Brussels.",
+              },
+              "children": Array [],
+              "name": "text",
+            },
+          ],
+          "name": "paragraph",
+        },
+        Object {
+          "attributes": Object {},
+          "children": Array [
+            Object {
+              "attributes": Object {
+                "value": "Critically, he said this would not necessarily require the withdrawal agreement to be reopened but could instead be done by a legally binding codicil. He added that should his amendment be passed in a Commons vote tomorrow it would give “enormous firepower” to the prime minister when she returned to Brussels.",
+              },
+              "children": Array [],
+              "name": "text",
+            },
+          ],
+          "name": "paragraph",
+        },
+        Object {
+          "attributes": Object {},
+          "children": Array [
+            Object {
+              "attributes": Object {
+                "value": "Critically, he said this would not necessarily require the withdrawal agreement to be reopened but could instead be done by a legally binding codicil. He added that should his amendment be passed in a Commons vote tomorrow it would give “enormous firepower” to the prime minister when she returned to Brussels.",
+              },
+              "children": Array [],
+              "name": "text",
+            },
+          ],
+          "name": "paragraph",
+        },
+        Object {
+          "attributes": Object {},
+          "children": Array [],
+          "name": "ad",
+        },
+      ]
+    }
+    summaryLineHeight={20}
     summaryStyle={
       Object {
         "fontSize": 14,
@@ -1508,7 +1781,6 @@ exports[`tile g front landscape 1366 1`] = `
   linkStyle={
     Object {
       "flex": 1,
-      "paddingBottom": 10,
       "paddingLeft": 10,
       "paddingRight": 10,
     }
@@ -1527,14 +1799,106 @@ exports[`tile g front landscape 1366 1`] = `
     uri="https://www.thetimes.co.uk/imageserver/image/%2Fmethode%2Ftimes%2Fprod%2Fweb%2Fbin%2F5a14c64e-06db-11e9-abe2-4909b2eb0130.jpg?crop=1434%2C1792%2C627%2C0"
   />
   <FrontTileSummary
+    bylineMarginBottom={15}
+    bylines={
+      Array [
+        Object {
+          "byline": Array [
+            Object {
+              "attributes": Object {
+                "slug": "richard-lloyd-parry",
+              },
+              "children": Array [
+                Object {
+                  "attributes": Object {
+                    "value": "Richard Lloyd Parry",
+                  },
+                  "children": Array [],
+                  "name": "text",
+                },
+              ],
+              "name": "author",
+            },
+          ],
+          "image": null,
+        },
+        Object {
+          "byline": Array [
+            Object {
+              "children": Array [
+                Object {
+                  "attributes": Object {
+                    "value": ", Hanoi",
+                  },
+                  "children": Array [],
+                  "name": "text",
+                },
+              ],
+              "name": "inline",
+            },
+          ],
+          "image": null,
+        },
+      ]
+    }
+    headlineMarginBottom={15}
     headlineStyle={
       Object {
         "fontFamily": "TimesModern-Bold",
         "fontSize": 35,
         "lineHeight": 35,
-        "marginBottom": 15,
       }
     }
+    straplineMarginBottom={0}
+    summary={
+      Array [
+        Object {
+          "attributes": Object {},
+          "children": Array [
+            Object {
+              "attributes": Object {
+                "value": "Critically, he said this would not necessarily require the withdrawal agreement to be reopened but could instead be done by a legally binding codicil. He added that should his amendment be passed in a Commons vote tomorrow it would give “enormous firepower” to the prime minister when she returned to Brussels.",
+              },
+              "children": Array [],
+              "name": "text",
+            },
+          ],
+          "name": "paragraph",
+        },
+        Object {
+          "attributes": Object {},
+          "children": Array [
+            Object {
+              "attributes": Object {
+                "value": "Critically, he said this would not necessarily require the withdrawal agreement to be reopened but could instead be done by a legally binding codicil. He added that should his amendment be passed in a Commons vote tomorrow it would give “enormous firepower” to the prime minister when she returned to Brussels.",
+              },
+              "children": Array [],
+              "name": "text",
+            },
+          ],
+          "name": "paragraph",
+        },
+        Object {
+          "attributes": Object {},
+          "children": Array [
+            Object {
+              "attributes": Object {
+                "value": "Critically, he said this would not necessarily require the withdrawal agreement to be reopened but could instead be done by a legally binding codicil. He added that should his amendment be passed in a Commons vote tomorrow it would give “enormous firepower” to the prime minister when she returned to Brussels.",
+              },
+              "children": Array [],
+              "name": "text",
+            },
+          ],
+          "name": "paragraph",
+        },
+        Object {
+          "attributes": Object {},
+          "children": Array [],
+          "name": "ad",
+        },
+      ]
+    }
+    summaryLineHeight={20}
     summaryStyle={
       Object {
         "fontSize": 15,
@@ -2009,7 +2373,6 @@ exports[`tile g front portrait 768 1`] = `
   linkStyle={
     Object {
       "flex": 1,
-      "paddingBottom": 10,
       "paddingLeft": 10,
     }
   }
@@ -2027,14 +2390,106 @@ exports[`tile g front portrait 768 1`] = `
     uri="https://www.thetimes.co.uk/imageserver/image/%2Fmethode%2Ftimes%2Fprod%2Fweb%2Fbin%2F5a14c64e-06db-11e9-abe2-4909b2eb0130.jpg?crop=1434%2C1792%2C627%2C0"
   />
   <FrontTileSummary
+    bylineMarginBottom={15}
+    bylines={
+      Array [
+        Object {
+          "byline": Array [
+            Object {
+              "attributes": Object {
+                "slug": "richard-lloyd-parry",
+              },
+              "children": Array [
+                Object {
+                  "attributes": Object {
+                    "value": "Richard Lloyd Parry",
+                  },
+                  "children": Array [],
+                  "name": "text",
+                },
+              ],
+              "name": "author",
+            },
+          ],
+          "image": null,
+        },
+        Object {
+          "byline": Array [
+            Object {
+              "children": Array [
+                Object {
+                  "attributes": Object {
+                    "value": ", Hanoi",
+                  },
+                  "children": Array [],
+                  "name": "text",
+                },
+              ],
+              "name": "inline",
+            },
+          ],
+          "image": null,
+        },
+      ]
+    }
+    headlineMarginBottom={10}
     headlineStyle={
       Object {
         "fontFamily": "TimesModern-Bold",
         "fontSize": 28,
         "lineHeight": 28,
-        "marginBottom": 10,
       }
     }
+    straplineMarginBottom={0}
+    summary={
+      Array [
+        Object {
+          "attributes": Object {},
+          "children": Array [
+            Object {
+              "attributes": Object {
+                "value": "Critically, he said this would not necessarily require the withdrawal agreement to be reopened but could instead be done by a legally binding codicil. He added that should his amendment be passed in a Commons vote tomorrow it would give “enormous firepower” to the prime minister when she returned to Brussels.",
+              },
+              "children": Array [],
+              "name": "text",
+            },
+          ],
+          "name": "paragraph",
+        },
+        Object {
+          "attributes": Object {},
+          "children": Array [
+            Object {
+              "attributes": Object {
+                "value": "Critically, he said this would not necessarily require the withdrawal agreement to be reopened but could instead be done by a legally binding codicil. He added that should his amendment be passed in a Commons vote tomorrow it would give “enormous firepower” to the prime minister when she returned to Brussels.",
+              },
+              "children": Array [],
+              "name": "text",
+            },
+          ],
+          "name": "paragraph",
+        },
+        Object {
+          "attributes": Object {},
+          "children": Array [
+            Object {
+              "attributes": Object {
+                "value": "Critically, he said this would not necessarily require the withdrawal agreement to be reopened but could instead be done by a legally binding codicil. He added that should his amendment be passed in a Commons vote tomorrow it would give “enormous firepower” to the prime minister when she returned to Brussels.",
+              },
+              "children": Array [],
+              "name": "text",
+            },
+          ],
+          "name": "paragraph",
+        },
+        Object {
+          "attributes": Object {},
+          "children": Array [],
+          "name": "ad",
+        },
+      ]
+    }
+    summaryLineHeight={20}
     summaryStyle={
       Object {
         "fontSize": 14,
@@ -2509,7 +2964,6 @@ exports[`tile g front portrait 810 1`] = `
   linkStyle={
     Object {
       "flex": 1,
-      "paddingBottom": 10,
       "paddingLeft": 10,
     }
   }
@@ -2527,14 +2981,106 @@ exports[`tile g front portrait 810 1`] = `
     uri="https://www.thetimes.co.uk/imageserver/image/%2Fmethode%2Ftimes%2Fprod%2Fweb%2Fbin%2F5a14c64e-06db-11e9-abe2-4909b2eb0130.jpg?crop=1434%2C1792%2C627%2C0"
   />
   <FrontTileSummary
+    bylineMarginBottom={15}
+    bylines={
+      Array [
+        Object {
+          "byline": Array [
+            Object {
+              "attributes": Object {
+                "slug": "richard-lloyd-parry",
+              },
+              "children": Array [
+                Object {
+                  "attributes": Object {
+                    "value": "Richard Lloyd Parry",
+                  },
+                  "children": Array [],
+                  "name": "text",
+                },
+              ],
+              "name": "author",
+            },
+          ],
+          "image": null,
+        },
+        Object {
+          "byline": Array [
+            Object {
+              "children": Array [
+                Object {
+                  "attributes": Object {
+                    "value": ", Hanoi",
+                  },
+                  "children": Array [],
+                  "name": "text",
+                },
+              ],
+              "name": "inline",
+            },
+          ],
+          "image": null,
+        },
+      ]
+    }
+    headlineMarginBottom={10}
     headlineStyle={
       Object {
         "fontFamily": "TimesModern-Bold",
         "fontSize": 28,
         "lineHeight": 28,
-        "marginBottom": 10,
       }
     }
+    straplineMarginBottom={0}
+    summary={
+      Array [
+        Object {
+          "attributes": Object {},
+          "children": Array [
+            Object {
+              "attributes": Object {
+                "value": "Critically, he said this would not necessarily require the withdrawal agreement to be reopened but could instead be done by a legally binding codicil. He added that should his amendment be passed in a Commons vote tomorrow it would give “enormous firepower” to the prime minister when she returned to Brussels.",
+              },
+              "children": Array [],
+              "name": "text",
+            },
+          ],
+          "name": "paragraph",
+        },
+        Object {
+          "attributes": Object {},
+          "children": Array [
+            Object {
+              "attributes": Object {
+                "value": "Critically, he said this would not necessarily require the withdrawal agreement to be reopened but could instead be done by a legally binding codicil. He added that should his amendment be passed in a Commons vote tomorrow it would give “enormous firepower” to the prime minister when she returned to Brussels.",
+              },
+              "children": Array [],
+              "name": "text",
+            },
+          ],
+          "name": "paragraph",
+        },
+        Object {
+          "attributes": Object {},
+          "children": Array [
+            Object {
+              "attributes": Object {
+                "value": "Critically, he said this would not necessarily require the withdrawal agreement to be reopened but could instead be done by a legally binding codicil. He added that should his amendment be passed in a Commons vote tomorrow it would give “enormous firepower” to the prime minister when she returned to Brussels.",
+              },
+              "children": Array [],
+              "name": "text",
+            },
+          ],
+          "name": "paragraph",
+        },
+        Object {
+          "attributes": Object {},
+          "children": Array [],
+          "name": "ad",
+        },
+      ]
+    }
+    summaryLineHeight={20}
     summaryStyle={
       Object {
         "fontSize": 14,
@@ -3009,7 +3555,6 @@ exports[`tile g front portrait 834 0.75 ratio 1`] = `
   linkStyle={
     Object {
       "flex": 1,
-      "paddingBottom": 10,
       "paddingLeft": 10,
     }
   }
@@ -3027,14 +3572,106 @@ exports[`tile g front portrait 834 0.75 ratio 1`] = `
     uri="https://www.thetimes.co.uk/imageserver/image/%2Fmethode%2Ftimes%2Fprod%2Fweb%2Fbin%2F5a14c64e-06db-11e9-abe2-4909b2eb0130.jpg?crop=1434%2C1792%2C627%2C0"
   />
   <FrontTileSummary
+    bylineMarginBottom={15}
+    bylines={
+      Array [
+        Object {
+          "byline": Array [
+            Object {
+              "attributes": Object {
+                "slug": "richard-lloyd-parry",
+              },
+              "children": Array [
+                Object {
+                  "attributes": Object {
+                    "value": "Richard Lloyd Parry",
+                  },
+                  "children": Array [],
+                  "name": "text",
+                },
+              ],
+              "name": "author",
+            },
+          ],
+          "image": null,
+        },
+        Object {
+          "byline": Array [
+            Object {
+              "children": Array [
+                Object {
+                  "attributes": Object {
+                    "value": ", Hanoi",
+                  },
+                  "children": Array [],
+                  "name": "text",
+                },
+              ],
+              "name": "inline",
+            },
+          ],
+          "image": null,
+        },
+      ]
+    }
+    headlineMarginBottom={10}
     headlineStyle={
       Object {
         "fontFamily": "TimesModern-Bold",
         "fontSize": 30,
         "lineHeight": 30,
-        "marginBottom": 10,
       }
     }
+    straplineMarginBottom={0}
+    summary={
+      Array [
+        Object {
+          "attributes": Object {},
+          "children": Array [
+            Object {
+              "attributes": Object {
+                "value": "Critically, he said this would not necessarily require the withdrawal agreement to be reopened but could instead be done by a legally binding codicil. He added that should his amendment be passed in a Commons vote tomorrow it would give “enormous firepower” to the prime minister when she returned to Brussels.",
+              },
+              "children": Array [],
+              "name": "text",
+            },
+          ],
+          "name": "paragraph",
+        },
+        Object {
+          "attributes": Object {},
+          "children": Array [
+            Object {
+              "attributes": Object {
+                "value": "Critically, he said this would not necessarily require the withdrawal agreement to be reopened but could instead be done by a legally binding codicil. He added that should his amendment be passed in a Commons vote tomorrow it would give “enormous firepower” to the prime minister when she returned to Brussels.",
+              },
+              "children": Array [],
+              "name": "text",
+            },
+          ],
+          "name": "paragraph",
+        },
+        Object {
+          "attributes": Object {},
+          "children": Array [
+            Object {
+              "attributes": Object {
+                "value": "Critically, he said this would not necessarily require the withdrawal agreement to be reopened but could instead be done by a legally binding codicil. He added that should his amendment be passed in a Commons vote tomorrow it would give “enormous firepower” to the prime minister when she returned to Brussels.",
+              },
+              "children": Array [],
+              "name": "text",
+            },
+          ],
+          "name": "paragraph",
+        },
+        Object {
+          "attributes": Object {},
+          "children": Array [],
+          "name": "ad",
+        },
+      ]
+    }
+    summaryLineHeight={20}
     summaryStyle={
       Object {
         "fontSize": 14,
@@ -3509,7 +4146,6 @@ exports[`tile g front portrait 834 less than 0.75 ratio 1`] = `
   linkStyle={
     Object {
       "flex": 1,
-      "paddingBottom": 10,
       "paddingLeft": 10,
     }
   }
@@ -3527,14 +4163,106 @@ exports[`tile g front portrait 834 less than 0.75 ratio 1`] = `
     uri="https://www.thetimes.co.uk/imageserver/image/%2Fmethode%2Ftimes%2Fprod%2Fweb%2Fbin%2F5a14c64e-06db-11e9-abe2-4909b2eb0130.jpg?crop=1434%2C1792%2C627%2C0"
   />
   <FrontTileSummary
+    bylineMarginBottom={15}
+    bylines={
+      Array [
+        Object {
+          "byline": Array [
+            Object {
+              "attributes": Object {
+                "slug": "richard-lloyd-parry",
+              },
+              "children": Array [
+                Object {
+                  "attributes": Object {
+                    "value": "Richard Lloyd Parry",
+                  },
+                  "children": Array [],
+                  "name": "text",
+                },
+              ],
+              "name": "author",
+            },
+          ],
+          "image": null,
+        },
+        Object {
+          "byline": Array [
+            Object {
+              "children": Array [
+                Object {
+                  "attributes": Object {
+                    "value": ", Hanoi",
+                  },
+                  "children": Array [],
+                  "name": "text",
+                },
+              ],
+              "name": "inline",
+            },
+          ],
+          "image": null,
+        },
+      ]
+    }
+    headlineMarginBottom={10}
     headlineStyle={
       Object {
         "fontFamily": "TimesModern-Bold",
         "fontSize": 30,
         "lineHeight": 30,
-        "marginBottom": 10,
       }
     }
+    straplineMarginBottom={0}
+    summary={
+      Array [
+        Object {
+          "attributes": Object {},
+          "children": Array [
+            Object {
+              "attributes": Object {
+                "value": "Critically, he said this would not necessarily require the withdrawal agreement to be reopened but could instead be done by a legally binding codicil. He added that should his amendment be passed in a Commons vote tomorrow it would give “enormous firepower” to the prime minister when she returned to Brussels.",
+              },
+              "children": Array [],
+              "name": "text",
+            },
+          ],
+          "name": "paragraph",
+        },
+        Object {
+          "attributes": Object {},
+          "children": Array [
+            Object {
+              "attributes": Object {
+                "value": "Critically, he said this would not necessarily require the withdrawal agreement to be reopened but could instead be done by a legally binding codicil. He added that should his amendment be passed in a Commons vote tomorrow it would give “enormous firepower” to the prime minister when she returned to Brussels.",
+              },
+              "children": Array [],
+              "name": "text",
+            },
+          ],
+          "name": "paragraph",
+        },
+        Object {
+          "attributes": Object {},
+          "children": Array [
+            Object {
+              "attributes": Object {
+                "value": "Critically, he said this would not necessarily require the withdrawal agreement to be reopened but could instead be done by a legally binding codicil. He added that should his amendment be passed in a Commons vote tomorrow it would give “enormous firepower” to the prime minister when she returned to Brussels.",
+              },
+              "children": Array [],
+              "name": "text",
+            },
+          ],
+          "name": "paragraph",
+        },
+        Object {
+          "attributes": Object {},
+          "children": Array [],
+          "name": "ad",
+        },
+      ]
+    }
+    summaryLineHeight={20}
     summaryStyle={
       Object {
         "fontSize": 14,
@@ -4009,7 +4737,6 @@ exports[`tile g front portrait 1024 1`] = `
   linkStyle={
     Object {
       "flex": 1,
-      "paddingBottom": 10,
       "paddingLeft": 10,
     }
   }
@@ -4027,14 +4754,106 @@ exports[`tile g front portrait 1024 1`] = `
     uri="https://www.thetimes.co.uk/imageserver/image/%2Fmethode%2Ftimes%2Fprod%2Fweb%2Fbin%2F5a14c64e-06db-11e9-abe2-4909b2eb0130.jpg?crop=1434%2C1792%2C627%2C0"
   />
   <FrontTileSummary
+    bylineMarginBottom={15}
+    bylines={
+      Array [
+        Object {
+          "byline": Array [
+            Object {
+              "attributes": Object {
+                "slug": "richard-lloyd-parry",
+              },
+              "children": Array [
+                Object {
+                  "attributes": Object {
+                    "value": "Richard Lloyd Parry",
+                  },
+                  "children": Array [],
+                  "name": "text",
+                },
+              ],
+              "name": "author",
+            },
+          ],
+          "image": null,
+        },
+        Object {
+          "byline": Array [
+            Object {
+              "children": Array [
+                Object {
+                  "attributes": Object {
+                    "value": ", Hanoi",
+                  },
+                  "children": Array [],
+                  "name": "text",
+                },
+              ],
+              "name": "inline",
+            },
+          ],
+          "image": null,
+        },
+      ]
+    }
+    headlineMarginBottom={15}
     headlineStyle={
       Object {
         "fontFamily": "TimesModern-Bold",
         "fontSize": 40,
         "lineHeight": 40,
-        "marginBottom": 15,
       }
     }
+    straplineMarginBottom={0}
+    summary={
+      Array [
+        Object {
+          "attributes": Object {},
+          "children": Array [
+            Object {
+              "attributes": Object {
+                "value": "Critically, he said this would not necessarily require the withdrawal agreement to be reopened but could instead be done by a legally binding codicil. He added that should his amendment be passed in a Commons vote tomorrow it would give “enormous firepower” to the prime minister when she returned to Brussels.",
+              },
+              "children": Array [],
+              "name": "text",
+            },
+          ],
+          "name": "paragraph",
+        },
+        Object {
+          "attributes": Object {},
+          "children": Array [
+            Object {
+              "attributes": Object {
+                "value": "Critically, he said this would not necessarily require the withdrawal agreement to be reopened but could instead be done by a legally binding codicil. He added that should his amendment be passed in a Commons vote tomorrow it would give “enormous firepower” to the prime minister when she returned to Brussels.",
+              },
+              "children": Array [],
+              "name": "text",
+            },
+          ],
+          "name": "paragraph",
+        },
+        Object {
+          "attributes": Object {},
+          "children": Array [
+            Object {
+              "attributes": Object {
+                "value": "Critically, he said this would not necessarily require the withdrawal agreement to be reopened but could instead be done by a legally binding codicil. He added that should his amendment be passed in a Commons vote tomorrow it would give “enormous firepower” to the prime minister when she returned to Brussels.",
+              },
+              "children": Array [],
+              "name": "text",
+            },
+          ],
+          "name": "paragraph",
+        },
+        Object {
+          "attributes": Object {},
+          "children": Array [],
+          "name": "ad",
+        },
+      ]
+    }
+    summaryLineHeight={20}
     summaryStyle={
       Object {
         "fontSize": 15,

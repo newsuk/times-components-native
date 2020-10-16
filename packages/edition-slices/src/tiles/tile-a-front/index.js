@@ -2,7 +2,13 @@
 import React from "react";
 import PropTypes from "prop-types";
 import { FrontTileSummary } from "@times-components-native/front-page";
-import { getTileImage, TileLink, withTileTracking, TileImage } from "../shared";
+import {
+  getTileImage,
+  TileLink,
+  withTileTracking,
+  TileImage,
+  getTileStrapline,
+} from "../shared";
 import { getStyle } from "./styles";
 import { getDimensions } from "@times-components-native/utils";
 
@@ -13,7 +19,6 @@ const TileAFront = ({ onPress, tile, orientation }) => {
   const isPortrait = orientation === "portrait";
   const columnCount = isPortrait ? 3 : 1;
   const crop = isPortrait ? "crop32" : "crop54";
-  const showSummary = isPortrait || (1080 < windowWidth && windowWidth < 1366);
   const imageCrop = getTileImage(tile, crop);
   const styles = getStyle(orientation, windowWidth, windowHeight);
 
@@ -21,6 +26,7 @@ const TileAFront = ({ onPress, tile, orientation }) => {
 
   const { article } = tile;
 
+  let strapline = getTileStrapline(tile);
   return (
     <TileLink onPress={onPress} style={styles.container} tile={tile}>
       <TileImage
@@ -36,12 +42,18 @@ const TileAFront = ({ onPress, tile, orientation }) => {
       />
       <FrontTileSummary
         headlineStyle={styles.headline}
-        summary={showSummary && article.content}
+        summary={article.content}
         summaryStyle={styles.summary}
+        strapline={strapline}
+        straplineStyle={styles.strapline}
         tile={tile}
         template={article.template}
         columnCount={columnCount}
         bylines={article.bylines}
+        bylineMarginBottom={styles.bylineMarginBottom}
+        straplineMarginBottom={styles.straplineMarginBottom}
+        headlineMarginBottom={styles.headlineMarginBottom}
+        summaryLineHeight={styles.summary.lineHeight}
       />
     </TileLink>
   );
