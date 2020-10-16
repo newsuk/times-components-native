@@ -20,16 +20,12 @@ const TileHFront = ({ onPress, tile, orientation }) => {
         headlineMarginBottom={styles.headlineMarginBottom}
         strapline={strapline}
         straplineStyle={styles.strapline}
-        straplineMarginBottom={strapline ? styles.straplineMarginBottom : 0}
+        straplineMarginBottom={styles.straplineMarginBottom}
         summary={article.content}
         summaryStyle={styles.summary}
         summaryLineHeight={styles.summary.lineHeight}
         bylines={article.bylines}
-        bylineMarginBottom={
-          article.bylines && article.bylines.length
-            ? styles.bylineMarginBottom
-            : 0
-        }
+        bylineMarginBottom={styles.bylineMarginBottom}
         tile={tile}
         template={article.template}
       />
