@@ -19,10 +19,10 @@ jest.mock("@times-components-native/utils", () => {
   };
 });
 
-const testFrontSlice = (renderComponent, width, orientation) => {
+const testFrontSlice = (renderComponent, width, height, orientation) => {
   getDimensions.mockImplementation(() => ({
     width: width,
-    height: 500,
+    height: height,
   }));
 
   const output = renderComponent(
@@ -41,49 +41,55 @@ export default (renderComponent) => {
     {
       name: "front lead two - portrait - 768",
       test() {
-        testFrontSlice(renderComponent, 768, "portrait");
+        testFrontSlice(renderComponent, 768, 1024, "portrait");
       },
     },
     {
       name: "front lead two - portrait - 810",
       test() {
-        testFrontSlice(renderComponent, 810, "portrait");
+        testFrontSlice(renderComponent, 810, 1024, "portrait");
       },
     },
     {
-      name: "front lead two - portrait - 834",
+      name: "front lead two - portrait - 834 - 0.75 ratio",
       test() {
-        testFrontSlice(renderComponent, 834, "portrait");
+        testFrontSlice(renderComponent, 834, 1112, "portrait");
+      },
+    },
+    {
+      name: "front lead two - portrait - 834 - less than 0.75 ratio",
+      test() {
+        testFrontSlice(renderComponent, 834, 1194, "portrait");
       },
     },
     {
       name: "front lead two - portrait - 1024",
       test() {
-        testFrontSlice(renderComponent, 1024, "portrait");
+        testFrontSlice(renderComponent, 1024, 1366, "portrait");
       },
     },
     {
       name: "front lead two - landscape - 1024",
       test() {
-        testFrontSlice(renderComponent, 1024, "landscape");
+        testFrontSlice(renderComponent, 1024, 768, "landscape");
       },
     },
     {
       name: "front lead two - landscape - 1080",
       test() {
-        testFrontSlice(renderComponent, 1080, "landscape");
+        testFrontSlice(renderComponent, 1080, 810, "landscape");
       },
     },
     {
       name: "front lead two - landscape - 1112",
       test() {
-        testFrontSlice(renderComponent, 1112, "landscape");
+        testFrontSlice(renderComponent, 1112, 834, "landscape");
       },
     },
     {
       name: "front lead two - landscape - 1366",
       test() {
-        testFrontSlice(renderComponent, 1366, "landscape");
+        testFrontSlice(renderComponent, 1366, 1024, "landscape");
       },
     },
   ];

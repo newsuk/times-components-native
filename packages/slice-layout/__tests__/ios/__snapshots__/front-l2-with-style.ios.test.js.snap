@@ -3,13 +3,15 @@
 exports[`1. front lead two - portrait - 768 1`] = `
 <TabletContentContainer
   orientation="portrait"
-  windowWidth={750}
+  windowWidth={768}
 >
   <HorizontalLayout
     tiles={
       Array [
         Object {
-          "style": undefined,
+          "style": Object {
+            "width": "32.751937984496124%",
+          },
           "tile": <ExampleChild
             id="lead1"
           >
@@ -17,7 +19,9 @@ exports[`1. front lead two - portrait - 768 1`] = `
           </ExampleChild>,
         },
         Object {
-          "style": undefined,
+          "style": Object {
+            "width": "67.10271317829458%",
+          },
           "tile": <ExampleChild
             id="lead2"
           >
@@ -38,13 +42,15 @@ exports[`1. front lead two - portrait - 768 1`] = `
 exports[`2. front lead two - portrait - 810 1`] = `
 <TabletContentContainer
   orientation="portrait"
-  windowWidth={750}
+  windowWidth={810}
 >
   <HorizontalLayout
     tiles={
       Array [
         Object {
-          "style": undefined,
+          "style": Object {
+            "width": "32.751937984496124%",
+          },
           "tile": <ExampleChild
             id="lead1"
           >
@@ -52,7 +58,9 @@ exports[`2. front lead two - portrait - 810 1`] = `
           </ExampleChild>,
         },
         Object {
-          "style": undefined,
+          "style": Object {
+            "width": "67.10271317829458%",
+          },
           "tile": <ExampleChild
             id="lead2"
           >
@@ -70,16 +78,18 @@ exports[`2. front lead two - portrait - 810 1`] = `
 </TabletContentContainer>
 `;
 
-exports[`3. front lead two - portrait - 834 1`] = `
+exports[`3. front lead two - portrait - 834 - 0.75 ratio 1`] = `
 <TabletContentContainer
   orientation="portrait"
-  windowWidth={750}
+  windowWidth={834}
 >
   <HorizontalLayout
     tiles={
       Array [
         Object {
-          "style": undefined,
+          "style": Object {
+            "width": "32.751937984496124%",
+          },
           "tile": <ExampleChild
             id="lead1"
           >
@@ -87,7 +97,9 @@ exports[`3. front lead two - portrait - 834 1`] = `
           </ExampleChild>,
         },
         Object {
-          "style": undefined,
+          "style": Object {
+            "width": "67.10271317829458%",
+          },
           "tile": <ExampleChild
             id="lead2"
           >
@@ -105,16 +117,18 @@ exports[`3. front lead two - portrait - 834 1`] = `
 </TabletContentContainer>
 `;
 
-exports[`4. front lead two - portrait - 1024 1`] = `
+exports[`4. front lead two - portrait - 834 - less than 0.75 ratio 1`] = `
 <TabletContentContainer
   orientation="portrait"
-  windowWidth={750}
+  windowWidth={834}
 >
   <HorizontalLayout
     tiles={
       Array [
         Object {
-          "style": undefined,
+          "style": Object {
+            "width": "32.751937984496124%",
+          },
           "tile": <ExampleChild
             id="lead1"
           >
@@ -122,7 +136,9 @@ exports[`4. front lead two - portrait - 1024 1`] = `
           </ExampleChild>,
         },
         Object {
-          "style": undefined,
+          "style": Object {
+            "width": "67.10271317829458%",
+          },
           "tile": <ExampleChild
             id="lead2"
           >
@@ -140,16 +156,18 @@ exports[`4. front lead two - portrait - 1024 1`] = `
 </TabletContentContainer>
 `;
 
-exports[`5. front lead two - landscape - 1024 1`] = `
+exports[`5. front lead two - portrait - 1024 1`] = `
 <TabletContentContainer
-  orientation="landscape"
-  windowWidth={750}
+  orientation="portrait"
+  windowWidth={1024}
 >
   <HorizontalLayout
     tiles={
       Array [
         Object {
-          "style": undefined,
+          "style": Object {
+            "width": "32.751937984496124%",
+          },
           "tile": <ExampleChild
             id="lead1"
           >
@@ -157,7 +175,48 @@ exports[`5. front lead two - landscape - 1024 1`] = `
           </ExampleChild>,
         },
         Object {
-          "style": undefined,
+          "style": Object {
+            "width": "67.10271317829458%",
+          },
+          "tile": <ExampleChild
+            id="lead2"
+          >
+            lead2
+          </ExampleChild>,
+        },
+      ]
+    }
+  />
+  <View>
+    <Text>
+      inTheNews
+    </Text>
+  </View>
+</TabletContentContainer>
+`;
+
+exports[`6. front lead two - landscape - 1024 1`] = `
+<TabletContentContainer
+  orientation="landscape"
+  windowWidth={1024}
+>
+  <HorizontalLayout
+    tiles={
+      Array [
+        Object {
+          "style": Object {
+            "width": "32.90960451977401%",
+          },
+          "tile": <ExampleChild
+            id="lead1"
+          >
+            lead1
+          </ExampleChild>,
+        },
+        Object {
+          "style": Object {
+            "width": "42.487641242937855%",
+          },
           "tile": <ExampleChild
             id="lead2"
           >
@@ -165,7 +224,10 @@ exports[`5. front lead two - landscape - 1024 1`] = `
           </ExampleChild>,
         },
         Object {
-          "style": undefined,
+          "style": Object {
+            "paddingLeft": 10,
+            "width": "24.390889830508474%",
+          },
           "tile": <ExampleChild
             id="inTheNews"
           >
@@ -178,16 +240,18 @@ exports[`5. front lead two - landscape - 1024 1`] = `
 </TabletContentContainer>
 `;
 
-exports[`6. front lead two - landscape - 1080 1`] = `
+exports[`7. front lead two - landscape - 1080 1`] = `
 <TabletContentContainer
   orientation="landscape"
-  windowWidth={750}
+  windowWidth={1080}
 >
   <HorizontalLayout
     tiles={
       Array [
         Object {
-          "style": undefined,
+          "style": Object {
+            "width": "32.90960451977401%",
+          },
           "tile": <ExampleChild
             id="lead1"
           >
@@ -195,7 +259,9 @@ exports[`6. front lead two - landscape - 1080 1`] = `
           </ExampleChild>,
         },
         Object {
-          "style": undefined,
+          "style": Object {
+            "width": "42.487641242937855%",
+          },
           "tile": <ExampleChild
             id="lead2"
           >
@@ -203,7 +269,10 @@ exports[`6. front lead two - landscape - 1080 1`] = `
           </ExampleChild>,
         },
         Object {
-          "style": undefined,
+          "style": Object {
+            "paddingLeft": 10,
+            "width": "24.390889830508474%",
+          },
           "tile": <ExampleChild
             id="inTheNews"
           >
@@ -216,16 +285,18 @@ exports[`6. front lead two - landscape - 1080 1`] = `
 </TabletContentContainer>
 `;
 
-exports[`7. front lead two - landscape - 1112 1`] = `
+exports[`8. front lead two - landscape - 1112 1`] = `
 <TabletContentContainer
   orientation="landscape"
-  windowWidth={750}
+  windowWidth={1112}
 >
   <HorizontalLayout
     tiles={
       Array [
         Object {
-          "style": undefined,
+          "style": Object {
+            "width": "32.90960451977401%",
+          },
           "tile": <ExampleChild
             id="lead1"
           >
@@ -233,7 +304,9 @@ exports[`7. front lead two - landscape - 1112 1`] = `
           </ExampleChild>,
         },
         Object {
-          "style": undefined,
+          "style": Object {
+            "width": "42.487641242937855%",
+          },
           "tile": <ExampleChild
             id="lead2"
           >
@@ -241,7 +314,10 @@ exports[`7. front lead two - landscape - 1112 1`] = `
           </ExampleChild>,
         },
         Object {
-          "style": undefined,
+          "style": Object {
+            "paddingLeft": 10,
+            "width": "24.390889830508474%",
+          },
           "tile": <ExampleChild
             id="inTheNews"
           >
@@ -254,16 +330,18 @@ exports[`7. front lead two - landscape - 1112 1`] = `
 </TabletContentContainer>
 `;
 
-exports[`8. front lead two - landscape - 1366 1`] = `
+exports[`9. front lead two - landscape - 1366 1`] = `
 <TabletContentContainer
   orientation="landscape"
-  windowWidth={750}
+  windowWidth={1366}
 >
   <HorizontalLayout
     tiles={
       Array [
         Object {
-          "style": undefined,
+          "style": Object {
+            "width": "36.00731895223421%",
+          },
           "tile": <ExampleChild
             id="lead1"
           >
@@ -271,7 +349,9 @@ exports[`8. front lead two - landscape - 1366 1`] = `
           </ExampleChild>,
         },
         Object {
-          "style": undefined,
+          "style": Object {
+            "width": "46.3597842835131%",
+          },
           "tile": <ExampleChild
             id="lead2"
           >
@@ -279,7 +359,10 @@ exports[`8. front lead two - landscape - 1366 1`] = `
           </ExampleChild>,
         },
         Object {
-          "style": undefined,
+          "style": Object {
+            "paddingLeft": 10,
+            "width": "17.421032357473038%",
+          },
           "tile": <ExampleChild
             id="inTheNews"
           >

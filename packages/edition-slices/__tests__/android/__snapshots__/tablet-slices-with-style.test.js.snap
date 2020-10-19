@@ -1846,32 +1846,61 @@ exports[`23. front lead two - portrait - medium 1`] = `
       Object {
         "alignSelf": "center",
         "flex": 1,
-        "flexDirection": "row",
+        "flexDirection": "column",
         "justifyContent": "center",
         "marginBottom": 56,
+        "paddingBottom": 20,
+        "paddingTop": 10,
         "width": 688,
       }
     }
   >
-    <View>
-      <View>
+    <View
+      style={
+        Object {
+          "flex": 1,
+          "flexDirection": "row",
+        }
+      }
+    >
+      <View
+        style={
+          Object {
+            "width": "32.751937984496124%",
+          }
+        }
+      >
         <TileHFront />
       </View>
       <View
         style={
           Object {
-            "borderColor": "#DBDBDB",
+            "borderColor": "#999999",
             "borderRightWidth": 1,
             "borderStyle": "solid",
-            "marginVertical": 10,
+            "marginVertical": 0,
           }
         }
       />
-      <View>
+      <View
+        style={
+          Object {
+            "width": "67.10271317829458%",
+          }
+        }
+      >
         <TileGFront />
       </View>
     </View>
-    <View>
+    <View
+      style={
+        Object {
+          "height": 133,
+          "marginTop": 10,
+          "width": "100%",
+        }
+      }
+    >
       <InTodaysEdition />
     </View>
   </View>
@@ -4422,32 +4451,60 @@ exports[`57. front lead two - portrait - wide 1`] = `
       Object {
         "alignSelf": "center",
         "flex": 1,
-        "flexDirection": "row",
+        "flexDirection": "column",
         "justifyContent": "center",
         "marginBottom": 56,
-        "width": 688,
+        "paddingVertical": 20,
+        "width": 920,
       }
     }
   >
-    <View>
-      <View>
+    <View
+      style={
+        Object {
+          "flex": 1,
+          "flexDirection": "row",
+        }
+      }
+    >
+      <View
+        style={
+          Object {
+            "width": "32.751937984496124%",
+          }
+        }
+      >
         <TileHFront />
       </View>
       <View
         style={
           Object {
-            "borderColor": "#DBDBDB",
+            "borderColor": "#999999",
             "borderRightWidth": 1,
             "borderStyle": "solid",
-            "marginVertical": 10,
+            "marginVertical": 0,
           }
         }
       />
-      <View>
+      <View
+        style={
+          Object {
+            "width": "67.10271317829458%",
+          }
+        }
+      >
         <TileGFront />
       </View>
     </View>
-    <View>
+    <View
+      style={
+        Object {
+          "height": 174,
+          "marginTop": 10,
+          "width": "100%",
+        }
+      }
+    >
       <InTodaysEdition />
     </View>
   </View>
@@ -4471,41 +4528,68 @@ exports[`58. front lead two - landscape - wide 1`] = `
       Object {
         "alignSelf": "center",
         "flex": 1,
-        "flexDirection": "row",
+        "flexDirection": "column",
         "justifyContent": "center",
         "marginBottom": 56,
+        "paddingVertical": 10,
         "width": 944,
       }
     }
   >
-    <View>
-      <View>
+    <View
+      style={
+        Object {
+          "flex": 1,
+          "flexDirection": "row",
+        }
+      }
+    >
+      <View
+        style={
+          Object {
+            "width": "32.90960451977401%",
+          }
+        }
+      >
         <TileHFront />
       </View>
       <View
         style={
           Object {
-            "borderColor": "#DBDBDB",
+            "borderColor": "#999999",
             "borderRightWidth": 1,
             "borderStyle": "solid",
-            "marginVertical": 10,
+            "marginVertical": 0,
           }
         }
       />
-      <View>
+      <View
+        style={
+          Object {
+            "width": "42.487641242937855%",
+          }
+        }
+      >
         <TileGFront />
       </View>
       <View
         style={
           Object {
-            "borderColor": "#DBDBDB",
+            "borderColor": "#999999",
             "borderRightWidth": 1,
             "borderStyle": "solid",
-            "marginVertical": 10,
+            "marginVertical": 0,
           }
         }
       />
-      <View>
+      <View
+        style={
+          Object {
+            "paddingLeft": 10,
+            "width": "24.390889830508474%",
+          }
+        }
+      >
         <InTodaysEdition />
       </View>
     </View>
@@ -7259,32 +7343,60 @@ exports[`91. front lead two - portrait - huge 1`] = `
         Object {
           "alignSelf": "center",
           "flex": 1,
-          "flexDirection": "row",
+          "flexDirection": "column",
           "justifyContent": "center",
           "marginBottom": 56,
-          "width": 688,
+          "paddingVertical": 20,
+          "width": 920,
         }
       }
     >
-      <View>
-        <View>
+      <View
+        style={
+          Object {
+            "flex": 1,
+            "flexDirection": "row",
+          }
+        }
+      >
+        <View
+          style={
+            Object {
+              "width": "32.751937984496124%",
+            }
+          }
+        >
           <TileHFront />
         </View>
         <View
           style={
             Object {
-              "borderColor": "#DBDBDB",
+              "borderColor": "#999999",
               "borderRightWidth": 1,
               "borderStyle": "solid",
-              "marginVertical": 10,
+              "marginVertical": 0,
             }
           }
         />
-        <View>
+        <View
+          style={
+            Object {
+              "width": "67.10271317829458%",
+            }
+          }
+        >
           <TileGFront />
         </View>
       </View>
-      <View>
+      <View
+        style={
+          Object {
+            "height": 174,
+            "marginTop": 10,
+            "width": "100%",
+          }
+        }
+      >
         <InTodaysEdition />
       </View>
     </View>
@@ -7318,41 +7430,68 @@ exports[`92. front lead two - landscape - huge 1`] = `
         Object {
           "alignSelf": "center",
           "flex": 1,
-          "flexDirection": "row",
+          "flexDirection": "column",
           "justifyContent": "center",
           "marginBottom": 56,
-          "width": 944,
+          "paddingVertical": 20,
+          "width": 1140,
         }
       }
     >
-      <View>
-        <View>
+      <View
+        style={
+          Object {
+            "flex": 1,
+            "flexDirection": "row",
+          }
+        }
+      >
+        <View
+          style={
+            Object {
+              "width": "36.00731895223421%",
+            }
+          }
+        >
           <TileHFront />
         </View>
         <View
           style={
             Object {
-              "borderColor": "#DBDBDB",
+              "borderColor": "#999999",
               "borderRightWidth": 1,
               "borderStyle": "solid",
-              "marginVertical": 10,
+              "marginVertical": 0,
             }
           }
         />
-        <View>
+        <View
+          style={
+            Object {
+              "width": "46.3597842835131%",
+            }
+          }
+        >
           <TileGFront />
         </View>
         <View
           style={
             Object {
-              "borderColor": "#DBDBDB",
+              "borderColor": "#999999",
               "borderRightWidth": 1,
               "borderStyle": "solid",
-              "marginVertical": 10,
+              "marginVertical": 0,
             }
           }
         />
-        <View>
+        <View
+          style={
+            Object {
+              "paddingLeft": 10,
+              "width": "17.421032357473038%",
+            }
+          }
+        >
           <InTodaysEdition />
         </View>
       </View>

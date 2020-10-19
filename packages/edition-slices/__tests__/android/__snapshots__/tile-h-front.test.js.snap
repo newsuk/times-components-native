@@ -3545,7 +3545,7 @@ exports[`tile h front portrait 834 0.75 ratio 1`] = `
   linkStyle={
     Object {
       "flex": 1,
-      "paddingBottom": 5,
+      "paddingBottom": 0,
       "paddingRight": 10,
     }
   }
@@ -4136,7 +4136,7 @@ exports[`tile h front portrait 834 less than 0.75 ratio 1`] = `
   linkStyle={
     Object {
       "flex": 1,
-      "paddingBottom": 5,
+      "paddingBottom": 0,
       "paddingRight": 10,
     }
   }
@@ -4780,8 +4780,8 @@ exports[`tile h front portrait 1024 1`] = `
     headlineStyle={
       Object {
         "fontFamily": "TimesModern-Bold",
-        "fontSize": 40,
-        "lineHeight": 40,
+        "fontSize": 53,
+        "lineHeight": 53,
       }
     }
     strapline="Three Conservative MPs resign"
