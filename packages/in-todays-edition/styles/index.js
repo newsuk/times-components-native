@@ -96,7 +96,6 @@ const sharedLandscapeStyles = {
   item: {
     ...sharedStyles.item,
     paddingTop: spacing(2),
-    paddingRight: spacing(4),
   },
   itemTitle: {
     ...sharedStyles.itemTitle,
