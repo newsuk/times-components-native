@@ -74,8 +74,8 @@ const styles = {
       ...sharedLandscapeStyles,
       headline: {
         ...sharedHeadline,
-        fontSize: 25,
-        lineHeight: 25,
+        fontSize: 24,
+        lineHeight: 24,
       },
     },
     "1366": {
@@ -85,7 +85,7 @@ const styles = {
         fontSize: 35,
         lineHeight: 35,
       },
-      headlineMarginBottom: spacing(3),
+      headlineMarginBottom: spacing(2),
       summary: {
         ...sharedSummary,
         fontSize: 15,
@@ -110,11 +110,28 @@ const styles = {
       },
     },
     "834": {
-      ...sharedPortraitStyles,
-      headline: {
-        ...sharedHeadline,
-        fontSize: 30,
-        lineHeight: 30,
+      ratios: {
+        0: {
+          ...sharedPortraitStyles,
+          headline: {
+            ...sharedHeadline,
+            fontSize: 30,
+            lineHeight: 30,
+          },
+          imageContainer: {
+            width: "100%",
+            marginBottom: spacing(2),
+          },
+          headlineMarginBottom: spacing(3),
+        },
+        0.75: {
+          ...sharedPortraitStyles,
+          headline: {
+            ...sharedHeadline,
+            fontSize: 30,
+            lineHeight: 30,
+          },
+        },
       },
     },
     "1024": {

@@ -49,10 +49,6 @@ const sharedPortraitStyles = {
 
 const portrait834 = {
   ...sharedPortraitStyles,
-  container: {
-    ...sharedPortraitStyles.container,
-    paddingBottom: spacing(1),
-  },
   headline: {
     ...sharedHeadline,
     marginBottom: spacing(2),
@@ -192,8 +188,8 @@ const styles = {
       },
       headline: {
         ...sharedHeadline,
-        fontSize: 40,
-        lineHeight: 40,
+        fontSize: 53,
+        lineHeight: 53,
       },
       strapline: {
         ...sharedStrapline,
