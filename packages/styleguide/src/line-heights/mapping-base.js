@@ -19,6 +19,9 @@ const mapping = {
     headline: 35,
     pageHeadline: 42,
   },
+  frontByline: {
+    text: 13,
+  },
   headline: {
     articleHeadline: 45,
     commentsHeadline: 29,
