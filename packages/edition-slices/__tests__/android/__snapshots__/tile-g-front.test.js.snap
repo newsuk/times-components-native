@@ -1253,8 +1253,8 @@ exports[`tile g front landscape 1194 1`] = `
     headlineStyle={
       Object {
         "fontFamily": "TimesModern-Bold",
-        "fontSize": 25,
-        "lineHeight": 25,
+        "fontSize": 24,
+        "lineHeight": 24,
       }
     }
     straplineMarginBottom={0}
@@ -1841,7 +1841,7 @@ exports[`tile g front landscape 1366 1`] = `
         },
       ]
     }
-    headlineMarginBottom={15}
+    headlineMarginBottom={10}
     headlineStyle={
       Object {
         "fontFamily": "TimesModern-Bold",
@@ -4156,7 +4156,7 @@ exports[`tile g front portrait 834 less than 0.75 ratio 1`] = `
     fill={true}
     style={
       Object {
-        "marginBottom": 5,
+        "marginBottom": 10,
         "width": "100%",
       }
     }
@@ -4205,7 +4205,7 @@ exports[`tile g front portrait 834 less than 0.75 ratio 1`] = `
         },
       ]
     }
-    headlineMarginBottom={10}
+    headlineMarginBottom={15}
     headlineStyle={
       Object {
         "fontFamily": "TimesModern-Bold",
