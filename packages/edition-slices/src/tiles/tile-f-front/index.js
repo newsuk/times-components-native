@@ -1,7 +1,6 @@
 /* eslint-disable react/require-default-props */
 import React from "react";
 import PropTypes from "prop-types";
-import { editionBreakpointWidths } from "@times-components-native/styleguide";
 import { FrontTileSummary } from "@times-components-native/front-page";
 import {
   getTileImage,
@@ -14,14 +13,13 @@ import { getStyle } from "./styles";
 import { getDimensions } from "@times-components-native/utils";
 
 const TileFFront = ({ onPress, tile, orientation }) => {
-  const { width: windowWidth } = getDimensions();
+  const { width: windowWidth, height: windowHeight } = getDimensions();
   const isLandscape = orientation === "landscape";
   const columnCount = isLandscape ? 1 : 3;
   const hideSummary = isLandscape;
 
-  const isHugeLandscape = windowWidth >= editionBreakpointWidths.huge;
   const imageCrop = getTileImage(tile, "crop169");
-  const styles = getStyle(orientation, windowWidth);
+  const styles = getStyle(orientation, windowWidth, windowHeight);
 
   if (!imageCrop) return null;
 
@@ -42,15 +40,18 @@ const TileFFront = ({ onPress, tile, orientation }) => {
       />
       <FrontTileSummary
         headlineStyle={styles.headline}
+        headlineMarginBottom={styles.headlineMarginBottom}
         summary={!hideSummary && article.content}
         summaryStyle={styles.summary}
+        summaryLineHeight={styles.summary.lineHeight}
         strapline={getTileStrapline(tile)}
         straplineStyle={styles.strapline}
+        straplineMarginBottom={styles.straplineMarginBottom}
         tile={tile}
         template={article.template}
         columnCount={columnCount}
-        bylines={(!isLandscape || isHugeLandscape) && article.bylines}
-        bylineContainerStyle={styles.bylineContainer}
+        bylines={article.bylines}
+        bylineMarginBottom={styles.bylineMarginBottom}
       />
     </TileLink>
   );

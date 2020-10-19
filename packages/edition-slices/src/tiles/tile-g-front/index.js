@@ -8,16 +8,10 @@ import { getDimensions } from "@times-components-native/utils";
 import { getTileImage, TileLink, withTileTracking, TileImage } from "../shared";
 import { getStyle } from "./styles";
 
-const TileGFront = ({
-  onPress,
-  tile,
-  orientation,
-  showSummary,
-  showByline,
-}) => {
-  const { width: windowWidth } = getDimensions();
+const TileGFront = ({ onPress, tile, orientation }) => {
+  const { width: windowWidth, height: windowHeight } = getDimensions();
   const crop = getTileImage(tile, "crop45");
-  const styles = getStyle(orientation, windowWidth);
+  const styles = getStyle(orientation, windowWidth, windowHeight);
 
   if (!crop) {
     return null;
@@ -40,11 +34,15 @@ const TileGFront = ({
       />
       <FrontTileSummary
         headlineStyle={styles.headline}
-        summary={showSummary && article.content}
+        summary={article.content}
         summaryStyle={styles.summary}
         tile={tile}
-        bylines={showByline && article.bylines}
+        bylines={article.bylines}
         template={article.template}
+        bylineMarginBottom={styles.bylineMarginBottom}
+        headlineMarginBottom={styles.headlineMarginBottom}
+        straplineMarginBottom={0}
+        summaryLineHeight={styles.summary.lineHeight}
       />
     </TileLink>
   );

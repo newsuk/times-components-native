@@ -2,6 +2,7 @@ import {
   fonts,
   spacing,
   globalSpacingStyles,
+  colours,
 } from "@times-components-native/styleguide";
 import { getStyleByDeviceSize } from "@times-components-native/styleguide/src/styleguide";
 
@@ -13,12 +14,13 @@ const summary = {
 const headline = {
   ...globalSpacingStyles.tabletHeadline,
   fontFamily: fonts.headline,
-  marginBottom: spacing(2),
 };
 
-const headlinePortrait = {
-  ...headline,
-  marginBottom: spacing(4),
+const strapline = {
+  fontFamily: fonts.headlineRegular,
+  color: colours.functional.primary,
+  fontSize: 24,
+  lineHeight: 24,
 };
 
 const sharedStyles = {
@@ -31,12 +33,41 @@ const sharedStyles = {
     width: "100%",
     marginBottom: spacing(2),
   },
+  summary: {
+    ...summary,
+    fontSize: 14,
+    lineHeight: 18,
+  },
+  strapline,
+};
+
+const sharedLandscapeStyles = {
+  ...sharedStyles,
+  headlineMarginBottom: spacing(2),
+  straplineMarginBottom: spacing(3),
+  bylineMarginBottom: spacing(3),
+};
+
+const sharedPortraitStyles = {
+  ...sharedStyles,
+  headlineMarginBottom: spacing(4),
+  straplineMarginBottom: spacing(3),
+  bylineMarginBottom: 0,
+};
+
+const portrait834 = {
+  ...sharedPortraitStyles,
+  summary: {
+    ...summary,
+    fontSize: 14,
+    lineHeight: 18,
+  },
 };
 
 const styles = {
   landscape: {
     "1024": {
-      ...sharedStyles,
+      ...sharedLandscapeStyles,
       headline: {
         ...headline,
         fontSize: 42,
@@ -44,7 +75,7 @@ const styles = {
       },
     },
     "1080": {
-      ...sharedStyles,
+      ...sharedLandscapeStyles,
       headline: {
         ...headline,
         fontSize: 45,
@@ -52,59 +83,67 @@ const styles = {
       },
     },
     "1112": {
-      ...sharedStyles,
+      ...sharedLandscapeStyles,
       headline: {
         ...headline,
         fontSize: 45,
         lineHeight: 45,
-        marginBottom: spacing(3),
       },
     },
     "1366": {
-      ...sharedStyles,
+      ...sharedLandscapeStyles,
       headline: {
         ...headline,
         fontSize: 55,
         lineHeight: 55,
-        marginBottom: spacing(3),
       },
     },
   },
   portrait: {
     "768": {
-      ...sharedStyles,
+      ...sharedPortraitStyles,
       headline: {
-        ...headlinePortrait,
+        ...headline,
         fontSize: 42,
         lineHeight: 42,
       },
-      summary: {
-        ...summary,
-        fontSize: 14,
-        lineHeight: 18,
-      },
     },
     "810": {
-      ...sharedStyles,
+      ...sharedPortraitStyles,
       headline: {
-        ...headlinePortrait,
+        ...headline,
         fontSize: 45,
         lineHeight: 45,
       },
-      summary: {
-        ...summary,
-        fontSize: 14,
-        lineHeight: 18,
+    },
+    "834": {
+      ratios: {
+        0: {
+          ...portrait834,
+          headline: {
+            ...headline,
+            fontSize: 48,
+            lineHeight: 48,
+          },
+        },
+        0.75: {
+          ...portrait834,
+          headline: {
+            ...headline,
+            fontSize: 45,
+            lineHeight: 45,
+          },
+        },
       },
     },
     "1024": {
-      ...sharedStyles,
+      ...sharedPortraitStyles,
       imageContainer: {
-        ...sharedStyles.imageContainer,
+        ...sharedPortraitStyles.imageContainer,
         marginBottom: spacing(3),
       },
       headline: {
-        ...headlinePortrait,
+        ...headline,
         fontSize: 55,
         lineHeight: 55,
       },
@@ -117,5 +156,5 @@ const styles = {
   },
 };
 
-export const getStyle = (orientation, windowWidth) =>
-  getStyleByDeviceSize(styles[orientation], windowWidth);
+export const getStyle = (orientation, windowWidth, windowHeight) =>
+  getStyleByDeviceSize(styles[orientation], windowWidth, windowHeight);

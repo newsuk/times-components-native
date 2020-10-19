@@ -12,7 +12,7 @@ function renderMedium(props, orientation) {
     onPress,
     onLinkPress,
     slice: { lead, support },
-    inTodaysEditionSlice: { items: inTodaysEditionItems },
+    inTodaysEditionSlice: { items: inTodaysEditionItems = [] },
   } = props;
 
   return (

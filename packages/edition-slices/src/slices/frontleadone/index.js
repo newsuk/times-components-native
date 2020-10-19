@@ -9,7 +9,7 @@ function renderMedium(props, breakpoint, orientation) {
     onPress,
     onLinkPress,
     slice: { lead },
-    inTodaysEditionSlice: { items: inTodaysEditionItems },
+    inTodaysEditionSlice: { items: inTodaysEditionItems = [] },
   } = props;
 
   return (

@@ -16,10 +16,10 @@ jest.mock("@times-components-native/utils", () => {
 
 export const tile = mockEditionSlice(1).items[0];
 
-const testFrontTile = (width, orientation) => {
+const testFrontTile = (orientation, width, height = 500) => {
   getDimensions.mockImplementation(() => ({
-    width: width,
-    height: 500,
+    width,
+    height,
   }));
 
   const tree = TestRenderer.create(
@@ -32,37 +32,42 @@ export default () => {
   describe("tile f front", () => {
     describe("landscape", () => {
       it("1024", () => {
-        testFrontTile("1024", "landscape");
+        testFrontTile("landscape", 1024);
       });
 
       it("1080", () => {
-        testFrontTile("1080", "landscape");
+        testFrontTile("landscape", 1080);
       });
 
       it("1194", () => {
-        testFrontTile("1194", "landscape");
+        testFrontTile("landscape", 1194);
       });
 
       it("1366", () => {
-        testFrontTile("1366", "landscape");
+        testFrontTile("landscape", 1366);
       });
     });
 
     describe("portrait", () => {
       it("768", () => {
-        testFrontTile("768", "portrait");
+        testFrontTile("portrait", 768);
       });
 
       it("810", () => {
-        testFrontTile("810", "portrait");
+        testFrontTile("portrait", 810);
       });
 
-      it("834", () => {
-        testFrontTile("834", "portrait");
+      describe("834", () => {
+        it("0.75 ratio", () => {
+          testFrontTile("portrait", 834, 1112);
+        });
+        it("less than 0.75 ratio", () => {
+          testFrontTile("portrait", 834, 1194);
+        });
       });
 
       it("1024", () => {
-        testFrontTile("1024", "portrait");
+        testFrontTile("portrait", 1024);
       });
     });
   });

@@ -7,21 +7,26 @@ import { getTileStrapline, TileLink } from "../shared";
 import { getStyle } from "./styles";
 
 const TileHFront = ({ onPress, tile, orientation }) => {
-  const { width: windowWidth } = getDimensions();
-  const styles = getStyle(orientation, windowWidth);
+  const { width: windowWidth, height: windowHeight } = getDimensions();
+  const styles = getStyle(orientation, windowWidth, windowHeight);
 
   const { article } = tile;
 
+  let strapline = getTileStrapline(tile);
   return (
     <TileLink onPress={onPress} style={styles.container} tile={tile}>
       <FrontTileSummary
         headlineStyle={styles.headline}
-        strapline={getTileStrapline(tile)}
+        headlineMarginBottom={styles.headlineMarginBottom}
+        strapline={strapline}
         straplineStyle={styles.strapline}
+        straplineMarginBottom={styles.straplineMarginBottom}
         summary={article.content}
         summaryStyle={styles.summary}
-        tile={tile}
+        summaryLineHeight={styles.summary.lineHeight}
         bylines={article.bylines}
+        bylineMarginBottom={styles.bylineMarginBottom}
+        tile={tile}
         template={article.template}
       />
     </TileLink>

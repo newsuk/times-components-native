@@ -38,7 +38,6 @@ exports[`InTodaysEdition landscape 1024 1`] = `
       style={
         Object {
           "opacity": 1,
-          "paddingRight": 20,
           "paddingTop": 10,
         }
       }
@@ -112,7 +111,6 @@ exports[`InTodaysEdition landscape 1024 1`] = `
       style={
         Object {
           "opacity": 1,
-          "paddingRight": 20,
           "paddingTop": 10,
         }
       }
@@ -186,7 +184,6 @@ exports[`InTodaysEdition landscape 1024 1`] = `
       style={
         Object {
           "opacity": 1,
-          "paddingRight": 20,
           "paddingTop": 10,
         }
       }
@@ -260,7 +257,6 @@ exports[`InTodaysEdition landscape 1024 1`] = `
       style={
         Object {
           "opacity": 1,
-          "paddingRight": 20,
           "paddingTop": 10,
         }
       }
@@ -364,7 +360,6 @@ exports[`InTodaysEdition landscape 1080 1`] = `
       style={
         Object {
           "opacity": 1,
-          "paddingRight": 20,
           "paddingTop": 15,
         }
       }
@@ -438,7 +433,6 @@ exports[`InTodaysEdition landscape 1080 1`] = `
       style={
         Object {
           "opacity": 1,
-          "paddingRight": 20,
           "paddingTop": 15,
         }
       }
@@ -512,7 +506,6 @@ exports[`InTodaysEdition landscape 1080 1`] = `
       style={
         Object {
           "opacity": 1,
-          "paddingRight": 20,
           "paddingTop": 15,
         }
       }
@@ -586,7 +579,6 @@ exports[`InTodaysEdition landscape 1080 1`] = `
       style={
         Object {
           "opacity": 1,
-          "paddingRight": 20,
           "paddingTop": 15,
         }
       }
@@ -691,7 +683,6 @@ exports[`InTodaysEdition landscape 1112 1`] = `
         Object {
           "marginBottom": 5,
           "opacity": 1,
-          "paddingRight": 20,
           "paddingTop": 15,
         }
       }
@@ -766,7 +757,6 @@ exports[`InTodaysEdition landscape 1112 1`] = `
         Object {
           "marginBottom": 5,
           "opacity": 1,
-          "paddingRight": 20,
           "paddingTop": 15,
         }
       }
@@ -841,7 +831,6 @@ exports[`InTodaysEdition landscape 1112 1`] = `
         Object {
           "marginBottom": 5,
           "opacity": 1,
-          "paddingRight": 20,
           "paddingTop": 15,
         }
       }
@@ -916,7 +905,6 @@ exports[`InTodaysEdition landscape 1112 1`] = `
         Object {
           "marginBottom": 5,
           "opacity": 1,
-          "paddingRight": 20,
           "paddingTop": 15,
         }
       }
@@ -1022,7 +1010,6 @@ exports[`InTodaysEdition landscape 1366 1`] = `
         Object {
           "marginBottom": 10,
           "opacity": 1,
-          "paddingRight": 20,
           "paddingTop": 25,
         }
       }
@@ -1097,7 +1084,6 @@ exports[`InTodaysEdition landscape 1366 1`] = `
         Object {
           "marginBottom": 10,
           "opacity": 1,
-          "paddingRight": 20,
           "paddingTop": 25,
         }
       }
@@ -1172,7 +1158,6 @@ exports[`InTodaysEdition landscape 1366 1`] = `
         Object {
           "marginBottom": 10,
           "opacity": 1,
-          "paddingRight": 20,
           "paddingTop": 25,
         }
       }
@@ -1247,7 +1232,6 @@ exports[`InTodaysEdition landscape 1366 1`] = `
         Object {
           "marginBottom": 10,
           "opacity": 1,
-          "paddingRight": 20,
           "paddingTop": 25,
         }
       }

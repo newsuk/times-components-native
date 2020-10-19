@@ -37,6 +37,8 @@ const InTodaysEdition: React.FC<Props> = ({
   onLinkPress,
   orientation,
 }) => {
+  if (!items.length) return null;
+
   const { width: windowWidth } = getDimensions();
   const styles = getStyles(orientation, windowWidth);
 

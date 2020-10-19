@@ -212,7 +212,7 @@ fragment leadAsset54and32 on Media {
       crop32: crop(ratio: "3:2") {
         ...sectionCropProps
       }
-      crop45: crop(ratio: "5:4") {
+      crop54: crop(ratio: "5:4") {
         ...sectionCropProps
       }
     }
@@ -221,7 +221,7 @@ fragment leadAsset54and32 on Media {
     crop32: crop(ratio: "3:2") {
       ...sectionCropProps
     }
-    crop45: crop(ratio: "5:4") {
+    crop54: crop(ratio: "5:4") {
       ...sectionCropProps
     }
   }
@@ -986,17 +986,35 @@ fragment frontSlicesSection on FrontPageSectionSlice {
       headline
       strapline
       leadAsset {
-        ...leadAsset169and32
+        ...leadAsset169
       }
       article {
         ...baseArticleProps
         strapline
         content
         leadAsset {
-          ...leadAsset169and32
+          ...leadAsset169
         }
         listingAsset {
-          ...leadAsset169and32
+          ...leadAsset169
+        }
+      }
+    }
+  }
+  ... on InTheNewsSlice {
+    items {
+      strapline
+      title
+      mainLink {
+        __typename
+        ... on PuffMainLinkRef {
+          __typename
+          ... on ArticleLink {
+            articleId
+          }
+           ... on Link {
+            url
+          }
         }
       }
     }
