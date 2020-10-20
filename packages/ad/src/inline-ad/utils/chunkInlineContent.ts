@@ -69,15 +69,18 @@ export const chunkInlineContent = (
         inlineContentHeightRemaining / contentLineHeight!;
       const actualLineToSplit = Math.ceil(provisionalLineToSplit);
 
-      const totalLinesHeightAdjustement = contentLineHeight * actualLineToSplit;
+      const totalLinesHeightAdjustment = contentLineHeight * actualLineToSplit;
+
+      const adjustmentHeightDiffernce =
+        currentParagraphHeight - totalLinesHeightAdjustment;
 
       // final adjustment last paragraph lines fit without bottom padding
       const paddingAdjustment =
-        currentParagraphHeight - totalLinesHeightAdjustement <= 20 ? 20 : 0;
+        adjustmentHeightDiffernce <= 20 ? adjustmentHeightDiffernce : 0;
 
       const adjustedInlineContentHeight =
         currentInlineContentHeight +
-        totalLinesHeightAdjustement +
+        totalLinesHeightAdjustment +
         paddingAdjustment;
 
       const [
