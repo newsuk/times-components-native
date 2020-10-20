@@ -61,7 +61,6 @@ TileFFront.propTypes = {
   onPress: PropTypes.func.isRequired,
   tile: PropTypes.shape({}).isRequired,
   orientation: PropTypes.oneOf(["portrait", "landscape"]).isRequired,
-  breakpoint: PropTypes.string,
 };
 
 export default withTileTracking(TileFFront);
