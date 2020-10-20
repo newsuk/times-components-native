@@ -882,7 +882,6 @@ exports[`27. front lead one - portrait - medium 1`] = `
   <View>
     <View>
       <TileFFront
-        breakpoint="medium"
         orientation="portrait"
         tileName="lead"
       />
@@ -902,7 +901,6 @@ exports[`28. front lead one - landscape - medium 1`] = `
     <View>
       <View>
         <TileFFront
-          breakpoint="medium"
           orientation="landscape"
           tileName="lead"
         />
@@ -1984,7 +1982,6 @@ exports[`61. front lead one - portrait - wide 1`] = `
   <View>
     <View>
       <TileFFront
-        breakpoint="wide"
         orientation="portrait"
         tileName="lead"
       />
@@ -2004,7 +2001,6 @@ exports[`62. front lead one - landscape - wide 1`] = `
     <View>
       <View>
         <TileFFront
-          breakpoint="wide"
           orientation="landscape"
           tileName="lead"
         />
@@ -3133,7 +3129,6 @@ exports[`95. front lead one - portrait - huge 1`] = `
     <View>
       <View>
         <TileFFront
-          breakpoint="huge"
           orientation="portrait"
           tileName="lead"
         />
@@ -3155,7 +3150,6 @@ exports[`96. front lead one - landscape - huge 1`] = `
       <View>
         <View>
           <TileFFront
-            breakpoint="huge"
             orientation="landscape"
             tileName="lead"
           />
