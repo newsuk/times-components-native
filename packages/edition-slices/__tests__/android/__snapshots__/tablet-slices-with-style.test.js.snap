@@ -4785,7 +4785,7 @@ exports[`61. front lead one - portrait - wide 1`] = `
         "justifyContent": "center",
         "marginBottom": 56,
         "paddingBottom": 20,
-        "paddingTop": 15,
+        "paddingTop": 20,
         "width": 920,
       }
     }
@@ -7717,7 +7717,7 @@ exports[`95. front lead one - portrait - huge 1`] = `
           "justifyContent": "center",
           "marginBottom": 56,
           "paddingBottom": 20,
-          "paddingTop": 15,
+          "paddingTop": 20,
           "width": 920,
         }
       }
@@ -7775,8 +7775,8 @@ exports[`96. front lead one - landscape - huge 1`] = `
           "flexDirection": "row",
           "justifyContent": "center",
           "marginBottom": 56,
-          "paddingBottom": 35,
-          "paddingTop": 30,
+          "paddingBottom": 25,
+          "paddingTop": 20,
           "width": 1140,
         }
       }
