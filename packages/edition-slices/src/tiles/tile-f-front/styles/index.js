@@ -23,7 +23,7 @@ const strapline = {
 
 const sharedLandscapeStyles = {
   container: {
-    paddingBottom: spacing(2),
+    paddingBottom: 0,
     paddingRight: spacing(2),
     flex: 1,
   },
@@ -102,6 +102,7 @@ const styles = {
     },
     "1194": {
       ...sharedLandscapeStyles,
+      headlineMarginBottom: spacing(1),
       headline: {
         ...headline,
         fontSize: 50,
@@ -172,6 +173,7 @@ const styles = {
       ratios: {
         0: {
           ...portrait834,
+          straplineMarginBottom: spacing(4),
           headline: {
             ...portrait834.headline,
             fontSize: 50,
