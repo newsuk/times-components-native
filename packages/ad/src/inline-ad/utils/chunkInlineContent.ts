@@ -1,5 +1,5 @@
 import {
-  ColumnContents,
+  ChunkContents,
   ContentParameters,
   ContentMeasurements,
 } from "../types";
@@ -9,77 +9,95 @@ import { calculateInlineContentHeight } from "./calculateInlineContentHeight";
 
 import { ParagraphContent } from "../domain-types";
 
-const getColumnIndex = (columns: ColumnContents[]) =>
+const getColumnIndex = (columns: ChunkContents[]) =>
   Math.max(columns.length - 1, 0);
+
+type ChunkedContent = {
+  chunks: ChunkContents[];
+  currentInlineContentHeight: number;
+};
 
 export const chunkInlineContent = (
   contents: ParagraphContent[],
   contentMeasurements: ContentMeasurements,
   contentParameters: ContentParameters,
-  columns: ColumnContents[] = [],
-): ColumnContents[] => {
-  if (contents.length === 0) return columns;
+  chunks: ChunkContents[] = [],
+): ChunkedContent => {
+  if (contents.length === 0) return chunks;
 
-  const columnIndex = getColumnIndex(columns);
-  const currentContent = contents[0];
-  const currentColumn = columns[columnIndex] || [];
-  const { contentHeight } = contentParameters;
+  const { contentHeight, contentLineHeight } = contentParameters;
 
-  const heightOfCurrentParagraph =
-    contentMeasurements.contents.heights[currentContent.id!];
-  const currentColumnHeight = calculateInlineContentHeight(
-    currentColumn,
-    contentMeasurements,
+  const chunkedContent = contents.reduce(
+    ({ chunks, currentInlineContentHeight }, currentContent) => {
+      const currentChunkIndex = Math.max(chunks.length - 1, 0);
+      const currentChunk = chunks[currentChunkIndex] || [];
+
+      if (currentChunkIndex === 1) {
+        return {
+          chunks: [chunks[0], [...currentChunk, currentContent]],
+          currentInlineContentHeight,
+        };
+      }
+
+      const inlineContentHeightRemaining =
+        contentHeight - currentInlineContentHeight;
+
+      // no capacity in inline chunk, start adding into overflow chunk
+      if (inlineContentHeightRemaining === 0) {
+        return {
+          chunks: [currentChunk, []],
+          currentInlineContentHeight,
+        };
+      }
+
+      const currentParagraphHeight =
+        contentMeasurements.contents.heights[currentContent.id!];
+
+      const potentialInlineContentHeight =
+        currentInlineContentHeight + currentParagraphHeight;
+
+      // there is capacity in inline chunk, adding next content into it
+      if (potentialInlineContentHeight <= contentHeight) {
+        return {
+          chunks: [[...currentChunk, currentContent]],
+          currentInlineContentHeight: potentialInlineContentHeight,
+        };
+      }
+
+      // not enough capacity in inline chunk, splitting content into this chunk and the overflow chunk
+      const provisionalLineToSplit =
+        inlineContentHeightRemaining / contentLineHeight!;
+      const actualLineToSplit = Math.ceil(provisionalLineToSplit);
+
+      const totalLinesHeightAdjustement = contentLineHeight * actualLineToSplit;
+
+      // final adjustment last paragraph lines fit without bottom padding
+      const paddingAdjustment =
+        currentParagraphHeight - totalLinesHeightAdjustement <= 20 ? 20 : 0;
+
+      const adjustedInlineContentHeight =
+        currentInlineContentHeight +
+        totalLinesHeightAdjustement +
+        paddingAdjustment;
+
+      const [
+        contentA,
+        contentB,
+        updatedArticleMeasurements,
+      ] = splitParagraphContentByLine(
+        currentContent,
+        actualLineToSplit,
+        contentMeasurements,
+        contentLineHeight!,
+      );
+
+      return {
+        chunks: [[...currentChunk, contentA], [contentB]],
+        currentInlineContentHeight: adjustedInlineContentHeight,
+      };
+    },
+    { chunks: [], currentInlineContentHeight: 0 },
   );
-  const heightRemainingInColumn = contentHeight - currentColumnHeight;
 
-  if (heightRemainingInColumn === 0) {
-    // no capacity in current column, start adding into next column
-    const updatedColumns = [...columns, []];
-    return chunkInlineContent(
-      contents,
-      contentMeasurements,
-      contentParameters,
-      updatedColumns,
-    );
-  }
-
-  if (currentColumnHeight + heightOfCurrentParagraph <= contentHeight) {
-    // there is capacity in current column, adding next content into it
-    const updatedColumns = [
-      ...columns.slice(0, -1),
-      currentColumn.concat(currentContent),
-    ];
-    return chunkInlineContent(
-      contents.slice(1),
-      contentMeasurements,
-      contentParameters,
-      updatedColumns,
-    );
-  }
-
-  // no capacity in current column, splitting content into this column and the next column
-  const lineToSplit =
-    heightRemainingInColumn / contentParameters.contentLineHeight!;
-  const [
-    contentA,
-    contentB,
-    updatedArticleMeasurements,
-  ] = splitParagraphContentByLine(
-    currentContent,
-    lineToSplit,
-    contentMeasurements,
-    contentParameters.contentLineHeight!,
-  );
-
-  const updatedCurrentColumn = [...currentColumn, contentA];
-  const updatedColumns = [...columns.slice(0, -1), updatedCurrentColumn, []];
-  const nextContents = [contentB, ...contents.slice(1)];
-
-  return chunkInlineContent(
-    nextContents,
-    updatedArticleMeasurements,
-    contentParameters,
-    updatedColumns,
-  );
+  return chunkedContent;
 };

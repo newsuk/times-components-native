@@ -73,9 +73,7 @@ export const InlineAd = (props) => {
   const adContainerWidth = adWidth + adHorizontalSpacing;
   const contentWidth = tabletWidth - adContainerWidth;
 
-  const heightRemainder = adContainerHeightPlusMargin % lineHeight;
-  const heightAdjustment = heightRemainder ? lineHeight - heightRemainder : 0;
-  const contentHeight = adContainerHeightPlusMargin + heightAdjustment;
+  const contentHeight = adContainerHeightPlusMargin;
 
   const paragraphs = inlineContent
     .filter((c) => c.name === "paragraph")
@@ -93,16 +91,34 @@ export const InlineAd = (props) => {
       contentParameters={contentParameters}
       skeletonProps={skeletonProps}
       renderMeasuredContents={(contentMeasurements) => {
-        const articleColumns = chunkInlineContent(
+        const { chunks, currentInlineContentHeight } = chunkInlineContent(
           paragraphs,
           contentMeasurements,
           contentParameters,
         );
+        const requiredInlineContentHeight = Math.max(
+          currentInlineContentHeight,
+          contentHeight,
+        );
+
+        const chunkedInlineContent = chunks[0] || [];
+        const chunkedOverflowContent = chunks[1] || [];
+
         return (
           <>
-            <View style={[styles.container, { height: contentHeight }]}>
-              <View style={{ height: contentHeight, width: contentWidth }}>
-                {articleColumns[0].map(renderItem(true))}
+            <View
+              style={[
+                styles.container,
+                { height: requiredInlineContentHeight },
+              ]}
+            >
+              <View
+                style={{
+                  height: requiredInlineContentHeight,
+                  width: contentWidth,
+                }}
+              >
+                {chunkedInlineContent.map(renderItem(true))}
               </View>
               <View
                 style={[
@@ -113,7 +129,7 @@ export const InlineAd = (props) => {
                 <Ad {...props} />
               </View>
             </View>
-            {articleColumns[1].map(renderItem(false))}
+            {chunkedOverflowContent.map(renderItem(false))}
           </>
         );
       }}

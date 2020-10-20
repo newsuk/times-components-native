@@ -16,11 +16,6 @@ export const collapsed = (isTablet, content) =>
           return acc;
 
         // backwards
-        // if (
-        //   ((node.name === "image" || node.name === "ad") &&
-        //     node.attributes?.display === "inline") ||
-        //   node.name === "pullQuote"
-        // ) {
         if (
           (node.name === "image" && node.attributes?.display === "inline") ||
           node.name === "pullQuote"
@@ -62,31 +57,53 @@ const setupArticleMpuTestAd = (
   const { adPosition, group, width, height, slotName } = articleMpu;
   const isControlGroup = group === "A";
   const adSlotIndex = isControlGroup ? currentAdSlotIndex : adPosition - 1;
-  const inlineContentEndIndex = adSlotIndex + 5;
+
+  const contentBeforeAd = contentWithoutAdSlot.slice(0, adSlotIndex);
 
   if (isControlGroup) {
+    const contentAfterControlGroupAd = contentWithoutAdSlot.slice(adSlotIndex);
     return [
-      ...contentWithoutAdSlot.slice(0, adSlotIndex),
+      ...contentBeforeAd,
       {
         name: "ad",
         attributes: {
           slotName,
         },
       },
-      ...contentWithoutAdSlot.slice(inlineContentEndIndex),
+      ...contentAfterControlGroupAd,
     ];
   }
 
+  let inlineContentEndIndex = adSlotIndex + 7;
+
+  let inlineContent = contentWithoutAdSlot.slice(
+    adSlotIndex,
+    inlineContentEndIndex,
+  );
+
+  const nonParagraphIndex = inlineContent.findIndex(
+    (item) => item.name !== "paragraph",
+  );
+
+  if (nonParagraphIndex !== -1) {
+    inlineContentEndIndex = adSlotIndex + nonParagraphIndex;
+    inlineContent = contentWithoutAdSlot.slice(
+      adSlotIndex,
+      inlineContentEndIndex,
+    );
+  }
+
+  const contentAfterInlineAd = contentWithoutAdSlot.slice(
+    inlineContentEndIndex,
+  );
+
   return [
-    ...contentWithoutAdSlot.slice(0, adSlotIndex),
+    ...contentBeforeAd,
     {
       name: "inlineAd",
       attributes: {
         slotName,
-        inlineContent: contentWithoutAdSlot.slice(
-          adSlotIndex,
-          inlineContentEndIndex,
-        ),
+        inlineContent,
         skeletonProps,
         display: "inline",
         width,
@@ -94,7 +111,7 @@ const setupArticleMpuTestAd = (
       },
       children: [],
     },
-    ...contentWithoutAdSlot.slice(inlineContentEndIndex),
+    ...contentAfterInlineAd,
   ];
 };
 
@@ -112,7 +129,7 @@ export const setupAd = (
   const contentWithoutAdSlot = content.filter((item, index) => {
     const isItemAd = item.name === "ad";
     if (isItemAd) currentAdSlotIndex = index;
-    return !isItemAd;
+    return !isItemAd && item.children.length;
   });
 
   if (!currentAdSlotIndex) return content;

@@ -4,18 +4,7 @@ export type Line = {
   text: string;
 };
 export type TextLayoutEvent = { lines: Line[] };
-export type ColumnContents = ParagraphContent[];
-export interface PageColumn {
-  byline?: {
-    height: number;
-  };
-  image?: {
-    height: number;
-    margin: number;
-  };
-  contents: ColumnContents;
-  contentHeight: number;
-}
+export type ChunkContents = ParagraphContent[];
 
 export interface ContentMeasurements {
   contents: {
@@ -29,8 +18,3 @@ export interface ContentParameters {
   contentHeight: number;
   contentLineHeight: number;
 }
-
-// export interface FontScale {
-//   fontSize: number;
-//   lineHeight: number;
-// }

@@ -8,7 +8,7 @@ export default (dropCapFont, scale) => {
   return {
     ...sharedStyles,
     articleTextElement: {
-      // marginBottom: spacing(4),
+      marginBottom: spacing(4),
     },
   };
 };

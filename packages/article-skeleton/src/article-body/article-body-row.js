@@ -265,6 +265,7 @@ export default ({
             style={[
               styles.interactiveContainer,
               isTablet && styles.interactiveContainerTablet,
+              isTablet && styles.interactiveContainerFullWidth,
               isTablet &&
                 display === "fullwidth" &&
                 styles.interactiveContainerFullWidth,

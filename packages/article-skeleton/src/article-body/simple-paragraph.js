@@ -74,7 +74,6 @@ const SimpleParagraph = ({
             </Text>
           );
         })}
-        {`\n`}
       </Text>
     </ArticleParagraphWrapper>
   );
