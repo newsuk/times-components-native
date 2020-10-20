@@ -108,10 +108,24 @@ exports[`3. front lead two - portrait - 834 - 0.75 ratio 1`] = `
   windowWidth={834}
 >
   <HorizontalLayout
+    colSeparatorStyle={
+      Object {
+        "borderColor": "#999999",
+        "marginVertical": 0,
+      }
+    }
+    containerStyle={
+      Object {
+        "flex": 1,
+        "flexDirection": "row",
+      }
+    }
     tiles={
       Array [
         Object {
-          "style": undefined,
+          "style": Object {
+            "width": "32.751937984496124%",
+          },
           "tile": <ExampleChild
             id="lead1"
           >
@@ -119,7 +133,9 @@ exports[`3. front lead two - portrait - 834 - 0.75 ratio 1`] = `
           </ExampleChild>,
         },
         Object {
-          "style": undefined,
+          "style": Object {
+            "width": "67.10271317829458%",
+          },
           "tile": <ExampleChild
             id="lead2"
           >
@@ -143,10 +159,24 @@ exports[`4. front lead two - portrait - 834 - less than 0.75 ratio 1`] = `
   windowWidth={834}
 >
   <HorizontalLayout
+    colSeparatorStyle={
+      Object {
+        "borderColor": "#999999",
+        "marginVertical": 0,
+      }
+    }
+    containerStyle={
+      Object {
+        "flex": 1,
+        "flexDirection": "row",
+      }
+    }
     tiles={
       Array [
         Object {
-          "style": undefined,
+          "style": Object {
+            "width": "32.751937984496124%",
+          },
           "tile": <ExampleChild
             id="lead1"
           >
@@ -154,7 +184,9 @@ exports[`4. front lead two - portrait - 834 - less than 0.75 ratio 1`] = `
           </ExampleChild>,
         },
         Object {
-          "style": undefined,
+          "style": Object {
+            "width": "67.10271317829458%",
+          },
           "tile": <ExampleChild
             id="lead2"
           >
