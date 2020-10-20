@@ -85,15 +85,15 @@ const calculateStyles = (orientation) => {
         ...sharedLandscapeStyles,
         container: {
           ...container,
-          paddingVertical: spacing(3),
+          paddingTop: spacing(2),
+          paddingBottom: spacing(2) - 1,
         },
       },
       "1366": {
         ...sharedLandscapeStyles,
         container: {
           ...container,
-          paddingTop: spacing(4),
-          paddingBottom: spacing(5),
+          paddingVertical: spacing(4),
         },
         lead1Container: {
           width: columnToPercentageWithOrientation({
@@ -139,26 +139,45 @@ const calculateStyles = (orientation) => {
         },
         inTodaysEditionContainer: {
           ...inTodaysEditionContainerPortrait,
+          marginTop: spacing(3),
           height: 148,
         },
       },
       "834": {
-        ...sharedPortraitStyles,
-        container: {
-          ...container,
-          paddingTop: spacing(3),
-          paddingBottom: spacing(4),
-        },
-        inTodaysEditionContainer: {
-          ...inTodaysEditionContainerPortrait,
-          height: 148,
+        ratios: {
+          0: {
+            ...sharedPortraitStyles,
+            container: {
+              ...container,
+              paddingTop: spacing(3),
+              paddingBottom: spacing(4),
+            },
+            inTodaysEditionContainer: {
+              ...inTodaysEditionContainerPortrait,
+              marginTop: spacing(4),
+              height: 148,
+            },
+          },
+          0.75: {
+            ...sharedPortraitStyles,
+            container: {
+              ...container,
+              paddingTop: spacing(3),
+              paddingBottom: spacing(4),
+            },
+            inTodaysEditionContainer: {
+              ...inTodaysEditionContainerPortrait,
+              marginTop: spacing(7),
+              height: 148,
+            },
+          },
         },
       },
       "1024": {
         ...sharedPortraitStyles,
         container: {
           ...container,
-          paddingVertical: spacing(6),
+          paddingVertical: spacing(4),
         },
         inTodaysEditionContainer: {
           ...inTodaysEditionContainerPortrait,
@@ -171,5 +190,5 @@ const calculateStyles = (orientation) => {
   return styles[orientation];
 };
 
-export const getStyles = (orientation, windowWidth) =>
-  getStyleByDeviceSize(calculateStyles(orientation), windowWidth);
+export const getStyles = (orientation, windowWidth, windowHeight) =>
+  getStyleByDeviceSize(calculateStyles(orientation), windowWidth, windowHeight);

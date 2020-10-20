@@ -7,6 +7,7 @@ declare module "@times-components-native/styleguide" {
   export const colours: Colours;
   export const spacing: (number) => number;
   export const styleguide;
+  export const fontFactory;
 }
 
 declare module "@times-components-native/utils" {

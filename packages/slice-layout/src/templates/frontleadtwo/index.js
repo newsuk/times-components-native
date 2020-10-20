@@ -1,13 +1,14 @@
 import React from "react";
-import { Dimensions, View } from "react-native";
+import { View } from "react-native";
 
 import { TabletContentContainer } from "../shared";
 import HorizontalLayout from "../horizontallayout";
 import { getStyles } from "./styles";
+import { getDimensions } from "@times-components-native/utils";
 
 const FrontLeadTwoSlice = ({ orientation, lead1, lead2, inTodaysEdition }) => {
-  const windowWidth = Dimensions.get("window").width;
-  const styles = getStyles(orientation, windowWidth);
+  const { width: windowWidth, height: windowHeight } = getDimensions();
+  const styles = getStyles(orientation, windowWidth, windowHeight);
 
   if (orientation === "landscape") {
     return (

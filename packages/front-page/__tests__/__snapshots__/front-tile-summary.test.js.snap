@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`FrontTileSummary renders correctly 1`] = `
+exports[`FrontTileSummary performs measurements before rendering front tile summary 1`] = `
 <View
   style={
     Array [
@@ -10,38 +10,165 @@ exports[`FrontTileSummary renders correctly 1`] = `
       Object {
         "flex": 1,
       },
+      Object {
+        "opacity": 0,
+      },
     ]
   }
 >
-  <ArticleSummaryHeadline
-    headline="This is tile headline"
+  <View
+    onLayout={[Function]}
+    testID="headlineWrapper"
+  >
+    <ArticleSummaryHeadline
+      headline="This is tile headline"
+      style={
+        Array [
+          Object {
+            "backgroundColor": "blue",
+          },
+          Object {
+            "marginBottom": 0,
+          },
+        ]
+      }
+    />
+  </View>
+  <View
+    onLayout={[Function]}
+    testID="straplineWrapper"
+  >
+    <ArticleSummaryStrapline
+      strapline="Strapline Text"
+      style={
+        Array [
+          Object {
+            "backgroundColor": "green",
+          },
+          Object {
+            "marginBottom": 0,
+          },
+        ]
+      }
+    />
+  </View>
+  <View
+    onLayout={[Function]}
+    testID="bylineWrapper"
+  >
+    <FrontPageByline
+      byline={
+        Array [
+          Object {
+            "byline": Array [
+              Object {
+                "foo": "bar",
+              },
+            ],
+          },
+        ]
+      }
+      containerStyle={
+        Array [
+          undefined,
+          Object {
+            "marginBottom": 0,
+          },
+        ]
+      }
+    />
+  </View>
+</View>
+`;
+
+exports[`FrontTileSummary renders byline with keyline 1`] = `
+<View
+  style={
+    Array [
+      Object {
+        "backgroundColor": "red",
+      },
+      Object {
+        "flex": 1,
+      },
+      Object {
+        "opacity": 1,
+      },
+    ]
+  }
+>
+  <View
     style={
       Object {
-        "backgroundColor": "blue",
+        "marginBottom": 10,
       }
     }
-  />
-  <ArticleSummaryStrapline
-    strapline="Strapline Text"
+  >
+    <ArticleSummaryHeadline
+      headline="This is tile headline"
+      style={
+        Array [
+          Object {
+            "backgroundColor": "blue",
+          },
+          Object {
+            "marginBottom": 0,
+          },
+        ]
+      }
+    />
+  </View>
+  <View
     style={
       Object {
-        "backgroundColor": "green",
+        "marginBottom": 20,
       }
     }
-  />
-  <FrontPageByline
-    byline={
-      Array [
-        Object {
-          "byline": Array [
-            Object {
-              "foo": "bar",
-            },
-          ],
-        },
-      ]
+  >
+    <ArticleSummaryStrapline
+      strapline="Strapline Text"
+      style={
+        Array [
+          Object {
+            "backgroundColor": "green",
+          },
+          Object {
+            "marginBottom": 0,
+          },
+        ]
+      }
+    />
+  </View>
+  <View
+    style={
+      Object {
+        "marginBottom": 15,
+      }
     }
-  />
+  >
+    <FrontPageByline
+      byline={
+        Array [
+          Object {
+            "byline": Array [
+              Object {
+                "foo": "bar",
+              },
+            ],
+          },
+        ]
+      }
+      containerStyle={
+        Array [
+          undefined,
+          Object {
+            "marginBottom": 0,
+          },
+        ]
+      }
+      showKeyline={true}
+    />
+  </View>
   <FrontArticleSummaryContent
     bylines={
       Array [
@@ -81,7 +208,7 @@ exports[`FrontTileSummary renders correctly 1`] = `
 </View>
 `;
 
-exports[`FrontTileSummary renders with keyline 1`] = `
+exports[`FrontTileSummary renders with 2 columns 1`] = `
 <View
   style={
     Array [
@@ -91,104 +218,58 @@ exports[`FrontTileSummary renders with keyline 1`] = `
       Object {
         "flex": 1,
       },
-    ]
-  }
->
-  <ArticleSummaryHeadline
-    headline="This is tile headline"
-    style={
       Object {
-        "backgroundColor": "blue",
-      }
-    }
-  />
-  <ArticleSummaryStrapline
-    strapline="Strapline Text"
-    style={
-      Object {
-        "backgroundColor": "green",
-      }
-    }
-  />
-  <FrontPageByline
-    byline={
-      Array [
-        Object {
-          "byline": Array [
-            Object {
-              "foo": "bar",
-            },
-          ],
-        },
-      ]
-    }
-    showKeyline={true}
-  />
-  <FrontArticleSummaryContent
-    bylines={
-      Array [
-        Object {
-          "byline": Array [
-            Object {
-              "foo": "bar",
-            },
-          ],
-        },
-      ]
-    }
-    summary={
-      Array [
-        Object {
-          "attributes": Object {},
-          "children": Array [
-            Object {
-              "attributes": Object {
-                "value": "Test",
-              },
-              "children": Array [],
-              "name": "text",
-            },
-          ],
-          "name": "paragraph",
-        },
-      ]
-    }
-    summaryStyle={
-      Object {
-        "backgroundColor": "orange",
-      }
-    }
-    template="mainstandard"
-  />
-</View>
-`;
-
-exports[`FrontTileSummary renders with more than 1 columns 1`] = `
-<View
-  style={
-    Array [
-      Object {
-        "backgroundColor": "red",
-      },
-      Object {
-        "flex": 1,
+        "opacity": 1,
       },
     ]
   }
 >
-  <ArticleSummaryHeadline
-    headline="This is tile headline"
+  <View
     style={
       Object {
-        "backgroundColor": "blue",
+        "marginBottom": 10,
       }
     }
-  />
-  <ArticleSummaryStrapline
-    strapline="Strapline Text"
+  >
+    <ArticleSummaryHeadline
+      headline="This is tile headline"
+      style={
+        Array [
+          Object {
+            "backgroundColor": "blue",
+          },
+          Object {
+            "marginBottom": 0,
+          },
+        ]
+      }
+    />
+  </View>
+  <View
     style={
       Object {
-        "backgroundColor": "green",
+        "marginBottom": 20,
+      }
+    }
+  >
+    <ArticleSummaryStrapline
+      strapline="Strapline Text"
+      style={
+        Array [
+          Object {
+            "backgroundColor": "green",
+          },
+          Object {
+            "marginBottom": 0,
+          },
+        ]
+      }
+    />
+  </View>
+  <View
+    style={
+      Object {
+        "marginBottom": 15,
       }
     }
   />
@@ -232,7 +313,7 @@ exports[`FrontTileSummary renders with more than 1 columns 1`] = `
 </View>
 `;
 
-exports[`FrontTileSummary renders without byline 1`] = `
+exports[`FrontTileSummary renders with a missing byline 1`] = `
 <View
   style={
     Array [
@@ -242,25 +323,54 @@ exports[`FrontTileSummary renders without byline 1`] = `
       Object {
         "flex": 1,
       },
+      Object {
+        "opacity": 1,
+      },
     ]
   }
 >
-  <ArticleSummaryHeadline
-    headline="This is tile headline"
+  <View
     style={
       Object {
-        "backgroundColor": "blue",
+        "marginBottom": 10,
       }
     }
-  />
-  <ArticleSummaryStrapline
-    strapline="Strapline Text"
+  >
+    <ArticleSummaryHeadline
+      headline="This is tile headline"
+      style={
+        Array [
+          Object {
+            "backgroundColor": "blue",
+          },
+          Object {
+            "marginBottom": 0,
+          },
+        ]
+      }
+    />
+  </View>
+  <View
     style={
       Object {
-        "backgroundColor": "green",
+        "marginBottom": 20,
       }
     }
-  />
+  >
+    <ArticleSummaryStrapline
+      strapline="Strapline Text"
+      style={
+        Array [
+          Object {
+            "backgroundColor": "green",
+          },
+          Object {
+            "marginBottom": 0,
+          },
+        ]
+      }
+    />
+  </View>
   <FrontArticleSummaryContent
     summary={
       Array [
@@ -289,7 +399,7 @@ exports[`FrontTileSummary renders without byline 1`] = `
 </View>
 `;
 
-exports[`FrontTileSummary renders without strapline 1`] = `
+exports[`FrontTileSummary renders with a missing strapline 1`] = `
 <View
   style={
     Array [
@@ -299,19 +409,64 @@ exports[`FrontTileSummary renders without strapline 1`] = `
       Object {
         "flex": 1,
       },
+      Object {
+        "opacity": 1,
+      },
     ]
   }
 >
-  <ArticleSummaryHeadline
-    headline="This is tile headline"
+  <View
     style={
       Object {
-        "backgroundColor": "blue",
+        "marginBottom": 10,
       }
     }
-  />
-  <FrontPageByline
-    byline={
+  >
+    <ArticleSummaryHeadline
+      headline="This is tile headline"
+      style={
+        Array [
+          Object {
+            "backgroundColor": "blue",
+          },
+          Object {
+            "marginBottom": 0,
+          },
+        ]
+      }
+    />
+  </View>
+  <View
+    style={
+      Object {
+        "marginBottom": 15,
+      }
+    }
+  >
+    <FrontPageByline
+      byline={
+        Array [
+          Object {
+            "byline": Array [
+              Object {
+                "foo": "bar",
+              },
+            ],
+          },
+        ]
+      }
+      containerStyle={
+        Array [
+          undefined,
+          Object {
+            "marginBottom": 0,
+          },
+        ]
+      }
+    />
+  </View>
+  <FrontArticleSummaryContent
+    bylines={
       Array [
         Object {
           "byline": Array [
@@ -322,7 +477,160 @@ exports[`FrontTileSummary renders without strapline 1`] = `
         },
       ]
     }
+    summary={
+      Array [
+        Object {
+          "attributes": Object {},
+          "children": Array [
+            Object {
+              "attributes": Object {
+                "value": "Test",
+              },
+              "children": Array [],
+              "name": "text",
+            },
+          ],
+          "name": "paragraph",
+        },
+      ]
+    }
+    summaryStyle={
+      Object {
+        "backgroundColor": "orange",
+      }
+    }
+    template="mainstandard"
   />
+</View>
+`;
+
+exports[`FrontTileSummary shows front tile summary with headline only after measurement has been taken 1`] = `
+<View
+  style={
+    Array [
+      Object {
+        "backgroundColor": "red",
+      },
+      Object {
+        "flex": 1,
+      },
+      Object {
+        "opacity": 1,
+      },
+    ]
+  }
+>
+  <View
+    style={
+      Object {
+        "marginBottom": 0,
+      }
+    }
+  >
+    <ArticleSummaryHeadline
+      headline="This is tile headline"
+      style={
+        Array [
+          Object {
+            "backgroundColor": "blue",
+          },
+          Object {
+            "marginBottom": 0,
+          },
+        ]
+      }
+    />
+  </View>
+</View>
+`;
+
+exports[`FrontTileSummary shows front tile summary with headline/strapline/byline/content after measurement has been taken 1`] = `
+<View
+  style={
+    Array [
+      Object {
+        "backgroundColor": "red",
+      },
+      Object {
+        "flex": 1,
+      },
+      Object {
+        "opacity": 1,
+      },
+    ]
+  }
+>
+  <View
+    style={
+      Object {
+        "marginBottom": 10,
+      }
+    }
+  >
+    <ArticleSummaryHeadline
+      headline="This is tile headline"
+      style={
+        Array [
+          Object {
+            "backgroundColor": "blue",
+          },
+          Object {
+            "marginBottom": 0,
+          },
+        ]
+      }
+    />
+  </View>
+  <View
+    style={
+      Object {
+        "marginBottom": 20,
+      }
+    }
+  >
+    <ArticleSummaryStrapline
+      strapline="Strapline Text"
+      style={
+        Array [
+          Object {
+            "backgroundColor": "green",
+          },
+          Object {
+            "marginBottom": 0,
+          },
+        ]
+      }
+    />
+  </View>
+  <View
+    style={
+      Object {
+        "marginBottom": 15,
+      }
+    }
+  >
+    <FrontPageByline
+      byline={
+        Array [
+          Object {
+            "byline": Array [
+              Object {
+                "foo": "bar",
+              },
+            ],
+          },
+        ]
+      }
+      containerStyle={
+        Array [
+          undefined,
+          Object {
+            "marginBottom": 0,
+          },
+        ]
+      }
+    />
+  </View>
   <FrontArticleSummaryContent
     bylines={
       Array [

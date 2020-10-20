@@ -14,7 +14,6 @@ const sharedHeadline = {
 const sharedStrapline = {
   fontFamily: fonts.headlineRegular,
   color: colours.functional.primary,
-  marginBottom: spacing(3),
 };
 
 const sharedSummary = {
@@ -25,6 +24,9 @@ const sharedSummary = {
 
 const sharedStyles = {
   summary: { ...sharedSummary },
+  bylineMarginBottom: spacing(3),
+  headlineMarginBottom: spacing(2),
+  straplineMarginBottom: spacing(3),
 };
 
 const sharedLandscapeStyles = {
@@ -45,6 +47,19 @@ const sharedPortraitStyles = {
   },
 };
 
+const portrait834 = {
+  ...sharedPortraitStyles,
+  headline: {
+    ...sharedHeadline,
+    marginBottom: spacing(2),
+  },
+  strapline: {
+    ...sharedStrapline,
+    fontSize: 22,
+    lineHeight: 22,
+  },
+};
+
 const styles = {
   landscape: {
     "1024": {
@@ -53,7 +68,6 @@ const styles = {
         ...sharedHeadline,
         fontSize: 42,
         lineHeight: 42,
-        marginBottom: spacing(2),
       },
       strapline: {
         ...sharedStrapline,
@@ -67,7 +81,6 @@ const styles = {
         ...sharedHeadline,
         fontSize: 45,
         lineHeight: 45,
-        marginBottom: spacing(2),
       },
       strapline: {
         ...sharedStrapline,
@@ -81,7 +94,6 @@ const styles = {
         ...sharedHeadline,
         fontSize: 45,
         lineHeight: 45,
-        marginBottom: spacing(2),
       },
       strapline: {
         ...sharedStrapline,
@@ -95,7 +107,6 @@ const styles = {
         ...sharedHeadline,
         fontSize: 48,
         lineHeight: 48,
-        marginBottom: spacing(2),
       },
       strapline: {
         ...sharedStrapline,
@@ -109,8 +120,8 @@ const styles = {
         ...sharedHeadline,
         fontSize: 55,
         lineHeight: 55,
-        marginBottom: spacing(3),
       },
+      headlineMarginBottom: spacing(3),
       strapline: {
         ...sharedStrapline,
         fontSize: 24,
@@ -129,7 +140,6 @@ const styles = {
         ...sharedHeadline,
         fontSize: 28,
         lineHeight: 28,
-        marginBottom: spacing(2),
       },
       strapline: {
         ...sharedStrapline,
@@ -143,7 +153,6 @@ const styles = {
         ...sharedHeadline,
         fontSize: 28,
         lineHeight: 28,
-        marginBottom: spacing(2),
       },
       strapline: {
         ...sharedStrapline,
@@ -152,21 +161,23 @@ const styles = {
       },
     },
     "834": {
-      ...sharedPortraitStyles,
-      container: {
-        ...sharedPortraitStyles.container,
-        paddingBottom: spacing(1),
-      },
-      headline: {
-        ...sharedHeadline,
-        fontSize: 30,
-        lineHeight: 30,
-        marginBottom: spacing(2),
-      },
-      strapline: {
-        ...sharedStrapline,
-        fontSize: 22,
-        lineHeight: 22,
+      ratios: {
+        0: {
+          ...portrait834,
+          headline: {
+            ...portrait834.headline,
+            fontSize: 45,
+            lineHeight: 45,
+          },
+        },
+        0.75: {
+          ...portrait834,
+          headline: {
+            ...portrait834.headline,
+            fontSize: 42,
+            lineHeight: 42,
+          },
+        },
       },
     },
     "1024": {
@@ -177,9 +188,8 @@ const styles = {
       },
       headline: {
         ...sharedHeadline,
-        fontSize: 40,
-        lineHeight: 40,
-        marginBottom: spacing(2),
+        fontSize: 53,
+        lineHeight: 53,
       },
       strapline: {
         ...sharedStrapline,
@@ -194,5 +204,5 @@ const styles = {
   },
 };
 
-export const getStyle = (orientation, windowWidth) =>
-  getStyleByDeviceSize(styles[orientation], windowWidth);
+export const getStyle = (orientation, windowWidth, windowHeight) =>
+  getStyleByDeviceSize(styles[orientation], windowWidth, windowHeight);
