@@ -38,8 +38,8 @@ function renderMedium(props, breakpoint, orientation) {
 }
 
 const FrontLeadOne = (props) => {
-  const renderSlice = (breakpoint, orientation) =>
-    renderMedium(props, breakpoint, orientation);
+  const renderSlice = (_breakpoint, orientation) =>
+    renderMedium(props, orientation);
 
   return (
     <ResponsiveSlice
