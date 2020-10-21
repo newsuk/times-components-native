@@ -37,7 +37,6 @@ const sharedStyles = {
     fontFamily: fonts.supporting,
     color: colours.functional.red,
     textDecorationLine: "none",
-    marginBottom: spacing(3),
   },
   itemCTAIconContainer: {
     marginLeft: spacing(1),
@@ -70,6 +69,16 @@ const sharedPortraitStyles = {
   },
   itemLast: {
     marginRight: 0,
+  },
+  itemCTA: {
+    flexDirection: "row",
+    flex: 1,
+    alignItems: "flex-end",
+    marginBottom: -2,
+  },
+  itemCTAIconContainer: {
+    ...sharedStyles.itemCTAIconContainer,
+    marginBottom: 2,
   },
   divider: {
     paddingLeft: spacing(2),
@@ -106,6 +115,10 @@ const sharedLandscapeStyles = {
     fontSize: 14,
     lineHeight: 18,
     marginBottom: spacing(2),
+  },
+  itemCTAText: {
+    ...sharedStyles.itemCTAText,
+    marginBottom: spacing(3),
   },
   divider: {
     borderBottomWidth: 1,
