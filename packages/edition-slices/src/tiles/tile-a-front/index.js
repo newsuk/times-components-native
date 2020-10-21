@@ -17,7 +17,7 @@ const getAspectRatio = (crop) => (crop === "crop32" ? 3 / 2 : 5 / 4);
 const TileAFront = ({ onPress, tile, orientation }) => {
   const { width: windowWidth, height: windowHeight } = getDimensions();
   const isPortrait = orientation === "portrait";
-  const columnCount = isPortrait ? 3 : 1;
+  const columnCount = isPortrait ? 2 : 1;
   const crop = isPortrait ? "crop32" : "crop54";
   const imageCrop = getTileImage(tile, crop);
   const styles = getStyle(orientation, windowWidth, windowHeight);
