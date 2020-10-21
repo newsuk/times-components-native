@@ -5,12 +5,8 @@ import {
 } from "../types";
 // import { splitParagraphContentByLine } from "./splitParagraphContentByLine";
 import { splitParagraphContentByLine } from "@times-components-native/article-columns/utils/splitParagraphContentByLine";
-import { calculateInlineContentHeight } from "./calculateInlineContentHeight";
 
 import { ParagraphContent } from "../domain-types";
-
-const getColumnIndex = (columns: ChunkContents[]) =>
-  Math.max(columns.length - 1, 0);
 
 type ChunkedContent = {
   chunks: ChunkContents[];
@@ -21,9 +17,9 @@ export const chunkInlineContent = (
   contents: ParagraphContent[],
   contentMeasurements: ContentMeasurements,
   contentParameters: ContentParameters,
-  chunks: ChunkContents[] = [],
 ): ChunkedContent => {
-  if (contents.length === 0) return chunks;
+  if (contents.length === 0)
+    return { chunks: [], currentInlineContentHeight: 0 };
 
   const { contentHeight, contentLineHeight } = contentParameters;
 

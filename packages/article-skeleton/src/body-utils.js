@@ -126,10 +126,15 @@ export const setupAd = (
 
   let currentAdSlotIndex;
 
-  const contentWithoutAdSlot = content.filter((item, index) => {
+  // Remove empty paragraphs
+  const cleanedContent = content.filter(
+    (item) => !(item.name === "paragraph" && !item.children.length),
+  );
+
+  const contentWithoutAdSlot = cleanedContent.filter((item, index) => {
     const isItemAd = item.name === "ad";
     if (isItemAd) currentAdSlotIndex = index;
-    return !isItemAd && item.children.length;
+    return !isItemAd;
   });
 
   if (!currentAdSlotIndex) return content;
