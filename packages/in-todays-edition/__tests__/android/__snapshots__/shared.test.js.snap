@@ -1369,7 +1369,6 @@ exports[`InTodaysEdition portrait 768 1`] = `
               "color": "#CC0000",
               "fontFamily": "GillSansMTStd-Medium",
               "fontSize": 13,
-              "marginBottom": 15,
               "textDecorationLine": "none",
             }
           }
@@ -1379,6 +1378,7 @@ exports[`InTodaysEdition portrait 768 1`] = `
         <View
           style={
             Object {
+              "marginBottom": 2,
               "marginLeft": 5,
               "marginTop": 2,
             }
@@ -1444,7 +1444,6 @@ exports[`InTodaysEdition portrait 768 1`] = `
               "color": "#CC0000",
               "fontFamily": "GillSansMTStd-Medium",
               "fontSize": 13,
-              "marginBottom": 15,
               "textDecorationLine": "none",
             }
           }
@@ -1454,6 +1453,7 @@ exports[`InTodaysEdition portrait 768 1`] = `
         <View
           style={
             Object {
+              "marginBottom": 2,
               "marginLeft": 5,
               "marginTop": 2,
             }
@@ -1519,7 +1519,6 @@ exports[`InTodaysEdition portrait 768 1`] = `
               "color": "#CC0000",
               "fontFamily": "GillSansMTStd-Medium",
               "fontSize": 13,
-              "marginBottom": 15,
               "textDecorationLine": "none",
             }
           }
@@ -1529,6 +1528,7 @@ exports[`InTodaysEdition portrait 768 1`] = `
         <View
           style={
             Object {
+              "marginBottom": 2,
               "marginLeft": 5,
               "marginTop": 2,
             }
@@ -1594,7 +1594,6 @@ exports[`InTodaysEdition portrait 768 1`] = `
               "color": "#CC0000",
               "fontFamily": "GillSansMTStd-Medium",
               "fontSize": 13,
-              "marginBottom": 15,
               "textDecorationLine": "none",
             }
           }
@@ -1604,6 +1603,7 @@ exports[`InTodaysEdition portrait 768 1`] = `
         <View
           style={
             Object {
+              "marginBottom": 2,
               "marginLeft": 5,
               "marginTop": 2,
             }
@@ -1695,7 +1695,10 @@ exports[`InTodaysEdition portrait 810 1`] = `
       <View
         style={
           Object {
+            "alignItems": "flex-end",
+            "flex": 1,
             "flexDirection": "row",
+            "marginBottom": -2,
           }
         }
       >
@@ -1705,7 +1708,6 @@ exports[`InTodaysEdition portrait 810 1`] = `
               "color": "#CC0000",
               "fontFamily": "GillSansMTStd-Medium",
               "fontSize": 13,
-              "marginBottom": 15,
               "textDecorationLine": "none",
             }
           }
@@ -1715,6 +1717,7 @@ exports[`InTodaysEdition portrait 810 1`] = `
         <View
           style={
             Object {
+              "marginBottom": 2,
               "marginLeft": 5,
               "marginTop": 2,
             }
@@ -1770,7 +1773,10 @@ exports[`InTodaysEdition portrait 810 1`] = `
       <View
         style={
           Object {
+            "alignItems": "flex-end",
+            "flex": 1,
             "flexDirection": "row",
+            "marginBottom": -2,
           }
         }
       >
@@ -1780,7 +1786,6 @@ exports[`InTodaysEdition portrait 810 1`] = `
               "color": "#CC0000",
               "fontFamily": "GillSansMTStd-Medium",
               "fontSize": 13,
-              "marginBottom": 15,
               "textDecorationLine": "none",
             }
           }
@@ -1790,6 +1795,7 @@ exports[`InTodaysEdition portrait 810 1`] = `
         <View
           style={
             Object {
+              "marginBottom": 2,
               "marginLeft": 5,
               "marginTop": 2,
             }
@@ -1845,7 +1851,10 @@ exports[`InTodaysEdition portrait 810 1`] = `
       <View
         style={
           Object {
+            "alignItems": "flex-end",
+            "flex": 1,
             "flexDirection": "row",
+            "marginBottom": -2,
           }
         }
       >
@@ -1855,7 +1864,6 @@ exports[`InTodaysEdition portrait 810 1`] = `
               "color": "#CC0000",
               "fontFamily": "GillSansMTStd-Medium",
               "fontSize": 13,
-              "marginBottom": 15,
               "textDecorationLine": "none",
             }
           }
@@ -1865,6 +1873,7 @@ exports[`InTodaysEdition portrait 810 1`] = `
         <View
           style={
             Object {
+              "marginBottom": 2,
               "marginLeft": 5,
               "marginTop": 2,
             }
@@ -1920,7 +1929,10 @@ exports[`InTodaysEdition portrait 810 1`] = `
       <View
         style={
           Object {
+            "alignItems": "flex-end",
+            "flex": 1,
             "flexDirection": "row",
+            "marginBottom": -2,
           }
         }
       >
@@ -1930,7 +1942,6 @@ exports[`InTodaysEdition portrait 810 1`] = `
               "color": "#CC0000",
               "fontFamily": "GillSansMTStd-Medium",
               "fontSize": 13,
-              "marginBottom": 15,
               "textDecorationLine": "none",
             }
           }
@@ -1940,6 +1951,7 @@ exports[`InTodaysEdition portrait 810 1`] = `
         <View
           style={
             Object {
+              "marginBottom": 2,
               "marginLeft": 5,
               "marginTop": 2,
             }
@@ -2031,7 +2043,10 @@ exports[`InTodaysEdition portrait 1024 1`] = `
       <View
         style={
           Object {
+            "alignItems": "flex-end",
+            "flex": 1,
             "flexDirection": "row",
+            "marginBottom": -2,
           }
         }
       >
@@ -2041,7 +2056,6 @@ exports[`InTodaysEdition portrait 1024 1`] = `
               "color": "#CC0000",
               "fontFamily": "GillSansMTStd-Medium",
               "fontSize": 14,
-              "marginBottom": 15,
               "textDecorationLine": "none",
             }
           }
@@ -2051,6 +2065,7 @@ exports[`InTodaysEdition portrait 1024 1`] = `
         <View
           style={
             Object {
+              "marginBottom": 2,
               "marginLeft": 5,
               "marginTop": 2,
             }
@@ -2106,7 +2121,10 @@ exports[`InTodaysEdition portrait 1024 1`] = `
       <View
         style={
           Object {
+            "alignItems": "flex-end",
+            "flex": 1,
             "flexDirection": "row",
+            "marginBottom": -2,
           }
         }
       >
@@ -2116,7 +2134,6 @@ exports[`InTodaysEdition portrait 1024 1`] = `
               "color": "#CC0000",
               "fontFamily": "GillSansMTStd-Medium",
               "fontSize": 14,
-              "marginBottom": 15,
               "textDecorationLine": "none",
             }
           }
@@ -2126,6 +2143,7 @@ exports[`InTodaysEdition portrait 1024 1`] = `
         <View
           style={
             Object {
+              "marginBottom": 2,
               "marginLeft": 5,
               "marginTop": 2,
             }
@@ -2181,7 +2199,10 @@ exports[`InTodaysEdition portrait 1024 1`] = `
       <View
         style={
           Object {
+            "alignItems": "flex-end",
+            "flex": 1,
             "flexDirection": "row",
+            "marginBottom": -2,
           }
         }
       >
@@ -2191,7 +2212,6 @@ exports[`InTodaysEdition portrait 1024 1`] = `
               "color": "#CC0000",
               "fontFamily": "GillSansMTStd-Medium",
               "fontSize": 14,
-              "marginBottom": 15,
               "textDecorationLine": "none",
             }
           }
@@ -2201,6 +2221,7 @@ exports[`InTodaysEdition portrait 1024 1`] = `
         <View
           style={
             Object {
+              "marginBottom": 2,
               "marginLeft": 5,
               "marginTop": 2,
             }
@@ -2256,7 +2277,10 @@ exports[`InTodaysEdition portrait 1024 1`] = `
       <View
         style={
           Object {
+            "alignItems": "flex-end",
+            "flex": 1,
             "flexDirection": "row",
+            "marginBottom": -2,
           }
         }
       >
@@ -2266,7 +2290,6 @@ exports[`InTodaysEdition portrait 1024 1`] = `
               "color": "#CC0000",
               "fontFamily": "GillSansMTStd-Medium",
               "fontSize": 14,
-              "marginBottom": 15,
               "textDecorationLine": "none",
             }
           }
@@ -2276,6 +2299,7 @@ exports[`InTodaysEdition portrait 1024 1`] = `
         <View
           style={
             Object {
+              "marginBottom": 2,
               "marginLeft": 5,
               "marginTop": 2,
             }
