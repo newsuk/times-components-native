@@ -2477,7 +2477,7 @@ exports[`tile a front portrait 768 1`] = `
         },
       ]
     }
-    columnCount={3}
+    columnCount={2}
     headlineMarginBottom={20}
     headlineStyle={
       Object {
@@ -3080,7 +3080,7 @@ exports[`tile a front portrait 810 1`] = `
         },
       ]
     }
-    columnCount={3}
+    columnCount={2}
     headlineMarginBottom={20}
     headlineStyle={
       Object {
@@ -3683,7 +3683,7 @@ exports[`tile a front portrait 834 0.75 ratio 1`] = `
         },
       ]
     }
-    columnCount={3}
+    columnCount={2}
     headlineMarginBottom={20}
     headlineStyle={
       Object {
@@ -4286,7 +4286,7 @@ exports[`tile a front portrait 834 less than 0.75 ratio 1`] = `
         },
       ]
     }
-    columnCount={3}
+    columnCount={2}
     headlineMarginBottom={20}
     headlineStyle={
       Object {
@@ -4889,7 +4889,7 @@ exports[`tile a front portrait 1024 1`] = `
         },
       ]
     }
-    columnCount={3}
+    columnCount={2}
     headlineMarginBottom={20}
     headlineStyle={
       Object {

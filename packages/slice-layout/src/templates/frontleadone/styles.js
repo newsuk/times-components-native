@@ -48,12 +48,20 @@ const calculateStyles = (orientation) => {
           paddingVertical: spacing(3),
         },
       },
+      "1194": {
+        ...sharedLandscapeStyles,
+        container: {
+          ...containerLandscape,
+          paddingTop: spacing(2),
+          paddingBottom: spacing(3),
+        },
+      },
       "1366": {
         ...sharedLandscapeStyles,
         container: {
           ...containerLandscape,
-          paddingTop: spacing(6),
-          paddingBottom: spacing(7),
+          paddingTop: spacing(4),
+          paddingBottom: spacing(5),
         },
         inTodaysEditionContainer: {
           width: columnToPercentageWithOrientation({
@@ -110,7 +118,7 @@ const calculateStyles = (orientation) => {
         ...sharedPortraitStyles,
         container: {
           ...containerPortrait,
-          paddingTop: spacing(3),
+          paddingTop: spacing(4),
           paddingBottom: spacing(4),
         },
         inTodaysEditionContainer: {
