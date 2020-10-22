@@ -69,6 +69,7 @@ const setupArticleMpuTestAd = (
         attributes: {
           slotName,
         },
+        children: [],
       },
       ...contentAfterControlGroupAd,
     ];
@@ -105,7 +106,6 @@ const setupArticleMpuTestAd = (
         slotName,
         inlineContent,
         skeletonProps,
-        display: "inline",
         width,
         height,
       },
@@ -115,13 +115,11 @@ const setupArticleMpuTestAd = (
   ];
 };
 
-export const setupAd = (
-  isTablet,
-  variants,
-  template,
-  content,
-  skeletonProps,
-) => {
+export const setupAd = (skeletonProps, variants) => {
+  const {
+    isTablet,
+    data: { content, template },
+  } = skeletonProps;
   if (!isTablet || !variants || !Object.keys(variants).length) return content;
 
   let currentAdSlotIndex;
@@ -137,7 +135,7 @@ export const setupAd = (
     return !isItemAd;
   });
 
-  if (!currentAdSlotIndex) return content;
+  if (!currentAdSlotIndex) return cleanedContent;
 
   // If tablet, only show on mainstandard template
   if (isTablet && template !== "mainstandard") return contentWithoutAdSlot;
@@ -145,7 +143,7 @@ export const setupAd = (
   const { articleMpu } = variants;
 
   if (!articleMpu || (articleMpu && template !== "mainstandard"))
-    return content;
+    return cleanedContent;
 
   return setupArticleMpuTestAd(
     articleMpu,
@@ -177,9 +175,7 @@ export const getStringBounds = (fontSettings, string) => {
   return { width, height };
 };
 
-export default memoize((isTablet, variants, template, content, skeletonProps) =>
-  collapsed(
-    isTablet,
-    setupAd(isTablet, variants, template, content, skeletonProps),
-  ),
-);
+export default memoize((skeletonProps, variants) => {
+  const { isTablet } = skeletonProps;
+  return collapsed(isTablet, setupAd(skeletonProps, variants));
+});

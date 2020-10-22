@@ -1,7 +1,13 @@
-import { spacing, tabletWidth } from "@times-components-native/styleguide";
-import { StyleSheet } from "react-native";
+import { StyleSheet, ViewStyle } from "react-native";
 
-const styles = {
+import { spacing, tabletWidth } from "@times-components-native/styleguide";
+
+interface Styles {
+  container: ViewStyle;
+  inlineAdContainer: ViewStyle;
+}
+
+const styles: Styles = {
   container: {
     flex: 1,
     flexDirection: "row",
@@ -13,4 +19,4 @@ const styles = {
   },
 };
 
-export default StyleSheet.create(styles);
+export default StyleSheet.create<Styles>(styles);

@@ -15,6 +15,7 @@ import { setIsTablet } from "@times-components-native/mocks/dimensions";
 import renderParagraph from "./renderer";
 import dropCapData from "./fixtures/drop-cap-showcase.json";
 import paragraphData from "./fixtures/paragraph-showcase.json";
+import inlineParagraphData from "./fixtures/inline-paragraph.json";
 
 export default () => {
   addSerializers(
@@ -32,6 +33,16 @@ export default () => {
       name: "paragraph with a drop cap",
       test: async () => {
         const testInstance = TestRenderer.create(renderParagraph(dropCapData));
+        expect(testInstance).toMatchSnapshot();
+      },
+    },
+    {
+      name: "inline paragraph",
+      test: async () => {
+        setIsTablet(true);
+        const testInstance = TestRenderer.create(
+          <Responsive>{renderParagraph(inlineParagraphData)}</Responsive>,
+        );
         expect(testInstance).toMatchSnapshot();
       },
     },

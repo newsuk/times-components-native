@@ -1,6 +1,7 @@
 import React, { useCallback } from "react";
 import { View } from "react-native";
 
+import { ParagraphContent } from "@times-components-native/types";
 import { tabletWidth } from "@times-components-native/styleguide";
 import { render } from "@times-components-native/markup-forest";
 import {
@@ -13,6 +14,7 @@ import { chunkInlineContent } from "./utils/chunkInlineContent";
 import { MeasureInlineContent } from "./measure/MeasureInlineContent";
 import Ad from "../ad";
 import styles from "./styles";
+import { SkeletonProps } from "./types";
 
 const assignWithId = (height: number) => (
   content: ParagraphContent,
@@ -24,7 +26,19 @@ const assignWithId = (height: number) => (
   };
 };
 
-export const InlineAd = (props) => {
+interface Props {
+  adConfig: Record<string, unknown>;
+  defaultFont: { lineHeight: number };
+  display: string;
+  // dropcapsDisabled: boolean;
+  height: number;
+  inlineContent: ParagraphContent[];
+  skeletonProps: SkeletonProps;
+  slotName: string;
+  width: number;
+}
+
+export const InlineAd = (props: Props) => {
   const {
     width: adWidth,
     height: adHeight,
@@ -34,12 +48,10 @@ export const InlineAd = (props) => {
   } = props;
 
   const renderChild = render(
-    renderers({
-      dropcapsDisabled: true,
-      ...skeletonProps,
-    }),
+    // @ts-ignore
+    renderers({ dropcapsDisabled: true, ...skeletonProps }),
   );
-  // eslint-disable-next-line react/prop-types
+
   const Child = useCallback(({ item, index }, inline = false) => {
     item.attributes = { ...item.attributes, inline };
     return (
@@ -51,7 +63,10 @@ export const InlineAd = (props) => {
     );
   }, []);
 
-  const renderItem = (inline) => (item, index) => {
+  const renderItem = (inline: boolean) => (
+    item: ParagraphContent,
+    index: number,
+  ) => {
     const toRender = Child({ item, index }, inline);
     // return narrowContent ? (
     //   <View style={styles.keylineWrapper}>{toRender}</View>
@@ -60,8 +75,6 @@ export const InlineAd = (props) => {
     // );
     return toRender;
   };
-
-  // const renderInlineContent = inlineContent?.map(renderItem);
 
   const { lineHeight } = defaultFont;
 

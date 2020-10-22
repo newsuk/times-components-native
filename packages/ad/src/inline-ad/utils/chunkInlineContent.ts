@@ -1,12 +1,7 @@
-import {
-  ChunkContents,
-  ContentParameters,
-  ContentMeasurements,
-} from "../types";
-// import { splitParagraphContentByLine } from "./splitParagraphContentByLine";
-import { splitParagraphContentByLine } from "@times-components-native/article-columns/utils/splitParagraphContentByLine";
+import { ChunkContents, ContentParameters } from "../types";
+import { splitParagraphContentByLine } from "@times-components-native/utils/src/splitParagraphContentByLine";
 
-import { ParagraphContent } from "../domain-types";
+import { Measurements, ParagraphContent } from "@times-components-native/types";
 
 type ChunkedContent = {
   chunks: ChunkContents[];
@@ -15,7 +10,7 @@ type ChunkedContent = {
 
 export const chunkInlineContent = (
   contents: ParagraphContent[],
-  contentMeasurements: ContentMeasurements,
+  contentMeasurements: Measurements,
   contentParameters: ContentParameters,
 ): ChunkedContent => {
   if (contents.length === 0)
@@ -24,7 +19,10 @@ export const chunkInlineContent = (
   const { contentHeight, contentLineHeight } = contentParameters;
 
   const chunkedContent = contents.reduce(
-    ({ chunks, currentInlineContentHeight }, currentContent) => {
+    (
+      { chunks, currentInlineContentHeight }: ChunkedContent,
+      currentContent: ParagraphContent,
+    ) => {
       const currentChunkIndex = Math.max(chunks.length - 1, 0);
       const currentChunk = chunks[currentChunkIndex] || [];
 
@@ -79,11 +77,7 @@ export const chunkInlineContent = (
         totalLinesHeightAdjustment +
         paddingAdjustment;
 
-      const [
-        contentA,
-        contentB,
-        updatedArticleMeasurements,
-      ] = splitParagraphContentByLine(
+      const [contentA, contentB] = splitParagraphContentByLine(
         currentContent,
         actualLineToSplit,
         contentMeasurements,

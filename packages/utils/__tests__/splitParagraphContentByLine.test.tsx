@@ -1,15 +1,14 @@
-import { ArticleMeasurements } from "../../types";
-
 import {
   calculateArticleContentSize,
   splitParagraphContent,
   splitParagraphContentByLine,
   splitParagraphContentChild,
-} from "../../utils/splitParagraphContentByLine";
-import { ParagraphContent } from "../../domain-types";
-import { uuid } from "../../utils/random";
+} from "../src/splitParagraphContentByLine";
 
-jest.mock("../../utils/random");
+import { Measurements, ParagraphContent } from "@times-components-native/types";
+import { uuid } from "@times-components-native/utils/src/random";
+
+jest.mock("@times-components-native/utils/src/random");
 
 const columnLineHeight = 20;
 describe("calculateArticleContentSize", () => {
@@ -580,7 +579,7 @@ describe("splitParagraphContentByLine", () => {
       id: "p1",
     });
 
-    const articleMeasurements: ArticleMeasurements = {
+    const measurements: Measurements = {
       bylineHeight: 0,
       bylineMargin: 0,
       contents: {
@@ -601,7 +600,7 @@ describe("splitParagraphContentByLine", () => {
     const paragraphContents = splitParagraphContentByLine(
       paragraph1,
       2,
-      articleMeasurements,
+      measurements,
       columnLineHeight,
     );
     expect(paragraphContents[0]).toEqual({

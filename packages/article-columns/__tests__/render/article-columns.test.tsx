@@ -2,10 +2,9 @@ import React from "react";
 import TestRenderer from "react-test-renderer";
 
 import { ArticleColumns } from "../../article-columns";
-import { ParagraphContent } from "../../domain-types";
 import MockMarkup from "@times-components-native/fixture-generator/src/mock-markup";
 import { MeasureArticle } from "../../measure/MeasureArticle";
-import { ArticleMeasurements } from "../../types";
+import { Measurements, ParagraphContent } from "@times-components-native/types";
 
 jest.mock("../../measure/MeasureArticle", () => ({
   MeasureArticle: "MeasureArticle",
@@ -56,7 +55,7 @@ describe("ArticleColumns", () => {
     ).props["renderMeasuredContents"];
 
     const idWithHeight = `0-${height}`;
-    const articleMeasurements: ArticleMeasurements = {
+    const articleMeasurements: Measurements = {
       bylineHeight: 20,
       bylineMargin: 10,
       contents: {

@@ -1,17 +1,17 @@
 import React, { useReducer } from "react";
 import { ScrollView, StyleSheet, View } from "react-native";
 
-import { ContentParameters, Line, ContentMeasurements } from "../types";
-
 import { MeasureContent } from "./MeasureInlineComponents";
 import { InlineMeasurementDispatch } from "./InlineMeasurementDispatchContext";
 import { initialState, reducer } from "./reducer";
-import { ParagraphContent } from "../domain-types";
+import { Measurements, ParagraphContent } from "@times-components-native/types";
+import { ContentParameters, Line, SkeletonProps } from "../types";
 
 interface Props {
   content: ParagraphContent[];
   contentParameters: ContentParameters;
-  renderMeasuredContents: (articleMeasurements: ContentMeasurements) => any;
+  renderMeasuredContents: (contentMeasurements: Measurements) => any;
+  skeletonProps: SkeletonProps;
 }
 
 const allContentMeasured = (
@@ -26,7 +26,7 @@ const allContentMeasured = (
 };
 
 export const InnerMeasureInlineContent: React.FC<
-  Props & { measurementState: ContentMeasurements }
+  Props & { measurementState: Measurements }
 > = ({
   content,
   contentParameters,

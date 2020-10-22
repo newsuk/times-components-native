@@ -1,7 +1,7 @@
 import renderTrees from "@times-components-native/markup-forest";
 import React, { memo } from "react";
 import { TextStyle, View } from "react-native";
-import { ParagraphContent } from "../domain-types";
+import { ParagraphContent } from "@times-components-native/types";
 import { getRenderers } from "@times-components-native/front-page/front-renderer";
 
 import { useMeasurementDispatchContext } from "./MeasurementDispatchContext";

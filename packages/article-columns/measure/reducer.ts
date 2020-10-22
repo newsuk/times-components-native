@@ -1,7 +1,8 @@
 import { Reducer } from "react";
-import { ArticleMeasurements, Line } from "../types";
+import { Measurements } from "@times-components-native/types";
+import { Line } from "../types";
 
-export const initialState: ArticleMeasurements = {
+export const initialState: Measurements = {
   contents: {
     lines: {},
     heights: {},
@@ -33,10 +34,7 @@ export type Action =
   | SetContentLinesAction
   | SetBylineAction;
 
-export const reducer: Reducer<ArticleMeasurements, Action> = (
-  state,
-  action,
-) => {
+export const reducer: Reducer<Measurements, Action> = (state, action) => {
   switch (action.type) {
     case "SET_CONTENT_HEIGHT":
       return {

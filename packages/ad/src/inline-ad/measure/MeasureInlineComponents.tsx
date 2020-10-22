@@ -1,14 +1,15 @@
-import renderTrees from "@times-components-native/markup-forest";
 import React, { memo } from "react";
 import { View } from "react-native";
-import { ParagraphContent } from "../domain-types";
-import getRenderers from "@times-components-native/article-skeleton/src/article-body/article-body-row.js";
-// import { getRenderers } from "@times-components-native/front-page/front-renderer";
 
+import renderTrees from "@times-components-native/markup-forest";
+import getRenderers from "@times-components-native/article-skeleton/src/article-body/article-body-row.js";
+import { ParagraphContent } from "@times-components-native/types";
 import { useInlineMeasurementDispatchContext } from "./InlineMeasurementDispatchContext";
+import { SkeletonProps } from "../types";
 
 interface Props {
   content: ParagraphContent;
+  skeletonProps: SkeletonProps;
 }
 
 export const MeasureContent: React.FC<Props> = memo(

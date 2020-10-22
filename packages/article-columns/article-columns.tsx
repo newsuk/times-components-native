@@ -1,5 +1,10 @@
 import React from "react";
-import { ArticleContent, ParagraphContent } from "./domain-types";
+import {
+  ArticleContent,
+  Measurements,
+  ParagraphContent,
+} from "@times-components-native/types";
+
 import { chunkContentIntoColumns } from "./utils/chunkContentIntoColumns";
 import { Columns, SingleColumn } from "./render/Columns";
 import { TextStyle } from "react-native";
@@ -63,7 +68,7 @@ export const ArticleColumns: React.FC<Props> = ({
       articleContents={paragraphs}
       columnParameters={columnParameters}
       style={style}
-      renderMeasuredContents={(articleMeasurements) => {
+      renderMeasuredContents={(articleMeasurements: Measurements) => {
         const articleColumns = chunkContentIntoColumns(
           paragraphs,
           articleMeasurements,

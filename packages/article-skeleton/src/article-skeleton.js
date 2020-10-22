@@ -1,11 +1,5 @@
-import React, { useCallback, useState, useMemo } from "react";
-import {
-  View,
-  FlatList,
-  ActivityIndicator,
-  Platform,
-  ScrollView,
-} from "react-native";
+import React, { useCallback, useMemo } from "react";
+import { View, ScrollView } from "react-native";
 import PropTypes from "prop-types";
 import { screenWidth } from "@times-components-native/utils";
 import { withTrackScrollDepth } from "@times-components-native/tracking";
@@ -48,34 +42,11 @@ const ArticleWithContent = (props) => {
     onRelatedArticlePress,
     onTopicPress,
     isTablet,
-    onViewed,
     narrowContent,
   } = props;
   const variants = useVariantTestingContext();
 
   const { id, url, content, template } = data;
-
-  const onViewableItemsChanged = useCallback((info) => {
-    if (!onViewed || !info.changed || !info.changed.length) return [];
-
-    return info.changed
-      .filter((viewableItem) => viewableItem.isViewable)
-      .map((viewableItem) => onViewed(viewableItem.item, data));
-  }, []);
-
-  const [loading, setLoading] = useState(true);
-  const Loading = useCallback(
-    () => (
-      <Gutter>
-        <ActivityIndicator size="large" animating={loading} />
-      </Gutter>
-    ),
-    [loading],
-  );
-
-  const onEndReached = () => {
-    setLoading(false);
-  };
 
   const header = useMemo(
     () => (
@@ -106,10 +77,7 @@ const ArticleWithContent = (props) => {
   );
 
   const fixedContent = useMemo(
-    () => [
-      ...fixup(isTablet, variants, template, content, props),
-      { name: "footer" },
-    ],
+    () => [...fixup(props, variants), { name: "footer" }],
     [content, isTablet],
   );
 
@@ -142,15 +110,6 @@ const ArticleWithContent = (props) => {
 
   const processedContent = fixedContent.map(renderItem);
 
-  // const renderFlatListItem = ({ item, index }) => {
-  //   const toRender = Child({ item, index });
-  //   return narrowContent ? (
-  //     <View style={styles.keylineWrapper}>{toRender}</View>
-  //   ) : (
-  //     toRender
-  //   );
-  // };
-
   return (
     <View style={styles.articleContainer}>
       <Viewport.Tracker>
@@ -158,23 +117,6 @@ const ArticleWithContent = (props) => {
           {header}
           {processedContent}
         </ScrollView>
-        {/* <FlatList
-          data={fixedContent}
-          extraData={loading}
-          ListEmptyComponent={Loading}
-          ListHeaderComponent={header}
-          ListFooterComponent={Loading}
-          onEndReached={onEndReached}
-          renderItem={renderFlatListItem}
-          onViewableItemsChanged={onViewableItemsChanged}
-          removeClippedSubviews={false}
-          keyExtractor={(item, index) => index.toString()}
-          initialNumToRender={4}
-          windowSize={3}
-          nestedScrollEnabled
-          testID="flat-list-article"
-          style={styles.scroller}
-        /> */}
       </Viewport.Tracker>
     </View>
   );
