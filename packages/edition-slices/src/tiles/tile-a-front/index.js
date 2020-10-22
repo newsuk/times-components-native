@@ -51,6 +51,7 @@ const TileAFront = ({ onPress, tile, orientation }) => {
         columnCount={columnCount}
         bylines={article.bylines}
         bylineMarginBottom={styles.bylineMarginBottom}
+        straplineMarginTop={styles.straplineMarginTop}
         straplineMarginBottom={styles.straplineMarginBottom}
         headlineMarginBottom={styles.headlineMarginBottom}
         summaryLineHeight={styles.summary.lineHeight}
