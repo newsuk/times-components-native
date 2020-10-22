@@ -64,6 +64,7 @@ const props = {
   template: "mainstandard",
   summaryStyle: { backgroundColor: "orange" },
   headlineMarginBottom: 10,
+  straplineMarginTop: 10,
   straplineMarginBottom: 20,
   bylineMarginBottom: 15,
   summaryLineHeight: 20,

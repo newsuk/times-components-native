@@ -270,6 +270,7 @@ describe("getFrontTileConfig", () => {
       },
       strapline: {
         height: 0,
+        marginTop: 20,
         marginBottom: 20,
       },
       bylines: {
