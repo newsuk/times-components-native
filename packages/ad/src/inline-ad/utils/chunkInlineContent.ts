@@ -39,7 +39,7 @@ export const chunkInlineContent = (
       // no capacity in inline chunk, start adding into overflow chunk
       if (inlineContentHeightRemaining === 0) {
         return {
-          chunks: [currentChunk, []],
+          chunks: [chunks[0], [currentContent]],
           currentInlineContentHeight,
         };
       }

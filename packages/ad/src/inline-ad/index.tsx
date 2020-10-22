@@ -66,15 +66,7 @@ export const InlineAd = (props: Props) => {
   const renderItem = (inline: boolean) => (
     item: ParagraphContent,
     index: number,
-  ) => {
-    const toRender = Child({ item, index }, inline);
-    // return narrowContent ? (
-    //   <View style={styles.keylineWrapper}>{toRender}</View>
-    // ) : (
-    //   toRender
-    // );
-    return toRender;
-  };
+  ) => Child({ item, index }, inline);
 
   const { lineHeight } = defaultFont;
 
