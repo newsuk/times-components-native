@@ -25,7 +25,8 @@ const sharedSummary = {
 const sharedStyles = {
   summary: { ...sharedSummary },
   bylineMarginBottom: spacing(3),
-  headlineMarginBottom: spacing(2),
+  headlineMarginBottom: spacing(4),
+  straplineMarginTop: spacing(2),
   straplineMarginBottom: spacing(3),
 };
 

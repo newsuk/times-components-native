@@ -12,7 +12,8 @@ describe("getFrontTileConfig", () => {
       },
       strapline: {
         height: 100,
-        marginBottom: 20,
+        marginTop: 10,
+        marginBottom: 15,
       },
       bylines: {
         height: 100,
@@ -54,7 +55,8 @@ describe("getFrontTileConfig", () => {
       },
       strapline: {
         height: 80,
-        marginBottom: 20,
+        marginTop: 10,
+        marginBottom: 15,
       },
       bylines: {
         height: 100,
@@ -67,7 +69,7 @@ describe("getFrontTileConfig", () => {
     const config = getFrontTileConfig(summaryConfig);
     expect(config).toEqual({
       headline: {
-        marginBottom: 20,
+        marginBottom: 10,
         show: true,
       },
       byline: {
@@ -96,7 +98,8 @@ describe("getFrontTileConfig", () => {
       },
       strapline: {
         height: 80,
-        marginBottom: 20,
+        marginTop: 10,
+        marginBottom: 15,
       },
       bylines: {
         height: 100,
@@ -109,7 +112,7 @@ describe("getFrontTileConfig", () => {
     const config = getFrontTileConfig(summaryConfig);
     expect(config).toEqual({
       headline: {
-        marginBottom: 20,
+        marginBottom: 10,
         show: true,
       },
       byline: {
@@ -117,7 +120,7 @@ describe("getFrontTileConfig", () => {
         show: true,
       },
       strapline: {
-        marginBottom: 20,
+        marginBottom: 15,
         show: true,
       },
       content: {
@@ -138,7 +141,8 @@ describe("getFrontTileConfig", () => {
       },
       strapline: {
         height: 80,
-        marginBottom: 20,
+        marginTop: 10,
+        marginBottom: 15,
       },
       bylines: {
         height: 80,
@@ -151,7 +155,7 @@ describe("getFrontTileConfig", () => {
     const config = getFrontTileConfig(summaryConfig);
     expect(config).toEqual({
       headline: {
-        marginBottom: 20,
+        marginBottom: 10,
         show: true,
       },
       byline: {
@@ -159,7 +163,7 @@ describe("getFrontTileConfig", () => {
         show: true,
       },
       strapline: {
-        marginBottom: 20,
+        marginBottom: 15,
         show: true,
       },
       content: {
@@ -180,7 +184,8 @@ describe("getFrontTileConfig", () => {
       },
       strapline: {
         height: 80,
-        marginBottom: 20,
+        marginTop: 20,
+        marginBottom: 15,
       },
       bylines: {
         height: 80,
@@ -201,7 +206,7 @@ describe("getFrontTileConfig", () => {
         show: true,
       },
       strapline: {
-        marginBottom: 20,
+        marginBottom: 15,
         show: true,
       },
       content: {
@@ -222,7 +227,8 @@ describe("getFrontTileConfig", () => {
       },
       strapline: {
         height: 0,
-        marginBottom: 20,
+        marginTop: 10,
+        marginBottom: 25,
       },
       bylines: {
         height: 100,
@@ -243,7 +249,7 @@ describe("getFrontTileConfig", () => {
         show: true,
       },
       strapline: {
-        marginBottom: 20,
+        marginBottom: 25,
         show: false,
       },
       content: {
@@ -264,6 +270,7 @@ describe("getFrontTileConfig", () => {
       },
       strapline: {
         height: 0,
+        marginTop: 20,
         marginBottom: 20,
       },
       bylines: {

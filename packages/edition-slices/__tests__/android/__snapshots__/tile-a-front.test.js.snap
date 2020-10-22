@@ -76,6 +76,7 @@ exports[`tile a front landscape 1024 1`] = `
     }
     strapline="Three Conservative MPs resign"
     straplineMarginBottom={15}
+    straplineMarginTop={10}
     straplineStyle={
       Object {
         "color": "#333333",
@@ -669,7 +670,7 @@ exports[`tile a front landscape 1080 1`] = `
       ]
     }
     columnCount={1}
-    headlineMarginBottom={10}
+    headlineMarginBottom={15}
     headlineStyle={
       Object {
         "fontFamily": "TimesModern-Bold",
@@ -679,6 +680,7 @@ exports[`tile a front landscape 1080 1`] = `
     }
     strapline="Three Conservative MPs resign"
     straplineMarginBottom={15}
+    straplineMarginTop={10}
     straplineStyle={
       Object {
         "color": "#333333",
@@ -1272,7 +1274,7 @@ exports[`tile a front landscape 1194 1`] = `
       ]
     }
     columnCount={1}
-    headlineMarginBottom={10}
+    headlineMarginBottom={15}
     headlineStyle={
       Object {
         "fontFamily": "TimesModern-Bold",
@@ -1282,6 +1284,7 @@ exports[`tile a front landscape 1194 1`] = `
     }
     strapline="Three Conservative MPs resign"
     straplineMarginBottom={15}
+    straplineMarginTop={10}
     straplineStyle={
       Object {
         "color": "#333333",
@@ -1875,7 +1878,7 @@ exports[`tile a front landscape 1366 1`] = `
       ]
     }
     columnCount={1}
-    headlineMarginBottom={10}
+    headlineMarginBottom={15}
     headlineStyle={
       Object {
         "fontFamily": "TimesModern-Bold",
@@ -1885,6 +1888,7 @@ exports[`tile a front landscape 1366 1`] = `
     }
     strapline="Three Conservative MPs resign"
     straplineMarginBottom={15}
+    straplineMarginTop={10}
     straplineStyle={
       Object {
         "color": "#333333",
@@ -2488,6 +2492,7 @@ exports[`tile a front portrait 768 1`] = `
     }
     strapline="Three Conservative MPs resign"
     straplineMarginBottom={15}
+    straplineMarginTop={10}
     straplineStyle={
       Object {
         "color": "#333333",
@@ -3091,6 +3096,7 @@ exports[`tile a front portrait 810 1`] = `
     }
     strapline="Three Conservative MPs resign"
     straplineMarginBottom={15}
+    straplineMarginTop={10}
     straplineStyle={
       Object {
         "color": "#333333",
@@ -3694,6 +3700,7 @@ exports[`tile a front portrait 834 0.75 ratio 1`] = `
     }
     strapline="Three Conservative MPs resign"
     straplineMarginBottom={15}
+    straplineMarginTop={10}
     straplineStyle={
       Object {
         "color": "#333333",
@@ -4297,6 +4304,7 @@ exports[`tile a front portrait 834 less than 0.75 ratio 1`] = `
     }
     strapline="Three Conservative MPs resign"
     straplineMarginBottom={15}
+    straplineMarginTop={10}
     straplineStyle={
       Object {
         "color": "#333333",
@@ -4900,6 +4908,7 @@ exports[`tile a front portrait 1024 1`] = `
     }
     strapline="Three Conservative MPs resign"
     straplineMarginBottom={15}
+    straplineMarginTop={10}
     straplineStyle={
       Object {
         "color": "#333333",

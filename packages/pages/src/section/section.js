@@ -21,7 +21,8 @@ const {
   onPuzzlePress: () => null,
 };
 
-const onArticlePress = ({ id }) => onArticlePressBridge(id);
+const onArticlePress = ({ id, isPuff = false }) =>
+  onArticlePressBridge(id, isPuff);
 const onLinkPress = ({ url }) => onLinkPressBridge(url);
 
 const onPuzzlePress = ({ id, title, url }) =>

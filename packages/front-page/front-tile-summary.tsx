@@ -29,6 +29,7 @@ interface Props {
   showKeyline?: boolean;
   bylineContainerStyle?: any;
   headlineMarginBottom: number;
+  straplineMarginTop: number;
   straplineMarginBottom: number;
   bylineMarginBottom: number;
   summaryLineHeight: number;
@@ -94,6 +95,7 @@ const renderByline = (props: Props) => {
 const FrontTileSummary: React.FC<Props> = (props) => {
   const {
     bylineMarginBottom,
+    straplineMarginTop,
     straplineMarginBottom,
     headlineMarginBottom,
     summaryLineHeight,
@@ -161,6 +163,7 @@ const FrontTileSummary: React.FC<Props> = (props) => {
               },
               strapline: {
                 height: straplineHeight,
+                marginTop: straplineMarginTop,
                 marginBottom: straplineMarginBottom,
               },
               bylines: {
