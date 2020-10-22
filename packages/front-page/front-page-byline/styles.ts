@@ -17,6 +17,7 @@ export default () => ({
   withKeyline: {
     borderTopWidth: 1,
     borderColor: colours.functional.darkGrey,
-    paddingTop: spacing(1),
+    paddingTop: spacing(1) + 1,
+    marginTop: spacing(1),
   },
 });
