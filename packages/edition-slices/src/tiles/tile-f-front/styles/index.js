@@ -36,6 +36,7 @@ const sharedLandscapeStyles = {
     fontSize: 14,
     lineHeight: 18,
   },
+  straplineMarginTop: spacing(2),
   straplineMarginBottom: spacing(3),
   headlineMarginBottom: spacing(2),
   bylineMarginBottom: spacing(3),
@@ -47,8 +48,6 @@ const sharedPortraitStyles = {
     flex: 1,
     flexDirection: "column",
   },
-  headlineMarginBottom: spacing(1),
-  straplineMarginBottom: spacing(3),
   bylineMarginBottom: 0,
   summary: {
     ...summary,
@@ -59,7 +58,6 @@ const sharedPortraitStyles = {
 
 const portrait834 = {
   ...sharedPortraitStyles,
-  headlineMarginBottom: spacing(2),
   headline: {
     ...headline,
   },
@@ -149,6 +147,8 @@ const styles = {
         fontSize: 24,
         lineHeight: 24,
       },
+      headlineMarginBottom: spacing(4),
+      straplineMarginTop: spacing(1),
       straplineMarginBottom: spacing(2),
     },
     "810": {
@@ -167,13 +167,17 @@ const styles = {
         fontSize: 24,
         lineHeight: 24,
       },
+      headlineMarginBottom: spacing(4),
+      straplineMarginTop: spacing(1),
       straplineMarginBottom: spacing(3),
     },
     "834": {
       ratios: {
         0: {
           ...portrait834,
-          straplineMarginBottom: spacing(4),
+          headlineMarginBottom: spacing(4),
+          straplineMarginTop: spacing(2),
+          straplineMarginBottom: spacing(3),
           headline: {
             ...portrait834.headline,
             fontSize: 50,
@@ -187,6 +191,9 @@ const styles = {
         },
         0.75: {
           ...portrait834,
+          headlineMarginBottom: spacing(4),
+          straplineMarginTop: spacing(2),
+          straplineMarginBottom: spacing(3),
           headline: {
             ...portrait834.headline,
             fontSize: 45,
@@ -216,6 +223,8 @@ const styles = {
         fontSize: 30,
         lineHeight: 30,
       },
+      headlineMarginBottom: spacing(4),
+      straplineMarginTop: spacing(1),
       straplineMarginBottom: spacing(5),
       summary: {
         ...summary,

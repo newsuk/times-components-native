@@ -44,6 +44,7 @@ const sharedStyles = {
 const sharedLandscapeStyles = {
   ...sharedStyles,
   headlineMarginBottom: spacing(2),
+  straplineMarginTop: spacing(2),
   straplineMarginBottom: spacing(3),
   bylineMarginBottom: spacing(3),
 };
@@ -51,6 +52,7 @@ const sharedLandscapeStyles = {
 const sharedPortraitStyles = {
   ...sharedStyles,
   headlineMarginBottom: spacing(4),
+  straplineMarginTop: spacing(2),
   straplineMarginBottom: spacing(3),
   bylineMarginBottom: 0,
 };
@@ -68,6 +70,9 @@ const styles = {
   landscape: {
     "1024": {
       ...sharedLandscapeStyles,
+      headlineMarginBottom: spacing(2),
+      straplineMarginTop: spacing(2),
+      straplineMarginBottom: spacing(3),
       headline: {
         ...headline,
         fontSize: 42,
@@ -76,6 +81,9 @@ const styles = {
     },
     "1080": {
       ...sharedLandscapeStyles,
+      headlineMarginBottom: spacing(3),
+      straplineMarginTop: spacing(2),
+      straplineMarginBottom: spacing(3),
       headline: {
         ...headline,
         fontSize: 45,
@@ -84,6 +92,9 @@ const styles = {
     },
     "1112": {
       ...sharedLandscapeStyles,
+      headlineMarginBottom: spacing(3),
+      straplineMarginTop: spacing(2),
+      straplineMarginBottom: spacing(3),
       headline: {
         ...headline,
         fontSize: 45,
@@ -92,6 +103,9 @@ const styles = {
     },
     "1366": {
       ...sharedLandscapeStyles,
+      headlineMarginBottom: spacing(3),
+      straplineMarginTop: spacing(2),
+      straplineMarginBottom: spacing(3),
       headline: {
         ...headline,
         fontSize: 55,

@@ -10,6 +10,7 @@ interface SummaryConfig {
   };
   strapline: {
     height: number;
+    marginTop: number;
     marginBottom: number;
   };
   bylines: {
@@ -24,7 +25,10 @@ interface SummaryConfig {
 export const getFrontTileConfig = (summaryConfig: SummaryConfig) => {
   const { container, headline, strapline, bylines, content } = summaryConfig;
 
-  const headlineWithMargin = headline.height + headline.marginBottom;
+  const headlineMargin =
+    strapline.height === 0 ? headline.marginBottom : strapline.marginTop;
+
+  const headlineWithMargin = headlineMargin + headline.height;
 
   const straplineWithMargin =
     strapline.height > 0 ? strapline.height + strapline.marginBottom : 0;
@@ -49,7 +53,7 @@ export const getFrontTileConfig = (summaryConfig: SummaryConfig) => {
       show: true,
       marginBottom:
         canAccommodateStrapline || canAccommodateByline || canAccommodateContent
-          ? headline.marginBottom
+          ? headlineMargin
           : 0,
     },
     strapline: {
