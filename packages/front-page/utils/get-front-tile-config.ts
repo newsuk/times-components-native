@@ -28,7 +28,7 @@ export const getFrontTileConfig = (summaryConfig: SummaryConfig) => {
   const headlineMargin =
     strapline.height === 0 ? headline.marginBottom : strapline.marginTop;
 
-  const headlineWithMargin = headlineMargin + headline.marginBottom;
+  const headlineWithMargin = headlineMargin + headline.height;
 
   const straplineWithMargin =
     strapline.height > 0 ? strapline.height + strapline.marginBottom : 0;

@@ -16,7 +16,7 @@ const TileHFront = ({ onPress, tile, orientation }) => {
   return (
     <TileLink onPress={onPress} style={styles.container} tile={tile}>
       <FrontTileSummary
-        headlineStyle={[styles.headline]}
+        headlineStyle={styles.headline}
         headlineMarginBottom={styles.headlineMarginBottom}
         strapline={strapline}
         straplineStyle={styles.strapline}

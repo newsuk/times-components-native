@@ -112,7 +112,7 @@ describe("getFrontTileConfig", () => {
     const config = getFrontTileConfig(summaryConfig);
     expect(config).toEqual({
       headline: {
-        marginBottom: 25,
+        marginBottom: 10,
         show: true,
       },
       byline: {
@@ -155,7 +155,7 @@ describe("getFrontTileConfig", () => {
     const config = getFrontTileConfig(summaryConfig);
     expect(config).toEqual({
       headline: {
-        marginBottom: 20,
+        marginBottom: 10,
         show: true,
       },
       byline: {
@@ -163,7 +163,7 @@ describe("getFrontTileConfig", () => {
         show: true,
       },
       strapline: {
-        marginBottom: 20,
+        marginBottom: 15,
         show: true,
       },
       content: {
@@ -184,7 +184,7 @@ describe("getFrontTileConfig", () => {
       },
       strapline: {
         height: 80,
-        marginTop: 10,
+        marginTop: 20,
         marginBottom: 15,
       },
       bylines: {
@@ -206,7 +206,6 @@ describe("getFrontTileConfig", () => {
         show: true,
       },
       strapline: {
-        marginTop: 10,
         marginBottom: 15,
         show: true,
       },
@@ -229,7 +228,7 @@ describe("getFrontTileConfig", () => {
       strapline: {
         height: 0,
         marginTop: 10,
-        marginBottom: 15,
+        marginBottom: 25,
       },
       bylines: {
         height: 100,
@@ -250,7 +249,7 @@ describe("getFrontTileConfig", () => {
         show: true,
       },
       strapline: {
-        marginBottom: 20,
+        marginBottom: 25,
         show: false,
       },
       content: {
