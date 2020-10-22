@@ -139,8 +139,8 @@ const styles = {
       ...sharedPortraitStyles,
       headline: {
         ...sharedHeadline,
-        fontSize: 40,
-        lineHeight: 40,
+        fontSize: 28,
+        lineHeight: 28,
       },
       strapline: {
         ...sharedStrapline,
