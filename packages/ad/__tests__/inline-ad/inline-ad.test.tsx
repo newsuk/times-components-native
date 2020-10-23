@@ -23,9 +23,6 @@ export const createParagraphWithText = (text: string): ParagraphContent => ({
 
 describe("InlineAd", () => {
   const para1 = createParagraphWithText("article content");
-  // const para2 = createParagraphWithText("more article content");
-
-  // const content = [para1, para2];
   const content = [para1];
 
   const props = {
