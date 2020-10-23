@@ -65,6 +65,15 @@ exports[`tile g front landscape 1024 1`] = `
         },
       ]
     }
+    containerStyle={
+      Object {
+        "backgroundColor": "#FFFFFF",
+        "bottom": 0,
+        "paddingTop": 10,
+        "position": "absolute",
+        "width": "100%",
+      }
+    }
     headlineMarginBottom={5}
     headlineStyle={
       Object {
@@ -656,6 +665,15 @@ exports[`tile g front landscape 1080 1`] = `
           "image": null,
         },
       ]
+    }
+    containerStyle={
+      Object {
+        "backgroundColor": "#FFFFFF",
+        "bottom": 0,
+        "paddingTop": 10,
+        "position": "absolute",
+        "width": "100%",
+      }
     }
     headlineMarginBottom={5}
     headlineStyle={
@@ -1249,6 +1267,15 @@ exports[`tile g front landscape 1194 1`] = `
         },
       ]
     }
+    containerStyle={
+      Object {
+        "backgroundColor": "#FFFFFF",
+        "bottom": 0,
+        "paddingTop": 10,
+        "position": "absolute",
+        "width": "100%",
+      }
+    }
     headlineMarginBottom={5}
     headlineStyle={
       Object {
@@ -1841,6 +1868,15 @@ exports[`tile g front landscape 1366 1`] = `
         },
       ]
     }
+    containerStyle={
+      Object {
+        "backgroundColor": "#FFFFFF",
+        "bottom": 0,
+        "paddingTop": 10,
+        "position": "absolute",
+        "width": "100%",
+      }
+    }
     headlineMarginBottom={10}
     headlineStyle={
       Object {
@@ -2431,6 +2467,15 @@ exports[`tile g front portrait 768 1`] = `
           "image": null,
         },
       ]
+    }
+    containerStyle={
+      Object {
+        "backgroundColor": "#FFFFFF",
+        "bottom": 0,
+        "paddingTop": 10,
+        "position": "absolute",
+        "width": "100%",
+      }
     }
     headlineMarginBottom={10}
     headlineStyle={
@@ -3023,6 +3068,15 @@ exports[`tile g front portrait 810 1`] = `
         },
       ]
     }
+    containerStyle={
+      Object {
+        "backgroundColor": "#FFFFFF",
+        "bottom": 0,
+        "paddingTop": 10,
+        "position": "absolute",
+        "width": "100%",
+      }
+    }
     headlineMarginBottom={10}
     headlineStyle={
       Object {
@@ -3613,6 +3667,15 @@ exports[`tile g front portrait 834 0.75 ratio 1`] = `
           "image": null,
         },
       ]
+    }
+    containerStyle={
+      Object {
+        "backgroundColor": "#FFFFFF",
+        "bottom": 0,
+        "paddingTop": 10,
+        "position": "absolute",
+        "width": "100%",
+      }
     }
     headlineMarginBottom={10}
     headlineStyle={
@@ -4205,6 +4268,15 @@ exports[`tile g front portrait 834 less than 0.75 ratio 1`] = `
         },
       ]
     }
+    containerStyle={
+      Object {
+        "backgroundColor": "#FFFFFF",
+        "bottom": 0,
+        "paddingTop": 10,
+        "position": "absolute",
+        "width": "100%",
+      }
+    }
     headlineMarginBottom={15}
     headlineStyle={
       Object {
@@ -4795,6 +4867,15 @@ exports[`tile g front portrait 1024 1`] = `
           "image": null,
         },
       ]
+    }
+    containerStyle={
+      Object {
+        "backgroundColor": "#FFFFFF",
+        "bottom": 0,
+        "paddingTop": 10,
+        "position": "absolute",
+        "width": "100%",
+      }
     }
     headlineMarginBottom={15}
     headlineStyle={

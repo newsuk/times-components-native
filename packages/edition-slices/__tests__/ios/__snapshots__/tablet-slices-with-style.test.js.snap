@@ -1874,7 +1874,7 @@ exports[`23. front lead two - portrait - medium 1`] = `
       <View
         style={
           Object {
-            "borderColor": "#999999",
+            "borderColor": "#DBDBDB",
             "borderRightWidth": 1,
             "borderStyle": "solid",
             "marginVertical": 0,
@@ -4473,7 +4473,7 @@ exports[`57. front lead two - portrait - wide 1`] = `
       <View
         style={
           Object {
-            "borderColor": "#999999",
+            "borderColor": "#DBDBDB",
             "borderRightWidth": 1,
             "borderStyle": "solid",
             "marginVertical": 0,
@@ -4549,7 +4549,7 @@ exports[`58. front lead two - landscape - wide 1`] = `
       <View
         style={
           Object {
-            "borderColor": "#999999",
+            "borderColor": "#DBDBDB",
             "borderRightWidth": 1,
             "borderStyle": "solid",
             "marginVertical": 0,
@@ -4568,7 +4568,7 @@ exports[`58. front lead two - landscape - wide 1`] = `
       <View
         style={
           Object {
-            "borderColor": "#999999",
+            "borderColor": "#DBDBDB",
             "borderRightWidth": 1,
             "borderStyle": "solid",
             "marginVertical": 0,
@@ -7361,7 +7361,7 @@ exports[`91. front lead two - portrait - huge 1`] = `
         <View
           style={
             Object {
-              "borderColor": "#999999",
+              "borderColor": "#DBDBDB",
               "borderRightWidth": 1,
               "borderStyle": "solid",
               "marginVertical": 0,
@@ -7447,7 +7447,7 @@ exports[`92. front lead two - landscape - huge 1`] = `
         <View
           style={
             Object {
-              "borderColor": "#999999",
+              "borderColor": "#DBDBDB",
               "borderRightWidth": 1,
               "borderStyle": "solid",
               "marginVertical": 0,
@@ -7466,7 +7466,7 @@ exports[`92. front lead two - landscape - huge 1`] = `
         <View
           style={
             Object {
-              "borderColor": "#999999",
+              "borderColor": "#DBDBDB",
               "borderRightWidth": 1,
               "borderStyle": "solid",
               "marginVertical": 0,

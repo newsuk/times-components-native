@@ -1,9 +1,18 @@
 import {
+  colours,
   fonts,
   spacing,
   globalSpacingStyles,
 } from "@times-components-native/styleguide";
 import { getStyleByDeviceSize } from "@times-components-native/styleguide/src/styleguide";
+
+const sharedSummaryContainer = {
+  position: "absolute",
+  bottom: 0,
+  backgroundColor: colours.functional.white,
+  width: "100%",
+  paddingTop: spacing(2),
+};
 
 const sharedHeadline = {
   ...globalSpacingStyles.tabletHeadline,
@@ -17,6 +26,7 @@ const sharedSummary = {
 };
 
 const sharedStyles = {
+  summaryContainer: { ...sharedSummaryContainer },
   imageContainer: {
     width: "100%",
     marginBottom: spacing(1),
