@@ -30,7 +30,6 @@ interface Props {
   adConfig: Record<string, unknown>;
   defaultFont: { lineHeight: number };
   display: string;
-  // dropcapsDisabled: boolean;
   height: number;
   inlineContent: ParagraphContent[];
   skeletonProps: SkeletonProps;
