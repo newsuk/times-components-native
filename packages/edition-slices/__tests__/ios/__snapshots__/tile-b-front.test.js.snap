@@ -73,8 +73,10 @@ exports[`tile b front landscape 1024 1`] = `
         "lineHeight": 22,
       }
     }
+    justified={false}
     showKeyline={false}
     straplineMarginBottom={0}
+    straplineMarginTop={0}
     summary={
       Array [
         Object {
@@ -128,10 +130,8 @@ exports[`tile b front landscape 1024 1`] = `
       Object {
         "fontSize": 14,
         "lineHeight": 20,
-        "textAlign": "justify",
       }
     }
-    template="mainstandard"
     tile={
       Object {
         "article": Object {
@@ -667,8 +667,10 @@ exports[`tile b front landscape 1080 1`] = `
         "lineHeight": 25,
       }
     }
+    justified={false}
     showKeyline={false}
     straplineMarginBottom={0}
+    straplineMarginTop={0}
     summary={
       Array [
         Object {
@@ -722,10 +724,8 @@ exports[`tile b front landscape 1080 1`] = `
       Object {
         "fontSize": 14,
         "lineHeight": 20,
-        "textAlign": "justify",
       }
     }
-    template="mainstandard"
     tile={
       Object {
         "article": Object {
@@ -1261,8 +1261,10 @@ exports[`tile b front landscape 1194 1`] = `
         "lineHeight": 25,
       }
     }
+    justified={false}
     showKeyline={false}
     straplineMarginBottom={0}
+    straplineMarginTop={0}
     summary={
       Array [
         Object {
@@ -1316,10 +1318,8 @@ exports[`tile b front landscape 1194 1`] = `
       Object {
         "fontSize": 14,
         "lineHeight": 20,
-        "textAlign": "justify",
       }
     }
-    template="mainstandard"
     tile={
       Object {
         "article": Object {
@@ -1855,8 +1855,10 @@ exports[`tile b front landscape 1366 1`] = `
         "lineHeight": 25,
       }
     }
+    justified={false}
     showKeyline={false}
     straplineMarginBottom={0}
+    straplineMarginTop={0}
     summary={
       Array [
         Object {
@@ -1910,10 +1912,8 @@ exports[`tile b front landscape 1366 1`] = `
       Object {
         "fontSize": 15,
         "lineHeight": 20,
-        "textAlign": "justify",
       }
     }
-    template="mainstandard"
     tile={
       Object {
         "article": Object {
@@ -2449,8 +2449,10 @@ exports[`tile b front portrait 768 1`] = `
         "lineHeight": 22,
       }
     }
+    justified={false}
     showKeyline={true}
     straplineMarginBottom={0}
+    straplineMarginTop={0}
     summary={
       Array [
         Object {
@@ -2504,10 +2506,8 @@ exports[`tile b front portrait 768 1`] = `
       Object {
         "fontSize": 14,
         "lineHeight": 18,
-        "textAlign": "justify",
       }
     }
-    template="mainstandard"
     tile={
       Object {
         "article": Object {
@@ -3043,8 +3043,10 @@ exports[`tile b front portrait 810 1`] = `
         "lineHeight": 22,
       }
     }
+    justified={false}
     showKeyline={true}
     straplineMarginBottom={0}
+    straplineMarginTop={0}
     summary={
       Array [
         Object {
@@ -3098,10 +3100,8 @@ exports[`tile b front portrait 810 1`] = `
       Object {
         "fontSize": 14,
         "lineHeight": 18,
-        "textAlign": "justify",
       }
     }
-    template="mainstandard"
     tile={
       Object {
         "article": Object {
@@ -3637,8 +3637,10 @@ exports[`tile b front portrait 834 0.75 ratio 1`] = `
         "lineHeight": 22,
       }
     }
+    justified={false}
     showKeyline={true}
     straplineMarginBottom={0}
+    straplineMarginTop={0}
     summary={
       Array [
         Object {
@@ -3692,10 +3694,8 @@ exports[`tile b front portrait 834 0.75 ratio 1`] = `
       Object {
         "fontSize": 14,
         "lineHeight": 18,
-        "textAlign": "justify",
       }
     }
-    template="mainstandard"
     tile={
       Object {
         "article": Object {
@@ -4231,8 +4231,10 @@ exports[`tile b front portrait 834 less than 0.75 ratio 1`] = `
         "lineHeight": 24,
       }
     }
+    justified={false}
     showKeyline={true}
     straplineMarginBottom={0}
+    straplineMarginTop={0}
     summary={
       Array [
         Object {
@@ -4286,10 +4288,8 @@ exports[`tile b front portrait 834 less than 0.75 ratio 1`] = `
       Object {
         "fontSize": 14,
         "lineHeight": 18,
-        "textAlign": "justify",
       }
     }
-    template="mainstandard"
     tile={
       Object {
         "article": Object {
@@ -4825,8 +4825,10 @@ exports[`tile b front portrait 1024 1`] = `
         "lineHeight": 26,
       }
     }
+    justified={false}
     showKeyline={true}
     straplineMarginBottom={0}
+    straplineMarginTop={0}
     summary={
       Array [
         Object {
@@ -4882,7 +4884,6 @@ exports[`tile b front portrait 1024 1`] = `
         "lineHeight": 18,
       }
     }
-    template="mainstandard"
     tile={
       Object {
         "article": Object {

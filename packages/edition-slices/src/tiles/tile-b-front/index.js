@@ -35,18 +35,15 @@ const TileBFront = ({ onPress, tile, orientation }) => {
         headlineStyle={styles.headline}
         headlineMarginBottom={styles.headlineMarginBottom}
         bylineMarginBottom={styles.bylineMarginBottom}
+        straplineMarginTop={0}
         straplineMarginBottom={0}
         summaryLineHeight={styles.summary.lineHeight}
         summary={article.content}
-        summaryStyle={
-          article.template === "maincomment"
-            ? styles.commentSummary
-            : styles.summary
-        }
+        justified={false}
+        summaryStyle={styles.summary}
         showKeyline={showKeyline}
         tile={tile}
         bylines={article.bylines}
-        template={article.template}
       />
     </TileLink>
   );

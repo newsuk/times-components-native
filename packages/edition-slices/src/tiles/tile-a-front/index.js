@@ -47,7 +47,7 @@ const TileAFront = ({ onPress, tile, orientation }) => {
         strapline={strapline}
         straplineStyle={styles.strapline}
         tile={tile}
-        template={article.template}
+        justified={columnCount > 1}
         columnCount={columnCount}
         bylines={article.bylines}
         bylineMarginBottom={styles.bylineMarginBottom}

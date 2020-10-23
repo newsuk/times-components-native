@@ -61,7 +61,6 @@ const props = {
   headlineStyle: { backgroundColor: "blue" },
   straplineStyle: { backgroundColor: "green" },
   strapline: "Strapline Text",
-  template: "mainstandard",
   summaryStyle: { backgroundColor: "orange" },
   headlineMarginBottom: 10,
   straplineMarginTop: 10,

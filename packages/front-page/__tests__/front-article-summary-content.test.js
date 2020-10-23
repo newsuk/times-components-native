@@ -35,7 +35,7 @@ const component = (
   <FrontArticleSummaryContent
     bylines={bylines}
     whiteSpaceHeight={20}
-    template={"mainstandard"}
+    justified={false}
     linesOfTeaserToRender={1}
     style={{ backgoundColor: "red" }}
     summary={ast}

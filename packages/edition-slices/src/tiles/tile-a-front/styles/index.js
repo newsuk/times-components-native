@@ -8,7 +8,6 @@ import { getStyleByDeviceSize } from "@times-components-native/styleguide/src/st
 
 const summary = {
   ...globalSpacingStyles.tabletTeaser,
-  textAlign: "justify",
 };
 
 const headline = {
@@ -47,6 +46,11 @@ const sharedLandscapeStyles = {
   straplineMarginTop: spacing(2),
   straplineMarginBottom: spacing(3),
   bylineMarginBottom: spacing(3),
+  summary: {
+    ...summary,
+    fontSize: 14,
+    lineHeight: 20,
+  },
 };
 
 const sharedPortraitStyles = {
@@ -110,6 +114,11 @@ const styles = {
         ...headline,
         fontSize: 55,
         lineHeight: 55,
+      },
+      summary: {
+        ...summary,
+        fontSize: 15,
+        lineHeight: 20,
       },
     },
   },
