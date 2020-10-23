@@ -28,3 +28,33 @@ exports[`FrontArticleSummaryContent renders correctly 1`] = `
   </Text>
 </Text>
 `;
+
+exports[`FrontArticleSummaryContent renders correctly with justified text 1`] = `
+<Text
+  numberOfLines={9}
+  style={
+    Object {
+      "color": "#333333",
+      "flexWrap": "wrap",
+      "fontFamily": "TimesDigitalW04",
+      "fontSize": 14,
+      "lineHeight": 20,
+      "marginBottom": 0,
+      "textAlign": "justify",
+    }
+  }
+>
+  <Text
+    style={
+      Array [
+        false,
+      ]
+    }
+    textBreakStrategy="simple"
+  >
+    Test
+    
+
+  </Text>
+</Text>
+`;

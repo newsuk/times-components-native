@@ -74,6 +74,7 @@ exports[`tile f front landscape 1024 1`] = `
         "lineHeight": 40,
       }
     }
+    justified={true}
     strapline="Three Conservative MPs resign"
     straplineMarginBottom={15}
     straplineMarginTop={10}
@@ -91,10 +92,8 @@ exports[`tile f front landscape 1024 1`] = `
       Object {
         "fontSize": 14,
         "lineHeight": 18,
-        "textAlign": "justify",
       }
     }
-    template="mainstandard"
     tile={
       Object {
         "article": Object {
@@ -631,6 +630,7 @@ exports[`tile f front landscape 1080 1`] = `
         "lineHeight": 45,
       }
     }
+    justified={true}
     strapline="Three Conservative MPs resign"
     straplineMarginBottom={15}
     straplineMarginTop={10}
@@ -648,10 +648,8 @@ exports[`tile f front landscape 1080 1`] = `
       Object {
         "fontSize": 14,
         "lineHeight": 18,
-        "textAlign": "justify",
       }
     }
-    template="mainstandard"
     tile={
       Object {
         "article": Object {
@@ -1188,6 +1186,7 @@ exports[`tile f front landscape 1194 1`] = `
         "lineHeight": 50,
       }
     }
+    justified={true}
     strapline="Three Conservative MPs resign"
     straplineMarginBottom={15}
     straplineMarginTop={10}
@@ -1205,10 +1204,8 @@ exports[`tile f front landscape 1194 1`] = `
       Object {
         "fontSize": 14,
         "lineHeight": 18,
-        "textAlign": "justify",
       }
     }
-    template="mainstandard"
     tile={
       Object {
         "article": Object {
@@ -1745,6 +1742,7 @@ exports[`tile f front landscape 1366 1`] = `
         "lineHeight": 55,
       }
     }
+    justified={true}
     strapline="Three Conservative MPs resign"
     straplineMarginBottom={15}
     straplineMarginTop={10}
@@ -1762,10 +1760,8 @@ exports[`tile f front landscape 1366 1`] = `
       Object {
         "fontSize": 14,
         "lineHeight": 18,
-        "textAlign": "justify",
       }
     }
-    template="mainstandard"
     tile={
       Object {
         "article": Object {
@@ -2302,6 +2298,7 @@ exports[`tile f front portrait 768 1`] = `
         "lineHeight": 42,
       }
     }
+    justified={true}
     strapline="Three Conservative MPs resign"
     straplineMarginBottom={10}
     straplineMarginTop={5}
@@ -2366,10 +2363,8 @@ exports[`tile f front portrait 768 1`] = `
       Object {
         "fontSize": 14,
         "lineHeight": 18,
-        "textAlign": "justify",
       }
     }
-    template="mainstandard"
     tile={
       Object {
         "article": Object {
@@ -2906,6 +2901,7 @@ exports[`tile f front portrait 810 1`] = `
         "lineHeight": 45,
       }
     }
+    justified={true}
     strapline="Three Conservative MPs resign"
     straplineMarginBottom={15}
     straplineMarginTop={5}
@@ -2970,10 +2966,8 @@ exports[`tile f front portrait 810 1`] = `
       Object {
         "fontSize": 14,
         "lineHeight": 18,
-        "textAlign": "justify",
       }
     }
-    template="mainstandard"
     tile={
       Object {
         "article": Object {
@@ -3510,6 +3504,7 @@ exports[`tile f front portrait 834 0.75 ratio 1`] = `
         "lineHeight": 45,
       }
     }
+    justified={true}
     strapline="Three Conservative MPs resign"
     straplineMarginBottom={15}
     straplineMarginTop={10}
@@ -3574,10 +3569,8 @@ exports[`tile f front portrait 834 0.75 ratio 1`] = `
       Object {
         "fontSize": 14,
         "lineHeight": 18,
-        "textAlign": "justify",
       }
     }
-    template="mainstandard"
     tile={
       Object {
         "article": Object {
@@ -4114,6 +4107,7 @@ exports[`tile f front portrait 834 less than 0.75 ratio 1`] = `
         "lineHeight": 50,
       }
     }
+    justified={true}
     strapline="Three Conservative MPs resign"
     straplineMarginBottom={15}
     straplineMarginTop={10}
@@ -4178,10 +4172,8 @@ exports[`tile f front portrait 834 less than 0.75 ratio 1`] = `
       Object {
         "fontSize": 14,
         "lineHeight": 18,
-        "textAlign": "justify",
       }
     }
-    template="mainstandard"
     tile={
       Object {
         "article": Object {
@@ -4718,6 +4710,7 @@ exports[`tile f front portrait 1024 1`] = `
         "lineHeight": 55,
       }
     }
+    justified={true}
     strapline="Three Conservative MPs resign"
     straplineMarginBottom={25}
     straplineMarginTop={5}
@@ -4782,10 +4775,8 @@ exports[`tile f front portrait 1024 1`] = `
       Object {
         "fontSize": 15,
         "lineHeight": 18,
-        "textAlign": "justify",
       }
     }
-    template="mainstandard"
     tile={
       Object {
         "article": Object {

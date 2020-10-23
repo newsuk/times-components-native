@@ -128,7 +128,6 @@ exports[`tile h front landscape 1024 1`] = `
         "lineHeight": 20,
       }
     }
-    template="mainstandard"
     tile={
       Object {
         "article": Object {
@@ -719,7 +718,6 @@ exports[`tile h front landscape 1080 1`] = `
         "lineHeight": 20,
       }
     }
-    template="mainstandard"
     tile={
       Object {
         "article": Object {
@@ -1310,7 +1308,6 @@ exports[`tile h front landscape 1194 1`] = `
         "lineHeight": 20,
       }
     }
-    template="mainstandard"
     tile={
       Object {
         "article": Object {
@@ -1901,7 +1898,6 @@ exports[`tile h front landscape 1366 1`] = `
         "lineHeight": 20,
       }
     }
-    template="mainstandard"
     tile={
       Object {
         "article": Object {
@@ -2492,7 +2488,6 @@ exports[`tile h front portrait 768 1`] = `
         "lineHeight": 20,
       }
     }
-    template="mainstandard"
     tile={
       Object {
         "article": Object {
@@ -3083,7 +3078,6 @@ exports[`tile h front portrait 810 1`] = `
         "lineHeight": 20,
       }
     }
-    template="mainstandard"
     tile={
       Object {
         "article": Object {
@@ -3675,7 +3669,6 @@ exports[`tile h front portrait 834 0.75 ratio 1`] = `
         "lineHeight": 20,
       }
     }
-    template="mainstandard"
     tile={
       Object {
         "article": Object {
@@ -4267,7 +4260,6 @@ exports[`tile h front portrait 834 less than 0.75 ratio 1`] = `
         "lineHeight": 20,
       }
     }
-    template="mainstandard"
     tile={
       Object {
         "article": Object {
@@ -4858,7 +4850,6 @@ exports[`tile h front portrait 1024 1`] = `
         "lineHeight": 20,
       }
     }
-    template="mainstandard"
     tile={
       Object {
         "article": Object {

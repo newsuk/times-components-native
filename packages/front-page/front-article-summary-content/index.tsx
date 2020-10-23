@@ -5,7 +5,6 @@ import React from "react";
 import {
   BylineInput,
   Markup,
-  TemplateType,
 } from "@times-components-native/fixture-generator/src/types";
 import { MeasureContainer } from "@times-components-native/front-page/MeasureContainer";
 import { ArticleColumns } from "@times-components-native/article-columns/article-columns";
@@ -16,8 +15,9 @@ interface Props {
   summaryStyle?: any;
   columnCount?: number;
   bylines: BylineInput[];
-  template: TemplateType;
+  justified?: boolean;
 }
+
 interface SummaryTextProps {
   ast: Markup;
   style: TextStyle;
@@ -35,13 +35,17 @@ const SummaryText: React.FC<SummaryTextProps> = ({
   ) : null;
 };
 const FrontArticleSummaryContent: React.FC<Props> = (props) => {
-  const { summary, summaryStyle, template, columnCount = 1 } = props;
+  const { summary, summaryStyle, justified = false, columnCount = 1 } = props;
 
   if (!summary) return null;
 
-  const transformedAst = transformContentForFront(summary, template);
+  const transformedAst = transformContentForFront(summary, justified);
 
-  const style = { ...styles.summary, ...summaryStyle } as TextStyle;
+  const style = {
+    ...styles.summary,
+    ...summaryStyle,
+    ...(justified && { textAlign: "justify" }),
+  } as TextStyle;
   const lineHeight = style.lineHeight || 20;
   const numberOfLinesToRender = (height: number) => height / lineHeight;
   if (columnCount > 1) {

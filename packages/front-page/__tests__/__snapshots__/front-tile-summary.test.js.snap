@@ -203,7 +203,6 @@ exports[`FrontTileSummary renders byline with keyline 1`] = `
         "backgroundColor": "orange",
       }
     }
-    template="mainstandard"
   />
 </View>
 `;
@@ -308,7 +307,6 @@ exports[`FrontTileSummary renders with 2 columns 1`] = `
         "backgroundColor": "orange",
       }
     }
-    template="mainstandard"
   />
 </View>
 `;
@@ -394,7 +392,6 @@ exports[`FrontTileSummary renders with a missing byline 1`] = `
         "backgroundColor": "orange",
       }
     }
-    template="mainstandard"
   />
 </View>
 `;
@@ -499,7 +496,6 @@ exports[`FrontTileSummary renders with a missing strapline 1`] = `
         "backgroundColor": "orange",
       }
     }
-    template="mainstandard"
   />
 </View>
 `;
@@ -665,7 +661,6 @@ exports[`FrontTileSummary shows front tile summary with headline/strapline/bylin
         "backgroundColor": "orange",
       }
     }
-    template="mainstandard"
   />
 </View>
 `;
