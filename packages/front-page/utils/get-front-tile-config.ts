@@ -43,10 +43,11 @@ export const getFrontTileConfig = (summaryConfig: SummaryConfig) => {
     container.height >=
     headlineWithMargin + straplineWithMargin + bylines.height;
 
-  const canAccommodateContent =
+  const heightForContent =
     container.height -
-      (headlineWithMargin + straplineWithMargin + bylineWithMargin) >=
-    content.lineHeight * minimumNumberOfTeaserTextLines;
+    (headlineWithMargin + straplineWithMargin + bylineWithMargin);
+  const canAccommodateContent =
+    heightForContent >= content.lineHeight * minimumNumberOfTeaserTextLines;
 
   return {
     headline: {
@@ -67,6 +68,12 @@ export const getFrontTileConfig = (summaryConfig: SummaryConfig) => {
       show: bylines.height > 0 && canAccommodateByline,
       marginBottom: canAccommodateContent ? bylines.marginBottom : 0,
     },
-    content: { show: canAccommodateContent, marginBottom: 0 },
+    content: {
+      show: canAccommodateContent,
+      marginBottom: 0,
+      numberOfLines: canAccommodateContent
+        ? Math.floor(heightForContent / content.lineHeight)
+        : 0,
+    },
   };
 };

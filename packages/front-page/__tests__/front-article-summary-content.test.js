@@ -36,6 +36,7 @@ const props = {
   bylines: bylines,
   whiteSpaceHeight: 20,
   justified: false,
+  numberOfLines: 9,
   style: { backgoundColor: "red" },
   summary: ast,
 };
