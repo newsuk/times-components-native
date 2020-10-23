@@ -35,7 +35,13 @@ const SummaryText: React.FC<SummaryTextProps> = ({
   ) : null;
 };
 const FrontArticleSummaryContent: React.FC<Props> = (props) => {
-  const { summary, summaryStyle, justified = false, columnCount = 1 } = props;
+  const {
+    summary,
+    summaryStyle,
+    numberOfLines,
+    justified = false,
+    columnCount = 1,
+  } = props;
 
   if (!summary) return null;
 
@@ -47,7 +53,6 @@ const FrontArticleSummaryContent: React.FC<Props> = (props) => {
     ...(justified && { textAlign: "justify" }),
   } as TextStyle;
   const lineHeight = style.lineHeight || 20;
-  const numberOfLinesToRender = (height: number) => height / lineHeight;
   if (columnCount > 1) {
     return (
       <MeasureContainer
@@ -66,14 +71,10 @@ const FrontArticleSummaryContent: React.FC<Props> = (props) => {
     );
   }
   return (
-    <MeasureContainer
-      render={({ height }) => (
-        <SummaryText
-          ast={transformedAst}
-          style={style}
-          numberOfLines={numberOfLinesToRender(height)}
-        />
-      )}
+    <SummaryText
+      ast={transformedAst}
+      style={style}
+      numberOfLines={numberOfLines}
     />
   );
 };
