@@ -25,6 +25,12 @@ jest.mock("@times-components-native/front-page/MeasureContainer", () => {
   return { MeasureContainer: MockMeasureContainer };
 });
 
+jest.mock("@times-components-native/responsive", () => ({
+  useResponsiveContext: () => ({
+    orientation: undefined,
+  }),
+}));
+
 const summaryContent = [
   {
     attributes: {},

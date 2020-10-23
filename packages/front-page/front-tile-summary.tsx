@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import {
   ArticleSummaryHeadline,
   ArticleSummaryStrapline,
@@ -11,6 +11,7 @@ import { Markup } from "@times-components-native/fixture-generator/src/types";
 import { FrontPageByline } from "./front-page-byline";
 import { MeasureContainer } from "./MeasureContainer";
 import { getFrontTileConfig } from "./utils/get-front-tile-config";
+import { useResponsiveContext } from "@times-components-native/responsive";
 
 interface Props {
   columnCount?: number;
@@ -122,6 +123,17 @@ const FrontTileSummary: React.FC<Props> = (props) => {
       {children}
     </View>
   );
+
+  const { orientation } = useResponsiveContext();
+
+  // re-measure/render on orientation change
+  useEffect(() => {
+    if (orientation) {
+      setHeadlineHeight(undefined);
+      setStraplineHeight(undefined);
+      setBylineHeight(undefined);
+    }
+  }, [orientation]);
 
   return (
     <>
