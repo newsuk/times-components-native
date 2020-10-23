@@ -1695,10 +1695,7 @@ exports[`InTodaysEdition portrait 810 1`] = `
       <View
         style={
           Object {
-            "alignItems": "flex-end",
-            "flex": 1,
-            "flexDirection": "row",
-            "marginBottom": -2,
+            "display": "none",
           }
         }
       >
@@ -1773,10 +1770,7 @@ exports[`InTodaysEdition portrait 810 1`] = `
       <View
         style={
           Object {
-            "alignItems": "flex-end",
-            "flex": 1,
-            "flexDirection": "row",
-            "marginBottom": -2,
+            "display": "none",
           }
         }
       >
@@ -1851,10 +1845,7 @@ exports[`InTodaysEdition portrait 810 1`] = `
       <View
         style={
           Object {
-            "alignItems": "flex-end",
-            "flex": 1,
-            "flexDirection": "row",
-            "marginBottom": -2,
+            "display": "none",
           }
         }
       >
@@ -1929,10 +1920,7 @@ exports[`InTodaysEdition portrait 810 1`] = `
       <View
         style={
           Object {
-            "alignItems": "flex-end",
-            "flex": 1,
-            "flexDirection": "row",
-            "marginBottom": -2,
+            "display": "none",
           }
         }
       >
@@ -2043,10 +2031,7 @@ exports[`InTodaysEdition portrait 1024 1`] = `
       <View
         style={
           Object {
-            "alignItems": "flex-end",
-            "flex": 1,
-            "flexDirection": "row",
-            "marginBottom": -2,
+            "display": "none",
           }
         }
       >
@@ -2121,10 +2106,7 @@ exports[`InTodaysEdition portrait 1024 1`] = `
       <View
         style={
           Object {
-            "alignItems": "flex-end",
-            "flex": 1,
-            "flexDirection": "row",
-            "marginBottom": -2,
+            "display": "none",
           }
         }
       >
@@ -2199,10 +2181,7 @@ exports[`InTodaysEdition portrait 1024 1`] = `
       <View
         style={
           Object {
-            "alignItems": "flex-end",
-            "flex": 1,
-            "flexDirection": "row",
-            "marginBottom": -2,
+            "display": "none",
           }
         }
       >
@@ -2277,10 +2256,7 @@ exports[`InTodaysEdition portrait 1024 1`] = `
       <View
         style={
           Object {
-            "alignItems": "flex-end",
-            "flex": 1,
-            "flexDirection": "row",
-            "marginBottom": -2,
+            "display": "none",
           }
         }
       >

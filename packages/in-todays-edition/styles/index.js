@@ -71,10 +71,7 @@ const sharedPortraitStyles = {
     marginRight: 0,
   },
   itemCTA: {
-    flexDirection: "row",
-    flex: 1,
-    alignItems: "flex-end",
-    marginBottom: -2,
+    display: "none",
   },
   itemCTAIconContainer: {
     ...sharedStyles.itemCTAIconContainer,
@@ -147,9 +144,6 @@ const styles = {
   portrait: {
     768: {
       ...sharedPortraitStyles,
-      itemCTA: {
-        display: "none",
-      },
     },
     810: {
       ...sharedPortraitStyles,
