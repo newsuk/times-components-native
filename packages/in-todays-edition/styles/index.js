@@ -29,19 +29,6 @@ const sharedStyles = {
     fontFamily: fonts.bodyRegular,
     color: colours.functional.brandColour,
   },
-  itemCTA: {
-    flexDirection: "row",
-  },
-  itemCTAText: {
-    fontSize: 13,
-    fontFamily: fonts.supporting,
-    color: colours.functional.red,
-    textDecorationLine: "none",
-  },
-  itemCTAIconContainer: {
-    marginLeft: spacing(1),
-    marginTop: 2,
-  },
 };
 
 const sharedPortraitStyles = {
@@ -69,16 +56,6 @@ const sharedPortraitStyles = {
   },
   itemLast: {
     marginRight: 0,
-  },
-  itemCTA: {
-    flexDirection: "row",
-    flex: 1,
-    alignItems: "flex-end",
-    marginBottom: -2,
-  },
-  itemCTAIconContainer: {
-    ...sharedStyles.itemCTAIconContainer,
-    marginBottom: 2,
   },
   divider: {
     paddingLeft: spacing(2),
@@ -116,9 +93,20 @@ const sharedLandscapeStyles = {
     lineHeight: 18,
     marginBottom: spacing(2),
   },
+
+  itemCTA: {
+    flexDirection: "row",
+  },
   itemCTAText: {
-    ...sharedStyles.itemCTAText,
+    fontSize: 13,
+    fontFamily: fonts.supporting,
+    color: colours.functional.red,
+    textDecorationLine: "none",
     marginBottom: spacing(3),
+  },
+  itemCTAIconContainer: {
+    marginLeft: spacing(1),
+    marginTop: 2,
   },
   divider: {
     borderBottomWidth: 1,
@@ -147,9 +135,6 @@ const styles = {
   portrait: {
     768: {
       ...sharedPortraitStyles,
-      itemCTA: {
-        display: "none",
-      },
     },
     810: {
       ...sharedPortraitStyles,

@@ -34,7 +34,7 @@ const Item: React.FC<Props> = ({
   const { width: windowWidth } = getDimensions();
   const styles = getStyles(orientation, windowWidth);
   const link = item.mainLink;
-
+  const isLandscape = orientation === "landscape";
   const ctaText = isArticleLink(link) ? "Read the full story" : "Take me there";
   const onPress = isArticleLink(link)
     ? () =>
@@ -53,12 +53,17 @@ const Item: React.FC<Props> = ({
       >
         <Text style={styles.itemTitle}>{item.title}</Text>
         <Text style={styles.itemStrapline}>{item.strapline}</Text>
-        <View style={styles.itemCTA}>
-          <Text style={styles.itemCTAText}>{ctaText}</Text>
-          <View style={styles.itemCTAIconContainer}>
-            <IconForwardArrow fillColour={colours.functional.red} height={8} />
+        {isLandscape && (
+          <View style={styles.itemCTA}>
+            <Text style={styles.itemCTAText}>{ctaText}</Text>
+            <View style={styles.itemCTAIconContainer}>
+              <IconForwardArrow
+                fillColour={colours.functional.red}
+                height={8}
+              />
+            </View>
           </View>
-        </View>
+        )}
       </Link>
       {index !== 3 && <View style={styles.divider}></View>}
     </>

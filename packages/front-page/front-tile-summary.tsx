@@ -32,13 +32,14 @@ interface Props {
   summaryLineHeight: number;
 }
 
-const renderContent = (props: Props) => {
+const renderContent = (props: Props, numberOfLines: number) => {
   const { summary, summaryStyle, justified, columnCount, bylines } = props;
 
   return (
     <FrontArticleSummaryContent
       summary={summary}
       summaryStyle={summaryStyle}
+      numberOfLines={numberOfLines}
       columnCount={columnCount}
       bylines={bylines}
       justified={justified}
@@ -199,7 +200,8 @@ const FrontTileSummary: React.FC<Props> = (props) => {
                     {renderByline(props)}
                   </View>
                 )}
-                {frontTileConfig.content.show && renderContent(props)}
+                {frontTileConfig.content.show &&
+                  renderContent(props, frontTileConfig.content.numberOfLines)}
               </TileSummaryContainer>
             );
           }}
