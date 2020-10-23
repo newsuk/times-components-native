@@ -1,11 +1,11 @@
-import { ArticleMeasurements } from "../types";
 import {
   ArticleContent,
+  Measurements,
   ParagraphContent,
   ParagraphContentChild,
-} from "../domain-types";
+} from "@times-components-native/types";
 import { PARAGRAPH_INDENT_CHAR } from "@times-components-native/front-page/front-renderer";
-import { uuid } from "../utils/random";
+import { uuid } from "@times-components-native/utils/src/random";
 
 const addChildToArticleContent = (
   articleContent: ParagraphContent,
@@ -155,10 +155,10 @@ export const splitParagraphContent = (
 export const splitParagraphContentByLine = (
   articleContent: ParagraphContent,
   lineNumber: number,
-  articleMeasurements: ArticleMeasurements,
+  measurements: Measurements,
   lineHeight: number,
-): [ParagraphContent, ParagraphContent, ArticleMeasurements] => {
-  const contentLines = articleMeasurements.contents.lines[articleContent.id!];
+): [ParagraphContent, ParagraphContent, Measurements] => {
+  const contentLines = measurements.contents.lines[articleContent.id!];
   const splitPosition = contentLines
     .slice(0, lineNumber)
     .reduce((sum, next) => sum + next.text.length, 0);
@@ -172,17 +172,17 @@ export const splitParagraphContentByLine = (
   const heightA = linesForA.length * lineHeight;
   const heightB = linesForB.length * lineHeight;
 
-  const updatedMeasurements: ArticleMeasurements = {
-    ...articleMeasurements,
+  const updatedMeasurements: Measurements = {
+    ...measurements,
     contents: {
-      ...articleMeasurements.contents,
+      ...measurements.contents,
       heights: {
-        ...articleMeasurements.contents.heights,
+        ...measurements.contents.heights,
         [articleContentA.id!]: heightA,
         [articleContentB.id!]: heightB,
       },
       lines: {
-        ...articleMeasurements.contents.lines,
+        ...measurements.contents.lines,
         [articleContentA.id!]: linesForA,
         [articleContentB.id!]: linesForB,
       },

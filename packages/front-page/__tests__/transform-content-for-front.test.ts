@@ -1,6 +1,6 @@
 import { transformContentForFront } from "@times-components-native/front-page/utils/transform-content-for-front";
 import MockMarkup from "@times-components-native/fixture-generator/src/mock-markup";
-import { ArticleContent } from "@times-components-native/article-columns/domain-types";
+import { ArticleContent } from "@times-components-native/types";
 
 describe("indentation", () => {
   it("does not add indent to first paragraph", () => {

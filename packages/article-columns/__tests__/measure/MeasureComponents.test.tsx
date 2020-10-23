@@ -5,7 +5,7 @@ import { ColumnParameters } from "../../types";
 import MockMarkup from "@times-components-native/fixture-generator/src/mock-markup";
 import { MeasureByline, MeasureContent } from "../../measure/MeasureComponents";
 import { MeasurementDispatch } from "../../measure/MeasurementDispatchContext";
-import { ParagraphContent } from "../../domain-types";
+import { ParagraphContent } from "@times-components-native/types";
 
 jest.mock("@times-components-native/front-page/front-page-byline", () => ({
   FrontPageByline: "FrontPageByline",

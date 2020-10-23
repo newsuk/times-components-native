@@ -1,0 +1,382 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`InlineAd generates content for inline ad 1`] = `
+<MeasureInlineContent
+  content={
+    Array [
+      Object {
+        "children": Array [
+          Object {
+            "attributes": Object {
+              "value": "article content",
+            },
+            "children": Array [],
+            "name": "text",
+          },
+        ],
+        "id": "0-630",
+        "name": "paragraph",
+      },
+    ]
+  }
+  contentParameters={
+    Object {
+      "contentHeight": 630,
+      "contentLineHeight": 26,
+      "contentWidth": 339,
+    }
+  }
+  renderMeasuredContents={[Function]}
+  skeletonProps={
+    Object {
+      "data": Array [],
+      "isTablet": true,
+      "narrowContent": false,
+      "scale": 1,
+    }
+  }
+/>
+`;
+
+exports[`InlineAd renders inline ad via a render-prop 1`] = `
+<React.Fragment>
+  <View
+    style={
+      Array [
+        Object {
+          "alignSelf": "center",
+          "flex": 1,
+          "flexDirection": "row",
+          "width": 660,
+        },
+        Object {
+          "height": 630,
+        },
+      ]
+    }
+  >
+    <View
+      style={
+        Object {
+          "height": 630,
+          "width": 339,
+        }
+      }
+    >
+      <Gutter
+        style={
+          Object {
+            "overflow": "hidden",
+          }
+        }
+      >
+        <ErrorBoundary>
+          <ArticleParagraph
+            LinkComponent={[Function]}
+            attributes={
+              Object {
+                "inline": true,
+              }
+            }
+            data={Array []}
+            defaultFont={
+              Object {
+                "color": "#000000",
+                "fontFamily": "TimesDigitalW04",
+                "fontSize": 36,
+                "lineHeight": 52,
+              }
+            }
+            dropCapFont="dropCap"
+            dropcapsDisabled={true}
+            index={0}
+            isTablet={true}
+            narrowContent={false}
+            scale={1}
+            tree={
+              Object {
+                "attributes": Object {
+                  "inline": true,
+                },
+                "children": Array [
+                  Object {
+                    "attributes": Object {
+                      "value": "article content",
+                    },
+                    "children": Array [],
+                    "name": "text",
+                  },
+                ],
+                "id": "0-630",
+                "name": "paragraph",
+              }
+            }
+          >
+            AttributedString {
+              "attributes": Array [
+                Array [
+                  Object {
+                    "settings": Object {
+                      "color": "#000000",
+                      "fontFamily": "TimesDigitalW04",
+                      "fontSize": 36,
+                      "lineHeight": 52,
+                    },
+                    "tag": "FONT",
+                  },
+                ],
+                Array [
+                  Object {
+                    "settings": Object {
+                      "color": "#000000",
+                      "fontFamily": "TimesDigitalW04",
+                      "fontSize": 36,
+                      "lineHeight": 52,
+                    },
+                    "tag": "FONT",
+                  },
+                ],
+                Array [
+                  Object {
+                    "settings": Object {
+                      "color": "#000000",
+                      "fontFamily": "TimesDigitalW04",
+                      "fontSize": 36,
+                      "lineHeight": 52,
+                    },
+                    "tag": "FONT",
+                  },
+                ],
+                Array [
+                  Object {
+                    "settings": Object {
+                      "color": "#000000",
+                      "fontFamily": "TimesDigitalW04",
+                      "fontSize": 36,
+                      "lineHeight": 52,
+                    },
+                    "tag": "FONT",
+                  },
+                ],
+                Array [
+                  Object {
+                    "settings": Object {
+                      "color": "#000000",
+                      "fontFamily": "TimesDigitalW04",
+                      "fontSize": 36,
+                      "lineHeight": 52,
+                    },
+                    "tag": "FONT",
+                  },
+                ],
+                Array [
+                  Object {
+                    "settings": Object {
+                      "color": "#000000",
+                      "fontFamily": "TimesDigitalW04",
+                      "fontSize": 36,
+                      "lineHeight": 52,
+                    },
+                    "tag": "FONT",
+                  },
+                ],
+                Array [
+                  Object {
+                    "settings": Object {
+                      "color": "#000000",
+                      "fontFamily": "TimesDigitalW04",
+                      "fontSize": 36,
+                      "lineHeight": 52,
+                    },
+                    "tag": "FONT",
+                  },
+                ],
+                Array [
+                  Object {
+                    "settings": Object {
+                      "color": "#000000",
+                      "fontFamily": "TimesDigitalW04",
+                      "fontSize": 36,
+                      "lineHeight": 52,
+                    },
+                    "tag": "FONT",
+                  },
+                ],
+                Array [
+                  Object {
+                    "settings": Object {
+                      "color": "#000000",
+                      "fontFamily": "TimesDigitalW04",
+                      "fontSize": 36,
+                      "lineHeight": 52,
+                    },
+                    "tag": "FONT",
+                  },
+                ],
+                Array [
+                  Object {
+                    "settings": Object {
+                      "color": "#000000",
+                      "fontFamily": "TimesDigitalW04",
+                      "fontSize": 36,
+                      "lineHeight": 52,
+                    },
+                    "tag": "FONT",
+                  },
+                ],
+                Array [
+                  Object {
+                    "settings": Object {
+                      "color": "#000000",
+                      "fontFamily": "TimesDigitalW04",
+                      "fontSize": 36,
+                      "lineHeight": 52,
+                    },
+                    "tag": "FONT",
+                  },
+                ],
+                Array [
+                  Object {
+                    "settings": Object {
+                      "color": "#000000",
+                      "fontFamily": "TimesDigitalW04",
+                      "fontSize": 36,
+                      "lineHeight": 52,
+                    },
+                    "tag": "FONT",
+                  },
+                ],
+                Array [
+                  Object {
+                    "settings": Object {
+                      "color": "#000000",
+                      "fontFamily": "TimesDigitalW04",
+                      "fontSize": 36,
+                      "lineHeight": 52,
+                    },
+                    "tag": "FONT",
+                  },
+                ],
+                Array [
+                  Object {
+                    "settings": Object {
+                      "color": "#000000",
+                      "fontFamily": "TimesDigitalW04",
+                      "fontSize": 36,
+                      "lineHeight": 52,
+                    },
+                    "tag": "FONT",
+                  },
+                ],
+                Array [
+                  Object {
+                    "settings": Object {
+                      "color": "#000000",
+                      "fontFamily": "TimesDigitalW04",
+                      "fontSize": 36,
+                      "lineHeight": 52,
+                    },
+                    "tag": "FONT",
+                  },
+                ],
+              ],
+              "length": 15,
+              "split": [Function],
+              "string": "article content",
+            }
+          </ArticleParagraph>
+        </ErrorBoundary>
+      </Gutter>
+    </View>
+    <View
+      style={
+        Array [
+          Object {
+            "marginRight": 10,
+          },
+          Object {
+            "height": 620,
+            "width": 321,
+          },
+        ]
+      }
+    >
+      <AD
+        adConfig={Object {}}
+        defaultFont={
+          Object {
+            "lineHeight": 26,
+          }
+        }
+        display="inline"
+        height={600}
+        inlineContent={
+          Array [
+            Object {
+              "children": Array [
+                Object {
+                  "attributes": Object {
+                    "value": "article content",
+                  },
+                  "children": Array [],
+                  "name": "text",
+                },
+              ],
+              "id": "some-paragraph-id",
+              "name": "paragraph",
+            },
+          ]
+        }
+        skeletonProps={
+          Object {
+            "data": Array [],
+            "isTablet": true,
+            "narrowContent": false,
+            "scale": 1,
+          }
+        }
+        slotName="native-inline-ad-c"
+        width={300}
+      />
+    </View>
+  </View>
+</React.Fragment>
+`;
+
+exports[`InlineAd renders nothing if height is 0 1`] = `
+<MeasureInlineContent
+  content={
+    Array [
+      Object {
+        "children": Array [
+          Object {
+            "attributes": Object {
+              "value": "article content",
+            },
+            "children": Array [],
+            "name": "text",
+          },
+        ],
+        "id": "0-30",
+        "name": "paragraph",
+      },
+    ]
+  }
+  contentParameters={
+    Object {
+      "contentHeight": 30,
+      "contentLineHeight": 26,
+      "contentWidth": 339,
+    }
+  }
+  renderMeasuredContents={[Function]}
+  skeletonProps={
+    Object {
+      "data": Array [],
+      "isTablet": true,
+      "narrowContent": false,
+      "scale": 1,
+    }
+  }
+/>
+`;

@@ -1,4 +1,4 @@
-import { ArticleContent } from "@times-components-native/article-columns/domain-types";
+import { ArticleContent } from "@times-components-native/types";
 import { hyphenateArticleContent } from "@times-components-native/utils/src/hyphenate-article-content";
 import { Markup } from "@times-components-native/fixture-generator/src/types";
 

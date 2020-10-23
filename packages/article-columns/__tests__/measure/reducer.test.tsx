@@ -1,5 +1,5 @@
 import { initialState, reducer } from "../../measure/reducer";
-import { ArticleMeasurements } from "../../types";
+import { Measurements } from "@times-components-native/types";
 
 describe("reducer", () => {
   it("returns state when unrecognised action provided", () => {
@@ -30,7 +30,7 @@ describe("reducer", () => {
     });
 
     it("updates the measured height of a content item", () => {
-      const prevState: ArticleMeasurements = {
+      const prevState: Measurements = {
         ...initialState,
         contents: { heights: { someId: 1 }, lines: {} },
       };
@@ -73,7 +73,7 @@ describe("reducer", () => {
     });
 
     it("updates the measured lines of a content item", () => {
-      const prevState: ArticleMeasurements = {
+      const prevState: Measurements = {
         ...initialState,
         contents: {
           heights: {},

@@ -27,6 +27,9 @@ const sharedStyles = (dropCapFont = "dropCap", scale = scales.medium) => {
       alignSelf: "center",
       width: tabletWidth,
     },
+    articleInlineContentRowTablet: {
+      width: "100%",
+    },
     narrow: {
       alignSelf: "flex-start",
       width: "100%",

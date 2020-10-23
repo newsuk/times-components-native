@@ -10,7 +10,7 @@ import styleguide, {
 } from "@times-components-native/styleguide";
 import { AttributedString } from "@times-components-native/typeset";
 import { screenWidth } from "@times-components-native/utils";
-import Ad from "@times-components-native/ad";
+import Ad, { InlineAd } from "@times-components-native/ad";
 import ArticleImage from "@times-components-native/article-image";
 import InteractiveWrapper from "@times-components-native/interactive-wrapper";
 import KeyFacts from "@times-components-native/key-facts";
@@ -39,6 +39,7 @@ export default ({
   scale,
   analyticsStream,
   narrowContent,
+  onParagraphTextLayout,
 }) => {
   const styles = styleFactory(scale);
   const { fontFactory } = styleguide({ scale });
@@ -180,22 +181,29 @@ export default ({
           data={data}
           dropCapFont={dropCapFont}
           narrowContent={narrowContent}
+          onParagraphTextLayout={onParagraphTextLayout}
         >
           {children}
         </ArticleParagraph>
       );
     },
     ad(key, attributes) {
-      const template = data.template;
-
-      // If tablet, only show on mainstandard template
-      if (isTablet && template !== "mainstandard") return null;
-
       return (
         <Ad
           key={key}
           adConfig={adConfig}
           slotName="native-inline-ad"
+          {...attributes}
+        />
+      );
+    },
+    inlineAd(key, attributes) {
+      return (
+        <InlineAd
+          key={key}
+          adConfig={adConfig}
+          slotName="native-inline-ad"
+          defaultFont={defaultFont}
           {...attributes}
         />
       );

@@ -14,6 +14,8 @@ const SimpleParagraph = ({
   defaultFont,
   LinkComponent,
   narrowContent,
+  onParagraphTextLayout,
+  attributes,
 }) => {
   const { lineHeight } = defaultFont;
 
@@ -32,8 +34,20 @@ const SimpleParagraph = ({
   }
 
   return (
-    <ArticleParagraphWrapper ast={tree} uid={uid} narrowContent={narrowContent}>
-      <Text allowFontScaling={false} selectable style={{ lineHeight }}>
+    <ArticleParagraphWrapper
+      ast={tree}
+      uid={uid}
+      narrowContent={narrowContent}
+      attributes={attributes}
+    >
+      <Text
+        allowFontScaling={false}
+        selectable
+        style={{ lineHeight }}
+        onTextLayout={(e) => {
+          if (onParagraphTextLayout) onParagraphTextLayout(e);
+        }}
+      >
         {textItems.map((nestedChild, index) => {
           const [attribute, href] = textItemSettings[index];
           const style = attribute ? attribute.settings : defaultFont;

@@ -10,6 +10,7 @@ const ArticleParagraphWrapper = ({
   height,
   style,
   narrowContent,
+  attributes,
 }) => {
   const { children: astChildren } = ast;
   if (!astChildren || astChildren.length === 0) {
@@ -23,6 +24,7 @@ const ArticleParagraphWrapper = ({
       testID={`paragraph-${uid}`}
       style={style}
       narrowContent={narrowContent}
+      attributes={attributes}
     >
       {children}
     </ArticleParagraph>

@@ -1,17 +1,13 @@
-import {
-  ColumnContents,
-  ColumnParameters,
-  ArticleMeasurements,
-} from "../types";
-import { splitParagraphContentByLine } from "./splitParagraphContentByLine";
+import { ColumnContents, ColumnParameters } from "../types";
+import { splitParagraphContentByLine } from "@times-components-native/utils/src/splitParagraphContentByLine";
 import { calculateContentsHeight } from "./calculateContentsHeight";
 
-import { ParagraphContent } from "../domain-types";
+import { Measurements, ParagraphContent } from "@times-components-native/types";
 
 // TODO IMPLEMENT TO GET BYLINE HEIGHT FACTORED IN
 export const calculateHeightTakenOnPage = (
   columnIndex: number,
-  articleMeasurements: ArticleMeasurements,
+  articleMeasurements: Measurements,
 ) => {
   if (columnIndex > 0) return 0;
   const bylineHeight = articleMeasurements.bylineHeight ?? 0;
@@ -24,7 +20,7 @@ const getColumnIndex = (columns: ColumnContents[]) =>
 
 export const chunkContentIntoColumns = (
   contents: ParagraphContent[],
-  articleMeasurements: ArticleMeasurements,
+  articleMeasurements: Measurements,
   columnParameters: ColumnParameters,
   columns: ColumnContents[] = [],
 ): ColumnContents[] => {
