@@ -43,6 +43,7 @@ const TileGFront = ({ onPress, tile, orientation }) => {
         headlineMarginBottom={styles.headlineMarginBottom}
         straplineMarginBottom={0}
         summaryLineHeight={styles.summary.lineHeight}
+        containerStyle={styles.summaryContainer}
       />
     </TileLink>
   );

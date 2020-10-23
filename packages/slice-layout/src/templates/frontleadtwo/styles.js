@@ -21,7 +21,7 @@ const calculateStyles = (orientation) => {
   const sharedStyles = {
     colSeparatorStyle: {
       marginVertical: 0,
-      borderColor: colours.functional.darkGrey,
+      borderColor: colours.functional.keyline,
     },
     horizontalContainer: {
       flex: 1,
