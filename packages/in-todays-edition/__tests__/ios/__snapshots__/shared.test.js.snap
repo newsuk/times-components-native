@@ -1373,37 +1373,6 @@ exports[`InTodaysEdition portrait 768 1`] = `
       >
         A hydrogen-fuelled future energises Johnson
       </Text>
-      <View
-        style={
-          Object {
-            "display": "none",
-          }
-        }
-      >
-        <Text
-          style={
-            Object {
-              "color": "#CC0000",
-              "fontFamily": "GillSansMTStd-Medium",
-              "fontSize": 13,
-              "textDecorationLine": "none",
-            }
-          }
-        >
-          Read the full story
-        </Text>
-        <View
-          style={
-            Object {
-              "marginBottom": 2,
-              "marginLeft": 5,
-              "marginTop": 2,
-            }
-          }
-        >
-          <IconForwardArrow />
-        </View>
-      </View>
     </View>
     <View
       style={
@@ -1449,37 +1418,6 @@ exports[`InTodaysEdition portrait 768 1`] = `
       >
         At least Netflix is more low-key than Trooping the Colour
       </Text>
-      <View
-        style={
-          Object {
-            "display": "none",
-          }
-        }
-      >
-        <Text
-          style={
-            Object {
-              "color": "#CC0000",
-              "fontFamily": "GillSansMTStd-Medium",
-              "fontSize": 13,
-              "textDecorationLine": "none",
-            }
-          }
-        >
-          Read the full story
-        </Text>
-        <View
-          style={
-            Object {
-              "marginBottom": 2,
-              "marginLeft": 5,
-              "marginTop": 2,
-            }
-          }
-        >
-          <IconForwardArrow />
-        </View>
-      </View>
     </View>
     <View
       style={
@@ -1525,37 +1463,6 @@ exports[`InTodaysEdition portrait 768 1`] = `
       >
         My encounter with Britain’s oldest Olympian
       </Text>
-      <View
-        style={
-          Object {
-            "display": "none",
-          }
-        }
-      >
-        <Text
-          style={
-            Object {
-              "color": "#CC0000",
-              "fontFamily": "GillSansMTStd-Medium",
-              "fontSize": 13,
-              "textDecorationLine": "none",
-            }
-          }
-        >
-          Read the full story
-        </Text>
-        <View
-          style={
-            Object {
-              "marginBottom": 2,
-              "marginLeft": 5,
-              "marginTop": 2,
-            }
-          }
-        >
-          <IconForwardArrow />
-        </View>
-      </View>
     </View>
     <View
       style={
@@ -1601,37 +1508,6 @@ exports[`InTodaysEdition portrait 768 1`] = `
       >
         Listen free on DAB, online or via the Times Radio app
       </Text>
-      <View
-        style={
-          Object {
-            "display": "none",
-          }
-        }
-      >
-        <Text
-          style={
-            Object {
-              "color": "#CC0000",
-              "fontFamily": "GillSansMTStd-Medium",
-              "fontSize": 13,
-              "textDecorationLine": "none",
-            }
-          }
-        >
-          Take me there
-        </Text>
-        <View
-          style={
-            Object {
-              "marginBottom": 2,
-              "marginLeft": 5,
-              "marginTop": 2,
-            }
-          }
-        >
-          <IconForwardArrow />
-        </View>
-      </View>
     </View>
   </View>
 </View>
@@ -1713,37 +1589,6 @@ exports[`InTodaysEdition portrait 810 1`] = `
       >
         A hydrogen-fuelled future energises Johnson
       </Text>
-      <View
-        style={
-          Object {
-            "display": "none",
-          }
-        }
-      >
-        <Text
-          style={
-            Object {
-              "color": "#CC0000",
-              "fontFamily": "GillSansMTStd-Medium",
-              "fontSize": 13,
-              "textDecorationLine": "none",
-            }
-          }
-        >
-          Read the full story
-        </Text>
-        <View
-          style={
-            Object {
-              "marginBottom": 2,
-              "marginLeft": 5,
-              "marginTop": 2,
-            }
-          }
-        >
-          <IconForwardArrow />
-        </View>
-      </View>
     </View>
     <View
       style={
@@ -1789,37 +1634,6 @@ exports[`InTodaysEdition portrait 810 1`] = `
       >
         At least Netflix is more low-key than Trooping the Colour
       </Text>
-      <View
-        style={
-          Object {
-            "display": "none",
-          }
-        }
-      >
-        <Text
-          style={
-            Object {
-              "color": "#CC0000",
-              "fontFamily": "GillSansMTStd-Medium",
-              "fontSize": 13,
-              "textDecorationLine": "none",
-            }
-          }
-        >
-          Read the full story
-        </Text>
-        <View
-          style={
-            Object {
-              "marginBottom": 2,
-              "marginLeft": 5,
-              "marginTop": 2,
-            }
-          }
-        >
-          <IconForwardArrow />
-        </View>
-      </View>
     </View>
     <View
       style={
@@ -1865,37 +1679,6 @@ exports[`InTodaysEdition portrait 810 1`] = `
       >
         My encounter with Britain’s oldest Olympian
       </Text>
-      <View
-        style={
-          Object {
-            "display": "none",
-          }
-        }
-      >
-        <Text
-          style={
-            Object {
-              "color": "#CC0000",
-              "fontFamily": "GillSansMTStd-Medium",
-              "fontSize": 13,
-              "textDecorationLine": "none",
-            }
-          }
-        >
-          Read the full story
-        </Text>
-        <View
-          style={
-            Object {
-              "marginBottom": 2,
-              "marginLeft": 5,
-              "marginTop": 2,
-            }
-          }
-        >
-          <IconForwardArrow />
-        </View>
-      </View>
     </View>
     <View
       style={
@@ -1941,37 +1724,6 @@ exports[`InTodaysEdition portrait 810 1`] = `
       >
         Listen free on DAB, online or via the Times Radio app
       </Text>
-      <View
-        style={
-          Object {
-            "display": "none",
-          }
-        }
-      >
-        <Text
-          style={
-            Object {
-              "color": "#CC0000",
-              "fontFamily": "GillSansMTStd-Medium",
-              "fontSize": 13,
-              "textDecorationLine": "none",
-            }
-          }
-        >
-          Take me there
-        </Text>
-        <View
-          style={
-            Object {
-              "marginBottom": 2,
-              "marginLeft": 5,
-              "marginTop": 2,
-            }
-          }
-        >
-          <IconForwardArrow />
-        </View>
-      </View>
     </View>
   </View>
 </View>
@@ -2053,37 +1805,6 @@ exports[`InTodaysEdition portrait 1024 1`] = `
       >
         A hydrogen-fuelled future energises Johnson
       </Text>
-      <View
-        style={
-          Object {
-            "display": "none",
-          }
-        }
-      >
-        <Text
-          style={
-            Object {
-              "color": "#CC0000",
-              "fontFamily": "GillSansMTStd-Medium",
-              "fontSize": 14,
-              "textDecorationLine": "none",
-            }
-          }
-        >
-          Read the full story
-        </Text>
-        <View
-          style={
-            Object {
-              "marginBottom": 2,
-              "marginLeft": 5,
-              "marginTop": 2,
-            }
-          }
-        >
-          <IconForwardArrow />
-        </View>
-      </View>
     </View>
     <View
       style={
@@ -2129,37 +1850,6 @@ exports[`InTodaysEdition portrait 1024 1`] = `
       >
         At least Netflix is more low-key than Trooping the Colour
       </Text>
-      <View
-        style={
-          Object {
-            "display": "none",
-          }
-        }
-      >
-        <Text
-          style={
-            Object {
-              "color": "#CC0000",
-              "fontFamily": "GillSansMTStd-Medium",
-              "fontSize": 14,
-              "textDecorationLine": "none",
-            }
-          }
-        >
-          Read the full story
-        </Text>
-        <View
-          style={
-            Object {
-              "marginBottom": 2,
-              "marginLeft": 5,
-              "marginTop": 2,
-            }
-          }
-        >
-          <IconForwardArrow />
-        </View>
-      </View>
     </View>
     <View
       style={
@@ -2205,37 +1895,6 @@ exports[`InTodaysEdition portrait 1024 1`] = `
       >
         My encounter with Britain’s oldest Olympian
       </Text>
-      <View
-        style={
-          Object {
-            "display": "none",
-          }
-        }
-      >
-        <Text
-          style={
-            Object {
-              "color": "#CC0000",
-              "fontFamily": "GillSansMTStd-Medium",
-              "fontSize": 14,
-              "textDecorationLine": "none",
-            }
-          }
-        >
-          Read the full story
-        </Text>
-        <View
-          style={
-            Object {
-              "marginBottom": 2,
-              "marginLeft": 5,
-              "marginTop": 2,
-            }
-          }
-        >
-          <IconForwardArrow />
-        </View>
-      </View>
     </View>
     <View
       style={
@@ -2281,37 +1940,6 @@ exports[`InTodaysEdition portrait 1024 1`] = `
       >
         Listen free on DAB, online or via the Times Radio app
       </Text>
-      <View
-        style={
-          Object {
-            "display": "none",
-          }
-        }
-      >
-        <Text
-          style={
-            Object {
-              "color": "#CC0000",
-              "fontFamily": "GillSansMTStd-Medium",
-              "fontSize": 14,
-              "textDecorationLine": "none",
-            }
-          }
-        >
-          Take me there
-        </Text>
-        <View
-          style={
-            Object {
-              "marginBottom": 2,
-              "marginLeft": 5,
-              "marginTop": 2,
-            }
-          }
-        >
-          <IconForwardArrow />
-        </View>
-      </View>
     </View>
   </View>
 </View>
