@@ -23,7 +23,8 @@ export const collapsed = (isTablet, content) =>
           // forwards
           let i;
           let children = [node];
-          const maxNodesToInline = Math.min(4, acc.length);
+          const numberOfNodesToInline = 4;
+          const maxNodesToInline = Math.min(numberOfNodesToInline, acc.length);
           for (i = 0; i < maxNodesToInline; i += 1) {
             const next = acc[i];
             if (next && next.name === "paragraph") {
@@ -75,7 +76,9 @@ const setupArticleMpuTestAd = (
     ];
   }
 
-  let inlineContentEndIndex = adSlotIndex + 7;
+  const numberOfCandidateParagraphsToInline = 7;
+
+  let inlineContentEndIndex = adSlotIndex + numberOfCandidateParagraphsToInline;
 
   let inlineContent = contentWithoutAdSlot.slice(
     adSlotIndex,

@@ -2,7 +2,7 @@ import React, { useCallback } from "react";
 import { View } from "react-native";
 
 import { ParagraphContent } from "@times-components-native/types";
-import { tabletWidth } from "@times-components-native/styleguide";
+import { spacing, tabletWidth } from "@times-components-native/styleguide";
 import { render } from "@times-components-native/markup-forest";
 import {
   renderers,
@@ -69,9 +69,9 @@ export const InlineAd = (props: Props) => {
 
   const { lineHeight } = defaultFont;
 
-  const adHeaderHeight = 20;
+  const adHeaderHeight = spacing(4);
   const adHorizontalSpacing = 21;
-  const adMarginBottom = 10;
+  const adMarginBottom = spacing(2);
   const adContainerHeight = adHeight + adHeaderHeight;
   const adContainerHeightPlusMargin = adContainerHeight + adMarginBottom;
   const adContainerWidth = adWidth + adHorizontalSpacing;
@@ -130,7 +130,7 @@ export const InlineAd = (props: Props) => {
                   { width: adContainerWidth, height: adContainerHeight },
                 ]}
               >
-                <Ad {...props} />
+                <Ad {...props} display="inline" />
               </View>
             </View>
             {chunkedOverflowContent.map(renderItem(false))}
