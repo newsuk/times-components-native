@@ -2418,8 +2418,8 @@ exports[`tile h front portrait 768 1`] = `
     headlineStyle={
       Object {
         "fontFamily": "TimesModern-Bold",
-        "fontSize": 28,
-        "lineHeight": 28,
+        "fontSize": 40,
+        "lineHeight": 40,
       }
     }
     strapline="Three Conservative MPs resign"
@@ -3008,8 +3008,8 @@ exports[`tile h front portrait 810 1`] = `
     headlineStyle={
       Object {
         "fontFamily": "TimesModern-Bold",
-        "fontSize": 28,
-        "lineHeight": 28,
+        "fontSize": 42,
+        "lineHeight": 42,
       }
     }
     strapline="Three Conservative MPs resign"

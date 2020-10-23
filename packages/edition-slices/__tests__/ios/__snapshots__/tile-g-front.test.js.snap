@@ -83,6 +83,7 @@ exports[`tile g front landscape 1024 1`] = `
       }
     }
     straplineMarginBottom={0}
+    straplineMarginTop={0}
     summary={
       Array [
         Object {
@@ -684,6 +685,7 @@ exports[`tile g front landscape 1080 1`] = `
       }
     }
     straplineMarginBottom={0}
+    straplineMarginTop={0}
     summary={
       Array [
         Object {
@@ -1276,7 +1278,7 @@ exports[`tile g front landscape 1194 1`] = `
         "width": "100%",
       }
     }
-    headlineMarginBottom={5}
+    headlineMarginBottom={10}
     headlineStyle={
       Object {
         "fontFamily": "TimesModern-Bold",
@@ -1285,6 +1287,7 @@ exports[`tile g front landscape 1194 1`] = `
       }
     }
     straplineMarginBottom={0}
+    straplineMarginTop={0}
     summary={
       Array [
         Object {
@@ -1886,6 +1889,7 @@ exports[`tile g front landscape 1366 1`] = `
       }
     }
     straplineMarginBottom={0}
+    straplineMarginTop={0}
     summary={
       Array [
         Object {
@@ -2486,6 +2490,7 @@ exports[`tile g front portrait 768 1`] = `
       }
     }
     straplineMarginBottom={0}
+    straplineMarginTop={0}
     summary={
       Array [
         Object {
@@ -3086,6 +3091,7 @@ exports[`tile g front portrait 810 1`] = `
       }
     }
     straplineMarginBottom={0}
+    straplineMarginTop={0}
     summary={
       Array [
         Object {
@@ -3686,6 +3692,7 @@ exports[`tile g front portrait 834 0.75 ratio 1`] = `
       }
     }
     straplineMarginBottom={0}
+    straplineMarginTop={0}
     summary={
       Array [
         Object {
@@ -4281,11 +4288,12 @@ exports[`tile g front portrait 834 less than 0.75 ratio 1`] = `
     headlineStyle={
       Object {
         "fontFamily": "TimesModern-Bold",
-        "fontSize": 30,
-        "lineHeight": 30,
+        "fontSize": 32,
+        "lineHeight": 32,
       }
     }
     straplineMarginBottom={0}
+    straplineMarginTop={0}
     summary={
       Array [
         Object {
@@ -4886,6 +4894,7 @@ exports[`tile g front portrait 1024 1`] = `
       }
     }
     straplineMarginBottom={0}
+    straplineMarginTop={0}
     summary={
       Array [
         Object {

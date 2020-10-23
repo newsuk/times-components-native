@@ -82,6 +82,7 @@ const styles = {
     },
     "1194": {
       ...sharedLandscapeStyles,
+      headlineMarginBottom: spacing(2),
       headline: {
         ...sharedHeadline,
         fontSize: 24,
@@ -125,8 +126,8 @@ const styles = {
           ...sharedPortraitStyles,
           headline: {
             ...sharedHeadline,
-            fontSize: 30,
-            lineHeight: 30,
+            fontSize: 32,
+            lineHeight: 32,
           },
           imageContainer: {
             width: "100%",
