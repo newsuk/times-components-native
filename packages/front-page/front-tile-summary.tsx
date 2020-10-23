@@ -32,7 +32,7 @@ interface Props {
   summaryLineHeight: number;
 }
 
-const renderContent = (props: Props, numberOfLines) => {
+const renderContent = (props: Props, numberOfLines: number) => {
   const { summary, summaryStyle, justified, columnCount, bylines } = props;
 
   return (

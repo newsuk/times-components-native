@@ -35,6 +35,7 @@ describe("getFrontTileConfig", () => {
       },
       content: {
         marginBottom: 0,
+        numberOfLines: 0,
         show: false,
       },
       strapline: {
@@ -78,6 +79,7 @@ describe("getFrontTileConfig", () => {
       },
       content: {
         marginBottom: 0,
+        numberOfLines: 0,
         show: false,
       },
       strapline: {
@@ -125,6 +127,7 @@ describe("getFrontTileConfig", () => {
       },
       content: {
         marginBottom: 0,
+        numberOfLines: 0,
         show: false,
       },
     });
@@ -168,6 +171,7 @@ describe("getFrontTileConfig", () => {
       },
       content: {
         marginBottom: 0,
+        numberOfLines: 2,
         show: true,
       },
     });
@@ -211,6 +215,7 @@ describe("getFrontTileConfig", () => {
       },
       content: {
         marginBottom: 0,
+        numberOfLines: 0,
         show: false,
       },
     });
@@ -254,6 +259,7 @@ describe("getFrontTileConfig", () => {
       },
       content: {
         marginBottom: 0,
+        numberOfLines: 0,
         show: false,
       },
     });
@@ -297,6 +303,7 @@ describe("getFrontTileConfig", () => {
       },
       content: {
         marginBottom: 0,
+        numberOfLines: 5,
         show: true,
       },
     });

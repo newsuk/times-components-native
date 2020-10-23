@@ -47,9 +47,7 @@ export const getFrontTileConfig = (summaryConfig: SummaryConfig) => {
     container.height -
     (headlineWithMargin + straplineWithMargin + bylineWithMargin);
   const canAccommodateContent =
-    container.height -
-      (headlineWithMargin + straplineWithMargin + bylineWithMargin) >=
-    content.lineHeight * minimumNumberOfTeaserTextLines;
+    heightForContent >= content.lineHeight * minimumNumberOfTeaserTextLines;
 
   return {
     headline: {
@@ -73,7 +71,9 @@ export const getFrontTileConfig = (summaryConfig: SummaryConfig) => {
     content: {
       show: canAccommodateContent,
       marginBottom: 0,
-      numberOfLines: heightForContent / content.lineHeight,
+      numberOfLines: canAccommodateContent
+        ? Math.floor(heightForContent / content.lineHeight)
+        : 0,
     },
   };
 };

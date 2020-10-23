@@ -15,6 +15,7 @@ interface Props {
   summaryStyle?: any;
   columnCount?: number;
   bylines: BylineInput[];
+  numberOfLines: number;
   justified?: boolean;
 }
 

@@ -16,11 +16,6 @@ import {
   createPuzzleData,
   isSupplementSection,
 } from "./utils";
-import {
-  mockInTodaysEditionSlice,
-  mockLeadTwoFrontSlice,
-} from "@times-components-native/fixture-generator";
-import FrontLeadTwo from "@times-components-native/edition-slices/src/slices/frontleadtwo";
 
 const styles = styleFactory();
 
@@ -115,12 +110,6 @@ class Section extends Component {
       <Responsive>
         <ResponsiveContext.Consumer>
           {({ isTablet, editionBreakpoint }) => {
-            return (
-              <FrontLeadTwo
-                slice={mockLeadTwoFrontSlice()}
-                inTodaysEditionSlice={mockInTodaysEditionSlice()}
-              />
-            );
             if (name === "FrontPageSection") {
               const inTheNewsSlice = slices.find(
                 (slice) => slice.name === "InTheNewsSlice",
