@@ -15,7 +15,7 @@ interface Props {
   summaryStyle?: any;
   columnCount?: number;
   bylines: BylineInput[];
-  justified: boolean;
+  justified?: boolean;
 }
 
 interface SummaryTextProps {
@@ -35,7 +35,7 @@ const SummaryText: React.FC<SummaryTextProps> = ({
   ) : null;
 };
 const FrontArticleSummaryContent: React.FC<Props> = (props) => {
-  const { summary, summaryStyle, justified, columnCount = 1 } = props;
+  const { summary, summaryStyle, justified = false, columnCount = 1 } = props;
 
   if (!summary) return null;
 

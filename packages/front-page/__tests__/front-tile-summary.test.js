@@ -56,7 +56,6 @@ const props = {
   tile: new MockTile().get(),
   whiteSpaceHeight: 40,
   bylines: bylines,
-  linesOfTeaserToRender: 2,
   containerStyle: { backgroundColor: "red" },
   headlineStyle: { backgroundColor: "blue" },
   straplineStyle: { backgroundColor: "green" },

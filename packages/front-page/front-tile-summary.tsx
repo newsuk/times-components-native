@@ -28,7 +28,7 @@ interface Props {
   straplineMarginTop: number;
   straplineMarginBottom: number;
   bylineMarginBottom: number;
-  justified: boolean;
+  justified?: boolean;
   summaryLineHeight: number;
 }
 

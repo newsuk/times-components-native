@@ -27,7 +27,6 @@ const TileHFront = ({ onPress, tile, orientation }) => {
         summaryLineHeight={styles.summary.lineHeight}
         bylines={article.bylines}
         bylineMarginBottom={styles.bylineMarginBottom}
-        justified={false}
         tile={tile}
       />
     </TileLink>

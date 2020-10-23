@@ -39,7 +39,6 @@ const TileBFront = ({ onPress, tile, orientation }) => {
         straplineMarginBottom={0}
         summaryLineHeight={styles.summary.lineHeight}
         summary={article.content}
-        justified={false}
         summaryStyle={styles.summary}
         showKeyline={showKeyline}
         tile={tile}
