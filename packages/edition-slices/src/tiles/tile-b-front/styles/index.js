@@ -7,12 +7,6 @@ import { getStyleByDeviceSize } from "@times-components-native/styleguide/src/st
 
 const summary = {
   ...globalSpacingStyles.tabletTeaser,
-  textAlign: "justify",
-};
-
-const commentSummary = {
-  ...summary,
-  textAlign: "left",
 };
 
 const headlineLandscape = {
@@ -57,11 +51,6 @@ const portrait834 = {
   ...sharedPortraitStyles,
   summary: {
     ...summary,
-    fontSize: 14,
-    lineHeight: 18,
-  },
-  commentSummary: {
-    ...commentSummary,
     fontSize: 14,
     lineHeight: 18,
   },
@@ -122,11 +111,6 @@ const styles = {
         fontSize: 14,
         lineHeight: 18,
       },
-      commentSummary: {
-        ...commentSummary,
-        fontSize: 14,
-        lineHeight: 18,
-      },
     },
     "834": {
       ratios: {
@@ -160,11 +144,6 @@ const styles = {
         lineHeight: 26,
       },
       summary: {
-        fontSize: 15,
-        lineHeight: 18,
-      },
-      commentSummary: {
-        ...commentSummary,
         fontSize: 15,
         lineHeight: 18,
       },

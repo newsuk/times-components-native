@@ -13,7 +13,6 @@ const headline = {
 
 const summary = {
   ...globalSpacingStyles.tabletTeaser,
-  textAlign: "justify",
 };
 
 const strapline = {

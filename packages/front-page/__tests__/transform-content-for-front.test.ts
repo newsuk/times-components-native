@@ -1,14 +1,12 @@
 import { transformContentForFront } from "@times-components-native/front-page/utils/transform-content-for-front";
 import MockMarkup from "@times-components-native/fixture-generator/src/mock-markup";
 import { ArticleContent } from "@times-components-native/types";
-import { TemplateType } from "@times-components-native/fixture-generator/src/types";
 
-const template: TemplateType = TemplateType.Magazinestandard;
 describe("indentation", () => {
   it("does not add indent to first paragraph", () => {
     const content = new MockMarkup().addParagraphs(10).get();
 
-    const indentedContent = transformContentForFront(content, template);
+    const indentedContent = transformContentForFront(content, false);
 
     expect(indentedContent[0].attributes.tab).toBeFalsy();
   });
@@ -16,7 +14,7 @@ describe("indentation", () => {
   it("does add indents to subsequent paragraphs", () => {
     const content = new MockMarkup().addParagraphs(10).get();
 
-    const indentedContent = transformContentForFront(content, template);
+    const indentedContent = transformContentForFront(content, false);
 
     expect(indentedContent[1].attributes.tab).toBeTruthy();
   });
@@ -24,14 +22,14 @@ describe("indentation", () => {
   it("does not add indent to non-paragraphs", () => {
     const content = new MockMarkup().addAds(2).get();
 
-    const indentedContent = transformContentForFront(content, template);
+    const indentedContent = transformContentForFront(content, false);
     expect(indentedContent[0].attributes.tab).toBeFalsy();
     expect(indentedContent[1].attributes.tab).toBeFalsy();
   });
 });
 
 describe("hyphenation", () => {
-  it("hyphenates the content", () => {
+  it("hyphenates justified content", () => {
     const content = [
       {
         name: "paragraph",
@@ -47,7 +45,7 @@ describe("hyphenation", () => {
       },
     ] as ArticleContent[];
 
-    const transformedContent = transformContentForFront(content, template);
+    const transformedContent = transformContentForFront(content, true);
 
     expect(transformedContent).toEqual([
       {
@@ -66,7 +64,7 @@ describe("hyphenation", () => {
     ]);
   });
 
-  it("does not hyphenate content when maincomment template used", () => {
+  it("does not hyphenate unjustified content", () => {
     const content = [
       {
         name: "paragraph",
@@ -82,10 +80,7 @@ describe("hyphenation", () => {
       },
     ] as ArticleContent[];
 
-    const transformedContent = transformContentForFront(
-      content,
-      TemplateType.Maincomment,
-    );
+    const transformedContent = transformContentForFront(content, false);
 
     expect(transformedContent).toEqual([
       {

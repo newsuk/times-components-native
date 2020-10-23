@@ -31,20 +31,24 @@ const ast = [
 ];
 
 const bylines = new MockMarkup().addBylines().get();
-const component = (
-  <FrontArticleSummaryContent
-    bylines={bylines}
-    whiteSpaceHeight={20}
-    template={"mainstandard"}
-    linesOfTeaserToRender={1}
-    style={{ backgoundColor: "red" }}
-    summary={ast}
-  />
-);
 
+const props = {
+  bylines: bylines,
+  whiteSpaceHeight: 20,
+  justified: false,
+  style: { backgoundColor: "red" },
+  summary: ast,
+};
 describe("FrontArticleSummaryContent", () => {
   it("renders correctly", () => {
-    const tree = TestRenderer.create(component);
+    const tree = TestRenderer.create(<FrontArticleSummaryContent {...props} />);
+    expect(tree).toMatchSnapshot();
+  });
+
+  it("renders correctly with justified text", () => {
+    const tree = TestRenderer.create(
+      <FrontArticleSummaryContent {...props} justified={true} />,
+    );
     expect(tree).toMatchSnapshot();
   });
 });
