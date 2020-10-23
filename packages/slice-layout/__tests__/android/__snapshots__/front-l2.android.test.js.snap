@@ -8,7 +8,7 @@ exports[`1. front lead two - portrait - 768 1`] = `
   <HorizontalLayout
     colSeparatorStyle={
       Object {
-        "borderColor": "#999999",
+        "borderColor": "#DBDBDB",
         "marginVertical": 0,
       }
     }
@@ -59,7 +59,7 @@ exports[`2. front lead two - portrait - 810 1`] = `
   <HorizontalLayout
     colSeparatorStyle={
       Object {
-        "borderColor": "#999999",
+        "borderColor": "#DBDBDB",
         "marginVertical": 0,
       }
     }
@@ -110,7 +110,7 @@ exports[`3. front lead two - portrait - 834 - 0.75 ratio 1`] = `
   <HorizontalLayout
     colSeparatorStyle={
       Object {
-        "borderColor": "#999999",
+        "borderColor": "#DBDBDB",
         "marginVertical": 0,
       }
     }
@@ -161,7 +161,7 @@ exports[`4. front lead two - portrait - 834 - less than 0.75 ratio 1`] = `
   <HorizontalLayout
     colSeparatorStyle={
       Object {
-        "borderColor": "#999999",
+        "borderColor": "#DBDBDB",
         "marginVertical": 0,
       }
     }
@@ -212,7 +212,7 @@ exports[`5. front lead two - portrait - 1024 1`] = `
   <HorizontalLayout
     colSeparatorStyle={
       Object {
-        "borderColor": "#999999",
+        "borderColor": "#DBDBDB",
         "marginVertical": 0,
       }
     }
@@ -263,7 +263,7 @@ exports[`6. front lead two - landscape - 1024 1`] = `
   <HorizontalLayout
     colSeparatorStyle={
       Object {
-        "borderColor": "#999999",
+        "borderColor": "#DBDBDB",
         "marginVertical": 0,
       }
     }
@@ -320,7 +320,7 @@ exports[`7. front lead two - landscape - 1080 1`] = `
   <HorizontalLayout
     colSeparatorStyle={
       Object {
-        "borderColor": "#999999",
+        "borderColor": "#DBDBDB",
         "marginVertical": 0,
       }
     }
@@ -377,7 +377,7 @@ exports[`8. front lead two - landscape - 1112 1`] = `
   <HorizontalLayout
     colSeparatorStyle={
       Object {
-        "borderColor": "#999999",
+        "borderColor": "#DBDBDB",
         "marginVertical": 0,
       }
     }
@@ -434,7 +434,7 @@ exports[`9. front lead two - landscape - 1366 1`] = `
   <HorizontalLayout
     colSeparatorStyle={
       Object {
-        "borderColor": "#999999",
+        "borderColor": "#DBDBDB",
         "marginVertical": 0,
       }
     }
