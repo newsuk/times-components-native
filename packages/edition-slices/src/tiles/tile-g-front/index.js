@@ -41,6 +41,7 @@ const TileGFront = ({ onPress, tile, orientation }) => {
         template={article.template}
         bylineMarginBottom={styles.bylineMarginBottom}
         headlineMarginBottom={styles.headlineMarginBottom}
+        straplineMarginTop={0}
         straplineMarginBottom={0}
         summaryLineHeight={styles.summary.lineHeight}
         containerStyle={styles.summaryContainer}
