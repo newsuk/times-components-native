@@ -43,7 +43,7 @@ const calculateStyles = (orientation) => {
     },
     colSeparatorStyle: {
       borderColor: colours.functional.keyline,
-      marginTop: 0,
+      marginVertical: 0,
     },
     container: {
       marginTop: spacing(3),
