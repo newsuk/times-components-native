@@ -183,10 +183,6 @@ const styles = {
     },
     "1024": {
       ...sharedPortraitStyles,
-      container: {
-        ...sharedPortraitStyles.container,
-        paddingBottom: spacing(1),
-      },
       headline: {
         ...sharedHeadline,
         fontSize: 53,

@@ -37,7 +37,6 @@ const sharedPortraitStyles = {
   container: {
     flex: 1,
     paddingLeft: spacing(2),
-    paddingBottom: spacing(2),
   },
   imageContainer: {
     width: "100%",
