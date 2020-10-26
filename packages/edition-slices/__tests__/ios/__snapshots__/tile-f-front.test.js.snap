@@ -16,7 +16,6 @@ exports[`tile f front landscape 1024 1`] = `
     fill={true}
     style={
       Object {
-        "marginBottom": 5,
         "width": "100%",
       }
     }
@@ -65,7 +64,16 @@ exports[`tile f front landscape 1024 1`] = `
         },
       ]
     }
-    columnCount={1}
+    columnCount={3}
+    containerStyle={
+      Object {
+        "backgroundColor": "#FFFFFF",
+        "bottom": 0,
+        "paddingTop": 10,
+        "position": "absolute",
+        "width": "100%",
+      }
+    }
     headlineMarginBottom={10}
     headlineStyle={
       Object {
@@ -619,7 +627,6 @@ exports[`tile f front landscape 1080 1`] = `
     fill={true}
     style={
       Object {
-        "marginBottom": 5,
         "width": "100%",
       }
     }
@@ -668,7 +675,16 @@ exports[`tile f front landscape 1080 1`] = `
         },
       ]
     }
-    columnCount={1}
+    columnCount={3}
+    containerStyle={
+      Object {
+        "backgroundColor": "#FFFFFF",
+        "bottom": 0,
+        "paddingTop": 10,
+        "position": "absolute",
+        "width": "100%",
+      }
+    }
     headlineMarginBottom={10}
     headlineStyle={
       Object {
@@ -1222,7 +1238,6 @@ exports[`tile f front landscape 1194 1`] = `
     fill={true}
     style={
       Object {
-        "marginBottom": 5,
         "width": "100%",
       }
     }
@@ -1271,7 +1286,16 @@ exports[`tile f front landscape 1194 1`] = `
         },
       ]
     }
-    columnCount={1}
+    columnCount={3}
+    containerStyle={
+      Object {
+        "backgroundColor": "#FFFFFF",
+        "bottom": 0,
+        "paddingTop": 10,
+        "position": "absolute",
+        "width": "100%",
+      }
+    }
     headlineMarginBottom={5}
     headlineStyle={
       Object {
@@ -1874,7 +1898,16 @@ exports[`tile f front landscape 1366 1`] = `
         },
       ]
     }
-    columnCount={1}
+    columnCount={3}
+    containerStyle={
+      Object {
+        "backgroundColor": "#FFFFFF",
+        "bottom": 0,
+        "paddingTop": 10,
+        "position": "absolute",
+        "width": "100%",
+      }
+    }
     headlineMarginBottom={10}
     headlineStyle={
       Object {
