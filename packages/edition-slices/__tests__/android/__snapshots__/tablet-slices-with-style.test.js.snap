@@ -4724,8 +4724,7 @@ exports[`60. front lead one and one - landscape - wide 1`] = `
             "borderColor": "#DBDBDB",
             "borderRightWidth": 1,
             "borderStyle": "solid",
-            "marginTop": 0,
-            "marginVertical": 10,
+            "marginVertical": 0,
           }
         }
       />
@@ -4744,8 +4743,7 @@ exports[`60. front lead one and one - landscape - wide 1`] = `
             "borderColor": "#DBDBDB",
             "borderRightWidth": 1,
             "borderStyle": "solid",
-            "marginTop": 0,
-            "marginVertical": 10,
+            "marginVertical": 0,
           }
         }
       />
@@ -7646,8 +7644,7 @@ exports[`94. front lead one and one - landscape - huge 1`] = `
               "borderColor": "#DBDBDB",
               "borderRightWidth": 1,
               "borderStyle": "solid",
-              "marginTop": 0,
-              "marginVertical": 10,
+              "marginVertical": 0,
             }
           }
         />
@@ -7666,8 +7663,7 @@ exports[`94. front lead one and one - landscape - huge 1`] = `
               "borderColor": "#DBDBDB",
               "borderRightWidth": 1,
               "borderStyle": "solid",
-              "marginTop": 0,
-              "marginVertical": 10,
+              "marginVertical": 0,
             }
           }
         />
