@@ -41,6 +41,7 @@ const TileAFront = ({ onPress, tile, orientation }) => {
         hasVideo={article.hasVideo}
       />
       <FrontTileSummary
+        containerStyle={styles.summaryContainer}
         headlineStyle={styles.headline}
         summary={article.content}
         summaryStyle={styles.summary}
