@@ -16,8 +16,6 @@ const TileFFront = ({ onPress, tile, orientation }) => {
   const { width: windowWidth, height: windowHeight } = getDimensions();
   const isLandscape = orientation === "landscape";
   const columnCount = isLandscape ? 1 : 3;
-  const hideSummary = isLandscape;
-
   const imageCrop = getTileImage(tile, "crop169");
   const styles = getStyle(orientation, windowWidth, windowHeight);
 
@@ -41,7 +39,7 @@ const TileFFront = ({ onPress, tile, orientation }) => {
       <FrontTileSummary
         headlineStyle={styles.headline}
         headlineMarginBottom={styles.headlineMarginBottom}
-        summary={!hideSummary && article.content}
+        summary={article.content}
         summaryStyle={styles.summary}
         summaryLineHeight={styles.summary.lineHeight}
         strapline={getTileStrapline(tile)}
