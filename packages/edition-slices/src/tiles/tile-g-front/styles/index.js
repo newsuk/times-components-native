@@ -11,7 +11,6 @@ const sharedSummaryContainer = {
   bottom: 0,
   backgroundColor: colours.functional.white,
   width: "100%",
-  paddingTop: spacing(2),
 };
 
 const sharedHeadline = {
@@ -26,10 +25,10 @@ const sharedSummary = {
 };
 
 const sharedStyles = {
-  summaryContainer: { ...sharedSummaryContainer },
+  summaryContainer: { ...sharedSummaryContainer, paddingTop: spacing(1) },
   imageContainer: {
     width: "100%",
-    marginBottom: spacing(1),
+    marginBottom: 0,
   },
   summary: { ...sharedSummary },
   bylineMarginBottom: spacing(3),
@@ -129,9 +128,9 @@ const styles = {
             fontSize: 32,
             lineHeight: 32,
           },
-          imageContainer: {
-            width: "100%",
-            marginBottom: spacing(2),
+          summaryContainer: {
+            ...sharedSummaryContainer,
+            paddingTop: spacing(2),
           },
           headlineMarginBottom: spacing(3),
         },
@@ -147,9 +146,9 @@ const styles = {
     },
     "1024": {
       ...sharedPortraitStyles,
-      imageContainer: {
-        width: "100%",
-        marginBottom: spacing(2),
+      summaryContainer: {
+        ...sharedSummaryContainer,
+        paddingTop: spacing(2),
       },
       headline: {
         ...sharedHeadline,
