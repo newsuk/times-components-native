@@ -128,11 +128,9 @@ const FrontTileSummary: React.FC<Props> = (props) => {
 
   // re-measure/render on orientation change
   useEffect(() => {
-    if (orientation) {
-      setHeadlineHeight(undefined);
-      setStraplineHeight(undefined);
-      setBylineHeight(undefined);
-    }
+    setHeadlineHeight(undefined);
+    setStraplineHeight(undefined);
+    setBylineHeight(undefined);
   }, [orientation]);
 
   return (
