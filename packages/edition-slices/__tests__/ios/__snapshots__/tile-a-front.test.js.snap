@@ -5,7 +5,7 @@ exports[`tile a front landscape 1024 1`] = `
   linkStyle={
     Object {
       "flex": 1,
-      "paddingBottom": 10,
+      "paddingBottom": 0,
       "paddingRight": 10,
     }
   }
@@ -617,7 +617,7 @@ exports[`tile a front landscape 1080 1`] = `
   linkStyle={
     Object {
       "flex": 1,
-      "paddingBottom": 10,
+      "paddingBottom": 0,
       "paddingRight": 10,
     }
   }
@@ -1229,7 +1229,7 @@ exports[`tile a front landscape 1194 1`] = `
   linkStyle={
     Object {
       "flex": 1,
-      "paddingBottom": 10,
+      "paddingBottom": 0,
       "paddingRight": 10,
     }
   }
@@ -1841,7 +1841,7 @@ exports[`tile a front landscape 1366 1`] = `
   linkStyle={
     Object {
       "flex": 1,
-      "paddingBottom": 10,
+      "paddingBottom": 0,
       "paddingRight": 10,
     }
   }
@@ -2453,7 +2453,7 @@ exports[`tile a front portrait 768 1`] = `
   linkStyle={
     Object {
       "flex": 1,
-      "paddingBottom": 10,
+      "paddingBottom": 0,
       "paddingRight": 10,
     }
   }
@@ -3056,7 +3056,7 @@ exports[`tile a front portrait 810 1`] = `
   linkStyle={
     Object {
       "flex": 1,
-      "paddingBottom": 10,
+      "paddingBottom": 0,
       "paddingRight": 10,
     }
   }
@@ -3659,7 +3659,7 @@ exports[`tile a front portrait 834 0.75 ratio 1`] = `
   linkStyle={
     Object {
       "flex": 1,
-      "paddingBottom": 10,
+      "paddingBottom": 0,
       "paddingRight": 10,
     }
   }
@@ -4262,7 +4262,7 @@ exports[`tile a front portrait 834 less than 0.75 ratio 1`] = `
   linkStyle={
     Object {
       "flex": 1,
-      "paddingBottom": 10,
+      "paddingBottom": 0,
       "paddingRight": 10,
     }
   }
@@ -4865,7 +4865,7 @@ exports[`tile a front portrait 1024 1`] = `
   linkStyle={
     Object {
       "flex": 1,
-      "paddingBottom": 10,
+      "paddingBottom": 0,
       "paddingRight": 10,
     }
   }

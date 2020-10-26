@@ -6,7 +6,7 @@ exports[`tile b front landscape 1024 1`] = `
     Object {
       "flex": 1,
       "padding": 10,
-      "paddingTop": 0,
+      "paddingVertical": 0,
     }
   }
   url="/article/123"
@@ -599,7 +599,7 @@ exports[`tile b front landscape 1080 1`] = `
     Object {
       "flex": 1,
       "padding": 10,
-      "paddingTop": 0,
+      "paddingVertical": 0,
     }
   }
   url="/article/123"
@@ -1192,7 +1192,7 @@ exports[`tile b front landscape 1194 1`] = `
     Object {
       "flex": 1,
       "padding": 10,
-      "paddingTop": 0,
+      "paddingVertical": 0,
     }
   }
   url="/article/123"
@@ -1785,7 +1785,7 @@ exports[`tile b front landscape 1366 1`] = `
     Object {
       "flex": 1,
       "padding": 10,
-      "paddingTop": 0,
+      "paddingVertical": 0,
     }
   }
   url="/article/123"
@@ -2377,7 +2377,6 @@ exports[`tile b front portrait 768 1`] = `
   linkStyle={
     Object {
       "flex": 1,
-      "paddingBottom": 10,
       "paddingLeft": 10,
     }
   }
@@ -2970,7 +2969,6 @@ exports[`tile b front portrait 810 1`] = `
   linkStyle={
     Object {
       "flex": 1,
-      "paddingBottom": 10,
       "paddingLeft": 10,
     }
   }
@@ -3563,7 +3561,6 @@ exports[`tile b front portrait 834 0.75 ratio 1`] = `
   linkStyle={
     Object {
       "flex": 1,
-      "paddingBottom": 10,
       "paddingLeft": 10,
     }
   }
@@ -4156,7 +4153,6 @@ exports[`tile b front portrait 834 less than 0.75 ratio 1`] = `
   linkStyle={
     Object {
       "flex": 1,
-      "paddingBottom": 10,
       "paddingLeft": 10,
     }
   }
@@ -4749,7 +4745,6 @@ exports[`tile b front portrait 1024 1`] = `
   linkStyle={
     Object {
       "flex": 1,
-      "paddingBottom": 10,
       "paddingLeft": 10,
     }
   }

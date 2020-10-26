@@ -24,7 +24,7 @@ const strapline = {
 
 const sharedStyles = {
   container: {
-    paddingBottom: spacing(2),
+    paddingBottom: spacing(0),
     paddingRight: spacing(2),
     flex: 1,
   },
