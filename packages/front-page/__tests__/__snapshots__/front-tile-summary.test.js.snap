@@ -11,6 +11,7 @@ exports[`FrontTileSummary performs measurements before rendering front tile summ
         "flex": 1,
       },
       Object {
+        "minHeight": undefined,
         "opacity": 0,
       },
     ]
@@ -92,6 +93,7 @@ exports[`FrontTileSummary renders byline with keyline 1`] = `
         "flex": 1,
       },
       Object {
+        "minHeight": 200,
         "opacity": 1,
       },
     ]
@@ -219,6 +221,7 @@ exports[`FrontTileSummary renders with 2 columns 1`] = `
         "flex": 1,
       },
       Object {
+        "minHeight": 200,
         "opacity": 1,
       },
     ]
@@ -324,6 +327,7 @@ exports[`FrontTileSummary renders with a missing byline 1`] = `
         "flex": 1,
       },
       Object {
+        "minHeight": 200,
         "opacity": 1,
       },
     ]
@@ -410,6 +414,7 @@ exports[`FrontTileSummary renders with a missing strapline 1`] = `
         "flex": 1,
       },
       Object {
+        "minHeight": 200,
         "opacity": 1,
       },
     ]
@@ -515,6 +520,7 @@ exports[`FrontTileSummary shows front tile summary with headline only after meas
         "flex": 1,
       },
       Object {
+        "minHeight": 200,
         "opacity": 1,
       },
     ]
@@ -555,6 +561,7 @@ exports[`FrontTileSummary shows front tile summary with headline/strapline/bylin
         "flex": 1,
       },
       Object {
+        "minHeight": 200,
         "opacity": 1,
       },
     ]

@@ -109,15 +109,15 @@ const FrontTileSummary: React.FC<Props> = (props) => {
     straplineHeight !== undefined &&
     bylineHeight !== undefined;
 
-  const TileSummaryContainer: React.FC<{ hidden: boolean }> = ({
-    children,
-    hidden,
-  }) => (
+  const TileSummaryContainer: React.FC<{
+    hidden: boolean;
+    minHeight?: number;
+  }> = ({ children, hidden, minHeight }) => (
     <View
       style={[
         props.containerStyle,
         styles.container,
-        { opacity: hidden ? 0 : 1 },
+        { minHeight, opacity: hidden ? 0 : 1 },
       ]}
     >
       {children}
@@ -184,7 +184,7 @@ const FrontTileSummary: React.FC<Props> = (props) => {
             });
 
             return (
-              <TileSummaryContainer hidden={false}>
+              <TileSummaryContainer hidden={false} minHeight={height}>
                 <View
                   style={{
                     marginBottom: frontTileConfig.headline.marginBottom,
