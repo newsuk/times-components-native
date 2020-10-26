@@ -1,9 +1,7 @@
 /* eslint-disable no-param-reassign */
 import memoizeOne from "memoize-one";
 import { editionBreakpoints } from "@times-components-native/styleguide";
-
-const composeSliceBuilders = (firstBuilder, secondBuilder) => (slices) =>
-  secondBuilder(firstBuilder(slices));
+import { pipe } from "@times-components-native/utils/src/pipe";
 
 const withIgnoredSeperator = (slice) => ({ ...slice, ignoreSeparator: true });
 
@@ -68,10 +66,41 @@ const consecutiveItemsFlagger = memoizeOne((slices) =>
   ),
 );
 
-const prepareSlicesForRender = composeSliceBuilders(
-  buildSliceData,
-  consecutiveItemsFlagger,
-);
+const insertSectionAd = (isTablet, variants) => (slices) => {
+  const adSlotIndex = 2;
+
+  if (
+    !isTablet ||
+    slices.length <= adSlotIndex ||
+    !variants ||
+    !Object.keys(variants).length
+  )
+    return slices;
+
+  const { sectionAd } = variants;
+
+  if (!sectionAd) return slices;
+
+  const { group, slotName } = sectionAd;
+
+  if (group === "A") return slices;
+
+  return [
+    ...slices.slice(0, adSlotIndex),
+    {
+      name: "SectionAd",
+      slotName,
+    },
+    ...slices.slice(adSlotIndex),
+  ];
+};
+
+const prepareSlicesForRender = (isTablet, variants) =>
+  pipe(
+    buildSliceData,
+    consecutiveItemsFlagger,
+    insertSectionAd(isTablet, variants),
+  );
 
 const getRatio = (ratio) => {
   const ratios = ratio.split(":").map((num) => parseInt(num, 10));
@@ -125,7 +154,6 @@ const isSupplementSection = (sectionTitle) => {
 };
 
 export {
-  composeSliceBuilders,
   prepareSlicesForRender,
   consecutiveItemsFlagger,
   buildSliceData,

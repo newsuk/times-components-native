@@ -1,40 +1,48 @@
 import React, { createContext, useContext, ReactNode } from "react";
 import PropTypes from "prop-types";
 
+import { useResponsiveContext } from "@times-components-native/responsive";
+
 export const VariantTestingContext = createContext({});
+
+const validateVariant = (variant: string) => {
+  if (!variant || !["A", "B", "C"].includes(variant)) {
+    return "B";
+  }
+  return variant;
+};
 
 type Props = {
   children: ReactNode;
   variants: Record<string, string>;
-  isTablet: boolean;
 };
 
-export const VariantTestingProvider = ({
-  variants = {},
-  isTablet,
-  children,
-}: Props) => {
-  let { articleMpuTestVariant } = variants;
+export const VariantTestingProvider = ({ variants = {}, children }: Props) => {
+  const { articleMpuTestVariant, sectionAdTestVariant } = variants;
+  const { isTablet } = useResponsiveContext();
 
   let variantConfig = {};
 
   if (isTablet) {
-    if (
-      !articleMpuTestVariant ||
-      !["A", "B", "C"].includes(articleMpuTestVariant)
-    ) {
-      articleMpuTestVariant = "A";
-    }
+    const validArticleMpuTestVariant = validateVariant(articleMpuTestVariant);
+    const validSectionAdTestVariant = validateVariant(sectionAdTestVariant);
 
     variantConfig = {
       ...variantConfig,
       articleMpu: {
-        group: articleMpuTestVariant,
-        slotName: `native-inline-ad-${articleMpuTestVariant.toLowerCase()}`,
-        ...(articleMpuTestVariant !== "A" && {
+        group: validArticleMpuTestVariant,
+        slotName: `native-inline-ad-${validArticleMpuTestVariant.toLowerCase()}`,
+        ...(validArticleMpuTestVariant !== "A" && {
           adPosition: 5,
           width: 300,
-          height: articleMpuTestVariant === "B" ? 250 : 600,
+          height: validArticleMpuTestVariant === "B" ? 250 : 600,
+        }),
+      },
+      sectionAd: {
+        group: validSectionAdTestVariant,
+        ...(validSectionAdTestVariant !== "A" && {
+          slotName: "native-inline-ad-a",
+          // slotName: `native-section-ad-${validSectionAdTestVariant.toLowerCase()}`,
         }),
       },
     };

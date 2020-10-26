@@ -7,7 +7,7 @@ import {
   getImage,
   filterPuzzles,
   createPuzzleData,
-  composeSliceBuilders,
+  prepareSlicesForRender,
   isSupplementSection,
 } from "../../src/utils";
 
@@ -44,7 +44,8 @@ describe("splitPuzzlesBySlices", () => {
   });
 });
 
-describe("composeSliceBuilders", () => {
+describe("prepareSlicesForRender", () => {
+  const variants = {};
   it("should invoke the two passed functions", () => {
     const builderOne = jest.fn();
     const builderTwo = jest.fn();
@@ -63,7 +64,10 @@ describe("composeSliceBuilders", () => {
       { id: "l", name: "DailyUniversalRegister" },
     ];
 
-    const buildData = composeSliceBuilders(builderOne, builderTwo);
+    const buildData = prepareSlicesForRender(false, variants)(
+      builderOne,
+      builderTwo,
+    );
     buildData(originalData);
     expect(builderOne).toHaveBeenCalled();
     expect(builderTwo).toHaveBeenCalled();
@@ -87,7 +91,10 @@ describe("composeSliceBuilders", () => {
       { id: "l", name: "DailyUniversalRegister" },
     ];
 
-    const buildData = composeSliceBuilders(builderOne, builderTwo);
+    const buildData = prepareSlicesForRender(false, variants)(
+      builderOne,
+      builderTwo,
+    );
     buildData(originalData);
     expect(builderTwo).toHaveBeenCalledWith(builderOne(originalData));
   });

@@ -1,8 +1,11 @@
 import React, { Component } from "react";
 import { AppState, DeviceEventEmitter, NativeModules } from "react-native";
 import PropTypes from "prop-types";
+
 import { SectionContext } from "@times-components-native/context";
+import Responsive from "@times-components-native/responsive";
 import Section from "@times-components-native/section";
+import { VariantTestingProvider } from "@times-components-native/variant-testing";
 import trackSection from "./track-section";
 
 const {
@@ -131,7 +134,7 @@ class SectionPage extends Component {
   }
 
   render() {
-    const { publicationName } = this.props;
+    const { publicationName, variants } = this.props;
     const { recentlyOpenedPuzzleCount, savedArticles, section } = this.state;
 
     return (
@@ -145,15 +148,19 @@ class SectionPage extends Component {
           savedArticles,
         }}
       >
-        <Section
-          analyticsStream={trackSection}
-          onArticlePress={onArticlePress}
-          onLinkPress={onLinkPress}
-          onPuzzleBarPress={onPuzzleBarPress}
-          onPuzzlePress={onPuzzlePress}
-          section={section}
-          publicationName={publicationName}
-        />
+        <Responsive>
+          <VariantTestingProvider variants={variants}>
+            <Section
+              analyticsStream={trackSection}
+              onArticlePress={onArticlePress}
+              onLinkPress={onLinkPress}
+              onPuzzleBarPress={onPuzzleBarPress}
+              onPuzzlePress={onPuzzlePress}
+              section={section}
+              publicationName={publicationName}
+            />
+          </VariantTestingProvider>
+        </Responsive>
       </SectionContext.Provider>
     );
   }

@@ -5,7 +5,6 @@ import {
   ContextProviderWithDefaults,
   defaults,
 } from "@times-components-native/context";
-import { useResponsiveContext } from "@times-components-native/responsive";
 import { themeFactory } from "@times-components-native/styleguide";
 import { VariantTestingProvider } from "@times-components-native/variant-testing";
 import adTargetConfig from "./ad-targeting-config";
@@ -38,7 +37,6 @@ const ArticleBase = ({
   sectionName: pageSection,
   variants,
 }) => {
-  const { isTablet } = useResponsiveContext();
   const { section: articleSection, template } = article || {};
   const section = pageSection || articleSection || "default";
   const adConfig =
@@ -63,7 +61,7 @@ const ArticleBase = ({
 
   return (
     <ContextProviderWithDefaults value={{ theme }}>
-      <VariantTestingProvider variants={variants} isTablet={isTablet}>
+      <VariantTestingProvider variants={variants}>
         <Article
           adConfig={adConfig}
           analyticsStream={trackArticle}

@@ -6,11 +6,13 @@ const SectionPage = ({
   publicationName,
   recentlyOpenedPuzzleCount,
   section,
+  variants,
 }) => (
   <Section
     publicationName={publicationName}
     recentlyOpenedPuzzleCount={recentlyOpenedPuzzleCount}
     section={JSON.parse(section)}
+    variants={variants}
   />
 );
 
