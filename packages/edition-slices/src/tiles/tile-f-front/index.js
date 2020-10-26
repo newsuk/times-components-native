@@ -14,8 +14,6 @@ import { getDimensions } from "@times-components-native/utils";
 
 const TileFFront = ({ onPress, tile, orientation }) => {
   const { width: windowWidth, height: windowHeight } = getDimensions();
-  const isLandscape = orientation === "landscape";
-  const columnCount = isLandscape ? 1 : 3;
   const imageCrop = getTileImage(tile, "crop169");
   const styles = getStyle(orientation, windowWidth, windowHeight);
 
@@ -37,6 +35,7 @@ const TileFFront = ({ onPress, tile, orientation }) => {
         hasVideo={article.hasVideo}
       />
       <FrontTileSummary
+        containerStyle={styles.summaryContainer}
         headlineStyle={styles.headline}
         headlineMarginBottom={styles.headlineMarginBottom}
         summary={article.content}
@@ -48,7 +47,7 @@ const TileFFront = ({ onPress, tile, orientation }) => {
         justified={true}
         straplineMarginBottom={styles.straplineMarginBottom}
         tile={tile}
-        columnCount={columnCount}
+        columnCount={3}
         bylines={article.bylines}
         bylineMarginBottom={styles.bylineMarginBottom}
       />
