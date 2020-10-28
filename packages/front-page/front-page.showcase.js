@@ -37,6 +37,9 @@ export default {
                 textAlign: "justify",
               }}
               columnCount={1}
+              contentHeight={200}
+              contentWidth={200}
+              numberOfLines={5}
             />
           </StoryContainer>
         </Responsive>
@@ -58,6 +61,9 @@ export default {
                 textAlign: "justify",
               }}
               columnCount={2}
+              contentHeight={500}
+              contentWidth={200}
+              numberOfLines={5}
             />
           </StoryContainer>
         </Responsive>

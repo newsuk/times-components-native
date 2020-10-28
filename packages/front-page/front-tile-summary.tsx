@@ -33,7 +33,14 @@ interface Props {
   summaryLineHeight: number;
 }
 
-const renderContent = (props: Props, numberOfLines: number) => {
+const renderContent = (
+  props: Props,
+  {
+    numberOfLines,
+    contentWidth,
+    contentHeight,
+  }: { numberOfLines: number; contentWidth: number; contentHeight: number },
+) => {
   const { summary, summaryStyle, justified, columnCount, bylines } = props;
 
   return (
@@ -43,6 +50,8 @@ const renderContent = (props: Props, numberOfLines: number) => {
       numberOfLines={numberOfLines}
       columnCount={columnCount}
       bylines={bylines}
+      contentHeight={contentHeight}
+      contentWidth={contentWidth}
       justified={justified}
     />
   );
@@ -160,7 +169,7 @@ const FrontTileSummary: React.FC<Props> = (props) => {
       {allMeasured && (
         <MeasureContainer
           key={"measured"}
-          render={({ height }) => {
+          render={({ width, height }) => {
             const frontTileConfig = getFrontTileConfig({
               container: {
                 height,
@@ -211,7 +220,12 @@ const FrontTileSummary: React.FC<Props> = (props) => {
                   </View>
                 )}
                 {frontTileConfig.content.show &&
-                  renderContent(props, frontTileConfig.content.numberOfLines)}
+                  renderContent(props, {
+                    numberOfLines: frontTileConfig.content.numberOfLines,
+                    contentHeight:
+                      frontTileConfig.content.numberOfLines * summaryLineHeight,
+                    contentWidth: width,
+                  })}
               </TileSummaryContainer>
             );
           }}
