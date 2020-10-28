@@ -9,6 +9,7 @@ const functionalColours = {
   black: "#000000",
   border: "#F0F0F0",
   buff: "#F0EEDF",
+  buffKeyline: "#CECCBF",
   brandColour: "#1D1D1B",
   bullet: "#103546",
   contrast: "#FFFFFF",
