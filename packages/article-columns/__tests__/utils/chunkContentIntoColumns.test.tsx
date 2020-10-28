@@ -554,4 +554,73 @@ describe("chunkContentIntoColumns", () => {
       },
     ]);
   });
+
+  it("will not add another paragraph to first column when not enough room for one more line", () => {
+    const maxLinesInColumn = 20;
+    const linesInContent = 19;
+    const paragraph1 = createParagraphWithText(
+      createTextWithNumberOfLines(linesInContent),
+      {
+        id: "p1",
+      },
+    );
+    const paragraph2 = createParagraphWithText(
+      createTextWithNumberOfLines(linesInContent),
+      {
+        id: "p2",
+      },
+    );
+
+    const articleMeasurements: Measurements = {
+      bylineHeight: 19,
+      bylineMargin: 0,
+      contents: {
+        lines: {
+          p1: createLinesWithNumberOfLines(linesInContent),
+          p2: createLinesWithNumberOfLines(linesInContent),
+        },
+        heights: {
+          p1: linesInContent * columnLineHeight,
+          p2: linesInContent * columnLineHeight,
+        },
+      },
+    };
+
+    const columns = chunkContentIntoColumns(
+      [paragraph1, paragraph2],
+      articleMeasurements,
+      {
+        ...columnParameters,
+        columnHeight: maxLinesInColumn * columnLineHeight,
+      },
+    );
+
+    expect(columns).toHaveLength(2);
+    expect(columns[0]).toMatchObject([
+      {
+        children: [
+          {
+            attributes: {
+              value: createTextWithNumberOfLines(19),
+            },
+            children: [],
+            name: "text",
+          },
+        ],
+      },
+    ]);
+    expect(columns[1]).toMatchObject([
+      {
+        children: [
+          {
+            attributes: {
+              value: createTextWithNumberOfLines(19),
+            },
+            children: [],
+            name: "text",
+          },
+        ],
+      },
+    ]);
+  });
 });

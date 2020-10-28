@@ -213,7 +213,7 @@ exports[`5. front lead one - landscape - 1024 1`] = `
     colSeparatorStyle={
       Object {
         "borderColor": "#DBDBDB",
-        "marginTop": 0,
+        "marginVertical": 0,
       }
     }
     containerStyle={
@@ -270,7 +270,7 @@ exports[`6. front lead one - landscape - 1080 1`] = `
     colSeparatorStyle={
       Object {
         "borderColor": "#DBDBDB",
-        "marginTop": 0,
+        "marginVertical": 0,
       }
     }
     containerStyle={
@@ -327,7 +327,7 @@ exports[`7. front lead one - landscape - 1112 1`] = `
     colSeparatorStyle={
       Object {
         "borderColor": "#DBDBDB",
-        "marginTop": 0,
+        "marginVertical": 0,
       }
     }
     containerStyle={
@@ -384,7 +384,7 @@ exports[`8. front lead one - landscape - 1194 1`] = `
     colSeparatorStyle={
       Object {
         "borderColor": "#DBDBDB",
-        "marginTop": 0,
+        "marginVertical": 0,
       }
     }
     containerStyle={
@@ -441,7 +441,7 @@ exports[`9. front lead one - landscape - 1366 1`] = `
     colSeparatorStyle={
       Object {
         "borderColor": "#DBDBDB",
-        "marginTop": 0,
+        "marginVertical": 0,
       }
     }
     containerStyle={

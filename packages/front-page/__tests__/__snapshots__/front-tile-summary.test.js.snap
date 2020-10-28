@@ -11,6 +11,7 @@ exports[`FrontTileSummary performs measurements before rendering front tile summ
         "flex": 1,
       },
       Object {
+        "minHeight": undefined,
         "opacity": 0,
       },
     ]
@@ -92,6 +93,7 @@ exports[`FrontTileSummary renders byline with keyline 1`] = `
         "flex": 1,
       },
       Object {
+        "minHeight": 200,
         "opacity": 1,
       },
     ]
@@ -181,6 +183,8 @@ exports[`FrontTileSummary renders byline with keyline 1`] = `
         },
       ]
     }
+    contentHeight={80}
+    contentWidth={200}
     numberOfLines={4}
     summary={
       Array [
@@ -219,6 +223,7 @@ exports[`FrontTileSummary renders with 2 columns 1`] = `
         "flex": 1,
       },
       Object {
+        "minHeight": 200,
         "opacity": 1,
       },
     ]
@@ -286,6 +291,8 @@ exports[`FrontTileSummary renders with 2 columns 1`] = `
       ]
     }
     columnCount={2}
+    contentHeight={80}
+    contentWidth={200}
     numberOfLines={4}
     summary={
       Array [
@@ -324,6 +331,7 @@ exports[`FrontTileSummary renders with a missing byline 1`] = `
         "flex": 1,
       },
       Object {
+        "minHeight": 200,
         "opacity": 1,
       },
     ]
@@ -372,6 +380,8 @@ exports[`FrontTileSummary renders with a missing byline 1`] = `
     />
   </View>
   <FrontArticleSummaryContent
+    contentHeight={120}
+    contentWidth={200}
     numberOfLines={6}
     summary={
       Array [
@@ -410,6 +420,7 @@ exports[`FrontTileSummary renders with a missing strapline 1`] = `
         "flex": 1,
       },
       Object {
+        "minHeight": 200,
         "opacity": 1,
       },
     ]
@@ -477,6 +488,8 @@ exports[`FrontTileSummary renders with a missing strapline 1`] = `
         },
       ]
     }
+    contentHeight={120}
+    contentWidth={200}
     numberOfLines={6}
     summary={
       Array [
@@ -515,6 +528,7 @@ exports[`FrontTileSummary shows front tile summary with headline only after meas
         "flex": 1,
       },
       Object {
+        "minHeight": 200,
         "opacity": 1,
       },
     ]
@@ -555,6 +569,7 @@ exports[`FrontTileSummary shows front tile summary with headline/strapline/bylin
         "flex": 1,
       },
       Object {
+        "minHeight": 200,
         "opacity": 1,
       },
     ]
@@ -643,6 +658,8 @@ exports[`FrontTileSummary shows front tile summary with headline/strapline/bylin
         },
       ]
     }
+    contentHeight={80}
+    contentWidth={200}
     numberOfLines={4}
     summary={
       Array [

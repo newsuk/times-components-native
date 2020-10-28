@@ -23,7 +23,7 @@ const sharedLandscapeStyles = {
   container: {
     flex: 1,
     padding: spacing(2),
-    paddingTop: 0,
+    paddingVertical: 0,
   },
   imageContainer: {
     width: "100%",
@@ -37,7 +37,6 @@ const sharedPortraitStyles = {
   container: {
     flex: 1,
     paddingLeft: spacing(2),
-    paddingBottom: spacing(2),
   },
   imageContainer: {
     width: "100%",

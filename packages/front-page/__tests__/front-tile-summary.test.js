@@ -25,6 +25,12 @@ jest.mock("@times-components-native/front-page/MeasureContainer", () => {
   return { MeasureContainer: MockMeasureContainer };
 });
 
+jest.mock("@times-components-native/responsive", () => ({
+  useResponsiveContext: () => ({
+    orientation: undefined,
+  }),
+}));
+
 const summaryContent = [
   {
     attributes: {},
@@ -72,6 +78,16 @@ const simulateMeasurement = (
   renderer,
   { headlineHeight = 20, straplineHeight = 20, bylineHeight = 20 },
 ) => {
+  // this is triggering the useEffect which simulates an orientation change
+  ReactTestRenderer.act(() => {
+    renderer.root
+      .findByProps({
+        testID: "headlineWrapper",
+      })
+      .props["onLayout"]({
+        nativeEvent: { layout: { height: headlineHeight } },
+      });
+  });
   ReactTestRenderer.act(() => {
     renderer.root
       .findByProps({

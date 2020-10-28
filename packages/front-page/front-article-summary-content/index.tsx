@@ -6,7 +6,6 @@ import {
   BylineInput,
   Markup,
 } from "@times-components-native/fixture-generator/src/types";
-import { MeasureContainer } from "@times-components-native/front-page/MeasureContainer";
 import { ArticleColumns } from "@times-components-native/article-columns/article-columns";
 import { Text, TextStyle } from "react-native";
 import { transformContentForFront } from "@times-components-native/front-page/utils/transform-content-for-front";
@@ -17,6 +16,8 @@ interface Props {
   bylines: BylineInput[];
   numberOfLines: number;
   justified?: boolean;
+  contentWidth: number;
+  contentHeight: number;
 }
 
 interface SummaryTextProps {
@@ -37,6 +38,8 @@ const SummaryText: React.FC<SummaryTextProps> = ({
 };
 const FrontArticleSummaryContent: React.FC<Props> = (props) => {
   const {
+    contentHeight,
+    contentWidth,
     summary,
     summaryStyle,
     numberOfLines,
@@ -56,18 +59,14 @@ const FrontArticleSummaryContent: React.FC<Props> = (props) => {
   const lineHeight = style.lineHeight || 20;
   if (columnCount > 1) {
     return (
-      <MeasureContainer
-        render={({ width, height }) => (
-          <ArticleColumns
-            bylines={props.bylines}
-            style={style}
-            articleContents={transformedAst}
-            columnCount={columnCount}
-            containerHeight={height}
-            containerWidth={width}
-            lineHeight={lineHeight}
-          />
-        )}
+      <ArticleColumns
+        bylines={props.bylines}
+        style={style}
+        articleContents={transformedAst}
+        columnCount={columnCount}
+        containerHeight={contentHeight}
+        containerWidth={contentWidth}
+        lineHeight={lineHeight}
       />
     );
   }

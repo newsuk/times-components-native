@@ -7,13 +7,9 @@ jest.mock("@times-components-native/article-summary", () => ({
   ArticleSummaryContent: "ArticleSummaryContent",
 }));
 
-jest.mock("@times-components-native/front-page/MeasureContainer", () => {
-  const MockMeasureContainer = ({ render }) => {
-    return render({ height: 180, width: 200 });
-  };
-  return { MeasureContainer: MockMeasureContainer };
-});
-
+jest.mock("@times-components-native/article-columns/article-columns", () => ({
+  ArticleColumns: "ArticleColumns",
+}));
 const ast = [
   {
     attributes: {},
@@ -39,10 +35,19 @@ const props = {
   numberOfLines: 9,
   style: { backgoundColor: "red" },
   summary: ast,
+  contentWidth: 100,
+  contentHeight: 300,
 };
 describe("FrontArticleSummaryContent", () => {
   it("renders correctly", () => {
     const tree = TestRenderer.create(<FrontArticleSummaryContent {...props} />);
+    expect(tree).toMatchSnapshot();
+  });
+
+  it("renders correctly with multiple columns", () => {
+    const tree = TestRenderer.create(
+      <FrontArticleSummaryContent {...props} columnCount={3} />,
+    );
     expect(tree).toMatchSnapshot();
   });
 

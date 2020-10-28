@@ -16,7 +16,7 @@ exports[`tile g front landscape 1024 1`] = `
     fill={true}
     style={
       Object {
-        "marginBottom": 5,
+        "marginBottom": 0,
         "width": "100%",
       }
     }
@@ -69,7 +69,7 @@ exports[`tile g front landscape 1024 1`] = `
       Object {
         "backgroundColor": "#FFFFFF",
         "bottom": 0,
-        "paddingTop": 10,
+        "paddingTop": 5,
         "position": "absolute",
         "width": "100%",
       }
@@ -618,7 +618,7 @@ exports[`tile g front landscape 1080 1`] = `
     fill={true}
     style={
       Object {
-        "marginBottom": 5,
+        "marginBottom": 0,
         "width": "100%",
       }
     }
@@ -671,7 +671,7 @@ exports[`tile g front landscape 1080 1`] = `
       Object {
         "backgroundColor": "#FFFFFF",
         "bottom": 0,
-        "paddingTop": 10,
+        "paddingTop": 5,
         "position": "absolute",
         "width": "100%",
       }
@@ -1220,7 +1220,7 @@ exports[`tile g front landscape 1194 1`] = `
     fill={true}
     style={
       Object {
-        "marginBottom": 5,
+        "marginBottom": 0,
         "width": "100%",
       }
     }
@@ -1273,7 +1273,7 @@ exports[`tile g front landscape 1194 1`] = `
       Object {
         "backgroundColor": "#FFFFFF",
         "bottom": 0,
-        "paddingTop": 10,
+        "paddingTop": 5,
         "position": "absolute",
         "width": "100%",
       }
@@ -1822,7 +1822,7 @@ exports[`tile g front landscape 1366 1`] = `
     fill={true}
     style={
       Object {
-        "marginBottom": 5,
+        "marginBottom": 0,
         "width": "100%",
       }
     }
@@ -1875,7 +1875,7 @@ exports[`tile g front landscape 1366 1`] = `
       Object {
         "backgroundColor": "#FFFFFF",
         "bottom": 0,
-        "paddingTop": 10,
+        "paddingTop": 5,
         "position": "absolute",
         "width": "100%",
       }
@@ -2423,7 +2423,7 @@ exports[`tile g front portrait 768 1`] = `
     fill={true}
     style={
       Object {
-        "marginBottom": 5,
+        "marginBottom": 0,
         "width": "100%",
       }
     }
@@ -2476,7 +2476,7 @@ exports[`tile g front portrait 768 1`] = `
       Object {
         "backgroundColor": "#FFFFFF",
         "bottom": 0,
-        "paddingTop": 10,
+        "paddingTop": 5,
         "position": "absolute",
         "width": "100%",
       }
@@ -3024,7 +3024,7 @@ exports[`tile g front portrait 810 1`] = `
     fill={true}
     style={
       Object {
-        "marginBottom": 5,
+        "marginBottom": 0,
         "width": "100%",
       }
     }
@@ -3077,7 +3077,7 @@ exports[`tile g front portrait 810 1`] = `
       Object {
         "backgroundColor": "#FFFFFF",
         "bottom": 0,
-        "paddingTop": 10,
+        "paddingTop": 5,
         "position": "absolute",
         "width": "100%",
       }
@@ -3625,7 +3625,7 @@ exports[`tile g front portrait 834 0.75 ratio 1`] = `
     fill={true}
     style={
       Object {
-        "marginBottom": 5,
+        "marginBottom": 0,
         "width": "100%",
       }
     }
@@ -3678,7 +3678,7 @@ exports[`tile g front portrait 834 0.75 ratio 1`] = `
       Object {
         "backgroundColor": "#FFFFFF",
         "bottom": 0,
-        "paddingTop": 10,
+        "paddingTop": 5,
         "position": "absolute",
         "width": "100%",
       }
@@ -4226,7 +4226,7 @@ exports[`tile g front portrait 834 less than 0.75 ratio 1`] = `
     fill={true}
     style={
       Object {
-        "marginBottom": 10,
+        "marginBottom": 0,
         "width": "100%",
       }
     }
@@ -4827,7 +4827,7 @@ exports[`tile g front portrait 1024 1`] = `
     fill={true}
     style={
       Object {
-        "marginBottom": 10,
+        "marginBottom": 0,
         "width": "100%",
       }
     }

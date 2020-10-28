@@ -24,13 +24,9 @@ const strapline = {
 
 const sharedStyles = {
   container: {
-    paddingBottom: spacing(2),
+    paddingBottom: spacing(0),
     paddingRight: spacing(2),
     flex: 1,
-  },
-  imageContainer: {
-    width: "100%",
-    marginBottom: spacing(2),
   },
   summary: {
     ...summary,
@@ -42,10 +38,21 @@ const sharedStyles = {
 
 const sharedLandscapeStyles = {
   ...sharedStyles,
+  summaryContainer: {
+    position: "absolute",
+    bottom: 0,
+    backgroundColor: colours.functional.white,
+    width: "100%",
+    paddingTop: spacing(2),
+  },
   headlineMarginBottom: spacing(2),
   straplineMarginTop: spacing(2),
   straplineMarginBottom: spacing(3),
   bylineMarginBottom: spacing(3),
+  imageContainer: {
+    width: "100%",
+    marginBottom: 0,
+  },
   summary: {
     ...summary,
     fontSize: 14,
@@ -59,6 +66,10 @@ const sharedPortraitStyles = {
   straplineMarginTop: spacing(2),
   straplineMarginBottom: spacing(3),
   bylineMarginBottom: 0,
+  imageContainer: {
+    width: "100%",
+    marginBottom: spacing(2),
+  },
 };
 
 const portrait834 = {

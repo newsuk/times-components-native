@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import {
   ArticleSummaryHeadline,
   ArticleSummaryStrapline,
@@ -11,6 +11,7 @@ import { Markup } from "@times-components-native/fixture-generator/src/types";
 import { FrontPageByline } from "./front-page-byline";
 import { MeasureContainer } from "./MeasureContainer";
 import { getFrontTileConfig } from "./utils/get-front-tile-config";
+import { useResponsiveContext } from "@times-components-native/responsive";
 
 interface Props {
   columnCount?: number;
@@ -32,7 +33,14 @@ interface Props {
   summaryLineHeight: number;
 }
 
-const renderContent = (props: Props, numberOfLines: number) => {
+const renderContent = (
+  props: Props,
+  {
+    numberOfLines,
+    contentWidth,
+    contentHeight,
+  }: { numberOfLines: number; contentWidth: number; contentHeight: number },
+) => {
   const { summary, summaryStyle, justified, columnCount, bylines } = props;
 
   return (
@@ -42,6 +50,8 @@ const renderContent = (props: Props, numberOfLines: number) => {
       numberOfLines={numberOfLines}
       columnCount={columnCount}
       bylines={bylines}
+      contentHeight={contentHeight}
+      contentWidth={contentWidth}
       justified={justified}
     />
   );
@@ -108,20 +118,29 @@ const FrontTileSummary: React.FC<Props> = (props) => {
     straplineHeight !== undefined &&
     bylineHeight !== undefined;
 
-  const TileSummaryContainer: React.FC<{ hidden: boolean }> = ({
-    children,
-    hidden,
-  }) => (
+  const TileSummaryContainer: React.FC<{
+    hidden: boolean;
+    minHeight?: number;
+  }> = ({ children, hidden, minHeight }) => (
     <View
       style={[
         props.containerStyle,
         styles.container,
-        { opacity: hidden ? 0 : 1 },
+        { minHeight, opacity: hidden ? 0 : 1 },
       ]}
     >
       {children}
     </View>
   );
+
+  const { orientation } = useResponsiveContext();
+
+  // re-measure/render on orientation change
+  useEffect(() => {
+    setHeadlineHeight(undefined);
+    setStraplineHeight(undefined);
+    setBylineHeight(undefined);
+  }, [orientation]);
 
   return (
     <>
@@ -150,7 +169,7 @@ const FrontTileSummary: React.FC<Props> = (props) => {
       {allMeasured && (
         <MeasureContainer
           key={"measured"}
-          render={({ height }) => {
+          render={({ width, height }) => {
             const frontTileConfig = getFrontTileConfig({
               container: {
                 height,
@@ -174,7 +193,7 @@ const FrontTileSummary: React.FC<Props> = (props) => {
             });
 
             return (
-              <TileSummaryContainer hidden={false}>
+              <TileSummaryContainer hidden={false} minHeight={height}>
                 <View
                   style={{
                     marginBottom: frontTileConfig.headline.marginBottom,
@@ -201,7 +220,12 @@ const FrontTileSummary: React.FC<Props> = (props) => {
                   </View>
                 )}
                 {frontTileConfig.content.show &&
-                  renderContent(props, frontTileConfig.content.numberOfLines)}
+                  renderContent(props, {
+                    numberOfLines: frontTileConfig.content.numberOfLines,
+                    contentHeight:
+                      frontTileConfig.content.numberOfLines * summaryLineHeight,
+                    contentWidth: width,
+                  })}
               </TileSummaryContainer>
             );
           }}

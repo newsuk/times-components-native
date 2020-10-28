@@ -1849,7 +1849,7 @@ exports[`23. front lead two - portrait - medium 1`] = `
         "flexDirection": "column",
         "justifyContent": "center",
         "paddingBottom": 20,
-        "paddingTop": 10,
+        "paddingTop": 15,
         "width": 688,
       }
     }
@@ -1895,7 +1895,7 @@ exports[`23. front lead two - portrait - medium 1`] = `
       style={
         Object {
           "height": 133,
-          "marginTop": 10,
+          "marginTop": 20,
           "width": "100%",
         }
       }
@@ -4448,6 +4448,7 @@ exports[`57. front lead two - portrait - wide 1`] = `
         "flex": 1,
         "flexDirection": "column",
         "justifyContent": "center",
+        "paddingTop": 15,
         "paddingVertical": 20,
         "width": 920,
       }
@@ -4494,7 +4495,7 @@ exports[`57. front lead two - portrait - wide 1`] = `
       style={
         Object {
           "height": 174,
-          "marginTop": 10,
+          "marginTop": 20,
           "width": "100%",
         }
       }
@@ -4717,8 +4718,7 @@ exports[`60. front lead one and one - landscape - wide 1`] = `
             "borderColor": "#DBDBDB",
             "borderRightWidth": 1,
             "borderStyle": "solid",
-            "marginTop": 0,
-            "marginVertical": 10,
+            "marginVertical": 0,
           }
         }
       />
@@ -4737,8 +4737,7 @@ exports[`60. front lead one and one - landscape - wide 1`] = `
             "borderColor": "#DBDBDB",
             "borderRightWidth": 1,
             "borderStyle": "solid",
-            "marginTop": 0,
-            "marginVertical": 10,
+            "marginVertical": 0,
           }
         }
       />
@@ -7336,6 +7335,7 @@ exports[`91. front lead two - portrait - huge 1`] = `
           "flex": 1,
           "flexDirection": "column",
           "justifyContent": "center",
+          "paddingTop": 15,
           "paddingVertical": 20,
           "width": 920,
         }
@@ -7382,7 +7382,7 @@ exports[`91. front lead two - portrait - huge 1`] = `
         style={
           Object {
             "height": 174,
-            "marginTop": 10,
+            "marginTop": 20,
             "width": "100%",
           }
         }
@@ -7635,8 +7635,7 @@ exports[`94. front lead one and one - landscape - huge 1`] = `
               "borderColor": "#DBDBDB",
               "borderRightWidth": 1,
               "borderStyle": "solid",
-              "marginTop": 0,
-              "marginVertical": 10,
+              "marginVertical": 0,
             }
           }
         />
@@ -7655,8 +7654,7 @@ exports[`94. front lead one and one - landscape - huge 1`] = `
               "borderColor": "#DBDBDB",
               "borderRightWidth": 1,
               "borderStyle": "solid",
-              "marginTop": 0,
-              "marginVertical": 10,
+              "marginVertical": 0,
             }
           }
         />

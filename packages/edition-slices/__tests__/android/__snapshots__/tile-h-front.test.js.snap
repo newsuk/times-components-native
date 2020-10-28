@@ -4727,7 +4727,7 @@ exports[`tile h front portrait 1024 1`] = `
   linkStyle={
     Object {
       "flex": 1,
-      "paddingBottom": 5,
+      "paddingBottom": 0,
       "paddingRight": 10,
     }
   }

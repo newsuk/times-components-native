@@ -26,9 +26,15 @@ const sharedLandscapeStyles = {
     paddingRight: spacing(2),
     flex: 1,
   },
+  summaryContainer: {
+    position: "absolute",
+    bottom: 0,
+    backgroundColor: colours.functional.white,
+    width: "100%",
+    paddingTop: spacing(2),
+  },
   imageContainer: {
     width: "100%",
-    marginBottom: spacing(1),
   },
   summary: {
     ...summary,

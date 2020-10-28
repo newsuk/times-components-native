@@ -15,7 +15,7 @@ const calculateStyles = (orientation) => {
 
   const inTodaysEditionContainerPortrait = {
     width: "100%",
-    marginTop: spacing(2),
+    marginTop: spacing(4),
   };
 
   const sharedStyles = {
@@ -48,6 +48,10 @@ const calculateStyles = (orientation) => {
 
   const sharedPortraitStyles = {
     ...sharedStyles,
+    container: {
+      ...container,
+      paddingTop: spacing(3),
+    },
     lead1Container: {
       width: columnToPercentageWithOrientation({ numberOfColumns: 4 }),
     },
@@ -121,8 +125,7 @@ const calculateStyles = (orientation) => {
       "768": {
         ...sharedPortraitStyles,
         container: {
-          ...container,
-          paddingTop: spacing(2),
+          ...sharedPortraitStyles.container,
           paddingBottom: spacing(4),
         },
         inTodaysEditionContainer: {
@@ -133,8 +136,7 @@ const calculateStyles = (orientation) => {
       "810": {
         ...sharedPortraitStyles,
         container: {
-          ...container,
-          paddingTop: spacing(2),
+          ...sharedPortraitStyles.container,
           paddingBottom: spacing(3),
         },
         inTodaysEditionContainer: {
@@ -148,8 +150,7 @@ const calculateStyles = (orientation) => {
           0: {
             ...sharedPortraitStyles,
             container: {
-              ...container,
-              paddingTop: spacing(3),
+              ...sharedPortraitStyles.container,
               paddingBottom: spacing(4),
             },
             inTodaysEditionContainer: {
@@ -161,8 +162,7 @@ const calculateStyles = (orientation) => {
           0.75: {
             ...sharedPortraitStyles,
             container: {
-              ...container,
-              paddingTop: spacing(3),
+              ...sharedPortraitStyles.container,
               paddingBottom: spacing(4),
             },
             inTodaysEditionContainer: {
@@ -176,7 +176,7 @@ const calculateStyles = (orientation) => {
       "1024": {
         ...sharedPortraitStyles,
         container: {
-          ...container,
+          ...sharedPortraitStyles.container,
           paddingVertical: spacing(4),
         },
         inTodaysEditionContainer: {
