@@ -44,7 +44,8 @@ export const chunkContentIntoColumns = (
   const heightRemainingInColumn =
     columnHeight - (currentColumnHeight + heightTakenOnPage);
 
-  if (heightRemainingInColumn === 0) {
+  if (heightRemainingInColumn < columnParameters.columnLineHeight) {
+    // if (heightRemainingInColumn == 0) {
     // no capacity in current column, start adding into next column
     const updatedColumns = [...columns, []];
     return chunkContentIntoColumns(
