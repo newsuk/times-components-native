@@ -7,6 +7,7 @@ import Responsive from "@times-components-native/responsive";
 import Section from "@times-components-native/section";
 import { VariantTestingProvider } from "@times-components-native/variant-testing";
 import trackSection from "./track-section";
+import adTargetConfig from "./ad-targeting-config";
 
 const {
   getOpenedPuzzleCount,
@@ -134,8 +135,17 @@ class SectionPage extends Component {
   }
 
   render() {
-    const { publicationName, variants } = this.props;
+    const { error, isLoading, publicationName, variants } = this.props;
     const { recentlyOpenedPuzzleCount, savedArticles, section } = this.state;
+
+    const adConfig =
+      isLoading || error
+        ? {}
+        : adTargetConfig({
+            // adTestMode,
+            // article,
+            sectionName: section.name,
+          });
 
     return (
       <SectionContext.Provider
@@ -151,6 +161,7 @@ class SectionPage extends Component {
         <Responsive>
           <VariantTestingProvider variants={variants}>
             <Section
+              adConfig={adConfig}
               analyticsStream={trackSection}
               onArticlePress={onArticlePress}
               onLinkPress={onLinkPress}

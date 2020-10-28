@@ -24,8 +24,10 @@ export const VariantTestingProvider = ({ variants = {}, children }: Props) => {
   let variantConfig = {};
 
   if (isTablet) {
-    const validArticleMpuTestVariant = validateVariant(articleMpuTestVariant);
+    // const validArticleMpuTestVariant = validateVariant(articleMpuTestVariant);
+    const validArticleMpuTestVariant = "A";
     const validSectionAdTestVariant = validateVariant(sectionAdTestVariant);
+    // const validSectionAdTestVariant = "C";
 
     variantConfig = {
       ...variantConfig,

@@ -2,18 +2,8 @@ import React from "react";
 import PropTypes from "prop-types";
 import Section from "./section";
 
-const SectionPage = ({
-  publicationName,
-  recentlyOpenedPuzzleCount,
-  section,
-  variants,
-}) => (
-  <Section
-    publicationName={publicationName}
-    recentlyOpenedPuzzleCount={recentlyOpenedPuzzleCount}
-    section={JSON.parse(section)}
-    variants={variants}
-  />
+const SectionPage = (props) => (
+  <Section {...props} section={JSON.parse(props.section)} />
 );
 
 SectionPage.propTypes = {

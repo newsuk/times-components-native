@@ -1,26 +1,16 @@
 import React from "react";
-import { View, Text } from "react-native";
 import PropTypes from "prop-types";
 
 import Ad from "@times-components-native/ad";
-import { ResponsiveSlice } from "../shared";
 
-const SectionAd = ({ slice }) => {
+const SectionAd = ({ adConfig, slice }) => {
   const { slotName } = slice;
-  const adConfig = {};
 
-  const renderAd = () => <Ad adConfig={adConfig} slotName={slotName} />;
-  // const renderAd = () => (
-  //   <View>
-  //     <Text>Wibble</Text>
-  //   </View>
-  // );
-
-  return <ResponsiveSlice renderMedium={renderAd} />;
+  return <Ad adConfig={adConfig} slotName={slotName} />;
 };
 
 SectionAd.propTypes = {
-  // onPress: PropTypes.func.isRequired,
+  adConfig: PropTypes.shape({}),
   slice: PropTypes.shape({ slotName: PropTypes.string.isRequired }).isRequired,
 };
 

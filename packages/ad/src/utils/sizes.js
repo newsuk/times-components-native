@@ -94,6 +94,25 @@ const sizes = {
       width: 300,
     },
   ],
+  sectionB: [
+    {
+      height: 90,
+      sizes: [leaderboard],
+      width: 728,
+    },
+  ],
+  sectionC: [
+    {
+      height: 90,
+      sizes: [leaderboard],
+      width: 728,
+    },
+    {
+      height: 250,
+      sizes: [billboard],
+      width: 970,
+    },
+  ],
   pixel: [
     {
       height: 0,

@@ -221,7 +221,11 @@ class DOMContext extends PureComponent {
               baseUrl,
               html,
             }}
-            style={{ position: "absolute", width, height }}
+            style={{
+              position: "absolute",
+              width,
+              height,
+            }}
           />
         )}
         {height !== 0 && (

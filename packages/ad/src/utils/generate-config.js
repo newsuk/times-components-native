@@ -43,6 +43,8 @@ const sizeMap = {
   "native-inline-ad-a": sizes.native,
   "native-inline-ad-b": sizes.nativeB,
   "native-inline-ad-c": sizes.nativeC,
+  "native-section-ad-b": sizes.sectionB,
+  "native-section-ad-c": sizes.sectionC,
   pixel: sizes.pixel,
   pixelskin: sizes.pixel,
   pixelteads: sizes.pixel,

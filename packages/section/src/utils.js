@@ -67,7 +67,7 @@ const consecutiveItemsFlagger = memoizeOne((slices) =>
 );
 
 const insertSectionAd = (isTablet, variants) => (slices) => {
-  const adSlotIndex = 2;
+  const adSlotIndex = 2; // 0 based index
 
   if (
     !isTablet ||
@@ -90,6 +90,7 @@ const insertSectionAd = (isTablet, variants) => (slices) => {
     {
       name: "SectionAd",
       slotName,
+      height: group === "C" ? 90 : 250,
     },
     ...slices.slice(adSlotIndex),
   ];

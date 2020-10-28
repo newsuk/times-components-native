@@ -19,6 +19,7 @@ import {
 const styles = styleFactory();
 
 const Section = ({
+  adConfig,
   onArticlePress,
   onLinkPress,
   onPuzzlePress,
@@ -58,6 +59,7 @@ const Section = ({
       slice={slice}
       isInSupplement={isSupplementSection(title)}
       inTodaysEditionSlice={inTodaysEditionSlice}
+      adConfig={adConfig}
     />
   );
 
