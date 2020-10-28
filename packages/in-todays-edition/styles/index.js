@@ -9,19 +9,19 @@ const sharedStyles = {
   },
   titleContainer: {
     borderBottomWidth: 1,
-    borderBottomColor: colours.functional.keyline,
-    paddingBottom: 2,
+    borderBottomColor: colours.functional.buffKeyline,
+    paddingBottom: 3,
   },
   heading: {
     fontFamily: fonts.bodyRegular,
     letterSpacing: 1,
     color: colours.functional.brandColour,
+    fontWeight: "bold",
   },
   itemTitle: {
     fontSize: 16,
     fontFamily: fonts.headline,
     color: colours.functional.brandColour,
-    marginBottom: spacing(1),
   },
   itemStrapline: {
     fontSize: 13,
@@ -35,6 +35,7 @@ const sharedPortraitStyles = {
   ...sharedStyles,
   container: {
     ...sharedStyles.container,
+    paddingTop: 13,
     paddingHorizontal: spacing(4),
   },
   heading: {
@@ -50,8 +51,14 @@ const sharedPortraitStyles = {
     flex: 1,
     marginRight: spacing(2),
   },
+  itemTitle: {
+    ...sharedStyles.itemTitle,
+    marginBottom: 4,
+  },
   itemStrapline: {
     ...sharedStyles.itemStrapline,
+    fontSize: 14,
+    lineHeight: 18,
     marginBottom: spacing(1),
   },
   itemLast: {
@@ -59,7 +66,7 @@ const sharedPortraitStyles = {
   },
   divider: {
     paddingLeft: spacing(2),
-    borderColor: colours.functional.keyline,
+    borderColor: colours.functional.buffKeyline,
     borderLeftWidth: 1,
     marginHorizontal: spacing(1),
   },
@@ -86,6 +93,7 @@ const sharedLandscapeStyles = {
   itemTitle: {
     ...sharedStyles.itemTitle,
     fontSize: 18,
+    marginBottom: spacing(1),
   },
   itemStrapline: {
     ...sharedStyles.itemStrapline,
@@ -93,7 +101,6 @@ const sharedLandscapeStyles = {
     lineHeight: 18,
     marginBottom: spacing(2),
   },
-
   itemCTA: {
     flexDirection: "row",
   },
@@ -110,7 +117,7 @@ const sharedLandscapeStyles = {
   },
   divider: {
     borderBottomWidth: 1,
-    borderColor: colours.functional.keyline,
+    borderColor: colours.functional.buffKeyline,
   },
 };
 
@@ -141,13 +148,19 @@ const styles = {
       container: {
         ...sharedPortraitStyles.container,
         paddingHorizontal: spacing(4),
+        paddingBottom: spacing(5),
+      },
+      itemsContainer: {
+        ...sharedPortraitStyles.itemsContainer,
+        marginTop: spacing(3),
       },
     },
     1024: {
       ...sharedPortraitStyles,
       container: {
         ...sharedPortraitStyles.container,
-        paddingVertical: spacing(4),
+        paddingTop: spacing(4),
+        paddingBottom: spacing(5),
         paddingHorizontal: spacing(5),
       },
       heading: {
@@ -167,17 +180,13 @@ const styles = {
         fontSize: 15,
         lineHeight: 20,
       },
-      itemCTAText: {
-        ...sharedPortraitStyles.itemCTAText,
-        fontSize: 14,
-      },
       divider: {
         ...sharedPortraitStyles.divider,
-        paddingLeft: spacing(2),
+        paddingLeft: spacing(1),
       },
       item: {
         ...sharedPortraitStyles.item,
-        marginRight: spacing(1),
+        marginRight: spacing(2),
       },
     },
   },

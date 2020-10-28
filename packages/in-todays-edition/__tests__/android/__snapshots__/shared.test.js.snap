@@ -14,7 +14,7 @@ exports[`InTodaysEdition landscape 1024 1`] = `
   <View
     style={
       Object {
-        "borderBottomColor": "#DBDBDB",
+        "borderBottomColor": "#CECCBF",
         "borderBottomWidth": 1,
         "paddingBottom": 10,
       }
@@ -26,6 +26,7 @@ exports[`InTodaysEdition landscape 1024 1`] = `
           "color": "#1D1D1B",
           "fontFamily": "TimesDigitalW04-Regular",
           "fontSize": 14,
+          "fontWeight": "bold",
           "letterSpacing": 1,
         }
       }
@@ -102,7 +103,7 @@ exports[`InTodaysEdition landscape 1024 1`] = `
       style={
         Object {
           "borderBottomWidth": 1,
-          "borderColor": "#DBDBDB",
+          "borderColor": "#CECCBF",
         }
       }
     />
@@ -174,7 +175,7 @@ exports[`InTodaysEdition landscape 1024 1`] = `
       style={
         Object {
           "borderBottomWidth": 1,
-          "borderColor": "#DBDBDB",
+          "borderColor": "#CECCBF",
         }
       }
     />
@@ -246,7 +247,7 @@ exports[`InTodaysEdition landscape 1024 1`] = `
       style={
         Object {
           "borderBottomWidth": 1,
-          "borderColor": "#DBDBDB",
+          "borderColor": "#CECCBF",
         }
       }
     />
@@ -332,7 +333,7 @@ exports[`InTodaysEdition landscape 1080 1`] = `
   <View
     style={
       Object {
-        "borderBottomColor": "#DBDBDB",
+        "borderBottomColor": "#CECCBF",
         "borderBottomWidth": 1,
         "paddingBottom": 10,
       }
@@ -344,6 +345,7 @@ exports[`InTodaysEdition landscape 1080 1`] = `
           "color": "#1D1D1B",
           "fontFamily": "TimesDigitalW04-Regular",
           "fontSize": 14,
+          "fontWeight": "bold",
           "letterSpacing": 1,
         }
       }
@@ -420,7 +422,7 @@ exports[`InTodaysEdition landscape 1080 1`] = `
       style={
         Object {
           "borderBottomWidth": 1,
-          "borderColor": "#DBDBDB",
+          "borderColor": "#CECCBF",
         }
       }
     />
@@ -492,7 +494,7 @@ exports[`InTodaysEdition landscape 1080 1`] = `
       style={
         Object {
           "borderBottomWidth": 1,
-          "borderColor": "#DBDBDB",
+          "borderColor": "#CECCBF",
         }
       }
     />
@@ -564,7 +566,7 @@ exports[`InTodaysEdition landscape 1080 1`] = `
       style={
         Object {
           "borderBottomWidth": 1,
-          "borderColor": "#DBDBDB",
+          "borderColor": "#CECCBF",
         }
       }
     />
@@ -650,7 +652,7 @@ exports[`InTodaysEdition landscape 1112 1`] = `
   <View
     style={
       Object {
-        "borderBottomColor": "#DBDBDB",
+        "borderBottomColor": "#CECCBF",
         "borderBottomWidth": 1,
         "paddingBottom": 15,
       }
@@ -662,6 +664,7 @@ exports[`InTodaysEdition landscape 1112 1`] = `
           "color": "#1D1D1B",
           "fontFamily": "TimesDigitalW04-Regular",
           "fontSize": 14,
+          "fontWeight": "bold",
           "letterSpacing": 1,
         }
       }
@@ -739,7 +742,7 @@ exports[`InTodaysEdition landscape 1112 1`] = `
       style={
         Object {
           "borderBottomWidth": 1,
-          "borderColor": "#DBDBDB",
+          "borderColor": "#CECCBF",
         }
       }
     />
@@ -812,7 +815,7 @@ exports[`InTodaysEdition landscape 1112 1`] = `
       style={
         Object {
           "borderBottomWidth": 1,
-          "borderColor": "#DBDBDB",
+          "borderColor": "#CECCBF",
         }
       }
     />
@@ -885,7 +888,7 @@ exports[`InTodaysEdition landscape 1112 1`] = `
       style={
         Object {
           "borderBottomWidth": 1,
-          "borderColor": "#DBDBDB",
+          "borderColor": "#CECCBF",
         }
       }
     />
@@ -972,7 +975,7 @@ exports[`InTodaysEdition landscape 1366 1`] = `
   <View
     style={
       Object {
-        "borderBottomColor": "#DBDBDB",
+        "borderBottomColor": "#CECCBF",
         "borderBottomWidth": 1,
         "paddingBottom": 20,
       }
@@ -984,6 +987,7 @@ exports[`InTodaysEdition landscape 1366 1`] = `
           "color": "#1D1D1B",
           "fontFamily": "TimesDigitalW04-Regular",
           "fontSize": 15,
+          "fontWeight": "bold",
           "letterSpacing": 1,
           "lineHeight": 15,
         }
@@ -1062,7 +1066,7 @@ exports[`InTodaysEdition landscape 1366 1`] = `
       style={
         Object {
           "borderBottomWidth": 1,
-          "borderColor": "#DBDBDB",
+          "borderColor": "#CECCBF",
         }
       }
     />
@@ -1135,7 +1139,7 @@ exports[`InTodaysEdition landscape 1366 1`] = `
       style={
         Object {
           "borderBottomWidth": 1,
-          "borderColor": "#DBDBDB",
+          "borderColor": "#CECCBF",
         }
       }
     />
@@ -1208,7 +1212,7 @@ exports[`InTodaysEdition landscape 1366 1`] = `
       style={
         Object {
           "borderBottomWidth": 1,
-          "borderColor": "#DBDBDB",
+          "borderColor": "#CECCBF",
         }
       }
     />
@@ -1288,6 +1292,7 @@ exports[`InTodaysEdition portrait 768 1`] = `
       "backgroundColor": "#F0EEDF",
       "flex": 1,
       "paddingHorizontal": 20,
+      "paddingTop": 13,
       "paddingVertical": 15,
     }
   }
@@ -1295,9 +1300,9 @@ exports[`InTodaysEdition portrait 768 1`] = `
   <View
     style={
       Object {
-        "borderBottomColor": "#DBDBDB",
+        "borderBottomColor": "#CECCBF",
         "borderBottomWidth": 1,
-        "paddingBottom": 2,
+        "paddingBottom": 3,
       }
     }
   >
@@ -1307,6 +1312,7 @@ exports[`InTodaysEdition portrait 768 1`] = `
           "color": "#1D1D1B",
           "fontFamily": "TimesDigitalW04-Regular",
           "fontSize": 13,
+          "fontWeight": "bold",
           "letterSpacing": 1,
         }
       }
@@ -1337,7 +1343,7 @@ exports[`InTodaysEdition portrait 768 1`] = `
             "color": "#1D1D1B",
             "fontFamily": "TimesModern-Bold",
             "fontSize": 16,
-            "marginBottom": 5,
+            "marginBottom": 4,
           }
         }
       >
@@ -1348,8 +1354,8 @@ exports[`InTodaysEdition portrait 768 1`] = `
           Object {
             "color": "#1D1D1B",
             "fontFamily": "TimesDigitalW04-Regular",
-            "fontSize": 13,
-            "lineHeight": 16,
+            "fontSize": 14,
+            "lineHeight": 18,
             "marginBottom": 5,
           }
         }
@@ -1360,7 +1366,7 @@ exports[`InTodaysEdition portrait 768 1`] = `
     <View
       style={
         Object {
-          "borderColor": "#DBDBDB",
+          "borderColor": "#CECCBF",
           "borderLeftWidth": 1,
           "marginHorizontal": 5,
           "paddingLeft": 10,
@@ -1381,7 +1387,7 @@ exports[`InTodaysEdition portrait 768 1`] = `
             "color": "#1D1D1B",
             "fontFamily": "TimesModern-Bold",
             "fontSize": 16,
-            "marginBottom": 5,
+            "marginBottom": 4,
           }
         }
       >
@@ -1392,8 +1398,8 @@ exports[`InTodaysEdition portrait 768 1`] = `
           Object {
             "color": "#1D1D1B",
             "fontFamily": "TimesDigitalW04-Regular",
-            "fontSize": 13,
-            "lineHeight": 16,
+            "fontSize": 14,
+            "lineHeight": 18,
             "marginBottom": 5,
           }
         }
@@ -1404,7 +1410,7 @@ exports[`InTodaysEdition portrait 768 1`] = `
     <View
       style={
         Object {
-          "borderColor": "#DBDBDB",
+          "borderColor": "#CECCBF",
           "borderLeftWidth": 1,
           "marginHorizontal": 5,
           "paddingLeft": 10,
@@ -1425,7 +1431,7 @@ exports[`InTodaysEdition portrait 768 1`] = `
             "color": "#1D1D1B",
             "fontFamily": "TimesModern-Bold",
             "fontSize": 16,
-            "marginBottom": 5,
+            "marginBottom": 4,
           }
         }
       >
@@ -1436,8 +1442,8 @@ exports[`InTodaysEdition portrait 768 1`] = `
           Object {
             "color": "#1D1D1B",
             "fontFamily": "TimesDigitalW04-Regular",
-            "fontSize": 13,
-            "lineHeight": 16,
+            "fontSize": 14,
+            "lineHeight": 18,
             "marginBottom": 5,
           }
         }
@@ -1448,7 +1454,7 @@ exports[`InTodaysEdition portrait 768 1`] = `
     <View
       style={
         Object {
-          "borderColor": "#DBDBDB",
+          "borderColor": "#CECCBF",
           "borderLeftWidth": 1,
           "marginHorizontal": 5,
           "paddingLeft": 10,
@@ -1469,7 +1475,7 @@ exports[`InTodaysEdition portrait 768 1`] = `
             "color": "#1D1D1B",
             "fontFamily": "TimesModern-Bold",
             "fontSize": 16,
-            "marginBottom": 5,
+            "marginBottom": 4,
           }
         }
       >
@@ -1480,8 +1486,8 @@ exports[`InTodaysEdition portrait 768 1`] = `
           Object {
             "color": "#1D1D1B",
             "fontFamily": "TimesDigitalW04-Regular",
-            "fontSize": 13,
-            "lineHeight": 16,
+            "fontSize": 14,
+            "lineHeight": 18,
             "marginBottom": 5,
           }
         }
@@ -1499,7 +1505,9 @@ exports[`InTodaysEdition portrait 810 1`] = `
     Object {
       "backgroundColor": "#F0EEDF",
       "flex": 1,
+      "paddingBottom": 25,
       "paddingHorizontal": 20,
+      "paddingTop": 13,
       "paddingVertical": 15,
     }
   }
@@ -1507,9 +1515,9 @@ exports[`InTodaysEdition portrait 810 1`] = `
   <View
     style={
       Object {
-        "borderBottomColor": "#DBDBDB",
+        "borderBottomColor": "#CECCBF",
         "borderBottomWidth": 1,
-        "paddingBottom": 2,
+        "paddingBottom": 3,
       }
     }
   >
@@ -1519,6 +1527,7 @@ exports[`InTodaysEdition portrait 810 1`] = `
           "color": "#1D1D1B",
           "fontFamily": "TimesDigitalW04-Regular",
           "fontSize": 13,
+          "fontWeight": "bold",
           "letterSpacing": 1,
         }
       }
@@ -1531,7 +1540,7 @@ exports[`InTodaysEdition portrait 810 1`] = `
       Object {
         "flex": 1,
         "flexDirection": "row",
-        "marginTop": 10,
+        "marginTop": 15,
       }
     }
   >
@@ -1549,7 +1558,7 @@ exports[`InTodaysEdition portrait 810 1`] = `
             "color": "#1D1D1B",
             "fontFamily": "TimesModern-Bold",
             "fontSize": 16,
-            "marginBottom": 5,
+            "marginBottom": 4,
           }
         }
       >
@@ -1560,8 +1569,8 @@ exports[`InTodaysEdition portrait 810 1`] = `
           Object {
             "color": "#1D1D1B",
             "fontFamily": "TimesDigitalW04-Regular",
-            "fontSize": 13,
-            "lineHeight": 16,
+            "fontSize": 14,
+            "lineHeight": 18,
             "marginBottom": 5,
           }
         }
@@ -1572,7 +1581,7 @@ exports[`InTodaysEdition portrait 810 1`] = `
     <View
       style={
         Object {
-          "borderColor": "#DBDBDB",
+          "borderColor": "#CECCBF",
           "borderLeftWidth": 1,
           "marginHorizontal": 5,
           "paddingLeft": 10,
@@ -1593,7 +1602,7 @@ exports[`InTodaysEdition portrait 810 1`] = `
             "color": "#1D1D1B",
             "fontFamily": "TimesModern-Bold",
             "fontSize": 16,
-            "marginBottom": 5,
+            "marginBottom": 4,
           }
         }
       >
@@ -1604,8 +1613,8 @@ exports[`InTodaysEdition portrait 810 1`] = `
           Object {
             "color": "#1D1D1B",
             "fontFamily": "TimesDigitalW04-Regular",
-            "fontSize": 13,
-            "lineHeight": 16,
+            "fontSize": 14,
+            "lineHeight": 18,
             "marginBottom": 5,
           }
         }
@@ -1616,7 +1625,7 @@ exports[`InTodaysEdition portrait 810 1`] = `
     <View
       style={
         Object {
-          "borderColor": "#DBDBDB",
+          "borderColor": "#CECCBF",
           "borderLeftWidth": 1,
           "marginHorizontal": 5,
           "paddingLeft": 10,
@@ -1637,7 +1646,7 @@ exports[`InTodaysEdition portrait 810 1`] = `
             "color": "#1D1D1B",
             "fontFamily": "TimesModern-Bold",
             "fontSize": 16,
-            "marginBottom": 5,
+            "marginBottom": 4,
           }
         }
       >
@@ -1648,8 +1657,8 @@ exports[`InTodaysEdition portrait 810 1`] = `
           Object {
             "color": "#1D1D1B",
             "fontFamily": "TimesDigitalW04-Regular",
-            "fontSize": 13,
-            "lineHeight": 16,
+            "fontSize": 14,
+            "lineHeight": 18,
             "marginBottom": 5,
           }
         }
@@ -1660,7 +1669,7 @@ exports[`InTodaysEdition portrait 810 1`] = `
     <View
       style={
         Object {
-          "borderColor": "#DBDBDB",
+          "borderColor": "#CECCBF",
           "borderLeftWidth": 1,
           "marginHorizontal": 5,
           "paddingLeft": 10,
@@ -1681,7 +1690,7 @@ exports[`InTodaysEdition portrait 810 1`] = `
             "color": "#1D1D1B",
             "fontFamily": "TimesModern-Bold",
             "fontSize": 16,
-            "marginBottom": 5,
+            "marginBottom": 4,
           }
         }
       >
@@ -1692,8 +1701,8 @@ exports[`InTodaysEdition portrait 810 1`] = `
           Object {
             "color": "#1D1D1B",
             "fontFamily": "TimesDigitalW04-Regular",
-            "fontSize": 13,
-            "lineHeight": 16,
+            "fontSize": 14,
+            "lineHeight": 18,
             "marginBottom": 5,
           }
         }
@@ -1711,17 +1720,19 @@ exports[`InTodaysEdition portrait 1024 1`] = `
     Object {
       "backgroundColor": "#F0EEDF",
       "flex": 1,
+      "paddingBottom": 25,
       "paddingHorizontal": 25,
-      "paddingVertical": 20,
+      "paddingTop": 20,
+      "paddingVertical": 15,
     }
   }
 >
   <View
     style={
       Object {
-        "borderBottomColor": "#DBDBDB",
+        "borderBottomColor": "#CECCBF",
         "borderBottomWidth": 1,
-        "paddingBottom": 2,
+        "paddingBottom": 3,
       }
     }
   >
@@ -1731,6 +1742,7 @@ exports[`InTodaysEdition portrait 1024 1`] = `
           "color": "#1D1D1B",
           "fontFamily": "TimesDigitalW04-Regular",
           "fontSize": 16,
+          "fontWeight": "bold",
           "letterSpacing": 1,
         }
       }
@@ -1751,7 +1763,7 @@ exports[`InTodaysEdition portrait 1024 1`] = `
       style={
         Object {
           "flex": 1,
-          "marginRight": 5,
+          "marginRight": 10,
         }
       }
     >
@@ -1761,7 +1773,7 @@ exports[`InTodaysEdition portrait 1024 1`] = `
             "color": "#1D1D1B",
             "fontFamily": "TimesModern-Bold",
             "fontSize": 20,
-            "marginBottom": 5,
+            "marginBottom": 4,
           }
         }
       >
@@ -1784,10 +1796,10 @@ exports[`InTodaysEdition portrait 1024 1`] = `
     <View
       style={
         Object {
-          "borderColor": "#DBDBDB",
+          "borderColor": "#CECCBF",
           "borderLeftWidth": 1,
           "marginHorizontal": 5,
-          "paddingLeft": 10,
+          "paddingLeft": 5,
         }
       }
     />
@@ -1795,7 +1807,7 @@ exports[`InTodaysEdition portrait 1024 1`] = `
       style={
         Object {
           "flex": 1,
-          "marginRight": 5,
+          "marginRight": 10,
         }
       }
     >
@@ -1805,7 +1817,7 @@ exports[`InTodaysEdition portrait 1024 1`] = `
             "color": "#1D1D1B",
             "fontFamily": "TimesModern-Bold",
             "fontSize": 20,
-            "marginBottom": 5,
+            "marginBottom": 4,
           }
         }
       >
@@ -1828,10 +1840,10 @@ exports[`InTodaysEdition portrait 1024 1`] = `
     <View
       style={
         Object {
-          "borderColor": "#DBDBDB",
+          "borderColor": "#CECCBF",
           "borderLeftWidth": 1,
           "marginHorizontal": 5,
-          "paddingLeft": 10,
+          "paddingLeft": 5,
         }
       }
     />
@@ -1839,7 +1851,7 @@ exports[`InTodaysEdition portrait 1024 1`] = `
       style={
         Object {
           "flex": 1,
-          "marginRight": 5,
+          "marginRight": 10,
         }
       }
     >
@@ -1849,7 +1861,7 @@ exports[`InTodaysEdition portrait 1024 1`] = `
             "color": "#1D1D1B",
             "fontFamily": "TimesModern-Bold",
             "fontSize": 20,
-            "marginBottom": 5,
+            "marginBottom": 4,
           }
         }
       >
@@ -1872,10 +1884,10 @@ exports[`InTodaysEdition portrait 1024 1`] = `
     <View
       style={
         Object {
-          "borderColor": "#DBDBDB",
+          "borderColor": "#CECCBF",
           "borderLeftWidth": 1,
           "marginHorizontal": 5,
-          "paddingLeft": 10,
+          "paddingLeft": 5,
         }
       }
     />
@@ -1893,7 +1905,7 @@ exports[`InTodaysEdition portrait 1024 1`] = `
             "color": "#1D1D1B",
             "fontFamily": "TimesModern-Bold",
             "fontSize": 20,
-            "marginBottom": 5,
+            "marginBottom": 4,
           }
         }
       >
