@@ -199,7 +199,6 @@ class DOMContext extends PureComponent {
 
     const { loaded } = this.state;
 
-    console.log("!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!", width, loaded);
     return (
       <ViewportAwareView
         onViewportEnter={this.loadAd}

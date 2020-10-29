@@ -12,7 +12,7 @@ import {
 import { iterator } from "@times-components-native/test-utils";
 import adInit from "../src/utils/ad-init";
 import adConfig from "../fixtures/article-ad-config.json";
-import Ad, { AdComposer } from "../src/ad";
+import { AdBase, AdComposer } from "../src/ad";
 
 jest.mock("../src/utils/ad-init");
 adInit.mockImplementation(() => ({
@@ -27,6 +27,8 @@ const props = {
   style: {
     backgroundColor: "red",
   },
+  screenWidth: 1024,
+  orientation: "landscape",
 };
 
 export default () => {
@@ -50,13 +52,13 @@ export default () => {
         const testInstance = TestRenderer.create(
           <AdComposer adConfig={adConfig}>
             <Fragment>
-              <Ad {...props} slotName="header" />
-              <Ad {...props} slotName="pixel" />
+              <AdBase {...props} slotName="header" />
+              <AdBase {...props} slotName="pixel" />
             </Fragment>
           </AdComposer>,
         );
 
-        const AdComponent = testInstance.root.findAllByType(Ad);
+        const AdComponent = testInstance.root.findAllByType(AdBase);
         AdComponent[0].instance.setAdReady();
         AdComponent[1].instance.setAdReady();
 
@@ -69,12 +71,12 @@ export default () => {
         const testInstance = TestRenderer.create(
           <AdComposer adConfig={adConfig}>
             <Fragment>
-              <Ad {...props} slotName="header" />
+              <AdBase {...props} slotName="header" />
             </Fragment>
           </AdComposer>,
         );
 
-        const AdComponent = testInstance.root.findByType(Ad);
+        const AdComponent = testInstance.root.findByType(AdBase);
         AdComponent.instance.setAdError();
 
         expect(testInstance).toMatchSnapshot();

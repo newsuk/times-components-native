@@ -26,8 +26,8 @@ export const VariantTestingProvider = ({ variants = {}, children }: Props) => {
   if (isTablet) {
     // const validArticleMpuTestVariant = validateVariant(articleMpuTestVariant);
     const validArticleMpuTestVariant = "A";
-    const validSectionAdTestVariant = validateVariant(sectionAdTestVariant);
-    // const validSectionAdTestVariant = "C";
+    // const validSectionAdTestVariant = validateVariant(sectionAdTestVariant);
+    const validSectionAdTestVariant = "C";
 
     variantConfig = {
       ...variantConfig,
@@ -42,10 +42,11 @@ export const VariantTestingProvider = ({ variants = {}, children }: Props) => {
       },
       sectionAd: {
         group: validSectionAdTestVariant,
-        ...(validSectionAdTestVariant !== "A" && {
-          slotName: "native-inline-ad-a",
-          // slotName: `native-section-ad-${validSectionAdTestVariant.toLowerCase()}`,
-        }),
+        slotName: "native-section-ad-c",
+        // ...(validSectionAdTestVariant !== "A" && {
+        //   slotName: "native-section-ad-b",
+        //   // slotName: `native-section-ad-${validSectionAdTestVariant.toLowerCase()}`,
+        // }),
       },
     };
   }

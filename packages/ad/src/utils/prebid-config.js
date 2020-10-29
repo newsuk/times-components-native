@@ -35,9 +35,15 @@ const bidderSettings = ({ maxBid, minPrice, bucketSize }) => ({
   ],
 });
 
-const getPrebidSlotConfig = (slot, section, width, biddersConfig) => {
+const getPrebidSlotConfig = (
+  slot,
+  section,
+  width,
+  biddersConfig,
+  orientation,
+) => {
   const position = slotPositions[slot] || slotPositions.default;
-  const { sizes } = getSlotConfig(slot, width);
+  const { sizes } = getSlotConfig(slot, width, orientation);
   let bids = [];
   if (biddersConfig.ix && biddersConfig.ix.siteId) {
     bids = bids.concat(

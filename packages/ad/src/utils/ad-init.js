@@ -231,6 +231,11 @@ export default ({ el, data, platform, eventCallback, window }) => {
               const testGroup = ["a", "b", "c"].indexOf(slotName.slice(-1)) + 1;
               slot.setTargeting("testgroup", testGroup.toString());
             }
+            if (/^native-section-ad-/.test(slotName)) {
+              const testGroup = ["a", "b", "c"].indexOf(slotName.slice(-1)) + 1;
+              slot.setTargeting("testgroup", testGroup.toString());
+            }
+
             googletag.display(slotName);
             eventCallback(
               "warn",
@@ -269,7 +274,7 @@ export default ({ el, data, platform, eventCallback, window }) => {
             if (
               event &&
               event.slot &&
-              /^native-inline-ad/.test(event.slot.getSlotElementId()) &&
+              /^native-/.test(event.slot.getSlotElementId()) &&
               !event.isEmpty
             ) {
               const height =

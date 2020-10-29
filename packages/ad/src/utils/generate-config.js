@@ -59,9 +59,12 @@ const getAdSizes = (adSizeMap, width) => {
   return [];
 };
 
-const getSlotConfig = (slotName, width) => {
+const getSlotConfig = (slotName, width, orientation) => {
   const mappings = sizeMap[slotName] || sizeMap.default;
-  const adSizes = getAdSizes(mappings, width);
+  const mappingsForOrientation = mappings.filter((mapping) =>
+    mapping.orientation.includes(orientation),
+  );
+  const adSizes = getAdSizes(mappingsForOrientation, width);
   const maxSizes = getMaxSizes(adSizes);
 
   return {
