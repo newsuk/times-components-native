@@ -90,7 +90,6 @@ const insertSectionAd = (isTablet, variants) => (slices) => {
     {
       name: "SectionAd",
       slotName,
-      height: group === "C" ? 90 : 250,
     },
     ...slices.slice(adSlotIndex),
   ];

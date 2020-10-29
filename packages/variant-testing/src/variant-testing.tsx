@@ -7,7 +7,7 @@ export const VariantTestingContext = createContext({});
 
 const validateVariant = (variant: string) => {
   if (!variant || !["A", "B", "C"].includes(variant)) {
-    return "B";
+    return "A";
   }
   return variant;
 };
