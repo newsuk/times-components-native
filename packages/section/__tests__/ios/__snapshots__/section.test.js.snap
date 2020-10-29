@@ -367,27 +367,3 @@ exports[`should render Secondary 2 No Pic and 2 instead of Secondary 2 and 2 for
   </View>
 </RCTScrollView>
 `;
-
-exports[`should render secondary 2 and 2 for mobile (small breakpoint) 1`] = `
-<RCTScrollView>
-  <View>
-    <View>
-      <SecondaryTwoAndTwoSlice />
-      <View>
-        <View
-          style={
-            Object {
-              "backgroundColor": "#DBDBDB",
-              "height": 1,
-              "marginHorizontal": 0,
-            }
-          }
-        />
-      </View>
-    </View>
-    <View>
-      <SecondaryTwoNoPicAndTwoSlice />
-    </View>
-  </View>
-</RCTScrollView>
-`;

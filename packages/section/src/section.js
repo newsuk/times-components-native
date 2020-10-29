@@ -30,6 +30,7 @@ const Section = ({
 }) => {
   const { cover, name, slices, title } = section;
   const { isTablet, editionBreakpoint } = useResponsiveContext();
+
   const variants = useVariantTestingContext();
 
   const onViewableItemsChanged = useCallback((info) => {

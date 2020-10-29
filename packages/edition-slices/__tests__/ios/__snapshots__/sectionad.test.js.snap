@@ -1,7 +1,0 @@
-// Jest Snapshot v1, https://goo.gl/fbAQLP
-
-exports[`SectionAd renders correctly 1`] = `
-<Ad
-  slotName="native-inline-ad-a"
-/>
-`;
