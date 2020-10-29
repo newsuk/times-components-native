@@ -3,7 +3,6 @@ import { AppState, DeviceEventEmitter, NativeModules } from "react-native";
 import PropTypes from "prop-types";
 
 import { SectionContext } from "@times-components-native/context";
-import Responsive from "@times-components-native/responsive";
 import Section from "@times-components-native/section";
 import { VariantTestingProvider } from "@times-components-native/variant-testing";
 import trackSection from "./track-section";
@@ -158,20 +157,18 @@ class SectionPage extends Component {
           savedArticles,
         }}
       >
-        <Responsive>
-          <VariantTestingProvider variants={variants}>
-            <Section
-              adConfig={adConfig}
-              analyticsStream={trackSection}
-              onArticlePress={onArticlePress}
-              onLinkPress={onLinkPress}
-              onPuzzleBarPress={onPuzzleBarPress}
-              onPuzzlePress={onPuzzlePress}
-              section={section}
-              publicationName={publicationName}
-            />
-          </VariantTestingProvider>
-        </Responsive>
+        <VariantTestingProvider variants={variants}>
+          <Section
+            adConfig={adConfig}
+            analyticsStream={trackSection}
+            onArticlePress={onArticlePress}
+            onLinkPress={onLinkPress}
+            onPuzzleBarPress={onPuzzleBarPress}
+            onPuzzlePress={onPuzzlePress}
+            section={section}
+            publicationName={publicationName}
+          />
+        </VariantTestingProvider>
       </SectionContext.Provider>
     );
   }

@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useCallback } from "react";
 import { FlatList, View } from "react-native";
 import PropTypes from "prop-types";
 import { useResponsiveContext } from "@times-components-native/responsive";
@@ -29,14 +29,16 @@ const Section = ({
   section,
 }) => {
   const { cover, name, slices, title } = section;
+  const { isTablet, editionBreakpoint } = useResponsiveContext();
+  const variants = useVariantTestingContext();
 
-  const onViewableItemsChanged = (info) => {
-    if (!info.changed.length) return [];
+  const onViewableItemsChanged = useCallback((info) => {
+    if (!onViewed || !info.changed || !info.changed.length) return [];
 
     return info.changed
       .filter((viewableItem) => viewableItem.isViewable)
       .map((viewableItem) => onViewed(viewableItem.item, slices));
-  };
+  }, []);
 
   const getHeaderComponent = (isPuzzle, isMagazine) => {
     if (isPuzzle) return <PuzzleBar onPress={onPuzzleBarPress} />;
@@ -80,9 +82,6 @@ const Section = ({
 
   const isPuzzle = name === "PuzzleSection";
   const isMagazine = name === "MagazineSection";
-
-  const { isTablet, editionBreakpoint } = useResponsiveContext();
-  const variants = useVariantTestingContext();
 
   if (name === "FrontPageSection") {
     const inTheNewsSlice = slices.find(
