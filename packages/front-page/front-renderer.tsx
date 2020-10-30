@@ -32,6 +32,7 @@ export const getRenderers: GetRenderers = ({
         // @ts-ignore onTextLayout does exist on Text component
         onTextLayout={onParagraphTextLayout}
         textBreakStrategy={textBreakStrategy}
+        allowFontScaling={false}
       >
         {attributes?.tab && PARAGRAPH_INDENT_CHAR}
         {renderedChildren}
@@ -41,13 +42,17 @@ export const getRenderers: GetRenderers = ({
   },
   invisible(key, attributes) {
     return (
-      <Text key={key} style={styles.invisible}>
+      <Text allowFontScaling={false} key={key} style={styles.invisible}>
         {attributes.value}
       </Text>
     );
   },
   link(key, _attributes, renderedChildren) {
-    return <Text key={key}>{renderedChildren}</Text>;
+    return (
+      <Text allowFontScaling={false} key={key}>
+        {renderedChildren}
+      </Text>
+    );
   },
 });
 

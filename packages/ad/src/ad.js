@@ -3,7 +3,8 @@ import React, { Component } from "react";
 import { Subscriber } from "react-broadcast";
 import { View, Text } from "react-native";
 import NetInfo from "@react-native-community/netinfo";
-import { screenWidth } from "@times-components-native/utils";
+import { useResponsiveContext } from "@times-components-native/responsive";
+
 import { getPrebidSlotConfig, getSlotConfig, prebidConfig } from "./utils";
 import adInit from "./utils/ad-init";
 import AdContainer from "./ad-container";
@@ -12,24 +13,24 @@ import AdComposer from "./ad-composer";
 import { defaultProps, propTypes } from "./ad-prop-types";
 import styles from "./styles";
 
-class Ad extends Component {
+export class AdBase extends Component {
   static getDerivedStateFromProps(nextProps) {
-    const { slotName, width } = nextProps;
+    const { slotName, width, screenWidth, orientation } = nextProps;
 
     return {
-      config: getSlotConfig(slotName, width || screenWidth()),
+      config: getSlotConfig(slotName, width || screenWidth, orientation),
     };
   }
 
   constructor(props) {
     super(props);
 
-    const { slotName, width } = props;
+    const { slotName, width, screenWidth, orientation } = props;
 
     this.prebidConfig = prebidConfig;
 
     this.state = {
-      config: getSlotConfig(slotName, width || screenWidth()),
+      config: getSlotConfig(slotName, width || screenWidth, orientation),
       hasError: false,
       isAdReady: false,
       offline: false,
@@ -84,6 +85,8 @@ class Ad extends Component {
       slotName,
       style,
       width,
+      screenWidth,
+      orientation,
     } = this.props;
     const { config, hasError, isAdReady, offline } = this.state;
 
@@ -95,12 +98,13 @@ class Ad extends Component {
         adConfig.slotTargeting.section,
         config.maxSizes.width,
         adConfig.biddersConfig.bidders,
+        orientation,
       ),
     );
 
     this.allSlotConfigs = adConfig.globalSlots
       .concat(adConfig.bidderSlots)
-      .map((slot) => getSlotConfig(slot, screenWidth()));
+      .map((slot) => getSlotConfig(slot, screenWidth, orientation));
 
     const data = {
       adUnit: adConfig.adUnit,
@@ -130,7 +134,7 @@ class Ad extends Component {
       !isAdReady || hasError
         ? { width: 0 }
         : {
-            width: width || screenWidth(),
+            width: width || screenWidth,
           };
 
     const isInline = display === "inline";
@@ -169,6 +173,13 @@ class Ad extends Component {
     );
   }
 }
+
+const Ad = (props) => {
+  const { screenWidth, orientation } = useResponsiveContext();
+  return (
+    <AdBase {...props} screenWidth={screenWidth} orientation={orientation} />
+  );
+};
 
 Ad.propTypes = propTypes;
 Ad.defaultProps = defaultProps;
