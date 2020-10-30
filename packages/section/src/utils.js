@@ -157,6 +157,7 @@ export {
   prepareSlicesForRender,
   consecutiveItemsFlagger,
   buildSliceData,
+  insertSectionAd,
   getImage,
   createPuzzleData,
   splitPuzzlesBySlices,

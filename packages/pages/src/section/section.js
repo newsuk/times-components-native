@@ -134,17 +134,12 @@ class SectionPage extends Component {
   }
 
   render() {
-    const { error, isLoading, publicationName, variants } = this.props;
+    const { publicationName, variants } = this.props;
     const { recentlyOpenedPuzzleCount, savedArticles, section } = this.state;
 
-    const adConfig =
-      isLoading || error
-        ? {}
-        : adTargetConfig({
-            // adTestMode,
-            // article,
-            sectionName: section.name,
-          });
+    const adConfig = adTargetConfig({
+      sectionName: section.name,
+    });
 
     return (
       <SectionContext.Provider
