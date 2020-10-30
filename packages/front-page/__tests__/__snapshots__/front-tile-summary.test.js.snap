@@ -22,6 +22,7 @@ exports[`FrontTileSummary performs measurements before rendering front tile summ
     testID="headlineWrapper"
   >
     <ArticleSummaryHeadline
+      allowFontScaling={false}
       headline="This is tile headline"
       style={
         Array [
@@ -40,6 +41,7 @@ exports[`FrontTileSummary performs measurements before rendering front tile summ
     testID="straplineWrapper"
   >
     <ArticleSummaryStrapline
+      allowFontScaling={false}
       strapline="Strapline Text"
       style={
         Array [
@@ -107,6 +109,7 @@ exports[`FrontTileSummary renders byline with keyline 1`] = `
     }
   >
     <ArticleSummaryHeadline
+      allowFontScaling={false}
       headline="This is tile headline"
       style={
         Array [
@@ -128,6 +131,7 @@ exports[`FrontTileSummary renders byline with keyline 1`] = `
     }
   >
     <ArticleSummaryStrapline
+      allowFontScaling={false}
       strapline="Strapline Text"
       style={
         Array [
@@ -237,6 +241,7 @@ exports[`FrontTileSummary renders with 2 columns 1`] = `
     }
   >
     <ArticleSummaryHeadline
+      allowFontScaling={false}
       headline="This is tile headline"
       style={
         Array [
@@ -258,6 +263,7 @@ exports[`FrontTileSummary renders with 2 columns 1`] = `
     }
   >
     <ArticleSummaryStrapline
+      allowFontScaling={false}
       strapline="Strapline Text"
       style={
         Array [
@@ -345,6 +351,7 @@ exports[`FrontTileSummary renders with a missing byline 1`] = `
     }
   >
     <ArticleSummaryHeadline
+      allowFontScaling={false}
       headline="This is tile headline"
       style={
         Array [
@@ -366,6 +373,7 @@ exports[`FrontTileSummary renders with a missing byline 1`] = `
     }
   >
     <ArticleSummaryStrapline
+      allowFontScaling={false}
       strapline="Strapline Text"
       style={
         Array [
@@ -434,6 +442,7 @@ exports[`FrontTileSummary renders with a missing strapline 1`] = `
     }
   >
     <ArticleSummaryHeadline
+      allowFontScaling={false}
       headline="This is tile headline"
       style={
         Array [
@@ -542,6 +551,7 @@ exports[`FrontTileSummary shows front tile summary with headline only after meas
     }
   >
     <ArticleSummaryHeadline
+      allowFontScaling={false}
       headline="This is tile headline"
       style={
         Array [
@@ -583,6 +593,7 @@ exports[`FrontTileSummary shows front tile summary with headline/strapline/bylin
     }
   >
     <ArticleSummaryHeadline
+      allowFontScaling={false}
       headline="This is tile headline"
       style={
         Array [
@@ -604,6 +615,7 @@ exports[`FrontTileSummary shows front tile summary with headline/strapline/bylin
     }
   >
     <ArticleSummaryStrapline
+      allowFontScaling={false}
       strapline="Strapline Text"
       style={
         Array [
