@@ -3,6 +3,8 @@
 // NOTE: this function must be self-contained, i.e. contain no references to variables
 // defined outside the function, so that it can be passed into a WebView.
 export default ({ el, data, platform, eventCallback, window }) => {
+  const nativeAdRegex = /^native-(inline|section)-/;
+
   window.googletag = window.googletag || {};
   window.googletag.cmd = window.googletag.cmd || [];
   window.pbjs = window.pbjs || {};
@@ -227,10 +229,11 @@ export default ({ el, data, platform, eventCallback, window }) => {
             ).toString();
             slot.setTargeting("timestestgroup", randomTestingGroup);
             slot.setTargeting("pos", slotName);
-            if (/^native-inline-ad-/.test(slotName)) {
+            if (nativeAdRegex.test(slotName)) {
               const testGroup = ["a", "b", "c"].indexOf(slotName.slice(-1)) + 1;
               slot.setTargeting("testgroup", testGroup.toString());
             }
+
             googletag.display(slotName);
             eventCallback(
               "warn",
@@ -269,7 +272,7 @@ export default ({ el, data, platform, eventCallback, window }) => {
             if (
               event &&
               event.slot &&
-              /^native-inline-ad/.test(event.slot.getSlotElementId()) &&
+              nativeAdRegex.test(event.slot.getSlotElementId()) &&
               !event.isEmpty
             ) {
               const height =

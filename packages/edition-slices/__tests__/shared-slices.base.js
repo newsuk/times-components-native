@@ -39,6 +39,7 @@ import {
   SecondaryTwoNoPicAndTwoSlice,
   PuzzleSlice,
   StandardSlice,
+  SectionAd,
 } from "../src/slices";
 
 const slices = [
@@ -121,6 +122,11 @@ const slices = [
     mock: { puzzles: getPuzzleSlices(3) },
     name: "puzzle",
     Slice: PuzzleSlice,
+  },
+  {
+    mock: { slotName: "native-inline-ad-c" },
+    name: "sectionad",
+    Slice: SectionAd,
   },
 ];
 

@@ -22,6 +22,7 @@ import {
   LeadOneFullWidthFrontSlice,
   PuzzleSlice,
   TopSecondarySlice,
+  SectionAd,
   SupplementLeadOneAndFourSlice,
   SupplementLeadOneAndOneSlice,
   SupplementSecondaryFourSlice,
@@ -73,6 +74,7 @@ const sliceMap = (isInSupplement) => {
     TopSecondaryTwoAndTwoSlice: TopSecondarySlice,
     TopSecondaryTwoNoPicAndTwoSlice: TopSecondarySlice,
     TopSecondaryFourSlice: TopSecondarySlice,
+    SectionAd,
   };
 };
 

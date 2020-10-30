@@ -1,9 +1,12 @@
 import React, { Component } from "react";
 import { AppState, DeviceEventEmitter, NativeModules } from "react-native";
 import PropTypes from "prop-types";
+
 import { SectionContext } from "@times-components-native/context";
 import Section from "@times-components-native/section";
+import { VariantTestingProvider } from "@times-components-native/variant-testing";
 import trackSection from "./track-section";
+import adTargetConfig from "./ad-targeting-config";
 
 const {
   getOpenedPuzzleCount,
@@ -131,8 +134,12 @@ class SectionPage extends Component {
   }
 
   render() {
-    const { publicationName } = this.props;
+    const { publicationName, variants } = this.props;
     const { recentlyOpenedPuzzleCount, savedArticles, section } = this.state;
+
+    const adConfig = adTargetConfig({
+      sectionName: section.name,
+    });
 
     return (
       <SectionContext.Provider
@@ -145,15 +152,18 @@ class SectionPage extends Component {
           savedArticles,
         }}
       >
-        <Section
-          analyticsStream={trackSection}
-          onArticlePress={onArticlePress}
-          onLinkPress={onLinkPress}
-          onPuzzleBarPress={onPuzzleBarPress}
-          onPuzzlePress={onPuzzlePress}
-          section={section}
-          publicationName={publicationName}
-        />
+        <VariantTestingProvider variants={variants}>
+          <Section
+            adConfig={adConfig}
+            analyticsStream={trackSection}
+            onArticlePress={onArticlePress}
+            onLinkPress={onLinkPress}
+            onPuzzleBarPress={onPuzzleBarPress}
+            onPuzzlePress={onPuzzlePress}
+            section={section}
+            publicationName={publicationName}
+          />
+        </VariantTestingProvider>
       </SectionContext.Provider>
     );
   }

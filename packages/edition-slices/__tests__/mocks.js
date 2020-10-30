@@ -13,6 +13,8 @@ jest.mock("@times-components-native/icons", () => ({
   TheSTLogo: "TheSTLogo",
   TheTimesLogo: "TheTimesLogo",
 }));
+
+jest.mock("@times-components-native/ad", () => "Ad");
 jest.mock("@times-components-native/image", () => "Image");
 jest.mock("@times-components-native/link", () => "Link");
 jest.mock("@times-components-native/gradient", () => "Gradient");

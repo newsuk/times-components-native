@@ -11,6 +11,7 @@ export const propTypes = {
   slotName: PropTypes.string.isRequired,
   width: PropTypes.number,
   style: ViewPropTypesStyle,
+  display: PropTypes.string,
 };
 
 export const defaultProps = {

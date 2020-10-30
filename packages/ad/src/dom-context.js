@@ -134,6 +134,7 @@ class DOMContext extends PureComponent {
   render() {
     const { baseUrl, data, init, width } = this.props;
     const { height } = this.state;
+
     // NOTE: if this generated code is not working, and you don't know why
     // because React Native doesn't report errors in webview JS code, try
     // connecting a debugger to the app, console.log(html), copy and paste
@@ -197,6 +198,7 @@ class DOMContext extends PureComponent {
     `;
 
     const { loaded } = this.state;
+
     return (
       <ViewportAwareView
         onViewportEnter={this.loadAd}
