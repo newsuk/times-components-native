@@ -9,6 +9,7 @@ const Slice = ({
   onLinkPress,
   isInSupplement,
   inTodaysEditionSlice,
+  adConfig,
 }) => {
   const Component = getSlice(isInSupplement, slice.name);
   return Component ? (
@@ -17,6 +18,7 @@ const Slice = ({
       onLinkPress={onLinkPress}
       slice={slice}
       inTodaysEditionSlice={inTodaysEditionSlice}
+      adConfig={adConfig}
     />
   ) : null;
 };

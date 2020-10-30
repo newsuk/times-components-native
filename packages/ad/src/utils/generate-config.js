@@ -43,6 +43,8 @@ const sizeMap = {
   "native-inline-ad-a": sizes.native,
   "native-inline-ad-b": sizes.nativeB,
   "native-inline-ad-c": sizes.nativeC,
+  "native-section-ad-b": sizes.sectionB,
+  "native-section-ad-c": sizes.sectionC,
   pixel: sizes.pixel,
   pixelskin: sizes.pixel,
   pixelteads: sizes.pixel,
@@ -57,9 +59,12 @@ const getAdSizes = (adSizeMap, width) => {
   return [];
 };
 
-const getSlotConfig = (slotName, width) => {
+const getSlotConfig = (slotName, width, orientation) => {
   const mappings = sizeMap[slotName] || sizeMap.default;
-  const adSizes = getAdSizes(mappings, width);
+  const mappingsForOrientation = mappings.filter((mapping) =>
+    mapping.orientation.includes(orientation),
+  );
+  const adSizes = getAdSizes(mappingsForOrientation, width);
   const maxSizes = getMaxSizes(adSizes);
 
   return {

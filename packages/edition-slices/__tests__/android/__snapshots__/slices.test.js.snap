@@ -2951,3 +2951,9 @@ exports[`16. puzzle 1`] = `
   </View>
 </View>
 `;
+
+exports[`17. sectionad 1`] = `
+<Ad
+  slotName="native-inline-ad-c"
+/>
+`;

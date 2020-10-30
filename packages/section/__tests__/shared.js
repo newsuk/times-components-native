@@ -16,6 +16,26 @@ import SectionItemSeparator from "../src/section-item-separator";
 import Section from "../src/section";
 import PuzzleBar from "../src/puzzle-bar";
 
+// fixes issues with hooks not being allowed during test run
+jest.mock("react", () => {
+  const react = require.requireActual("react");
+  return react;
+});
+jest.mock("@times-components-native/responsive", () => ({
+  useResponsiveContext: () => ({ isTablet: true, editionBreakpoint: "small" }),
+}));
+jest.mock("@times-components-native/variant-testing", () => ({
+  useVariantTestingContext: () => ({
+    articleMpu: {
+      group: "A",
+      slotName: `native-inline-ad-a`,
+    },
+    sectionAd: {
+      group: "A",
+      slotName: "native-section-ad-a",
+    },
+  }),
+}));
 jest.mock("@times-components-native/edition-slices/src/slices", () => {
   const sliceMap = require.requireActual(
     "@times-components-native/edition-slices/src/slices",
@@ -74,39 +94,6 @@ export default () => {
     expect(
       TestRenderer.create(
         <Section
-          analyticsStream={() => null}
-          onArticlePress={() => null}
-          onPuzzleBarPress={() => null}
-          onPuzzlePress={() => null}
-          publicationName="TIMES"
-          recentlyOpenedPuzzleCount={1}
-          section={edition.sections[5]}
-        />,
-      ).toJSON(),
-    ).toMatchSnapshot();
-  });
-
-  it("should render secondary 2 and 2 for mobile (small breakpoint)", () => {
-    jest.doMock("@times-components-native/utils", () => {
-      const actualUtils = jest.requireActual("../../utils");
-
-      return {
-        ...actualUtils,
-        __esModule: true,
-        getDimensions: jest.fn(() => ({
-          height: 700,
-          width: 250,
-        })),
-      };
-    });
-
-    const SectionWithUpdatedDimensions = require("../src/section").default;
-
-    const edition = new MockEdition().get();
-
-    expect(
-      TestRenderer.create(
-        <SectionWithUpdatedDimensions
           analyticsStream={() => null}
           onArticlePress={() => null}
           onPuzzleBarPress={() => null}
