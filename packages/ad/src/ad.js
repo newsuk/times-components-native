@@ -154,6 +154,7 @@ export class AdBase extends Component {
             onRenderComplete={this.setAdReady}
             onRenderError={this.setAdError}
             isInline={isInline}
+            maxHeight={config.maxSizes.height}
             {...sizeProps}
           />
         )}

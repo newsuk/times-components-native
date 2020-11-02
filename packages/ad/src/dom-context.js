@@ -30,7 +30,7 @@ class DOMContext extends PureComponent {
     super(props);
     this.state = {
       loaded: false,
-      height: 0,
+      height: props.maxHeight + styles.containerAdditionalHeight.height,
     };
   }
 
