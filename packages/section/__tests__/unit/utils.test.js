@@ -117,8 +117,8 @@ describe("insertSectionAd", () => {
     ).toEqual([
       { id: "a", name: "LeadersSlice" },
       { id: "b", name: "DailyUniversalRegister" },
-      { name: "SectionAd", slotName: "native-section-ad-b" },
       { id: "c", name: "OtherSlice" },
+      { name: "SectionAd", slotName: "native-section-ad-b" },
       { id: "d", name: "LeadersSlice" },
     ]);
   });

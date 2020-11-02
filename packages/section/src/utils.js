@@ -67,7 +67,7 @@ const consecutiveItemsFlagger = memoizeOne((slices) =>
 );
 
 const insertSectionAd = (isTablet, variants) => (slices) => {
-  const adSlotIndex = 2; // 0 based index
+  const adSlotIndex = 3; // 0 based index
 
   if (
     !isTablet ||
