@@ -31,15 +31,17 @@ class Responsive extends Component {
     super(props);
     this.onDimensionChange = this.onDimensionChange.bind(this);
     const { fontScale, width, height } = getDimensions();
+    console.log("INITIAL DIMENSIONS");
+    console.log({ fontScale, width, height });
     this.state = calculateState(width, height, fontScale);
   }
 
   componentDidMount() {
-    addDimensionsListener("change", this.onDimensionChange);
+    this.listener = addDimensionsListener("change", this.onDimensionChange);
   }
 
   componentWillUnmount() {
-    removeDimensionsListener("change", this.onDimensionChange);
+    removeDimensionsListener("change", this.listener);
   }
 
   onDimensionChange({ window: { fontScale, width, height } }) {
