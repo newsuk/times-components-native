@@ -12,6 +12,7 @@ const BodyParagraph = ({
   style,
   children,
   attributes,
+  split,
 }) => {
   const { inline } = attributes || false;
   const { isTablet, narrowArticleBreakpoint } = useResponsiveContext();
@@ -24,6 +25,10 @@ const BodyParagraph = ({
         styles.articleTextElement,
         isTablet && styles.articleMainContentRowTablet,
         isTablet && inline && styles.articleInlineContentRowTablet,
+        isTablet &&
+          inline &&
+          split &&
+          styles.articleInlineSplitContentRowTablet,
         narrowContent && getNarrowContentStyle(narrowArticleBreakpoint.content),
         style,
       ].concat(height ? [{ height: height }] : [])}

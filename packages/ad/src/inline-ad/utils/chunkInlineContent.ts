@@ -61,18 +61,19 @@ export const chunkInlineContent = (
       // not enough capacity in inline chunk, splitting content into this chunk and the overflow chunk
       const provisionalLineToSplit =
         inlineContentHeightRemaining / contentLineHeight!;
+
       const actualLineToSplit = Math.ceil(provisionalLineToSplit);
 
       const totalLinesHeightAdjustment = contentLineHeight * actualLineToSplit;
 
-      const adjustmentHeightDiffernce =
+      const adjustmentHeightDifference =
         currentParagraphHeight - totalLinesHeightAdjustment;
 
       // final adjustment last paragraph lines fit without bottom padding
       const paragraphBottomSpacing = 20;
       const paddingAdjustment =
-        adjustmentHeightDiffernce <= paragraphBottomSpacing
-          ? adjustmentHeightDiffernce
+        adjustmentHeightDifference <= paragraphBottomSpacing
+          ? adjustmentHeightDifference
           : 0;
 
       const adjustedInlineContentHeight =

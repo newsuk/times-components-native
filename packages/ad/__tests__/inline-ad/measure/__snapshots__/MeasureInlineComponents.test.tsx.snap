@@ -17,6 +17,7 @@ exports[`MeasureContent renders the content 1`] = `
         false,
         false,
         false,
+        false,
         Object {},
       ]
     }

@@ -53,6 +53,7 @@ export const InlineAd = (props: Props) => {
 
   const Child = useCallback(({ item, index }, inline = false) => {
     item.attributes = { ...item.attributes, inline };
+
     return (
       <Gutter style={{ overflow: "hidden" }}>
         <ErrorBoundary>
@@ -100,6 +101,7 @@ export const InlineAd = (props: Props) => {
           contentMeasurements,
           contentParameters,
         );
+
         const requiredInlineContentHeight = Math.max(
           currentInlineContentHeight,
           contentHeight,

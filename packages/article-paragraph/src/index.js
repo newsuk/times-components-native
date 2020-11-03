@@ -25,6 +25,7 @@ const ArticleParagraphWrapper = ({
       style={style}
       narrowContent={narrowContent}
       attributes={attributes}
+      split={ast.split}
     >
       {children}
     </ArticleParagraph>
