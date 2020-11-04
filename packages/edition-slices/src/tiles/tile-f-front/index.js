@@ -10,10 +10,10 @@ import {
   withTileTracking,
 } from "../shared";
 import { getStyle } from "./styles";
-import { getDimensions } from "@times-components-native/utils";
+import { useResponsiveContext } from "@times-components-native/responsive";
 
 const TileFFront = ({ onPress, tile, orientation }) => {
-  const { width: windowWidth, height: windowHeight } = getDimensions();
+  const { windowWidth, windowHeight } = useResponsiveContext();
   const imageCrop = getTileImage(tile, "crop169");
   const styles = getStyle(orientation, windowWidth, windowHeight);
 

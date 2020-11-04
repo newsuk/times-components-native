@@ -5,8 +5,11 @@ import {
   spacing,
 } from "@times-components-native/styleguide";
 
-const calculateStyles = (orientation) => {
-  const columnToPercentageWithOrientation = columnToPercentage(orientation);
+const calculateStyles = (orientation, windowWidth) => {
+  const columnToPercentageWithOrientation = columnToPercentage(
+    orientation,
+    windowWidth,
+  );
 
   const container = {
     flex: 1,
@@ -191,4 +194,8 @@ const calculateStyles = (orientation) => {
 };
 
 export const getStyles = (orientation, windowWidth, windowHeight) =>
-  getStyleByDeviceSize(calculateStyles(orientation), windowWidth, windowHeight);
+  getStyleByDeviceSize(
+    calculateStyles(orientation, windowWidth),
+    windowWidth,
+    windowHeight,
+  );
