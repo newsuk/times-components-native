@@ -18,6 +18,7 @@ exports[`tile p without breakpoint 1`] = `
     rounded={true}
     style={
       Object {
+        "marginBottom": 10,
         "overflow": "hidden",
         "width": "30%",
       }
