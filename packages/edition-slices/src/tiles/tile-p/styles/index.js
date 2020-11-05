@@ -31,6 +31,7 @@ const styles = {
   imageContainer: {
     overflow: "hidden",
     width: "30%",
+    marginBottom: spacing(2),
   },
   strapline: {
     fontFamily: fonts.bodyRegular,
