@@ -22,12 +22,8 @@ const ResponsiveProvider: React.FC = ({ children }) => {
 
   const onDimensionChange = ({
     window: { fontScale, width, height },
-  }: DimensionChangeEvent) => {
-    const { fontScale: oldScale, windowWidth: oldWidth } = state;
-    if (fontScale !== oldScale || (oldWidth && width !== oldWidth)) {
-      setState(calculateResponsiveContext(width, height, fontScale));
-    }
-  };
+  }: DimensionChangeEvent) =>
+    setState(calculateResponsiveContext(width, height, fontScale));
 
   useEffect(() => {
     const listener = addDimensionsListener("change", onDimensionChange);
