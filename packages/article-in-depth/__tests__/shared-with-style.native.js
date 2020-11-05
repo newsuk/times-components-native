@@ -15,6 +15,10 @@ import "./mocks.native";
 import ArticleInDepth from "../src/article-in-depth";
 import articleFixture, { testFixture } from "../fixtures/full-article";
 import sharedProps from "./shared-props";
+import {
+  withMobileContext,
+  withTabletContext,
+} from "@times-components-native/test-utils";
 
 const article = articleFixture({
   ...testFixture,
@@ -141,7 +145,7 @@ export default () => {
 
   it("full article with style", () => {
     const testRenderer = TestRenderer.create(
-      <ArticleInDepth {...sharedProps} article={article} />,
+      withMobileContext(<ArticleInDepth {...sharedProps} article={article} />),
     );
 
     expect(testRenderer).toMatchSnapshot();
@@ -149,9 +153,11 @@ export default () => {
 
   it("full article with style in the culture magazine", () => {
     const testRenderer = TestRenderer.create(
-      <ContextProviderWithDefaults value={themeForSection("culture")}>
-        <ArticleInDepth {...sharedProps} article={article} />
-      </ContextProviderWithDefaults>,
+      withMobileContext(
+        <ContextProviderWithDefaults value={themeForSection("culture")}>
+          <ArticleInDepth {...sharedProps} article={article} />
+        </ContextProviderWithDefaults>,
+      ),
     );
 
     expect(testRenderer).toMatchSnapshot();
@@ -159,9 +165,11 @@ export default () => {
 
   it("full article with style in the style magazine", () => {
     const testRenderer = TestRenderer.create(
-      <ContextProviderWithDefaults value={themeForSection("style")}>
-        <ArticleInDepth {...sharedProps} article={article} />
-      </ContextProviderWithDefaults>,
+      withMobileContext(
+        <ContextProviderWithDefaults value={themeForSection("style")}>
+          <ArticleInDepth {...sharedProps} article={article} />
+        </ContextProviderWithDefaults>,
+      ),
     );
 
     expect(testRenderer).toMatchSnapshot();
@@ -169,46 +177,51 @@ export default () => {
 
   it("full article with style in the sunday times magazine", () => {
     const testRenderer = TestRenderer.create(
-      <ContextProviderWithDefaults
-        value={themeForSection("thesundaytimesmagazine")}
-      >
-        <ArticleInDepth {...sharedProps} article={article} />
-      </ContextProviderWithDefaults>,
+      withMobileContext(
+        <ContextProviderWithDefaults
+          value={themeForSection("thesundaytimesmagazine")}
+        >
+          <ArticleInDepth {...sharedProps} article={article} />
+        </ContextProviderWithDefaults>,
+      ),
     );
 
     expect(testRenderer).toMatchSnapshot();
   });
 
   it("tablet full article with style in the culture magazine", () => {
-    setIsTablet(true);
     const testRenderer = TestRenderer.create(
-      <ContextProviderWithDefaults value={themeForSection("culture")}>
-        <ArticleInDepth {...sharedProps} article={article} />
-      </ContextProviderWithDefaults>,
+      withTabletContext(
+        <ContextProviderWithDefaults value={themeForSection("culture")}>
+          <ArticleInDepth {...sharedProps} article={article} />
+        </ContextProviderWithDefaults>,
+      ),
     );
 
     expect(testRenderer).toMatchSnapshot();
   });
 
   it("tablet full article with style in the style magazine", () => {
-    setIsTablet(true);
     const testRenderer = TestRenderer.create(
-      <ContextProviderWithDefaults value={themeForSection("style")}>
-        <ArticleInDepth {...sharedProps} article={article} />
-      </ContextProviderWithDefaults>,
+      withTabletContext(
+        <ContextProviderWithDefaults value={themeForSection("style")}>
+          <ArticleInDepth {...sharedProps} article={article} />
+        </ContextProviderWithDefaults>,
+      ),
     );
 
     expect(testRenderer).toMatchSnapshot();
   });
 
   it("tablet full article with style in the sunday times magazine", () => {
-    setIsTablet(true);
     const testRenderer = TestRenderer.create(
-      <ContextProviderWithDefaults
-        value={themeForSection("thesundaytimesmagazine")}
-      >
-        <ArticleInDepth {...sharedProps} article={article} />
-      </ContextProviderWithDefaults>,
+      withTabletContext(
+        <ContextProviderWithDefaults
+          value={themeForSection("thesundaytimesmagazine")}
+        >
+          <ArticleInDepth {...sharedProps} article={article} />
+        </ContextProviderWithDefaults>,
+      ),
     );
 
     expect(testRenderer).toMatchSnapshot();

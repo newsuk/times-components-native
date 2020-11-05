@@ -7,7 +7,7 @@ import {
 } from "@times-components-native/utils";
 import { ScaledSize } from "react-native";
 import ResponsiveContext from "./context";
-import { calculateState } from "./calculateState";
+import { calculateResponsiveContext } from "./calculateResponsiveContext";
 
 type DimensionChangeEvent = {
   window: ScaledSize;
@@ -16,14 +16,16 @@ type DimensionChangeEvent = {
 const ResponsiveProvider: React.FC = ({ children }) => {
   const { fontScale, width, height } = getDimensions();
 
-  const [state, setState] = useState(calculateState(width, height, fontScale));
+  const [state, setState] = useState(
+    calculateResponsiveContext(width, height, fontScale),
+  );
 
   const onDimensionChange = ({
     window: { fontScale, width, height },
   }: DimensionChangeEvent) => {
     const { fontScale: oldScale, windowWidth: oldWidth } = state;
     if (fontScale !== oldScale || (oldWidth && width !== oldWidth)) {
-      setState(calculateState(width, height, fontScale));
+      setState(calculateResponsiveContext(width, height, fontScale));
     }
   };
 
@@ -33,7 +35,7 @@ const ResponsiveProvider: React.FC = ({ children }) => {
     return () => {
       removeDimensionsListener("change", listener);
     };
-  });
+  }, []);
 
   return (
     <ResponsiveContext.Provider value={state}>

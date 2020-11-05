@@ -8,30 +8,23 @@ import "./serializers-with-all-styles";
 jest.mock("@times-components-native/icons", () => ({
   IconForwardArrow: "IconForwardArrow",
 }));
-jest.mock("@times-components-native/utils", () => {
-  const actualUtils = jest.requireActual("../../utils");
-
-  return {
-    ...actualUtils,
-    getDimensions: jest.fn(),
-  };
-});
 
 import InTodaysEditionData from "../fixtures/in-todays-edition.json";
+import ResponsiveContext from "@times-components-native/responsive/src/context";
+import { calculateResponsiveContext } from "@times-components-native/responsive/src/calculateResponsiveContext";
 
 const renderInTodaysEdition = (width, orientation) => {
-  getDimensions.mockImplementation(() => ({
-    width: width,
-    height: 500,
-  }));
-
   const output = TestRenderer.create(
-    <InTodaysEdition
-      items={InTodaysEditionData}
-      onArticlePress={() => null}
-      onLinkPress={() => null}
-      orientation={orientation}
-    />,
+    <ResponsiveContext.Provider
+      value={calculateResponsiveContext(width, 500, 1)}
+    >
+      <InTodaysEdition
+        items={InTodaysEditionData}
+        onArticlePress={() => null}
+        onLinkPress={() => null}
+        orientation={orientation}
+      />
+    </ResponsiveContext.Provider>,
   );
   expect(output).toMatchSnapshot();
 };
@@ -69,18 +62,18 @@ export default () => {
       it("onArticlePress is called correctly for item with article link", () => {
         const onArticlePressMock = jest.fn();
         const onLinkPressMock = jest.fn();
-        getDimensions.mockImplementation(() => ({
-          width: 300,
-          height: 500,
-        }));
 
         const item = TestRenderer.create(
-          <Item
-            item={InTodaysEditionData[0]}
-            onArticlePress={onArticlePressMock}
-            onLinkPress={onLinkPressMock}
-            orientation="portrait"
-          />,
+          <ResponsiveContext.Provider
+            value={calculateResponsiveContext(300, 500, 1)}
+          >
+            <Item
+              item={InTodaysEditionData[0]}
+              onArticlePress={onArticlePressMock}
+              onLinkPress={onLinkPressMock}
+              orientation="portrait"
+            />
+          </ResponsiveContext.Provider>,
         );
 
         item.root.findByType(Item).props.onArticlePress();
@@ -92,18 +85,17 @@ export default () => {
       it("onLinkPress is called correctly for item with non-article link", () => {
         const onArticlePressMock = jest.fn();
         const onLinkPressMock = jest.fn();
-        getDimensions.mockImplementation(() => ({
-          width: 300,
-          height: 500,
-        }));
-
         const item = TestRenderer.create(
-          <Item
-            item={InTodaysEditionData[3]}
-            onArticlePress={onArticlePressMock}
-            onLinkPress={onLinkPressMock}
-            orientation="portrait"
-          />,
+          <ResponsiveContext.Provider
+            value={calculateResponsiveContext(300, 500, 1)}
+          >
+            <Item
+              item={InTodaysEditionData[3]}
+              onArticlePress={onArticlePressMock}
+              onLinkPress={onLinkPressMock}
+              orientation="portrait"
+            />
+          </ResponsiveContext.Provider>,
         );
 
         item.root.findByType(Item).props.onLinkPress();

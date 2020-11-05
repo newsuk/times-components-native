@@ -1,6 +1,6 @@
 import { createContext } from "react";
 import { getDimensions } from "@times-components-native/utils";
-import { calculateState } from "./calculateState";
+import { calculateResponsiveContext } from "./calculateResponsiveContext";
 
 export type ContextType = {
   editionBreakpoint: string;
@@ -15,5 +15,5 @@ export type ContextType = {
 const { width, height, fontScale } = getDimensions();
 
 export default createContext<ContextType>(
-  calculateState(width, height, fontScale),
+  calculateResponsiveContext(width, height, fontScale),
 );

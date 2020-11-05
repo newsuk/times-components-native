@@ -6,6 +6,7 @@ import ArticleMainComment from "../src/article-main-comment";
 import articleFixture, { testFixture } from "../fixtures/full-article";
 import sharedProps from "./shared-props";
 import { adConfig } from "./ad-mock";
+import { withMobileContext } from "@times-components-native/test-utils";
 
 const findComponents = (testInstance, componentName) =>
   testInstance.root.findAll((node) => {
@@ -50,14 +51,16 @@ export const snapshotTests = (renderComponent) => [
     name: "an article with no headline falls back to use shortHeadline",
     test() {
       const testRenderer = renderComponent(
-        <ArticleMainComment
-          {...sharedProps}
-          article={articleFixture({
-            ...testFixture,
-            ...emptyArticle,
-            headline: "",
-          })}
-        />,
+        withMobileContext(
+          <ArticleMainComment
+            {...sharedProps}
+            article={articleFixture({
+              ...testFixture,
+              ...emptyArticle,
+              headline: "",
+            })}
+          />,
+        ),
       );
 
       expect(testRenderer).toMatchSnapshot();
@@ -67,20 +70,22 @@ export const snapshotTests = (renderComponent) => [
     name: "an article with ads",
     test() {
       const testRenderer = renderComponent(
-        <ArticleMainComment
-          {...sharedProps}
-          article={articleFixture({
-            ...testFixture,
-            ...emptyArticle,
-            content: [
-              {
-                attributes: {},
-                children: [],
-                name: "ad",
-              },
-            ],
-          })}
-        />,
+        withMobileContext(
+          <ArticleMainComment
+            {...sharedProps}
+            article={articleFixture({
+              ...testFixture,
+              ...emptyArticle,
+              content: [
+                {
+                  attributes: {},
+                  children: [],
+                  name: "ad",
+                },
+              ],
+            })}
+          />,
+        ),
       );
 
       expect(testRenderer).toMatchSnapshot();

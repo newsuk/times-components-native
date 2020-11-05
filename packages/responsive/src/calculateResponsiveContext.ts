@@ -7,7 +7,7 @@ import { NativeModules } from "react-native";
 
 const config = (NativeModules || {}).ReactConfig;
 
-export const calculateState = (
+export const calculateResponsiveContext = (
   width: number,
   height: number,
   fontScale: number,

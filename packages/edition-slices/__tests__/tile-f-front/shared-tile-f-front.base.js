@@ -3,27 +3,17 @@ import { TileFFront } from "../../src/tiles";
 import TestRenderer from "react-test-renderer";
 import React from "react";
 import { mockEditionSlice } from "@times-components-native/fixture-generator";
-import { getDimensions } from "@times-components-native/utils";
-
-jest.mock("@times-components-native/utils", () => {
-  const actualUtils = jest.requireActual("../../../utils");
-
-  return {
-    ...actualUtils,
-    getDimensions: jest.fn(),
-  };
-});
+import ResponsiveContext from "@times-components-native/responsive/src/context";
 
 export const tile = mockEditionSlice(1).items[0];
 
 const testFrontTile = (orientation, width, height = 500) => {
-  getDimensions.mockImplementation(() => ({
-    width,
-    height,
-  }));
-
   const tree = TestRenderer.create(
-    <TileFFront onPress={() => null} tile={tile} orientation={orientation} />,
+    <ResponsiveContext.Provider
+      value={{ windowWidth: width, windowHeight: height }}
+    >
+      <TileFFront onPress={() => null} tile={tile} orientation={orientation} />,
+    </ResponsiveContext.Provider>,
   );
   expect(tree).toMatchSnapshot();
 };

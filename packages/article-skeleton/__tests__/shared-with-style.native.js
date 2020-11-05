@@ -15,6 +15,7 @@ import { setIsTablet } from "@times-components-native/mocks/dimensions";
 import { FontStorage } from "@times-components-native/typeset";
 import articleFixture from "../fixtures/full-article";
 import shared, { renderArticle, fixtureArgs } from "./shared.base";
+import { withTabletContext } from "@times-components-native/test-utils/src/responsiveContextUtil";
 
 FontStorage.registerFont(
   "TimesDigitalW04",
@@ -48,11 +49,9 @@ export default () => {
     {
       name: "an Article Skeleton with responsive items",
       test() {
-        setIsTablet(true);
-
         const article = articleFixture({ ...fixtureArgs });
         const testInstance = TestRenderer.create(
-          <Responsive>{renderArticle(article)}</Responsive>,
+          withTabletContext(renderArticle(article)),
         );
 
         expect(testInstance).toMatchSnapshot();

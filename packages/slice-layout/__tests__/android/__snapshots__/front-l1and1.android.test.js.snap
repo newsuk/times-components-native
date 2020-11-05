@@ -73,7 +73,7 @@ exports[`2. front lead one - portrait - 810 1`] = `
       Array [
         Object {
           "style": Object {
-            "width": "75.69040697674419%",
+            "width": "75.65068493150685%",
           },
           "tile": <ExampleChild
             id="lead"
@@ -83,7 +83,7 @@ exports[`2. front lead one - portrait - 810 1`] = `
         },
         Object {
           "style": Object {
-            "width": "24.164244186046513%",
+            "width": "24.212328767123285%",
           },
           "tile": <ExampleChild
             id="support"
@@ -124,7 +124,7 @@ exports[`3. front lead one - portrait - 834 1`] = `
       Array [
         Object {
           "style": Object {
-            "width": "75.69040697674419%",
+            "width": "75.65068493150685%",
           },
           "tile": <ExampleChild
             id="lead"
@@ -134,7 +134,7 @@ exports[`3. front lead one - portrait - 834 1`] = `
         },
         Object {
           "style": Object {
-            "width": "24.164244186046513%",
+            "width": "24.212328767123285%",
           },
           "tile": <ExampleChild
             id="support"
@@ -175,7 +175,7 @@ exports[`4. front lead one - portrait - 1024 1`] = `
       Array [
         Object {
           "style": Object {
-            "width": "75.69040697674419%",
+            "width": "75.5163043478261%",
           },
           "tile": <ExampleChild
             id="lead"
@@ -185,7 +185,7 @@ exports[`4. front lead one - portrait - 1024 1`] = `
         },
         Object {
           "style": Object {
-            "width": "24.164244186046513%",
+            "width": "24.375%",
           },
           "tile": <ExampleChild
             id="support"
@@ -283,7 +283,7 @@ exports[`6. front lead one - landscape - 1080 1`] = `
       Array [
         Object {
           "style": Object {
-            "width": "49.94703389830508%",
+            "width": "49.95%",
           },
           "tile": <ExampleChild
             id="lead"
@@ -293,7 +293,7 @@ exports[`6. front lead one - landscape - 1080 1`] = `
         },
         Object {
           "style": Object {
-            "width": "24.390889830508474%",
+            "width": "24.425%",
           },
           "tile": <ExampleChild
             id="support"
@@ -304,7 +304,7 @@ exports[`6. front lead one - landscape - 1080 1`] = `
         Object {
           "style": Object {
             "marginLeft": 10,
-            "width": "24.390889830508474%",
+            "width": "24.425%",
           },
           "tile": <ExampleChild
             id="inTheNews"
@@ -340,7 +340,7 @@ exports[`7. front lead one - landscape - 1112 1`] = `
       Array [
         Object {
           "style": Object {
-            "width": "49.94703389830508%",
+            "width": "49.95%",
           },
           "tile": <ExampleChild
             id="lead"
@@ -350,7 +350,7 @@ exports[`7. front lead one - landscape - 1112 1`] = `
         },
         Object {
           "style": Object {
-            "width": "24.390889830508474%",
+            "width": "24.425%",
           },
           "tile": <ExampleChild
             id="support"
@@ -361,7 +361,7 @@ exports[`7. front lead one - landscape - 1112 1`] = `
         Object {
           "style": Object {
             "marginLeft": 10,
-            "width": "24.390889830508474%",
+            "width": "24.425%",
           },
           "tile": <ExampleChild
             id="inTheNews"
@@ -397,7 +397,7 @@ exports[`8. front lead one - landscape - 1194 1`] = `
       Array [
         Object {
           "style": Object {
-            "width": "49.94703389830508%",
+            "width": "49.951171875%",
           },
           "tile": <ExampleChild
             id="lead"
@@ -407,7 +407,7 @@ exports[`8. front lead one - landscape - 1194 1`] = `
         },
         Object {
           "style": Object {
-            "width": "24.390889830508474%",
+            "width": "24.4384765625%",
           },
           "tile": <ExampleChild
             id="support"
@@ -418,7 +418,7 @@ exports[`8. front lead one - landscape - 1194 1`] = `
         Object {
           "style": Object {
             "marginLeft": 10,
-            "width": "24.390889830508474%",
+            "width": "24.4384765625%",
           },
           "tile": <ExampleChild
             id="inTheNews"
@@ -454,7 +454,7 @@ exports[`9. front lead one - landscape - 1366 1`] = `
       Array [
         Object {
           "style": Object {
-            "width": "63.886748844375965%",
+            "width": "63.843700159489636%",
           },
           "tile": <ExampleChild
             id="lead"
@@ -464,7 +464,7 @@ exports[`9. front lead one - landscape - 1366 1`] = `
         },
         Object {
           "style": Object {
-            "width": "17.421032357473038%",
+            "width": "17.5518341307815%",
           },
           "tile": <ExampleChild
             id="support"
@@ -475,7 +475,7 @@ exports[`9. front lead one - landscape - 1366 1`] = `
         Object {
           "style": Object {
             "marginLeft": 10,
-            "width": "17.421032357473038%",
+            "width": "17.5518341307815%",
           },
           "tile": <ExampleChild
             id="inTheNews"
