@@ -35,7 +35,7 @@ const TileAH = ({ onPress, tile, breakpoint = editionBreakpoints.medium }) => {
         rounded
         resizeMode="cover"
       />
-      <Byline ast={tile.article.bylines} bylineStyle={styles.bylineOpinion} />
+      <Byline ast={tile.article.bylines} bylineStyle={styles.byline} />
       <TileSummary
         headlineStyle={styles.headline}
         strapline={getTileStrapline(tile)}

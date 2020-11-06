@@ -6,7 +6,7 @@ import {
 } from "@times-components-native/styleguide";
 
 const styles = {
-  bylineOpinion: {
+  byline: {
     color: colours.section.comment,
     fontFamily: fonts.supporting,
     fontSize: fontSizes.cardMetaMobile,

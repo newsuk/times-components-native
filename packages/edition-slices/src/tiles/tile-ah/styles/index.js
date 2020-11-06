@@ -20,7 +20,7 @@ const keylinePadding = {
 };
 
 const styles = (breakpoint) => ({
-  bylineOpinion: {
+  byline: {
     color: colours.section.comment,
     fontFamily: fonts.supporting,
     fontSize: fontSizes.cardMetaMobile,
