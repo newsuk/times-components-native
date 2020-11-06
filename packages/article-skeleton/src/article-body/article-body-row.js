@@ -11,6 +11,7 @@ import styleguide, {
 import { AttributedString } from "@times-components-native/typeset";
 import { screenWidth } from "@times-components-native/utils";
 import Ad, { InlineAd } from "@times-components-native/ad";
+import InlineContent from "@times-components-native/inline-content";
 import ArticleImage from "@times-components-native/article-image";
 import InteractiveWrapper from "@times-components-native/interactive-wrapper";
 import KeyFacts from "@times-components-native/key-facts";
@@ -204,6 +205,18 @@ export default ({
           adConfig={adConfig}
           slotName="native-inline-ad"
           defaultFont={defaultFont}
+          {...attributes}
+        />
+      );
+    },
+    inlineContent(key, attributes) {
+      return (
+        <InlineContent
+          key={key}
+          adConfig={adConfig}
+          defaultFont={defaultFont}
+          onImagePress={onImagePress}
+          narrowContent={narrowContent}
           {...attributes}
         />
       );
