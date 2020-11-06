@@ -12,7 +12,6 @@ const styles = {
     fontSize: fontSizes.cardMetaMobile,
     letterSpacing: 0.6,
     lineHeight: 12,
-    marginTop: spacing(3),
     textTransform: "uppercase",
   },
   container: {
@@ -31,6 +30,7 @@ const styles = {
   imageContainer: {
     overflow: "hidden",
     width: "30%",
+    marginBottom: spacing(3),
   },
   strapline: {
     fontFamily: fonts.bodyRegular,

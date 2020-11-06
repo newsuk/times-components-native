@@ -1,6 +1,7 @@
 /* eslint-disable react/require-default-props */
 import React from "react";
 import PropTypes from "prop-types";
+import Byline from "@times-components-native/article-byline";
 import { editionBreakpoints } from "@times-components-native/styleguide";
 import {
   getTileImage,
@@ -34,6 +35,7 @@ const TileAH = ({ onPress, tile, breakpoint = editionBreakpoints.medium }) => {
         rounded
         resizeMode="cover"
       />
+      <Byline ast={tile.article.bylines} bylineStyle={styles.bylineOpinion} />
       <TileSummary
         headlineStyle={styles.headline}
         strapline={getTileStrapline(tile)}
@@ -41,6 +43,7 @@ const TileAH = ({ onPress, tile, breakpoint = editionBreakpoints.medium }) => {
         style={styles.summaryContainer}
         tile={tile}
         centeredStar
+        hideLabel={true}
       />
     </TileLink>
   );

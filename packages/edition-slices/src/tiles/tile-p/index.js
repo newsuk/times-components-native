@@ -40,6 +40,7 @@ const TileP = ({ onPress, tile }) => {
         style={styles.summaryContainer}
         tile={tile}
         centeredStar
+        hideLabel={true}
       />
     </TileLink>
   );
