@@ -27,7 +27,11 @@ const ArticlePage = (props) => {
   if (article || error) {
     const ArticlePageView = withErrorBoundaries(
       withNativeProvider(
-        <Responsive>
+        <Responsive
+          initialFontScale={props.fontScale}
+          initialHeight={props.initialHeight}
+          initialWidth={props.initialWidth}
+        >
           <ArticleBase
             {...props}
             article={article ? JSON.parse(article).data.article : null}
@@ -46,7 +50,11 @@ const ArticlePage = (props) => {
     withNativeProvider(
       <ArticleProvider debounceTimeMs={100} id={articleId}>
         {({ article: articleData, isLoading, error: errorData, refetch }) => (
-          <Responsive>
+          <Responsive
+            initialFontScale={props.fontScale}
+            initialHeight={props.initialHeight}
+            initialWidth={props.initialWidth}
+          >
             <ArticleBase
               {...props}
               article={articleData}

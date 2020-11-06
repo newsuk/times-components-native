@@ -5,7 +5,11 @@ import Responsive from "@times-components-native/responsive";
 import Section from "./section";
 
 const SectionPage = (props) => (
-  <Responsive>
+  <Responsive
+    initialWidth={props.displayWidth}
+    initialHeight={props.displayHeight}
+    initialFontScale={props.fontScale}
+  >
     <Section {...props} section={JSON.parse(props.section)} />
   </Responsive>
 );

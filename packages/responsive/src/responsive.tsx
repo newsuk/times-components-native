@@ -9,12 +9,30 @@ import { ScaledSize } from "react-native";
 import ResponsiveContext from "./context";
 import { calculateResponsiveContext } from "./calculateResponsiveContext";
 
-type DimensionChangeEvent = {
+interface DimensionChangeEvent {
   window: ScaledSize;
-};
+}
 
-const ResponsiveProvider: React.FC = ({ children }) => {
-  const { fontScale, width, height } = getDimensions();
+interface Props {
+  initialHeight?: number | undefined;
+  initialWidth?: number | undefined;
+  initialFontScale?: number | undefined;
+}
+
+const ResponsiveProvider: React.FC<Props> = ({
+  children,
+  initialWidth,
+  initialHeight,
+  initialFontScale,
+}) => {
+  const { fontScale, width, height } =
+    initialWidth && initialHeight && initialFontScale
+      ? {
+          width: initialWidth,
+          height: initialHeight,
+          fontScale: initialFontScale,
+        }
+      : getDimensions();
 
   const [state, setState] = useState(
     calculateResponsiveContext(width, height, fontScale),

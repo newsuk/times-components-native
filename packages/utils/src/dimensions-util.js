@@ -19,7 +19,15 @@ export const getDimensions = (
 
 export const addDimensionsListener = (type, handler) => {
   if (Platform.OS === "android") {
-    let wrappedHandler = (data) => handler({ window: data });
+    const wrappedHandler = (data) => {
+      return handler({
+        window: {
+          width: data.displayWidth,
+          height: data.displayHeight,
+          fontScale: data.fontScale,
+        },
+      });
+    };
     eventEmitter.addListener("OrientationChanged", wrappedHandler);
     return wrappedHandler;
   } else {

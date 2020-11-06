@@ -5,3 +5,5 @@ exports[`width values should update on device rotation 1`] = `"{\\"editionBreakp
 exports[`width values should update on device rotation: after width update 1`] = `"{\\"editionBreakpoint\\":\\"small\\",\\"isTablet\\":false,\\"windowWidth\\":100,\\"windowHeight\\":100,\\"orientation\\":\\"landscape\\"}"`;
 
 exports[`with default values 1`] = `"{\\"editionBreakpoint\\":\\"small\\",\\"isTablet\\":false,\\"windowWidth\\":100,\\"windowHeight\\":100,\\"orientation\\":\\"landscape\\"}"`;
+
+exports[`with specified values 1`] = `"{\\"editionBreakpoint\\":\\"small\\",\\"fontScale\\":1,\\"isTablet\\":false,\\"windowWidth\\":200,\\"windowHeight\\":100,\\"orientation\\":\\"landscape\\"}"`;
