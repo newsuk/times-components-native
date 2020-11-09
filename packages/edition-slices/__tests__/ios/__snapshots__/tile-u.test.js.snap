@@ -32,6 +32,7 @@ exports[`tile u with headline style 1`] = `
     >
       <ArticleLabel
         color="#005B8D"
+        hide={false}
         isVideo={false}
         title="label"
       />
@@ -101,6 +102,7 @@ exports[`tile u without breakpoint 1`] = `
     >
       <ArticleLabel
         color="#005B8D"
+        hide={false}
         isVideo={false}
         title="label"
       />

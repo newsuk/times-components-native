@@ -32,6 +32,7 @@ exports[`tile ax landscape huge 1`] = `
     >
       <ArticleLabel
         color="#005B8D"
+        hide={false}
         isVideo={false}
         title="label"
       />
@@ -100,6 +101,7 @@ exports[`tile ax landscape medium 1`] = `
     >
       <ArticleLabel
         color="#005B8D"
+        hide={false}
         isVideo={false}
         title="label"
       />
@@ -168,6 +170,7 @@ exports[`tile ax landscape wide 1`] = `
     >
       <ArticleLabel
         color="#005B8D"
+        hide={false}
         isVideo={false}
         title="label"
       />
@@ -236,6 +239,7 @@ exports[`tile ax portrait huge 1`] = `
     >
       <ArticleLabel
         color="#005B8D"
+        hide={false}
         isVideo={false}
         title="label"
       />
@@ -304,6 +308,7 @@ exports[`tile ax portrait medium 1`] = `
     >
       <ArticleLabel
         color="#005B8D"
+        hide={false}
         isVideo={false}
         title="label"
       />
@@ -372,6 +377,7 @@ exports[`tile ax portrait wide 1`] = `
     >
       <ArticleLabel
         color="#005B8D"
+        hide={false}
         isVideo={false}
         title="label"
       />
