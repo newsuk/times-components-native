@@ -1,7 +1,6 @@
 import React, { useCallback, useMemo } from "react";
 import { View, ScrollView } from "react-native";
 import PropTypes from "prop-types";
-import { screenWidth } from "@times-components-native/utils";
 import { withTrackScrollDepth } from "@times-components-native/tracking";
 import { Viewport } from "@skele/components";
 import { render } from "@times-components-native/markup-forest";
@@ -17,6 +16,7 @@ import styles from "./styles/shared";
 import renderers from "./article-body/article-body-row";
 import fixup from "./body-utils";
 import ErrorBoundary from "./boundary";
+import { useResponsiveContext } from "@times-components-native/responsive";
 
 const templateWithDropCaps = [
   "indepth",
@@ -45,13 +45,14 @@ const ArticleWithContent = (props) => {
     narrowContent,
   } = props;
   const variants = useVariantTestingContext();
+  const { windowWidth } = useResponsiveContext();
 
   const { id, url, content, template } = data;
 
   const header = useMemo(
     () => (
       <Gutter>
-        <Header width={Math.min(maxWidth, screenWidth())} />
+        <Header width={Math.min(maxWidth, windowWidth)} />
       </Gutter>
     ),
     [],

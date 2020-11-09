@@ -1,7 +1,6 @@
 import TestRenderer from "react-test-renderer";
 import renderParagraph from "./renderer";
 import dropCapData from "./fixtures/drop-cap-showcase.json";
-import React from "react";
 import { withMobileContext } from "@times-components-native/test-utils";
 
 const renderComponent = (component) =>

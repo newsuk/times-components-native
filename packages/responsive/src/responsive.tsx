@@ -1,5 +1,4 @@
 import React, { useContext, useEffect, useState } from "react";
-// @ts-ignore
 import {
   getDimensions,
   addDimensionsListener,

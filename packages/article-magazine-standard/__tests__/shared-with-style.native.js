@@ -10,7 +10,7 @@ import {
   print,
 } from "@times-components-native/jest-serializer";
 import { themeFactory } from "@times-components-native/styleguide";
-import { setIsTablet } from "./mocks.native";
+import "./mocks.native";
 import ArticleMagazineStandard from "../src/article-magazine-standard";
 import articleFixture, { testFixture } from "../fixtures/full-article";
 import sharedProps from "./shared-props";

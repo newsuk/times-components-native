@@ -2,7 +2,6 @@ import InTodaysEdition from "../in-todays-edition";
 import Item from "../item";
 import TestRenderer from "react-test-renderer";
 import React from "react";
-import { getDimensions } from "@times-components-native/utils";
 import "./serializers-with-all-styles";
 
 jest.mock("@times-components-native/icons", () => ({

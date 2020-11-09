@@ -1,5 +1,4 @@
 /* eslint-disable global-require */
-import React from "react";
 import TestRenderer from "react-test-renderer";
 import {
   addSerializers,
@@ -10,8 +9,6 @@ import {
   minimalNativeTransform,
 } from "@times-components-native/jest-serializer";
 import "./mocks.native";
-import Responsive from "@times-components-native/responsive";
-import { setIsTablet } from "@times-components-native/mocks/dimensions";
 import { FontStorage } from "@times-components-native/typeset";
 import articleFixture from "../fixtures/full-article";
 import shared, { renderArticle, fixtureArgs } from "./shared.base";
