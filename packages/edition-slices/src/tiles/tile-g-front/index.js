@@ -3,13 +3,13 @@ import React from "react";
 import PropTypes from "prop-types";
 
 import { FrontTileSummary } from "@times-components-native/front-page";
-import { getDimensions } from "@times-components-native/utils";
 
 import { getTileImage, TileLink, withTileTracking, TileImage } from "../shared";
 import { getStyle } from "./styles";
+import { useResponsiveContext } from "@times-components-native/responsive";
 
 const TileGFront = ({ onPress, tile, orientation }) => {
-  const { width: windowWidth, height: windowHeight } = getDimensions();
+  const { windowWidth, windowHeight } = useResponsiveContext();
   const crop = getTileImage(tile, "crop45");
   const styles = getStyle(orientation, windowWidth, windowHeight);
 

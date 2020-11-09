@@ -176,9 +176,9 @@ export class AdBase extends Component {
 }
 
 const Ad = (props) => {
-  const { screenWidth, orientation } = useResponsiveContext();
+  const { windowWidth, orientation } = useResponsiveContext();
   return (
-    <AdBase {...props} screenWidth={screenWidth} orientation={orientation} />
+    <AdBase {...props} screenWidth={windowWidth} orientation={orientation} />
   );
 };
 

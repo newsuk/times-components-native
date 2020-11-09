@@ -5,8 +5,11 @@ import ArticleMainComment from "@times-components-native/article-main-comment";
 import ArticleMagazineStandard from "@times-components-native/article-magazine-standard";
 import ArticleMagazineComment from "@times-components-native/article-magazine-comment";
 import ArticleCommentTablet from "@times-components-native/article-comment-tablet";
-import { ResponsiveContext } from "@times-components-native/responsive";
 import Article from "../src/article";
+import {
+  withMobileContext,
+  withTabletContext,
+} from "@times-components-native/test-utils";
 
 jest.mock("@times-components-native/image", () => "TimesImage");
 
@@ -28,24 +31,10 @@ const requiredProps = {
   refetch: () => null,
 };
 
-const withTabletContext = (WrappedComponent) => (
-  <ResponsiveContext.Provider
-    value={{
-      narrowArticleBreakpoint: {
-        container: 800,
-        content: 600,
-      },
-      isTablet: true,
-    }}
-  >
-    {WrappedComponent}
-  </ResponsiveContext.Provider>
-);
-
 describe("Article", () => {
   it("renders with ArticleMainStandard as the default template if article is null", () => {
     const testRenderer = TestRenderer.create(
-      <Article {...requiredProps} article={null} />,
+      withMobileContext(<Article {...requiredProps} article={null} />),
     );
     const testInstance = testRenderer.root;
 
@@ -54,7 +43,7 @@ describe("Article", () => {
 
   it("renders with ArticleMainStandard as the default template if no template is provided", () => {
     const testRenderer = TestRenderer.create(
-      <Article article={{}} {...requiredProps} />,
+      withMobileContext(<Article article={{}} {...requiredProps} />),
     );
     const testInstance = testRenderer.root;
 
@@ -63,7 +52,9 @@ describe("Article", () => {
 
   it("renders with ArticleMainStandard if an unknown template is chosen", () => {
     const testRenderer = TestRenderer.create(
-      <Article article={{ template: "undefined" }} {...requiredProps} />,
+      withMobileContext(
+        <Article article={{ template: "undefined" }} {...requiredProps} />,
+      ),
     );
     const testInstance = testRenderer.root;
 
@@ -72,7 +63,9 @@ describe("Article", () => {
 
   it("renders with ArticleMainStandard as the default template if null is set for template", () => {
     const testRenderer = TestRenderer.create(
-      <Article article={{ template: null }} {...requiredProps} />,
+      withMobileContext(
+        <Article article={{ template: null }} {...requiredProps} />,
+      ),
     );
     const testInstance = testRenderer.root;
 
@@ -81,7 +74,9 @@ describe("Article", () => {
 
   it("renders with ArticleMainStandard if the correct template is chosen", () => {
     const testRenderer = TestRenderer.create(
-      <Article article={{ template: "mainstandard" }} {...requiredProps} />,
+      withMobileContext(
+        <Article article={{ template: "mainstandard" }} {...requiredProps} />,
+      ),
     );
     const testInstance = testRenderer.root;
 
@@ -90,7 +85,9 @@ describe("Article", () => {
 
   it("renders with ArticleMainComment if the correct template is chosen", () => {
     const testRenderer = TestRenderer.create(
-      <Article article={{ template: "maincomment" }} {...requiredProps} />,
+      withMobileContext(
+        <Article article={{ template: "maincomment" }} {...requiredProps} />,
+      ),
     );
     const testInstance = testRenderer.root;
 
@@ -99,7 +96,12 @@ describe("Article", () => {
 
   it("renders with ArticleMagazineStandard if the correct template is chosen", () => {
     const testRenderer = TestRenderer.create(
-      <Article article={{ template: "magazinestandard" }} {...requiredProps} />,
+      withMobileContext(
+        <Article
+          article={{ template: "magazinestandard" }}
+          {...requiredProps}
+        />,
+      ),
     );
     const testInstance = testRenderer.root;
 
@@ -108,7 +110,12 @@ describe("Article", () => {
 
   it("renders with ArticleMagazineComment if the correct template is chosen", () => {
     const testRenderer = TestRenderer.create(
-      <Article article={{ template: "magazinecomment" }} {...requiredProps} />,
+      withMobileContext(
+        <Article
+          article={{ template: "magazinecomment" }}
+          {...requiredProps}
+        />,
+      ),
     );
     const testInstance = testRenderer.root;
 

@@ -8,11 +8,15 @@ import {
   minimalNativeTransform,
   print,
 } from "@times-components-native/jest-serializer";
-import { setIsTablet } from "./mocks.native";
+import "./mocks.native";
 import ArticleMainStandard from "../src/article-main-standard";
 import articleFixture, { testFixture } from "../fixtures/full-article";
 import { adConfig } from "./ad-mock";
 import articleProps from "./shared-article-props";
+import {
+  withMobileContext,
+  withTabletContext,
+} from "@times-components-native/test-utils";
 
 export default () => {
   addSerializers(
@@ -132,28 +136,28 @@ export default () => {
     });
 
     const output = TestRenderer.create(
-      <ArticleMainStandard
-        {...articleProps}
-        adConfig={adConfig}
-        analyticsStream={() => null}
-        article={article}
-        onAuthorPress={() => null}
-        onCommentGuidelinesPress={() => null}
-        onCommentsPress={() => null}
-        onLinkPress={() => null}
-        onRelatedArticlePress={() => null}
-        onTopicPress={() => null}
-        onTwitterLinkPress={() => null}
-        onVideoPress={() => null}
-      />,
+      withMobileContext(
+        <ArticleMainStandard
+          {...articleProps}
+          adConfig={adConfig}
+          analyticsStream={() => null}
+          article={article}
+          onAuthorPress={() => null}
+          onCommentGuidelinesPress={() => null}
+          onCommentsPress={() => null}
+          onLinkPress={() => null}
+          onRelatedArticlePress={() => null}
+          onTopicPress={() => null}
+          onTwitterLinkPress={() => null}
+          onVideoPress={() => null}
+        />,
+      ),
     );
 
     expect(output).toMatchSnapshot();
   });
 
   it("full article with style on tablet", () => {
-    setIsTablet(true);
-
     const article = articleFixture({
       ...testFixture,
       content: [
@@ -260,20 +264,22 @@ export default () => {
     });
 
     const output = TestRenderer.create(
-      <ArticleMainStandard
-        {...articleProps}
-        adConfig={adConfig}
-        analyticsStream={() => null}
-        article={article}
-        onAuthorPress={() => null}
-        onCommentGuidelinesPress={() => null}
-        onCommentsPress={() => null}
-        onLinkPress={() => null}
-        onRelatedArticlePress={() => null}
-        onTopicPress={() => null}
-        onTwitterLinkPress={() => null}
-        onVideoPress={() => null}
-      />,
+      withTabletContext(
+        <ArticleMainStandard
+          {...articleProps}
+          adConfig={adConfig}
+          analyticsStream={() => null}
+          article={article}
+          onAuthorPress={() => null}
+          onCommentGuidelinesPress={() => null}
+          onCommentsPress={() => null}
+          onLinkPress={() => null}
+          onRelatedArticlePress={() => null}
+          onTopicPress={() => null}
+          onTwitterLinkPress={() => null}
+          onVideoPress={() => null}
+        />,
+      ),
     );
 
     expect(output).toMatchSnapshot();

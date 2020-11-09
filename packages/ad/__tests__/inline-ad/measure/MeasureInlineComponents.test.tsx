@@ -5,6 +5,7 @@ import ReactTestRenderer from "react-test-renderer";
 import { MeasureContent } from "../../../src/inline-ad/measure/MeasureInlineComponents";
 import { InlineMeasurementDispatch } from "../../../src/inline-ad/measure/InlineMeasurementDispatchContext";
 import { ParagraphContent } from "@times-components-native/types";
+import { withMobileContext } from "@times-components-native/test-utils";
 
 export const createParagraphWithText = (text: string): ParagraphContent => ({
   id: "some-paragraph-id",
@@ -25,7 +26,9 @@ describe("MeasureContent", () => {
   const paragraph = createParagraphWithText("abc");
   it("renders the content", () => {
     const renderer = ReactTestRenderer.create(
-      <MeasureContent content={paragraph} skeletonProps={skeletonProps} />,
+      withMobileContext(
+        <MeasureContent content={paragraph} skeletonProps={skeletonProps} />,
+      ),
     );
 
     expect(renderer.toJSON()).toMatchSnapshot();

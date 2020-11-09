@@ -2,16 +2,16 @@
 import React from "react";
 import PropTypes from "prop-types";
 import { FrontTileSummary } from "@times-components-native/front-page";
-import { getDimensions } from "@times-components-native/utils";
 import { getTileImage, TileLink, TileImage, withTileTracking } from "../shared";
 import { getStyle } from "./styles";
+import { useResponsiveContext } from "@times-components-native/responsive";
 
 const TileBFront = ({ onPress, tile, orientation }) => {
   const isPortrait = orientation === "portrait";
   const showKeyline = isPortrait;
 
   const crop = getTileImage(tile, "crop32");
-  const { width: windowWidth, height: windowHeight } = getDimensions();
+  const { windowWidth, windowHeight } = useResponsiveContext();
   const styles = getStyle(orientation, windowWidth, windowHeight);
 
   if (!crop) return null;

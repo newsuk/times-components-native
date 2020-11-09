@@ -8,10 +8,14 @@ import {
   minimalNativeTransform,
   print,
 } from "@times-components-native/jest-serializer";
-import { setIsTablet } from "./mocks.native";
+import "./mocks.native";
 import ArticleMainComment from "../src/article-main-comment";
 import articleFixture, { testFixture } from "../fixtures/full-article";
 import sharedProps from "./shared-props";
+import {
+  withMobileContext,
+  withTabletContext,
+} from "@times-components-native/test-utils";
 
 export default () => {
   addSerializers(
@@ -134,14 +138,15 @@ export default () => {
     });
 
     const testRenderer = TestRenderer.create(
-      <ArticleMainComment {...sharedProps} article={article} />,
+      withMobileContext(
+        <ArticleMainComment {...sharedProps} article={article} />,
+      ),
     );
 
     expect(testRenderer).toMatchSnapshot();
   });
 
   it("tablet full article with style", () => {
-    setIsTablet(true);
     const article = articleFixture({
       ...testFixture,
       author: {
@@ -251,7 +256,9 @@ export default () => {
     });
 
     const testRenderer = TestRenderer.create(
-      <ArticleMainComment {...sharedProps} article={article} />,
+      withTabletContext(
+        <ArticleMainComment {...sharedProps} article={article} />,
+      ),
     );
 
     expect(testRenderer).toMatchSnapshot();

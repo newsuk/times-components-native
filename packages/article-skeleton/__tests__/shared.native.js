@@ -21,6 +21,7 @@ import articleFixture, {
 } from "../fixtures/full-article";
 import { adConfig } from "./ad-mock";
 import articleSkeletonProps from "./shared-article-skeleton-props";
+import { withMobileContext } from "@times-components-native/test-utils";
 
 FontStorage.registerFont(
   "TimesDigitalW04",
@@ -67,68 +68,70 @@ export default () => {
     mockDate.reset();
   });
 
-  const renderArticle = ({ onLinkPress, stream }) => (
-    <ArticleSkeleton
-      {...articleSkeletonProps}
-      adConfig={adConfig}
-      analyticsStream={stream || (() => null)}
-      data={articleFixture({
-        ...testFixture,
-        content: [
-          {
-            children: [
-              {
-                attributes: {
-                  href: "https://link.io",
-                  target: "_blank",
-                },
-                children: [
-                  {
-                    attributes: {
-                      value: "Press Me",
-                    },
-                    children: [],
-                    name: "text",
+  const renderArticle = ({ onLinkPress, stream }) =>
+    withMobileContext(
+      <ArticleSkeleton
+        {...articleSkeletonProps}
+        adConfig={adConfig}
+        analyticsStream={stream || (() => null)}
+        data={articleFixture({
+          ...testFixture,
+          content: [
+            {
+              children: [
+                {
+                  attributes: {
+                    href: "https://link.io",
+                    target: "_blank",
                   },
-                ],
-                name: "link",
-              },
-            ],
-            name: "paragraph",
-          },
-        ],
-      })}
-      onAuthorPress={() => null}
-      onCommentGuidelinesPress={() => null}
-      onCommentsPress={() => null}
-      onLinkPress={onLinkPress || (() => null)}
-      onRelatedArticlePress={() => null}
-      onTopicPress={() => null}
-      onTwitterLinkPress={() => null}
-      onVideoPress={() => null}
-    />
-  );
+                  children: [
+                    {
+                      attributes: {
+                        value: "Press Me",
+                      },
+                      children: [],
+                      name: "text",
+                    },
+                  ],
+                  name: "link",
+                },
+              ],
+              name: "paragraph",
+            },
+          ],
+        })}
+        onAuthorPress={() => null}
+        onCommentGuidelinesPress={() => null}
+        onCommentsPress={() => null}
+        onLinkPress={onLinkPress || (() => null)}
+        onRelatedArticlePress={() => null}
+        onTopicPress={() => null}
+        onTwitterLinkPress={() => null}
+        onVideoPress={() => null}
+      />,
+    );
 
-  const renderArticleContent = (content, template) => (
-    <ArticleSkeleton
-      {...articleSkeletonProps}
-      adConfig={adConfig}
-      analyticsStream={() => null}
-      data={articleFixture({
-        ...testFixture,
-        content,
-        template,
-      })}
-      onAuthorPress={() => null}
-      onCommentGuidelinesPress={() => null}
-      onCommentsPress={() => null}
-      onLinkPress={() => null}
-      onRelatedArticlePress={() => null}
-      onTopicPress={() => null}
-      onTwitterLinkPress={() => null}
-      onVideoPress={() => null}
-    />
-  );
+  const renderArticleContent = (content, template) =>
+    withMobileContext(
+      <ArticleSkeleton
+        {...articleSkeletonProps}
+        adConfig={adConfig}
+        analyticsStream={() => null}
+        data={articleFixture({
+          ...testFixture,
+          content,
+          template,
+        })}
+        onAuthorPress={() => null}
+        onCommentGuidelinesPress={() => null}
+        onCommentsPress={() => null}
+        onLinkPress={() => null}
+        onRelatedArticlePress={() => null}
+        onTopicPress={() => null}
+        onTwitterLinkPress={() => null}
+        onVideoPress={() => null}
+      />,
+    );
 
   const tests = [
     {

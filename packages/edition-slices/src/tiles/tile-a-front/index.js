@@ -10,12 +10,12 @@ import {
   getTileStrapline,
 } from "../shared";
 import { getStyle } from "./styles";
-import { getDimensions } from "@times-components-native/utils";
+import { useResponsiveContext } from "@times-components-native/responsive";
 
 const getAspectRatio = (crop) => (crop === "crop32" ? 3 / 2 : 5 / 4);
 
 const TileAFront = ({ onPress, tile, orientation }) => {
-  const { width: windowWidth, height: windowHeight } = getDimensions();
+  const { windowWidth, windowHeight } = useResponsiveContext();
   const isPortrait = orientation === "portrait";
   const columnCount = isPortrait ? 2 : 1;
   const crop = isPortrait ? "crop32" : "crop54";

@@ -33,7 +33,7 @@ exports[`1. a full article with all content items with dropcap template 1`] = `
         <View
           style={
             Object {
-              "left": 45,
+              "left": 0,
             }
           }
         >
@@ -55,7 +55,7 @@ exports[`1. a full article with all content items with dropcap template 1`] = `
         <View
           style={
             Object {
-              "height": 156,
+              "height": 260,
               "marginBottom": 20,
               "paddingLeft": 10,
               "paddingRight": 10,
@@ -99,10 +99,10 @@ exports[`1. a full article with all content items with dropcap template 1`] = `
                   "color": "#000000",
                   "fontFamily": "TimesDigitalW04",
                   "fontSize": 36,
-                  "left": 195.0390625,
+                  "left": 139,
                   "lineHeight": 52,
                   "position": "absolute",
-                  "top": 0,
+                  "top": 52,
                 }
               }
             >
@@ -114,10 +114,10 @@ exports[`1. a full article with all content items with dropcap template 1`] = `
                   "color": "#000000",
                   "fontFamily": "TimesDigitalW04",
                   "fontSize": 36,
-                  "left": 292.017578125,
+                  "left": 139,
                   "lineHeight": 52,
                   "position": "absolute",
-                  "top": 0,
+                  "top": 104,
                 }
               }
             >
@@ -129,10 +129,10 @@ exports[`1. a full article with all content items with dropcap template 1`] = `
                   "color": "#000000",
                   "fontFamily": "TimesDigitalW04",
                   "fontSize": 36,
-                  "left": 388.75,
+                  "left": 0,
                   "lineHeight": 52,
                   "position": "absolute",
-                  "top": 0,
+                  "top": 156,
                 }
               }
             >
@@ -144,10 +144,10 @@ exports[`1. a full article with all content items with dropcap template 1`] = `
                   "color": "#000000",
                   "fontFamily": "TimesDigitalW04",
                   "fontSize": 36,
-                  "left": 512.095703125,
+                  "left": 123.345703125,
                   "lineHeight": 52,
                   "position": "absolute",
-                  "top": 0,
+                  "top": 156,
                 }
               }
             >
@@ -159,10 +159,10 @@ exports[`1. a full article with all content items with dropcap template 1`] = `
                   "color": "#000000",
                   "fontFamily": "TimesDigitalW04",
                   "fontSize": 36,
-                  "left": 631.486328125,
+                  "left": 0,
                   "lineHeight": 52,
                   "position": "absolute",
-                  "top": 0,
+                  "top": 208,
                 }
               }
             >
@@ -174,10 +174,10 @@ exports[`1. a full article with all content items with dropcap template 1`] = `
                   "color": "#000000",
                   "fontFamily": "TimesDigitalW04",
                   "fontSize": 36,
-                  "left": 139,
+                  "left": 67.552734375,
                   "lineHeight": 52,
                   "position": "absolute",
-                  "top": 52,
+                  "top": 208,
                 }
               }
             >
@@ -1008,7 +1008,7 @@ exports[`5. an article with a nested markup in first paragraph displays a drop c
         <View
           style={
             Object {
-              "left": 45,
+              "left": 0,
             }
           }
         >
@@ -1030,7 +1030,7 @@ exports[`5. an article with a nested markup in first paragraph displays a drop c
         <View
           style={
             Object {
-              "height": 156,
+              "height": 416,
               "marginBottom": 20,
               "paddingLeft": 10,
               "paddingRight": 10,
@@ -1077,10 +1077,10 @@ exports[`5. an article with a nested markup in first paragraph displays a drop c
                   "fontFamily": "TimesDigitalW04",
                   "fontSize": 36,
                   "fontWeight": "bold",
-                  "left": 260.42578125,
+                  "left": 159,
                   "lineHeight": 52,
                   "position": "absolute",
-                  "top": 0,
+                  "top": 52,
                 }
               }
             >
@@ -1093,10 +1093,10 @@ exports[`5. an article with a nested markup in first paragraph displays a drop c
                   "fontFamily": "TimesDigitalW04",
                   "fontSize": 36,
                   "fontWeight": "bold",
-                  "left": 355.541015625,
+                  "left": 159,
                   "lineHeight": 52,
                   "position": "absolute",
-                  "top": 0,
+                  "top": 104,
                 }
               }
             >
@@ -1109,10 +1109,10 @@ exports[`5. an article with a nested markup in first paragraph displays a drop c
                   "fontFamily": "TimesDigitalW04",
                   "fontSize": 36,
                   "fontWeight": "bold",
-                  "left": 424.763671875,
+                  "left": 228.22265625,
                   "lineHeight": 52,
                   "position": "absolute",
-                  "top": 0,
+                  "top": 104,
                 }
               }
             >
@@ -1125,10 +1125,10 @@ exports[`5. an article with a nested markup in first paragraph displays a drop c
                   "fontFamily": "TimesDigitalW04",
                   "fontSize": 36,
                   "fontWeight": "bold",
-                  "left": 443.466796875,
+                  "left": 159,
                   "lineHeight": 52,
                   "position": "absolute",
-                  "top": 0,
+                  "top": 156,
                 }
               }
             >
@@ -1141,10 +1141,10 @@ exports[`5. an article with a nested markup in first paragraph displays a drop c
                   "fontFamily": "TimesDigitalW04",
                   "fontSize": 36,
                   "fontWeight": "bold",
-                  "left": 542.888671875,
+                  "left": 0,
                   "lineHeight": 52,
                   "position": "absolute",
-                  "top": 0,
+                  "top": 208,
                 }
               }
             >
@@ -1157,10 +1157,10 @@ exports[`5. an article with a nested markup in first paragraph displays a drop c
                   "fontFamily": "TimesDigitalW04",
                   "fontSize": 36,
                   "fontWeight": "bold",
-                  "left": 159,
+                  "left": 59.572265625,
                   "lineHeight": 52,
                   "position": "absolute",
-                  "top": 52,
+                  "top": 208,
                 }
               }
             >
@@ -1173,10 +1173,10 @@ exports[`5. an article with a nested markup in first paragraph displays a drop c
                   "fontFamily": "TimesDigitalW04",
                   "fontSize": 36,
                   "fontWeight": "bold",
-                  "left": 302.560546875,
+                  "left": 203.1328125,
                   "lineHeight": 52,
                   "position": "absolute",
-                  "top": 52,
+                  "top": 208,
                 }
               }
             >
@@ -1189,10 +1189,10 @@ exports[`5. an article with a nested markup in first paragraph displays a drop c
                   "fontFamily": "TimesDigitalW04",
                   "fontSize": 36,
                   "fontWeight": "bold",
-                  "left": 343.412109375,
+                  "left": 0,
                   "lineHeight": 52,
                   "position": "absolute",
-                  "top": 52,
+                  "top": 260,
                 }
               }
             >
@@ -1205,10 +1205,10 @@ exports[`5. an article with a nested markup in first paragraph displays a drop c
                   "fontFamily": "TimesDigitalW04",
                   "fontSize": 36,
                   "fontWeight": "bold",
-                  "left": 420.6328125,
+                  "left": 77.220703125,
                   "lineHeight": 52,
                   "position": "absolute",
-                  "top": 52,
+                  "top": 260,
                 }
               }
             >
@@ -1221,10 +1221,10 @@ exports[`5. an article with a nested markup in first paragraph displays a drop c
                   "fontFamily": "TimesDigitalW04",
                   "fontSize": 36,
                   "fontWeight": "bold",
-                  "left": 467.689453125,
+                  "left": 124.27734375,
                   "lineHeight": 52,
                   "position": "absolute",
-                  "top": 52,
+                  "top": 260,
                 }
               }
             >
@@ -1237,10 +1237,10 @@ exports[`5. an article with a nested markup in first paragraph displays a drop c
                   "fontFamily": "TimesDigitalW04",
                   "fontSize": 36,
                   "fontWeight": "bold",
-                  "left": 496.18359375,
+                  "left": 152.771484375,
                   "lineHeight": 52,
                   "position": "absolute",
-                  "top": 52,
+                  "top": 260,
                 }
               }
             >
@@ -1253,10 +1253,10 @@ exports[`5. an article with a nested markup in first paragraph displays a drop c
                   "fontFamily": "TimesDigitalW04",
                   "fontSize": 36,
                   "fontWeight": "bold",
-                  "left": 597.75,
+                  "left": 254.337890625,
                   "lineHeight": 52,
                   "position": "absolute",
-                  "top": 52,
+                  "top": 260,
                 }
               }
             >
@@ -1269,10 +1269,10 @@ exports[`5. an article with a nested markup in first paragraph displays a drop c
                   "fontFamily": "TimesDigitalW04",
                   "fontSize": 36,
                   "fontWeight": "bold",
-                  "left": 159,
+                  "left": 0,
                   "lineHeight": 52,
                   "position": "absolute",
-                  "top": 104,
+                  "top": 312,
                 }
               }
             >
@@ -1285,10 +1285,10 @@ exports[`5. an article with a nested markup in first paragraph displays a drop c
                   "fontFamily": "TimesDigitalW04",
                   "fontSize": 36,
                   "fontWeight": "bold",
-                  "left": 286.494140625,
+                  "left": 127.494140625,
                   "lineHeight": 52,
                   "position": "absolute",
-                  "top": 104,
+                  "top": 312,
                 }
               }
             >
@@ -1301,10 +1301,10 @@ exports[`5. an article with a nested markup in first paragraph displays a drop c
                   "fontFamily": "TimesDigitalW04",
                   "fontSize": 36,
                   "fontWeight": "bold",
-                  "left": 362.818359375,
+                  "left": 203.818359375,
                   "lineHeight": 52,
                   "position": "absolute",
-                  "top": 104,
+                  "top": 312,
                 }
               }
             >
@@ -1317,10 +1317,10 @@ exports[`5. an article with a nested markup in first paragraph displays a drop c
                   "fontFamily": "TimesDigitalW04",
                   "fontSize": 36,
                   "fontWeight": "bold",
-                  "left": 399.029296875,
+                  "left": 0,
                   "lineHeight": 52,
                   "position": "absolute",
-                  "top": 104,
+                  "top": 364,
                 }
               }
             >
@@ -1333,10 +1333,10 @@ exports[`5. an article with a nested markup in first paragraph displays a drop c
                   "fontFamily": "TimesDigitalW04",
                   "fontSize": 36,
                   "fontWeight": "bold",
-                  "left": 473.75390625,
+                  "left": 74.724609375,
                   "lineHeight": 52,
                   "position": "absolute",
-                  "top": 104,
+                  "top": 364,
                 }
               }
             >
@@ -2416,7 +2416,7 @@ exports[`15. an article starting with single quote 1`] = `
         <View
           style={
             Object {
-              "left": 45,
+              "left": 0,
             }
           }
         >
@@ -2438,7 +2438,7 @@ exports[`15. an article starting with single quote 1`] = `
         <View
           style={
             Object {
-              "height": 208,
+              "height": 624,
               "marginBottom": 20,
               "paddingLeft": 10,
               "paddingRight": 10,
@@ -2482,10 +2482,10 @@ exports[`15. an article starting with single quote 1`] = `
                   "color": "#000000",
                   "fontFamily": "TimesDigitalW04",
                   "fontSize": 36,
-                  "left": 285.060546875,
+                  "left": 0,
                   "lineHeight": 52,
                   "position": "absolute",
-                  "top": 0,
+                  "top": 208,
                 }
               }
             >
@@ -2497,10 +2497,10 @@ exports[`15. an article starting with single quote 1`] = `
                   "color": "#000000",
                   "fontFamily": "TimesDigitalW04",
                   "fontSize": 36,
-                  "left": 473.12890625,
+                  "left": 0,
                   "lineHeight": 52,
                   "position": "absolute",
-                  "top": 0,
+                  "top": 260,
                 }
               }
             >
@@ -2512,10 +2512,10 @@ exports[`15. an article starting with single quote 1`] = `
                   "color": "#000000",
                   "fontFamily": "TimesDigitalW04",
                   "fontSize": 36,
-                  "left": 594.365234375,
+                  "left": 121.236328125,
                   "lineHeight": 52,
                   "position": "absolute",
-                  "top": 0,
+                  "top": 260,
                 }
               }
             >
@@ -2527,10 +2527,10 @@ exports[`15. an article starting with single quote 1`] = `
                   "color": "#000000",
                   "fontFamily": "TimesDigitalW04",
                   "fontSize": 36,
-                  "left": 707.708984375,
+                  "left": 234.580078125,
                   "lineHeight": 52,
                   "position": "absolute",
-                  "top": 0,
+                  "top": 260,
                 }
               }
             >
@@ -2542,10 +2542,10 @@ exports[`15. an article starting with single quote 1`] = `
                   "color": "#000000",
                   "fontFamily": "TimesDigitalW04",
                   "fontSize": 36,
-                  "left": 182,
+                  "left": 0,
                   "lineHeight": 52,
                   "position": "absolute",
-                  "top": 52,
+                  "top": 312,
                 }
               }
             >
@@ -2557,10 +2557,10 @@ exports[`15. an article starting with single quote 1`] = `
                   "color": "#000000",
                   "fontFamily": "TimesDigitalW04",
                   "fontSize": 36,
-                  "left": 388.173828125,
+                  "left": 206.173828125,
                   "lineHeight": 52,
                   "position": "absolute",
-                  "top": 52,
+                  "top": 312,
                 }
               }
             >
@@ -2572,10 +2572,10 @@ exports[`15. an article starting with single quote 1`] = `
                   "color": "#000000",
                   "fontFamily": "TimesDigitalW04",
                   "fontSize": 36,
-                  "left": 465.693359375,
+                  "left": 0,
                   "lineHeight": 52,
                   "position": "absolute",
-                  "top": 52,
+                  "top": 364,
                 }
               }
             >
@@ -2587,10 +2587,10 @@ exports[`15. an article starting with single quote 1`] = `
                   "color": "#000000",
                   "fontFamily": "TimesDigitalW04",
                   "fontSize": 36,
-                  "left": 563.322265625,
+                  "left": 97.62890625,
                   "lineHeight": 52,
                   "position": "absolute",
-                  "top": 52,
+                  "top": 364,
                 }
               }
             >
@@ -2602,10 +2602,10 @@ exports[`15. an article starting with single quote 1`] = `
                   "color": "#000000",
                   "fontFamily": "TimesDigitalW04",
                   "fontSize": 36,
-                  "left": 680.09375,
+                  "left": 214.400390625,
                   "lineHeight": 52,
                   "position": "absolute",
-                  "top": 52,
+                  "top": 364,
                 }
               }
             >
@@ -2617,10 +2617,10 @@ exports[`15. an article starting with single quote 1`] = `
                   "color": "#000000",
                   "fontFamily": "TimesDigitalW04",
                   "fontSize": 36,
-                  "left": 182,
+                  "left": 0,
                   "lineHeight": 52,
                   "position": "absolute",
-                  "top": 104,
+                  "top": 416,
                 }
               }
             >
@@ -2632,10 +2632,10 @@ exports[`15. an article starting with single quote 1`] = `
                   "color": "#000000",
                   "fontFamily": "TimesDigitalW04",
                   "fontSize": 36,
-                  "left": 239.498046875,
+                  "left": 57.498046875,
                   "lineHeight": 52,
                   "position": "absolute",
-                  "top": 104,
+                  "top": 416,
                 }
               }
             >
@@ -2647,10 +2647,10 @@ exports[`15. an article starting with single quote 1`] = `
                   "color": "#000000",
                   "fontFamily": "TimesDigitalW04",
                   "fontSize": 36,
-                  "left": 359.451171875,
+                  "left": 177.451171875,
                   "lineHeight": 52,
                   "position": "absolute",
-                  "top": 104,
+                  "top": 416,
                 }
               }
             >
@@ -2662,10 +2662,10 @@ exports[`15. an article starting with single quote 1`] = `
                   "color": "#000000",
                   "fontFamily": "TimesDigitalW04",
                   "fontSize": 36,
-                  "left": 438.88671875,
+                  "left": 0,
                   "lineHeight": 52,
                   "position": "absolute",
-                  "top": 104,
+                  "top": 468,
                 }
               }
             >
@@ -2677,10 +2677,10 @@ exports[`15. an article starting with single quote 1`] = `
                   "color": "#000000",
                   "fontFamily": "TimesDigitalW04",
                   "fontSize": 36,
-                  "left": 522.892578125,
+                  "left": 84.005859375,
                   "lineHeight": 52,
                   "position": "absolute",
-                  "top": 104,
+                  "top": 468,
                 }
               }
             >
@@ -2692,10 +2692,10 @@ exports[`15. an article starting with single quote 1`] = `
                   "color": "#000000",
                   "fontFamily": "TimesDigitalW04",
                   "fontSize": 36,
-                  "left": 638.92578125,
+                  "left": 200.0390625,
                   "lineHeight": 52,
                   "position": "absolute",
-                  "top": 104,
+                  "top": 468,
                 }
               }
             >
@@ -2707,10 +2707,10 @@ exports[`15. an article starting with single quote 1`] = `
                   "color": "#000000",
                   "fontFamily": "TimesDigitalW04",
                   "fontSize": 36,
-                  "left": 182,
+                  "left": 0,
                   "lineHeight": 52,
                   "position": "absolute",
-                  "top": 156,
+                  "top": 520,
                 }
               }
             >
@@ -2722,10 +2722,10 @@ exports[`15. an article starting with single quote 1`] = `
                   "color": "#000000",
                   "fontFamily": "TimesDigitalW04",
                   "fontSize": 36,
-                  "left": 278.310546875,
+                  "left": 96.310546875,
                   "lineHeight": 52,
                   "position": "absolute",
-                  "top": 156,
+                  "top": 520,
                 }
               }
             >
@@ -2737,10 +2737,10 @@ exports[`15. an article starting with single quote 1`] = `
                   "color": "#000000",
                   "fontFamily": "TimesDigitalW04",
                   "fontSize": 36,
-                  "left": 398.509765625,
+                  "left": 216.509765625,
                   "lineHeight": 52,
                   "position": "absolute",
-                  "top": 156,
+                  "top": 520,
                 }
               }
             >
@@ -2752,10 +2752,10 @@ exports[`15. an article starting with single quote 1`] = `
                   "color": "#000000",
                   "fontFamily": "TimesDigitalW04",
                   "fontSize": 36,
-                  "left": 447.81640625,
+                  "left": 0,
                   "lineHeight": 52,
                   "position": "absolute",
-                  "top": 156,
+                  "top": 572,
                 }
               }
             >
@@ -2767,10 +2767,10 @@ exports[`15. an article starting with single quote 1`] = `
                   "color": "#000000",
                   "fontFamily": "TimesDigitalW04",
                   "fontSize": 36,
-                  "left": 524.984375,
+                  "left": 77.16796875,
                   "lineHeight": 52,
                   "position": "absolute",
-                  "top": 156,
+                  "top": 572,
                 }
               }
             >
@@ -2782,10 +2782,10 @@ exports[`15. an article starting with single quote 1`] = `
                   "color": "#000000",
                   "fontFamily": "TimesDigitalW04",
                   "fontSize": 36,
-                  "left": 625.21484375,
+                  "left": 177.3984375,
                   "lineHeight": 52,
                   "position": "absolute",
-                  "top": 156,
+                  "top": 572,
                 }
               }
             >
@@ -2855,7 +2855,7 @@ exports[`16. an article starting with double quote 1`] = `
         <View
           style={
             Object {
-              "left": 45,
+              "left": 0,
             }
           }
         >
@@ -2877,7 +2877,7 @@ exports[`16. an article starting with double quote 1`] = `
         <View
           style={
             Object {
-              "height": 260,
+              "height": 624,
               "marginBottom": 20,
               "paddingLeft": 10,
               "paddingRight": 10,
@@ -2906,10 +2906,10 @@ exports[`16. an article starting with double quote 1`] = `
                   "color": "#000000",
                   "fontFamily": "TimesDigitalW04",
                   "fontSize": 36,
-                  "left": 235.53125,
+                  "left": 0,
                   "lineHeight": 52,
                   "position": "absolute",
-                  "top": 0,
+                  "top": 208,
                 }
               }
             >
@@ -2921,10 +2921,10 @@ exports[`16. an article starting with double quote 1`] = `
                   "color": "#000000",
                   "fontFamily": "TimesDigitalW04",
                   "fontSize": 36,
-                  "left": 318.060546875,
+                  "left": 82.529296875,
                   "lineHeight": 52,
                   "position": "absolute",
-                  "top": 0,
+                  "top": 208,
                 }
               }
             >
@@ -2936,10 +2936,10 @@ exports[`16. an article starting with double quote 1`] = `
                   "color": "#000000",
                   "fontFamily": "TimesDigitalW04",
                   "fontSize": 36,
-                  "left": 506.12890625,
+                  "left": 0,
                   "lineHeight": 52,
                   "position": "absolute",
-                  "top": 0,
+                  "top": 260,
                 }
               }
             >
@@ -2951,10 +2951,10 @@ exports[`16. an article starting with double quote 1`] = `
                   "color": "#000000",
                   "fontFamily": "TimesDigitalW04",
                   "fontSize": 36,
-                  "left": 215,
+                  "left": 121.236328125,
                   "lineHeight": 52,
                   "position": "absolute",
-                  "top": 52,
+                  "top": 260,
                 }
               }
             >
@@ -2966,10 +2966,10 @@ exports[`16. an article starting with double quote 1`] = `
                   "color": "#000000",
                   "fontFamily": "TimesDigitalW04",
                   "fontSize": 36,
-                  "left": 328.34375,
+                  "left": 234.580078125,
                   "lineHeight": 52,
                   "position": "absolute",
-                  "top": 52,
+                  "top": 260,
                 }
               }
             >
@@ -2981,10 +2981,10 @@ exports[`16. an article starting with double quote 1`] = `
                   "color": "#000000",
                   "fontFamily": "TimesDigitalW04",
                   "fontSize": 36,
-                  "left": 356.837890625,
+                  "left": 0,
                   "lineHeight": 52,
                   "position": "absolute",
-                  "top": 52,
+                  "top": 312,
                 }
               }
             >
@@ -2996,10 +2996,10 @@ exports[`16. an article starting with double quote 1`] = `
                   "color": "#000000",
                   "fontFamily": "TimesDigitalW04",
                   "fontSize": 36,
-                  "left": 563.01171875,
+                  "left": 206.173828125,
                   "lineHeight": 52,
                   "position": "absolute",
-                  "top": 52,
+                  "top": 312,
                 }
               }
             >
@@ -3011,10 +3011,10 @@ exports[`16. an article starting with double quote 1`] = `
                   "color": "#000000",
                   "fontFamily": "TimesDigitalW04",
                   "fontSize": 36,
-                  "left": 640.53125,
+                  "left": 0,
                   "lineHeight": 52,
                   "position": "absolute",
-                  "top": 52,
+                  "top": 364,
                 }
               }
             >
@@ -3026,10 +3026,10 @@ exports[`16. an article starting with double quote 1`] = `
                   "color": "#000000",
                   "fontFamily": "TimesDigitalW04",
                   "fontSize": 36,
-                  "left": 215,
+                  "left": 97.62890625,
                   "lineHeight": 52,
                   "position": "absolute",
-                  "top": 104,
+                  "top": 364,
                 }
               }
             >
@@ -3041,10 +3041,10 @@ exports[`16. an article starting with double quote 1`] = `
                   "color": "#000000",
                   "fontFamily": "TimesDigitalW04",
                   "fontSize": 36,
-                  "left": 331.771484375,
+                  "left": 214.400390625,
                   "lineHeight": 52,
                   "position": "absolute",
-                  "top": 104,
+                  "top": 364,
                 }
               }
             >
@@ -3056,10 +3056,10 @@ exports[`16. an article starting with double quote 1`] = `
                   "color": "#000000",
                   "fontFamily": "TimesDigitalW04",
                   "fontSize": 36,
-                  "left": 369.283203125,
+                  "left": 0,
                   "lineHeight": 52,
                   "position": "absolute",
-                  "top": 104,
+                  "top": 416,
                 }
               }
             >
@@ -3071,10 +3071,10 @@ exports[`16. an article starting with double quote 1`] = `
                   "color": "#000000",
                   "fontFamily": "TimesDigitalW04",
                   "fontSize": 36,
-                  "left": 426.78125,
+                  "left": 57.498046875,
                   "lineHeight": 52,
                   "position": "absolute",
-                  "top": 104,
+                  "top": 416,
                 }
               }
             >
@@ -3086,10 +3086,10 @@ exports[`16. an article starting with double quote 1`] = `
                   "color": "#000000",
                   "fontFamily": "TimesDigitalW04",
                   "fontSize": 36,
-                  "left": 546.734375,
+                  "left": 177.451171875,
                   "lineHeight": 52,
                   "position": "absolute",
-                  "top": 104,
+                  "top": 416,
                 }
               }
             >
@@ -3101,10 +3101,10 @@ exports[`16. an article starting with double quote 1`] = `
                   "color": "#000000",
                   "fontFamily": "TimesDigitalW04",
                   "fontSize": 36,
-                  "left": 626.169921875,
+                  "left": 0,
                   "lineHeight": 52,
                   "position": "absolute",
-                  "top": 104,
+                  "top": 468,
                 }
               }
             >
@@ -3116,10 +3116,10 @@ exports[`16. an article starting with double quote 1`] = `
                   "color": "#000000",
                   "fontFamily": "TimesDigitalW04",
                   "fontSize": 36,
-                  "left": 215,
+                  "left": 84.005859375,
                   "lineHeight": 52,
                   "position": "absolute",
-                  "top": 156,
+                  "top": 468,
                 }
               }
             >
@@ -3131,10 +3131,10 @@ exports[`16. an article starting with double quote 1`] = `
                   "color": "#000000",
                   "fontFamily": "TimesDigitalW04",
                   "fontSize": 36,
-                  "left": 331.033203125,
+                  "left": 200.0390625,
                   "lineHeight": 52,
                   "position": "absolute",
-                  "top": 156,
+                  "top": 468,
                 }
               }
             >
@@ -3146,10 +3146,10 @@ exports[`16. an article starting with double quote 1`] = `
                   "color": "#000000",
                   "fontFamily": "TimesDigitalW04",
                   "fontSize": 36,
-                  "left": 371.884765625,
+                  "left": 0,
                   "lineHeight": 52,
                   "position": "absolute",
-                  "top": 156,
+                  "top": 520,
                 }
               }
             >
@@ -3161,10 +3161,10 @@ exports[`16. an article starting with double quote 1`] = `
                   "color": "#000000",
                   "fontFamily": "TimesDigitalW04",
                   "fontSize": 36,
-                  "left": 468.1953125,
+                  "left": 96.310546875,
                   "lineHeight": 52,
                   "position": "absolute",
-                  "top": 156,
+                  "top": 520,
                 }
               }
             >
@@ -3176,10 +3176,10 @@ exports[`16. an article starting with double quote 1`] = `
                   "color": "#000000",
                   "fontFamily": "TimesDigitalW04",
                   "fontSize": 36,
-                  "left": 588.39453125,
+                  "left": 216.509765625,
                   "lineHeight": 52,
                   "position": "absolute",
-                  "top": 156,
+                  "top": 520,
                 }
               }
             >
@@ -3191,10 +3191,10 @@ exports[`16. an article starting with double quote 1`] = `
                   "color": "#000000",
                   "fontFamily": "TimesDigitalW04",
                   "fontSize": 36,
-                  "left": 637.701171875,
+                  "left": 0,
                   "lineHeight": 52,
                   "position": "absolute",
-                  "top": 156,
+                  "top": 572,
                 }
               }
             >
@@ -3206,10 +3206,10 @@ exports[`16. an article starting with double quote 1`] = `
                   "color": "#000000",
                   "fontFamily": "TimesDigitalW04",
                   "fontSize": 36,
-                  "left": 0,
+                  "left": 77.16796875,
                   "lineHeight": 52,
                   "position": "absolute",
-                  "top": 208,
+                  "top": 572,
                 }
               }
             >
@@ -3221,10 +3221,10 @@ exports[`16. an article starting with double quote 1`] = `
                   "color": "#000000",
                   "fontFamily": "TimesDigitalW04",
                   "fontSize": 36,
-                  "left": 100.23046875,
+                  "left": 177.3984375,
                   "lineHeight": 52,
                   "position": "absolute",
-                  "top": 208,
+                  "top": 572,
                 }
               }
             >

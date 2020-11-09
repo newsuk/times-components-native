@@ -3,6 +3,8 @@ import { Text } from "react-native";
 import TestRenderer from "react-test-renderer";
 import { iterator } from "@times-components-native/test-utils";
 import Card from "../src/card";
+import ResponsiveContext from "@times-components-native/responsive/src/context";
+import { calculateResponsiveContext } from "@times-components-native/responsive/src/calculateResponsiveContext";
 
 const props = {
   highResSize: 360,
@@ -12,15 +14,27 @@ const props = {
   showImage: true,
 };
 
-export default (renderMethod) => {
+const ResponsiveContextForMobile = ({ children }) => (
+  <ResponsiveContext.Provider value={calculateResponsiveContext(300, 600, 1)}>
+    {children}
+  </ResponsiveContext.Provider>
+);
+
+export default (renderComponent) => {
   // magic to stop the React Native Animated library from dying, as each test kicks off another animation that uses timing
   jest.useFakeTimers();
+
+  const renderComponentForMobile = (component) => (
+    <ResponsiveContextForMobile>
+      {renderComponent(component)}
+    </ResponsiveContextForMobile>
+  );
 
   const tests = [
     {
       name: "card default state",
       test: () => {
-        const output = renderMethod(
+        const output = renderComponentForMobile(
           <Card {...props}>
             <Text>A card</Text>
           </Card>,
@@ -32,7 +46,7 @@ export default (renderMethod) => {
     {
       name: "pass an empty state to the image component",
       test: () => {
-        const output = renderMethod(
+        const output = renderComponentForMobile(
           <Card {...props} imageUri={null}>
             <Text>A card with an empty image</Text>
           </Card>,
@@ -44,7 +58,7 @@ export default (renderMethod) => {
     {
       name: "card without an image when showImage is false",
       test: () => {
-        const output = renderMethod(
+        const output = renderComponentForMobile(
           <Card {...props} showImage={false}>
             <Text>No image</Text>
           </Card>,
@@ -56,7 +70,7 @@ export default (renderMethod) => {
     {
       name: "pass an empty state to the image component when the uri is null",
       test: () => {
-        const output = renderMethod(
+        const output = renderComponentForMobile(
           <Card {...props} imageUri={null}>
             <Text>No URI</Text>
           </Card>,
@@ -68,7 +82,7 @@ export default (renderMethod) => {
     {
       name: "card with reversed layout",
       test: () => {
-        const output = renderMethod(
+        const output = renderComponentForMobile(
           <Card {...props} isReversed>
             <Text>A card in reverse</Text>
           </Card>,
@@ -80,7 +94,7 @@ export default (renderMethod) => {
     {
       name: "card with reversed layout and no image",
       test: () => {
-        const output = renderMethod(
+        const output = renderComponentForMobile(
           <Card {...props} isReversed showImage={false}>
             <Text>A card in reverse with no image</Text>
           </Card>,
@@ -92,7 +106,7 @@ export default (renderMethod) => {
     {
       name: "card with a loading state",
       test: () => {
-        const output = renderMethod(
+        const output = renderComponentForMobile(
           <Card {...props} isLoading>
             <Text>Loading state</Text>
           </Card>,
@@ -104,7 +118,7 @@ export default (renderMethod) => {
     {
       name: "card with a loading state and no image",
       test: () => {
-        const output = renderMethod(
+        const output = renderComponentForMobile(
           <Card {...props} isLoading showImage={false}>
             <Text>Loading with no image</Text>
           </Card>,
@@ -116,7 +130,7 @@ export default (renderMethod) => {
     {
       name: "card with reversed loading state",
       test: () => {
-        const output = renderMethod(
+        const output = renderComponentForMobile(
           <Card {...props} isLoading isReversed>
             <Text>Loading in reverse</Text>
           </Card>,
@@ -128,7 +142,7 @@ export default (renderMethod) => {
     {
       name: "card with reversed loading state with no image",
       test: () => {
-        const output = renderMethod(
+        const output = renderComponentForMobile(
           <Card {...props} isLoading isReversed showImage={false}>
             <Text>Loading in reverse with no image</Text>
           </Card>,
