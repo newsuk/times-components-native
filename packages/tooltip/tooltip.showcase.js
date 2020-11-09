@@ -5,7 +5,11 @@ import Tooltip from "@times-components-native/tooltip";
 export default {
   children: [
     {
-      component: (_, { decorateAction }) => <Tooltip>My tooltip</Tooltip>,
+      component: (_, { decorateAction }) => (
+        <Tooltip>
+          Tap to read comments and join in with the conversation
+        </Tooltip>
+      ),
       name: "Default",
       type: "story",
     },

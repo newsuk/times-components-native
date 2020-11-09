@@ -5,6 +5,7 @@ import Context from "@times-components-native/context";
 import Button from "@times-components-native/button";
 import { TextLink } from "@times-components-native/link";
 import styleguide from "@times-components-native/styleguide";
+import Tooltip from "@times-components-native/tooltip";
 import styles from "./styles";
 
 const Comments = ({
@@ -25,6 +26,7 @@ const Comments = ({
         here
       </TextLink>
     </Text>
+    <Tooltip>Tap to read comments and join in with the conversation</Tooltip>
     <Context.Consumer>
       {({ theme: { scale } }) => {
         const themedStyleguide = styleguide({ scale });

@@ -1,42 +1,29 @@
 import React from "react";
 import { colours } from "@times-components-native/styleguide";
-import Svg, { Path } from "@times-components-native/svgs";
+import Svg, { G, Path } from "@times-components-native/svgs";
 import { clean } from "@times-components-native/utils";
 import propTypes from "./prop-types";
 
-const CloseIcon = ({
-  fillColour,
-  height,
-  opacity,
-  strokeColour,
-  title = "Save star",
-  width,
-}) => (
+const IconClose = ({ fillColour, height, width }) => (
   <Svg
-    aria-label="icon-save-star"
-    role="img"
-    viewBox="0 0 18 18"
+    aria-label="icon-close"
+    viewBox="0 0 16 16"
     {...clean({
       height,
-      title,
       width: width || height,
     })}
   >
-    <Path
-      {...clean({
-        fill: fillColour,
-        opacity,
-        stroke: strokeColour,
-      })}
-      d="M13.616 16.644l-1.778-5.711 4.674-3.554-5.768.013L9 1.705 7.256 7.392 1.488 7.38l4.674 3.554-1.778 5.71L9 13.102l4.616 3.543z"
-    />
+    <G fill={fillColour} fill-rule="evenodd">
+      <Path d="M1.678 1.012l13.31 13.31C.184.184.184.482 0 .666-.184.184-.482.184-.666 0L1.012 1.678C-.184-.184-.184-.482 0-.666.184-.184.482-.184.666 0Z" />
+      <Path d="M1.678 14.988l13.31-13.31C.184-.184.184-.482 0-.666-.184-.184-.482-.184-.666 0L-13.31 13.31C-.184.184-.184.482 0 .666.184.184.482.184.666 0Z" />
+    </G>
   </Svg>
 );
 
-CloseIcon.propTypes = propTypes;
+IconClose.propTypes = propTypes;
 
-CloseIcon.defaultProps = {
+IconClose.defaultProps = {
   fillColour: colours.functional.action,
 };
 
-export default CloseIcon;
+export default IconClose;
