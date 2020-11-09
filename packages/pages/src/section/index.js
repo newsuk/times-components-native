@@ -6,9 +6,9 @@ import Section from "./section";
 
 const SectionPage = (props) => (
   <Responsive
-    initialWidth={props.displayWidth}
-    initialHeight={props.displayHeight}
-    initialFontScale={props.fontScale}
+    displayWidth={props.displayWidth}
+    displayHeight={props.displayHeight}
+    fontScale={props.fontScale}
   >
     <Section {...props} section={JSON.parse(props.section)} />
   </Responsive>
@@ -18,6 +18,9 @@ SectionPage.propTypes = {
   publicationName: PropTypes.string,
   recentlyOpenedPuzzleCount: PropTypes.number,
   section: PropTypes.string.isRequired,
+  displayHeight: PropTypes.number,
+  displayWidth: PropTypes.number,
+  fontScale: PropTypes.number,
 };
 
 SectionPage.defaultProps = {

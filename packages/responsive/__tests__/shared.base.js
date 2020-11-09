@@ -17,7 +17,7 @@ export default () => {
 
   it("with specified values", () => {
     const testInstance = TestRenderer.create(
-      <Responsive initialFontScale={1} initialHeight={100} initialWidth={200}>
+      <Responsive fontScale={1} displayHeight={100} displayWidth={200}>
         <ResponsiveContext.Consumer>
           {(context) => JSON.stringify(context)}
         </ResponsiveContext.Consumer>

@@ -13,22 +13,22 @@ interface DimensionChangeEvent {
 }
 
 interface Props {
-  initialHeight?: number | undefined;
-  initialWidth?: number | undefined;
-  initialFontScale?: number | undefined;
+  displayHeight?: number | undefined;
+  displayWidth?: number | undefined;
+  fontScale?: number | undefined;
 }
 
 const ResponsiveProvider: React.FC<Props> = ({
   children,
-  initialWidth,
-  initialHeight,
-  initialFontScale,
+  displayWidth,
+  displayHeight,
+  fontScale: initialFontScale,
 }) => {
   const { fontScale, width, height } =
-    initialWidth && initialHeight && initialFontScale
+    displayWidth && displayHeight && initialFontScale
       ? {
-          width: initialWidth,
-          height: initialHeight,
+          width: displayWidth,
+          height: displayHeight,
           fontScale: initialFontScale,
         }
       : getDimensions();

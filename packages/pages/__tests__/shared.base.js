@@ -21,6 +21,9 @@ export default (makeTest) => {
           articleId="test-article-id"
           scale={scales.large}
           sectionName="News"
+          displayWidth={1024}
+          displayHeight={768}
+          fontScale={1}
         />,
       ),
     ).toMatchSnapshot();

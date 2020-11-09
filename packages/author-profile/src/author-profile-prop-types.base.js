@@ -15,6 +15,9 @@ export const propTypes = {
   pageSize: PropTypes.number,
   refetch: PropTypes.func.isRequired,
   slug: PropTypes.string.isRequired,
+  displayHeight: PropTypes.number,
+  displayWidth: PropTypes.number,
+  fontScale: PropTypes.number,
 };
 
 export const defaultProps = {

@@ -12,7 +12,14 @@ import withNativeProvider from "../with-native-provider";
 const { refetch: refetchArticle } = NativeModules.ArticleEvents;
 
 const ArticlePage = (props) => {
-  const { article, articleId, error } = props;
+  const {
+    article,
+    articleId,
+    error,
+    displayHeight,
+    displayWidth,
+    fontScale,
+  } = props;
   const data = article ? JSON.parse(article).data.article : null;
   const openInBrowser = (data || {}).url
     ? () => Linking.openURL(data.url)
@@ -28,9 +35,9 @@ const ArticlePage = (props) => {
     const ArticlePageView = withErrorBoundaries(
       withNativeProvider(
         <Responsive
-          initialFontScale={props.fontScale}
-          initialHeight={props.initialHeight}
-          initialWidth={props.initialWidth}
+          fontScale={fontScale}
+          displayHeight={displayHeight}
+          displayWidth={displayWidth}
         >
           <ArticleBase
             {...props}
@@ -51,9 +58,9 @@ const ArticlePage = (props) => {
       <ArticleProvider debounceTimeMs={100} id={articleId}>
         {({ article: articleData, isLoading, error: errorData, refetch }) => (
           <Responsive
-            initialFontScale={props.fontScale}
-            initialHeight={props.initialHeight}
-            initialWidth={props.initialWidth}
+            fontScale={fontScale}
+            displayHeight={displayHeight}
+            displayWidth={displayWidth}
           >
             <ArticleBase
               {...props}
