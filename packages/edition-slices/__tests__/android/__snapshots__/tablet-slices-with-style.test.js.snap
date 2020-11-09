@@ -4471,7 +4471,7 @@ exports[`57. front lead two - portrait - wide 1`] = `
       <View
         style={
           Object {
-            "width": "32.751937984496124%",
+            "width": "32.89855072463767%",
           }
         }
       >
@@ -4490,7 +4490,7 @@ exports[`57. front lead two - portrait - wide 1`] = `
       <View
         style={
           Object {
-            "width": "67.10271317829458%",
+            "width": "66.99275362318839%",
           }
         }
       >
@@ -4635,7 +4635,7 @@ exports[`59. front lead one and one - portrait - wide 1`] = `
       <View
         style={
           Object {
-            "width": "75.69040697674419%",
+            "width": "75.5163043478261%",
           }
         }
       >
@@ -4655,7 +4655,7 @@ exports[`59. front lead one and one - portrait - wide 1`] = `
       <View
         style={
           Object {
-            "width": "24.164244186046513%",
+            "width": "24.375%",
           }
         }
       >
@@ -7362,7 +7362,7 @@ exports[`91. front lead two - portrait - huge 1`] = `
         <View
           style={
             Object {
-              "width": "32.751937984496124%",
+              "width": "32.89855072463767%",
             }
           }
         >
@@ -7381,7 +7381,7 @@ exports[`91. front lead two - portrait - huge 1`] = `
         <View
           style={
             Object {
-              "width": "67.10271317829458%",
+              "width": "66.99275362318839%",
             }
           }
         >
@@ -7449,7 +7449,7 @@ exports[`92. front lead two - landscape - huge 1`] = `
         <View
           style={
             Object {
-              "width": "36.00731895223421%",
+              "width": "36.068580542264755%",
             }
           }
         >
@@ -7468,7 +7468,7 @@ exports[`92. front lead two - landscape - huge 1`] = `
         <View
           style={
             Object {
-              "width": "46.3597842835131%",
+              "width": "46.20414673046252%",
             }
           }
         >
@@ -7488,7 +7488,7 @@ exports[`92. front lead two - landscape - huge 1`] = `
           style={
             Object {
               "paddingLeft": 10,
-              "width": "17.421032357473038%",
+              "width": "17.5518341307815%",
             }
           }
         >
@@ -7546,7 +7546,7 @@ exports[`93. front lead one and one - portrait - huge 1`] = `
         <View
           style={
             Object {
-              "width": "75.69040697674419%",
+              "width": "75.5163043478261%",
             }
           }
         >
@@ -7566,7 +7566,7 @@ exports[`93. front lead one and one - portrait - huge 1`] = `
         <View
           style={
             Object {
-              "width": "24.164244186046513%",
+              "width": "24.375%",
             }
           }
         >
@@ -7634,7 +7634,7 @@ exports[`94. front lead one and one - landscape - huge 1`] = `
         <View
           style={
             Object {
-              "width": "63.886748844375965%",
+              "width": "63.843700159489636%",
             }
           }
         >
@@ -7653,7 +7653,7 @@ exports[`94. front lead one and one - landscape - huge 1`] = `
         <View
           style={
             Object {
-              "width": "17.421032357473038%",
+              "width": "17.5518341307815%",
             }
           }
         >
@@ -7673,7 +7673,7 @@ exports[`94. front lead one and one - landscape - huge 1`] = `
           style={
             Object {
               "marginLeft": 10,
-              "width": "17.421032357473038%",
+              "width": "17.5518341307815%",
             }
           }
         >
@@ -7790,7 +7790,7 @@ exports[`96. front lead one - landscape - huge 1`] = `
         <View
           style={
             Object {
-              "width": "82.47303543913715%",
+              "width": "82.36044657097288%",
             }
           }
         >
@@ -7810,7 +7810,7 @@ exports[`96. front lead one - landscape - huge 1`] = `
           style={
             Object {
               "marginLeft": 10,
-              "width": "17.421032357473038%",
+              "width": "17.5518341307815%",
             }
           }
         >

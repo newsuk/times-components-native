@@ -479,7 +479,9 @@ exports[`tablet full article with style in the culture magazine 1`] = `
     style={
       Object {
         "alignItems": "center",
+        "alignSelf": "center",
         "backgroundColor": "rgba(60, 129, 190, 1)",
+        "maxWidth": 1194,
         "paddingBottom": 40,
         "paddingHorizontal": 20,
         "paddingTop": 45,
@@ -491,10 +493,17 @@ exports[`tablet full article with style in the culture magazine 1`] = `
       style={
         Object {
           "alignItems": "center",
+          "width": 660,
         }
       }
     >
-      <View>
+      <View
+        style={
+          Object {
+            "marginBottom": 10,
+          }
+        }
+      >
         <ArticleLabel />
       </View>
       <Text
@@ -502,8 +511,8 @@ exports[`tablet full article with style in the culture magazine 1`] = `
           Object {
             "color": "rgba(255, 255, 255, 1)",
             "fontFamily": "Flama-Bold",
-            "fontSize": 30,
-            "lineHeight": 35,
+            "fontSize": 40,
+            "lineHeight": 42,
             "marginBottom": 10,
             "textAlign": "center",
           }
@@ -531,7 +540,10 @@ exports[`tablet full article with style in the culture magazine 1`] = `
   <View
     style={
       Object {
+        "alignSelf": "center",
         "marginBottom": 0,
+        "maxWidth": 1194,
+        "width": "100%",
       }
     }
   >
@@ -542,6 +554,7 @@ exports[`tablet full article with style in the culture magazine 1`] = `
     style={
       Object {
         "alignItems": "center",
+        "alignSelf": "center",
         "borderBottomColor": "#DBDBDB",
         "borderBottomWidth": 1,
         "borderTopColor": "#DBDBDB",
@@ -549,10 +562,20 @@ exports[`tablet full article with style in the culture magazine 1`] = `
         "marginHorizontal": 10,
         "marginVertical": 20,
         "paddingVertical": 10,
+        "width": 660,
       }
     }
   >
-    <View>
+    <View
+      style={
+        Object {
+          "alignItems": "center",
+          "flexDirection": "row",
+          "justifyContent": "center",
+          "width": "100%",
+        }
+      }
+    >
       <View
         style={
           Object {
@@ -564,6 +587,17 @@ exports[`tablet full article with style in the culture magazine 1`] = `
       >
         <ArticleBylineWithLinks />
       </View>
+      <View
+        style={
+          Object {
+            "borderRightColor": "#DBDBDB",
+            "borderRightWidth": 1,
+            "height": 15,
+            "marginRight": 10,
+            "paddingLeft": 10,
+          }
+        }
+      />
       <View
         style={
           Object {
@@ -580,6 +614,7 @@ exports[`tablet full article with style in the culture magazine 1`] = `
               "fontFamily": "GillSansMTStd-Medium",
               "fontSize": 13,
               "lineHeight": 15,
+              "marginTop": 0,
             }
           }
         >
@@ -597,7 +632,9 @@ exports[`tablet full article with style in the style magazine 1`] = `
     style={
       Object {
         "alignItems": "center",
+        "alignSelf": "center",
         "backgroundColor": "rgba(60, 129, 190, 1)",
+        "maxWidth": 1194,
         "paddingBottom": 40,
         "paddingHorizontal": 20,
         "paddingTop": 45,
@@ -609,10 +646,17 @@ exports[`tablet full article with style in the style magazine 1`] = `
       style={
         Object {
           "alignItems": "center",
+          "width": 660,
         }
       }
     >
-      <View>
+      <View
+        style={
+          Object {
+            "marginBottom": 10,
+          }
+        }
+      >
         <ArticleLabel />
       </View>
       <Text
@@ -620,8 +664,8 @@ exports[`tablet full article with style in the style magazine 1`] = `
           Object {
             "color": "rgba(255, 255, 255, 1)",
             "fontFamily": "CenturyGothic-Bold",
-            "fontSize": 30,
-            "lineHeight": 35,
+            "fontSize": 40,
+            "lineHeight": 42,
             "marginBottom": 10,
             "textAlign": "center",
             "textTransform": "uppercase",
@@ -650,7 +694,10 @@ exports[`tablet full article with style in the style magazine 1`] = `
   <View
     style={
       Object {
+        "alignSelf": "center",
         "marginBottom": 0,
+        "maxWidth": 1194,
+        "width": "100%",
       }
     }
   >
@@ -661,6 +708,7 @@ exports[`tablet full article with style in the style magazine 1`] = `
     style={
       Object {
         "alignItems": "center",
+        "alignSelf": "center",
         "borderBottomColor": "#DBDBDB",
         "borderBottomWidth": 1,
         "borderTopColor": "#DBDBDB",
@@ -668,10 +716,20 @@ exports[`tablet full article with style in the style magazine 1`] = `
         "marginHorizontal": 10,
         "marginVertical": 20,
         "paddingVertical": 10,
+        "width": 660,
       }
     }
   >
-    <View>
+    <View
+      style={
+        Object {
+          "alignItems": "center",
+          "flexDirection": "row",
+          "justifyContent": "center",
+          "width": "100%",
+        }
+      }
+    >
       <View
         style={
           Object {
@@ -683,6 +741,17 @@ exports[`tablet full article with style in the style magazine 1`] = `
       >
         <ArticleBylineWithLinks />
       </View>
+      <View
+        style={
+          Object {
+            "borderRightColor": "#DBDBDB",
+            "borderRightWidth": 1,
+            "height": 15,
+            "marginRight": 10,
+            "paddingLeft": 10,
+          }
+        }
+      />
       <View
         style={
           Object {
@@ -699,6 +768,7 @@ exports[`tablet full article with style in the style magazine 1`] = `
               "fontFamily": "GillSansMTStd-Medium",
               "fontSize": 13,
               "lineHeight": 15,
+              "marginTop": 0,
             }
           }
         >
@@ -716,7 +786,9 @@ exports[`tablet full article with style in the sunday times magazine 1`] = `
     style={
       Object {
         "alignItems": "center",
+        "alignSelf": "center",
         "backgroundColor": "rgba(60, 129, 190, 1)",
+        "maxWidth": 1194,
         "paddingBottom": 40,
         "paddingHorizontal": 20,
         "paddingTop": 45,
@@ -728,10 +800,17 @@ exports[`tablet full article with style in the sunday times magazine 1`] = `
       style={
         Object {
           "alignItems": "center",
+          "width": 660,
         }
       }
     >
-      <View>
+      <View
+        style={
+          Object {
+            "marginBottom": 10,
+          }
+        }
+      >
         <ArticleLabel />
       </View>
       <Text
@@ -739,8 +818,8 @@ exports[`tablet full article with style in the sunday times magazine 1`] = `
           Object {
             "color": "rgba(255, 255, 255, 1)",
             "fontFamily": "Tiempos-Headline-Bold",
-            "fontSize": 30,
-            "lineHeight": 35,
+            "fontSize": 40,
+            "lineHeight": 42,
             "marginBottom": 10,
             "textAlign": "center",
           }
@@ -768,7 +847,10 @@ exports[`tablet full article with style in the sunday times magazine 1`] = `
   <View
     style={
       Object {
+        "alignSelf": "center",
         "marginBottom": 0,
+        "maxWidth": 1194,
+        "width": "100%",
       }
     }
   >
@@ -779,6 +861,7 @@ exports[`tablet full article with style in the sunday times magazine 1`] = `
     style={
       Object {
         "alignItems": "center",
+        "alignSelf": "center",
         "borderBottomColor": "#DBDBDB",
         "borderBottomWidth": 1,
         "borderTopColor": "#DBDBDB",
@@ -786,10 +869,20 @@ exports[`tablet full article with style in the sunday times magazine 1`] = `
         "marginHorizontal": 10,
         "marginVertical": 20,
         "paddingVertical": 10,
+        "width": 660,
       }
     }
   >
-    <View>
+    <View
+      style={
+        Object {
+          "alignItems": "center",
+          "flexDirection": "row",
+          "justifyContent": "center",
+          "width": "100%",
+        }
+      }
+    >
       <View
         style={
           Object {
@@ -801,6 +894,17 @@ exports[`tablet full article with style in the sunday times magazine 1`] = `
       >
         <ArticleBylineWithLinks />
       </View>
+      <View
+        style={
+          Object {
+            "borderRightColor": "#DBDBDB",
+            "borderRightWidth": 1,
+            "height": 15,
+            "marginRight": 10,
+            "paddingLeft": 10,
+          }
+        }
+      />
       <View
         style={
           Object {
@@ -817,6 +921,7 @@ exports[`tablet full article with style in the sunday times magazine 1`] = `
               "fontFamily": "GillSansMTStd-Medium",
               "fontSize": 13,
               "lineHeight": 15,
+              "marginTop": 0,
             }
           }
         >

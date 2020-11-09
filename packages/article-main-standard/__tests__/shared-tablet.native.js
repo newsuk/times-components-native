@@ -9,9 +9,10 @@ import {
   minimalNativeTransform,
 } from "@times-components-native/jest-serializer";
 import "./mocks.native";
-import Responsive from "@times-components-native/responsive";
-import { iterator } from "@times-components-native/test-utils";
-import { setIsTablet } from "@times-components-native/mocks/dimensions";
+import {
+  iterator,
+  withTabletContext,
+} from "@times-components-native/test-utils";
 
 import ArticleMainStandard from "../src/article-main-standard";
 import articleProps from "./shared-article-props";
@@ -32,12 +33,13 @@ export default () => {
     {
       name: "Article Main Standard - Tablet",
       test() {
-        setIsTablet(true);
-
         const testInstance = TestRenderer.create(
-          <Responsive>
-            <ArticleMainStandard {...articleProps} article={articleFixture()} />
-          </Responsive>,
+          withTabletContext(
+            <ArticleMainStandard
+              {...articleProps}
+              article={articleFixture()}
+            />,
+          ),
         );
 
         expect(testInstance).toMatchSnapshot();

@@ -2,7 +2,8 @@ import React from "react";
 import { iterator } from "@times-components-native/test-utils";
 import createItem from "./utils";
 import { FrontLeadOneAndOneSlice } from "../src/slice-layout";
-import { getDimensions } from "@times-components-native/utils";
+import ResponsiveContext from "@times-components-native/responsive/src/context";
+import { calculateResponsiveContext } from "@times-components-native/responsive/src/calculateResponsiveContext";
 
 jest.mock("../src/templates/horizontallayout", () => "HorizontalLayout");
 jest.mock(
@@ -10,28 +11,18 @@ jest.mock(
   () => "TabletContentContainer",
 );
 
-jest.mock("@times-components-native/utils", () => {
-  const actualUtils = jest.requireActual("../../utils");
-
-  return {
-    ...actualUtils,
-    getDimensions: jest.fn(),
-  };
-});
-
 const testFrontSlice = (renderComponent, width, orientation) => {
-  getDimensions.mockImplementation(() => ({
-    width: width,
-    height: 500,
-  }));
-
   const output = renderComponent(
-    <FrontLeadOneAndOneSlice
-      lead={createItem("lead")}
-      support={createItem("support")}
-      orientation={orientation}
-      inTodaysEdition={createItem("inTheNews")}
-    />,
+    <ResponsiveContext.Provider
+      value={calculateResponsiveContext(width, 500, 1)}
+    >
+      <FrontLeadOneAndOneSlice
+        lead={createItem("lead")}
+        support={createItem("support")}
+        orientation={orientation}
+        inTodaysEdition={createItem("inTheNews")}
+      />
+    </ResponsiveContext.Provider>,
   );
 
   expect(output).toMatchSnapshot();

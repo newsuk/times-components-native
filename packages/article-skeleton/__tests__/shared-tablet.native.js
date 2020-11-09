@@ -1,5 +1,4 @@
 /* eslint-disable global-require */
-import React from "react";
 import TestRenderer from "react-test-renderer";
 import {
   addSerializers,
@@ -10,8 +9,10 @@ import {
   minimalNativeTransform,
 } from "@times-components-native/jest-serializer";
 import "./mocks.native";
-import Responsive from "@times-components-native/responsive";
-import { iterator } from "@times-components-native/test-utils";
+import {
+  iterator,
+  withTabletContext,
+} from "@times-components-native/test-utils";
 import articleFixture from "../fixtures/full-article";
 import { renderArticle, fixtureArgs } from "./shared.base";
 
@@ -50,7 +51,7 @@ export default () => {
         });
 
         const testInstance = TestRenderer.create(
-          <Responsive>{renderArticle(article, undefined, true)}</Responsive>,
+          withTabletContext(renderArticle(article, undefined, true)),
         );
 
         expect(testInstance).toMatchSnapshot();
@@ -72,7 +73,7 @@ export default () => {
         });
 
         const testInstance = TestRenderer.create(
-          <Responsive>{renderArticle(article, undefined, true)}</Responsive>,
+          withTabletContext(renderArticle(article, undefined, true)),
         );
 
         expect(testInstance).toMatchSnapshot();
@@ -94,7 +95,7 @@ export default () => {
         });
 
         const testInstance = TestRenderer.create(
-          <Responsive>{renderArticle(article, undefined, true)}</Responsive>,
+          withTabletContext(renderArticle(article, undefined, true)),
         );
 
         expect(testInstance).toMatchSnapshot();
