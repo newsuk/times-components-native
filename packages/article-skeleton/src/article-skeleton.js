@@ -55,7 +55,7 @@ const ArticleWithContent = (props) => {
         <Header width={Math.min(maxWidth, windowWidth)} />
       </Gutter>
     ),
-    [],
+    [windowWidth],
   );
 
   const footer = useMemo(
