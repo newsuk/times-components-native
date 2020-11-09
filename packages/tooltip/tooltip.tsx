@@ -25,9 +25,7 @@ const Tooltip: React.FC<Props> = ({ children }) => {
         opacity: opacity,
       }}
     >
-      <View style=[{ styles.container }, {
-        opacity: opacity,
-      }]>
+      <View style={styles.container}>
         <View style={styles.body}>
           <Text style={styles.text}>{children}</Text>
           <View style={styles.close}>
