@@ -116,7 +116,9 @@ class TileSummary extends Component {
       summary,
       withStar,
       labelColour,
+      hideLabel,
     } = this.props;
+
     return (
       <ResponsiveContext.Consumer>
         {({ isTablet }) => (
@@ -125,7 +127,6 @@ class TileSummary extends Component {
             content={summary ? this.renderContent() : undefined}
             flags={this.renderFlags()}
             headline={this.renderHeadline()}
-            label={label}
             labelProps={{
               color:
                 labelColour ||
@@ -133,6 +134,7 @@ class TileSummary extends Component {
                 colours.section.default,
               isVideo: hasVideo,
               title: label,
+              hide: hideLabel,
             }}
             strapline={strapline ? this.renderStrapline() : undefined}
             saveStar={withStar && this.renderSaveStar()}
@@ -164,6 +166,7 @@ TileSummary.propTypes = {
   centeredStar: PropTypes.bool,
   isDarkStar: PropTypes.bool,
   starStyle: PropTypes.shape({}),
+  hideLabel: PropTypes.bool,
 };
 
 TileSummary.defaultProps = {
@@ -181,6 +184,7 @@ TileSummary.defaultProps = {
   centeredStar: false,
   isDarkStar: false,
   starStyle: null,
+  hideLabel: false,
 };
 
 export default TileSummary;

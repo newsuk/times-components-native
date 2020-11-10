@@ -3,7 +3,10 @@ import { Text } from "react-native";
 import TestRenderer from "react-test-renderer";
 import Image from "@times-components-native/image";
 import { SectionContext } from "@times-components-native/context";
-import { ArticleSummaryHeadline } from "@times-components-native/article-summary";
+import {
+  ArticleSummaryHeadline,
+  ArticleSummaryLabel,
+} from "@times-components-native/article-summary";
 import { iterator } from "@times-components-native/test-utils";
 import { mockEditionSlice } from "@times-components-native/fixture-generator";
 import StarButton from "@times-components-native/star-button";
@@ -87,6 +90,17 @@ export default () => {
         expect(
           output.root.findByType(ArticleSummaryHeadline).props.headline,
         ).toEqual(tileWithoutShortHeadlineAndTileHeadline.article.headline);
+      },
+    },
+    {
+      name: "Tile summary hides the label correctly",
+      test: () => {
+        const output = TestRenderer.create(
+          <TileSummary tile={tile} hideLabel={true} />,
+        );
+        expect(output.root.findByType(ArticleSummaryLabel).props.hide).toEqual(
+          true,
+        );
       },
     },
     {

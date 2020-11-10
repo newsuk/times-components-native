@@ -29,6 +29,7 @@ exports[`tile as huge 1`] = `
         >
           <ArticleLabel
             color="#005B8D"
+            hide={false}
             isVideo={false}
             title="label"
           />
@@ -115,6 +116,7 @@ exports[`tile as medium 1`] = `
         >
           <ArticleLabel
             color="#005B8D"
+            hide={false}
             isVideo={false}
             title="label"
           />
@@ -201,6 +203,7 @@ exports[`tile as wide 1`] = `
         >
           <ArticleLabel
             color="#005B8D"
+            hide={false}
             isVideo={false}
             title="label"
           />

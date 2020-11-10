@@ -11,7 +11,12 @@ const {
   onTwitterLinkPress,
 } = NativeModules.AuthorProfileEvents;
 
-const AuthorProfilePage = ({ authorSlug }) => {
+const AuthorProfilePage = ({
+  authorSlug,
+  displayWidth,
+  displayHeight,
+  fontScale,
+}) => {
   const AuthorProfileView = withNativeProvider(
     <AuthorProfileProvider
       articleImageRatio="4:3"
@@ -43,6 +48,9 @@ const AuthorProfilePage = ({ authorSlug }) => {
           pageSize={pageSize}
           refetch={refetch}
           slug={authorSlug}
+          displayWidth={displayWidth}
+          displayHeight={displayHeight}
+          fontScale={fontScale}
         />
       )}
     </AuthorProfileProvider>,

@@ -34,6 +34,7 @@ exports[`tile i without breakpoint 1`] = `
     >
       <ArticleLabel
         color="#005B8D"
+        hide={false}
         isVideo={false}
         title="label"
       />

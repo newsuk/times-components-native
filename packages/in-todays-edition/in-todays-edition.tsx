@@ -1,8 +1,8 @@
 import React from "react";
 import { Text, View } from "react-native";
-import { getDimensions } from "@times-components-native/utils";
 import { getStyles } from "./styles";
 import Item from "./item";
+import { useResponsiveContext } from "@times-components-native/responsive";
 
 export type LinkType = {
   url: string;
@@ -37,9 +37,8 @@ const InTodaysEdition: React.FC<Props> = ({
   onLinkPress,
   orientation,
 }) => {
+  const { windowWidth } = useResponsiveContext();
   if (!items.length) return null;
-
-  const { width: windowWidth } = getDimensions();
   const styles = getStyles(orientation, windowWidth);
 
   return (

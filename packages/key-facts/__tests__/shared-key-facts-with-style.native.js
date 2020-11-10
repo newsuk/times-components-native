@@ -14,6 +14,10 @@ import { setIsTablet } from "@times-components-native/mocks/dimensions";
 import KeyFacts from "../src/key-facts";
 import dataWithTitle from "../fixtures/key-facts-test.json";
 import dataWithoutTitle from "../fixtures/key-facts-no-title-test.json";
+import {
+  withMobileContext,
+  withTabletContext,
+} from "@times-components-native/test-utils";
 
 export default () => {
   addSerializers(
@@ -28,24 +32,19 @@ export default () => {
 
   it("key facts with title on mobile", () => {
     const testInstance = TestRenderer.create(
-      <KeyFacts ast={dataWithTitle} onLinkPress={() => null} />,
+      withMobileContext(
+        <KeyFacts ast={dataWithTitle} onLinkPress={() => null} />,
+      ),
     );
 
     expect(testInstance).toMatchSnapshot();
   });
 
   it("key facts with title on tablet", () => {
-    setIsTablet(true);
     const testInstance = TestRenderer.create(
-      <KeyFacts ast={dataWithTitle} onLinkPress={() => null} />,
-    );
-
-    expect(testInstance).toMatchSnapshot();
-  });
-
-  it("key facts without title on mobile", () => {
-    const testInstance = TestRenderer.create(
-      <KeyFacts ast={dataWithoutTitle} onLinkPress={() => null} />,
+      withTabletContext(
+        <KeyFacts ast={dataWithTitle} onLinkPress={() => null} />,
+      ),
     );
 
     expect(testInstance).toMatchSnapshot();
@@ -60,14 +59,28 @@ export default () => {
     expect(testInstance).toMatchSnapshot();
   });
 
+  it("key facts without title on mobile", () => {
+    const testInstance = TestRenderer.create(
+      withMobileContext(
+        <KeyFacts ast={dataWithoutTitle} onLinkPress={() => null} />,
+      ),
+    );
+
+    expect(testInstance).toMatchSnapshot();
+  });
+
   it("key facts with title and context theme", () => {
     const scale = scales.large;
     const sectionColour = "#FFFFFF";
 
     const testInstance = TestRenderer.create(
-      <ContextProviderWithDefaults value={{ theme: { scale, sectionColour } }}>
-        <KeyFacts ast={dataWithTitle} onLinkPress={() => null} />
-      </ContextProviderWithDefaults>,
+      withMobileContext(
+        <ContextProviderWithDefaults
+          value={{ theme: { scale, sectionColour } }}
+        >
+          <KeyFacts ast={dataWithTitle} onLinkPress={() => null} />
+        </ContextProviderWithDefaults>,
+      ),
     );
 
     expect(testInstance).toMatchSnapshot();

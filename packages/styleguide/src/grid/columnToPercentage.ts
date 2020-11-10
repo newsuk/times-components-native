@@ -1,5 +1,3 @@
-import { Dimensions } from "react-native";
-
 import spacing from "../spacing";
 import calculateContentWidth from "@times-components-native/utils/src/calculate-content-width";
 
@@ -10,14 +8,13 @@ type Options = {
 };
 type GridColToPercentage = (
   orientation: string,
+  windowWidth: number,
 ) => (options: Options) => string;
 
-const gridColToPercentage: GridColToPercentage = (orientation) => ({
-  numberOfColumns,
-  numberOfMargins = 1,
-  totalColumns = 12,
-}) => {
-  const windowWidth = Dimensions.get("window").width;
+const gridColToPercentage: GridColToPercentage = (
+  orientation,
+  windowWidth,
+) => ({ numberOfColumns, numberOfMargins = 1, totalColumns = 12 }) => {
   const contentWidth = calculateContentWidth(windowWidth, orientation);
 
   const gapWidth = spacing(4) + 1;

@@ -6,7 +6,6 @@ import styleguide, {
   tabletWidth,
   getNarrowArticleBreakpoint,
 } from "@times-components-native/styleguide";
-import { screenWidth } from "@times-components-native/utils";
 import {
   TextContainer,
   LayoutManager,
@@ -32,20 +31,20 @@ const InlineParagraph = ({
 }) => {
   const { spacing } = styleguide({ scale });
   const [inlineExclusion, setInlineExclusion] = useState(false);
-  const { orientation } = useResponsiveContext();
+  const { orientation, windowWidth } = useResponsiveContext();
   const variants = useVariantTestingContext();
 
   const contentWidth = Math.min(
-    screenWidth(),
+    windowWidth,
     narrowContent
-      ? getNarrowArticleBreakpoint(screenWidth()).content
+      ? getNarrowArticleBreakpoint(windowWidth).content
       : tabletWidth,
   );
 
-  const gutters = (screenWidth() - contentWidth) / 2 + spacing(2);
+  const gutters = (windowWidth - contentWidth) / 2 + spacing(2);
 
   const container = new TextContainer(
-    (isTablet ? contentWidth : screenWidth()) - spacing(4),
+    (isTablet ? contentWidth : windowWidth) - spacing(4),
     Infinity,
     0,
     0,
@@ -80,8 +79,7 @@ const InlineParagraph = ({
       return { left: narrowContent ? 0 : gutters, width: contentWidth * 0.35 };
 
     return {
-      left:
-        screenWidth() - gutters - articleMpu.width - inlineAdAdditionalWidth,
+      left: windowWidth - gutters - articleMpu.width - inlineAdAdditionalWidth,
       width: articleMpu.width + inlineAdAdditionalWidth,
       height: articleMpu.height + inlineAdTitleHeight,
     };
@@ -109,9 +107,7 @@ const InlineParagraph = ({
             const { width } = getInlineLayout();
             setInlineExclusion({
               exclusion: new BoxExclusion(
-                isInlineAd
-                  ? screenWidth() - 2 * gutters - width - spacing(2)
-                  : 0,
+                isInlineAd ? windowWidth - 2 * gutters - width - spacing(2) : 0,
                 0,
                 width + spacing(isInlineAd ? 4 : 2),
                 height + spacing(2),

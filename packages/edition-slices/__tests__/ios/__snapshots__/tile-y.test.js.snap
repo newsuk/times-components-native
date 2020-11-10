@@ -21,6 +21,7 @@ exports[`tile y huge 1`] = `
     >
       <ArticleLabel
         color="#005B8D"
+        hide={false}
         isVideo={false}
         title="label"
       />
@@ -96,6 +97,7 @@ exports[`tile y medium 1`] = `
     >
       <ArticleLabel
         color="#005B8D"
+        hide={false}
         isVideo={false}
         title="label"
       />
@@ -171,6 +173,7 @@ exports[`tile y wide 1`] = `
     >
       <ArticleLabel
         color="#005B8D"
+        hide={false}
         isVideo={false}
         title="label"
       />
@@ -246,6 +249,7 @@ exports[`tile y without breakpoint should be like medium 1`] = `
     >
       <ArticleLabel
         color="#005B8D"
+        hide={false}
         isVideo={false}
         title="label"
       />

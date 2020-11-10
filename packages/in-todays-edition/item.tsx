@@ -2,12 +2,12 @@
 import React from "react";
 import { View, Text } from "react-native";
 import Link from "@times-components-native/link";
-import { getDimensions } from "@times-components-native/utils";
 import { IconForwardArrow } from "@times-components-native/icons";
 import { colours } from "@times-components-native/styleguide";
 import { getStyles } from "./styles";
 import { ItemType, LinkType, ArticleLinkType } from "./in-todays-edition";
 import withTrackingEvents from "./tracking-events";
+import { useResponsiveContext } from "@times-components-native/responsive";
 
 interface Props {
   item: ItemType;
@@ -31,7 +31,7 @@ const Item: React.FC<Props> = ({
   onLinkPress,
   orientation,
 }) => {
-  const { width: windowWidth } = getDimensions();
+  const { windowWidth } = useResponsiveContext();
   const styles = getStyles(orientation, windowWidth);
   const link = item.mainLink;
   const isLandscape = orientation === "landscape";

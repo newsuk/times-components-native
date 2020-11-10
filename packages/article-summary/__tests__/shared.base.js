@@ -340,6 +340,27 @@ export default () => {
         expect(testInstance.toJSON()).toMatchSnapshot();
       },
     },
+    {
+      name: "article summary component with hidden label",
+      test: () => {
+        const testInstance = TestRenderer.create(
+          <ArticleSummary
+            {...defaultFixture({
+              flags,
+              headline,
+              paragraph,
+            })}
+            {...{
+              labelProps: {
+                hide: true,
+              },
+            }}
+          />,
+        );
+
+        expect(testInstance.toJSON()).toMatchSnapshot();
+      },
+    },
   ];
 
   iterator(tests);

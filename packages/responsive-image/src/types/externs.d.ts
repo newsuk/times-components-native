@@ -7,6 +7,8 @@ declare module "@times-components-native/styleguide" {
   export const colours: Colours;
   export const spacing: (number) => number;
   export const tabletWidth: number;
+  export const getEditionBreakpoint = (number) => string;
+  export const getNarrowArticleBreakpoint = (number) => string;
   export const styleguide;
   export const fontFactory;
 }
@@ -19,12 +21,16 @@ declare module "@times-components-native/utils" {
   ) => string;
 
   type getDimensions = () => any;
+  type addDimensionsListener = (string, any) => any;
+  type removeDimensionsListener = (string, any) => any;
 
   type calculateContentWidth = (number, string) => number;
 
   export const appendToImageURL: appendToImageURL;
   export const getDimensions: getDimensions;
   export const calculateContentWidth: calculateContentWidth;
+  export const addDimensionsListener: addDimensionsListener;
+  export const removeDimensionsListener: removeDimensionsListener;
 }
 
 declare module "react-native-hooks" {

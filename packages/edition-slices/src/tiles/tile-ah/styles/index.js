@@ -20,6 +20,14 @@ const keylinePadding = {
 };
 
 const styles = (breakpoint) => ({
+  byline: {
+    color: colours.section.comment,
+    fontFamily: fonts.supporting,
+    fontSize: fontSizes.cardMetaMobile,
+    letterSpacing: 0.6,
+    lineHeight: 12,
+    textTransform: "uppercase",
+  },
   container: {
     flex: 1,
     alignItems: "center",
@@ -40,7 +48,7 @@ const styles = (breakpoint) => ({
   imageContainer: {
     overflow: "hidden",
     width: 97,
-    marginBottom: spacing(1),
+    marginBottom: spacing(3),
   },
   strapline: {
     color: colours.functional.secondary,

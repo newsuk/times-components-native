@@ -5,8 +5,11 @@ import {
   spacing,
 } from "@times-components-native/styleguide";
 
-const calculateStyles = (orientation) => {
-  const columnToPercentageWithOrientation = columnToPercentage(orientation);
+const calculateStyles = (orientation, windowWidth) => {
+  const columnToPercentageWithOrientation = columnToPercentage(
+    orientation,
+    windowWidth,
+  );
 
   const sharedPortraitStyles = {
     colSeparatorStyle: {
@@ -159,4 +162,4 @@ const calculateStyles = (orientation) => {
 };
 
 export const getStyles = (orientation, windowWidth) =>
-  getStyleByDeviceSize(calculateStyles(orientation), windowWidth);
+  getStyleByDeviceSize(calculateStyles(orientation, windowWidth), windowWidth);

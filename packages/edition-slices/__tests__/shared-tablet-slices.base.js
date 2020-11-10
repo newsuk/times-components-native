@@ -2,7 +2,6 @@ import React from "react";
 import TestRenderer from "react-test-renderer";
 import { editionBreakpointWidths } from "@times-components-native/styleguide";
 import { iterator } from "@times-components-native/test-utils";
-import { getDimensions } from "@times-components-native/utils";
 import {
   mockCommentLeadAndCartoonSlice,
   mockDailyRegisterSlice,
@@ -25,7 +24,6 @@ import {
   mockLeadOneFullWidthFrontSlice,
   mockInTodaysEditionSlice,
 } from "@times-components-native/fixture-generator";
-import Responsive from "@times-components-native/responsive";
 import "./mocks";
 import {
   CommentLeadAndCartoonSlice,
@@ -54,6 +52,8 @@ import {
   SupplementSecondaryOneSlice,
   SupplementSecondaryTwoAndTwoSlice,
 } from "../src/slices";
+import ResponsiveContext from "@times-components-native/responsive/src/context";
+import { calculateResponsiveContext } from "@times-components-native/responsive/src/calculateResponsiveContext";
 
 const slices = [
   {
@@ -260,29 +260,18 @@ const slices = [
   },
 ];
 
-jest.mock("@times-components-native/utils", () => {
-  // eslint-disable-next-line global-require
-  const actualUtils = jest.requireActual("../../utils");
-
-  return {
-    ...actualUtils,
-    getDimensions: jest.fn(),
-  };
-});
-
 const tabletTester = (type) =>
   slices.map(({ mock, name, Slice, orientation, sliceProps }) => ({
     name: `${name} - ${type}`,
     test: () => {
-      let width = editionBreakpointWidths[type];
-      getDimensions.mockImplementation(() => ({
-        width,
-        height: orientation === "landscape" ? width / 2 : width * 2,
-      }));
+      const width = editionBreakpointWidths[type];
+      const height = orientation === "landscape" ? width / 2 : width * 2;
       const output = TestRenderer.create(
-        <Responsive>
+        <ResponsiveContext.Provider
+          value={calculateResponsiveContext(width, height, 1)}
+        >
           <Slice onPress={() => null} slice={mock} {...sliceProps} />
-        </Responsive>,
+        </ResponsiveContext.Provider>,
       );
 
       expect(output).toMatchSnapshot();
