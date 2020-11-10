@@ -6,10 +6,12 @@ import { IconSaveBookmark } from "@times-components-native/icons";
 import styles from "./styles";
 
 interface Props {
+  content: any;
   children: any;
+  placement: string;
 }
 
-const Tooltip: React.FC<Props> = ({ children }) => {
+const Tooltip: React.FC<Props> = ({ content, children, placement }) => {
   const [opacity] = useState(new Animated.Value(1));
 
   const onPress = () =>
@@ -20,27 +22,30 @@ const Tooltip: React.FC<Props> = ({ children }) => {
     }).start();
 
   return (
-    <Animated.View
-      style={{
-        opacity: opacity,
-      }}
-    >
-      <View style={styles.container}>
-        <View style={styles.body}>
-          <Text style={styles.text}>{children}</Text>
-          <View style={styles.close}>
-            <TouchableOpacity onPress={onPress}>
-              <IconSaveBookmark
-                fillColour={colours.functional.white}
-                opacity={1}
-                height={16}
-                width={16}
-              />
-            </TouchableOpacity>
+    <>
+      <Animated.View
+        style={{
+          opacity: opacity,
+        }}
+      >
+        <View style={styles.container}>
+          <View style={styles.body}>
+            <Text style={styles.text}>{content}</Text>
+            <View style={styles.close}>
+              <TouchableOpacity onPress={onPress}>
+                <IconSaveBookmark
+                  fillColour={colours.functional.white}
+                  opacity={1}
+                  height={16}
+                  width={16}
+                />
+              </TouchableOpacity>
+            </View>
           </View>
         </View>
-      </View>
-    </Animated.View>
+      </Animated.View>
+      {children}
+    </>
   );
 };
 

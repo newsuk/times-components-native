@@ -6,6 +6,17 @@ const styles = StyleSheet.create({
     padding: spacing(3),
     width: 256,
     backgroundColor: colours.functional.tooltip,
+    position: "absolute",
+    bottom: 0,
+    left: -128,
+    borderRadius: 3,
+    shadowColor: colours.functional.black,
+    shadowOffset: {
+      width: 3,
+      height: 3,
+    },
+    shadowOpacity: 0.3,
+    shadowRadius: 4,
   },
   body: {},
   text: {

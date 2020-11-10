@@ -26,25 +26,32 @@ const Comments = ({
         here
       </TextLink>
     </Text>
-    <Tooltip>Tap to read comments and join in with the conversation</Tooltip>
-    <Context.Consumer>
-      {({ theme: { scale } }) => {
-        const themedStyleguide = styleguide({ scale });
-        const fontFactory = themedStyleguide.fontFactory({
-          font: "supporting",
-          fontSize: "button",
-        });
-        return (
-          <Button
-            fontSize={fontFactory.fontSize}
-            lineHeight={fontFactory.lineHeight}
-            onPress={(e) => onCommentsPress(e, { articleId, url })}
-            style={styles.button}
-            title={commentCount > 0 ? "View comments" : "Post a comment"}
-          />
-        );
-      }}
-    </Context.Consumer>
+
+    <Tooltip
+      content={
+        <Text>Tap to read comments and join in with the conversation</Text>
+      }
+      placement="top"
+    >
+      <Context.Consumer>
+        {({ theme: { scale } }) => {
+          const themedStyleguide = styleguide({ scale });
+          const fontFactory = themedStyleguide.fontFactory({
+            font: "supporting",
+            fontSize: "button",
+          });
+          return (
+            <Button
+              fontSize={fontFactory.fontSize}
+              lineHeight={fontFactory.lineHeight}
+              onPress={(e) => onCommentsPress(e, { articleId, url })}
+              style={styles.button}
+              title={commentCount > 0 ? "View comments" : "Post a comment"}
+            />
+          );
+        }}
+      </Context.Consumer>
+    </Tooltip>
   </View>
 );
 
