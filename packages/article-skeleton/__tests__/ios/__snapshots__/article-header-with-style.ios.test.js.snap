@@ -7,6 +7,13 @@ exports[`1. article with header 1`] = `
       <View />
       <View>
         <View>
+          <InteractiveWrapper
+            id="d883baab-bac6-4572-b54f-2c136d62c34b"
+          />
+        </View>
+      </View>
+      <View>
+        <View>
           <View>
             <Text>
               NEW BREXIT REFERENDUM
