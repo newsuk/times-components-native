@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 import { Animated, Text, TouchableOpacity, View } from "react-native";
 
 import { colours } from "@times-components-native/styleguide";
-import { IconSaveBookmark } from "@times-components-native/icons";
+import { IconClose } from "@times-components-native/icons";
 import styles from "./styles";
 
 interface Props {
@@ -33,14 +33,14 @@ const Tooltip: React.FC<Props> = ({ content, children, placement }) => {
             <Text style={styles.text}>{content}</Text>
             <View style={styles.close}>
               <TouchableOpacity onPress={onPress}>
-                <IconSaveBookmark
+                <IconClose
                   fillColour={colours.functional.white}
-                  opacity={1}
                   height={16}
                   width={16}
                 />
               </TouchableOpacity>
             </View>
+            <View style={styles.arrow} />
           </View>
         </View>
       </Animated.View>
