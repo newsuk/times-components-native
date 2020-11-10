@@ -2,6 +2,7 @@ import React from "react";
 import { Text, View } from "react-native";
 import PropTypes from "prop-types";
 import Context from "@times-components-native/context";
+import { useResponsiveContext } from "@times-components-native/responsive";
 import Button from "@times-components-native/button";
 import { TextLink } from "@times-components-native/link";
 import styleguide from "@times-components-native/styleguide";
@@ -18,6 +19,12 @@ const Comments = ({
   url,
 }) => {
   const tooltipType = "commenting";
+  const { isTablet } = useResponsiveContext();
+
+  const showCommentButton =
+    tooltips?.includes(tooltipType) && isTablet
+      ? renderButtonWithTooltip
+      : renderButton;
 
   const renderButton = () => (
     <Context.Consumer>
@@ -51,10 +58,6 @@ const Comments = ({
       {renderButton()}
     </Tooltip>
   );
-
-  const showCommentButton = tooltips?.includes(tooltipType)
-    ? renderButtonWithTooltip
-    : renderButton;
 
   return (
     <View style={styles.container}>
