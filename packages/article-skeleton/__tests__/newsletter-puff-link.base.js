@@ -28,6 +28,7 @@ export default () => {
           <NewsletterPuffLink
             analyticsStream={mockedAnalyticsStream}
             onPress={mockedOnPress}
+            newsletterPuffName="RED BOX"
           />
         </ResponsiveContext.Provider>,
       );
@@ -44,6 +45,7 @@ export default () => {
           <NewsletterPuffLink
             onPress={onPress}
             analyticsStream={mockedAnalyticsStream}
+            newsletterPuffName="RED BOX"
           />
         </ResponsiveContext.Provider>,
       );
@@ -60,6 +62,7 @@ export default () => {
           <NewsletterPuffLink
             onPress={onPress}
             analyticsStream={mockedAnalyticsStream}
+            newsletterPuffName="RED BOX"
           />
         </ResponsiveContext.Provider>,
       );

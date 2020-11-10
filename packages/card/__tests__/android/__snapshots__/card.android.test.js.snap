@@ -1,199 +1,219 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`1. card default state 1`] = `
-<View>
+<ResponsiveContextForMobile>
   <View>
-    <Image
-      aspectRatio={0.6666666666666666}
-      fadeImageIn={false}
-      highResSize={360}
-      lowResQuality={null}
-      lowResSize={50}
-      uri="https://img.io/img"
-    />
+    <View>
+      <Image
+        aspectRatio={0.6666666666666666}
+        fadeImageIn={false}
+        highResSize={360}
+        lowResQuality={null}
+        lowResSize={50}
+        uri="https://img.io/img"
+      />
+    </View>
+    <View>
+      <Text>
+        A card
+      </Text>
+    </View>
   </View>
-  <View>
-    <Text>
-      A card
-    </Text>
-  </View>
-</View>
+</ResponsiveContextForMobile>
 `;
 
 exports[`2. pass an empty state to the image component 1`] = `
-<View>
+<ResponsiveContextForMobile>
   <View>
-    <Image
-      aspectRatio={0.6666666666666666}
-      fadeImageIn={false}
-      highResSize={360}
-      lowResQuality={null}
-      lowResSize={50}
-      uri={null}
-    />
+    <View>
+      <Image
+        aspectRatio={0.6666666666666666}
+        fadeImageIn={false}
+        highResSize={360}
+        lowResQuality={null}
+        lowResSize={50}
+        uri={null}
+      />
+    </View>
+    <View>
+      <Text>
+        A card with an empty image
+      </Text>
+    </View>
   </View>
-  <View>
-    <Text>
-      A card with an empty image
-    </Text>
-  </View>
-</View>
+</ResponsiveContextForMobile>
 `;
 
 exports[`3. card without an image when showimage is false 1`] = `
-<View>
+<ResponsiveContextForMobile>
   <View>
-    <Text>
-      No image
-    </Text>
+    <View>
+      <Text>
+        No image
+      </Text>
+    </View>
   </View>
-</View>
+</ResponsiveContextForMobile>
 `;
 
 exports[`4. pass an empty state to the image component when the uri is null 1`] = `
-<View>
+<ResponsiveContextForMobile>
   <View>
-    <Image
-      aspectRatio={0.6666666666666666}
-      fadeImageIn={false}
-      highResSize={360}
-      lowResQuality={null}
-      lowResSize={50}
-      uri={null}
-    />
+    <View>
+      <Image
+        aspectRatio={0.6666666666666666}
+        fadeImageIn={false}
+        highResSize={360}
+        lowResQuality={null}
+        lowResSize={50}
+        uri={null}
+      />
+    </View>
+    <View>
+      <Text>
+        No URI
+      </Text>
+    </View>
   </View>
-  <View>
-    <Text>
-      No URI
-    </Text>
-  </View>
-</View>
+</ResponsiveContextForMobile>
 `;
 
 exports[`5. card with reversed layout 1`] = `
-<View>
+<ResponsiveContextForMobile>
   <View>
-    <Text>
-      A card in reverse
-    </Text>
+    <View>
+      <Text>
+        A card in reverse
+      </Text>
+    </View>
+    <View>
+      <Image
+        aspectRatio={0.6666666666666666}
+        fadeImageIn={false}
+        highResSize={360}
+        lowResQuality={null}
+        lowResSize={50}
+        uri="https://img.io/img"
+      />
+    </View>
   </View>
-  <View>
-    <Image
-      aspectRatio={0.6666666666666666}
-      fadeImageIn={false}
-      highResSize={360}
-      lowResQuality={null}
-      lowResSize={50}
-      uri="https://img.io/img"
-    />
-  </View>
-</View>
+</ResponsiveContextForMobile>
 `;
 
 exports[`6. card with reversed layout and no image 1`] = `
-<View>
+<ResponsiveContextForMobile>
   <View>
-    <Text>
-      A card in reverse with no image
-    </Text>
+    <View>
+      <Text>
+        A card in reverse with no image
+      </Text>
+    </View>
   </View>
-</View>
+</ResponsiveContextForMobile>
 `;
 
 exports[`7. card with a loading state 1`] = `
-<View>
+<ResponsiveContextForMobile>
   <View>
-    <Image
-      aspectRatio={0.6666666666666666}
-      fadeImageIn={false}
-      highResSize={360}
-      lowResQuality={null}
-      lowResSize={50}
-      uri="https://img.io/img"
-    />
+    <View>
+      <Image
+        aspectRatio={0.6666666666666666}
+        fadeImageIn={false}
+        highResSize={360}
+        lowResQuality={null}
+        lowResSize={50}
+        uri="https://img.io/img"
+      />
+    </View>
+    <View>
+      <Gradient
+        degrees={264}
+      />
+      <Gradient
+        degrees={267}
+      />
+      <Gradient
+        degrees={267}
+      />
+      <Gradient
+        degrees={267}
+      />
+    </View>
   </View>
-  <View>
-    <Gradient
-      degrees={264}
-    />
-    <Gradient
-      degrees={267}
-    />
-    <Gradient
-      degrees={267}
-    />
-    <Gradient
-      degrees={267}
-    />
-  </View>
-</View>
+</ResponsiveContextForMobile>
 `;
 
 exports[`8. card with a loading state and no image 1`] = `
-<View>
+<ResponsiveContextForMobile>
   <View>
-    <Gradient
-      degrees={264}
-    />
-    <Gradient
-      degrees={267}
-    />
-    <Gradient
-      degrees={267}
-    />
-    <Gradient
-      degrees={267}
-    />
+    <View>
+      <Gradient
+        degrees={264}
+      />
+      <Gradient
+        degrees={267}
+      />
+      <Gradient
+        degrees={267}
+      />
+      <Gradient
+        degrees={267}
+      />
+    </View>
   </View>
-</View>
+</ResponsiveContextForMobile>
 `;
 
 exports[`9. card with reversed loading state 1`] = `
-<View>
+<ResponsiveContextForMobile>
   <View>
-    <Gradient
-      degrees={264}
-    />
-    <Gradient
-      degrees={267}
-    />
-    <Gradient
-      degrees={267}
-    />
-    <Gradient
-      degrees={267}
-    />
+    <View>
+      <Gradient
+        degrees={264}
+      />
+      <Gradient
+        degrees={267}
+      />
+      <Gradient
+        degrees={267}
+      />
+      <Gradient
+        degrees={267}
+      />
+    </View>
+    <View>
+      <Image
+        aspectRatio={0.6666666666666666}
+        fadeImageIn={false}
+        highResSize={360}
+        lowResQuality={null}
+        lowResSize={50}
+        uri="https://img.io/img"
+      />
+    </View>
   </View>
-  <View>
-    <Image
-      aspectRatio={0.6666666666666666}
-      fadeImageIn={false}
-      highResSize={360}
-      lowResQuality={null}
-      lowResSize={50}
-      uri="https://img.io/img"
-    />
-  </View>
-</View>
+</ResponsiveContextForMobile>
 `;
 
 exports[`10. card with reversed loading state with no image 1`] = `
-<View>
+<ResponsiveContextForMobile>
   <View>
-    <Gradient
-      degrees={264}
-    />
-    <Gradient
-      degrees={267}
-    />
-    <Gradient
-      degrees={267}
-    />
-    <Gradient
-      degrees={267}
-    />
+    <View>
+      <Gradient
+        degrees={264}
+      />
+      <Gradient
+        degrees={267}
+      />
+      <Gradient
+        degrees={267}
+      />
+      <Gradient
+        degrees={267}
+      />
+    </View>
   </View>
-</View>
+</ResponsiveContextForMobile>
 `;
 
 exports[`11. card should not re-render when imageratio prop is changed 1`] = `

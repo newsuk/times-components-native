@@ -18,11 +18,12 @@ exports[`tile p without breakpoint 1`] = `
     rounded={true}
     style={
       Object {
+        "marginBottom": 15,
         "overflow": "hidden",
         "width": "30%",
       }
     }
-    uri="//www.thetimes.co.uk/imageserver/image/methode%2Ftimes%2Fprod%2Fweb%2Fbin%2F5af6925e-2599-11e9-b782-40e94f317da5.jpg?crop=1000%2C1000%2C250%2C0"
+    uri="https://www.thetimes.co.uk/imageserver/image/methode%2Ftimes%2Fprod%2Fweb%2Fbin%2F5af6925e-2599-11e9-b782-40e94f317da5.jpg?crop=1000%2C1000%2C250%2C0"
   />
   <Text
     style={
@@ -44,7 +45,6 @@ exports[`tile p without breakpoint 1`] = `
           "fontSize": 12,
           "letterSpacing": 0.6,
           "lineHeight": 12,
-          "marginTop": 15,
           "textTransform": "uppercase",
         }
       }
@@ -60,7 +60,6 @@ exports[`tile p without breakpoint 1`] = `
           "fontSize": 12,
           "letterSpacing": 0.6,
           "lineHeight": 12,
-          "marginTop": 15,
           "textTransform": "uppercase",
         }
       }
@@ -77,19 +76,6 @@ exports[`tile p without breakpoint 1`] = `
       }
     }
   >
-    <View
-      style={
-        Object {
-          "marginBottom": 5,
-        }
-      }
-    >
-      <ArticleLabel
-        color="#005B8D"
-        isVideo={false}
-        title="label"
-      />
-    </View>
     <Text
       accessibilityRole="header"
       aria-level="3"

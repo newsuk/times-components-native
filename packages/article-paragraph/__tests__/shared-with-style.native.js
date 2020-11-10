@@ -1,4 +1,3 @@
-import React from "react";
 import TestRenderer from "react-test-renderer";
 import {
   addSerializers,
@@ -8,13 +7,16 @@ import {
   flattenStyleTransform,
   print,
 } from "@times-components-native/jest-serializer";
-import Responsive from "@times-components-native/responsive";
 import { iterator } from "@times-components-native/test-utils";
-import { setIsTablet } from "@times-components-native/mocks/dimensions";
 
 import renderParagraph from "./renderer";
 import dropCapData from "./fixtures/drop-cap-showcase.json";
 import paragraphData from "./fixtures/paragraph-showcase.json";
+import inlineParagraphData from "./fixtures/inline-paragraph.json";
+import {
+  withMobileContext,
+  withTabletContext,
+} from "@times-components-native/test-utils";
 
 export default () => {
   addSerializers(
@@ -31,16 +33,26 @@ export default () => {
     {
       name: "paragraph with a drop cap",
       test: async () => {
-        const testInstance = TestRenderer.create(renderParagraph(dropCapData));
+        const testInstance = TestRenderer.create(
+          withMobileContext(renderParagraph(dropCapData)),
+        );
+        expect(testInstance).toMatchSnapshot();
+      },
+    },
+    {
+      name: "inline paragraph",
+      test: async () => {
+        const testInstance = TestRenderer.create(
+          withTabletContext(renderParagraph(inlineParagraphData)),
+        );
         expect(testInstance).toMatchSnapshot();
       },
     },
     {
       name: "responsive tablet paragraph",
       test: async () => {
-        setIsTablet(true);
         const testInstance = TestRenderer.create(
-          <Responsive>{renderParagraph(paragraphData)}</Responsive>,
+          withTabletContext(renderParagraph(paragraphData)),
         );
         expect(testInstance).toMatchSnapshot();
       },
@@ -48,9 +60,8 @@ export default () => {
     {
       name: "responsive tablet paragraph with a drop cap",
       test: async () => {
-        setIsTablet(true);
         const testInstance = TestRenderer.create(
-          <Responsive>{renderParagraph(dropCapData)}</Responsive>,
+          withTabletContext(renderParagraph(dropCapData)),
         );
         expect(testInstance).toMatchSnapshot();
       },

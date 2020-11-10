@@ -426,8 +426,11 @@ exports[`key facts with title on tablet 1`] = `
 <View
   style={
     Object {
-      "marginHorizontal": 10,
-      "marginVertical": 5,
+      "alignSelf": "center",
+      "flexDirection": "row",
+      "marginHorizontal": 0,
+      "marginVertical": 10,
+      "width": "80.8%",
     }
   }
 >
@@ -441,6 +444,8 @@ exports[`key facts with title on tablet 1`] = `
         "letterSpacing": 1.2,
         "lineHeight": 18,
         "marginBottom": 20,
+        "paddingRight": 20,
+        "width": "20%",
       }
     }
   >
@@ -833,8 +838,11 @@ exports[`key facts without title on tablet 1`] = `
 <View
   style={
     Object {
-      "marginHorizontal": 10,
-      "marginVertical": 5,
+      "alignSelf": "center",
+      "flexDirection": "row",
+      "marginHorizontal": 0,
+      "marginVertical": 10,
+      "width": "80.8%",
     }
   }
 >

@@ -1,13 +1,16 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`front renderers link text renderer renders link text 1`] = `
-<Text>
+<Text
+  allowFontScaling={false}
+>
   Some Text
 </Text>
 `;
 
 exports[`front renderers paragraph renderer renders paragraph 1`] = `
 <Text
+  allowFontScaling={false}
   style={
     Array [
       Object {
@@ -23,6 +26,7 @@ exports[`front renderers paragraph renderer renders paragraph 1`] = `
 
 exports[`front renderers paragraph renderer renders paragraph with new line at end 1`] = `
 <Text
+  allowFontScaling={false}
   style={
     Array [
       false,
@@ -39,6 +43,7 @@ exports[`front renderers paragraph renderer renders paragraph with new line at e
 
 exports[`front renderers paragraph renderer renders paragraph with tab 1`] = `
 <Text
+  allowFontScaling={false}
   style={
     Array [
       Object {

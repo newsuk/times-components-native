@@ -20,7 +20,7 @@ exports[`tile az portrait medium 1`] = `
         "width": "100%",
       }
     }
-    uri="//www.thetimes.co.uk/imageserver/image/methode%2Ftimes%2Fprod%2Fweb%2Fbin%2Fd3abdbfc-1776-11e6-b4ba-d249b128bacc.jpg?crop=620%2C348%2C0%2C32"
+    uri="https://www.thetimes.co.uk/imageserver/image/methode%2Ftimes%2Fprod%2Fweb%2Fbin%2Fd3abdbfc-1776-11e6-b4ba-d249b128bacc.jpg?crop=620%2C348%2C0%2C32"
   />
   <View
     style={
@@ -43,6 +43,7 @@ exports[`tile az portrait medium 1`] = `
     >
       <ArticleLabel
         color="#005B8D"
+        hide={false}
         isVideo={false}
         title="label"
       />
@@ -101,7 +102,7 @@ exports[`tile az portrait wide 1`] = `
         "width": "100%",
       }
     }
-    uri="//www.thetimes.co.uk/imageserver/image/methode%2Ftimes%2Fprod%2Fweb%2Fbin%2Fd3abdbfc-1776-11e6-b4ba-d249b128bacc.jpg?crop=620%2C348%2C0%2C32"
+    uri="https://www.thetimes.co.uk/imageserver/image/methode%2Ftimes%2Fprod%2Fweb%2Fbin%2Fd3abdbfc-1776-11e6-b4ba-d249b128bacc.jpg?crop=620%2C348%2C0%2C32"
   />
   <View
     style={
@@ -124,6 +125,7 @@ exports[`tile az portrait wide 1`] = `
     >
       <ArticleLabel
         color="#005B8D"
+        hide={false}
         isVideo={false}
         title="label"
       />

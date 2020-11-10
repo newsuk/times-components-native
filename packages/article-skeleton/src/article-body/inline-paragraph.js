@@ -1,12 +1,11 @@
 /* eslint-disable react/forbid-prop-types */
-import React, { useState } from "react";
+import React, { useMemo, useState } from "react";
 import { View, Text } from "react-native";
 import PropTypes from "prop-types";
 import styleguide, {
   tabletWidth,
   getNarrowArticleBreakpoint,
 } from "@times-components-native/styleguide";
-import { screenWidth } from "@times-components-native/utils";
 import {
   TextContainer,
   LayoutManager,
@@ -14,6 +13,7 @@ import {
 } from "@times-components-native/typeset";
 import ArticleParagraphWrapper from "@times-components-native/article-paragraph";
 import { useVariantTestingContext } from "@times-components-native/variant-testing";
+import { useResponsiveContext } from "@times-components-native/responsive";
 
 const InlineParagraph = ({
   onLinkPress,
@@ -31,23 +31,20 @@ const InlineParagraph = ({
 }) => {
   const { spacing } = styleguide({ scale });
   const [inlineExclusion, setInlineExclusion] = useState(false);
+  const { orientation, windowWidth } = useResponsiveContext();
   const variants = useVariantTestingContext();
 
-  if (!str.length) {
-    return null;
-  }
-
   const contentWidth = Math.min(
-    screenWidth(),
+    windowWidth,
     narrowContent
-      ? getNarrowArticleBreakpoint(screenWidth()).content
+      ? getNarrowArticleBreakpoint(windowWidth).content
       : tabletWidth,
   );
 
-  const gutters = (screenWidth() - contentWidth) / 2 + spacing(2);
+  const gutters = (windowWidth - contentWidth) / 2 + spacing(2);
 
   const container = new TextContainer(
-    (isTablet ? contentWidth : screenWidth()) - spacing(4),
+    (isTablet ? contentWidth : windowWidth) - spacing(4),
     Infinity,
     0,
     0,
@@ -55,14 +52,23 @@ const InlineParagraph = ({
   );
 
   const slice = str.charAt(1) === " " ? 2 : dropCap.length;
+  const [positionedTextItems, positionTextItemSettings] = useMemo(() => {
+    const manager = new LayoutManager(
+      dropCap ? str.slice(slice) : str,
+      [container],
+      inlineExclusion ? [inlineExclusion.exclusion] : [],
+    );
 
-  const manager = new LayoutManager(
-    dropCap ? str.slice(slice) : str,
-    [container],
-    inlineExclusion ? [inlineExclusion.exclusion] : [],
-  );
+    const newPositionedTextItems = manager.layout();
+    const newPositionItemSettings = newPositionedTextItems.map((p) =>
+      p.text.collapsedAttributes(0),
+    );
+    return [newPositionedTextItems, newPositionItemSettings];
+  }, [inlineExclusion, orientation]);
 
-  const positioned = manager.layout();
+  if (!str.length) {
+    return null;
+  }
 
   const getInlineLayout = () => {
     const { articleMpu } = variants;
@@ -73,8 +79,7 @@ const InlineParagraph = ({
       return { left: narrowContent ? 0 : gutters, width: contentWidth * 0.35 };
 
     return {
-      left:
-        screenWidth() - gutters - articleMpu.width - inlineAdAdditionalWidth,
+      left: windowWidth - gutters - articleMpu.width - inlineAdAdditionalWidth,
       width: articleMpu.width + inlineAdAdditionalWidth,
       height: articleMpu.height + inlineAdTitleHeight,
     };
@@ -93,6 +98,7 @@ const InlineParagraph = ({
         key={`${uid}:inline-paragraph`}
         style={{
           position: "absolute",
+          zIndex: 1000,
           ...getInlineLayout(),
         }}
         onLayout={(e) => {
@@ -101,9 +107,7 @@ const InlineParagraph = ({
             const { width } = getInlineLayout();
             setInlineExclusion({
               exclusion: new BoxExclusion(
-                isInlineAd
-                  ? screenWidth() - 2 * gutters - width - spacing(2)
-                  : 0,
+                isInlineAd ? windowWidth - 2 * gutters - width - spacing(2) : 0,
                 0,
                 width + spacing(isInlineAd ? 4 : 2),
                 height + spacing(2),
@@ -122,16 +126,16 @@ const InlineParagraph = ({
       key={`${uid}:paragraph-wrapper`}
       height={Math.max(
         dropCap ? defaultFont.lineHeight * 3 : 0,
-        !positioned.length
+        !positionedTextItems.length
           ? 0
-          : positioned[positioned.length - 1].position.y +
+          : positionedTextItems[positionedTextItems.length - 1].position.y +
               defaultFont.lineHeight,
         inlineExclusion ? inlineExclusion.height : 0,
       )}
       narrowContent={narrowContent}
     >
-      {positioned.map((p, i) => {
-        const [attribute, href] = p.text.collapsedAttributes(0);
+      {positionedTextItems.map((p, i) => {
+        const [attribute, href] = positionTextItemSettings[i];
         const style = attribute ? attribute.settings : defaultFont;
         const type = href ? href.type : null;
         const canonicalId = href ? href.canonicalId : null;

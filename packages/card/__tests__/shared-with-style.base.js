@@ -2,6 +2,8 @@ import React from "react";
 import { Text } from "react-native";
 import { iterator } from "@times-components-native/test-utils";
 import Card from "../src/card";
+import ResponsiveContext from "@times-components-native/responsive/src/context";
+import { calculateResponsiveContext } from "@times-components-native/responsive/src/calculateResponsiveContext";
 
 const props = {
   highResSize: 900,
@@ -11,6 +13,12 @@ const props = {
   showImage: true,
 };
 
+const ResponsiveContextForMobile = ({ children }) => (
+  <ResponsiveContext.Provider value={calculateResponsiveContext(300, 600, 1)}>
+    {children}
+  </ResponsiveContext.Provider>
+);
+
 export default (renderMethod) => {
   jest.useFakeTimers();
 
@@ -19,9 +27,11 @@ export default (renderMethod) => {
       name: "card default state",
       test: () => {
         const output = renderMethod(
-          <Card {...props}>
-            <Text>A card</Text>
-          </Card>,
+          <ResponsiveContextForMobile>
+            <Card {...props}>
+              <Text>A card</Text>
+            </Card>
+          </ResponsiveContextForMobile>,
         );
 
         jest.runTimersToTime();
@@ -33,9 +43,11 @@ export default (renderMethod) => {
       name: "card with reversed state",
       test: () => {
         const output = renderMethod(
-          <Card {...props} isReversed>
-            <Text>A card in reverse</Text>
-          </Card>,
+          <ResponsiveContextForMobile>
+            <Card {...props} isReversed>
+              <Text>A card in reverse</Text>
+            </Card>
+          </ResponsiveContextForMobile>,
         );
 
         jest.runTimersToTime();
@@ -47,9 +59,11 @@ export default (renderMethod) => {
       name: "card loading state",
       test: () => {
         const output = renderMethod(
-          <Card {...props} isLoading>
-            <Text>Loading state</Text>
-          </Card>,
+          <ResponsiveContextForMobile>
+            <Card {...props} isLoading>
+              <Text>Loading state</Text>
+            </Card>
+          </ResponsiveContextForMobile>,
         );
 
         jest.runTimersToTime();
@@ -61,9 +75,11 @@ export default (renderMethod) => {
       name: "card reversed loading state",
       test: () => {
         const output = renderMethod(
-          <Card {...props} isLoading isReversed>
-            <Text>Loading in reverse</Text>
-          </Card>,
+          <ResponsiveContextForMobile>
+            <Card {...props} isLoading isReversed>
+              <Text>Loading in reverse</Text>
+            </Card>
+          </ResponsiveContextForMobile>,
         );
 
         jest.runTimersToTime();

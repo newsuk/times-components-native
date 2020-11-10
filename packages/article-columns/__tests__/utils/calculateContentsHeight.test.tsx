@@ -1,4 +1,4 @@
-import { ArticleMeasurements } from "../../types";
+import { Measurements } from "@times-components-native/types";
 import { calculateContentsHeight } from "../../utils/calculateContentsHeight";
 import MockMarkup from "@times-components-native/fixture-generator/src/mock-markup";
 
@@ -7,7 +7,7 @@ describe("calculateContentsHeight", () => {
     const paragraph = new MockMarkup().addParagraphs(1).get();
     const paragraph1 = { ...paragraph, id: "p1" };
     const paragraph2 = { ...paragraph, id: "p2" };
-    const articleMeasurements: ArticleMeasurements = {
+    const articleMeasurements: Measurements = {
       bylineHeight: 0,
       bylineMargin: 0,
       contents: {

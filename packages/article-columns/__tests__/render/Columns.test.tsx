@@ -2,7 +2,7 @@ import React from "react";
 import { View } from "react-native";
 import TestRenderer from "react-test-renderer";
 
-import { ArticleContent } from "../../domain-types";
+import { ArticleContent } from "@times-components-native/types";
 import { ColumnParameters } from "../../types";
 import { SingleColumn } from "../../render/Columns";
 

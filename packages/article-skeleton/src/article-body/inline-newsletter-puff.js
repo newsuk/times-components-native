@@ -71,14 +71,11 @@ const InlineNewsletterPuff = ({
                 {justSubscribed ? (
                   <View style={styles.subscribedContainer}>
                     <Text style={styles.subscribedHeadline}>
-                      You’ve successfully signed up
-                    </Text>
-                    <Text style={styles.subscribedCopy}>
-                      Congratulations you can now enjoy daily updates from Red
-                      Box.
+                      {`You’ve successfully signed up to ${newsletter.title}`}
                     </Text>
                     <View style={styles.preferencesContainer}>
                       <NewsletterPuffLink
+                        newsletterPuffName={newsletter.title}
                         analyticsStream={analyticsStream}
                         onPress={() => onManagePreferencesPress()}
                       />
@@ -91,6 +88,7 @@ const InlineNewsletterPuff = ({
                     <Text style={styles.copy}>{copy}</Text>
                     <View style={styles.signUpCTAContainer}>
                       <NewsletterPuffButton
+                        newsletterPuffName={newsletter.title}
                         analyticsStream={analyticsStream}
                         updatingSubscription={updatingSubscription}
                         onPress={() => {

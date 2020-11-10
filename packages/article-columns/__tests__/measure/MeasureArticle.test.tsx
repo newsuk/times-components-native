@@ -3,7 +3,10 @@ import TestRenderer from "react-test-renderer";
 
 import { InnerMeasureArticle as MeasureArticle } from "../../measure/MeasureArticle";
 import { initialState } from "../../measure/reducer";
-import { ArticleContent, ParagraphContent } from "../../domain-types";
+import {
+  ArticleContent,
+  ParagraphContent,
+} from "@times-components-native/types";
 import { ColumnParameters } from "../../types";
 import MockMarkup from "@times-components-native/fixture-generator/src/mock-markup";
 

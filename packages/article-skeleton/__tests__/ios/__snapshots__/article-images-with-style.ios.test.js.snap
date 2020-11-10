@@ -8,27 +8,40 @@ exports[`1. a primary image 1`] = `
     }
   }
 >
-  <RCTScrollView
-    style={
-      Object {
-        "backgroundColor": "#FFFFFF",
-      }
-    }
-  >
+  <RCTScrollView>
     <View>
-      <View>
-        <View
-          style={
-            Object {
-              "backgroundColor": "#ffffff",
-              "maxWidth": "100%",
-              "overflow": "hidden",
-              "width": undefined,
-            }
+      <View
+        style={
+          Object {
+            "backgroundColor": "#ffffff",
+            "maxWidth": "100%",
+            "overflow": "hidden",
+            "width": undefined,
           }
-        />
+        }
+      />
+      <View
+        style={
+          Object {
+            "backgroundColor": "#ffffff",
+            "maxWidth": "100%",
+            "overflow": "hidden",
+            "width": undefined,
+          }
+        }
+      >
+        <ArticleImage />
       </View>
-      <View>
+      <View
+        style={
+          Object {
+            "backgroundColor": "#ffffff",
+            "maxWidth": "100%",
+            "overflow": "hidden",
+            "width": undefined,
+          }
+        }
+      >
         <View
           style={
             Object {
@@ -39,46 +52,7 @@ exports[`1. a primary image 1`] = `
             }
           }
         >
-          <ArticleImage />
-        </View>
-      </View>
-      <View>
-        <View
-          style={
-            Object {
-              "backgroundColor": "#ffffff",
-              "maxWidth": "100%",
-              "overflow": "hidden",
-              "width": undefined,
-            }
-          }
-        >
-          <View
-            style={
-              Object {
-                "backgroundColor": "#ffffff",
-                "maxWidth": "100%",
-                "overflow": "hidden",
-                "width": undefined,
-              }
-            }
-          >
-            <ArticleExtras />
-          </View>
-        </View>
-      </View>
-      <View>
-        <View
-          style={
-            Object {
-              "backgroundColor": "#ffffff",
-              "maxWidth": "100%",
-              "overflow": "hidden",
-              "width": undefined,
-            }
-          }
-        >
-          <ActivityIndicator />
+          <ArticleExtras />
         </View>
       </View>
     </View>
@@ -94,27 +68,40 @@ exports[`2. a fullwidth image 1`] = `
     }
   }
 >
-  <RCTScrollView
-    style={
-      Object {
-        "backgroundColor": "#FFFFFF",
-      }
-    }
-  >
+  <RCTScrollView>
     <View>
-      <View>
-        <View
-          style={
-            Object {
-              "backgroundColor": "#ffffff",
-              "maxWidth": "100%",
-              "overflow": "hidden",
-              "width": undefined,
-            }
+      <View
+        style={
+          Object {
+            "backgroundColor": "#ffffff",
+            "maxWidth": "100%",
+            "overflow": "hidden",
+            "width": undefined,
           }
-        />
+        }
+      />
+      <View
+        style={
+          Object {
+            "backgroundColor": "#ffffff",
+            "maxWidth": "100%",
+            "overflow": "hidden",
+            "width": undefined,
+          }
+        }
+      >
+        <ArticleImage />
       </View>
-      <View>
+      <View
+        style={
+          Object {
+            "backgroundColor": "#ffffff",
+            "maxWidth": "100%",
+            "overflow": "hidden",
+            "width": undefined,
+          }
+        }
+      >
         <View
           style={
             Object {
@@ -125,46 +112,7 @@ exports[`2. a fullwidth image 1`] = `
             }
           }
         >
-          <ArticleImage />
-        </View>
-      </View>
-      <View>
-        <View
-          style={
-            Object {
-              "backgroundColor": "#ffffff",
-              "maxWidth": "100%",
-              "overflow": "hidden",
-              "width": undefined,
-            }
-          }
-        >
-          <View
-            style={
-              Object {
-                "backgroundColor": "#ffffff",
-                "maxWidth": "100%",
-                "overflow": "hidden",
-                "width": undefined,
-              }
-            }
-          >
-            <ArticleExtras />
-          </View>
-        </View>
-      </View>
-      <View>
-        <View
-          style={
-            Object {
-              "backgroundColor": "#ffffff",
-              "maxWidth": "100%",
-              "overflow": "hidden",
-              "width": undefined,
-            }
-          }
-        >
-          <ActivityIndicator />
+          <ArticleExtras />
         </View>
       </View>
     </View>
@@ -180,27 +128,40 @@ exports[`3. a secondary image 1`] = `
     }
   }
 >
-  <RCTScrollView
-    style={
-      Object {
-        "backgroundColor": "#FFFFFF",
-      }
-    }
-  >
+  <RCTScrollView>
     <View>
-      <View>
-        <View
-          style={
-            Object {
-              "backgroundColor": "#ffffff",
-              "maxWidth": "100%",
-              "overflow": "hidden",
-              "width": undefined,
-            }
+      <View
+        style={
+          Object {
+            "backgroundColor": "#ffffff",
+            "maxWidth": "100%",
+            "overflow": "hidden",
+            "width": undefined,
           }
-        />
+        }
+      />
+      <View
+        style={
+          Object {
+            "backgroundColor": "#ffffff",
+            "maxWidth": "100%",
+            "overflow": "hidden",
+            "width": undefined,
+          }
+        }
+      >
+        <ArticleImage />
       </View>
-      <View>
+      <View
+        style={
+          Object {
+            "backgroundColor": "#ffffff",
+            "maxWidth": "100%",
+            "overflow": "hidden",
+            "width": undefined,
+          }
+        }
+      >
         <View
           style={
             Object {
@@ -211,46 +172,7 @@ exports[`3. a secondary image 1`] = `
             }
           }
         >
-          <ArticleImage />
-        </View>
-      </View>
-      <View>
-        <View
-          style={
-            Object {
-              "backgroundColor": "#ffffff",
-              "maxWidth": "100%",
-              "overflow": "hidden",
-              "width": undefined,
-            }
-          }
-        >
-          <View
-            style={
-              Object {
-                "backgroundColor": "#ffffff",
-                "maxWidth": "100%",
-                "overflow": "hidden",
-                "width": undefined,
-              }
-            }
-          >
-            <ArticleExtras />
-          </View>
-        </View>
-      </View>
-      <View>
-        <View
-          style={
-            Object {
-              "backgroundColor": "#ffffff",
-              "maxWidth": "100%",
-              "overflow": "hidden",
-              "width": undefined,
-            }
-          }
-        >
-          <ActivityIndicator />
+          <ArticleExtras />
         </View>
       </View>
     </View>
@@ -266,27 +188,40 @@ exports[`4. an inline image 1`] = `
     }
   }
 >
-  <RCTScrollView
-    style={
-      Object {
-        "backgroundColor": "#FFFFFF",
-      }
-    }
-  >
+  <RCTScrollView>
     <View>
-      <View>
-        <View
-          style={
-            Object {
-              "backgroundColor": "#ffffff",
-              "maxWidth": "100%",
-              "overflow": "hidden",
-              "width": undefined,
-            }
+      <View
+        style={
+          Object {
+            "backgroundColor": "#ffffff",
+            "maxWidth": "100%",
+            "overflow": "hidden",
+            "width": undefined,
           }
-        />
+        }
+      />
+      <View
+        style={
+          Object {
+            "backgroundColor": "#ffffff",
+            "maxWidth": "100%",
+            "overflow": "hidden",
+            "width": undefined,
+          }
+        }
+      >
+        <ArticleImage />
       </View>
-      <View>
+      <View
+        style={
+          Object {
+            "backgroundColor": "#ffffff",
+            "maxWidth": "100%",
+            "overflow": "hidden",
+            "width": undefined,
+          }
+        }
+      >
         <View
           style={
             Object {
@@ -297,46 +232,7 @@ exports[`4. an inline image 1`] = `
             }
           }
         >
-          <ArticleImage />
-        </View>
-      </View>
-      <View>
-        <View
-          style={
-            Object {
-              "backgroundColor": "#ffffff",
-              "maxWidth": "100%",
-              "overflow": "hidden",
-              "width": undefined,
-            }
-          }
-        >
-          <View
-            style={
-              Object {
-                "backgroundColor": "#ffffff",
-                "maxWidth": "100%",
-                "overflow": "hidden",
-                "width": undefined,
-              }
-            }
-          >
-            <ArticleExtras />
-          </View>
-        </View>
-      </View>
-      <View>
-        <View
-          style={
-            Object {
-              "backgroundColor": "#ffffff",
-              "maxWidth": "100%",
-              "overflow": "hidden",
-              "width": undefined,
-            }
-          }
-        >
-          <ActivityIndicator />
+          <ArticleExtras />
         </View>
       </View>
     </View>

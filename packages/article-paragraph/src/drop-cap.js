@@ -1,7 +1,6 @@
 import React, { cloneElement } from "react";
 import { Text } from "react-native";
 import PropTypes from "prop-types";
-import { ResponsiveContext } from "@times-components-native/responsive";
 import styleFactory from "./styles";
 import { propTypes, defaultProps } from "./drop-cap-prop-types";
 
@@ -46,8 +45,4 @@ DropCap.propTypes = {
 
 DropCap.defaultProps = defaultProps;
 
-export default (props) => (
-  <ResponsiveContext.Consumer>
-    {({ isTablet }) => <DropCap {...props} isTablet={isTablet} />}
-  </ResponsiveContext.Consumer>
-);
+export default DropCap;

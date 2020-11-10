@@ -14,4 +14,16 @@ export default () => {
 
     expect(testInstance).toMatchSnapshot();
   });
+
+  it("with specified values", () => {
+    const testInstance = TestRenderer.create(
+      <Responsive fontScale={1} displayHeight={100} displayWidth={200}>
+        <ResponsiveContext.Consumer>
+          {(context) => JSON.stringify(context)}
+        </ResponsiveContext.Consumer>
+      </Responsive>,
+    );
+
+    expect(testInstance).toMatchSnapshot();
+  });
 };

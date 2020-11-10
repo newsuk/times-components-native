@@ -4,6 +4,7 @@ const fonts = {
   bodyRegularSmallCaps: "TimesDigitalW04-RegularSC",
   cultureMagazine: "Flama-Bold",
   dropCap: "TimesModern-Regular",
+  frontByline: "GillSansMTStd-Bold",
   headline: "TimesModern-Bold",
   headlineRegular: "TimesModern-Regular",
   stMagazine: "Tiempos-Headline-Bold",

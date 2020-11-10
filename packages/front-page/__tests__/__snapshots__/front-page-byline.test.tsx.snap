@@ -14,7 +14,9 @@ exports[`FrontPageByline renders with container style 1`] = `
     ]
   }
 >
-  <Text>
+  <Text
+    allowFontScaling={false}
+  >
     <ArticleByline
       ast={
         Array [
@@ -30,7 +32,9 @@ exports[`FrontPageByline renders with container style 1`] = `
       bylineStyle={
         Object {
           "color": "#1D1D1B",
-          "lineHeight": 13,
+          "fontFamily": "GillSansMTStd-Bold",
+          "fontSize": 13,
+          "lineHeight": 14,
         }
       }
     />
@@ -49,12 +53,15 @@ exports[`FrontPageByline renders with keyline 1`] = `
       Object {
         "borderColor": "#999999",
         "borderTopWidth": 1,
-        "paddingTop": 5,
+        "marginTop": 5,
+        "paddingTop": 6,
       },
     ]
   }
 >
-  <Text>
+  <Text
+    allowFontScaling={false}
+  >
     <ArticleByline
       ast={
         Array [
@@ -70,7 +77,9 @@ exports[`FrontPageByline renders with keyline 1`] = `
       bylineStyle={
         Object {
           "color": "#1D1D1B",
-          "lineHeight": 13,
+          "fontFamily": "GillSansMTStd-Bold",
+          "fontSize": 13,
+          "lineHeight": 14,
         }
       }
     />
@@ -90,7 +99,9 @@ exports[`FrontPageByline renders without keyline 1`] = `
     ]
   }
 >
-  <Text>
+  <Text
+    allowFontScaling={false}
+  >
     <ArticleByline
       ast={
         Array [
@@ -106,7 +117,9 @@ exports[`FrontPageByline renders without keyline 1`] = `
       bylineStyle={
         Object {
           "color": "#1D1D1B",
-          "lineHeight": 13,
+          "fontFamily": "GillSansMTStd-Bold",
+          "fontSize": 13,
+          "lineHeight": 14,
         }
       }
     />

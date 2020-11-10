@@ -1,102 +1,244 @@
 import {
   fonts,
   spacing,
-  editionBreakpoints,
   globalSpacingStyles,
   colours,
 } from "@times-components-native/styleguide";
+import { getStyleByDeviceSize } from "@times-components-native/styleguide/src/styleguide";
 
-const mediumBreakpointStyles = {
-  containerLandscape: {
-    paddingBottom: spacing(2),
+const headline = {
+  ...globalSpacingStyles.tabletHeadline,
+  fontFamily: fonts.headline,
+};
+
+const summary = {
+  ...globalSpacingStyles.tabletTeaser,
+};
+
+const strapline = {
+  fontFamily: fonts.headlineRegular,
+  color: colours.functional.primary,
+};
+
+const sharedLandscapeStyles = {
+  container: {
+    paddingBottom: 0,
+    paddingRight: spacing(2),
     flex: 1,
-    flexDirection: "row-reverse",
   },
-  containerPortrait: {
-    paddingBottom: spacing(2),
+  summaryContainer: {
+    position: "absolute",
+    bottom: 0,
+    backgroundColor: colours.functional.white,
+    width: "100%",
+    paddingTop: spacing(2),
+  },
+  imageContainer: {
+    width: "100%",
+  },
+  summary: {
+    ...summary,
+    fontSize: 14,
+    lineHeight: 18,
+  },
+  straplineMarginTop: spacing(2),
+  straplineMarginBottom: spacing(3),
+  headlineMarginBottom: spacing(2),
+  bylineMarginBottom: spacing(3),
+};
+
+const sharedPortraitStyles = {
+  container: {
+    paddingBottom: 0,
     flex: 1,
     flexDirection: "column",
   },
-  headlineLandscape: {
-    ...globalSpacingStyles.tabletHeadline,
-    fontFamily: fonts.headline,
-    fontSize: 40,
-    lineHeight: 40,
+  bylineMarginBottom: 0,
+  summary: {
+    ...summary,
+    fontSize: 14,
+    lineHeight: 18,
   },
-  headlinePortrait: {
-    ...globalSpacingStyles.tabletHeadline,
-    fontFamily: fonts.headline,
-    fontSize: 40,
-    lineHeight: 40,
+};
+
+const portrait834 = {
+  ...sharedPortraitStyles,
+  headline: {
+    ...headline,
   },
-  strapline: {
-    fontFamily: fonts.headlineRegular,
-    color: colours.functional.primary,
-    fontSize: 24,
-    lineHeight: 26,
-  },
-  bylineContainer: {
-    marginBottom: spacing(3),
-  },
-  summaryContainerLandscape: {
-    width: "25%",
-    paddingRight: spacing(4),
-  },
-  imageContainerLandscape: {
-    width: "75%",
-    marginBottom: spacing(2),
-  },
-  imageContainerPortrait: {
+  imageContainer: {
     width: "100%",
     marginBottom: spacing(2),
   },
-  summaryLandscape: {
-    ...globalSpacingStyles.tabletTeaser,
-    textAlign: "justify",
-    fontSize: 14,
-    lineHeight: 18,
-  },
-  summaryPortrait: {
-    ...globalSpacingStyles.tabletTeaser,
-    textAlign: "justify",
-    fontSize: 14,
-    lineHeight: 18,
+  strapline: {
+    ...strapline,
   },
 };
 
-const wideBreakpointStyles = {
-  ...mediumBreakpointStyles,
-  headlineLandscape: {
-    ...mediumBreakpointStyles.headlineLandscape,
-    fontSize: 35,
-    lineHeight: 35,
+const styles = {
+  landscape: {
+    "1024": {
+      ...sharedLandscapeStyles,
+      headline: {
+        ...headline,
+        fontSize: 40,
+        lineHeight: 40,
+      },
+      strapline: {
+        ...strapline,
+        fontSize: 24,
+        lineHeight: 24,
+      },
+    },
+    "1080": {
+      ...sharedLandscapeStyles,
+      headline: {
+        ...headline,
+        fontSize: 45,
+        lineHeight: 45,
+      },
+      strapline: {
+        ...strapline,
+        fontSize: 24,
+        lineHeight: 24,
+      },
+    },
+    "1194": {
+      ...sharedLandscapeStyles,
+      headlineMarginBottom: spacing(1),
+      headline: {
+        ...headline,
+        fontSize: 50,
+        lineHeight: 50,
+      },
+      strapline: {
+        ...strapline,
+        fontSize: 24,
+        lineHeight: 24,
+      },
+    },
+    "1366": {
+      ...sharedLandscapeStyles,
+      imageContainer: {
+        width: "100%",
+        marginBottom: spacing(3),
+      },
+      headline: {
+        ...headline,
+        fontSize: 55,
+        lineHeight: 55,
+      },
+      strapline: {
+        ...strapline,
+        fontSize: 26,
+        lineHeight: 26,
+      },
+    },
   },
-  headlinePortrait: {
-    ...mediumBreakpointStyles.headlinePortrait,
-    fontSize: 50,
-    lineHeight: 50,
-  },
-  summaryPortrait: {
-    ...mediumBreakpointStyles.summaryPortrait,
-    fontSize: 16,
-    lineHeight: 20,
+  portrait: {
+    "768": {
+      ...sharedPortraitStyles,
+      headline: {
+        ...headline,
+        fontSize: 42,
+        lineHeight: 42,
+      },
+      imageContainer: {
+        width: "100%",
+        marginBottom: spacing(1),
+      },
+      strapline: {
+        ...strapline,
+        fontSize: 24,
+        lineHeight: 24,
+      },
+      headlineMarginBottom: spacing(4),
+      straplineMarginTop: spacing(1),
+      straplineMarginBottom: spacing(2),
+    },
+    "810": {
+      ...sharedPortraitStyles,
+      headline: {
+        ...headline,
+        fontSize: 45,
+        lineHeight: 45,
+      },
+      imageContainer: {
+        width: "100%",
+        marginBottom: spacing(2),
+      },
+      strapline: {
+        ...strapline,
+        fontSize: 24,
+        lineHeight: 24,
+      },
+      headlineMarginBottom: spacing(4),
+      straplineMarginTop: spacing(1),
+      straplineMarginBottom: spacing(3),
+    },
+    "834": {
+      ratios: {
+        0: {
+          ...portrait834,
+          headlineMarginBottom: spacing(4),
+          straplineMarginTop: spacing(2),
+          straplineMarginBottom: spacing(3),
+          headline: {
+            ...portrait834.headline,
+            fontSize: 50,
+            lineHeight: 50,
+          },
+          strapline: {
+            ...portrait834.strapline,
+            fontSize: 26,
+            lineHeight: 26,
+          },
+        },
+        0.75: {
+          ...portrait834,
+          headlineMarginBottom: spacing(4),
+          straplineMarginTop: spacing(2),
+          straplineMarginBottom: spacing(3),
+          headline: {
+            ...portrait834.headline,
+            fontSize: 45,
+            lineHeight: 45,
+          },
+          strapline: {
+            ...portrait834.strapline,
+            fontSize: 24,
+            lineHeight: 24,
+          },
+        },
+      },
+    },
+    "1024": {
+      ...sharedPortraitStyles,
+      headline: {
+        ...headline,
+        fontSize: 55,
+        lineHeight: 55,
+      },
+      imageContainer: {
+        width: "100%",
+        marginBottom: spacing(2),
+      },
+      strapline: {
+        ...strapline,
+        fontSize: 30,
+        lineHeight: 30,
+      },
+      headlineMarginBottom: spacing(4),
+      straplineMarginTop: spacing(1),
+      straplineMarginBottom: spacing(5),
+      summary: {
+        ...summary,
+        fontSize: 15,
+        lineHeight: 18,
+      },
+    },
   },
 };
 
-const hugeBreakpointStyles = {
-  ...wideBreakpointStyles,
-  headlineLandscape: {
-    ...wideBreakpointStyles.headlineLandscape,
-    fontSize: 45,
-    lineHeight: 45,
-  },
-};
-
-const stylesResolver = {
-  [editionBreakpoints.small]: {},
-  [editionBreakpoints.medium]: mediumBreakpointStyles,
-  [editionBreakpoints.wide]: wideBreakpointStyles,
-  [editionBreakpoints.huge]: hugeBreakpointStyles,
-};
-
-export default (breakpoint) => stylesResolver[breakpoint];
+export const getStyle = (orientation, windowWidth, windowHeight) =>
+  getStyleByDeviceSize(styles[orientation], windowWidth, windowHeight);

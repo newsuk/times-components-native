@@ -5,6 +5,10 @@ import {
   VariantTestingProvider,
 } from "../src/variant-testing";
 
+jest.mock("@times-components-native/responsive", () => ({
+  useResponsiveContext: () => ({ isTablet: true }),
+}));
+
 export default () => {
   it("with default values", () => {
     const testInstance = TestRenderer.create(
@@ -36,7 +40,7 @@ export default () => {
   it("should create context based on variant prop", () => {
     const testInstance = TestRenderer.create(
       <VariantTestingProvider
-        variants={{ articleMpuTestVariant: "B" }}
+        variants={{ articleMpuTestVariant: "B", sectionAdTestVariant: "B" }}
         isTablet={true}
       >
         <VariantTestingContext.Consumer>

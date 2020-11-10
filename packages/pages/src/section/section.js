@@ -1,25 +1,33 @@
 import React, { Component } from "react";
 import { AppState, DeviceEventEmitter, NativeModules } from "react-native";
 import PropTypes from "prop-types";
+
 import { SectionContext } from "@times-components-native/context";
 import Section from "@times-components-native/section";
+import { VariantTestingProvider } from "@times-components-native/variant-testing";
 import trackSection from "./track-section";
+import adTargetConfig from "./ad-targeting-config";
 
 const {
   getOpenedPuzzleCount,
   getSavedArticles,
   getSectionData,
   onArticlePress: onArticlePressBridge,
+  onLinkPress: onLinkPressBridge,
   onPuzzleBarPress = () => null,
   onPuzzlePress: onPuzzlePressBridge,
   onArticleSavePress: onArticleSavePressBridge,
 } = NativeModules.SectionEvents || {
   onArticlePress: () => null,
+  onLinkPress: () => null,
   onPuzzleBarPress: () => null,
   onPuzzlePress: () => null,
 };
 
-const onArticlePress = ({ id, url }) => onArticlePressBridge(url, id);
+const onArticlePress = ({ id, isPuff = false }) =>
+  onArticlePressBridge(id, isPuff);
+const onLinkPress = ({ url }) => onLinkPressBridge(url);
+
 const onPuzzlePress = ({ id, title, url }) =>
   onPuzzlePressBridge(url, title, id);
 
@@ -126,8 +134,12 @@ class SectionPage extends Component {
   }
 
   render() {
-    const { publicationName } = this.props;
+    const { publicationName, variants } = this.props;
     const { recentlyOpenedPuzzleCount, savedArticles, section } = this.state;
+
+    const adConfig = adTargetConfig({
+      sectionName: section.name,
+    });
 
     return (
       <SectionContext.Provider
@@ -140,14 +152,18 @@ class SectionPage extends Component {
           savedArticles,
         }}
       >
-        <Section
-          analyticsStream={trackSection}
-          onArticlePress={onArticlePress}
-          onPuzzleBarPress={onPuzzleBarPress}
-          onPuzzlePress={onPuzzlePress}
-          section={section}
-          publicationName={publicationName}
-        />
+        <VariantTestingProvider variants={variants}>
+          <Section
+            adConfig={adConfig}
+            analyticsStream={trackSection}
+            onArticlePress={onArticlePress}
+            onLinkPress={onLinkPress}
+            onPuzzleBarPress={onPuzzleBarPress}
+            onPuzzlePress={onPuzzlePress}
+            section={section}
+            publicationName={publicationName}
+          />
+        </VariantTestingProvider>
       </SectionContext.Provider>
     );
   }

@@ -22,7 +22,7 @@ exports[`tile as huge 1`] = `
     <Image
       aspectRatio={1.5}
       fill={true}
-      uri="//www.thetimes.co.uk/imageserver/image/%2Fmethode%2Ftimes%2Fprod%2Fweb%2Fbin%2F5a14c64e-06db-11e9-abe2-4909b2eb0130.jpg?crop=2688%2C1792%2C0%2C0"
+      uri="https://www.thetimes.co.uk/imageserver/image/%2Fmethode%2Ftimes%2Fprod%2Fweb%2Fbin%2F5a14c64e-06db-11e9-abe2-4909b2eb0130.jpg?crop=2688%2C1792%2C0%2C0"
     />
   </View>
   <View
@@ -41,6 +41,7 @@ exports[`tile as huge 1`] = `
     >
       <ArticleLabel
         color="#005B8D"
+        hide={false}
         isVideo={false}
         title="label"
       />
@@ -117,7 +118,7 @@ exports[`tile as medium 1`] = `
     <Image
       aspectRatio={1.5}
       fill={true}
-      uri="//www.thetimes.co.uk/imageserver/image/%2Fmethode%2Ftimes%2Fprod%2Fweb%2Fbin%2F5a14c64e-06db-11e9-abe2-4909b2eb0130.jpg?crop=2688%2C1792%2C0%2C0"
+      uri="https://www.thetimes.co.uk/imageserver/image/%2Fmethode%2Ftimes%2Fprod%2Fweb%2Fbin%2F5a14c64e-06db-11e9-abe2-4909b2eb0130.jpg?crop=2688%2C1792%2C0%2C0"
     />
   </View>
   <View
@@ -136,6 +137,7 @@ exports[`tile as medium 1`] = `
     >
       <ArticleLabel
         color="#005B8D"
+        hide={false}
         isVideo={false}
         title="label"
       />
@@ -212,7 +214,7 @@ exports[`tile as wide 1`] = `
     <Image
       aspectRatio={1.5}
       fill={true}
-      uri="//www.thetimes.co.uk/imageserver/image/%2Fmethode%2Ftimes%2Fprod%2Fweb%2Fbin%2F5a14c64e-06db-11e9-abe2-4909b2eb0130.jpg?crop=2688%2C1792%2C0%2C0"
+      uri="https://www.thetimes.co.uk/imageserver/image/%2Fmethode%2Ftimes%2Fprod%2Fweb%2Fbin%2F5a14c64e-06db-11e9-abe2-4909b2eb0130.jpg?crop=2688%2C1792%2C0%2C0"
     />
   </View>
   <View
@@ -231,6 +233,7 @@ exports[`tile as wide 1`] = `
     >
       <ArticleLabel
         color="#005B8D"
+        hide={false}
         isVideo={false}
         title="label"
       />

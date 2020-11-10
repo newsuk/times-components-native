@@ -20,10 +20,10 @@ function renderAst(ast) {
   return renderTrees(summarise(ast), renderer);
 }
 
-function Label(props) {
-  const { title, isVideo } = props;
+function ArticleSummaryLabel(props) {
+  const { hide, title, isVideo } = props;
 
-  if (!title && !isVideo) {
+  if (hide || (!title && !isVideo)) {
     return null;
   }
 
@@ -68,7 +68,7 @@ function ArticleSummary(props) {
 
   return (
     <View style={style}>
-      {labelProps ? <Label {...labelProps} /> : null}
+      {labelProps ? <ArticleSummaryLabel {...labelProps} /> : null}
       {isOpinionByline && byline}
       {headline}
       {strapline}
@@ -102,6 +102,7 @@ ArticleSummary.propTypes = {
     color: PropTypes.string,
     isVideo: PropTypes.bool,
     title: PropTypes.string,
+    hide: PropTypes.bool,
   }),
   strapline: PropTypes.node,
   style: PropTypes.shape({}),
@@ -113,7 +114,9 @@ ArticleSummary.defaultProps = {
   datePublicationProps: null,
   flags: null,
   headline: null,
-  labelProps: null,
+  labelProps: {
+    hide: false,
+  },
   strapline: null,
   style: null,
 };
@@ -121,6 +124,7 @@ ArticleSummary.defaultProps = {
 export {
   ArticleSummaryContent,
   ArticleSummaryHeadline,
+  ArticleSummaryLabel,
   ArticleSummaryStrapline,
   renderAst,
   renderer,

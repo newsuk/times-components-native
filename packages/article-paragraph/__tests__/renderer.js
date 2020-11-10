@@ -15,6 +15,7 @@ export default (ast, section = "default") => {
           dropCapFont={theme.dropCapFont}
           key={indx}
           uid={indx}
+          attributes={attributes}
         >
           {children}
         </ArticleParagraph>

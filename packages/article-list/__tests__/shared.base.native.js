@@ -4,6 +4,7 @@ import TestRenderer from "react-test-renderer";
 import { iterator } from "@times-components-native/test-utils";
 import ArticleList from "../src/article-list";
 import articlesFixture from "../fixtures/articles.json";
+import { withMobileContext } from "@times-components-native/test-utils";
 
 export default (additionalTests = []) => {
   const realIntl = Intl;
@@ -26,13 +27,15 @@ export default (additionalTests = []) => {
       name: "article list",
       test() {
         const testInstance = TestRenderer.create(
-          <ArticleList
-            articles={articlesFixture.slice(0, 2)}
-            emptyStateMessage="Empty state"
-            onArticlePress={() => null}
-            pageSize={3}
-            refetch={() => null}
-          />,
+          withMobileContext(
+            <ArticleList
+              articles={articlesFixture.slice(0, 2)}
+              emptyStateMessage="Empty state"
+              onArticlePress={() => null}
+              pageSize={3}
+              refetch={() => null}
+            />,
+          ),
         );
 
         expect(testInstance).toMatchSnapshot();
@@ -42,14 +45,16 @@ export default (additionalTests = []) => {
       name: "article list with no images",
       test() {
         const testInstance = TestRenderer.create(
-          <ArticleList
-            articles={articlesFixture.slice(0, 1)}
-            emptyStateMessage="Empty state"
-            onArticlePress={() => null}
-            pageSize={3}
-            refetch={() => null}
-            showImages={false}
-          />,
+          withMobileContext(
+            <ArticleList
+              articles={articlesFixture.slice(0, 1)}
+              emptyStateMessage="Empty state"
+              onArticlePress={() => null}
+              pageSize={3}
+              refetch={() => null}
+              showImages={false}
+            />,
+          ),
         );
 
         expect(testInstance).toMatchSnapshot();
@@ -61,13 +66,15 @@ export default (additionalTests = []) => {
         const fetchMore = () => Promise.reject(new Error("test"));
 
         const testInstance = TestRenderer.create(
-          <ArticleList
-            articles={articlesFixture.slice(0, 1)}
-            emptyStateMessage="Empty state"
-            fetchMore={fetchMore}
-            onArticlePress={() => null}
-            refetch={() => null}
-          />,
+          withMobileContext(
+            <ArticleList
+              articles={articlesFixture.slice(0, 1)}
+              emptyStateMessage="Empty state"
+              fetchMore={fetchMore}
+              onArticlePress={() => null}
+              refetch={() => null}
+            />,
+          ),
         );
 
         try {

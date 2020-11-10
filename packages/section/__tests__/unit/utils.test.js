@@ -7,8 +7,9 @@ import {
   getImage,
   filterPuzzles,
   createPuzzleData,
-  composeSliceBuilders,
+  prepareSlicesForRender,
   isSupplementSection,
+  insertSectionAd,
 } from "../../src/utils";
 
 describe("splitPuzzlesBySlices", () => {
@@ -44,10 +45,9 @@ describe("splitPuzzlesBySlices", () => {
   });
 });
 
-describe("composeSliceBuilders", () => {
-  it("should invoke the two passed functions", () => {
-    const builderOne = jest.fn();
-    const builderTwo = jest.fn();
+describe("prepareSlicesForRender", () => {
+  const variants = {};
+  it("should transform data", () => {
     const originalData = [
       { id: "a", name: "LeadersSlice" },
       { id: "b", name: "DailyUniversalRegister" },
@@ -63,33 +63,64 @@ describe("composeSliceBuilders", () => {
       { id: "l", name: "DailyUniversalRegister" },
     ];
 
-    const buildData = composeSliceBuilders(builderOne, builderTwo);
-    buildData(originalData);
-    expect(builderOne).toHaveBeenCalled();
-    expect(builderTwo).toHaveBeenCalled();
+    const prepararedData = prepareSlicesForRender(true, variants)(originalData);
+    expect(prepararedData).toMatchSnapshot();
+  });
+});
+
+describe("insertSectionAd", () => {
+  const originalSlices = [
+    { id: "a", name: "LeadersSlice" },
+    { id: "b", name: "DailyUniversalRegister" },
+    { id: "c", name: "OtherSlice" },
+    { id: "d", name: "LeadersSlice" },
+  ];
+  const variants = {
+    sectionAd: {
+      group: "B",
+      slotName: "native-inline-ad-b",
+    },
+  };
+
+  it("should not insert ads for mobile", () => {
+    expect(insertSectionAd(false, variants)(originalSlices)).toEqual(
+      originalSlices,
+    );
   });
 
-  it("should invoke the second function with the result of the first being applied", () => {
-    const builderOne = jest.fn();
-    const builderTwo = jest.fn();
-    const originalData = [
+  it("should not insert ads for sections that have too few slices", () => {
+    const slices = originalSlices.slice(0, 1);
+    expect(insertSectionAd(true, variants)(slices)).toEqual(slices);
+  });
+
+  it("should not insert ads when no section variants provided", () => {
+    expect(insertSectionAd(true, null)(originalSlices)).toEqual(originalSlices);
+    expect(insertSectionAd(true, {})(originalSlices)).toEqual(originalSlices);
+    expect(insertSectionAd(true, { articleAd: {} })(originalSlices)).toEqual(
+      originalSlices,
+    );
+  });
+
+  it("should not insert ads for section variant A", () => {
+    expect(
+      insertSectionAd(true, {
+        sectionAd: { group: "A", slotName: "native-section-ad-a" },
+      })(originalSlices),
+    ).toEqual(originalSlices);
+  });
+
+  it("should insert ads for section variants other than A", () => {
+    expect(
+      insertSectionAd(true, {
+        sectionAd: { group: "B", slotName: "native-section-ad-b" },
+      })(originalSlices),
+    ).toEqual([
       { id: "a", name: "LeadersSlice" },
       { id: "b", name: "DailyUniversalRegister" },
       { id: "c", name: "OtherSlice" },
+      { name: "SectionAd", slotName: "native-section-ad-b" },
       { id: "d", name: "LeadersSlice" },
-      { id: "e", name: "DailyUniversalRegister" },
-      { id: "f", name: "OtherSlice" },
-      { id: "g", name: "OtherSlice" },
-      { id: "h", name: "LeadersSlice" },
-      { id: "i", name: "OtherSlice" },
-      { id: "j", name: "OtherSlice" },
-      { id: "k", name: "OtherSlice" },
-      { id: "l", name: "DailyUniversalRegister" },
-    ];
-
-    const buildData = composeSliceBuilders(builderOne, builderTwo);
-    buildData(originalData);
-    expect(builderTwo).toHaveBeenCalledWith(builderOne(originalData));
+    ]);
   });
 });
 

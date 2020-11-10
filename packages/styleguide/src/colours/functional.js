@@ -8,6 +8,8 @@ const functionalColours = {
   backgroundSecondary: "#EDEDED",
   black: "#000000",
   border: "#F0F0F0",
+  buff: "#F0EEDF",
+  buffKeyline: "#CECCBF",
   brandColour: "#1D1D1B",
   bullet: "#103546",
   contrast: "#FFFFFF",
@@ -30,6 +32,7 @@ const functionalColours = {
   white: "#FFFFFF",
   whiteGrey: "#F5F5F5",
   darkGrey: "#999999",
+  red: "#CC0000",
 };
 
 export default functionalColours;

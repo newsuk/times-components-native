@@ -9,8 +9,7 @@ import styleguide, {
   spacing,
 } from "@times-components-native/styleguide";
 import { AttributedString } from "@times-components-native/typeset";
-import { screenWidth } from "@times-components-native/utils";
-import Ad from "@times-components-native/ad";
+import Ad, { InlineAd } from "@times-components-native/ad";
 import ArticleImage from "@times-components-native/article-image";
 import InteractiveWrapper from "@times-components-native/interactive-wrapper";
 import KeyFacts from "@times-components-native/key-facts";
@@ -23,6 +22,7 @@ import InsetCaption from "./inset-caption";
 import styleFactory from "../styles/article-body";
 import ArticleLink from "./article-link";
 import InlineNewsletterPuff from "./inline-newsletter-puff";
+import { useResponsiveContext } from "@times-components-native/responsive";
 
 export default ({
   data,
@@ -39,6 +39,7 @@ export default ({
   scale,
   analyticsStream,
   narrowContent,
+  onParagraphTextLayout,
 }) => {
   const styles = styleFactory(scale);
   const { fontFactory } = styleguide({ scale });
@@ -180,22 +181,29 @@ export default ({
           data={data}
           dropCapFont={dropCapFont}
           narrowContent={narrowContent}
+          onParagraphTextLayout={onParagraphTextLayout}
         >
           {children}
         </ArticleParagraph>
       );
     },
     ad(key, attributes) {
-      const template = data.template;
-
-      // If tablet, only show on mainstandard template
-      if (isTablet && template !== "mainstandard") return null;
-
       return (
         <Ad
           key={key}
           adConfig={adConfig}
           slotName="native-inline-ad"
+          {...attributes}
+        />
+      );
+    },
+    inlineAd(key, attributes) {
+      return (
+        <InlineAd
+          key={key}
+          adConfig={adConfig}
+          slotName="native-inline-ad"
+          defaultFont={defaultFont}
           {...attributes}
         />
       );
@@ -252,10 +260,21 @@ export default ({
         } = element;
 
         return (
-          <InteractiveWrapper.ResponsiveImageInteractive
-            deckId={deckId}
+          <View
             key={key}
-          />
+            style={[
+              styles.interactiveContainer,
+              isTablet && styles.interactiveContainerTablet,
+              isTablet &&
+                display === "fullwidth" &&
+                styles.interactiveContainerFullWidth,
+            ]}
+          >
+            <InteractiveWrapper.ResponsiveImageInteractive
+              deckId={deckId}
+              key={key}
+            />
+          </View>
         );
       }
       if (element && element.value === "newsletter-puff") {
@@ -301,9 +320,14 @@ export default ({
         </View>
       );
     },
+    unorderedList(key, attributes, children, index, tree) {
+      return tree;
+    },
     pullQuote(key, { caption: { name, text, twitter } }, children) {
+      // eslint-disable-next-line react-hooks/rules-of-hooks
+      const { windowWidth } = useResponsiveContext();
       const content = children[0].string;
-      const contentWidth = Math.min(screenWidth(), tabletWidth);
+      const contentWidth = Math.min(windowWidth, tabletWidth);
       return (
         <Context.Consumer key={key}>
           {({
@@ -335,10 +359,19 @@ export default ({
         caption,
       },
     ) {
+      // eslint-disable-next-line react-hooks/rules-of-hooks
+      const { windowWidth } = useResponsiveContext();
       const aspectRatio = 16 / 9;
+
+      const getWideContentWidth = () => {
+        const contentWidth = isTablet ? tabletWidth : windowWidth;
+        return contentWidth - (isTablet && tabletRowPadding);
+      };
+
       const contentWidth = narrowContent
-        ? getNarrowArticleBreakpoint(screenWidth()).content
-        : screenWidth(isTablet) - (isTablet && tabletRowPadding);
+        ? getNarrowArticleBreakpoint(windowWidth).content
+        : getWideContentWidth();
+
       const height = contentWidth / aspectRatio;
 
       const captionStyle = {
@@ -373,8 +406,8 @@ export default ({
         </View>
       );
     },
-    unknown(key, attributes, children, index, tree) {
-      return tree;
+    unknown(key, attributes, children) {
+      return AttributedString.join(children);
     },
   };
 };

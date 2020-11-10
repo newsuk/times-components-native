@@ -1,19 +1,19 @@
 import React, { useReducer } from "react";
 import { ScrollView, StyleSheet, TextStyle, View } from "react-native";
 
-import { ColumnParameters, Line, ArticleMeasurements } from "../types";
+import { ColumnParameters, Line } from "../types";
 
 import { MeasureByline, MeasureContent } from "./MeasureComponents";
 import { MeasurementDispatch } from "./MeasurementDispatchContext";
 import { initialState, reducer } from "./reducer";
-import { ParagraphContent } from "../domain-types";
+import { Measurements, ParagraphContent } from "@times-components-native/types";
 import { BylineInput } from "@times-components-native/fixture-generator/src/types";
 
 interface Props {
   articleContents: ParagraphContent[];
   bylines: BylineInput[];
   columnParameters: ColumnParameters;
-  renderMeasuredContents: (articleMeasurements: ArticleMeasurements) => any;
+  renderMeasuredContents: (articleMeasurements: Measurements) => any;
   style: TextStyle;
 }
 
@@ -29,7 +29,7 @@ const allContentMeasured = (
 };
 
 export const InnerMeasureArticle: React.FC<
-  Props & { measurementState: ArticleMeasurements }
+  Props & { measurementState: Measurements }
 > = ({
   articleContents,
   bylines,

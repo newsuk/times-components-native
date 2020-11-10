@@ -1,4 +1,4 @@
-import { ParagraphContent } from "./domain-types";
+import { ParagraphContent } from "@times-components-native/types";
 
 export type Line = {
   text: string;
@@ -15,15 +15,6 @@ export interface PageColumn {
   };
   contents: ColumnContents;
   contentHeight: number;
-}
-
-export interface ArticleMeasurements {
-  contents: {
-    lines: { [key: string]: Line[] };
-    heights: { [key: string]: number };
-  };
-  bylineHeight: number | null;
-  bylineMargin: number | null;
 }
 
 export interface ColumnParameters {

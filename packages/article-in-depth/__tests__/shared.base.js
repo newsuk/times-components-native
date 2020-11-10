@@ -6,6 +6,7 @@ import ArticleInDepth from "../src/article-in-depth";
 import articleFixture, { testFixture } from "../fixtures/full-article";
 import sharedProps from "./shared-props";
 import { adConfig } from "./ad-mock";
+import { withMobileContext } from "@times-components-native/test-utils";
 
 const findComponents = (testInstance, componentName) =>
   testInstance.root.findAll((node) => {
@@ -22,71 +23,76 @@ const emptyArticle = {
   standfirst: null,
 };
 
-export const snapshotTests = (renderComponent) => [
-  {
-    name: "an error",
-    test() {
-      const testRenderer = renderComponent(
-        <ArticleInDepth
-          {...sharedProps}
-          error={{ message: "An example error." }}
-        />,
-      );
+export const snapshotTests = (renderComponent) => {
+  const renderComponentForMobile = (component) =>
+    withMobileContext(renderComponent(component));
 
-      expect(testRenderer).toMatchSnapshot();
-    },
-  },
-  {
-    name: "loading",
-    test() {
-      const testRenderer = renderComponent(
-        <ArticleInDepth {...sharedProps} isLoading />,
-      );
+  return [
+    {
+      name: "an error",
+      test() {
+        const testRenderer = renderComponentForMobile(
+          <ArticleInDepth
+            {...sharedProps}
+            error={{ message: "An example error." }}
+          />,
+        );
 
-      expect(testRenderer).toMatchSnapshot();
+        expect(testRenderer).toMatchSnapshot();
+      },
     },
-  },
-  {
-    name: "an article with no headline falls back to use shortHeadline",
-    test() {
-      const testRenderer = renderComponent(
-        <ArticleInDepth
-          {...sharedProps}
-          article={articleFixture({
-            ...testFixture,
-            ...emptyArticle,
-            headline: "",
-          })}
-        />,
-      );
+    {
+      name: "loading",
+      test() {
+        const testRenderer = renderComponentForMobile(
+          <ArticleInDepth {...sharedProps} isLoading />,
+        );
 
-      expect(testRenderer).toMatchSnapshot();
+        expect(testRenderer).toMatchSnapshot();
+      },
     },
-  },
-  {
-    name: "an article with ads",
-    test() {
-      const testRenderer = renderComponent(
-        <ArticleInDepth
-          {...sharedProps}
-          article={articleFixture({
-            ...testFixture,
-            ...emptyArticle,
-            content: [
-              {
-                attributes: {},
-                children: [],
-                name: "ad",
-              },
-            ],
-          })}
-        />,
-      );
+    {
+      name: "an article with no headline falls back to use shortHeadline",
+      test() {
+        const testRenderer = renderComponentForMobile(
+          <ArticleInDepth
+            {...sharedProps}
+            article={articleFixture({
+              ...testFixture,
+              ...emptyArticle,
+              headline: "",
+            })}
+          />,
+        );
 
-      expect(testRenderer).toMatchSnapshot();
+        expect(testRenderer).toMatchSnapshot();
+      },
     },
-  },
-];
+    {
+      name: "an article with ads",
+      test() {
+        const testRenderer = renderComponentForMobile(
+          <ArticleInDepth
+            {...sharedProps}
+            article={articleFixture({
+              ...testFixture,
+              ...emptyArticle,
+              content: [
+                {
+                  attributes: {},
+                  children: [],
+                  name: "ad",
+                },
+              ],
+            })}
+          />,
+        );
+
+        expect(testRenderer).toMatchSnapshot();
+      },
+    },
+  ];
+};
 
 const negativeTests = [
   {
