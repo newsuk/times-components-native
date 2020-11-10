@@ -37,17 +37,15 @@ const styles = StyleSheet.create({
     position: "absolute",
     bottom: -23,
     left: 100,
-    backgroundColor: 'transparent',
-    borderStyle: 'solid',
+    backgroundColor: "transparent",
+    borderStyle: "solid",
     borderColor: colours.functional.tooltip,
     borderLeftWidth: 12,
     borderRightWidth: 12,
     borderBottomWidth: 8,
-    borderLeftColor: 'transparent',
-    borderRightColor: 'transparent',
-    transform: [
-      {rotate: '180deg'}
-    ],
+    borderLeftColor: "transparent",
+    borderRightColor: "transparent",
+    transform: [{ rotate: "180deg" }],
     borderRadius: 3,
     shadowColor: colours.functional.black,
     shadowOffset: {

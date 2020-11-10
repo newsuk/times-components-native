@@ -13,47 +13,65 @@ const Comments = ({
   commentCount,
   onCommentGuidelinesPress,
   onCommentsPress,
+  onTooltipPresented,
+  tooltips,
   url,
-}) => (
-  <View style={styles.container}>
-    <Text style={styles.headline}>{`${commentCount} ${
-      commentCount === 1 ? "comment" : "comments"
-    }`}</Text>
-    <Text style={styles.supporting}>
-      Comments are subject to our community guidelines, which can be
-      viewed&nbsp;
-      <TextLink onPress={onCommentGuidelinesPress} style={styles.link}>
-        here
-      </TextLink>
-    </Text>
+}) => {
+  const tooltipType = "commenting";
 
+  const renderButton = () => (
+    <Context.Consumer>
+      {({ theme: { scale } }) => {
+        const themedStyleguide = styleguide({ scale });
+        const fontFactory = themedStyleguide.fontFactory({
+          font: "supporting",
+          fontSize: "button",
+        });
+        return (
+          <Button
+            fontSize={fontFactory.fontSize}
+            lineHeight={fontFactory.lineHeight}
+            onPress={(e) => onCommentsPress(e, { articleId, url })}
+            style={styles.button}
+            title={commentCount > 0 ? "View comments" : "Post a comment"}
+          />
+        );
+      }}
+    </Context.Consumer>
+  );
+
+  const renderButtonWithTooltip = () => (
     <Tooltip
       content={
         <Text>Tap to read comments and join in with the conversation</Text>
       }
-      placement="top"
+      onTooltipPresented={onTooltipPresented}
+      type={tooltipType}
     >
-      <Context.Consumer>
-        {({ theme: { scale } }) => {
-          const themedStyleguide = styleguide({ scale });
-          const fontFactory = themedStyleguide.fontFactory({
-            font: "supporting",
-            fontSize: "button",
-          });
-          return (
-            <Button
-              fontSize={fontFactory.fontSize}
-              lineHeight={fontFactory.lineHeight}
-              onPress={(e) => onCommentsPress(e, { articleId, url })}
-              style={styles.button}
-              title={commentCount > 0 ? "View comments" : "Post a comment"}
-            />
-          );
-        }}
-      </Context.Consumer>
+      {renderButton()}
     </Tooltip>
-  </View>
-);
+  );
+
+  const showCommentButton = tooltips?.includes(tooltipType)
+    ? renderButtonWithTooltip
+    : renderButton;
+
+  return (
+    <View style={styles.container}>
+      <Text style={styles.headline}>{`${commentCount} ${
+        commentCount === 1 ? "comment" : "comments"
+      }`}</Text>
+      <Text style={styles.supporting}>
+        Comments are subject to our community guidelines, which can be
+        viewed&nbsp;
+        <TextLink onPress={onCommentGuidelinesPress} style={styles.link}>
+          here
+        </TextLink>
+      </Text>
+      {showCommentButton()}
+    </View>
+  );
+};
 
 Comments.propTypes = {
   articleId: PropTypes.string.isRequired,

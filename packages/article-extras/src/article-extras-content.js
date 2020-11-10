@@ -16,12 +16,15 @@ const ArticleExtrasContent = ({
   onCommentGuidelinesPress,
   onCommentsPress,
   onRelatedArticlePress,
+  onTooltipPresented,
   onTopicPress,
   narrowContent,
   template,
+  tooltips,
 }) => {
   const { isTablet, narrowArticleBreakpoint } = useResponsiveContext();
   const isMobileMainStandard = !isTablet && template === "mainstandard";
+
   const {
     commentCount,
     commentsEnabled,
@@ -58,6 +61,8 @@ const ArticleExtrasContent = ({
         commentsEnabled={commentsEnabled}
         onCommentGuidelinesPress={onCommentGuidelinesPress}
         onCommentsPress={onCommentsPress}
+        onTooltipPresented={onTooltipPresented}
+        tooltips={tooltips}
         url={articleUrl}
       />
       {(isTablet || isMobileMainStandard) && (

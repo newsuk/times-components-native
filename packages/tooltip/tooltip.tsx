@@ -8,10 +8,16 @@ import styles from "./styles";
 interface Props {
   content: any;
   children: any;
-  placement: string;
+  onTooltipPresented: <T = unknown, R = unknown>(args?: T) => R;
+  type: string;
 }
 
-const Tooltip: React.FC<Props> = ({ content, children, placement }) => {
+const Tooltip: React.FC<Props> = ({
+  content,
+  children,
+  onTooltipPresented,
+  type,
+}) => {
   const [opacity] = useState(new Animated.Value(1));
 
   const onPress = () =>
@@ -20,6 +26,10 @@ const Tooltip: React.FC<Props> = ({ content, children, placement }) => {
       toValue: 0,
       useNativeDriver: true,
     }).start();
+
+  useEffect(() => {
+    onTooltipPresented(type);
+  }, []);
 
   return (
     <>
