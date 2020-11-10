@@ -1,5 +1,6 @@
 import { ChunkContents, ContentParameters } from "../types";
 import { splitParagraphContentByLine } from "@times-components-native/utils/src/splitParagraphContentByLine";
+import { spacing } from "@times-components-native/styleguide";
 
 import { Measurements, ParagraphContent } from "@times-components-native/types";
 
@@ -16,7 +17,17 @@ export const chunkInlineContent = (
   if (contents.length === 0)
     return { chunks: [], currentInlineContentHeight: 0 };
 
-  const { contentHeight, contentLineHeight } = contentParameters;
+  const { contentLineHeight } = contentParameters;
+
+  const contentHeight =
+    contentMeasurements.itemHeight || contentParameters.contentHeight;
+
+  console.log(
+    "CCCCCCCCCCCC%&*$&%*£&%*£$&%*(£$&%(*£$&%*$£",
+    contentMeasurements.itemHeight,
+    contentParameters.contentHeight,
+    contentHeight,
+  );
 
   const chunkedContent = contents.reduce(
     (

@@ -98,7 +98,7 @@ const InlineContent = (props: Props) => {
     url,
   } = props;
 
-  const articleImageProps = {
+  const imageProps = {
     captionOptions: {
       caption,
       credits,
@@ -118,7 +118,7 @@ const InlineContent = (props: Props) => {
     },
   };
 
-  // Component = <ArticleImage {...articleImageProps} />;
+  // Component = <ArticleImage {...imageProps} />;
   // }
 
   const { lineHeight } = defaultFont;
@@ -138,7 +138,7 @@ const InlineContent = (props: Props) => {
   const [ratioWidth, ratioHeight] = ratio.split(":");
   const aspectRatio = ratioWidth / ratioHeight;
   const inlineItemHeight = inlineItemWidth / aspectRatio;
-  const inlineContentHeight = inlineItemHeight + spacing(2) + 70; // <<<<<<<<<<<<<<<< TODO!!!!!!!!!!!!!!
+  const inlineContentHeight = inlineItemHeight + spacing(2); // <<<<<<<<<<<<<<<< TODO!!!!!!!!!!!!!!
 
   console.log("SDKFJSDKFJDSFJDSF:SDFJDLK", ratio, aspectRatio, caption);
 
@@ -160,12 +160,14 @@ const InlineContent = (props: Props) => {
     contentWidth: inlineContentWidth,
     contentHeight: inlineContentHeight,
     contentLineHeight: lineHeight,
+    itemWidth: inlineItemWidth,
   };
 
   return (
     <MeasureInlineContent
       content={paragraphs}
       contentParameters={contentParameters}
+      imageProps={imageProps}
       skeletonProps={skeletonProps}
       renderMeasuredContents={(contentMeasurements) => {
         const { chunks, currentInlineContentHeight } = chunkInlineContent(
@@ -174,9 +176,12 @@ const InlineContent = (props: Props) => {
           contentParameters,
         );
 
+        const itemHeight =
+          contentMeasurements.itemHeight || inlineContentHeight || 0;
+
         const requiredInlineContentHeight = Math.max(
           currentInlineContentHeight,
-          inlineContentHeight,
+          itemHeight,
         );
 
         const chunkedInlineContent = chunks[0] || [];
@@ -198,7 +203,7 @@ const InlineContent = (props: Props) => {
                   { width: inlineItemWidth, height: inlineContentHeight },
                 ]}
               >
-                <ArticleImage {...articleImageProps} />
+                <ArticleImage {...imageProps} />
                 {/* {Component} */}
               </View>
               <View

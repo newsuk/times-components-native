@@ -1,15 +1,21 @@
 import React, { useReducer } from "react";
 import { ScrollView, StyleSheet, View } from "react-native";
 
-import { MeasureContent } from "./MeasureInlineComponents";
+import { MeasureItem, MeasureContent } from "./MeasureInlineComponents";
 import { InlineMeasurementDispatch } from "./InlineMeasurementDispatchContext";
 import { initialState, reducer } from "./reducer";
 import { Measurements, ParagraphContent } from "@times-components-native/types";
-import { ContentParameters, Line, SkeletonProps } from "../types";
+import {
+  ArticleImageProps,
+  ContentParameters,
+  Line,
+  SkeletonProps,
+} from "../types";
 
 interface Props {
   content: ParagraphContent[];
   contentParameters: ContentParameters;
+  imageProps: ArticleImageProps;
   renderMeasuredContents: (contentMeasurements: Measurements) => any;
   skeletonProps: SkeletonProps;
 }
@@ -30,6 +36,7 @@ export const InnerMeasureInlineContent: React.FC<
 > = ({
   content,
   contentParameters,
+  imageProps,
   skeletonProps,
   renderMeasuredContents,
   measurementState,
@@ -37,12 +44,16 @@ export const InnerMeasureInlineContent: React.FC<
   const {
     contents: { lines, heights },
   } = measurementState;
-  if (allContentMeasured(content, heights, lines)) {
+  if (
+    allContentMeasured(content, heights, lines) &&
+    measurementState.itemHeight !== null
+  ) {
     return renderMeasuredContents(measurementState);
   }
 
   return (
     <ScrollView style={styles.renderOffscreen}>
+      <MeasureItem itemProps={imageProps} width={contentParameters.itemWidth} />
       <View
         style={{
           width: contentParameters.contentWidth,
