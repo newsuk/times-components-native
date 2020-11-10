@@ -9,7 +9,6 @@ import styleguide, {
   spacing,
 } from "@times-components-native/styleguide";
 import { AttributedString } from "@times-components-native/typeset";
-import { screenWidth } from "@times-components-native/utils";
 import Ad, { InlineAd } from "@times-components-native/ad";
 import ArticleImage from "@times-components-native/article-image";
 import InteractiveWrapper from "@times-components-native/interactive-wrapper";
@@ -23,6 +22,7 @@ import InsetCaption from "./inset-caption";
 import styleFactory from "../styles/article-body";
 import ArticleLink from "./article-link";
 import InlineNewsletterPuff from "./inline-newsletter-puff";
+import { useResponsiveContext } from "@times-components-native/responsive";
 
 export default ({
   data,
@@ -324,8 +324,10 @@ export default ({
       return tree;
     },
     pullQuote(key, { caption: { name, text, twitter } }, children) {
+      // eslint-disable-next-line react-hooks/rules-of-hooks
+      const { windowWidth } = useResponsiveContext();
       const content = children[0].string;
-      const contentWidth = Math.min(screenWidth(), tabletWidth);
+      const contentWidth = Math.min(windowWidth, tabletWidth);
       return (
         <Context.Consumer key={key}>
           {({
@@ -357,10 +359,19 @@ export default ({
         caption,
       },
     ) {
+      // eslint-disable-next-line react-hooks/rules-of-hooks
+      const { windowWidth } = useResponsiveContext();
       const aspectRatio = 16 / 9;
+
+      const getWideContentWidth = () => {
+        const contentWidth = isTablet ? tabletWidth : windowWidth;
+        return contentWidth - (isTablet && tabletRowPadding);
+      };
+
       const contentWidth = narrowContent
-        ? getNarrowArticleBreakpoint(screenWidth()).content
-        : screenWidth(isTablet) - (isTablet && tabletRowPadding);
+        ? getNarrowArticleBreakpoint(windowWidth).content
+        : getWideContentWidth();
+
       const height = contentWidth / aspectRatio;
 
       const captionStyle = {

@@ -30,6 +30,7 @@ exports[`tile ae huge 1`] = `
         >
           <ArticleLabel
             color="#005B8D"
+            hide={false}
             isVideo={false}
             title="label"
           />
@@ -117,6 +118,7 @@ exports[`tile ae medium 1`] = `
         >
           <ArticleLabel
             color="#005B8D"
+            hide={false}
             isVideo={false}
             title="label"
           />
@@ -204,6 +206,7 @@ exports[`tile ae wide 1`] = `
         >
           <ArticleLabel
             color="#005B8D"
+            hide={false}
             isVideo={false}
             title="label"
           />
@@ -291,6 +294,7 @@ exports[`tile ae without breakpoint should be like medium 1`] = `
         >
           <ArticleLabel
             color="#005B8D"
+            hide={false}
             isVideo={false}
             title="label"
           />

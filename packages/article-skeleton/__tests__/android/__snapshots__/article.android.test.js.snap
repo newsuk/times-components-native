@@ -41,7 +41,7 @@ exports[`1. a full article with all content items with dropcap template 1`] = `
         <View
           style={
             Object {
-              "left": 45,
+              "left": 0,
             }
           }
         >
@@ -78,7 +78,7 @@ exports[`1. a full article with all content items with dropcap template 1`] = `
               false,
               Object {},
               Object {
-                "height": 156,
+                "height": 260,
               },
             ]
           }
@@ -132,9 +132,9 @@ exports[`1. a full article with all content items with dropcap template 1`] = `
               style={
                 Array [
                   Object {
-                    "left": 195.0390625,
+                    "left": 139,
                     "position": "absolute",
-                    "top": 0,
+                    "top": 52,
                   },
                   Object {
                     "color": "#000000",
@@ -153,9 +153,9 @@ exports[`1. a full article with all content items with dropcap template 1`] = `
               style={
                 Array [
                   Object {
-                    "left": 292.017578125,
+                    "left": 139,
                     "position": "absolute",
-                    "top": 0,
+                    "top": 104,
                   },
                   Object {
                     "color": "#000000",
@@ -174,9 +174,9 @@ exports[`1. a full article with all content items with dropcap template 1`] = `
               style={
                 Array [
                   Object {
-                    "left": 388.75,
+                    "left": 0,
                     "position": "absolute",
-                    "top": 0,
+                    "top": 156,
                   },
                   Object {
                     "color": "#000000",
@@ -195,9 +195,9 @@ exports[`1. a full article with all content items with dropcap template 1`] = `
               style={
                 Array [
                   Object {
-                    "left": 512.095703125,
+                    "left": 123.345703125,
                     "position": "absolute",
-                    "top": 0,
+                    "top": 156,
                   },
                   Object {
                     "color": "#000000",
@@ -216,9 +216,9 @@ exports[`1. a full article with all content items with dropcap template 1`] = `
               style={
                 Array [
                   Object {
-                    "left": 631.486328125,
+                    "left": 0,
                     "position": "absolute",
-                    "top": 0,
+                    "top": 208,
                   },
                   Object {
                     "color": "#000000",
@@ -237,9 +237,9 @@ exports[`1. a full article with all content items with dropcap template 1`] = `
               style={
                 Array [
                   Object {
-                    "left": 139,
+                    "left": 67.552734375,
                     "position": "absolute",
-                    "top": 52,
+                    "top": 208,
                   },
                   Object {
                     "color": "#000000",
@@ -773,7 +773,7 @@ exports[`1. a full article with all content items with dropcap template 1`] = `
         >
           <Video
             accountId="57838016001"
-            height={421.875}
+            height={168.75}
             policyKey="1.2.3.4"
             poster={
               Object {
@@ -781,7 +781,7 @@ exports[`1. a full article with all content items with dropcap template 1`] = `
               }
             }
             videoId="4084164751001"
-            width={750}
+            width={300}
           />
           <View>
             <View
@@ -1655,7 +1655,7 @@ exports[`5. an article with a nested markup in first paragraph displays a drop c
         <View
           style={
             Object {
-              "left": 45,
+              "left": 0,
             }
           }
         >
@@ -1692,7 +1692,7 @@ exports[`5. an article with a nested markup in first paragraph displays a drop c
               false,
               Object {},
               Object {
-                "height": 156,
+                "height": 416,
               },
             ]
           }
@@ -1748,9 +1748,9 @@ exports[`5. an article with a nested markup in first paragraph displays a drop c
               style={
                 Array [
                   Object {
-                    "left": 260.42578125,
+                    "left": 159,
                     "position": "absolute",
-                    "top": 0,
+                    "top": 52,
                   },
                   Object {
                     "color": "#000000",
@@ -1770,9 +1770,9 @@ exports[`5. an article with a nested markup in first paragraph displays a drop c
               style={
                 Array [
                   Object {
-                    "left": 355.541015625,
+                    "left": 159,
                     "position": "absolute",
-                    "top": 0,
+                    "top": 104,
                   },
                   Object {
                     "color": "#000000",
@@ -1792,9 +1792,9 @@ exports[`5. an article with a nested markup in first paragraph displays a drop c
               style={
                 Array [
                   Object {
-                    "left": 424.763671875,
+                    "left": 228.22265625,
                     "position": "absolute",
-                    "top": 0,
+                    "top": 104,
                   },
                   Object {
                     "color": "#000000",
@@ -1814,9 +1814,9 @@ exports[`5. an article with a nested markup in first paragraph displays a drop c
               style={
                 Array [
                   Object {
-                    "left": 443.466796875,
+                    "left": 159,
                     "position": "absolute",
-                    "top": 0,
+                    "top": 156,
                   },
                   Object {
                     "color": "#000000",
@@ -1836,9 +1836,9 @@ exports[`5. an article with a nested markup in first paragraph displays a drop c
               style={
                 Array [
                   Object {
-                    "left": 542.888671875,
+                    "left": 0,
                     "position": "absolute",
-                    "top": 0,
+                    "top": 208,
                   },
                   Object {
                     "color": "#000000",
@@ -1858,9 +1858,9 @@ exports[`5. an article with a nested markup in first paragraph displays a drop c
               style={
                 Array [
                   Object {
-                    "left": 159,
+                    "left": 59.572265625,
                     "position": "absolute",
-                    "top": 52,
+                    "top": 208,
                   },
                   Object {
                     "color": "#000000",
@@ -1880,9 +1880,9 @@ exports[`5. an article with a nested markup in first paragraph displays a drop c
               style={
                 Array [
                   Object {
-                    "left": 302.560546875,
+                    "left": 203.1328125,
                     "position": "absolute",
-                    "top": 52,
+                    "top": 208,
                   },
                   Object {
                     "color": "#000000",
@@ -1902,9 +1902,9 @@ exports[`5. an article with a nested markup in first paragraph displays a drop c
               style={
                 Array [
                   Object {
-                    "left": 343.412109375,
+                    "left": 0,
                     "position": "absolute",
-                    "top": 52,
+                    "top": 260,
                   },
                   Object {
                     "color": "#000000",
@@ -1924,9 +1924,9 @@ exports[`5. an article with a nested markup in first paragraph displays a drop c
               style={
                 Array [
                   Object {
-                    "left": 420.6328125,
+                    "left": 77.220703125,
                     "position": "absolute",
-                    "top": 52,
+                    "top": 260,
                   },
                   Object {
                     "color": "#000000",
@@ -1946,9 +1946,9 @@ exports[`5. an article with a nested markup in first paragraph displays a drop c
               style={
                 Array [
                   Object {
-                    "left": 467.689453125,
+                    "left": 124.27734375,
                     "position": "absolute",
-                    "top": 52,
+                    "top": 260,
                   },
                   Object {
                     "color": "#000000",
@@ -1968,9 +1968,9 @@ exports[`5. an article with a nested markup in first paragraph displays a drop c
               style={
                 Array [
                   Object {
-                    "left": 496.18359375,
+                    "left": 152.771484375,
                     "position": "absolute",
-                    "top": 52,
+                    "top": 260,
                   },
                   Object {
                     "color": "#000000",
@@ -1990,9 +1990,9 @@ exports[`5. an article with a nested markup in first paragraph displays a drop c
               style={
                 Array [
                   Object {
-                    "left": 597.75,
+                    "left": 254.337890625,
                     "position": "absolute",
-                    "top": 52,
+                    "top": 260,
                   },
                   Object {
                     "color": "#000000",
@@ -2012,9 +2012,9 @@ exports[`5. an article with a nested markup in first paragraph displays a drop c
               style={
                 Array [
                   Object {
-                    "left": 159,
+                    "left": 0,
                     "position": "absolute",
-                    "top": 104,
+                    "top": 312,
                   },
                   Object {
                     "color": "#000000",
@@ -2034,9 +2034,9 @@ exports[`5. an article with a nested markup in first paragraph displays a drop c
               style={
                 Array [
                   Object {
-                    "left": 286.494140625,
+                    "left": 127.494140625,
                     "position": "absolute",
-                    "top": 104,
+                    "top": 312,
                   },
                   Object {
                     "color": "#000000",
@@ -2056,9 +2056,9 @@ exports[`5. an article with a nested markup in first paragraph displays a drop c
               style={
                 Array [
                   Object {
-                    "left": 362.818359375,
+                    "left": 203.818359375,
                     "position": "absolute",
-                    "top": 104,
+                    "top": 312,
                   },
                   Object {
                     "color": "#000000",
@@ -2078,9 +2078,9 @@ exports[`5. an article with a nested markup in first paragraph displays a drop c
               style={
                 Array [
                   Object {
-                    "left": 399.029296875,
+                    "left": 0,
                     "position": "absolute",
-                    "top": 104,
+                    "top": 364,
                   },
                   Object {
                     "color": "#000000",
@@ -2100,9 +2100,9 @@ exports[`5. an article with a nested markup in first paragraph displays a drop c
               style={
                 Array [
                   Object {
-                    "left": 473.75390625,
+                    "left": 74.724609375,
                     "position": "absolute",
-                    "top": 104,
+                    "top": 364,
                   },
                   Object {
                     "color": "#000000",
@@ -3555,7 +3555,7 @@ exports[`15. an article starting with single quote 1`] = `
         <View
           style={
             Object {
-              "left": 45,
+              "left": 0,
             }
           }
         >
@@ -3592,7 +3592,7 @@ exports[`15. an article starting with single quote 1`] = `
               false,
               Object {},
               Object {
-                "height": 208,
+                "height": 624,
               },
             ]
           }
@@ -3646,9 +3646,9 @@ exports[`15. an article starting with single quote 1`] = `
               style={
                 Array [
                   Object {
-                    "left": 285.060546875,
+                    "left": 0,
                     "position": "absolute",
-                    "top": 0,
+                    "top": 208,
                   },
                   Object {
                     "color": "#000000",
@@ -3667,9 +3667,9 @@ exports[`15. an article starting with single quote 1`] = `
               style={
                 Array [
                   Object {
-                    "left": 473.12890625,
+                    "left": 0,
                     "position": "absolute",
-                    "top": 0,
+                    "top": 260,
                   },
                   Object {
                     "color": "#000000",
@@ -3688,9 +3688,9 @@ exports[`15. an article starting with single quote 1`] = `
               style={
                 Array [
                   Object {
-                    "left": 594.365234375,
+                    "left": 121.236328125,
                     "position": "absolute",
-                    "top": 0,
+                    "top": 260,
                   },
                   Object {
                     "color": "#000000",
@@ -3709,9 +3709,9 @@ exports[`15. an article starting with single quote 1`] = `
               style={
                 Array [
                   Object {
-                    "left": 707.708984375,
+                    "left": 234.580078125,
                     "position": "absolute",
-                    "top": 0,
+                    "top": 260,
                   },
                   Object {
                     "color": "#000000",
@@ -3730,9 +3730,9 @@ exports[`15. an article starting with single quote 1`] = `
               style={
                 Array [
                   Object {
-                    "left": 182,
+                    "left": 0,
                     "position": "absolute",
-                    "top": 52,
+                    "top": 312,
                   },
                   Object {
                     "color": "#000000",
@@ -3751,9 +3751,9 @@ exports[`15. an article starting with single quote 1`] = `
               style={
                 Array [
                   Object {
-                    "left": 388.173828125,
+                    "left": 206.173828125,
                     "position": "absolute",
-                    "top": 52,
+                    "top": 312,
                   },
                   Object {
                     "color": "#000000",
@@ -3772,9 +3772,9 @@ exports[`15. an article starting with single quote 1`] = `
               style={
                 Array [
                   Object {
-                    "left": 465.693359375,
+                    "left": 0,
                     "position": "absolute",
-                    "top": 52,
+                    "top": 364,
                   },
                   Object {
                     "color": "#000000",
@@ -3793,9 +3793,9 @@ exports[`15. an article starting with single quote 1`] = `
               style={
                 Array [
                   Object {
-                    "left": 563.322265625,
+                    "left": 97.62890625,
                     "position": "absolute",
-                    "top": 52,
+                    "top": 364,
                   },
                   Object {
                     "color": "#000000",
@@ -3814,9 +3814,9 @@ exports[`15. an article starting with single quote 1`] = `
               style={
                 Array [
                   Object {
-                    "left": 680.09375,
+                    "left": 214.400390625,
                     "position": "absolute",
-                    "top": 52,
+                    "top": 364,
                   },
                   Object {
                     "color": "#000000",
@@ -3835,9 +3835,9 @@ exports[`15. an article starting with single quote 1`] = `
               style={
                 Array [
                   Object {
-                    "left": 182,
+                    "left": 0,
                     "position": "absolute",
-                    "top": 104,
+                    "top": 416,
                   },
                   Object {
                     "color": "#000000",
@@ -3856,9 +3856,9 @@ exports[`15. an article starting with single quote 1`] = `
               style={
                 Array [
                   Object {
-                    "left": 239.498046875,
+                    "left": 57.498046875,
                     "position": "absolute",
-                    "top": 104,
+                    "top": 416,
                   },
                   Object {
                     "color": "#000000",
@@ -3877,9 +3877,9 @@ exports[`15. an article starting with single quote 1`] = `
               style={
                 Array [
                   Object {
-                    "left": 359.451171875,
+                    "left": 177.451171875,
                     "position": "absolute",
-                    "top": 104,
+                    "top": 416,
                   },
                   Object {
                     "color": "#000000",
@@ -3898,9 +3898,9 @@ exports[`15. an article starting with single quote 1`] = `
               style={
                 Array [
                   Object {
-                    "left": 438.88671875,
+                    "left": 0,
                     "position": "absolute",
-                    "top": 104,
+                    "top": 468,
                   },
                   Object {
                     "color": "#000000",
@@ -3919,9 +3919,9 @@ exports[`15. an article starting with single quote 1`] = `
               style={
                 Array [
                   Object {
-                    "left": 522.892578125,
+                    "left": 84.005859375,
                     "position": "absolute",
-                    "top": 104,
+                    "top": 468,
                   },
                   Object {
                     "color": "#000000",
@@ -3940,9 +3940,9 @@ exports[`15. an article starting with single quote 1`] = `
               style={
                 Array [
                   Object {
-                    "left": 638.92578125,
+                    "left": 200.0390625,
                     "position": "absolute",
-                    "top": 104,
+                    "top": 468,
                   },
                   Object {
                     "color": "#000000",
@@ -3961,9 +3961,9 @@ exports[`15. an article starting with single quote 1`] = `
               style={
                 Array [
                   Object {
-                    "left": 182,
+                    "left": 0,
                     "position": "absolute",
-                    "top": 156,
+                    "top": 520,
                   },
                   Object {
                     "color": "#000000",
@@ -3982,9 +3982,9 @@ exports[`15. an article starting with single quote 1`] = `
               style={
                 Array [
                   Object {
-                    "left": 278.310546875,
+                    "left": 96.310546875,
                     "position": "absolute",
-                    "top": 156,
+                    "top": 520,
                   },
                   Object {
                     "color": "#000000",
@@ -4003,9 +4003,9 @@ exports[`15. an article starting with single quote 1`] = `
               style={
                 Array [
                   Object {
-                    "left": 398.509765625,
+                    "left": 216.509765625,
                     "position": "absolute",
-                    "top": 156,
+                    "top": 520,
                   },
                   Object {
                     "color": "#000000",
@@ -4024,9 +4024,9 @@ exports[`15. an article starting with single quote 1`] = `
               style={
                 Array [
                   Object {
-                    "left": 447.81640625,
+                    "left": 0,
                     "position": "absolute",
-                    "top": 156,
+                    "top": 572,
                   },
                   Object {
                     "color": "#000000",
@@ -4045,9 +4045,9 @@ exports[`15. an article starting with single quote 1`] = `
               style={
                 Array [
                   Object {
-                    "left": 524.984375,
+                    "left": 77.16796875,
                     "position": "absolute",
-                    "top": 156,
+                    "top": 572,
                   },
                   Object {
                     "color": "#000000",
@@ -4066,9 +4066,9 @@ exports[`15. an article starting with single quote 1`] = `
               style={
                 Array [
                   Object {
-                    "left": 625.21484375,
+                    "left": 177.3984375,
                     "position": "absolute",
-                    "top": 156,
+                    "top": 572,
                   },
                   Object {
                     "color": "#000000",
@@ -4165,7 +4165,7 @@ exports[`16. an article starting with double quote 1`] = `
         <View
           style={
             Object {
-              "left": 45,
+              "left": 0,
             }
           }
         >
@@ -4202,7 +4202,7 @@ exports[`16. an article starting with double quote 1`] = `
               false,
               Object {},
               Object {
-                "height": 260,
+                "height": 624,
               },
             ]
           }
@@ -4235,9 +4235,9 @@ exports[`16. an article starting with double quote 1`] = `
               style={
                 Array [
                   Object {
-                    "left": 235.53125,
+                    "left": 0,
                     "position": "absolute",
-                    "top": 0,
+                    "top": 208,
                   },
                   Object {
                     "color": "#000000",
@@ -4256,9 +4256,9 @@ exports[`16. an article starting with double quote 1`] = `
               style={
                 Array [
                   Object {
-                    "left": 318.060546875,
+                    "left": 82.529296875,
                     "position": "absolute",
-                    "top": 0,
+                    "top": 208,
                   },
                   Object {
                     "color": "#000000",
@@ -4277,9 +4277,9 @@ exports[`16. an article starting with double quote 1`] = `
               style={
                 Array [
                   Object {
-                    "left": 506.12890625,
+                    "left": 0,
                     "position": "absolute",
-                    "top": 0,
+                    "top": 260,
                   },
                   Object {
                     "color": "#000000",
@@ -4298,9 +4298,9 @@ exports[`16. an article starting with double quote 1`] = `
               style={
                 Array [
                   Object {
-                    "left": 215,
+                    "left": 121.236328125,
                     "position": "absolute",
-                    "top": 52,
+                    "top": 260,
                   },
                   Object {
                     "color": "#000000",
@@ -4319,9 +4319,9 @@ exports[`16. an article starting with double quote 1`] = `
               style={
                 Array [
                   Object {
-                    "left": 328.34375,
+                    "left": 234.580078125,
                     "position": "absolute",
-                    "top": 52,
+                    "top": 260,
                   },
                   Object {
                     "color": "#000000",
@@ -4340,9 +4340,9 @@ exports[`16. an article starting with double quote 1`] = `
               style={
                 Array [
                   Object {
-                    "left": 356.837890625,
+                    "left": 0,
                     "position": "absolute",
-                    "top": 52,
+                    "top": 312,
                   },
                   Object {
                     "color": "#000000",
@@ -4361,9 +4361,9 @@ exports[`16. an article starting with double quote 1`] = `
               style={
                 Array [
                   Object {
-                    "left": 563.01171875,
+                    "left": 206.173828125,
                     "position": "absolute",
-                    "top": 52,
+                    "top": 312,
                   },
                   Object {
                     "color": "#000000",
@@ -4382,9 +4382,9 @@ exports[`16. an article starting with double quote 1`] = `
               style={
                 Array [
                   Object {
-                    "left": 640.53125,
+                    "left": 0,
                     "position": "absolute",
-                    "top": 52,
+                    "top": 364,
                   },
                   Object {
                     "color": "#000000",
@@ -4403,9 +4403,9 @@ exports[`16. an article starting with double quote 1`] = `
               style={
                 Array [
                   Object {
-                    "left": 215,
+                    "left": 97.62890625,
                     "position": "absolute",
-                    "top": 104,
+                    "top": 364,
                   },
                   Object {
                     "color": "#000000",
@@ -4424,9 +4424,9 @@ exports[`16. an article starting with double quote 1`] = `
               style={
                 Array [
                   Object {
-                    "left": 331.771484375,
+                    "left": 214.400390625,
                     "position": "absolute",
-                    "top": 104,
+                    "top": 364,
                   },
                   Object {
                     "color": "#000000",
@@ -4445,9 +4445,9 @@ exports[`16. an article starting with double quote 1`] = `
               style={
                 Array [
                   Object {
-                    "left": 369.283203125,
+                    "left": 0,
                     "position": "absolute",
-                    "top": 104,
+                    "top": 416,
                   },
                   Object {
                     "color": "#000000",
@@ -4466,9 +4466,9 @@ exports[`16. an article starting with double quote 1`] = `
               style={
                 Array [
                   Object {
-                    "left": 426.78125,
+                    "left": 57.498046875,
                     "position": "absolute",
-                    "top": 104,
+                    "top": 416,
                   },
                   Object {
                     "color": "#000000",
@@ -4487,9 +4487,9 @@ exports[`16. an article starting with double quote 1`] = `
               style={
                 Array [
                   Object {
-                    "left": 546.734375,
+                    "left": 177.451171875,
                     "position": "absolute",
-                    "top": 104,
+                    "top": 416,
                   },
                   Object {
                     "color": "#000000",
@@ -4508,9 +4508,9 @@ exports[`16. an article starting with double quote 1`] = `
               style={
                 Array [
                   Object {
-                    "left": 626.169921875,
+                    "left": 0,
                     "position": "absolute",
-                    "top": 104,
+                    "top": 468,
                   },
                   Object {
                     "color": "#000000",
@@ -4529,9 +4529,9 @@ exports[`16. an article starting with double quote 1`] = `
               style={
                 Array [
                   Object {
-                    "left": 215,
+                    "left": 84.005859375,
                     "position": "absolute",
-                    "top": 156,
+                    "top": 468,
                   },
                   Object {
                     "color": "#000000",
@@ -4550,9 +4550,9 @@ exports[`16. an article starting with double quote 1`] = `
               style={
                 Array [
                   Object {
-                    "left": 331.033203125,
+                    "left": 200.0390625,
                     "position": "absolute",
-                    "top": 156,
+                    "top": 468,
                   },
                   Object {
                     "color": "#000000",
@@ -4571,9 +4571,9 @@ exports[`16. an article starting with double quote 1`] = `
               style={
                 Array [
                   Object {
-                    "left": 371.884765625,
+                    "left": 0,
                     "position": "absolute",
-                    "top": 156,
+                    "top": 520,
                   },
                   Object {
                     "color": "#000000",
@@ -4592,9 +4592,9 @@ exports[`16. an article starting with double quote 1`] = `
               style={
                 Array [
                   Object {
-                    "left": 468.1953125,
+                    "left": 96.310546875,
                     "position": "absolute",
-                    "top": 156,
+                    "top": 520,
                   },
                   Object {
                     "color": "#000000",
@@ -4613,9 +4613,9 @@ exports[`16. an article starting with double quote 1`] = `
               style={
                 Array [
                   Object {
-                    "left": 588.39453125,
+                    "left": 216.509765625,
                     "position": "absolute",
-                    "top": 156,
+                    "top": 520,
                   },
                   Object {
                     "color": "#000000",
@@ -4634,9 +4634,9 @@ exports[`16. an article starting with double quote 1`] = `
               style={
                 Array [
                   Object {
-                    "left": 637.701171875,
+                    "left": 0,
                     "position": "absolute",
-                    "top": 156,
+                    "top": 572,
                   },
                   Object {
                     "color": "#000000",
@@ -4655,9 +4655,9 @@ exports[`16. an article starting with double quote 1`] = `
               style={
                 Array [
                   Object {
-                    "left": 0,
+                    "left": 77.16796875,
                     "position": "absolute",
-                    "top": 208,
+                    "top": 572,
                   },
                   Object {
                     "color": "#000000",
@@ -4676,9 +4676,9 @@ exports[`16. an article starting with double quote 1`] = `
               style={
                 Array [
                   Object {
-                    "left": 100.23046875,
+                    "left": 177.3984375,
                     "position": "absolute",
-                    "top": 208,
+                    "top": 572,
                   },
                   Object {
                     "color": "#000000",
@@ -5334,7 +5334,7 @@ exports[`17. an article with variant testing 1`] = `
         >
           <Video
             accountId="57838016001"
-            height={421.875}
+            height={168.75}
             policyKey="1.2.3.4"
             poster={
               Object {
@@ -5342,7 +5342,7 @@ exports[`17. an article with variant testing 1`] = `
               }
             }
             videoId="4084164751001"
-            width={750}
+            width={300}
           />
           <View>
             <View
@@ -8653,7 +8653,7 @@ exports[`21. an article with inline paragraph 1`] = `
         <View
           style={
             Object {
-              "left": 45,
+              "left": 0,
             }
           }
         >
@@ -8690,7 +8690,7 @@ exports[`21. an article with inline paragraph 1`] = `
               false,
               Object {},
               Object {
-                "height": 468,
+                "height": 1196,
               },
             ]
           }
@@ -8786,9 +8786,9 @@ exports[`21. an article with inline paragraph 1`] = `
               style={
                 Array [
                   Object {
-                    "left": 284.490234375,
+                    "left": 69,
                     "position": "absolute",
-                    "top": 0,
+                    "top": 52,
                   },
                   Object {
                     "color": "#000000",
@@ -8807,9 +8807,9 @@ exports[`21. an article with inline paragraph 1`] = `
               style={
                 Array [
                   Object {
-                    "left": 361.447265625,
+                    "left": 145.95703125,
                     "position": "absolute",
-                    "top": 0,
+                    "top": 52,
                   },
                   Object {
                     "color": "#000000",
@@ -8828,9 +8828,9 @@ exports[`21. an article with inline paragraph 1`] = `
               style={
                 Array [
                   Object {
-                    "left": 408.50390625,
+                    "left": 193.013671875,
                     "position": "absolute",
-                    "top": 0,
+                    "top": 52,
                   },
                   Object {
                     "color": "#000000",
@@ -8849,9 +8849,9 @@ exports[`21. an article with inline paragraph 1`] = `
               style={
                 Array [
                   Object {
-                    "left": 498.978515625,
+                    "left": 69,
                     "position": "absolute",
-                    "top": 0,
+                    "top": 104,
                   },
                   Object {
                     "color": "#000000",
@@ -8870,9 +8870,9 @@ exports[`21. an article with inline paragraph 1`] = `
               style={
                 Array [
                   Object {
-                    "left": 546.03515625,
+                    "left": 116.056640625,
                     "position": "absolute",
-                    "top": 0,
+                    "top": 104,
                   },
                   Object {
                     "color": "#000000",
@@ -8891,9 +8891,9 @@ exports[`21. an article with inline paragraph 1`] = `
               style={
                 Array [
                   Object {
-                    "left": 69,
+                    "left": 0,
                     "position": "absolute",
-                    "top": 52,
+                    "top": 156,
                   },
                   Object {
                     "color": "#000000",
@@ -8912,9 +8912,9 @@ exports[`21. an article with inline paragraph 1`] = `
               style={
                 Array [
                   Object {
-                    "left": 161.337890625,
+                    "left": 92.337890625,
                     "position": "absolute",
-                    "top": 52,
+                    "top": 156,
                   },
                   Object {
                     "color": "#000000",
@@ -8933,9 +8933,9 @@ exports[`21. an article with inline paragraph 1`] = `
               style={
                 Array [
                   Object {
-                    "left": 255.78515625,
+                    "left": 0,
                     "position": "absolute",
-                    "top": 52,
+                    "top": 208,
                   },
                   Object {
                     "color": "#000000",
@@ -8954,9 +8954,9 @@ exports[`21. an article with inline paragraph 1`] = `
               style={
                 Array [
                   Object {
-                    "left": 368.478515625,
+                    "left": 112.693359375,
                     "position": "absolute",
-                    "top": 52,
+                    "top": 208,
                   },
                   Object {
                     "color": "#000000",
@@ -8975,9 +8975,9 @@ exports[`21. an article with inline paragraph 1`] = `
               style={
                 Array [
                   Object {
-                    "left": 408.732421875,
+                    "left": 152.947265625,
                     "position": "absolute",
-                    "top": 52,
+                    "top": 208,
                   },
                   Object {
                     "color": "#000000",
@@ -8996,9 +8996,9 @@ exports[`21. an article with inline paragraph 1`] = `
               style={
                 Array [
                   Object {
-                    "left": 465.140625,
+                    "left": 209.35546875,
                     "position": "absolute",
-                    "top": 52,
+                    "top": 208,
                   },
                   Object {
                     "color": "#000000",
@@ -9017,9 +9017,9 @@ exports[`21. an article with inline paragraph 1`] = `
               style={
                 Array [
                   Object {
-                    "left": 544.576171875,
+                    "left": 0,
                     "position": "absolute",
-                    "top": 52,
+                    "top": 260,
                   },
                   Object {
                     "color": "#000000",
@@ -9038,9 +9038,9 @@ exports[`21. an article with inline paragraph 1`] = `
               style={
                 Array [
                   Object {
-                    "left": 69,
+                    "left": 104.16796875,
                     "position": "absolute",
-                    "top": 104,
+                    "top": 260,
                   },
                   Object {
                     "color": "#000000",
@@ -9059,9 +9059,9 @@ exports[`21. an article with inline paragraph 1`] = `
               style={
                 Array [
                   Object {
-                    "left": 167.4375,
+                    "left": 202.60546875,
                     "position": "absolute",
-                    "top": 104,
+                    "top": 260,
                   },
                   Object {
                     "color": "#000000",
@@ -9080,9 +9080,9 @@ exports[`21. an article with inline paragraph 1`] = `
               style={
                 Array [
                   Object {
-                    "left": 208.2890625,
+                    "left": 0,
                     "position": "absolute",
-                    "top": 104,
+                    "top": 312,
                   },
                   Object {
                     "color": "#000000",
@@ -9101,9 +9101,9 @@ exports[`21. an article with inline paragraph 1`] = `
               style={
                 Array [
                   Object {
-                    "left": 292.62890625,
+                    "left": 84.33984375,
                     "position": "absolute",
-                    "top": 104,
+                    "top": 312,
                   },
                   Object {
                     "color": "#000000",
@@ -9122,9 +9122,9 @@ exports[`21. an article with inline paragraph 1`] = `
               style={
                 Array [
                   Object {
-                    "left": 333.48046875,
+                    "left": 125.19140625,
                     "position": "absolute",
-                    "top": 104,
+                    "top": 312,
                   },
                   Object {
                     "color": "#000000",
@@ -9143,9 +9143,9 @@ exports[`21. an article with inline paragraph 1`] = `
               style={
                 Array [
                   Object {
-                    "left": 459.779296875,
+                    "left": 0,
                     "position": "absolute",
-                    "top": 104,
+                    "top": 364,
                   },
                   Object {
                     "color": "#000000",
@@ -9164,9 +9164,9 @@ exports[`21. an article with inline paragraph 1`] = `
               style={
                 Array [
                   Object {
-                    "left": 538.01953125,
+                    "left": 78.240234375,
                     "position": "absolute",
-                    "top": 104,
+                    "top": 364,
                   },
                   Object {
                     "color": "#000000",
@@ -9187,7 +9187,7 @@ exports[`21. an article with inline paragraph 1`] = `
                   Object {
                     "left": 0,
                     "position": "absolute",
-                    "top": 156,
+                    "top": 416,
                   },
                   Object {
                     "color": "#000000",
@@ -9208,7 +9208,7 @@ exports[`21. an article with inline paragraph 1`] = `
                   Object {
                     "left": 137.126953125,
                     "position": "absolute",
-                    "top": 156,
+                    "top": 416,
                   },
                   Object {
                     "color": "#000000",
@@ -9227,9 +9227,9 @@ exports[`21. an article with inline paragraph 1`] = `
               style={
                 Array [
                   Object {
-                    "left": 279.896484375,
+                    "left": 0,
                     "position": "absolute",
-                    "top": 156,
+                    "top": 468,
                   },
                   Object {
                     "color": "#000000",
@@ -9248,9 +9248,9 @@ exports[`21. an article with inline paragraph 1`] = `
               style={
                 Array [
                   Object {
-                    "left": 370.65234375,
+                    "left": 90.755859375,
                     "position": "absolute",
-                    "top": 156,
+                    "top": 468,
                   },
                   Object {
                     "color": "#000000",
@@ -9269,9 +9269,9 @@ exports[`21. an article with inline paragraph 1`] = `
               style={
                 Array [
                   Object {
-                    "left": 493.681640625,
+                    "left": 213.78515625,
                     "position": "absolute",
-                    "top": 156,
+                    "top": 468,
                   },
                   Object {
                     "color": "#000000",
@@ -9290,9 +9290,9 @@ exports[`21. an article with inline paragraph 1`] = `
               style={
                 Array [
                   Object {
-                    "left": 563.1328125,
+                    "left": 0,
                     "position": "absolute",
-                    "top": 156,
+                    "top": 520,
                   },
                   Object {
                     "color": "#000000",
@@ -9311,9 +9311,9 @@ exports[`21. an article with inline paragraph 1`] = `
               style={
                 Array [
                   Object {
-                    "left": 0,
+                    "left": 78.240234375,
                     "position": "absolute",
-                    "top": 208,
+                    "top": 520,
                   },
                   Object {
                     "color": "#000000",
@@ -9332,9 +9332,9 @@ exports[`21. an article with inline paragraph 1`] = `
               style={
                 Array [
                   Object {
-                    "left": 112.4296875,
+                    "left": 190.669921875,
                     "position": "absolute",
-                    "top": 208,
+                    "top": 520,
                   },
                   Object {
                     "color": "#000000",
@@ -9353,9 +9353,9 @@ exports[`21. an article with inline paragraph 1`] = `
               style={
                 Array [
                   Object {
-                    "left": 161.736328125,
+                    "left": 0,
                     "position": "absolute",
-                    "top": 208,
+                    "top": 572,
                   },
                   Object {
                     "color": "#000000",
@@ -9374,9 +9374,9 @@ exports[`21. an article with inline paragraph 1`] = `
               style={
                 Array [
                   Object {
-                    "left": 221.30859375,
+                    "left": 59.572265625,
                     "position": "absolute",
-                    "top": 208,
+                    "top": 572,
                   },
                   Object {
                     "color": "#000000",
@@ -9395,9 +9395,9 @@ exports[`21. an article with inline paragraph 1`] = `
               style={
                 Array [
                   Object {
-                    "left": 293.625,
+                    "left": 131.888671875,
                     "position": "absolute",
-                    "top": 208,
+                    "top": 572,
                   },
                   Object {
                     "color": "#000000",
@@ -9416,9 +9416,9 @@ exports[`21. an article with inline paragraph 1`] = `
               style={
                 Array [
                   Object {
-                    "left": 354.673828125,
+                    "left": 192.9375,
                     "position": "absolute",
-                    "top": 208,
+                    "top": 572,
                   },
                   Object {
                     "color": "#000000",
@@ -9437,9 +9437,9 @@ exports[`21. an article with inline paragraph 1`] = `
               style={
                 Array [
                   Object {
-                    "left": 396.615234375,
+                    "left": 0,
                     "position": "absolute",
-                    "top": 208,
+                    "top": 624,
                   },
                   Object {
                     "color": "#000000",
@@ -9458,9 +9458,9 @@ exports[`21. an article with inline paragraph 1`] = `
               style={
                 Array [
                   Object {
-                    "left": 456.1875,
+                    "left": 59.572265625,
                     "position": "absolute",
-                    "top": 208,
+                    "top": 624,
                   },
                   Object {
                     "color": "#000000",
@@ -9479,9 +9479,9 @@ exports[`21. an article with inline paragraph 1`] = `
               style={
                 Array [
                   Object {
-                    "left": 572.4140625,
+                    "left": 175.798828125,
                     "position": "absolute",
-                    "top": 208,
+                    "top": 624,
                   },
                   Object {
                     "color": "#000000",
@@ -9502,7 +9502,7 @@ exports[`21. an article with inline paragraph 1`] = `
                   Object {
                     "left": 0,
                     "position": "absolute",
-                    "top": 260,
+                    "top": 676,
                   },
                   Object {
                     "color": "#000000",
@@ -9523,7 +9523,7 @@ exports[`21. an article with inline paragraph 1`] = `
                   Object {
                     "left": 119.232421875,
                     "position": "absolute",
-                    "top": 260,
+                    "top": 676,
                   },
                   Object {
                     "color": "#000000",
@@ -9545,7 +9545,7 @@ exports[`21. an article with inline paragraph 1`] = `
                   Object {
                     "left": 174.33984375,
                     "position": "absolute",
-                    "top": 260,
+                    "top": 676,
                   },
                   Object {
                     "color": "#000000",
@@ -9565,9 +9565,9 @@ exports[`21. an article with inline paragraph 1`] = `
               style={
                 Array [
                   Object {
-                    "left": 264.09375,
+                    "left": 0,
                     "position": "absolute",
-                    "top": 260,
+                    "top": 728,
                   },
                   Object {
                     "color": "#000000",
@@ -9587,9 +9587,9 @@ exports[`21. an article with inline paragraph 1`] = `
               style={
                 Array [
                   Object {
-                    "left": 304.9453125,
+                    "left": 40.8515625,
                     "position": "absolute",
-                    "top": 260,
+                    "top": 728,
                   },
                   Object {
                     "color": "#000000",
@@ -9609,9 +9609,9 @@ exports[`21. an article with inline paragraph 1`] = `
               style={
                 Array [
                   Object {
-                    "left": 372.33984375,
+                    "left": 108.24609375,
                     "position": "absolute",
-                    "top": 260,
+                    "top": 728,
                   },
                   Object {
                     "color": "#000000",
@@ -9635,12 +9635,12 @@ exports[`21. an article with inline paragraph 1`] = `
                     "color": "#006699",
                     "fontFamily": "TimesDigitalW04",
                     "fontSize": 36,
-                    "left": 431.912109375,
+                    "left": 167.818359375,
                     "lineHeight": 52,
                     "marginBottom": 25,
                     "marginTop": 0,
                     "position": "absolute",
-                    "top": 260,
+                    "top": 728,
                   },
                 ]
               }
@@ -9658,58 +9658,12 @@ exports[`21. an article with inline paragraph 1`] = `
                     "color": "#006699",
                     "fontFamily": "TimesDigitalW04",
                     "fontSize": 36,
-                    "left": 521.384765625,
+                    "left": 257.291015625,
                     "lineHeight": 52,
                     "marginBottom": 25,
                     "marginTop": 0,
                     "position": "absolute",
-                    "top": 260,
-                  },
-                ]
-              }
-            >
-               
-            </Text>
-            <Text
-              accessibilityRole="link"
-              style={
-                Array [
-                  Object {
-                    "textDecorationLine": "underline",
-                  },
-                  Object {
-                    "color": "#006699",
-                    "fontFamily": "TimesDigitalW04",
-                    "fontSize": 36,
-                    "left": 530.296875,
-                    "lineHeight": 52,
-                    "marginBottom": 25,
-                    "marginTop": 0,
-                    "position": "absolute",
-                    "top": 260,
-                  },
-                ]
-              }
-            >
-              James
-            </Text>
-            <Text
-              accessibilityRole="link"
-              style={
-                Array [
-                  Object {
-                    "textDecorationLine": "underline",
-                  },
-                  Object {
-                    "color": "#006699",
-                    "fontFamily": "TimesDigitalW04",
-                    "fontSize": 36,
-                    "left": 638.9296875,
-                    "lineHeight": 52,
-                    "marginBottom": 25,
-                    "marginTop": 0,
-                    "position": "absolute",
-                    "top": 260,
+                    "top": 728,
                   },
                 ]
               }
@@ -9732,12 +9686,12 @@ exports[`21. an article with inline paragraph 1`] = `
                     "marginBottom": 25,
                     "marginTop": 0,
                     "position": "absolute",
-                    "top": 312,
+                    "top": 780,
                   },
                 ]
               }
             >
-              Bond
+              James
             </Text>
             <Text
               accessibilityRole="link"
@@ -9750,12 +9704,12 @@ exports[`21. an article with inline paragraph 1`] = `
                     "color": "#006699",
                     "fontFamily": "TimesDigitalW04",
                     "fontSize": 36,
-                    "left": 83.109375,
+                    "left": 108.6328125,
                     "lineHeight": 52,
                     "marginBottom": 25,
                     "marginTop": 0,
                     "position": "absolute",
-                    "top": 312,
+                    "top": 780,
                   },
                 ]
               }
@@ -9773,12 +9727,58 @@ exports[`21. an article with inline paragraph 1`] = `
                     "color": "#006699",
                     "fontFamily": "TimesDigitalW04",
                     "fontSize": 36,
-                    "left": 92.021484375,
+                    "left": 117.544921875,
                     "lineHeight": 52,
                     "marginBottom": 25,
                     "marginTop": 0,
                     "position": "absolute",
-                    "top": 312,
+                    "top": 780,
+                  },
+                ]
+              }
+            >
+              Bond
+            </Text>
+            <Text
+              accessibilityRole="link"
+              style={
+                Array [
+                  Object {
+                    "textDecorationLine": "underline",
+                  },
+                  Object {
+                    "color": "#006699",
+                    "fontFamily": "TimesDigitalW04",
+                    "fontSize": 36,
+                    "left": 200.654296875,
+                    "lineHeight": 52,
+                    "marginBottom": 25,
+                    "marginTop": 0,
+                    "position": "absolute",
+                    "top": 780,
+                  },
+                ]
+              }
+            >
+               
+            </Text>
+            <Text
+              accessibilityRole="link"
+              style={
+                Array [
+                  Object {
+                    "textDecorationLine": "underline",
+                  },
+                  Object {
+                    "color": "#006699",
+                    "fontFamily": "TimesDigitalW04",
+                    "fontSize": 36,
+                    "left": 209.56640625,
+                    "lineHeight": 52,
+                    "marginBottom": 25,
+                    "marginTop": 0,
+                    "position": "absolute",
+                    "top": 780,
                   },
                 ]
               }
@@ -9791,9 +9791,9 @@ exports[`21. an article with inline paragraph 1`] = `
               style={
                 Array [
                   Object {
-                    "left": 169.5234375,
+                    "left": 0,
                     "position": "absolute",
-                    "top": 312,
+                    "top": 832,
                   },
                   Object {
                     "color": "#000000",
@@ -9812,9 +9812,9 @@ exports[`21. an article with inline paragraph 1`] = `
               style={
                 Array [
                   Object {
-                    "left": 261.861328125,
+                    "left": 92.337890625,
                     "position": "absolute",
-                    "top": 312,
+                    "top": 832,
                   },
                   Object {
                     "color": "#000000",
@@ -9833,9 +9833,9 @@ exports[`21. an article with inline paragraph 1`] = `
               style={
                 Array [
                   Object {
-                    "left": 384.873046875,
+                    "left": 215.349609375,
                     "position": "absolute",
-                    "top": 312,
+                    "top": 832,
                   },
                   Object {
                     "color": "#000000",
@@ -9854,9 +9854,9 @@ exports[`21. an article with inline paragraph 1`] = `
               style={
                 Array [
                   Object {
-                    "left": 444.4453125,
+                    "left": 0,
                     "position": "absolute",
-                    "top": 312,
+                    "top": 884,
                   },
                   Object {
                     "color": "#000000",
@@ -9875,9 +9875,9 @@ exports[`21. an article with inline paragraph 1`] = `
               style={
                 Array [
                   Object {
-                    "left": 510.01171875,
+                    "left": 65.56640625,
                     "position": "absolute",
-                    "top": 312,
+                    "top": 884,
                   },
                   Object {
                     "color": "#000000",
@@ -9896,9 +9896,9 @@ exports[`21. an article with inline paragraph 1`] = `
               style={
                 Array [
                   Object {
-                    "left": 586.30078125,
+                    "left": 141.85546875,
                     "position": "absolute",
-                    "top": 312,
+                    "top": 884,
                   },
                   Object {
                     "color": "#000000",
@@ -9919,7 +9919,7 @@ exports[`21. an article with inline paragraph 1`] = `
                   Object {
                     "left": 0,
                     "position": "absolute",
-                    "top": 364,
+                    "top": 936,
                   },
                   Object {
                     "color": "#000000",
@@ -9940,7 +9940,7 @@ exports[`21. an article with inline paragraph 1`] = `
                   Object {
                     "left": 106.98046875,
                     "position": "absolute",
-                    "top": 364,
+                    "top": 936,
                   },
                   Object {
                     "color": "#000000",
@@ -9959,9 +9959,9 @@ exports[`21. an article with inline paragraph 1`] = `
               style={
                 Array [
                   Object {
-                    "left": 254.25,
+                    "left": 0,
                     "position": "absolute",
-                    "top": 364,
+                    "top": 988,
                   },
                   Object {
                     "color": "#000000",
@@ -9980,9 +9980,9 @@ exports[`21. an article with inline paragraph 1`] = `
               style={
                 Array [
                   Object {
-                    "left": 348.2578125,
+                    "left": 94.0078125,
                     "position": "absolute",
-                    "top": 364,
+                    "top": 988,
                   },
                   Object {
                     "color": "#000000",
@@ -10001,9 +10001,9 @@ exports[`21. an article with inline paragraph 1`] = `
               style={
                 Array [
                   Object {
-                    "left": 493.453125,
+                    "left": 0,
                     "position": "absolute",
-                    "top": 364,
+                    "top": 1040,
                   },
                   Object {
                     "color": "#000000",
@@ -10022,9 +10022,9 @@ exports[`21. an article with inline paragraph 1`] = `
               style={
                 Array [
                   Object {
-                    "left": 562.11328125,
+                    "left": 68.66015625,
                     "position": "absolute",
-                    "top": 364,
+                    "top": 1040,
                   },
                   Object {
                     "color": "#000000",
@@ -10045,7 +10045,7 @@ exports[`21. an article with inline paragraph 1`] = `
                   Object {
                     "left": 0,
                     "position": "absolute",
-                    "top": 416,
+                    "top": 1092,
                   },
                   Object {
                     "color": "#000000",
@@ -10066,7 +10066,7 @@ exports[`21. an article with inline paragraph 1`] = `
                   Object {
                     "left": 116.0859375,
                     "position": "absolute",
-                    "top": 416,
+                    "top": 1092,
                   },
                   Object {
                     "color": "#000000",
@@ -10085,9 +10085,9 @@ exports[`21. an article with inline paragraph 1`] = `
               style={
                 Array [
                   Object {
-                    "left": 214.716796875,
+                    "left": 0,
                     "position": "absolute",
-                    "top": 416,
+                    "top": 1144,
                   },
                   Object {
                     "color": "#000000",

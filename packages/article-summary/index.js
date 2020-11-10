@@ -2,6 +2,7 @@ export {
   default,
   ArticleSummaryContent,
   ArticleSummaryHeadline,
+  ArticleSummaryLabel,
   ArticleSummaryStrapline,
   renderAst,
   renderer,

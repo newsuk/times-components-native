@@ -23,6 +23,7 @@ import {
   paragraphStartingWithSingleQuote,
   paragraphStartingWithDoubleQuote,
 } from "../fixtures/dropcap-article-content";
+import { withMobileContext } from "@times-components-native/test-utils";
 
 export const renderArticle = (
   data,
@@ -372,7 +373,7 @@ export const snapshotTests = (renderComponent) => [
     test() {
       const template = "maincomment";
       const article = articleFixture({ ...fixtureArgs, template });
-      const output = renderComponent(renderArticle(article));
+      const output = renderComponent(withMobileContext(renderArticle(article)));
 
       expect(output).toMatchSnapshot();
     },
@@ -415,7 +416,7 @@ export const snapshotTests = (renderComponent) => [
           },
         ],
       });
-      const output = renderComponent(renderArticle(article));
+      const output = renderComponent(withMobileContext(renderArticle(article)));
 
       expect(output).toMatchSnapshot();
     },
@@ -424,7 +425,7 @@ export const snapshotTests = (renderComponent) => [
     name: "an article with no content",
     test() {
       const article = articleFixture({ ...fixtureArgs, content: [] });
-      const output = renderComponent(renderArticle(article));
+      const output = renderComponent(withMobileContext(renderArticle(article)));
 
       expect(output).toMatchSnapshot();
     },
@@ -433,7 +434,7 @@ export const snapshotTests = (renderComponent) => [
     name: "an article with no content if content is set as null",
     test() {
       const article = articleFixture({ ...fixtureArgs, content: null });
-      const output = renderComponent(renderArticle(article));
+      const output = renderComponent(withMobileContext(renderArticle(article)));
 
       expect(output).toMatchSnapshot();
     },
@@ -450,7 +451,7 @@ export const snapshotTests = (renderComponent) => [
         template,
         topics: [],
       });
-      const output = renderComponent(renderArticle(article));
+      const output = renderComponent(withMobileContext(renderArticle(article)));
 
       expect(output).toMatchSnapshot();
     },
@@ -462,7 +463,7 @@ export const snapshotTests = (renderComponent) => [
         ...fixtureArgs,
         content: contentWithHeadingTags,
       });
-      const output = renderComponent(renderArticle(article));
+      const output = renderComponent(withMobileContext(renderArticle(article)));
 
       expect(output).toMatchSnapshot();
     },
@@ -474,7 +475,7 @@ export const snapshotTests = (renderComponent) => [
         ...fixtureArgs,
         content: articleContentWithLink,
       });
-      const output = renderComponent(renderArticle(article));
+      const output = renderComponent(withMobileContext(renderArticle(article)));
 
       expect(output).toMatchSnapshot();
     },
@@ -486,7 +487,7 @@ export const snapshotTests = (renderComponent) => [
         ...fixtureArgs,
         content: articleContentWithItalicLink,
       });
-      const output = renderComponent(renderArticle(article));
+      const output = renderComponent(withMobileContext(renderArticle(article)));
 
       expect(output).toMatchSnapshot();
     },
@@ -498,7 +499,7 @@ export const snapshotTests = (renderComponent) => [
         ...fixtureArgs,
         content: articleContentWithTextAndBoldLink,
       });
-      const output = renderComponent(renderArticle(article));
+      const output = renderComponent(withMobileContext(renderArticle(article)));
 
       expect(output).toMatchSnapshot();
     },
@@ -510,7 +511,7 @@ export const snapshotTests = (renderComponent) => [
         ...fixtureArgs,
         content: articleContentWithMixedLink,
       });
-      const output = renderComponent(renderArticle(article));
+      const output = renderComponent(withMobileContext(renderArticle(article)));
 
       expect(output).toMatchSnapshot();
     },
@@ -522,7 +523,7 @@ export const snapshotTests = (renderComponent) => [
         ...fixtureArgs,
         content: articleContentWithBoldItalicText,
       });
-      const output = renderComponent(renderArticle(article));
+      const output = renderComponent(withMobileContext(renderArticle(article)));
 
       expect(output).toMatchSnapshot();
     },
@@ -534,7 +535,7 @@ export const snapshotTests = (renderComponent) => [
         ...fixtureArgs,
         content: paragraphWithSingleInlineMarkup,
       });
-      const output = renderComponent(renderArticle(article));
+      const output = renderComponent(withMobileContext(renderArticle(article)));
 
       expect(output).toMatchSnapshot();
     },
@@ -546,7 +547,7 @@ export const snapshotTests = (renderComponent) => [
         ...fixtureArgs,
         content: paragraphWithTextAndInlineMarkup,
       });
-      const output = renderComponent(renderArticle(article));
+      const output = renderComponent(withMobileContext(renderArticle(article)));
 
       expect(output).toMatchSnapshot();
     },
@@ -558,7 +559,7 @@ export const snapshotTests = (renderComponent) => [
         ...fixtureArgs,
         content: paragraphWithNestedInlineMarkup,
       });
-      const output = renderComponent(renderArticle(article));
+      const output = renderComponent(withMobileContext(renderArticle(article)));
 
       expect(output).toMatchSnapshot();
     },
@@ -571,7 +572,7 @@ export const snapshotTests = (renderComponent) => [
         content: paragraphStartingWithSingleQuote,
         template: "maincomment",
       });
-      const output = renderComponent(renderArticle(article));
+      const output = renderComponent(withMobileContext(renderArticle(article)));
 
       expect(output).toMatchSnapshot();
     },
@@ -584,7 +585,7 @@ export const snapshotTests = (renderComponent) => [
         content: paragraphStartingWithDoubleQuote,
         template: "maincomment",
       });
-      const output = renderComponent(renderArticle(article));
+      const output = renderComponent(withMobileContext(renderArticle(article)));
 
       expect(output).toMatchSnapshot();
     },
@@ -599,7 +600,9 @@ export const snapshotTests = (renderComponent) => [
         withAds: true,
       });
       const output = renderComponent(
-        renderArticle(article, null, false, { articleMpuTestVariant: "B" }),
+        withMobileContext(
+          renderArticle(article, null, false, { articleMpuTestVariant: "B" }),
+        ),
       );
 
       expect(output).toMatchSnapshot();

@@ -435,10 +435,12 @@ exports[`tablet full article with style 1`] = `
     style={
       Object {
         "alignItems": "center",
+        "alignSelf": "center",
         "marginBottom": 25,
         "paddingLeft": 10,
         "paddingRight": 10,
         "paddingTop": 35,
+        "width": 660,
       }
     }
   >
@@ -456,8 +458,8 @@ exports[`tablet full article with style 1`] = `
         Object {
           "color": "#1D1D1B",
           "fontFamily": "TimesModern-Bold",
-          "fontSize": 30,
-          "lineHeight": 36,
+          "fontSize": 40,
+          "lineHeight": 40,
           "marginBottom": 10,
           "textAlign": "center",
         }
@@ -485,6 +487,8 @@ exports[`tablet full article with style 1`] = `
       style={
         Object {
           "alignItems": "center",
+          "flexDirection": "row",
+          "justifyContent": "center",
           "marginTop": 20,
         }
       }
@@ -494,6 +498,7 @@ exports[`tablet full article with style 1`] = `
           Object {
             "flexDirection": "row",
             "flexWrap": "wrap",
+            "paddingTop": "auto",
           }
         }
       >
@@ -502,8 +507,19 @@ exports[`tablet full article with style 1`] = `
       <View
         style={
           Object {
+            "borderRightColor": "#DBDBDB",
+            "borderRightWidth": 1,
+            "height": 15,
+            "marginHorizontal": 10,
+          }
+        }
+      />
+      <View
+        style={
+          Object {
             "flexDirection": "row",
             "flexWrap": "wrap",
+            "paddingTop": "auto",
           }
         }
       >
@@ -514,7 +530,7 @@ exports[`tablet full article with style 1`] = `
               "fontFamily": "GillSansMTStd-Medium",
               "fontSize": 13,
               "lineHeight": 15,
-              "marginTop": 15,
+              "marginTop": "auto",
             }
           }
         >
@@ -526,7 +542,11 @@ exports[`tablet full article with style 1`] = `
   <View
     style={
       Object {
+        "alignSelf": "center",
         "marginBottom": 20,
+        "paddingLeft": 10,
+        "paddingRight": 10,
+        "width": 660,
       }
     }
   >

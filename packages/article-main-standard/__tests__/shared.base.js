@@ -7,6 +7,7 @@ import ArticleMainStandard from "../src/article-main-standard";
 import articleFixture, { testFixture } from "../fixtures/full-article";
 import { adConfig } from "./ad-mock";
 import articleProps from "./shared-article-props";
+import { withMobileContext } from "@times-components-native/test-utils";
 
 const emptyArticle = {
   bylines: null,
@@ -25,20 +26,22 @@ export const snapshotTests = (renderComponent) => [
     name: "an article",
     test() {
       const output = renderComponent(
-        <ArticleMainStandard
-          {...articleProps}
-          adConfig={adConfig}
-          analyticsStream={() => null}
-          article={articleFixture(testFixture)}
-          onAuthorPress={() => null}
-          onCommentGuidelinesPress={() => null}
-          onCommentsPress={() => null}
-          onLinkPress={() => null}
-          onRelatedArticlePress={() => null}
-          onTopicPress={() => null}
-          onTwitterLinkPress={() => null}
-          onVideoPress={() => null}
-        />,
+        withMobileContext(
+          <ArticleMainStandard
+            {...articleProps}
+            adConfig={adConfig}
+            analyticsStream={() => null}
+            article={articleFixture(testFixture)}
+            onAuthorPress={() => null}
+            onCommentGuidelinesPress={() => null}
+            onCommentsPress={() => null}
+            onLinkPress={() => null}
+            onRelatedArticlePress={() => null}
+            onTopicPress={() => null}
+            onTwitterLinkPress={() => null}
+            onVideoPress={() => null}
+          />,
+        ),
       );
 
       expect(output).toMatchSnapshot();
@@ -85,24 +88,26 @@ export const snapshotTests = (renderComponent) => [
     name: "an article with no headline falls back to use shortHeadline",
     test() {
       const output = renderComponent(
-        <ArticleMainStandard
-          {...articleProps}
-          adConfig={adConfig}
-          analyticsStream={() => null}
-          article={articleFixture({
-            ...testFixture,
-            ...emptyArticle,
-            headline: "",
-          })}
-          onAuthorPress={() => null}
-          onCommentGuidelinesPress={() => null}
-          onCommentsPress={() => null}
-          onLinkPress={() => null}
-          onRelatedArticlePress={() => null}
-          onTopicPress={() => null}
-          onTwitterLinkPress={() => null}
-          onVideoPress={() => null}
-        />,
+        withMobileContext(
+          <ArticleMainStandard
+            {...articleProps}
+            adConfig={adConfig}
+            analyticsStream={() => null}
+            article={articleFixture({
+              ...testFixture,
+              ...emptyArticle,
+              headline: "",
+            })}
+            onAuthorPress={() => null}
+            onCommentGuidelinesPress={() => null}
+            onCommentsPress={() => null}
+            onLinkPress={() => null}
+            onRelatedArticlePress={() => null}
+            onTopicPress={() => null}
+            onTwitterLinkPress={() => null}
+            onVideoPress={() => null}
+          />,
+        ),
       );
 
       expect(output).toMatchSnapshot();
@@ -112,30 +117,32 @@ export const snapshotTests = (renderComponent) => [
     name: "an article with ads",
     test() {
       const output = renderComponent(
-        <ArticleMainStandard
-          {...articleProps}
-          adConfig={adConfig}
-          analyticsStream={() => null}
-          article={articleFixture({
-            ...testFixture,
-            ...emptyArticle,
-            content: [
-              {
-                attributes: {},
-                children: [],
-                name: "ad",
-              },
-            ],
-          })}
-          onAuthorPress={() => null}
-          onCommentGuidelinesPress={() => null}
-          onCommentsPress={() => null}
-          onLinkPress={() => null}
-          onRelatedArticlePress={() => null}
-          onTopicPress={() => null}
-          onTwitterLinkPress={() => null}
-          onVideoPress={() => null}
-        />,
+        withMobileContext(
+          <ArticleMainStandard
+            {...articleProps}
+            adConfig={adConfig}
+            analyticsStream={() => null}
+            article={articleFixture({
+              ...testFixture,
+              ...emptyArticle,
+              content: [
+                {
+                  attributes: {},
+                  children: [],
+                  name: "ad",
+                },
+              ],
+            })}
+            onAuthorPress={() => null}
+            onCommentGuidelinesPress={() => null}
+            onCommentsPress={() => null}
+            onLinkPress={() => null}
+            onRelatedArticlePress={() => null}
+            onTopicPress={() => null}
+            onTwitterLinkPress={() => null}
+            onVideoPress={() => null}
+          />,
+        ),
       );
 
       expect(output).toMatchSnapshot();
@@ -148,20 +155,22 @@ const negativeTests = [
     name: "an article with no byline",
     test() {
       const output = TestRenderer.create(
-        <ArticleMainStandard
-          {...articleProps}
-          adConfig={adConfig}
-          analyticsStream={() => null}
-          article={articleFixture({ ...testFixture, bylines: null })}
-          onAuthorPress={() => null}
-          onCommentGuidelinesPress={() => null}
-          onCommentsPress={() => null}
-          onLinkPress={() => null}
-          onRelatedArticlePress={() => null}
-          onTopicPress={() => null}
-          onTwitterLinkPress={() => null}
-          onVideoPress={() => null}
-        />,
+        withMobileContext(
+          <ArticleMainStandard
+            {...articleProps}
+            adConfig={adConfig}
+            analyticsStream={() => null}
+            article={articleFixture({ ...testFixture, bylines: null })}
+            onAuthorPress={() => null}
+            onCommentGuidelinesPress={() => null}
+            onCommentsPress={() => null}
+            onLinkPress={() => null}
+            onRelatedArticlePress={() => null}
+            onTopicPress={() => null}
+            onTwitterLinkPress={() => null}
+            onVideoPress={() => null}
+          />,
+        ),
       );
 
       expect(output).toMatchSnapshot();
@@ -171,20 +180,22 @@ const negativeTests = [
     name: "an article with no label",
     test() {
       const output = TestRenderer.create(
-        <ArticleMainStandard
-          {...articleProps}
-          adConfig={adConfig}
-          analyticsStream={() => null}
-          article={articleFixture({ ...testFixture, label: null })}
-          onAuthorPress={() => null}
-          onCommentGuidelinesPress={() => null}
-          onCommentsPress={() => null}
-          onLinkPress={() => null}
-          onRelatedArticlePress={() => null}
-          onTopicPress={() => null}
-          onTwitterLinkPress={() => null}
-          onVideoPress={() => null}
-        />,
+        withMobileContext(
+          <ArticleMainStandard
+            {...articleProps}
+            adConfig={adConfig}
+            analyticsStream={() => null}
+            article={articleFixture({ ...testFixture, label: null })}
+            onAuthorPress={() => null}
+            onCommentGuidelinesPress={() => null}
+            onCommentsPress={() => null}
+            onLinkPress={() => null}
+            onRelatedArticlePress={() => null}
+            onTopicPress={() => null}
+            onTwitterLinkPress={() => null}
+            onVideoPress={() => null}
+          />,
+        ),
       );
 
       expect(output).toMatchSnapshot();
@@ -194,23 +205,25 @@ const negativeTests = [
     name: "an article with no standfirst",
     test() {
       const testInstance = TestRenderer.create(
-        <ArticleMainStandard
-          {...articleProps}
-          adConfig={adConfig}
-          analyticsStream={() => null}
-          article={articleFixture({
-            ...testFixture,
-            standfirst: null,
-          })}
-          onAuthorPress={() => null}
-          onCommentGuidelinesPress={() => null}
-          onCommentsPress={() => null}
-          onLinkPress={() => null}
-          onRelatedArticlePress={() => null}
-          onTopicPress={() => null}
-          onTwitterLinkPress={() => null}
-          onVideoPress={() => null}
-        />,
+        withMobileContext(
+          <ArticleMainStandard
+            {...articleProps}
+            adConfig={adConfig}
+            analyticsStream={() => null}
+            article={articleFixture({
+              ...testFixture,
+              standfirst: null,
+            })}
+            onAuthorPress={() => null}
+            onCommentGuidelinesPress={() => null}
+            onCommentsPress={() => null}
+            onLinkPress={() => null}
+            onRelatedArticlePress={() => null}
+            onTopicPress={() => null}
+            onTwitterLinkPress={() => null}
+            onVideoPress={() => null}
+          />,
+        ),
       );
 
       const textNodes = testInstance.root.findAll((node) => {

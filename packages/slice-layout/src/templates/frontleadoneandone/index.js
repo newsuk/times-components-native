@@ -1,9 +1,9 @@
 import React from "react";
 import { View } from "react-native";
 import { TabletContentContainer } from "@times-components-native/slice-layout";
-import { getDimensions } from "@times-components-native/utils";
 import HorizontalLayout from "../horizontallayout";
 import { getStyles } from "./styles";
+import { useResponsiveContext } from "@times-components-native/responsive";
 
 const FrontLeadOneAndOneSlice = ({
   orientation,
@@ -11,7 +11,7 @@ const FrontLeadOneAndOneSlice = ({
   support,
   inTodaysEdition,
 }) => {
-  const { width: windowWidth } = getDimensions();
+  const { windowWidth } = useResponsiveContext();
   const styles = getStyles(orientation, windowWidth);
 
   if (orientation === "landscape") {

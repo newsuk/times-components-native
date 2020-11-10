@@ -2,12 +2,12 @@
 import React from "react";
 import PropTypes from "prop-types";
 import { FrontTileSummary } from "@times-components-native/front-page";
-import { getDimensions } from "@times-components-native/utils";
 import { getTileStrapline, TileLink } from "../shared";
 import { getStyle } from "./styles";
+import { useResponsiveContext } from "@times-components-native/responsive";
 
 const TileHFront = ({ onPress, tile, orientation }) => {
-  const { width: windowWidth, height: windowHeight } = getDimensions();
+  const { windowWidth, windowHeight } = useResponsiveContext();
   const styles = getStyle(orientation, windowWidth, windowHeight);
 
   const { article } = tile;
