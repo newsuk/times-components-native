@@ -21,11 +21,6 @@ const Comments = ({
   const tooltipType = "commenting";
   const { isTablet } = useResponsiveContext();
 
-  const showCommentButton =
-    tooltips?.includes(tooltipType) && isTablet
-      ? renderButtonWithTooltip
-      : renderButton;
-
   const renderButton = () => (
     <Context.Consumer>
       {({ theme: { scale } }) => {
@@ -58,6 +53,11 @@ const Comments = ({
       {renderButton()}
     </Tooltip>
   );
+
+  const showCommentButton =
+    tooltips?.includes(tooltipType) && isTablet
+      ? renderButtonWithTooltip
+      : renderButton;
 
   return (
     <View style={styles.container}>
