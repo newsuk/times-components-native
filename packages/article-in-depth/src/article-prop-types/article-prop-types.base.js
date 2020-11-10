@@ -13,6 +13,7 @@ const articlePagePropTypes = {
   isLoading: PropTypes.bool,
   onImagePress: PropTypes.func,
   receiveChildList: PropTypes.func.isRequired,
+  tooltips: PropTypes.array,
 };
 
 const articlePageDefaultProps = {
@@ -20,6 +21,7 @@ const articlePageDefaultProps = {
   error: null,
   isLoading: false,
   onImagePress: null,
+  tooltips: [],
 };
 
 export { articlePagePropTypes, articlePageDefaultProps };
