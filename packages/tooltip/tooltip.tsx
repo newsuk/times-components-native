@@ -23,7 +23,7 @@ const Tooltip: React.FC<Props> = ({
   const { isTablet } = useResponsiveContext();
   const ViewportAwareView = Viewport.Aware(View);
 
-  const onPress = () =>
+  const onClosePress = () =>
     Animated.timing(opacity, {
       duration: 200,
       toValue: 0,
@@ -35,7 +35,7 @@ const Tooltip: React.FC<Props> = ({
   };
 
   const closeButton = (
-    <TouchableOpacity onPress={onPress}>
+    <TouchableOpacity onPress={onClosePress}>
       <View style={styles.close}>
         <View style={styles.crossDiagonal1} />
         <View style={styles.crossDiagonal2} />

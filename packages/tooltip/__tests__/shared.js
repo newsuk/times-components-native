@@ -2,7 +2,7 @@ import Tooltip from "../tooltip";
 import TestRenderer from "react-test-renderer";
 import { delay } from "@times-components-native/test-utils";
 import { shallow } from "enzyme";
-import { TouchableOpacity } from "react-native";
+import { TouchableOpacity, Animated } from "react-native";
 import React from "react";
 import { Text } from "react-native";
 import "./serializers-with-all-styles";
@@ -41,10 +41,10 @@ export default () => {
       expect(output).toMatchSnapshot();
     });
 
-    it("onTooltipPresented is called correctly", () => {
+    it("closes when clicking the close button", async () => {
       const onTooltipPresentedMock = jest.fn();
 
-      TestRenderer.create(
+      const output = shallow(
         <Tooltip
           content={<Text>foo</Text>}
           onTooltipPresented={onTooltipPresentedMock}
@@ -55,27 +55,12 @@ export default () => {
         </Tooltip>,
       );
 
-      expect(onTooltipPresentedMock).toHaveBeenCalledWith("testtype");
+      const closeButton = output.find(TouchableOpacity);
+      closeButton.simulate("press");
+      await delay(201);
+      expect(output.find(Animated.View).get(0).props.style.opacity._value).toBe(
+        0,
+      );
     });
-
-    // it("closes when clicking the close button", async () => {
-    //   const onTooltipPresentedMock = jest.fn();
-
-    //   const output = shallow(
-    //     <Tooltip
-    //       content={<Text>foo</Text>}
-    //       onTooltipPresented={onTooltipPresentedMock}
-    //       type="testtype"
-    //       tooltips={["testtype"]}
-    //     >
-    //       bar
-    //     </Tooltip>,
-    //   );
-
-    //   const closeButton = output.find(TouchableOpacity);
-    //   closeButton.simulate("press");
-    //   delay(250);
-    //   expect(closeButton).to.have.css("opacity", 0);
-    // });
   });
 };
