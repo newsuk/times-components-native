@@ -15,10 +15,6 @@ import {
 import { loadStories } from "./story-loader";
 import "./rn-addons";
 
-if (Platform.OS === "ios") {
-  addDecorator(BarSpacingDecorator);
-}
-
 if (Platform.OS === "android") {
   addDecorator(WhiteBgColorDecorator);
 }

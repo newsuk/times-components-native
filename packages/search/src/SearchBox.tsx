@@ -31,7 +31,7 @@ export const SearchBox = connectSearchBox(({ currentRefinement, refine }) => {
 const styles = StyleSheet.create({
   container: {
     paddingHorizontal: 10,
-    marginBottom: 10,
+    marginVertical: 10,
   },
   input: {
     padding: 10,
