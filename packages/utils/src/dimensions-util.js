@@ -28,7 +28,7 @@ export const addDimensionsListener = (type, handler) => {
         },
       });
     };
-    eventEmitter.addListener("OrientationChanged", wrappedHandler);
+    eventEmitter.addListener("configurationChanged", wrappedHandler);
     return wrappedHandler;
   } else {
     Dimensions.addEventListener(type, handler);
@@ -38,7 +38,7 @@ export const addDimensionsListener = (type, handler) => {
 
 export const removeDimensionsListener = (type, handler) => {
   if (Platform.OS === "android") {
-    eventEmitter.removeListener("OrientationChanged", handler);
+    eventEmitter.removeListener("configurationChanged", handler);
   } else {
     Dimensions.removeEventListener(type, handler);
   }
