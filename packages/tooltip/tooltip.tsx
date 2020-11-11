@@ -30,6 +30,10 @@ const Tooltip: React.FC<Props> = ({
       useNativeDriver: true,
     }).start();
 
+  const onViewportEnter = () => {
+    onTooltipPresented(type);
+  };
+
   const closeButton = (
     <TouchableOpacity onPress={onPress}>
       <View style={styles.close}>
@@ -42,7 +46,7 @@ const Tooltip: React.FC<Props> = ({
   return (
     <>
       {tooltips?.includes(type) && isTablet && (
-        <ViewportAwareView onViewportEnter={onTooltipPresented(type)}>
+        <ViewportAwareView onViewportEnter={onViewportEnter}>
           <Animated.View
             style={{
               opacity: opacity,
