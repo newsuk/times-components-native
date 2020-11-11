@@ -1,8 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { Animated, Text, TouchableOpacity, View } from "react-native";
 import { useResponsiveContext } from "@times-components-native/responsive";
-import { colours } from "@times-components-native/styleguide";
-import { IconClose } from "@times-components-native/icons";
 import styles from "./styles";
 
 interface Props {
@@ -33,6 +31,15 @@ const Tooltip: React.FC<Props> = ({
     onTooltipPresented(type);
   }, []);
 
+  const closeButton = (
+    <TouchableOpacity onPress={onPress}>
+      <View style={styles.close}>
+        <View style={styles.crossDiagonal1} />
+        <View style={styles.crossDiagonal2} />
+      </View>
+    </TouchableOpacity>
+  );
+
   return (
     <>
       {tooltips?.includes(type) && isTablet && (
@@ -42,19 +49,9 @@ const Tooltip: React.FC<Props> = ({
           }}
         >
           <View style={styles.container}>
-            <View style={styles.body}>
-              <Text style={styles.text}>{content}</Text>
-              <View style={styles.close}>
-                <TouchableOpacity onPress={onPress}>
-                  <IconClose
-                    fillColour={colours.functional.white}
-                    height={16}
-                    width={16}
-                  />
-                </TouchableOpacity>
-              </View>
-              <View style={styles.arrow} />
-            </View>
+            {closeButton}
+            <Text style={styles.text}>{content}</Text>
+            <View style={styles.arrow} />
           </View>
         </Animated.View>
       )}

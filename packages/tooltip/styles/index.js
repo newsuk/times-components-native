@@ -18,10 +18,9 @@ const styles = StyleSheet.create({
     shadowOpacity: 0.2,
     shadowRadius: 4,
   },
-  body: {},
   text: {
     paddingHorizontal: spacing(3),
-    paddingVertical: spacing(2),
+    paddingVertical: spacing(1),
     color: colours.functional.white,
     fontFamily: fonts.supporting,
     fontSize: 16,
@@ -30,13 +29,13 @@ const styles = StyleSheet.create({
   },
   close: {
     position: "absolute",
-    top: spacing(-1),
-    right: spacing(-1),
+    top: -10,
+    right: -3,
   },
   arrow: {
     position: "absolute",
-    bottom: -23,
-    left: 100,
+    bottom: -7,
+    left: 120,
     backgroundColor: "transparent",
     borderStyle: "solid",
     borderColor: colours.functional.tooltip,
@@ -54,6 +53,19 @@ const styles = StyleSheet.create({
     },
     shadowOpacity: 0.2,
     shadowRadius: 4,
+  },
+  crossDiagonal1: {
+    backgroundColor: colours.functional.white,
+    height: 16,
+    width: 1,
+    transform: [{ rotate: "45deg" }],
+  },
+  crossDiagonal2: {
+    backgroundColor: colours.functional.white,
+    height: 16,
+    width: 1,
+    position: "absolute",
+    transform: [{ rotate: "-45deg" }],
   },
 });
 
