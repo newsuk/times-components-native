@@ -315,6 +315,10 @@ PODS:
     - React
   - RNDeviceInfo (5.3.1):
     - React
+  - RNGestureHandler (1.8.0):
+    - React
+  - RNReanimated (1.13.1):
+    - React
   - RNSVG (9.11.1):
     - React
   - Yoga (1.14.0)
@@ -374,6 +378,8 @@ DEPENDENCIES:
   - ReactNativeNavigation (from `../node_modules/react-native-navigation`)
   - "RNCAsyncStorage (from `../node_modules/@react-native-community/async-storage`)"
   - RNDeviceInfo (from `../node_modules/react-native-device-info`)
+  - RNGestureHandler (from `../node_modules/react-native-gesture-handler`)
+  - RNReanimated (from `../node_modules/react-native-reanimated`)
   - RNSVG (from `../node_modules/react-native-svg`)
   - Yoga (from `../node_modules/react-native/ReactCommon/yoga`)
 
@@ -455,6 +461,10 @@ EXTERNAL SOURCES:
     :path: "../node_modules/@react-native-community/async-storage"
   RNDeviceInfo:
     :path: "../node_modules/react-native-device-info"
+  RNGestureHandler:
+    :path: "../node_modules/react-native-gesture-handler"
+  RNReanimated:
+    :path: "../node_modules/react-native-reanimated"
   RNSVG:
     :path: "../node_modules/react-native-svg"
   Yoga:
@@ -503,6 +513,8 @@ SPEC CHECKSUMS:
   ReactNativeNavigation: aefc8debafb4a374575adafb44a3352b9d5b618a
   RNCAsyncStorage: 2a692bcb9b69b76a2f1a95f33db057129700af64
   RNDeviceInfo: 6f20764111df002b4484f90cbe0a861be29bcc6c
+  RNGestureHandler: 7a5833d0f788dbd107fbb913e09aa0c1ff333c39
+  RNReanimated: dd8c286ab5dd4ba36d3a7fef8bff7e08711b5476
   RNSVG: be27aa7c58819f97399388ae53d7fa0572f32c7f
   Yoga: 7740b94929bbacbddda59bf115b5317e9a161598
   YogaKit: f782866e155069a2cca2517aafea43200b01fd5a
