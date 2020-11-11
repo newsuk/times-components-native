@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import { View, Text, Animated, TouchableOpacity } from "react-native";
 import PropTypes from "prop-types";
-import { IconClose } from "@times-components-native/icons";
+import { CloseIcon } from "@times-components-native/icons";
 import styleFactory from "./styles";
 
 class MessageBar extends Component {
@@ -95,7 +95,7 @@ class MessageBar extends Component {
             <Text style={styles.messageBarText}>{message}</Text>
             <View style={styles.messageBarCloseButton}>
               <TouchableOpacity onPress={this.close}>
-                <IconClose width="28" height="28" />
+                <CloseIcon width="28" height="28" />
               </TouchableOpacity>
             </View>
           </View>

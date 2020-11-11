@@ -1,5 +1,4 @@
 export {
-  IconClose,
   IconEmail,
   IconFacebook,
   IconForwardArrow,
@@ -11,4 +10,5 @@ export {
   IconVideo360Player,
   TheSTLogo,
   TheTimesLogo,
+  CloseIcon,
 } from "./src/icons";

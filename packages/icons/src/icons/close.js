@@ -1,28 +1,37 @@
 import React from "react";
-import { colours } from "@times-components-native/styleguide";
-import Svg, { G, Path } from "@times-components-native/svgs";
+import Svg, { Path } from "@times-components-native/svgs";
 import { clean } from "@times-components-native/utils";
-import propTypes from "./prop-types";
+import PropTypes from "prop-types";
 
-const IconClose = ({ fillColour, height, width }) => (
+const IconClose = ({ height, width }) => (
   <Svg
     aria-label="icon-close"
-    viewBox="0 0 24 24"
+    role="img"
+    viewBox="0 0 28 28"
     {...clean({
       height,
-      width: width || height,
+      width,
+      title: "Close Icon",
     })}
   >
-    <G fill={fillColour} fill-rule="evenodd">
-      <Path d="M24 20.188l-8.315-8.209 8.2-8.282-3.697-3.697-8.212 8.318-8.31-8.203-3.666 3.666 8.321 8.24-8.206 8.313 3.666 3.666 8.237-8.318 8.285 8.203z" />
-    </G>
+    <Path
+      {...clean({
+        fill: "white",
+        stroke: "white",
+      })}
+      d="M15.617 14l4.683 5.838-.462.462L14 15.617 8.162 20.3l-.462-.462L12.383 14 7.7 8.162l.462-.462L14 12.383 19.838 7.7l.462.462z"
+    />
   </Svg>
 );
 
-IconClose.propTypes = propTypes;
+IconClose.propTypes = {
+  height: PropTypes.number,
+  width: PropTypes.number,
+};
 
 IconClose.defaultProps = {
-  fillColour: colours.functional.action,
+  height: 28,
+  width: 28,
 };
 
 export default IconClose;
