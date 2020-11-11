@@ -12,10 +12,7 @@ import { SearchFilters } from "./SearchFilters";
 import { View, StyleSheet } from "react-native";
 import { endOfDay, startOfDay, subDays } from "date-fns";
 
-const searchClient = algoliasearch(
-  "PZGYBTWG3J",
-  "a5e050571fe9c0e3a32b4383a3b76b0c",
-);
+const searchClient = algoliasearch("", "");
 
 const timeRanges = [
   {
