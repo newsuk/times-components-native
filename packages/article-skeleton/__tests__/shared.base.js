@@ -34,7 +34,6 @@ export const renderArticle = (
   <ContextProviderWithDefaults
     value={{
       theme: { scale: scales.medium, sectionColour: "#FF0000" },
-      user: { isLoggedIn: true },
     }}
   >
     <VariantTestingProvider variants={variants} isTablet={true}>

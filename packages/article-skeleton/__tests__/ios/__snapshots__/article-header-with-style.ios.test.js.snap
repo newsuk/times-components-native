@@ -633,15 +633,12 @@ exports[`1. article with header 1`] = `
         </View>
       </View>
       <View>
-        <View>
-          <PullQuote
-            caption="JudgeSapnara"
-            quoteColour="#FF0000"
-            twitter="@JudgeSapnara"
-          >
-            A pull quote is here.
-          </PullQuote>
-        </View>
+        <PullQuote
+          caption="JudgeSapnara"
+          twitter="@JudgeSapnara"
+        >
+          A pull quote is here.
+        </PullQuote>
       </View>
       <View>
         <View>

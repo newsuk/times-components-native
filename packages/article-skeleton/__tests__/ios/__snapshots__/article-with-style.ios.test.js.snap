@@ -354,11 +354,9 @@ exports[`1. a full article with all content items with dropcap template 1`] = `
           }
         }
       >
-        <View>
-          <PullQuote>
-            The pull quote content
-          </PullQuote>
-        </View>
+        <PullQuote>
+          The pull quote content
+        </PullQuote>
       </View>
       <View
         style={
@@ -3492,11 +3490,9 @@ exports[`17. an article with variant testing 1`] = `
           }
         }
       >
-        <View>
-          <PullQuote>
-            The pull quote content
-          </PullQuote>
-        </View>
+        <PullQuote>
+          The pull quote content
+        </PullQuote>
       </View>
       <View
         style={
@@ -4209,11 +4205,9 @@ exports[`18. an article skeleton with responsive items 1`] = `
           }
         }
       >
-        <View>
-          <PullQuote>
-            The pull quote content
-          </PullQuote>
-        </View>
+        <PullQuote>
+          The pull quote content
+        </PullQuote>
       </View>
       <View
         style={
