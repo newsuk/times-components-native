@@ -1,22 +1,12 @@
 import Tooltip from "../tooltip";
 import TestRenderer from "react-test-renderer";
-import { ResponsiveContext } from "@times-components-native/responsive";
+import { withTabletContext } from "@times-components-native/test-utils";
 import { delay } from "@times-components-native/test-utils";
 import { shallow } from "enzyme";
 import { TouchableOpacity, Animated } from "react-native";
 import React from "react";
 import { Text } from "react-native";
 import "./serializers-with-all-styles";
-
-export const withTabletContext = (WrappedComponent, isTablet = true) => (
-  <ResponsiveContext.Provider
-    value={{
-      isTablet: isTablet,
-    }}
-  >
-    {WrappedComponent}
-  </ResponsiveContext.Provider>
-);
 
 export default () => {
   describe("Tooltip", () => {
