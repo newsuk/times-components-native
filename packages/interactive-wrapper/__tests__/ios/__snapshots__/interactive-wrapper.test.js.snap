@@ -11,7 +11,7 @@ exports[`renders correctly 1`] = `
 >
   <RNCWebView
     cacheEnabled={true}
-    injectedJavaScript="window.postMessage = function(data) {window.ReactNativeWebView.postMessage(data);};(function webviewEventCallbackSetup(options) {
+    injectedJavaScriptBeforeContentLoaded="window.postMessage = function(data) {window.ReactNativeWebView.postMessage(data);};(function webviewEventCallbackSetup(options) {
   var window = options.window;
 
   window.eventCallback = function (type, detail) {
@@ -40,6 +40,8 @@ exports[`renders correctly 1`] = `
   meta.setAttribute(\\"name\\", \\"viewport\\");
   window.document.getElementsByTagName(\\"head\\")[0].appendChild(meta);
 })({window});"
+    injectedJavaScriptBeforeContentLoadedForMainFrameOnly={true}
+    injectedJavaScriptForMainFrameOnly={true}
     scrollEnabled={false}
     source={
       Object {

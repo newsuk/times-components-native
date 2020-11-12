@@ -1,6 +1,6 @@
 /* eslint-disable react/prop-types */
 import React from "react";
-import { Text, View } from "react-native";
+import { Platform, Text, View } from "react-native";
 import pick from "lodash.pick";
 import { sections } from "@times-components-native/storybook";
 import articleAdConfig from "@times-components-native/ad/fixtures/article-ad-config.json";
@@ -118,6 +118,12 @@ const renderArticleSkeleton = ({
                 analyticsStream={storybookReporter}
                 data={data}
                 Header={showHeader}
+                interactiveConfig={{
+                  environment: "prod",
+                  platform: Platform.OS,
+                  version: "7.0.0",
+                  dev: false,
+                }}
                 onAuthorPress={preventDefaultedAction(decorateAction)(
                   "onAuthorPress",
                 )}
