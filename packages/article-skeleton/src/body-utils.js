@@ -2,64 +2,21 @@
 import memoize from "memoize-one";
 import { FontStorage } from "@times-components-native/typeset";
 
-// Collapse inlines into the following paragraphs on tablet
-export const collapsed = (isTablet, content) => content;
-// !isTablet
-//   ? content
-//   : content.reduceRight((acc, node, index) => {
-//       // remove inline image if first
-//       if (
-//         index === 0 &&
-//         node.name === "image" &&
-//         node.attributes?.display === "inline"
-//       )
-//         return acc;
-
-//       // backwards
-//       if (
-//         (node.name === "image" && node.attributes?.display === "inline") ||
-//         node.name === "pullQuote"
-//       ) {
-//         // forwards
-//         let i;
-//         let children = [node];
-//         const numberOfNodesToInline = 4;
-//         const maxNodesToInline = Math.min(numberOfNodesToInline, acc.length);
-//         for (i = 0; i < maxNodesToInline; i += 1) {
-//           const next = acc[i];
-//           if (next && next.name === "paragraph") {
-//             children = [
-//               ...children,
-//               ...next.children,
-//               { name: "break", children: [] },
-//               { name: "break", children: [] },
-//             ];
-//           } else {
-//             break;
-//           }
-//         }
-//         return [
-//           {
-//             ...acc[0],
-//             children,
-//           },
-//           ...acc.slice(i),
-//         ];
-//       }
-//       return [node, ...acc];
-//     }, []);
-
 const setupInlineContent = (
   skeletonProps,
   unprocessedContent,
   processedContent = [],
 ) => {
+  const { isTablet } = skeletonProps;
+  if (!isTablet) return unprocessedContent;
+
   const numberOfCandidateParagraphsToInline = 7;
 
   // Find something that needs inlining
   const inlineItemIndex = unprocessedContent.findIndex(
-    (item) => item.name === "image" && item.attributes?.display === "inline",
-    // || item.name === "pullQuote",
+    (item) =>
+      (item.name === "image" && item.attributes?.display === "inline") ||
+      item.name === "pullQuote",
   );
 
   // We got nothing so return
@@ -256,16 +213,5 @@ export const getStringBounds = (fontSettings, string) => {
 };
 
 export default memoize((skeletonProps, variants) => {
-  const { isTablet } = skeletonProps;
-  // const stuff = collapsed(isTablet, setupAd(skeletonProps, variants));
-  const stuff = collapsed(
-    isTablet,
-    setupInlineContent(skeletonProps, setupAd(skeletonProps, variants)),
-  );
-  console.log(
-    "*($^%&^&%^$*%^$*^%$^%)$%)($&%)$^%*^%*£^%)&%(&%*^*$^%^%($^*(",
-    stuff.map((s) => `${s.name} - ${!!s.children}`),
-    // JSON.stringify(stuff),
-  );
-  return stuff;
+  return setupInlineContent(skeletonProps, setupAd(skeletonProps, variants));
 });

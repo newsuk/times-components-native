@@ -6,6 +6,7 @@ import renderTrees from "@times-components-native/markup-forest";
 import getRenderers from "@times-components-native/article-skeleton/src/article-body/article-body-row.js";
 import { ParagraphContent } from "@times-components-native/types";
 import { useInlineMeasurementDispatchContext } from "./InlineMeasurementDispatchContext";
+import { renderItemComponent } from "../";
 import { ArticleImageProps, SkeletonProps } from "../types";
 
 interface Props {
@@ -90,7 +91,7 @@ export const MeasureItem: React.FC<{
         });
       }}
     >
-      <ArticleImage {...itemProps} />
+      {renderItemComponent(itemProps)}
     </View>
   );
 });

@@ -22,13 +22,6 @@ export const chunkInlineContent = (
   const contentHeight =
     contentMeasurements.itemHeight || contentParameters.contentHeight;
 
-  console.log(
-    "CCCCCCCCCCCC%&*$&%*£&%*£$&%*(£$&%(*£$&%*$£",
-    contentMeasurements.itemHeight,
-    contentParameters.contentHeight,
-    contentHeight,
-  );
-
   const chunkedContent = contents.reduce(
     (
       { chunks, currentInlineContentHeight }: ChunkedContent,

@@ -209,16 +209,19 @@ export default ({
         />
       );
     },
-    inlineContent(key, attributes) {
+    inlineContent(key, attributes, children) {
       return (
         <InlineContent
           key={key}
           adConfig={adConfig}
           defaultFont={defaultFont}
           onImagePress={onImagePress}
+          onTwitterLinkPress={onTwitterLinkPress}
           narrowContent={narrowContent}
           {...attributes}
-        />
+        >
+          {children}
+        </InlineContent>
       );
     },
     image(

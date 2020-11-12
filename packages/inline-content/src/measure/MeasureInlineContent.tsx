@@ -15,7 +15,7 @@ import {
 interface Props {
   content: ParagraphContent[];
   contentParameters: ContentParameters;
-  imageProps: ArticleImageProps;
+  itemProps?: ArticleImageProps;
   renderMeasuredContents: (contentMeasurements: Measurements) => any;
   skeletonProps: SkeletonProps;
 }
@@ -36,24 +36,29 @@ export const InnerMeasureInlineContent: React.FC<
 > = ({
   content,
   contentParameters,
-  imageProps,
-  skeletonProps,
-  renderMeasuredContents,
+  itemProps,
   measurementState,
+  renderMeasuredContents,
+  skeletonProps,
 }) => {
   const {
     contents: { lines, heights },
   } = measurementState;
   if (
     allContentMeasured(content, heights, lines) &&
-    measurementState.itemHeight !== null
+    (!itemProps || measurementState.itemHeight !== null)
   ) {
     return renderMeasuredContents(measurementState);
   }
 
   return (
     <ScrollView style={styles.renderOffscreen}>
-      <MeasureItem itemProps={imageProps} width={contentParameters.itemWidth} />
+      {itemProps && (
+        <MeasureItem
+          itemProps={itemProps}
+          width={contentParameters.itemWidth}
+        />
+      )}
       <View
         style={{
           width: contentParameters.contentWidth,
