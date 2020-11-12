@@ -74,7 +74,7 @@ export const chunkInlineContent = (
         currentParagraphHeight - totalLinesHeightAdjustment;
 
       // final adjustment last paragraph lines fit without bottom padding
-      const paragraphBottomSpacing = 20;
+      const paragraphBottomSpacing = spacing(4);
       const paddingAdjustment =
         adjustmentHeightDifference <= paragraphBottomSpacing
           ? adjustmentHeightDifference

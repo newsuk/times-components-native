@@ -26,7 +26,7 @@ const setupInlineContent = (
   // Otherwise stash everything before it
   processedContent.push(...unprocessedContent.slice(0, inlineItemIndex));
 
-  // Grab the inline item
+  // Grab the item to inline
   const inlineItem = unprocessedContent[inlineItemIndex];
 
   const inlineContentStartIndex = inlineItemIndex + 1;
@@ -55,24 +55,22 @@ const setupInlineContent = (
     );
   }
 
-  // stash the rest of the content to append after
+  // Stash the rest of the content to append after
   const afterInlineContent = unprocessedContent.slice(inlineContentEndIndex);
 
-  // Add
+  // Add the item and content to inline
   processedContent.push({
     ...inlineItem,
     name: "inlineContent",
     attributes: {
       ...inlineItem.attributes,
       originalName: inlineItem.name,
-      //   slotName,
       inlineContent,
       skeletonProps,
-      //   width,
-      //   height,
     },
   });
 
+  // More content to check so round we go again
   if (afterInlineContent.length)
     return setupInlineContent(
       skeletonProps,
@@ -80,6 +78,7 @@ const setupInlineContent = (
       processedContent,
     );
 
+  // All done
   return processedContent;
 };
 
