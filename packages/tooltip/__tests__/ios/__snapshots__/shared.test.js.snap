@@ -130,5 +130,3 @@ Array [
   "bar",
 ]
 `;
-
-exports[`Tooltip renders correctly when type is not in tooltips array 1`] = `"bar"`;
