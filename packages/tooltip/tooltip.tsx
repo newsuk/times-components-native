@@ -27,12 +27,8 @@ const Tooltip: React.FC<Props> = ({
     Animated.timing(opacity, {
       duration: 200,
       toValue: 0,
-      useNativeDriver: true,
+      useNativeDriver: false,
     }).start();
-
-  const onViewportEnter = () => {
-    onTooltipPresented(type);
-  };
 
   const closeButton = (
     <TouchableOpacity onPress={onClosePress}>
@@ -46,7 +42,11 @@ const Tooltip: React.FC<Props> = ({
   return (
     <>
       {tooltips?.includes(type) && isTablet && (
-        <ViewportAwareView onViewportEnter={onViewportEnter}>
+        <ViewportAwareView
+          onViewportEnter={() => {
+            onTooltipPresented(type);
+          }}
+        >
           <Animated.View
             style={{
               opacity: opacity,

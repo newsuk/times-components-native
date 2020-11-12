@@ -41,7 +41,7 @@ export default () => {
       expect(output).toMatchSnapshot();
     });
 
-    it("closes when clicking the close button", async () => {
+    it("fades out when clicking the close button", async () => {
       const onTooltipPresentedMock = jest.fn();
 
       const output = shallow(
@@ -57,7 +57,7 @@ export default () => {
 
       const closeButton = output.find(TouchableOpacity);
       closeButton.simulate("press");
-      await delay(201);
+      await delay(250);
       expect(output.find(Animated.View).get(0).props.style.opacity._value).toBe(
         0,
       );
