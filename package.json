@@ -1,7 +1,7 @@
 {
   "name": "times-components-native",
   "private": true,
-  "version": "1.11.11",
+  "version": "1.12.0",
   "description": "A collection of react-native components for The Times and Sunday Times",
   "main": "index.js",
   "engines": {
