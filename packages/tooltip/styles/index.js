@@ -7,7 +7,7 @@ const styles = StyleSheet.create({
     width: 256,
     backgroundColor: colours.functional.tooltip,
     position: "absolute",
-    bottom: -5,
+    bottom: -spacing(1),
     left: -128,
     borderRadius: 3,
     shadowColor: colours.functional.black,
