@@ -87,7 +87,7 @@ class InteractiveWrapper extends Component {
 
     return (
       <WebView
-        injectedJavaScript={scriptToInject}
+        injectedJavaScriptBeforeContentLoaded={scriptToInject}
         onLoadEnd={this.onLoadEnd}
         onMessage={this.onMessage}
         onNavigationStateChange={this.handleNavigationStateChange}
