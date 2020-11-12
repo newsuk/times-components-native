@@ -1,5 +1,22 @@
 export default [
   {
+    name: "interactive",
+    attributes: {
+      id: "d883baab-bac6-4572-b54f-2c136d62c34b",
+      display: "primary",
+      url:
+        "https://components.timesdev.tools/lib2/times-chapter-header-2.0.0/chapter-header.html",
+      element: {
+        value: "chapter-header",
+        attributes: {
+          heading: "Where%20flowers%20bloom%20all%20year",
+          chaptercounter: "One",
+        },
+      },
+    },
+    children: [],
+  },
+  {
     attributes: {
       title: "New Brexit referendum",
     },
