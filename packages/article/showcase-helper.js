@@ -34,7 +34,6 @@ const LINKED_BYLINE = 32;
 const PULL_QUOTE = 64;
 const STANDFIRST = 128;
 const VIDEO = 256;
-const TEASED_CONTENT = 512;
 
 const templates = [
   "mainstandard",
@@ -54,7 +53,6 @@ export const makeArticleConfiguration = ({
   withPullQuote,
   withStandfirst,
   withVideo,
-  withTeasedContent,
 }) => {
   let mask;
 
@@ -92,10 +90,6 @@ export const makeArticleConfiguration = ({
 
   if (withVideo) {
     mask = mask | VIDEO;
-  }
-
-  if (withTeasedContent) {
-    mask = mask | TEASED_CONTENT;
   }
 
   return mask;
@@ -145,10 +139,6 @@ const makeArticle = (configuration) => (article) => {
     extraContent.unshift(fixtures.inlineVideo);
   } else {
     configuredArticle.hasVideo = false;
-  }
-
-  if (configuration & TEASED_CONTENT) {
-    configuredArticle.content = [...configuredArticle.content.slice(0, 6)];
   }
 
   configuredArticle.content = [...extraContent, ...configuredArticle.content];
@@ -220,8 +210,6 @@ const renderArticle = ({
   scale,
   section,
   template,
-  isTeaser,
-  isMeteredExpired,
 }) => (
   <ArticleProvider debounceTimeMs={0} id={id}>
     {({ article, error, refetch }) => {
@@ -246,10 +234,6 @@ const renderArticle = ({
             theme: {
               ...themeFactory(section, template),
               scale: scale || defaults.theme.scale,
-            },
-            user: {
-              isLoggedIn: !isTeaser || isMeteredExpired,
-              isMeteredExpired,
             },
           }}
         >
@@ -324,10 +308,6 @@ const renderArticleConfig = ({
       ? { rgba: { alpha: 1, blue: 255, green: 255, red: 255 } }
       : null;
 
-  const user = (global.nuk && global.nuk.user) || {};
-  const { isLoggedIn, isMeteredExpired, isShared } = user;
-  const isTeaser = !isShared && (isMeteredExpired || !isLoggedIn);
-
   return (
     <Fragment>
       {link}
@@ -343,7 +323,6 @@ const renderArticleConfig = ({
             withPullQuote,
             withStandfirst,
             withVideo,
-            withTeasedContent: isTeaser,
           })}
           id={id}
         >
@@ -354,8 +333,6 @@ const renderArticleConfig = ({
             id,
             inDepthBackgroundColour,
             inDepthTextColour,
-            isTeaser,
-            isMeteredExpired,
             scale,
             section,
             template,
