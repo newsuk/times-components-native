@@ -62,5 +62,22 @@ export default () => {
         0,
       );
     });
+
+    it("onTooltipPresented is called correctly", async () => {
+      const onTooltipPresentedMock = jest.fn();
+
+      const testInstance = shallow(
+        <Tooltip
+          content={<Text>foo</Text>}
+          onTooltipPresented={onTooltipPresentedMock}
+          type="testtype"
+          tooltips={["testtype"]}
+        >
+          bar
+        </Tooltip>,
+      );
+      testInstance.children().at(0).props().onViewportEnter();
+      expect(onTooltipPresentedMock).toBeCalled();
+    });
   });
 };
