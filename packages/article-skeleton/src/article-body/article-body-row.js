@@ -16,7 +16,6 @@ import KeyFacts from "@times-components-native/key-facts";
 import PullQuote from "@times-components-native/pull-quote";
 import Video from "@times-components-native/video";
 import ArticleParagraphWrapper from "@times-components-native/article-paragraph";
-import Context from "@times-components-native/context";
 import ArticleParagraph from "./article-body-paragraph";
 import InsetCaption from "./inset-caption";
 import styleFactory from "../styles/article-body";
@@ -324,29 +323,16 @@ export default ({
       return tree;
     },
     pullQuote(key, { caption: { name, text, twitter } }, children) {
-      // eslint-disable-next-line react-hooks/rules-of-hooks
-      const { windowWidth } = useResponsiveContext();
       const content = children[0].string;
-      const contentWidth = Math.min(windowWidth, tabletWidth);
       return (
-        <Context.Consumer key={key}>
-          {({
-            theme: { pullQuoteFont, sectionColour = colours.section.default },
-          }) => (
-            <View style={[isTablet && { width: contentWidth * 0.35 }]}>
-              <PullQuote
-                caption={name}
-                font={pullQuoteFont}
-                onTwitterLinkPress={onTwitterLinkPress}
-                quoteColour={sectionColour}
-                text={text}
-                twitter={twitter}
-              >
-                {content}
-              </PullQuote>
-            </View>
-          )}
-        </Context.Consumer>
+        <PullQuote
+          caption={name}
+          onTwitterLinkPress={onTwitterLinkPress}
+          text={text}
+          twitter={twitter}
+        >
+          {content}
+        </PullQuote>
       );
     },
     video(

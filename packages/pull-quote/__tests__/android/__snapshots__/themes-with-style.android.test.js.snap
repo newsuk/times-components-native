@@ -8,13 +8,14 @@ exports[`1. pull quote in culture magazine 1`] = `
       "marginTop": 0,
       "paddingLeft": 10,
       "paddingRight": 10,
+      "width": 230.99999999999997,
     }
   }
 >
   <Text
     style={
       Object {
-        "color": "#696969",
+        "color": "#1D1D1B",
         "fontFamily": "Flama-Bold",
         "fontSize": 75,
         "marginBottom": -40,
@@ -86,13 +87,14 @@ exports[`2. pull quote in style magazine 1`] = `
       "marginTop": 0,
       "paddingLeft": 10,
       "paddingRight": 10,
+      "width": 230.99999999999997,
     }
   }
 >
   <Text
     style={
       Object {
-        "color": "#696969",
+        "color": "#1D1D1B",
         "fontFamily": "CenturyGothic-Bold",
         "fontSize": 75,
         "marginBottom": -40,
@@ -164,13 +166,14 @@ exports[`3. pull quote in the sunday times magazine 1`] = `
       "marginTop": 0,
       "paddingLeft": 10,
       "paddingRight": 10,
+      "width": 230.99999999999997,
     }
   }
 >
   <Text
     style={
       Object {
-        "color": "#696969",
+        "color": "#1D1D1B",
         "fontFamily": "Tiempos-Headline-Bold",
         "fontSize": 75,
         "marginBottom": -40,
