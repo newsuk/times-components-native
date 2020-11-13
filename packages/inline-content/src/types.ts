@@ -48,7 +48,10 @@ export interface InlinePullQuoteProps extends BaseInlineContentProps {
   onTwitterLinkPress: () => void;
 }
 
-export type InlineContentProps = InlineArticleImageProps | InlinePullQuoteProps;
+export type InlineContentProps =
+  | BaseInlineContentProps
+  | InlineArticleImageProps
+  | InlinePullQuoteProps;
 
 export type ArticleImageProps = {
   captionOptions: {
