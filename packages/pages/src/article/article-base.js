@@ -22,6 +22,7 @@ const {
   onLinkPress,
   onTopicPress,
   onVideoPress,
+  onTooltipPresented,
 } = NativeModules.ArticleEvents;
 
 const ArticleBase = ({
@@ -36,6 +37,7 @@ const ArticleBase = ({
   scale,
   sectionName: pageSection,
   variants,
+  tooltips,
 }) => {
   const { section: articleSection, template } = article || {};
   const section = pageSection || articleSection || "default";
@@ -87,10 +89,12 @@ const ArticleBase = ({
           onRelatedArticlePress={(event, { url }) => onArticlePress(url)}
           onTopicPress={(event, { slug }) => onTopicPress(slug)}
           onTwitterLinkPress={(_, { url }) => onLinkPress(url)}
+          onTooltipPresented={onTooltipPresented}
           onVideoPress={(event, info) => onVideoPress(info)}
           pageSection={pageSection}
           referralUrl={referralUrl}
           refetch={refetch}
+          tooltips={tooltips}
         />
       </VariantTestingProvider>
     </ContextProviderWithDefaults>

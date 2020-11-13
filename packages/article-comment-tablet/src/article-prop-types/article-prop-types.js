@@ -14,6 +14,7 @@ const articlePropTypes = {
   onCommentsPress: PropTypes.func.isRequired,
   onLinkPress: PropTypes.func.isRequired,
   onRelatedArticlePress: PropTypes.func.isRequired,
+  onTooltipPresented: PropTypes.func,
   onTopicPress: PropTypes.func.isRequired,
   onTwitterLinkPress: PropTypes.func.isRequired,
   onVideoPress: PropTypes.func.isRequired,
@@ -24,6 +25,7 @@ const articlePropTypes = {
 const articleDefaultProps = {
   ...articlePageDefaultProps,
   interactiveConfig: {},
+  onTooltipPresented: () => null,
 };
 
 export { articlePropTypes, articleDefaultProps };

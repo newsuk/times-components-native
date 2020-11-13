@@ -9,6 +9,8 @@ const ArticleComments = ({
   commentsEnabled,
   onCommentGuidelinesPress,
   onCommentsPress,
+  onTooltipPresented,
+  tooltips,
   url,
 }) =>
   commentsEnabled ? (
@@ -17,6 +19,8 @@ const ArticleComments = ({
       commentCount={commentCount}
       onCommentGuidelinesPress={onCommentGuidelinesPress}
       onCommentsPress={onCommentsPress}
+      onTooltipPresented={onTooltipPresented}
+      tooltips={tooltips}
       url={url}
     />
   ) : (

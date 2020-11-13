@@ -13,8 +13,10 @@ const ArticleExtras = ({
   onTopicPress,
   onCommentGuidelinesPress,
   onCommentsPress,
+  onTooltipPresented,
   narrowContent,
   template,
+  tooltips,
 }) => (
   <ArticleExtrasProvider debounceTimeMs={0} id={articleId}>
     {({ article, error, isLoading, refetch }) => {
@@ -35,8 +37,10 @@ const ArticleExtras = ({
           onCommentsPress={onCommentsPress}
           onRelatedArticlePress={onRelatedArticlePress}
           onTopicPress={onTopicPress}
+          onTooltipPresented={onTooltipPresented}
           narrowContent={narrowContent}
           template={template}
+          tooltips={tooltips}
         />
       );
     }}

@@ -96,11 +96,13 @@ class ArticlePage extends Component {
       onImagePress,
       onLinkPress,
       onRelatedArticlePress,
+      onTooltipPresented,
       onTopicPress,
       onTwitterLinkPress,
       onVideoPress,
       onViewed,
       receiveChildList,
+      tooltips,
     } = this.props;
 
     const { bylines, topics } = article;
@@ -148,6 +150,7 @@ class ArticlePage extends Component {
                     onImagePress={onImagePress}
                     onLinkPress={onLinkPress}
                     onRelatedArticlePress={onRelatedArticlePress}
+                    onTooltipPresented={onTooltipPresented}
                     onTopicPress={onTopicPress}
                     onTwitterLinkPress={onTwitterLinkPress}
                     onVideoPress={onVideoPress}
@@ -157,6 +160,7 @@ class ArticlePage extends Component {
                     narrowContent={true}
                     receiveChildList={receiveChildList}
                     scale={scale}
+                    tooltips={tooltips}
                   />
                 </View>
               </View>

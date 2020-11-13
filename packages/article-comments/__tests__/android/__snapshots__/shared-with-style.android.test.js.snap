@@ -122,9 +122,8 @@ exports[`enabled comments 1`] = `
         "justifyContent": "center",
         "marginBottom": 0,
         "marginTop": 25,
-        "maxWidth": 215,
         "minWidth": 100,
-        "width": "100%",
+        "width": 215,
       }
     }
   >
