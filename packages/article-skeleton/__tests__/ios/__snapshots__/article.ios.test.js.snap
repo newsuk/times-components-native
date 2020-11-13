@@ -727,22 +727,13 @@ exports[`1. a full article with all content items with dropcap template 1`] = `
           ]
         }
       >
-        <View
-          style={
-            Array [
-              false,
-            ]
-          }
+        <PullQuote
+          caption="AName"
+          text="a text"
+          twitter="@AName"
         >
-          <PullQuote
-            caption="AName"
-            quoteColour="#FF0000"
-            text="a text"
-            twitter="@AName"
-          >
-            The pull quote content
-          </PullQuote>
-        </View>
+          The pull quote content
+        </PullQuote>
       </View>
       <View
         style={
@@ -5288,22 +5279,13 @@ exports[`17. an article with variant testing 1`] = `
           ]
         }
       >
-        <View
-          style={
-            Array [
-              false,
-            ]
-          }
+        <PullQuote
+          caption="AName"
+          text="a text"
+          twitter="@AName"
         >
-          <PullQuote
-            caption="AName"
-            quoteColour="#FF0000"
-            text="a text"
-            twitter="@AName"
-          >
-            The pull quote content
-          </PullQuote>
-        </View>
+          The pull quote content
+        </PullQuote>
       </View>
       <View
         style={

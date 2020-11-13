@@ -54,7 +54,6 @@ export const makeArticleConfiguration = ({
   withPullQuote,
   withStandfirst,
   withVideo,
-  withTeasedContent,
 }) => {
   let mask;
 
@@ -92,10 +91,6 @@ export const makeArticleConfiguration = ({
 
   if (withVideo) {
     mask = mask | VIDEO;
-  }
-
-  if (withTeasedContent) {
-    mask = mask | TEASED_CONTENT;
   }
 
   return mask;
@@ -220,8 +215,6 @@ const renderArticle = ({
   scale,
   section,
   template,
-  isTeaser,
-  isMeteredExpired,
 }) => (
   <ArticleProvider debounceTimeMs={0} id={id}>
     {({ article, error, refetch }) => {
@@ -246,10 +239,6 @@ const renderArticle = ({
             theme: {
               ...themeFactory(section, template),
               scale: scale || defaults.theme.scale,
-            },
-            user: {
-              isLoggedIn: !isTeaser || isMeteredExpired,
-              isMeteredExpired,
             },
           }}
         >
@@ -324,10 +313,6 @@ const renderArticleConfig = ({
       ? { rgba: { alpha: 1, blue: 255, green: 255, red: 255 } }
       : null;
 
-  const user = (global.nuk && global.nuk.user) || {};
-  const { isLoggedIn, isMeteredExpired, isShared } = user;
-  const isTeaser = !isShared && (isMeteredExpired || !isLoggedIn);
-
   return (
     <Fragment>
       {link}
@@ -343,7 +328,6 @@ const renderArticleConfig = ({
             withPullQuote,
             withStandfirst,
             withVideo,
-            withTeasedContent: isTeaser,
           })}
           id={id}
         >
@@ -354,8 +338,6 @@ const renderArticleConfig = ({
             id,
             inDepthBackgroundColour,
             inDepthTextColour,
-            isTeaser,
-            isMeteredExpired,
             scale,
             section,
             template,

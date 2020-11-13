@@ -3,4 +3,5 @@ export {
   defaults,
   SectionContext,
   ContextProviderWithDefaults,
+  useAppContext,
 } from "./src/context";
