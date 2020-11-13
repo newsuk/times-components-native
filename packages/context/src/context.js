@@ -1,4 +1,4 @@
-import React, { createContext } from "react";
+import React, { createContext, useContext } from "react";
 import defaults from "./defaults";
 import SectionContext from "./section-context";
 
@@ -8,5 +8,7 @@ function ContextProviderWithDefaults({ value, ...props }) {
   return <Context.Provider {...props} value={{ ...defaults, ...value }} />;
 }
 
+const useAppContext = () => useContext(Context);
+
 export default Context;
-export { defaults, SectionContext, ContextProviderWithDefaults };
+export { defaults, SectionContext, ContextProviderWithDefaults, useAppContext };
