@@ -1,3 +1,5 @@
+import { ViewStyle } from "react-native";
+
 import { ParagraphContent } from "@times-components-native/types";
 
 export type Line = {
@@ -7,9 +9,9 @@ export type TextLayoutEvent = { lines: Line[] };
 export type ChunkContents = ParagraphContent[];
 
 export interface ContentParameters {
-  contentWidth: number;
   contentHeight: number;
   contentLineHeight: number;
+  contentWidth: number;
   itemWidth: number;
 }
 
@@ -24,8 +26,15 @@ interface BaseInlineContentProps {
   narrowContent: boolean;
   originalName: string;
   skeletonProps: SkeletonProps;
-  slotName: string;
   width: number;
+}
+
+export interface InlineAdProps extends BaseInlineContentProps {
+  baseUrl: string;
+  contextUrl: string;
+  isLoading: boolean;
+  slotName: string;
+  style: ViewStyle;
 }
 
 export interface InlineArticleImageProps extends BaseInlineContentProps {
@@ -35,10 +44,10 @@ export interface InlineArticleImageProps extends BaseInlineContentProps {
   narrowContent: boolean;
   onImagePress: () => void;
   ratio: string;
-  relativeWidth: number;
   relativeHeight: number;
   relativeHorizontalOffset: number;
   relativeVerticalOffset: number;
+  relativeWidth: number;
   url: string;
 }
 
@@ -49,28 +58,40 @@ export interface InlinePullQuoteProps extends BaseInlineContentProps {
 }
 
 export type InlineContentProps =
-  | BaseInlineContentProps
+  | InlineAdProps
   | InlineArticleImageProps
   | InlinePullQuoteProps;
+
+export type AdProps = {
+  adConfig: Record<string, unknown>;
+  baseUrl: string;
+  contextUrl: string;
+  display: string;
+  isLoading: boolean;
+  originalName: string;
+  slotName: string;
+  style: ViewStyle;
+  width: number;
+};
 
 export type ArticleImageProps = {
   captionOptions: {
     caption: string;
     credits: string;
   };
-  onImagePress: () => void;
   images: [];
   imageOptions: {
     display: string;
-    ratio: string;
     index: number;
-    uri: string;
-    relativeWidth: number;
+    narrowContent: boolean;
+    ratio: string;
     relativeHeight: number;
     relativeHorizontalOffset: number;
     relativeVerticalOffset: number;
-    narrowContent: boolean;
+    relativeWidth: number;
+    uri: string;
   };
+  onImagePress: () => void;
   originalName: string;
 };
 
@@ -84,4 +105,4 @@ export type PullQuoteProps = {
   width: number;
 };
 
-export type InlineItemProps = ArticleImageProps | PullQuoteProps;
+export type InlineItemProps = AdProps | ArticleImageProps | PullQuoteProps;

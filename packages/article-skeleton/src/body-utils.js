@@ -137,13 +137,14 @@ const setupArticleMpuTestAd = (
   return [
     ...contentBeforeAd,
     {
-      name: "inlineAd",
+      name: "inlineContent",
       attributes: {
-        slotName,
-        inlineContent,
-        skeletonProps,
-        width,
         height,
+        inlineContent,
+        originalName: "ad",
+        skeletonProps,
+        slotName,
+        width,
       },
       children: [],
     },

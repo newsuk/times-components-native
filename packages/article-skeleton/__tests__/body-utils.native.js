@@ -226,7 +226,7 @@ export default () => {
         createParagraph("c"),
         createParagraph("d"),
         {
-          name: "inlineAd",
+          name: "inlineContent",
           attributes: {
             width: 300,
             height: 600,
@@ -289,7 +289,7 @@ export default () => {
         createParagraph("c"),
         createParagraph("d"),
         {
-          name: "inlineAd",
+          name: "inlineContent",
           attributes: {
             width: 300,
             height: 600,

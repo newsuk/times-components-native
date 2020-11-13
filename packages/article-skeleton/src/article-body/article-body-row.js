@@ -197,17 +197,6 @@ export default ({
         />
       );
     },
-    inlineAd(key, attributes) {
-      return (
-        <InlineAd
-          key={key}
-          adConfig={adConfig}
-          slotName="native-inline-ad"
-          defaultFont={defaultFont}
-          {...attributes}
-        />
-      );
-    },
     inlineContent(key, attributes, children) {
       return (
         <InlineContent

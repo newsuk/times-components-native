@@ -15,7 +15,7 @@ import {
 interface Props {
   content: ParagraphContent[];
   contentParameters: ContentParameters;
-  itemProps: InlineItemProps;
+  itemProps: InlineItemProps | undefined;
   renderMeasuredContents: (contentMeasurements: Measurements) => any;
   skeletonProps: SkeletonProps;
 }

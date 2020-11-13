@@ -9,6 +9,7 @@ import {
 import { render } from "@times-components-native/markup-forest";
 import { useResponsiveContext } from "@times-components-native/responsive";
 import {
+  spacing,
   tabletWidth,
   getNarrowArticleBreakpoint,
 } from "@times-components-native/styleguide";
@@ -24,7 +25,13 @@ import { InlineContentProps } from "./types";
 import styles from "./styles";
 
 const InlineContent = (props: InlineContentProps) => {
-  const { defaultFont, inlineContent, narrowContent, skeletonProps } = props;
+  const {
+    defaultFont,
+    inlineContent,
+    narrowContent,
+    originalName,
+    skeletonProps,
+  } = props;
   const { windowWidth } = useResponsiveContext();
   const { lineHeight } = defaultFont;
   const availableWidth = Math.min(
@@ -33,18 +40,23 @@ const InlineContent = (props: InlineContentProps) => {
       ? getNarrowArticleBreakpoint(windowWidth).content
       : tabletWidth,
   );
-  const inlineItemWidth = availableWidth * 0.35;
+  const isAd = originalName === "ad";
+
+  let inlineItemWidth = availableWidth * 0.35;
+  let inlineContentHeight: number;
+  let adContainerHeight: number;
+
+  if (isAd) {
+    const { height: adHeight, width: adWidth } = props;
+    const adHeaderHeight = spacing(4);
+    const adHorizontalSpacing = 21;
+    const adMarginBottom = spacing(2);
+    adContainerHeight = adHeight + adHeaderHeight;
+    inlineContentHeight = adContainerHeight + adMarginBottom;
+    inlineItemWidth = adWidth + adHorizontalSpacing;
+  }
+
   const inlineContentWidth = availableWidth - inlineItemWidth;
-
-  // const adHeaderHeight = spacing(4);
-  // const adHorizontalSpacing = 21;
-  // const adMarginBottom = spacing(2);
-  // const adContainerHeight = height + adHeaderHeight;
-  // const adContainerHeightPlusMargin = adContainerHeight + adMarginBottom;
-  // const adContainerWidth = width + adHorizontalSpacing;
-
-  // const contentWidth = tabletWidth - adContainerWidth;
-  // const contentHeight = adContainerHeightPlusMargin;
 
   const renderChild = render(
     // @ts-ignore
@@ -77,8 +89,8 @@ const InlineContent = (props: InlineContentProps) => {
 
   const contentParameters = {
     contentWidth: inlineContentWidth,
-    // contentHeight: inlineContentHeight,
-    contentHeight: 0,
+    // @ts-ignore
+    contentHeight: inlineContentHeight || 0,
     contentLineHeight: lineHeight,
     itemWidth: inlineItemWidth,
   };
@@ -87,7 +99,7 @@ const InlineContent = (props: InlineContentProps) => {
     <MeasureInlineContent
       content={paragraphs}
       contentParameters={contentParameters}
-      itemProps={itemProps}
+      itemProps={!isAd ? itemProps : undefined}
       skeletonProps={skeletonProps}
       renderMeasuredContents={(contentMeasurements) => {
         const { chunks, currentInlineContentHeight } = chunkInlineContent(
@@ -96,9 +108,8 @@ const InlineContent = (props: InlineContentProps) => {
           contentParameters,
         );
 
-        // const itemHeight =
-        //   contentMeasurements.itemHeight || inlineContentHeight || 0;
-        const itemHeight = contentMeasurements.itemHeight || 0;
+        const itemHeight =
+          inlineContentHeight || contentMeasurements.itemHeight || 0;
 
         const requiredInlineContentHeight = Math.max(
           currentInlineContentHeight,
@@ -108,6 +119,33 @@ const InlineContent = (props: InlineContentProps) => {
         const chunkedInlineContent = chunks[0] || [];
         const chunkedOverflowContent = chunks[1] || [];
 
+        const inlineItemToRender = (
+          <View
+            style={[
+              narrowContent
+                ? styles.inlineItemNarrowContainer
+                : styles.inlineItemContainer,
+              {
+                width: inlineItemWidth,
+                height: isAd ? adContainerHeight : itemHeight,
+              },
+            ]}
+          >
+            {renderInlineItem(itemProps)}
+          </View>
+        );
+
+        const inlineContentToRender = (
+          <View
+            style={{
+              height: requiredInlineContentHeight,
+              width: inlineContentWidth,
+            }}
+          >
+            {chunkedInlineContent.map(renderItem(true))}
+          </View>
+        );
+
         return (
           <>
             <View
@@ -116,24 +154,9 @@ const InlineContent = (props: InlineContentProps) => {
                 { height: requiredInlineContentHeight },
               ]}
             >
-              <View
-                style={[
-                  narrowContent
-                    ? styles.inlineItemNarrowContainer
-                    : styles.inlineItemContainer,
-                  { width: inlineItemWidth, height: itemHeight },
-                ]}
-              >
-                {renderInlineItem(itemProps)}
-              </View>
-              <View
-                style={{
-                  height: requiredInlineContentHeight,
-                  width: inlineContentWidth,
-                }}
-              >
-                {chunkedInlineContent.map(renderItem(true))}
-              </View>
+              {isAd
+                ? [inlineContentToRender, inlineItemToRender]
+                : [inlineItemToRender, inlineContentToRender]}
             </View>
             {chunkedOverflowContent.map(renderItem(false))}
           </>

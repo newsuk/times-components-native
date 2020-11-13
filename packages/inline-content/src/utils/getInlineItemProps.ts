@@ -1,4 +1,5 @@
 import {
+  InlineAdProps,
   InlineArticleImageProps,
   InlineContentProps,
   InlineItemProps,
@@ -10,6 +11,10 @@ export const getInlineItemProps = (
   inlineItemWidth: number,
 ): InlineItemProps | undefined => {
   const { originalName } = props;
+
+  if (originalName === "ad") {
+    return props as InlineAdProps;
+  }
 
   if (originalName === "image") {
     const {
