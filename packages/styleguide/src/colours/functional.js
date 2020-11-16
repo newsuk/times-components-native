@@ -29,6 +29,7 @@ const functionalColours = {
   tertiary: "#4D4D4D",
   transparentBlack: "rgba(0, 0, 0, 0.6)",
   transparentWhite: "rgba(255, 255, 255, 0.3)",
+  tooltip: "#3C81BE",
   white: "#FFFFFF",
   whiteGrey: "#F5F5F5",
   darkGrey: "#999999",

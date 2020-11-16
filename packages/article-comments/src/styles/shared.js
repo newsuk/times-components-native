@@ -5,7 +5,7 @@ const styles = {
   button: {
     marginBottom: spacing(0),
     marginTop: spacing(5),
-    maxWidth: 215,
+    width: 215,
   },
   container: {
     alignItems: "center",

@@ -99,11 +99,13 @@ class ArticleMagazineStandard extends Component {
       onImagePress,
       onLinkPress,
       onRelatedArticlePress,
+      onTooltipPresented,
       onTopicPress,
       onTwitterLinkPress,
       onVideoPress,
       onViewed,
       receiveChildList,
+      tooltips,
     } = this.props;
 
     return (
@@ -125,6 +127,7 @@ class ArticleMagazineStandard extends Component {
                 onImagePress={onImagePress}
                 onLinkPress={onLinkPress}
                 onRelatedArticlePress={onRelatedArticlePress}
+                onTooltipPresented={onTooltipPresented}
                 onTopicPress={onTopicPress}
                 onTwitterLinkPress={onTwitterLinkPress}
                 onVideoPress={onVideoPress}
@@ -133,6 +136,7 @@ class ArticleMagazineStandard extends Component {
                 }
                 receiveChildList={receiveChildList}
                 scale={scale}
+                tooltips={tooltips}
               />
             )}
           </Context.Consumer>

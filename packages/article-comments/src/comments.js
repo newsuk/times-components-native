@@ -5,6 +5,7 @@ import Context from "@times-components-native/context";
 import Button from "@times-components-native/button";
 import { TextLink } from "@times-components-native/link";
 import styleguide from "@times-components-native/styleguide";
+import Tooltip from "@times-components-native/tooltip";
 import styles from "./styles";
 
 const Comments = ({
@@ -12,6 +13,8 @@ const Comments = ({
   commentCount,
   onCommentGuidelinesPress,
   onCommentsPress,
+  onTooltipPresented,
+  tooltips,
   url,
 }) => (
   <View style={styles.container}>
@@ -25,24 +28,33 @@ const Comments = ({
         here
       </TextLink>
     </Text>
-    <Context.Consumer>
-      {({ theme: { scale } }) => {
-        const themedStyleguide = styleguide({ scale });
-        const fontFactory = themedStyleguide.fontFactory({
-          font: "supporting",
-          fontSize: "button",
-        });
-        return (
-          <Button
-            fontSize={fontFactory.fontSize}
-            lineHeight={fontFactory.lineHeight}
-            onPress={(e) => onCommentsPress(e, { articleId, url })}
-            style={styles.button}
-            title={commentCount > 0 ? "View comments" : "Post a comment"}
-          />
-        );
-      }}
-    </Context.Consumer>
+    <Tooltip
+      content={
+        <Text>Tap to read comments and join in with the conversation</Text>
+      }
+      onTooltipPresented={onTooltipPresented}
+      type="commenting"
+      tooltips={tooltips}
+    >
+      <Context.Consumer>
+        {({ theme: { scale } }) => {
+          const themedStyleguide = styleguide({ scale });
+          const fontFactory = themedStyleguide.fontFactory({
+            font: "supporting",
+            fontSize: "button",
+          });
+          return (
+            <Button
+              fontSize={fontFactory.fontSize}
+              lineHeight={fontFactory.lineHeight}
+              onPress={(e) => onCommentsPress(e, { articleId, url })}
+              style={styles.button}
+              title={commentCount > 0 ? "View comments" : "Post a comment"}
+            />
+          );
+        }}
+      </Context.Consumer>
+    </Tooltip>
   </View>
 );
 

@@ -1,0 +1,132 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Tooltip renders correctly when type is in tooltips array 1`] = `
+Array [
+  <View>
+    <View
+      style={
+        Object {
+          "opacity": 1,
+        }
+      }
+    >
+      <View
+        style={
+          Object {
+            "backgroundColor": "#3C81BE",
+            "borderRadius": 3,
+            "bottom": -5,
+            "left": -128,
+            "padding": 15,
+            "position": "absolute",
+            "shadowColor": "#000000",
+            "shadowOffset": Object {
+              "height": 3,
+              "width": 3,
+            },
+            "shadowOpacity": 0.2,
+            "shadowRadius": 4,
+            "width": 256,
+          }
+        }
+      >
+        <View
+          style={
+            Object {
+              "opacity": 1,
+            }
+          }
+        >
+          <View
+            style={
+              Object {
+                "position": "absolute",
+                "right": -3,
+                "top": -10,
+              }
+            }
+          >
+            <View
+              style={
+                Object {
+                  "backgroundColor": "#FFFFFF",
+                  "height": 16,
+                  "transform": Array [
+                    Object {
+                      "rotate": "45deg",
+                    },
+                  ],
+                  "width": 1,
+                }
+              }
+            />
+            <View
+              style={
+                Object {
+                  "backgroundColor": "#FFFFFF",
+                  "height": 16,
+                  "position": "absolute",
+                  "transform": Array [
+                    Object {
+                      "rotate": "-45deg",
+                    },
+                  ],
+                  "width": 1,
+                }
+              }
+            />
+          </View>
+        </View>
+        <Text
+          style={
+            Object {
+              "color": "#FFFFFF",
+              "fontFamily": "GillSansMTStd-Medium",
+              "fontSize": 16,
+              "lineHeight": 18,
+              "paddingHorizontal": 15,
+              "paddingVertical": 5,
+              "textAlign": "center",
+            }
+          }
+        >
+          <Text>
+            foo
+          </Text>
+        </Text>
+        <View
+          style={
+            Object {
+              "backgroundColor": "transparent",
+              "borderBottomWidth": 8,
+              "borderColor": "#3C81BE",
+              "borderLeftColor": "transparent",
+              "borderLeftWidth": 12,
+              "borderRadius": 3,
+              "borderRightColor": "transparent",
+              "borderRightWidth": 12,
+              "borderStyle": "solid",
+              "bottom": -7,
+              "left": 120,
+              "position": "absolute",
+              "shadowColor": "#000000",
+              "shadowOffset": Object {
+                "height": -3,
+                "width": -3,
+              },
+              "shadowOpacity": 0.2,
+              "shadowRadius": 4,
+              "transform": Array [
+                Object {
+                  "rotate": "180deg",
+                },
+              ],
+            }
+          }
+        />
+      </View>
+    </View>
+  </View>,
+  "bar",
+]
+`;

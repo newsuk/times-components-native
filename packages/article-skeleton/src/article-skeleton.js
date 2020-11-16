@@ -39,10 +39,12 @@ const ArticleWithContent = (props) => {
     analyticsStream,
     onCommentGuidelinesPress,
     onCommentsPress,
+    onTooltipPresented,
     onRelatedArticlePress,
     onTopicPress,
     isTablet,
     narrowContent,
+    tooltips,
   } = props;
   const variants = useVariantTestingContext();
   const { windowWidth } = useResponsiveContext();
@@ -68,9 +70,11 @@ const ArticleWithContent = (props) => {
           onCommentGuidelinesPress={onCommentGuidelinesPress}
           onCommentsPress={onCommentsPress}
           onRelatedArticlePress={onRelatedArticlePress}
+          onTooltipPresented={onTooltipPresented}
           onTopicPress={onTopicPress}
           narrowContent={narrowContent}
           template={template}
+          tooltips={tooltips}
         />
       </Gutter>
     ),

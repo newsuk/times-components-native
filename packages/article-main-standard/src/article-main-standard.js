@@ -124,12 +124,14 @@ class ArticlePage extends Component {
       onImagePress,
       onLinkPress,
       onRelatedArticlePress,
+      onTooltipPresented,
       onTopicPress,
       onTwitterLinkPress,
       onVideoPress,
       onViewed,
       receiveChildList,
       referralUrl,
+      tooltips,
     } = this.props;
 
     return (
@@ -151,6 +153,7 @@ class ArticlePage extends Component {
                 onImagePress={onImagePress}
                 onLinkPress={onLinkPress}
                 onRelatedArticlePress={onRelatedArticlePress}
+                onTooltipPresented={onTooltipPresented}
                 onTopicPress={onTopicPress}
                 onTwitterLinkPress={onTwitterLinkPress}
                 onVideoPress={onVideoPress}
@@ -160,6 +163,7 @@ class ArticlePage extends Component {
                 receiveChildList={receiveChildList}
                 referralUrl={referralUrl}
                 scale={scale}
+                tooltips={tooltips}
               />
             )}
           </Context.Consumer>

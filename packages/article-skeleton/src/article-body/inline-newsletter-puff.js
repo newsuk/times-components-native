@@ -75,6 +75,7 @@ const InlineNewsletterPuff = ({
                     </Text>
                     <View style={styles.preferencesContainer}>
                       <NewsletterPuffLink
+                        enforceTracking
                         newsletterPuffName={newsletter.title}
                         analyticsStream={analyticsStream}
                         onPress={() => onManagePreferencesPress()}
@@ -88,6 +89,7 @@ const InlineNewsletterPuff = ({
                     <Text style={styles.copy}>{copy}</Text>
                     <View style={styles.signUpCTAContainer}>
                       <NewsletterPuffButton
+                        enforceTracking
                         newsletterPuffName={newsletter.title}
                         analyticsStream={analyticsStream}
                         updatingSubscription={updatingSubscription}
