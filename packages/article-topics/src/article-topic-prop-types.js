@@ -1,11 +1,14 @@
 import PropTypes from "prop-types";
 
-const topicPropTypes = {
+export const topicPropTypes = {
   fontSize: PropTypes.number,
   lineHeight: PropTypes.number,
   name: PropTypes.string.isRequired,
   onPress: PropTypes.func.isRequired,
   slug: PropTypes.string.isRequired,
+  tooltips: PropTypes.array,
 };
 
-export default topicPropTypes;
+export const topicDefaultProps = {
+  tooltips: [],
+};

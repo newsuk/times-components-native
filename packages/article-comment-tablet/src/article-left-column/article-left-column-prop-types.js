@@ -5,6 +5,7 @@ const articleLeftColumnPropTypes = {
   bylines: PropTypes.arrayOf(PropTypes.shape({})).isRequired,
   onAuthorPress: PropTypes.func.isRequired,
   onTopicPress: PropTypes.func.isRequired,
+  tooltips: PropTypes.array,
   topics: PropTypes.arrayOf(
     PropTypes.shape({
       name: PropTypes.string.isRequired,
@@ -13,6 +14,8 @@ const articleLeftColumnPropTypes = {
   ),
 };
 
-const articleLeftColumnDefaultProps = {};
+const articleLeftColumnDefaultProps = {
+  tooltips: [],
+};
 
 export { articleLeftColumnPropTypes, articleLeftColumnDefaultProps };

@@ -11,6 +11,10 @@ const styles = {
     paddingRight: spacing(2),
     paddingTop: spacing(2),
   },
+  borderHighlight: {
+    borderColor: colours.functional.tooltip,
+    borderWidth: 2,
+  },
   spacer: {
     marginRight: spacing(2),
     marginTop: spacing(2),
