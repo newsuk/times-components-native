@@ -155,7 +155,7 @@ Array [
             },
             "shadowOpacity": 0.3,
             "shadowRadius": 3,
-            "width": "100",
+            "width": 100,
           }
         }
       >

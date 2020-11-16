@@ -34,7 +34,7 @@ export default () => {
           onTooltipPresented={onTooltipPresentedMock}
           type="testtype"
           tooltips={["testtype"]}
-          width="100"
+          width={100}
         >
           bar
         </Tooltip>,

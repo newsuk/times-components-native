@@ -6,14 +6,12 @@ const styles = {
     borderColor: colours.functional.keyline,
     borderRadius: 2,
     borderWidth: 1,
-    paddingBottom: spacing(2),
-    paddingLeft: spacing(2),
-    paddingRight: spacing(2),
-    paddingTop: spacing(2),
+    padding: spacing(2),
   },
   borderHighlight: {
     borderColor: colours.functional.tooltip,
     borderWidth: 2,
+    padding: spacing(2) - 1,
   },
   spacer: {
     marginRight: spacing(2),
