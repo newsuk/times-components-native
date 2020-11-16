@@ -1,78 +1,196 @@
 import React from "react";
 import TestRenderer from "react-test-renderer";
 
+import { Measurements, ParagraphContent } from "@times-components-native/types";
+import { withTabletContext } from "@times-components-native/test-utils/src/responsiveContextUtil";
 import InlineContent from "../src";
 import { MeasureInlineContent } from "../src/measure/MeasureInlineContent";
-import { Measurements, ParagraphContent } from "@times-components-native/types";
+import {
+  InlineAdProps,
+  InlineArticleImageProps,
+  InlinePullQuoteProps,
+} from "../src/types";
+
+const windowWidth = 1000;
 
 jest.mock("../src/measure/MeasureInlineContent", () => ({
   MeasureInlineContent: "MeasureInlineContent",
 }));
-
-jest.mock("../../src/ad", () => "AD");
-
+jest.mock("@times-components-native/ad", () => "Ad");
+jest.mock("@times-components-native/article-image", () => "ArticleImage");
+jest.mock("@times-components-native/pull-quote", () => "PullQuote");
 jest.mock("react-native-image-zoom-viewer", () => "ImageZoomView");
 
-const height = 630;
-
 export const createParagraphWithText = (text: string): ParagraphContent => ({
-  id: "some-paragraph-id",
   name: "paragraph",
   children: [{ name: "text", children: [], attributes: { value: text } }],
 });
 
 describe("InlineContent", () => {
-  const para1 = createParagraphWithText("article content");
-  const content = [para1];
+  const paragraph = createParagraphWithText("article content");
+  const content = [paragraph];
 
-  const props = {
-    adConfig: {},
-    display: "inline",
-    inlineContent: content,
-    defaultFont: { lineHeight: 26 },
-    width: 300,
-    height: 600,
-    slotName: "native-inline-ad-c",
-    skeletonProps: {
-      data: [],
-      isTablet: true,
+  describe("ad", () => {
+    const props = {
+      adConfig: {},
+      baseUrl: "some-base-url",
+      contextUrl: "some-context-url",
+      defaultFont: { lineHeight: 26 },
+      display: "inline",
+      height: 600,
+      inlineContent: content,
+      isLoading: false,
       narrowContent: false,
-      scale: 1,
-    },
-  };
-
-  it("generates content for inline ad", () => {
-    const renderer = TestRenderer.create(<InlineContent {...props} />);
-    expect(renderer.toJSON()).toMatchSnapshot();
-  });
-
-  it("renders inline ad via a render-prop", () => {
-    const renderer = TestRenderer.create(<InlineContent {...props} />);
-    const renderMeasuredContentsRenderProp = renderer.root.findByType(
-      MeasureInlineContent,
-    ).props["renderMeasuredContents"];
-
-    const idWithHeight = `0-${height}`;
-    const contentMeasurements: Measurements = {
-      contents: {
-        lines: {
-          [idWithHeight]: [{ text: "line1" }],
-        },
-        heights: {
-          [idWithHeight]: 40,
-        },
+      originalName: "ad",
+      skeletonProps: {
+        data: [],
+        isTablet: true,
+        narrowContent: false,
+        scale: 1,
+        windowWidth,
       },
-    };
+      slotName: "native-inline-ad-c",
+      style: {},
+      width: 300,
+    } as InlineAdProps;
 
-    expect(
-      renderMeasuredContentsRenderProp(contentMeasurements),
-    ).toMatchSnapshot();
+    it("generates content measurements for inline ad", () => {
+      const renderer = TestRenderer.create(
+        withTabletContext(<InlineContent {...props} />),
+      );
+      expect(renderer.toJSON()).toMatchSnapshot();
+    });
+
+    it("renders content and inline ad via a render-prop", () => {
+      const renderer = TestRenderer.create(
+        withTabletContext(<InlineContent {...props} />),
+      );
+      const renderMeasuredContentsRenderProp = renderer.root.findByType(
+        MeasureInlineContent,
+      ).props["renderMeasuredContents"];
+
+      const idWithWidth = `0-${windowWidth}`;
+      const contentMeasurements: Measurements = {
+        contents: {
+          lines: {
+            [idWithWidth]: [{ text: "line1" }],
+          },
+          heights: {
+            [idWithWidth]: 40,
+          },
+        },
+        itemHeight: null,
+      };
+
+      expect(
+        renderMeasuredContentsRenderProp(contentMeasurements),
+      ).toMatchSnapshot();
+    });
   });
 
-  it("renders nothing if height is 0", () => {
-    const renderer = TestRenderer.create(
-      <InlineContent {...props} height={0} />,
-    );
-    expect(renderer.toJSON()).toMatchSnapshot();
+  describe("image", () => {
+    const props = {
+      caption: "some caption",
+      credits: "some credits",
+      defaultFont: { lineHeight: 26 },
+      display: "inline",
+      imageIndex: 0,
+      inlineContent: content,
+      narrowContent: false,
+      onImagePress: () => {
+        return;
+      },
+      originalName: "image",
+      ratio: "16:9",
+      relativeHeight: 900,
+      relativeHorizontalOffset: 0,
+      relativeVerticalOffset: 0,
+      relativeWidth: 1600,
+      url: "some image url",
+    } as InlineArticleImageProps;
+
+    it("generates content measurements for inline image", () => {
+      const renderer = TestRenderer.create(
+        withTabletContext(<InlineContent {...props} />),
+      );
+      expect(renderer.toJSON()).toMatchSnapshot();
+    });
+
+    it("renders content and inline image via a render-prop", () => {
+      const renderer = TestRenderer.create(
+        withTabletContext(<InlineContent {...props} />),
+      );
+      const renderMeasuredContentsRenderProp = renderer.root.findByType(
+        MeasureInlineContent,
+      ).props["renderMeasuredContents"];
+
+      const idWithWidth = `0-${windowWidth}`;
+      const contentMeasurements: Measurements = {
+        contents: {
+          lines: {
+            [idWithWidth]: [{ text: "line1" }],
+          },
+          heights: {
+            [idWithWidth]: 40,
+          },
+        },
+        itemHeight: null,
+      };
+
+      expect(
+        renderMeasuredContentsRenderProp(contentMeasurements),
+      ).toMatchSnapshot();
+    });
+  });
+
+  describe("pullQuote", () => {
+    const props = {
+      caption: {
+        name: "some caption",
+        text: "some text",
+        twitter: "some twitter text",
+      },
+      children: [{ string: "some pull quote text" }],
+      defaultFont: { lineHeight: 26 },
+      inlineContent: content,
+      onTwitterLinkPress: () => {
+        return;
+      },
+      originalName: "pullQuote",
+      width: 231,
+    } as InlinePullQuoteProps;
+
+    it("generates content measurements for pullQuote", () => {
+      const renderer = TestRenderer.create(
+        withTabletContext(<InlineContent {...props} />),
+      );
+      expect(renderer.toJSON()).toMatchSnapshot();
+    });
+
+    it("renders content and pullQuote ad via a render-prop", () => {
+      const renderer = TestRenderer.create(
+        withTabletContext(<InlineContent {...props} />),
+      );
+      const renderMeasuredContentsRenderProp = renderer.root.findByType(
+        MeasureInlineContent,
+      ).props["renderMeasuredContents"];
+
+      const idWithWidth = `0-${windowWidth}`;
+      const contentMeasurements: Measurements = {
+        contents: {
+          lines: {
+            [idWithWidth]: [{ text: "line1" }],
+          },
+          heights: {
+            [idWithWidth]: 40,
+          },
+        },
+        itemHeight: null,
+      };
+
+      expect(
+        renderMeasuredContentsRenderProp(contentMeasurements),
+      ).toMatchSnapshot();
+    });
   });
 });

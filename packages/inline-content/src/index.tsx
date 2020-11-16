@@ -81,11 +81,11 @@ const InlineContent = (props: InlineContentProps) => {
 
   const paragraphs = inlineContent
     .filter((c) => c.name === "paragraph")
-    .map(assignWithId(inlineContentWidth));
+    .map(assignWithId(windowWidth));
 
   const itemProps = getInlineItemProps(props, inlineItemWidth);
 
-  if (!itemProps) return paragraphs.map(renderItem(false));
+  if (!itemProps) return <>{paragraphs.map(renderItem(false))}</>;
 
   const contentParameters = {
     contentWidth: inlineContentWidth,

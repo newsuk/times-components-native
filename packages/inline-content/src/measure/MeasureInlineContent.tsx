@@ -43,10 +43,11 @@ export const InnerMeasureInlineContent: React.FC<
 }) => {
   const {
     contents: { lines, heights },
+    itemHeight,
   } = measurementState;
   if (
     allContentMeasured(content, heights, lines) &&
-    (!itemProps || measurementState.itemHeight !== null)
+    (!itemProps || itemHeight !== null)
   ) {
     return renderMeasuredContents(measurementState);
   }

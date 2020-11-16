@@ -25,10 +25,10 @@ export const getInlineItemProps = (
       narrowContent,
       onImagePress,
       ratio,
-      relativeWidth,
       relativeHeight,
       relativeHorizontalOffset,
       relativeVerticalOffset,
+      relativeWidth,
       url,
     } = props as InlineArticleImageProps;
 
@@ -37,20 +37,20 @@ export const getInlineItemProps = (
         caption,
         credits,
       },
-      onImagePress,
-      originalName,
       images: [],
       imageOptions: {
         display,
-        ratio,
         index: imageIndex,
-        uri: url,
-        relativeWidth,
+        narrowContent,
+        ratio,
         relativeHeight,
         relativeHorizontalOffset,
         relativeVerticalOffset,
-        narrowContent,
+        relativeWidth,
+        uri: url,
       },
+      onImagePress,
+      originalName,
     };
   }
 

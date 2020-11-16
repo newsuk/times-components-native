@@ -14,9 +14,14 @@ exports[`MeasureContent renders the content 1`] = `
         Object {
           "marginBottom": 20,
         },
-        false,
-        false,
-        false,
+        Object {
+          "alignSelf": "center",
+          "width": 660,
+        },
+        Object {
+          "width": "100%",
+        },
+        undefined,
         false,
         Object {},
       ]
@@ -50,5 +55,63 @@ exports[`MeasureContent renders the content 1`] = `
       </Text>
     </View>
   </View>
+</View>
+`;
+
+exports[`MeasureItem renders a pull quote 1`] = `
+<View
+  onLayout={[Function]}
+  style={
+    Object {
+      "width": 231,
+    }
+  }
+>
+  <PullQuote
+    caption="some caption"
+    onTwitterLinkPress={[Function]}
+    originalName="pullQuote"
+    text="some text"
+    twitter="some twitter text"
+    width={231}
+  >
+    some pull quote text
+  </PullQuote>
+</View>
+`;
+
+exports[`MeasureItem renders an inline image 1`] = `
+<View
+  onLayout={[Function]}
+  style={
+    Object {
+      "width": 231,
+    }
+  }
+>
+  <ArticleImage
+    captionOptions={
+      Object {
+        "caption": "some caption",
+        "credits": "some credits",
+      }
+    }
+    imageOptions={
+      Object {
+        "display": "inline",
+        "index": 0,
+        "narrowContent": false,
+        "ratio": "16:9",
+        "relativeHeight": 900,
+        "relativeHorizontalOffset": 0,
+        "relativeVerticalOffset": 0,
+        "relativeWidth": 1600,
+        "uri": "some image uri",
+      }
+    }
+    images={Array []}
+    onImagePress={[Function]}
+    originalName="image"
+  />
 </View>
 `;

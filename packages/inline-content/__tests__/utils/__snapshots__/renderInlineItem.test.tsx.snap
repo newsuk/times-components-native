@@ -1,0 +1,58 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renderInlineItem renders a pull quote if pullQuote itemProps passed 1`] = `
+<PullQuote
+  caption="some caption"
+  onTwitterLinkPress={[Function]}
+  originalName="pullQuote"
+  text="some text"
+  twitter="some twitter text"
+  width={231}
+>
+  some pull quote text
+</PullQuote>
+`;
+
+exports[`renderInlineItem renders an ad if ad itemProps passed 1`] = `
+<Ad
+  adConfig={Object {}}
+  baseUrl="some-url"
+  contextUrl="some-context-url"
+  display="inline"
+  height={600}
+  isLoading={false}
+  originalName="ad"
+  slotName="native-inline-ad-c"
+  style={Object {}}
+  width={300}
+/>
+`;
+
+exports[`renderInlineItem renders an inline article image if image itemProps passed 1`] = `
+<ArticleImage
+  captionOptions={
+    Object {
+      "caption": "some caption",
+      "credits": "some credits",
+    }
+  }
+  imageOptions={
+    Object {
+      "display": "inline",
+      "index": 0,
+      "narrowContent": false,
+      "ratio": "16:9",
+      "relativeHeight": 900,
+      "relativeHorizontalOffset": 0,
+      "relativeVerticalOffset": 0,
+      "relativeWidth": 1600,
+      "uri": "some image uri",
+    }
+  }
+  images={Array []}
+  onImagePress={[Function]}
+  originalName="image"
+/>
+`;
+
+exports[`renderInlineItem renders nothing if no itemProps passed 1`] = `null`;
