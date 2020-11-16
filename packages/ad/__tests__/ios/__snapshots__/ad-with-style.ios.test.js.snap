@@ -15,8 +15,6 @@ Array [
         <RNCWebView
           cacheEnabled={true}
           className="IS1"
-          injectedJavaScriptBeforeContentLoadedForMainFrameOnly={true}
-          injectedJavaScriptForMainFrameOnly={true}
           javaScriptEnabled={true}
           messagingEnabled={true}
           useSharedProcessPool={true}
@@ -41,8 +39,6 @@ Array [
         <RNCWebView
           cacheEnabled={true}
           className="IS1"
-          injectedJavaScriptBeforeContentLoadedForMainFrameOnly={true}
-          injectedJavaScriptForMainFrameOnly={true}
           javaScriptEnabled={true}
           messagingEnabled={true}
           useSharedProcessPool={true}

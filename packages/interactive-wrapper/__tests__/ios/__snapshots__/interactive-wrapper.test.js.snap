@@ -40,8 +40,6 @@ exports[`renders correctly 1`] = `
   meta.setAttribute(\\"name\\", \\"viewport\\");
   window.document.getElementsByTagName(\\"head\\")[0].appendChild(meta);
 })({window});"
-    injectedJavaScriptBeforeContentLoadedForMainFrameOnly={true}
-    injectedJavaScriptForMainFrameOnly={true}
     scrollEnabled={false}
     source={
       Object {

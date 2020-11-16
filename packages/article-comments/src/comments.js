@@ -15,7 +15,7 @@ const Comments = ({
   onCommentGuidelinesPress,
   onCommentsPress,
   onTooltipPresented,
-  tooltips,
+  tooltips = [],
   url,
 }) => {
   const { isTablet } = useResponsiveContext();
