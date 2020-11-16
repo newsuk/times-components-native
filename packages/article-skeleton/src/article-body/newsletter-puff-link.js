@@ -40,6 +40,7 @@ export default withTrackingContext(
       {
         actionName: "onPress",
         eventName: "onPress",
+        trackingName: "NewsletterPuffLink",
         getAttrs: ({ newsletterPuffName }) => ({
           article_parent_name: `${newsletterPuffName}`,
           event_navigation_name: "widget : puff : manage preferences here",
@@ -56,6 +57,7 @@ export default withTrackingContext(
       article_parent_name: `${newsletterPuffName}`,
       event_navigation_browsing_method: "automated",
     }),
+    trackingName: "NewsletterPuffLink",
     trackingObjectName: "NewsletterPuffLink",
   },
 );
