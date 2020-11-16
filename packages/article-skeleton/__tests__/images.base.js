@@ -1,7 +1,6 @@
 import React from "react";
 import { iterator } from "@times-components-native/test-utils";
 import TestRenderer from "react-test-renderer";
-import Context from "@times-components-native/context";
 import ArticleSkeleton from "../src/article-skeleton";
 import articleFixture, { testFixture } from "../fixtures/full-article";
 import { adConfig } from "./ad-mock";
