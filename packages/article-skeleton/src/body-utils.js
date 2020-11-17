@@ -102,11 +102,6 @@ const setupArticleMpuTestAd = (
     return count + 1;
   }, 0);
 
-  console.log(
-    "fdsjklfjakdfsdafjad skjskfjsdklfjksd akfjdfkldsaj;lfksd",
-    nthParagraphIndex,
-  );
-
   const adSlotIndex = isControlGroup ? currentAdSlotIndex : nthParagraphIndex;
 
   const contentBeforeAd = contentWithoutAdSlot.slice(0, adSlotIndex);
