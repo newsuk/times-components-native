@@ -1,6 +1,5 @@
 import React, { useState } from "react";
 import Context from "@times-components-native/context";
-import { useResponsiveContext } from "@times-components-native/responsive";
 import { Text, View } from "react-native";
 import Link from "@times-components-native/link";
 import Tooltip from "@times-components-native/tooltip";

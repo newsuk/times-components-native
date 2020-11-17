@@ -13,6 +13,7 @@ exports[`renders correctly 1`] = `
     allowFileAccess={false}
     allowsFullscreenVideo={false}
     androidHardwareAccelerationDisabled={false}
+    androidLayerType="none"
     automaticallyAdjustContentInsets={false}
     cacheEnabled={true}
     injectedJavaScript="
@@ -97,6 +98,7 @@ exports[`renders correctly 1`] = `
   updateSize();
   
   "
+    messagingModuleName="WebViewMessageHandler1"
     overScrollMode="always"
     scrollEnabled={false}
     showsHorizontalScrollIndicator={false}

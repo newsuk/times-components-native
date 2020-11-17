@@ -14,7 +14,7 @@ const Comments = ({
   onCommentGuidelinesPress,
   onCommentsPress,
   onTooltipPresented,
-  tooltips,
+  tooltips = [],
   url,
 }) => (
   <View style={styles.container}>
