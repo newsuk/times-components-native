@@ -1,0 +1,129 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`MeasureInlineContent outputs rendered content once everything has been measured 1`] = `
+<View>
+  <Text>
+    {"contents":{"lines":{"p1":[{"text":"line1"}]},"heights":{"p1":20}},"itemHeight":null}
+  </Text>
+</View>
+`;
+
+exports[`MeasureInlineContent outputs rendered content with inline item once everything has been measured 1`] = `
+<View>
+  <Text>
+    {"contents":{"lines":{"p1":[{"text":"line1"}]},"heights":{"p1":20}},"itemHeight":300}
+  </Text>
+</View>
+`;
+
+exports[`MeasureInlineContent renders content to be measured 1`] = `
+<RCTScrollView
+  style={
+    Object {
+      "transform": Array [
+        Object {
+          "translateX": -1000,
+        },
+      ],
+    }
+  }
+>
+  <View>
+    <View
+      style={
+        Object {
+          "width": 429,
+        }
+      }
+    >
+      <MeasureContent
+        content={
+          Object {
+            "children": Array [
+              Object {
+                "attributes": Object {
+                  "value": "line1",
+                },
+                "children": Array [],
+                "name": "text",
+              },
+            ],
+            "id": "p1",
+            "name": "paragraph",
+          }
+        }
+        skeletonProps={
+          Object {
+            "some": "props",
+          }
+        }
+      />
+    </View>
+  </View>
+</RCTScrollView>
+`;
+
+exports[`MeasureInlineContent renders content with inline item to be measured 1`] = `
+<RCTScrollView
+  style={
+    Object {
+      "transform": Array [
+        Object {
+          "translateX": -1000,
+        },
+      ],
+    }
+  }
+>
+  <View>
+    <MeasureItem
+      itemProps={
+        Object {
+          "caption": "some caption",
+          "children": Array [
+            Object {
+              "string": "some pull quote text",
+            },
+          ],
+          "onTwitterLinkPress": [Function],
+          "originalName": "pullQuote",
+          "text": "some text",
+          "twitter": "some twitter text",
+          "width": 231,
+        }
+      }
+      width={231}
+    />
+    <View
+      style={
+        Object {
+          "width": 429,
+        }
+      }
+    >
+      <MeasureContent
+        content={
+          Object {
+            "children": Array [
+              Object {
+                "attributes": Object {
+                  "value": "line1",
+                },
+                "children": Array [],
+                "name": "text",
+              },
+            ],
+            "id": "p1",
+            "name": "paragraph",
+          }
+        }
+        skeletonProps={
+          Object {
+            "some": "props",
+          }
+        }
+      />
+    </View>
+  </View>
+</RCTScrollView>
+`;

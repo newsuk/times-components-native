@@ -5,7 +5,8 @@ import renderTrees from "@times-components-native/markup-forest";
 import getRenderers from "@times-components-native/article-skeleton/src/article-body/article-body-row.js";
 import { ParagraphContent } from "@times-components-native/types";
 import { useInlineMeasurementDispatchContext } from "./InlineMeasurementDispatchContext";
-import { SkeletonProps } from "../types";
+import { renderInlineItem } from "../utils/renderInlineItem";
+import { InlineItemProps, SkeletonProps } from "../types";
 
 interface Props {
   content: ParagraphContent;
@@ -65,3 +66,31 @@ export const MeasureContent: React.FC<Props> = memo(
     );
   },
 );
+
+export const MeasureItem: React.FC<{
+  itemProps: InlineItemProps;
+  width: number;
+}> = memo(({ itemProps, width }) => {
+  const dispatch = useInlineMeasurementDispatchContext();
+
+  if (!itemProps || !width)
+    dispatch({
+      type: "SET_INLINE_ITEM_HEIGHT",
+      height: 0,
+    });
+
+  return (
+    <View
+      style={{ width }}
+      onLayout={(event) => {
+        const height = event.nativeEvent.layout.height;
+        dispatch({
+          type: "SET_INLINE_ITEM_HEIGHT",
+          height,
+        });
+      }}
+    >
+      {renderInlineItem(itemProps)}
+    </View>
+  );
+});

@@ -1,0 +1,1014 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`InlineContent ad generates content measurements for inline ad 1`] = `
+<MeasureInlineContent
+  content={
+    Array [
+      Object {
+        "children": Array [
+          Object {
+            "attributes": Object {
+              "value": "article content",
+            },
+            "children": Array [],
+            "name": "text",
+          },
+        ],
+        "id": "0-1000",
+        "name": "paragraph",
+      },
+    ]
+  }
+  contentParameters={
+    Object {
+      "contentHeight": 630,
+      "contentLineHeight": 26,
+      "contentWidth": 339,
+      "itemWidth": 321,
+    }
+  }
+  renderMeasuredContents={[Function]}
+  skeletonProps={
+    Object {
+      "data": Array [],
+      "isTablet": true,
+      "narrowContent": false,
+      "scale": 1,
+      "windowWidth": 1000,
+    }
+  }
+/>
+`;
+
+exports[`InlineContent ad renders content and inline ad via a render-prop 1`] = `
+<React.Fragment>
+  <View
+    style={
+      Array [
+        Object {
+          "alignSelf": "center",
+          "flex": 1,
+          "flexDirection": "row",
+          "width": 660,
+        },
+        Object {
+          "height": 630,
+        },
+      ]
+    }
+  >
+    <View
+      style={
+        Object {
+          "height": 630,
+          "width": 339,
+        }
+      }
+    >
+      <Gutter
+        style={
+          Object {
+            "overflow": "hidden",
+          }
+        }
+      >
+        <ErrorBoundary>
+          <ArticleParagraph
+            LinkComponent={[Function]}
+            attributes={
+              Object {
+                "inline": true,
+              }
+            }
+            data={Array []}
+            defaultFont={
+              Object {
+                "color": "#000000",
+                "fontFamily": "TimesDigitalW04",
+                "fontSize": 36,
+                "lineHeight": 52,
+              }
+            }
+            dropCapFont="dropCap"
+            dropcapsDisabled={true}
+            index={0}
+            isTablet={true}
+            narrowContent={false}
+            scale={1}
+            tree={
+              Object {
+                "attributes": Object {
+                  "inline": true,
+                },
+                "children": Array [
+                  Object {
+                    "attributes": Object {
+                      "value": "article content",
+                    },
+                    "children": Array [],
+                    "name": "text",
+                  },
+                ],
+                "id": "0-1000",
+                "name": "paragraph",
+              }
+            }
+          >
+            AttributedString {
+              "attributes": Array [
+                Array [
+                  Object {
+                    "settings": Object {
+                      "color": "#000000",
+                      "fontFamily": "TimesDigitalW04",
+                      "fontSize": 36,
+                      "lineHeight": 52,
+                    },
+                    "tag": "FONT",
+                  },
+                ],
+                Array [
+                  Object {
+                    "settings": Object {
+                      "color": "#000000",
+                      "fontFamily": "TimesDigitalW04",
+                      "fontSize": 36,
+                      "lineHeight": 52,
+                    },
+                    "tag": "FONT",
+                  },
+                ],
+                Array [
+                  Object {
+                    "settings": Object {
+                      "color": "#000000",
+                      "fontFamily": "TimesDigitalW04",
+                      "fontSize": 36,
+                      "lineHeight": 52,
+                    },
+                    "tag": "FONT",
+                  },
+                ],
+                Array [
+                  Object {
+                    "settings": Object {
+                      "color": "#000000",
+                      "fontFamily": "TimesDigitalW04",
+                      "fontSize": 36,
+                      "lineHeight": 52,
+                    },
+                    "tag": "FONT",
+                  },
+                ],
+                Array [
+                  Object {
+                    "settings": Object {
+                      "color": "#000000",
+                      "fontFamily": "TimesDigitalW04",
+                      "fontSize": 36,
+                      "lineHeight": 52,
+                    },
+                    "tag": "FONT",
+                  },
+                ],
+                Array [
+                  Object {
+                    "settings": Object {
+                      "color": "#000000",
+                      "fontFamily": "TimesDigitalW04",
+                      "fontSize": 36,
+                      "lineHeight": 52,
+                    },
+                    "tag": "FONT",
+                  },
+                ],
+                Array [
+                  Object {
+                    "settings": Object {
+                      "color": "#000000",
+                      "fontFamily": "TimesDigitalW04",
+                      "fontSize": 36,
+                      "lineHeight": 52,
+                    },
+                    "tag": "FONT",
+                  },
+                ],
+                Array [
+                  Object {
+                    "settings": Object {
+                      "color": "#000000",
+                      "fontFamily": "TimesDigitalW04",
+                      "fontSize": 36,
+                      "lineHeight": 52,
+                    },
+                    "tag": "FONT",
+                  },
+                ],
+                Array [
+                  Object {
+                    "settings": Object {
+                      "color": "#000000",
+                      "fontFamily": "TimesDigitalW04",
+                      "fontSize": 36,
+                      "lineHeight": 52,
+                    },
+                    "tag": "FONT",
+                  },
+                ],
+                Array [
+                  Object {
+                    "settings": Object {
+                      "color": "#000000",
+                      "fontFamily": "TimesDigitalW04",
+                      "fontSize": 36,
+                      "lineHeight": 52,
+                    },
+                    "tag": "FONT",
+                  },
+                ],
+                Array [
+                  Object {
+                    "settings": Object {
+                      "color": "#000000",
+                      "fontFamily": "TimesDigitalW04",
+                      "fontSize": 36,
+                      "lineHeight": 52,
+                    },
+                    "tag": "FONT",
+                  },
+                ],
+                Array [
+                  Object {
+                    "settings": Object {
+                      "color": "#000000",
+                      "fontFamily": "TimesDigitalW04",
+                      "fontSize": 36,
+                      "lineHeight": 52,
+                    },
+                    "tag": "FONT",
+                  },
+                ],
+                Array [
+                  Object {
+                    "settings": Object {
+                      "color": "#000000",
+                      "fontFamily": "TimesDigitalW04",
+                      "fontSize": 36,
+                      "lineHeight": 52,
+                    },
+                    "tag": "FONT",
+                  },
+                ],
+                Array [
+                  Object {
+                    "settings": Object {
+                      "color": "#000000",
+                      "fontFamily": "TimesDigitalW04",
+                      "fontSize": 36,
+                      "lineHeight": 52,
+                    },
+                    "tag": "FONT",
+                  },
+                ],
+                Array [
+                  Object {
+                    "settings": Object {
+                      "color": "#000000",
+                      "fontFamily": "TimesDigitalW04",
+                      "fontSize": 36,
+                      "lineHeight": 52,
+                    },
+                    "tag": "FONT",
+                  },
+                ],
+              ],
+              "length": 15,
+              "split": [Function],
+              "string": "article content",
+            }
+          </ArticleParagraph>
+        </ErrorBoundary>
+      </Gutter>
+    </View>
+    <View
+      style={
+        Array [
+          Object {
+            "marginBottom": 10,
+            "marginLeft": 10,
+          },
+          Object {
+            "height": 620,
+            "width": 321,
+          },
+        ]
+      }
+    >
+      <Ad
+        adConfig={Object {}}
+        baseUrl="some-base-url"
+        contextUrl="some-context-url"
+        defaultFont={
+          Object {
+            "lineHeight": 26,
+          }
+        }
+        display="inline"
+        height={600}
+        inlineContent={
+          Array [
+            Object {
+              "children": Array [
+                Object {
+                  "attributes": Object {
+                    "value": "article content",
+                  },
+                  "children": Array [],
+                  "name": "text",
+                },
+              ],
+              "name": "paragraph",
+            },
+          ]
+        }
+        isLoading={false}
+        narrowContent={false}
+        originalName="ad"
+        skeletonProps={
+          Object {
+            "data": Array [],
+            "isTablet": true,
+            "narrowContent": false,
+            "scale": 1,
+            "windowWidth": 1000,
+          }
+        }
+        slotName="native-inline-ad-c"
+        style={Object {}}
+        width={300}
+      />
+    </View>
+  </View>
+</React.Fragment>
+`;
+
+exports[`InlineContent image generates content measurements for inline image 1`] = `
+<MeasureInlineContent
+  content={
+    Array [
+      Object {
+        "children": Array [
+          Object {
+            "attributes": Object {
+              "value": "article content",
+            },
+            "children": Array [],
+            "name": "text",
+          },
+        ],
+        "id": "0-1000",
+        "name": "paragraph",
+      },
+    ]
+  }
+  contentParameters={
+    Object {
+      "contentHeight": 0,
+      "contentLineHeight": 26,
+      "contentWidth": 429,
+      "itemWidth": 230.99999999999997,
+    }
+  }
+  itemProps={
+    Object {
+      "captionOptions": Object {
+        "caption": "some caption",
+        "credits": "some credits",
+      },
+      "imageOptions": Object {
+        "display": "inline",
+        "index": 0,
+        "narrowContent": false,
+        "ratio": "16:9",
+        "relativeHeight": 900,
+        "relativeHorizontalOffset": 0,
+        "relativeVerticalOffset": 0,
+        "relativeWidth": 1600,
+        "uri": "some image url",
+      },
+      "images": Array [],
+      "onImagePress": [Function],
+      "originalName": "image",
+    }
+  }
+  renderMeasuredContents={[Function]}
+/>
+`;
+
+exports[`InlineContent image renders content and inline image via a render-prop 1`] = `
+<React.Fragment>
+  <View
+    style={
+      Array [
+        Object {
+          "alignSelf": "center",
+          "flex": 1,
+          "flexDirection": "row",
+          "width": 660,
+        },
+        Object {
+          "height": 0,
+        },
+      ]
+    }
+  >
+    <View
+      style={
+        Array [
+          Object {
+            "marginBottom": 10,
+            "marginLeft": 10,
+          },
+          Object {
+            "height": 0,
+            "width": 230.99999999999997,
+          },
+        ]
+      }
+    >
+      <ArticleImage
+        captionOptions={
+          Object {
+            "caption": "some caption",
+            "credits": "some credits",
+          }
+        }
+        imageOptions={
+          Object {
+            "display": "inline",
+            "index": 0,
+            "narrowContent": false,
+            "ratio": "16:9",
+            "relativeHeight": 900,
+            "relativeHorizontalOffset": 0,
+            "relativeVerticalOffset": 0,
+            "relativeWidth": 1600,
+            "uri": "some image url",
+          }
+        }
+        images={Array []}
+        onImagePress={[Function]}
+        originalName="image"
+      />
+    </View>
+    <View
+      style={
+        Object {
+          "height": 0,
+          "width": 429,
+        }
+      }
+    />
+  </View>
+  <Gutter
+    style={
+      Object {
+        "overflow": "hidden",
+      }
+    }
+  >
+    <ErrorBoundary>
+      <ArticleParagraph
+        LinkComponent={[Function]}
+        attributes={
+          Object {
+            "inline": false,
+          }
+        }
+        defaultFont={
+          Object {
+            "color": "#000000",
+            "fontFamily": "TimesDigitalW04",
+            "fontSize": 36,
+            "lineHeight": 52,
+          }
+        }
+        dropCapFont="dropCap"
+        dropcapsDisabled={true}
+        index={0}
+        tree={
+          Object {
+            "attributes": Object {
+              "inline": false,
+            },
+            "children": Array [
+              Object {
+                "attributes": Object {
+                  "value": "article content",
+                },
+                "children": Array [],
+                "name": "text",
+              },
+            ],
+            "id": "0-1000",
+            "name": "paragraph",
+          }
+        }
+      >
+        AttributedString {
+          "attributes": Array [
+            Array [
+              Object {
+                "settings": Object {
+                  "color": "#000000",
+                  "fontFamily": "TimesDigitalW04",
+                  "fontSize": 36,
+                  "lineHeight": 52,
+                },
+                "tag": "FONT",
+              },
+            ],
+            Array [
+              Object {
+                "settings": Object {
+                  "color": "#000000",
+                  "fontFamily": "TimesDigitalW04",
+                  "fontSize": 36,
+                  "lineHeight": 52,
+                },
+                "tag": "FONT",
+              },
+            ],
+            Array [
+              Object {
+                "settings": Object {
+                  "color": "#000000",
+                  "fontFamily": "TimesDigitalW04",
+                  "fontSize": 36,
+                  "lineHeight": 52,
+                },
+                "tag": "FONT",
+              },
+            ],
+            Array [
+              Object {
+                "settings": Object {
+                  "color": "#000000",
+                  "fontFamily": "TimesDigitalW04",
+                  "fontSize": 36,
+                  "lineHeight": 52,
+                },
+                "tag": "FONT",
+              },
+            ],
+            Array [
+              Object {
+                "settings": Object {
+                  "color": "#000000",
+                  "fontFamily": "TimesDigitalW04",
+                  "fontSize": 36,
+                  "lineHeight": 52,
+                },
+                "tag": "FONT",
+              },
+            ],
+            Array [
+              Object {
+                "settings": Object {
+                  "color": "#000000",
+                  "fontFamily": "TimesDigitalW04",
+                  "fontSize": 36,
+                  "lineHeight": 52,
+                },
+                "tag": "FONT",
+              },
+            ],
+            Array [
+              Object {
+                "settings": Object {
+                  "color": "#000000",
+                  "fontFamily": "TimesDigitalW04",
+                  "fontSize": 36,
+                  "lineHeight": 52,
+                },
+                "tag": "FONT",
+              },
+            ],
+            Array [
+              Object {
+                "settings": Object {
+                  "color": "#000000",
+                  "fontFamily": "TimesDigitalW04",
+                  "fontSize": 36,
+                  "lineHeight": 52,
+                },
+                "tag": "FONT",
+              },
+            ],
+            Array [
+              Object {
+                "settings": Object {
+                  "color": "#000000",
+                  "fontFamily": "TimesDigitalW04",
+                  "fontSize": 36,
+                  "lineHeight": 52,
+                },
+                "tag": "FONT",
+              },
+            ],
+            Array [
+              Object {
+                "settings": Object {
+                  "color": "#000000",
+                  "fontFamily": "TimesDigitalW04",
+                  "fontSize": 36,
+                  "lineHeight": 52,
+                },
+                "tag": "FONT",
+              },
+            ],
+            Array [
+              Object {
+                "settings": Object {
+                  "color": "#000000",
+                  "fontFamily": "TimesDigitalW04",
+                  "fontSize": 36,
+                  "lineHeight": 52,
+                },
+                "tag": "FONT",
+              },
+            ],
+            Array [
+              Object {
+                "settings": Object {
+                  "color": "#000000",
+                  "fontFamily": "TimesDigitalW04",
+                  "fontSize": 36,
+                  "lineHeight": 52,
+                },
+                "tag": "FONT",
+              },
+            ],
+            Array [
+              Object {
+                "settings": Object {
+                  "color": "#000000",
+                  "fontFamily": "TimesDigitalW04",
+                  "fontSize": 36,
+                  "lineHeight": 52,
+                },
+                "tag": "FONT",
+              },
+            ],
+            Array [
+              Object {
+                "settings": Object {
+                  "color": "#000000",
+                  "fontFamily": "TimesDigitalW04",
+                  "fontSize": 36,
+                  "lineHeight": 52,
+                },
+                "tag": "FONT",
+              },
+            ],
+            Array [
+              Object {
+                "settings": Object {
+                  "color": "#000000",
+                  "fontFamily": "TimesDigitalW04",
+                  "fontSize": 36,
+                  "lineHeight": 52,
+                },
+                "tag": "FONT",
+              },
+            ],
+          ],
+          "length": 15,
+          "split": [Function],
+          "string": "article content",
+        }
+      </ArticleParagraph>
+    </ErrorBoundary>
+  </Gutter>
+</React.Fragment>
+`;
+
+exports[`InlineContent pullQuote generates content measurements for pullQuote 1`] = `
+<MeasureInlineContent
+  content={
+    Array [
+      Object {
+        "children": Array [
+          Object {
+            "attributes": Object {
+              "value": "article content",
+            },
+            "children": Array [],
+            "name": "text",
+          },
+        ],
+        "id": "0-1000",
+        "name": "paragraph",
+      },
+    ]
+  }
+  contentParameters={
+    Object {
+      "contentHeight": 0,
+      "contentLineHeight": 26,
+      "contentWidth": 429,
+      "itemWidth": 230.99999999999997,
+    }
+  }
+  itemProps={
+    Object {
+      "caption": "some caption",
+      "children": Array [
+        Object {
+          "string": "some pull quote text",
+        },
+      ],
+      "onTwitterLinkPress": [Function],
+      "originalName": "pullQuote",
+      "text": "some text",
+      "twitter": "some twitter text",
+      "width": 230.99999999999997,
+    }
+  }
+  renderMeasuredContents={[Function]}
+/>
+`;
+
+exports[`InlineContent pullQuote renders content and pullQuote ad via a render-prop 1`] = `
+<React.Fragment>
+  <View
+    style={
+      Array [
+        Object {
+          "alignSelf": "center",
+          "flex": 1,
+          "flexDirection": "row",
+          "width": 660,
+        },
+        Object {
+          "height": 0,
+        },
+      ]
+    }
+  >
+    <View
+      style={
+        Array [
+          Object {
+            "marginBottom": 10,
+            "marginLeft": 10,
+          },
+          Object {
+            "height": 0,
+            "width": 230.99999999999997,
+          },
+        ]
+      }
+    >
+      <PullQuote
+        caption="some caption"
+        onTwitterLinkPress={[Function]}
+        originalName="pullQuote"
+        text="some text"
+        twitter="some twitter text"
+        width={230.99999999999997}
+      >
+        some pull quote text
+      </PullQuote>
+    </View>
+    <View
+      style={
+        Object {
+          "height": 0,
+          "width": 429,
+        }
+      }
+    />
+  </View>
+  <Gutter
+    style={
+      Object {
+        "overflow": "hidden",
+      }
+    }
+  >
+    <ErrorBoundary>
+      <ArticleParagraph
+        LinkComponent={[Function]}
+        attributes={
+          Object {
+            "inline": false,
+          }
+        }
+        defaultFont={
+          Object {
+            "color": "#000000",
+            "fontFamily": "TimesDigitalW04",
+            "fontSize": 36,
+            "lineHeight": 52,
+          }
+        }
+        dropCapFont="dropCap"
+        dropcapsDisabled={true}
+        index={0}
+        tree={
+          Object {
+            "attributes": Object {
+              "inline": false,
+            },
+            "children": Array [
+              Object {
+                "attributes": Object {
+                  "value": "article content",
+                },
+                "children": Array [],
+                "name": "text",
+              },
+            ],
+            "id": "0-1000",
+            "name": "paragraph",
+          }
+        }
+      >
+        AttributedString {
+          "attributes": Array [
+            Array [
+              Object {
+                "settings": Object {
+                  "color": "#000000",
+                  "fontFamily": "TimesDigitalW04",
+                  "fontSize": 36,
+                  "lineHeight": 52,
+                },
+                "tag": "FONT",
+              },
+            ],
+            Array [
+              Object {
+                "settings": Object {
+                  "color": "#000000",
+                  "fontFamily": "TimesDigitalW04",
+                  "fontSize": 36,
+                  "lineHeight": 52,
+                },
+                "tag": "FONT",
+              },
+            ],
+            Array [
+              Object {
+                "settings": Object {
+                  "color": "#000000",
+                  "fontFamily": "TimesDigitalW04",
+                  "fontSize": 36,
+                  "lineHeight": 52,
+                },
+                "tag": "FONT",
+              },
+            ],
+            Array [
+              Object {
+                "settings": Object {
+                  "color": "#000000",
+                  "fontFamily": "TimesDigitalW04",
+                  "fontSize": 36,
+                  "lineHeight": 52,
+                },
+                "tag": "FONT",
+              },
+            ],
+            Array [
+              Object {
+                "settings": Object {
+                  "color": "#000000",
+                  "fontFamily": "TimesDigitalW04",
+                  "fontSize": 36,
+                  "lineHeight": 52,
+                },
+                "tag": "FONT",
+              },
+            ],
+            Array [
+              Object {
+                "settings": Object {
+                  "color": "#000000",
+                  "fontFamily": "TimesDigitalW04",
+                  "fontSize": 36,
+                  "lineHeight": 52,
+                },
+                "tag": "FONT",
+              },
+            ],
+            Array [
+              Object {
+                "settings": Object {
+                  "color": "#000000",
+                  "fontFamily": "TimesDigitalW04",
+                  "fontSize": 36,
+                  "lineHeight": 52,
+                },
+                "tag": "FONT",
+              },
+            ],
+            Array [
+              Object {
+                "settings": Object {
+                  "color": "#000000",
+                  "fontFamily": "TimesDigitalW04",
+                  "fontSize": 36,
+                  "lineHeight": 52,
+                },
+                "tag": "FONT",
+              },
+            ],
+            Array [
+              Object {
+                "settings": Object {
+                  "color": "#000000",
+                  "fontFamily": "TimesDigitalW04",
+                  "fontSize": 36,
+                  "lineHeight": 52,
+                },
+                "tag": "FONT",
+              },
+            ],
+            Array [
+              Object {
+                "settings": Object {
+                  "color": "#000000",
+                  "fontFamily": "TimesDigitalW04",
+                  "fontSize": 36,
+                  "lineHeight": 52,
+                },
+                "tag": "FONT",
+              },
+            ],
+            Array [
+              Object {
+                "settings": Object {
+                  "color": "#000000",
+                  "fontFamily": "TimesDigitalW04",
+                  "fontSize": 36,
+                  "lineHeight": 52,
+                },
+                "tag": "FONT",
+              },
+            ],
+            Array [
+              Object {
+                "settings": Object {
+                  "color": "#000000",
+                  "fontFamily": "TimesDigitalW04",
+                  "fontSize": 36,
+                  "lineHeight": 52,
+                },
+                "tag": "FONT",
+              },
+            ],
+            Array [
+              Object {
+                "settings": Object {
+                  "color": "#000000",
+                  "fontFamily": "TimesDigitalW04",
+                  "fontSize": 36,
+                  "lineHeight": 52,
+                },
+                "tag": "FONT",
+              },
+            ],
+            Array [
+              Object {
+                "settings": Object {
+                  "color": "#000000",
+                  "fontFamily": "TimesDigitalW04",
+                  "fontSize": 36,
+                  "lineHeight": 52,
+                },
+                "tag": "FONT",
+              },
+            ],
+            Array [
+              Object {
+                "settings": Object {
+                  "color": "#000000",
+                  "fontFamily": "TimesDigitalW04",
+                  "fontSize": 36,
+                  "lineHeight": 52,
+                },
+                "tag": "FONT",
+              },
+            ],
+          ],
+          "length": 15,
+          "split": [Function],
+          "string": "article content",
+        }
+      </ArticleParagraph>
+    </ErrorBoundary>
+  </Gutter>
+</React.Fragment>
+`;

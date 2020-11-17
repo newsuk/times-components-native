@@ -9,4 +9,5 @@ export interface Measurements {
   };
   bylineHeight?: number | null;
   bylineMargin?: number | null;
+  itemHeight?: number | null;
 }

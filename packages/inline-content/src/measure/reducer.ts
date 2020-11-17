@@ -8,6 +8,7 @@ export const initialState: Measurements = {
     lines: {},
     heights: {},
   },
+  itemHeight: null,
 };
 
 interface SetInlineContentHeightAction {
@@ -22,7 +23,15 @@ interface SetInlineContentLinesAction {
   payload: Line[];
 }
 
-export type Action = SetInlineContentHeightAction | SetInlineContentLinesAction;
+interface SetInlineItemHeightAction {
+  type: "SET_INLINE_ITEM_HEIGHT";
+  height: number;
+}
+
+export type Action =
+  | SetInlineContentHeightAction
+  | SetInlineContentLinesAction
+  | SetInlineItemHeightAction;
 
 export const reducer: Reducer<Measurements, Action> = (state, action) => {
   switch (action.type) {
@@ -41,6 +50,11 @@ export const reducer: Reducer<Measurements, Action> = (state, action) => {
           ...state.contents,
           lines: { ...state.contents.lines, [action.id]: action.payload },
         },
+      };
+    case "SET_INLINE_ITEM_HEIGHT":
+      return {
+        ...state,
+        itemHeight: action.height,
       };
     default:
       return state;
