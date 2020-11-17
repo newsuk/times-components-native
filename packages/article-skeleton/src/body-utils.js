@@ -2,7 +2,7 @@
 import memoize from "memoize-one";
 import { FontStorage } from "@times-components-native/typeset";
 
-const setupInlineContent = (
+export const setupInlineContent = (
   skeletonProps,
   unprocessedContent,
   processedContent = [],
@@ -50,7 +50,7 @@ const setupInlineContent = (
     inlineContentEndIndex =
       inlineContentStartIndex + flagggedInlineContentIndex;
     inlineContent = unprocessedContent.slice(
-      inlineItemIndex,
+      inlineContentStartIndex,
       inlineContentEndIndex,
     );
   }
