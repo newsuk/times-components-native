@@ -90,7 +90,24 @@ const setupArticleMpuTestAd = (
 ) => {
   const { adPosition, group, width, height, slotName } = articleMpu;
   const isControlGroup = group === "A";
-  const adSlotIndex = isControlGroup ? currentAdSlotIndex : adPosition - 1;
+
+  // Get index of nth (adPosition) paragraph
+  let nthParagraphIndex = currentAdSlotIndex;
+
+  contentWithoutAdSlot.reduce((count, item, index) => {
+    if (item.name !== "paragraph") return count;
+    if (count === adPosition) {
+      nthParagraphIndex = index - 1;
+    }
+    return count + 1;
+  }, 0);
+
+  console.log(
+    "fdsjklfjakdfsdafjad skjskfjsdklfjksd akfjdfkldsaj;lfksd",
+    nthParagraphIndex,
+  );
+
+  const adSlotIndex = isControlGroup ? currentAdSlotIndex : nthParagraphIndex;
 
   const contentBeforeAd = contentWithoutAdSlot.slice(0, adSlotIndex);
 
