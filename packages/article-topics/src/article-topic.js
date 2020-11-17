@@ -56,13 +56,13 @@ const ArticleTopic = ({
     </Context.Consumer>
   );
 
-  const articleTopicTooltip = (
+  const articleTopicWithTooltip = (
     <Tooltip
       content={<Text>Tap a topic to see more of our coverage</Text>}
       onClose={unhighlightTopic}
       onTooltipPresented={onTooltipPresented}
       type="topics"
-      tooltips={tooltips}
+      tooltips={["topics"]}
       alignment="left"
       width={236}
     >
@@ -70,7 +70,7 @@ const ArticleTopic = ({
     </Tooltip>
   );
 
-  return showTooltip ? articleTopicTooltip : articleTopic;
+  return showTooltip ? articleTopicWithTooltip : articleTopic;
 };
 
 ArticleTopic.propTypes = topicPropTypes;
