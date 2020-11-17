@@ -1,8 +1,11 @@
-import { ContentParameters, Line } from "../../../src/inline-ad/types";
-import { Measurements, ParagraphContent } from "@times-components-native/types";
-import { chunkInlineContent } from "../../../src/inline-ad/utils/chunkInlineContent";
-
-const range = (n: number) => [...Array(n).keys()];
+import { Measurements } from "@times-components-native/types";
+import { ContentParameters } from "../../src/types";
+import { chunkInlineContent } from "../../src/utils/chunkInlineContent";
+import {
+  createTextWithNumberOfLines,
+  createLinesWithNumberOfLines,
+  createParagraphWithText,
+} from "../test-utils";
 
 const contentLineHeight = 26;
 const paragraphBottomSpacing = 20;
@@ -10,28 +13,8 @@ const contentParameters: ContentParameters = {
   contentWidth: 339,
   contentHeight: 1000,
   contentLineHeight,
+  itemWidth: 231,
 };
-
-const createTextWithNumberOfLines = (
-  numberOfLines: number,
-  offset = 0,
-): string =>
-  range(numberOfLines)
-    .map((i) => `line${i + offset}`)
-    .join("");
-
-const createLinesWithNumberOfLines = (numberOfLines: number): Line[] =>
-  range(numberOfLines).map((i) => ({ text: `line${i}` }));
-
-const createParagraphWithText = (
-  text: string,
-  testData: Partial<ParagraphContent> = {},
-): ParagraphContent => ({
-  id: "some-paragraph-id",
-  name: "paragraph",
-  children: [{ name: "text", children: [], attributes: { value: text } }],
-  ...testData,
-});
 
 describe("chunkInlineContent", () => {
   it("returns result if no content to chunk", () => {

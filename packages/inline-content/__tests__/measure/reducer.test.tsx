@@ -1,4 +1,4 @@
-import { initialState, reducer } from "../../../src/inline-ad/measure/reducer";
+import { initialState, reducer } from "../../src/measure/reducer";
 import { Measurements } from "@times-components-native/types";
 
 describe("reducer", () => {
@@ -24,6 +24,7 @@ describe("reducer", () => {
           },
           lines: {},
         },
+        itemHeight: null,
       });
     });
 
@@ -46,6 +47,7 @@ describe("reducer", () => {
           },
           lines: {},
         },
+        itemHeight: null,
       });
     });
   });
@@ -63,6 +65,7 @@ describe("reducer", () => {
           heights: {},
           lines: { someId: [{ text: "some text" }] },
         },
+        itemHeight: null,
       });
     });
 
@@ -86,7 +89,39 @@ describe("reducer", () => {
           heights: {},
           lines: { someId: [{ text: "some text" }] },
         },
+        itemHeight: null,
       });
+    });
+  });
+});
+
+describe('when dispatching the "SET_INLINE_ITEM_HEIGHT" action', () => {
+  it("sets the measured height of an inline item", () => {
+    const nextState = reducer(initialState, {
+      height: 5,
+      type: "SET_INLINE_ITEM_HEIGHT",
+    });
+
+    expect(nextState).toEqual({
+      ...initialState,
+      itemHeight: 5,
+    });
+  });
+
+  it("updates the measured height of an inline item", () => {
+    const prevState: Measurements = {
+      ...initialState,
+      itemHeight: 5,
+    };
+
+    const nextState = reducer(prevState, {
+      height: 10,
+      type: "SET_INLINE_ITEM_HEIGHT",
+    });
+
+    expect(nextState).toEqual({
+      ...prevState,
+      itemHeight: 10,
     });
   });
 });

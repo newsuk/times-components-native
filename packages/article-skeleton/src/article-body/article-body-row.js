@@ -9,7 +9,8 @@ import styleguide, {
   spacing,
 } from "@times-components-native/styleguide";
 import { AttributedString } from "@times-components-native/typeset";
-import Ad, { InlineAd } from "@times-components-native/ad";
+import Ad from "@times-components-native/ad";
+import InlineContent from "@times-components-native/inline-content";
 import ArticleImage from "@times-components-native/article-image";
 import InteractiveWrapper from "@times-components-native/interactive-wrapper";
 import KeyFacts from "@times-components-native/key-facts";
@@ -196,15 +197,19 @@ export default ({
         />
       );
     },
-    inlineAd(key, attributes) {
+    inlineContent(key, attributes, children) {
       return (
-        <InlineAd
+        <InlineContent
           key={key}
           adConfig={adConfig}
-          slotName="native-inline-ad"
           defaultFont={defaultFont}
+          onImagePress={onImagePress}
+          onTwitterLinkPress={onTwitterLinkPress}
+          narrowContent={narrowContent}
           {...attributes}
-        />
+        >
+          {children}
+        </InlineContent>
       );
     },
     image(

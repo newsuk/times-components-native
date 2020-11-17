@@ -1,0 +1,117 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`MeasureContent renders the content 1`] = `
+<View
+  onLayout={[Function]}
+>
+  <View
+    style={
+      Array [
+        Object {
+          "paddingLeft": 10,
+          "paddingRight": 10,
+        },
+        Object {
+          "marginBottom": 20,
+        },
+        Object {
+          "alignSelf": "center",
+          "width": 660,
+        },
+        Object {
+          "width": "100%",
+        },
+        undefined,
+        false,
+        Object {},
+      ]
+    }
+  >
+    <View>
+      <Text
+        allowFontScaling={false}
+        onTextLayout={[Function]}
+        selectable={true}
+        style={
+          Object {
+            "lineHeight": 52,
+          }
+        }
+      >
+        <Text
+          allowFontScaling={false}
+          selectable={true}
+          style={
+            Object {
+              "color": "#000000",
+              "fontFamily": "TimesDigitalW04",
+              "fontSize": 36,
+              "lineHeight": 52,
+            }
+          }
+        >
+          abc
+        </Text>
+      </Text>
+    </View>
+  </View>
+</View>
+`;
+
+exports[`MeasureItem renders a pull quote 1`] = `
+<View
+  onLayout={[Function]}
+  style={
+    Object {
+      "width": 231,
+    }
+  }
+>
+  <PullQuote
+    caption="some caption"
+    onTwitterLinkPress={[Function]}
+    originalName="pullQuote"
+    text="some text"
+    twitter="some twitter text"
+    width={231}
+  >
+    some pull quote text
+  </PullQuote>
+</View>
+`;
+
+exports[`MeasureItem renders an inline image 1`] = `
+<View
+  onLayout={[Function]}
+  style={
+    Object {
+      "width": 231,
+    }
+  }
+>
+  <ArticleImage
+    captionOptions={
+      Object {
+        "caption": "some caption",
+        "credits": "some credits",
+      }
+    }
+    imageOptions={
+      Object {
+        "display": "inline",
+        "index": 0,
+        "narrowContent": false,
+        "ratio": "16:9",
+        "relativeHeight": 900,
+        "relativeHorizontalOffset": 0,
+        "relativeVerticalOffset": 0,
+        "relativeWidth": 1600,
+        "uri": "some image uri",
+      }
+    }
+    images={Array []}
+    onImagePress={[Function]}
+    originalName="image"
+  />
+</View>
+`;
