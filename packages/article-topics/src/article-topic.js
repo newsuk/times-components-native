@@ -1,15 +1,33 @@
-import React from "react";
+import React, { useState } from "react";
 import Context from "@times-components-native/context";
 import { Text, View } from "react-native";
 import Link from "@times-components-native/link";
+import Tooltip from "@times-components-native/tooltip";
 import { withTrackEvents } from "@times-components-native/tracking";
 import styles from "./styles";
-import topicPropTypes from "./article-topic-prop-types";
+import { topicDefaultProps, topicPropTypes } from "./article-topic-prop-types";
 
-const ArticleTopic = ({ fontSize, lineHeight, name, onPress, slug }) => {
+const ArticleTopic = ({
+  fontSize,
+  index,
+  lineHeight,
+  name,
+  onPress,
+  onTooltipPresented,
+  slug,
+  tooltips,
+}) => {
   const fontSizeStyle = fontSize ? { fontSize } : null;
   const lineHeightStyle = lineHeight ? { lineHeight } : null;
-  return (
+
+  const showTooltip = index === 0;
+  const [isHighlighted, setIsHighlighted] = useState(showTooltip);
+
+  const unhighlightTopic = () => {
+    setIsHighlighted(false);
+  };
+
+  const articleTopic = (
     <Context.Consumer>
       {({ makeTopicUrl }) => (
         <View style={styles.spacer}>
@@ -17,7 +35,12 @@ const ArticleTopic = ({ fontSize, lineHeight, name, onPress, slug }) => {
             onPress={(e) => onPress(e, { name, slug })}
             url={makeTopicUrl({ slug })}
           >
-            <View style={styles.container}>
+            <View
+              style={[
+                styles.container,
+                isHighlighted && styles.borderHighlight,
+              ]}
+            >
               <Text
                 accessibilityComponentType="button"
                 accessibilityRole="button"
@@ -32,9 +55,26 @@ const ArticleTopic = ({ fontSize, lineHeight, name, onPress, slug }) => {
       )}
     </Context.Consumer>
   );
+
+  const articleTopicWithTooltip = (
+    <Tooltip
+      content={<Text>Tap a topic to see more of our coverage</Text>}
+      onClose={unhighlightTopic}
+      onTooltipPresented={onTooltipPresented}
+      type="topics"
+      tooltips={["topics"]}
+      alignment="left"
+      width={236}
+    >
+      {articleTopic}
+    </Tooltip>
+  );
+
+  return showTooltip ? articleTopicWithTooltip : articleTopic;
 };
 
 ArticleTopic.propTypes = topicPropTypes;
+ArticleTopic.defaultProps = topicDefaultProps;
 
 export default withTrackEvents(ArticleTopic, {
   analyticsEvents: [

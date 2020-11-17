@@ -17,7 +17,9 @@ const ArticleLeftColumn = ({
   authorImage,
   bylines,
   onAuthorPress,
+  onTooltipPresented,
   onTopicPress,
+  tooltips,
   topics,
 }) => (
   <View style={styles.leftColumnContainer}>
@@ -36,7 +38,9 @@ const ArticleLeftColumn = ({
     {topics ? (
       <View style={styles.topicsContainer}>
         <ArticleTopics
+          onTooltipPresented={onTooltipPresented}
           onPress={onTopicPress}
+          tooltips={tooltips}
           topics={topics}
           style={{ justifyContent: "flex-start" }}
         />
