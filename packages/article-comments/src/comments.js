@@ -4,7 +4,7 @@ import PropTypes from "prop-types";
 import Context from "@times-components-native/context";
 import Button from "@times-components-native/button";
 import { TextLink } from "@times-components-native/link";
-import styleguide from "@times-components-native/styleguide";
+import styleguide, { spacing } from "@times-components-native/styleguide";
 import Tooltip from "@times-components-native/tooltip";
 import styles from "./styles";
 
@@ -14,7 +14,7 @@ const Comments = ({
   onCommentGuidelinesPress,
   onCommentsPress,
   onTooltipPresented,
-  tooltips,
+  tooltips = [],
   url,
 }) => (
   <View style={styles.container}>
@@ -35,6 +35,8 @@ const Comments = ({
       onTooltipPresented={onTooltipPresented}
       type="commenting"
       tooltips={tooltips}
+      alignment="center"
+      offsetY={-spacing(1)}
     >
       <Context.Consumer>
         {({ theme: { scale } }) => {

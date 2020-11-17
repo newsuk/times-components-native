@@ -13,19 +13,18 @@ Array [
       <View
         style={
           Object {
-            "backgroundColor": "#3C81BE",
+            "backgroundColor": "#ff007f",
             "borderRadius": 3,
-            "bottom": -5,
+            "bottom": 5,
             "left": -128,
-            "padding": 15,
             "position": "absolute",
             "shadowColor": "#000000",
             "shadowOffset": Object {
               "height": 3,
               "width": 3,
             },
-            "shadowOpacity": 0.2,
-            "shadowRadius": 4,
+            "shadowOpacity": 0.3,
+            "shadowRadius": 3,
             "width": 256,
           }
         }
@@ -33,49 +32,49 @@ Array [
         <View
           style={
             Object {
+              "height": 16,
               "opacity": 1,
+              "position": "absolute",
+              "right": 5,
+              "top": 10,
+              "width": 16,
+              "zIndex": 1,
             }
           }
         >
           <View
             style={
               Object {
-                "position": "absolute",
-                "right": -3,
-                "top": -10,
+                "backgroundColor": "#FFFFFF",
+                "height": 16,
+                "left": 5,
+                "top": -2,
+                "transform": Array [
+                  Object {
+                    "rotate": "45deg",
+                  },
+                ],
+                "width": 1,
               }
             }
-          >
-            <View
-              style={
-                Object {
-                  "backgroundColor": "#FFFFFF",
-                  "height": 16,
-                  "transform": Array [
-                    Object {
-                      "rotate": "45deg",
-                    },
-                  ],
-                  "width": 1,
-                }
+          />
+          <View
+            style={
+              Object {
+                "backgroundColor": "#FFFFFF",
+                "height": 16,
+                "left": 5,
+                "position": "absolute",
+                "top": -2,
+                "transform": Array [
+                  Object {
+                    "rotate": "-45deg",
+                  },
+                ],
+                "width": 1,
               }
-            />
-            <View
-              style={
-                Object {
-                  "backgroundColor": "#FFFFFF",
-                  "height": 16,
-                  "position": "absolute",
-                  "transform": Array [
-                    Object {
-                      "rotate": "-45deg",
-                    },
-                  ],
-                  "width": 1,
-                }
-              }
-            />
-          </View>
+            }
+          />
         </View>
         <Text
           style={
@@ -84,8 +83,8 @@ Array [
               "fontFamily": "GillSansMTStd-Medium",
               "fontSize": 16,
               "lineHeight": 18,
-              "paddingHorizontal": 15,
-              "paddingVertical": 5,
+              "paddingHorizontal": 30,
+              "paddingVertical": 20,
               "textAlign": "center",
             }
           }
@@ -99,7 +98,7 @@ Array [
             Object {
               "backgroundColor": "transparent",
               "borderBottomWidth": 8,
-              "borderColor": "#3C81BE",
+              "borderColor": "#ff007f",
               "borderLeftColor": "transparent",
               "borderLeftWidth": 12,
               "borderRadius": 3,
@@ -107,7 +106,137 @@ Array [
               "borderRightWidth": 12,
               "borderStyle": "solid",
               "bottom": -7,
-              "left": 120,
+              "left": 122,
+              "position": "absolute",
+              "shadowColor": "#000000",
+              "shadowOffset": Object {
+                "height": -3,
+                "width": -3,
+              },
+              "shadowOpacity": 0.2,
+              "shadowRadius": 4,
+              "transform": Array [
+                Object {
+                  "rotate": "180deg",
+                },
+              ],
+            }
+          }
+        />
+      </View>
+    </View>
+  </View>,
+  "bar",
+]
+`;
+
+exports[`Tooltip renders correctly width supplied width 1`] = `
+Array [
+  <View>
+    <View
+      style={
+        Object {
+          "opacity": 1,
+        }
+      }
+    >
+      <View
+        style={
+          Object {
+            "backgroundColor": "#ff007f",
+            "borderRadius": 3,
+            "bottom": 5,
+            "left": -128,
+            "position": "absolute",
+            "shadowColor": "#000000",
+            "shadowOffset": Object {
+              "height": 3,
+              "width": 3,
+            },
+            "shadowOpacity": 0.3,
+            "shadowRadius": 3,
+            "width": 100,
+          }
+        }
+      >
+        <View
+          style={
+            Object {
+              "height": 16,
+              "opacity": 1,
+              "position": "absolute",
+              "right": 5,
+              "top": 10,
+              "width": 16,
+              "zIndex": 1,
+            }
+          }
+        >
+          <View
+            style={
+              Object {
+                "backgroundColor": "#FFFFFF",
+                "height": 16,
+                "left": 5,
+                "top": -2,
+                "transform": Array [
+                  Object {
+                    "rotate": "45deg",
+                  },
+                ],
+                "width": 1,
+              }
+            }
+          />
+          <View
+            style={
+              Object {
+                "backgroundColor": "#FFFFFF",
+                "height": 16,
+                "left": 5,
+                "position": "absolute",
+                "top": -2,
+                "transform": Array [
+                  Object {
+                    "rotate": "-45deg",
+                  },
+                ],
+                "width": 1,
+              }
+            }
+          />
+        </View>
+        <Text
+          style={
+            Object {
+              "color": "#FFFFFF",
+              "fontFamily": "GillSansMTStd-Medium",
+              "fontSize": 16,
+              "lineHeight": 18,
+              "paddingHorizontal": 30,
+              "paddingVertical": 20,
+              "textAlign": "center",
+            }
+          }
+        >
+          <Text>
+            foo
+          </Text>
+        </Text>
+        <View
+          style={
+            Object {
+              "backgroundColor": "transparent",
+              "borderBottomWidth": 8,
+              "borderColor": "#ff007f",
+              "borderLeftColor": "transparent",
+              "borderLeftWidth": 12,
+              "borderRadius": 3,
+              "borderRightColor": "transparent",
+              "borderRightWidth": 12,
+              "borderStyle": "solid",
+              "bottom": -7,
+              "left": 44,
               "position": "absolute",
               "shadowColor": "#000000",
               "shadowOffset": Object {

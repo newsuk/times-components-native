@@ -9,19 +9,34 @@ import {
   topicsPropTypes,
 } from "./article-topics-prop-types";
 
-const renderArticleTopics = (topics, onPress, fontStyle) =>
-  topics.map(({ name, slug }) => (
+const renderArticleTopics = (
+  tooltips,
+  topics,
+  onPress,
+  onTooltipPresented,
+  fontStyle,
+) =>
+  topics.map(({ name, slug }, index) => (
     <ArticleTopic
       fontSize={fontStyle.fontSize}
+      index={index}
       key={slug}
       lineHeight={fontStyle.lineHeight}
       name={name}
       onPress={onPress}
+      onTooltipPresented={onTooltipPresented}
       slug={slug}
+      tooltips={tooltips}
     />
   ));
 
-const ArticleTopics = ({ onPress, style, topics }) => (
+const ArticleTopics = ({
+  onPress,
+  onTooltipPresented,
+  style,
+  tooltips,
+  topics,
+}) => (
   <Context.Consumer>
     {({ theme: { scale } }) => {
       const themedStyleguide = styleguide({ scale });
@@ -29,8 +44,10 @@ const ArticleTopics = ({ onPress, style, topics }) => (
       return (
         <View style={[styles.topicGroup, style]}>
           {renderArticleTopics(
+            tooltips,
             topics,
             onPress,
+            onTooltipPresented,
             themedStyleguide.fontFactory({
               font: "supporting",
               fontSize: "link",
