@@ -1,4 +1,5 @@
 import Tooltip from "../tooltip";
+import { calculateArrowPosition } from "../styles";
 import TestRenderer from "react-test-renderer";
 import { ResponsiveContext } from "@times-components-native/responsive";
 import { delay } from "@times-components-native/test-utils";
@@ -148,6 +149,15 @@ export default () => {
       const closeButton = testInstance.find(TouchableOpacity);
       closeButton.simulate("press");
       expect(onCloseMock).toBeCalled();
+    });
+  });
+
+  describe("calculateArrowPosition", () => {
+    it("returns correct position with default alignment", () => {
+      expect(calculateArrowPosition("foo", 100)).toEqual(44);
+    });
+    it("returns correct position with left alignment", () => {
+      expect(calculateArrowPosition("left", 100)).toEqual(20);
     });
   });
 };

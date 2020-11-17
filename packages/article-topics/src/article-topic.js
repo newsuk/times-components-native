@@ -27,46 +27,50 @@ const ArticleTopic = ({
     setIsHighlighted(false);
   };
 
-  return (
-    showTooltip && (
-      <Tooltip
-        content={<Text>Tap a topic to see more of our coverage</Text>}
-        onClose={unhighlightTopic}
-        onTooltipPresented={onTooltipPresented}
-        type="topics"
-        tooltips={tooltips}
-        alignment="left"
-        width={236}
-      >
-        <Context.Consumer>
-          {({ makeTopicUrl }) => (
-            <View style={styles.spacer}>
-              <Link
-                onPress={(e) => onPress(e, { name, slug })}
-                url={makeTopicUrl({ slug })}
+  const articleTopic = (
+    <Context.Consumer>
+      {({ makeTopicUrl }) => (
+        <View style={styles.spacer}>
+          <Link
+            onPress={(e) => onPress(e, { name, slug })}
+            url={makeTopicUrl({ slug })}
+          >
+            <View
+              style={[
+                styles.container,
+                isHighlighted && styles.borderHighlight,
+              ]}
+            >
+              <Text
+                accessibilityComponentType="button"
+                accessibilityRole="button"
+                accessibilityTraits="button"
+                style={[styles.text, fontSizeStyle, lineHeightStyle]}
               >
-                <View
-                  style={[
-                    styles.container,
-                    isHighlighted && styles.borderHighlight,
-                  ]}
-                >
-                  <Text
-                    accessibilityComponentType="button"
-                    accessibilityRole="button"
-                    accessibilityTraits="button"
-                    style={[styles.text, fontSizeStyle, lineHeightStyle]}
-                  >
-                    {name}
-                  </Text>
-                </View>
-              </Link>
+                {name}
+              </Text>
             </View>
-          )}
-        </Context.Consumer>
-      </Tooltip>
-    )
+          </Link>
+        </View>
+      )}
+    </Context.Consumer>
   );
+
+  const articleTopicTooltip = (
+    <Tooltip
+      content={<Text>Tap a topic to see more of our coverage</Text>}
+      onClose={unhighlightTopic}
+      onTooltipPresented={onTooltipPresented}
+      type="topics"
+      tooltips={tooltips}
+      alignment="left"
+      width={236}
+    >
+      {articleTopic}
+    </Tooltip>
+  );
+
+  return showTooltip ? articleTopicTooltip : articleTopic;
 };
 
 ArticleTopic.propTypes = topicPropTypes;
