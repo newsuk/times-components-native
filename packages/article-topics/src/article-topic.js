@@ -21,63 +21,53 @@ const ArticleTopic = ({
   const fontSizeStyle = fontSize ? { fontSize } : null;
   const lineHeightStyle = lineHeight ? { lineHeight } : null;
 
-  const { isTablet } = useResponsiveContext();
-  const tooltipType = "topics";
-
-  const showTooltip = isTablet && tooltips.includes(tooltipType) && index === 0;
-  const initialHighlightState = showTooltip ? true : false;
-  const [isHighlighted, setIsHighlighted] = useState(initialHighlightState);
+  const showTooltip = index === 0;
+  const [isHighlighted, setIsHighlighted] = useState(showTooltip);
 
   const unhighlightTopic = () => {
     setIsHighlighted(false);
   };
 
-  const topic = (name, slug) => (
-    <Context.Consumer>
-      {({ makeTopicUrl }) => (
-        <View style={styles.spacer}>
-          <Link
-            onPress={(e) => onPress(e, { name, slug })}
-            url={makeTopicUrl({ slug })}
-          >
-            <View
-              style={[
-                styles.container,
-                isHighlighted && styles.borderHighlight,
-              ]}
-            >
-              <Text
-                accessibilityComponentType="button"
-                accessibilityRole="button"
-                accessibilityTraits="button"
-                style={[styles.text, fontSizeStyle, lineHeightStyle]}
-              >
-                {name}
-              </Text>
-            </View>
-          </Link>
-        </View>
-      )}
-    </Context.Consumer>
-  );
-
-  const topicWithTooltip = (name, slug) => {
-    return (
+  return (
+    showTooltip && (
       <Tooltip
         content={<Text>Tap a topic to see more of our coverage</Text>}
         onClose={unhighlightTopic}
         onTooltipPresented={onTooltipPresented}
-        type={tooltipType}
+        type="topics"
         tooltips={tooltips}
         alignment="left"
         width={236}
       >
-        {topic(name, slug)}
+        <Context.Consumer>
+          {({ makeTopicUrl }) => (
+            <View style={styles.spacer}>
+              <Link
+                onPress={(e) => onPress(e, { name, slug })}
+                url={makeTopicUrl({ slug })}
+              >
+                <View
+                  style={[
+                    styles.container,
+                    isHighlighted && styles.borderHighlight,
+                  ]}
+                >
+                  <Text
+                    accessibilityComponentType="button"
+                    accessibilityRole="button"
+                    accessibilityTraits="button"
+                    style={[styles.text, fontSizeStyle, lineHeightStyle]}
+                  >
+                    {name}
+                  </Text>
+                </View>
+              </Link>
+            </View>
+          )}
+        </Context.Consumer>
       </Tooltip>
-    );
-  };
-
-  return showTooltip ? topicWithTooltip(name, slug) : topic(name, slug);
+    )
+  );
 };
 
 ArticleTopic.propTypes = topicPropTypes;

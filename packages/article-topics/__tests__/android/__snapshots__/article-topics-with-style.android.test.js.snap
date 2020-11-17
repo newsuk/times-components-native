@@ -23,10 +23,10 @@ exports[`1. group of topics 1`] = `
       <View
         style={
           Object {
-            "borderColor": "#DBDBDB",
+            "borderColor": "#3C81BE",
             "borderRadius": 2,
-            "borderWidth": 1,
-            "padding": 10,
+            "borderWidth": 2,
+            "padding": 9,
           }
         }
       >
@@ -73,10 +73,10 @@ exports[`2. group of topics at large scale 1`] = `
       <View
         style={
           Object {
-            "borderColor": "#DBDBDB",
+            "borderColor": "#3C81BE",
             "borderRadius": 2,
-            "borderWidth": 1,
-            "padding": 10,
+            "borderWidth": 2,
+            "padding": 9,
           }
         }
       >
@@ -123,10 +123,10 @@ exports[`3. group of topics at xlarge scale 1`] = `
       <View
         style={
           Object {
-            "borderColor": "#DBDBDB",
+            "borderColor": "#3C81BE",
             "borderRadius": 2,
-            "borderWidth": 1,
-            "padding": 10,
+            "borderWidth": 2,
+            "padding": 9,
           }
         }
       >
@@ -150,80 +150,6 @@ exports[`3. group of topics at xlarge scale 1`] = `
 </View>
 `;
 
-exports[`4. article topic with style 1`] = `
-<View
-  style={
-    Object {
-      "marginRight": 10,
-      "marginTop": 10,
-    }
-  }
->
-  <View>
-    <View
-      style={
-        Object {
-          "borderColor": "#DBDBDB",
-          "borderRadius": 2,
-          "borderWidth": 1,
-          "padding": 10,
-        }
-      }
-    >
-      <Text
-        style={
-          Object {
-            "color": "#696969",
-            "fontFamily": "GillSansMTStd-Medium",
-            "fontSize": 17,
-            "lineHeight": 20,
-            "position": "relative",
-            "top": 1,
-          }
-        }
-      >
-        Test
-      </Text>
-    </View>
-  </View>
-</View>
-`;
+exports[`4. article topic with style 1`] = `null`;
 
-exports[`5. article topic with no additional style 1`] = `
-<View
-  style={
-    Object {
-      "marginRight": 10,
-      "marginTop": 10,
-    }
-  }
->
-  <View>
-    <View
-      style={
-        Object {
-          "borderColor": "#DBDBDB",
-          "borderRadius": 2,
-          "borderWidth": 1,
-          "padding": 10,
-        }
-      }
-    >
-      <Text
-        style={
-          Object {
-            "color": "#696969",
-            "fontFamily": "GillSansMTStd-Medium",
-            "fontSize": 13,
-            "lineHeight": 13,
-            "position": "relative",
-            "top": 1,
-          }
-        }
-      >
-        Test
-      </Text>
-    </View>
-  </View>
-</View>
-`;
+exports[`5. article topic with no additional style 1`] = `null`;

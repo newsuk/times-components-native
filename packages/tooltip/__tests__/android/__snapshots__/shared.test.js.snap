@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Tooltip renders correctly 1`] = `
+exports[`Tooltip renders correctly when type is in tooltips array 1`] = `
 Array [
   <View>
     <View

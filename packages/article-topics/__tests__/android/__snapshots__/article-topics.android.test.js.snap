@@ -17,66 +17,6 @@ exports[`1. group of topics 1`] = `
       </View>
     </View>
   </View>
-  <View>
-    <View
-      focusable={true}
-    >
-      <View>
-        <Text
-          accessibilityComponentType="button"
-          accessibilityRole="button"
-          accessibilityTraits="button"
-        >
-          Manchester United FC
-        </Text>
-      </View>
-    </View>
-  </View>
-  <View>
-    <View
-      focusable={true}
-    >
-      <View>
-        <Text
-          accessibilityComponentType="button"
-          accessibilityRole="button"
-          accessibilityTraits="button"
-        >
-          Chelsea FC
-        </Text>
-      </View>
-    </View>
-  </View>
-  <View>
-    <View
-      focusable={true}
-    >
-      <View>
-        <Text
-          accessibilityComponentType="button"
-          accessibilityRole="button"
-          accessibilityTraits="button"
-        >
-          Arsenal
-        </Text>
-      </View>
-    </View>
-  </View>
-  <View>
-    <View
-      focusable={true}
-    >
-      <View>
-        <Text
-          accessibilityComponentType="button"
-          accessibilityRole="button"
-          accessibilityTraits="button"
-        >
-          Rugby Union
-        </Text>
-      </View>
-    </View>
-  </View>
 </View>
 `;
 
@@ -119,20 +59,4 @@ Array [
 ]
 `;
 
-exports[`4. article topic 1`] = `
-<View>
-  <View
-    focusable={true}
-  >
-    <View>
-      <Text
-        accessibilityComponentType="button"
-        accessibilityRole="button"
-        accessibilityTraits="button"
-      >
-        Test
-      </Text>
-    </View>
-  </View>
-</View>
-`;
+exports[`4. article topic 1`] = `null`;

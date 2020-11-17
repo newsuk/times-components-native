@@ -32,6 +32,26 @@ exports[`enabled comments 1`] = `
     </Text>
   </Text>
   <View
+    inViewport={false}
+  >
+    <View>
+      <View>
+        <View
+          focusable={true}
+        >
+          <View />
+          <View />
+        </View>
+        <Text>
+          <Text>
+            Tap to read comments and join in with the conversation
+          </Text>
+        </Text>
+        <View />
+      </View>
+    </View>
+  </View>
+  <View
     accessibilityLabel="View comments"
     accessibilityRole="button"
     focusable={true}
@@ -59,6 +79,26 @@ exports[`single comment 1`] = `
     </Text>
   </Text>
   <View
+    inViewport={false}
+  >
+    <View>
+      <View>
+        <View
+          focusable={true}
+        >
+          <View />
+          <View />
+        </View>
+        <Text>
+          <Text>
+            Tap to read comments and join in with the conversation
+          </Text>
+        </Text>
+        <View />
+      </View>
+    </View>
+  </View>
+  <View
     accessibilityLabel="View comments"
     accessibilityRole="button"
     focusable={true}
@@ -85,6 +125,26 @@ exports[`zero comments 1`] = `
       here
     </Text>
   </Text>
+  <View
+    inViewport={false}
+  >
+    <View>
+      <View>
+        <View
+          focusable={true}
+        >
+          <View />
+          <View />
+        </View>
+        <Text>
+          <Text>
+            Tap to read comments and join in with the conversation
+          </Text>
+        </Text>
+        <View />
+      </View>
+    </View>
+  </View>
   <View
     accessibilityLabel="Post a comment"
     accessibilityRole="button"

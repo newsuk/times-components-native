@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import { Animated, Text, TouchableOpacity, View } from "react-native";
 // @ts-ignore
 import { Viewport } from "@skele/components";
+import { useResponsiveContext } from "@times-components-native/responsive";
 import styles, { calculateArrowPosition, defaults } from "./styles";
 
 interface Props {
@@ -10,6 +11,7 @@ interface Props {
   offsetY: number;
   onClose?: <T = unknown, R = unknown>(args?: T) => R;
   onTooltipPresented: <T = unknown, R = unknown>(args?: T) => R;
+  tooltips: [string];
   type: string;
   width?: number;
 }
@@ -21,9 +23,11 @@ const Tooltip: React.FC<Props> = ({
   offsetY = defaults.offsetY,
   onClose,
   onTooltipPresented,
+  tooltips,
   type,
   width = defaults.width,
 }) => {
+  const { isTablet } = useResponsiveContext();
   const [opacity] = useState(new Animated.Value(1));
   const ViewportAwareView = Viewport.Aware(View);
   const leftAligned = alignment === "left";
@@ -46,37 +50,39 @@ const Tooltip: React.FC<Props> = ({
 
   return (
     <>
-      <ViewportAwareView
-        onViewportEnter={() => {
-          onTooltipPresented(type);
-        }}
-      >
-        <Animated.View
-          style={{
-            opacity: opacity,
+      {tooltips.includes(type) && isTablet && (
+        <ViewportAwareView
+          onViewportEnter={() => {
+            onTooltipPresented(type);
           }}
         >
-          <View
-            style={[
-              styles.container,
-              { width },
-              styles[alignment],
-              { bottom: offsetY },
-            ]}
+          <Animated.View
+            style={{
+              opacity: opacity,
+            }}
           >
-            {closeButton}
-            <Text style={[styles.text, leftAligned && styles.textLeft]}>
-              {content}
-            </Text>
             <View
               style={[
-                styles.arrow,
-                { left: calculateArrowPosition(alignment, width) },
+                styles.container,
+                { width },
+                styles[alignment],
+                { bottom: offsetY },
               ]}
-            />
-          </View>
-        </Animated.View>
-      </ViewportAwareView>
+            >
+              {closeButton}
+              <Text style={[styles.text, leftAligned && styles.textLeft]}>
+                {content}
+              </Text>
+              <View
+                style={[
+                  styles.arrow,
+                  { left: calculateArrowPosition(alignment, width) },
+                ]}
+              />
+            </View>
+          </Animated.View>
+        </ViewportAwareView>
+      )}
       {children}
     </>
   );
