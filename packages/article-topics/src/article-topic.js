@@ -62,7 +62,7 @@ const ArticleTopic = ({
       onClose={unhighlightTopic}
       onTooltipPresented={onTooltipPresented}
       type="topics"
-      tooltips={["topics"]}
+      tooltips={[tooltips]}
       alignment="left"
       width={236}
     >
