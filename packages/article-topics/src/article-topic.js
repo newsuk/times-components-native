@@ -20,7 +20,8 @@ const ArticleTopic = ({
   const fontSizeStyle = fontSize ? { fontSize } : null;
   const lineHeightStyle = lineHeight ? { lineHeight } : null;
 
-  const showTooltip = index === 0;
+  const tooltipType = "topics";
+  const showTooltip = index === 0 && tooltips.includes(tooltipType);
   const [isHighlighted, setIsHighlighted] = useState(showTooltip);
 
   const unhighlightTopic = () => {
@@ -61,7 +62,7 @@ const ArticleTopic = ({
       content={<Text>Tap a topic to see more of our coverage</Text>}
       onClose={unhighlightTopic}
       onTooltipPresented={onTooltipPresented}
-      type="topics"
+      type={tooltipType}
       tooltips={[tooltips]}
       alignment="left"
       width={236}
