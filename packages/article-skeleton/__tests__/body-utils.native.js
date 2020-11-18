@@ -465,5 +465,51 @@ export default () => {
         createParagraph("m"),
       ]);
     });
+
+    it("setupAd should return content with the ad in the variant requested position", () => {
+      const newSkeletonProps = {
+        ...skeletonProps,
+        data: {
+          ...skeletonProps.data,
+          content: [
+            { name: "image", children: [] },
+            ...skeletonProps.data.content,
+          ],
+        },
+      };
+
+      expect(
+        setupAd(newSkeletonProps, {
+          articleMpu: {
+            group: "C",
+            adPosition: 3,
+            width: 300,
+            height: 600,
+            slotName: "native-inline-ad-c",
+          },
+        }),
+      ).toEqual([
+        { name: "image", children: [] },
+        createParagraph("a"),
+        createParagraph("b"),
+        {
+          name: "inlineContent",
+          attributes: {
+            width: 300,
+            height: 600,
+            slotName: "native-inline-ad-c",
+            inlineContent: [
+              createParagraph("c"),
+              createParagraph("d"),
+              createParagraph("e"),
+              createParagraph("f"),
+            ],
+            originalName: "ad",
+            skeletonProps: newSkeletonProps,
+          },
+          children: [],
+        },
+      ]);
+    });
   });
 };
