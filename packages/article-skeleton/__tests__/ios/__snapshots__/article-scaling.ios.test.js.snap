@@ -15,7 +15,7 @@ exports[`1. scaled medium full article 1`] = `
           Object {
             "backgroundColor": "#ffffff",
             "maxWidth": "100%",
-            "overflow": "hidden",
+            "overflow": "visible",
             "width": undefined,
           }
         }
@@ -25,7 +25,7 @@ exports[`1. scaled medium full article 1`] = `
           Object {
             "backgroundColor": "#ffffff",
             "maxWidth": "100%",
-            "overflow": "hidden",
+            "overflow": "visible",
             "width": undefined,
           }
         }
@@ -68,7 +68,7 @@ exports[`1. scaled medium full article 1`] = `
           Object {
             "backgroundColor": "#ffffff",
             "maxWidth": "100%",
-            "overflow": "hidden",
+            "overflow": "visible",
             "width": undefined,
           }
         }
@@ -78,7 +78,7 @@ exports[`1. scaled medium full article 1`] = `
             Object {
               "backgroundColor": "#ffffff",
               "maxWidth": "100%",
-              "overflow": "hidden",
+              "overflow": "visible",
               "width": undefined,
             }
           }
@@ -106,7 +106,7 @@ exports[`2. scaled large full article 1`] = `
           Object {
             "backgroundColor": "#ffffff",
             "maxWidth": "100%",
-            "overflow": "hidden",
+            "overflow": "visible",
             "width": undefined,
           }
         }
@@ -116,7 +116,7 @@ exports[`2. scaled large full article 1`] = `
           Object {
             "backgroundColor": "#ffffff",
             "maxWidth": "100%",
-            "overflow": "hidden",
+            "overflow": "visible",
             "width": undefined,
           }
         }
@@ -159,7 +159,7 @@ exports[`2. scaled large full article 1`] = `
           Object {
             "backgroundColor": "#ffffff",
             "maxWidth": "100%",
-            "overflow": "hidden",
+            "overflow": "visible",
             "width": undefined,
           }
         }
@@ -169,7 +169,7 @@ exports[`2. scaled large full article 1`] = `
             Object {
               "backgroundColor": "#ffffff",
               "maxWidth": "100%",
-              "overflow": "hidden",
+              "overflow": "visible",
               "width": undefined,
             }
           }
@@ -197,7 +197,7 @@ exports[`3. scaled xlarge full article 1`] = `
           Object {
             "backgroundColor": "#ffffff",
             "maxWidth": "100%",
-            "overflow": "hidden",
+            "overflow": "visible",
             "width": undefined,
           }
         }
@@ -207,7 +207,7 @@ exports[`3. scaled xlarge full article 1`] = `
           Object {
             "backgroundColor": "#ffffff",
             "maxWidth": "100%",
-            "overflow": "hidden",
+            "overflow": "visible",
             "width": undefined,
           }
         }
@@ -250,7 +250,7 @@ exports[`3. scaled xlarge full article 1`] = `
           Object {
             "backgroundColor": "#ffffff",
             "maxWidth": "100%",
-            "overflow": "hidden",
+            "overflow": "visible",
             "width": undefined,
           }
         }
@@ -260,7 +260,7 @@ exports[`3. scaled xlarge full article 1`] = `
             Object {
               "backgroundColor": "#ffffff",
               "maxWidth": "100%",
-              "overflow": "hidden",
+              "overflow": "visible",
               "width": undefined,
             }
           }

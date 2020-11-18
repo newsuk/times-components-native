@@ -93,7 +93,7 @@ const ArticleWithContent = (props) => {
   // eslint-disable-next-line react/prop-types
   const Child = useCallback(
     ({ item, index }) => (
-      <Gutter style={{ overflow: "hidden" }}>
+      <Gutter>
         <ErrorBoundary>
           {item.name === "footer"
             ? footer

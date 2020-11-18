@@ -29,10 +29,10 @@ exports[`1. group of topics 1`] = `
       <View
         style={
           Object {
-            "borderColor": "#3C81BE",
+            "borderColor": "#DBDBDB",
             "borderRadius": 2,
-            "borderWidth": 2,
-            "padding": 9,
+            "borderWidth": 1,
+            "padding": 10,
           }
         }
       >
@@ -85,10 +85,10 @@ exports[`2. group of topics at large scale 1`] = `
       <View
         style={
           Object {
-            "borderColor": "#3C81BE",
+            "borderColor": "#DBDBDB",
             "borderRadius": 2,
-            "borderWidth": 2,
-            "padding": 9,
+            "borderWidth": 1,
+            "padding": 10,
           }
         }
       >
@@ -141,10 +141,10 @@ exports[`3. group of topics at xlarge scale 1`] = `
       <View
         style={
           Object {
-            "borderColor": "#3C81BE",
+            "borderColor": "#DBDBDB",
             "borderRadius": 2,
-            "borderWidth": 2,
-            "padding": 9,
+            "borderWidth": 1,
+            "padding": 10,
           }
         }
       >
