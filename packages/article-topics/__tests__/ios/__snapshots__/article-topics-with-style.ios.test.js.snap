@@ -22,7 +22,7 @@ exports[`1. group of topics 1`] = `
       <View
         style={
           Object {
-            "backgroundColor": "#ff007f",
+            "backgroundColor": "#3C81BE",
             "borderRadius": 3,
             "bottom": 5,
             "left": 0,
@@ -108,7 +108,7 @@ exports[`1. group of topics 1`] = `
             Object {
               "backgroundColor": "transparent",
               "borderBottomWidth": 8,
-              "borderColor": "#ff007f",
+              "borderColor": "#3C81BE",
               "borderLeftColor": "transparent",
               "borderLeftWidth": 12,
               "borderRadius": 3,
@@ -154,7 +154,7 @@ exports[`1. group of topics 1`] = `
       <View
         style={
           Object {
-            "borderColor": "#ff007f",
+            "borderColor": "#3C81BE",
             "borderRadius": 2,
             "borderWidth": 2,
             "padding": 9,
@@ -203,7 +203,7 @@ exports[`2. group of topics at large scale 1`] = `
       <View
         style={
           Object {
-            "backgroundColor": "#ff007f",
+            "backgroundColor": "#3C81BE",
             "borderRadius": 3,
             "bottom": 5,
             "left": 0,
@@ -289,7 +289,7 @@ exports[`2. group of topics at large scale 1`] = `
             Object {
               "backgroundColor": "transparent",
               "borderBottomWidth": 8,
-              "borderColor": "#ff007f",
+              "borderColor": "#3C81BE",
               "borderLeftColor": "transparent",
               "borderLeftWidth": 12,
               "borderRadius": 3,
@@ -335,7 +335,7 @@ exports[`2. group of topics at large scale 1`] = `
       <View
         style={
           Object {
-            "borderColor": "#ff007f",
+            "borderColor": "#3C81BE",
             "borderRadius": 2,
             "borderWidth": 2,
             "padding": 9,
@@ -384,7 +384,7 @@ exports[`3. group of topics at xlarge scale 1`] = `
       <View
         style={
           Object {
-            "backgroundColor": "#ff007f",
+            "backgroundColor": "#3C81BE",
             "borderRadius": 3,
             "bottom": 5,
             "left": 0,
@@ -470,7 +470,7 @@ exports[`3. group of topics at xlarge scale 1`] = `
             Object {
               "backgroundColor": "transparent",
               "borderBottomWidth": 8,
-              "borderColor": "#ff007f",
+              "borderColor": "#3C81BE",
               "borderLeftColor": "transparent",
               "borderLeftWidth": 12,
               "borderRadius": 3,
@@ -516,7 +516,7 @@ exports[`3. group of topics at xlarge scale 1`] = `
       <View
         style={
           Object {
-            "borderColor": "#ff007f",
+            "borderColor": "#3C81BE",
             "borderRadius": 2,
             "borderWidth": 2,
             "padding": 9,
