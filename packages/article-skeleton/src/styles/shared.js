@@ -20,6 +20,7 @@ const globalStyle = {
     backgroundColor: "#ffffff",
     maxWidth: "100%",
     width: maxWidth,
+    overflow: "visible",
   },
 };
 
