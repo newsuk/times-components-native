@@ -31,6 +31,8 @@ const ArticleLeftColumn = ({
             ast={bylines}
             centered
             onAuthorPress={onAuthorPress}
+            onTooltipPresented={onTooltipPresented}
+            showTooltipHighlight={true}
           />
         </View>
       )}

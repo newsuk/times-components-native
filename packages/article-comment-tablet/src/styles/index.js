@@ -75,7 +75,7 @@ const Styles = {
     paddingLeft: spacing(7),
   },
   bylines: {
-    paddingTop: spacing(2),
+    marginTop: spacing(2),
     width: "100%",
   },
   topicsContainer: {

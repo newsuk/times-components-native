@@ -21,6 +21,7 @@ const ArticleTopic = ({
   const lineHeightStyle = lineHeight ? { lineHeight } : null;
 
   const tooltipType = "topics";
+  tooltips = ["topics"]; // remove debug
   const showTooltip = index === 0 && tooltips.includes(tooltipType);
   const [isHighlighted, setIsHighlighted] = useState(showTooltip);
 
@@ -63,7 +64,7 @@ const ArticleTopic = ({
       onClose={unhighlightTopic}
       onTooltipPresented={onTooltipPresented}
       type={tooltipType}
-      tooltips={[tooltips]}
+      tooltips={tooltips}
       alignment="left"
       width={236}
     >

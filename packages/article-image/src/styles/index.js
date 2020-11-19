@@ -14,10 +14,13 @@ const containerShared = {
 const styles = StyleSheet.create({
   container: {
     paddingTop: 0,
+    overflow: "visible",
+    borderWidth: 1,
   },
   fullwidthCaption: {
     alignSelf: "center",
     maxWidth: tabletWidth - tabletRowPadding,
+    borderWidth: 1,
   },
   fullwidthContainer: {
     marginBottom: spacing(2),

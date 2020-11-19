@@ -11,6 +11,7 @@ interface Props {
   offsetY: number;
   onClose?: <T = unknown, R = unknown>(args?: T) => R;
   onTooltipPresented: <T = unknown, R = unknown>(args?: T) => R;
+  placement?: "bottom" | "top";
   tooltips: [string];
   type: string;
   width?: number;
@@ -23,6 +24,7 @@ const Tooltip: React.FC<Props> = ({
   offsetY = defaults.offsetY,
   onClose,
   onTooltipPresented,
+  placement,
   tooltips,
   type,
   width = defaults.width,
@@ -49,7 +51,7 @@ const Tooltip: React.FC<Props> = ({
   );
 
   return (
-    <>
+    <View style={{ flexDirection: "column-reverse" }}>
       {tooltips.includes(type) && isTablet && (
         <ViewportAwareView
           onViewportEnter={() => {
@@ -66,7 +68,7 @@ const Tooltip: React.FC<Props> = ({
                 styles.container,
                 { width },
                 styles[alignment],
-                { bottom: offsetY },
+                { top: offsetY },
               ]}
             >
               {closeButton}
@@ -75,7 +77,7 @@ const Tooltip: React.FC<Props> = ({
               </Text>
               <View
                 style={[
-                  styles.arrow,
+                  placement === "bottom" ? styles.arrowTop : styles.arrow,
                   { left: calculateArrowPosition(alignment, width) },
                 ]}
               />
@@ -84,7 +86,7 @@ const Tooltip: React.FC<Props> = ({
         </ViewportAwareView>
       )}
       {children}
-    </>
+    </View>
   );
 };
 

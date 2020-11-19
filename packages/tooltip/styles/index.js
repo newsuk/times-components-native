@@ -5,7 +5,7 @@ export const defaults = {
   arrowWidth: 12,
   offsetY: spacing(1),
   width: 256,
-  leftAlignedArrowLeft: spacing(4),
+  leftAlignedArrowLeft: 60,
 };
 
 export const calculateArrowPosition = (alignment, width) =>
@@ -15,7 +15,7 @@ export const calculateArrowPosition = (alignment, width) =>
 
 const styles = StyleSheet.create({
   container: {
-    backgroundColor: colours.functional.tooltip,
+    backgroundColor: colours.functional.action,
     borderRadius: 3,
     shadowColor: colours.functional.black,
     shadowOffset: {
@@ -24,7 +24,7 @@ const styles = StyleSheet.create({
     },
     shadowOpacity: 0.3,
     shadowRadius: 3,
-    position: "absolute",
+    top: 10,
   },
   left: {
     left: 0,
@@ -51,20 +51,41 @@ const styles = StyleSheet.create({
     width: 16,
     top: 10,
     right: 5,
-    zIndex: 1,
+    zIndex: 9999,
   },
   arrow: {
     position: "absolute",
     bottom: -7,
     backgroundColor: "transparent",
     borderStyle: "solid",
-    borderColor: colours.functional.tooltip,
+    borderColor: colours.functional.action,
     borderLeftWidth: defaults.arrowWidth,
     borderRightWidth: defaults.arrowWidth,
     borderBottomWidth: 8,
     borderLeftColor: "transparent",
     borderRightColor: "transparent",
     transform: [{ rotate: "180deg" }],
+    borderRadius: 3,
+    shadowColor: colours.functional.black,
+    shadowOffset: {
+      width: -3,
+      height: -3,
+    },
+    shadowOpacity: 0.2,
+    shadowRadius: 4,
+  },
+  arrowTop: {
+    position: "absolute",
+    top: -7,
+    backgroundColor: "transparent",
+    borderStyle: "solid",
+    borderColor: colours.functional.action,
+    borderLeftWidth: defaults.arrowWidth,
+    borderRightWidth: defaults.arrowWidth,
+    borderBottomWidth: 8,
+    borderLeftColor: "transparent",
+    borderRightColor: "transparent",
+    transform: [{ rotate: "0deg" }],
     borderRadius: 3,
     shadowColor: colours.functional.black,
     shadowOffset: {
