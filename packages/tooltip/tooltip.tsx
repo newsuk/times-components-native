@@ -7,8 +7,10 @@ import styles, { calculateArrowPosition, defaults } from "./styles";
 
 interface Props {
   alignment?: "center" | "left";
+  arrowOffsetX?: number;
   content: string;
-  offsetY: number;
+  offsetX?: number;
+  offsetY?: number;
   onClose?: <T = unknown, R = unknown>(args?: T) => R;
   onTooltipPresented: <T = unknown, R = unknown>(args?: T) => R;
   placement?: "bottom" | "top";
@@ -19,8 +21,10 @@ interface Props {
 
 const Tooltip: React.FC<Props> = ({
   alignment = "center",
+  arrowOffsetX = defaults.arrowOffsetX,
   content,
   children,
+  offsetX = defaults.offsetX,
   offsetY = defaults.offsetY,
   onClose,
   onTooltipPresented,
@@ -69,6 +73,7 @@ const Tooltip: React.FC<Props> = ({
                 { width },
                 styles[alignment],
                 { top: offsetY },
+                { left: offsetX },
               ]}
             >
               {closeButton}
@@ -78,7 +83,13 @@ const Tooltip: React.FC<Props> = ({
               <View
                 style={[
                   placement === "bottom" ? styles.arrowTop : styles.arrow,
-                  { left: calculateArrowPosition(alignment, width) },
+                  {
+                    left: calculateArrowPosition(
+                      alignment,
+                      width,
+                      arrowOffsetX,
+                    ),
+                  },
                 ]}
               />
             </View>

@@ -34,7 +34,14 @@ const AuthorComponent = ({
 };
 
 const ArticleBylineWithLinks = ({ ast, ...props }) => {
-  let { centered, onTooltipPresented, showTooltipHighlight, tooltips } = props;
+  let {
+    centered,
+    onTooltipPresented,
+    tooltipArrowOffsetX,
+    tooltipOffsetX,
+    tooltipOffsetY,
+    tooltips,
+  } = props;
 
   const textStyle = centered ? [styles.text, styles.centered] : styles.text;
   const tooltipType = "profile";
@@ -62,7 +69,9 @@ const ArticleBylineWithLinks = ({ ast, ...props }) => {
         </Text>
       }
       onClose={unhighlightAuthor}
-      offsetY={10}
+      arrowOffsetX={tooltipArrowOffsetX}
+      offsetX={tooltipOffsetX}
+      offsetY={tooltipOffsetY}
       onTooltipPresented={onTooltipPresented}
       type={tooltipType}
       tooltips={tooltips}
@@ -70,14 +79,7 @@ const ArticleBylineWithLinks = ({ ast, ...props }) => {
       placement="bottom"
       width={236}
     >
-      <View
-        style={[
-          showTooltipHighlight && styles.unhighlighted,
-          showTooltipHighlight && isHighlighted && styles.highlighted,
-        ]}
-      >
-        {byline}
-      </View>
+      {byline}
     </Tooltip>
   );
 

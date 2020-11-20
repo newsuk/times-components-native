@@ -2,16 +2,16 @@ import { StyleSheet } from "react-native";
 import { fonts, spacing, colours } from "@times-components-native/styleguide";
 
 export const defaults = {
+  arrowOffsetX: 20,
   arrowWidth: 12,
-  offsetY: spacing(1),
+  offsetX: 0,
+  offsetY: 0,
   width: 256,
   leftAlignedArrowLeft: 60,
 };
 
-export const calculateArrowPosition = (alignment, width) =>
-  alignment === "left"
-    ? defaults.leftAlignedArrowLeft
-    : width / 2 - defaults.arrowWidth / 2;
+export const calculateArrowPosition = (alignment, width, arrowOffsetX) =>
+  alignment === "left" ? arrowOffsetX : width / 2 - defaults.arrowWidth / 2;
 
 const styles = StyleSheet.create({
   container: {
@@ -24,7 +24,7 @@ const styles = StyleSheet.create({
     },
     shadowOpacity: 0.3,
     shadowRadius: 3,
-    top: 10,
+    position: "absolute",
   },
   left: {
     left: 0,

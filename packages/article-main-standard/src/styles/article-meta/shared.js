@@ -25,6 +25,7 @@ const sharedStyles = {
   articleMetaTablet: {
     marginLeft: 0,
     marginRight: 0,
+    zIndex: 1,
   },
   byline: {
     ...fontFactory({

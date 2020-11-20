@@ -32,7 +32,10 @@ const ArticleLeftColumn = ({
             centered
             onAuthorPress={onAuthorPress}
             onTooltipPresented={onTooltipPresented}
-            showTooltipHighlight={true}
+            tooltipArrowOffsetX={50}
+            tooltipOffsetX={10}
+            tooltipOffsetY={10}
+            tooltips={tooltips}
           />
         </View>
       )}
