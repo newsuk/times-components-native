@@ -1,13 +1,18 @@
 import { StyleSheet } from "react-native";
 import { fonts, spacing, colours } from "@times-components-native/styleguide";
 
-const arrowWidth = 12;
+const arrow = {
+  height: 8,
+  width: 12,
+};
+
+const shadowOpacity = 0.3;
 
 const styles = StyleSheet.create({
   wrapper: {
-    zIndex: 88888,
+    zIndex: 9999,
   },
-  wrapperPlacementStyles: {
+  wrapperTop: {
     flexDirection: "column",
   },
   container: {
@@ -18,7 +23,7 @@ const styles = StyleSheet.create({
       width: 3,
       height: 3,
     },
-    shadowOpacity: 0.3,
+    shadowOpacity: shadowOpacity,
     shadowRadius: 3,
     position: "absolute",
   },
@@ -46,25 +51,33 @@ const styles = StyleSheet.create({
     backgroundColor: "transparent",
     borderStyle: "solid",
     borderColor: colours.functional.action,
-    borderLeftWidth: arrowWidth,
-    borderRightWidth: arrowWidth,
-    borderBottomWidth: 8,
+    borderLeftWidth: arrow.width,
+    borderRightWidth: arrow.width,
+    borderBottomWidth: arrow.height,
     borderLeftColor: "transparent",
     borderRightColor: "transparent",
-    transform: [{ rotate: "0deg" }],
     borderRadius: 3,
     shadowColor: colours.functional.black,
     shadowOffset: {
       width: -3,
       height: -3,
     },
-    shadowOpacity: 0.2,
+    shadowOpacity: 0,
     shadowRadius: 4,
   },
   arrowBottom: {
     bottom: -7,
     top: "auto",
     transform: [{ rotate: "180deg" }],
+    shadowOpacity: shadowOpacity,
+  },
+  arrowRight: {
+    transform: [{ rotate: "90deg" }],
+    shadowOffset: {
+      width: 3,
+      height: -3,
+    },
+    shadowOpacity: shadowOpacity,
   },
   crossDiagonal1: {
     backgroundColor: colours.functional.white,
@@ -87,10 +100,31 @@ const styles = StyleSheet.create({
 
 const generateStyles = (options) => {
   let arrowPlacementStyles, wrapperPlacementStyles, containerPlacementStyles;
-  if (options.placement === "top") {
-    arrowPlacementStyles = styles.arrowBottom;
-    wrapperPlacementStyles = styles.wrapperTop;
-    containerPlacementStyles = { bottom: options.offsetY };
+
+  switch (options.placement) {
+    case "top":
+      arrowPlacementStyles = [
+        styles.arrowBottom,
+        { left: options.arrowOffset },
+      ];
+      wrapperPlacementStyles = styles.wrapperTop;
+      containerPlacementStyles = { bottom: options.offsetY };
+      break;
+    case "left":
+      arrowPlacementStyles = [
+        styles.arrowRight,
+        { left: options.width - arrow.height },
+        { top: options.arrowOffset },
+      ];
+      wrapperPlacementStyles = styles.wrapperLeft;
+      containerPlacementStyles = [
+        { left: -options.width - options.offsetX },
+        { top: options.offsetY },
+      ];
+      break;
+    default:
+      arrowPlacementStyles = { left: options.arrowOffset };
+      containerPlacementStyles = { top: options.offsetY };
   }
 
   return {
@@ -102,7 +136,7 @@ const generateStyles = (options) => {
       { left: options.offsetX },
       containerPlacementStyles,
     ],
-    arrow: [styles.arrow, { left: options.arrowOffsetX }, arrowPlacementStyles],
+    arrow: [styles.arrow, arrowPlacementStyles],
   };
 };
 

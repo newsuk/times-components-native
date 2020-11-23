@@ -37,7 +37,7 @@ const ArticleBylineWithLinks = ({ ast, ...props }) => {
   let {
     centered,
     onTooltipPresented,
-    tooltipArrowOffsetX,
+    tooltipArrowOffset,
     tooltipOffsetX,
     tooltipOffsetY,
     tooltips,
@@ -63,7 +63,7 @@ const ArticleBylineWithLinks = ({ ast, ...props }) => {
           To view all articles from this journalist, just tap their name
         </Text>
       }
-      arrowOffsetX={tooltipArrowOffsetX}
+      arrowOffset={tooltipArrowOffset}
       offsetX={tooltipOffsetX}
       offsetY={tooltipOffsetY}
       onTooltipPresented={onTooltipPresented}

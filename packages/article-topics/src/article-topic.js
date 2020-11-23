@@ -61,7 +61,7 @@ const ArticleTopic = ({
   const articleTopicWithTooltip = (
     <Tooltip
       content={<Text>Tap a topic to see more of our coverage</Text>}
-      offsetY={10}
+      offsetY={5}
       onClose={unhighlightTopic}
       onTooltipPresented={onTooltipPresented}
       placement="top"

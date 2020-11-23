@@ -4,7 +4,7 @@ import PropTypes from "prop-types";
 import Context from "@times-components-native/context";
 import Button from "@times-components-native/button";
 import { TextLink } from "@times-components-native/link";
-import styleguide, { spacing } from "@times-components-native/styleguide";
+import styleguide from "@times-components-native/styleguide";
 import Tooltip from "@times-components-native/tooltip";
 import styles from "./styles";
 
@@ -29,14 +29,16 @@ const Comments = ({
       </TextLink>
     </Text>
     <Tooltip
+      arrowOffset={42}
       content={
         <Text>Tap to read comments and join in with the conversation</Text>
       }
+      offsetX={15}
       onTooltipPresented={onTooltipPresented}
       type="commenting"
       tooltips={["commenting"]}
       placement="left"
-      offsetY={0}
+      width={242}
     >
       <Context.Consumer>
         {({ theme: { scale } }) => {

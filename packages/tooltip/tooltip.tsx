@@ -6,7 +6,7 @@ import { useResponsiveContext } from "@times-components-native/responsive";
 import generateStyles from "./styles";
 
 interface Props {
-  arrowOffsetX?: number;
+  arrowOffset?: number;
   content: string;
   offsetX?: number;
   offsetY?: number;
@@ -19,7 +19,7 @@ interface Props {
 }
 
 const Tooltip: React.FC<Props> = ({
-  arrowOffsetX = 20,
+  arrowOffset = 20,
   content,
   children,
   offsetX = 0,
@@ -36,7 +36,7 @@ const Tooltip: React.FC<Props> = ({
   const ViewportAwareView = Viewport.Aware(View);
 
   const styles = generateStyles({
-    arrowOffsetX,
+    arrowOffset,
     offsetX,
     offsetY,
     placement,
