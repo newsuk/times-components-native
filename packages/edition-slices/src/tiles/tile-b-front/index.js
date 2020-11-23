@@ -1,21 +1,18 @@
 /* eslint-disable react/require-default-props */
 import React from "react";
 import PropTypes from "prop-types";
-import { editionBreakpoints } from "@times-components-native/styleguide";
 import { FrontTileSummary } from "@times-components-native/front-page";
 import { getTileImage, TileLink, TileImage, withTileTracking } from "../shared";
-import stylesFactory from "./styles";
+import { getStyle } from "./styles";
+import { useResponsiveContext } from "@times-components-native/responsive";
 
-const TileBFront = ({
-  onPress,
-  tile,
-  orientation,
-  breakpoint = editionBreakpoints.wide,
-}) => {
-  const showKeyline = orientation === "portrait";
+const TileBFront = ({ onPress, tile, orientation }) => {
+  const isPortrait = orientation === "portrait";
+  const showKeyline = isPortrait;
 
   const crop = getTileImage(tile, "crop32");
-  const styles = stylesFactory(breakpoint);
+  const { windowWidth, windowHeight } = useResponsiveContext();
+  const styles = getStyle(orientation, windowWidth, windowHeight);
 
   if (!crop) return null;
 
@@ -35,21 +32,17 @@ const TileBFront = ({
         hasVideo={article.hasVideo}
       />
       <FrontTileSummary
-        headlineStyle={
-          orientation === "portrait"
-            ? styles.headlinePortrait
-            : styles.headlineLandscape
-        }
+        headlineStyle={styles.headline}
+        headlineMarginBottom={styles.headlineMarginBottom}
+        bylineMarginBottom={styles.bylineMarginBottom}
+        straplineMarginTop={0}
+        straplineMarginBottom={0}
+        summaryLineHeight={styles.summary.lineHeight}
         summary={article.content}
-        summaryStyle={
-          article.template === "maincomment"
-            ? styles.commentSummary
-            : styles.summary
-        }
+        summaryStyle={styles.summary}
         showKeyline={showKeyline}
         tile={tile}
         bylines={article.bylines}
-        template={article.template}
       />
     </TileLink>
   );

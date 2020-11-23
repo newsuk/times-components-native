@@ -868,3 +868,77 @@ exports[`20. article summary component with a strapline and flag on tablet 1`] =
   </Text>
 </View>
 `;
+
+exports[`21. article summary component with hidden label 1`] = `
+<View>
+  <Text
+    accessibilityRole="header"
+    aria-level="3"
+  >
+    Test Headline
+  </Text>
+  <ArticleFlags
+    flags={
+      Array [
+        Object {
+          "expiryTime": "2020-03-13T12:00:00.000Z",
+          "type": "UPDATED",
+        },
+        Object {
+          "expiryTime": "2019-03-14T12:00:00.000Z",
+          "type": "EXCLUSIVE",
+        },
+      ]
+    }
+  />
+  <Text>
+    <Text>
+      
+      Test paragraph
+      ...
+    </Text>
+  </Text>
+  <Text>
+    <DatePublication
+      date="2017-11-17T00:01:00.000Z"
+      publication="TIMES"
+    />
+  </Text>
+  <Text>
+    <ArticleByline
+      ast={
+        Array [
+          Object {
+            "attributes": Object {
+              "slug": "camilla-long",
+            },
+            "children": Array [
+              Object {
+                "attributes": Object {
+                  "value": "Camilla Long",
+                },
+                "children": Array [],
+                "name": "text",
+              },
+            ],
+            "name": "author",
+          },
+          Object {
+            "attributes": Object {},
+            "children": Array [
+              Object {
+                "attributes": Object {
+                  "value": ", Environment Editor",
+                },
+                "children": Array [],
+                "name": "text",
+              },
+            ],
+            "name": "inline",
+          },
+        ]
+      }
+    />
+  </Text>
+</View>
+`;

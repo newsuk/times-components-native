@@ -6,7 +6,15 @@ import styleFactory from "./styles";
 
 const styles = styleFactory();
 
-const BodyParagraph = ({ height, narrowContent, style, children }) => {
+const BodyParagraph = ({
+  height,
+  narrowContent,
+  style,
+  children,
+  attributes,
+  split,
+}) => {
+  const { inline } = attributes || false;
   const { isTablet, narrowArticleBreakpoint } = useResponsiveContext();
   const getNarrowContentStyle = (width) => [styles.narrow, { maxWidth: width }];
 
@@ -16,6 +24,11 @@ const BodyParagraph = ({ height, narrowContent, style, children }) => {
         styles.articleMainContentRow,
         styles.articleTextElement,
         isTablet && styles.articleMainContentRowTablet,
+        isTablet && inline && styles.articleInlineContentRowTablet,
+        isTablet &&
+          inline &&
+          split &&
+          styles.articleInlineSplitContentRowTablet,
         narrowContent && getNarrowContentStyle(narrowArticleBreakpoint.content),
         style,
       ].concat(height ? [{ height: height }] : [])}

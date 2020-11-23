@@ -30,14 +30,13 @@ export const SearchBox = connectSearchBox(({ currentRefinement, refine }) => {
 
 const styles = StyleSheet.create({
   container: {
-    margin: 10,
-    marginBottom: 20,
+    paddingHorizontal: 10,
+    marginVertical: 10,
   },
   input: {
     padding: 10,
     borderWidth: 1,
     borderColor: "#eee",
-    marginBottom: 10,
     borderRadius: 6,
   },
 });

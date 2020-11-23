@@ -21,6 +21,8 @@ const ArticleParagraph = ({
   dropCapFont,
   LinkComponent,
   narrowContent,
+  onParagraphTextLayout,
+  attributes,
 }) => {
   const str = AttributedString.join(
     children.filter((child) => child instanceof AttributedString),
@@ -47,6 +49,8 @@ const ArticleParagraph = ({
         onLinkPress={onLinkPress}
         LinkComponent={LinkComponent}
         narrowContent={narrowContent}
+        onParagraphTextLayout={onParagraphTextLayout}
+        attributes={attributes}
       >
         {children}
       </SimpleParagraph>

@@ -3,6 +3,8 @@ const fonts = {
   "CenturyGothic-Bold": () =>
     require("./dist/public/fonts/CenturyGothic-Bold.js").default,
   "Flama-Bold": () => require("./dist/public/fonts/Flama-Bold.js").default,
+  "GillSansMTStd-Bold": () =>
+    require("./dist/public/fonts/GillSansMTStd-Bold.js").default,
   "GillSansMTStd-Medium": () =>
     require("./dist/public/fonts/GillSansMTStd-Medium.js").default,
   "Tiempos-Headline-Bold": () =>

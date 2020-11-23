@@ -11,7 +11,7 @@ module.exports = {
   ],
   setupFilesAfterEnv: [],
   rootDir: "../",
-  testMatch: ["**/__tests__/ios/*.test.[jt]s?(x)"],
+  testMatch: ["**/__tests__/ios/?(*.)+(spec|test).[jt]s?(x)"],
   testURL: "http://localhost",
   transform: {
     "^.+\\.(bmp|gif|jpg|jpeg|mp4|png|psd|svg|webp)$":

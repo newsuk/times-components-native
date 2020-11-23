@@ -8,9 +8,15 @@ export const Stats = connectStats(({ nbHits }) => {
   }
 
   return (
-    <View>
+    <View
+      style={{
+        marginTop: 10,
+      }}
+    >
       <Text>
-        Your search returned {nbHits.toLocaleString()} result
+        Your search returned{" "}
+        <Text style={{ fontWeight: "bold" }}>{nbHits.toLocaleString()}</Text>{" "}
+        result
         {nbHits === 1 ? "" : "s"}
       </Text>
     </View>

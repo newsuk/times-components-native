@@ -11,7 +11,7 @@ module.exports = {
   ],
   setupFilesAfterEnv: [],
   rootDir: "../",
-  testMatch: ["**/__tests__/android/*.test.[jt]s?(x)"],
+  testMatch: ["**/__tests__/android/?(*.)+(spec|test).[jt]s?(x)"],
   testURL: "http://localhost",
   transform: {
     "^.+\\.(bmp|gif|jpg|jpeg|mp4|png|psd|svg|webp)$":

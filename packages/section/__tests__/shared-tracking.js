@@ -20,24 +20,7 @@ jest.mock("react-native", () => {
   return rn;
 });
 
-jest.mock("@times-components-native/responsive", () => {
-  const { ResponsiveContext, useResponsiveContext } = require.requireActual(
-    "@times-components-native/responsive",
-  );
-
-  return {
-    __esModule: true,
-    default: ({ children }) => (
-      <ResponsiveContext.Provider
-        value={{ isTablet: false, editionBreakpoint: "small" }}
-      >
-        {children}
-      </ResponsiveContext.Provider>
-    ),
-    useResponsiveContext,
-    ResponsiveContext,
-  };
-});
+import { ResponsiveContext } from "@times-components-native/responsive";
 jest.mock("@times-components-native/image", () => ({
   __esModule: true,
   default: "TimesImage",
@@ -56,13 +39,17 @@ class WithTrackingContext extends Component {
   render() {
     const { onArticlePress, onPuzzlePress, section } = this.props;
     return (
-      <Section
-        analyticsStream={() => null}
-        onArticlePress={onArticlePress}
-        onPuzzlePress={onPuzzlePress}
-        publicationName="TIMES"
-        section={section}
-      />
+      <ResponsiveContext.Provider
+        value={{ isTablet: false, editionBreakpoint: "small" }}
+      >
+        <Section
+          analyticsStream={() => null}
+          onArticlePress={onArticlePress}
+          onPuzzlePress={onPuzzlePress}
+          publicationName="TIMES"
+          section={section}
+        />
+      </ResponsiveContext.Provider>
     );
   }
 }

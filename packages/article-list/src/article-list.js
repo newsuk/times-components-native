@@ -124,7 +124,7 @@ class ArticleList extends Component {
       receiveChildList,
       refetch,
     } = this.props;
-    const { loadMoreError } = this.state;
+    const { loadMoreError, loadingMore } = this.state;
 
     if (error) {
       return (

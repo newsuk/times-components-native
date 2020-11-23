@@ -5,11 +5,18 @@ import styles from "./styles";
 
 const { style: TextStylePropTypes } = Text.propTypes;
 
-const ArticleSummaryHeadline = ({ className, headline, style }) => (
+const ArticleSummaryHeadline = ({
+  className,
+  headline,
+  style,
+  allowFontScaling,
+}) => (
   <Text
     accessibilityRole="header"
     aria-level="3"
-    allowFontScaling={Platform.OS === "ios"}
+    allowFontScaling={
+      allowFontScaling !== false ? Platform.OS === "ios" : false
+    }
     className={className}
     style={[styles.headline, styles.headlineWrapper, style]}
   >

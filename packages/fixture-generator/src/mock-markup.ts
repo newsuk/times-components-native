@@ -17,6 +17,7 @@ const markupTypes: Markup = {
   },
   ad: {
     name: "ad",
+
     attributes: {},
     children: [],
   },

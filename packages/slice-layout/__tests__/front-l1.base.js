@@ -1,93 +1,73 @@
 import React from "react";
 import { iterator } from "@times-components-native/test-utils";
-import { editionBreakpoints } from "@times-components-native/styleguide";
 import createItem from "./utils";
 import { FrontLeadOneSlice } from "../src/slice-layout";
+import ResponsiveContext from "@times-components-native/responsive/src/context";
+import { calculateResponsiveContext } from "@times-components-native/responsive/src/calculateResponsiveContext";
 
+jest.mock("../src/templates/horizontallayout", () => "HorizontalLayout");
+jest.mock(
+  "../src/templates/shared/TabletContentContainer",
+  () => "TabletContentContainer",
+);
+
+const testFrontSlice = (renderComponent, width, orientation) => {
+  const output = renderComponent(
+    <ResponsiveContext.Provider
+      value={calculateResponsiveContext(width, 500, 1)}
+    >
+      <FrontLeadOneSlice
+        lead={createItem("lead")}
+        orientation={orientation}
+        inTodaysEdition={createItem("inTheNews")}
+      />
+    </ResponsiveContext.Provider>,
+  );
+
+  expect(output).toMatchSnapshot();
+};
 export default (renderComponent) => {
   const tests = [
     {
-      name: "front lead one - medium - portrait",
+      name: "front lead one - portrait - 768",
       test() {
-        const output = renderComponent(
-          <FrontLeadOneSlice
-            breakpoint={editionBreakpoints.medium}
-            lead={createItem("lead")}
-            orientation={"portrait"}
-          />,
-        );
-
-        expect(output).toMatchSnapshot();
+        testFrontSlice(renderComponent, 768, "portrait");
       },
     },
     {
-      name: "front lead one - wide - portrait",
+      name: "front lead one - portrait - 810",
       test() {
-        const output = renderComponent(
-          <FrontLeadOneSlice
-            breakpoint={editionBreakpoints.wide}
-            lead={createItem("lead")}
-            orientation={"portrait"}
-          />,
-        );
-
-        expect(output).toMatchSnapshot();
+        testFrontSlice(renderComponent, 810, "portrait");
       },
     },
     {
-      name: "front lead one - huge - portrait",
+      name: "front lead one - portrait - 834",
       test() {
-        const output = renderComponent(
-          <FrontLeadOneSlice
-            breakpoint={editionBreakpoints.huge}
-            lead={createItem("lead")}
-            orientation={"orientation"}
-          />,
-        );
-
-        expect(output).toMatchSnapshot();
+        testFrontSlice(renderComponent, 834, "portrait");
       },
     },
     {
-      name: "front lead one - medium - landscape",
+      name: "front lead one - portrait - 1024",
       test() {
-        const output = renderComponent(
-          <FrontLeadOneSlice
-            breakpoint={editionBreakpoints.medium}
-            lead={createItem("lead")}
-            orientation={"landscape"}
-          />,
-        );
-
-        expect(output).toMatchSnapshot();
+        testFrontSlice(renderComponent, 1024, "portrait");
       },
     },
     {
-      name: "front lead one - wide - landscape",
+      name: "front lead one - landscape - 1024",
       test() {
-        const output = renderComponent(
-          <FrontLeadOneSlice
-            breakpoint={editionBreakpoints.wide}
-            lead={createItem("lead")}
-            orientation={"landscape"}
-          />,
-        );
-
-        expect(output).toMatchSnapshot();
+        testFrontSlice(renderComponent, 1024, "landscape");
       },
     },
     {
-      name: "front lead one - huge - landscape",
+      name: "front lead one - landscape - 1080",
       test() {
-        const output = renderComponent(
-          <FrontLeadOneSlice
-            breakpoint={editionBreakpoints.huge}
-            lead={createItem("lead")}
-            orientation={"orientation"}
-          />,
-        );
-
-        expect(output).toMatchSnapshot();
+        testFrontSlice(renderComponent, 1080, "landscape");
+      },
+    },
+    {
+      name: "front lead one - landscape - 1366",
+      test() {
+        testFrontSlice(renderComponent, 1366, "landscape");
       },
     },
   ];

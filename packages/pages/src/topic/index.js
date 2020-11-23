@@ -8,7 +8,7 @@ import withNativeProvider from "../with-native-provider";
 const { onArticlePress } = NativeModules.TopicEvents;
 const { track } = NativeModules.ReactAnalytics;
 
-const TopicPage = ({ topicSlug }) => {
+const TopicPage = ({ topicSlug, displayHeight, displayWidth, fontScale }) => {
   const TopicPageView = withNativeProvider(
     <TopicProvider debounceTimeMs={250} page={1} pageSize={20} slug={topicSlug}>
       {({ topic, isLoading, error, page, pageSize, refetch }) => (
@@ -20,6 +20,9 @@ const TopicPage = ({ topicSlug }) => {
           page={page}
           pageSize={pageSize}
           refetch={refetch}
+          displayHeight={displayHeight}
+          displayWidth={displayWidth}
+          fontScale={fontScale}
           slug={topicSlug}
           topic={topic}
         />
@@ -31,6 +34,9 @@ const TopicPage = ({ topicSlug }) => {
 
 TopicPage.propTypes = {
   topicSlug: PropTypes.string.isRequired,
+  displayHeight: PropTypes.number,
+  displayWidth: PropTypes.number,
+  fontScale: PropTypes.number,
 };
 
 export default TopicPage;

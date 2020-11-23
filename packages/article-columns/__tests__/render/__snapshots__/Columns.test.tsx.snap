@@ -17,6 +17,7 @@ exports[`SingleColumn renders correctly 1`] = `
     testID="SingleColumn:Content"
   >
     <Text
+      allowFontScaling={false}
       style={
         Array [
           Object {

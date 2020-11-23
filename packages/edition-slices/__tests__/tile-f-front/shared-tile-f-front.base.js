@@ -1,47 +1,63 @@
 import "../mocks-tiles";
-import { editionBreakpoints } from "@times-components-native/styleguide";
-import { testTile } from "../shared-tile-utils";
 import { TileFFront } from "../../src/tiles";
+import TestRenderer from "react-test-renderer";
+import React from "react";
+import { mockEditionSlice } from "@times-components-native/fixture-generator";
+import ResponsiveContext from "@times-components-native/responsive/src/context";
+
+export const tile = mockEditionSlice(1).items[0];
+
+const testFrontTile = (orientation, width, height = 500) => {
+  const tree = TestRenderer.create(
+    <ResponsiveContext.Provider
+      value={{ windowWidth: width, windowHeight: height }}
+    >
+      <TileFFront onPress={() => null} tile={tile} orientation={orientation} />,
+    </ResponsiveContext.Provider>,
+  );
+  expect(tree).toMatchSnapshot();
+};
 
 export default () => {
   describe("tile f front", () => {
     describe("landscape", () => {
-      it("medium", () => {
-        testTile(TileFFront, editionBreakpoints.medium, undefined, {
-          orientation: "landscape",
-        });
+      it("1024", () => {
+        testFrontTile("landscape", 1024);
       });
 
-      it("wide", () => {
-        testTile(TileFFront, editionBreakpoints.wide, undefined, {
-          orientation: "landscape",
-        });
+      it("1080", () => {
+        testFrontTile("landscape", 1080);
       });
 
-      it("huge", () => {
-        testTile(TileFFront, editionBreakpoints.huge, undefined, {
-          orientation: "landscape",
-        });
+      it("1194", () => {
+        testFrontTile("landscape", 1194);
+      });
+
+      it("1366", () => {
+        testFrontTile("landscape", 1366);
       });
     });
 
     describe("portrait", () => {
-      it("medium", () => {
-        testTile(TileFFront, editionBreakpoints.medium, undefined, {
-          orientation: "portrait",
+      it("768", () => {
+        testFrontTile("portrait", 768);
+      });
+
+      it("810", () => {
+        testFrontTile("portrait", 810);
+      });
+
+      describe("834", () => {
+        it("0.75 ratio", () => {
+          testFrontTile("portrait", 834, 1112);
+        });
+        it("less than 0.75 ratio", () => {
+          testFrontTile("portrait", 834, 1194);
         });
       });
 
-      it("wide", () => {
-        testTile(TileFFront, editionBreakpoints.wide, undefined, {
-          orientation: "portrait",
-        });
-      });
-
-      it("huge", () => {
-        testTile(TileFFront, editionBreakpoints.huge, undefined, {
-          orientation: "portrait",
-        });
+      it("1024", () => {
+        testFrontTile("portrait", 1024);
       });
     });
   });

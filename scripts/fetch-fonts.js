@@ -7,7 +7,7 @@ const exec = promisify(require("child_process").exec);
 const fetch = require("node-fetch");
 const convert = require("../packages/typeset/lib/convert-fonts");
 
-const fontCdn = "https://www.thetimes.co.uk/d/fonts";
+const fontBasePath = "https://nuk-times-fonts.s3-eu-west-1.amazonaws.com";
 const fontDir = `${__dirname}/../dist/public/fonts`;
 
 const fonts = [
@@ -15,111 +15,73 @@ const fonts = [
     fontName: "TimesModern-Bold",
     fileName: "TimesModern-Bold",
     fontFamily: "TimesModern-Bold",
-    sources: [
-      `${fontCdn}/TimesModern/TimesModern-Bold-62eb027e67.woff2`,
-      `${fontCdn}/TimesModern/TimesModern-Bold-828aec4ccd.woff`,
-      `${fontCdn}/TimesModern/TimesModern-Bold-e960fb2b2c.ttf`,
-    ],
+    source: `${fontBasePath}/TimesModern-Bold.ttf`,
   },
   {
     fontName: "TimesModern-Regular",
     fileName: "TimesModern-Regular",
     fontFamily: "TimesModern-Regular",
-    sources: [
-      `${fontCdn}/TimesModern/TimesModern-Regular-f3419df85d.woff2`,
-      `${fontCdn}/TimesModern/TimesModern-Regular-39c619f4ef.woff`,
-      `${fontCdn}/TimesModern/TimesModern-Regular-e47b8c277b.ttf`,
-    ],
+    source: `${fontBasePath}/TimesModern-Regular.ttf`,
   },
   {
     fontName: "TimesDigitalW04-Regular",
     fileName: "TimesDigitalW04",
     fontFamily: "TimesDigitalW04",
-    sources: [
-      `${fontCdn}/TimesDigital/TimesDigitalW04-Regular-dca82eac02.woff2`,
-      `${fontCdn}/TimesDigital/TimesDigitalW04-Regular-c93f4e13dd.woff`,
-      `${fontCdn}/TimesDigital/TimesDigitalW04-Regular-bf4b850ffb.ttf`,
-    ],
+    source: `${fontBasePath}/TimesDigitalW04-Regular.ttf`,
   },
   {
     fontName: "TimesDigitalW04-Regular",
     fileName: "TimesDigitalW04-Regular",
     fontFamily: "TimesDigitalW04-Regular",
-    sources: [
-      `${fontCdn}/TimesDigital/TimesDigitalW04-Regular-dca82eac02.woff2`,
-      `${fontCdn}/TimesDigital/TimesDigitalW04-Regular-c93f4e13dd.woff`,
-      `${fontCdn}/TimesDigital/TimesDigitalW04-Regular-bf4b850ffb.ttf`,
-    ],
+    source: `${fontBasePath}/TimesDigitalW04-Regular.ttf`,
   },
   {
     fontName: "TimesDigitalW04-Italic",
     fileName: "TimesDigitalW04_italic",
     fontFamily: "TimesDigitalW04",
-    sources: [
-      `${fontCdn}/TimesDigital/TimesDigitalW04-Italic-b1475ca316.woff2`,
-      `${fontCdn}/TimesDigital/TimesDigitalW04-Italic-a577e30ef1.woff`,
-      `${fontCdn}/TimesDigital/TimesDigitalW04-Italic-624f40f1d5.ttf`,
-    ],
+    source: `${fontBasePath}/TimesDigitalW04-Italic.ttf`,
   },
   {
     fontName: "TimesDigitalW04-Bold",
     fileName: "TimesDigitalW04_bold",
     fontFamily: "TimesDigitalW04",
-    sources: [
-      `${fontCdn}/TimesDigital/TimesDigitalW04-Bold-9a71df9f73.woff2`,
-      `${fontCdn}/TimesDigital/TimesDigitalW04-Bold-956d1db6de.woff`,
-      `${fontCdn}/TimesDigital/TimesDigitalW04-Bold-e627de75c8.ttf`,
-    ],
+    source: `${fontBasePath}/TimesDigitalW04-Bold.ttf`,
   },
   {
     fontName: "TimesDigitalW04-RegularSC",
     fileName: "TimesDigitalW04-RegularSC",
     fontFamily: "TimesDigitalW04-RegularSC",
-    sources: [
-      `${fontCdn}/TimesDigital/TimesDigitalW04-RegularSC-5fc97c82cd.woff2`,
-      `${fontCdn}/TimesDigital/TimesDigitalW04-RegularSC-a06bfa24de.woff`,
-      `${fontCdn}/TimesDigital/TimesDigitalW04-RegularSC-b3f19b6c56.ttf`,
-    ],
+    source: `${fontBasePath}/TimesDigitalW04-RegularSC.ttf`,
   },
   {
     fontName: "GillSansMTStd-Medium",
     fileName: "GillSansMTStd-Medium",
     fontFamily: "GillSansMTStd-Medium",
-    sources: [
-      `${fontCdn}/GillSans/GillSansMTStd-Medium-ff809aff43.woff2`,
-      `${fontCdn}/GillSans/GillSansMTStd-Medium-f147e4bbf2.woff`,
-      `${fontCdn}/GillSans/GillSansMTStd-Medium-45ad758029.ttf`,
-    ],
+    source: `${fontBasePath}/GillSansMTStd-Medium.ttf`,
+  },
+  {
+    fontName: "GillSansMTStd-Bold",
+    fileName: "GillSansMTStd-Bold",
+    fontFamily: "GillSansMTStd-Bold",
+    source: `${fontBasePath}/GillSansMTStd-Bold.ttf`,
   },
   {
     fontName: "CenturyGothic-Bold",
     fileName: "CenturyGothic-Bold",
     fontFamily: "CenturyGothic-Bold",
-    sources: [
-      `${fontCdn}/CenturyGothic/CenturyGothic-Bold.woff2`,
-      `${fontCdn}/CenturyGothic/CenturyGothic-Bold.woff`,
-      `${fontCdn}/CenturyGothic/CenturyGothic-Bold.ttf`,
-    ],
+    source: `${fontBasePath}/CenturyGothic-Bold.ttf`,
   },
   {
     fontName: "Flama-Bold",
     fileName: "Flama-Bold",
     fontFamily: "Flama-Bold",
-    sources: [
-      `${fontCdn}/Flama/flama-bold-webfont.woff2`,
-      `${fontCdn}/Flama/flama-bold-webfont.woff`,
-      `${fontCdn}/Flama/flama-bold-webfont.ttf`,
-    ],
+    source: `${fontBasePath}/Flama-Bold.ttf`,
   },
   {
     fontName: "Tiempos-Headline-Bold",
     fileName: "Tiempos-Headline-Bold",
     fontFamily: "Tiempos-Headline-Bold",
-    sources: [
-      `${fontCdn}/Tiempos/TiemposHeadlineWebBold.woff2`,
-      `${fontCdn}/Tiempos/TiemposHeadlineWebBold.woff`,
-      `${fontCdn}/Tiempos/TiemposHeadlineWebBold.ttf`,
-    ],
+    source: `${fontBasePath}/Tiempos-Headline-Bold.ttf`,
   },
 ];
 
@@ -143,27 +105,22 @@ const generate = (file, fontName, fontFamily) =>
 
 fs.promises.mkdir(fontDir, { recursive: true }).then(() =>
   Promise.all(
-    ...fonts.map(({ fontName, fontFamily, sources, fileName }) =>
-      sources.map((source) => {
-        const extension = path.extname(source);
-        const dest = `${fontDir}/${fileName}${extension}`;
-
-        if (!fs.existsSync(dest)) {
-          return download(source, dest).then(() => {
-            if (extension === ".ttf") {
-              try {
-                generate(dest, fontName, fontFamily).then(() => {
-                  convert(dest, `${fontDir}/${fileName}.js`);
-                });
-              } catch (e) {
-                console.error(e);
-              }
-            }
-            return null;
-          });
-        }
-        return Promise.resolve();
-      }),
-    ),
+    fonts.map(({ fontName, fontFamily, source, fileName }) => {
+      const extension = path.extname(source);
+      const dest = `${fontDir}/${fileName}${extension}`;
+      if (!fs.existsSync(dest)) {
+        return download(source, dest).then(() => {
+          try {
+            generate(dest, fontName, fontFamily).then(() => {
+              convert(dest, `${fontDir}/${fileName}.js`);
+            });
+          } catch (e) {
+            console.error(e);
+          }
+          return null;
+        });
+      }
+      return Promise.resolve();
+    }),
   ),
 );

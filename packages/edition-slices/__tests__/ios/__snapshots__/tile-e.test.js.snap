@@ -29,6 +29,7 @@ exports[`tile e huge 1`] = `
         >
           <ArticleLabel
             color="#005B8D"
+            hide={false}
             isVideo={false}
             title="label"
           />
@@ -74,7 +75,7 @@ exports[`tile e huge 1`] = `
         "width": "100%",
       }
     }
-    uri="//www.thetimes.co.uk/imageserver/image/%2Fmethode%2Ftimes%2Fprod%2Fweb%2Fbin%2F5a14c64e-06db-11e9-abe2-4909b2eb0130.jpg?crop=1434%2C1792%2C627%2C0"
+    uri="https://www.thetimes.co.uk/imageserver/image/%2Fmethode%2Ftimes%2Fprod%2Fweb%2Fbin%2F5a14c64e-06db-11e9-abe2-4909b2eb0130.jpg?crop=1434%2C1792%2C627%2C0"
   />
 </Link>
 `;
@@ -108,6 +109,7 @@ exports[`tile e medium 1`] = `
         >
           <ArticleLabel
             color="#005B8D"
+            hide={false}
             isVideo={false}
             title="label"
           />
@@ -153,7 +155,7 @@ exports[`tile e medium 1`] = `
         "width": "100%",
       }
     }
-    uri="//www.thetimes.co.uk/imageserver/image/%2Fmethode%2Ftimes%2Fprod%2Fweb%2Fbin%2F5a14c64e-06db-11e9-abe2-4909b2eb0130.jpg?crop=1434%2C1792%2C627%2C0"
+    uri="https://www.thetimes.co.uk/imageserver/image/%2Fmethode%2Ftimes%2Fprod%2Fweb%2Fbin%2F5a14c64e-06db-11e9-abe2-4909b2eb0130.jpg?crop=1434%2C1792%2C627%2C0"
   />
 </Link>
 `;
@@ -193,6 +195,7 @@ exports[`tile e small 1`] = `
         >
           <ArticleLabel
             color="#005B8D"
+            hide={false}
             isVideo={false}
             title="label"
           />
@@ -255,7 +258,7 @@ exports[`tile e small 1`] = `
         "width": "50%",
       }
     }
-    uri="//www.thetimes.co.uk/imageserver/image/%2Fmethode%2Ftimes%2Fprod%2Fweb%2Fbin%2F5a14c64e-06db-11e9-abe2-4909b2eb0130.jpg?crop=1434%2C1792%2C627%2C0"
+    uri="https://www.thetimes.co.uk/imageserver/image/%2Fmethode%2Ftimes%2Fprod%2Fweb%2Fbin%2F5a14c64e-06db-11e9-abe2-4909b2eb0130.jpg?crop=1434%2C1792%2C627%2C0"
   />
 </Link>
 `;
@@ -289,6 +292,7 @@ exports[`tile e wide 1`] = `
         >
           <ArticleLabel
             color="#005B8D"
+            hide={false}
             isVideo={false}
             title="label"
           />
@@ -334,7 +338,7 @@ exports[`tile e wide 1`] = `
         "width": "100%",
       }
     }
-    uri="//www.thetimes.co.uk/imageserver/image/%2Fmethode%2Ftimes%2Fprod%2Fweb%2Fbin%2F5a14c64e-06db-11e9-abe2-4909b2eb0130.jpg?crop=1434%2C1792%2C627%2C0"
+    uri="https://www.thetimes.co.uk/imageserver/image/%2Fmethode%2Ftimes%2Fprod%2Fweb%2Fbin%2F5a14c64e-06db-11e9-abe2-4909b2eb0130.jpg?crop=1434%2C1792%2C627%2C0"
   />
 </Link>
 `;
@@ -374,6 +378,7 @@ exports[`tile e without breakpoint should be like small 1`] = `
         >
           <ArticleLabel
             color="#005B8D"
+            hide={false}
             isVideo={false}
             title="label"
           />
@@ -436,7 +441,7 @@ exports[`tile e without breakpoint should be like small 1`] = `
         "width": "50%",
       }
     }
-    uri="//www.thetimes.co.uk/imageserver/image/%2Fmethode%2Ftimes%2Fprod%2Fweb%2Fbin%2F5a14c64e-06db-11e9-abe2-4909b2eb0130.jpg?crop=1434%2C1792%2C627%2C0"
+    uri="https://www.thetimes.co.uk/imageserver/image/%2Fmethode%2Ftimes%2Fprod%2Fweb%2Fbin%2F5a14c64e-06db-11e9-abe2-4909b2eb0130.jpg?crop=1434%2C1792%2C627%2C0"
   />
 </Link>
 `;

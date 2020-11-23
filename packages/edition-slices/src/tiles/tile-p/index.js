@@ -32,7 +32,7 @@ const TileP = ({ onPress, tile }) => {
         rounded
         resizeMode="cover"
       />
-      <Byline ast={tile.article.bylines} bylineStyle={styles.bylineOpinion} />
+      <Byline ast={tile.article.bylines} bylineStyle={styles.byline} />
       <TileSummary
         headlineStyle={styles.headline}
         strapline={getTileStrapline(tile)}
@@ -40,6 +40,7 @@ const TileP = ({ onPress, tile }) => {
         style={styles.summaryContainer}
         tile={tile}
         centeredStar
+        hideLabel={true}
       />
     </TileLink>
   );

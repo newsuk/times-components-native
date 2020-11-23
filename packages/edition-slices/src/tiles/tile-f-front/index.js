@@ -1,96 +1,55 @@
 /* eslint-disable react/require-default-props */
-import React, { useState } from "react";
+import React from "react";
 import PropTypes from "prop-types";
-import { editionBreakpoints } from "@times-components-native/styleguide";
 import { FrontTileSummary } from "@times-components-native/front-page";
 import {
   getTileImage,
+  getTileStrapline,
+  TileImage,
   TileLink,
   withTileTracking,
-  TileImage,
-  getTileStrapline,
 } from "../shared";
-import stylesFactory from "./styles";
+import { getStyle } from "./styles";
+import { useResponsiveContext } from "@times-components-native/responsive";
 
-const getAspectRatio = (crop) => (crop === "crop32" ? 3 / 2 : 16 / 9);
-
-const TileFFront = ({
-  onPress,
-  tile,
-  orientation,
-  breakpoint = editionBreakpoints.small,
-}) => {
-  const isLandscape = orientation === "landscape";
-  const isHugeLandscape = breakpoint === editionBreakpoints.huge && isLandscape;
-  const columnCount = isLandscape ? 1 : 3;
-  const crop = isHugeLandscape || !isLandscape ? "crop169" : "crop32";
-  const hideSummary = isHugeLandscape;
-
-  const imageCrop = getTileImage(tile, crop);
-  const styles = stylesFactory(breakpoint);
-
-  const [summaryHeight, setSummaryHeight] = useState(null);
+const TileFFront = ({ onPress, tile, orientation }) => {
+  const { windowWidth, windowHeight } = useResponsiveContext();
+  const imageCrop = getTileImage(tile, "crop169");
+  const styles = getStyle(orientation, windowWidth, windowHeight);
 
   if (!imageCrop) return null;
 
   const { article } = tile;
 
   return (
-    <TileLink
-      onPress={onPress}
-      style={
-        isLandscape && breakpoint !== editionBreakpoints.huge
-          ? styles.containerLandscape
-          : styles.containerPortrait
-      }
-      tile={tile}
-    >
+    <TileLink onPress={onPress} style={styles.container} tile={tile}>
       <TileImage
-        aspectRatio={getAspectRatio(crop)}
+        aspectRatio={16 / 9}
         relativeWidth={imageCrop.relativeWidth}
         relativeHeight={imageCrop.relativeHeight}
         relativeHorizontalOffset={imageCrop.relativeHorizontalOffset}
         relativeVerticalOffset={imageCrop.relativeVerticalOffset}
-        style={
-          isLandscape && breakpoint !== editionBreakpoints.huge
-            ? styles.imageContainerLandscape
-            : styles.imageContainerPortrait
-        }
+        style={styles.imageContainer}
         uri={imageCrop.url}
         fill
         hasVideo={article.hasVideo}
-        onLayout={(e) => {
-          if (isLandscape) {
-            const height = Math.floor(e.nativeEvent.layout.height);
-            setSummaryHeight(height);
-          }
-        }}
       />
       <FrontTileSummary
-        headlineStyle={
-          isLandscape ? styles.headlineLandscape : styles.headlinePortrait
-        }
-        summary={!hideSummary && article.content}
-        summaryStyle={
-          isLandscape ? styles.summaryLandscape : styles.summaryPortrait
-        }
+        containerStyle={styles.summaryContainer}
+        headlineStyle={styles.headline}
+        headlineMarginBottom={styles.headlineMarginBottom}
+        summary={article.content}
+        summaryStyle={styles.summary}
+        summaryLineHeight={styles.summary.lineHeight}
         strapline={getTileStrapline(tile)}
         straplineStyle={styles.strapline}
-        containerStyle={
-          isLandscape &&
-          breakpoint !== editionBreakpoints.huge && {
-            ...styles.summaryContainerLandscape,
-            ...(summaryHeight && {
-              height: summaryHeight,
-            }),
-          }
-        }
+        straplineMarginTop={styles.straplineMarginTop}
+        justified={true}
+        straplineMarginBottom={styles.straplineMarginBottom}
         tile={tile}
-        template={article.template}
-        columnCount={columnCount}
+        columnCount={3}
         bylines={article.bylines}
-        showKeyline={!isHugeLandscape}
-        bylineContainerStyle={styles.bylineContainer}
+        bylineMarginBottom={styles.bylineMarginBottom}
       />
     </TileLink>
   );
@@ -100,7 +59,6 @@ TileFFront.propTypes = {
   onPress: PropTypes.func.isRequired,
   tile: PropTypes.shape({}).isRequired,
   orientation: PropTypes.oneOf(["portrait", "landscape"]).isRequired,
-  breakpoint: PropTypes.string,
 };
 
 export default withTileTracking(TileFFront);

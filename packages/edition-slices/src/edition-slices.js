@@ -17,11 +17,12 @@ import {
   SecondaryOneSlice,
   SecondaryTwoAndTwoSlice,
   SecondaryTwoNoPicAndTwoSlice,
-  LeadTwoNoPicAndTwoFrontSlice,
+  LeadTwoFrontSlice,
   LeadOneAndOneFrontSlice,
   LeadOneFullWidthFrontSlice,
   PuzzleSlice,
   TopSecondarySlice,
+  SectionAd,
   SupplementLeadOneAndFourSlice,
   SupplementLeadOneAndOneSlice,
   SupplementSecondaryFourSlice,
@@ -67,12 +68,13 @@ const sliceMap = (isInSupplement) => {
     SecondaryTwoNoPicAndTwoSlice,
     StandardSlice,
     TwoPicAndSixNoPicSlice: ListTwoAndSixNoPicSlice,
-    LeadTwoNoPicAndTwoFrontSlice,
+    LeadTwoFrontSlice,
     LeadOneAndOneFrontSlice,
     LeadOneFullWidthFrontSlice,
     TopSecondaryTwoAndTwoSlice: TopSecondarySlice,
     TopSecondaryTwoNoPicAndTwoSlice: TopSecondarySlice,
     TopSecondaryFourSlice: TopSecondarySlice,
+    SectionAd,
   };
 };
 

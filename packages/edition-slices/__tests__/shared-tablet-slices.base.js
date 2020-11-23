@@ -2,7 +2,6 @@ import React from "react";
 import TestRenderer from "react-test-renderer";
 import { editionBreakpointWidths } from "@times-components-native/styleguide";
 import { iterator } from "@times-components-native/test-utils";
-import { getDimensions } from "@times-components-native/utils";
 import {
   mockCommentLeadAndCartoonSlice,
   mockDailyRegisterSlice,
@@ -20,11 +19,11 @@ import {
   getPuzzleSlices,
   mockSecondaryOneAndFourSlice,
   mockListTwoAndSixNoPicSlice,
+  mockLeadTwoFrontSlice,
   mockLeadOneAndOneFrontSlice,
-  mockLeadTwoNoPicAndTwoFrontSlice,
   mockLeadOneFullWidthFrontSlice,
+  mockInTodaysEditionSlice,
 } from "@times-components-native/fixture-generator";
-import Responsive from "@times-components-native/responsive";
 import "./mocks";
 import {
   CommentLeadAndCartoonSlice,
@@ -43,7 +42,7 @@ import {
   SecondaryTwoAndTwoSlice,
   StandardSlice,
   ListTwoAndSixNoPicSlice,
-  LeadTwoNoPicAndTwoFrontSlice,
+  LeadTwoFrontSlice,
   LeadOneAndOneFrontSlice,
   LeadOneFullWidthFrontSlice,
   TopSecondarySlice,
@@ -53,6 +52,8 @@ import {
   SupplementSecondaryOneSlice,
   SupplementSecondaryTwoAndTwoSlice,
 } from "../src/slices";
+import ResponsiveContext from "@times-components-native/responsive/src/context";
+import { calculateResponsiveContext } from "@times-components-native/responsive/src/calculateResponsiveContext";
 
 const slices = [
   {
@@ -84,6 +85,13 @@ const slices = [
     mock: mockLeadTwoNoPicAndTwoSlice(),
     name: "lead two no pic and two",
     Slice: LeadTwoNoPicAndTwoSlice,
+    orientation: "landscape",
+  },
+  {
+    mock: mockLeadTwoNoPicAndTwoSlice(),
+    name: "lead two no pic and two",
+    Slice: LeadTwoNoPicAndTwoSlice,
+    orientation: "portrait",
   },
   {
     mock: mockLeadersSlice(),
@@ -161,40 +169,58 @@ const slices = [
     Slice: PuzzleSlice,
   },
   {
-    mock: mockLeadTwoNoPicAndTwoFrontSlice(),
-    name: "front lead two no pic and two - landscape",
-    Slice: LeadTwoNoPicAndTwoFrontSlice,
-    orientation: "landscape",
+    mock: mockLeadTwoFrontSlice(),
+    name: "front lead two - portrait",
+    Slice: LeadTwoFrontSlice,
+    orientation: "portrait",
+    sliceProps: {
+      inTodaysEditionSlice: mockInTodaysEditionSlice(),
+    },
   },
   {
-    mock: mockLeadTwoNoPicAndTwoFrontSlice(),
-    name: "front lead two no pic and two - portrait",
-    Slice: LeadTwoNoPicAndTwoFrontSlice,
-    orientation: "portrait",
+    mock: mockLeadTwoFrontSlice(),
+    name: "front lead two - landscape",
+    Slice: LeadTwoFrontSlice,
+    orientation: "landscape",
+    sliceProps: {
+      inTodaysEditionSlice: mockInTodaysEditionSlice(),
+    },
   },
   {
     mock: mockLeadOneAndOneFrontSlice(),
     name: "front lead one and one - portrait",
     Slice: LeadOneAndOneFrontSlice,
     orientation: "portrait",
+    sliceProps: {
+      inTodaysEditionSlice: mockInTodaysEditionSlice(),
+    },
   },
   {
     mock: mockLeadOneAndOneFrontSlice(),
     name: "front lead one and one - landscape",
     Slice: LeadOneAndOneFrontSlice,
     orientation: "landscape",
+    sliceProps: {
+      inTodaysEditionSlice: mockInTodaysEditionSlice(),
+    },
   },
   {
     mock: mockLeadOneFullWidthFrontSlice(),
     name: "front lead one - portrait",
     Slice: LeadOneFullWidthFrontSlice,
     orientation: "portrait",
+    sliceProps: {
+      inTodaysEditionSlice: mockInTodaysEditionSlice(),
+    },
   },
   {
     mock: mockLeadOneFullWidthFrontSlice(),
     name: "front lead one - landscape",
     Slice: LeadOneFullWidthFrontSlice,
     orientation: "landscape",
+    sliceProps: {
+      inTodaysEditionSlice: mockInTodaysEditionSlice(),
+    },
   },
   {
     mock: mockSecondaryFourSlice(),
@@ -234,29 +260,18 @@ const slices = [
   },
 ];
 
-jest.mock("@times-components-native/utils", () => {
-  // eslint-disable-next-line global-require
-  const actualUtils = jest.requireActual("../../utils");
-
-  return {
-    ...actualUtils,
-    getDimensions: jest.fn(),
-  };
-});
-
 const tabletTester = (type) =>
-  slices.map(({ mock, name, Slice, orientation }) => ({
+  slices.map(({ mock, name, Slice, orientation, sliceProps }) => ({
     name: `${name} - ${type}`,
     test: () => {
-      let width = editionBreakpointWidths[type];
-      getDimensions.mockImplementation(() => ({
-        width,
-        height: orientation === "landscape" ? width / 2 : width * 2,
-      }));
+      const width = editionBreakpointWidths[type];
+      const height = orientation === "landscape" ? width / 2 : width * 2;
       const output = TestRenderer.create(
-        <Responsive>
-          <Slice onPress={() => null} slice={mock} />
-        </Responsive>,
+        <ResponsiveContext.Provider
+          value={calculateResponsiveContext(width, height, 1)}
+        >
+          <Slice onPress={() => null} slice={mock} {...sliceProps} />
+        </ResponsiveContext.Provider>,
       );
 
       expect(output).toMatchSnapshot();

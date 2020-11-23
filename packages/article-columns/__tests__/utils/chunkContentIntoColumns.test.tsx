@@ -1,10 +1,10 @@
-import { ColumnParameters, Line, ArticleMeasurements } from "../../types";
-import { ParagraphContent } from "../../domain-types";
+import { ColumnParameters, Line } from "../../types";
+import { Measurements, ParagraphContent } from "@times-components-native/types";
 import { chunkContentIntoColumns } from "../../utils/chunkContentIntoColumns";
 
 const range = (n: number) => [...Array(n).keys()];
 
-jest.mock("../../utils/random");
+jest.mock("@times-components-native/utils/src/random");
 
 const columnLineHeight = 20;
 const columnParameters: ColumnParameters = {
@@ -40,7 +40,7 @@ describe("chunkContentIntoColumns", () => {
     const paragraph = createParagraphWithText("line1", {
       id: "p1",
     });
-    const articleMeasurements: ArticleMeasurements = {
+    const articleMeasurements: Measurements = {
       bylineHeight: 0,
       bylineMargin: 0,
       contents: {
@@ -68,7 +68,7 @@ describe("chunkContentIntoColumns", () => {
       id: "p1",
     });
 
-    const articleMeasurements: ArticleMeasurements = {
+    const articleMeasurements: Measurements = {
       bylineHeight: 0,
       bylineMargin: 0,
       contents: {
@@ -102,7 +102,7 @@ describe("chunkContentIntoColumns", () => {
     );
     const lines = createLinesWithNumberOfLines(numberOfLinesInContent);
 
-    const articleMeasurements: ArticleMeasurements = {
+    const articleMeasurements: Measurements = {
       bylineHeight: 0,
       bylineMargin: 0,
       contents: {
@@ -159,7 +159,7 @@ describe("chunkContentIntoColumns", () => {
       },
     );
     const lines = createLinesWithNumberOfLines(numberOfLinesInContent);
-    const articleMeasurements: ArticleMeasurements = {
+    const articleMeasurements: Measurements = {
       bylineHeight: 0,
       bylineMargin: 0,
       contents: {
@@ -231,7 +231,7 @@ describe("chunkContentIntoColumns", () => {
       id: "p2",
     });
 
-    const articleMeasurements: ArticleMeasurements = {
+    const articleMeasurements: Measurements = {
       bylineHeight: 0,
       bylineMargin: 0,
       contents: {
@@ -277,7 +277,7 @@ describe("chunkContentIntoColumns", () => {
       },
     );
 
-    const articleMeasurements: ArticleMeasurements = {
+    const articleMeasurements: Measurements = {
       bylineHeight: 0,
       bylineMargin: 0,
       contents: {
@@ -358,7 +358,7 @@ describe("chunkContentIntoColumns", () => {
       },
     );
 
-    const articleMeasurements: ArticleMeasurements = {
+    const articleMeasurements: Measurements = {
       bylineHeight: 0,
       bylineMargin: 0,
       contents: {
@@ -425,7 +425,7 @@ describe("chunkContentIntoColumns", () => {
       },
     );
 
-    const articleMeasurements: ArticleMeasurements = {
+    const articleMeasurements: Measurements = {
       bylineHeight: 0,
       bylineMargin: 0,
       contents: {
@@ -508,7 +508,7 @@ describe("chunkContentIntoColumns", () => {
       },
     );
 
-    const articleMeasurements: ArticleMeasurements = {
+    const articleMeasurements: Measurements = {
       bylineHeight: 40,
       bylineMargin: 20,
       contents: {
@@ -546,6 +546,75 @@ describe("chunkContentIntoColumns", () => {
           {
             attributes: {
               value: createTextWithNumberOfLines(1, maxLinesInColumn - 3),
+            },
+            children: [],
+            name: "text",
+          },
+        ],
+      },
+    ]);
+  });
+
+  it("will not add another paragraph to first column when not enough room for one more line", () => {
+    const maxLinesInColumn = 20;
+    const linesInContent = 19;
+    const paragraph1 = createParagraphWithText(
+      createTextWithNumberOfLines(linesInContent),
+      {
+        id: "p1",
+      },
+    );
+    const paragraph2 = createParagraphWithText(
+      createTextWithNumberOfLines(linesInContent),
+      {
+        id: "p2",
+      },
+    );
+
+    const articleMeasurements: Measurements = {
+      bylineHeight: 19,
+      bylineMargin: 0,
+      contents: {
+        lines: {
+          p1: createLinesWithNumberOfLines(linesInContent),
+          p2: createLinesWithNumberOfLines(linesInContent),
+        },
+        heights: {
+          p1: linesInContent * columnLineHeight,
+          p2: linesInContent * columnLineHeight,
+        },
+      },
+    };
+
+    const columns = chunkContentIntoColumns(
+      [paragraph1, paragraph2],
+      articleMeasurements,
+      {
+        ...columnParameters,
+        columnHeight: maxLinesInColumn * columnLineHeight,
+      },
+    );
+
+    expect(columns).toHaveLength(2);
+    expect(columns[0]).toMatchObject([
+      {
+        children: [
+          {
+            attributes: {
+              value: createTextWithNumberOfLines(19),
+            },
+            children: [],
+            name: "text",
+          },
+        ],
+      },
+    ]);
+    expect(columns[1]).toMatchObject([
+      {
+        children: [
+          {
+            attributes: {
+              value: createTextWithNumberOfLines(19),
             },
             children: [],
             name: "text",

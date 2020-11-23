@@ -40,7 +40,7 @@ exports[`tile bd medium 1`] = `
             "width": 97,
           }
         }
-        uri="//www.thetimes.co.uk/imageserver/image/methode%2Ftimes%2Fprod%2Fweb%2Fbin%2F5af6925e-2599-11e9-b782-40e94f317da5.jpg?crop=1000%2C1000%2C250%2C0"
+        uri="https://www.thetimes.co.uk/imageserver/image/methode%2Ftimes%2Fprod%2Fweb%2Fbin%2F5af6925e-2599-11e9-b782-40e94f317da5.jpg?crop=1000%2C1000%2C250%2C0"
       />
       <View
         style={
@@ -61,6 +61,7 @@ exports[`tile bd medium 1`] = `
         >
           <ArticleLabel
             color="#005B8D"
+            hide={false}
             isVideo={false}
             title="label"
           />
@@ -139,7 +140,7 @@ exports[`tile bd wide 1`] = `
             "width": 136,
           }
         }
-        uri="//www.thetimes.co.uk/imageserver/image/methode%2Ftimes%2Fprod%2Fweb%2Fbin%2F5af6925e-2599-11e9-b782-40e94f317da5.jpg?crop=1000%2C1000%2C250%2C0"
+        uri="https://www.thetimes.co.uk/imageserver/image/methode%2Ftimes%2Fprod%2Fweb%2Fbin%2F5af6925e-2599-11e9-b782-40e94f317da5.jpg?crop=1000%2C1000%2C250%2C0"
       />
       <View
         style={
@@ -160,6 +161,7 @@ exports[`tile bd wide 1`] = `
         >
           <ArticleLabel
             color="#005B8D"
+            hide={false}
             isVideo={false}
             title="label"
           />
@@ -238,7 +240,7 @@ exports[`tile bd without breakpoint 1`] = `
             "width": 97,
           }
         }
-        uri="//www.thetimes.co.uk/imageserver/image/methode%2Ftimes%2Fprod%2Fweb%2Fbin%2F5af6925e-2599-11e9-b782-40e94f317da5.jpg?crop=1000%2C1000%2C250%2C0"
+        uri="https://www.thetimes.co.uk/imageserver/image/methode%2Ftimes%2Fprod%2Fweb%2Fbin%2F5af6925e-2599-11e9-b782-40e94f317da5.jpg?crop=1000%2C1000%2C250%2C0"
       />
       <View
         style={
@@ -259,6 +261,7 @@ exports[`tile bd without breakpoint 1`] = `
         >
           <ArticleLabel
             color="#005B8D"
+            hide={false}
             isVideo={false}
             title="label"
           />

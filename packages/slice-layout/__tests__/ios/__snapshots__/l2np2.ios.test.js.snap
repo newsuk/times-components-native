@@ -20,31 +20,7 @@ exports[`1. lead two no pic and two - small 1`] = `
 </View>
 `;
 
-exports[`2. lead two no pic and two - medium 1`] = `
-<View>
-  <View>
-    <Text>
-      lead-1
-    </Text>
-    <View />
-    <Text>
-      lead-2
-    </Text>
-  </View>
-  <View />
-  <View>
-    <Text>
-      support-2
-    </Text>
-    <View />
-    <Text>
-      support-1
-    </Text>
-  </View>
-</View>
-`;
-
-exports[`3. lead two no pic and two - wide 1`] = `
+exports[`2. lead two no pic and two - tablet - landscape 1`] = `
 <View>
   <View>
     <Text>
@@ -70,7 +46,7 @@ exports[`3. lead two no pic and two - wide 1`] = `
 </View>
 `;
 
-exports[`4. lead two no pic and two - huge 1`] = `
+exports[`3. lead two no pic and two - tablet - portrait 1`] = `
 <View>
   <View>
     <Text>
@@ -84,13 +60,11 @@ exports[`4. lead two no pic and two - huge 1`] = `
   <View />
   <View>
     <Text>
-      support-1
-    </Text>
-  </View>
-  <View />
-  <View>
-    <Text>
       support-2
+    </Text>
+    <View />
+    <Text>
+      support-1
     </Text>
   </View>
 </View>

@@ -1,107 +1,178 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`1. front lead one - medium - portrait 1`] = `
-<View
-  style={
-    Object {
-      "flex": 1,
-      "flexDirection": "row",
-      "marginHorizontal": 30,
-      "paddingTop": 20,
-    }
-  }
+exports[`1. front lead one - portrait - 768 1`] = `
+<TabletContentContainer
+  orientation="portrait"
+  windowWidth={768}
 >
-  <Text>
-    lead
-  </Text>
-</View>
+  <View>
+    <Text>
+      lead
+    </Text>
+  </View>
+  <View>
+    <Text>
+      inTheNews
+    </Text>
+  </View>
+</TabletContentContainer>
 `;
 
-exports[`2. front lead one - wide - portrait 1`] = `
-<View
-  style={
-    Object {
-      "flex": 1,
-      "flexDirection": "row",
-      "marginHorizontal": 30,
-      "paddingTop": 20,
-    }
-  }
+exports[`2. front lead one - portrait - 810 1`] = `
+<TabletContentContainer
+  orientation="portrait"
+  windowWidth={810}
 >
-  <Text>
-    lead
-  </Text>
-</View>
+  <View>
+    <Text>
+      lead
+    </Text>
+  </View>
+  <View>
+    <Text>
+      inTheNews
+    </Text>
+  </View>
+</TabletContentContainer>
 `;
 
-exports[`3. front lead one - huge - portrait 1`] = `
-<View
-  style={
-    Object {
-      "flex": 1,
-      "flexDirection": "row",
-      "marginHorizontal": 30,
-      "paddingTop": 20,
-    }
-  }
+exports[`3. front lead one - portrait - 834 1`] = `
+<TabletContentContainer
+  orientation="portrait"
+  windowWidth={834}
 >
-  <Text>
-    lead
-  </Text>
-</View>
+  <View>
+    <Text>
+      lead
+    </Text>
+  </View>
+  <View>
+    <Text>
+      inTheNews
+    </Text>
+  </View>
+</TabletContentContainer>
 `;
 
-exports[`4. front lead one - medium - landscape 1`] = `
-<View
-  style={
-    Object {
-      "alignSelf": "center",
-      "flex": 1,
-      "flexDirection": "row",
-      "marginHorizontal": 30,
-      "paddingTop": 20,
-      "width": 1000,
-    }
-  }
+exports[`4. front lead one - portrait - 1024 1`] = `
+<TabletContentContainer
+  orientation="portrait"
+  windowWidth={1024}
 >
-  <Text>
-    lead
-  </Text>
-</View>
+  <View>
+    <Text>
+      lead
+    </Text>
+  </View>
+  <View>
+    <Text>
+      inTheNews
+    </Text>
+  </View>
+</TabletContentContainer>
 `;
 
-exports[`5. front lead one - wide - landscape 1`] = `
-<View
-  style={
-    Object {
-      "alignSelf": "center",
-      "flex": 1,
-      "flexDirection": "row",
-      "marginHorizontal": 30,
-      "paddingTop": 20,
-      "width": 1000,
-    }
-  }
+exports[`5. front lead one - landscape - 1024 1`] = `
+<TabletContentContainer
+  orientation="landscape"
+  windowWidth={1024}
 >
-  <Text>
-    lead
-  </Text>
-</View>
+  <HorizontalLayout
+    tiles={
+      Array [
+        Object {
+          "style": Object {
+            "width": "75.5031779661017%",
+          },
+          "tile": <ExampleChild
+            id="lead"
+          >
+            lead
+          </ExampleChild>,
+        },
+        Object {
+          "style": Object {
+            "marginLeft": 10,
+            "width": "24.390889830508474%",
+          },
+          "tile": <ExampleChild
+            id="inTheNews"
+          >
+            inTheNews
+          </ExampleChild>,
+        },
+      ]
+    }
+  />
+</TabletContentContainer>
 `;
 
-exports[`6. front lead one - huge - landscape 1`] = `
-<View
-  style={
-    Object {
-      "flex": 1,
-      "flexDirection": "row",
-      "marginHorizontal": 30,
-      "paddingTop": 20,
-    }
-  }
+exports[`6. front lead one - landscape - 1080 1`] = `
+<TabletContentContainer
+  orientation="landscape"
+  windowWidth={1080}
 >
-  <Text>
-    lead
-  </Text>
-</View>
+  <HorizontalLayout
+    tiles={
+      Array [
+        Object {
+          "style": Object {
+            "width": "75.47500000000001%",
+          },
+          "tile": <ExampleChild
+            id="lead"
+          >
+            lead
+          </ExampleChild>,
+        },
+        Object {
+          "style": Object {
+            "marginLeft": 10,
+            "width": "24.425%",
+          },
+          "tile": <ExampleChild
+            id="inTheNews"
+          >
+            inTheNews
+          </ExampleChild>,
+        },
+      ]
+    }
+  />
+</TabletContentContainer>
+`;
+
+exports[`7. front lead one - landscape - 1366 1`] = `
+<TabletContentContainer
+  orientation="landscape"
+  windowWidth={1366}
+>
+  <HorizontalLayout
+    tiles={
+      Array [
+        Object {
+          "style": Object {
+            "width": "82.36044657097288%",
+          },
+          "tile": <ExampleChild
+            id="lead"
+          >
+            lead
+          </ExampleChild>,
+        },
+        Object {
+          "style": Object {
+            "marginLeft": 10,
+            "width": "17.5518341307815%",
+          },
+          "tile": <ExampleChild
+            id="inTheNews"
+          >
+            inTheNews
+          </ExampleChild>,
+        },
+      ]
+    }
+  />
+</TabletContentContainer>
 `;

@@ -41,6 +41,7 @@
 	<string></string>
 	<key>UIAppFonts</key>
 	<array>
+		<string>GillSansMTStd-Bold.ttf</string>
 		<string>GillSansMTStd-Medium.ttf</string>
 		<string>TimesDigitalW04-RegularSC.ttf</string>
 		<string>TimesModern-Bold.ttf</string>

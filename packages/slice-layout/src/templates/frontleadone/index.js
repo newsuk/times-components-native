@@ -1,34 +1,44 @@
 import React from "react";
-import { Dimensions, View } from "react-native";
-import stylesFactory from "./styles";
+import { View } from "react-native";
+import { getStyles } from "./styles";
+import HorizontalLayout from "../horizontallayout";
+import TabletContentContainer from "../shared/TabletContentContainer";
+import { useResponsiveContext } from "@times-components-native/responsive";
 
-const calculateContentWidth = (windowWidth) => {
-  if (windowWidth >= 1366) return 1180;
-  if (windowWidth >= 1194) return 1024;
-  if (windowWidth >= 1112) return 1000;
-  if (windowWidth >= 1080) return 1000;
-  if (windowWidth >= 1024) return 920;
+const FrontLeadOneSlice = ({ orientation, lead, inTodaysEdition }) => {
+  const { windowWidth } = useResponsiveContext();
+  const styles = getStyles(orientation, windowWidth);
 
-  return 1000;
-};
-
-const FrontLeadOneSlice = ({ breakpoint, orientation, lead }) => {
-  const styles = stylesFactory(breakpoint);
-
-  const windowWidth = Dimensions.get("window").width;
-
+  if (orientation === "landscape") {
+    return (
+      <TabletContentContainer
+        orientation={orientation}
+        windowWidth={windowWidth}
+        style={styles.container}
+      >
+        <HorizontalLayout
+          containerStyle={styles.row}
+          tiles={[
+            { style: styles.leadContainer, tile: lead },
+            {
+              style: styles.inTodaysEditionContainer,
+              tile: inTodaysEdition,
+            },
+          ]}
+          colSeparatorStyle={styles.colSeparatorStyle}
+        />
+      </TabletContentContainer>
+    );
+  }
   return (
-    <View
-      style={[
-        styles.container,
-        orientation === "landscape" && {
-          width: calculateContentWidth(windowWidth),
-          alignSelf: "center",
-        },
-      ]}
+    <TabletContentContainer
+      orientation={orientation}
+      windowWidth={windowWidth}
+      style={styles.container}
     >
-      {lead}
-    </View>
+      <View style={styles.leadContainer}>{lead}</View>
+      <View style={styles.inTodaysEditionContainer}>{inTodaysEdition}</View>
+    </TabletContentContainer>
   );
 };
 

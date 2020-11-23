@@ -17,14 +17,15 @@ export const collapsed = (isTablet, content) =>
 
         // backwards
         if (
-          ((node.name === "image" || node.name === "ad") &&
-            node.attributes?.display === "inline") ||
+          (node.name === "image" && node.attributes?.display === "inline") ||
           node.name === "pullQuote"
         ) {
           // forwards
           let i;
           let children = [node];
-          for (i = 0; i < acc.length; i += 1) {
+          const numberOfNodesToInline = 4;
+          const maxNodesToInline = Math.min(numberOfNodesToInline, acc.length);
+          for (i = 0; i < maxNodesToInline; i += 1) {
             const next = acc[i];
             if (next && next.name === "paragraph") {
               children = [
@@ -52,47 +53,106 @@ const setupArticleMpuTestAd = (
   articleMpu,
   currentAdSlotIndex,
   contentWithoutAdSlot,
+  skeletonProps,
 ) => {
   const { adPosition, group, width, height, slotName } = articleMpu;
   const isControlGroup = group === "A";
   const adSlotIndex = isControlGroup ? currentAdSlotIndex : adPosition - 1;
 
+  const contentBeforeAd = contentWithoutAdSlot.slice(0, adSlotIndex);
+
+  if (isControlGroup) {
+    const contentAfterControlGroupAd = contentWithoutAdSlot.slice(adSlotIndex);
+    return [
+      ...contentBeforeAd,
+      {
+        name: "ad",
+        attributes: {
+          slotName,
+        },
+        children: [],
+      },
+      ...contentAfterControlGroupAd,
+    ];
+  }
+
+  const numberOfCandidateParagraphsToInline = 7;
+
+  let inlineContentEndIndex = adSlotIndex + numberOfCandidateParagraphsToInline;
+
+  let inlineContent = contentWithoutAdSlot.slice(
+    adSlotIndex,
+    inlineContentEndIndex,
+  );
+
+  const nonParagraphIndex = inlineContent.findIndex(
+    (item) => item.name !== "paragraph",
+  );
+
+  if (nonParagraphIndex !== -1) {
+    inlineContentEndIndex = adSlotIndex + nonParagraphIndex;
+    inlineContent = contentWithoutAdSlot.slice(
+      adSlotIndex,
+      inlineContentEndIndex,
+    );
+  }
+
+  const contentAfterInlineAd = contentWithoutAdSlot.slice(
+    inlineContentEndIndex,
+  );
+
   return [
-    ...contentWithoutAdSlot.slice(0, adSlotIndex),
+    ...contentBeforeAd,
     {
-      name: "ad",
+      name: "inlineAd",
       attributes: {
         slotName,
-        ...(!isControlGroup && { display: "inline", width, height }),
+        inlineContent,
+        skeletonProps,
+        width,
+        height,
       },
       children: [],
     },
-    ...contentWithoutAdSlot.slice(adSlotIndex),
+    ...contentAfterInlineAd,
   ];
 };
 
-export const setupAd = (isTablet, variants, template, content) => {
+export const setupAd = (skeletonProps, variants) => {
+  const {
+    isTablet,
+    data: { content, template },
+  } = skeletonProps;
   if (!isTablet || !variants || !Object.keys(variants).length) return content;
 
   let currentAdSlotIndex;
 
-  const contentWithoutAdSlot = content.filter((item, index) => {
+  // Remove empty paragraphs
+  const cleanedContent = content.filter(
+    (item) => !(item.name === "paragraph" && !item.children.length),
+  );
+
+  const contentWithoutAdSlot = cleanedContent.filter((item, index) => {
     const isItemAd = item.name === "ad";
     if (isItemAd) currentAdSlotIndex = index;
     return !isItemAd;
   });
 
-  if (!currentAdSlotIndex) return content;
+  if (!currentAdSlotIndex) return cleanedContent;
+
+  // If tablet, only show on mainstandard template
+  if (isTablet && template !== "mainstandard") return contentWithoutAdSlot;
 
   const { articleMpu } = variants;
 
   if (!articleMpu || (articleMpu && template !== "mainstandard"))
-    return content;
+    return cleanedContent;
 
   return setupArticleMpuTestAd(
     articleMpu,
     currentAdSlotIndex,
     contentWithoutAdSlot,
+    skeletonProps,
   );
 };
 
@@ -118,6 +178,7 @@ export const getStringBounds = (fontSettings, string) => {
   return { width, height };
 };
 
-export default memoize((isTablet, variants, template, content) =>
-  collapsed(isTablet, setupAd(isTablet, variants, template, content)),
-);
+export default memoize((skeletonProps, variants) => {
+  const { isTablet } = skeletonProps;
+  return collapsed(isTablet, setupAd(skeletonProps, variants));
+});

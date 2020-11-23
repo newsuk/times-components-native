@@ -21,12 +21,15 @@ import {
   SecondaryOneAndFourSlice,
   Puzzle,
   LeadOneFullWidthFrontSlice,
+  LeadTwoFrontSlice,
+  PuffLiteInput,
 } from "./types";
 import MockPuzzle from "./mock-puzzle";
 
 import MockTile from "./mock-tile";
 import MockDailyRegister from "./mock-daily-register";
-import MockMarkup from "@times-components-native/fixture-generator/src/mock-markup";
+import MockMarkup from "./mock-markup";
+import inTodaysEditionFixture from "@times-components-native/in-todays-edition/fixtures/in-todays-edition.json";
 
 interface LeadOneAndFourSliceWithName extends LeadOneAndFourSlice {
   name: string;
@@ -44,6 +47,10 @@ interface LeadOneAndOneSliceWithName extends LeadOneAndOneSlice {
 }
 
 interface LeadOneAndTwoSliceWithName extends LeadOneAndTwoSlice {
+  name: string;
+}
+
+interface LeadTwoFrontSliceWithName extends LeadTwoFrontSlice {
   name: string;
 }
 
@@ -156,6 +163,19 @@ function mockLeadOneFullWidthSlice(): LeadOneFullWidthSliceWithName {
   };
 }
 
+// This needs to be replaced once TPA has updated the schema to include InTodaysEdition in the front section.
+type InTodaysEditionItem = PuffLiteInput & { leadImage?: any };
+
+interface InTodaysEditionSlice {
+  items: InTodaysEditionItem[];
+}
+
+function mockInTodaysEditionSlice(): InTodaysEditionSlice {
+  return {
+    items: inTodaysEditionFixture,
+  };
+}
+
 function mockLeadOneAndOneSlice(): LeadOneAndOneSliceWithName {
   const tiles = getTiles(2);
   const expirableFlags = [
@@ -211,8 +231,8 @@ function mockLeadTwoNoPicAndTwoSlice(): LeadTwoNoPicAndTwoSliceWithName {
   };
 }
 
-function mockLeadTwoNoPicAndTwoFrontSlice(): LeadTwoNoPicAndTwoSliceWithName {
-  const tiles = getTiles(4);
+function mockLeadTwoFrontSlice(): LeadTwoFrontSliceWithName {
+  const tiles = getTiles(2);
   const leadTile = {
     ...tiles[0],
     article: {
@@ -221,12 +241,10 @@ function mockLeadTwoNoPicAndTwoFrontSlice(): LeadTwoNoPicAndTwoSliceWithName {
     },
   };
 
-  return <LeadTwoNoPicAndTwoSliceWithName>{
-    name: "LeadTwoNoPicAndTwoFrontSlice",
+  return <LeadTwoFrontSliceWithName>{
+    name: "LeadTwoFrontSlice",
     lead1: leadTile,
     lead2: tiles[1],
-    support1: tiles[2],
-    support2: tiles[3],
     items: [leadTile, ...tiles.slice(1)],
   };
 }
@@ -428,6 +446,7 @@ export default mockArticleSlice;
 export {
   mockCommentLeadAndCartoonSlice,
   mockDailyRegisterSlice,
+  mockInTodaysEditionSlice,
   mockLeadOneAndFourSlice,
   mockStandardSlice,
   mockLeadOneFullWidthSlice,
@@ -443,7 +462,7 @@ export {
   mockSecondaryTwoAndTwoSlice,
   mockSecondaryTwoNoPicAndTwoSlice,
   mockPuzzleSlice,
-  mockLeadTwoNoPicAndTwoFrontSlice,
+  mockLeadTwoFrontSlice,
   mockLeadOneAndOneFrontSlice,
   mockLeadOneFullWidthFrontSlice,
 };
