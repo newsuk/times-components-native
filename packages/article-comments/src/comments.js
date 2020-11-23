@@ -34,9 +34,9 @@ const Comments = ({
       }
       onTooltipPresented={onTooltipPresented}
       type="commenting"
-      tooltips={tooltips}
-      alignment="center"
-      offsetY={-spacing(1)}
+      tooltips={["commenting"]}
+      placement="left"
+      offsetY={0}
     >
       <Context.Consumer>
         {({ theme: { scale } }) => {

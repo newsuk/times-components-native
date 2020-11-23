@@ -48,11 +48,6 @@ const ArticleBylineWithLinks = ({ ast, ...props }) => {
   tooltips = ["profile"]; // remove
 
   const showTooltip = hasAuthorData(ast) && tooltips.includes(tooltipType);
-  const [isHighlighted, setIsHighlighted] = useState(showTooltip);
-
-  const unhighlightAuthor = () => {
-    setIsHighlighted(false);
-  };
 
   const byline = renderByline(
     withTrackEvents(AuthorComponent),
@@ -68,15 +63,12 @@ const ArticleBylineWithLinks = ({ ast, ...props }) => {
           To view all articles from this journalist, just tap their name
         </Text>
       }
-      onClose={unhighlightAuthor}
       arrowOffsetX={tooltipArrowOffsetX}
       offsetX={tooltipOffsetX}
       offsetY={tooltipOffsetY}
       onTooltipPresented={onTooltipPresented}
       type={tooltipType}
       tooltips={tooltips}
-      alignment="left"
-      placement="bottom"
       width={236}
     >
       {byline}

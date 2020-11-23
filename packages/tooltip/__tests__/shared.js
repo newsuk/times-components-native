@@ -151,13 +151,4 @@ export default () => {
       expect(onCloseMock).toBeCalled();
     });
   });
-
-  describe("calculateArrowPosition", () => {
-    it("returns correct position with default alignment", () => {
-      expect(calculateArrowPosition("foo", 100)).toEqual(44);
-    });
-    it("returns correct position with left alignment", () => {
-      expect(calculateArrowPosition("left", 100)).toEqual(20);
-    });
-  });
 };

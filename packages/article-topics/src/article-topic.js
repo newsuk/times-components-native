@@ -61,11 +61,12 @@ const ArticleTopic = ({
   const articleTopicWithTooltip = (
     <Tooltip
       content={<Text>Tap a topic to see more of our coverage</Text>}
+      offsetY={10}
       onClose={unhighlightTopic}
       onTooltipPresented={onTooltipPresented}
+      placement="top"
       type={tooltipType}
       tooltips={tooltips}
-      alignment="left"
       width={236}
     >
       {articleTopic}

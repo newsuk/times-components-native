@@ -1,19 +1,15 @@
 import { StyleSheet } from "react-native";
 import { fonts, spacing, colours } from "@times-components-native/styleguide";
 
-export const defaults = {
-  arrowOffsetX: 20,
-  arrowWidth: 12,
-  offsetX: 0,
-  offsetY: 0,
-  width: 256,
-  leftAlignedArrowLeft: 60,
-};
-
-export const calculateArrowPosition = (alignment, width, arrowOffsetX) =>
-  alignment === "left" ? arrowOffsetX : width / 2 - defaults.arrowWidth / 2;
+const arrowWidth = 12;
 
 const styles = StyleSheet.create({
+  wrapper: {
+    zIndex: 88888,
+  },
+  wrapperPlacementStyles: {
+    flexDirection: "column",
+  },
   container: {
     backgroundColor: colours.functional.action,
     borderRadius: 3,
@@ -26,12 +22,6 @@ const styles = StyleSheet.create({
     shadowRadius: 3,
     position: "absolute",
   },
-  left: {
-    left: 0,
-  },
-  center: {
-    left: -defaults.width / 2,
-  },
   text: {
     paddingHorizontal: spacing(6),
     paddingVertical: spacing(4),
@@ -39,9 +29,6 @@ const styles = StyleSheet.create({
     fontFamily: fonts.supporting,
     fontSize: 16,
     lineHeight: 18,
-    textAlign: "center",
-  },
-  textLeft: {
     textAlign: "left",
     paddingRight: spacing(7),
   },
@@ -51,37 +38,16 @@ const styles = StyleSheet.create({
     width: 16,
     top: 10,
     right: 5,
-    zIndex: 9999,
+    zIndex: 1,
   },
   arrow: {
-    position: "absolute",
-    bottom: -7,
-    backgroundColor: "transparent",
-    borderStyle: "solid",
-    borderColor: colours.functional.action,
-    borderLeftWidth: defaults.arrowWidth,
-    borderRightWidth: defaults.arrowWidth,
-    borderBottomWidth: 8,
-    borderLeftColor: "transparent",
-    borderRightColor: "transparent",
-    transform: [{ rotate: "180deg" }],
-    borderRadius: 3,
-    shadowColor: colours.functional.black,
-    shadowOffset: {
-      width: -3,
-      height: -3,
-    },
-    shadowOpacity: 0.2,
-    shadowRadius: 4,
-  },
-  arrowTop: {
     position: "absolute",
     top: -7,
     backgroundColor: "transparent",
     borderStyle: "solid",
     borderColor: colours.functional.action,
-    borderLeftWidth: defaults.arrowWidth,
-    borderRightWidth: defaults.arrowWidth,
+    borderLeftWidth: arrowWidth,
+    borderRightWidth: arrowWidth,
     borderBottomWidth: 8,
     borderLeftColor: "transparent",
     borderRightColor: "transparent",
@@ -94,6 +60,11 @@ const styles = StyleSheet.create({
     },
     shadowOpacity: 0.2,
     shadowRadius: 4,
+  },
+  arrowBottom: {
+    bottom: -7,
+    top: "auto",
+    transform: [{ rotate: "180deg" }],
   },
   crossDiagonal1: {
     backgroundColor: colours.functional.white,
@@ -114,4 +85,25 @@ const styles = StyleSheet.create({
   },
 });
 
-export default styles;
+const generateStyles = (options) => {
+  let arrowPlacementStyles, wrapperPlacementStyles, containerPlacementStyles;
+  if (options.placement === "top") {
+    arrowPlacementStyles = styles.arrowBottom;
+    wrapperPlacementStyles = styles.wrapperTop;
+    containerPlacementStyles = { bottom: options.offsetY };
+  }
+
+  return {
+    ...styles,
+    wrapper: [styles.wrapper, wrapperPlacementStyles],
+    container: [
+      styles.container,
+      { width: options.width },
+      { left: options.offsetX },
+      containerPlacementStyles,
+    ],
+    arrow: [styles.arrow, { left: options.arrowOffsetX }, arrowPlacementStyles],
+  };
+};
+
+export default generateStyles;
