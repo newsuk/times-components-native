@@ -2,7 +2,9 @@
 
 exports[`1. article with header 1`] = `
 <View>
-  <RCTScrollView>
+  <RCTScrollView
+    contentInsetAdjustmentBehavior="automatic"
+  >
     <View>
       <View />
       <View>
