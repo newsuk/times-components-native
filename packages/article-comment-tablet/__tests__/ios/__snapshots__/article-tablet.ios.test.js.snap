@@ -14,6 +14,57 @@ exports[`1. article comment tablet - magazinecomment template 1`] = `
   <View
     style={
       Object {
+        "height": "100%",
+        "paddingTop": 40,
+        "position": "absolute",
+        "width": "25%",
+      }
+    }
+  >
+    <View
+      style={
+        Object {
+          "maxWidth": 200,
+          "paddingLeft": 35,
+          "paddingRight": 15,
+          "width": "100%",
+        }
+      }
+    >
+      <Image />
+      <View
+        style={
+          Object {
+            "marginTop": 10,
+            "width": "100%",
+          }
+        }
+      >
+        <ArticleBylineWithLinks />
+      </View>
+    </View>
+    <View
+      style={
+        Object {
+          "bottom": 60,
+          "paddingLeft": 25,
+          "position": "absolute",
+          "width": "100%",
+        }
+      }
+    >
+      <ArticleTopics
+        style={
+          Object {
+            "justifyContent": "flex-start",
+          }
+        }
+      />
+    </View>
+  </View>
+  <View
+    style={
+      Object {
         "marginLeft": "25%",
       }
     }
@@ -119,6 +170,20 @@ exports[`1. article comment tablet - magazinecomment template 1`] = `
       />
     </ArticleSkeleton>
   </View>
+</View>
+`;
+
+exports[`2. article comment tablet - maincomment template 1`] = `
+<View
+  style={
+    Object {
+      "marginLeft": "auto",
+      "marginRight": "auto",
+      "maxWidth": 800,
+      "width": "100%",
+    }
+  }
+>
   <View
     style={
       Object {
@@ -170,20 +235,6 @@ exports[`1. article comment tablet - magazinecomment template 1`] = `
       />
     </View>
   </View>
-</View>
-`;
-
-exports[`2. article comment tablet - maincomment template 1`] = `
-<View
-  style={
-    Object {
-      "marginLeft": "auto",
-      "marginRight": "auto",
-      "maxWidth": 800,
-      "width": "100%",
-    }
-  }
->
   <View
     style={
       Object {
@@ -280,57 +331,6 @@ exports[`2. article comment tablet - maincomment template 1`] = `
         </View>
       </View>
     </ArticleSkeleton>
-  </View>
-  <View
-    style={
-      Object {
-        "height": "100%",
-        "paddingTop": 40,
-        "position": "absolute",
-        "width": "25%",
-      }
-    }
-  >
-    <View
-      style={
-        Object {
-          "maxWidth": 200,
-          "paddingLeft": 35,
-          "paddingRight": 15,
-          "width": "100%",
-        }
-      }
-    >
-      <Image />
-      <View
-        style={
-          Object {
-            "marginTop": 10,
-            "width": "100%",
-          }
-        }
-      >
-        <ArticleBylineWithLinks />
-      </View>
-    </View>
-    <View
-      style={
-        Object {
-          "bottom": 60,
-          "paddingLeft": 25,
-          "position": "absolute",
-          "width": "100%",
-        }
-      }
-    >
-      <ArticleTopics
-        style={
-          Object {
-            "justifyContent": "flex-start",
-          }
-        }
-      />
-    </View>
   </View>
 </View>
 `;

@@ -127,6 +127,14 @@ class ArticlePage extends Component {
                   { maxWidth: narrowArticleBreakpoint.container },
                 ]}
               >
+                <ArticleLeftColumn
+                  authorImage={authorImage}
+                  bylines={bylines}
+                  onAuthorPress={onAuthorPress}
+                  onImagePress={onImagePress}
+                  onTopicPress={onTopicPress}
+                  topics={topics}
+                />
                 <View style={styles.contentContainer}>
                   <ArticleSkeleton
                     adConfig={adConfig}
@@ -155,14 +163,6 @@ class ArticlePage extends Component {
                     tooltips={tooltips}
                   />
                 </View>
-                <ArticleLeftColumn
-                  authorImage={authorImage}
-                  bylines={bylines}
-                  onAuthorPress={onAuthorPress}
-                  onImagePress={onImagePress}
-                  onTopicPress={onTopicPress}
-                  topics={topics}
-                />
               </View>
             )}
           </Context.Consumer>

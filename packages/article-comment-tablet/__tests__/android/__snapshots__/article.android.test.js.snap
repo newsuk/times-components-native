@@ -7,6 +7,63 @@ exports[`2. loading 1`] = `null`;
 exports[`3. an article with no headline falls back to use shortheadline 1`] = `
 <View>
   <View>
+    <View>
+      <Image
+        aspectRatio={1}
+        rounded={true}
+        uri="https://image.io"
+      />
+      <View>
+        <ArticleBylineWithLinks
+          ast={
+            Array [
+              Object {
+                "byline": Array [
+                  Object {
+                    "attributes": Object {},
+                    "children": Array [
+                      Object {
+                        "attributes": Object {
+                          "value": "Some byline",
+                        },
+                        "children": Array [],
+                        "name": "text",
+                      },
+                    ],
+                    "name": "inline",
+                  },
+                ],
+                "image": Object {
+                  "crop": Object {
+                    "ratio": "1:1",
+                    "url": "https://image.io",
+                  },
+                  "id": "36f9b2e8-0d41-464a-9e95-921bdb6895be",
+                },
+              },
+            ]
+          }
+          centered={true}
+          tooltipArrowOffset={50}
+          tooltipOffsetX={10}
+          tooltipOffsetY={25}
+        />
+      </View>
+    </View>
+    <View>
+      <ArticleTopics
+        topics={
+          Array [
+            Object {
+              "name": "Topic",
+              "slug": "topic",
+            },
+          ]
+        }
+      />
+    </View>
+  </View>
+  <View>
     <ArticleSkeleton>
       <View>
         <View>
@@ -28,6 +85,11 @@ exports[`3. an article with no headline falls back to use shortheadline 1`] = `
       </View>
     </ArticleSkeleton>
   </View>
+</View>
+`;
+
+exports[`4. an article with ads 1`] = `
+<View>
   <View>
     <View>
       <Image
@@ -85,11 +147,6 @@ exports[`3. an article with no headline falls back to use shortheadline 1`] = `
       />
     </View>
   </View>
-</View>
-`;
-
-exports[`4. an article with ads 1`] = `
-<View>
   <View>
     <ArticleSkeleton>
       <View>
@@ -111,63 +168,6 @@ exports[`4. an article with ads 1`] = `
         </View>
       </View>
     </ArticleSkeleton>
-  </View>
-  <View>
-    <View>
-      <Image
-        aspectRatio={1}
-        rounded={true}
-        uri="https://image.io"
-      />
-      <View>
-        <ArticleBylineWithLinks
-          ast={
-            Array [
-              Object {
-                "byline": Array [
-                  Object {
-                    "attributes": Object {},
-                    "children": Array [
-                      Object {
-                        "attributes": Object {
-                          "value": "Some byline",
-                        },
-                        "children": Array [],
-                        "name": "text",
-                      },
-                    ],
-                    "name": "inline",
-                  },
-                ],
-                "image": Object {
-                  "crop": Object {
-                    "ratio": "1:1",
-                    "url": "https://image.io",
-                  },
-                  "id": "36f9b2e8-0d41-464a-9e95-921bdb6895be",
-                },
-              },
-            ]
-          }
-          centered={true}
-          tooltipArrowOffset={50}
-          tooltipOffsetX={10}
-          tooltipOffsetY={25}
-        />
-      </View>
-    </View>
-    <View>
-      <ArticleTopics
-        topics={
-          Array [
-            Object {
-              "name": "Topic",
-              "slug": "topic",
-            },
-          ]
-        }
-      />
-    </View>
   </View>
 </View>
 `;

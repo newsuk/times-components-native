@@ -162,7 +162,6 @@ exports[`3. mobile fullwidth image with caption and credits 1`] = `
     style={
       Object {
         "alignSelf": "center",
-        "borderWidth": 1,
         "maxWidth": 640,
       }
     }
@@ -240,7 +239,6 @@ exports[`4. tablet fullwidth image with caption and credits 1`] = `
     style={
       Object {
         "alignSelf": "center",
-        "borderWidth": 1,
         "maxWidth": 640,
       }
     }
