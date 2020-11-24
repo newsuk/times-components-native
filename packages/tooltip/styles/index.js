@@ -12,9 +12,6 @@ const styles = StyleSheet.create({
   wrapper: {
     zIndex: 9999,
   },
-  wrapperTop: {
-    flexDirection: "column",
-  },
   wrapperRight: {
     flexDirection: "row-reverse",
   },
@@ -100,7 +97,9 @@ const styles = StyleSheet.create({
 });
 
 const generateStyles = (options) => {
-  let arrowPlacementStyles, wrapperPlacementStyles, containerPlacementStyles;
+  let arrowPlacementStyles,
+    wrapperPlacementStyles = {},
+    containerPlacementStyles;
 
   switch (options.placement) {
     case "top":
@@ -108,7 +107,6 @@ const generateStyles = (options) => {
         styles.arrowBottom,
         { left: options.arrowOffset },
       ];
-      wrapperPlacementStyles = styles.wrapperTop;
       containerPlacementStyles = { bottom: options.offsetY };
       break;
     case "right":

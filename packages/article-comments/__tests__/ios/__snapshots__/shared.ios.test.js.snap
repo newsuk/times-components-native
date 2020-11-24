@@ -31,16 +31,18 @@ exports[`enabled comments 1`] = `
       here
     </Text>
   </Text>
-  <View
-    accessibilityLabel="View comments"
-    accessibilityRole="button"
-    focusable={true}
-  >
-    <Text
-      title="View comments"
+  <View>
+    <View
+      accessibilityLabel="View comments"
+      accessibilityRole="button"
+      focusable={true}
     >
-      View comments
-    </Text>
+      <Text
+        title="View comments"
+      >
+        View comments
+      </Text>
+    </View>
   </View>
 </View>
 `;
@@ -58,16 +60,18 @@ exports[`single comment 1`] = `
       here
     </Text>
   </Text>
-  <View
-    accessibilityLabel="View comments"
-    accessibilityRole="button"
-    focusable={true}
-  >
-    <Text
-      title="View comments"
+  <View>
+    <View
+      accessibilityLabel="View comments"
+      accessibilityRole="button"
+      focusable={true}
     >
-      View comments
-    </Text>
+      <Text
+        title="View comments"
+      >
+        View comments
+      </Text>
+    </View>
   </View>
 </View>
 `;
@@ -85,16 +89,18 @@ exports[`zero comments 1`] = `
       here
     </Text>
   </Text>
-  <View
-    accessibilityLabel="Post a comment"
-    accessibilityRole="button"
-    focusable={true}
-  >
-    <Text
-      title="Post a comment"
+  <View>
+    <View
+      accessibilityLabel="Post a comment"
+      accessibilityRole="button"
+      focusable={true}
     >
-      Post a comment
-    </Text>
+      <Text
+        title="Post a comment"
+      >
+        Post a comment
+      </Text>
+    </View>
   </View>
 </View>
 `;

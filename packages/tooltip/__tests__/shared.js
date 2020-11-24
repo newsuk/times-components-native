@@ -36,7 +36,7 @@ export default () => {
       expect(output).toMatchSnapshot();
     });
 
-    it("renders correctly when type is not in tooltips array", () => {
+    it("does not render tooltip when tooltip type is not in tooltips array", () => {
       const onTooltipPresentedMock = jest.fn();
 
       const output = TestRenderer.create(
@@ -51,7 +51,7 @@ export default () => {
           </Tooltip>,
         ),
       );
-      expect(output.toJSON()).toEqual("bar");
+      expect(output).toMatchSnapshot();
     });
 
     it("does not render tooltip if not in tablet", () => {
@@ -70,7 +70,7 @@ export default () => {
           false,
         ),
       );
-      expect(output.toJSON()).toEqual("bar");
+      expect(output).toMatchSnapshot();
     });
 
     it("renders correctly with supplied width", () => {

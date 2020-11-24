@@ -76,6 +76,9 @@ exports[`6. article meta uses default section colour 1`] = `
         ]
       }
       color="#1D1D1B"
+      tooltipArrowOffsetX={35}
+      tooltipOffsetX={-10}
+      tooltipOffsetY={25}
     />
   </View>
   <View>
