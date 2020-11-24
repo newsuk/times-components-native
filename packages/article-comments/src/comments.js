@@ -29,16 +29,16 @@ const Comments = ({
       </TextLink>
     </Text>
     <Tooltip
-      arrowOffset={42}
+      arrowOffset={44}
       content={
         <Text>Tap to read comments and join in with the conversation</Text>
       }
-      offsetX={15}
+      offsetX={12}
       onTooltipPresented={onTooltipPresented}
       type="commenting"
       tooltips={["commenting"]}
-      placement="left"
-      width={242}
+      placement="right"
+      width={207}
     >
       <Context.Consumer>
         {({ theme: { scale } }) => {

@@ -16,8 +16,10 @@ const nodeShape = {
 export const propTypes = {
   bylines: PropTypes.arrayOf(PropTypes.shape(nodeShape)),
   onAuthorPress: PropTypes.func,
+  onTooltipPresented: PropTypes.func.isRequired,
   publicationName: PropTypes.string,
   publishedTime: PropTypes.string,
+  tooltips: PropTypes.arrayOf.isRequired,
 };
 
 export const defaultProps = {

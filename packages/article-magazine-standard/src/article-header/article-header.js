@@ -23,9 +23,11 @@ const ArticleHeader = ({
   label,
   longRead,
   onAuthorPress,
+  onTooltipPresented,
   publicationName,
   publishedTime,
   standfirst,
+  tooltips,
 }) => (
   <Context.Consumer>
     {({ theme: { headlineFont, headlineCase } }) => (
@@ -51,8 +53,10 @@ const ArticleHeader = ({
           bylines={bylines}
           isTablet={isTablet}
           onAuthorPress={onAuthorPress}
+          onTooltipPresented={onTooltipPresented}
           publicationName={publicationName}
           publishedTime={publishedTime}
+          tooltips={tooltips}
         />
       </View>
     )}

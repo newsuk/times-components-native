@@ -63,7 +63,6 @@ const Styles = {
   leftColumnContainer: {
     paddingTop: spacing(8),
     width: "25%",
-    zIndex: 1,
     height: "100%",
     position: "absolute",
   },

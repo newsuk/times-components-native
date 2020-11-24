@@ -28,14 +28,7 @@ class ArticleInDepth extends Component {
   }
 
   renderHeader({ width }) {
-    const {
-      article,
-      onAuthorPress,
-      onImagePress,
-      onTooltipPresented,
-      onVideoPress,
-      tooltips,
-    } = this.props;
+    const { article, onAuthorPress, onImagePress, onVideoPress } = this.props;
     const {
       backgroundColour,
       bylines,
@@ -87,11 +80,9 @@ class ArticleInDepth extends Component {
                 bylines={bylines}
                 isTablet={isTablet}
                 onAuthorPress={onAuthorPress}
-                onTooltipPresented={onTooltipPresented}
                 publicationName={publicationName}
                 publishedTime={publishedTime}
                 textColour={textColour}
-                tooltips={tooltips}
               />
             </View>
           </Fragment>

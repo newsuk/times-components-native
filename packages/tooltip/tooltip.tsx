@@ -4,6 +4,8 @@ import { Animated, Text, TouchableOpacity, View } from "react-native";
 import { Viewport } from "@skele/components";
 import { useResponsiveContext } from "@times-components-native/responsive";
 import generateStyles from "./styles";
+// @ts-ignore
+import { Animations } from "@times-components-native/styleguide";
 
 interface Props {
   arrowOffset?: number;
@@ -67,17 +69,19 @@ const Tooltip: React.FC<Props> = ({
             onTooltipPresented(type);
           }}
         >
-          <Animated.View
-            style={{
-              opacity: opacity,
-            }}
-          >
-            <View style={styles.container}>
-              {closeButton}
-              <Text style={styles.text}>{content}</Text>
-              <View style={styles.arrow} />
-            </View>
-          </Animated.View>
+          <Animations.FadeIn>
+            <Animated.View
+              style={{
+                opacity: opacity,
+              }}
+            >
+              <View style={styles.container}>
+                {closeButton}
+                <Text style={styles.text}>{content}</Text>
+                <View style={styles.arrow} />
+              </View>
+            </Animated.View>
+          </Animations.FadeIn>
         </ViewportAwareView>
       )}
       {children}

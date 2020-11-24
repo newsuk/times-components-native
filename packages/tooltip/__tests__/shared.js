@@ -107,7 +107,7 @@ export default () => {
       expect(output).toMatchSnapshot();
     });
 
-    it("renders correctly with supplied placement left", () => {
+    it("renders correctly with supplied placement right", () => {
       const onTooltipPresentedMock = jest.fn();
 
       const output = TestRenderer.create(
@@ -116,7 +116,7 @@ export default () => {
           onTooltipPresented={onTooltipPresentedMock}
           type="testtype"
           tooltips={["testtype"]}
-          placement="left"
+          placement="right"
         >
           bar
         </Tooltip>,

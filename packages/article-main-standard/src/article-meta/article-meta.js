@@ -22,17 +22,17 @@ function ArticleMeta({
     <View style={[styles.articleMeta, isTablet && styles.articleMetaTablet]}>
       {hasBylineData(bylines) && (
         <View style={styles.articleMetaElementWithBorder}>
-          <Text style={styles.datePublication}>
+          <View style={styles.datePublication}>
             <ArticleBylineWithLinks
               ast={bylines}
               onAuthorPress={onAuthorPress}
               onTooltipPresented={onTooltipPresented}
-              tooltipArrowOffset={40}
+              tooltipArrowOffset={30}
               tooltips={tooltips}
               tooltipOffsetX={-20}
-              tooltipOffsetY={20}
+              tooltipOffsetY={26}
             />
-          </Text>
+          </View>
         </View>
       )}
       <View

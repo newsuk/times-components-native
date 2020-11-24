@@ -12,9 +12,11 @@ const articleHeaderPropTypes = {
   headline: PropTypes.string.isRequired,
   label: PropTypes.string,
   longRead: PropTypes.bool,
+  onTooltipPresented: PropTypes.func,
   publicationName: PropTypes.string.isRequired,
   publishedTime: PropTypes.string.isRequired,
   standfirst: PropTypes.string,
+  tooltips: PropTypes.array,
 };
 
 const articleHeaderDefaultProps = {
@@ -22,7 +24,9 @@ const articleHeaderDefaultProps = {
   hasVideo: false,
   label: null,
   longRead: false,
+  onTooltipPresented: () => null,
   standfirst: null,
+  tooltips: [],
 };
 
 export { articleHeaderPropTypes, articleHeaderDefaultProps };

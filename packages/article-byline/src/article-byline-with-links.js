@@ -1,6 +1,6 @@
 /* eslint-disable react/prop-types, no-sequences, no-unused-expressions */
-import React, { useState } from "react";
-import { Text, View } from "react-native";
+import React from "react";
+import { Text } from "react-native";
 import { TextLink } from "@times-components-native/link";
 import Tooltip from "@times-components-native/tooltip";
 import renderByline from "./render-byline";
@@ -36,6 +36,7 @@ const AuthorComponent = ({
 const ArticleBylineWithLinks = ({ ast, ...props }) => {
   let {
     centered,
+    disableTooltip,
     onTooltipPresented,
     tooltipArrowOffset,
     tooltipOffsetX,
@@ -47,7 +48,8 @@ const ArticleBylineWithLinks = ({ ast, ...props }) => {
   const tooltipType = "profile";
   tooltips = ["profile"]; // remove
 
-  const showTooltip = hasAuthorData(ast) && tooltips.includes(tooltipType);
+  const showTooltip =
+    !disableTooltip && hasAuthorData(ast) && tooltips.includes(tooltipType);
 
   const byline = renderByline(
     withTrackEvents(AuthorComponent),

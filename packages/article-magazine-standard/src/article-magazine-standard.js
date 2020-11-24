@@ -1,6 +1,7 @@
 /* eslint-disable consistent-return */
 
 import React, { Component, Fragment } from "react";
+import { View } from "react-native";
 import ArticleError from "@times-components-native/article-error";
 import ArticleSkeleton from "@times-components-native/article-skeleton";
 import {
@@ -27,7 +28,14 @@ class ArticleMagazineStandard extends Component {
   }
 
   renderHeader({ width }) {
-    const { article, onAuthorPress, onImagePress, onVideoPress } = this.props;
+    const {
+      article,
+      onAuthorPress,
+      onImagePress,
+      onVideoPress,
+      onTooltipPresented,
+      tooltips,
+    } = this.props;
     const {
       bylines,
       expirableFlags,
@@ -44,7 +52,7 @@ class ArticleMagazineStandard extends Component {
     return (
       <ResponsiveContext.Consumer>
         {({ isTablet }) => (
-          <Fragment>
+          <View>
             <ArticleHeader
               bylines={bylines}
               flags={expirableFlags}
@@ -54,9 +62,11 @@ class ArticleMagazineStandard extends Component {
               label={label}
               longRead={longRead}
               onAuthorPress={onAuthorPress}
+              onTooltipPresented={onTooltipPresented}
               publicationName={publicationName}
               publishedTime={publishedTime}
               standfirst={standfirst}
+              tooltips={tooltips}
             />
             <LeadAsset
               {...getLeadAsset(article)}
@@ -64,14 +74,10 @@ class ArticleMagazineStandard extends Component {
               onImagePress={onImagePress}
               onVideoPress={onVideoPress}
               renderCaption={({ caption }) => <CentredCaption {...caption} />}
-              style={[
-                styles.leadAssetContainer,
-                isTablet && styles.leadAssetContainerTablet,
-                isTablet && styles.tabletContainer,
-              ]}
+              style={[{ zIndex: 0 }]}
               width={Math.min(width, tabletWidth)}
             />
-          </Fragment>
+          </View>
         )}
       </ResponsiveContext.Consumer>
     );

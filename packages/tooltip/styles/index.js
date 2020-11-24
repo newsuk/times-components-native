@@ -15,6 +15,9 @@ const styles = StyleSheet.create({
   wrapperTop: {
     flexDirection: "column",
   },
+  wrapperRight: {
+    flexDirection: "row-reverse",
+  },
   container: {
     backgroundColor: colours.functional.action,
     borderRadius: 3,
@@ -72,12 +75,10 @@ const styles = StyleSheet.create({
     shadowOpacity: shadowOpacity,
   },
   arrowRight: {
-    transform: [{ rotate: "90deg" }],
-    shadowOffset: {
-      width: 3,
-      height: -3,
-    },
-    shadowOpacity: shadowOpacity,
+    left: -16,
+    top: "auto",
+    transform: [{ rotate: "270deg" }],
+    shadowOpacity: 0,
   },
   crossDiagonal1: {
     backgroundColor: colours.functional.white,
@@ -110,15 +111,11 @@ const generateStyles = (options) => {
       wrapperPlacementStyles = styles.wrapperTop;
       containerPlacementStyles = { bottom: options.offsetY };
       break;
-    case "left":
-      arrowPlacementStyles = [
-        styles.arrowRight,
-        { left: options.width - arrow.height },
-        { top: options.arrowOffset },
-      ];
-      wrapperPlacementStyles = styles.wrapperLeft;
+    case "right":
+      arrowPlacementStyles = [styles.arrowRight, { top: options.arrowOffset }];
+      wrapperPlacementStyles = styles.wrapperRight;
       containerPlacementStyles = [
-        { left: -options.width - options.offsetX },
+        { left: options.offsetX },
         { top: options.offsetY },
       ];
       break;

@@ -16,10 +16,8 @@ const ArticleMeta = ({
   bylines,
   isTablet,
   onAuthorPress,
-  onTooltipPresented,
   publicationName,
   publishedTime,
-  tooltips,
 }) => (
   <View style={isTablet && styles.metaContainerTabletFlow}>
     {hasBylineData(bylines) && (
@@ -31,11 +29,7 @@ const ArticleMeta = ({
                 ast={bylines}
                 color={sectionColour || colours.section.default}
                 onAuthorPress={onAuthorPress}
-                onTooltipPresented={onTooltipPresented}
-                tooltipArrowOffsetX={35}
-                tooltips={tooltips}
-                tooltipOffsetX={-20}
-                tooltipOffsetY={10}
+                disableTooltip={true}
               />
             )}
           </Context.Consumer>
