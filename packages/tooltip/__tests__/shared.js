@@ -1,5 +1,4 @@
 import Tooltip from "../tooltip";
-import { calculateArrowPosition } from "../styles";
 import TestRenderer from "react-test-renderer";
 import { ResponsiveContext } from "@times-components-native/responsive";
 import { delay } from "@times-components-native/test-utils";
@@ -74,7 +73,7 @@ export default () => {
       expect(output.toJSON()).toEqual("bar");
     });
 
-    it("renders correctly width supplied width", () => {
+    it("renders correctly with supplied width", () => {
       const onTooltipPresentedMock = jest.fn();
 
       const output = TestRenderer.create(
@@ -84,6 +83,59 @@ export default () => {
           type="testtype"
           tooltips={["testtype"]}
           width={100}
+        >
+          bar
+        </Tooltip>,
+      );
+      expect(output).toMatchSnapshot();
+    });
+
+    it("renders correctly with supplied placement top", () => {
+      const onTooltipPresentedMock = jest.fn();
+
+      const output = TestRenderer.create(
+        <Tooltip
+          content={<Text>foo</Text>}
+          onTooltipPresented={onTooltipPresentedMock}
+          type="testtype"
+          tooltips={["testtype"]}
+          placement="top"
+        >
+          bar
+        </Tooltip>,
+      );
+      expect(output).toMatchSnapshot();
+    });
+
+    it("renders correctly with supplied placement left", () => {
+      const onTooltipPresentedMock = jest.fn();
+
+      const output = TestRenderer.create(
+        <Tooltip
+          content={<Text>foo</Text>}
+          onTooltipPresented={onTooltipPresentedMock}
+          type="testtype"
+          tooltips={["testtype"]}
+          placement="left"
+        >
+          bar
+        </Tooltip>,
+      );
+      expect(output).toMatchSnapshot();
+    });
+
+    it("renders correctly with supplied offsets", () => {
+      const onTooltipPresentedMock = jest.fn();
+
+      const output = TestRenderer.create(
+        <Tooltip
+          content={<Text>foo</Text>}
+          onTooltipPresented={onTooltipPresentedMock}
+          type="testtype"
+          tooltips={["testtype"]}
+          offsetX={10}
+          offsetY={10}
+          arrowOffset={10}
         >
           bar
         </Tooltip>,

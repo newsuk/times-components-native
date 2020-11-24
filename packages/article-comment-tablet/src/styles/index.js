@@ -10,7 +10,6 @@ const Styles = {
   },
   contentContainer: {
     marginLeft: "25%",
-    position: "relative",
   },
   articleHeadline: {
     ...fontFactory({
