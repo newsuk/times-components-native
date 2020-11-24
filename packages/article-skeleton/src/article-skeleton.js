@@ -118,7 +118,7 @@ const ArticleWithContent = (props) => {
   return (
     <View style={styles.articleContainer}>
       <Viewport.Tracker>
-        <ScrollView>
+        <ScrollView contentInsetAdjustmentBehavior="automatic">
           {header}
           {processedContent}
         </ScrollView>
