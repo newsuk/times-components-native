@@ -65,6 +65,7 @@ const Styles = {
     width: "25%",
     height: "100%",
     position: "absolute",
+    zIndex: 1,
   },
   authorContainer: {
     width: "100%",

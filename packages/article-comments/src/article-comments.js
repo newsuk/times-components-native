@@ -7,6 +7,7 @@ const ArticleComments = ({
   articleId,
   commentCount,
   commentsEnabled,
+  narrowContent,
   onCommentGuidelinesPress,
   onCommentsPress,
   onTooltipPresented,
@@ -17,6 +18,7 @@ const ArticleComments = ({
     <Comments
       articleId={articleId}
       commentCount={commentCount}
+      narrowContent={narrowContent}
       onCommentGuidelinesPress={onCommentGuidelinesPress}
       onCommentsPress={onCommentsPress}
       onTooltipPresented={onTooltipPresented}
@@ -31,6 +33,7 @@ ArticleComments.propTypes = {
   articleId: PropTypes.string.isRequired,
   commentCount: PropTypes.number,
   commentsEnabled: PropTypes.bool,
+  narrowContent: PropTypes.bool.isRequired,
   onCommentGuidelinesPress: PropTypes.func.isRequired,
   onCommentsPress: PropTypes.func.isRequired,
   url: PropTypes.string.isRequired,

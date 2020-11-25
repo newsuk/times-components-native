@@ -11,6 +11,7 @@ import styles from "./styles";
 const Comments = ({
   articleId,
   commentCount,
+  narrowContent,
   onCommentGuidelinesPress,
   onCommentsPress,
   onTooltipPresented,
@@ -29,7 +30,7 @@ const Comments = ({
       </TextLink>
     </Text>
     <Tooltip
-      arrowOffset={40}
+      arrowOffset={43}
       content={
         <Text>Tap to read comments and join in with the conversation</Text>
       }
@@ -38,7 +39,7 @@ const Comments = ({
       type="commenting"
       tooltips={"commenting"}
       placement="right"
-      width={207}
+      width={narrowContent ? 165 : 207}
     >
       <Context.Consumer>
         {({ theme: { scale } }) => {
@@ -65,6 +66,7 @@ const Comments = ({
 Comments.propTypes = {
   articleId: PropTypes.string.isRequired,
   commentCount: PropTypes.number.isRequired,
+  narrowContent: PropTypes.bool,
   onCommentGuidelinesPress: PropTypes.func.isRequired,
   onCommentsPress: PropTypes.func.isRequired,
   onTooltipPresented: PropTypes.func,

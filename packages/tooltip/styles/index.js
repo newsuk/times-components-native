@@ -1,6 +1,5 @@
 import { StyleSheet } from "react-native";
 import { fonts, spacing, colours } from "@times-components-native/styleguide";
-import { Colors } from "react-native/Libraries/NewAppScreen";
 
 const arrow = {
   height: 8,
@@ -64,13 +63,18 @@ const styles = StyleSheet.create({
     bottom: -arrow.height,
     top: "auto",
     transform: [{ rotateX: "0deg" }],
+    shadowColor: colours.functional.black,
+    shadowOffset: {
+      width: 3,
+      height: 3,
+    },
     shadowOpacity: shadowOpacity,
+    shadowRadius: 4,
   },
   arrowRight: {
     left: -16,
     top: "auto",
     transform: [{ rotate: "90deg" }],
-    shadowOpacity: 0,
   },
   crossDiagonal1: {
     backgroundColor: colours.functional.white,
