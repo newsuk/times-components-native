@@ -46,7 +46,7 @@ exports[`3. an article with no headline falls back to use shortheadline 1`] = `
           centered={true}
           tooltipArrowOffset={50}
           tooltipOffsetX={10}
-          tooltipOffsetY={25}
+          tooltipOffsetY={30}
         />
       </View>
     </View>
@@ -130,7 +130,7 @@ exports[`4. an article with ads 1`] = `
           centered={true}
           tooltipArrowOffset={50}
           tooltipOffsetX={10}
-          tooltipOffsetY={25}
+          tooltipOffsetY={30}
         />
       </View>
     </View>

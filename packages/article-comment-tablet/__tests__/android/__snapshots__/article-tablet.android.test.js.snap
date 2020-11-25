@@ -18,6 +18,7 @@ exports[`1. article comment tablet - magazinecomment template 1`] = `
         "paddingTop": 40,
         "position": "absolute",
         "width": "25%",
+        "zIndex": 1,
       }
     }
   >
@@ -191,6 +192,7 @@ exports[`2. article comment tablet - maincomment template 1`] = `
         "paddingTop": 40,
         "position": "absolute",
         "width": "25%",
+        "zIndex": 1,
       }
     }
   >

@@ -37,7 +37,7 @@ const Comments = ({
       offsetX={12}
       onTooltipPresented={onTooltipPresented}
       type="commenting"
-      tooltips={"commenting"}
+      tooltips={tooltips}
       placement="right"
       width={narrowContent ? 165 : 207}
     >

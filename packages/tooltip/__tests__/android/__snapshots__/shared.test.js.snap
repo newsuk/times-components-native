@@ -128,24 +128,22 @@ exports[`Tooltip renders correctly when type is in tooltips array 1`] = `
           style={
             Object {
               "backgroundColor": "transparent",
-              "borderBottomWidth": 8,
-              "borderColor": "#006699",
+              "borderBottomColor": "transparent",
               "borderLeftColor": "transparent",
               "borderLeftWidth": 12,
-              "borderRadius": 3,
               "borderRightColor": "transparent",
               "borderRightWidth": 12,
               "borderStyle": "solid",
+              "borderTopColor": "#006699",
+              "borderTopWidth": 8,
               "left": 20,
               "position": "absolute",
-              "shadowColor": "#000000",
-              "shadowOffset": Object {
-                "height": -3,
-                "width": -3,
-              },
-              "shadowOpacity": 0,
-              "shadowRadius": 4,
-              "top": -7,
+              "top": -8,
+              "transform": Array [
+                Object {
+                  "rotateX": "180deg",
+                },
+              ],
             }
           }
         />
@@ -260,24 +258,22 @@ exports[`Tooltip renders correctly with supplied offsets 1`] = `
           style={
             Object {
               "backgroundColor": "transparent",
-              "borderBottomWidth": 8,
-              "borderColor": "#006699",
+              "borderBottomColor": "transparent",
               "borderLeftColor": "transparent",
               "borderLeftWidth": 12,
-              "borderRadius": 3,
               "borderRightColor": "transparent",
               "borderRightWidth": 12,
               "borderStyle": "solid",
+              "borderTopColor": "#006699",
+              "borderTopWidth": 8,
               "left": 10,
               "position": "absolute",
-              "shadowColor": "#000000",
-              "shadowOffset": Object {
-                "height": -3,
-                "width": -3,
-              },
-              "shadowOpacity": 0,
-              "shadowRadius": 4,
-              "top": -7,
+              "top": -8,
+              "transform": Array [
+                Object {
+                  "rotateX": "180deg",
+                },
+              ],
             }
           }
         />
@@ -393,27 +389,20 @@ exports[`Tooltip renders correctly with supplied placement right 1`] = `
           style={
             Object {
               "backgroundColor": "transparent",
-              "borderBottomWidth": 8,
-              "borderColor": "#006699",
+              "borderBottomColor": "transparent",
               "borderLeftColor": "transparent",
               "borderLeftWidth": 12,
-              "borderRadius": 3,
               "borderRightColor": "transparent",
               "borderRightWidth": 12,
               "borderStyle": "solid",
+              "borderTopColor": "#006699",
+              "borderTopWidth": 8,
               "left": -16,
               "position": "absolute",
-              "shadowColor": "#000000",
-              "shadowOffset": Object {
-                "height": -3,
-                "width": -3,
-              },
-              "shadowOpacity": 0,
-              "shadowRadius": 4,
               "top": 20,
               "transform": Array [
                 Object {
-                  "rotate": "270deg",
+                  "rotate": "90deg",
                 },
               ],
             }
@@ -530,28 +519,28 @@ exports[`Tooltip renders correctly with supplied placement top 1`] = `
           style={
             Object {
               "backgroundColor": "transparent",
-              "borderBottomWidth": 8,
-              "borderColor": "#006699",
+              "borderBottomColor": "transparent",
               "borderLeftColor": "transparent",
               "borderLeftWidth": 12,
-              "borderRadius": 3,
               "borderRightColor": "transparent",
               "borderRightWidth": 12,
               "borderStyle": "solid",
-              "bottom": -7,
+              "borderTopColor": "#006699",
+              "borderTopWidth": 8,
+              "bottom": -8,
               "left": 20,
               "position": "absolute",
               "shadowColor": "#000000",
               "shadowOffset": Object {
-                "height": -3,
-                "width": -3,
+                "height": 3,
+                "width": 3,
               },
               "shadowOpacity": 0.3,
               "shadowRadius": 4,
               "top": "auto",
               "transform": Array [
                 Object {
-                  "rotate": "180deg",
+                  "rotateX": "0deg",
                 },
               ],
             }
@@ -668,24 +657,22 @@ exports[`Tooltip renders correctly with supplied width 1`] = `
           style={
             Object {
               "backgroundColor": "transparent",
-              "borderBottomWidth": 8,
-              "borderColor": "#006699",
+              "borderBottomColor": "transparent",
               "borderLeftColor": "transparent",
               "borderLeftWidth": 12,
-              "borderRadius": 3,
               "borderRightColor": "transparent",
               "borderRightWidth": 12,
               "borderStyle": "solid",
+              "borderTopColor": "#006699",
+              "borderTopWidth": 8,
               "left": 20,
               "position": "absolute",
-              "shadowColor": "#000000",
-              "shadowOffset": Object {
-                "height": -3,
-                "width": -3,
-              },
-              "shadowOpacity": 0,
-              "shadowRadius": 4,
-              "top": -7,
+              "top": -8,
+              "transform": Array [
+                Object {
+                  "rotateX": "180deg",
+                },
+              ],
             }
           }
         />

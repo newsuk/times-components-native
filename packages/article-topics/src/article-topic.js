@@ -23,7 +23,6 @@ const ArticleTopic = ({
   const { isTablet } = useResponsiveContext();
 
   const tooltipType = "topics";
-  tooltips = ["topics"];
   const showTooltip = isTablet && index === 0 && tooltips.includes(tooltipType);
   const [isHighlighted, setIsHighlighted] = useState(showTooltip);
 

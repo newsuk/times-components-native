@@ -10,6 +10,7 @@ exports[`1. article extras content 1`] = `
     articleId="dummy-article-id"
     commentCount={123}
     commentsEnabled={true}
+    narrowContent={false}
     url="dummy-article-url"
   />
 </View>
@@ -25,6 +26,7 @@ exports[`2. article extras content on tablet 1`] = `
     articleId="dummy-article-id"
     commentCount={123}
     commentsEnabled={true}
+    narrowContent={false}
     url="dummy-article-url"
   />
   <SponsoredAd
