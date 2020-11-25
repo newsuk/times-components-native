@@ -8,7 +8,7 @@ import styles from "../styles";
 
 import Image from "@times-components-native/image";
 import ArticleTopics from "@times-components-native/article-topics";
-import { articleLeftColumnPropTypes } from "./article-left-column-prop-types";
+import articleLeftColumnPropTypes from "./article-left-column-prop-types";
 
 const ArticleLeftColumn = ({
   authorImage,
