@@ -34,7 +34,7 @@ const AuthorComponent = ({
 };
 
 const ArticleBylineWithLinks = ({ ast, ...props }) => {
-  const {
+  let {
     centered,
     disableTooltip,
     onTooltipPresented,
@@ -43,6 +43,7 @@ const ArticleBylineWithLinks = ({ ast, ...props }) => {
     tooltipOffsetY,
     tooltips,
   } = props;
+  tooltips = ["profile"];
 
   const textStyle = centered ? [styles.text, styles.centered] : styles.text;
   const tooltipType = "profile";

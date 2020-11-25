@@ -1,5 +1,6 @@
 import { StyleSheet } from "react-native";
 import { fonts, spacing, colours } from "@times-components-native/styleguide";
+import { Colors } from "react-native/Libraries/NewAppScreen";
 
 const arrow = {
   height: 8,
@@ -47,34 +48,28 @@ const styles = StyleSheet.create({
   },
   arrow: {
     position: "absolute",
-    top: -7,
+    top: -arrow.height,
     backgroundColor: "transparent",
     borderStyle: "solid",
-    borderColor: colours.functional.action,
-    borderLeftWidth: arrow.width,
     borderRightWidth: arrow.width,
-    borderBottomWidth: arrow.height,
+    borderBottomColor: "transparent",
     borderLeftColor: "transparent",
     borderRightColor: "transparent",
-    borderRadius: 3,
-    shadowColor: colours.functional.black,
-    shadowOffset: {
-      width: -3,
-      height: -3,
-    },
-    shadowOpacity: 0,
-    shadowRadius: 4,
+    borderTopWidth: arrow.height,
+    borderLeftWidth: arrow.width,
+    borderTopColor: colours.functional.action,
+    transform: [{ rotateX: "180deg" }],
   },
   arrowBottom: {
-    bottom: -7,
+    bottom: -arrow.height,
     top: "auto",
-    transform: [{ rotate: "180deg" }],
+    transform: [{ rotateX: "0deg" }],
     shadowOpacity: shadowOpacity,
   },
   arrowRight: {
     left: -16,
     top: "auto",
-    transform: [{ rotate: "270deg" }],
+    transform: [{ rotate: "90deg" }],
     shadowOpacity: 0,
   },
   crossDiagonal1: {

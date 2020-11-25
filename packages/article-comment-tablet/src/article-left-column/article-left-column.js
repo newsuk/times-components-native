@@ -31,7 +31,7 @@ const ArticleLeftColumn = ({
             onTooltipPresented={onTooltipPresented}
             tooltipArrowOffset={50}
             tooltipOffsetX={10}
-            tooltipOffsetY={25}
+            tooltipOffsetY={30}
             tooltips={tooltips}
           />
         </View>

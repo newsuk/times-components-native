@@ -44,6 +44,7 @@ const Tooltip: React.FC<Props> = ({
   });
 
   const onClosePress = () => {
+    console.log("closing");
     onClose && onClose();
     Animated.timing(opacity, {
       duration: 200,

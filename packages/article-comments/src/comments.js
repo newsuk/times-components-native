@@ -29,14 +29,14 @@ const Comments = ({
       </TextLink>
     </Text>
     <Tooltip
-      arrowOffset={44}
+      arrowOffset={40}
       content={
         <Text>Tap to read comments and join in with the conversation</Text>
       }
       offsetX={12}
       onTooltipPresented={onTooltipPresented}
       type="commenting"
-      tooltips={tooltips}
+      tooltips={"commenting"}
       placement="right"
       width={207}
     >
@@ -67,7 +67,12 @@ Comments.propTypes = {
   commentCount: PropTypes.number.isRequired,
   onCommentGuidelinesPress: PropTypes.func.isRequired,
   onCommentsPress: PropTypes.func.isRequired,
+  onTooltipPresented: PropTypes.func,
   url: PropTypes.string.isRequired,
+};
+
+Comments.defaultProps = {
+  onTooltipPresented: () => null,
 };
 
 export default Comments;
