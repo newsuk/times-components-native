@@ -98,6 +98,7 @@ exports[`full article with style in the culture magazine 1`] = `
     <View
       style={
         Object {
+          "marginBottom": 20,
           "zIndex": 0,
         }
       }
@@ -208,6 +209,7 @@ exports[`full article with style in the style magazine 1`] = `
     <View
       style={
         Object {
+          "marginBottom": 20,
           "zIndex": 0,
         }
       }
@@ -317,6 +319,7 @@ exports[`full article with style in the sunday times magazine 1`] = `
     <View
       style={
         Object {
+          "marginBottom": 20,
           "zIndex": 0,
         }
       }
@@ -426,6 +429,7 @@ exports[`phone full article with style 1`] = `
     <View
       style={
         Object {
+          "marginBottom": 20,
           "zIndex": 0,
         }
       }
@@ -552,6 +556,11 @@ exports[`tablet full article with style 1`] = `
     <View
       style={
         Object {
+          "alignSelf": "center",
+          "marginBottom": 20,
+          "paddingLeft": 10,
+          "paddingRight": 10,
+          "width": 660,
           "zIndex": 0,
         }
       }

@@ -75,7 +75,9 @@ const Tooltip: React.FC<Props> = ({
           >
             <View style={styles.container}>
               {closeButton}
-              <Text style={styles.text}>{content}</Text>
+              <Text style={styles.text} allowFontScaling={false}>
+                {content}
+              </Text>
               <View style={styles.arrow} />
             </View>
           </Animated.View>

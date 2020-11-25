@@ -74,7 +74,12 @@ class ArticleMagazineStandard extends Component {
               onImagePress={onImagePress}
               onVideoPress={onVideoPress}
               renderCaption={({ caption }) => <CentredCaption {...caption} />}
-              style={[{ zIndex: 0 }]}
+              style={[
+                styles.leadAssetContainer,
+                isTablet && styles.leadAssetContainerTablet,
+                isTablet && styles.tabletContainer,
+                { zIndex: 0 },
+              ]}
               width={Math.min(width, tabletWidth)}
             />
           </View>
