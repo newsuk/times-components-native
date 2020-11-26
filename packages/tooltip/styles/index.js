@@ -1,36 +1,31 @@
 import { StyleSheet } from "react-native";
 import { fonts, spacing, colours } from "@times-components-native/styleguide";
 
-export const defaults = {
-  arrowWidth: 12,
-  offsetY: spacing(1),
-  width: 256,
-  leftAlignedArrowLeft: spacing(4),
+const arrow = {
+  height: 8,
+  width: 12,
 };
 
-export const calculateArrowPosition = (alignment, width) =>
-  alignment === "left"
-    ? defaults.leftAlignedArrowLeft
-    : width / 2 - defaults.arrowWidth / 2;
+const shadowOpacity = 0.3;
 
 const styles = StyleSheet.create({
+  wrapper: {
+    zIndex: 9999,
+  },
+  wrapperRight: {
+    flexDirection: "row-reverse",
+  },
   container: {
-    backgroundColor: colours.functional.tooltip,
+    backgroundColor: colours.functional.action,
     borderRadius: 3,
     shadowColor: colours.functional.black,
     shadowOffset: {
       width: 3,
       height: 3,
     },
-    shadowOpacity: 0.3,
+    shadowOpacity: shadowOpacity,
     shadowRadius: 3,
     position: "absolute",
-  },
-  left: {
-    left: 0,
-  },
-  center: {
-    left: -defaults.width / 2,
   },
   text: {
     paddingHorizontal: spacing(6),
@@ -39,9 +34,6 @@ const styles = StyleSheet.create({
     fontFamily: fonts.supporting,
     fontSize: 16,
     lineHeight: 18,
-    textAlign: "center",
-  },
-  textLeft: {
     textAlign: "left",
     paddingRight: spacing(7),
   },
@@ -55,24 +47,34 @@ const styles = StyleSheet.create({
   },
   arrow: {
     position: "absolute",
-    bottom: -7,
+    top: -arrow.height,
     backgroundColor: "transparent",
     borderStyle: "solid",
-    borderColor: colours.functional.tooltip,
-    borderLeftWidth: defaults.arrowWidth,
-    borderRightWidth: defaults.arrowWidth,
-    borderBottomWidth: 8,
+    borderRightWidth: arrow.width,
+    borderBottomColor: "transparent",
     borderLeftColor: "transparent",
     borderRightColor: "transparent",
-    transform: [{ rotate: "180deg" }],
-    borderRadius: 3,
+    borderTopWidth: arrow.height,
+    borderLeftWidth: arrow.width,
+    borderTopColor: colours.functional.action,
+    transform: [{ rotateX: "180deg" }],
+  },
+  arrowBottom: {
+    bottom: -arrow.height,
+    top: "auto",
+    transform: [{ rotateX: "0deg" }],
     shadowColor: colours.functional.black,
     shadowOffset: {
-      width: -3,
-      height: -3,
+      width: 3,
+      height: 3,
     },
-    shadowOpacity: 0.2,
+    shadowOpacity: shadowOpacity,
     shadowRadius: 4,
+  },
+  arrowRight: {
+    left: -16,
+    top: "auto",
+    transform: [{ rotate: "90deg" }],
   },
   crossDiagonal1: {
     backgroundColor: colours.functional.white,
@@ -93,4 +95,43 @@ const styles = StyleSheet.create({
   },
 });
 
-export default styles;
+const generateStyles = (options) => {
+  let arrowPlacementStyles,
+    wrapperPlacementStyles = {},
+    containerPlacementStyles;
+
+  switch (options.placement) {
+    case "top":
+      arrowPlacementStyles = [
+        styles.arrowBottom,
+        { left: options.arrowOffset },
+      ];
+      containerPlacementStyles = { bottom: options.offsetY };
+      break;
+    case "right":
+      arrowPlacementStyles = [styles.arrowRight, { top: options.arrowOffset }];
+      wrapperPlacementStyles = styles.wrapperRight;
+      containerPlacementStyles = [
+        { left: options.offsetX },
+        { top: options.offsetY },
+      ];
+      break;
+    default:
+      arrowPlacementStyles = { left: options.arrowOffset };
+      containerPlacementStyles = { top: options.offsetY };
+  }
+
+  return {
+    ...styles,
+    wrapper: [styles.wrapper, wrapperPlacementStyles],
+    container: [
+      styles.container,
+      { width: options.width },
+      { left: options.offsetX },
+      containerPlacementStyles,
+    ],
+    arrow: [styles.arrow, arrowPlacementStyles],
+  };
+};
+
+export default generateStyles;

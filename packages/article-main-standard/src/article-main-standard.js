@@ -29,7 +29,14 @@ class ArticlePage extends Component {
   }
 
   renderHeader(parentProps) {
-    const { article, onAuthorPress, onImagePress, onVideoPress } = this.props;
+    const {
+      article,
+      onAuthorPress,
+      onImagePress,
+      onTooltipPresented,
+      onVideoPress,
+      tooltips,
+    } = this.props;
     const {
       bylines,
       expirableFlags,
@@ -80,8 +87,10 @@ class ArticlePage extends Component {
                 bylines={bylines}
                 isTablet={isTablet}
                 onAuthorPress={onAuthorPress}
+                onTooltipPresented={onTooltipPresented}
                 publicationName={publicationName}
                 publishedTime={publishedTime}
+                tooltips={tooltips}
               />
             </Fragment>
           );

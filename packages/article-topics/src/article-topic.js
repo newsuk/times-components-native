@@ -3,6 +3,7 @@ import Context from "@times-components-native/context";
 import { Text, View } from "react-native";
 import Link from "@times-components-native/link";
 import Tooltip from "@times-components-native/tooltip";
+import { useResponsiveContext } from "@times-components-native/responsive";
 import { withTrackEvents } from "@times-components-native/tracking";
 import styles from "./styles";
 import { topicDefaultProps, topicPropTypes } from "./article-topic-prop-types";
@@ -19,9 +20,10 @@ const ArticleTopic = ({
 }) => {
   const fontSizeStyle = fontSize ? { fontSize } : null;
   const lineHeightStyle = lineHeight ? { lineHeight } : null;
+  const { isTablet } = useResponsiveContext();
 
   const tooltipType = "topics";
-  const showTooltip = index === 0 && tooltips.includes(tooltipType);
+  const showTooltip = isTablet && index === 0 && tooltips.includes(tooltipType);
   const [isHighlighted, setIsHighlighted] = useState(showTooltip);
 
   const unhighlightTopic = () => {
@@ -60,11 +62,12 @@ const ArticleTopic = ({
   const articleTopicWithTooltip = (
     <Tooltip
       content={<Text>Tap a topic to see more of our coverage</Text>}
+      offsetY={5}
       onClose={unhighlightTopic}
       onTooltipPresented={onTooltipPresented}
+      placement="top"
       type={tooltipType}
-      tooltips={[tooltips]}
-      alignment="left"
+      tooltips={tooltips}
       width={236}
     >
       {articleTopic}

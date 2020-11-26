@@ -59,6 +59,7 @@ const ArticleExtrasContent = ({
         articleId={articleId}
         commentCount={commentCount}
         commentsEnabled={commentsEnabled}
+        narrowContent={narrowContent}
         onCommentGuidelinesPress={onCommentGuidelinesPress}
         onCommentsPress={onCommentsPress}
         onTooltipPresented={onTooltipPresented}

@@ -10,7 +10,6 @@ const Styles = {
   },
   contentContainer: {
     marginLeft: "25%",
-    position: "relative",
   },
   articleHeadline: {
     ...fontFactory({
@@ -64,9 +63,9 @@ const Styles = {
   leftColumnContainer: {
     paddingTop: spacing(8),
     width: "25%",
-    zIndex: 1,
     height: "100%",
     position: "absolute",
+    zIndex: 1,
   },
   authorContainer: {
     width: "100%",
@@ -75,7 +74,7 @@ const Styles = {
     paddingLeft: spacing(7),
   },
   bylines: {
-    paddingTop: spacing(2),
+    marginTop: spacing(2),
     width: "100%",
   },
   topicsContainer: {

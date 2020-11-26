@@ -76,6 +76,7 @@ exports[`6. article meta uses default section colour 1`] = `
         ]
       }
       color="#1D1D1B"
+      disableTooltip={true}
     />
   </View>
   <View>

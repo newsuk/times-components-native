@@ -15,17 +15,24 @@ function ArticleMeta({
   publicationName,
   publishedTime,
   onAuthorPress,
+  onTooltipPresented,
+  tooltips,
 }) {
   return (
     <View style={[styles.articleMeta, isTablet && styles.articleMetaTablet]}>
       {hasBylineData(bylines) && (
         <View style={styles.articleMetaElementWithBorder}>
-          <Text style={styles.datePublication}>
+          <View style={styles.datePublication}>
             <ArticleBylineWithLinks
               ast={bylines}
               onAuthorPress={onAuthorPress}
+              onTooltipPresented={onTooltipPresented}
+              tooltipArrowOffset={30}
+              tooltips={tooltips}
+              tooltipOffsetX={-20}
+              tooltipOffsetY={26}
             />
-          </Text>
+          </View>
         </View>
       )}
       <View

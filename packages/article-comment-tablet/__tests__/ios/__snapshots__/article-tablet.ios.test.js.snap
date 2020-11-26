@@ -36,7 +36,7 @@ exports[`1. article comment tablet - magazinecomment template 1`] = `
       <View
         style={
           Object {
-            "paddingTop": 10,
+            "marginTop": 10,
             "width": "100%",
           }
         }
@@ -67,7 +67,6 @@ exports[`1. article comment tablet - magazinecomment template 1`] = `
     style={
       Object {
         "marginLeft": "25%",
-        "position": "relative",
       }
     }
   >
@@ -211,7 +210,7 @@ exports[`2. article comment tablet - maincomment template 1`] = `
       <View
         style={
           Object {
-            "paddingTop": 10,
+            "marginTop": 10,
             "width": "100%",
           }
         }
@@ -242,7 +241,6 @@ exports[`2. article comment tablet - maincomment template 1`] = `
     style={
       Object {
         "marginLeft": "25%",
-        "position": "relative",
       }
     }
   >

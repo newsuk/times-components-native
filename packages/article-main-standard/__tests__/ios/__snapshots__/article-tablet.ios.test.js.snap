@@ -79,6 +79,7 @@ exports[`1. article main standard - tablet 1`] = `
           "marginLeft": 0,
           "marginRight": 0,
           "paddingBottom": 5,
+          "zIndex": 1,
         }
       }
     >
@@ -91,20 +92,20 @@ exports[`1. article main standard - tablet 1`] = `
           }
         }
       >
-        <Text
+        <View
           style={
             Object {
               "color": "#696969",
               "fontFamily": "GillSansMTStd-Medium",
               "fontSize": 13,
               "lineHeight": 15,
-              "marginTop": 0,
               "paddingTop": 0,
+              "top": -3,
             }
           }
         >
           <ArticleBylineWithLinks />
-        </Text>
+        </View>
       </View>
       <View
         style={
@@ -120,8 +121,8 @@ exports[`1. article main standard - tablet 1`] = `
               "fontFamily": "GillSansMTStd-Medium",
               "fontSize": 13,
               "lineHeight": 15,
-              "marginTop": 0,
               "paddingTop": 0,
+              "top": -3,
             }
           }
         >

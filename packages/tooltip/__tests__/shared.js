@@ -1,5 +1,4 @@
 import Tooltip from "../tooltip";
-import { calculateArrowPosition } from "../styles";
 import TestRenderer from "react-test-renderer";
 import { ResponsiveContext } from "@times-components-native/responsive";
 import { delay } from "@times-components-native/test-utils";
@@ -37,7 +36,7 @@ export default () => {
       expect(output).toMatchSnapshot();
     });
 
-    it("renders correctly when type is not in tooltips array", () => {
+    it("does not render tooltip when tooltip type is not in tooltips array", () => {
       const onTooltipPresentedMock = jest.fn();
 
       const output = TestRenderer.create(
@@ -52,7 +51,7 @@ export default () => {
           </Tooltip>,
         ),
       );
-      expect(output.toJSON()).toEqual("bar");
+      expect(output).toMatchSnapshot();
     });
 
     it("does not render tooltip if not in tablet", () => {
@@ -71,10 +70,10 @@ export default () => {
           false,
         ),
       );
-      expect(output.toJSON()).toEqual("bar");
+      expect(output).toMatchSnapshot();
     });
 
-    it("renders correctly width supplied width", () => {
+    it("renders correctly with supplied width", () => {
       const onTooltipPresentedMock = jest.fn();
 
       const output = TestRenderer.create(
@@ -84,6 +83,59 @@ export default () => {
           type="testtype"
           tooltips={["testtype"]}
           width={100}
+        >
+          bar
+        </Tooltip>,
+      );
+      expect(output).toMatchSnapshot();
+    });
+
+    it("renders correctly with supplied placement top", () => {
+      const onTooltipPresentedMock = jest.fn();
+
+      const output = TestRenderer.create(
+        <Tooltip
+          content={<Text>foo</Text>}
+          onTooltipPresented={onTooltipPresentedMock}
+          type="testtype"
+          tooltips={["testtype"]}
+          placement="top"
+        >
+          bar
+        </Tooltip>,
+      );
+      expect(output).toMatchSnapshot();
+    });
+
+    it("renders correctly with supplied placement right", () => {
+      const onTooltipPresentedMock = jest.fn();
+
+      const output = TestRenderer.create(
+        <Tooltip
+          content={<Text>foo</Text>}
+          onTooltipPresented={onTooltipPresentedMock}
+          type="testtype"
+          tooltips={["testtype"]}
+          placement="right"
+        >
+          bar
+        </Tooltip>,
+      );
+      expect(output).toMatchSnapshot();
+    });
+
+    it("renders correctly with supplied offsets", () => {
+      const onTooltipPresentedMock = jest.fn();
+
+      const output = TestRenderer.create(
+        <Tooltip
+          content={<Text>foo</Text>}
+          onTooltipPresented={onTooltipPresentedMock}
+          type="testtype"
+          tooltips={["testtype"]}
+          offsetX={10}
+          offsetY={10}
+          arrowOffset={10}
         >
           bar
         </Tooltip>,
@@ -149,15 +201,6 @@ export default () => {
       const closeButton = testInstance.find(TouchableOpacity);
       closeButton.simulate("press");
       expect(onCloseMock).toBeCalled();
-    });
-  });
-
-  describe("calculateArrowPosition", () => {
-    it("returns correct position with default alignment", () => {
-      expect(calculateArrowPosition("foo", 100)).toEqual(44);
-    });
-    it("returns correct position with left alignment", () => {
-      expect(calculateArrowPosition("left", 100)).toEqual(20);
     });
   });
 };

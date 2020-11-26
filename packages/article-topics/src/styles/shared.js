@@ -9,7 +9,7 @@ const styles = {
     padding: spacing(2),
   },
   borderHighlight: {
-    borderColor: colours.functional.tooltip,
+    borderColor: colours.functional.action,
     borderWidth: 2,
     padding: spacing(2) - 1,
   },

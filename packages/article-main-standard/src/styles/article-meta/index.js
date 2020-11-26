@@ -30,7 +30,7 @@ const styles = StyleSheet.create({
   },
   datePublication: {
     ...sharedStyles.datePublication,
-    marginTop: 0,
+    top: -3,
     paddingTop: 0,
   },
 });

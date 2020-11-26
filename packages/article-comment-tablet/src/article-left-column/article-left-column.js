@@ -8,10 +8,7 @@ import styles from "../styles";
 
 import Image from "@times-components-native/image";
 import ArticleTopics from "@times-components-native/article-topics";
-import {
-  articleLeftColumnPropTypes,
-  articleLeftColumnDefaultProps,
-} from "./article-left-column-prop-types";
+import articleLeftColumnPropTypes from "./article-left-column-prop-types";
 
 const ArticleLeftColumn = ({
   authorImage,
@@ -31,6 +28,11 @@ const ArticleLeftColumn = ({
             ast={bylines}
             centered
             onAuthorPress={onAuthorPress}
+            onTooltipPresented={onTooltipPresented}
+            tooltipArrowOffset={50}
+            tooltipOffsetX={10}
+            tooltipOffsetY={30}
+            tooltips={tooltips}
           />
         </View>
       )}
@@ -49,10 +51,6 @@ const ArticleLeftColumn = ({
   </View>
 );
 
-ArticleLeftColumn.propTypes = {
-  ...articleLeftColumnPropTypes,
-};
-
-ArticleLeftColumn.defaultProps = articleLeftColumnDefaultProps;
+ArticleLeftColumn.propTypes = articleLeftColumnPropTypes;
 
 export default ArticleLeftColumn;

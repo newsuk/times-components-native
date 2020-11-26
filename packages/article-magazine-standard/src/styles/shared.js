@@ -72,6 +72,7 @@ const sharedStyles = {
   tabletContainer: {
     alignSelf: "center",
     width: tabletWidth,
+    zIndex: 1,
   },
 };
 

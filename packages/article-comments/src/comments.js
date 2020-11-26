@@ -4,13 +4,14 @@ import PropTypes from "prop-types";
 import Context from "@times-components-native/context";
 import Button from "@times-components-native/button";
 import { TextLink } from "@times-components-native/link";
-import styleguide, { spacing } from "@times-components-native/styleguide";
+import styleguide from "@times-components-native/styleguide";
 import Tooltip from "@times-components-native/tooltip";
 import styles from "./styles";
 
 const Comments = ({
   articleId,
   commentCount,
+  narrowContent,
   onCommentGuidelinesPress,
   onCommentsPress,
   onTooltipPresented,
@@ -29,14 +30,16 @@ const Comments = ({
       </TextLink>
     </Text>
     <Tooltip
+      arrowOffset={43}
       content={
         <Text>Tap to read comments and join in with the conversation</Text>
       }
+      offsetX={12}
       onTooltipPresented={onTooltipPresented}
       type="commenting"
       tooltips={tooltips}
-      alignment="center"
-      offsetY={-spacing(1)}
+      placement="right"
+      width={narrowContent ? 165 : 207}
     >
       <Context.Consumer>
         {({ theme: { scale } }) => {
@@ -63,9 +66,15 @@ const Comments = ({
 Comments.propTypes = {
   articleId: PropTypes.string.isRequired,
   commentCount: PropTypes.number.isRequired,
+  narrowContent: PropTypes.bool,
   onCommentGuidelinesPress: PropTypes.func.isRequired,
   onCommentsPress: PropTypes.func.isRequired,
+  onTooltipPresented: PropTypes.func,
   url: PropTypes.string.isRequired,
+};
+
+Comments.defaultProps = {
+  onTooltipPresented: () => null,
 };
 
 export default Comments;
