@@ -24,15 +24,15 @@ const styles = StyleSheet.create({
     flexDirection: "row",
   },
   icon: {
-    justifyContent: "center",
-    paddingLeft: height / 4,
+    paddingTop: spacing(3),
+    paddingLeft: 16,
   },
   text: {
     paddingTop: 22,
     color: colours.functional.secondary,
     fontSize: 15,
     fontFamily: fonts.supporting,
-    marginLeft: 7,
+    marginLeft: spacing(2),
   },
 });
 
