@@ -1,5 +1,5 @@
 import React from "react";
-import { Text, TouchableOpacity } from "react-native";
+import { Text, TouchableOpacity, View } from "react-native";
 import styles from "./styles";
 
 interface Props {
@@ -11,7 +11,7 @@ interface Props {
 const FloatingActionButton: React.FC<Props> = ({ icon, text, onPress }) => {
   return (
     <TouchableOpacity onPress={onPress} style={styles.container}>
-      {icon}
+      <View style={styles.icon}>{icon}</View>
       <Text style={styles.text} allowFontScaling={false}>
         {text}
       </Text>

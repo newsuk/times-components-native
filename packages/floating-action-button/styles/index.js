@@ -7,7 +7,6 @@ const styles = StyleSheet.create({
   container: {
     width: 170,
     height: height,
-    padding: spacing(4),
     position: "absolute",
     bottom: 40,
     right: 30,
@@ -24,11 +23,16 @@ const styles = StyleSheet.create({
     zIndex: 9999,
     flexDirection: "row",
   },
+  icon: {
+    justifyContent: "center",
+    paddingLeft: height / 4,
+  },
   text: {
+    paddingTop: 22,
     color: colours.functional.secondary,
     fontSize: 15,
     fontFamily: fonts.supporting,
-    marginLeft: spacing(3),
+    marginLeft: 7,
   },
 });
 

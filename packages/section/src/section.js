@@ -5,7 +5,7 @@ import format from "date-fns/format";
 import { useResponsiveContext } from "@times-components-native/responsive";
 import { withTrackScrollDepth } from "@times-components-native/tracking";
 import { useVariantTestingContext } from "@times-components-native/variant-testing";
-import { IconForwardArrow } from "@times-components-native/icons";
+import { IconEmail } from "@times-components-native/icons";
 import SectionItemSeparator from "./section-item-separator";
 import withTrackingContext from "./section-tracking-context";
 import PuzzleBar from "./puzzle-bar";
@@ -142,7 +142,7 @@ const Section = ({
       {isPuzzle ? (
         <FloatingActionButton
           text="Email me puzzles"
-          icon={<IconForwardArrow height={15} />}
+          icon={<IconEmail height={15} />}
           onPress={onEmailPuzzleButtonPress}
         />
       ) : null}
