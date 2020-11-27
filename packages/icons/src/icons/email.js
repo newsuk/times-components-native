@@ -1,13 +1,8 @@
 import React from "react";
-import Svg, { G, Path, Use, Defs } from "react-native-svg";
+import Svg, { G, Path } from "react-native-svg";
 
 const IconEmail = () => (
-  <Svg
-    xmlns="http://www.w3.org/2000/Svg"
-    width="22"
-    height="23"
-    viewBox="0 0 22 23"
-  >
+  <Svg width="22" height="23" viewBox="0 0 22 23">
     <G fill="none" fill-rule="evenodd">
       <G>
         <G>
