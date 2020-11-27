@@ -1,9 +1,11 @@
 import React, { useCallback } from "react";
 import { FlatList, View } from "react-native";
 import PropTypes from "prop-types";
+import format from "date-fns/format";
 import { useResponsiveContext } from "@times-components-native/responsive";
 import { withTrackScrollDepth } from "@times-components-native/tracking";
 import { useVariantTestingContext } from "@times-components-native/variant-testing";
+import { IconForwardArrow } from "@times-components-native/icons";
 import SectionItemSeparator from "./section-item-separator";
 import withTrackingContext from "./section-tracking-context";
 import PuzzleBar from "./puzzle-bar";
@@ -15,6 +17,7 @@ import {
   createPuzzleData,
   isSupplementSection,
 } from "./utils";
+import FloatingActionButton from "@times-components-native/floating-action-button";
 
 const styles = styleFactory();
 
@@ -25,6 +28,7 @@ const Section = ({
   onPuzzlePress,
   onPuzzleBarPress,
   onViewed,
+  publishedTime,
   receiveChildList,
   section,
 }) => {
@@ -32,6 +36,18 @@ const Section = ({
   const { isTablet, editionBreakpoint } = useResponsiveContext();
 
   const variants = useVariantTestingContext();
+
+  const getEmailPuzzlesUrl = () =>
+    `https://times.formstack.com/forms/puzzles_${format(
+      publishedTime,
+      "DD_MM_YYYY",
+    )}`;
+
+  const onEmailPuzzleButtonPress = () =>
+    onLinkPress({
+      url: getEmailPuzzlesUrl(),
+      isExternal: false,
+    });
 
   const onViewableItemsChanged = useCallback((info) => {
     if (!onViewed || !info.changed || !info.changed.length) return [];
@@ -105,34 +121,42 @@ const Section = ({
   if (slices) receiveChildList(data);
 
   return (
-    <FlatList
-      contentContainerStyle={
-        isTablet && isPuzzle && styles.additionalContainerPadding
-      }
-      removeClippedSubviews
-      data={data}
-      initialNumToRender={isTablet ? 5 : 2}
-      ItemSeparatorComponent={(leadingItem) =>
-        renderItemSeperator(isPuzzle)(leadingItem, editionBreakpoint)
-      }
-      keyExtractor={(item) => item.elementId}
-      ListHeaderComponent={getHeaderComponent(isPuzzle, isMagazine)}
-      nestedScrollEnabled
-      onViewableItemsChanged={onViewed ? onViewableItemsChanged : null}
-      renderItem={renderItem(isPuzzle)}
-      windowSize={3}
-    />
+    <>
+      <FlatList
+        contentContainerStyle={
+          isTablet && isPuzzle && styles.additionalContainerPadding
+        }
+        removeClippedSubviews
+        data={data}
+        initialNumToRender={isTablet ? 5 : 2}
+        ItemSeparatorComponent={(leadingItem) =>
+          renderItemSeperator(isPuzzle)(leadingItem, editionBreakpoint)
+        }
+        keyExtractor={(item) => item.elementId}
+        ListHeaderComponent={getHeaderComponent(isPuzzle, isMagazine)}
+        nestedScrollEnabled
+        onViewableItemsChanged={onViewed ? onViewableItemsChanged : null}
+        renderItem={renderItem(isPuzzle)}
+        windowSize={3}
+      />
+      {isPuzzle ? (
+        <FloatingActionButton
+          text="Email me puzzles"
+          icon={<IconForwardArrow height={15} />}
+          onPress={onEmailPuzzleButtonPress}
+        />
+      ) : null}
+    </>
   );
 };
 
 Section.displayName = "Section";
-
 Section.propTypes = {
-  onArticlePress: PropTypes.func,
   onLinkPress: PropTypes.func,
   onPuzzleBarPress: PropTypes.func,
   onPuzzlePress: PropTypes.func,
   onViewed: PropTypes.func,
+  publishedTime: PropTypes.string.isRequired,
   receiveChildList: PropTypes.func,
   section: PropTypes.shape({}).isRequired,
 };
