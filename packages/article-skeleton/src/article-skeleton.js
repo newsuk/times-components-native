@@ -46,6 +46,7 @@ const ArticleWithContent = (props) => {
     narrowContent,
     tooltips,
   } = props;
+
   const variants = useVariantTestingContext();
   const { windowWidth } = useResponsiveContext();
 
@@ -134,13 +135,17 @@ ArticleWithContent.propTypes = {
   onCommentsPress: PropTypes.func.isRequired,
   onLinkPress: PropTypes.func.isRequired,
   onRelatedArticlePress: PropTypes.func.isRequired,
+  onTooltipPresented: PropTypes.func,
   onTwitterLinkPress: PropTypes.func.isRequired,
   onVideoPress: PropTypes.func.isRequired,
   onImagePress: PropTypes.func.isRequired,
+  tooltips: PropTypes.array,
 };
 ArticleWithContent.defaultProps = {
   ...articleSkeletonDefaultProps,
   interactiveConfig: {},
+  onTooltipPresented: () => null,
+  tooltips: [],
 };
 
 const ArticleSkeleton = (props) => {

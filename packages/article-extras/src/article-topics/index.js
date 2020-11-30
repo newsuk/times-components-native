@@ -5,7 +5,13 @@ import ArticleTopics from "@times-components-native/article-topics";
 import { useResponsiveContext } from "@times-components-native/responsive";
 import styles from "./styles";
 
-const ShowTopics = ({ topics, onPress, narrowContent }) => {
+const ShowTopics = ({
+  topics,
+  onPress,
+  onTooltipPresented,
+  narrowContent,
+  tooltips,
+}) => {
   const { isTablet, narrowArticleBreakpoint } = useResponsiveContext();
 
   if (topics && topics.length > 0) {
@@ -20,7 +26,12 @@ const ShowTopics = ({ topics, onPress, narrowContent }) => {
             },
         ]}
       >
-        <ArticleTopics onPress={onPress} topics={topics} />
+        <ArticleTopics
+          onPress={onPress}
+          onTooltipPresented={onTooltipPresented}
+          topics={topics}
+          tooltips={tooltips}
+        />
       </View>
     );
   }
@@ -29,19 +40,23 @@ const ShowTopics = ({ topics, onPress, narrowContent }) => {
 };
 
 ShowTopics.propTypes = {
+  narrowContent: PropTypes.bool,
   onPress: PropTypes.func.isRequired,
+  onTooltipPresented: PropTypes.func,
   topics: PropTypes.arrayOf(
     PropTypes.shape({
       name: PropTypes.string.isRequired,
       slug: PropTypes.string.isRequired,
     }).isRequired,
   ),
-  narrowContent: PropTypes.bool,
+  tooltips: PropTypes.array,
 };
 
 ShowTopics.defaultProps = {
-  topics: null,
   narrowContent: false,
+  onTooltipPresented: () => null,
+  tooltips: [],
+  topics: null,
 };
 
 export default ShowTopics;

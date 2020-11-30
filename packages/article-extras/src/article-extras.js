@@ -54,13 +54,17 @@ ArticleExtras.propTypes = {
   onCommentGuidelinesPress: PropTypes.func.isRequired,
   onCommentsPress: PropTypes.func.isRequired,
   onRelatedArticlePress: PropTypes.func.isRequired,
+  onTooltipPresented: PropTypes.func,
   onTopicPress: PropTypes.func.isRequired,
   template: PropTypes.string.isRequired,
+  tooltips: PropTypes.array,
   narrowContent: PropTypes.bool,
 };
 
 ArticleExtras.defaultProps = {
   narrowContent: false,
+  onTooltipPresented: () => null,
+  tooltips: [],
 };
 
 export default ArticleExtras;
