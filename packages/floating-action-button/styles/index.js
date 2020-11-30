@@ -4,14 +4,13 @@ import { fonts, spacing, colours } from "@times-components-native/styleguide";
 const height = 56;
 
 const styles = StyleSheet.create({
-  container: {
-    width: 170,
+  wrapper: {
     height: height,
     position: "absolute",
     bottom: 40,
     right: 30,
     backgroundColor: colours.functional.white,
-    justifyContent: "flex-start",
+
     borderRadius: height / 2,
     shadowColor: colours.functional.black,
     shadowOffset: {
@@ -23,16 +22,24 @@ const styles = StyleSheet.create({
     zIndex: 9999,
     flexDirection: "row",
   },
+  outerContainer: {
+    width: 170,
+  },
+  innerContainer: {
+    justifyContent: "flex-start",
+    flexDirection: "row",
+    overflow: "hidden",
+  },
   icon: {
     paddingTop: spacing(3),
-    paddingLeft: 16,
+    paddingLeft: 17,
   },
   text: {
     paddingTop: 22,
     color: colours.functional.secondary,
     fontSize: 15,
     fontFamily: fonts.supporting,
-    marginLeft: spacing(2),
+    marginLeft: spacing(3),
   },
 });
 

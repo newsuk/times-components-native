@@ -1,11 +1,12 @@
-import React, { useCallback } from "react";
-import { FlatList, View } from "react-native";
+import React, { useCallback, useState, useEffect } from "react";
+import { Animated, FlatList, View } from "react-native";
 import PropTypes from "prop-types";
 import format from "date-fns/format";
 import { useResponsiveContext } from "@times-components-native/responsive";
 import { withTrackScrollDepth } from "@times-components-native/tracking";
 import { useVariantTestingContext } from "@times-components-native/variant-testing";
 import { IconEmail } from "@times-components-native/icons";
+import FloatingActionButton from "@times-components-native/floating-action-button";
 import SectionItemSeparator from "./section-item-separator";
 import withTrackingContext from "./section-tracking-context";
 import PuzzleBar from "./puzzle-bar";
@@ -17,7 +18,6 @@ import {
   createPuzzleData,
   isSupplementSection,
 } from "./utils";
-import FloatingActionButton from "@times-components-native/floating-action-button";
 
 const styles = styleFactory();
 
@@ -34,6 +34,7 @@ const Section = ({
 }) => {
   const { cover, name, slices, title } = section;
   const { isTablet, editionBreakpoint } = useResponsiveContext();
+  const [emailPuzzleButtonWidth] = useState(new Animated.Value(170));
 
   const variants = useVariantTestingContext();
 
@@ -48,6 +49,14 @@ const Section = ({
       url: getEmailPuzzlesUrl(),
       isExternal: false,
     });
+
+  const onScrollBeginDrag = () => {
+    Animated.timing(emailPuzzleButtonWidth, {
+      toValue: 0,
+      duration: 200,
+      useNativeDriver: false,
+    }).start();
+  };
 
   const onViewableItemsChanged = useCallback((info) => {
     if (!onViewed || !info.changed || !info.changed.length) return [];
@@ -136,6 +145,7 @@ const Section = ({
         ListHeaderComponent={getHeaderComponent(isPuzzle, isMagazine)}
         nestedScrollEnabled
         onViewableItemsChanged={onViewed ? onViewableItemsChanged : null}
+        onScrollBeginDrag={onScrollBeginDrag}
         renderItem={renderItem(isPuzzle)}
         windowSize={3}
       />
@@ -144,6 +154,7 @@ const Section = ({
           text="Email me puzzles"
           icon={<IconEmail height={15} />}
           onPress={onEmailPuzzleButtonPress}
+          animatedWidth={emailPuzzleButtonWidth}
         />
       ) : null}
     </>
