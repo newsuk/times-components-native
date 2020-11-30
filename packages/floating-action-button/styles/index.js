@@ -1,17 +1,18 @@
 import { StyleSheet } from "react-native";
 import { fonts, spacing, colours } from "@times-components-native/styleguide";
 
-const height = 56;
+export const buttonHeight = 54;
+const iconWidth = 22;
 
 const styles = StyleSheet.create({
   wrapper: {
-    height: height,
+    height: buttonHeight,
     position: "absolute",
     bottom: 40,
     right: 30,
     backgroundColor: colours.functional.white,
 
-    borderRadius: height / 2,
+    borderRadius: buttonHeight / 2,
     shadowColor: colours.functional.black,
     shadowOffset: {
       width: 2,
@@ -22,17 +23,14 @@ const styles = StyleSheet.create({
     zIndex: 9999,
     flexDirection: "row",
   },
-  outerContainer: {
-    width: 170,
-  },
-  innerContainer: {
+  container: {
     justifyContent: "flex-start",
     flexDirection: "row",
     overflow: "hidden",
   },
   icon: {
     paddingTop: spacing(3),
-    paddingLeft: 17,
+    paddingLeft: (buttonHeight - iconWidth) / 2,
   },
   text: {
     paddingTop: 22,

@@ -1,4 +1,4 @@
-import React, { useCallback, useState, useEffect } from "react";
+import React, { useCallback, useState } from "react";
 import { Animated, FlatList, View } from "react-native";
 import PropTypes from "prop-types";
 import format from "date-fns/format";
@@ -34,7 +34,10 @@ const Section = ({
 }) => {
   const { cover, name, slices, title } = section;
   const { isTablet, editionBreakpoint } = useResponsiveContext();
-  const [emailPuzzleButtonWidth] = useState(new Animated.Value(170));
+  const emailPuzzlesButtonExtendedWidth = 170;
+  const [emailPuzzlesButtonWidth] = useState(
+    new Animated.Value(emailPuzzlesButtonExtendedWidth),
+  );
 
   const variants = useVariantTestingContext();
 
@@ -51,7 +54,7 @@ const Section = ({
     });
 
   const onScrollBeginDrag = () => {
-    Animated.timing(emailPuzzleButtonWidth, {
+    Animated.timing(emailPuzzlesButtonWidth, {
       toValue: 0,
       duration: 200,
       useNativeDriver: false,
@@ -151,10 +154,11 @@ const Section = ({
       />
       {isPuzzle ? (
         <FloatingActionButton
+          animatedWidth={emailPuzzlesButtonWidth}
+          extendedWidth={emailPuzzlesButtonExtendedWidth}
           text="Email me puzzles"
-          icon={<IconEmail height={15} />}
+          icon={<IconEmail />}
           onPress={onEmailPuzzleButtonPress}
-          animatedWidth={emailPuzzleButtonWidth}
         />
       ) : null}
     </>
@@ -163,6 +167,7 @@ const Section = ({
 
 Section.displayName = "Section";
 Section.propTypes = {
+  onArticlePress: PropTypes.func,
   onLinkPress: PropTypes.func,
   onPuzzleBarPress: PropTypes.func,
   onPuzzlePress: PropTypes.func,
