@@ -50,9 +50,11 @@ const ArticleExtrasContent = ({
       ) : null}
       {topics && !narrowContent ? (
         <ArticleTopics
-          onPress={onTopicPress}
-          topics={topics}
           narrowContent={narrowContent}
+          onPress={onTopicPress}
+          onTooltipPresented={onTooltipPresented}
+          tooltips={tooltips}
+          topics={topics}
         />
       ) : null}
       <ArticleComments
@@ -80,16 +82,20 @@ ArticleExtrasContent.propTypes = {
   article: PropTypes.shape({}).isRequired,
   articleId: PropTypes.string.isRequired,
   articleUrl: PropTypes.string.isRequired,
+  narrowContent: PropTypes.bool,
   onCommentGuidelinesPress: PropTypes.func.isRequired,
   onCommentsPress: PropTypes.func.isRequired,
   onRelatedArticlePress: PropTypes.func.isRequired,
   onTopicPress: PropTypes.func.isRequired,
+  onTooltipPresented: PropTypes.func,
+  tooltips: PropTypes.array,
   template: PropTypes.string.isRequired,
-  narrowContent: PropTypes.bool,
 };
 
 ArticleExtrasContent.defaultProps = {
   narrowContent: false,
+  onTooltipPresented: () => null,
+  tooltips: [],
 };
 
 export default ArticleExtrasContent;
