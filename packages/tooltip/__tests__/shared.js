@@ -165,7 +165,7 @@ export default () => {
       );
     });
 
-    it("onTooltipPresented is called correctly", async () => {
+    it("onTooltipPresented is called correctly on Viewport Enter", async () => {
       const onTooltipPresentedMock = jest.fn();
 
       const testInstance = shallow(
@@ -179,6 +179,23 @@ export default () => {
         </Tooltip>,
       );
       testInstance.children().at(0).props().onViewportEnter();
+      expect(onTooltipPresentedMock).toBeCalled();
+    });
+
+    it("onTooltipPresented is called correctly if tooltip is displayed in view", async () => {
+      const onTooltipPresentedMock = jest.fn();
+
+      shallow(
+        <Tooltip
+          content={<Text>foo</Text>}
+          displayedInView={true}
+          onTooltipPresented={onTooltipPresentedMock}
+          type="testtype"
+          tooltips={["testtype"]}
+        >
+          bar
+        </Tooltip>,
+      );
       expect(onTooltipPresentedMock).toBeCalled();
     });
 

@@ -8,6 +8,7 @@ import generateStyles from "./styles";
 interface Props {
   arrowOffset?: number;
   content: string;
+  displayedInView: boolean;
   offsetX?: number;
   offsetY?: number;
   onClose?: <T = unknown, R = unknown>(args?: T) => R;
@@ -22,6 +23,7 @@ const Tooltip: React.FC<Props> = ({
   arrowOffset = 20,
   content,
   children,
+  displayedInView = false,
   offsetX = 0,
   offsetY = 0,
   onClose,
@@ -44,7 +46,6 @@ const Tooltip: React.FC<Props> = ({
   });
 
   const onClosePress = () => {
-    console.log("closing");
     onClose && onClose();
     Animated.timing(opacity, {
       duration: 200,
@@ -59,6 +60,10 @@ const Tooltip: React.FC<Props> = ({
       <View style={styles.crossDiagonal2} />
     </TouchableOpacity>
   );
+
+  if (displayedInView && onTooltipPresented) {
+    onTooltipPresented(type);
+  }
 
   return (
     <View style={styles.wrapper}>

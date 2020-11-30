@@ -10,6 +10,7 @@ import {
 } from "./article-topics-prop-types";
 
 const renderArticleTopics = (
+  tooltipDisplayedInView,
   tooltips,
   topics,
   onPress,
@@ -26,6 +27,7 @@ const renderArticleTopics = (
       onPress={onPress}
       onTooltipPresented={onTooltipPresented}
       slug={slug}
+      tooltipDisplayedInView={tooltipDisplayedInView}
       tooltips={tooltips}
     />
   ));
@@ -35,6 +37,7 @@ const ArticleTopics = ({
   onTooltipPresented,
   style,
   tooltips,
+  tooltipDisplayedInView,
   topics,
 }) => (
   <Context.Consumer>
@@ -44,6 +47,7 @@ const ArticleTopics = ({
       return (
         <View style={[styles.topicGroup, style]}>
           {renderArticleTopics(
+            tooltipDisplayedInView,
             tooltips,
             topics,
             onPress,

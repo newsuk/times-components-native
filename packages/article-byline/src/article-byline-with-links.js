@@ -39,6 +39,7 @@ const ArticleBylineWithLinks = ({ ast, ...props }) => {
     disableTooltip,
     onTooltipPresented,
     tooltipArrowOffset,
+    tooltipDisplayedInView,
     tooltipOffsetX,
     tooltipOffsetY,
     tooltips,
@@ -64,6 +65,7 @@ const ArticleBylineWithLinks = ({ ast, ...props }) => {
         </Text>
       }
       arrowOffset={tooltipArrowOffset}
+      displayedInView={tooltipDisplayedInView}
       offsetX={tooltipOffsetX}
       offsetY={tooltipOffsetY}
       onTooltipPresented={onTooltipPresented}
