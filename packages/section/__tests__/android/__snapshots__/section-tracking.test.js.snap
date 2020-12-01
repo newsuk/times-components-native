@@ -100,3 +100,15 @@ Object {
   "object": "Slice",
 }
 `;
+
+exports[`puzzle section page click tracking: onPuzzlePress 1`] = `
+Array [
+  Array [
+    Object {
+      "id": "0",
+      "title": "Times Concise medium No 7881",
+      "url": "/crossword/123",
+    },
+  ],
+]
+`;
