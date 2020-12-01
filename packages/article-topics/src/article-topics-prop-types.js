@@ -7,6 +7,7 @@ export const topicsPropTypes = {
   onPress: PropTypes.func.isRequired,
   onTooltipPresented: PropTypes.func,
   style: ViewPropTypesStyle,
+  tooltipDisplayedInView: PropTypes.bool,
   tooltips: PropTypes.array,
   topics: PropTypes.arrayOf(
     PropTypes.shape({
@@ -17,6 +18,7 @@ export const topicsPropTypes = {
 };
 
 export const topicsDefaultProps = {
+  tooltipDisplayedInView: false,
   onTooltipPresented: () => null,
   style: null,
   tooltips: [],

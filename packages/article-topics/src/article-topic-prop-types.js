@@ -7,10 +7,12 @@ export const topicPropTypes = {
   onPress: PropTypes.func.isRequired,
   onTooltipPresented: PropTypes.func,
   slug: PropTypes.string.isRequired,
+  tooltipDisplayedInView: PropTypes.bool,
   tooltips: PropTypes.array,
 };
 
 export const topicDefaultProps = {
   onTooltipPresented: () => null,
+  tooltipDisplayedInView: false,
   tooltips: [],
 };

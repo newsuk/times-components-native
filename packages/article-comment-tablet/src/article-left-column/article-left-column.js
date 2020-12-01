@@ -29,6 +29,7 @@ const ArticleLeftColumn = ({
             centered
             onAuthorPress={onAuthorPress}
             onTooltipPresented={onTooltipPresented}
+            tooltipDisplayedInView={true}
             tooltipArrowOffset={50}
             tooltipOffsetX={10}
             tooltipOffsetY={30}
@@ -42,6 +43,7 @@ const ArticleLeftColumn = ({
         <ArticleTopics
           onTooltipPresented={onTooltipPresented}
           onPress={onTopicPress}
+          tooltipDisplayedInView={true}
           tooltips={tooltips}
           topics={topics}
           style={{ justifyContent: "flex-start" }}

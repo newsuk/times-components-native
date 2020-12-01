@@ -45,6 +45,7 @@ exports[`3. an article with no headline falls back to use shortheadline 1`] = `
           }
           centered={true}
           tooltipArrowOffset={50}
+          tooltipDisplayedInView={true}
           tooltipOffsetX={10}
           tooltipOffsetY={30}
         />
@@ -52,6 +53,7 @@ exports[`3. an article with no headline falls back to use shortheadline 1`] = `
     </View>
     <View>
       <ArticleTopics
+        tooltipDisplayedInView={true}
         topics={
           Array [
             Object {
@@ -129,6 +131,7 @@ exports[`4. an article with ads 1`] = `
           }
           centered={true}
           tooltipArrowOffset={50}
+          tooltipDisplayedInView={true}
           tooltipOffsetX={10}
           tooltipOffsetY={30}
         />
@@ -136,6 +139,7 @@ exports[`4. an article with ads 1`] = `
     </View>
     <View>
       <ArticleTopics
+        tooltipDisplayedInView={true}
         topics={
           Array [
             Object {
