@@ -8,8 +8,8 @@ const styles = StyleSheet.create({
   wrapper: {
     height: buttonHeight,
     position: "absolute",
-    bottom: 40,
-    right: 30,
+    bottom: spacing(5),
+    right: spacing(5),
     backgroundColor: colours.functional.white,
 
     borderRadius: buttonHeight / 2,
