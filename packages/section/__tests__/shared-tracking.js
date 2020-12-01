@@ -26,6 +26,11 @@ jest.mock("@times-components-native/image", () => ({
   default: "TimesImage",
 }));
 
+jest.mock("@times-components-native/floating-action-button", () => ({
+  __esModule: true,
+  default: "FloatingActionButton",
+}));
+
 class WithTrackingContext extends Component {
   getChildContext() {
     const { stream } = this.props;

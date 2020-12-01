@@ -25,7 +25,7 @@ exports[`FloatingActionButton renders correctly with icon 1`] = `
   <View
     style={
       Object {
-        "width": 100,
+        "width": undefined,
       }
     }
   >
@@ -92,7 +92,7 @@ exports[`FloatingActionButton renders correctly without icon 1`] = `
   <View
     style={
       Object {
-        "width": 100,
+        "width": undefined,
       }
     }
   >

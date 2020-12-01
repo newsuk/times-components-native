@@ -5,8 +5,17 @@ import { shallow } from "enzyme";
 import { TouchableOpacity } from "react-native";
 import React from "react";
 import "./serializers-with-all-styles";
+
+jest.mock("@times-components-native/icons", () => ({
+  IconEmail: "IconEmail",
+}));
+
 const onPressMock = jest.fn();
-const animatedWidthMock = jest.fn();
+const animatedWidthMock = {
+  interpolate: jest.fn(() => {
+    return 100;
+  }),
+};
 
 export default () => {
   describe("FloatingActionButton", () => {

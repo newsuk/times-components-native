@@ -3,7 +3,7 @@ import { Animated, Text, TouchableOpacity, View } from "react-native";
 import styles, { buttonHeight } from "./styles";
 
 interface Props {
-  animatedWidth: Animated.Value;
+  animatedWidth?: Animated.Value;
   icon?: string;
   extendedWidth: number;
   text: string;
@@ -17,11 +17,13 @@ const FloatingActionButton: React.FC<Props> = ({
   text,
   onPress,
 }) => {
-  const buttonWidth = animatedWidth.interpolate({
-    inputRange: [0, extendedWidth],
-    outputRange: [buttonHeight, extendedWidth],
-    extrapolate: "clamp",
-  });
+  const buttonWidth = animatedWidth
+    ? animatedWidth.interpolate({
+        inputRange: [0, extendedWidth],
+        outputRange: [buttonHeight, extendedWidth],
+        extrapolate: "clamp",
+      })
+    : extendedWidth;
 
   return (
     <View style={styles.wrapper}>

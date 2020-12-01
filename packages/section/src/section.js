@@ -1,7 +1,6 @@
 import React, { useCallback, useState } from "react";
 import { Animated, FlatList, View } from "react-native";
 import PropTypes from "prop-types";
-import format from "date-fns/format";
 import { useResponsiveContext } from "@times-components-native/responsive";
 import { withTrackScrollDepth } from "@times-components-native/tracking";
 import { useVariantTestingContext } from "@times-components-native/variant-testing";
@@ -14,6 +13,7 @@ import MagazineCover from "./magazine-cover";
 import Slice from "./slice";
 import styleFactory from "./styles";
 import {
+  getEmailPuzzlesUrl,
   prepareSlicesForRender,
   createPuzzleData,
   isSupplementSection,
@@ -41,15 +41,9 @@ const Section = ({
 
   const variants = useVariantTestingContext();
 
-  const getEmailPuzzlesUrl = () =>
-    `https://times.formstack.com/forms/puzzles_${format(
-      publishedTime,
-      "DD_MM_YYYY",
-    )}`;
-
   const onEmailPuzzleButtonPress = () =>
     onLinkPress({
-      url: getEmailPuzzlesUrl(),
+      url: getEmailPuzzlesUrl(publishedTime),
       isExternal: false,
     });
 

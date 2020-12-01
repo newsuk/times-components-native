@@ -1,13 +1,28 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`1. iconemail sets a width when height is set 1`] = `
-<ARTSurfaceView
+<RNSVGSvgView
+  align="xMidYMid"
+  bbHeight="23"
+  bbWidth="22"
+  focusable={false}
+  height="23"
+  meetOrSlice={0}
+  minX={0}
+  minY={0}
   style={
     Object {
-      "height": 50,
-      "width": 68.75,
+      "backgroundColor": "transparent",
+      "borderWidth": 0,
+      "flex": 0,
+      "height": 23,
+      "opacity": 1,
+      "width": 22,
     }
   }
+  vbHeight={23}
+  vbWidth={22}
+  width="22"
 />
 `;
 
