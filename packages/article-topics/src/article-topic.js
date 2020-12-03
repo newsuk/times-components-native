@@ -16,6 +16,7 @@ const ArticleTopic = ({
   onPress,
   onTooltipPresented,
   slug,
+  tooltipDisplayedInView,
   tooltips,
 }) => {
   const fontSizeStyle = fontSize ? { fontSize } : null;
@@ -62,6 +63,7 @@ const ArticleTopic = ({
   const articleTopicWithTooltip = (
     <Tooltip
       content={<Text>Tap a topic to see more of our coverage</Text>}
+      displayedInView={tooltipDisplayedInView}
       offsetY={5}
       onClose={unhighlightTopic}
       onTooltipPresented={onTooltipPresented}

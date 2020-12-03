@@ -132,7 +132,9 @@ class ArticlePage extends Component {
                   bylines={bylines}
                   onAuthorPress={onAuthorPress}
                   onImagePress={onImagePress}
+                  onTooltipPresented={onTooltipPresented}
                   onTopicPress={onTopicPress}
+                  tooltips={tooltips}
                   topics={topics}
                 />
                 <View style={styles.contentContainer}>
