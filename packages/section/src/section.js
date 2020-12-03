@@ -128,8 +128,6 @@ const Section = ({
 
   if (slices) receiveChildList(data);
 
-  console.log("IS PUZZLE", isPuzzle);
-
   return (
     <>
       <FlatList
