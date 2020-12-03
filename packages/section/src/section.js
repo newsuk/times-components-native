@@ -1,5 +1,5 @@
 import React, { useCallback, useState } from "react";
-import { Animated, FlatList, View } from "react-native";
+import { Animated, FlatList, Platform, View } from "react-native";
 import PropTypes from "prop-types";
 import { useResponsiveContext } from "@times-components-native/responsive";
 import { withTrackScrollDepth } from "@times-components-native/tracking";
@@ -40,6 +40,8 @@ const Section = ({
   );
 
   const variants = useVariantTestingContext();
+
+  const isIOS = Platform.OS === "ios";
 
   const onEmailPuzzleButtonPress = () =>
     onLinkPress({
@@ -126,6 +128,8 @@ const Section = ({
 
   if (slices) receiveChildList(data);
 
+  console.log("IS PUZZLE", isPuzzle);
+
   return (
     <>
       <FlatList
@@ -146,7 +150,7 @@ const Section = ({
         renderItem={renderItem(isPuzzle)}
         windowSize={3}
       />
-      {isPuzzle ? (
+      {isPuzzle && isIOS ? (
         <FloatingActionButton
           animatedWidth={emailPuzzlesButtonWidth}
           extendedWidth={emailPuzzlesButtonExtendedWidth}
