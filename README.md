@@ -1,6 +1,6 @@
 # times-components-native [![circleci][circleci-image]][circleci-url]
 
-Home of The Times' `react native` components used in the mobile and tablet apps.
+Home of The Times' React Native components used in the mobile and tablet apps.
 
 ## Table of Contents
 
