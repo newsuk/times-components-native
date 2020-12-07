@@ -144,7 +144,7 @@ const Section = ({
         ListHeaderComponent={getHeaderComponent(isPuzzle, isMagazine)}
         nestedScrollEnabled
         onViewableItemsChanged={onViewed ? onViewableItemsChanged : null}
-        {...(isPuzzle && { onScrollBeginDrag: onScrollBeginDrag })}
+        {...(isPuzzle && { onScrollBeginDrag })}
         renderItem={renderItem(isPuzzle)}
         windowSize={3}
       />
