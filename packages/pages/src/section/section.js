@@ -26,7 +26,8 @@ const {
 
 const onArticlePress = ({ id, isPuff = false }) =>
   onArticlePressBridge(id, isPuff);
-const onLinkPress = ({ url }) => onLinkPressBridge(url);
+const onLinkPress = ({ url, isExternal = true }) =>
+  onLinkPressBridge(url, isExternal);
 
 const onPuzzlePress = ({ id, title, url }) =>
   onPuzzlePressBridge(url, title, id);
@@ -134,7 +135,7 @@ class SectionPage extends Component {
   }
 
   render() {
-    const { publicationName, variants } = this.props;
+    const { publicationName, publishedTime, variants } = this.props;
     const { recentlyOpenedPuzzleCount, savedArticles, section } = this.state;
 
     const adConfig = adTargetConfig({
@@ -162,6 +163,7 @@ class SectionPage extends Component {
             onPuzzlePress={onPuzzlePress}
             section={section}
             publicationName={publicationName}
+            publishedTime={publishedTime}
           />
         </VariantTestingProvider>
       </SectionContext.Provider>
