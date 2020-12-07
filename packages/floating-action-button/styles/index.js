@@ -11,7 +11,6 @@ const styles = StyleSheet.create({
     bottom: spacing(5),
     right: spacing(5),
     backgroundColor: colours.functional.white,
-
     borderRadius: buttonHeight / 2,
     shadowColor: colours.functional.black,
     shadowOffset: {

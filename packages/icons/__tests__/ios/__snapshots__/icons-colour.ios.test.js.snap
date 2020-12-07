@@ -15,82 +15,42 @@ exports[`1. iconemail renders with different colours 1`] = `
       fill={null}
       stroke={null}
     >
-      <RNSVGGroup
+      <RNSVGPath
         fill={
           Array [
             0,
-            4278190080,
+            4290295992,
           ]
         }
         stroke={null}
-      >
-        <RNSVGGroup
-          fill={
-            Array [
-              0,
-              4278190080,
-            ]
-          }
-          stroke={null}
-        >
-          <RNSVGGroup
-            fill={
-              Array [
-                0,
-                4278190080,
-              ]
-            }
-            stroke={null}
-          >
-            <RNSVGGroup
-              fill={
-                Array [
-                  0,
-                  4278190080,
-                ]
-              }
-              stroke={null}
-            >
-              <RNSVGPath
-                fill={
-                  Array [
-                    0,
-                    4290295992,
-                  ]
-                }
-                stroke={null}
-              />
-              <RNSVGPath
-                fill={
-                  Array [
-                    0,
-                    4294967295,
-                  ]
-                }
-                stroke={null}
-              />
-              <RNSVGPath
-                fill={
-                  Array [
-                    0,
-                    4291611852,
-                  ]
-                }
-                stroke={null}
-              />
-              <RNSVGPath
-                fill={
-                  Array [
-                    0,
-                    4290953922,
-                  ]
-                }
-                stroke={null}
-              />
-            </RNSVGGroup>
-          </RNSVGGroup>
-        </RNSVGGroup>
-      </RNSVGGroup>
+      />
+      <RNSVGPath
+        fill={
+          Array [
+            0,
+            4294967295,
+          ]
+        }
+        stroke={null}
+      />
+      <RNSVGPath
+        fill={
+          Array [
+            0,
+            4291611852,
+          ]
+        }
+        stroke={null}
+      />
+      <RNSVGPath
+        fill={
+          Array [
+            0,
+            4290953922,
+          ]
+        }
+        stroke={null}
+      />
     </RNSVGGroup>
   </RNSVGGroup>
 </RNSVGSvgView>

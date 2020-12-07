@@ -144,7 +144,7 @@ const Section = ({
         ListHeaderComponent={getHeaderComponent(isPuzzle, isMagazine)}
         nestedScrollEnabled
         onViewableItemsChanged={onViewed ? onViewableItemsChanged : null}
-        onScrollBeginDrag={onScrollBeginDrag}
+        {...(isPuzzle && { onScrollBeginDrag: onScrollBeginDrag })}
         renderItem={renderItem(isPuzzle)}
         windowSize={3}
       />
@@ -153,7 +153,7 @@ const Section = ({
           animatedWidth={emailPuzzlesButtonWidth}
           extendedWidth={emailPuzzlesButtonExtendedWidth}
           text="Email me puzzles"
-          icon={<IconEmail />}
+          icon={<IconEmail width={22} height={23} />}
           onPress={onEmailPuzzleButtonPress}
         />
       ) : null}

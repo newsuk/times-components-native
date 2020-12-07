@@ -1,13 +1,13 @@
-import React from "react";
+import React, { ComponentType } from "react";
 import { Animated, Text, TouchableOpacity, View } from "react-native";
 import styles, { buttonHeight } from "./styles";
 
 interface Props {
   animatedWidth?: Animated.Value;
-  icon?: string;
+  icon?: ComponentType;
   extendedWidth: number;
   text: string;
-  onPress: <T = unknown, R = unknown>(args?: T) => R;
+  onPress: () => void;
 }
 
 const FloatingActionButton: React.FC<Props> = ({
