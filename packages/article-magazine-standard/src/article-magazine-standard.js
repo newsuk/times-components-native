@@ -1,6 +1,5 @@
 /* eslint-disable consistent-return */
-
-import React, { Component, Fragment } from "react";
+import React, { Component } from "react";
 import { View } from "react-native";
 import ArticleError from "@times-components-native/article-error";
 import ArticleSkeleton from "@times-components-native/article-skeleton";
