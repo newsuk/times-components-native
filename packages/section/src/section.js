@@ -1,9 +1,11 @@
-import React, { useCallback } from "react";
-import { FlatList, View } from "react-native";
+import React, { useCallback, useState } from "react";
+import { Animated, FlatList, Platform, View } from "react-native";
 import PropTypes from "prop-types";
 import { useResponsiveContext } from "@times-components-native/responsive";
 import { withTrackScrollDepth } from "@times-components-native/tracking";
 import { useVariantTestingContext } from "@times-components-native/variant-testing";
+import { IconEmail } from "@times-components-native/icons";
+import FloatingActionButton from "@times-components-native/floating-action-button";
 import SectionItemSeparator from "./section-item-separator";
 import withTrackingContext from "./section-tracking-context";
 import PuzzleBar from "./puzzle-bar";
@@ -11,6 +13,7 @@ import MagazineCover from "./magazine-cover";
 import Slice from "./slice";
 import styleFactory from "./styles";
 import {
+  getEmailPuzzlesUrl,
   prepareSlicesForRender,
   createPuzzleData,
   isSupplementSection,
@@ -25,13 +28,34 @@ const Section = ({
   onPuzzlePress,
   onPuzzleBarPress,
   onViewed,
+  publishedTime,
   receiveChildList,
   section,
 }) => {
   const { cover, name, slices, title } = section;
   const { isTablet, editionBreakpoint } = useResponsiveContext();
+  const emailPuzzlesButtonExtendedWidth = 170;
+  const [emailPuzzlesButtonWidth] = useState(
+    new Animated.Value(emailPuzzlesButtonExtendedWidth),
+  );
 
   const variants = useVariantTestingContext();
+
+  const isIOS = Platform.OS === "ios";
+
+  const onEmailPuzzleButtonPress = () =>
+    onLinkPress({
+      url: getEmailPuzzlesUrl(publishedTime),
+      isExternal: false,
+    });
+
+  const onScrollBeginDrag = () => {
+    Animated.timing(emailPuzzlesButtonWidth, {
+      toValue: 0,
+      duration: 200,
+      useNativeDriver: false,
+    }).start();
+  };
 
   const onViewableItemsChanged = useCallback((info) => {
     if (!onViewed || !info.changed || !info.changed.length) return [];
@@ -105,34 +129,46 @@ const Section = ({
   if (slices) receiveChildList(data);
 
   return (
-    <FlatList
-      contentContainerStyle={
-        isTablet && isPuzzle && styles.additionalContainerPadding
-      }
-      removeClippedSubviews
-      data={data}
-      initialNumToRender={isTablet ? 5 : 2}
-      ItemSeparatorComponent={(leadingItem) =>
-        renderItemSeperator(isPuzzle)(leadingItem, editionBreakpoint)
-      }
-      keyExtractor={(item) => item.elementId}
-      ListHeaderComponent={getHeaderComponent(isPuzzle, isMagazine)}
-      nestedScrollEnabled
-      onViewableItemsChanged={onViewed ? onViewableItemsChanged : null}
-      renderItem={renderItem(isPuzzle)}
-      windowSize={3}
-    />
+    <>
+      <FlatList
+        contentContainerStyle={
+          isTablet && isPuzzle && styles.additionalContainerPadding
+        }
+        removeClippedSubviews
+        data={data}
+        initialNumToRender={isTablet ? 5 : 2}
+        ItemSeparatorComponent={(leadingItem) =>
+          renderItemSeperator(isPuzzle)(leadingItem, editionBreakpoint)
+        }
+        keyExtractor={(item) => item.elementId}
+        ListHeaderComponent={getHeaderComponent(isPuzzle, isMagazine)}
+        nestedScrollEnabled
+        onViewableItemsChanged={onViewed ? onViewableItemsChanged : null}
+        {...(isPuzzle && { onScrollBeginDrag })}
+        renderItem={renderItem(isPuzzle)}
+        windowSize={3}
+      />
+      {isPuzzle && isIOS ? (
+        <FloatingActionButton
+          animatedWidth={emailPuzzlesButtonWidth}
+          extendedWidth={emailPuzzlesButtonExtendedWidth}
+          text="Email me puzzles"
+          icon={<IconEmail width={22} height={23} />}
+          onPress={onEmailPuzzleButtonPress}
+        />
+      ) : null}
+    </>
   );
 };
 
 Section.displayName = "Section";
-
 Section.propTypes = {
   onArticlePress: PropTypes.func,
   onLinkPress: PropTypes.func,
   onPuzzleBarPress: PropTypes.func,
   onPuzzlePress: PropTypes.func,
   onViewed: PropTypes.func,
+  publishedTime: PropTypes.string.isRequired,
   receiveChildList: PropTypes.func,
   section: PropTypes.shape({}).isRequired,
 };

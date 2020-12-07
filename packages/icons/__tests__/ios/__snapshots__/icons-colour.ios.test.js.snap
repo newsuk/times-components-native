@@ -1,18 +1,59 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`1. iconemail renders with different colours 1`] = `
-<ARTShape
-  fill={
-    Array [
-      0,
-      0.9803921568627451,
-      0.792156862745098,
-      0.8705882352941177,
-      1,
-    ]
-  }
-  stroke="#c0ffee"
-/>
+<RNSVGSvgView>
+  <RNSVGGroup
+    fill={
+      Array [
+        0,
+        4278190080,
+      ]
+    }
+    stroke={null}
+  >
+    <RNSVGGroup
+      fill={null}
+      stroke={null}
+    >
+      <RNSVGPath
+        fill={
+          Array [
+            0,
+            4290295992,
+          ]
+        }
+        stroke={null}
+      />
+      <RNSVGPath
+        fill={
+          Array [
+            0,
+            4294967295,
+          ]
+        }
+        stroke={null}
+      />
+      <RNSVGPath
+        fill={
+          Array [
+            0,
+            4291611852,
+          ]
+        }
+        stroke={null}
+      />
+      <RNSVGPath
+        fill={
+          Array [
+            0,
+            4290953922,
+          ]
+        }
+        stroke={null}
+      />
+    </RNSVGGroup>
+  </RNSVGGroup>
+</RNSVGSvgView>
 `;
 
 exports[`2. iconfacebook renders with different colours 1`] = `
