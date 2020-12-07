@@ -8,7 +8,7 @@ exports[`1. article in depth - tablet 1`] = `
         "alignItems": "center",
         "alignSelf": "center",
         "backgroundColor": "rgba(60, 129, 190, 1)",
-        "maxWidth": 1194,
+        "maxWidth": 1366,
         "paddingBottom": 40,
         "paddingHorizontal": 20,
         "paddingTop": 45,
@@ -69,7 +69,7 @@ exports[`1. article in depth - tablet 1`] = `
       Object {
         "alignSelf": "center",
         "marginBottom": 0,
-        "maxWidth": 1194,
+        "maxWidth": 1366,
         "width": "100%",
       }
     }
