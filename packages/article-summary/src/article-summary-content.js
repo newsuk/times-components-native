@@ -3,6 +3,7 @@ import { Text } from "react-native";
 import PropTypes from "prop-types";
 import { propTypes as treePropType } from "@times-components-native/markup-forest";
 import { renderAst as defaultRenderAst } from "./article-summary";
+import fixContent from "./fixContent";
 import styles from "./styles";
 
 const ArticleSummaryContent = ({
@@ -29,7 +30,7 @@ const ArticleSummaryContent = ({
       style={[styles.text, style]}
       {...numberOfLinesProp}
     >
-      {renderAst(ast)}
+      {renderAst(fixContent(ast))}
     </Text>
   ) : null;
 };

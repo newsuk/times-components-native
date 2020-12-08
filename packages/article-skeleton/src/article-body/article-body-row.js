@@ -23,6 +23,7 @@ import styleFactory from "../styles/article-body";
 import ArticleLink from "./article-link";
 import InlineNewsletterPuff from "./inline-newsletter-puff";
 import { useResponsiveContext } from "@times-components-native/responsive";
+import { getAttributes } from "../body-utils";
 
 export default ({
   data,
@@ -68,13 +69,15 @@ export default ({
 
   return {
     text(key, attributes) {
+      const fixedAttributes = getAttributes(attributes);
+
       const attr = {
         tag: "FONT",
         settings: fontConfig.body,
       };
       return new AttributedString(
-        attributes.value,
-        attributes.value.split("").map(() => [attr]),
+        fixedAttributes.value,
+        fixedAttributes.value.split("").map(() => [attr]),
       );
     },
     inline(key, attributes, renderedChildren) {

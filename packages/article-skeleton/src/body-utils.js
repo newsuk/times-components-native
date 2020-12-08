@@ -2,6 +2,15 @@
 import memoize from "memoize-one";
 import { FontStorage } from "@times-components-native/typeset";
 
+export const getAttributes = (attributes) => {
+  if (attributes?.value?.includes("▶")) {
+    attributes.value = attributes.value.replace(/▶/g, "▸");
+    return attributes;
+  }
+
+  return attributes;
+};
+
 export const setupInlineContent = (
   skeletonProps,
   unprocessedContent,
@@ -57,13 +66,17 @@ export const setupInlineContent = (
 
   // Stash the rest of the content to append after
   const afterInlineContent = unprocessedContent.slice(inlineContentEndIndex);
+  const modifiedInlineItemAttributes = getAttributes(inlineItem.attributes);
+  const itemAttributes = modifiedInlineItemAttributes?.attributes
+    ? modifiedInlineItemAttributes.attributes
+    : inlineItem.attributes;
 
   // Add the item and content to inline
   processedContent.push({
     ...inlineItem,
     name: "inlineContent",
     attributes: {
-      ...inlineItem.attributes,
+      ...itemAttributes,
       originalName: inlineItem.name,
       inlineContent,
       skeletonProps,

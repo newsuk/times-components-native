@@ -6,6 +6,7 @@ export const render = (renderers) => {
     const renderedChildren = children.map((child, index) =>
       run(child, `${key}.${index}`, index),
     );
+
     const result = renderer.call(
       renderers,
       key,
