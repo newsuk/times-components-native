@@ -1,5 +1,6 @@
 /* eslint-disable no-param-reassign */
 import memoizeOne from "memoize-one";
+import format from "date-fns/format";
 import { editionBreakpoints } from "@times-components-native/styleguide";
 import { pipe } from "@times-components-native/utils/src/pipe";
 
@@ -153,7 +154,16 @@ const isSupplementSection = (sectionTitle) => {
   return sectionTitle && knownSupplementSections.includes(sectionTitle);
 };
 
+const getEmailPuzzlesUrl = (publishedTime) =>
+  publishedTime
+    ? `https://times.formstack.com/forms/puzzles_${format(
+        publishedTime,
+        "DD_MM_YYYY",
+      )}`
+    : ``;
+
 export {
+  getEmailPuzzlesUrl,
   prepareSlicesForRender,
   consecutiveItemsFlagger,
   buildSliceData,
