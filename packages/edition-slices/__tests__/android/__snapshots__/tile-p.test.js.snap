@@ -32,7 +32,7 @@ exports[`tile p without breakpoint 1`] = `
         "flexDirection": "row",
         "fontFamily": "GillSansMTStd-Medium",
         "fontSize": 13,
-        "lineHeight": 19,
+        "lineHeight": 13,
       }
     }
   >
