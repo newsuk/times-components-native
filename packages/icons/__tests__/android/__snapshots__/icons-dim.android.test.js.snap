@@ -2,30 +2,17 @@
 
 exports[`1. iconemail sets a width when height is set 1`] = `
 <RNSVGSvgView
-  align="xMidYMid"
-  aria-label="icon-email"
   bbHeight={50}
-  bbWidth={68.75}
   focusable={false}
   height={50}
-  meetOrSlice={0}
-  minX={0}
-  minY={0}
-  role="img"
   style={
     Object {
       "backgroundColor": "transparent",
       "borderWidth": 0,
-      "flex": 0,
-      "height": 50,
       "opacity": 1,
-      "width": 68,
     }
   }
-  title="Email Icon"
-  vbHeight={16}
-  vbWidth={22}
-  width={68.75}
+  title="Email icon"
 />
 `;
 

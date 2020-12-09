@@ -1,28 +1,65 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`1. iconemail renders 1`] = `
-<ARTSurfaceView
+<RNSVGSvgView
+  bbWidth={20}
+  focusable={false}
   style={
     Object {
-      "height": 14.545454545454545,
-      "width": 20,
+      "backgroundColor": "transparent",
+      "borderWidth": 0,
+      "opacity": 1,
     }
   }
+  title="IconEmail"
+  width={20}
 >
-  <ARTGroup
-    transform={
+  <RNSVGGroup
+    fill={
       Array [
-        0.9090909090909091,
+        0,
+        4278190080,
+      ]
+    }
+    fillOpacity={1}
+    fillRule={1}
+    font={Object {}}
+    matrix={
+      Array [
+        1,
         0,
         0,
-        0.9090909090909091,
+        1,
         0,
         0,
       ]
     }
+    originX={0}
+    originY={0}
+    propList={Array []}
+    rotation={0}
+    scaleX={1}
+    scaleY={1}
+    skewX={0}
+    skewY={0}
+    stroke={null}
+    strokeDasharray={null}
+    strokeDashoffset={null}
+    strokeLinecap={0}
+    strokeLinejoin={0}
+    strokeMiterlimit={4}
+    strokeOpacity={1}
+    strokeWidth={1}
+    vectorEffect={0}
+    x={0}
+    y={0}
   >
-    <ARTGroup
-      transform={
+    <RNSVGGroup
+      fill={null}
+      fillOpacity={1}
+      fillRule={0}
+      font={Object {}}
+      matrix={
         Array [
           1,
           0,
@@ -32,24 +69,42 @@ exports[`1. iconemail renders 1`] = `
           0,
         ]
       }
+      originX={0}
+      originY={0}
+      propList={
+        Array [
+          "fill",
+          "fillRule",
+        ]
+      }
+      rotation={0}
+      scaleX={1}
+      scaleY={1}
+      skewX={0}
+      skewY={0}
+      stroke={null}
+      strokeDasharray={null}
+      strokeDashoffset={null}
+      strokeLinecap={0}
+      strokeLinejoin={0}
+      strokeMiterlimit={4}
+      strokeOpacity={1}
+      strokeWidth={1}
+      vectorEffect={0}
+      x={0}
+      y={0}
     >
-      <ARTShape
-        d="4c3e2447d8a07529d4601a20e2be1f86"
+      <RNSVGPath
+        d="2dca68e6b455fb04a2975586f95f2052"
         fill={
           Array [
             0,
-            0.11372549019607843,
-            0.11372549019607843,
-            0.10588235294117647,
-            1,
+            4290295992,
           ]
         }
-        stroke={null}
-        strokeCap={1}
-        strokeDash={null}
-        strokeJoin={1}
-        strokeWidth={null}
-        transform={
+        fillOpacity={1}
+        fillRule={1}
+        matrix={
           Array [
             1,
             0,
@@ -59,10 +114,165 @@ exports[`1. iconemail renders 1`] = `
             0,
           ]
         }
+        originX={0}
+        originY={0}
+        propList={
+          Array [
+            "fill",
+          ]
+        }
+        rotation={0}
+        scaleX={1}
+        scaleY={1}
+        skewX={0}
+        skewY={0}
+        stroke={null}
+        strokeDasharray={null}
+        strokeDashoffset={null}
+        strokeLinecap={0}
+        strokeLinejoin={0}
+        strokeMiterlimit={4}
+        strokeOpacity={1}
+        strokeWidth={1}
+        vectorEffect={0}
+        x={0}
+        y={0}
       />
-    </ARTGroup>
-  </ARTGroup>
-</ARTSurfaceView>
+      <RNSVGPath
+        d="d08f2857f91d1cb7ade3298227eeb176"
+        fill={
+          Array [
+            0,
+            4294967295,
+          ]
+        }
+        fillOpacity={1}
+        fillRule={1}
+        matrix={
+          Array [
+            1,
+            0,
+            0,
+            1,
+            0,
+            0,
+          ]
+        }
+        originX={0}
+        originY={0}
+        propList={
+          Array [
+            "fill",
+          ]
+        }
+        rotation={0}
+        scaleX={1}
+        scaleY={1}
+        skewX={0}
+        skewY={0}
+        stroke={null}
+        strokeDasharray={null}
+        strokeDashoffset={null}
+        strokeLinecap={0}
+        strokeLinejoin={0}
+        strokeMiterlimit={4}
+        strokeOpacity={1}
+        strokeWidth={1}
+        vectorEffect={0}
+        x={0}
+        y={0}
+      />
+      <RNSVGPath
+        d="59952cd14b0c0c6204892147f26f685a"
+        fill={
+          Array [
+            0,
+            4291611852,
+          ]
+        }
+        fillOpacity={1}
+        fillRule={1}
+        matrix={
+          Array [
+            1,
+            0,
+            0,
+            1,
+            0,
+            0,
+          ]
+        }
+        originX={0}
+        originY={0}
+        propList={
+          Array [
+            "fill",
+          ]
+        }
+        rotation={0}
+        scaleX={1}
+        scaleY={1}
+        skewX={0}
+        skewY={0}
+        stroke={null}
+        strokeDasharray={null}
+        strokeDashoffset={null}
+        strokeLinecap={0}
+        strokeLinejoin={0}
+        strokeMiterlimit={4}
+        strokeOpacity={1}
+        strokeWidth={1}
+        vectorEffect={0}
+        x={0}
+        y={0}
+      />
+      <RNSVGPath
+        d="27656d0344be367be22064a8124ce9dc"
+        fill={
+          Array [
+            0,
+            4290953922,
+          ]
+        }
+        fillOpacity={1}
+        fillRule={1}
+        matrix={
+          Array [
+            1,
+            0,
+            0,
+            1,
+            0,
+            0,
+          ]
+        }
+        originX={0}
+        originY={0}
+        propList={
+          Array [
+            "fill",
+          ]
+        }
+        rotation={0}
+        scaleX={1}
+        scaleY={1}
+        skewX={0}
+        skewY={0}
+        stroke={null}
+        strokeDasharray={null}
+        strokeDashoffset={null}
+        strokeLinecap={0}
+        strokeLinejoin={0}
+        strokeMiterlimit={4}
+        strokeOpacity={1}
+        strokeWidth={1}
+        vectorEffect={0}
+        x={0}
+        y={0}
+      />
+    </RNSVGGroup>
+  </RNSVGGroup>
+</RNSVGSvgView>
 `;
 
 exports[`2. iconfacebook renders 1`] = `

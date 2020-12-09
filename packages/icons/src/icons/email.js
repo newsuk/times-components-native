@@ -1,42 +1,18 @@
 import React from "react";
-import { colours } from "@times-components-native/styleguide";
-import Svg, { G, Path } from "@times-components-native/svgs";
-import { clean } from "@times-components-native/utils";
-import propTypes from "./prop-types";
+import Svg, { G, Path } from "react-native-svg";
 
-const viewBox = "0 0 22 16";
-
-const ratio = 22 / 16;
-const IconEmail = ({
-  fillColour,
-  height,
-  strokeColour,
-  title = "Email Icon",
-  width,
-}) => (
-  <Svg
-    aria-label="icon-email"
-    role="img"
-    viewBox={viewBox}
-    {...clean({
-      height,
-      title,
-      width: width || height * ratio,
-    })}
-  >
-    <G
-      fillRule="nonzero"
-      {...clean({ fill: fillColour, stroke: strokeColour })}
-    >
-      <Path d="M22,0 L22,16 L0,16 L0,0 L22,0 Z M13.5135,8 L20.2711667,2.23985068 L20.0346667,1.91880541 L11,9.20018665 L2.04233333,2.00093327 L1.80583333,2.32197853 L8.56533333,8.08026132 L1.80766667,13.8404106 L2.04233333,14.1595894 L9.0365,8.47970135 L11,10.1595894 L13.0423333,8.39944004 L20.0346667,14.079328 L20.2711667,13.7582828 L13.5135,8 Z" />
+const IconEmail = ({ height, title = "Email icon", width }) => (
+  <Svg width={width} height={height} title={title}>
+    <G fill="none" fillRule="evenodd">
+      <Path
+        fill="#B8B8B8"
+        d="M0 7.006L10.463.342a.998.998 0 011.074 0L22 7.006V18H0V7.006z"
+      />
+      <Path fill="#FFF" d="M4 7h14v10H4z" />
+      <Path fill="#CCC" d="M22 22.984L0 23V9z" />
+      <Path fill="#C2C2C2" d="M0 22.984L22 23V9z" />
     </G>
   </Svg>
 );
-
-IconEmail.propTypes = propTypes;
-
-IconEmail.defaultProps = {
-  fillColour: colours.functional.brandColour,
-};
 
 export default IconEmail;

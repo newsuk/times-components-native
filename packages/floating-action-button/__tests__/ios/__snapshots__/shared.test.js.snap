@@ -1,0 +1,125 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`FloatingActionButton renders correctly with icon 1`] = `
+<View
+  style={
+    Object {
+      "backgroundColor": "#FFFFFF",
+      "borderRadius": 27,
+      "bottom": 25,
+      "flexDirection": "row",
+      "height": 54,
+      "position": "absolute",
+      "right": 25,
+      "shadowColor": "#000000",
+      "shadowOffset": Object {
+        "height": 6,
+        "width": 2,
+      },
+      "shadowOpacity": 0.46,
+      "shadowRadius": 6,
+      "zIndex": 9999,
+    }
+  }
+>
+  <View
+    style={
+      Object {
+        "width": 100,
+      }
+    }
+  >
+    <View
+      style={
+        Object {
+          "flexDirection": "row",
+          "justifyContent": "flex-start",
+          "opacity": 1,
+          "overflow": "hidden",
+        }
+      }
+    >
+      <View
+        style={
+          Object {
+            "paddingLeft": 16,
+            "paddingTop": 15,
+          }
+        }
+      >
+        <IconEmail />
+      </View>
+      <Text
+        style={
+          Object {
+            "color": "#696969",
+            "fontFamily": "GillSansMTStd-Medium",
+            "fontSize": 15,
+            "marginLeft": 15,
+            "paddingTop": 22,
+          }
+        }
+      >
+        foo
+      </Text>
+    </View>
+  </View>
+</View>
+`;
+
+exports[`FloatingActionButton renders correctly without icon 1`] = `
+<View
+  style={
+    Object {
+      "backgroundColor": "#FFFFFF",
+      "borderRadius": 27,
+      "bottom": 25,
+      "flexDirection": "row",
+      "height": 54,
+      "position": "absolute",
+      "right": 25,
+      "shadowColor": "#000000",
+      "shadowOffset": Object {
+        "height": 6,
+        "width": 2,
+      },
+      "shadowOpacity": 0.46,
+      "shadowRadius": 6,
+      "zIndex": 9999,
+    }
+  }
+>
+  <View
+    style={
+      Object {
+        "width": 100,
+      }
+    }
+  >
+    <View
+      style={
+        Object {
+          "flexDirection": "row",
+          "justifyContent": "flex-start",
+          "opacity": 1,
+          "overflow": "hidden",
+        }
+      }
+    >
+      <Text
+        style={
+          Object {
+            "color": "#696969",
+            "fontFamily": "GillSansMTStd-Medium",
+            "fontSize": 15,
+            "marginLeft": 15,
+            "paddingTop": 22,
+          }
+        }
+      >
+        foo
+      </Text>
+    </View>
+  </View>
+</View>
+`;
