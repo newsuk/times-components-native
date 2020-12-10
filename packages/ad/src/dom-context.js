@@ -103,7 +103,9 @@ class DOMContext extends PureComponent {
 
   outViewport = () => {
     this.isVisible = false;
-    this.webView.injectJavaScript(`
+
+    if (this.webView) {
+      this.webView.injectJavaScript(`
         if (typeof unrulyViewportStatus === "function") {
           unrulyViewportStatus(${JSON.stringify({
             ...this.deviceInfo,
@@ -111,6 +113,7 @@ class DOMContext extends PureComponent {
           })});
         };
       `);
+    }
   };
 
   loadAd = () => {
@@ -121,7 +124,9 @@ class DOMContext extends PureComponent {
 
   inViewport = () => {
     this.isVisible = true;
-    this.webView.injectJavaScript(`
+
+    if (this.webView) {
+      this.webView.injectJavaScript(`
           if (typeof unrulyViewportStatus === "function") {
             unrulyViewportStatus(${JSON.stringify({
               ...this.deviceInfo,
@@ -129,6 +134,7 @@ class DOMContext extends PureComponent {
             })})
           };
         `);
+    }
   };
 
   render() {
