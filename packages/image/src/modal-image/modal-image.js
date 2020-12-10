@@ -54,7 +54,16 @@ class ModalImage extends Component {
   }
 
   render() {
-    const { highResSize, index, onImagePress, images = [], uri } = this.props;
+    const {
+      highResSize,
+      index,
+      onImagePress,
+      images = [],
+      uri,
+      isAuthorImage,
+      rounded,
+    } = this.props;
+
     if (onImagePress) {
       return (
         <Button onPress={() => onImagePress(index)}>
@@ -115,6 +124,11 @@ class ModalImage extends Component {
                             {...this.props}
                             uri={onlineUrl.toString()}
                             fill
+                            style={
+                              isAuthorImage
+                                ? styles.modalAuthorImage
+                                : this.props.styles
+                            }
                           />
                         </View>
                       );
