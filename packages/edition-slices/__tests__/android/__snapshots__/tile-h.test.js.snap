@@ -86,7 +86,7 @@ exports[`tile h without breakpoint 1`] = `
             "flexDirection": "row",
             "fontFamily": "GillSansMTStd-Medium",
             "fontSize": 13,
-            "lineHeight": 19,
+            "lineHeight": 13,
           }
         }
       >
@@ -97,7 +97,7 @@ exports[`tile h without breakpoint 1`] = `
               "flexDirection": "row",
               "fontFamily": "GillSansMTStd-Medium",
               "fontSize": 13,
-              "lineHeight": 19,
+              "lineHeight": 13,
             }
           }
         >
@@ -110,7 +110,7 @@ exports[`tile h without breakpoint 1`] = `
               "flexDirection": "row",
               "fontFamily": "GillSansMTStd-Medium",
               "fontSize": 13,
-              "lineHeight": 19,
+              "lineHeight": 13,
             }
           }
         >
