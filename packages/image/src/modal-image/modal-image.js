@@ -60,8 +60,7 @@ class ModalImage extends Component {
       onImagePress,
       images = [],
       uri,
-      isAuthorImage,
-      rounded,
+      isSmallImage,
     } = this.props;
 
     if (onImagePress) {
@@ -125,8 +124,8 @@ class ModalImage extends Component {
                             uri={onlineUrl.toString()}
                             fill
                             style={
-                              isAuthorImage
-                                ? styles.modalAuthorImage
+                              isSmallImage
+                                ? styles.modalSmallImage
                                 : this.props.styles
                             }
                           />

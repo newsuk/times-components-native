@@ -37,7 +37,7 @@ const ArticleHeader = ({
           uri={authorImage}
           onImagePress={onImagePress ? () => onImagePress(0) : undefined}
           rounded
-          isAuthorImage
+          isSmallImage
         />
         <Label isVideo={hasVideo} label={label} />
         <Text

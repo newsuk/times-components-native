@@ -6,7 +6,7 @@ export const modalPropTypes = {
   caption: PropTypes.node,
   onImagePress: PropTypes.func,
   show: PropTypes.bool,
-  isAuthorImage: PropTypes.bool,
+  isSmallImage: PropTypes.bool,
 };
 
 export const modalDefaultProps = {
@@ -14,5 +14,5 @@ export const modalDefaultProps = {
   caption: null,
   onImagePress: null,
   show: false,
-  isAuthorImage: false,
+  isSmallImage: false,
 };
