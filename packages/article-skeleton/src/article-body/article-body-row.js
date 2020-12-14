@@ -23,6 +23,7 @@ import styleFactory from "../styles/article-body";
 import ArticleLink from "./article-link";
 import InlineNewsletterPuff from "./inline-newsletter-puff";
 import { useResponsiveContext } from "@times-components-native/responsive";
+import { toSubscript, toSuperscript } from "@times-components-native/utils";
 
 export default ({
   data,
@@ -149,20 +150,12 @@ export default ({
     },
     subscript(key, attributes, children) {
       const childStr = AttributedString.join(children);
-      const attr = {
-        tag: "FONT",
-        settings: fontConfig.body,
-      };
-      childStr.addAttribute(0, childStr.length, attr);
+      childStr.string = toSubscript(childStr.string);
       return childStr;
     },
     superscript(key, attributes, children) {
       const childStr = AttributedString.join(children);
-      const attr = {
-        tag: "FONT",
-        settings: fontConfig.body,
-      };
-      childStr.addAttribute(0, childStr.length, attr);
+      childStr.string = toSuperscript(childStr.string);
       return childStr;
     },
     paragraph(key, attributes, children, index, tree) {
