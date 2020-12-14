@@ -34,7 +34,7 @@ exports[`tile ah huge 1`] = `
         "flexDirection": "row",
         "fontFamily": "GillSansMTStd-Medium",
         "fontSize": 13,
-        "lineHeight": 19,
+        "lineHeight": 13,
       }
     }
   >
@@ -164,7 +164,7 @@ exports[`tile ah medium 1`] = `
         "flexDirection": "row",
         "fontFamily": "GillSansMTStd-Medium",
         "fontSize": 13,
-        "lineHeight": 19,
+        "lineHeight": 13,
       }
     }
   >
@@ -294,7 +294,7 @@ exports[`tile ah wide 1`] = `
         "flexDirection": "row",
         "fontFamily": "GillSansMTStd-Medium",
         "fontSize": 13,
-        "lineHeight": 19,
+        "lineHeight": 13,
       }
     }
   >
@@ -424,7 +424,7 @@ exports[`tile ah without breakpoint should be like medium 1`] = `
         "flexDirection": "row",
         "fontFamily": "GillSansMTStd-Medium",
         "fontSize": 13,
-        "lineHeight": 19,
+        "lineHeight": 13,
       }
     }
   >
