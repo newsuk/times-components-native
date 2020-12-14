@@ -54,7 +54,15 @@ class ModalImage extends Component {
   }
 
   render() {
-    const { highResSize, index, onImagePress, images = [], uri } = this.props;
+    const {
+      highResSize,
+      index,
+      onImagePress,
+      images = [],
+      uri,
+      isSmallImage,
+    } = this.props;
+
     if (onImagePress) {
       return (
         <Button onPress={() => onImagePress(index)}>
@@ -115,6 +123,11 @@ class ModalImage extends Component {
                             {...this.props}
                             uri={onlineUrl.toString()}
                             fill
+                            style={
+                              isSmallImage
+                                ? styles.modalSmallImage
+                                : this.props.styles
+                            }
                           />
                         </View>
                       );

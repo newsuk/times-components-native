@@ -95,6 +95,11 @@ const styles = {
     position: "absolute",
     overflow: "hidden",
   },
+  modalSmallImage: {
+    backgroundColor: colours.functional.modalBackground,
+    width: "100%",
+    height: "100%",
+  },
 };
 
 export const captionStyles = {
