@@ -1,5 +1,6 @@
 import { StyleSheet } from "react-native";
 import sharedStyles from "./shared";
+import { fontSizes } from "@times-components-native/styleguide";
 
 const styles = StyleSheet.create({
   ...sharedStyles,
@@ -9,7 +10,7 @@ const styles = StyleSheet.create({
   },
   nonLinkText: {
     ...sharedStyles.nonLinkText,
-    lineHeight: 19,
+    lineHeight: fontSizes.cardMeta,
   },
   opinion: {
     ...sharedStyles.opinion,
