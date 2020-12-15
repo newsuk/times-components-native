@@ -17,6 +17,7 @@ const ArticleError = ({ buttonText, refetch, title, message }) => (
           resizeMode="contain"
           source={errorImage}
           style={[styles.errorImageContainer, { height: 270, width: 240 }]}
+          defaultSource={require("../../image/assets/t.png")}
         />
 
         <Text style={styles.errorHeading}>{title}</Text>
