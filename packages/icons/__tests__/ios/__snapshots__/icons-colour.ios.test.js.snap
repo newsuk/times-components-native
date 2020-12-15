@@ -2,54 +2,21 @@
 
 exports[`1. iconemail renders with different colours 1`] = `
 <RNSVGSvgView>
-  <RNSVGGroup
-    fill={
-      Array [
-        0,
-        4278190080,
-      ]
-    }
-    stroke={null}
-  >
+  <RNSVGGroup>
     <RNSVGGroup
       fill={null}
-      stroke={null}
     >
       <RNSVGPath
-        fill={
-          Array [
-            0,
-            4290295992,
-          ]
-        }
-        stroke={null}
+        fill={4290295992}
       />
       <RNSVGPath
-        fill={
-          Array [
-            0,
-            4294967295,
-          ]
-        }
-        stroke={null}
+        fill={4294967295}
       />
       <RNSVGPath
-        fill={
-          Array [
-            0,
-            4291611852,
-          ]
-        }
-        stroke={null}
+        fill={4291611852}
       />
       <RNSVGPath
-        fill={
-          Array [
-            0,
-            4290953922,
-          ]
-        }
-        stroke={null}
+        fill={4290953922}
       />
     </RNSVGGroup>
   </RNSVGGroup>

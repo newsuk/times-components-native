@@ -21,6 +21,7 @@ const emptyArticle = {
   expirableFlags: [],
   label: null,
   standfirst: null,
+  isSmallImage: false,
 };
 
 export const withTabletContext = (WrappedComponent) => (

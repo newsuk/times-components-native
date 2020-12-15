@@ -9,7 +9,6 @@ exports[`1. iconemail sets a width when height is set 1`] = `
     Object {
       "backgroundColor": "transparent",
       "borderWidth": 0,
-      "opacity": 1,
     }
   }
   title="Email icon"
@@ -34,7 +33,6 @@ exports[`2. iconfacebook sets a width when height is set 1`] = `
       "borderWidth": 0,
       "flex": 0,
       "height": 50,
-      "opacity": 1,
       "width": 25,
     }
   }
@@ -62,7 +60,6 @@ exports[`3. iconforwardarrow sets a width when height is set 1`] = `
       "borderWidth": 0,
       "flex": 0,
       "height": 50,
-      "opacity": 1,
       "width": 29,
     }
   }
@@ -90,7 +87,6 @@ exports[`4. iconstar sets a width when height is set 1`] = `
       "borderWidth": 0,
       "flex": 0,
       "height": 50,
-      "opacity": 1,
       "width": 50,
     }
   }
@@ -119,7 +115,6 @@ exports[`5. iconcopylink sets a width when height is set 1`] = `
       "borderWidth": 0,
       "flex": 0,
       "height": 50,
-      "opacity": 1,
       "width": 15,
     }
   }
@@ -148,7 +143,6 @@ exports[`6. iconsavebookmark sets a width when height is set 1`] = `
       "borderWidth": 0,
       "flex": 0,
       "height": 50,
-      "opacity": 1,
       "width": 12,
     }
   }
@@ -177,7 +171,6 @@ exports[`7. icontwitter sets a width when height is set 1`] = `
       "borderWidth": 0,
       "flex": 0,
       "height": 50,
-      "opacity": 1,
       "width": 62,
     }
   }
@@ -206,7 +199,6 @@ exports[`8. iconvideo sets a width when height is set 1`] = `
       "borderWidth": 0,
       "flex": 0,
       "height": 50,
-      "opacity": 1,
       "width": 85,
     }
   }
@@ -235,7 +227,6 @@ exports[`9. iconvideo360player sets a width when height is set 1`] = `
       "borderWidth": 0,
       "flex": 0,
       "height": 50,
-      "opacity": 1,
       "width": 54,
     }
   }
@@ -264,7 +255,6 @@ exports[`10. thestlogo sets a width when height is set 1`] = `
       "borderWidth": 0,
       "flex": 0,
       "height": 50,
-      "opacity": 1,
       "width": 50,
     }
   }
@@ -293,7 +283,6 @@ exports[`11. thetimeslogo sets a width when height is set 1`] = `
       "borderWidth": 0,
       "flex": 0,
       "height": 50,
-      "opacity": 1,
       "width": 50,
     }
   }
@@ -322,7 +311,6 @@ exports[`12. closeicon sets a width when height is set 1`] = `
       "borderWidth": 0,
       "flex": 0,
       "height": 50,
-      "opacity": 1,
       "width": 28,
     }
   }
