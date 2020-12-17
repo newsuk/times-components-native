@@ -1,5 +1,5 @@
 import PropTypes from "prop-types";
-import {PathProps} from "react-native-svg";
+import { PathProps } from "react-native-svg";
 
 // all fields are optional and don't have default props because:
 // 1) if width and height is not set Svg scales to fill the parent container
