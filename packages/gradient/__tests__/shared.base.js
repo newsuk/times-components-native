@@ -1,6 +1,6 @@
 import React from "react";
 import { Text } from "react-native";
-import { Surface } from "@react-native-community/art";
+import { Svg } from "react-native-svg";
 
 import { iterator } from "@times-components-native/test-utils";
 import Gradient, { OverlayGradient } from "../src/gradient";
@@ -68,9 +68,9 @@ export default (renderMethod) => {
             width: 100,
           }),
         );
-        const surface = testInstance.findByType(Surface);
+        const svg = testInstance.findByType(Svg);
 
-        expect(surface.props).toEqual(
+        expect(svg.props).toEqual(
           expect.objectContaining({ height: 100, width: 100 }),
         );
       },
@@ -87,9 +87,9 @@ export default (renderMethod) => {
           />,
         );
         const testInstance = testRenderer.root;
-        const surface = testInstance.findByType(Surface);
+        const svg = testInstance.findByType(Svg);
 
-        expect(surface.props).toEqual(
+        expect(svg.props).toEqual(
           expect.objectContaining({ height: 200, width: 300 }),
         );
       },
