@@ -10,21 +10,26 @@ exports[`1. gradient using prop styles 1`] = `
     }
   }
 >
-  <ARTSurfaceView
+  <RNSVGSvgView
     style={
       Object {
+        "backgroundColor": "transparent",
+        "borderWidth": 0,
         "bottom": 0,
-        "height": null,
         "left": 0,
         "position": "absolute",
         "right": 0,
         "top": 0,
-        "width": null,
       }
     }
   >
-    <ARTShape />
-  </ARTSurfaceView>
+    <RNSVGGroup>
+      <RNSVGDefs>
+        <RNSVGLinearGradient />
+      </RNSVGDefs>
+      <RNSVGRect />
+    </RNSVGGroup>
+  </RNSVGSvgView>
 </View>
 `;
 
@@ -38,21 +43,26 @@ exports[`2. gradient using array prop styles 1`] = `
     }
   }
 >
-  <ARTSurfaceView
+  <RNSVGSvgView
     style={
       Object {
+        "backgroundColor": "transparent",
+        "borderWidth": 0,
         "bottom": 0,
-        "height": null,
         "left": 0,
         "position": "absolute",
         "right": 0,
         "top": 0,
-        "width": null,
       }
     }
   >
-    <ARTShape />
-  </ARTSurfaceView>
+    <RNSVGGroup>
+      <RNSVGDefs>
+        <RNSVGLinearGradient />
+      </RNSVGDefs>
+      <RNSVGRect />
+    </RNSVGGroup>
+  </RNSVGSvgView>
 </View>
 `;
 
@@ -67,20 +77,25 @@ exports[`3. gradient using stylesheets 1`] = `
     }
   }
 >
-  <ARTSurfaceView
+  <RNSVGSvgView
     style={
       Object {
+        "backgroundColor": "transparent",
+        "borderWidth": 0,
         "bottom": 0,
-        "height": null,
         "left": 0,
         "position": "absolute",
         "right": 0,
         "top": 0,
-        "width": null,
       }
     }
   >
-    <ARTShape />
-  </ARTSurfaceView>
+    <RNSVGGroup>
+      <RNSVGDefs>
+        <RNSVGLinearGradient />
+      </RNSVGDefs>
+      <RNSVGRect />
+    </RNSVGGroup>
+  </RNSVGSvgView>
 </View>
 `;

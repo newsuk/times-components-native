@@ -41,11 +41,22 @@ exports[`1. video 1`] = `
       }
     >
       <View>
-        <Svg>
-          <Rect />
-          <Rect />
-          <Polygon />
-        </Svg>
+        <RNSVGSvgView
+          style={
+            Object {
+              "backgroundColor": "transparent",
+              "borderWidth": 0,
+              "flex": 0,
+              "height": 70,
+              "width": 70,
+            }
+          }
+        >
+          <RNSVGGroup>
+            <RNSVGRect />
+            <RNSVGPath />
+          </RNSVGGroup>
+        </RNSVGSvgView>
       </View>
     </View>
   </View>
@@ -94,11 +105,22 @@ exports[`2. video without a poster image 1`] = `
       }
     >
       <View>
-        <Svg>
-          <Rect />
-          <Rect />
-          <Polygon />
-        </Svg>
+        <RNSVGSvgView
+          style={
+            Object {
+              "backgroundColor": "transparent",
+              "borderWidth": 0,
+              "flex": 0,
+              "height": 70,
+              "width": 70,
+            }
+          }
+        >
+          <RNSVGGroup>
+            <RNSVGRect />
+            <RNSVGPath />
+          </RNSVGGroup>
+        </RNSVGSvgView>
       </View>
     </View>
   </View>
@@ -146,11 +168,22 @@ exports[`3. 360 video 1`] = `
       }
     >
       <View>
-        <Svg>
-          <Rect />
-          <Rect />
-          <Polygon />
-        </Svg>
+        <RNSVGSvgView
+          style={
+            Object {
+              "backgroundColor": "transparent",
+              "borderWidth": 0,
+              "flex": 0,
+              "height": 70,
+              "width": 70,
+            }
+          }
+        >
+          <RNSVGGroup>
+            <RNSVGRect />
+            <RNSVGPath />
+          </RNSVGGroup>
+        </RNSVGSvgView>
       </View>
     </View>
   </View>

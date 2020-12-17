@@ -2,62 +2,58 @@
 
 exports[`1. gradient 1`] = `
 <View>
-  <ARTSurfaceView>
-    <ARTShape
-      stroke={null}
-      strokeCap={1}
-      strokeDash={null}
-      strokeJoin={1}
-      strokeWidth={1}
-    />
-  </ARTSurfaceView>
+  <RNSVGSvgView>
+    <RNSVGGroup>
+      <RNSVGDefs>
+        <RNSVGLinearGradient />
+      </RNSVGDefs>
+      <RNSVGRect />
+    </RNSVGGroup>
+  </RNSVGSvgView>
 </View>
 `;
 
 exports[`2. gradient with a child 1`] = `
 <View>
-  <ARTSurfaceView>
-    <ARTShape
-      stroke={null}
-      strokeCap={1}
-      strokeDash={null}
-      strokeJoin={1}
-      strokeWidth={1}
-    />
-  </ARTSurfaceView>
-  <Text>
-    Some example text
-  </Text>
+  <RNSVGSvgView>
+    <RNSVGGroup>
+      <RNSVGDefs>
+        <RNSVGLinearGradient />
+      </RNSVGDefs>
+      <RNSVGRect />
+      <Text>
+        Some example text
+      </Text>
+    </RNSVGGroup>
+  </RNSVGSvgView>
 </View>
 `;
 
 exports[`3. overlay gradient 1`] = `
 <View>
-  <ARTSurfaceView>
-    <ARTShape
-      stroke={null}
-      strokeCap={1}
-      strokeDash={null}
-      strokeJoin={1}
-      strokeWidth={1}
-    />
-  </ARTSurfaceView>
+  <RNSVGSvgView>
+    <RNSVGGroup>
+      <RNSVGDefs>
+        <RNSVGLinearGradient />
+      </RNSVGDefs>
+      <RNSVGRect />
+    </RNSVGGroup>
+  </RNSVGSvgView>
 </View>
 `;
 
 exports[`4. overlay gradient with a child 1`] = `
 <View>
-  <ARTSurfaceView>
-    <ARTShape
-      stroke={null}
-      strokeCap={1}
-      strokeDash={null}
-      strokeJoin={1}
-      strokeWidth={1}
-    />
-  </ARTSurfaceView>
-  <Text>
-    Some example text
-  </Text>
+  <RNSVGSvgView>
+    <RNSVGGroup>
+      <RNSVGDefs>
+        <RNSVGLinearGradient />
+      </RNSVGDefs>
+      <RNSVGRect />
+      <Text>
+        Some example text
+      </Text>
+    </RNSVGGroup>
+  </RNSVGSvgView>
 </View>
 `;

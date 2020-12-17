@@ -15,7 +15,6 @@ import defaultVideoProps from "./default-video-props";
 
 jest.mock("@times-components-native/image", () => "Image");
 // eslint-disable-next-line global-require
-jest.mock("@times-components-native/svgs", () => require("./mock-svg"));
 
 export default () => {
   addSerializers(

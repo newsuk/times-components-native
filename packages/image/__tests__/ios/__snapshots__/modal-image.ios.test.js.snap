@@ -44,77 +44,68 @@ exports[`1. modal image 1`] = `
         }
       />
       <View>
-        <ARTSurfaceView>
-          <ARTShape
-            d={
-              Array [
-                2,
-                750,
-                0,
-                2,
-                750,
-                140,
-                2,
-                0,
-                140,
-                2,
-                0,
-                0,
-              ]
-            }
-            fill={
-              Array [
-                1,
-                750,
-                140,
-                749.9999999999999,
-                -3.108624468950438e-14,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0.9019607843137255,
-                1,
-                0.35714285714285715,
-              ]
-            }
-            opacity={1}
-            stroke={null}
-            strokeCap={1}
-            strokeDash={null}
-            strokeJoin={1}
-            strokeWidth={1}
-            transform={
-              Array [
-                1,
-                0,
-                0,
-                1,
-                0,
-                0,
-              ]
-            }
-          />
-        </ARTSurfaceView>
-        <View
-          forceInset={
-            Object {
-              "bottom": "always",
-              "horizontal": "always",
-              "top": "never",
-            }
-          }
-          pointerEvents="box-none"
+        <RNSVGSvgView
+          bbHeight={140}
+          bbWidth={750}
+          focusable={false}
+          height={140}
+          width={750}
         >
-          <View>
-            <Text>
-              Caption
-            </Text>
-          </View>
-        </View>
+          <RNSVGGroup>
+            <RNSVGDefs>
+              <RNSVGLinearGradient
+                gradient={
+                  Array [
+                    0.35714285714285715,
+                    -436207616,
+                    1,
+                    0,
+                  ]
+                }
+                gradientTransform={null}
+                gradientUnits={0}
+                name="gradSVG"
+                x1={1}
+                x2={0.9999999999999999}
+                y1={1}
+                y2={-2.220446049250313e-16}
+              />
+            </RNSVGDefs>
+            <RNSVGRect
+              fill={
+                Array [
+                  1,
+                  "gradSVG",
+                ]
+              }
+              height={140}
+              propList={
+                Array [
+                  "fill",
+                ]
+              }
+              width={750}
+              x={1}
+              y={1}
+            />
+            <View
+              forceInset={
+                Object {
+                  "bottom": "always",
+                  "horizontal": "always",
+                  "top": "never",
+                }
+              }
+              pointerEvents="box-none"
+            >
+              <View>
+                <Text>
+                  Caption
+                </Text>
+              </View>
+            </View>
+          </RNSVGGroup>
+        </RNSVGSvgView>
       </View>
     </View>
   </Modal>
@@ -180,71 +171,62 @@ exports[`2. modal image with no caption 1`] = `
         }
       />
       <View>
-        <ARTSurfaceView>
-          <ARTShape
-            d={
-              Array [
-                2,
-                750,
-                0,
-                2,
-                750,
-                140,
-                2,
-                0,
-                140,
-                2,
-                0,
-                0,
-              ]
-            }
-            fill={
-              Array [
-                1,
-                750,
-                140,
-                749.9999999999999,
-                -3.108624468950438e-14,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0.9019607843137255,
-                1,
-                0.35714285714285715,
-              ]
-            }
-            opacity={1}
-            stroke={null}
-            strokeCap={1}
-            strokeDash={null}
-            strokeJoin={1}
-            strokeWidth={1}
-            transform={
-              Array [
-                1,
-                0,
-                0,
-                1,
-                0,
-                0,
-              ]
-            }
-          />
-        </ARTSurfaceView>
-        <View
-          forceInset={
-            Object {
-              "bottom": "always",
-              "horizontal": "always",
-              "top": "never",
-            }
-          }
-          pointerEvents="box-none"
-        />
+        <RNSVGSvgView
+          bbHeight={140}
+          bbWidth={750}
+          focusable={false}
+          height={140}
+          width={750}
+        >
+          <RNSVGGroup>
+            <RNSVGDefs>
+              <RNSVGLinearGradient
+                gradient={
+                  Array [
+                    0.35714285714285715,
+                    -436207616,
+                    1,
+                    0,
+                  ]
+                }
+                gradientTransform={null}
+                gradientUnits={0}
+                name="gradSVG"
+                x1={1}
+                x2={0.9999999999999999}
+                y1={1}
+                y2={-2.220446049250313e-16}
+              />
+            </RNSVGDefs>
+            <RNSVGRect
+              fill={
+                Array [
+                  1,
+                  "gradSVG",
+                ]
+              }
+              height={140}
+              propList={
+                Array [
+                  "fill",
+                ]
+              }
+              width={750}
+              x={1}
+              y={1}
+            />
+            <View
+              forceInset={
+                Object {
+                  "bottom": "always",
+                  "horizontal": "always",
+                  "top": "never",
+                }
+              }
+              pointerEvents="box-none"
+            />
+          </RNSVGGroup>
+        </RNSVGSvgView>
       </View>
     </View>
   </Modal>
@@ -311,77 +293,68 @@ exports[`3. modal image with custom highressize 1`] = `
         }
       />
       <View>
-        <ARTSurfaceView>
-          <ARTShape
-            d={
-              Array [
-                2,
-                750,
-                0,
-                2,
-                750,
-                140,
-                2,
-                0,
-                140,
-                2,
-                0,
-                0,
-              ]
-            }
-            fill={
-              Array [
-                1,
-                750,
-                140,
-                749.9999999999999,
-                -3.108624468950438e-14,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0.9019607843137255,
-                1,
-                0.35714285714285715,
-              ]
-            }
-            opacity={1}
-            stroke={null}
-            strokeCap={1}
-            strokeDash={null}
-            strokeJoin={1}
-            strokeWidth={1}
-            transform={
-              Array [
-                1,
-                0,
-                0,
-                1,
-                0,
-                0,
-              ]
-            }
-          />
-        </ARTSurfaceView>
-        <View
-          forceInset={
-            Object {
-              "bottom": "always",
-              "horizontal": "always",
-              "top": "never",
-            }
-          }
-          pointerEvents="box-none"
+        <RNSVGSvgView
+          bbHeight={140}
+          bbWidth={750}
+          focusable={false}
+          height={140}
+          width={750}
         >
-          <View>
-            <Text>
-              Caption
-            </Text>
-          </View>
-        </View>
+          <RNSVGGroup>
+            <RNSVGDefs>
+              <RNSVGLinearGradient
+                gradient={
+                  Array [
+                    0.35714285714285715,
+                    -436207616,
+                    1,
+                    0,
+                  ]
+                }
+                gradientTransform={null}
+                gradientUnits={0}
+                name="gradSVG"
+                x1={1}
+                x2={0.9999999999999999}
+                y1={1}
+                y2={-2.220446049250313e-16}
+              />
+            </RNSVGDefs>
+            <RNSVGRect
+              fill={
+                Array [
+                  1,
+                  "gradSVG",
+                ]
+              }
+              height={140}
+              propList={
+                Array [
+                  "fill",
+                ]
+              }
+              width={750}
+              x={1}
+              y={1}
+            />
+            <View
+              forceInset={
+                Object {
+                  "bottom": "always",
+                  "horizontal": "always",
+                  "top": "never",
+                }
+              }
+              pointerEvents="box-none"
+            >
+              <View>
+                <Text>
+                  Caption
+                </Text>
+              </View>
+            </View>
+          </RNSVGGroup>
+        </RNSVGSvgView>
       </View>
     </View>
   </Modal>

@@ -43,96 +43,48 @@ exports[`NewsletterPuffLink renders the link with the text \`Manage preferences 
         }
       }
     >
-      <ARTSurfaceView
+      <RNSVGSvgView
+        align="xMidYMid"
+        aria-label="icon-forward-arrow"
+        bbHeight={12}
+        bbWidth={15}
+        focusable={false}
+        height={12}
+        meetOrSlice={0}
+        minX={42}
+        minY={12}
         style={
           Array [
-            undefined,
             Object {
-              "height": 14,
-              "width": 7,
+              "backgroundColor": "transparent",
+              "borderWidth": 0,
+            },
+            Object {
+              "flex": 0,
+              "height": 12,
+              "width": 15,
             },
           ]
         }
+        vbHeight={120}
+        vbWidth={60}
+        width={15}
       >
-        <ARTGroup
-          opacity={1}
-          transform={
-            Array [
-              0.11666666666666667,
-              0,
-              0,
-              0.11666666666666667,
-              -4.9,
-              -1.4,
-            ]
-          }
-        >
-          <ARTGroup
-            opacity={1}
-            transform={
+        <RNSVGGroup>
+          <RNSVGGroup
+            fill={4278216345}
+            propList={
               Array [
-                1,
-                0,
-                0,
-                1,
-                0,
-                0,
+                "fill",
               ]
             }
           >
-            <ARTShape
-              d={
-                Array [
-                  0,
-                  45.8,
-                  132,
-                  2,
-                  42,
-                  128.2,
-                  2,
-                  74.8,
-                  72,
-                  2,
-                  42,
-                  15.8,
-                  2,
-                  45.8,
-                  12,
-                  2,
-                  102,
-                  72,
-                  1,
-                ]
-              }
-              fill={
-                Array [
-                  0,
-                  0,
-                  0.4,
-                  0.6,
-                  1,
-                ]
-              }
-              opacity={1}
-              stroke={null}
-              strokeCap={1}
-              strokeDash={null}
-              strokeJoin={1}
-              strokeWidth={null}
-              transform={
-                Array [
-                  1,
-                  0,
-                  0,
-                  1,
-                  0,
-                  0,
-                ]
-              }
+            <RNSVGPath
+              d="M45.8,132L42,128.2,74.8,72,42,15.8,45.8,12,102,72Z"
             />
-          </ARTGroup>
-        </ARTGroup>
-      </ARTSurfaceView>
+          </RNSVGGroup>
+        </RNSVGGroup>
+      </RNSVGSvgView>
     </View>
   </View>
 </View>
