@@ -1,7 +1,17 @@
-import React from "react";
+import React, { FC } from "react";
 import Svg, { G, Path } from "react-native-svg";
 
-const IconEmail = ({ height, title = "Email icon", width }) => (
+export interface IconEmailProps {
+  height: number;
+  title?: string;
+  width: number;
+}
+
+const IconEmail: FC<IconEmailProps> = ({
+  height,
+  title = "Email icon",
+  width,
+}) => (
   <Svg width={width} height={height} title={title}>
     <G fill="none" fillRule="evenodd">
       <Path
@@ -14,5 +24,7 @@ const IconEmail = ({ height, title = "Email icon", width }) => (
     </G>
   </Svg>
 );
+
+IconEmail.defaultProps = {};
 
 export default IconEmail;

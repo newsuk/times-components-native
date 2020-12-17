@@ -37,16 +37,11 @@ const styles = StyleSheet.create({
 const renderIcon = (color) => (args) => {
   const name = args[0];
   const Icon = args[1];
-
   return (
     <View key={name} style={styles.icon}>
       <Icon
-        fillColour={color(`Icon ${name} fill`, Icon.defaultProps.fillColour)}
+        fillColour={color(`Icon ${name} fill`, colours.functional.brandColour)}
         height={50}
-        strokeColour={color(
-          `Icon ${name} strike`,
-          Icon.defaultProps.strokeColour,
-        )}
         width={50}
       />
       <Text style={styles.label}>{name}</Text>

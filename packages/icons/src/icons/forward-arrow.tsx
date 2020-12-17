@@ -1,12 +1,22 @@
-import React from "react";
+import React, { FC } from "react";
 import { colours } from "@times-components-native/styleguide";
-import Svg, { G, Path } from "@times-components-native/svgs";
+// import Svg, { G, Path } from "@times-components-native/svgs";
+import { Svg, G, Path } from "react-native-svg";
 import { clean } from "@times-components-native/utils";
-import propTypes from "./prop-types";
+import propTypes, { IconProps } from "./prop-types";
+
+export type ForwardArrowProps = Pick<
+  IconProps,
+  "fillColour" | "width" | "height"
+>;
 
 const ratio = 7 / 12;
 
-const ForwardArrow = ({ fillColour, height, width }) => (
+const ForwardArrow: FC<ForwardArrowProps> = ({
+  fillColour = colours.functional.secondary,
+  height = 15,
+  width = 15,
+}) => (
   <Svg
     aria-label="icon-forward-arrow"
     viewBox="42 12 60 120"

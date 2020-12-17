@@ -1,5 +1,9 @@
 declare module "*.png";
 
+interface Dictionary<T> {
+  [index: string]: T;
+}
+
 declare module "@times-components-native/styleguide" {
   type ColourMap = Record<string, string>;
   type Colours = Record<string, ColourMap>;
@@ -26,6 +30,8 @@ declare module "@times-components-native/utils" {
 
   type calculateContentWidth = (number, string) => number;
 
+  type clean = <T>(obj: Dictionary<T>) => Dictionary<T>;
+  export const clean: clean;
   export const appendToImageURL: appendToImageURL;
   export const getDimensions: getDimensions;
   export const calculateContentWidth: calculateContentWidth;

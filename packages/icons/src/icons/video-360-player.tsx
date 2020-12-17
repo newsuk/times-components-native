@@ -1,21 +1,20 @@
-import React from "react";
+import React, { FC } from "react";
 import { colours } from "@times-components-native/styleguide";
-import Svg, { Path } from "@times-components-native/svgs";
+import { Svg, Path } from "react-native-svg";
 import { clean } from "@times-components-native/utils";
-import propTypes from "./prop-types";
+import { IconProps } from "./prop-types";
 
 const ratio = 108 / 100;
 
-const IconVideo360Player = ({
-  fillColour,
-  height,
+const IconVideo360Player: FC<IconProps> = ({
+  fillColour = colours.functional.action,
+  height = 15,
   strokeColour,
   title = "Video 360 Player Icon",
-  width,
+  width = 15,
 }) => (
   <Svg
     aria-label="icon-video-360-player"
-    role="img"
     viewBox="0 0 108 100"
     {...clean({
       height,
@@ -32,8 +31,6 @@ const IconVideo360Player = ({
     />
   </Svg>
 );
-
-IconVideo360Player.propTypes = propTypes;
 
 IconVideo360Player.defaultProps = {
   fillColour: colours.functional.action,

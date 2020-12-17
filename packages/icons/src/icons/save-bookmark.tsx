@@ -1,20 +1,20 @@
-import React from "react";
+import React, { FC } from "react";
 import { colours } from "@times-components-native/styleguide";
-import Svg, { Path } from "@times-components-native/svgs";
+// import Svg, { Path } from "@times-components-native/svgs";
+import { Svg, Path } from "react-native-svg";
 import { clean } from "@times-components-native/utils";
-import propTypes from "./prop-types";
+import { IconProps } from "./prop-types";
 
-const IconSaveBookmark = ({
+const IconSaveBookmark: FC<IconProps> = ({
   fillColour,
-  height,
+  height = 16,
   opacity,
   strokeColour,
   title = "Save to My Articles",
-  width,
+  width = 12,
 }) => (
   <Svg
     aria-label="icon-save-bookmark"
-    role="img"
     viewBox="0 0 12 16"
     {...clean({
       height,
@@ -33,12 +33,8 @@ const IconSaveBookmark = ({
   </Svg>
 );
 
-IconSaveBookmark.propTypes = propTypes;
-
 IconSaveBookmark.defaultProps = {
   fillColour: colours.functional.secondary,
-  height: 16,
-  width: 12,
 };
 
 export default IconSaveBookmark;

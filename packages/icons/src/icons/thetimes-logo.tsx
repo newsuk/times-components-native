@@ -1,10 +1,10 @@
-import React from "react";
+import React, { FC } from "react";
 import { colours } from "@times-components-native/styleguide";
-import Svg, { Path } from "@times-components-native/svgs";
+import { Svg, Path } from "react-native-svg";
 import { clean } from "@times-components-native/utils";
-import propTypes from "./prop-types";
+import { IconProps } from "./prop-types";
 
-const TheTimesLogo = ({
+const TheTimesLogo: FC<IconProps> = ({
   fillColour,
   height,
   strokeColour,
@@ -13,7 +13,6 @@ const TheTimesLogo = ({
 }) => (
   <Svg
     aria-label="logo-the-times"
-    role="img"
     viewBox="0 0 20 20"
     {...clean({
       height,
@@ -30,8 +29,6 @@ const TheTimesLogo = ({
     />
   </Svg>
 );
-
-TheTimesLogo.propTypes = propTypes;
 
 TheTimesLogo.defaultProps = {
   fillColour: colours.functional.white,

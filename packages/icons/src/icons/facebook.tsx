@@ -1,22 +1,22 @@
-import React from "react";
+import React, { FC } from "react";
 import { colours } from "@times-components-native/styleguide";
-import Svg, { G, Path } from "@times-components-native/svgs";
+import { Svg, G, Path } from "react-native-svg";
 import { clean } from "@times-components-native/utils";
-import propTypes from "./prop-types";
+import { IconProps } from "./prop-types";
 
 const viewBox = "14 10 10.592460632324219 20.397258758544922";
 
 const ratio = 1 / 2;
-const IconFacebook = ({
+
+const IconFacebook: FC<IconProps> = ({
   fillColour,
-  height,
+  height = 15,
+  width = 15,
   strokeColour,
   title = "Facebook Icon",
-  width,
 }) => (
   <Svg
     aria-label="icon-facebook"
-    role="img"
     viewBox={viewBox}
     {...clean({
       height,
@@ -35,8 +35,6 @@ const IconFacebook = ({
     </G>
   </Svg>
 );
-
-IconFacebook.propTypes = propTypes;
 
 IconFacebook.defaultProps = {
   fillColour: colours.functional.brandColour,

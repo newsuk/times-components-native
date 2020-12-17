@@ -1,22 +1,21 @@
-import React from "react";
+import React, { FC } from "react";
 import { colours } from "@times-components-native/styleguide";
-import Svg, { Rect, Polygon } from "@times-components-native/svgs";
+import { Polygon, Rect, Svg } from "react-native-svg";
 import { clean } from "@times-components-native/utils";
-import propTypes from "./prop-types";
+import { IconProps } from "./prop-types";
 
 const viewBox = "0 0 68 40";
 
 const ratio = 68 / 40;
-const IconVideo = ({
-  fillColour,
-  height,
+const IconVideo: FC<IconProps> = ({
+  fillColour = colours.functional.brandColour,
+  height = 15,
   strokeColour,
   title = "Video Icon",
-  width,
+  width = 15,
 }) => (
   <Svg
     aria-label="icon-video"
-    role="img"
     viewBox={viewBox}
     {...clean({
       height,
@@ -43,8 +42,6 @@ const IconVideo = ({
     />
   </Svg>
 );
-
-IconVideo.propTypes = propTypes;
 
 IconVideo.defaultProps = {
   fillColour: colours.functional.brandColour,

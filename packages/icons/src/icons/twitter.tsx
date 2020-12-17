@@ -1,21 +1,20 @@
-import React from "react";
+import React, { FC } from "react";
 import { colours } from "@times-components-native/styleguide";
-import Svg, { Path } from "@times-components-native/svgs";
+import { Svg, Path } from "react-native-svg";
 import { clean } from "@times-components-native/utils";
-import propTypes from "./prop-types";
+import { IconProps } from "./prop-types";
 
 const ratio = 75 / 60;
 
-const IconTwitter = ({
-  fillColour,
-  height,
+const IconTwitter: FC<IconProps> = ({
+  fillColour = colours.functional.action,
+  height = 15,
   strokeColour,
   title = "Twitter Icon",
-  width,
+  width = 15,
 }) => (
   <Svg
     aria-label="icon-twitter"
-    role="img"
     viewBox="-354.2 -279.4 750 600"
     {...clean({
       height,
@@ -37,8 +36,6 @@ const IconTwitter = ({
     />
   </Svg>
 );
-
-IconTwitter.propTypes = propTypes;
 
 IconTwitter.defaultProps = {
   fillColour: colours.functional.action,
