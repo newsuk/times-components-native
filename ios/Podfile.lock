@@ -311,11 +311,11 @@ PODS:
     - React
     - React-RCTImage
     - React-RCTText
-  - RNCAsyncStorage (1.12.0):
-    - React
+  - RNCAsyncStorage (1.12.1):
+    - React-Core
   - RNDeviceInfo (5.3.1):
     - React
-  - RNSVG (9.11.1):
+  - RNSVG (12.1.0):
     - React
   - Yoga (1.14.0)
   - YogaKit (1.18.1):
@@ -487,8 +487,8 @@ SPEC CHECKSUMS:
   React-jsi: 54245e1d5f4b690dec614a73a3795964eeef13a8
   React-jsiexecutor: 8ca588cc921e70590820ce72b8789b02c67cce38
   React-jsinspector: b14e62ebe7a66e9231e9581279909f2fc3db6606
-  react-native-netinfo: 8884d510fe67349940b4399c01db3e3591c922aa
-  react-native-webview: bfe5436586b214759bd5043658863549fffc8e92
+  react-native-netinfo: 75711548b53a527515d9226e6370249f75083e63
+  react-native-webview: 6ee7868ca8eba635dbf7963986d1ab7959da0391
   React-RCTActionSheet: 910163b6b09685a35c4ebbc52b66d1bfbbe39fc5
   React-RCTAnimation: 9a883bbe1e9d2e158d4fb53765ed64c8dc2200c6
   React-RCTBlob: 39cf0ece1927996c4466510e25d2105f67010e13
@@ -499,11 +499,11 @@ SPEC CHECKSUMS:
   React-RCTText: 1b6773e776e4b33f90468c20fe3b16ca3e224bb8
   React-RCTVibration: 4d2e726957f4087449739b595f107c0d4b6c2d2d
   ReactCommon: a0a1edbebcac5e91338371b72ffc66aa822792ce
-  ReactNativeART: 78edc68dd4a1e675338cd0cd113319cf3a65f2ab
+  ReactNativeART: f003b07dfa7098aa419ed95b69560923440b1eee
   ReactNativeNavigation: aefc8debafb4a374575adafb44a3352b9d5b618a
-  RNCAsyncStorage: 2a692bcb9b69b76a2f1a95f33db057129700af64
-  RNDeviceInfo: 6f20764111df002b4484f90cbe0a861be29bcc6c
-  RNSVG: be27aa7c58819f97399388ae53d7fa0572f32c7f
+  RNCAsyncStorage: cb9a623793918c6699586281f0b51cbc38f046f9
+  RNDeviceInfo: e5976ab5c3bed0b5c78f188e0b8abb139b33a9da
+  RNSVG: ce9d996113475209013317e48b05c21ee988d42e
   Yoga: 7740b94929bbacbddda59bf115b5317e9a161598
   YogaKit: f782866e155069a2cca2517aafea43200b01fd5a
 
