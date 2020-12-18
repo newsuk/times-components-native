@@ -43,6 +43,7 @@ const renderIcon = (color) => (args) => {
         fillColour={color(`Icon ${name} fill`, colours.functional.brandColour)}
         height={50}
         width={50}
+        strokeColour={color(`Icon ${name} strike`, "transparent")}
       />
       <Text style={styles.label}>{name}</Text>
     </View>
