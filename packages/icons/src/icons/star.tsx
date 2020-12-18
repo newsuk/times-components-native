@@ -2,7 +2,7 @@ import React, { FC } from "react";
 import { colours } from "@times-components-native/styleguide";
 import { Svg, Path } from "react-native-svg";
 import { clean } from "@times-components-native/utils";
-import { IconProps } from "@times-components-native/icons/src/icons/types";
+import { IconProps } from "./types";
 
 const IconStar: FC<IconProps> = ({
   fillColour,
