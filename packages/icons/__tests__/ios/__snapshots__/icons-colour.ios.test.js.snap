@@ -2,54 +2,21 @@
 
 exports[`1. iconemail renders with different colours 1`] = `
 <RNSVGSvgView>
-  <RNSVGGroup
-    fill={
-      Array [
-        0,
-        4278190080,
-      ]
-    }
-    stroke={null}
-  >
+  <RNSVGGroup>
     <RNSVGGroup
       fill={null}
-      stroke={null}
     >
       <RNSVGPath
-        fill={
-          Array [
-            0,
-            4290295992,
-          ]
-        }
-        stroke={null}
+        fill={4290295992}
       />
       <RNSVGPath
-        fill={
-          Array [
-            0,
-            4294967295,
-          ]
-        }
-        stroke={null}
+        fill={4294967295}
       />
       <RNSVGPath
-        fill={
-          Array [
-            0,
-            4291611852,
-          ]
-        }
-        stroke={null}
+        fill={4291611852}
       />
       <RNSVGPath
-        fill={
-          Array [
-            0,
-            4290953922,
-          ]
-        }
-        stroke={null}
+        fill={4290953922}
       />
     </RNSVGGroup>
   </RNSVGGroup>
@@ -87,33 +54,25 @@ exports[`3. iconforwardarrow renders with different colours 1`] = `
 `;
 
 exports[`4. iconstar renders with different colours 1`] = `
-<ARTShape
-  fill={
-    Array [
-      0,
-      0.9803921568627451,
-      0.792156862745098,
-      0.8705882352941177,
-      1,
-    ]
-  }
-  stroke="#c0ffee"
-/>
+<RNSVGSvgView>
+  <RNSVGGroup>
+    <RNSVGPath
+      fill={4294626014}
+      stroke={4290838510}
+    />
+  </RNSVGGroup>
+</RNSVGSvgView>
 `;
 
 exports[`5. iconcopylink renders with different colours 1`] = `
-<ARTShape
-  fill={
-    Array [
-      0,
-      0.9803921568627451,
-      0.792156862745098,
-      0.8705882352941177,
-      1,
-    ]
-  }
-  stroke="#c0ffee"
-/>
+<RNSVGSvgView>
+  <RNSVGGroup>
+    <RNSVGPath
+      fill={4294626014}
+      stroke={4290838510}
+    />
+  </RNSVGGroup>
+</RNSVGSvgView>
 `;
 
 exports[`6. iconsavebookmark renders with different colours 1`] = `
@@ -221,16 +180,12 @@ exports[`11. thetimeslogo renders with different colours 1`] = `
 `;
 
 exports[`12. closeicon renders with different colours 1`] = `
-<ARTShape
-  fill={
-    Array [
-      0,
-      1,
-      1,
-      1,
-      1,
-    ]
-  }
-  stroke="#ffffff"
-/>
+<RNSVGSvgView>
+  <RNSVGGroup>
+    <RNSVGPath
+      fill={4294626014}
+      stroke={4294626014}
+    />
+  </RNSVGGroup>
+</RNSVGSvgView>
 `;

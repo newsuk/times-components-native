@@ -1,20 +1,19 @@
-import React from "react";
+import React, { FC } from "react";
 import { colours } from "@times-components-native/styleguide";
-import Svg, { Path } from "@times-components-native/svgs";
+import { Svg, Path } from "react-native-svg";
 import { clean } from "@times-components-native/utils";
-import propTypes from "./prop-types";
+import { IconProps } from "@times-components-native/icons/src/icons/types";
 
-const IconCopyLink = ({
-  fillColour,
-  height,
+const IconCopyLink: FC<IconProps> = ({
+  fillColour = colours.functional.secondary,
+  height = 15,
+  width = 15,
   opacity,
   strokeColour,
   title = "Copy link to clipboard",
-  width,
 }) => (
   <Svg
     aria-label="icon-copy-link"
-    role="img"
     viewBox="0 0 15 15"
     {...clean({
       height,
@@ -32,8 +31,6 @@ const IconCopyLink = ({
     />
   </Svg>
 );
-
-IconCopyLink.propTypes = propTypes;
 
 IconCopyLink.defaultProps = {
   fillColour: colours.functional.secondary,
