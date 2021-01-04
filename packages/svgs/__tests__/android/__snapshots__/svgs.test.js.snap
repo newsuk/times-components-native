@@ -16,6 +16,7 @@ exports[`1. an svg, g, path 1`] = `
       "borderWidth": 0,
       "flex": 0,
       "height": 100,
+      "opacity": 1,
       "width": 100,
     }
   }
@@ -24,9 +25,58 @@ exports[`1. an svg, g, path 1`] = `
   version="1.1"
   width={100}
 >
-  <RNSVGGroup>
+  <RNSVGGroup
+    fill={
+      Array [
+        0,
+        -16777216,
+      ]
+    }
+    fillOpacity={1}
+    fillRule={1}
+    matrix={
+      Array [
+        1,
+        0,
+        0,
+        1,
+        0,
+        0,
+      ]
+    }
+    opacity={1}
+    originX={0}
+    originY={0}
+    rotation={0}
+    scaleX={1}
+    scaleY={1}
+    skewX={0}
+    skewY={0}
+    strokeLinecap={0}
+    strokeLinejoin={0}
+    strokeMiterlimit={4}
+    strokeOpacity={1}
+    strokeWidth={1}
+    vectorEffect={0}
+    x={0}
+    y={0}
+  >
     <RNSVGGroup
+      fillOpacity={1}
       fillRule={0}
+      matrix={
+        Array [
+          1,
+          0,
+          0,
+          1,
+          0,
+          0,
+        ]
+      }
+      opacity={1}
+      originX={0}
+      originY={0}
       propList={
         Array [
           "fill",
@@ -35,16 +85,61 @@ exports[`1. an svg, g, path 1`] = `
           "strokeWidth",
         ]
       }
+      rotation={0}
+      scaleX={1}
+      scaleY={1}
+      skewX={0}
+      skewY={0}
+      strokeLinecap={0}
+      strokeLinejoin={0}
+      strokeMiterlimit={4}
+      strokeOpacity={1}
       strokeWidth={1}
+      vectorEffect={0}
+      x={0}
+      y={0}
     >
       <RNSVGPath
         d="4872173116d82a1a379dbcc06ad3c243"
-        fill={-16777216}
+        fill={
+          Array [
+            0,
+            -16777216,
+          ]
+        }
+        fillOpacity={1}
+        fillRule={1}
+        matrix={
+          Array [
+            1,
+            0,
+            0,
+            1,
+            0,
+            0,
+          ]
+        }
+        opacity={1}
+        originX={0}
+        originY={0}
         propList={
           Array [
             "fill",
           ]
         }
+        rotation={0}
+        scaleX={1}
+        scaleY={1}
+        skewX={0}
+        skewY={0}
+        strokeLinecap={0}
+        strokeLinejoin={0}
+        strokeMiterlimit={4}
+        strokeOpacity={1}
+        strokeWidth={1}
+        vectorEffect={0}
+        x={0}
+        y={0}
       />
     </RNSVGGroup>
   </RNSVGGroup>
@@ -54,33 +149,118 @@ exports[`1. an svg, g, path 1`] = `
 exports[`2. a path with no fill 1`] = `
 <RNSVGPath
   d="4872173116d82a1a379dbcc06ad3c243"
+  fillOpacity={1}
+  fillRule={1}
+  matrix={
+    Array [
+      1,
+      0,
+      0,
+      1,
+      0,
+      0,
+    ]
+  }
+  opacity={1}
+  originX={0}
+  originY={0}
   propList={
     Array [
       "fill",
     ]
   }
+  rotation={0}
+  scaleX={1}
+  scaleY={1}
+  skewX={0}
+  skewY={0}
+  strokeLinecap={0}
+  strokeLinejoin={0}
+  strokeMiterlimit={4}
+  strokeOpacity={1}
+  strokeWidth={1}
+  vectorEffect={0}
+  x={0}
+  y={0}
 />
 `;
 
 exports[`3. a polygon 1`] = `
 <RNSVGPath
   d="f0010c2bbdef3c3bedb66db380f29ac6"
-  fill={-16776961}
+  fill={
+    Array [
+      0,
+      -16776961,
+    ]
+  }
+  fillOpacity={1}
+  fillRule={1}
+  matrix={
+    Array [
+      1,
+      0,
+      0,
+      1,
+      0,
+      0,
+    ]
+  }
+  opacity={1}
+  originX={0}
+  originY={0}
   propList={
     Array [
       "fill",
       "stroke",
     ]
   }
-  stroke={-65536}
+  rotation={0}
+  scaleX={1}
+  scaleY={1}
+  skewX={0}
+  skewY={0}
+  stroke={
+    Array [
+      0,
+      -65536,
+    ]
+  }
+  strokeLinecap={0}
+  strokeLinejoin={0}
+  strokeMiterlimit={4}
+  strokeOpacity={1}
+  strokeWidth={1}
+  vectorEffect={0}
+  x={0}
+  y={0}
 />
 `;
 
 exports[`4. a rect 1`] = `
 <RNSVGRect
-  fill={-16777216}
+  fill={
+    Array [
+      0,
+      -16777216,
+    ]
+  }
   fillOpacity={0.4}
+  fillRule={1}
   height="100"
+  matrix={
+    Array [
+      1,
+      0,
+      0,
+      1,
+      0,
+      0,
+    ]
+  }
+  opacity={1}
+  originX={0}
+  originY={0}
   propList={
     Array [
       "fill",
@@ -89,8 +269,23 @@ exports[`4. a rect 1`] = `
       "strokeWidth",
     ]
   }
-  stroke={-1}
+  rotation={0}
+  scaleX={1}
+  scaleY={1}
+  skewX={0}
+  skewY={0}
+  stroke={
+    Array [
+      0,
+      -1,
+    ]
+  }
+  strokeLinecap={0}
+  strokeLinejoin={0}
+  strokeMiterlimit={4}
+  strokeOpacity={1}
   strokeWidth={8}
+  vectorEffect={0}
   width="100"
   x="5"
   y="10"
