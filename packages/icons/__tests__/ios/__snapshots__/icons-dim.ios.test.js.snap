@@ -9,6 +9,7 @@ exports[`1. iconemail sets a width when height is set 1`] = `
     Object {
       "backgroundColor": "transparent",
       "borderWidth": 0,
+      "opacity": 1,
     }
   }
   title="Email icon"

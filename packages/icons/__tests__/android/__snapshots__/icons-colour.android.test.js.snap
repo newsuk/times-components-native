@@ -2,21 +2,54 @@
 
 exports[`1. iconemail renders with different colours 1`] = `
 <RNSVGSvgView>
-  <RNSVGGroup>
+  <RNSVGGroup
+    fill={
+      Array [
+        0,
+        -16777216,
+      ]
+    }
+    stroke={null}
+  >
     <RNSVGGroup
       fill={null}
+      stroke={null}
     >
       <RNSVGPath
-        fill={-4671304}
+        fill={
+          Array [
+            0,
+            -4671304,
+          ]
+        }
+        stroke={null}
       />
       <RNSVGPath
-        fill={-1}
+        fill={
+          Array [
+            0,
+            -1,
+          ]
+        }
+        stroke={null}
       />
       <RNSVGPath
-        fill={-3355444}
+        fill={
+          Array [
+            0,
+            -3355444,
+          ]
+        }
+        stroke={null}
       />
       <RNSVGPath
-        fill={-4013374}
+        fill={
+          Array [
+            0,
+            -4013374,
+          ]
+        }
+        stroke={null}
       />
     </RNSVGGroup>
   </RNSVGGroup>
@@ -25,12 +58,38 @@ exports[`1. iconemail renders with different colours 1`] = `
 
 exports[`2. iconfacebook renders with different colours 1`] = `
 <RNSVGSvgView>
-  <RNSVGGroup>
+  <RNSVGGroup
+    fill={
+      Array [
+        0,
+        -16777216,
+      ]
+    }
+    stroke={null}
+  >
     <RNSVGGroup
-      fill={-341282}
-      stroke={-4128786}
+      fill={
+        Array [
+          0,
+          -341282,
+        ]
+      }
+      stroke={
+        Array [
+          0,
+          -4128786,
+        ]
+      }
     >
-      <RNSVGPath />
+      <RNSVGPath
+        fill={
+          Array [
+            0,
+            -16777216,
+          ]
+        }
+        stroke={null}
+      />
     </RNSVGGroup>
   </RNSVGGroup>
 </RNSVGSvgView>
@@ -38,11 +97,33 @@ exports[`2. iconfacebook renders with different colours 1`] = `
 
 exports[`3. iconforwardarrow renders with different colours 1`] = `
 <RNSVGSvgView>
-  <RNSVGGroup>
+  <RNSVGGroup
+    fill={
+      Array [
+        0,
+        -16777216,
+      ]
+    }
+    stroke={null}
+  >
     <RNSVGGroup
-      fill={-341282}
+      fill={
+        Array [
+          0,
+          -341282,
+        ]
+      }
+      stroke={null}
     >
-      <RNSVGPath />
+      <RNSVGPath
+        fill={
+          Array [
+            0,
+            -16777216,
+          ]
+        }
+        stroke={null}
+      />
     </RNSVGGroup>
   </RNSVGGroup>
 </RNSVGSvgView>
@@ -50,10 +131,28 @@ exports[`3. iconforwardarrow renders with different colours 1`] = `
 
 exports[`4. iconstar renders with different colours 1`] = `
 <RNSVGSvgView>
-  <RNSVGGroup>
+  <RNSVGGroup
+    fill={
+      Array [
+        0,
+        -16777216,
+      ]
+    }
+    stroke={null}
+  >
     <RNSVGPath
-      fill={-341282}
-      stroke={-4128786}
+      fill={
+        Array [
+          0,
+          -341282,
+        ]
+      }
+      stroke={
+        Array [
+          0,
+          -4128786,
+        ]
+      }
     />
   </RNSVGGroup>
 </RNSVGSvgView>
@@ -61,10 +160,28 @@ exports[`4. iconstar renders with different colours 1`] = `
 
 exports[`5. iconcopylink renders with different colours 1`] = `
 <RNSVGSvgView>
-  <RNSVGGroup>
+  <RNSVGGroup
+    fill={
+      Array [
+        0,
+        -16777216,
+      ]
+    }
+    stroke={null}
+  >
     <RNSVGPath
-      fill={-341282}
-      stroke={-4128786}
+      fill={
+        Array [
+          0,
+          -341282,
+        ]
+      }
+      stroke={
+        Array [
+          0,
+          -4128786,
+        ]
+      }
     />
   </RNSVGGroup>
 </RNSVGSvgView>
@@ -72,10 +189,28 @@ exports[`5. iconcopylink renders with different colours 1`] = `
 
 exports[`6. iconsavebookmark renders with different colours 1`] = `
 <RNSVGSvgView>
-  <RNSVGGroup>
+  <RNSVGGroup
+    fill={
+      Array [
+        0,
+        -16777216,
+      ]
+    }
+    stroke={null}
+  >
     <RNSVGPath
-      fill={-341282}
-      stroke={-4128786}
+      fill={
+        Array [
+          0,
+          -341282,
+        ]
+      }
+      stroke={
+        Array [
+          0,
+          -4128786,
+        ]
+      }
     />
   </RNSVGGroup>
 </RNSVGSvgView>
@@ -83,10 +218,28 @@ exports[`6. iconsavebookmark renders with different colours 1`] = `
 
 exports[`7. icontwitter renders with different colours 1`] = `
 <RNSVGSvgView>
-  <RNSVGGroup>
+  <RNSVGGroup
+    fill={
+      Array [
+        0,
+        -16777216,
+      ]
+    }
+    stroke={null}
+  >
     <RNSVGPath
-      fill={-341282}
-      stroke={-4128786}
+      fill={
+        Array [
+          0,
+          -341282,
+        ]
+      }
+      stroke={
+        Array [
+          0,
+          -4128786,
+        ]
+      }
     />
   </RNSVGGroup>
 </RNSVGSvgView>
@@ -94,14 +247,42 @@ exports[`7. icontwitter renders with different colours 1`] = `
 
 exports[`8. iconvideo renders with different colours 1`] = `
 <RNSVGSvgView>
-  <RNSVGGroup>
+  <RNSVGGroup
+    fill={
+      Array [
+        0,
+        -16777216,
+      ]
+    }
+    stroke={null}
+  >
     <RNSVGRect
-      fill={-341282}
-      stroke={-4128786}
+      fill={
+        Array [
+          0,
+          -341282,
+        ]
+      }
+      stroke={
+        Array [
+          0,
+          -4128786,
+        ]
+      }
     />
     <RNSVGPath
-      fill={-341282}
-      stroke={-4128786}
+      fill={
+        Array [
+          0,
+          -341282,
+        ]
+      }
+      stroke={
+        Array [
+          0,
+          -4128786,
+        ]
+      }
     />
   </RNSVGGroup>
 </RNSVGSvgView>
@@ -109,10 +290,28 @@ exports[`8. iconvideo renders with different colours 1`] = `
 
 exports[`9. iconvideo360player renders with different colours 1`] = `
 <RNSVGSvgView>
-  <RNSVGGroup>
+  <RNSVGGroup
+    fill={
+      Array [
+        0,
+        -16777216,
+      ]
+    }
+    stroke={null}
+  >
     <RNSVGPath
-      fill={-341282}
-      stroke={-4128786}
+      fill={
+        Array [
+          0,
+          -341282,
+        ]
+      }
+      stroke={
+        Array [
+          0,
+          -4128786,
+        ]
+      }
     />
   </RNSVGGroup>
 </RNSVGSvgView>
@@ -120,10 +319,28 @@ exports[`9. iconvideo360player renders with different colours 1`] = `
 
 exports[`10. thestlogo renders with different colours 1`] = `
 <RNSVGSvgView>
-  <RNSVGGroup>
+  <RNSVGGroup
+    fill={
+      Array [
+        0,
+        -16777216,
+      ]
+    }
+    stroke={null}
+  >
     <RNSVGPath
-      fill={-341282}
-      stroke={-4128786}
+      fill={
+        Array [
+          0,
+          -341282,
+        ]
+      }
+      stroke={
+        Array [
+          0,
+          -4128786,
+        ]
+      }
     />
   </RNSVGGroup>
 </RNSVGSvgView>
@@ -131,10 +348,28 @@ exports[`10. thestlogo renders with different colours 1`] = `
 
 exports[`11. thetimeslogo renders with different colours 1`] = `
 <RNSVGSvgView>
-  <RNSVGGroup>
+  <RNSVGGroup
+    fill={
+      Array [
+        0,
+        -16777216,
+      ]
+    }
+    stroke={null}
+  >
     <RNSVGPath
-      fill={-341282}
-      stroke={-4128786}
+      fill={
+        Array [
+          0,
+          -341282,
+        ]
+      }
+      stroke={
+        Array [
+          0,
+          -4128786,
+        ]
+      }
     />
   </RNSVGGroup>
 </RNSVGSvgView>
@@ -142,10 +377,28 @@ exports[`11. thetimeslogo renders with different colours 1`] = `
 
 exports[`12. closeicon renders with different colours 1`] = `
 <RNSVGSvgView>
-  <RNSVGGroup>
+  <RNSVGGroup
+    fill={
+      Array [
+        0,
+        -16777216,
+      ]
+    }
+    stroke={null}
+  >
     <RNSVGPath
-      fill={-1}
-      stroke={-1}
+      fill={
+        Array [
+          0,
+          -1,
+        ]
+      }
+      stroke={
+        Array [
+          0,
+          -1,
+        ]
+      }
     />
   </RNSVGGroup>
 </RNSVGSvgView>
