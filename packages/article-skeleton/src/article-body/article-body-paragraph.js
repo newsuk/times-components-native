@@ -64,7 +64,6 @@ const ArticleParagraph = ({
       str={str}
       scale={scale}
       inline={inline}
-      isInlineAd={inline?.type === Ad}
       tree={tree}
       uid={`${index}`}
       defaultFont={defaultFont}
