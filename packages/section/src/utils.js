@@ -67,41 +67,23 @@ const consecutiveItemsFlagger = memoizeOne((slices) =>
   ),
 );
 
-const insertSectionAd = (isTablet, variants) => (slices) => {
+const insertSectionAd = (isTablet) => (slices) => {
   const adSlotIndex = 3; // 0 based index
 
-  if (
-    !isTablet ||
-    slices.length <= adSlotIndex ||
-    !variants ||
-    !Object.keys(variants).length
-  )
-    return slices;
-
-  const { sectionAd } = variants;
-
-  if (!sectionAd) return slices;
-
-  const { group, slotName } = sectionAd;
-
-  if (group === "A") return slices;
+  if (!isTablet || slices.length <= adSlotIndex) return slices;
 
   return [
     ...slices.slice(0, adSlotIndex),
     {
       name: "SectionAd",
-      slotName,
+      slotName: "native-section-ad",
     },
     ...slices.slice(adSlotIndex),
   ];
 };
 
-const prepareSlicesForRender = (isTablet, variants) =>
-  pipe(
-    buildSliceData,
-    consecutiveItemsFlagger,
-    insertSectionAd(isTablet, variants),
-  );
+const prepareSlicesForRender = (isTablet) =>
+  pipe(buildSliceData, consecutiveItemsFlagger, insertSectionAd(isTablet));
 
 const getRatio = (ratio) => {
   const ratios = ratio.split(":").map((num) => parseInt(num, 10));

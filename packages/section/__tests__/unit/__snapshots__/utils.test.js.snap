@@ -601,6 +601,10 @@ Array [
     "name": "OtherSlice",
   },
   Object {
+    "name": "SectionAd",
+    "slotName": "native-section-ad",
+  },
+  Object {
     "elementId": "d.3",
     "id": "d",
     "ignoreSeparator": true,

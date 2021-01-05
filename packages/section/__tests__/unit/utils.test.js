@@ -47,7 +47,6 @@ describe("splitPuzzlesBySlices", () => {
 });
 
 describe("prepareSlicesForRender", () => {
-  const variants = {};
   it("should transform data", () => {
     const originalData = [
       { id: "a", name: "LeadersSlice" },
@@ -64,7 +63,7 @@ describe("prepareSlicesForRender", () => {
       { id: "l", name: "DailyUniversalRegister" },
     ];
 
-    const prepararedData = prepareSlicesForRender(true, variants)(originalData);
+    const prepararedData = prepareSlicesForRender(true)(originalData);
     expect(prepararedData).toMatchSnapshot();
   });
 });
@@ -76,50 +75,22 @@ describe("insertSectionAd", () => {
     { id: "c", name: "OtherSlice" },
     { id: "d", name: "LeadersSlice" },
   ];
-  const variants = {
-    sectionAd: {
-      group: "B",
-      slotName: "native-inline-ad-b",
-    },
-  };
 
   it("should not insert ads for mobile", () => {
-    expect(insertSectionAd(false, variants)(originalSlices)).toEqual(
-      originalSlices,
-    );
+    expect(insertSectionAd(false)(originalSlices)).toEqual(originalSlices);
   });
 
   it("should not insert ads for sections that have too few slices", () => {
     const slices = originalSlices.slice(0, 1);
-    expect(insertSectionAd(true, variants)(slices)).toEqual(slices);
+    expect(insertSectionAd(true)(slices)).toEqual(slices);
   });
 
-  it("should not insert ads when no section variants provided", () => {
-    expect(insertSectionAd(true, null)(originalSlices)).toEqual(originalSlices);
-    expect(insertSectionAd(true, {})(originalSlices)).toEqual(originalSlices);
-    expect(insertSectionAd(true, { articleAd: {} })(originalSlices)).toEqual(
-      originalSlices,
-    );
-  });
-
-  it("should not insert ads for section variant A", () => {
-    expect(
-      insertSectionAd(true, {
-        sectionAd: { group: "A", slotName: "native-section-ad-a" },
-      })(originalSlices),
-    ).toEqual(originalSlices);
-  });
-
-  it("should insert ads for section variants other than A", () => {
-    expect(
-      insertSectionAd(true, {
-        sectionAd: { group: "B", slotName: "native-section-ad-b" },
-      })(originalSlices),
-    ).toEqual([
+  it("should insert sections ads", () => {
+    expect(insertSectionAd(true)(originalSlices)).toEqual([
       { id: "a", name: "LeadersSlice" },
       { id: "b", name: "DailyUniversalRegister" },
       { id: "c", name: "OtherSlice" },
-      { name: "SectionAd", slotName: "native-section-ad-b" },
+      { name: "SectionAd", slotName: "native-section-ad" },
       { id: "d", name: "LeadersSlice" },
     ]);
   });

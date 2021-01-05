@@ -41,11 +41,18 @@ const renderIcon = (color) => (args) => {
   return (
     <View key={name} style={styles.icon}>
       <Icon
-        fillColour={color(`Icon ${name} fill`, Icon.defaultProps.fillColour)}
+        fillColour={color(
+          `Icon ${name} fill`,
+          Icon.defaultProps
+            ? Icon.defaultProps.fillColour
+            : colours.functional.brandColour,
+        )}
         height={50}
         strokeColour={color(
           `Icon ${name} strike`,
-          Icon.defaultProps.strokeColour,
+          Icon.defaultProps
+            ? Icon.defaultProps.strokeColour
+            : colours.functional.brandColour,
         )}
         width={50}
       />

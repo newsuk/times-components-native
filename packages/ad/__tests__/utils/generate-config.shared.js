@@ -24,16 +24,16 @@ export default () => {
   });
 
   it("returns config for slot for portrait only", () => {
-    const config = getSlotConfig("native-section-ad-c", 1024, "portrait");
+    const config = getSlotConfig("native-section-ad", 1024, "portrait");
     expect(config.sizes).toEqual([[728, 90]]);
     expect(config.maxSizes).toEqual({ height: 90, width: 728 });
-    expect(config.slotName).toEqual("native-section-ad-c");
+    expect(config.slotName).toEqual("native-section-ad");
   });
 
   it("returns config for slot for landscape only", () => {
-    const config = getSlotConfig("native-section-ad-c", 1024, "landscape");
+    const config = getSlotConfig("native-section-ad", 1024, "landscape");
     expect(config.sizes).toEqual([[970, 250]]);
     expect(config.maxSizes).toEqual({ height: 250, width: 970 });
-    expect(config.slotName).toEqual("native-section-ad-c");
+    expect(config.slotName).toEqual("native-section-ad");
   });
 };

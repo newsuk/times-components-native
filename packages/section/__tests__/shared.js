@@ -24,18 +24,6 @@ jest.mock("react", () => {
 jest.mock("@times-components-native/responsive", () => ({
   useResponsiveContext: () => ({ isTablet: true, editionBreakpoint: "small" }),
 }));
-jest.mock("@times-components-native/variant-testing", () => ({
-  useVariantTestingContext: () => ({
-    articleMpu: {
-      group: "A",
-      slotName: `native-inline-ad-a`,
-    },
-    sectionAd: {
-      group: "A",
-      slotName: "native-section-ad-a",
-    },
-  }),
-}));
 jest.mock("@times-components-native/edition-slices/src/slices", () => {
   const sliceMap = require.requireActual(
     "@times-components-native/edition-slices/src/slices",

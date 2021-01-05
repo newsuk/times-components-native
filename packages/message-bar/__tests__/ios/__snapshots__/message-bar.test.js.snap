@@ -13,89 +13,35 @@ exports[`1. renders correctly 1`] = `
         <View
           focusable={true}
         >
-          <ARTSurfaceView>
-            <ARTGroup
-              opacity={1}
-              transform={
-                Array [
-                  1,
-                  0,
-                  0,
-                  1,
-                  0,
-                  0,
-                ]
-              }
-            >
-              <ARTShape
-                d={
+          <RNSVGSvgView
+            align="xMidYMid"
+            aria-label="icon-close"
+            bbHeight="28"
+            bbWidth="28"
+            focusable={false}
+            height="28"
+            meetOrSlice={0}
+            minX={0}
+            minY={0}
+            title="Close Icon"
+            vbHeight={28}
+            vbWidth={28}
+            width="28"
+          >
+            <RNSVGGroup>
+              <RNSVGPath
+                d="M15.617 14l4.683 5.838-.462.462L14 15.617 8.162 20.3l-.462-.462L12.383 14 7.7 8.162l.462-.462L14 12.383 19.838 7.7l.462.462z"
+                fill={4294967295}
+                propList={
                   Array [
-                    0,
-                    15.617,
-                    14,
-                    2,
-                    20.3,
-                    19.838,
-                    2,
-                    NaN,
-                    NaN,
-                    2,
-                    NaN,
-                    NaN,
-                    2,
-                    NaN,
-                    NaN,
-                    2,
-                    NaN,
-                    NaN,
-                    2,
-                    12.383,
-                    14,
-                    2,
-                    7.7,
-                    8.162,
-                    2,
-                    8.162,
-                    7.700000000000001,
-                    2,
-                    14,
-                    12.383,
-                    2,
-                    19.838,
-                    7.7,
-                    2,
-                    NaN,
-                    NaN,
+                    "fill",
+                    "stroke",
                   ]
                 }
-                fill={
-                  Array [
-                    0,
-                    1,
-                    1,
-                    1,
-                    1,
-                  ]
-                }
-                opacity={1}
-                stroke="#ffffff"
-                strokeCap={1}
-                strokeDash={null}
-                strokeJoin={1}
-                strokeWidth={null}
-                transform={
-                  Array [
-                    1,
-                    0,
-                    0,
-                    1,
-                    0,
-                    0,
-                  ]
-                }
+                stroke={4294967295}
               />
-            </ARTGroup>
-          </ARTSurfaceView>
+            </RNSVGGroup>
+          </RNSVGSvgView>
         </View>
       </View>
     </View>

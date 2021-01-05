@@ -1703,10 +1703,10 @@
     sudo-prompt "^9.0.0"
     wcwidth "^1.0.1"
 
-"@react-native-community/netinfo@5.3.3":
-  version "5.3.3"
-  resolved "https://registry.yarnpkg.com/@react-native-community/netinfo/-/netinfo-5.3.3.tgz#2e627456d83c1d75d4c43ab6cef70fe125b9691d"
-  integrity sha512-L4BsdIEEuG5rKkVNzjESdJ1wvusn0kflj/FrwctaW+xkLxiFs1+mdBg/mvqqfXvVFuBEphbyXJTFT4aG4Okkow==
+"@react-native-community/netinfo@5.9.9":
+  version "5.9.9"
+  resolved "https://registry.yarnpkg.com/@react-native-community/netinfo/-/netinfo-5.9.9.tgz#5e022637f5e08bd74bf94a0c3315748acd4589f9"
+  integrity sha512-Gp0XV4BgabvzkL4Dp6JAsA2l9LcmgBAq3erCLdvRZmEFz7guCWTogQWVfFtl+IbU0uqfwfo9fm2+mQiwdudLCw==
 
 "@samverschueren/stream-to-observable@^0.3.0":
   version "0.3.1"
@@ -2088,6 +2088,18 @@
   version "0.0.29"
   resolved "https://registry.yarnpkg.com/@types/json5/-/json5-0.0.29.tgz#ee28707ae94e11d2b827bcbe5270bcea7f3e71ee"
   integrity sha1-7ihweulOEdK4J7y+UnC86n8+ce4=
+
+"@types/lodash.omitby@^4.6.6":
+  version "4.6.6"
+  resolved "https://registry.yarnpkg.com/@types/lodash.omitby/-/lodash.omitby-4.6.6.tgz#d9b392d5f236983d2597b9e977d337faa00af8aa"
+  integrity sha512-bHkWp4YyTlqPtHgUwEhExcMQNb8V+HjTUzhxgdnw0UhuT0i61aff6RuSlXt4MbQVPJhB/24tb4WBZJQ+LYIQgw==
+  dependencies:
+    "@types/lodash" "*"
+
+"@types/lodash@*":
+  version "4.14.165"
+  resolved "https://registry.yarnpkg.com/@types/lodash/-/lodash-4.14.165.tgz#74d55d947452e2de0742bad65270433b63a8c30f"
+  integrity sha512-tjSSOTHhI5mCHTy/OOXYIhi2Wt1qcbHmuXD1Ha7q70CgI/I71afO4XtLb/cVexki1oVYchpul/TOuu3Arcdxrg==
 
 "@types/minimist@^1.2.0":
   version "1.2.0"
@@ -3154,7 +3166,7 @@ bindings@^1.5.0:
   dependencies:
     file-uri-to-path "1.0.0"
 
-boolbase@~1.0.0:
+boolbase@^1.0.0, boolbase@~1.0.0:
   version "1.0.0"
   resolved "https://registry.yarnpkg.com/boolbase/-/boolbase-1.0.0.tgz#68dff5fbe60c51eb37725ea9e3ed310dcc1e776e"
   integrity sha1-aN/1++YMUes3cl6p4+0xDcwed24=
@@ -4103,6 +4115,16 @@ css-color-keywords@^1.0.0:
   resolved "https://registry.yarnpkg.com/css-color-keywords/-/css-color-keywords-1.0.0.tgz#fea2616dc676b2962686b3af8dbdbe180b244e05"
   integrity sha1-/qJhbcZ2spYmhrOvjb2+GAskTgU=
 
+css-select@^2.1.0:
+  version "2.1.0"
+  resolved "https://registry.yarnpkg.com/css-select/-/css-select-2.1.0.tgz#6a34653356635934a81baca68d0255432105dbef"
+  integrity sha512-Dqk7LQKpwLoH3VovzZnkzegqNSuAziQyNZUcrdDM401iY+R5NkGBXGmtO05/yaXQziALuPogeG0b7UAgjnTJTQ==
+  dependencies:
+    boolbase "^1.0.0"
+    css-what "^3.2.1"
+    domutils "^1.7.0"
+    nth-check "^1.0.2"
+
 css-select@~1.2.0:
   version "1.2.0"
   resolved "https://registry.yarnpkg.com/css-select/-/css-select-1.2.0.tgz#2b3a110539c5355f1cd8d314623e870b121ec858"
@@ -4122,10 +4144,23 @@ css-to-react-native@^2.2.1:
     css-color-keywords "^1.0.0"
     postcss-value-parser "^3.3.0"
 
+css-tree@^1.0.0-alpha.39:
+  version "1.1.2"
+  resolved "https://registry.yarnpkg.com/css-tree/-/css-tree-1.1.2.tgz#9ae393b5dafd7dae8a622475caec78d3d8fbd7b5"
+  integrity sha512-wCoWush5Aeo48GLhfHPbmvZs59Z+M7k5+B1xDnXbdWNcEF423DoFdqSWE0PM5aNk5nI5cp1q7ms36zGApY/sKQ==
+  dependencies:
+    mdn-data "2.0.14"
+    source-map "^0.6.1"
+
 css-what@2.1:
   version "2.1.3"
   resolved "https://registry.yarnpkg.com/css-what/-/css-what-2.1.3.tgz#a6d7604573365fe74686c3f311c56513d88285f2"
   integrity sha512-a+EPoD+uZiNfh+5fxw2nO9QwFa6nJe2Or35fGY6Ipw1R3R4AGz1d1TEZrCegvw2YTmZ0jXirGYlzxxpYSHwpEg==
+
+css-what@^3.2.1:
+  version "3.4.2"
+  resolved "https://registry.yarnpkg.com/css-what/-/css-what-3.4.2.tgz#ea7026fcb01777edbde52124e21f327e7ae950e4"
+  integrity sha512-ACUm3L0/jiZTqfzRM3Hi9Q8eZqd6IK37mMWPLz9PJxkLWllYeRf+EHUSHYEtFop2Eqytaq1FizFVh7XfBnXCDQ==
 
 css@^2.2.1:
   version "2.2.4"
@@ -4538,7 +4573,7 @@ domutils@1.5.1:
     dom-serializer "0"
     domelementtype "1"
 
-domutils@^1.5.1:
+domutils@^1.5.1, domutils@^1.7.0:
   version "1.7.0"
   resolved "https://registry.yarnpkg.com/domutils/-/domutils-1.7.0.tgz#56ea341e834e06e6748af7a1cb25da67ea9f8c2a"
   integrity sha512-Lgd2XcJ/NjEw+7tFvfKxOzCYKZsdct5lczQ2ZaQY8Djz7pfAD3Gbp8ySJWtreII/vDlMVmxwa6pHmdxIYgttDg==
@@ -8055,6 +8090,11 @@ material-colors@^1.2.1:
   resolved "https://registry.yarnpkg.com/material-colors/-/material-colors-1.2.6.tgz#6d1958871126992ceecc72f4bcc4d8f010865f46"
   integrity sha512-6qE4B9deFBIa9YSpOc9O0Sgc43zTeVYbgDT5veRKSlB2+ZuHNoVVxA1L/ckMUayV9Ay9y7Z/SZCLcGteW9i7bg==
 
+mdn-data@2.0.14:
+  version "2.0.14"
+  resolved "https://registry.yarnpkg.com/mdn-data/-/mdn-data-2.0.14.tgz#7113fc4281917d63ce29b43446f701e68c25ba50"
+  integrity sha512-dn6wd0uw5GsdswPFfsgMp5NSB0/aDe6fK94YJV/AJDYXL6HVLWBsxeq7js7Ad+mU2K9LAlwpk6kN2D5mwCPVow==
+
 memoize-one@5.1.1, memoize-one@^5.0.0:
   version "5.1.1"
   resolved "https://registry.yarnpkg.com/memoize-one/-/memoize-one-5.1.1.tgz#047b6e3199b508eaec03504de71229b8eb1d75c0"
@@ -8813,7 +8853,7 @@ npm-run-path@^2.0.0:
   dependencies:
     path-key "^2.0.0"
 
-nth-check@~1.0.1:
+nth-check@^1.0.2, nth-check@~1.0.1:
   version "1.0.2"
   resolved "https://registry.yarnpkg.com/nth-check/-/nth-check-1.0.2.tgz#b2bd295c37e3dd58a3bf0700376663ba4d9cf05c"
   integrity sha512-WeBOdju8SnzPN5vTUJYxYUxLeXpCaVP5i5e0LF8fg7WORF2Wd7wFX/pk0tYZk7s8T+J7VLy0Da6J1+wCT0AtHg==
@@ -9855,10 +9895,10 @@ react-native-color-picker@^0.4.0:
     prop-types "^15.5.10"
     tinycolor2 "^1.4.1"
 
-react-native-device-info@5.3.1:
-  version "5.3.1"
-  resolved "https://registry.yarnpkg.com/react-native-device-info/-/react-native-device-info-5.3.1.tgz#d764732c4841b6b6c2f42516e8840075717ea88a"
-  integrity sha512-e/fRDoah+HxItscOJTGJY8zyVKmBUdf53VWIDGLGV4VVZ0mfzIQ2uo0ULGri0vjGUYqgyqgnW3jybPSznMxKcA==
+react-native-device-info@7.3.1:
+  version "7.3.1"
+  resolved "https://registry.yarnpkg.com/react-native-device-info/-/react-native-device-info-7.3.1.tgz#6c4b0120d57872a2f7534332323306b386828a3d"
+  integrity sha512-RQP3etbmXsOlcaxHeHNug68nRli02S9iGC7TbaXpkvyyevIuRogfnrI71sWtqmlT91kdpYAOYKmNfRL9LOSKVw==
 
 react-native-image-pan-zoom@^2.1.9:
   version "2.1.12"
@@ -9917,10 +9957,13 @@ react-native-storybook-loader@2.0.2:
     prettier "^2.0.5"
     yargs "^15.4.1"
 
-react-native-svg@9.11.1:
-  version "9.11.1"
-  resolved "https://registry.yarnpkg.com/react-native-svg/-/react-native-svg-9.11.1.tgz#b1ccf48de413ff8c4f476f202aaa3893f4c8b59a"
-  integrity sha512-BmNCM81SSzhj1+N5rYiy7sxrkmybgiT8Cu8yVRB7zVoWze/i1lbCWJah+Gk0OHHwR35ZA31oVKf5jtO4G1n94Q==
+react-native-svg@12.1.0:
+  version "12.1.0"
+  resolved "https://registry.yarnpkg.com/react-native-svg/-/react-native-svg-12.1.0.tgz#acfe48c35cd5fca3d5fd767abae0560c36cfc03d"
+  integrity sha512-1g9qBRci7man8QsHoXn6tP3DhCDiypGgc6+AOWq+Sy+PmP6yiyf8VmvKuoqrPam/tf5x+ZaBT2KI0gl7bptZ7w==
+  dependencies:
+    css-select "^2.1.0"
+    css-tree "^1.0.0-alpha.39"
 
 react-native-swipe-gestures@^1.0.4:
   version "1.0.5"
@@ -9941,10 +9984,10 @@ react-native-v8@0.63.2-patch.1:
   dependencies:
     v8-android "~8.84.0"
 
-react-native-webview@10.9.0:
-  version "10.9.0"
-  resolved "https://registry.yarnpkg.com/react-native-webview/-/react-native-webview-10.9.0.tgz#a45998f82ab1bbbbfde22b8b155394772610157a"
-  integrity sha512-zYZfmdJca/xRbwvvOfPhzL59SQC4L0W9rPWVF4zMi7BMDdCVHXVp0wKZ9KzmqxZNwadZNTxl5s0pvd6p3S34Fg==
+react-native-webview@10.9.3:
+  version "10.9.3"
+  resolved "https://registry.yarnpkg.com/react-native-webview/-/react-native-webview-10.9.3.tgz#4828ce36a85bef038c6b686615ba69269f6ab9f8"
+  integrity sha512-50KVtsgJEdK4S3rzWQBDGosjFDct9O1ve9UWtf6ZX9FE2kLmq1K29aoJ7PL4xo3EusctfoQAf0bhiDx/EaAGNA==
   dependencies:
     escape-string-regexp "2.0.0"
     invariant "2.2.4"

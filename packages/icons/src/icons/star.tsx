@@ -1,10 +1,10 @@
-import React from "react";
+import React, { FC } from "react";
 import { colours } from "@times-components-native/styleguide";
-import Svg, { Path } from "@times-components-native/svgs";
+import { Svg, Path } from "react-native-svg";
 import { clean } from "@times-components-native/utils";
-import propTypes from "./prop-types";
+import { IconProps } from "./types";
 
-const IconStar = ({
+const IconStar: FC<IconProps> = ({
   fillColour,
   height,
   opacity,
@@ -14,7 +14,6 @@ const IconStar = ({
 }) => (
   <Svg
     aria-label="icon-save-star"
-    role="img"
     viewBox="0 0 18 18"
     {...clean({
       height,
@@ -32,8 +31,6 @@ const IconStar = ({
     />
   </Svg>
 );
-
-IconStar.propTypes = propTypes;
 
 IconStar.defaultProps = {
   fillColour: colours.functional.action,
