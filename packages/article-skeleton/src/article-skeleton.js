@@ -5,7 +5,6 @@ import { withTrackScrollDepth } from "@times-components-native/tracking";
 import { Viewport } from "@skele/components";
 import { render } from "@times-components-native/markup-forest";
 import ArticleExtras from "@times-components-native/article-extras";
-import { useVariantTestingContext } from "@times-components-native/variant-testing";
 import {
   articleSkeletonPropTypes,
   articleSkeletonDefaultProps,
@@ -47,7 +46,6 @@ const ArticleWithContent = (props) => {
     tooltips,
   } = props;
 
-  const variants = useVariantTestingContext();
   const { windowWidth } = useResponsiveContext();
 
   const { id, url, content, template } = data;
@@ -82,10 +80,10 @@ const ArticleWithContent = (props) => {
     [],
   );
 
-  const fixedContent = useMemo(
-    () => [...fixup(props, variants), { name: "footer" }],
-    [content, isTablet],
-  );
+  const fixedContent = useMemo(() => [...fixup(props), { name: "footer" }], [
+    content,
+    isTablet,
+  ]);
 
   const images = fixedContent.filter((node) => node.name === "image");
 

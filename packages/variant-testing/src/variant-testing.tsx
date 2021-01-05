@@ -1,16 +1,7 @@
 import React, { createContext, useContext, ReactNode } from "react";
 import PropTypes from "prop-types";
 
-import { useResponsiveContext } from "@times-components-native/responsive";
-
 export const VariantTestingContext = createContext({});
-
-const validateVariant = (variant: string) => {
-  if (!variant || !["A", "B", "C"].includes(variant)) {
-    return "A";
-  }
-  return variant;
-};
 
 type Props = {
   children: ReactNode;
@@ -18,37 +9,8 @@ type Props = {
 };
 
 export const VariantTestingProvider = ({ variants = {}, children }: Props) => {
-  const { articleMpuTestVariant, sectionAdTestVariant } = variants;
-  const { isTablet } = useResponsiveContext();
-
-  let variantConfig = {};
-
-  if (isTablet) {
-    const validArticleMpuTestVariant = validateVariant(articleMpuTestVariant);
-    const validSectionAdTestVariant = validateVariant(sectionAdTestVariant);
-
-    variantConfig = {
-      ...variantConfig,
-      articleMpu: {
-        group: validArticleMpuTestVariant,
-        slotName: `native-inline-ad-${validArticleMpuTestVariant.toLowerCase()}`,
-        ...(validArticleMpuTestVariant !== "A" && {
-          adPosition: 5,
-          width: 300,
-          height: validArticleMpuTestVariant === "B" ? 250 : 600,
-        }),
-      },
-      sectionAd: {
-        group: validSectionAdTestVariant,
-        ...(validSectionAdTestVariant !== "A" && {
-          slotName: `native-section-ad-${validSectionAdTestVariant.toLowerCase()}`,
-        }),
-      },
-    };
-  }
-
   return (
-    <VariantTestingContext.Provider value={variantConfig}>
+    <VariantTestingContext.Provider value={variants}>
       {children}
     </VariantTestingContext.Provider>
   );

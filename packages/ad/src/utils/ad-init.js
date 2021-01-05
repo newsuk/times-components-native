@@ -3,7 +3,7 @@
 // NOTE: this function must be self-contained, i.e. contain no references to variables
 // defined outside the function, so that it can be passed into a WebView.
 export default ({ el, data, platform, eventCallback, window }) => {
-  const nativeAdRegex = /^native-(inline|section)-/;
+  const nativeAdRegex = /^native-(inline|section|(single|double)-mpu)/;
 
   window.googletag = window.googletag || {};
   window.googletag.cmd = window.googletag.cmd || [];
@@ -229,11 +229,6 @@ export default ({ el, data, platform, eventCallback, window }) => {
             ).toString();
             slot.setTargeting("timestestgroup", randomTestingGroup);
             slot.setTargeting("pos", slotName);
-            if (nativeAdRegex.test(slotName)) {
-              const testGroup = ["a", "b", "c"].indexOf(slotName.slice(-1)) + 1;
-              slot.setTargeting("testgroup", testGroup.toString());
-            }
-
             googletag.display(slotName);
             eventCallback(
               "warn",

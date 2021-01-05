@@ -589,24 +589,6 @@ export const snapshotTests = (renderComponent) => [
       expect(output).toMatchSnapshot();
     },
   },
-  {
-    name: "an article with variant testing",
-    test() {
-      const template = "mainstandard";
-      const article = articleFixture({
-        ...fixtureArgs,
-        template,
-        withAds: true,
-      });
-      const output = renderComponent(
-        withMobileContext(
-          renderArticle(article, null, false, { articleMpuTestVariant: "B" }),
-        ),
-      );
-
-      expect(output).toMatchSnapshot();
-    },
-  },
 ];
 
 export default (renderComponent, platformTests = []) => {
