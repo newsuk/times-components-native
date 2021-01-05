@@ -3,6 +3,7 @@ import memoizeOne from "memoize-one";
 import format from "date-fns/format";
 import { editionBreakpoints } from "@times-components-native/styleguide";
 import { pipe } from "@times-components-native/utils/src/pipe";
+import slice from "./slice";
 
 const withIgnoredSeperator = (slice) => ({ ...slice, ignoreSeparator: true });
 
@@ -162,7 +163,20 @@ const getEmailPuzzlesUrl = (publishedTime) =>
       )}`
     : ``;
 
+const getSliceIndexByArticleId = (articleId, section) => {
+  let currentIndex = 0;
+  section?.slices?.forEach((slice, index) => {
+    slice.items?.forEach((item) => {
+      if (articleId === item.articleId) {
+        currentIndex = index;
+      }
+    });
+  });
+  return currentIndex;
+};
+
 export {
+  getSliceIndexByArticleId,
   getEmailPuzzlesUrl,
   prepareSlicesForRender,
   consecutiveItemsFlagger,

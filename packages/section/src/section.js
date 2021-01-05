@@ -1,6 +1,5 @@
-import React, { useCallback, useState } from "react";
+import React, { useCallback, useEffect, useState } from "react";
 import { Animated, FlatList, Platform, View } from "react-native";
-import PropTypes from "prop-types";
 import { useResponsiveContext } from "@times-components-native/responsive";
 import { withTrackScrollDepth } from "@times-components-native/tracking";
 import { useVariantTestingContext } from "@times-components-native/variant-testing";
@@ -13,6 +12,7 @@ import MagazineCover from "./magazine-cover";
 import Slice from "./slice";
 import styleFactory from "./styles";
 import {
+  getSliceIndexByArticleId,
   getEmailPuzzlesUrl,
   prepareSlicesForRender,
   createPuzzleData,
@@ -38,6 +38,20 @@ const Section = ({
   const [emailPuzzlesButtonWidth] = useState(
     new Animated.Value(emailPuzzlesButtonExtendedWidth),
   );
+
+  // slice index 1
+  //const lastViewedArticleId = "8b6e7742-4de9-11eb-ad71-ea6bb4a570af";
+
+  // slice index 2
+  const lastViewedArticleId = "dca88772-4df0-11eb-ad71-ea6bb4a570af";
+
+  const sliceIndexFromArticle = getSliceIndexByArticleId(
+    lastViewedArticleId,
+    section,
+  );
+  console.log("sliceIndexFromArticle", sliceIndexFromArticle);
+
+  const [sliceIndex] = useState(sliceIndexFromArticle);
 
   const variants = useVariantTestingContext();
 
@@ -69,7 +83,6 @@ const Section = ({
     if (isPuzzle) return <PuzzleBar onPress={onPuzzleBarPress} />;
 
     if (isMagazine) return <MagazineCover cover={cover} />;
-
     return null;
   };
 
@@ -77,18 +90,23 @@ const Section = ({
     index,
     item: slice,
     inTodaysEditionSlice,
-  }) => (
-    <Slice
-      index={index}
-      length={slices.length}
-      onPress={isPuzzle ? onPuzzlePress : onArticlePress}
-      onLinkPress={onLinkPress}
-      slice={slice}
-      isInSupplement={isSupplementSection(title)}
-      inTodaysEditionSlice={inTodaysEditionSlice}
-      adConfig={adConfig}
-    />
-  );
+  }) => {
+    // console.log("slice", slice.name);
+
+    return (
+      <Slice
+        index={index}
+        id={slice.id}
+        length={slices.length}
+        onPress={isPuzzle ? onPuzzlePress : onArticlePress}
+        onLinkPress={onLinkPress}
+        slice={slice}
+        isInSupplement={isSupplementSection(title)}
+        inTodaysEditionSlice={inTodaysEditionSlice}
+        adConfig={adConfig}
+      />
+    );
+  };
 
   const renderItemSeperator = (isPuzzle) => (
     { leadingItem },
@@ -146,6 +164,8 @@ const Section = ({
         onViewableItemsChanged={onViewed ? onViewableItemsChanged : null}
         {...(isPuzzle && { onScrollBeginDrag })}
         renderItem={renderItem(isPuzzle)}
+        onScrollToIndexFailed={() => null}
+        initialScrollIndex={sliceIndex}
         windowSize={3}
       />
       {isPuzzle && isIOS ? (
@@ -159,18 +179,6 @@ const Section = ({
       ) : null}
     </>
   );
-};
-
-Section.displayName = "Section";
-Section.propTypes = {
-  onArticlePress: PropTypes.func,
-  onLinkPress: PropTypes.func,
-  onPuzzleBarPress: PropTypes.func,
-  onPuzzlePress: PropTypes.func,
-  onViewed: PropTypes.func,
-  publishedTime: PropTypes.string.isRequired,
-  receiveChildList: PropTypes.func,
-  section: PropTypes.shape({}).isRequired,
 };
 
 Section.defaultProps = {

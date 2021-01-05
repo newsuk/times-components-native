@@ -318,6 +318,9 @@ fragment commonSlicesSection on StandardSectionSlice {
     }
   }
   ... on LeadOneAndFourSlice {
+    items {
+      articleId
+    }
     lead {
       headline
       leadAsset {
@@ -403,6 +406,9 @@ fragment commonSlicesSection on StandardSectionSlice {
     }
   }
   ... on LeadOneAndOneSlice {
+    items {
+      articleId
+    }
     lead {
       headline
       leadAsset {
@@ -462,6 +468,9 @@ fragment commonSlicesSection on StandardSectionSlice {
     }
   }
   ... on LeadTwoNoPicAndTwoSlice {
+    items {
+      articleId
+    }
     lead1 {
       headline
       strapline
@@ -526,6 +535,9 @@ fragment commonSlicesSection on StandardSectionSlice {
     }
   }
   ... on SecondaryFourSlice {
+    items {
+      articleId
+    }
     secondary1 {
       headline
       leadAsset {
@@ -599,6 +611,9 @@ fragment commonSlicesSection on StandardSectionSlice {
     ...topSecondarySlice
   }
   ... on SecondaryOneSlice {
+    items {
+      articleId
+    }
     secondary {
       headline
       leadAsset {
@@ -658,6 +673,9 @@ fragment commonSlicesSection on StandardSectionSlice {
     }
   }
   ... on SecondaryOneAndFourSlice {
+    items {
+      articleId
+    }
     secondary {
       headline
       strapline
@@ -701,6 +719,9 @@ fragment commonSlicesSection on StandardSectionSlice {
     }
   }
   ... on SecondaryTwoAndTwoSlice {
+    items {
+      articleId
+    }
     secondary1 {
       headline
       leadAsset {
@@ -770,6 +791,9 @@ fragment commonSlicesSection on StandardSectionSlice {
     ...topSecondarySlice
   }
   ... on SecondaryTwoNoPicAndTwoSlice {
+    items {
+      articleId
+    }
     secondary1 {
       headline
       article {
@@ -1012,7 +1036,7 @@ fragment frontSlicesSection on FrontPageSectionSlice {
           ... on ArticleLink {
             articleId
           }
-           ... on Link {
+          ... on Link {
             url
           }
         }
