@@ -12,7 +12,6 @@ import {
   BoxExclusion,
 } from "@times-components-native/typeset";
 import ArticleParagraphWrapper from "@times-components-native/article-paragraph";
-import { useVariantTestingContext } from "@times-components-native/variant-testing";
 import { useResponsiveContext } from "@times-components-native/responsive";
 
 const InlineParagraph = ({
@@ -22,7 +21,6 @@ const InlineParagraph = ({
   str,
   scale,
   inline,
-  isInlineAd,
   tree,
   uid,
   defaultFont,
@@ -32,7 +30,6 @@ const InlineParagraph = ({
   const { spacing } = styleguide({ scale });
   const [inlineExclusion, setInlineExclusion] = useState(false);
   const { orientation, windowWidth } = useResponsiveContext();
-  const variants = useVariantTestingContext();
 
   const contentWidth = Math.min(
     windowWidth,
@@ -70,22 +67,8 @@ const InlineParagraph = ({
     return null;
   }
 
-  const getInlineLayout = () => {
-    const { articleMpu } = variants;
-    const inlineAdTitleHeight = spacing(4);
-    const inlineAdAdditionalWidth = spacing(2) + 1;
-
-    if (!isInlineAd || !articleMpu)
-      return { left: narrowContent ? 0 : gutters, width: contentWidth * 0.35 };
-
-    return {
-      left: windowWidth - gutters - articleMpu.width - inlineAdAdditionalWidth,
-      width: articleMpu.width + inlineAdAdditionalWidth,
-      height: articleMpu.height + inlineAdTitleHeight,
-    };
-  };
-
   const dropCapLeftPosition = narrowContent ? 0 : gutters - spacing(2);
+  const inlineContentWidth = contentWidth * 0.35;
 
   return [
     dropCap && (
@@ -97,19 +80,19 @@ const InlineParagraph = ({
       <View
         key={`${uid}:inline-paragraph`}
         style={{
+          left: narrowContent ? 0 : gutters,
           position: "absolute",
+          width: inlineContentWidth,
           zIndex: 1000,
-          ...getInlineLayout(),
         }}
         onLayout={(e) => {
           const { height } = e.nativeEvent.layout;
           if (!inlineExclusion) {
-            const { width } = getInlineLayout();
             setInlineExclusion({
               exclusion: new BoxExclusion(
-                isInlineAd ? windowWidth - 2 * gutters - width - spacing(2) : 0,
                 0,
-                width + spacing(isInlineAd ? 4 : 2),
+                0,
+                inlineContentWidth + spacing(2),
                 height + spacing(2),
               ),
               height,
@@ -189,7 +172,6 @@ InlineParagraph.propTypes = {
   str: PropTypes.object.isRequired,
   scale: PropTypes.string.isRequired,
   inline: PropTypes.object.isRequired,
-  isInlineAd: PropTypes.bool.isRequired,
   tree: PropTypes.object.isRequired,
   uid: PropTypes.string.isRequired,
   defaultFont: PropTypes.object.isRequired,

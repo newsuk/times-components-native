@@ -124,7 +124,7 @@ const slices = [
     Slice: PuzzleSlice,
   },
   {
-    mock: { slotName: "native-inline-ad-c" },
+    mock: { slotName: "native-section-ad" },
     name: "sectionad",
     Slice: SectionAd,
   },

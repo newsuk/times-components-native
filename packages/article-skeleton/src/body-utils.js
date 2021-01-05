@@ -1,6 +1,7 @@
 /* eslint-disable no-plusplus */
 import memoize from "memoize-one";
 import { FontStorage } from "@times-components-native/typeset";
+import { sizeMap } from "@times-components-native/ad/src/utils/generate-config";
 
 export const setupInlineContent = (
   skeletonProps,
@@ -82,14 +83,14 @@ export const setupInlineContent = (
   return processedContent;
 };
 
-const setupArticleMpuTestAd = (
-  articleMpu,
+const setupArticleMpuAd = (
   currentAdSlotIndex,
   contentWithoutAdSlot,
   skeletonProps,
 ) => {
-  const { adPosition, group, width, height, slotName } = articleMpu;
-  const isControlGroup = group === "A";
+  const adPosition = 5;
+  const slotName = "native-single-mpu";
+  const { height, width } = sizeMap[slotName][0];
 
   // Get index of nth (adPosition) paragraph
   let nthParagraphIndex = currentAdSlotIndex;
@@ -102,24 +103,9 @@ const setupArticleMpuTestAd = (
     return count + 1;
   }, 0);
 
-  const adSlotIndex = isControlGroup ? currentAdSlotIndex : nthParagraphIndex;
+  const adSlotIndex = nthParagraphIndex;
 
   const contentBeforeAd = contentWithoutAdSlot.slice(0, adSlotIndex);
-
-  if (isControlGroup) {
-    const contentAfterControlGroupAd = contentWithoutAdSlot.slice(adSlotIndex);
-    return [
-      ...contentBeforeAd,
-      {
-        name: "ad",
-        attributes: {
-          slotName,
-        },
-        children: [],
-      },
-      ...contentAfterControlGroupAd,
-    ];
-  }
 
   const numberOfCandidateParagraphsToInline = 7;
 
@@ -164,12 +150,12 @@ const setupArticleMpuTestAd = (
   ];
 };
 
-export const setupAd = (skeletonProps, variants) => {
+export const setupAd = (skeletonProps) => {
   const {
     isTablet,
     data: { content, template },
   } = skeletonProps;
-  if (!isTablet || !variants || !Object.keys(variants).length) return content;
+  if (!isTablet) return content;
 
   let currentAdSlotIndex;
 
@@ -189,13 +175,7 @@ export const setupAd = (skeletonProps, variants) => {
   // If tablet, only show on mainstandard template
   if (isTablet && template !== "mainstandard") return contentWithoutAdSlot;
 
-  const { articleMpu } = variants;
-
-  if (!articleMpu || (articleMpu && template !== "mainstandard"))
-    return cleanedContent;
-
-  return setupArticleMpuTestAd(
-    articleMpu,
+  return setupArticleMpuAd(
     currentAdSlotIndex,
     contentWithoutAdSlot,
     skeletonProps,
@@ -224,6 +204,6 @@ export const getStringBounds = (fontSettings, string) => {
   return { width, height };
 };
 
-export default memoize((skeletonProps, variants) => {
-  return setupInlineContent(skeletonProps, setupAd(skeletonProps, variants));
+export default memoize((skeletonProps) => {
+  return setupInlineContent(skeletonProps, setupAd(skeletonProps));
 });

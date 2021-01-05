@@ -29,7 +29,7 @@ const slotPositions = {
   pixelteads: 2,
 };
 
-const sizeMap = {
+export const sizeMap = {
   "ad-header": sizes.header,
   "ad-mpu": sizes.mpu,
   "ad-pixel": sizes.pixel,
@@ -40,11 +40,9 @@ const sizeMap = {
   header: sizes.header,
   mpu: sizes.mpu,
   "native-inline-ad": sizes.native,
-  "native-inline-ad-a": sizes.native,
-  "native-inline-ad-b": sizes.nativeB,
-  "native-inline-ad-c": sizes.nativeC,
-  "native-section-ad-b": sizes.sectionB,
-  "native-section-ad-c": sizes.sectionC,
+  "native-single-mpu": sizes.singleMPU,
+  "native-double-mpu": sizes.doubleMPU,
+  "native-section-ad": sizes.section,
   pixel: sizes.pixel,
   pixelskin: sizes.pixel,
   pixelteads: sizes.pixel,

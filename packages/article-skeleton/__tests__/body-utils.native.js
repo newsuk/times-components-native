@@ -240,105 +240,52 @@ export default () => {
 
   describe("setupAd", () => {
     it("should return content untouched if not tablet", () => {
-      expect(setupAd({ ...skeletonProps, isTablet: false }, undefined)).toEqual(
-        content,
-      );
-    });
-
-    it("should return content untouched if no variants specified", () => {
-      expect(setupAd(skeletonProps, undefined)).toEqual(content);
-    });
-
-    it("should return content untouched if no variant tests specified", () => {
-      expect(setupAd(skeletonProps, {})).toEqual(content);
+      expect(setupAd({ ...skeletonProps, isTablet: false })).toEqual(content);
     });
 
     it("should return content untouched if no ad block present in content", () => {
       const contentWithoutAd = content.filter((item) => item.name !== "ad");
       expect(
-        setupAd(
-          {
-            ...skeletonProps,
-            data: { ...skeletonProps.data, content: contentWithoutAd },
-          },
-          { someVariantTest: "B" },
-        ),
+        setupAd({
+          ...skeletonProps,
+          data: { ...skeletonProps.data, content: contentWithoutAd },
+        }),
       ).toEqual(contentWithoutAd);
     });
 
     it("should remove empty paragraphs", () => {
       const contentWithoutAd = content.filter((item) => item.name !== "ad");
       expect(
-        setupAd(
-          {
-            ...skeletonProps,
-            data: {
-              ...skeletonProps.data,
-              content: [
-                { name: "paragraph", children: [] },
-                ...contentWithoutAd,
-              ],
-            },
+        setupAd({
+          ...skeletonProps,
+          data: {
+            ...skeletonProps.data,
+            content: [{ name: "paragraph", children: [] }, ...contentWithoutAd],
           },
-          { someVariantTest: "B" },
-        ),
+        }),
       ).toEqual(contentWithoutAd);
     });
   });
 
-  describe("Article MPU Test", () => {
+  describe("Article MPU", () => {
     it("setupAd should remove ad if tablet and template is not mainstandard", () => {
       const contentWithoutAd = content.filter((item) => item.name !== "ad");
       expect(
-        setupAd(
-          {
-            ...skeletonProps,
-            data: { ...skeletonProps.data, template: "maincomment" },
-          },
-          { articleMpu: { group: "B" } },
-        ),
+        setupAd({
+          ...skeletonProps,
+          data: { ...skeletonProps.data, template: "maincomment" },
+        }),
       ).toEqual(contentWithoutAd);
     });
 
     it("setupAd should not remove ad if not tablet and template is not mainstandard", () => {
       expect(
-        setupAd(
-          {
-            ...skeletonProps,
-            isTablet: false,
-            data: { ...skeletonProps.data, template: "maincomment" },
-          },
-          { articleMpu: { group: "B" } },
-        ),
-      ).toEqual(content);
-    });
-
-    it("setupAd should return content untouched if articleMpu not specified", () => {
-      expect(
-        setupAd(skeletonProps, { notTheTestYouAreLookingFor: "B" }),
-      ).toEqual(content);
-    });
-
-    it("setupAd should return content with the slotName overriden if articleMpu group is control group A", () => {
-      expect(
-        setupAd(skeletonProps, {
-          articleMpu: { group: "A", slotName: "native-inline-ad-a" },
+        setupAd({
+          ...skeletonProps,
+          isTablet: false,
+          data: { ...skeletonProps.data, template: "maincomment" },
         }),
-      ).toEqual([
-        createParagraph("a"),
-        createParagraph("b"),
-        createParagraph("c"),
-        createParagraph("d"),
-        createParagraph("e"),
-        {
-          name: "ad",
-          attributes: {
-            slotName: "native-inline-ad-a",
-          },
-          children: [],
-        },
-        createParagraph("f"),
-      ]);
+      ).toEqual(content);
     });
 
     it("setupAd should return content with the inline mpu ad present and attributes overriden", () => {
@@ -364,17 +311,7 @@ export default () => {
         data: { ...skeletonProps.data, content: longContent },
       };
 
-      expect(
-        setupAd(newSkeletonProps, {
-          articleMpu: {
-            group: "C",
-            adPosition: 5,
-            width: 300,
-            height: 600,
-            slotName: "native-inline-ad-c",
-          },
-        }),
-      ).toEqual([
+      expect(setupAd(newSkeletonProps)).toEqual([
         createParagraph("a"),
         createParagraph("b"),
         createParagraph("c"),
@@ -383,8 +320,8 @@ export default () => {
           name: "inlineContent",
           attributes: {
             width: 300,
-            height: 600,
-            slotName: "native-inline-ad-c",
+            height: 250,
+            slotName: "native-single-mpu",
             inlineContent: [
               createParagraph("e"),
               createParagraph("f"),
@@ -428,17 +365,7 @@ export default () => {
         data: { ...skeletonProps.data, content: longContent },
       };
 
-      expect(
-        setupAd(newSkeletonProps, {
-          articleMpu: {
-            group: "C",
-            adPosition: 5,
-            width: 300,
-            height: 600,
-            slotName: "native-inline-ad-c",
-          },
-        }),
-      ).toEqual([
+      expect(setupAd(newSkeletonProps)).toEqual([
         createParagraph("a"),
         createParagraph("b"),
         createParagraph("c"),
@@ -447,8 +374,8 @@ export default () => {
           name: "inlineContent",
           attributes: {
             width: 300,
-            height: 600,
-            slotName: "native-inline-ad-c",
+            height: 250,
+            slotName: "native-single-mpu",
             inlineContent: [createParagraph("e"), createParagraph("f")],
             originalName: "ad",
             skeletonProps: newSkeletonProps,
@@ -463,52 +390,6 @@ export default () => {
         createParagraph("k"),
         createParagraph("l"),
         createParagraph("m"),
-      ]);
-    });
-
-    it("setupAd should return content with the ad in the variant requested position", () => {
-      const newSkeletonProps = {
-        ...skeletonProps,
-        data: {
-          ...skeletonProps.data,
-          content: [
-            { name: "image", children: [] },
-            ...skeletonProps.data.content,
-          ],
-        },
-      };
-
-      expect(
-        setupAd(newSkeletonProps, {
-          articleMpu: {
-            group: "C",
-            adPosition: 3,
-            width: 300,
-            height: 600,
-            slotName: "native-inline-ad-c",
-          },
-        }),
-      ).toEqual([
-        { name: "image", children: [] },
-        createParagraph("a"),
-        createParagraph("b"),
-        {
-          name: "inlineContent",
-          attributes: {
-            width: 300,
-            height: 600,
-            slotName: "native-inline-ad-c",
-            inlineContent: [
-              createParagraph("c"),
-              createParagraph("d"),
-              createParagraph("e"),
-              createParagraph("f"),
-            ],
-            originalName: "ad",
-            skeletonProps: newSkeletonProps,
-          },
-          children: [],
-        },
       ]);
     });
   });
