@@ -6,6 +6,7 @@ import { ModalImage } from "@times-components-native/image";
 import InsetCaption from "./inset-caption";
 import InlineImage from "./inline-image";
 import FullWidthCaption from "./fullwidth-caption";
+import { Placeholder } from "@times-components-native/image";
 import { propTypes, defaultPropTypes } from "./article-image-prop-types";
 import styles from "./styles";
 
@@ -73,6 +74,10 @@ const ArticleImage = ({
   const { caption, credits } = captionOptions;
 
   if (display === "inline") {
+    if (!uri || uri === "") {
+      return <Placeholder />;
+    }
+
     return (
       <InlineImage
         captionOptions={captionOptions}
