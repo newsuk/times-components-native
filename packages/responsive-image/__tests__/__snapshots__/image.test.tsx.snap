@@ -45,7 +45,39 @@ exports[`Image gracefully handles bad high-res url 1`] = `
 </View>
 `;
 
-exports[`Image handles no uri 1`] = `null`;
+exports[`Image handles no uri 1`] = `
+<View
+  height="100%"
+  style={
+    Array [
+      Object {
+        "alignItems": "center",
+        "backgroundColor": "#EDEDED",
+        "elevation": 5,
+        "justifyContent": "center",
+        "zIndex": 999,
+      },
+      0,
+    ]
+  }
+  width="100%"
+>
+  <Image
+    fadeDuration={0}
+    resizeMode="contain"
+    source={
+      Object {
+        "testUri": "../../../packages/image/assets/t.png",
+      }
+    }
+    style={
+      Object {
+        "width": "25%",
+      }
+    }
+  />
+</View>
+`;
 
 exports[`Image loads high-res 1`] = `
 <View
@@ -60,26 +92,38 @@ exports[`Image loads high-res 1`] = `
   }
 >
   <Image
-    borderRadius={0}
-    fadeDuration={0}
-    onLoadEnd={[Function]}
-    source={
+    defaultSource={
       Object {
         "testUri": "../../../packages/responsive-image/assets/t.png",
       }
     }
+    fadeDuration={0}
+    onError={[Function]}
+    onLoadEnd={[Function]}
+    resizeMethod="resize"
+    source={
+      Object {
+        "uri": "http://foo.com/bar.png?rel_width=1&rel_height=1&rel_vertical_offset=0&rel_horizontal_offset=0&offline=true&resize=1024",
+      }
+    }
     style={
       Object {
-        "height": "100%",
-        "resizeMode": "center",
-        "width": 500,
+        "aspectRatio": undefined,
+        "borderRadius": 0,
+        "resizeMode": "cover",
+        "width": "100%",
       }
     }
   />
   <Image
+    defaultSource={
+      Object {
+        "testUri": "../../../packages/responsive-image/assets/t.png",
+      }
+    }
     fadeDuration={0}
     onError={[Function]}
-    onLoadEnd={[Function]}
+    onLoad={[Function]}
     resizeMethod="resize"
     source={
       Object {

@@ -3,6 +3,8 @@ import { Image, ImageBackground } from "react-native";
 import { act, create } from "react-test-renderer";
 import ResponsiveImage from "../src";
 
+jest.mock("react-native-image-zoom-viewer", () => "ImageZoomView");
+
 const testUri = "http://foo.com/bar.png";
 
 beforeEach(() => {
