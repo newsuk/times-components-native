@@ -9,7 +9,6 @@ exports[`1. iconemail sets a width when height is set 1`] = `
     Object {
       "backgroundColor": "transparent",
       "borderWidth": 0,
-      "opacity": 1,
     }
   }
   title="Email icon"
@@ -39,24 +38,56 @@ exports[`3. iconforwardarrow sets a width when height is set 1`] = `
 `;
 
 exports[`4. iconstar sets a width when height is set 1`] = `
-<ARTSurfaceView
+<RNSVGSvgView
+  align="xMidYMid"
+  aria-label="icon-save-star"
+  bbHeight={50}
+  bbWidth={50}
+  focusable={false}
+  height={50}
+  meetOrSlice={0}
+  minX={0}
+  minY={0}
   style={
     Object {
+      "backgroundColor": "transparent",
+      "borderWidth": 0,
+      "flex": 0,
       "height": 50,
       "width": 50,
     }
   }
+  title="Save star"
+  vbHeight={18}
+  vbWidth={18}
+  width={50}
 />
 `;
 
 exports[`5. iconcopylink sets a width when height is set 1`] = `
-<ARTSurfaceView
+<RNSVGSvgView
+  align="xMidYMid"
+  aria-label="icon-copy-link"
+  bbHeight={50}
+  bbWidth={15}
+  focusable={false}
+  height={50}
+  meetOrSlice={0}
+  minX={0}
+  minY={0}
   style={
     Object {
-      "height": 15,
+      "backgroundColor": "transparent",
+      "borderWidth": 0,
+      "flex": 0,
+      "height": 50,
       "width": 15,
     }
   }
+  title="Copy link to clipboard"
+  vbHeight={15}
+  vbWidth={15}
+  width={15}
 />
 `;
 
@@ -127,12 +158,28 @@ exports[`11. thetimeslogo sets a width when height is set 1`] = `
 `;
 
 exports[`12. closeicon sets a width when height is set 1`] = `
-<ARTSurfaceView
+<RNSVGSvgView
+  align="xMidYMid"
+  aria-label="icon-close"
+  bbHeight={50}
+  bbWidth={28}
+  focusable={false}
+  height={50}
+  meetOrSlice={0}
+  minX={0}
+  minY={0}
   style={
     Object {
-      "height": 28,
+      "backgroundColor": "transparent",
+      "borderWidth": 0,
+      "flex": 0,
+      "height": 50,
       "width": 28,
     }
   }
+  title="Close Icon"
+  vbHeight={28}
+  vbWidth={28}
+  width={28}
 />
 `;

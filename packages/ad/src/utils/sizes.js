@@ -93,7 +93,7 @@ const sizes = {
       width: 970,
     },
   ],
-  nativeB: [
+  singleMPU: [
     {
       orientation: ["landscape", "portrait"],
       height: 250,
@@ -101,7 +101,7 @@ const sizes = {
       width: 300,
     },
   ],
-  nativeC: [
+  doubleMPU: [
     {
       orientation: ["landscape", "portrait"],
       height: 600,
@@ -109,15 +109,7 @@ const sizes = {
       width: 300,
     },
   ],
-  sectionB: [
-    {
-      orientation: ["landscape", "portrait"],
-      height: 90,
-      sizes: [leaderboard],
-      width: 728,
-    },
-  ],
-  sectionC: [
+  section: [
     {
       orientation: ["portrait"],
       height: 90,

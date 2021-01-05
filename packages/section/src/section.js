@@ -3,7 +3,6 @@ import { Animated, FlatList, Platform, View } from "react-native";
 import PropTypes from "prop-types";
 import { useResponsiveContext } from "@times-components-native/responsive";
 import { withTrackScrollDepth } from "@times-components-native/tracking";
-import { useVariantTestingContext } from "@times-components-native/variant-testing";
 import { IconEmail } from "@times-components-native/icons";
 import FloatingActionButton from "@times-components-native/floating-action-button";
 import SectionItemSeparator from "./section-item-separator";
@@ -38,8 +37,6 @@ const Section = ({
   const [emailPuzzlesButtonWidth] = useState(
     new Animated.Value(emailPuzzlesButtonExtendedWidth),
   );
-
-  const variants = useVariantTestingContext();
 
   const isIOS = Platform.OS === "ios";
 
@@ -124,7 +121,7 @@ const Section = ({
 
   const data = isPuzzle
     ? createPuzzleData(slices, editionBreakpoint)
-    : prepareSlicesForRender(isTablet, variants)(slices);
+    : prepareSlicesForRender(isTablet)(slices);
 
   if (slices) receiveChildList(data);
 

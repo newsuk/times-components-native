@@ -1,12 +1,14 @@
-import React from "react";
-import Svg, { Path } from "@times-components-native/svgs";
+import React, { FC } from "react";
+import { Path, Svg } from "react-native-svg";
 import { clean } from "@times-components-native/utils";
-import PropTypes from "prop-types";
 
-const IconClose = ({ height, width }) => (
+const IconClose: FC<{ width: number; height: number; fillColour?: string }> = ({
+  height,
+  width,
+  fillColour = "white",
+}) => (
   <Svg
     aria-label="icon-close"
-    role="img"
     viewBox="0 0 28 28"
     {...clean({
       height,
@@ -16,18 +18,13 @@ const IconClose = ({ height, width }) => (
   >
     <Path
       {...clean({
-        fill: "white",
-        stroke: "white",
+        fill: fillColour,
+        stroke: fillColour,
       })}
       d="M15.617 14l4.683 5.838-.462.462L14 15.617 8.162 20.3l-.462-.462L12.383 14 7.7 8.162l.462-.462L14 12.383 19.838 7.7l.462.462z"
     />
   </Svg>
 );
-
-IconClose.propTypes = {
-  height: PropTypes.number,
-  width: PropTypes.number,
-};
 
 IconClose.defaultProps = {
   height: 28,
