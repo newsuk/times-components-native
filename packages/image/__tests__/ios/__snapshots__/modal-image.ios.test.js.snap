@@ -131,6 +131,20 @@ exports[`1. modal image 1`] = `
           }
         }
       />
+      <Image
+        defaultSource={
+          Object {
+            "testUri": "../../../packages/responsive-image/assets/t.png",
+          }
+        }
+        fadeDuration={0}
+        resizeMethod="resize"
+        source={
+          Object {
+            "uri": "http://example.com/image.jpg?crop=1016%2C677%2C0%2C0&rel_width=1&rel_height=1&rel_vertical_offset=0&rel_horizontal_offset=0&offline=true&resize=1440",
+          }
+        }
+      />
     </View>
   </View>
 </View>
@@ -395,6 +409,20 @@ exports[`3. modal image with custom highressize 1`] = `
         source={
           Object {
             "testUri": "../../../packages/responsive-image/assets/t.png",
+          }
+        }
+      />
+      <Image
+        defaultSource={
+          Object {
+            "testUri": "../../../packages/responsive-image/assets/t.png",
+          }
+        }
+        fadeDuration={0}
+        resizeMethod="resize"
+        source={
+          Object {
+            "uri": "http://example.com/image.jpg?crop=1016%2C677%2C0%2C0&rel_width=1&rel_height=1&rel_vertical_offset=0&rel_horizontal_offset=0&offline=true&resize=1440",
           }
         }
       />
