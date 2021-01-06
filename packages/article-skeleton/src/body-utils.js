@@ -89,14 +89,19 @@ const setupArticleMpuAd = (
   skeletonProps,
 ) => {
   const adPosition = 5;
-  const slotName = "native-single-mpu";
-  const { height, width } = sizeMap[slotName][0];
+  const doubleMPUThreshold = 10;
 
   // Get index of nth (adPosition) paragraph
   let nthParagraphIndex = currentAdSlotIndex;
 
+  let hasNonParagraphContentBeforeThreshold = false;
+
   contentWithoutAdSlot.reduce((count, item, index) => {
-    if (item.name !== "paragraph") return count;
+    if (item.name !== "paragraph") {
+      if (index < doubleMPUThreshold)
+        hasNonParagraphContentBeforeThreshold = true;
+      return count;
+    }
     if (count === adPosition) {
       nthParagraphIndex = index - 1;
     }
@@ -104,6 +109,11 @@ const setupArticleMpuAd = (
   }, 0);
 
   const adSlotIndex = nthParagraphIndex;
+
+  const slotName = hasNonParagraphContentBeforeThreshold
+    ? "native-single-mpu"
+    : "native-double-mpu";
+  const { height, width } = sizeMap[slotName][0];
 
   const contentBeforeAd = contentWithoutAdSlot.slice(0, adSlotIndex);
 
