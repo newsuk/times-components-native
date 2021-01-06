@@ -265,10 +265,8 @@ export default () => {
         }),
       ).toEqual(contentWithoutAd);
     });
-  });
 
-  describe("Article MPU", () => {
-    it("setupAd should remove ad if tablet and template is not mainstandard", () => {
+    it("should remove ad if tablet and template is not mainstandard", () => {
       const contentWithoutAd = content.filter((item) => item.name !== "ad");
       expect(
         setupAd({
@@ -278,7 +276,7 @@ export default () => {
       ).toEqual(contentWithoutAd);
     });
 
-    it("setupAd should not remove ad if not tablet and template is not mainstandard", () => {
+    it("should not remove ad if not tablet and template is not mainstandard", () => {
       expect(
         setupAd({
           ...skeletonProps,
@@ -287,8 +285,10 @@ export default () => {
         }),
       ).toEqual(content);
     });
+  });
 
-    it("setupAd should return content with the inline mpu ad present and attributes overriden", () => {
+  describe("setupArticleMpuAd", () => {
+    it("should return content with an inline double mpu ad present and attributes overriden when no non-paragraph content within threshold", () => {
       const longContent = [
         createParagraph("a"),
         createParagraph("b"),
@@ -296,6 +296,62 @@ export default () => {
         createParagraph("d"),
         createParagraph("e"),
         { name: "ad", children: [] },
+        createParagraph("f"),
+        createParagraph("g"),
+        createParagraph("h"),
+        createParagraph("i"),
+        createParagraph("j"),
+        createParagraph("k"),
+        createParagraph("l"),
+        { name: "image", children: [] },
+        createParagraph("m"),
+      ];
+
+      const newSkeletonProps = {
+        ...skeletonProps,
+        data: { ...skeletonProps.data, content: longContent },
+      };
+
+      expect(setupAd(newSkeletonProps)).toEqual([
+        createParagraph("a"),
+        createParagraph("b"),
+        createParagraph("c"),
+        createParagraph("d"),
+        {
+          name: "inlineContent",
+          attributes: {
+            width: 300,
+            height: 600,
+            slotName: "native-double-mpu",
+            inlineContent: [
+              createParagraph("e"),
+              createParagraph("f"),
+              createParagraph("g"),
+              createParagraph("h"),
+              createParagraph("i"),
+              createParagraph("j"),
+              createParagraph("k"),
+            ],
+            originalName: "ad",
+            skeletonProps: newSkeletonProps,
+          },
+          children: [],
+        },
+        createParagraph("l"),
+        { name: "image", children: [] },
+        createParagraph("m"),
+      ]);
+    });
+
+    it("should return content with the inline single mpu ad present when non-paragraph content within threshold", () => {
+      const longContent = [
+        createParagraph("a"),
+        createParagraph("b"),
+        createParagraph("c"),
+        { name: "image", children: [] },
+        createParagraph("d"),
+        { name: "ad", children: [] },
+        createParagraph("e"),
         createParagraph("f"),
         createParagraph("g"),
         createParagraph("h"),
@@ -315,6 +371,7 @@ export default () => {
         createParagraph("a"),
         createParagraph("b"),
         createParagraph("c"),
+        { name: "image", children: [] },
         createParagraph("d"),
         {
           name: "inlineContent",
@@ -341,7 +398,7 @@ export default () => {
       ]);
     });
 
-    it("setupAd should return content with the inline mpu ad present but split content on non-paragraph", () => {
+    it("should return content with the inline ad present but split content on non-paragraph", () => {
       const longContent = [
         createParagraph("a"),
         createParagraph("b"),
