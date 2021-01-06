@@ -55,7 +55,7 @@ const Video = ({
         />
       )}
       <View style={[styles.overlay, { height, width }]}>
-        <PlayIcon />
+        <PlayIcon containerWidth={width} />
       </View>
     </View>
   </Touchable>
@@ -71,4 +71,4 @@ Video.propTypes = {
 };
 
 export default Video;
-export { default as PlayIcon } from "./play-icon.native";
+export { default as PlayIcon, PLAY_ICON_SIZE } from "./play-icon.native";

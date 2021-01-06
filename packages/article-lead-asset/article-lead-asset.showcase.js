@@ -1,5 +1,5 @@
 import React from "react";
-import { Text } from "react-native";
+import { Dimensions, Text } from "react-native";
 import ArticleLeadAsset from "./src/article-lead-asset";
 
 const preventDefaultedAction = (decorateAction) =>
@@ -35,6 +35,8 @@ const createCaption = (label) => ({ caption: { text, credits } }) => (
   </Text>
 );
 
+const width = Dimensions.get("window").width;
+
 export default {
   children: [
     {
@@ -45,7 +47,7 @@ export default {
           getImageCrop={() => imageLeadAsset.crop169}
           leadAsset={imageLeadAsset}
           renderCaption={createCaption("caption")}
-          width={400}
+          width={width}
         />
       ),
       name: "Image",
@@ -61,7 +63,7 @@ export default {
           leadAsset={videoLeadAsset}
           onVideoPress={preventDefaultedAction(decorateAction)("onVideoPress")}
           renderCaption={createCaption("caption")}
-          width={400}
+          width={width}
         />
       ),
       name: "Video",
