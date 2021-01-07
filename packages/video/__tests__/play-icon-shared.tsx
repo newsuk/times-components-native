@@ -26,7 +26,7 @@ export default () => {
       },
     },
     {
-      name: "PlayIcon with containerWidth of 0",
+      name: "PlayIcon with containerWidth of 269",
       test() {
         const testInstance = TestRenderer.create(
           <PlayIcon containerWidth={269} />,
