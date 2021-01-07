@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, ReactNode } from "react";
 import { Animated } from "react-native";
 import ArticleSummary, {
   ArticleSummaryContent,
@@ -74,21 +74,29 @@ const TileSummary: React.FC<Props> = ({
   const readArticleAnimationDuration = 300;
   const readArticleAnimationDelay = 500;
 
-  const MarkAsRead = ({ children, markArticleAsRead }) =>
-    markArticleAsRead ? (
-      <Animated.View
-        style={{
-          opacity: textOpacity,
-        }}
-      >
-        {children}
-      </Animated.View>
-    ) : (
-      children
-    );
+  type MarkAsReadProps = {
+    children: ReactNode;
+    markAsRead: boolean;
+  };
 
-  const renderContent = (markArticleAsRead) => (
-    <MarkAsRead markArticleAsRead={markArticleAsRead}>
+  const MarkAsRead = ({ children, markAsRead }: MarkAsReadProps) => (
+    <>
+      {markAsRead ? (
+        <Animated.View
+          style={{
+            opacity: textOpacity,
+          }}
+        >
+          {children}
+        </Animated.View>
+      ) : (
+        children
+      )}
+    </>
+  );
+
+  const renderContent = (markAsRead: boolean) => (
+    <MarkAsRead markAsRead={markAsRead}>
       <ArticleSummaryContent
         ast={summary}
         style={summaryStyle}
@@ -99,8 +107,8 @@ const TileSummary: React.FC<Props> = ({
     </MarkAsRead>
   );
 
-  const renderFlags = (markArticleAsRead) => (
-    <MarkAsRead markArticleAsRead={markArticleAsRead}>
+  const renderFlags = (markAsRead: boolean) => (
+    <MarkAsRead markAsRead={markAsRead}>
       <ArticleFlags
         {...flagColour}
         style={flagsStyle}
@@ -120,8 +128,8 @@ const TileSummary: React.FC<Props> = ({
     />
   );
 
-  const renderHeadline = (markArticleAsRead) => (
-    <MarkAsRead markArticleAsRead={markArticleAsRead}>
+  const renderHeadline = (markAsRead: boolean) => (
+    <MarkAsRead markAsRead={markAsRead}>
       <ArticleSummaryHeadline
         headline={tileHeadline || shortHeadline || headline}
         style={headlineStyle}
@@ -129,21 +137,27 @@ const TileSummary: React.FC<Props> = ({
     </MarkAsRead>
   );
 
-  const renderStrapline = (markArticleAsRead) => (
-    <MarkAsRead markArticleAsRead={markArticleAsRead}>
-      <ArticleSummaryStrapline strapline={strapline} style={straplineStyle} />
-    </MarkAsRead>
-  );
+  const renderStrapline = (markAsRead: boolean) =>
+    strapline && (
+      <MarkAsRead markAsRead={markAsRead}>
+        <ArticleSummaryStrapline strapline={strapline} style={straplineStyle} />
+      </MarkAsRead>
+    );
+
+  const shouldMarkAsRead = (
+    isTablet: boolean,
+    readArticles: Array<string> | null,
+    articleId: string,
+  ) => !!(isTablet && readArticles && readArticles.includes(articleId));
 
   return (
     <ResponsiveContext.Consumer>
       {({ isTablet }) => (
         <SectionContext.Consumer>
           {({ readArticles }) => {
-            const markArticleAsRead =
-              isTablet && readArticles && readArticles.includes(id);
+            const markAsRead = shouldMarkAsRead(isTablet, readArticles, id);
 
-            if (markArticleAsRead) {
+            if (markAsRead) {
               Animated.timing(textOpacity, {
                 delay: readArticleAnimationDelay,
                 duration: readArticleAnimationDuration,
@@ -155,9 +169,9 @@ const TileSummary: React.FC<Props> = ({
             return (
               <ArticleSummary
                 bylineProps={bylines ? { ast: bylines, bylineStyle } : null}
-                content={summary ? renderContent(markArticleAsRead) : undefined}
-                flags={renderFlags(markArticleAsRead)}
-                headline={renderHeadline(markArticleAsRead)}
+                content={summary && renderContent(markAsRead)}
+                flags={renderFlags(markAsRead)}
+                headline={renderHeadline(markAsRead)}
                 labelProps={{
                   color:
                     labelColour ||
@@ -166,14 +180,11 @@ const TileSummary: React.FC<Props> = ({
                   isVideo: hasVideo,
                   title: label,
                   hide: hideLabel,
-                  markArticleAsRead,
+                  markAsRead,
                 }}
-                strapline={
-                  strapline ? renderStrapline(markArticleAsRead) : undefined
-                }
+                strapline={renderStrapline(markAsRead)}
                 saveStar={withStar && renderSaveStar()}
                 style={style}
-                isTablet={isTablet}
               />
             );
           }}

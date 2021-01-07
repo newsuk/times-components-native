@@ -21,7 +21,7 @@ function renderAst(ast) {
 }
 
 function ArticleSummaryLabel(props) {
-  const { markArticleAsRead, hide, title, isVideo } = props;
+  const { markAsRead, hide, title, isVideo } = props;
   const [labelOpacity] = useState(new Animated.Value(1));
 
   if (hide || (!title && !isVideo)) {
@@ -30,7 +30,7 @@ function ArticleSummaryLabel(props) {
 
   Animated.timing(labelOpacity, {
     duration: 500,
-    toValue: markArticleAsRead ? 0.6 : 1,
+    toValue: markAsRead ? 0.6 : 1,
     useNativeDriver: false,
   }).start();
 
@@ -116,7 +116,9 @@ ArticleSummary.propTypes = {
     isVideo: PropTypes.bool,
     title: PropTypes.string,
     hide: PropTypes.bool,
+    markAsRead: PropTypes.bool,
   }),
+  saveStar: PropTypes.node,
   strapline: PropTypes.node,
   style: PropTypes.shape({}),
 };
@@ -130,6 +132,7 @@ ArticleSummary.defaultProps = {
   labelProps: {
     hide: false,
   },
+  saveStar: null,
   strapline: null,
   style: null,
 };
