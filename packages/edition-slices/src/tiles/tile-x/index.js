@@ -28,6 +28,7 @@ const TileX = ({ onPress, tile, breakpoint = editionBreakpoints.medium }) => {
             tile={tile}
             whiteSpaceHeight={whiteSpaceHeight}
             withStar={false}
+            hasBeenRead={true}
           />
         )}
       />

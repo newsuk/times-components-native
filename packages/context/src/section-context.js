@@ -5,4 +5,5 @@ export default createContext({
   publicationName: "TIMES",
   recentlyOpenedPuzzleCount: 0,
   savedArticles: null,
+  readArticles: null,
 });

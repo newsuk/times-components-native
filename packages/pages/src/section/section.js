@@ -142,6 +142,18 @@ class SectionPage extends Component {
       sectionName: section.name,
     });
 
+    const readArticles = [
+      "703d9a72-4f86-11eb-ad71-ea6bb4a570af",
+      "8622019e-36f4-11ea-9e00-2e9f417bebfa",
+      "186f16cc-4f4f-11eb-ad71-ea6bb4a570af",
+      "9d5c5076-502f-11eb-9824-61a56b05e43d",
+      "af28b209-7b7a-4103-9782-c922fb3e8743",
+      "4a77e282-503c-11eb-9824-61a56b05e43d",
+      "1aa0eaee-5038-11eb-9824-61a56b05e43d",
+      "c705d420-4ad9-11eb-9dbc-44d114c9d92d",
+      "a4382b7c-5048-11eb-ad71-ea6bb4a570af",
+    ];
+
     return (
       <SectionContext.Provider
         value={{
@@ -151,6 +163,7 @@ class SectionPage extends Component {
           publicationName,
           recentlyOpenedPuzzleCount,
           savedArticles,
+          readArticles,
         }}
       >
         <VariantTestingProvider variants={variants}>
