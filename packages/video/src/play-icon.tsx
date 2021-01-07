@@ -1,7 +1,7 @@
 import React, { FC } from "react";
 import Svg, { Path, Rect } from "react-native-svg";
 
-export enum PLAY_ICON_SIZE {
+enum PLAY_ICON_SIZE {
   SMALL = 32,
   MEDIUM = 48,
   LARGE = 64,

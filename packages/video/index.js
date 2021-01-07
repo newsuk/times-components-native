@@ -1,1 +1,1 @@
-export { default, PlayIcon, PLAY_ICON_SIZE } from "./src/video";
+export { default, PlayIcon } from "./src/video";

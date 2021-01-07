@@ -5,7 +5,7 @@ import Image from "@times-components-native/image";
 import { playIconStyles } from "./styles";
 
 const TileImage = ({ hasVideo, style, onLayout, playIconSize, ...props }) => {
-  const [containerWidth, setContainerWidth] = useState(null);
+  const [containerWidth, setContainerWidth] = useState(0);
   if (!hasVideo) {
     return <Image style={style} {...props} onLayout={onLayout && onLayout} />;
   }

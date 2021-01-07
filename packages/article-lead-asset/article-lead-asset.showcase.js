@@ -1,6 +1,7 @@
 import React from "react";
-import { Dimensions, Text } from "react-native";
+import { Text } from "react-native";
 import ArticleLeadAsset from "./src/article-lead-asset";
+import { getDimensions } from "@times-components-native/utils";
 
 const preventDefaultedAction = (decorateAction) =>
   decorateAction([
@@ -35,7 +36,7 @@ const createCaption = (label) => ({ caption: { text, credits } }) => (
   </Text>
 );
 
-const width = Dimensions.get("window").width;
+const { width } = getDimensions();
 
 export default {
   children: [
