@@ -17,11 +17,6 @@ exports[`renders correctly with style 1`] = `
       <View>
         <Image
           accessibilityLabel="Error Cartoon"
-          defaultSource={
-            Object {
-              "testUri": "../../../packages/image/assets/t.png",
-            }
-          }
           resizeMode="contain"
           source={
             Object {

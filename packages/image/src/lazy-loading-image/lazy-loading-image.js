@@ -33,10 +33,9 @@ const LazyLoadingImage = (props) => {
           {...props}
           resizeMode={fill ? "cover" : "center"}
           source={{ uri: appendParamsToQuery(source.uri, queryObject) }}
-          defaultSource={require("../../assets/t.png")}
         />
       ) : null}
-      <Image {...props} defaultSource={require("../../assets/t.png")} />
+      <Image {...props} />
     </Fragment>
   );
 };
