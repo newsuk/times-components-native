@@ -28,22 +28,30 @@ function ArticleSummaryLabel(props) {
     return null;
   }
 
-  Animated.timing(labelOpacity, {
-    duration: 500,
-    toValue: markAsRead ? 0.6 : 1,
-    useNativeDriver: false,
-  }).start();
+  if (markAsRead) {
+    Animated.timing(labelOpacity, {
+      duration: 500,
+      toValue: 0.6,
+      useNativeDriver: false,
+    }).start();
+  }
 
-  return (
+  const Label = (
+    <View style={styles.labelWrapper}>
+      {isVideo ? <VideoLabel {...props} /> : <ArticleLabel {...props} />}
+    </View>
+  );
+
+  return markAsRead ? (
     <Animated.View
       style={{
         opacity: labelOpacity,
       }}
     >
-      <View style={styles.labelWrapper}>
-        {isVideo ? <VideoLabel {...props} /> : <ArticleLabel {...props} />}
-      </View>
+      {Label}
     </Animated.View>
+  ) : (
+    Label
   );
 }
 
@@ -131,6 +139,7 @@ ArticleSummary.defaultProps = {
   headline: null,
   labelProps: {
     hide: false,
+    markAsRead: false,
   },
   saveStar: null,
   strapline: null,
