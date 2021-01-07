@@ -39,17 +39,20 @@ const Section = ({
     new Animated.Value(emailPuzzlesButtonExtendedWidth),
   );
 
+  // slice index 0
+  //const lastViewedArticleId = "d2ba9ddc-50dd-11eb-9824-61a56b05e43d";
+
   // slice index 1
-  //const lastViewedArticleId = "8b6e7742-4de9-11eb-ad71-ea6bb4a570af";
+  const lastViewedArticleId = "1d2f7b18-50dd-11eb-9824-61a56b05e43d";
 
   // slice index 2
-  const lastViewedArticleId = "dca88772-4df0-11eb-ad71-ea6bb4a570af";
+  //const lastViewedArticleId = "16bb03f6-5010-11eb-9824-61a56b05e43d";
 
   const sliceIndexFromArticle = getSliceIndexByArticleId(
     lastViewedArticleId,
     section,
   );
-  console.log("sliceIndexFromArticle", sliceIndexFromArticle);
+  console.log("sliceIndexFromArticle 2", section.title, sliceIndexFromArticle);
 
   const [sliceIndex] = useState(sliceIndexFromArticle);
 
