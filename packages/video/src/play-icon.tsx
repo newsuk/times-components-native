@@ -1,7 +1,7 @@
 import React, { FC } from "react";
 import Svg, { Path, Rect } from "react-native-svg";
 
-enum PLAY_ICON_SIZE {
+export enum PLAY_ICON_SIZE {
   SMALL = 32,
   MEDIUM = 48,
   LARGE = 64,
@@ -14,14 +14,14 @@ export type PlayIconProps = {
 
 const getSize = (containerWidth: number) => {
   switch (true) {
-    case containerWidth > 270:
-      return PLAY_ICON_SIZE.MEDIUM;
-    case containerWidth > 563:
-      return PLAY_ICON_SIZE.LARGE;
-    case containerWidth > 755:
-      return PLAY_ICON_SIZE.XLARGE;
-    default:
+    case containerWidth < 270:
       return PLAY_ICON_SIZE.SMALL;
+    case containerWidth < 563:
+      return PLAY_ICON_SIZE.MEDIUM;
+    case containerWidth < 755:
+      return PLAY_ICON_SIZE.LARGE;
+    default:
+      return PLAY_ICON_SIZE.XLARGE;
   }
 };
 
