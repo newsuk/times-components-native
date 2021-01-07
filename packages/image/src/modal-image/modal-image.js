@@ -18,29 +18,25 @@ class ModalImage extends Component {
       lowResImageWidth: null,
       showModal: props.show || false,
     };
-    this.hideModal = this.hideModal.bind(this);
-    this.showModal = this.showModal.bind(this);
-    this.onLowResLayout = this.onLowResLayout.bind(this);
-    this.toggleElements = this.toggleElements.bind(this);
   }
 
-  onLowResLayout(evt) {
+  onLowResLayout = (evt) => {
     this.setState({ lowResImageWidth: evt.nativeEvent.layout.width });
-  }
+  };
 
-  hideModal() {
+  hideModal = () => {
     this.setState({ showModal: false });
-  }
+  };
 
-  showModal() {
+  showModal = () => {
     this.setState({ showModal: true });
-  }
+  };
 
-  toggleElements() {
+  toggleElements = () => {
     this.setState(({ elementsVisible }) => ({
       elementsVisible: !elementsVisible,
     }));
-  }
+  };
 
   renderCaption({ isTablet }) {
     const { caption } = this.props;
@@ -63,7 +59,7 @@ class ModalImage extends Component {
       isSmallImage,
     } = this.props;
 
-    if (onImagePress) {
+    if (onImagePress && !isSmallImage) {
       return (
         <Button onPress={() => onImagePress(index)}>
           <Image {...this.props} />
