@@ -9,7 +9,6 @@ import styles from "../styles";
 import Image from "@times-components-native/image";
 import ArticleTopics from "@times-components-native/article-topics";
 import articleLeftColumnPropTypes from "./article-left-column-prop-types";
-import { Placeholder } from "@times-components-native/image";
 
 const ArticleLeftColumn = ({
   authorImage,
@@ -22,11 +21,7 @@ const ArticleLeftColumn = ({
 }) => (
   <View style={styles.leftColumnContainer}>
     <View style={styles.authorContainer}>
-      {authorImage !== "" ? (
-        <Image aspectRatio={1} uri={authorImage} rounded />
-      ) : (
-        <Placeholder />
-      )}
+      <Image aspectRatio={1} uri={authorImage} rounded />
       {hasBylineData(bylines) && (
         <View style={styles.bylines}>
           <ArticleBylineWithLinks

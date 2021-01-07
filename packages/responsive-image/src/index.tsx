@@ -12,7 +12,6 @@ import logoPath from "../assets/t.png";
 import { appendToImageURL } from "@times-components-native/utils";
 import findClosestWidth from "./utils/findClosestWidth";
 import styles from "./styles";
-import { Placeholder } from "@times-components-native/image";
 
 interface ResponsiveImageProps {
   readonly aspectRatio?: number;
@@ -65,7 +64,6 @@ const ImageElement = ({
       ...styles.imageStyle,
       resizeMode: resize,
     }}
-    defaultSource={require("../assets/t.png")}
   />
 );
 
@@ -103,7 +101,7 @@ const ResponsiveImage = (props: ResponsiveImageProps) => {
   }, []);
 
   if (!uri) {
-    return <Placeholder />;
+    return null;
   }
 
   const url: Url = new Url(uri, true);
@@ -118,44 +116,31 @@ const ResponsiveImage = (props: ResponsiveImageProps) => {
       : "0";
     url.query.offline = "true";
   }
-  const imageUrl = url.toString();
+  const offlineUrl = url.toString();
   url.query.offline = "false";
+  const onlineUrl = url.toString();
 
   // eslint-disable-next-line react-hooks/rules-of-hooks
   React.useEffect(() => {
     if ("queryCache" in Image && width && !checkedCache) {
-      const cache = Image.queryCache && Image.queryCache([imageUrl]);
-
+      const cache =
+        Image.queryCache && Image.queryCache([onlineUrl, offlineUrl]);
       setCheckedCache(true);
-
       if (!cache) {
-        setShowOnline(false);
-        setShowOffline(true);
-        setShowPlaceholder(true);
         return;
       }
-
-      cache
-        .then((results) => {
-          if (imageUrl in results) {
-            setShowOnline(true);
-            setShowOffline(false);
-            setShowPlaceholder(false);
-          } else {
-            setShowOnline(false);
-            setShowOffline(true);
-            setShowPlaceholder(true);
-          }
-        })
-        .catch(() => {
-          setShowOnline(false);
+      cache.then((results) => {
+        if (onlineUrl in results) {
+          setShowOnline(true);
+          setShowOffline(false);
+          setShowPlaceholder(false);
+          return;
+        }
+        if (offlineUrl in results) {
           setShowOffline(true);
-          setShowPlaceholder(true);
-        });
-    } else {
-      setShowOnline(false);
-      setShowOffline(true);
-      setShowPlaceholder(true);
+          setShowPlaceholder(false);
+        }
+      });
     }
   }, [width]);
 
@@ -187,7 +172,7 @@ const ResponsiveImage = (props: ResponsiveImageProps) => {
   const highRes = showOnline && (
     <ImageElement
       key="online"
-      source={{ uri: appendToImageURL(imageUrl, "resize", closestWidth) }}
+      source={{ uri: appendToImageURL(onlineUrl, "resize", closestWidth) }}
       aspectRatio={aspectRatio}
       borderRadius={borderRadius}
       onLoad={() => {
@@ -196,7 +181,6 @@ const ResponsiveImage = (props: ResponsiveImageProps) => {
       onError={() => {
         setShowOnline(false);
         setShowOffline(true);
-        setShowPlaceholder(true);
         setFailed(true);
         if (onError) {
           onError();
@@ -209,18 +193,19 @@ const ResponsiveImage = (props: ResponsiveImageProps) => {
   const lowRes = showOffline && (
     <ImageElement
       key="offline"
-      source={{ uri: appendToImageURL(imageUrl, "resize", closestWidth) }}
+      source={{ uri: appendToImageURL(offlineUrl, "resize", closestWidth) }}
       aspectRatio={aspectRatio}
       borderRadius={borderRadius}
       onLoadEnd={() => {
-        setShowOnline(true);
+        if (!failed) {
+          setShowOnline(true);
+        }
         setShowPlaceholder(false);
       }}
       onError={() => {
         if (onError) {
           onError();
         }
-        setShowOnline(false);
         setShowOffline(false);
         setFailed(true);
         setShowPlaceholder(true);
@@ -229,7 +214,6 @@ const ResponsiveImage = (props: ResponsiveImageProps) => {
       fadeDuration={0}
     />
   );
-
   const placeholder = showPlaceholder && (
     <Image
       key="placeholder"

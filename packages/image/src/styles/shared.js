@@ -81,8 +81,6 @@ const styles = {
     width: "100%",
   },
   placeholder: {
-    zIndex: 999,
-    elevation: 5,
     alignItems: "center",
     backgroundColor: colours.functional.backgroundSecondary,
     justifyContent: "center",
