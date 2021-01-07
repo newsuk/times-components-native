@@ -152,6 +152,7 @@ class SectionPage extends Component {
       "1aa0eaee-5038-11eb-9824-61a56b05e43d",
       "c705d420-4ad9-11eb-9dbc-44d114c9d92d",
       "a4382b7c-5048-11eb-ad71-ea6bb4a570af",
+      "9170ea86-505e-11eb-9824-61a56b05e43d",
     ];
 
     return (

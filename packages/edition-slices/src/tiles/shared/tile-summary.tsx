@@ -74,8 +74,21 @@ const TileSummary: React.FC<Props> = ({
   const readArticleAnimationDuration = 300;
   const readArticleAnimationDelay = 500;
 
-  const renderContent = (markArticleAsRead) => {
-    const summaryContent = (
+  const MarkAsRead = ({ children, markArticleAsRead }) =>
+    markArticleAsRead ? (
+      <Animated.View
+        style={{
+          opacity: textOpacity,
+        }}
+      >
+        {children}
+      </Animated.View>
+    ) : (
+      children
+    );
+
+  const renderContent = (markArticleAsRead) => (
+    <MarkAsRead markArticleAsRead={markArticleAsRead}>
       <ArticleSummaryContent
         ast={summary}
         style={summaryStyle}
@@ -83,41 +96,19 @@ const TileSummary: React.FC<Props> = ({
         whiteSpaceHeight={whiteSpaceHeight}
         initialLines={linesOfTeaserToRender}
       />
-    );
-    return markArticleAsRead ? (
-      <Animated.View
-        style={{
-          opacity: textOpacity,
-        }}
-      >
-        {summaryContent}
-      </Animated.View>
-    ) : (
-      summaryContent
-    );
-  };
+    </MarkAsRead>
+  );
 
-  const renderFlags = (markArticleAsRead) => {
-    const articleFlags = (
+  const renderFlags = (markArticleAsRead) => (
+    <MarkAsRead markArticleAsRead={markArticleAsRead}>
       <ArticleFlags
         {...flagColour}
         style={flagsStyle}
         flags={expirableFlags}
         longRead={longRead}
       />
-    );
-    return markArticleAsRead ? (
-      <Animated.View
-        style={{
-          opacity: textOpacity,
-        }}
-      >
-        {articleFlags}
-      </Animated.View>
-    ) : (
-      articleFlags
-    );
-  };
+    </MarkAsRead>
+  );
 
   const renderSaveStar = () => (
     <PositionedTileStar
@@ -129,43 +120,20 @@ const TileSummary: React.FC<Props> = ({
     />
   );
 
-  const renderHeadline = (markArticleAsRead) => {
-    const articleHeadline = (
+  const renderHeadline = (markArticleAsRead) => (
+    <MarkAsRead markArticleAsRead={markArticleAsRead}>
       <ArticleSummaryHeadline
         headline={tileHeadline || shortHeadline || headline}
         style={headlineStyle}
       />
-    );
+    </MarkAsRead>
+  );
 
-    return markArticleAsRead ? (
-      <Animated.View
-        style={{
-          opacity: textOpacity,
-        }}
-      >
-        {articleHeadline}
-      </Animated.View>
-    ) : (
-      articleHeadline
-    );
-  };
-
-  const renderStrapline = (markArticleAsRead) => {
-    const articleStrapline = (
+  const renderStrapline = (markArticleAsRead) => (
+    <MarkAsRead markArticleAsRead={markArticleAsRead}>
       <ArticleSummaryStrapline strapline={strapline} style={straplineStyle} />
-    );
-    return markArticleAsRead ? (
-      <Animated.View
-        style={{
-          opacity: textOpacity,
-        }}
-      >
-        {articleStrapline}
-      </Animated.View>
-    ) : (
-      articleStrapline
-    );
-  };
+    </MarkAsRead>
+  );
 
   return (
     <ResponsiveContext.Consumer>
