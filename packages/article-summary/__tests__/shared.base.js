@@ -361,6 +361,21 @@ export default () => {
         expect(testInstance.toJSON()).toMatchSnapshot();
       },
     },
+    {
+      name: "article summary component when article is marked as read",
+      test: () => {
+        const testInstance = TestRenderer.create(
+          <ArticleSummary
+            {...defaultFixture({
+              markAsRead: true,
+            })}
+            isTablet={isTablet}
+          />,
+        );
+
+        expect(testInstance.toJSON()).toMatchSnapshot();
+      },
+    },
   ];
 
   iterator(tests);
