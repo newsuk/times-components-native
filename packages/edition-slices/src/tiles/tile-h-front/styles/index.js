@@ -203,3 +203,19 @@ const styles = {
 
 export const getStyle = (orientation, windowWidth, windowHeight) =>
   getStyleByDeviceSize(styles[orientation], windowWidth, windowHeight);
+
+export const getDynamicStyle = (multiplier) => {
+  return {
+    ...sharedLandscapeStyles,
+    headline: {
+      ...sharedHeadline,
+      fontSize: 42 * multiplier,
+      lineHeight: 42 * multiplier,
+    },
+    strapline: {
+      ...sharedStrapline,
+      fontSize: 20 * multiplier,
+      lineHeight: 20 * multiplier,
+    },
+  };
+};

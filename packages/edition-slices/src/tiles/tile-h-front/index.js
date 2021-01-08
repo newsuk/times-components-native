@@ -1,14 +1,14 @@
 /* eslint-disable react/require-default-props */
-import React from "react";
+import React, { useContext } from "react";
 import PropTypes from "prop-types";
 import { FrontTileSummary } from "@times-components-native/front-page";
 import { getTileStrapline, TileLink } from "../shared";
-import { getStyle } from "./styles";
-import { useResponsiveContext } from "@times-components-native/responsive";
+import { getDynamicStyle } from "./styles";
+import { FrontPageContext } from "@times-components-native/slice-layout/src/templates/frontleadtwo";
 
 const TileHFront = ({ onPress, tile, orientation }) => {
-  const { windowWidth, windowHeight } = useResponsiveContext();
-  const styles = getStyle(orientation, windowWidth, windowHeight);
+  const frontPageContext = useContext(FrontPageContext);
+  const styles = getDynamicStyle(frontPageContext.multiplier);
 
   const { article } = tile;
 

@@ -40,18 +40,18 @@ const getNarrowArticleBreakpoint = (width) => {
 };
 
 const getStyleByDeviceSize = (styles, windowWidth, windowHeight) => {
-  const selectedSize = Object.entries(styles)
-    .sort(([a], [b]) => b - a)
-    .find(([size]) => size <= windowWidth);
+  const sortedStyles = Object.entries(styles).sort(([a], [b]) => b - a);
+  const selectedSize = sortedStyles.find(([size]) => size <= windowWidth);
 
   if (selectedSize?.[1].ratios) {
     const size = Object.entries(selectedSize[1].ratios)
       .sort(([a], [b]) => b - a)
       .find(([ratio]) => ratio <= windowWidth / windowHeight);
+
     return size?.[1] ?? {};
   }
 
-  return selectedSize?.[1] ?? {};
+  return selectedSize?.[1] ?? sortedStyles[0][1];
 };
 
 export {
