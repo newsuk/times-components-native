@@ -14,12 +14,6 @@ import straplineFixture from "./fixtures/strapline";
 const story = (m) => <View style={{ padding: 20 }}>{m}</View>;
 const isTablet = true;
 
-const markAsReadLabelProps = {
-  label: "Label",
-  markAsRead: true,
-  color: "red",
-};
-
 export default {
   children: [
     {
