@@ -31,6 +31,7 @@ exports[`tile ad huge 1`] = `
             color="#005B8D"
             hide={false}
             isVideo={false}
+            markAsRead={false}
             title="label"
           />
         </View>
@@ -118,6 +119,7 @@ exports[`tile ad medium 1`] = `
             color="#005B8D"
             hide={false}
             isVideo={false}
+            markAsRead={false}
             title="label"
           />
         </View>
@@ -186,6 +188,7 @@ exports[`tile ad wide 1`] = `
             color="#005B8D"
             hide={false}
             isVideo={false}
+            markAsRead={false}
             title="label"
           />
         </View>
@@ -273,6 +276,7 @@ exports[`tile ad without breakpoint should be like medium 1`] = `
             color="#005B8D"
             hide={false}
             isVideo={false}
+            markAsRead={false}
             title="label"
           />
         </View>
