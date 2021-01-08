@@ -20,6 +20,7 @@ const ArticleLeadAssetModalImage = ({
   relativeHeight,
   relativeHorizontalOffset,
   relativeVerticalOffset,
+  extraContent,
 }) => (
   <ModalImage
     highResSize={width}
@@ -33,6 +34,7 @@ const ArticleLeadAssetModalImage = ({
       relativeHeight,
       relativeHorizontalOffset,
       relativeVerticalOffset,
+      images: extraContent,
     }}
     index={0}
   />
@@ -47,6 +49,7 @@ const ArticleLeadAsset = ({
   onVideoPress,
   width,
   style,
+  extraContent,
 }) => {
   if (!leadAsset) {
     return null;
@@ -81,6 +84,7 @@ const ArticleLeadAsset = ({
         onVideoPress={onVideoPress}
         uri={crop.url}
         width={width}
+        extraContent={extraContent}
       />
       {renderCaption({ caption })}
     </View>

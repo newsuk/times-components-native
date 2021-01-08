@@ -8,6 +8,7 @@ import ArticleLeadAsset from "@times-components-native/article-lead-asset";
 import { CentredCaption } from "@times-components-native/caption";
 import { ResponsiveContext } from "@times-components-native/responsive";
 import {
+  getExtraImagesContent,
   getHeadline,
   getLeadAsset,
   getStandardTemplateCrop,
@@ -15,8 +16,8 @@ import {
 import Context from "@times-components-native/context";
 import ArticleHeader from "./article-header/article-header";
 import {
-  articlePropTypes,
   articleDefaultProps,
+  articlePropTypes,
 } from "./article-prop-types/article-prop-types";
 import Meta from "./article-meta/article-meta";
 import styles from "./styles";
@@ -43,6 +44,7 @@ class ArticleInDepth extends Component {
       standfirst,
       textColour,
     } = article;
+
     return (
       <ResponsiveContext.Consumer>
         {({ isTablet }) => (
@@ -68,6 +70,7 @@ class ArticleInDepth extends Component {
               }
               style={[styles.leadAsset, isTablet && styles.leadAssetTablet]}
               width={width}
+              extraContent={getExtraImagesContent(article)}
             />
             <View
               style={[

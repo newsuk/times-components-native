@@ -1,5 +1,5 @@
 import React, { Component, Fragment } from "react";
-import { Modal, View, SafeAreaView } from "react-native";
+import { Modal, SafeAreaView, View } from "react-native";
 import { ResponsiveContext } from "@times-components-native/responsive";
 import Button from "@times-components-native/link";
 import ImageViewer from "react-native-image-zoom-viewer";
@@ -7,7 +7,7 @@ import Url from "url-parse";
 import CloseButton from "../close-button";
 import ModalCaptionContainer from "../modal-caption-container";
 import Image from "../image";
-import { modalPropTypes, modalDefaultProps } from "./modal-image-prop-types";
+import { modalDefaultProps, modalPropTypes } from "./modal-image-prop-types";
 import styles, { captionStyles, tabletCaptionStyles } from "../styles";
 
 class ModalImage extends Component {
