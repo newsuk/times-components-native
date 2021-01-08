@@ -1,10 +1,15 @@
 import React, { useState, ReactNode } from "react";
-import { Animated } from "react-native";
+import { Animated, StyleProp, ViewStyle } from "react-native";
 import ArticleSummary, {
   ArticleSummaryContent,
   ArticleSummaryHeadline,
   ArticleSummaryStrapline,
 } from "@times-components-native/article-summary";
+import {
+  BylineInput,
+  Markup,
+  Tile,
+} from "@times-components-native/fixture-generator/src/types";
 import { SectionContext } from "@times-components-native/context";
 import { ArticleFlags } from "@times-components-native/article-flag";
 import { colours } from "@times-components-native/styleguide";
@@ -12,24 +17,24 @@ import { ResponsiveContext } from "@times-components-native/responsive";
 import PositionedTileStar from "./positioned-tile-star";
 
 interface Props {
-  bylines?: any;
-  bylineStyle?: any;
+  bylines: BylineInput[];
+  bylineStyle?: StyleProp<ViewStyle>;
   flagColour?: any;
-  flagsStyle?: any;
-  headlineStyle?: any;
+  flagsStyle?: StyleProp<ViewStyle>;
+  headlineStyle?: StyleProp<ViewStyle>;
   labelColour?: string;
   linesOfTeaserToRender?: number;
   strapline?: string;
-  straplineStyle?: any;
-  style?: any;
-  summary?: any;
+  straplineStyle?: StyleProp<ViewStyle>;
+  style?: StyleProp<ViewStyle>;
+  summary?: Markup;
   summaryStyle?: any;
-  tile: any;
+  tile: Tile;
   withStar?: boolean;
   underneathTextStar?: boolean;
   centeredStar?: boolean;
   isDarkStar?: boolean;
-  starStyle?: any;
+  starStyle?: StyleProp<ViewStyle>;
   hideLabel?: boolean;
   whiteSpaceHeight?: number;
 }
@@ -131,7 +136,7 @@ const TileSummary: React.FC<Props> = ({
   const renderHeadline = (markAsRead: boolean) => (
     <MarkAsRead markAsRead={markAsRead}>
       <ArticleSummaryHeadline
-        headline={tileHeadline || shortHeadline || headline}
+        headline={tileHeadline || shortHeadline || headline || ""}
         style={headlineStyle}
       />
     </MarkAsRead>
@@ -175,7 +180,7 @@ const TileSummary: React.FC<Props> = ({
                 labelProps={{
                   color:
                     labelColour ||
-                    colours.section[section] ||
+                    (section && colours.section[section]) ||
                     colours.section.default,
                   isVideo: hasVideo,
                   title: label,
