@@ -16,10 +16,10 @@ exports[`1. mobile primary image with caption and credits 1`] = `
       accessibilityLabel="Some caption"
       aspectRatio={1.25}
       caption={
-        <Caption
-          credits="Some credits"
-          text="Some caption"
-        />
+        Object {
+          "credits": "Some credits",
+          "text": "Some caption",
+        }
       }
       onImagePress={null}
       uri="https://img/someImage"
@@ -83,10 +83,10 @@ exports[`2. tablet primary image with caption and credits 1`] = `
       accessibilityLabel="Some caption"
       aspectRatio={1.25}
       caption={
-        <Caption
-          credits="Some credits"
-          text="Some caption"
-        />
+        Object {
+          "credits": "Some credits",
+          "text": "Some caption",
+        }
       }
       onImagePress={null}
       uri="https://img/someImage"
@@ -149,10 +149,10 @@ exports[`3. mobile fullwidth image with caption and credits 1`] = `
       accessibilityLabel="Some caption"
       aspectRatio={1.25}
       caption={
-        <Caption
-          credits="Some credits"
-          text="Some caption"
-        />
+        Object {
+          "credits": "Some credits",
+          "text": "Some caption",
+        }
       }
       onImagePress={null}
       uri="https://img/someImage"
@@ -226,10 +226,10 @@ exports[`4. tablet fullwidth image with caption and credits 1`] = `
       accessibilityLabel="Some caption"
       aspectRatio={1.25}
       caption={
-        <Caption
-          credits="Some credits"
-          text="Some caption"
-        />
+        Object {
+          "credits": "Some credits",
+          "text": "Some caption",
+        }
       }
       onImagePress={null}
       uri="https://img/someImage"
@@ -313,10 +313,10 @@ exports[`5. secondary image with caption and credits 1`] = `
       accessibilityLabel="Another caption"
       aspectRatio={1.5}
       caption={
-        <Caption
-          credits="Other credits"
-          text="Another caption"
-        />
+        Object {
+          "credits": "Other credits",
+          "text": "Another caption",
+        }
       }
       onImagePress={null}
       uri="https://img/someImage"

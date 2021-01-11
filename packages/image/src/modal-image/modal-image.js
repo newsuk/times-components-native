@@ -9,14 +9,15 @@ import ModalCaptionContainer from "../modal-caption-container";
 import Image from "../image";
 import { modalDefaultProps, modalPropTypes } from "./modal-image-prop-types";
 import styles, { captionStyles, tabletCaptionStyles } from "../styles";
+import Caption from "@times-components-native/caption";
 
 class ModalImage extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      elementsVisible: true,
       lowResImageWidth: null,
       showModal: props.show || false,
+      currentIndex: 0,
     };
   }
 
@@ -32,21 +33,38 @@ class ModalImage extends Component {
     this.setState({ showModal: true });
   };
 
-  toggleElements = () => {
-    this.setState(({ elementsVisible }) => ({
-      elementsVisible: !elementsVisible,
-    }));
+  setCurrentIndex = (index) => {
+    this.setState({ currentIndex: index });
   };
 
   renderCaption({ isTablet }) {
-    const { caption } = this.props;
+    const { caption, images } = this.props;
     const style = isTablet ? tabletCaptionStyles : captionStyles;
 
     if (!caption) {
       return null;
     }
 
-    return React.cloneElement(caption, { style });
+    if (this.state.currentIndex === 0) {
+      return (
+        <Caption style={style} credits={caption.credits} text={caption.text} />
+      );
+    }
+
+    if (
+      images[this.state.currentIndex - 1] &&
+      images[this.state.currentIndex - 1].attributes
+    ) {
+      return (
+        <Caption
+          style={style}
+          text={images[this.state.currentIndex - 1].attributes.caption}
+          credits={images[this.state.currentIndex - 1].attributes.credits}
+        />
+      );
+    }
+
+    return null;
   }
 
   render() {
@@ -66,7 +84,7 @@ class ModalImage extends Component {
         </Button>
       );
     }
-    const { showModal, lowResImageWidth, elementsVisible } = this.state;
+    const { showModal, lowResImageWidth } = this.state;
     const lowResSize = highResSize || lowResImageWidth;
     const mainUrl = new Url(uri, true);
     mainUrl.query.offline = "true";
@@ -99,17 +117,14 @@ class ModalImage extends Component {
                       isTablet && styles.buttonContainerTablet,
                     ]}
                   >
-                    {elementsVisible ? (
-                      <CloseButton
-                        isTablet={isTablet}
-                        onPress={this.hideModal}
-                      />
-                    ) : null}
+                    <CloseButton isTablet={isTablet} onPress={this.hideModal} />
                   </SafeAreaView>
                   <ImageViewer
                     imageUrls={urls}
                     renderIndicator={() => null}
                     enableSwipeDown
+                    onChange={this.setCurrentIndex}
+                    useNativeDriver
                     renderImage={({ source }) => {
                       const onlineUrl = new Url(source.uri, true);
                       delete onlineUrl.query.offline;
@@ -132,14 +147,12 @@ class ModalImage extends Component {
                     onSwipeDown={this.hideModal}
                     enablePreload
                   />
-                  {elementsVisible ? (
-                    <ModalCaptionContainer
-                      pointerEvents="none"
-                      style={styles.bottomSafeView}
-                    >
-                      {this.renderCaption({ isTablet })}
-                    </ModalCaptionContainer>
-                  ) : null}
+                  <ModalCaptionContainer
+                    pointerEvents="none"
+                    style={styles.bottomSafeView}
+                  >
+                    {this.renderCaption({ isTablet })}
+                  </ModalCaptionContainer>
                 </Fragment>
               )}
             </ResponsiveContext.Consumer>

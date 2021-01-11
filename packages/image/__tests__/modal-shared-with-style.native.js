@@ -1,5 +1,4 @@
 import React from "react";
-import { Text, View } from "react-native";
 import TestRenderer, { act } from "react-test-renderer";
 import {
   addSerializers,
@@ -17,16 +16,11 @@ import ModalImage from "../src/modal-image";
 
 jest.mock("react-native-image-zoom-viewer", () => "ImageZoomView");
 
-// eslint-disable-next-line react/prop-types
-const MockCaption = ({ style: { text, caption, credits, container } }) => (
-  <View style={container}>
-    <Text style={{ ...text, ...caption }}>Caption</Text>
-    <Text style={{ ...text, ...credits }}>Credits</Text>
-  </View>
-);
-
 const props = {
-  caption: <MockCaption />,
+  caption: {
+    text: "Caption",
+    credits: "Credits",
+  },
   uri: "http://example.com/image.jpg?crop=1016%2C677%2C0%2C0",
 };
 

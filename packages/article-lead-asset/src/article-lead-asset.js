@@ -1,12 +1,8 @@
 import React from "react";
 import { View } from "react-native";
-import Caption from "@times-components-native/caption";
 import { ModalImage } from "@times-components-native/image";
 import ArticleLeadAssetVideo from "./article-lead-asset-video";
-import {
-  nativePropTypes,
-  nativeDefaultProps,
-} from "./article-lead-asset-prop-types";
+import { nativeDefaultProps, nativePropTypes, } from "./article-lead-asset-prop-types";
 import getRatio from "./get-ratio";
 
 const ArticleLeadAssetModalImage = ({
@@ -74,7 +70,7 @@ const ArticleLeadAsset = ({
     <View style={style}>
       <LeadAsset
         aspectRatio={getRatio(crop.ratio)}
-        caption={<Caption {...caption} />}
+        caption={caption}
         leadAsset={leadAsset}
         relativeWidth={crop.relativeWidth}
         relativeHeight={crop.relativeHeight}
