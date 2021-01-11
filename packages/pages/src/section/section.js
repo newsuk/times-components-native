@@ -142,25 +142,7 @@ class SectionPage extends Component {
       sectionName: section.name,
     });
 
-    const readArticles = [
-      "703d9a72-4f86-11eb-ad71-ea6bb4a570af",
-      "8622019e-36f4-11ea-9e00-2e9f417bebfa",
-      "186f16cc-4f4f-11eb-ad71-ea6bb4a570af",
-      "9d5c5076-502f-11eb-9824-61a56b05e43d",
-      "af28b209-7b7a-4103-9782-c922fb3e8743",
-      "4a77e282-503c-11eb-9824-61a56b05e43d",
-      "1aa0eaee-5038-11eb-9824-61a56b05e43d",
-      "c705d420-4ad9-11eb-9dbc-44d114c9d92d",
-      "a4382b7c-5048-11eb-ad71-ea6bb4a570af",
-      "9170ea86-505e-11eb-9824-61a56b05e43d",
-      "322ab0ac-5130-11eb-ad71-ea6bb4a570af",
-      "db9c054c-53ff-11eb-8852-f1ee277e4313",
-      "15fa1fb2-5400-11eb-8852-f1ee277e4313",
-      "943a9fd6-536b-11eb-8852-f1ee277e4313",
-      "1402c302-536b-11eb-8852-f1ee277e4313",
-      "70df820e-536b-11eb-8852-f1ee277e4313",
-      "89ac8b36-5386-11eb-b0d0-071d11d2d557",
-    ];
+    const readArticles = [];
 
     return (
       <SectionContext.Provider
