@@ -1,6 +1,7 @@
 import React from "react";
 import { Text } from "react-native";
 import ArticleLeadAsset from "./src/article-lead-asset";
+import { getDimensions } from "@times-components-native/utils";
 
 const preventDefaultedAction = (decorateAction) =>
   decorateAction([
@@ -35,6 +36,8 @@ const createCaption = (label) => ({ caption: { text, credits } }) => (
   </Text>
 );
 
+const { width } = getDimensions();
+
 export default {
   children: [
     {
@@ -45,7 +48,7 @@ export default {
           getImageCrop={() => imageLeadAsset.crop169}
           leadAsset={imageLeadAsset}
           renderCaption={createCaption("caption")}
-          width={400}
+          width={width}
         />
       ),
       name: "Image",
@@ -61,7 +64,7 @@ export default {
           leadAsset={videoLeadAsset}
           onVideoPress={preventDefaultedAction(decorateAction)("onVideoPress")}
           renderCaption={createCaption("caption")}
-          width={400}
+          width={width}
         />
       ),
       name: "Video",

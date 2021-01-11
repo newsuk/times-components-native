@@ -1,7 +1,7 @@
 import {
+  colours,
   fontFactory,
   spacing,
-  colours,
 } from "@times-components-native/styleguide";
 
 const styles = {
@@ -27,12 +27,10 @@ const styles = {
     top: "50%",
   },
   overlay: {
-    alignItems: "center",
     flex: 1,
-    justifyContent: "center",
-    left: 0,
+    justifyContent: "flex-end",
     position: "absolute",
-    top: 0,
+    bottom: 0,
     zIndex: 2,
   },
   videoTabletContainer: {

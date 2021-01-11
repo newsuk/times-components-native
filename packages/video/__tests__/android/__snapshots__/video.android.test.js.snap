@@ -11,36 +11,52 @@ exports[`1. video 1`] = `
     uri="b9a31d3949b1882a09ed2f8508d538f3"
   />
   <View>
-    <View>
-      <Svg
-        aria-label="icon-play"
-        height={70}
-        viewBox="0 0 100 100"
-        width={70}
+    <RNSVGSvgView
+      align="xMidYMid"
+      bbHeight={48}
+      bbWidth={48}
+      fill="none"
+      focusable={false}
+      height={48}
+      meetOrSlice={0}
+      minX={0}
+      minY={0}
+      vbHeight={64}
+      vbWidth={64}
+      width={48}
+    >
+      <RNSVGGroup
+        fill={null}
+        propList={
+          Array [
+            "fill",
+          ]
+        }
       >
-        <Rect
-          fill="#000000"
-          fillOpacity="0.4"
-          height="100"
-          width="100"
-          x="0"
-          y="0"
+        <RNSVGRect
+          fill={-16711667}
+          height="64"
+          opacity={0.6}
+          propList={
+            Array [
+              "fill",
+            ]
+          }
+          width="64"
+          x={0}
+          y={0}
         />
-        <Rect
-          fillOpacity="0"
-          height="100"
-          stroke="#FFFFFF"
-          strokeWidth={8}
-          width="100"
-          x="0"
-          y="0"
+        <RNSVGPath
+          d="M20 16V48L44 32L20 16Z"
+          fill={-1}
+          propList={
+            Array [
+              "fill",
+            ]
+          }
         />
-        <Polygon
-          fill="#FFFFFF"
-          points="30,20 70,50 30,80"
-        />
-      </Svg>
-    </View>
+      </RNSVGGroup>
+    </RNSVGSvgView>
   </View>
 </View>
 `;
@@ -53,36 +69,52 @@ exports[`2. video without a poster image 1`] = `
 >
   <View />
   <View>
-    <View>
-      <Svg
-        aria-label="icon-play"
-        height={70}
-        viewBox="0 0 100 100"
-        width={70}
+    <RNSVGSvgView
+      align="xMidYMid"
+      bbHeight={48}
+      bbWidth={48}
+      fill="none"
+      focusable={false}
+      height={48}
+      meetOrSlice={0}
+      minX={0}
+      minY={0}
+      vbHeight={64}
+      vbWidth={64}
+      width={48}
+    >
+      <RNSVGGroup
+        fill={null}
+        propList={
+          Array [
+            "fill",
+          ]
+        }
       >
-        <Rect
-          fill="#000000"
-          fillOpacity="0.4"
-          height="100"
-          width="100"
-          x="0"
-          y="0"
+        <RNSVGRect
+          fill={-16711667}
+          height="64"
+          opacity={0.6}
+          propList={
+            Array [
+              "fill",
+            ]
+          }
+          width="64"
+          x={0}
+          y={0}
         />
-        <Rect
-          fillOpacity="0"
-          height="100"
-          stroke="#FFFFFF"
-          strokeWidth={8}
-          width="100"
-          x="0"
-          y="0"
+        <RNSVGPath
+          d="M20 16V48L44 32L20 16Z"
+          fill={-1}
+          propList={
+            Array [
+              "fill",
+            ]
+          }
         />
-        <Polygon
-          fill="#FFFFFF"
-          points="30,20 70,50 30,80"
-        />
-      </Svg>
-    </View>
+      </RNSVGGroup>
+    </RNSVGSvgView>
   </View>
 </View>
 `;
@@ -98,36 +130,52 @@ exports[`3. 360 video 1`] = `
     uri="b9a31d3949b1882a09ed2f8508d538f3"
   />
   <View>
-    <View>
-      <Svg
-        aria-label="icon-play"
-        height={70}
-        viewBox="0 0 100 100"
-        width={70}
+    <RNSVGSvgView
+      align="xMidYMid"
+      bbHeight={48}
+      bbWidth={48}
+      fill="none"
+      focusable={false}
+      height={48}
+      meetOrSlice={0}
+      minX={0}
+      minY={0}
+      vbHeight={64}
+      vbWidth={64}
+      width={48}
+    >
+      <RNSVGGroup
+        fill={null}
+        propList={
+          Array [
+            "fill",
+          ]
+        }
       >
-        <Rect
-          fill="#000000"
-          fillOpacity="0.4"
-          height="100"
-          width="100"
-          x="0"
-          y="0"
+        <RNSVGRect
+          fill={-16711667}
+          height="64"
+          opacity={0.6}
+          propList={
+            Array [
+              "fill",
+            ]
+          }
+          width="64"
+          x={0}
+          y={0}
         />
-        <Rect
-          fillOpacity="0"
-          height="100"
-          stroke="#FFFFFF"
-          strokeWidth={8}
-          width="100"
-          x="0"
-          y="0"
+        <RNSVGPath
+          d="M20 16V48L44 32L20 16Z"
+          fill={-1}
+          propList={
+            Array [
+              "fill",
+            ]
+          }
         />
-        <Polygon
-          fill="#FFFFFF"
-          points="30,20 70,50 30,80"
-        />
-      </Svg>
-    </View>
+      </RNSVGGroup>
+    </RNSVGSvgView>
   </View>
 </View>
 `;
