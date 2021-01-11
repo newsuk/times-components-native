@@ -31,6 +31,15 @@ export const {
 } = breakpoints;
 export const tabletRowPadding = 20;
 
+export const articleReadGlobals = {
+  animationDelay: 500,
+  animationDuration: 300,
+};
+
+export const ARTICLE_READ_ANIMATION = {
+  DELAY: 500,
+  DURATION: 300,
+};
 export {
   default as breakpoints,
   editionBreakpoints,

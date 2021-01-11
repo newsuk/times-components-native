@@ -9,6 +9,7 @@ import ArticleLabel from "@times-components-native/article-label";
 import VideoLabel from "@times-components-native/video-label";
 import DatePublication from "@times-components-native/date-publication";
 import renderTrees from "@times-components-native/markup-forest";
+import { ARTICLE_READ_ANIMATION } from "@times-components-native/styleguide";
 import ArticleSummaryContent from "./article-summary-content";
 import ArticleSummaryHeadline from "./article-summary-headline";
 import ArticleSummaryStrapline from "./article-summary-strapline";
@@ -26,10 +27,10 @@ function ArticleSummaryLabel(props) {
 
   useEffect(() => {
     Animated.timing(labelOpacity, {
-      delay: 500,
-      duration: 300,
+      delay: ARTICLE_READ_ANIMATION.delay,
+      duration: ARTICLE_READ_ANIMATION.duration,
       toValue: 0.6,
-      useNativeDriver: false,
+      useNativeDriver: true,
     }).start();
   }, [markAsRead]);
 

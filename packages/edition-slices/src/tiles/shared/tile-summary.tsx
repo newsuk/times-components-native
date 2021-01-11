@@ -12,7 +12,10 @@ import {
 } from "@times-components-native/fixture-generator/src/types";
 import { SectionContext } from "@times-components-native/context";
 import { ArticleFlags } from "@times-components-native/article-flag";
-import { colours } from "@times-components-native/styleguide";
+import {
+  colours,
+  ARTICLE_READ_ANIMATION,
+} from "@times-components-native/styleguide";
 import { ResponsiveContext } from "@times-components-native/responsive";
 import PositionedTileStar from "./positioned-tile-star";
 
@@ -80,12 +83,10 @@ const TileSummary: React.FC<Props> = ({
   const [summaryOpacity] = useState(new Animated.Value(1));
 
   const [markAsRead, setMarkAsRead] = useState(false);
-  const readArticleAnimationDuration = 300;
-  const readArticleAnimationDelay = 500;
 
   const sharedTimingConfig = {
-    delay: readArticleAnimationDelay,
-    duration: readArticleAnimationDuration,
+    delay: ARTICLE_READ_ANIMATION.delay,
+    duration: ARTICLE_READ_ANIMATION.duration,
     useNativeDriver: true,
   };
 
