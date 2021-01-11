@@ -15,7 +15,7 @@ import { ArticleFlags } from "@times-components-native/article-flag";
 import {
   colours,
   ARTICLE_READ_ANIMATION,
-} from "@times-components-native/styleguide";
+} from "@times-components-native/styleguide/index";
 import { ResponsiveContext } from "@times-components-native/responsive";
 import PositionedTileStar from "./positioned-tile-star";
 
@@ -85,8 +85,8 @@ const TileSummary: React.FC<Props> = ({
   const [markAsRead, setMarkAsRead] = useState(false);
 
   const sharedTimingConfig = {
-    delay: ARTICLE_READ_ANIMATION.delay,
-    duration: ARTICLE_READ_ANIMATION.duration,
+    delay: ARTICLE_READ_ANIMATION.DELAY,
+    duration: ARTICLE_READ_ANIMATION.DURATION,
     useNativeDriver: true,
   };
 

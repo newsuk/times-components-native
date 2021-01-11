@@ -2,7 +2,6 @@ import sectionColours, { secondarySectionColours } from "./colours/section";
 import functionalColours from "./colours/functional";
 
 import FadeIn from "./animations";
-
 import breakpoints from "./breakpoints";
 import timesLineHeightsFactory from "./line-heights";
 import timesFonts from "./fonts/fonts";
@@ -31,15 +30,6 @@ export const {
 } = breakpoints;
 export const tabletRowPadding = 20;
 
-export const articleReadGlobals = {
-  animationDelay: 500,
-  animationDuration: 300,
-};
-
-export const ARTICLE_READ_ANIMATION = {
-  DELAY: 500,
-  DURATION: 300,
-};
 export {
   default as breakpoints,
   editionBreakpoints,
@@ -58,6 +48,8 @@ export { default as spacing, globalSpacingStyles } from "./spacing";
 export { default as themeFactory } from "./theme/theme-factory";
 
 export { default as columnToPercentage } from "./grid/columnToPercentage";
+
+export { ARTICLE_READ_ANIMATION } from "./articleRead";
 
 export default ({ scale = scales.medium } = {}) => ({
   Animations,
