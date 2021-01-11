@@ -28,25 +28,32 @@ exports[`1. video 1`] = `
     <View
       style={
         Object {
-          "alignItems": "center",
+          "bottom": 0,
           "flex": 1,
           "height": 200,
-          "justifyContent": "center",
-          "left": 0,
+          "justifyContent": "flex-end",
           "position": "absolute",
-          "top": 0,
           "width": 300,
           "zIndex": 2,
         }
       }
     >
-      <View>
-        <Svg>
-          <Rect />
-          <Rect />
-          <Polygon />
-        </Svg>
-      </View>
+      <RNSVGSvgView
+        style={
+          Object {
+            "backgroundColor": "transparent",
+            "borderWidth": 0,
+            "flex": 0,
+            "height": 48,
+            "width": 48,
+          }
+        }
+      >
+        <RNSVGGroup>
+          <RNSVGRect />
+          <RNSVGPath />
+        </RNSVGGroup>
+      </RNSVGSvgView>
     </View>
   </View>
 </View>
@@ -81,25 +88,32 @@ exports[`2. video without a poster image 1`] = `
     <View
       style={
         Object {
-          "alignItems": "center",
+          "bottom": 0,
           "flex": 1,
           "height": 200,
-          "justifyContent": "center",
-          "left": 0,
+          "justifyContent": "flex-end",
           "position": "absolute",
-          "top": 0,
           "width": 300,
           "zIndex": 2,
         }
       }
     >
-      <View>
-        <Svg>
-          <Rect />
-          <Rect />
-          <Polygon />
-        </Svg>
-      </View>
+      <RNSVGSvgView
+        style={
+          Object {
+            "backgroundColor": "transparent",
+            "borderWidth": 0,
+            "flex": 0,
+            "height": 48,
+            "width": 48,
+          }
+        }
+      >
+        <RNSVGGroup>
+          <RNSVGRect />
+          <RNSVGPath />
+        </RNSVGGroup>
+      </RNSVGSvgView>
     </View>
   </View>
 </View>
@@ -133,25 +147,32 @@ exports[`3. 360 video 1`] = `
     <View
       style={
         Object {
-          "alignItems": "center",
+          "bottom": 0,
           "flex": 1,
           "height": 200,
-          "justifyContent": "center",
-          "left": 0,
+          "justifyContent": "flex-end",
           "position": "absolute",
-          "top": 0,
           "width": 300,
           "zIndex": 2,
         }
       }
     >
-      <View>
-        <Svg>
-          <Rect />
-          <Rect />
-          <Polygon />
-        </Svg>
-      </View>
+      <RNSVGSvgView
+        style={
+          Object {
+            "backgroundColor": "transparent",
+            "borderWidth": 0,
+            "flex": 0,
+            "height": 48,
+            "width": 48,
+          }
+        }
+      >
+        <RNSVGGroup>
+          <RNSVGRect />
+          <RNSVGPath />
+        </RNSVGGroup>
+      </RNSVGSvgView>
     </View>
   </View>
 </View>

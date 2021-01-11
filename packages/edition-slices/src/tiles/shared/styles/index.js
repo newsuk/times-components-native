@@ -35,12 +35,10 @@ const starUnderneathTextStyles = {
 };
 
 const playIconStyles = {
-  alignItems: "center",
-  flex: 1,
-  justifyContent: "center",
+  justifyContent: "flex-end",
+  bottom: 0,
   left: 0,
   position: "absolute",
-  top: 0,
   zIndex: 2,
   width: "100%",
   height: "100%",

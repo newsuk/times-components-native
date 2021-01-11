@@ -3,7 +3,7 @@ import PropTypes from "prop-types";
 import { View } from "react-native";
 import Image from "@times-components-native/image";
 import Touchable from "./touchable";
-import PlayIcon from "./play-icon.native";
+import PlayIcon from "./play-icon";
 import { propTypes, defaultProps } from "./video-prop-types";
 import styles from "./styles";
 
@@ -55,7 +55,7 @@ const Video = ({
         />
       )}
       <View style={[styles.overlay, { height, width }]}>
-        <PlayIcon />
+        <PlayIcon containerWidth={width} />
       </View>
     </View>
   </Touchable>
@@ -71,4 +71,4 @@ Video.propTypes = {
 };
 
 export default Video;
-export { default as PlayIcon } from "./play-icon.native";
+export { default as PlayIcon } from "./play-icon";
