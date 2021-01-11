@@ -1,5 +1,7 @@
 import React from "react";
-import { Text } from "react-native";
+import { Animated, Text } from "react-native";
+import { delay } from "@times-components-native/test-utils";
+import { shallow } from "enzyme";
 import TestRenderer from "react-test-renderer";
 import Image from "@times-components-native/image";
 import { SectionContext } from "@times-components-native/context";
@@ -103,6 +105,29 @@ export default () => {
         );
       },
     },
+    // {
+    //   name:
+    //     "Tile summary components have reduced opacity when article is marked as read",
+    //   test: async () => {
+    //     const tileWithArticleRead = {
+    //       ...tile,
+    //       article: {
+    //         ...tile.article,
+    //         id: "1234",
+    //       },
+    //     };
+
+    //     const output = shallow(
+    //       <SectionContext.Provider value={{ readArticles: ["1234"] }}>
+    //         <TileSummary tile={tileWithArticleRead} />
+    //       </SectionContext.Provider>,
+    //     );
+    //     await delay(850);
+    //     expect(
+    //       output.find(Animated.View).get(0).props.style.opacity._value,
+    //     ).toBe(0.6);
+    //   },
+    // },
     {
       name:
         "Tile summary displays the tile summary override if it is available",

@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useRef, useEffect } from "react";
 import { Animated, Text, View } from "react-native";
 import PropTypes from "prop-types";
 import ArticleByline, {
@@ -22,18 +22,19 @@ function renderAst(ast) {
 
 function ArticleSummaryLabel(props) {
   const { markAsRead, hide, title, isVideo } = props;
-  const [labelOpacity] = useState(new Animated.Value(1));
+  const labelOpacity = useRef(new Animated.Value(1)).current;
 
-  if (hide || (!title && !isVideo)) {
-    return null;
-  }
-
-  if (markAsRead) {
+  useEffect(() => {
     Animated.timing(labelOpacity, {
-      duration: 500,
+      delay: 500,
+      duration: 300,
       toValue: 0.6,
       useNativeDriver: false,
     }).start();
+  }, [markAsRead]);
+
+  if (hide || (!title && !isVideo)) {
+    return null;
   }
 
   const Label = (

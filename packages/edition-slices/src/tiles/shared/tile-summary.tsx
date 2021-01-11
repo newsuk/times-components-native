@@ -1,4 +1,4 @@
-import React, { useState, ReactNode } from "react";
+import React, { useEffect, useState, ReactNode } from "react";
 import { Animated, StyleProp, ViewStyle } from "react-native";
 import ArticleSummary, {
   ArticleSummaryContent,
@@ -75,21 +75,53 @@ const TileSummary: React.FC<Props> = ({
     },
   } = tile;
 
-  const [textOpacity] = useState(new Animated.Value(1));
+  const [standardOpacity] = useState(new Animated.Value(1));
+  const [straplineOpacity] = useState(new Animated.Value(1));
+  const [summaryOpacity] = useState(new Animated.Value(1));
+
+  const [markAsRead, setMarkAsRead] = useState(false);
   const readArticleAnimationDuration = 300;
   const readArticleAnimationDelay = 500;
+
+  const sharedTimingConfig = {
+    delay: readArticleAnimationDelay,
+    duration: readArticleAnimationDuration,
+    useNativeDriver: true,
+  };
+
+  useEffect(() => {
+    Animated.parallel([
+      Animated.timing(standardOpacity, {
+        ...sharedTimingConfig,
+        toValue: 0.5,
+      }),
+      Animated.timing(straplineOpacity, {
+        ...sharedTimingConfig,
+        toValue: 0.6,
+      }),
+      Animated.timing(summaryOpacity, {
+        ...sharedTimingConfig,
+        toValue: 0.7,
+      }),
+    ]).start();
+  }, [markAsRead]);
 
   type MarkAsReadProps = {
     children: ReactNode;
     markAsRead: boolean;
+    opacity?: Animated.Value;
   };
 
-  const MarkAsRead = ({ children, markAsRead }: MarkAsReadProps) => (
+  const MarkAsRead = ({
+    children,
+    markAsRead,
+    opacity = standardOpacity,
+  }: MarkAsReadProps) => (
     <>
       {markAsRead ? (
         <Animated.View
           style={{
-            opacity: textOpacity,
+            opacity,
           }}
         >
           {children}
@@ -101,7 +133,7 @@ const TileSummary: React.FC<Props> = ({
   );
 
   const renderContent = (markAsRead: boolean) => (
-    <MarkAsRead markAsRead={markAsRead}>
+    <MarkAsRead markAsRead={markAsRead} opacity={summaryOpacity}>
       <ArticleSummaryContent
         ast={summary}
         style={summaryStyle}
@@ -144,7 +176,7 @@ const TileSummary: React.FC<Props> = ({
 
   const renderStrapline = (markAsRead: boolean) =>
     strapline && (
-      <MarkAsRead markAsRead={markAsRead}>
+      <MarkAsRead markAsRead={markAsRead} opacity={straplineOpacity}>
         <ArticleSummaryStrapline strapline={strapline} style={straplineStyle} />
       </MarkAsRead>
     );
@@ -160,17 +192,7 @@ const TileSummary: React.FC<Props> = ({
       {({ isTablet }) => (
         <SectionContext.Consumer>
           {({ readArticles }) => {
-            const markAsRead = shouldMarkAsRead(isTablet, readArticles, id);
-
-            if (markAsRead) {
-              Animated.timing(textOpacity, {
-                delay: readArticleAnimationDelay,
-                duration: readArticleAnimationDuration,
-                toValue: 0.6,
-                useNativeDriver: false,
-              }).start();
-            }
-
+            setMarkAsRead(shouldMarkAsRead(isTablet, readArticles, id));
             return (
               <ArticleSummary
                 bylineProps={bylines ? { ast: bylines, bylineStyle } : null}
