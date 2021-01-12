@@ -94,11 +94,11 @@ const TileSummary: React.FC<Props> = ({
     Animated.parallel([
       Animated.timing(standardOpacity, {
         ...sharedTimingConfig,
-        toValue: 0.5,
+        toValue: 0.57,
       }),
       Animated.timing(straplineOpacity, {
         ...sharedTimingConfig,
-        toValue: 0.6,
+        toValue: 0.57,
       }),
       Animated.timing(summaryOpacity, {
         ...sharedTimingConfig,
