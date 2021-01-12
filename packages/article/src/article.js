@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import ArticleMagazineComment from "@times-components-native/article-magazine-comment";
 import ArticleInDepth from "@times-components-native/article-in-depth";
 import ArticleMagazineStandard from "@times-components-native/article-magazine-standard";
@@ -31,8 +31,16 @@ export class TakeoverBailout extends Error {
 
 const Article = (props) => {
   const { isTablet } = useResponsiveContext();
-  const { article, onImagePress } = props;
+  const { article, onArticleRead, onImagePress } = props;
   const { leadAsset, template } = article || {};
+
+  const [isDeemedRead, setIsDeemedRead] = useState(false);
+
+  setInterval(() => setIsDeemedRead(true), 6000);
+
+  useEffect(() => {
+    onArticleRead(article.id);
+  }, [isDeemedRead]);
 
   let { content } = article || {};
   if (template === "takeoverpage") {
