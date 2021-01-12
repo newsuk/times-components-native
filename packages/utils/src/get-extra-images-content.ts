@@ -1,4 +1,4 @@
-import { ArticleContent, ImageContent } from "@times-components-native/types";
+import { ArticleContent } from "@times-components-native/types";
 
 type Article = {
   content: ArticleContent[];
