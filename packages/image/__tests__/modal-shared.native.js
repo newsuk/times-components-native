@@ -1,5 +1,5 @@
 import React from "react";
-import { Modal, Text, View } from "react-native";
+import { Modal} from "react-native";
 import TestRenderer, { act } from "react-test-renderer";
 import Link from "@times-components-native/link";
 import {

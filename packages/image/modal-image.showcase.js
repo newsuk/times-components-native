@@ -9,7 +9,7 @@ const uri =
 export default {
   children: [
     {
-      component: ({ text }) => (
+      component: () => (
         <Fragment>
           <Text>Click on the image to open the modal</Text>
           <ModalImage

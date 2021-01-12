@@ -2,7 +2,10 @@ import React from "react";
 import { View } from "react-native";
 import { ModalImage } from "@times-components-native/image";
 import ArticleLeadAssetVideo from "./article-lead-asset-video";
-import { nativeDefaultProps, nativePropTypes, } from "./article-lead-asset-prop-types";
+import {
+  nativeDefaultProps,
+  nativePropTypes,
+} from "./article-lead-asset-prop-types";
 import getRatio from "./get-ratio";
 
 const ArticleLeadAssetModalImage = ({
