@@ -29,6 +29,7 @@ exports[`tile n huge 1`] = `
         color="#CCC"
         hide={false}
         isVideo={false}
+        markAsRead={false}
         title="label"
       />
     </View>
@@ -95,6 +96,7 @@ exports[`tile n medium 1`] = `
         color="#CCC"
         hide={false}
         isVideo={false}
+        markAsRead={false}
         title="label"
       />
     </View>
@@ -163,6 +165,7 @@ exports[`tile n small 1`] = `
         color="#CCC"
         hide={false}
         isVideo={false}
+        markAsRead={false}
         title="label"
       />
     </View>
@@ -228,6 +231,7 @@ exports[`tile n wide 1`] = `
         color="#CCC"
         hide={false}
         isVideo={false}
+        markAsRead={false}
         title="label"
       />
     </View>
@@ -296,6 +300,7 @@ exports[`tile n with default star 1`] = `
         color="#CCC"
         hide={false}
         isVideo={false}
+        markAsRead={false}
         title="label"
       />
     </View>

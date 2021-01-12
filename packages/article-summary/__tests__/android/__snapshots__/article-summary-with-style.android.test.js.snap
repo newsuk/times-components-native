@@ -11,6 +11,7 @@ exports[`1. article summary component with a single paragraph 1`] = `
   >
     <ArticleLabel
       color="#333333"
+      markAsRead={false}
       title="Test label"
     />
   </View>

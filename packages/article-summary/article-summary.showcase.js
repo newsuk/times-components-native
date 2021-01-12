@@ -28,6 +28,17 @@ export default {
       type: "story",
     },
     {
+      component: () =>
+        story(
+          <ArticleSummary
+            {...defaultFixture({ markAsRead: true })}
+            isTablet={isTablet}
+          />,
+        ),
+      name: "Article marked as read",
+      type: "story",
+    },
+    {
       component: () => story(<ArticleSummary {...withSummaryLinksFixture()} />),
       name: "With links in summary",
       type: "story",

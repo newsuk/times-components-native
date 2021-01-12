@@ -25,12 +25,14 @@ const ArticleSummaryHeadline = ({
 );
 
 ArticleSummaryHeadline.propTypes = {
+  allowFontScaling: PropTypes.bool,
   className: PropTypes.string,
   headline: PropTypes.string.isRequired,
   style: TextStylePropTypes,
 };
 
 ArticleSummaryHeadline.defaultProps = {
+  allowFontScaling: false,
   className: "",
   style: {},
 };

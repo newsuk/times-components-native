@@ -13,6 +13,7 @@ export default ({
   headline = defaultHeadline,
   label = defaultLabel,
   paragraph = defaultParagraph,
+  markAsRead = false,
 } = {}) => ({
   bylineProps: {
     ast: [
@@ -81,5 +82,6 @@ export default ({
   labelProps: {
     color: colours.functional.primary,
     title: label,
+    markAsRead,
   },
 });

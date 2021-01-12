@@ -142,6 +142,8 @@ class SectionPage extends Component {
       sectionName: section.name,
     });
 
+    const readArticles = [];
+
     return (
       <SectionContext.Provider
         value={{
@@ -151,6 +153,7 @@ class SectionPage extends Component {
           publicationName,
           recentlyOpenedPuzzleCount,
           savedArticles,
+          readArticles,
         }}
       >
         <VariantTestingProvider variants={variants}>

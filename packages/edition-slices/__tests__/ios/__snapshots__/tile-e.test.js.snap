@@ -31,6 +31,7 @@ exports[`tile e huge 1`] = `
             color="#005B8D"
             hide={false}
             isVideo={false}
+            markAsRead={false}
             title="label"
           />
         </View>
@@ -111,6 +112,7 @@ exports[`tile e medium 1`] = `
             color="#005B8D"
             hide={false}
             isVideo={false}
+            markAsRead={false}
             title="label"
           />
         </View>
@@ -197,6 +199,7 @@ exports[`tile e small 1`] = `
             color="#005B8D"
             hide={false}
             isVideo={false}
+            markAsRead={false}
             title="label"
           />
         </View>
@@ -294,6 +297,7 @@ exports[`tile e wide 1`] = `
             color="#005B8D"
             hide={false}
             isVideo={false}
+            markAsRead={false}
             title="label"
           />
         </View>
@@ -380,6 +384,7 @@ exports[`tile e without breakpoint should be like small 1`] = `
             color="#005B8D"
             hide={false}
             isVideo={false}
+            markAsRead={false}
             title="label"
           />
         </View>

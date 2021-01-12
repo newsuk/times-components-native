@@ -45,6 +45,7 @@ exports[`tile aw landscape huge 1`] = `
         color="#005B8D"
         hide={false}
         isVideo={false}
+        markAsRead={false}
         title="label"
       />
     </View>
@@ -126,6 +127,7 @@ exports[`tile aw landscape medium 1`] = `
         color="#005B8D"
         hide={false}
         isVideo={false}
+        markAsRead={false}
         title="label"
       />
     </View>
@@ -207,6 +209,7 @@ exports[`tile aw landscape wide 1`] = `
         color="#005B8D"
         hide={false}
         isVideo={false}
+        markAsRead={false}
         title="label"
       />
     </View>

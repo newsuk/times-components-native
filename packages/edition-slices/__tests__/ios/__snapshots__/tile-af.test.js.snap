@@ -31,6 +31,7 @@ exports[`tile af huge 1`] = `
             color="#005B8D"
             hide={false}
             isVideo={false}
+            markAsRead={false}
             title="label"
           />
         </View>
@@ -118,6 +119,7 @@ exports[`tile af wide 1`] = `
             color="#005B8D"
             hide={false}
             isVideo={false}
+            markAsRead={false}
             title="label"
           />
         </View>
@@ -205,6 +207,7 @@ exports[`tile af without breakpoint should be like wide 1`] = `
             color="#005B8D"
             hide={false}
             isVideo={false}
+            markAsRead={false}
             title="label"
           />
         </View>
