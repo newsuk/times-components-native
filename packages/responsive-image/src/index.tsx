@@ -2,8 +2,12 @@ import * as React from "react";
 import {
   Image,
   ImageBackground,
+  ImageBackgroundProps,
+  ImageErrorEventData,
+  ImageProps,
   ImageSourcePropType,
   ImageStyle,
+  NativeSyntheticEvent,
   PixelRatio,
   View,
 } from "react-native";
@@ -25,32 +29,32 @@ interface ResponsiveImageProps {
   readonly resizeMode?: ImageStyle["resizeMode"];
   readonly rounded?: boolean;
   readonly style?: any;
-  readonly onLayout?: (ev: any) => void;
-  readonly onError?: () => void;
+  readonly onLayout?: ImageBackgroundProps["onLayout"];
+  readonly onError?: ImageProps["onError"];
   readonly disablePlaceholder?: boolean;
 }
 
 interface ElementProps {
   readonly source: ImageSourcePropType;
-  readonly onLoadEnd?: () => void;
-  readonly onLoad?: () => void;
+  readonly onLoadEnd?: ImageProps["onLoadEnd"];
+  readonly onLoad?: ImageProps["onLoad"];
   readonly aspectRatio?: ResponsiveImageProps["aspectRatio"];
   readonly borderRadius: number;
   readonly resize: ImageStyle["resizeMode"];
   readonly fadeDuration: number;
-  readonly onError?: () => void;
+  readonly onError?: ImageProps["onError"];
 }
 
 const ImageElement = ({
-  source,
-  onLoadEnd,
-  onLoad,
-  aspectRatio,
-  borderRadius,
-  resize,
-  fadeDuration,
-  onError,
-}: ElementProps) => (
+                        source,
+                        onLoadEnd,
+                        onLoad,
+                        aspectRatio,
+                        borderRadius,
+                        resize,
+                        fadeDuration,
+                        onError,
+                      }: ElementProps) => (
   <Image
     fadeDuration={fadeDuration}
     source={source}
@@ -178,12 +182,12 @@ const ResponsiveImage = (props: ResponsiveImageProps) => {
       onLoad={() => {
         setShowOffline(false);
       }}
-      onError={() => {
+      onError={(error) => {
         setShowOnline(false);
         setShowOffline(true);
         setFailed(true);
         if (onError) {
-          onError();
+          onError(error);
         }
       }}
       resize={resize}
@@ -202,9 +206,9 @@ const ResponsiveImage = (props: ResponsiveImageProps) => {
         }
         setShowPlaceholder(false);
       }}
-      onError={() => {
+      onError={(error: NativeSyntheticEvent<ImageErrorEventData>) => {
         if (onError) {
-          onError();
+          onError(error);
         }
         setShowOffline(false);
         setFailed(true);
