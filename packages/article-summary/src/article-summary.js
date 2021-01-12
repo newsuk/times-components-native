@@ -1,5 +1,5 @@
-import React from "react";
-import { Text, View } from "react-native";
+import React, { useRef, useEffect } from "react";
+import { Animated, Text, View } from "react-native";
 import PropTypes from "prop-types";
 import ArticleByline, {
   ArticleBylineOpinion,
@@ -9,6 +9,7 @@ import ArticleLabel from "@times-components-native/article-label";
 import VideoLabel from "@times-components-native/video-label";
 import DatePublication from "@times-components-native/date-publication";
 import renderTrees from "@times-components-native/markup-forest";
+import { ARTICLE_READ_ANIMATION } from "@times-components-native/styleguide";
 import ArticleSummaryContent from "./article-summary-content";
 import ArticleSummaryHeadline from "./article-summary-headline";
 import ArticleSummaryStrapline from "./article-summary-strapline";
@@ -21,16 +22,38 @@ function renderAst(ast) {
 }
 
 function ArticleSummaryLabel(props) {
-  const { hide, title, isVideo } = props;
+  const { markAsRead, hide, title, isVideo } = props;
+  const labelOpacity = useRef(new Animated.Value(1)).current;
+
+  useEffect(() => {
+    Animated.timing(labelOpacity, {
+      delay: ARTICLE_READ_ANIMATION.delay,
+      duration: ARTICLE_READ_ANIMATION.duration,
+      toValue: 0.6,
+      useNativeDriver: true,
+    }).start();
+  }, [markAsRead]);
 
   if (hide || (!title && !isVideo)) {
     return null;
   }
 
-  return (
+  const Label = (
     <View style={styles.labelWrapper}>
       {isVideo ? <VideoLabel {...props} /> : <ArticleLabel {...props} />}
     </View>
+  );
+
+  return markAsRead ? (
+    <Animated.View
+      style={{
+        opacity: labelOpacity,
+      }}
+    >
+      {Label}
+    </Animated.View>
+  ) : (
+    Label
   );
 }
 
@@ -103,7 +126,9 @@ ArticleSummary.propTypes = {
     isVideo: PropTypes.bool,
     title: PropTypes.string,
     hide: PropTypes.bool,
+    markAsRead: PropTypes.bool,
   }),
+  saveStar: PropTypes.node,
   strapline: PropTypes.node,
   style: PropTypes.shape({}),
 };
@@ -116,7 +141,9 @@ ArticleSummary.defaultProps = {
   headline: null,
   labelProps: {
     hide: false,
+    markAsRead: false,
   },
+  saveStar: null,
   strapline: null,
   style: null,
 };

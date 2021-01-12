@@ -29,6 +29,7 @@ exports[`tile h without breakpoint 1`] = `
         color="#005B8D"
         hide={false}
         isVideo={false}
+        markAsRead={false}
         title="label"
       />
     </View>

@@ -39,6 +39,7 @@ exports[`tile ba portrait medium 1`] = `
         color="#005B8D"
         hide={false}
         isVideo={false}
+        markAsRead={false}
         title="label"
       />
     </View>
@@ -113,6 +114,7 @@ exports[`tile ba portrait wide 1`] = `
         color="#005B8D"
         hide={false}
         isVideo={false}
+        markAsRead={false}
         title="label"
       />
     </View>

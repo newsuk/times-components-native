@@ -45,6 +45,7 @@ exports[`tile ar huge 1`] = `
             color="#005B8D"
             hide={false}
             isVideo={false}
+            markAsRead={false}
             title="label"
           />
         </View>
@@ -146,6 +147,7 @@ exports[`tile ar medium 1`] = `
             color="#005B8D"
             hide={false}
             isVideo={false}
+            markAsRead={false}
             title="label"
           />
         </View>
@@ -247,6 +249,7 @@ exports[`tile ar wide 1`] = `
             color="#005B8D"
             hide={false}
             isVideo={false}
+            markAsRead={false}
             title="label"
           />
         </View>
@@ -348,6 +351,7 @@ exports[`tile ar without breakpoint should be like medium 1`] = `
             color="#005B8D"
             hide={false}
             isVideo={false}
+            markAsRead={false}
             title="label"
           />
         </View>

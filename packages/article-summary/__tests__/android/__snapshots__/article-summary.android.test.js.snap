@@ -5,6 +5,7 @@ exports[`1. article summary component with a single paragraph 1`] = `
   <View>
     <ArticleLabel
       color="#333333"
+      markAsRead={false}
       title="Test label"
     />
   </View>
@@ -700,6 +701,7 @@ exports[`19. article summary component with a single paragraph and flag on table
   <View>
     <ArticleLabel
       color="#333333"
+      markAsRead={false}
       title="Camilla Long"
     />
   </View>
@@ -895,6 +897,89 @@ exports[`21. article summary component with hidden label 1`] = `
     <Text>
       
       Test paragraph
+      ...
+    </Text>
+  </Text>
+  <Text>
+    <DatePublication
+      date="2017-11-17T00:01:00.000Z"
+      publication="TIMES"
+    />
+  </Text>
+  <Text>
+    <ArticleByline
+      ast={
+        Array [
+          Object {
+            "attributes": Object {
+              "slug": "camilla-long",
+            },
+            "children": Array [
+              Object {
+                "attributes": Object {
+                  "value": "Camilla Long",
+                },
+                "children": Array [],
+                "name": "text",
+              },
+            ],
+            "name": "author",
+          },
+          Object {
+            "attributes": Object {},
+            "children": Array [
+              Object {
+                "attributes": Object {
+                  "value": ", Environment Editor",
+                },
+                "children": Array [],
+                "name": "text",
+              },
+            ],
+            "name": "inline",
+          },
+        ]
+      }
+    />
+  </Text>
+</View>
+`;
+
+exports[`22. article summary component when article is marked as read 1`] = `
+<View>
+  <View>
+    <View>
+      <ArticleLabel
+        color="#333333"
+        markAsRead={true}
+        title="Camilla Long"
+      />
+    </View>
+  </View>
+  <Text
+    accessibilityRole="header"
+    aria-level="3"
+  >
+    Top medal for forces dog who took a bite out of the Taliban
+  </Text>
+  <ArticleFlags
+    flags={
+      Array [
+        Object {
+          "expiryTime": "2020-03-13T12:00:00.000Z",
+          "type": "UPDATED",
+        },
+        Object {
+          "expiryTime": "2019-03-14T12:00:00.000Z",
+          "type": "EXCLUSIVE",
+        },
+      ]
+    }
+  />
+  <Text>
+    <Text>
+      
+      The special forces dog fought on under fire, even after shrapnel from Taliban grenades tore into his belly and legs, blew out a front tooth and damaged his right ear.
       ...
     </Text>
   </Text>

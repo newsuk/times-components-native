@@ -1,6 +1,7 @@
 export {
   default,
   Animations,
+  ARTICLE_READ_ANIMATION,
   breakpoints,
   columnToPercentage,
   colours,

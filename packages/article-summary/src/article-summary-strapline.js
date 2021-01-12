@@ -17,11 +17,13 @@ const ArticleSummaryStrapline = ({ strapline, style, allowFontScaling }) => (
 );
 
 ArticleSummaryStrapline.propTypes = {
+  allowFontScaling: PropTypes.bool,
   strapline: PropTypes.string.isRequired,
   style: TextStylePropTypes,
 };
 
 ArticleSummaryStrapline.defaultProps = {
+  allowFontScaling: false,
   style: {},
 };
 

@@ -2,7 +2,6 @@ import sectionColours, { secondarySectionColours } from "./colours/section";
 import functionalColours from "./colours/functional";
 
 import FadeIn from "./animations";
-
 import breakpoints from "./breakpoints";
 import timesLineHeightsFactory from "./line-heights";
 import timesFonts from "./fonts/fonts";
@@ -49,6 +48,8 @@ export { default as spacing, globalSpacingStyles } from "./spacing";
 export { default as themeFactory } from "./theme/theme-factory";
 
 export { default as columnToPercentage } from "./grid/columnToPercentage";
+
+export { ARTICLE_READ_ANIMATION } from "./articleRead";
 
 export default ({ scale = scales.medium } = {}) => ({
   Animations,

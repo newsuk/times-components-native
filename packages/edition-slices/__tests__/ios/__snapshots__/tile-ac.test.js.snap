@@ -43,6 +43,7 @@ exports[`tile ac huge 1`] = `
         color="#005B8D"
         hide={false}
         isVideo={false}
+        markAsRead={false}
         title="label"
       />
     </View>
@@ -122,6 +123,7 @@ exports[`tile ac medium 1`] = `
         color="#005B8D"
         hide={false}
         isVideo={false}
+        markAsRead={false}
         title="label"
       />
     </View>
@@ -201,6 +203,7 @@ exports[`tile ac wide 1`] = `
         color="#005B8D"
         hide={false}
         isVideo={false}
+        markAsRead={false}
         title="label"
       />
     </View>
@@ -280,6 +283,7 @@ exports[`tile ac without breakpoint should be like medium 1`] = `
         color="#005B8D"
         hide={false}
         isVideo={false}
+        markAsRead={false}
         title="label"
       />
     </View>
