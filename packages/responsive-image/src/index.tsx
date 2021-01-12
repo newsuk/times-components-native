@@ -46,15 +46,15 @@ interface ElementProps {
 }
 
 const ImageElement = ({
-                        source,
-                        onLoadEnd,
-                        onLoad,
-                        aspectRatio,
-                        borderRadius,
-                        resize,
-                        fadeDuration,
-                        onError,
-                      }: ElementProps) => (
+  source,
+  onLoadEnd,
+  onLoad,
+  aspectRatio,
+  borderRadius,
+  resize,
+  fadeDuration,
+  onError,
+}: ElementProps) => (
   <Image
     fadeDuration={fadeDuration}
     source={source}
