@@ -1,18 +1,7 @@
+import { ArticleContent, ImageContent } from "@times-components-native/types";
+
 type Article = {
-  content: {
-    name: string;
-    attributes: {
-      caption: string;
-      credits: string;
-      display: string;
-      ratio: string;
-      relativeHeight: number;
-      relativeHorizontalOffset: number;
-      relativeVerticalOffset: number;
-      relativeWidth: number;
-      url: string;
-    };
-  }[];
+  content: ArticleContent[];
 };
 
 export const getExtraImagesContent = (article: Article) => {
