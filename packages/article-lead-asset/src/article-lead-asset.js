@@ -14,7 +14,6 @@ const ArticleLeadAssetModalImage = ({
   crop,
   onImagePress,
   uri,
-  width,
   relativeWidth,
   relativeHeight,
   relativeHorizontalOffset,
@@ -22,7 +21,6 @@ const ArticleLeadAssetModalImage = ({
   extraContent,
 }) => (
   <ModalImage
-    highResSize={width}
     {...{
       aspectRatio,
       caption,

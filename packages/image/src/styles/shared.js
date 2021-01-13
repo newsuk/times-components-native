@@ -95,6 +95,9 @@ const styles = {
     position: "absolute",
     overflow: "hidden",
   },
+  modalImage: {
+    backgroundColor: colours.functional.modalBackground,
+  },
   modalSmallImage: {
     backgroundColor: colours.functional.modalBackground,
     width: "100%",

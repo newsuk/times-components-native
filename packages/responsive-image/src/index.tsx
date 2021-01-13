@@ -9,7 +9,9 @@ import {
   ImageStyle,
   NativeSyntheticEvent,
   PixelRatio,
+  StyleProp,
   View,
+  ViewProps,
 } from "react-native";
 import Url from "url-parse";
 import logoPath from "../assets/t.png";
@@ -28,10 +30,9 @@ interface ResponsiveImageProps {
   readonly relativeWidth?: number;
   readonly resizeMode?: ImageStyle["resizeMode"];
   readonly rounded?: boolean;
-  readonly style?: any;
+  readonly style?: StyleProp<ViewProps>;
   readonly onLayout?: ImageBackgroundProps["onLayout"];
   readonly onError?: ImageProps["onError"];
-  readonly disablePlaceholder?: boolean;
 }
 
 interface ElementProps {
@@ -75,7 +76,7 @@ const ResponsiveImage = (props: ResponsiveImageProps) => {
   const {
     uri,
     aspectRatio,
-    style: propStyle,
+    style: propStyle = {},
     relativeHeight = 1,
     relativeHorizontalOffset = 0,
     relativeVerticalOffset = 0,
@@ -159,12 +160,14 @@ const ResponsiveImage = (props: ResponsiveImageProps) => {
           borderRadius,
           resizeMode: "center",
         }}
-        style={{
-          ...styles.style,
-          ...propStyle,
-          aspectRatio,
-          borderRadius,
-        }}
+        style={[
+          styles.style,
+          propStyle,
+          {
+            aspectRatio,
+            borderRadius,
+          },
+        ]}
       />
     );
   }
@@ -234,7 +237,7 @@ const ResponsiveImage = (props: ResponsiveImageProps) => {
   );
 
   return (
-    <View style={{ ...styles.style, ...propStyle, aspectRatio, borderRadius }}>
+    <View style={[styles.style, propStyle, { aspectRatio, borderRadius }]}>
       {placeholder}
       {lowRes}
       {highRes}

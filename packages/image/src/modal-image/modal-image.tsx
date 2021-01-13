@@ -11,45 +11,41 @@ import styles, { captionStyles, tabletCaptionStyles } from "../styles";
 import Caption from "@times-components-native/caption";
 import { ImageContent } from "@times-components-native/types";
 
-interface ModalImageProps extends ImageProps {
+interface ModalImageProps {
+  aspectRatio?: number;
   caption: {
     text: string;
     credits: string;
   } | null;
-  onImagePress: (index: number) => void | null;
-  show: boolean;
-  isSmallImage: boolean;
-  accessibilityLabel: string;
-  aspectRatio?: number;
-  borderRadius: number;
-  disablePlaceholder?: boolean;
-  rounded?: boolean;
-  uri: string;
+  images?: ImageContent[];
   index?: number;
-  images: ImageContent[];
+  isSmallImage?: boolean;
+  onImagePress?: (index: number) => void | null;
+  relativeHeight?: number;
+  relativeHorizontalOffset?: number;
+  relativeVerticalOffset?: number;
+  relativeWidth?: number;
+  rounded?: boolean;
+  show?: boolean;
   styles?: StyleProp<ImageProps>;
-  relativeHeight: number;
-  relativeWidth: number;
-  relativeHorizontalOffset: number;
-  relativeVerticalOffset: number;
+  uri: string;
 }
 
 const ModalImage: FC<ModalImageProps> = ({
-  show = false,
+  aspectRatio,
   caption = null,
-  onImagePress = null,
   images = [],
-  isSmallImage = false,
-  disablePlaceholder = false,
-  rounded = false,
-  uri = "",
   index = 0,
-  styles: imageStyles,
+  isSmallImage = false,
+  onImagePress = null,
   relativeHeight,
-  relativeWidth,
   relativeHorizontalOffset,
   relativeVerticalOffset,
-  aspectRatio,
+  relativeWidth,
+  rounded = false,
+  show = false,
+  styles: imageStyles = {},
+  uri = "",
 }) => {
   const [showModal, setShowModal] = useState(show || false);
   const [currentIndex, setCurrentIndex] = useState(0);
@@ -99,7 +95,6 @@ const ModalImage: FC<ModalImageProps> = ({
       <Button onPress={() => onImagePress(index)}>
         <Image
           uri={uri}
-          disablePlaceholder={disablePlaceholder}
           rounded={rounded}
           aspectRatio={aspectRatio}
           relativeHeight={relativeHeight}
@@ -123,13 +118,7 @@ const ModalImage: FC<ModalImageProps> = ({
       .filter(({ url }) => url !== mainUrl.toString()),
   );
 
-  const getImagesProps = (): {
-    aspectRatio: number;
-    relativeHeight: number;
-    relativeWidth: number;
-    relativeHorizontalOffset: number;
-    relativeVerticalOffset: number;
-  } => {
+  const getImagesProps = () => {
     if (currentIndex === 0) {
       return {
         aspectRatio: aspectRatio || 1,
@@ -172,10 +161,12 @@ const ModalImage: FC<ModalImageProps> = ({
     return (
       <View style={styles.modalImageContainer}>
         <Image
-          disablePlaceholder={true}
           rounded={rounded}
           uri={onlineUrl.toString()}
-          style={isSmallImage ? styles.modalSmallImage : imageStyles}
+          style={[
+            styles.modalImage,
+            isSmallImage ? styles.modalSmallImage : imageStyles,
+          ]}
           relativeWidth={relativeWidth}
           relativeHeight={relativeHeight}
           relativeVerticalOffset={relativeVerticalOffset}
@@ -236,7 +227,6 @@ const ModalImage: FC<ModalImageProps> = ({
           relativeHorizontalOffset={relativeHorizontalOffset}
           relativeVerticalOffset={relativeVerticalOffset}
           uri={uri}
-          disablePlaceholder={disablePlaceholder}
           rounded={rounded}
         />
       </Button>
