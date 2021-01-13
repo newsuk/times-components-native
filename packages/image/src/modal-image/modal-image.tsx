@@ -27,7 +27,7 @@ interface ModalImageProps {
   relativeWidth?: number;
   rounded?: boolean;
   show?: boolean;
-  styles?: StyleProp<ImageProps>;
+  imageStyles?: StyleProp<ImageProps>;
   uri: string;
 }
 
@@ -44,7 +44,7 @@ const ModalImage: FC<ModalImageProps> = ({
   relativeWidth,
   rounded = false,
   show = false,
-  styles: imageStyles = {},
+  imageStyles = {},
   uri = "",
 }) => {
   const [showModal, setShowModal] = useState(show || false);
@@ -101,6 +101,7 @@ const ModalImage: FC<ModalImageProps> = ({
           relativeWidth={relativeWidth}
           relativeHorizontalOffset={relativeHorizontalOffset}
           relativeVerticalOffset={relativeVerticalOffset}
+          style={imageStyles}
         />
       </Button>
     );
@@ -158,6 +159,7 @@ const ModalImage: FC<ModalImageProps> = ({
       relativeVerticalOffset,
       aspectRatio,
     } = getImagesProps();
+
     return (
       <View style={styles.modalImageContainer}>
         <Image
@@ -228,6 +230,7 @@ const ModalImage: FC<ModalImageProps> = ({
           relativeVerticalOffset={relativeVerticalOffset}
           uri={uri}
           rounded={rounded}
+          style={imageStyles}
         />
       </Button>
     </View>
