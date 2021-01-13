@@ -13,7 +13,7 @@ import { ImageContent } from "@times-components-native/types";
 
 interface ModalImageProps {
   aspectRatio?: number;
-  caption: {
+  caption?: {
     text: string;
     credits: string;
   } | null;
