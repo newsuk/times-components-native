@@ -141,10 +141,6 @@ const ResponsiveImage = (props: ResponsiveImageProps) => {
             setShowOnline(true);
             setShowOffline(false);
             setShowPlaceholder(false);
-          } else {
-            setShowOnline(false);
-            setShowOffline(true);
-            setShowPlaceholder(true);
           }
         })
         .catch(() => {

@@ -5,7 +5,7 @@ import { Placeholder } from "@times-components-native/image";
 import styles from "./styles";
 
 const AuthorProfileHeadImage = ({ uri }) => {
-  return uri ? (
+  return (
     <Image
       aspectRatio={1}
       style={styles.authorPhoto}
@@ -13,8 +13,6 @@ const AuthorProfileHeadImage = ({ uri }) => {
       rounded
       accessibilityLabel="author-image"
     />
-  ) : (
-    <Placeholder />
   );
 };
 

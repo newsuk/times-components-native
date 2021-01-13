@@ -22,11 +22,7 @@ const ArticleLeftColumn = ({
 }) => (
   <View style={styles.leftColumnContainer}>
     <View style={styles.authorContainer}>
-      {authorImage !== "" ? (
-        <Image aspectRatio={1} uri={authorImage} rounded />
-      ) : (
-        <Placeholder />
-      )}
+      <Image aspectRatio={1} uri={authorImage} rounded />
       {hasBylineData(bylines) && (
         <View style={styles.bylines}>
           <ArticleBylineWithLinks
