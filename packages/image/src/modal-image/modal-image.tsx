@@ -81,7 +81,7 @@ const ModalImage: FC<ModalImageProps> = ({
       );
     }
 
-    if (images[currentIndex - 1] && images[currentIndex - 1].attributes) {
+    if (images[currentIndex - 1]?.attributes) {
       return (
         <Caption
           style={style}
