@@ -10,8 +10,9 @@ const Slice = ({
   isInSupplement,
   inTodaysEditionSlice,
   adConfig,
+  sectionTitle,
 }) => {
-  const Component = getSlice(isInSupplement, slice.name);
+  const Component = getSlice(isInSupplement, slice.name, sectionTitle);
   return Component ? (
     <Component
       onPress={onPress}
