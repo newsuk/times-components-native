@@ -1,4 +1,4 @@
-import React, { useCallback, useMemo } from "react";
+import React, { useCallback, useEffect, useMemo, useState } from "react";
 import { View, ScrollView } from "react-native";
 import PropTypes from "prop-types";
 import { withTrackScrollDepth } from "@times-components-native/tracking";
@@ -36,6 +36,7 @@ const ArticleWithContent = (props) => {
     Header,
     data,
     analyticsStream,
+    onArticleRead,
     onCommentGuidelinesPress,
     onCommentsPress,
     onTooltipPresented,
@@ -48,7 +49,27 @@ const ArticleWithContent = (props) => {
 
   const { windowWidth } = useResponsiveContext();
 
+  const [hasBeenRead, setHasBeenRead] = useState(false);
+
   const { id, url, content, template } = data;
+
+  const setArticleRead = () => {
+    setHasBeenRead(true);
+    onArticleRead && onArticleRead(id);
+  };
+
+  useEffect(() => {
+    if (!hasBeenRead) {
+      const delay = setTimeout(() => {
+        setArticleRead();
+      }, 6000);
+      return () => clearTimeout(delay);
+    }
+  }, [hasBeenRead]);
+
+  const onScroll = () => {
+    !hasBeenRead && setArticleRead();
+  };
 
   const header = useMemo(
     () => (
@@ -117,7 +138,11 @@ const ArticleWithContent = (props) => {
   return (
     <View style={styles.articleContainer}>
       <Viewport.Tracker>
-        <ScrollView contentInsetAdjustmentBehavior="automatic">
+        <ScrollView
+          contentInsetAdjustmentBehavior="automatic"
+          onScroll={onScroll}
+          scrollEventThrottle={400}
+        >
           {header}
           {processedContent}
         </ScrollView>
