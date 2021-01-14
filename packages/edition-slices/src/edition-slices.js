@@ -37,7 +37,20 @@ const isTablet =
   (config && config.breakpoint && config.breakpoint !== "small") ||
   width > tabletWidth;
 
-const sliceMap = (isInSupplement) => {
+const determineLeadOneAndOneVariant = (sectionName) => {
+  console.log({ sectionName });
+  if (sectionName === "Register") {
+    return LeadOneAndOneSlice({ showTileTeaser1: true, showImageTile2: true });
+  }
+
+  if (sectionName === "News") {
+    return LeadOneAndOneSlice({ showTileTeaser1: false, showImageTile2: true });
+  }
+
+  return LeadOneAndOneSlice({ test: true });
+};
+
+const sliceMap = (isInSupplement, sectionName) => {
   const isInTabletSupplement = isInSupplement && isTablet;
   return {
     CommentLeadAndCartoonSlice,
@@ -48,7 +61,7 @@ const sliceMap = (isInSupplement) => {
       : LeadOneAndFourSlice,
     LeadOneAndOneSlice: isInTabletSupplement
       ? SupplementLeadOneAndOneSlice
-      : LeadOneAndOneSlice,
+      : determineLeadOneAndOneVariant(sectionName),
     LeadOneFullWidthSlice,
     LeadTwoNoPicAndTwoSlice,
     Puzzle: PuzzleSlice,
@@ -78,5 +91,5 @@ const sliceMap = (isInSupplement) => {
   };
 };
 
-export const getSlice = (isInSupplement, sliceName) =>
-  sliceMap(isInSupplement)[sliceName];
+export const getSlice = (isInSupplement, sliceName, sectionName) =>
+  sliceMap(isInSupplement, sectionName)[sliceName];

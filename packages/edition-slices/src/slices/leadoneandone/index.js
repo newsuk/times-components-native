@@ -30,12 +30,20 @@ class LeadOneAndOne extends Component {
     const {
       onPress,
       slice: { lead, support },
+      config,
     } = this.props;
     return (
       <LeadOneAndOneSlice
         breakpoint={breakpoint}
         lead={<TileU onPress={onPress} tile={lead} tileName="lead" />}
-        support={<TileAA onPress={onPress} tile={support} tileName="support" />}
+        support={
+          <TileAA
+            onPress={onPress}
+            tile={support}
+            tileName="support"
+            config={{ showImage: config.showImageTile2 }}
+          />
+        }
       />
     );
   }
@@ -87,4 +95,12 @@ LeadOneAndOne.propTypes = {
   }).isRequired,
 };
 
-export default LeadOneAndOne;
+function withConfig(WrappedComponent, config) {
+  return class extends Component {
+    render() {
+      return <WrappedComponent config={config} {...this.props} />;
+    }
+  };
+}
+
+export default (config) => withConfig(LeadOneAndOne, config);

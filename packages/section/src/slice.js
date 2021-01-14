@@ -7,11 +7,12 @@ const Slice = ({
   slice,
   onPress,
   onLinkPress,
+  sectionName,
   isInSupplement,
   inTodaysEditionSlice,
   adConfig,
 }) => {
-  const Component = getSlice(isInSupplement, slice.name);
+  const Component = getSlice(isInSupplement, slice.name, sectionName);
   return Component ? (
     <Component
       onPress={onPress}

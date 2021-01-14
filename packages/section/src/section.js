@@ -81,6 +81,7 @@ const Section = ({
       onPress={isPuzzle ? onPuzzlePress : onArticlePress}
       onLinkPress={onLinkPress}
       slice={slice}
+      sectionName={title}
       isInSupplement={isSupplementSection(title)}
       inTodaysEditionSlice={inTodaysEditionSlice}
       adConfig={adConfig}
