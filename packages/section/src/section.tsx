@@ -1,6 +1,5 @@
 import React, { useCallback, useState } from "react";
 import { Animated, FlatList, Platform, View } from "react-native";
-import PropTypes from "prop-types";
 import { useResponsiveContext } from "@times-components-native/responsive";
 import { withTrackScrollDepth } from "@times-components-native/tracking";
 import { IconEmail } from "@times-components-native/icons";
@@ -20,7 +19,19 @@ import {
 
 const styles = styleFactory();
 
-const Section = ({
+interface Props {
+  adConfig: any;
+  onArticlePress: () => void;
+  onLinkPress: (link: any) => void;
+  onPuzzlePress: () => void;
+  onPuzzleBarPress: () => void;
+  onViewed: (item: any, slices: any[]) => void;
+  publishedTime: string;
+  receiveChildList: (childList: any) => void;
+  section: any;
+}
+
+const Section: React.FC<Props> = ({
   adConfig,
   onArticlePress,
   onLinkPress,
@@ -58,11 +69,11 @@ const Section = ({
     if (!onViewed || !info.changed || !info.changed.length) return [];
 
     return info.changed
-      .filter((viewableItem) => viewableItem.isViewable)
-      .map((viewableItem) => onViewed(viewableItem.item, slices));
+      .filter((viewableItem: any) => viewableItem.isViewable)
+      .map((viewableItem: any) => onViewed(viewableItem.item, slices));
   }, []);
 
-  const getHeaderComponent = (isPuzzle, isMagazine) => {
+  const getHeaderComponent = (isPuzzle: boolean, isMagazine: boolean) => {
     if (isPuzzle) return <PuzzleBar onPress={onPuzzleBarPress} />;
 
     if (isMagazine) return <MagazineCover cover={cover} />;
@@ -70,11 +81,11 @@ const Section = ({
     return null;
   };
 
-  const renderItem = (isPuzzle) => ({
+  const renderItem = (isPuzzle: boolean) => ({
     index,
     item: slice,
     inTodaysEditionSlice,
-  }) => (
+  }: any) => (
     <Slice
       index={index}
       length={slices.length}
@@ -87,16 +98,16 @@ const Section = ({
     />
   );
 
-  const renderItemSeperator = (isPuzzle) => (
-    { leadingItem },
-    editionBreakpoint,
+  const renderItemSeperator = (isPuzzle: boolean) => (
+    { leadingItem }: any,
+    editionBreakpoint: string,
   ) => {
     const isIgnored = leadingItem.ignoreSeparator;
 
     if (isPuzzle || isIgnored) return null;
 
     return (
-      <View style={styles.listItemSeparatorContainer}>
+      <View>
         <SectionItemSeparator breakpoint={editionBreakpoint} />
       </View>
     );
@@ -107,10 +118,12 @@ const Section = ({
 
   if (name === "FrontPageSection") {
     const inTheNewsSlice = slices.find(
-      (slice) => slice.name === "InTheNewsSlice",
+      (slice: any) => slice.name === "InTheNewsSlice",
     );
 
-    const frontSlice = slices.find((slice) => slice.name !== "InTheNewsSlice");
+    const frontSlice = slices.find(
+      (slice: any) => slice.name !== "InTheNewsSlice",
+    );
 
     return renderItem(false)({
       index: 0,
@@ -159,16 +172,6 @@ const Section = ({
 };
 
 Section.displayName = "Section";
-Section.propTypes = {
-  onArticlePress: PropTypes.func,
-  onLinkPress: PropTypes.func,
-  onPuzzleBarPress: PropTypes.func,
-  onPuzzlePress: PropTypes.func,
-  onViewed: PropTypes.func,
-  publishedTime: PropTypes.string.isRequired,
-  receiveChildList: PropTypes.func,
-  section: PropTypes.shape({}).isRequired,
-};
 
 Section.defaultProps = {
   onArticlePress: () => null,
