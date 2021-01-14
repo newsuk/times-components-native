@@ -10,6 +10,12 @@ declare module "@times-components-native/styleguide" {
 
   export const colours: Colours;
   export const spacing: (number) => number;
+  export const editionBreakpoints: {
+    huge: "huge";
+    medium: "medium";
+    small: "small";
+    wide: "wide";
+  };
   export const tabletWidth: number;
   export const getEditionBreakpoint = (number) => string;
   export const getNarrowArticleBreakpoint = (number) => string;
