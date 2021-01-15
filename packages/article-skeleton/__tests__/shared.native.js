@@ -190,19 +190,6 @@ export default () => {
         expect(testInstance.toJSON()).toMatchSnapshot();
       },
     },
-    // {
-    //   name: "onArticleRead is called on scroll",
-    //   async test() {
-    //     const onArticleRead = jest.fn();
-
-    //     const testInstance = TestRenderer.create(
-    //       renderArticle({ onArticleRead }),
-    //     );
-
-    //     testInstance.root.findByType(ScrollView).props.onScroll();
-    //     expect(onArticleRead).toHaveBeenCalled();
-    //   },
-    // },
     {
       name: "onArticleRead is called after 6 seconds",
       async test() {
