@@ -63,7 +63,7 @@ export default () => {
   );
 
   beforeEach(() => {
-    jest.setTimeout(60000);
+    jest.useFakeTimers();
     mockDate.set(1514764800000, 0);
   });
 
@@ -195,10 +195,10 @@ export default () => {
       async test() {
         const onArticleRead = jest.fn();
         TestRenderer.create(renderArticle({ onArticleRead }));
-        await delay(6000);
-        expect(onArticleRead).toHaveBeenCalled();
+        expect(onArticleRead).not.toHaveBeenCalled();
+        jest.advanceTimersByTime(6000);
+        expect(onArticleRead).toHaveBeenCalledTimes(1);
       },
-      timout: 6000,
     },
   ];
 
