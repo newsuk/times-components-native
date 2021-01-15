@@ -1,11 +1,10 @@
 import React from "react";
 import { View } from "react-native";
-import Caption from "@times-components-native/caption";
 import { ModalImage } from "@times-components-native/image";
 import ArticleLeadAssetVideo from "./article-lead-asset-video";
 import {
-  nativePropTypes,
   nativeDefaultProps,
+  nativePropTypes,
 } from "./article-lead-asset-prop-types";
 import getRatio from "./get-ratio";
 
@@ -15,14 +14,13 @@ const ArticleLeadAssetModalImage = ({
   crop,
   onImagePress,
   uri,
-  width,
   relativeWidth,
   relativeHeight,
   relativeHorizontalOffset,
   relativeVerticalOffset,
+  extraContent,
 }) => (
   <ModalImage
-    highResSize={width}
     {...{
       aspectRatio,
       caption,
@@ -33,6 +31,7 @@ const ArticleLeadAssetModalImage = ({
       relativeHeight,
       relativeHorizontalOffset,
       relativeVerticalOffset,
+      images: extraContent,
     }}
     index={0}
   />
@@ -47,6 +46,7 @@ const ArticleLeadAsset = ({
   onVideoPress,
   width,
   style,
+  extraContent,
 }) => {
   if (!leadAsset) {
     return null;
@@ -71,7 +71,7 @@ const ArticleLeadAsset = ({
     <View style={style}>
       <LeadAsset
         aspectRatio={getRatio(crop.ratio)}
-        caption={<Caption {...caption} />}
+        caption={caption}
         leadAsset={leadAsset}
         relativeWidth={crop.relativeWidth}
         relativeHeight={crop.relativeHeight}
@@ -81,6 +81,7 @@ const ArticleLeadAsset = ({
         onVideoPress={onVideoPress}
         uri={crop.url}
         width={width}
+        extraContent={extraContent}
       />
       {renderCaption({ caption })}
     </View>

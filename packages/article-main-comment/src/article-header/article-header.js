@@ -33,7 +33,7 @@ const ArticleHeader = ({
       <View style={[styles.container, isTablet && styles.containerTablet]}>
         <ModalImage
           aspectRatio={1}
-          style={styles.authorImage}
+          imageStyles={styles.authorImage}
           uri={authorImage}
           onImagePress={onImagePress ? () => onImagePress(0) : undefined}
           rounded

@@ -61,36 +61,43 @@ exports[`1. landscape default modal 1`] = `
           }
         }
       >
-        <View
-          style={
-            Object {
-              "margin": 20,
-            }
-          }
-        >
-          <Text
+        <View>
+          <View
             style={
               Object {
-                "color": "#FFFFFF",
-                "fontSize": 15,
-                "lineHeight": 15,
+                "margin": 20,
+                "paddingTop": 5,
               }
             }
           >
-            Caption
-          </Text>
-          <Text
-            style={
-              Object {
-                "color": "#FFFFFF",
-                "fontSize": 10,
-                "lineHeight": 10,
-                "marginTop": 5,
+            <Text
+              style={
+                Object {
+                  "color": "#FFFFFF",
+                  "fontFamily": "GillSansMTStd-Medium",
+                  "fontSize": 15,
+                  "lineHeight": 15,
+                }
               }
-            }
-          >
-            Credits
-          </Text>
+            >
+              Caption
+            </Text>
+            <Text
+              style={
+                Object {
+                  "color": "#FFFFFF",
+                  "fontFamily": "GillSansMTStd-Medium",
+                  "fontSize": 10,
+                  "fontWeight": "400",
+                  "letterSpacing": 1,
+                  "lineHeight": 10,
+                  "marginTop": 5,
+                }
+              }
+            >
+              CREDITS
+            </Text>
+          </View>
         </View>
       </View>
     </View>
@@ -188,36 +195,43 @@ exports[`2. portrait default modal 1`] = `
           }
         }
       >
-        <View
-          style={
-            Object {
-              "margin": 20,
-            }
-          }
-        >
-          <Text
+        <View>
+          <View
             style={
               Object {
-                "color": "#FFFFFF",
-                "fontSize": 15,
-                "lineHeight": 15,
+                "margin": 20,
+                "paddingTop": 5,
               }
             }
           >
-            Caption
-          </Text>
-          <Text
-            style={
-              Object {
-                "color": "#FFFFFF",
-                "fontSize": 10,
-                "lineHeight": 10,
-                "marginTop": 5,
+            <Text
+              style={
+                Object {
+                  "color": "#FFFFFF",
+                  "fontFamily": "GillSansMTStd-Medium",
+                  "fontSize": 15,
+                  "lineHeight": 15,
+                }
               }
-            }
-          >
-            Credits
-          </Text>
+            >
+              Caption
+            </Text>
+            <Text
+              style={
+                Object {
+                  "color": "#FFFFFF",
+                  "fontFamily": "GillSansMTStd-Medium",
+                  "fontSize": 10,
+                  "fontWeight": "400",
+                  "letterSpacing": 1,
+                  "lineHeight": 10,
+                  "marginTop": 5,
+                }
+              }
+            >
+              CREDITS
+            </Text>
+          </View>
         </View>
       </View>
     </View>
@@ -315,36 +329,43 @@ exports[`3. tablet landscape default modal 1`] = `
           }
         }
       >
-        <View
-          style={
-            Object {
-              "margin": 20,
-            }
-          }
-        >
-          <Text
+        <View>
+          <View
             style={
               Object {
-                "color": "#FFFFFF",
-                "fontSize": 15,
-                "lineHeight": 15,
+                "margin": 20,
+                "paddingTop": 5,
               }
             }
           >
-            Caption
-          </Text>
-          <Text
-            style={
-              Object {
-                "color": "#FFFFFF",
-                "fontSize": 10,
-                "lineHeight": 10,
-                "marginTop": 5,
+            <Text
+              style={
+                Object {
+                  "color": "#FFFFFF",
+                  "fontFamily": "GillSansMTStd-Medium",
+                  "fontSize": 15,
+                  "lineHeight": 15,
+                }
               }
-            }
-          >
-            Credits
-          </Text>
+            >
+              Caption
+            </Text>
+            <Text
+              style={
+                Object {
+                  "color": "#FFFFFF",
+                  "fontFamily": "GillSansMTStd-Medium",
+                  "fontSize": 10,
+                  "fontWeight": "400",
+                  "letterSpacing": 1,
+                  "lineHeight": 10,
+                  "marginTop": 5,
+                }
+              }
+            >
+              CREDITS
+            </Text>
+          </View>
         </View>
       </View>
     </View>
@@ -442,36 +463,43 @@ exports[`4. tablet portrait default modal 1`] = `
           }
         }
       >
-        <View
-          style={
-            Object {
-              "margin": 20,
-            }
-          }
-        >
-          <Text
+        <View>
+          <View
             style={
               Object {
-                "color": "#FFFFFF",
-                "fontSize": 15,
-                "lineHeight": 15,
+                "margin": 20,
+                "paddingTop": 5,
               }
             }
           >
-            Caption
-          </Text>
-          <Text
-            style={
-              Object {
-                "color": "#FFFFFF",
-                "fontSize": 10,
-                "lineHeight": 10,
-                "marginTop": 5,
+            <Text
+              style={
+                Object {
+                  "color": "#FFFFFF",
+                  "fontFamily": "GillSansMTStd-Medium",
+                  "fontSize": 15,
+                  "lineHeight": 15,
+                }
               }
-            }
-          >
-            Credits
-          </Text>
+            >
+              Caption
+            </Text>
+            <Text
+              style={
+                Object {
+                  "color": "#FFFFFF",
+                  "fontFamily": "GillSansMTStd-Medium",
+                  "fontSize": 10,
+                  "fontWeight": "400",
+                  "letterSpacing": 1,
+                  "lineHeight": 10,
+                  "marginTop": 5,
+                }
+              }
+            >
+              CREDITS
+            </Text>
+          </View>
         </View>
       </View>
     </View>
