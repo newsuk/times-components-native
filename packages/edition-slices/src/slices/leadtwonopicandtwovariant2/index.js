@@ -1,7 +1,16 @@
 import React, { Component } from "react";
 import PropTypes from "prop-types";
 import { LeadTwoNoPicAndTwoVariant2Slice } from "@times-components-native/slice-layout";
-import { TileB, TileD, TileA, TileF, TileX, TileY, TileAL } from "../../tiles";
+import {
+  TileB,
+  TileD,
+  TileA,
+  TileF,
+  TileX,
+  TileY,
+  TileAL,
+  TileV,
+} from "../../tiles";
 import { ResponsiveSlice } from "../shared";
 
 class LeadTwoNoPicAndTwoVariant2 extends Component {
@@ -21,7 +30,7 @@ class LeadTwoNoPicAndTwoVariant2 extends Component {
         breakpoint={breakpoint}
         orientation={orientation}
         lead1={<TileF onPress={onPress} tile={lead1} tileName="lead1" />}
-        lead2={<TileB onPress={onPress} tile={lead2} tileName="lead2" />}
+        lead2={<TileF onPress={onPress} tile={lead2} tileName="lead2" />}
         support1={
           <TileD onPress={onPress} tile={support1} tileName="support1" />
         }
@@ -38,7 +47,11 @@ class LeadTwoNoPicAndTwoVariant2 extends Component {
       slice: { lead1, lead2, support1, support2 },
     } = this.props;
 
-    const Support1 = orientation === "landscape" ? TileAL : TileB;
+    const isLandscape = orientation === "landscape";
+
+    const Support1 = isLandscape ? TileAL : TileB;
+    const Support2 = isLandscape ? TileV : TileA;
+
     return (
       <LeadTwoNoPicAndTwoVariant2Slice
         orientation={orientation}
@@ -68,7 +81,7 @@ class LeadTwoNoPicAndTwoVariant2 extends Component {
           />
         }
         support2={
-          <TileA
+          <Support2
             breakpoint={breakpoint}
             onPress={onPress}
             tile={support2}
