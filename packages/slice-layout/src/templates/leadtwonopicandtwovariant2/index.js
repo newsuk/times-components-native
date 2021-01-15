@@ -6,6 +6,9 @@ import { ItemColSeparator } from "../shared";
 import styleFactory from "./styles";
 import VerticalLayout from "../verticallayout";
 
+// new tile a with 2/3 image for portrait
+// new tile for landscape with image above text below (middle column)
+
 const LeadTwoNoPicAndTwoVariant2Slice = ({
   breakpoint,
   orientation,
@@ -25,9 +28,9 @@ const LeadTwoNoPicAndTwoVariant2Slice = ({
       <View style={styles.container}>
         <VerticalLayout style={styles.column} tiles={[lead1, lead2]} />
         <ItemColSeparator style={styles.colSeparatorStyle} />
-        <View style={styles.middleTile}>{support1}</View>
+        <View style={styles.secondColumn}>{support2}</View>
         <ItemColSeparator style={styles.colSeparatorStyle} />
-        <View style={styles.column}>{support2}</View>
+        <View style={styles.thirdColumn}>{support1}</View>
       </View>
     );
   }

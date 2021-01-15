@@ -12,6 +12,7 @@ const portraitStyles = {
     ...sharedStyles.container,
     marginHorizontal: spacing(4),
   },
+
   column: {
     width: "41%",
   },
@@ -19,7 +20,7 @@ const portraitStyles = {
     width: "59%",
   },
   colSeparatorStyle: {
-    marginVertical: spacing(3),
+    marginHorizontal: 10,
   },
 };
 
@@ -29,13 +30,18 @@ const landscapeStyles = {
     marginHorizontal: spacing(2),
   },
   column: {
-    width: "42%",
+    width: "34%",
   },
-  middleTile: {
-    width: "16%",
+  secondColumn: {
+    width: "41%",
+    marginVertical: spacing(1),
+  },
+  thirdColumn: {
+    width: "25%",
   },
   colSeparatorStyle: {
     marginVertical: spacing(3),
+    marginHorizontal: spacing(2),
   },
 };
 
