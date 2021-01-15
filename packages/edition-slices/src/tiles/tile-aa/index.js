@@ -10,31 +10,25 @@ import {
 import styles from "./styles";
 import WithoutWhiteSpace from "../shared/without-white-space";
 import PositionedTileStar from "../shared/positioned-tile-star";
-import { View } from "react-native";
 
-const TileAA = ({ onPress, tile }) => {
-  return (
-    <TileLink onPress={onPress} style={styles.container} tile={tile}>
-      {tile.config?.showImage && (
-        <View style={{ width: 10, height: 10, backgroundColor: "red" }} />
+const TileAA = ({ onPress, tile }) => (
+  <TileLink onPress={onPress} style={styles.container} tile={tile}>
+    <WithoutWhiteSpace
+      style={styles.summaryContainer}
+      render={(whiteSpaceHeight) => (
+        <TileSummary
+          headlineStyle={styles.headline}
+          summary={getTileSummary(tile, 800)}
+          summaryStyle={styles.summary}
+          tile={tile}
+          whiteSpaceHeight={whiteSpaceHeight}
+          withStar={false}
+        />
       )}
-      <WithoutWhiteSpace
-        style={styles.summaryContainer}
-        render={(whiteSpaceHeight) => (
-          <TileSummary
-            headlineStyle={styles.headline}
-            summary={getTileSummary(tile, 800)}
-            summaryStyle={styles.summary}
-            tile={tile}
-            whiteSpaceHeight={whiteSpaceHeight}
-            withStar={false}
-          />
-        )}
-      />
-      <PositionedTileStar articleId={tile.article.id} />
-    </TileLink>
-  );
-};
+    />
+    <PositionedTileStar articleId={tile.article.id} />
+  </TileLink>
+);
 
 TileAA.propTypes = {
   onPress: PropTypes.func.isRequired,
