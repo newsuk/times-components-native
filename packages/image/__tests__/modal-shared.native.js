@@ -1,5 +1,5 @@
 import React from "react";
-import { Modal, Text, View } from "react-native";
+import { Modal } from "react-native";
 import TestRenderer, { act } from "react-test-renderer";
 import Link from "@times-components-native/link";
 import {
@@ -14,13 +14,6 @@ import { hash, iterator } from "@times-components-native/test-utils";
 import Image, { ModalImage } from "../src";
 
 jest.mock("react-native-image-zoom-viewer", () => "ImageZoomView");
-
-// eslint-disable-next-line react/prop-types
-const MockCaption = ({ style: { text, container } }) => (
-  <View style={container}>
-    <Text style={text}>Caption</Text>
-  </View>
-);
 
 jest.useFakeTimers();
 
@@ -41,7 +34,9 @@ export default () => {
 
   const props = {
     aspectRatio: 2,
-    caption: <MockCaption />,
+    caption: {
+      caption: "Caption",
+    },
     uri: "http://example.com/image.jpg?crop=1016%2C677%2C0%2C0",
   };
 

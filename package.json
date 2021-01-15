@@ -94,7 +94,7 @@
     "react-native": "0.63.2",
     "react-native-autoheight-webview": "1.5.1",
     "react-native-device-info": "7.3.1",
-    "react-native-image-zoom-viewer": "2.2.26",
+    "react-native-image-zoom-viewer": "3.0.1",
     "react-native-navigation": "^6.11.0",
     "react-native-svg": "12.1.0",
     "react-native-v8": "0.63.2-patch.1",

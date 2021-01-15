@@ -17,7 +17,6 @@ export const propTypes = {
 };
 
 export const defaultProps = {
-  ...Image.defaultImagePropTypes,
   aspectRatio: undefined,
   disablePlaceholder: false,
   fadeImageIn: false,
