@@ -67,7 +67,7 @@ const ArticleWithContent = (props) => {
     }
   }, [hasBeenRead]);
 
-  const onScroll = () => {
+  const scrollHandler = () => {
     !hasBeenRead && setArticleRead();
   };
 
@@ -140,7 +140,7 @@ const ArticleWithContent = (props) => {
       <Viewport.Tracker>
         <ScrollView
           contentInsetAdjustmentBehavior="automatic"
-          onScroll={onScroll}
+          onScroll={scrollHandler}
           scrollEventThrottle={400}
         >
           {header}
