@@ -17,7 +17,7 @@ describe("prepareSlicesForRender", () => {
       { id: "l", name: "DailyUniversalRegister" },
     ];
 
-    const prepararedData = prepareSlicesForRender(true)(originalData);
+    const prepararedData = prepareSlicesForRender(true, "News")(originalData);
     expect(prepararedData).toMatchSnapshot();
   });
 });
