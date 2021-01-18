@@ -2,7 +2,7 @@ import React from "react";
 import { View } from "react-native";
 import Caption from "@times-components-native/caption";
 import { ModalImage } from "@times-components-native/image";
-import { propTypes, defaultPropTypes } from "./article-image-prop-types";
+import { defaultPropTypes, propTypes } from "./article-image-prop-types";
 import styles from "./styles";
 
 const renderCaption = (display, caption, credits) => {
@@ -45,7 +45,7 @@ const InlineImage = ({ imageOptions, captionOptions, onImagePress }) => {
     <View key="img" style={styles.inlineImage}>
       <ModalImage
         aspectRatio={aspectRatio}
-        caption={<Caption credits={credits} text={caption} />}
+        caption={{ credits, text: caption }}
         highResSize={highResSize}
         index={index}
         lowResSize={lowResSize}

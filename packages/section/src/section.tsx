@@ -42,8 +42,7 @@ const Section: React.FC<Props> = ({
   receiveChildList,
   section,
 }) => {
-  const { cover, name, slices, title } = section;
-
+  const { cover, name, slices, title: sectionTitle } = section;
   const { isTablet, editionBreakpoint } = useResponsiveContext();
   const emailPuzzlesButtonExtendedWidth = 170;
   const [emailPuzzlesButtonWidth] = useState(
@@ -93,7 +92,7 @@ const Section: React.FC<Props> = ({
       onPress={isPuzzle ? onPuzzlePress : onArticlePress}
       onLinkPress={onLinkPress}
       slice={slice}
-      isInSupplement={isSupplementSection(title)}
+      isInSupplement={isSupplementSection(sectionTitle)}
       inTodaysEditionSlice={inTodaysEditionSlice}
       adConfig={adConfig}
       sectionTitle={sectionTitle}
@@ -138,8 +137,8 @@ const Section: React.FC<Props> = ({
   }
 
   const data = isPuzzle
-    ? createPuzzleData(slices, editionBreakpoint)
-    : prepareSlicesForRender(isTablet)(slices);
+    ? createPuzzleData(isTablet, sectionTitle)(slices, editionBreakpoint)
+    : prepareSlicesForRender(isTablet, sectionTitle)(slices);
 
   if (slices) receiveChildList(data);
 

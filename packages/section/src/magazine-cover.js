@@ -36,7 +36,12 @@ class MagazineCoverImage extends Component {
         : {};
 
     return showModalImage ? (
-      <ModalImage aspectRatio={ratio} show style={styles.image} uri={url} />
+      <ModalImage
+        aspectRatio={ratio}
+        show
+        imageStyles={styles.image}
+        uri={url}
+      />
     ) : (
       <Image
         aspectRatio={ratio}

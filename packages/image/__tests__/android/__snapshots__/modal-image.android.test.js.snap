@@ -30,7 +30,6 @@ exports[`1. modal image 1`] = `
         </View>
       </View>
       <ImageZoomView
-        captureEvent={true}
         enablePreload={true}
         enableSwipeDown={true}
         imageUrls={
@@ -40,14 +39,13 @@ exports[`1. modal image 1`] = `
             },
           ]
         }
+        useNativeDriver={true}
       />
       <View
         pointerEvents="none"
       >
         <View>
-          <Text>
-            Caption
-          </Text>
+          <View />
         </View>
       </View>
     </View>
@@ -100,7 +98,6 @@ exports[`2. modal image with no caption 1`] = `
         </View>
       </View>
       <ImageZoomView
-        captureEvent={true}
         enablePreload={true}
         enableSwipeDown={true}
         imageUrls={
@@ -110,6 +107,7 @@ exports[`2. modal image with no caption 1`] = `
             },
           ]
         }
+        useNativeDriver={true}
       />
       <View
         pointerEvents="none"
@@ -165,7 +163,6 @@ exports[`3. modal image with custom highressize 1`] = `
         </View>
       </View>
       <ImageZoomView
-        captureEvent={true}
         enablePreload={true}
         enableSwipeDown={true}
         imageUrls={
@@ -175,14 +172,13 @@ exports[`3. modal image with custom highressize 1`] = `
             },
           ]
         }
+        useNativeDriver={true}
       />
       <View
         pointerEvents="none"
       >
         <View>
-          <Text>
-            Caption
-          </Text>
+          <View />
         </View>
       </View>
     </View>
