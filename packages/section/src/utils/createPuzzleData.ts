@@ -24,10 +24,11 @@ export const filterPuzzles = (puzzles: any[], editionBreakpoint: string) =>
     ? puzzles.filter((puzzle) => !puzzle.hideOnMobile)
     : puzzles;
 
-export const createPuzzleData = (puzzles: any[], editionBreakpoint: string) => {
+export const createPuzzleData = (isTablet: boolean, sectionTitle: string) => (
+  puzzles: any[],
+  editionBreakpoint: string,
+) => {
   const filteredPuzzles = filterPuzzles(puzzles, editionBreakpoint);
   const splitedPuzzlesBySlices = splitPuzzlesBySlices(filteredPuzzles);
-  const sliceData = buildSliceData(splitedPuzzlesBySlices);
-
-  return sliceData;
+  return buildSliceData(isTablet, sectionTitle)(splitedPuzzlesBySlices);
 };
