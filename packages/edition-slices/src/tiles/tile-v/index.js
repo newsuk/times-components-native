@@ -9,8 +9,12 @@ import {
 } from "../shared";
 import styles from "./styles";
 
-const TileV = ({ onPress, tile }) => {
-  const crop = getTileImage(tile, "crop169");
+const TileV = ({
+  onPress,
+  tile,
+  imageAspectRatio: { width = 16, height = 9 },
+}) => {
+  const crop = getTileImage(tile, `crop${width}${height}`);
 
   if (!crop) {
     return null;
@@ -23,7 +27,7 @@ const TileV = ({ onPress, tile }) => {
   return (
     <TileLink onPress={onPress} style={styles.container} tile={tile}>
       <TileImage
-        aspectRatio={16 / 9}
+        aspectRatio={width / height}
         relativeWidth={crop.relativeWidth}
         relativeHeight={crop.relativeHeight}
         relativeHorizontalOffset={crop.relativeHorizontalOffset}
@@ -45,6 +49,10 @@ const TileV = ({ onPress, tile }) => {
 TileV.propTypes = {
   onPress: PropTypes.func.isRequired,
   tile: PropTypes.shape({}).isRequired,
+  imageAspectRatio: PropTypes.shape({
+    width: PropTypes.number,
+    height: PropTypes.number,
+  }),
 };
 
 export default withTileTracking(TileV);
