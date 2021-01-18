@@ -35,9 +35,14 @@ export default () => {
   const props = {
     aspectRatio: 2,
     caption: {
-      caption: "Caption",
+      text: "Caption",
+      credits: "Credits",
     },
     uri: "http://example.com/image.jpg?crop=1016%2C677%2C0%2C0",
+    relativeHeight: 1,
+    relativeHorizontalOffset: 1,
+    relativeVerticalOffset: 1,
+    relativeWidth: 1,
   };
 
   const tests = [
