@@ -509,14 +509,17 @@ fragment commonSlicesSection on StandardSectionSlice {
       headline
       leadAsset {
         ...leadAsset32and45
+        ...leadAsset23
       }
       article {
         ...baseArticleProps
         leadAsset {
           ...leadAsset32and45
+          ...leadAsset23
         }
         listingAsset {
           ...leadAsset32and45
+          ...leadAsset23
         }
         summary125: summary(maxCharCount: 125)
         summary800: summary(maxCharCount: 800)
@@ -1012,7 +1015,7 @@ fragment frontSlicesSection on FrontPageSectionSlice {
           ... on ArticleLink {
             articleId
           }
-           ... on Link {
+          ... on Link {
             url
           }
         }
