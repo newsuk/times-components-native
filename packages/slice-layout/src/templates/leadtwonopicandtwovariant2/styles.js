@@ -21,7 +21,7 @@ const portraitStyles = {
     width: "59%",
   },
   colSeparatorStyle: {
-    marginRight: spacing(2),
+    marginHorizontal: spacing(2),
   },
 };
 
