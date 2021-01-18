@@ -7,6 +7,7 @@ import ArticleSkeleton from "@times-components-native/article-skeleton";
 import ArticleLeadAsset from "@times-components-native/article-lead-asset";
 import { ResponsiveContext } from "@times-components-native/responsive";
 import {
+  getExtraImagesContent,
   getHeadline,
   getLeadAsset,
   getStandardTemplateCrop,
@@ -30,6 +31,7 @@ class ArticlePage extends Component {
   renderHeader(parentProps) {
     const {
       article,
+      onArticleRead,
       onAuthorPress,
       onImagePress,
       onTooltipPresented,
@@ -62,6 +64,7 @@ class ArticlePage extends Component {
                 onVideoPress={onVideoPress}
                 style={[styles.leadAsset, isTablet && styles.leadAssetTablet]}
                 width={Math.min(parentProps.width, tabletWidth)}
+                extraContent={getExtraImagesContent(article)}
               />
             </View>
           );
@@ -120,6 +123,7 @@ class ArticlePage extends Component {
       analyticsStream,
       article,
       interactiveConfig,
+      onArticleRead,
       onAuthorPress,
       onCommentGuidelinesPress,
       onCommentsPress,
@@ -149,6 +153,7 @@ class ArticlePage extends Component {
                 Header={this.renderHeader}
                 interactiveConfig={interactiveConfig}
                 isTablet={isTablet}
+                onArticleRead={onArticleRead}
                 onAuthorPress={onAuthorPress}
                 onCommentGuidelinesPress={onCommentGuidelinesPress}
                 onCommentsPress={onCommentsPress}
@@ -178,6 +183,7 @@ class ArticlePage extends Component {
 ArticlePage.propTypes = {
   ...articlePropTypes,
   interactiveConfig: PropTypes.shape({}),
+  onArticleRead: PropTypes.func.isRequired,
   onAuthorPress: PropTypes.func.isRequired,
   onCommentGuidelinesPress: PropTypes.func.isRequired,
   onCommentsPress: PropTypes.func.isRequired,

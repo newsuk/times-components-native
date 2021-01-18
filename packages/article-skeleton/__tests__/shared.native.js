@@ -1,5 +1,7 @@
 /* eslint-disable global-require */
 import React from "react";
+import { ScrollView } from "react-native";
+import { delay } from "@times-components-native/test-utils";
 import TestRenderer from "react-test-renderer";
 import mockDate from "mockdate";
 import {
@@ -61,6 +63,7 @@ export default () => {
   );
 
   beforeEach(() => {
+    jest.useFakeTimers();
     mockDate.set(1514764800000, 0);
   });
 
@@ -68,7 +71,7 @@ export default () => {
     mockDate.reset();
   });
 
-  const renderArticle = ({ onLinkPress, stream }) =>
+  const renderArticle = ({ onArticleRead, onLinkPress, stream }) =>
     withMobileContext(
       <ArticleSkeleton
         {...articleSkeletonProps}
@@ -100,6 +103,7 @@ export default () => {
             },
           ],
         })}
+        onArticleRead={onArticleRead || (() => null)}
         onAuthorPress={() => null}
         onCommentGuidelinesPress={() => null}
         onCommentsPress={() => null}
@@ -184,6 +188,16 @@ export default () => {
         );
 
         expect(testInstance.toJSON()).toMatchSnapshot();
+      },
+    },
+    {
+      name: "onArticleRead is called after 6 seconds",
+      async test() {
+        const onArticleRead = jest.fn();
+        TestRenderer.create(renderArticle({ onArticleRead }));
+        expect(onArticleRead).not.toHaveBeenCalled();
+        jest.advanceTimersByTime(6000);
+        expect(onArticleRead).toHaveBeenCalledTimes(1);
       },
     },
   ];

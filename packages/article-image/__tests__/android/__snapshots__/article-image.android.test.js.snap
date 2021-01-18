@@ -30,10 +30,10 @@ exports[`5. image with no caption 1`] = `
       accessibilityLabel={null}
       aspectRatio={1.7777777777777777}
       caption={
-        <Caption
-          credits={null}
-          text={null}
-        />
+        Object {
+          "credits": null,
+          "text": null,
+        }
       }
       onImagePress={null}
       uri="https://img/someImage"
@@ -77,10 +77,10 @@ exports[`8. primary image renders with caption and credits 1`] = `
       accessibilityLabel="Some caption"
       aspectRatio={1.7777777777777777}
       caption={
-        <Caption
-          credits="Some credit"
-          text="Some caption"
-        />
+        Object {
+          "credits": "Some credit",
+          "text": "Some caption",
+        }
       }
       onImagePress={null}
       uri="https://img/someImage"
@@ -108,10 +108,10 @@ exports[`9. primary image with given resolutions 1`] = `
       accessibilityLabel="Some caption"
       aspectRatio={1.7777777777777777}
       caption={
-        <Caption
-          credits="Some credit"
-          text="Some caption"
-        />
+        Object {
+          "credits": "Some credit",
+          "text": "Some caption",
+        }
       }
       highResSize={900}
       lowResSize={50}
