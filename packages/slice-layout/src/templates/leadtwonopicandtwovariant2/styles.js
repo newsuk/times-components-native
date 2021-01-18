@@ -11,6 +11,7 @@ const portraitStyles = {
   container: {
     ...sharedStyles.container,
     marginHorizontal: spacing(4),
+    marginTop: 10,
   },
 
   column: {
@@ -20,7 +21,7 @@ const portraitStyles = {
     width: "59%",
   },
   colSeparatorStyle: {
-    marginHorizontal: 10,
+    marginRight: spacing(2),
   },
 };
 
