@@ -1,5 +1,4 @@
 import { pipe } from "@times-components-native/utils/src/pipe";
-import { addSliceConfig } from "./addSliceConfig";
 import { buildSliceData } from "./buildSliceData";
 import { insertSectionAd } from "./insertSectionAd";
 import { consecutiveItemsFlagger } from "./consecutiveItemsFlagger";
@@ -9,8 +8,7 @@ export const prepareSlicesForRender = (
   sectionTitle: string,
 ) =>
   pipe(
-    buildSliceData,
+    buildSliceData(isTablet, sectionTitle),
     consecutiveItemsFlagger,
     insertSectionAd(isTablet),
-    addSliceConfig(isTablet, sectionTitle),
   );

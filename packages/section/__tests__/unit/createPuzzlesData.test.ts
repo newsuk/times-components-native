@@ -3,11 +3,12 @@ import { mockPuzzleSlice } from "@times-components-native/fixture-generator";
 import {
   splitPuzzlesBySlices,
   filterPuzzles,
-  createPuzzleData,
+  createPuzzleData as createPuzzleDataFunction,
 } from "../../src/utils/createPuzzleData";
 import { editionBreakpoints } from "@times-components-native/styleguide";
 
 describe("createPuzzleData", () => {
+  const createPuzzleData = createPuzzleDataFunction(false, "Puzzles");
   it("should create puzzle data and return 3 rows of puzzles", () => {
     const puzzles = new Array(7).fill(0).map(() => mockPuzzleSlice());
     const data = createPuzzleData(puzzles, editionBreakpoints.small);

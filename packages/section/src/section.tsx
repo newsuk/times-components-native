@@ -133,7 +133,7 @@ const Section: React.FC<Props> = ({
   }
 
   const data = isPuzzle
-    ? createPuzzleData(slices, editionBreakpoint)
+    ? createPuzzleData(isTablet, sectionTitle)(slices, editionBreakpoint)
     : prepareSlicesForRender(isTablet, sectionTitle)(slices);
 
   if (slices) receiveChildList(data);
