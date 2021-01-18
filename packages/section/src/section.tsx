@@ -128,7 +128,7 @@ const Section: React.FC<Props> = ({
 
     return renderItem(
       false,
-      title,
+      sectionTitle,
     )({
       index: 0,
       item: frontSlice || {},
@@ -159,7 +159,7 @@ const Section: React.FC<Props> = ({
         nestedScrollEnabled
         onViewableItemsChanged={onViewed ? onViewableItemsChanged : null}
         {...(isPuzzle && { onScrollBeginDrag })}
-        renderItem={renderItem(isPuzzle, title)}
+        renderItem={renderItem(isPuzzle, sectionTitle)}
         windowSize={3}
       />
       {isPuzzle && isIOS ? (
