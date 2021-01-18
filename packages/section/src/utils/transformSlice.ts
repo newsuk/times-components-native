@@ -24,7 +24,20 @@ const leadOneAndOneNewsTransform = {
   }),
 };
 
-const sliceTransformations: TransformSlice[] = [leadOneAndOneNewsTransform];
+const leadOneAndOneRegisterTransform = {
+  sectionTitle: "Register",
+  name: "LeadOneAndOneSlice",
+  transform: (slice: Slice) => ({
+    ...slice,
+    lead: { ...slice.lead, config: { showSummary: true } },
+    support: { ...slice.support, config: { showImage: true } },
+  }),
+};
+
+const sliceTransformations: TransformSlice[] = [
+  leadOneAndOneNewsTransform,
+  leadOneAndOneRegisterTransform,
+];
 
 export const transformSlice = (isTablet: boolean, sectionTitle: string) => (
   slice: Slice,
