@@ -1,6 +1,8 @@
 import { buildSliceData } from "../../src/utils/buildSliceData";
 
 describe("buildSliceData", () => {
+  const isTablet = false;
+  const sectionTitle = "News";
   it("should add elementId and ignoreSeparator properties", () => {
     const originalData = [
       { id: "a", name: "LeadersSlice" },
@@ -16,7 +18,7 @@ describe("buildSliceData", () => {
       { id: "k", name: "OtherSlice" },
       { id: "l", name: "DailyUniversalRegister" },
     ];
-    const newData = buildSliceData(originalData);
+    const newData = buildSliceData(isTablet, sectionTitle)(originalData);
 
     expect(newData).toMatchSnapshot();
   });
@@ -37,7 +39,7 @@ describe("buildSliceData", () => {
       { id: "l", name: "DailyUniversalRegister" },
     ];
     const json = JSON.stringify(originalData);
-    buildSliceData(originalData);
+    buildSliceData(isTablet, sectionTitle)(originalData);
     expect(JSON.stringify(originalData)).toEqual(json);
   });
 });
