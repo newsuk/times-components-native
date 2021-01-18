@@ -1,3 +1,5 @@
+import { TileConfig } from "@times-components-native/types";
+
 export const addSliceConfig = (isTablet: boolean, sectionTitle: string) => (
   slices: any[],
 ) => {
@@ -9,9 +11,10 @@ export const addSliceConfig = (isTablet: boolean, sectionTitle: string) => (
       slice.name === "LeadOneAndOneSlice" &&
       index == 0
     ) {
+      const tileConfig: TileConfig = { showImage: true };
       return {
         ...slice,
-        support: { ...slice.support, config: { showImage: true } },
+        support: { ...slice.support, config: tileConfig },
       };
     }
     return slice;
