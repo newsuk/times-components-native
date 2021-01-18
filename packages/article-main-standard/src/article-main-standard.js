@@ -31,6 +31,7 @@ class ArticlePage extends Component {
   renderHeader(parentProps) {
     const {
       article,
+      onArticleRead,
       onAuthorPress,
       onImagePress,
       onTooltipPresented,
@@ -122,6 +123,7 @@ class ArticlePage extends Component {
       analyticsStream,
       article,
       interactiveConfig,
+      onArticleRead,
       onAuthorPress,
       onCommentGuidelinesPress,
       onCommentsPress,
@@ -151,6 +153,7 @@ class ArticlePage extends Component {
                 Header={this.renderHeader}
                 interactiveConfig={interactiveConfig}
                 isTablet={isTablet}
+                onArticleRead={onArticleRead}
                 onAuthorPress={onAuthorPress}
                 onCommentGuidelinesPress={onCommentGuidelinesPress}
                 onCommentsPress={onCommentsPress}
@@ -180,6 +183,7 @@ class ArticlePage extends Component {
 ArticlePage.propTypes = {
   ...articlePropTypes,
   interactiveConfig: PropTypes.shape({}),
+  onArticleRead: PropTypes.func.isRequired,
   onAuthorPress: PropTypes.func.isRequired,
   onCommentGuidelinesPress: PropTypes.func.isRequired,
   onCommentsPress: PropTypes.func.isRequired,
