@@ -10,7 +10,7 @@ import {
   LeadOneAndOneSlice,
   LeadOneFullWidthSlice,
   LeadTwoNoPicAndTwoSlice,
-  LeadTwoNoPicAndTwoVariant2,
+  LeadTwoNoPicAndTwoVariant2Slice,
   ListTwoAndSixNoPicSlice,
   SecondaryFourSlice,
   SecondaryOneAndColumnistSlice,
@@ -30,7 +30,7 @@ import {
   SupplementSecondaryOneSlice,
   SupplementSecondaryTwoAndTwoSlice,
 } from "./slices";
-import { sectionTitles } from "@times-components-native/section/src/utils";
+import { sectionConfigs } from "@times-components-native/section/src/utils";
 
 const config = (NativeModules || {}).ReactConfig;
 
@@ -38,6 +38,8 @@ const { width } = getDimensions();
 const isTablet =
   (config && config.breakpoint && config.breakpoint !== "small") ||
   width > tabletWidth;
+
+const { sectionTitles } = sectionConfigs;
 
 const sliceMap = (isInSupplement, sectionTitle) => {
   const isInTabletSupplement = isInSupplement && isTablet;
@@ -85,5 +87,5 @@ export const getSlice = (isInSupplement, sliceName, sectionTitle) =>
 
 const renderLeadTwoNoPicAndTwoSlice = (sectionTitle) =>
   sectionTitle === sectionTitles.sport
-    ? LeadTwoNoPicAndTwoVariant2
+    ? LeadTwoNoPicAndTwoVariant2Slice
     : LeadTwoNoPicAndTwoSlice;
