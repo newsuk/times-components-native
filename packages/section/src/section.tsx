@@ -15,6 +15,7 @@ import {
   prepareSlicesForRender,
   createPuzzleData,
   isSupplementSection,
+  sectionConfigs,
 } from "./utils";
 
 const styles = styleFactory();
@@ -28,7 +29,12 @@ interface Props {
   onViewed: (item: any, slices: any[]) => void;
   publishedTime: string;
   receiveChildList: (childList: any) => void;
-  section: any;
+  section: {
+    title: sectionConfigs.SectionTitles;
+    cover: any;
+    name: any;
+    slices: any;
+  };
 }
 
 const Section: React.FC<Props> = ({
@@ -81,11 +87,10 @@ const Section: React.FC<Props> = ({
     return null;
   };
 
-  const renderItem = (isPuzzle: boolean, sectionTitle: any) => ({
-    index,
-    item: slice,
-    inTodaysEditionSlice,
-  }: any) => (
+  const renderItem = (
+    isPuzzle: boolean,
+    sectionTitle: sectionConfigs.SectionTitles,
+  ) => ({ index, item: slice, inTodaysEditionSlice }: any) => (
     <Slice
       index={index}
       length={slices.length}
