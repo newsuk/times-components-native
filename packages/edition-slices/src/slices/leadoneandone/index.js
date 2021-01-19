@@ -32,6 +32,7 @@ class LeadOneAndOne extends Component {
       onPress,
       slice: { lead, support },
     } = this.props;
+
     return (
       <LeadOneAndOneSlice
         breakpoint={breakpoint}
@@ -39,7 +40,15 @@ class LeadOneAndOne extends Component {
           <TileVerticalA
             breakpoint={breakpoint}
             onPress={onPress}
-            tile={lead}
+            tile={{
+              ...lead,
+              config: {
+                image: true,
+                summary: {
+                  length: 800,
+                },
+              },
+            }}
             tileName="lead"
           />
         }
@@ -47,7 +56,15 @@ class LeadOneAndOne extends Component {
           <TileVerticalA
             breakpoint={breakpoint}
             onPress={onPress}
-            tile={support}
+            tile={{
+              ...support,
+              config: {
+                image: true,
+                summary: {
+                  length: 800,
+                },
+              },
+            }}
             tileName="support"
           />
         }

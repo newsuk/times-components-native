@@ -27,7 +27,7 @@ const TileVerticalA: FC<Props> = ({ onPress, tile, breakpoint }) => {
     article: { hasVideo },
   } = tile;
 
-  console.log(tile.config.summary?.length);
+  console.log(tile.config?.summary?.length);
 
   return (
     <TileLink onPress={onPress} style={styles.container} tile={tile}>
@@ -50,7 +50,7 @@ const TileVerticalA: FC<Props> = ({ onPress, tile, breakpoint }) => {
             headlineStyle={styles.headline}
             summary={
               tile.config?.summary
-                ? getTileSummary(tile, tile.config?.summary.length)
+                ? getTileSummary(tile, tile.config?.summary?.length)
                 : {}
             }
             summaryStyle={styles.summary}
