@@ -75,6 +75,7 @@ export interface ImageContent extends ContentMetadata {
     relativeVerticalOffset: number;
     relativeWidth: number;
     relativeHeight: number;
+    ratio: string;
   };
   children: [];
 }

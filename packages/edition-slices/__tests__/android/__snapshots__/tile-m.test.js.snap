@@ -7,7 +7,6 @@ exports[`tile m huge 1`] = `
       "paddingBottom": 60,
     }
   }
-  url="/article/123"
 >
   <View>
     <Text
@@ -59,7 +58,6 @@ exports[`tile m medium 1`] = `
       "paddingBottom": 30,
     }
   }
-  url="/article/123"
 >
   <View>
     <Text
@@ -112,7 +110,6 @@ exports[`tile m small 1`] = `
       "paddingBottom": 10,
     }
   }
-  url="/article/123"
 >
   <View
     style={
@@ -170,7 +167,6 @@ exports[`tile m wide 1`] = `
       "paddingBottom": 60,
     }
   }
-  url="/article/123"
 >
   <View>
     <Text
@@ -223,7 +219,6 @@ exports[`tile m without breakpoint should be like small 1`] = `
       "paddingBottom": 10,
     }
   }
-  url="/article/123"
 >
   <View
     style={

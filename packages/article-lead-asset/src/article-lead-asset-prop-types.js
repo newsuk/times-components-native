@@ -55,6 +55,20 @@ export const propTypes = {
   renderCaption: PropTypes.func,
   style: PropTypes.any,
   width: PropTypes.number,
+  extraContent: PropTypes.shape({
+    name: PropTypes.string,
+    attributes: PropTypes.shape({
+      caption: PropTypes.string,
+      credits: PropTypes.string,
+      display: PropTypes.string,
+      ratio: PropTypes.string,
+      relativeHeight: PropTypes.number,
+      relativeHorizontalOffset: PropTypes.number,
+      relativeVerticalOffset: PropTypes.number,
+      relativeWidth: PropTypes.number,
+      url: PropTypes.string,
+    }),
+  }),
 };
 
 export const defaultProps = {

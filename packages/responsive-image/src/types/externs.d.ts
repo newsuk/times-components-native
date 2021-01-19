@@ -11,11 +11,19 @@ declare module "@times-components-native/styleguide" {
   export const colours: Colours;
   export const fonts: Record<string, string>;
   export const spacing: (number) => number;
+  export const editionBreakpoints: {
+    huge: "huge";
+    medium: "medium";
+    small: "small";
+    wide: "wide";
+  };
   export const tabletWidth: number;
   export const getEditionBreakpoint = (number) => string;
   export const getNarrowArticleBreakpoint = (number) => string;
   export const styleguide;
   export const fontFactory;
+  export const globalSpacingStyles;
+  export const fonts;
 }
 
 declare module "@times-components-native/utils" {

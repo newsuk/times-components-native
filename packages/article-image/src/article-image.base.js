@@ -6,7 +6,7 @@ import { ModalImage } from "@times-components-native/image";
 import InsetCaption from "./inset-caption";
 import InlineImage from "./inline-image";
 import FullWidthCaption from "./fullwidth-caption";
-import { propTypes, defaultPropTypes } from "./article-image-prop-types";
+import { defaultPropTypes, propTypes } from "./article-image-prop-types";
 import styles from "./styles";
 
 const captionStyle = {
@@ -101,7 +101,7 @@ const ArticleImage = ({
         <ModalImage
           accessibilityLabel={caption}
           aspectRatio={aspectRatio}
-          caption={<Caption credits={credits} text={caption} />}
+          caption={{ text: caption, credits }}
           highResSize={highResSize}
           index={index}
           images={images}
