@@ -90,10 +90,10 @@ const ModalImage: FC<ModalImageProps> = ({
       credits: caption?.credits,
       caption: caption?.text,
       aspectRatio: aspectRatio || 1,
-      relativeHeight: relativeHeight,
-      relativeWidth: relativeWidth,
-      relativeHorizontalOffset: relativeHorizontalOffset,
-      relativeVerticalOffset: relativeVerticalOffset,
+      relativeHeight,
+      relativeWidth,
+      relativeHorizontalOffset,
+      relativeVerticalOffset,
     },
   ].concat(
     images
@@ -103,14 +103,12 @@ const ModalImage: FC<ModalImageProps> = ({
         const [ratioWidth, ratioHeight] = i.attributes.ratio.split(":");
 
         return {
+          ...i.attributes,
           url: offlineUrl.toString(),
-          credits: i.attributes.credits,
-          caption: i.attributes.caption,
-          aspectRatio: Number(ratioWidth) / Number(ratioHeight) || 1,
-          relativeHeight: i.attributes.relativeHeight,
-          relativeWidth: i.attributes.relativeWidth,
-          relativeHorizontalOffset: i.attributes.relativeHorizontalOffset,
-          relativeVerticalOffset: i.attributes.relativeVerticalOffset,
+          aspectRatio:
+            ratioWidth && ratioHeight
+              ? Number(ratioWidth) / Number(ratioHeight)
+              : 1,
         };
       })
       .filter(({ url }) => url !== mainUrl.toString()),
