@@ -9,6 +9,7 @@ declare module "@times-components-native/styleguide" {
   type Colours = Record<string, ColourMap>;
 
   export const colours: Colours;
+  export const fonts: Record<string, string>;
   export const spacing: (number) => number;
   export const tabletWidth: number;
   export const getEditionBreakpoint = (number) => string;

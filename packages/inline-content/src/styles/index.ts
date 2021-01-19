@@ -14,6 +14,7 @@ const styles: Styles = {
     flexDirection: "row",
     alignSelf: "center",
     width: tabletWidth,
+    // backgroundColor: "green",
   },
   inlineItemContainer: {
     marginLeft: spacing(2),

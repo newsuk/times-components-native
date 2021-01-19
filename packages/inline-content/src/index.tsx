@@ -41,6 +41,7 @@ const InlineContent = (props: InlineContentProps) => {
       : tabletWidth,
   );
   const isAd = originalName === "ad";
+  const isDropCap = originalName === "dropcap";
 
   let inlineItemWidth = availableWidth * 0.35;
   let inlineContentHeight: number;
@@ -54,6 +55,12 @@ const InlineContent = (props: InlineContentProps) => {
     adContainerHeight = adHeight + adHeaderHeight;
     inlineContentHeight = adContainerHeight + adMarginBottom;
     inlineItemWidth = adWidth + adHorizontalSpacing;
+  }
+
+  if (isDropCap) {
+    const { height: dropCapHeight, width: dropCapWidth } = props;
+    inlineContentHeight = dropCapHeight;
+    inlineItemWidth = dropCapWidth;
   }
 
   const inlineContentWidth = availableWidth - inlineItemWidth;
