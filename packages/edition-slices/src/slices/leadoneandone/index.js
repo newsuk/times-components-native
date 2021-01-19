@@ -43,9 +43,11 @@ class LeadOneAndOne extends Component {
             tile={{
               ...lead,
               config: {
-                image: true,
-                summary: {
-                  length: 800,
+                image: {
+                  ratio: "16:9",
+                },
+                headline: {
+                  fontsize: 14,
                 },
               },
             }}
@@ -59,7 +61,9 @@ class LeadOneAndOne extends Component {
             tile={{
               ...support,
               config: {
-                image: true,
+                image: {
+                  ratio: "3:2",
+                },
                 summary: {
                   length: 800,
                 },
