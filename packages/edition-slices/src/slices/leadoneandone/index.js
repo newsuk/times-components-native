@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import PropTypes from "prop-types";
 import { LeadOneAndOneSlice } from "@times-components-native/slice-layout";
-import { TileA, TileB, TileU, TileZ } from "../../tiles";
+import { TileA, TileB, TileZ } from "../../tiles";
 import { ResponsiveSlice } from "../shared";
 import TileVerticalA from "@times-components-native/edition-slices/src/configured-tiles/tile-vertical-a";
 
