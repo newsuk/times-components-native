@@ -1,4 +1,4 @@
-import { fonts, spacing } from "@times-components-native/styleguide";
+import { fonts } from "@times-components-native/styleguide";
 import React from "react";
 import { Text, View } from "react-native";
 
@@ -15,7 +15,6 @@ export default ({
     style={[
       {
         width,
-        // height: height * 1.33,
         height: height + 1,
       },
       narrowContent && { paddingLeft: 7 },
@@ -28,11 +27,9 @@ export default ({
           color: dropCapColor,
           fontFamily: fonts[dropCapFont],
           fontSize: dropCapFontSize,
-          // lineHeight: height * 1.33,
           lineHeight: height,
           paddingTop: 24,
           width,
-          // backgroundColor: "red",
         },
       ]}
     >

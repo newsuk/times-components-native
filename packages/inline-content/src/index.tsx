@@ -32,6 +32,7 @@ const InlineContent = (props: InlineContentProps) => {
     originalName,
     skeletonProps,
   } = props;
+  const { isTablet } = skeletonProps;
   const { windowWidth } = useResponsiveContext();
   const { lineHeight } = defaultFont;
   const availableWidth = Math.min(
@@ -63,7 +64,7 @@ const InlineContent = (props: InlineContentProps) => {
     inlineItemWidth = dropCapWidth;
   }
 
-  const inlineContentWidth = availableWidth - inlineItemWidth;
+  const inlineContentWidth = availableWidth - inlineItemWidth - spacing(2);
 
   const renderChild = render(
     // @ts-ignore
@@ -102,6 +103,13 @@ const InlineContent = (props: InlineContentProps) => {
     itemWidth: inlineItemWidth,
   };
 
+  console.log(
+    "jkjkljlkjkljkljkljkljlkjljkjlj",
+    windowWidth,
+    inlineItemWidth,
+    JSON.stringify(contentParameters, null, 2),
+  );
+
   return (
     <MeasureInlineContent
       content={paragraphs}
@@ -115,12 +123,24 @@ const InlineContent = (props: InlineContentProps) => {
           contentParameters,
         );
 
+        console.log(
+          "7459843843687894673849678378734985453454",
+          JSON.stringify(contentMeasurements, null, 2),
+        );
+
         const itemHeight =
           inlineContentHeight || contentMeasurements.itemHeight || 0;
 
         const requiredInlineContentHeight = Math.max(
           currentInlineContentHeight,
           itemHeight,
+        );
+
+        console.log(
+          "£%$%^&^&*^(&*%^$^$%&$&(&*^*&$^&$",
+          currentInlineContentHeight,
+          itemHeight,
+          requiredInlineContentHeight,
         );
 
         const chunkedInlineContent = chunks[0] || [];
@@ -158,7 +178,10 @@ const InlineContent = (props: InlineContentProps) => {
             <View
               style={[
                 styles.container,
-                { height: requiredInlineContentHeight },
+                {
+                  height: requiredInlineContentHeight,
+                },
+                !isTablet && { width: availableWidth },
               ]}
             >
               {isAd
