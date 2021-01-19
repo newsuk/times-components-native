@@ -7,3 +7,5 @@ export interface TileConfig {
 export interface ConfiguredTile extends Tile {
   config: TileConfig;
 }
+
+export type OnArticlePress = (args: { id: string; isPuff?: boolean }) => void;
