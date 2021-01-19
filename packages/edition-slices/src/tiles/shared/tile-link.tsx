@@ -13,11 +13,11 @@ const TileLink: FC<Props> = ({
   onPress,
   style = {},
   tile: {
-    article: { id },
+    article: { id, url },
   },
 }) => (
-  // eslint-disable-next-line jsx-a11y/anchor-is-valid
-  <Link linkStyle={style} onPress={() => onPress({ id })}>
+  // @ts-ignore TODO url prop no longer needed, to be deleted.
+  <Link linkStyle={style} onPress={() => onPress({ id })} url={url}>
     {children}
   </Link>
 );
