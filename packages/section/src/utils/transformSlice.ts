@@ -22,7 +22,12 @@ const leadOneAndOneNewsTransform = {
     ...slice,
     support: {
       ...slice.support,
-      config: { summary: { length: 800 }, image: true },
+      config: {
+        summary: { length: 800 },
+        image: {
+          ratio: "3:2",
+        },
+      },
     },
   }),
 };
@@ -35,7 +40,12 @@ const leadOneAndOneRegisterTransform = {
     lead: { ...slice.lead, config: { summary: { length: 800 }, image: true } },
     support: {
       ...slice.support,
-      config: { summary: { length: 800 }, image: true },
+      config: {
+        summary: { length: 800 },
+        image: {
+          ratio: "3:2",
+        },
+      },
     },
   }),
 };
