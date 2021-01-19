@@ -29,7 +29,7 @@ const leadOneAndOneRegisterTransform = {
   name: "LeadOneAndOneSlice",
   transform: (slice: Slice) => ({
     ...slice,
-    lead: { ...slice.lead, config: { showSummary: true } },
+    lead: { ...slice.lead, config: { showSummary: false, showImage: true } },
     support: { ...slice.support, config: { showImage: true } },
   }),
 };

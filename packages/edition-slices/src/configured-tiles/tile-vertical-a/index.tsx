@@ -46,7 +46,7 @@ const TileVerticalA: FC<Props> = ({ onPress, tile, breakpoint }) => {
         render={(whiteSpaceHeight: number) => (
           <TileSummary
             headlineStyle={styles.headline}
-            summary={getTileSummary(tile, 800)}
+            summary={!tile.config?.hideSummary ? getTileSummary(tile, 800) : {}}
             summaryStyle={styles.summary}
             tile={tile}
             whiteSpaceHeight={whiteSpaceHeight}
