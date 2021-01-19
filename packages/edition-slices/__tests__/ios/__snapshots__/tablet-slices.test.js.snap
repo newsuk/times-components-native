@@ -83,7 +83,7 @@ exports[`3. lead one and one - medium 1`] = `
     </View>
     <View />
     <View>
-      <TileAF
+      <TileVerticalA
         breakpoint="medium"
         tileName="support"
       />
@@ -1181,7 +1181,7 @@ exports[`37. lead one and one - wide 1`] = `
     </View>
     <View />
     <View>
-      <TileAF
+      <TileVerticalA
         breakpoint="wide"
         tileName="support"
       />
@@ -2286,7 +2286,7 @@ exports[`71. lead one and one - huge 1`] = `
       </View>
       <View />
       <View>
-        <TileAF
+        <TileVerticalA
           breakpoint="huge"
           tileName="support"
         />
