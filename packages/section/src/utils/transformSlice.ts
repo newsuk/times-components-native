@@ -20,7 +20,10 @@ const leadOneAndOneNewsTransform = {
   name: "LeadOneAndOneSlice",
   transform: (slice: Slice) => ({
     ...slice,
-    support: { ...slice.support, config: { showImage: true } },
+    support: {
+      ...slice.support,
+      config: { summary: { length: 800 }, image: true },
+    },
   }),
 };
 
@@ -29,8 +32,11 @@ const leadOneAndOneRegisterTransform = {
   name: "LeadOneAndOneSlice",
   transform: (slice: Slice) => ({
     ...slice,
-    lead: { ...slice.lead, config: { showSummary: false, showImage: true } },
-    support: { ...slice.support, config: { showImage: true } },
+    lead: { ...slice.lead, config: { summary: { length: 800 }, image: true } },
+    support: {
+      ...slice.support,
+      config: { summary: { length: 800 }, image: true },
+    },
   }),
 };
 

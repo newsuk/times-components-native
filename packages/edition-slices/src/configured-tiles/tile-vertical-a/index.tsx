@@ -27,9 +27,11 @@ const TileVerticalA: FC<Props> = ({ onPress, tile, breakpoint }) => {
     article: { hasVideo },
   } = tile;
 
+  console.log(tile.config.summary?.length);
+
   return (
     <TileLink onPress={onPress} style={styles.container} tile={tile}>
-      {crop && tile.config?.showImage && (
+      {crop && tile.config?.image && (
         <TileImage
           aspectRatio={3 / 2}
           relativeWidth={crop.relativeWidth}
@@ -46,7 +48,11 @@ const TileVerticalA: FC<Props> = ({ onPress, tile, breakpoint }) => {
         render={(whiteSpaceHeight: number) => (
           <TileSummary
             headlineStyle={styles.headline}
-            summary={!tile.config?.hideSummary ? getTileSummary(tile, 800) : {}}
+            summary={
+              tile.config?.summary
+                ? getTileSummary(tile, tile.config?.summary.length)
+                : {}
+            }
             summaryStyle={styles.summary}
             tile={tile}
             whiteSpaceHeight={whiteSpaceHeight}

@@ -1,8 +1,16 @@
 import { Tile } from "@times-components-native/fixture-generator/src/types";
 
+export interface ImageConfig {
+  ratio: string;
+}
+
+export interface SummaryConfig {
+  length: number;
+}
+
 export interface TileConfig {
-  showImage?: boolean;
-  showSummary?: boolean;
+  image?: ImageConfig;
+  summary?: SummaryConfig;
 }
 
 export interface ConfiguredTile extends Tile {
