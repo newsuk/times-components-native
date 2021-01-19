@@ -1,4 +1,5 @@
 import { spacing } from "@times-components-native/styleguide";
+import { ViewStyle } from "react-native";
 
 const horizontalStyles = {
   container: {
@@ -34,7 +35,7 @@ const starUnderneathTextStyles = {
   marginTop: 0,
 };
 
-const playIconStyles = {
+const playIconStyles: ViewStyle = {
   justifyContent: "flex-end",
   bottom: 0,
   left: 0,

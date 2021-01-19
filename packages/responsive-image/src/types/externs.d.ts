@@ -21,6 +21,8 @@ declare module "@times-components-native/styleguide" {
   export const getNarrowArticleBreakpoint = (number) => string;
   export const styleguide;
   export const fontFactory;
+  export const globalSpacingStyles;
+  export const fonts;
 }
 
 declare module "@times-components-native/utils" {

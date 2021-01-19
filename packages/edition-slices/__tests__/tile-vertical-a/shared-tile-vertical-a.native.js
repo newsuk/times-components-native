@@ -6,7 +6,7 @@ import {
   minimalNativeTransform,
   print,
 } from "@times-components-native/jest-serializer";
-import shared from "./shared-tile-af.base";
+import shared from "./shared-tile-vertical-a.base";
 
 export default () => {
   addSerializers(

@@ -1,7 +1,4 @@
-/* eslint-disable react/require-default-props */
-import React from "react";
-import PropTypes from "prop-types";
-import { editionBreakpoints } from "@times-components-native/styleguide";
+import React, { FC } from "react";
 import {
   getTileImage,
   getTileSummary,
@@ -9,12 +6,20 @@ import {
   TileLink,
   TileSummary,
   withTileTracking,
-} from "../shared";
-import styleFactory from "./styles";
-import WithoutWhiteSpace from "../shared/without-white-space";
-import PositionedTileStar from "../shared/positioned-tile-star";
+} from "../../tiles/shared";
 
-const TileAF = ({ onPress, tile, breakpoint = editionBreakpoints.wide }) => {
+import styleFactory from "./styles";
+import WithoutWhiteSpace from "../../tiles/shared/without-white-space";
+import PositionedTileStar from "../../tiles/shared/positioned-tile-star";
+import { ConfiguredTile, OnArticlePress } from "@times-components-native/types";
+
+interface Props {
+  onPress: OnArticlePress;
+  tile: ConfiguredTile;
+  breakpoint: string;
+}
+
+const TileVerticalA: FC<Props> = ({ onPress, tile, breakpoint }) => {
   const styles = styleFactory(breakpoint);
   const crop = getTileImage(tile, "crop32");
 
@@ -38,8 +43,7 @@ const TileAF = ({ onPress, tile, breakpoint = editionBreakpoints.wide }) => {
         />
       )}
       <WithoutWhiteSpace
-        style={styles.summaryContainer}
-        render={(whiteSpaceHeight) => (
+        render={(whiteSpaceHeight: number) => (
           <TileSummary
             headlineStyle={styles.headline}
             summary={getTileSummary(tile, 800)}
@@ -55,10 +59,4 @@ const TileAF = ({ onPress, tile, breakpoint = editionBreakpoints.wide }) => {
   );
 };
 
-TileAF.propTypes = {
-  onPress: PropTypes.func.isRequired,
-  tile: PropTypes.shape({}).isRequired,
-  breakpoint: PropTypes.string,
-};
-
-export default withTileTracking(TileAF);
+export default withTileTracking(TileVerticalA);

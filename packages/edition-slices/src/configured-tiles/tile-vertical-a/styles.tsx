@@ -5,13 +5,13 @@ import {
   globalSpacingStyles,
 } from "@times-components-native/styleguide";
 
-const fontSizeResolver = {
+const fontSizeResolver: Record<string, number> = {
   [editionBreakpoints.medium]: 20,
   [editionBreakpoints.wide]: 20,
   [editionBreakpoints.huge]: 22,
 };
 
-export default (breakpoint) => ({
+export default (breakpoint: string) => ({
   container: {
     flex: 1,
     paddingVertical: spacing(3),
