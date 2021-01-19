@@ -9,7 +9,6 @@ exports[`tile bc huge 1`] = `
       "paddingTop": 10,
     }
   }
-  url="/article/123"
 >
   <Image
     aspectRatio={1.5}
@@ -85,7 +84,6 @@ exports[`tile bc medium 1`] = `
       "paddingTop": 10,
     }
   }
-  url="/article/123"
 >
   <Image
     aspectRatio={1.7777777777777777}
@@ -161,7 +159,6 @@ exports[`tile bc wide 1`] = `
       "paddingTop": 10,
     }
   }
-  url="/article/123"
 >
   <Image
     aspectRatio={1.7777777777777777}
@@ -237,7 +234,6 @@ exports[`tile bc without breakpoint 1`] = `
       "paddingTop": 10,
     }
   }
-  url="/article/123"
 >
   <Image
     aspectRatio={1.7777777777777777}

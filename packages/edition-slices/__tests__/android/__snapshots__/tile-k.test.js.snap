@@ -8,7 +8,6 @@ exports[`tile k huge 1`] = `
       "padding": 10,
     }
   }
-  url="/article/123"
 >
   <Image
     aspectRatio={1.5}
@@ -83,7 +82,6 @@ exports[`tile k medium 1`] = `
       "padding": 10,
     }
   }
-  url="/article/123"
 >
   <Image
     aspectRatio={1.5}
@@ -158,7 +156,6 @@ exports[`tile k small 1`] = `
       "padding": 10,
     }
   }
-  url="/article/123"
 >
   <Image
     aspectRatio={1.5}
@@ -233,7 +230,6 @@ exports[`tile k wide 1`] = `
       "padding": 10,
     }
   }
-  url="/article/123"
 >
   <Image
     aspectRatio={1.5}
@@ -308,7 +304,6 @@ exports[`tile k without breakpoint should be like small 1`] = `
       "padding": 10,
     }
   }
-  url="/article/123"
 >
   <Image
     aspectRatio={1.5}

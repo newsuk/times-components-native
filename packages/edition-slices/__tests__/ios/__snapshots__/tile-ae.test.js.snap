@@ -10,7 +10,6 @@ exports[`tile ae huge 1`] = `
       "paddingVertical": 15,
     }
   }
-  url="/article/123"
 >
   <View
     style={
@@ -99,7 +98,6 @@ exports[`tile ae medium 1`] = `
       "paddingVertical": 15,
     }
   }
-  url="/article/123"
 >
   <View
     style={
@@ -188,7 +186,6 @@ exports[`tile ae wide 1`] = `
       "paddingVertical": 15,
     }
   }
-  url="/article/123"
 >
   <View
     style={
@@ -277,7 +274,6 @@ exports[`tile ae without breakpoint should be like medium 1`] = `
       "paddingVertical": 15,
     }
   }
-  url="/article/123"
 >
   <View
     style={

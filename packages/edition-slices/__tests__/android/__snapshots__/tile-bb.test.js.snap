@@ -8,7 +8,6 @@ exports[`tile bb landscape huge 1`] = `
       "padding": 10,
     }
   }
-  url="/article/123"
 >
   <Image
     aspectRatio={1.5}
@@ -84,7 +83,6 @@ exports[`tile bb landscape medium 1`] = `
       "padding": 10,
     }
   }
-  url="/article/123"
 >
   <Image
     aspectRatio={1.5}
@@ -160,7 +158,6 @@ exports[`tile bb landscape wide 1`] = `
       "padding": 10,
     }
   }
-  url="/article/123"
 >
   <Image
     aspectRatio={1.5}

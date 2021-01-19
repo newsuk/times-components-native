@@ -10,7 +10,6 @@ Array [
         "paddingRight": 10,
       }
     }
-    url="/article/123"
   >
     <Image
       aspectRatio={1.25}
@@ -625,7 +624,6 @@ Array [
         "paddingRight": 10,
       }
     }
-    url="/article/123"
   >
     <Image
       aspectRatio={1.25}
@@ -1240,7 +1238,6 @@ Array [
         "paddingRight": 10,
       }
     }
-    url="/article/123"
   >
     <Image
       aspectRatio={1.25}
@@ -1855,7 +1852,6 @@ Array [
         "paddingRight": 10,
       }
     }
-    url="/article/123"
   >
     <Image
       aspectRatio={1.25}
@@ -2470,7 +2466,6 @@ Array [
         "paddingRight": 10,
       }
     }
-    url="/article/123"
   >
     <Image
       aspectRatio={1.5}
@@ -3076,7 +3071,6 @@ Array [
         "paddingRight": 10,
       }
     }
-    url="/article/123"
   >
     <Image
       aspectRatio={1.5}
@@ -3682,7 +3676,6 @@ Array [
         "paddingRight": 10,
       }
     }
-    url="/article/123"
   >
     <Image
       aspectRatio={1.5}
@@ -4288,7 +4281,6 @@ Array [
         "paddingRight": 10,
       }
     }
-    url="/article/123"
   >
     <Image
       aspectRatio={1.5}
@@ -4894,7 +4886,6 @@ Array [
         "paddingRight": 10,
       }
     }
-    url="/article/123"
   >
     <Image
       aspectRatio={1.5}

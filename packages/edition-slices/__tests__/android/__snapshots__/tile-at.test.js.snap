@@ -9,7 +9,6 @@ exports[`tile at medium 1`] = `
       "paddingVertical": 15,
     }
   }
-  url="/article/123"
 >
   <Image
     aspectRatio={1.5}
