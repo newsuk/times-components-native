@@ -1,15 +1,15 @@
 import React, { FC, Fragment, useState } from "react";
 import { ImageProps, Modal, SafeAreaView, StyleProp, View } from "react-native";
-import { ResponsiveContext } from "@times-components-native/responsive";
-import Button from "@times-components-native/link";
-import ImageViewer from "react-native-image-zoom-viewer";
 import Url from "url-parse";
+import ImageViewer from "react-native-image-zoom-viewer";
+import Button from "@times-components-native/link";
+import { ResponsiveContext } from "@times-components-native/responsive";
+import { ImageContent } from "@times-components-native/types";
 import CloseButton from "../close-button";
 import ModalCaptionContainer from "../modal-caption-container";
 import Image from "../image";
 import styles from "../styles";
-import { ImageContent } from "@times-components-native/types";
-import ModalCaption from "@times-components-native/image/src/modal-image/modal-caption";
+import ModalCaption from "./modal-caption";
 
 interface ModalImageProps {
   aspectRatio?: number;
