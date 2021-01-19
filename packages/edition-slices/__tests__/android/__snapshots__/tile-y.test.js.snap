@@ -9,7 +9,6 @@ exports[`tile y huge 1`] = `
       "paddingTop": 10,
     }
   }
-  url="/article/123"
 >
   <View>
     <View
@@ -86,7 +85,6 @@ exports[`tile y medium 1`] = `
       "paddingTop": 10,
     }
   }
-  url="/article/123"
 >
   <View>
     <View
@@ -163,7 +161,6 @@ exports[`tile y wide 1`] = `
       "paddingTop": 10,
     }
   }
-  url="/article/123"
 >
   <View>
     <View
@@ -240,7 +237,6 @@ exports[`tile y without breakpoint should be like medium 1`] = `
       "paddingTop": 10,
     }
   }
-  url="/article/123"
 >
   <View>
     <View
