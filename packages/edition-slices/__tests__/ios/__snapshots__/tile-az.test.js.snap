@@ -10,7 +10,6 @@ exports[`tile az portrait medium 1`] = `
       "marginHorizontal": -30,
     }
   }
-  url="/article/123"
 >
   <Image
     aspectRatio={1.5}
@@ -93,7 +92,6 @@ exports[`tile az portrait wide 1`] = `
       "marginHorizontal": -50,
     }
   }
-  url="/article/123"
 >
   <Image
     aspectRatio={1.5}

@@ -9,7 +9,6 @@ exports[`tile n huge 1`] = `
       "padding": 10,
     }
   }
-  url="/article/123"
 >
   <View
     style={
@@ -76,7 +75,6 @@ exports[`tile n medium 1`] = `
       "padding": 10,
     }
   }
-  url="/article/123"
 >
   <View
     style={
@@ -145,7 +143,6 @@ exports[`tile n small 1`] = `
       "paddingHorizontal": 12,
     }
   }
-  url="/article/123"
 >
   <View
     style={
@@ -211,7 +208,6 @@ exports[`tile n wide 1`] = `
       "padding": 10,
     }
   }
-  url="/article/123"
 >
   <View
     style={
@@ -280,7 +276,6 @@ exports[`tile n with default star 1`] = `
       "paddingHorizontal": 12,
     }
   }
-  url="/article/123"
 >
   <View
     style={

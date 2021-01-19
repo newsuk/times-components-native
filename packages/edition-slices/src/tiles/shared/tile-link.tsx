@@ -13,11 +13,10 @@ const TileLink: FC<Props> = ({
   onPress,
   style = {},
   tile: {
-    article: { id, url },
+    article: { id },
   },
 }) => (
-  // @ts-ignore TODO url prop no longer needed, to be deleted.
-  <Link linkStyle={style} onPress={() => onPress({ id })} url={url}>
+  <Link linkStyle={style} onPress={() => onPress({ id })}>
     {children}
   </Link>
 );

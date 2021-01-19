@@ -9,7 +9,6 @@ exports[`tile v without breakpoint 1`] = `
       "paddingTop": 10,
     }
   }
-  url="/article/123"
 >
   <Image
     aspectRatio={1.7777777777777777}

@@ -9,7 +9,6 @@ exports[`tile vertical a huge 1`] = `
       "paddingVertical": 15,
     }
   }
-  url="/article/123"
 >
   <View
     style={
@@ -97,7 +96,6 @@ exports[`tile vertical a medium 1`] = `
       "paddingVertical": 15,
     }
   }
-  url="/article/123"
 >
   <View
     style={
@@ -185,7 +183,6 @@ exports[`tile vertical a shows an image 1`] = `
       "paddingVertical": 15,
     }
   }
-  url="/article/123"
 >
   <Image
     aspectRatio={1.5}
@@ -283,7 +280,6 @@ exports[`tile vertical a wide 1`] = `
       "paddingVertical": 15,
     }
   }
-  url="/article/123"
 >
   <View
     style={
