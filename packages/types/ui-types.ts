@@ -4,6 +4,6 @@ export interface TileConfig {
   showImage?: boolean;
 }
 
-export interface TransformedTile extends Tile {
+export interface ConfiguredTile extends Tile {
   config: TileConfig;
 }

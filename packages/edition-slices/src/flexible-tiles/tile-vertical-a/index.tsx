@@ -11,11 +11,11 @@ import {
 import styleFactory from "./styles";
 import WithoutWhiteSpace from "../../tiles/shared/without-white-space";
 import PositionedTileStar from "../../tiles/shared/positioned-tile-star";
-import { TransformedTile } from "@times-components-native/types";
+import { ConfiguredTile } from "@times-components-native/types";
 
 interface Props {
   onPress: () => void;
-  tile: TransformedTile;
+  tile: ConfiguredTile;
   breakpoint: string;
 }
 

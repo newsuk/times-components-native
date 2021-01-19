@@ -1,12 +1,12 @@
 import React, { FC } from "react";
 import Link from "@times-components-native/link";
 import { TextStyle } from "react-native";
-import { TransformedTile } from "@times-components-native/types";
+import { ConfiguredTile } from "@times-components-native/types";
 
 interface Props {
   onPress: (args: { id: string }) => void;
   style: TextStyle;
-  tile: TransformedTile;
+  tile: ConfiguredTile;
 }
 const TileLink: FC<Props> = ({
   children,
