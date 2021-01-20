@@ -12,8 +12,8 @@ import {
   TileV,
 } from "../../tiles";
 import { ResponsiveSlice } from "../shared";
-import { sectionConfigs } from "@times-components-native/section/src/utils";
-import TileHorizontalA from "../../configured-tiles/Tile-vertical-with-image-bottom";
+import TileVerticalA from "../../configured-tiles/tile-vertical-a";
+import TileColWithImageBottom from "../../configured-tiles/tile-col-with-image-bottom";
 
 class LeadTwoNoPicAndTwoVariant2 extends Component {
   constructor(props) {
@@ -46,37 +46,17 @@ class LeadTwoNoPicAndTwoVariant2 extends Component {
   renderMedium(breakpoint, orientation) {
     const {
       onPress,
-      slice: { lead1, lead2, support1, support2 },
+      slice: { lead1, lead2, support1, support2, config },
     } = this.props;
 
-    const {
-      imageAspectRatios: { ratio45, ratio23 },
-    } = sectionConfigs;
+    // console.log(config, "ddiodidi");
 
     const isLandscape = orientation === "landscape";
 
-    const Support2 = isLandscape ? TileV : TileA;
+    // const Support2 = isLandscape ? TileV : TileA;
+    const Support2 = isLandscape ? TileVerticalA : TileColWithImageBottom;
+
     const Support1 = isLandscape ? TileAL : TileB;
-
-    // const renderSupport1 = () => {
-    //   if (isLandscape) {
-    //     return {
-    //       tile: TileAL,
-    //       styles: {
-    //         fontSizes: { huge: 24, wide: 24, medium: 22, small: 22 },
-    //       },
-    //     };
-    //   }
-
-    //   return {
-    //     tile: TileB,
-    //     styles: {
-    //       fontSizes: { huge: 24, wide: 24, medium: 24, small: 24 },
-    //     },
-    //   };
-    // };
-
-    // const { styles } = renderSupport1();
 
     return (
       <LeadTwoNoPicAndTwoVariant2Slice
@@ -99,7 +79,7 @@ class LeadTwoNoPicAndTwoVariant2 extends Component {
           />
         }
         support1={
-          <TileHorizontalA
+          <TileVerticalA
             breakpoint={breakpoint}
             onPress={onPress}
             tile={support1}
@@ -113,7 +93,10 @@ class LeadTwoNoPicAndTwoVariant2 extends Component {
             onPress={onPress}
             tile={support2}
             tileName="support2"
-            imageAspectRatio={isLandscape ? ratio45 : ratio23}
+            orientation={orientation}
+            imageAspectRatio={
+              isLandscape ? { width: 4, height: 5 } : { width: 2, height: 3 }
+            }
           />
         }
       />
