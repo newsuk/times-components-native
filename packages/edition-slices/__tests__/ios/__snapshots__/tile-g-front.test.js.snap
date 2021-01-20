@@ -13,7 +13,6 @@ Array [
   >
     <Image
       aspectRatio={0.8}
-      fill={true}
       style={
         Object {
           "marginBottom": 0,
@@ -617,7 +616,6 @@ Array [
   >
     <Image
       aspectRatio={0.8}
-      fill={true}
       style={
         Object {
           "marginBottom": 0,
@@ -1221,7 +1219,6 @@ Array [
   >
     <Image
       aspectRatio={0.8}
-      fill={true}
       style={
         Object {
           "marginBottom": 0,
@@ -1825,7 +1822,6 @@ Array [
   >
     <Image
       aspectRatio={0.8}
-      fill={true}
       style={
         Object {
           "marginBottom": 0,
@@ -2428,7 +2424,6 @@ Array [
   >
     <Image
       aspectRatio={0.8}
-      fill={true}
       style={
         Object {
           "marginBottom": 0,
@@ -3031,7 +3026,6 @@ Array [
   >
     <Image
       aspectRatio={0.8}
-      fill={true}
       style={
         Object {
           "marginBottom": 0,
@@ -3634,7 +3628,6 @@ Array [
   >
     <Image
       aspectRatio={0.8}
-      fill={true}
       style={
         Object {
           "marginBottom": 0,
@@ -4237,7 +4230,6 @@ Array [
   >
     <Image
       aspectRatio={0.8}
-      fill={true}
       style={
         Object {
           "marginBottom": 0,
@@ -4840,7 +4832,6 @@ Array [
   >
     <Image
       aspectRatio={0.8}
-      fill={true}
       style={
         Object {
           "marginBottom": 0,

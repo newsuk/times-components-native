@@ -11,7 +11,6 @@ exports[`tile bb landscape huge 1`] = `
 >
   <Image
     aspectRatio={1.5}
-    fill={true}
     style={
       Object {
         "width": "50%",
@@ -86,7 +85,6 @@ exports[`tile bb landscape medium 1`] = `
 >
   <Image
     aspectRatio={1.5}
-    fill={true}
     style={
       Object {
         "width": "50%",
@@ -161,7 +159,6 @@ exports[`tile bb landscape wide 1`] = `
 >
   <Image
     aspectRatio={1.5}
-    fill={true}
     style={
       Object {
         "width": "50%",

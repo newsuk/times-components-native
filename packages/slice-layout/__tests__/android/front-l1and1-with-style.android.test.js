@@ -1,3 +1,3 @@
-import shared from "../front-l1and1-with-style.native";
+import shared from "../front-l1and1-with-style";
 
 shared();

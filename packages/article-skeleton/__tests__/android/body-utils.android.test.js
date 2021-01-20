@@ -1,3 +1,3 @@
-import shared from "../body-utils.native";
+import shared from "../body-utils";
 
 shared();

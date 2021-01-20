@@ -1,3 +1,3 @@
-import scalingTests from "../scaling.native";
+import scalingTests from "../scaling";
 
 scalingTests();

@@ -30,7 +30,6 @@ const TileAW = ({ onPress, tile, breakpoint = editionBreakpoints.medium }) => {
         relativeVerticalOffset={crop.relativeVerticalOffset}
         style={styles.imageContainer}
         uri={crop.url}
-        fill
         hasVideo={hasVideo}
       />
       <TileSummary

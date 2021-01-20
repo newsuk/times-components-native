@@ -1,3 +1,3 @@
-import shared from "../shared-colour.native";
+import shared from "../shared-colour";
 
 shared();

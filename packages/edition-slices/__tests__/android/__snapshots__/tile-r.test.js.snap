@@ -12,7 +12,6 @@ exports[`tile r huge 1`] = `
 >
   <Image
     aspectRatio={1.7777777777777777}
-    fill={true}
     style={
       Object {
         "marginBottom": 15,
@@ -81,7 +80,6 @@ exports[`tile r medium 1`] = `
 >
   <Image
     aspectRatio={1.7777777777777777}
-    fill={true}
     style={
       Object {
         "marginBottom": 10,
@@ -150,7 +148,6 @@ exports[`tile r wide 1`] = `
 >
   <Image
     aspectRatio={1.7777777777777777}
-    fill={true}
     style={
       Object {
         "marginBottom": 15,
@@ -219,7 +216,6 @@ exports[`tile r without breakpoint should be like medium 1`] = `
 >
   <Image
     aspectRatio={1.7777777777777777}
-    fill={true}
     style={
       Object {
         "marginBottom": 10,

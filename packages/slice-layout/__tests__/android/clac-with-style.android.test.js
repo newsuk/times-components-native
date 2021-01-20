@@ -1,3 +1,3 @@
-import shared from "../clac-with-style.native";
+import shared from "../clac-with-style";
 
 shared();

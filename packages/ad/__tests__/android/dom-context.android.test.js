@@ -1,3 +1,3 @@
-import shared from "../dom-context.native";
+import shared from "../dom-context";
 
 shared();
