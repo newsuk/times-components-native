@@ -12,8 +12,10 @@ import styleFactory from "./styles";
 import WithoutWhiteSpace from "../../tiles/shared/without-white-space";
 import PositionedTileStar from "../../tiles/shared/positioned-tile-star";
 import { ConfiguredTile, OnArticlePress } from "@times-components-native/types";
-import { getCropByRatio } from "../../utils/getCropByRatio";
-import { getAspectRatio } from "../../utils/getAspectRatio";
+import {
+  getAspectRatio,
+  getCropByRatio,
+} from "@times-components-native/image/src/utils";
 
 interface Props {
   onPress: OnArticlePress;
