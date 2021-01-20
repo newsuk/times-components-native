@@ -97,7 +97,6 @@ exports[`tile z huge 1`] = `
   </View>
   <Image
     aspectRatio={1.5}
-    fill={true}
     style={
       Object {
         "width": "59%",
@@ -205,7 +204,6 @@ exports[`tile z wide 1`] = `
   </View>
   <Image
     aspectRatio={1.5}
-    fill={true}
     style={
       Object {
         "width": "59%",
@@ -313,7 +311,6 @@ exports[`tile z without breakpoint should be like wide 1`] = `
   </View>
   <Image
     aspectRatio={1.5}
-    fill={true}
     style={
       Object {
         "width": "59%",

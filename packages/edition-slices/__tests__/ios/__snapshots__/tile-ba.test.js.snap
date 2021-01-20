@@ -11,7 +11,6 @@ exports[`tile ba portrait medium 1`] = `
 >
   <Image
     aspectRatio={1.7777777777777777}
-    fill={true}
     style={
       Object {
         "flex": 1,
@@ -85,7 +84,6 @@ exports[`tile ba portrait wide 1`] = `
 >
   <Image
     aspectRatio={1.7777777777777777}
-    fill={true}
     style={
       Object {
         "flex": 1,

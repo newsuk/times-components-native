@@ -12,7 +12,6 @@ exports[`tile p without breakpoint 1`] = `
 >
   <Image
     aspectRatio={1}
-    fill={true}
     resizeMode="cover"
     rounded={true}
     style={

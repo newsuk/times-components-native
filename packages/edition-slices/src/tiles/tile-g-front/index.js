@@ -29,7 +29,6 @@ const TileGFront = ({ onPress, tile, orientation }) => {
         relativeVerticalOffset={crop.relativeVerticalOffset}
         style={styles.imageContainer}
         uri={crop.url}
-        fill
         hasVideo={article.hasVideo}
       />
       <FrontTileSummary

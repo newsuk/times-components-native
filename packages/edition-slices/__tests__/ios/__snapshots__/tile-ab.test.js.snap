@@ -96,7 +96,6 @@ exports[`tile ab huge 1`] = `
   </View>
   <Image
     aspectRatio={0.6666666666666666}
-    fill={true}
     style={
       Object {
         "flex": 0.26,
@@ -203,7 +202,6 @@ exports[`tile ab medium 1`] = `
   </View>
   <Image
     aspectRatio={0.6666666666666666}
-    fill={true}
     style={
       Object {
         "flex": 0.44,
@@ -310,7 +308,6 @@ exports[`tile ab wide 1`] = `
   </View>
   <Image
     aspectRatio={0.6666666666666666}
-    fill={true}
     style={
       Object {
         "flex": 1,
@@ -417,7 +414,6 @@ exports[`tile ab without breakpoint should be like medium 1`] = `
   </View>
   <Image
     aspectRatio={0.6666666666666666}
-    fill={true}
     style={
       Object {
         "flex": 0.44,
