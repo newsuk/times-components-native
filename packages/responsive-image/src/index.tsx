@@ -19,7 +19,7 @@ import { appendToImageURL } from "@times-components-native/utils";
 import findClosestWidth from "./utils/findClosestWidth";
 import styles from "./styles";
 
-interface ResponsiveImageProps {
+export interface ResponsiveImageProps {
   readonly aspectRatio?: number;
   readonly onImagePress?: () => void;
   readonly caption?: JSX.Element;

@@ -38,7 +38,6 @@ const TileH = ({ onPress, tile }) => {
         relativeVerticalOffset={crop.relativeVerticalOffset}
         style={styles.imageContainer}
         uri={crop.url}
-        fill
         hasVideo={hasVideo}
       />
     </TileLink>

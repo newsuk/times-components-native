@@ -60,7 +60,6 @@ exports[`tile a without breakpoint 1`] = `
   </View>
   <Image
     aspectRatio={1.7777777777777777}
-    fill={true}
     style={
       Object {
         "marginBottom": 10,

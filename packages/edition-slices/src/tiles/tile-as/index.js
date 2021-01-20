@@ -29,7 +29,6 @@ const TileAS = ({ onPress, tile, breakpoint }) => {
         <TileImage
           aspectRatio={3 / 2}
           uri={crop.url}
-          fill
           relativeWidth={crop.relativeWidth}
           relativeHeight={crop.relativeHeight}
           relativeHorizontalOffset={crop.relativeHorizontalOffset}

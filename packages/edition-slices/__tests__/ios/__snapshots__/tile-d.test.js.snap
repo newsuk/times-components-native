@@ -12,7 +12,6 @@ exports[`tile d medium 1`] = `
 >
   <Image
     aspectRatio={1.5}
-    fill={true}
     style={
       Object {
         "flex": 1,
@@ -86,7 +85,6 @@ exports[`tile d small 1`] = `
 >
   <Image
     aspectRatio={1.5}
-    fill={true}
     style={
       Object {
         "width": "50%",
@@ -161,7 +159,6 @@ exports[`tile d without breakpoint should be like small 1`] = `
 >
   <Image
     aspectRatio={1.5}
-    fill={true}
     style={
       Object {
         "width": "50%",
