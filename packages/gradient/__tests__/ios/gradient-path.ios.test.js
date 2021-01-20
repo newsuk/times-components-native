@@ -1,3 +1,3 @@
-import shared from "../shared-path.native";
+import shared from "../shared-path";
 
 shared();

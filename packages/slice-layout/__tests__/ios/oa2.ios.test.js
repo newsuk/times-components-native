@@ -1,3 +1,3 @@
-import shared from "../oa2.native";
+import shared from "../oa2";
 
 shared();

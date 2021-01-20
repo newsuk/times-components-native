@@ -1,3 +1,3 @@
-import shared from "../shared-std-has-video.native";
+import shared from "../shared-std-has-video";
 
 shared();

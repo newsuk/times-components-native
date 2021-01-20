@@ -1,3 +1,3 @@
-import shared from "../std-with-style.native";
+import shared from "../std-with-style";
 
 shared();
