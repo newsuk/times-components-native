@@ -25,7 +25,6 @@ const TileQ = ({ onPress, tile }) => {
         relativeVerticalOffset={crop.relativeVerticalOffset}
         style={styles.imageContainer}
         uri={crop.url}
-        fill
         hasVideo={hasVideo}
       />
       <PositionedTileStar articleId={tile.article.id} centeredStar />

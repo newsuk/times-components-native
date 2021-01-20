@@ -13,7 +13,6 @@ Array [
   >
     <Image
       aspectRatio={1.7777777777777777}
-      fill={true}
       style={
         Object {
           "width": "100%",
@@ -626,7 +625,6 @@ Array [
   >
     <Image
       aspectRatio={1.7777777777777777}
-      fill={true}
       style={
         Object {
           "width": "100%",
@@ -1239,7 +1237,6 @@ Array [
   >
     <Image
       aspectRatio={1.7777777777777777}
-      fill={true}
       style={
         Object {
           "width": "100%",
@@ -1852,7 +1849,6 @@ Array [
   >
     <Image
       aspectRatio={1.7777777777777777}
-      fill={true}
       style={
         Object {
           "marginBottom": 15,
@@ -2466,7 +2462,6 @@ Array [
   >
     <Image
       aspectRatio={1.7777777777777777}
-      fill={true}
       style={
         Object {
           "marginBottom": 5,
@@ -3071,7 +3066,6 @@ Array [
   >
     <Image
       aspectRatio={1.7777777777777777}
-      fill={true}
       style={
         Object {
           "marginBottom": 10,
@@ -3676,7 +3670,6 @@ Array [
   >
     <Image
       aspectRatio={1.7777777777777777}
-      fill={true}
       style={
         Object {
           "marginBottom": 10,
@@ -4281,7 +4274,6 @@ Array [
   >
     <Image
       aspectRatio={1.7777777777777777}
-      fill={true}
       style={
         Object {
           "marginBottom": 10,
@@ -4886,7 +4878,6 @@ Array [
   >
     <Image
       aspectRatio={1.7777777777777777}
-      fill={true}
       style={
         Object {
           "marginBottom": 10,

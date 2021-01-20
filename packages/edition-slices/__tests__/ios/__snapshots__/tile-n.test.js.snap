@@ -19,7 +19,6 @@ exports[`tile n huge 1`] = `
   >
     <Image
       aspectRatio={1}
-      fill={true}
       style={
         Object {
           "flex": 1,
@@ -104,7 +103,6 @@ exports[`tile n medium 1`] = `
   >
     <Image
       aspectRatio={1}
-      fill={true}
       style={
         Object {
           "flex": 1,
@@ -205,7 +203,6 @@ exports[`tile n small 1`] = `
   >
     <Image
       aspectRatio={1}
-      fill={true}
       style={
         Object {
           "flex": 1,
@@ -305,7 +302,6 @@ exports[`tile n wide 1`] = `
   >
     <Image
       aspectRatio={1}
-      fill={true}
       style={
         Object {
           "flex": 1,
@@ -406,7 +402,6 @@ exports[`tile n with default star 1`] = `
   >
     <Image
       aspectRatio={1}
-      fill={true}
       style={
         Object {
           "flex": 1,
@@ -507,7 +502,6 @@ exports[`tile n without breakpoint should be like small 1`] = `
   >
     <Image
       aspectRatio={1}
-      fill={true}
       style={
         Object {
           "flex": 1,

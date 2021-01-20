@@ -44,7 +44,6 @@ exports[`tile ak huge 1`] = `
   <Image
     aspectRatio={1.5}
     disablePlaceholder={true}
-    fill={true}
     style={
       Object {
         "alignSelf": "flex-end",
@@ -101,7 +100,6 @@ exports[`tile ak medium 1`] = `
   <Image
     aspectRatio={1.5}
     disablePlaceholder={true}
-    fill={true}
     style={
       Object {
         "alignSelf": "flex-end",
@@ -158,7 +156,6 @@ exports[`tile ak wide 1`] = `
   <Image
     aspectRatio={1.5}
     disablePlaceholder={true}
-    fill={true}
     style={
       Object {
         "alignSelf": "flex-end",
@@ -215,7 +212,6 @@ exports[`tile ak without breakpoint should be like medium 1`] = `
   <Image
     aspectRatio={1.5}
     disablePlaceholder={true}
-    fill={true}
     style={
       Object {
         "alignSelf": "flex-end",

@@ -67,7 +67,6 @@ exports[`tile e huge 1`] = `
   </View>
   <Image
     aspectRatio={0.8}
-    fill={true}
     style={
       Object {
         "marginBottom": 10,
@@ -147,7 +146,6 @@ exports[`tile e medium 1`] = `
   </View>
   <Image
     aspectRatio={0.8}
-    fill={true}
     style={
       Object {
         "marginBottom": 10,
@@ -252,7 +250,6 @@ exports[`tile e small 1`] = `
   </View>
   <Image
     aspectRatio={0.8}
-    fill={true}
     style={
       Object {
         "width": "50%",
@@ -330,7 +327,6 @@ exports[`tile e wide 1`] = `
   </View>
   <Image
     aspectRatio={0.8}
-    fill={true}
     style={
       Object {
         "marginBottom": 10,
@@ -435,7 +431,6 @@ exports[`tile e without breakpoint should be like small 1`] = `
   </View>
   <Image
     aspectRatio={0.8}
-    fill={true}
     style={
       Object {
         "width": "50%",
