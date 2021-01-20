@@ -97,13 +97,13 @@ const ModalImage: FC<ModalImageProps> = ({
     },
   ].concat(
     images
-      .map((i) => {
-        const offlineUrl = new Url(i.attributes.url, true);
+      .map((image) => {
+        const offlineUrl = new Url(image.attributes.url, true);
         offlineUrl.query.offline = "true";
-        const [ratioWidth, ratioHeight] = i.attributes.ratio.split(":");
+        const [ratioWidth, ratioHeight] = image.attributes.ratio.split(":");
 
         return {
-          ...i.attributes,
+          ...image.attributes,
           url: offlineUrl.toString(),
           aspectRatio:
             ratioWidth && ratioHeight
