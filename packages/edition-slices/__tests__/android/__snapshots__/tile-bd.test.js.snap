@@ -30,7 +30,6 @@ exports[`tile bd medium 1`] = `
     >
       <Image
         aspectRatio={1}
-        fill={true}
         resizeMode="cover"
         rounded={true}
         style={
@@ -130,7 +129,6 @@ exports[`tile bd wide 1`] = `
     >
       <Image
         aspectRatio={1}
-        fill={true}
         resizeMode="cover"
         rounded={true}
         style={
@@ -230,7 +228,6 @@ exports[`tile bd without breakpoint 1`] = `
     >
       <Image
         aspectRatio={1}
-        fill={true}
         resizeMode="cover"
         rounded={true}
         style={

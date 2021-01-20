@@ -10,7 +10,6 @@ exports[`tile q without breakpoint 1`] = `
 >
   <Image
     aspectRatio={1.5}
-    fill={true}
     style={
       Object {
         "marginBottom": 10,
