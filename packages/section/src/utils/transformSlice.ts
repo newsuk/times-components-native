@@ -24,10 +24,14 @@ interface TransformSlice {
 const leadOneAndOneNewsTransform = {
   sectionTitle: "News",
   name: "LeadOneAndOneSlice",
-  transform: (slice: Slice) => ({
-    ...slice,
-    support: { ...slice.support, config: { showImage: true } },
-  }),
+  ovverrides: {
+    support: {
+      summary: { length: 800 },
+      image: {
+        ratio: "3:2",
+      },
+    },
+  },
 };
 
 const sliceTransformations: TransformSlice[] = [leadOneAndOneNewsTransform];
@@ -43,7 +47,7 @@ export const transformSlice = (isTablet: boolean, sectionTitle: string) => (
       st.sectionTitle.toUpperCase() === sectionTitle.toUpperCase(),
   );
 
-  // no transform object and no default only use slice in old format
+  // no transform object and no default base config so only use slice in old format
   if (!transformation && !baseConfigs[slice.name]) return slice;
 
   //merges existing slice tile data with the base config
@@ -59,7 +63,7 @@ export const transformSlice = (isTablet: boolean, sectionTitle: string) => (
       : acc;
   }, {});
 
-  // no transform but base config so passes the default config to a possible flexible slice
+  // no transform but base config is truthy so passes the base config to slice that contains a configured tile or tiles
   if (!transformation && baseConfigs[slice.name]) {
     return {
       ...slice,
@@ -67,7 +71,7 @@ export const transformSlice = (isTablet: boolean, sectionTitle: string) => (
     };
   }
 
-  // uses base config if someone forgets to set it in ovverrides
+  // uses base config if someone forgets to set ovverrides in transform
   if (!transformation.overrides)
     return {
       ...slice,
