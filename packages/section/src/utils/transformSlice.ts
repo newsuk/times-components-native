@@ -1,27 +1,9 @@
+import { baseLeadTwoNoPicAndTwoVariant2Config } from "@times-components-native/edition-slices/src/slices/leadtwonopicandtwovariant2/baseLeadTwoNoPicAndTwoVariant2Config";
 import { TileConfig } from "@times-components-native/types";
 import merge from "lodash.merge";
 
-// configure slice
-
-const base = {
-  support1: {
-    summary: { length: 800 },
-    showImage: true,
-    wide: { image: { ratio: "3:2", orientation: "landscape" } },
-    huge: { image: { ratio: "3:2", orientation: "landscape" } },
-    medium: {},
-  },
-  support2: {
-    image: { ratio: "2:3", orientation: "portrait" },
-    showImage: true,
-    wide: {},
-    huge: { image: { ratio: "4:5", orientation: "landscape" } },
-    medium: {},
-  },
-};
-
 const baseConfigs = {
-  LeadTwoNoPicAndTwoSlice: base,
+  LeadTwoNoPicAndTwoSlice: baseLeadTwoNoPicAndTwoVariant2Config,
 };
 
 interface Slice {
@@ -39,39 +21,16 @@ interface TransformSlice {
   transform: (slice: Slice) => Slice;
 }
 
-// const leadOneAndOneNewsTransform = {
-//   sectionTitle: "News",
-//   name: "LeadOneAndOneSlice",
-//   transform: (slice: Slice) => ({
-//     ...slice,
-//     support: { ...slice.support, config: { showImage: true } },
-//   }),
-// };
-
-const leadTwoNoPicAndTwoVariant2SportTransform = {
-  sectionTitle: "world",
-  name: "LeadTwoNoPicAndTwoSlice",
-  overrides: {
-    support1: {
-      summary: { length: "summaryMerge" },
-      showImage: false,
-      wide: { image: { ratio: "dog", orientation: "landscape" } },
-      huge: { image: { ratio: "cat", orientation: "landscape" } },
-      medium: {},
-    },
-    support2: {
-      image: { ratio: "2:3", orientation: "portrait" },
-      showImage: "falsy",
-      wide: {},
-      huge: { image: { ratio: "elephant", orientation: "landscape" } },
-      medium: {},
-    },
-  },
+const leadOneAndOneNewsTransform = {
+  sectionTitle: "News",
+  name: "LeadOneAndOneSlice",
+  transform: (slice: Slice) => ({
+    ...slice,
+    support: { ...slice.support, config: { showImage: true } },
+  }),
 };
 
-const sliceTransformations: TransformSlice[] = [
-  leadTwoNoPicAndTwoVariant2SportTransform,
-];
+const sliceTransformations: TransformSlice[] = [leadOneAndOneNewsTransform];
 
 export const transformSlice = (isTablet: boolean, sectionTitle: string) => (
   slice: Slice,
@@ -84,33 +43,56 @@ export const transformSlice = (isTablet: boolean, sectionTitle: string) => (
       st.sectionTitle.toUpperCase() === sectionTitle.toUpperCase(),
   );
 
-  // merge
-  // if no base
-  // console.log(
-  //   merge(
-  //     baseConfigs[slice.name],
-  //     transformation.overrides[slice.name],
-  //     "trying to merge",
-  //   ),
-  // );
-  if (!transformation || !baseConfigs[transformation.name]) return slice;
+  // no transform object and no default only use slice in old format
+  if (!transformation && !baseConfigs[slice.name]) return slice;
 
-  const test = {
-    ...slice,
-    config: merge(baseConfigs[slice.name], transformation.overrides),
-  };
+  //merges existing slice tile data with the base config
+  const mergeBaseConfig = Object.keys(slice).reduce((acc, curtileName) => {
+    return Object.keys(baseConfigs[slice.name]).includes(curtileName)
+      ? {
+          ...acc,
+          [curtileName]: {
+            ...slice[curtileName],
+            ...baseConfigs[slice.name][curtileName],
+          },
+        }
+      : acc;
+  }, {});
 
-  // console.log(test);
+  // no transform but base config so passes the default config to a possible flexible slice
+  if (!transformation && baseConfigs[slice.name]) {
+    return {
+      ...slice,
+      ...mergeBaseConfig,
+    };
+  }
 
-  return transformation?.overrides
-    ? {
-        ...slice,
-        config: merge(baseConfigs[slice.name], transformation.overrides),
-      }
-    : {
-        ...slice,
-        config: {
-          ...baseConfigs[slice.name],
-        },
-      };
+  // uses base config if someone forgets to set it in ovverrides
+  if (!transformation.overrides)
+    return {
+      ...slice,
+      ...mergeBaseConfig,
+    };
+
+  //merges existing slice tile data with the transform ovverrides
+  const mergeTileOverrideData = Object.keys(slice).reduce(
+    (acc, curtileName) => {
+      return Object.keys(baseConfigs[slice.name]).includes(curtileName)
+        ? {
+            ...acc,
+            [curtileName]: {
+              ...slice[curtileName],
+              config: merge(
+                baseConfigs[slice.name][curtileName],
+                transformation.overrides[curtileName],
+              ),
+            },
+          }
+        : acc;
+    },
+    {},
+  );
+
+  // merges ovverrides with exsisting tile data
+  return { ...slice, ...mergeTileOverrideData };
 };
