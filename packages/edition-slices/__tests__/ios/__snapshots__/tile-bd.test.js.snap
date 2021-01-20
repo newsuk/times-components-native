@@ -11,7 +11,6 @@ exports[`tile bd medium 1`] = `
       "paddingVertical": 15,
     }
   }
-  url="/article/123"
 >
   <View
     style={
@@ -112,7 +111,6 @@ exports[`tile bd wide 1`] = `
       "paddingVertical": 10,
     }
   }
-  url="/article/123"
 >
   <View
     style={
@@ -213,7 +211,6 @@ exports[`tile bd without breakpoint 1`] = `
       "paddingVertical": 15,
     }
   }
-  url="/article/123"
 >
   <View
     style={

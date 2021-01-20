@@ -1,3 +1,3 @@
-import shared from "../top-sd-with-style.native";
+import shared from "../top-sd-with-style";
 
 shared();

@@ -9,7 +9,6 @@ exports[`tile ad huge 1`] = `
       "padding": 10,
     }
   }
-  url="/article/123"
 >
   <View
     style={
@@ -97,7 +96,6 @@ exports[`tile ad medium 1`] = `
       "padding": 10,
     }
   }
-  url="/article/123"
 >
   <View
     style={
@@ -166,7 +164,6 @@ exports[`tile ad wide 1`] = `
       "padding": 10,
     }
   }
-  url="/article/123"
 >
   <View
     style={
@@ -254,7 +251,6 @@ exports[`tile ad without breakpoint should be like medium 1`] = `
       "padding": 10,
     }
   }
-  url="/article/123"
 >
   <View
     style={

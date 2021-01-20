@@ -9,7 +9,6 @@ exports[`tile r huge 1`] = `
       "paddingVertical": 15,
     }
   }
-  url="/article/123"
 >
   <Image
     aspectRatio={1.7777777777777777}
@@ -79,7 +78,6 @@ exports[`tile r medium 1`] = `
       "paddingVertical": 15,
     }
   }
-  url="/article/123"
 >
   <Image
     aspectRatio={1.7777777777777777}
@@ -149,7 +147,6 @@ exports[`tile r wide 1`] = `
       "paddingVertical": 15,
     }
   }
-  url="/article/123"
 >
   <Image
     aspectRatio={1.7777777777777777}
@@ -219,7 +216,6 @@ exports[`tile r without breakpoint should be like medium 1`] = `
       "paddingVertical": 15,
     }
   }
-  url="/article/123"
 >
   <Image
     aspectRatio={1.7777777777777777}

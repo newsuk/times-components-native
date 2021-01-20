@@ -7,7 +7,6 @@ exports[`tile f without breakpoint 1`] = `
       "padding": 10,
     }
   }
-  url="/article/123"
 >
   <View>
     <View

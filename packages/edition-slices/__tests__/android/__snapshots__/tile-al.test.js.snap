@@ -9,7 +9,6 @@ exports[`tile al huge 1`] = `
       "paddingVertical": 15,
     }
   }
-  url="/article/123"
 >
   <Image
     aspectRatio={1.5}
@@ -108,7 +107,6 @@ exports[`tile al wide 1`] = `
       "paddingVertical": 15,
     }
   }
-  url="/article/123"
 >
   <Image
     aspectRatio={1.5}

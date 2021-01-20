@@ -9,7 +9,6 @@ exports[`tile x huge 1`] = `
       "paddingTop": 15,
     }
   }
-  url="/article/123"
 >
   <View
     style={
@@ -113,7 +112,6 @@ exports[`tile x medium 1`] = `
       "paddingTop": 15,
     }
   }
-  url="/article/123"
 >
   <View
     style={
@@ -217,7 +215,6 @@ exports[`tile x wide 1`] = `
       "paddingTop": 15,
     }
   }
-  url="/article/123"
 >
   <View
     style={

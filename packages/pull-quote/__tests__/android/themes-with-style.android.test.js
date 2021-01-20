@@ -1,3 +1,3 @@
-import shared from "../themes-with-style.native";
+import shared from "../themes-with-style";
 
 shared();

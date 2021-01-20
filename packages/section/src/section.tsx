@@ -17,12 +17,13 @@ import {
   isSupplementSection,
   sectionConfigs,
 } from "./utils";
+import { OnArticlePress } from "@times-components-native/types";
 
 const styles = styleFactory();
 
 interface Props {
   adConfig: any;
-  onArticlePress: () => void;
+  onArticlePress: OnArticlePress;
   onLinkPress: (link: any) => void;
   onPuzzlePress: () => void;
   onPuzzleBarPress: () => void;

@@ -10,7 +10,6 @@ exports[`tile ab huge 1`] = `
       "paddingVertical": 15,
     }
   }
-  url="/article/123"
 >
   <View
     style={
@@ -118,7 +117,6 @@ exports[`tile ab medium 1`] = `
       "paddingVertical": 15,
     }
   }
-  url="/article/123"
 >
   <View
     style={
@@ -226,7 +224,6 @@ exports[`tile ab wide 1`] = `
       "paddingVertical": 15,
     }
   }
-  url="/article/123"
 >
   <View
     style={
@@ -334,7 +331,6 @@ exports[`tile ab without breakpoint should be like medium 1`] = `
       "paddingVertical": 15,
     }
   }
-  url="/article/123"
 >
   <View
     style={

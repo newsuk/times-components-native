@@ -1,3 +1,3 @@
-import shared from "../shared-accessible.native";
+import shared from "../shared-accessible";
 
 shared();

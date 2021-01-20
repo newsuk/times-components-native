@@ -16,7 +16,6 @@ const Link = ({ children, disabled, linkStyle, onPress }) => (
 const { style: ViewPropTypesStyle } = ViewPropTypes;
 
 Link.propTypes = {
-  children: PropTypes.node.isRequired,
   disabled: PropTypes.bool,
   linkStyle: ViewPropTypesStyle,
   onPress: PropTypes.func.isRequired,

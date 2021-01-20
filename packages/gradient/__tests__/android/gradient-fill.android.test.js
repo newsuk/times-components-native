@@ -1,3 +1,3 @@
-import shared from "../shared-fill.native";
+import shared from "../shared-fill";
 
 shared();

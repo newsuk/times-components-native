@@ -9,7 +9,6 @@ exports[`tile as huge 1`] = `
       "paddingVertical": 10,
     }
   }
-  url="/article/123"
 >
   <View
     style={
@@ -106,7 +105,6 @@ exports[`tile as medium 1`] = `
       "paddingVertical": 10,
     }
   }
-  url="/article/123"
 >
   <View
     style={
@@ -203,7 +201,6 @@ exports[`tile as wide 1`] = `
       "paddingVertical": 10,
     }
   }
-  url="/article/123"
 >
   <View
     style={

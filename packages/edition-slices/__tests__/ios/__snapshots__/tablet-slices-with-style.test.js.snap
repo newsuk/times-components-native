@@ -208,7 +208,7 @@ exports[`3. lead one and one - medium 1`] = `
         }
       }
     >
-      <TileAF />
+      <TileVerticalA />
     </View>
   </View>
 </View>
@@ -2840,7 +2840,7 @@ exports[`37. lead one and one - wide 1`] = `
         }
       }
     >
-      <TileAF />
+      <TileVerticalA />
     </View>
   </View>
 </View>
@@ -5545,7 +5545,7 @@ exports[`71. lead one and one - huge 1`] = `
           }
         }
       >
-        <TileAF />
+        <TileVerticalA />
       </View>
     </View>
   </View>

@@ -147,7 +147,7 @@ const sliceStories = [
   },
   {
     mock: mockSecondaryOneAndColumnistSlice(),
-    name: "Secondary One and Columnist (Mobile: T,H, Tablet: AA,AB)",
+    name: "Secondary One and Columnist (Mobile: T,H, Tablet: AB,B)",
     Slice: SecondaryOneAndColumnistSlice,
   },
   {
