@@ -1,23 +1,30 @@
 import { fonts } from "@times-components-native/styleguide";
 import React from "react";
-import { Text, View } from "react-native";
+import { Platform, Text, View } from "react-native";
 
-export default ({
+interface Props {
+  dropCapColor: string;
+  dropCapFont: string;
+  dropCapFontSize: number;
+  dropCapText: string;
+  height: number;
+  width: number;
+}
+
+const DropCap: React.FC<Props> = ({
   dropCapColor,
   dropCapFont,
   dropCapFontSize,
   dropCapText,
   height,
-  narrowContent,
   width,
 }) => (
   <View
     style={[
       {
         width,
-        height: height + 1,
+        height: height + 3,
       },
-      narrowContent && { paddingLeft: 7 },
     ]}
   >
     <Text
@@ -28,7 +35,7 @@ export default ({
           fontFamily: fonts[dropCapFont],
           fontSize: dropCapFontSize,
           lineHeight: height,
-          paddingTop: 24,
+          paddingTop: Platform.OS === "ios" ? 24 : 20,
           width,
         },
       ]}
@@ -37,3 +44,5 @@ export default ({
     </Text>
   </View>
 );
+
+export default DropCap;

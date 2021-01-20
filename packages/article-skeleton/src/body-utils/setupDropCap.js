@@ -1,7 +1,6 @@
 import styleguide, {
   colours,
   fonts,
-  spacing,
 } from "@times-components-native/styleguide";
 import { FontStorage } from "@times-components-native/typeset";
 import { Dimensions } from "react-native";
@@ -22,8 +21,7 @@ const isDropcapsDisabled = ({ template, dropcapsDisabled }) => {
 };
 
 export const setupDropCap = (skeletonProps, content) => {
-  // return content;
-  const { data, dropCapFont, narrowContent, scale } = skeletonProps;
+  const { data, dropCapFont, scale } = skeletonProps;
   const dropcapsDisabled = isDropcapsDisabled(data);
 
   if (dropcapsDisabled) return content;
@@ -94,9 +92,7 @@ export const setupDropCap = (skeletonProps, content) => {
   };
   const font = FontStorage.getFont(fontSettings);
   const { height } = getStringBounds(fontSettings, dropCapText);
-  const width =
-    font.getAdvanceWidth(dropCapText, fontSettings.fontSize) +
-    (narrowContent ? 7 : 1);
+  const width = font.getAdvanceWidth(dropCapText, fontSettings.fontSize);
 
   return [
     {

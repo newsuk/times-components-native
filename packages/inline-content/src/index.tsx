@@ -103,13 +103,6 @@ const InlineContent = (props: InlineContentProps) => {
     itemWidth: inlineItemWidth,
   };
 
-  console.log(
-    "jkjkljlkjkljkljkljkljlkjljkjlj",
-    windowWidth,
-    inlineItemWidth,
-    JSON.stringify(contentParameters, null, 2),
-  );
-
   return (
     <MeasureInlineContent
       content={paragraphs}
@@ -123,11 +116,6 @@ const InlineContent = (props: InlineContentProps) => {
           contentParameters,
         );
 
-        console.log(
-          "7459843843687894673849678378734985453454",
-          JSON.stringify(contentMeasurements, null, 2),
-        );
-
         const itemHeight =
           inlineContentHeight || contentMeasurements.itemHeight || 0;
 
@@ -136,22 +124,13 @@ const InlineContent = (props: InlineContentProps) => {
           itemHeight,
         );
 
-        console.log(
-          "£%$%^&^&*^(&*%^$^$%&$&(&*^*&$^&$",
-          currentInlineContentHeight,
-          itemHeight,
-          requiredInlineContentHeight,
-        );
-
         const chunkedInlineContent = chunks[0] || [];
         const chunkedOverflowContent = chunks[1] || [];
 
         const inlineItemToRender = (
           <View
             style={[
-              narrowContent
-                ? styles.inlineItemNarrowContainer
-                : styles.inlineItemContainer,
+              styles.inlineItemContainer,
               {
                 width: inlineItemWidth,
                 height: isAd ? adContainerHeight : itemHeight,
@@ -180,6 +159,7 @@ const InlineContent = (props: InlineContentProps) => {
                 styles.container,
                 {
                   height: requiredInlineContentHeight,
+                  alignSelf: narrowContent ? "flex-start" : "center",
                 },
                 !isTablet && { width: availableWidth },
               ]}
