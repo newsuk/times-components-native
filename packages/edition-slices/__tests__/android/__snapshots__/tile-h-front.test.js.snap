@@ -10,7 +10,6 @@ Array [
         "paddingRight": 10,
       }
     }
-    url="/article/123"
   >
     <FrontTileSummary
       bylineMarginBottom={15}
@@ -603,7 +602,6 @@ Array [
         "paddingRight": 10,
       }
     }
-    url="/article/123"
   >
     <FrontTileSummary
       bylineMarginBottom={15}
@@ -1196,7 +1194,6 @@ Array [
         "paddingRight": 10,
       }
     }
-    url="/article/123"
   >
     <FrontTileSummary
       bylineMarginBottom={15}
@@ -1789,7 +1786,6 @@ Array [
         "paddingRight": 10,
       }
     }
-    url="/article/123"
   >
     <FrontTileSummary
       bylineMarginBottom={15}
@@ -2382,7 +2378,6 @@ Array [
         "paddingRight": 10,
       }
     }
-    url="/article/123"
   >
     <FrontTileSummary
       bylineMarginBottom={15}
@@ -2975,7 +2970,6 @@ Array [
         "paddingRight": 10,
       }
     }
-    url="/article/123"
   >
     <FrontTileSummary
       bylineMarginBottom={15}
@@ -3568,7 +3562,6 @@ Array [
         "paddingRight": 10,
       }
     }
-    url="/article/123"
   >
     <FrontTileSummary
       bylineMarginBottom={15}
@@ -4162,7 +4155,6 @@ Array [
         "paddingRight": 10,
       }
     }
-    url="/article/123"
   >
     <FrontTileSummary
       bylineMarginBottom={15}
@@ -4756,7 +4748,6 @@ Array [
         "paddingRight": 10,
       }
     }
-    url="/article/123"
   >
     <FrontTileSummary
       bylineMarginBottom={15}

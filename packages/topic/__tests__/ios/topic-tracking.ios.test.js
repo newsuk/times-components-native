@@ -1,3 +1,3 @@
-import shared from "../shared-tracking.native";
+import shared from "../shared-tracking";
 
 shared();

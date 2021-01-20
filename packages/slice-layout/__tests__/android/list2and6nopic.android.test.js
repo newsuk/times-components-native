@@ -1,3 +1,3 @@
-import shared from "../list2and6nopic.native";
+import shared from "../list2and6nopic";
 
 shared();

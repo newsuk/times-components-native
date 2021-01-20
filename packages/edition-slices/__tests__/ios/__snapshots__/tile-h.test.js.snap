@@ -8,7 +8,6 @@ exports[`tile h without breakpoint 1`] = `
       "padding": 10,
     }
   }
-  url="/article/123"
 >
   <View
     style={
@@ -122,7 +121,6 @@ exports[`tile h without breakpoint 1`] = `
   </View>
   <Image
     aspectRatio={0.6666666666666666}
-    fill={true}
     style={
       Object {
         "flexDirection": "column",

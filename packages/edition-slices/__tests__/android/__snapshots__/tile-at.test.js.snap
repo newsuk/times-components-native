@@ -9,11 +9,9 @@ exports[`tile at medium 1`] = `
       "paddingVertical": 15,
     }
   }
-  url="/article/123"
 >
   <Image
     aspectRatio={1.5}
-    fill={true}
     style={
       Object {
         "marginBottom": 10,

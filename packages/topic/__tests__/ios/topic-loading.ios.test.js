@@ -1,3 +1,3 @@
-import shared from "../shared-loading.native";
+import shared from "../shared-loading";
 
 shared();

@@ -1,3 +1,3 @@
-import shared from "../vertical-list.native";
+import shared from "../vertical-list";
 
 shared();

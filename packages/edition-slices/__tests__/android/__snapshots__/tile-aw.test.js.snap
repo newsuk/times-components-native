@@ -9,11 +9,9 @@ exports[`tile aw landscape huge 1`] = `
       "paddingRight": 10,
     }
   }
-  url="/article/123"
 >
   <Image
     aspectRatio={1.7777777777777777}
-    fill={true}
     style={
       Object {
         "width": "100%",
@@ -91,11 +89,9 @@ exports[`tile aw landscape medium 1`] = `
       "paddingRight": 10,
     }
   }
-  url="/article/123"
 >
   <Image
     aspectRatio={1.7777777777777777}
-    fill={true}
     style={
       Object {
         "width": "100%",
@@ -173,11 +169,9 @@ exports[`tile aw landscape wide 1`] = `
       "paddingRight": 10,
     }
   }
-  url="/article/123"
 >
   <Image
     aspectRatio={1.7777777777777777}
-    fill={true}
     style={
       Object {
         "width": "100%",

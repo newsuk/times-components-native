@@ -44,7 +44,6 @@ const TileAK = ({
         relativeVerticalOffset={crop.relativeVerticalOffset}
         style={imageContainer}
         uri={crop.url}
-        fill
       />
     </Link>
   );

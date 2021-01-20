@@ -1,3 +1,3 @@
-import shared from "../shared-internal-components.native";
+import shared from "../shared-internal-components";
 
 shared();

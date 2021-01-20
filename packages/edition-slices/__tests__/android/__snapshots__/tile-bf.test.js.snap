@@ -11,7 +11,6 @@ exports[`tile bf huge 1`] = `
       "marginVertical": 10,
     }
   }
-  url="/article/123"
 >
   <View
     style={
@@ -77,7 +76,6 @@ exports[`tile bf huge 1`] = `
   >
     <Image
       aspectRatio={1.7777777777777777}
-      fill={true}
       uri="https://www.thetimes.co.uk/imageserver/image/methode%2Ftimes%2Fprod%2Fweb%2Fbin%2Fd3abdbfc-1776-11e6-b4ba-d249b128bacc.jpg?crop=620%2C348%2C0%2C32"
     />
   </View>
@@ -95,7 +93,6 @@ exports[`tile bf medium 1`] = `
       "marginVertical": 10,
     }
   }
-  url="/article/123"
 >
   <View
     style={
@@ -161,7 +158,6 @@ exports[`tile bf medium 1`] = `
   >
     <Image
       aspectRatio={1.7777777777777777}
-      fill={true}
       uri="https://www.thetimes.co.uk/imageserver/image/methode%2Ftimes%2Fprod%2Fweb%2Fbin%2Fd3abdbfc-1776-11e6-b4ba-d249b128bacc.jpg?crop=620%2C348%2C0%2C32"
     />
   </View>
@@ -179,7 +175,6 @@ exports[`tile bf wide 1`] = `
       "marginVertical": 10,
     }
   }
-  url="/article/123"
 >
   <View
     style={
@@ -245,7 +240,6 @@ exports[`tile bf wide 1`] = `
   >
     <Image
       aspectRatio={1.7777777777777777}
-      fill={true}
       uri="https://www.thetimes.co.uk/imageserver/image/methode%2Ftimes%2Fprod%2Fweb%2Fbin%2Fd3abdbfc-1776-11e6-b4ba-d249b128bacc.jpg?crop=620%2C348%2C0%2C32"
     />
   </View>
@@ -263,7 +257,6 @@ exports[`tile bf without breakpoint should be like medium 1`] = `
       "marginVertical": 10,
     }
   }
-  url="/article/123"
 >
   <View
     style={
@@ -329,7 +322,6 @@ exports[`tile bf without breakpoint should be like medium 1`] = `
   >
     <Image
       aspectRatio={1.7777777777777777}
-      fill={true}
       uri="https://www.thetimes.co.uk/imageserver/image/methode%2Ftimes%2Fprod%2Fweb%2Fbin%2Fd3abdbfc-1776-11e6-b4ba-d249b128bacc.jpg?crop=620%2C348%2C0%2C32"
     />
   </View>

@@ -42,7 +42,6 @@ exports[`tile aj without breakpoint 1`] = `
   <Image
     aspectRatio={1.5}
     disablePlaceholder={true}
-    fill={true}
     style={
       Object {
         "alignSelf": "flex-end",

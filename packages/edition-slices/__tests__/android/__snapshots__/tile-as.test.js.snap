@@ -9,7 +9,6 @@ exports[`tile as huge 1`] = `
       "paddingVertical": 10,
     }
   }
-  url="/article/123"
 >
   <View
     style={
@@ -21,7 +20,6 @@ exports[`tile as huge 1`] = `
   >
     <Image
       aspectRatio={1.5}
-      fill={true}
       uri="https://www.thetimes.co.uk/imageserver/image/%2Fmethode%2Ftimes%2Fprod%2Fweb%2Fbin%2F5a14c64e-06db-11e9-abe2-4909b2eb0130.jpg?crop=2688%2C1792%2C0%2C0"
     />
   </View>
@@ -106,7 +104,6 @@ exports[`tile as medium 1`] = `
       "paddingVertical": 10,
     }
   }
-  url="/article/123"
 >
   <View
     style={
@@ -118,7 +115,6 @@ exports[`tile as medium 1`] = `
   >
     <Image
       aspectRatio={1.5}
-      fill={true}
       uri="https://www.thetimes.co.uk/imageserver/image/%2Fmethode%2Ftimes%2Fprod%2Fweb%2Fbin%2F5a14c64e-06db-11e9-abe2-4909b2eb0130.jpg?crop=2688%2C1792%2C0%2C0"
     />
   </View>
@@ -203,7 +199,6 @@ exports[`tile as wide 1`] = `
       "paddingVertical": 10,
     }
   }
-  url="/article/123"
 >
   <View
     style={
@@ -215,7 +210,6 @@ exports[`tile as wide 1`] = `
   >
     <Image
       aspectRatio={1.5}
-      fill={true}
       uri="https://www.thetimes.co.uk/imageserver/image/%2Fmethode%2Ftimes%2Fprod%2Fweb%2Fbin%2F5a14c64e-06db-11e9-abe2-4909b2eb0130.jpg?crop=2688%2C1792%2C0%2C0"
     />
   </View>

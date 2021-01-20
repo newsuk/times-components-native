@@ -1,3 +1,3 @@
-import shared from "../shared-stroke.native";
+import shared from "../shared-stroke";
 
 shared();

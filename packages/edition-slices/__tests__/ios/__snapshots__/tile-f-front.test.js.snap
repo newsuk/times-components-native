@@ -10,11 +10,9 @@ Array [
         "paddingRight": 10,
       }
     }
-    url="/article/123"
   >
     <Image
       aspectRatio={1.7777777777777777}
-      fill={true}
       style={
         Object {
           "width": "100%",
@@ -624,11 +622,9 @@ Array [
         "paddingRight": 10,
       }
     }
-    url="/article/123"
   >
     <Image
       aspectRatio={1.7777777777777777}
-      fill={true}
       style={
         Object {
           "width": "100%",
@@ -1238,11 +1234,9 @@ Array [
         "paddingRight": 10,
       }
     }
-    url="/article/123"
   >
     <Image
       aspectRatio={1.7777777777777777}
-      fill={true}
       style={
         Object {
           "width": "100%",
@@ -1852,11 +1846,9 @@ Array [
         "paddingRight": 10,
       }
     }
-    url="/article/123"
   >
     <Image
       aspectRatio={1.7777777777777777}
-      fill={true}
       style={
         Object {
           "marginBottom": 15,
@@ -2467,11 +2459,9 @@ Array [
         "paddingBottom": 0,
       }
     }
-    url="/article/123"
   >
     <Image
       aspectRatio={1.7777777777777777}
-      fill={true}
       style={
         Object {
           "marginBottom": 5,
@@ -3073,11 +3063,9 @@ Array [
         "paddingBottom": 0,
       }
     }
-    url="/article/123"
   >
     <Image
       aspectRatio={1.7777777777777777}
-      fill={true}
       style={
         Object {
           "marginBottom": 10,
@@ -3679,11 +3667,9 @@ Array [
         "paddingBottom": 0,
       }
     }
-    url="/article/123"
   >
     <Image
       aspectRatio={1.7777777777777777}
-      fill={true}
       style={
         Object {
           "marginBottom": 10,
@@ -4285,11 +4271,9 @@ Array [
         "paddingBottom": 0,
       }
     }
-    url="/article/123"
   >
     <Image
       aspectRatio={1.7777777777777777}
-      fill={true}
       style={
         Object {
           "marginBottom": 10,
@@ -4891,11 +4875,9 @@ Array [
         "paddingBottom": 0,
       }
     }
-    url="/article/123"
   >
     <Image
       aspectRatio={1.7777777777777777}
-      fill={true}
       style={
         Object {
           "marginBottom": 10,

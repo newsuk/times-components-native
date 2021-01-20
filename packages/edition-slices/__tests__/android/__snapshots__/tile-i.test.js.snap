@@ -1,12 +1,9 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`tile i without breakpoint 1`] = `
-<Link
-  url="/article/123"
->
+<Link>
   <Image
     aspectRatio={1.7777777777777777}
-    fill={true}
     style={
       Object {
         "width": "100%",

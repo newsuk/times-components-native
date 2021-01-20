@@ -2,7 +2,7 @@ import React from "react";
 import TestRenderer from "react-test-renderer";
 import { iterator } from "@times-components-native/test-utils";
 import { Svg, G, Path, Polygon, Rect } from "../src";
-import "./serializers.native";
+import "./serializers";
 
 export default () => {
   const tests = [

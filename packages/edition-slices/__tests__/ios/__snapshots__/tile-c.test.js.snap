@@ -8,7 +8,6 @@ exports[`tile c without breakpoint 1`] = `
       "padding": 10,
     }
   }
-  url="/article/123"
 >
   <View
     style={
@@ -20,7 +19,6 @@ exports[`tile c without breakpoint 1`] = `
   >
     <Image
       aspectRatio={1.7777777777777777}
-      fill={true}
       uri="https://www.thetimes.co.uk/imageserver/image/methode%2Ftimes%2Fprod%2Fweb%2Fbin%2Fd3abdbfc-1776-11e6-b4ba-d249b128bacc.jpg?crop=620%2C348%2C0%2C32"
     />
   </View>

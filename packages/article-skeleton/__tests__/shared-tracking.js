@@ -1,5 +1,5 @@
 /* eslint-disable global-require */
-import "./mocks.native";
+import "./mocks";
 
 import { FontStorage } from "@times-components-native/typeset";
 import shared from "./shared-tracking.base";

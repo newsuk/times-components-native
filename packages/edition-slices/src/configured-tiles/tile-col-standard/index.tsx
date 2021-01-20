@@ -42,7 +42,6 @@ const TileColStandard: FC<Props> = ({ onPress, tile, breakpoint }) => {
           relativeVerticalOffset={crop.relativeVerticalOffset}
           style={styles.imageContainer}
           uri={crop.url}
-          fill
           hasVideo={hasVideo}
         />
       )}

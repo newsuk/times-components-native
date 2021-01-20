@@ -8,11 +8,9 @@ exports[`tile t without breakpoint 1`] = `
       "padding": 10,
     }
   }
-  url="/article/123"
 >
   <Image
     aspectRatio={1.7777777777777777}
-    fill={true}
     style={
       Object {
         "width": "50%",

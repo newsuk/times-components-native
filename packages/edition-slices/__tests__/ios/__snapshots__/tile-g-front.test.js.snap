@@ -10,11 +10,9 @@ Array [
         "paddingRight": 10,
       }
     }
-    url="/article/123"
   >
     <Image
       aspectRatio={0.8}
-      fill={true}
       style={
         Object {
           "marginBottom": 0,
@@ -615,11 +613,9 @@ Array [
         "paddingRight": 10,
       }
     }
-    url="/article/123"
   >
     <Image
       aspectRatio={0.8}
-      fill={true}
       style={
         Object {
           "marginBottom": 0,
@@ -1220,11 +1216,9 @@ Array [
         "paddingRight": 10,
       }
     }
-    url="/article/123"
   >
     <Image
       aspectRatio={0.8}
-      fill={true}
       style={
         Object {
           "marginBottom": 0,
@@ -1825,11 +1819,9 @@ Array [
         "paddingRight": 10,
       }
     }
-    url="/article/123"
   >
     <Image
       aspectRatio={0.8}
-      fill={true}
       style={
         Object {
           "marginBottom": 0,
@@ -2429,11 +2421,9 @@ Array [
         "paddingLeft": 10,
       }
     }
-    url="/article/123"
   >
     <Image
       aspectRatio={0.8}
-      fill={true}
       style={
         Object {
           "marginBottom": 0,
@@ -3033,11 +3023,9 @@ Array [
         "paddingLeft": 10,
       }
     }
-    url="/article/123"
   >
     <Image
       aspectRatio={0.8}
-      fill={true}
       style={
         Object {
           "marginBottom": 0,
@@ -3637,11 +3625,9 @@ Array [
         "paddingLeft": 10,
       }
     }
-    url="/article/123"
   >
     <Image
       aspectRatio={0.8}
-      fill={true}
       style={
         Object {
           "marginBottom": 0,
@@ -4241,11 +4227,9 @@ Array [
         "paddingLeft": 10,
       }
     }
-    url="/article/123"
   >
     <Image
       aspectRatio={0.8}
-      fill={true}
       style={
         Object {
           "marginBottom": 0,
@@ -4845,11 +4829,9 @@ Array [
         "paddingLeft": 10,
       }
     }
-    url="/article/123"
   >
     <Image
       aspectRatio={0.8}
-      fill={true}
       style={
         Object {
           "marginBottom": 0,

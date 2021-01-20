@@ -9,11 +9,9 @@ exports[`tile ax landscape huge 1`] = `
       "paddingVertical": 15,
     }
   }
-  url="/article/123"
 >
   <Image
     aspectRatio={1.5}
-    fill={true}
     style={
       Object {
         "marginBottom": 10,
@@ -79,11 +77,9 @@ exports[`tile ax landscape medium 1`] = `
       "paddingVertical": 15,
     }
   }
-  url="/article/123"
 >
   <Image
     aspectRatio={1.5}
-    fill={true}
     style={
       Object {
         "marginBottom": 10,
@@ -149,11 +145,9 @@ exports[`tile ax landscape wide 1`] = `
       "paddingVertical": 15,
     }
   }
-  url="/article/123"
 >
   <Image
     aspectRatio={1.5}
-    fill={true}
     style={
       Object {
         "marginBottom": 10,
@@ -219,11 +213,9 @@ exports[`tile ax portrait huge 1`] = `
       "paddingVertical": 15,
     }
   }
-  url="/article/123"
 >
   <Image
     aspectRatio={1.5}
-    fill={true}
     style={
       Object {
         "marginBottom": 10,
@@ -289,11 +281,9 @@ exports[`tile ax portrait medium 1`] = `
       "paddingVertical": 15,
     }
   }
-  url="/article/123"
 >
   <Image
     aspectRatio={1.5}
-    fill={true}
     style={
       Object {
         "marginBottom": 10,
@@ -359,11 +349,9 @@ exports[`tile ax portrait wide 1`] = `
       "paddingVertical": 15,
     }
   }
-  url="/article/123"
 >
   <Image
     aspectRatio={1.5}
-    fill={true}
     style={
       Object {
         "marginBottom": 10,

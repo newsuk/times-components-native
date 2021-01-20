@@ -8,11 +8,9 @@ exports[`tile ac huge 1`] = `
       "padding": 10,
     }
   }
-  url="/article/123"
 >
   <Image
     aspectRatio={1.7777777777777777}
-    fill={true}
     style={
       Object {
         "width": "100%",
@@ -88,11 +86,9 @@ exports[`tile ac medium 1`] = `
       "padding": 10,
     }
   }
-  url="/article/123"
 >
   <Image
     aspectRatio={1.7777777777777777}
-    fill={true}
     style={
       Object {
         "width": "100%",
@@ -168,11 +164,9 @@ exports[`tile ac wide 1`] = `
       "padding": 10,
     }
   }
-  url="/article/123"
 >
   <Image
     aspectRatio={1.7777777777777777}
-    fill={true}
     style={
       Object {
         "width": "100%",
@@ -248,11 +242,9 @@ exports[`tile ac without breakpoint should be like medium 1`] = `
       "padding": 10,
     }
   }
-  url="/article/123"
 >
   <Image
     aspectRatio={1.7777777777777777}
-    fill={true}
     style={
       Object {
         "width": "100%",
