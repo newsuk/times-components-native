@@ -12,6 +12,8 @@ import {
   TileV,
 } from "../../tiles";
 import { ResponsiveSlice } from "../shared";
+import { sectionConfigs } from "@times-components-native/section/src/utils";
+import TileHorizontalA from "../../configured-tiles/Tile-vertical-with-image-bottom";
 
 class LeadTwoNoPicAndTwoVariant2 extends Component {
   constructor(props) {
@@ -47,10 +49,34 @@ class LeadTwoNoPicAndTwoVariant2 extends Component {
       slice: { lead1, lead2, support1, support2 },
     } = this.props;
 
+    const {
+      imageAspectRatios: { ratio45, ratio23 },
+    } = sectionConfigs;
+
     const isLandscape = orientation === "landscape";
 
-    const Support1 = isLandscape ? TileAL : TileB;
     const Support2 = isLandscape ? TileV : TileA;
+    const Support1 = isLandscape ? TileAL : TileB;
+
+    // const renderSupport1 = () => {
+    //   if (isLandscape) {
+    //     return {
+    //       tile: TileAL,
+    //       styles: {
+    //         fontSizes: { huge: 24, wide: 24, medium: 22, small: 22 },
+    //       },
+    //     };
+    //   }
+
+    //   return {
+    //     tile: TileB,
+    //     styles: {
+    //       fontSizes: { huge: 24, wide: 24, medium: 24, small: 24 },
+    //     },
+    //   };
+    // };
+
+    // const { styles } = renderSupport1();
 
     return (
       <LeadTwoNoPicAndTwoVariant2Slice
@@ -73,11 +99,12 @@ class LeadTwoNoPicAndTwoVariant2 extends Component {
           />
         }
         support1={
-          <Support1
+          <TileHorizontalA
             breakpoint={breakpoint}
             onPress={onPress}
             tile={support1}
             tileName="support1"
+            orientation={orientation}
           />
         }
         support2={
@@ -86,6 +113,7 @@ class LeadTwoNoPicAndTwoVariant2 extends Component {
             onPress={onPress}
             tile={support2}
             tileName="support2"
+            imageAspectRatio={isLandscape ? ratio45 : ratio23}
           />
         }
       />

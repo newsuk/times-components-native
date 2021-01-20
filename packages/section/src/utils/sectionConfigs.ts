@@ -1,16 +1,3 @@
-type ImageAspectRatios = "ratio45" | "ratio23" | "ratio169";
-
-type ImageAspectRatiosConfig = Record<
-  ImageAspectRatios,
-  { width: number; height: number }
->;
-
-export const imageAspectRatios: ImageAspectRatiosConfig = {
-  ratio45: { width: 4, height: 5 },
-  ratio23: { width: 2, height: 3 },
-  ratio169: { width: 16, height: 9 },
-};
-
 export const sectionTitles = {
   front: "Front",
   news: "News",

@@ -1,4 +1,5 @@
 import { TileConfig } from "@times-components-native/types";
+import { imageAspectRatios } from "./sectionConfigs";
 
 interface Slice {
   support: {
@@ -24,7 +25,27 @@ const leadOneAndOneNewsTransform = {
   }),
 };
 
-const sliceTransformations: TransformSlice[] = [leadOneAndOneNewsTransform];
+const leadTwoNoPicAndTwoVariant2SportTransform = {
+  sectionTitle: "sport",
+  name: "LeadTwoNoPicAndTwoSlice",
+  transform: (slice: Slice) => ({
+    ...slice,
+    support1: {
+      ...slice.support1,
+      config: {
+        summary: { length: 800 },
+        wide: { image: { ratio: "3:2", orientation: "landscape" } },
+        huge: { image: { ratio: "3:2", orientation: "landscape" } },
+        medium: {},
+      },
+    },
+  }),
+};
+
+const sliceTransformations: TransformSlice[] = [
+  leadOneAndOneNewsTransform,
+  leadTwoNoPicAndTwoVariant2SportTransform,
+];
 
 export const transformSlice = (isTablet: boolean, sectionTitle: string) => (
   slice: Slice,
