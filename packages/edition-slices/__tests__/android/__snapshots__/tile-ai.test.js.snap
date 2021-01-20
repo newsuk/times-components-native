@@ -12,7 +12,6 @@ exports[`tile ai huge 1`] = `
 >
   <Image
     aspectRatio={1.5}
-    fill={true}
     style={
       Object {
         "width": "100%",
@@ -35,7 +34,6 @@ exports[`tile ai medium 1`] = `
 >
   <Image
     aspectRatio={1.5}
-    fill={true}
     style={
       Object {
         "width": "100%",
@@ -58,7 +56,6 @@ exports[`tile ai wide 1`] = `
 >
   <Image
     aspectRatio={1.5}
-    fill={true}
     style={
       Object {
         "width": "100%",
@@ -81,7 +78,6 @@ exports[`tile ai without breakpoint should be like medium 1`] = `
 >
   <Image
     aspectRatio={1.5}
-    fill={true}
     style={
       Object {
         "width": "100%",

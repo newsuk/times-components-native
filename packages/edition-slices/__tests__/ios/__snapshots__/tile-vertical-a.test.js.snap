@@ -186,7 +186,6 @@ exports[`tile vertical a shows an image 1`] = `
 >
   <Image
     aspectRatio={1.5}
-    fill={true}
     style={
       Object {
         "marginBottom": 10,

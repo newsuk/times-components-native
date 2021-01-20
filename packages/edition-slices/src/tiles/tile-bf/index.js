@@ -42,7 +42,6 @@ const TileBF = ({ onPress, tile, breakpoint = editionBreakpoints.medium }) => {
           relativeHorizontalOffset={crop.relativeHorizontalOffset}
           relativeVerticalOffset={crop.relativeVerticalOffset}
           uri={crop.url}
-          fill
           hasVideo={hasVideo}
         />
       </View>

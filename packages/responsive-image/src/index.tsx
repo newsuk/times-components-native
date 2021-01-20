@@ -20,7 +20,7 @@ import findClosestWidth from "./utils/findClosestWidth";
 import styles from "./styles";
 import { Placeholder } from "@times-components-native/image";
 
-interface ResponsiveImageProps {
+export interface ResponsiveImageProps {
   readonly aspectRatio?: number;
   readonly onImagePress?: () => void;
   readonly caption?: JSX.Element;

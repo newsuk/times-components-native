@@ -33,7 +33,6 @@ const TileAR = ({ onPress, tile, breakpoint = editionBreakpoints.medium }) => {
         <TileImage
           aspectRatio={16 / 9}
           uri={crop.url}
-          fill
           relativeWidth={crop.relativeWidth}
           relativeHeight={crop.relativeHeight}
           relativeHorizontalOffset={crop.relativeHorizontalOffset}
