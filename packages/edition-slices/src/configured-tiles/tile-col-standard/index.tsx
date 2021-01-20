@@ -22,20 +22,21 @@ interface Props {
 }
 
 const TileColStandard: FC<Props> = ({ onPress, tile, breakpoint }) => {
-  const styles = styleFactory(breakpoint);
-
   const {
     article: { hasVideo },
+    config,
   } = tile;
 
+  const styles = styleFactory(config, breakpoint);
+
   const crop =
-    tile.config?.image &&
-    getTileImage(tile, getCropByRatio(tile.config?.image?.ratio));
+    config?.image && getTileImage(tile, getCropByRatio(config?.image?.ratio));
+
   return (
     <TileLink onPress={onPress} style={styles.container} tile={tile}>
-      {crop && tile.config?.image && (
+      {crop && config?.image && (
         <TileImage
-          aspectRatio={getAspectRatio(tile.config?.image?.ratio)}
+          aspectRatio={getAspectRatio(config?.image?.ratio)}
           relativeWidth={crop.relativeWidth}
           relativeHeight={crop.relativeHeight}
           relativeHorizontalOffset={crop.relativeHorizontalOffset}
@@ -51,16 +52,14 @@ const TileColStandard: FC<Props> = ({ onPress, tile, breakpoint }) => {
             headlineStyle={[
               styles.headline,
               {
-                fontSize: tile.config?.headline?.fontSize,
-                lineHeight: tile.config?.headline?.fontSize,
+                fontSize: config?.headline?.fontSize,
+                lineHeight: config?.headline?.fontSize,
               },
             ]}
-            summary={
-              tile.config?.summary
-                ? getTileSummary(tile, tile.config?.summary?.length)
-                : {}
-            }
-            summaryStyle={styles.summary}
+            {...(config?.summary && {
+              summary: getTileSummary(tile, config?.summary.length),
+              summaryStyle: styles.summary,
+            })}
             tile={tile}
             whiteSpaceHeight={whiteSpaceHeight}
             withStar={false}

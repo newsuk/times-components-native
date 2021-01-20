@@ -4,6 +4,7 @@ import {
   editionBreakpoints,
   globalSpacingStyles,
 } from "@times-components-native/styleguide";
+import { TileConfig } from "@times-components-native/types";
 
 const fontSizeResolver: Record<string, number> = {
   [editionBreakpoints.medium]: 20,
@@ -11,7 +12,7 @@ const fontSizeResolver: Record<string, number> = {
   [editionBreakpoints.huge]: 22,
 };
 
-export default (breakpoint: string) => ({
+export default (config: TileConfig, breakpoint: string) => ({
   container: {
     flex: 1,
     paddingVertical: spacing(3),
@@ -23,8 +24,8 @@ export default (breakpoint: string) => ({
   headline: {
     ...globalSpacingStyles.tabletHeadline,
     fontFamily: fonts.headline,
-    fontSize: fontSizeResolver[breakpoint],
-    lineHeight: fontSizeResolver[breakpoint],
+    fontSize: config?.headline?.fontSize ?? fontSizeResolver[breakpoint],
+    lineHeight: config?.headline?.fontSize ?? fontSizeResolver[breakpoint],
   },
   summary: {
     ...globalSpacingStyles.tabletTeaser,
