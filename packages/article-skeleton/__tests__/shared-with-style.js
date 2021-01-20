@@ -8,7 +8,7 @@ import {
   minimaliseTransform,
   minimalNativeTransform,
 } from "@times-components-native/jest-serializer";
-import "./mocks.native";
+import "./mocks";
 import { FontStorage } from "@times-components-native/typeset";
 import articleFixture from "../fixtures/full-article";
 import shared, { renderArticle, fixtureArgs } from "./shared.base";

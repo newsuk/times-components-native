@@ -8,7 +8,7 @@ import {
   minimaliseTransform,
   minimalNativeTransform,
 } from "@times-components-native/jest-serializer";
-import "./mocks.native";
+import "./mocks";
 import { iterator } from "@times-components-native/test-utils";
 
 import ArticleCommentTablet from "../src/article-comment-tablet";

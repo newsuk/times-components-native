@@ -1,3 +1,3 @@
-import shared from "../s1andc.native";
+import shared from "../s1andc";
 
 shared();

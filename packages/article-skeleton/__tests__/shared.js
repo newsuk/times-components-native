@@ -12,7 +12,7 @@ import {
   minimalNativeTransform,
 } from "@times-components-native/jest-serializer";
 import { TextLink } from "@times-components-native/link";
-import "./mocks.native";
+import "./mocks";
 import { FontStorage } from "@times-components-native/typeset";
 import shared from "./shared.base";
 import ArticleSkeleton from "../src/article-skeleton";

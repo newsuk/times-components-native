@@ -8,7 +8,7 @@ import {
 } from "@times-components-native/jest-serializer";
 import { hash } from "@times-components-native/test-utils";
 import { omitNative as omitProps } from "./utils";
-import shared from "./shared-error.base.native";
+import shared from "./shared-error.base";
 
 export default () => {
   addSerializers(

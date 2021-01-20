@@ -9,7 +9,7 @@ import {
   minimalNativeTransform,
 } from "@times-components-native/jest-serializer";
 import { iterator } from "@times-components-native/test-utils";
-import "./mocks.native";
+import "./mocks";
 import { FontStorage } from "@times-components-native/typeset";
 import snapshotTests from "./scaling.base";
 

@@ -6,7 +6,7 @@ import {
   minimaliseTransform,
   minimalNativeTransform,
 } from "@times-components-native/jest-serializer";
-import "./mocks.native";
+import "./mocks";
 import shared from "./shared-internal-components.base";
 
 const omitKeys = new Set([

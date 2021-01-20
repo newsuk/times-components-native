@@ -8,7 +8,7 @@ import {
   minimalNativeTransform,
   print,
 } from "@times-components-native/jest-serializer";
-import "./mocks.native";
+import "./mocks";
 import ArticleMainComment from "../src/article-main-comment";
 import articleFixture, { testFixture } from "../fixtures/full-article";
 import sharedProps from "./shared-props";

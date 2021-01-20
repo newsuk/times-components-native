@@ -8,7 +8,7 @@ import {
   minimaliseTransform,
   minimalNativeTransform,
 } from "@times-components-native/jest-serializer";
-import "./mocks.native";
+import "./mocks";
 import {
   iterator,
   withTabletContext,

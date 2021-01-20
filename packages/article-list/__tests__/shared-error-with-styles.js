@@ -6,7 +6,7 @@ import {
   minimalNativeTransform,
   print,
 } from "@times-components-native/jest-serializer";
-import shared from "./shared-error.base.native";
+import shared from "./shared-error.base";
 
 export default () => {
   addSerializers(

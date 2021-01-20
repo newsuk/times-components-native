@@ -7,7 +7,7 @@ import {
   print,
 } from "@times-components-native/jest-serializer";
 import TestRenderer from "react-test-renderer";
-import "./mocks.native.js";
+import "./mocks.js";
 import shared from "./shared.base";
 
 export default () => {

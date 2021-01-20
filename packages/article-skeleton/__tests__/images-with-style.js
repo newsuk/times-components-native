@@ -6,7 +6,7 @@ import {
   minimaliseTransform,
   print,
 } from "@times-components-native/jest-serializer";
-import "./mocks.native";
+import "./mocks";
 import { FontStorage } from "@times-components-native/typeset";
 import shared from "./images.base";
 

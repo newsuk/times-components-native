@@ -13,7 +13,7 @@ import ArticleSummaryHeadline from "@times-components-native/article-summary";
 import { omitNative as omitProps } from "./utils";
 import ArticleList from "../src/article-list";
 import articlesFixture from "../fixtures/articles.json";
-import shared from "./shared.base.native";
+import shared from "./shared.base";
 
 export default () => {
   addSerializers(

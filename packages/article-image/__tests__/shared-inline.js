@@ -1,4 +1,4 @@
-import "./mocks.native";
+import "./mocks";
 import React from "react";
 import {
   addSerializers,
