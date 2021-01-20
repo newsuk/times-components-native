@@ -5,7 +5,7 @@ export interface HeadlineConfig {
 }
 
 export interface ImageConfig {
-  ratio: "16:9" | "3:2" | "4:5" | "2:3";
+  ratio: "16:9" | "3:2" | "4:5" | "2:3" | string;
 }
 
 export interface SummaryConfig {
