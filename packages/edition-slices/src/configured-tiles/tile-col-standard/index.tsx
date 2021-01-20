@@ -12,22 +12,25 @@ import styleFactory from "./styles";
 import WithoutWhiteSpace from "../../tiles/shared/without-white-space";
 import PositionedTileStar from "../../tiles/shared/positioned-tile-star";
 import { ConfiguredTile, OnArticlePress } from "@times-components-native/types";
-import getCropByRatio from "../../utils/getCropByRatio";
-import getAspectRatio from "../../utils/getAspectRatio";
+import { getCropByRatio } from "../../utils/getCropByRatio";
+import { getAspectRatio } from "../../utils/getAspectRatio";
+
 interface Props {
   onPress: OnArticlePress;
   tile: ConfiguredTile;
   breakpoint: string;
 }
 
-const TileVerticalA: FC<Props> = ({ onPress, tile, breakpoint }) => {
+const TileColStandard: FC<Props> = ({ onPress, tile, breakpoint }) => {
   const styles = styleFactory(breakpoint);
 
   const {
     article: { hasVideo },
   } = tile;
 
-  const crop = getTileImage(tile, getCropByRatio(tile.config?.image?.ratio));
+  const crop =
+    tile.config?.image &&
+    getTileImage(tile, getCropByRatio(tile.config?.image?.ratio));
   return (
     <TileLink onPress={onPress} style={styles.container} tile={tile}>
       {crop && tile.config?.image && (
@@ -46,7 +49,13 @@ const TileVerticalA: FC<Props> = ({ onPress, tile, breakpoint }) => {
       <WithoutWhiteSpace
         render={(whiteSpaceHeight: number) => (
           <TileSummary
-            headlineStyle={styles.headline}
+            headlineStyle={[
+              styles.headline,
+              {
+                fontSize: tile.config?.headline?.fontSize,
+                lineHeight: tile.config?.headline?.fontSize,
+              },
+            ]}
             summary={
               tile.config?.summary
                 ? getTileSummary(tile, tile.config?.summary?.length)
@@ -64,4 +73,4 @@ const TileVerticalA: FC<Props> = ({ onPress, tile, breakpoint }) => {
   );
 };
 
-export default withTileTracking(TileVerticalA);
+export default withTileTracking(TileColStandard);

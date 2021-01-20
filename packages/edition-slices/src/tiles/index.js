@@ -56,4 +56,4 @@ export { default as TileHFront } from "./tile-h-front";
 export { default as TileAFront } from "./tile-a-front";
 export { default as TileBFront } from "./tile-b-front";
 export { default as TileFFront } from "./tile-f-front";
-export { default as TileVerticalA } from "../configured-tiles/tile-vertical-a";
+export { default as TileVerticalA } from "../configured-tiles/tile-col-standard";

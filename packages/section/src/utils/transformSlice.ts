@@ -23,6 +23,7 @@ const leadOneAndOneNewsTransform = {
     support: {
       ...slice.support,
       config: {
+        ...slice.support.config,
         summary: { length: 800 },
         image: {
           ratio: "3:2",
@@ -35,19 +36,32 @@ const leadOneAndOneNewsTransform = {
 const leadOneAndOneRegisterTransform = {
   sectionTitle: "Register",
   name: "LeadOneAndOneSlice",
-  transform: (slice: Slice) => ({
-    ...slice,
-    lead: { ...slice.lead, config: { summary: { length: 800 }, image: true } },
-    support: {
-      ...slice.support,
-      config: {
-        summary: { length: 800 },
-        image: {
-          ratio: "3:2",
+  transform: (slice: Slice) => {
+    console.log("###### SLICE 1", slice.lead.config);
+    return {
+      ...slice,
+      lead: {
+        ...slice.lead,
+        config: {
+          ...slice.lead.config,
+          image: {
+            ratio: "16:9",
+          },
+          summary: { length: 800 },
         },
       },
-    },
-  }),
+      support: {
+        ...slice.support,
+        config: {
+          ...slice.support.config,
+          image: {
+            ratio: "3:2",
+          },
+          summary: { length: 800 },
+        },
+      },
+    };
+  },
 };
 
 const sliceTransformations: TransformSlice[] = [
