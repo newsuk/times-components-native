@@ -1,3 +1,3 @@
-import shared from "../tile-ay/shared-tile-ay.native";
+import shared from "../tile-ay/shared-tile-ay";
 
 shared();

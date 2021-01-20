@@ -1,3 +1,3 @@
-import shared from "../modal-shared-with-style.native";
+import shared from "../modal-shared-with-style";
 
 shared();

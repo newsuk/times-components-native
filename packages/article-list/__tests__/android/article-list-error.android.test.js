@@ -1,3 +1,3 @@
-import shared from "../shared-error.native";
+import shared from "../shared-error";
 
 shared();

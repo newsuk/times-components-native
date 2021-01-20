@@ -1,3 +1,3 @@
-import shared from "../shared-error-with-styles.native";
+import shared from "../shared-error-with-styles";
 
 shared();

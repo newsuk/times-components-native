@@ -1,3 +1,3 @@
-import shared from "../shared-slices.native";
+import shared from "../shared-slices";
 
 shared();

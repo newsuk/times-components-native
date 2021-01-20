@@ -1,3 +1,3 @@
-import shared from "../tablet-with-style.native";
+import shared from "../tablet-with-style";
 
 shared();

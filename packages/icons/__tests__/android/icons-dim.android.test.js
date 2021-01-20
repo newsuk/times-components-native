@@ -1,3 +1,3 @@
-import shared from "../shared-dim.native";
+import shared from "../shared-dim";
 
 shared();
