@@ -40,17 +40,7 @@ class LeadOneAndOne extends Component {
           <TileVerticalA
             breakpoint={breakpoint}
             onPress={onPress}
-            tile={{
-              ...lead,
-              config: {
-                image: {
-                  ratio: "16:9",
-                },
-                headline: {
-                  fontSize: 40,
-                },
-              },
-            }}
+            tile={lead}
             tileName="lead"
           />
         }
@@ -58,17 +48,7 @@ class LeadOneAndOne extends Component {
           <TileVerticalA
             breakpoint={breakpoint}
             onPress={onPress}
-            tile={{
-              ...support,
-              config: {
-                headline: {
-                  fontSize: 20,
-                },
-                summary: {
-                  length: 800,
-                },
-              },
-            }}
+            tile={support}
             tileName="support"
           />
         }
