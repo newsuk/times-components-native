@@ -1,3 +1,3 @@
-import shared from "../ad-with-style.native";
+import shared from "../ad-with-style";
 
 shared();

@@ -20,7 +20,7 @@ import { ResponsiveContext } from "@times-components-native/responsive";
 import PositionedTileStar from "./positioned-tile-star";
 
 interface Props {
-  bylines: BylineInput[];
+  bylines?: BylineInput[];
   bylineStyle?: StyleProp<ViewStyle>;
   flagColour?: any;
   flagsStyle?: StyleProp<ViewStyle>;

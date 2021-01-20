@@ -32,7 +32,6 @@ exports[`1. modal image 1`] = `
         </View>
       </RCTSafeAreaView>
       <ImageZoomView
-        captureEvent={true}
         enablePreload={true}
         enableSwipeDown={true}
         imageUrls={
@@ -42,6 +41,7 @@ exports[`1. modal image 1`] = `
             },
           ]
         }
+        useNativeDriver={true}
       />
       <View>
         <ARTSurfaceView>
@@ -110,9 +110,7 @@ exports[`1. modal image 1`] = `
           pointerEvents="box-none"
         >
           <View>
-            <Text>
-              Caption
-            </Text>
+            <View />
           </View>
         </View>
       </View>
@@ -182,7 +180,6 @@ exports[`2. modal image with no caption 1`] = `
         </View>
       </RCTSafeAreaView>
       <ImageZoomView
-        captureEvent={true}
         enablePreload={true}
         enableSwipeDown={true}
         imageUrls={
@@ -192,6 +189,7 @@ exports[`2. modal image with no caption 1`] = `
             },
           ]
         }
+        useNativeDriver={true}
       />
       <View>
         <ARTSurfaceView>
@@ -313,7 +311,6 @@ exports[`3. modal image with custom highressize 1`] = `
         </View>
       </RCTSafeAreaView>
       <ImageZoomView
-        captureEvent={true}
         enablePreload={true}
         enableSwipeDown={true}
         imageUrls={
@@ -323,6 +320,7 @@ exports[`3. modal image with custom highressize 1`] = `
             },
           ]
         }
+        useNativeDriver={true}
       />
       <View>
         <ARTSurfaceView>
@@ -391,9 +389,7 @@ exports[`3. modal image with custom highressize 1`] = `
           pointerEvents="box-none"
         >
           <View>
-            <Text>
-              Caption
-            </Text>
+            <View />
           </View>
         </View>
       </View>

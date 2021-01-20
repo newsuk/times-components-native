@@ -11,7 +11,6 @@ exports[`tile ah huge 1`] = `
       "paddingRight": 15,
     }
   }
-  url="/article/123"
 >
   <Image
     aspectRatio={1}
@@ -141,7 +140,6 @@ exports[`tile ah medium 1`] = `
       "paddingRight": 10,
     }
   }
-  url="/article/123"
 >
   <Image
     aspectRatio={1}
@@ -271,7 +269,6 @@ exports[`tile ah wide 1`] = `
       "paddingRight": 15,
     }
   }
-  url="/article/123"
 >
   <Image
     aspectRatio={1}
@@ -401,7 +398,6 @@ exports[`tile ah without breakpoint should be like medium 1`] = `
       "paddingRight": 10,
     }
   }
-  url="/article/123"
 >
   <Image
     aspectRatio={1}

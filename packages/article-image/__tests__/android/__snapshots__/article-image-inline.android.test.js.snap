@@ -26,10 +26,10 @@ exports[`1. inline image (landscape) with caption and credits 1`] = `
     <ModalImage
       aspectRatio={1.5}
       caption={
-        <Caption
-          credits="Landscape credits"
-          text="Landscape caption"
-        />
+        Object {
+          "credits": "Landscape credits",
+          "text": "Landscape caption",
+        }
       }
       onImagePress={null}
       uri="https://img/someImage"
@@ -109,10 +109,10 @@ exports[`2. inline image (portrait) with caption and credits 1`] = `
     <ModalImage
       aspectRatio={0.6666666666666666}
       caption={
-        <Caption
-          credits="Portrait credits"
-          text="Portrait caption"
-        />
+        Object {
+          "credits": "Portrait credits",
+          "text": "Portrait caption",
+        }
       }
       onImagePress={null}
       uri="https://img/someImage"

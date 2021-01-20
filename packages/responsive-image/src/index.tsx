@@ -2,10 +2,16 @@ import * as React from "react";
 import {
   Image,
   ImageBackground,
+  ImageBackgroundProps,
+  ImageErrorEventData,
+  ImageProps,
   ImageSourcePropType,
   ImageStyle,
+  NativeSyntheticEvent,
   PixelRatio,
+  StyleProp,
   View,
+  ViewProps,
 } from "react-native";
 import Url from "url-parse";
 import logoPath from "../assets/t.png";
@@ -25,21 +31,20 @@ interface ResponsiveImageProps {
   readonly relativeWidth?: number;
   readonly resizeMode?: ImageStyle["resizeMode"];
   readonly rounded?: boolean;
-  readonly style?: any;
-  readonly onLayout?: (ev: any) => void;
-  readonly onError?: () => void;
-  readonly disablePlaceholder?: boolean;
+  readonly style?: StyleProp<ViewProps>;
+  readonly onLayout?: ImageBackgroundProps["onLayout"];
+  readonly onError?: ImageProps["onError"];
 }
 
 interface ElementProps {
   readonly source: ImageSourcePropType;
-  readonly onLoadEnd?: () => void;
-  readonly onLoad?: () => void;
+  readonly onLoadEnd?: ImageProps["onLoadEnd"];
+  readonly onLoad?: ImageProps["onLoad"];
   readonly aspectRatio?: ResponsiveImageProps["aspectRatio"];
   readonly borderRadius: number;
   readonly resize: ImageStyle["resizeMode"];
   readonly fadeDuration: number;
-  readonly onError?: () => void;
+  readonly onError?: ImageProps["onError"];
 }
 
 const ImageElement = ({
@@ -73,7 +78,7 @@ const ResponsiveImage = (props: ResponsiveImageProps) => {
   const {
     uri,
     aspectRatio,
-    style: propStyle,
+    style: propStyle = {},
     relativeHeight = 1,
     relativeHorizontalOffset = 0,
     relativeVerticalOffset = 0,
@@ -166,12 +171,14 @@ const ResponsiveImage = (props: ResponsiveImageProps) => {
           borderRadius,
           resizeMode: "center",
         }}
-        style={{
-          ...styles.style,
-          ...propStyle,
-          aspectRatio,
-          borderRadius,
-        }}
+        style={[
+          styles.style,
+          propStyle,
+          {
+            aspectRatio,
+            borderRadius,
+          },
+        ]}
       />
     );
   }
@@ -189,13 +196,13 @@ const ResponsiveImage = (props: ResponsiveImageProps) => {
       onLoad={() => {
         setShowOffline(false);
       }}
-      onError={() => {
+      onError={(error) => {
         setShowOnline(false);
         setShowOffline(true);
         setShowPlaceholder(true);
         setFailed(true);
         if (onError) {
-          onError();
+          onError(error);
         }
       }}
       resize={resize}
@@ -212,9 +219,9 @@ const ResponsiveImage = (props: ResponsiveImageProps) => {
         setShowOnline(true);
         setShowPlaceholder(false);
       }}
-      onError={() => {
+      onError={(error: NativeSyntheticEvent<ImageErrorEventData>) => {
         if (onError) {
-          onError();
+          onError(error);
         }
         setShowOnline(false);
         setShowOffline(false);
@@ -242,7 +249,7 @@ const ResponsiveImage = (props: ResponsiveImageProps) => {
   );
 
   return (
-    <View style={{ ...styles.style, ...propStyle, aspectRatio, borderRadius }}>
+    <View style={[styles.style, propStyle, { aspectRatio, borderRadius }]}>
       {placeholder}
       {lowRes}
       {highRes}

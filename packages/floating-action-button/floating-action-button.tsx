@@ -4,7 +4,7 @@ import styles, { buttonHeight } from "./styles";
 
 interface Props {
   animatedWidth?: Animated.Value;
-  icon?: ComponentType;
+  icon?: ComponentType | Element;
   extendedWidth: number;
   text: string;
   onPress: () => void;

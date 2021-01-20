@@ -1,3 +1,3 @@
-import shared from "../shared-states.native";
+import shared from "../shared-states";
 
 shared();

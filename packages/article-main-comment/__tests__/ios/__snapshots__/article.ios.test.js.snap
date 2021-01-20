@@ -10,6 +10,15 @@ exports[`3. an article with no headline falls back to use shortheadline 1`] = `
     <View>
       <ModalImage
         aspectRatio={1}
+        imageStyles={
+          Object {
+            "borderRadius": 50,
+            "height": 100,
+            "marginBottom": 15,
+            "overflow": "hidden",
+            "width": 100,
+          }
+        }
         isSmallImage={true}
         rounded={true}
         uri="https://image.io"
@@ -71,6 +80,15 @@ exports[`4. an article with ads 1`] = `
     <View>
       <ModalImage
         aspectRatio={1}
+        imageStyles={
+          Object {
+            "borderRadius": 50,
+            "height": 100,
+            "marginBottom": 15,
+            "overflow": "hidden",
+            "width": 100,
+          }
+        }
         isSmallImage={true}
         rounded={true}
         uri="https://image.io"

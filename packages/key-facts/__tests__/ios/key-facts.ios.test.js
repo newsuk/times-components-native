@@ -1,3 +1,3 @@
-import shared from "../shared-key-facts.native";
+import shared from "../shared-key-facts";
 
 shared();

@@ -1,3 +1,3 @@
-import shared from "../shared-inline.native";
+import shared from "../shared-inline";
 
 shared();

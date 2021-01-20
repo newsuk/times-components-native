@@ -1,3 +1,3 @@
-import shared from "../clac.native";
+import shared from "../clac";
 
 shared();

@@ -20,17 +20,7 @@ exports[`phone full article with style 1`] = `
         }
       }
     >
-      <ModalImage
-        style={
-          Object {
-            "borderRadius": 50,
-            "height": 100,
-            "marginBottom": 15,
-            "overflow": "hidden",
-            "width": 100,
-          }
-        }
-      />
+      <ModalImage />
       <View
         style={
           Object {
@@ -146,17 +136,7 @@ exports[`tablet full article with style 1`] = `
         }
       }
     >
-      <ModalImage
-        style={
-          Object {
-            "borderRadius": 50,
-            "height": 100,
-            "marginBottom": 15,
-            "overflow": "hidden",
-            "width": 100,
-          }
-        }
-      />
+      <ModalImage />
       <View
         style={
           Object {

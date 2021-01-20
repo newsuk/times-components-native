@@ -9,7 +9,6 @@ exports[`tile u with headline style 1`] = `
       "paddingVertical": 15,
     }
   }
-  url="/article/123"
 >
   <Image
     aspectRatio={1.7777777777777777}
@@ -80,7 +79,6 @@ exports[`tile u without breakpoint 1`] = `
       "paddingVertical": 15,
     }
   }
-  url="/article/123"
 >
   <Image
     aspectRatio={1.7777777777777777}
