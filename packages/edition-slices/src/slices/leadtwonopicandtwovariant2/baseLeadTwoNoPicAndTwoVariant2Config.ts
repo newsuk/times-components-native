@@ -1,14 +1,13 @@
 export const baseLeadTwoNoPicAndTwoVariant2Config = {
   support1: {
     config: {
-      base: {
-        summary: { length: 800 },
-      },
       wide: {
+        summary: { length: 800 },
         showImage: true,
         image: { ratio: "3:2", orientation: "landscape" },
       },
       huge: {
+        summary: { length: 800 },
         showImage: true,
         image: { ratio: "3:2", orientation: "landscape" },
       },
@@ -17,9 +16,10 @@ export const baseLeadTwoNoPicAndTwoVariant2Config = {
   },
   support2: {
     config: {
-      image: { ratio: "2:3", orientation: "portrait" },
-      showImage: true,
-      wide: {},
+      wide: {
+        image: { ratio: "2:3", orientation: "portrait" },
+        showImage: true,
+      },
       huge: {
         showImage: true,
         image: { ratio: "4:5", orientation: "landscape" },

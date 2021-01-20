@@ -46,10 +46,8 @@ class LeadTwoNoPicAndTwoVariant2 extends Component {
   renderMedium(breakpoint, orientation) {
     const {
       onPress,
-      slice: { lead1, lead2, support1, support2, config },
+      slice: { lead1, lead2, support1, support2 },
     } = this.props;
-
-    // console.log(config, "ddiodidi");
 
     const isLandscape = orientation === "landscape";
 
@@ -94,9 +92,6 @@ class LeadTwoNoPicAndTwoVariant2 extends Component {
             tile={support2}
             tileName="support2"
             orientation={orientation}
-            imageAspectRatio={
-              isLandscape ? { width: 4, height: 5 } : { width: 2, height: 3 }
-            }
           />
         }
       />
