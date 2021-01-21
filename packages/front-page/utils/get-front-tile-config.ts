@@ -22,6 +22,19 @@ interface SummaryConfig {
   };
 }
 
+function isLastItem(items: any[], item: string) {
+  const pos = items.indexOf(item);
+
+  if (pos < 0) return true;
+
+  return pos === items.length - 1;
+}
+
+function getNumberOfLines(heightAvailable: number, lineHeight: number) {
+  if (heightAvailable < 0) return 0;
+  return Math.floor(heightAvailable / lineHeight);
+}
+
 export const getFrontTileConfig = (summaryConfig: SummaryConfig) => {
   const { container, headline, strapline, bylines, content } = summaryConfig;
 
@@ -61,50 +74,42 @@ export const getFrontTileConfig = (summaryConfig: SummaryConfig) => {
   const shouldShowContentInsteadOfByline =
     !canAccommodateContentWithByline && canAccommodateContentWithoutByline;
 
+  const itemsToRender = [
+    "headline",
+    strapline.height > 0 && canAccommodateStrapline && "strapline",
+    bylines.height > 0 &&
+      canAccommodateByline &&
+      !shouldShowContentInsteadOfByline &&
+      "byline",
+    (canAccommodateContentWithByline || canAccommodateContentWithoutByline) &&
+      "content",
+  ].filter(Boolean);
+
   return {
     headline: {
       show: true,
-      marginBottom:
-        canAccommodateStrapline ||
-        canAccommodateByline ||
-        canAccommodateContentWithoutByline
-          ? headlineMargin
-          : 0,
+      marginBottom: isLastItem(itemsToRender, "headline") ? 0 : headlineMargin,
     },
     strapline: {
-      show: strapline.height > 0 && canAccommodateStrapline,
-      marginBottom:
-        canAccommodateByline || canAccommodateContentWithoutByline
-          ? strapline.marginBottom
-          : 0,
+      show: itemsToRender.includes("strapline"),
+      marginBottom: isLastItem(itemsToRender, "strapline")
+        ? 0
+        : strapline.marginBottom,
     },
     byline: {
-      show:
-        bylines.height > 0 &&
-        !shouldShowContentInsteadOfByline &&
-        canAccommodateByline,
-      marginBottom: canAccommodateContentWithByline ? bylines.marginBottom : 0,
+      show: itemsToRender.includes("byline"),
+      marginBottom: isLastItem(itemsToRender, "byline")
+        ? 0
+        : bylines.marginBottom,
     },
-    content: canAccommodateContentWithByline
-      ? {
-          show: true,
-          marginBottom: 0,
-          numberOfLines: Math.floor(
-            heightForContentWithByline / content.lineHeight,
-          ),
-        }
-      : canAccommodateContentWithoutByline
-      ? {
-          show: true,
-          marginBottom: 0,
-          numberOfLines: Math.floor(
-            heightForContentWithoutByline / content.lineHeight,
-          ),
-        }
-      : {
-          show: false,
-          marginBottom: 0,
-          numberOfLines: 0,
-        },
+    content: {
+      show: itemsToRender.includes("content"),
+      marginBottom: 0,
+      numberOfLines: canAccommodateContentWithByline
+        ? getNumberOfLines(heightForContentWithByline, content.lineHeight)
+        : canAccommodateContentWithoutByline
+        ? getNumberOfLines(heightForContentWithoutByline, content.lineHeight)
+        : 0,
+    },
   };
 };
