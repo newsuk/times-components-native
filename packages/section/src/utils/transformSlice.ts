@@ -32,14 +32,19 @@ interface TransformSlice {
   overrides: Slice;
 }
 
-const leadOneAndOneNewsTransform = {
+const leadOneAndOneNewsTransform: TransformSlice = {
   sectionTitle: "News",
   name: "LeadOneAndOneSlice",
-  ovverrides: {
+  overrides: {
     support: {
-      summary: { length: 800 },
-      image: {
-        ratio: "3:2",
+      config: {
+        huge: {
+          summary: { length: 800 },
+          image: {
+            ratio: "3:2",
+            orientation: "portrait",
+          },
+        },
       },
     },
   },
