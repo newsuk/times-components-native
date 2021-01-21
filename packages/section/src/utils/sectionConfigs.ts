@@ -1,3 +1,4 @@
+// These are the known daily section titles. However, editorial can add any titles through the methode cms and it will filter through to the app  (i.e. Rich List/Travel/etc)
 export const sectionTitles = {
   front: "Front",
   news: "News",

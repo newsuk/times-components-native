@@ -2,6 +2,7 @@ import { Tile } from "@times-components-native/fixture-generator/src/types";
 
 export interface TileConfig {
   showImage?: boolean;
+  [key: string]: string;
 }
 
 export interface ConfiguredTile extends Tile {

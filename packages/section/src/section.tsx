@@ -33,7 +33,7 @@ interface Props {
   section: {
     title: sectionConfigs.SectionTitles;
     cover: any;
-    name: any;
+    name: string;
     slices: any;
   };
 }
@@ -132,10 +132,7 @@ const Section: React.FC<Props> = ({
       (slice: any) => slice.name !== "InTheNewsSlice",
     );
 
-    return renderItem(
-      false,
-      sectionTitle,
-    )({
+    return renderItem(false)({
       index: 0,
       item: frontSlice || {},
       inTodaysEditionSlice: inTheNewsSlice || {},
