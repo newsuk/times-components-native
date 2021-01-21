@@ -9,12 +9,8 @@ import {
 } from "../shared";
 import styles from "./styles";
 
-const TileA = ({
-  onPress,
-  tile,
-  imageAspectRatio: { width = 16, height = 9 },
-}) => {
-  const crop = getTileImage(tile, `crop${width}${height}`);
+const TileA = ({ onPress, tile }) => {
+  const crop = getTileImage(tile, "crop169");
 
   if (!crop) {
     return null;
@@ -33,14 +29,13 @@ const TileA = ({
         flagsStyle={styles.flags}
       />
       <TileImage
-        aspectRatio={width / height}
+        aspectRatio={16 / 9}
         relativeWidth={crop.relativeWidth}
         relativeHeight={crop.relativeHeight}
         relativeHorizontalOffset={crop.relativeHorizontalOffset}
         relativeVerticalOffset={crop.relativeVerticalOffset}
         style={styles.imageContainer}
         uri={crop.url}
-        fill
         hasVideo={hasVideo}
       />
     </TileLink>
@@ -49,10 +44,6 @@ const TileA = ({
 TileA.propTypes = {
   onPress: PropTypes.func.isRequired,
   tile: PropTypes.shape({}).isRequired,
-  aspectRatio: PropTypes.shape({
-    width: PropTypes.number,
-    height: PropTypes.number,
-  }),
 };
 
 export default withTileTracking(TileA);
