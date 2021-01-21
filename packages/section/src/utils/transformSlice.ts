@@ -1,24 +1,35 @@
-import { baseLeadTwoNoPicAndTwoVariant2Config } from "@times-components-native/edition-slices/src/slices/leadtwonopicandtwovariant2/baseLeadTwoNoPicAndTwoVariant2Config";
-import { TileConfig } from "@times-components-native/types";
+import { baseConfig } from "@times-components-native/edition-slices/src/slices/leadtwonopicandtwovariant2/baseConfig";
+import { ConfiguredTile } from "@times-components-native/types";
 import merge from "lodash.merge";
 
-const baseConfigs = {
-  LeadTwoNoPicAndTwoSlice: baseLeadTwoNoPicAndTwoVariant2Config,
+type SliceNames = "LeadTwoNoPicAndTwoSlice";
+
+type SliceNameConfig = Record<SliceNames, Slice>;
+
+const baseConfigs: SliceNameConfig = {
+  LeadTwoNoPicAndTwoSlice: baseConfig,
 };
 
-interface Slice {
-  support: {
-    config?: TileConfig;
-  };
-  name: string;
-  id: string;
-  [key: string]: any;
+export interface Slice {
+  support?: ConfiguredTile;
+
+  support1?: ConfiguredTile;
+
+  support2?: ConfiguredTile;
+
+  lead1?: ConfiguredTile;
+
+  lead2?: ConfiguredTile;
+
+  name?: string;
+  id?: string;
+  // [key: string]: any;
 }
 
 interface TransformSlice {
   name: string;
   sectionTitle: string;
-  transform: (slice: Slice) => Slice;
+  overrides: Slice;
 }
 
 const leadOneAndOneNewsTransform = {
@@ -72,7 +83,7 @@ export const transformSlice = (isTablet: boolean, sectionTitle: string) => (
   }
 
   // uses base config if someone forgets to set ovverrides in transform
-  if (!transformation.overrides)
+  if (!transformation?.overrides)
     return {
       ...slice,
       ...mergeBaseConfig,
