@@ -54,7 +54,7 @@ const sharedPortraitStyles = {
     width: "100%",
     marginBottom: spacing(2),
   },
-  headlineMarginBottom: spacing(2),
+  headlineMarginBottom: spacing(3),
 };
 
 const styles = {

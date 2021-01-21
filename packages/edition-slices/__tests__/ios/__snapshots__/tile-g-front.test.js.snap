@@ -2484,7 +2484,7 @@ Array [
           "width": "100%",
         }
       }
-      headlineMarginBottom={10}
+      headlineMarginBottom={15}
       headlineStyle={
         Object {
           "fontFamily": "TimesModern-Bold",
@@ -3086,7 +3086,7 @@ Array [
           "width": "100%",
         }
       }
-      headlineMarginBottom={10}
+      headlineMarginBottom={15}
       headlineStyle={
         Object {
           "fontFamily": "TimesModern-Bold",
@@ -3688,7 +3688,7 @@ Array [
           "width": "100%",
         }
       }
-      headlineMarginBottom={10}
+      headlineMarginBottom={15}
       headlineStyle={
         Object {
           "fontFamily": "TimesModern-Bold",
