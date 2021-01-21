@@ -21,15 +21,15 @@ export interface Slice {
 
   lead2?: ConfiguredTile;
 
-  name?: string;
+  name: SliceNames;
   id?: string;
-  // [key: string]: any;
+  [key: string]: any;
 }
 
 interface TransformSlice {
   name: string;
   sectionTitle: string;
-  overrides: Slice;
+  overrides: Omit<Slice, "name">;
 }
 
 const leadOneAndOneNewsTransform: TransformSlice = {
