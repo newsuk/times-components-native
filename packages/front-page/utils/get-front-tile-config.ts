@@ -22,7 +22,7 @@ interface SummaryConfig {
   };
 }
 
-function isLastItem(items: any[], item: string) {
+function isLastItem(items: string[], item: string) {
   const pos = items.indexOf(item);
 
   if (pos < 0) return true;
@@ -83,7 +83,7 @@ export const getFrontTileConfig = (summaryConfig: SummaryConfig) => {
       "byline",
     (canAccommodateContentWithByline || canAccommodateContentWithoutByline) &&
       "content",
-  ].filter(Boolean);
+  ].filter(Boolean) as string[];
 
   return {
     headline: {
