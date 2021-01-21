@@ -1,4 +1,10 @@
+import { leadOneAndOneSliceConfig } from "@times-components-native/edition-slices/src/slices/leadoneandone/config";
 import { TileConfig } from "@times-components-native/types";
+import merge from "lodash.merge";
+
+const baseConfigs = {
+  LeadOneAndOneSlice: leadOneAndOneSliceConfig,
+};
 
 interface Slice {
   support: {
@@ -14,53 +20,38 @@ interface TransformSlice {
   sectionTitle: string;
   transform: (slice: Slice) => Slice;
 }
-
 const leadOneAndOneNewsTransform = {
   sectionTitle: "News",
   name: "LeadOneAndOneSlice",
-  transform: (slice: Slice) => ({
-    ...slice,
+  overrides: {
     support: {
-      ...slice.support,
-      config: {
-        ...slice.support.config,
-        summary: { length: 800 },
-        image: {
-          ratio: "3:2",
-        },
+      summary: { length: 800 },
+      image: {
+        ratio: "3:2",
       },
     },
-  }),
+  },
 };
 
 const leadOneAndOneRegisterTransform = {
   sectionTitle: "Register",
   name: "LeadOneAndOneSlice",
-  transform: (slice: Slice) => {
-    console.log("###### SLICE 1", slice.lead.config);
-    return {
-      ...slice,
-      lead: {
-        ...slice.lead,
-        config: {
-          ...slice.lead.config,
-          image: {
-            ratio: "16:9",
-          },
-          summary: { length: 800 },
-        },
+  overrides: {
+    lead: {
+      image: {
+        ratio: "16:9",
       },
-      support: {
-        ...slice.support,
-        config: {
-          ...slice.support.config,
-          image: {
-            ratio: "3:2",
-          },
-          summary: { length: 800 },
-        },
+      summary: { length: 800 },
+      headline: {
+        fontSize: 40,
       },
-    };
+    },
+    support: {
+      image: {
+        ratio: "3:2",
+      },
+      summary: { length: 800 },
+    },
   },
 };
 
@@ -79,5 +70,54 @@ export const transformSlice = (isTablet: boolean, sectionTitle: string) => (
       st.name == slice.name &&
       st.sectionTitle.toUpperCase() === sectionTitle.toUpperCase(),
   );
-  return transformation?.transform(slice) ?? slice;
+
+  // no transform object and no default base config so only use slice in old format
+  if (!transformation && !baseConfigs[slice.name]) return slice;
+
+  //merges existing slice tile data with the base config
+  const mergeBaseConfig = Object.keys(slice).reduce((acc, curtileName) => {
+    return Object.keys(baseConfigs[slice.name]).includes(curtileName)
+      ? {
+          ...acc,
+          [curtileName]: {
+            ...slice[curtileName],
+            ...baseConfigs[slice.name][curtileName],
+          },
+        }
+      : acc;
+  }, {});
+
+  // no transform but base config is truthy so passes the base config to slice that contains a configured tile or tiles
+  if (!transformation && baseConfigs[slice.name]) {
+    return {
+      ...slice,
+      ...mergeBaseConfig,
+    };
+  }
+
+  // uses base config if someone forgets to set ovverrides in transform
+  if (!transformation.overrides)
+    return {
+      ...slice,
+      ...mergeBaseConfig,
+    };
+
+  //merges existing slice tile data with the transform ovverrides
+  const mergedSliceConfig = Object.keys(slice).reduce((acc, curtileName) => {
+    return Object.keys(baseConfigs[slice.name]).includes(curtileName)
+      ? {
+          ...acc,
+          [curtileName]: {
+            ...slice[curtileName],
+            config: merge(
+              baseConfigs[slice.name][curtileName],
+              transformation.overrides[curtileName],
+            ),
+          },
+        }
+      : acc;
+  }, {});
+
+  // merges ovverrides with exsisting tile data
+  return { ...slice, ...mergedSliceConfig };
 };

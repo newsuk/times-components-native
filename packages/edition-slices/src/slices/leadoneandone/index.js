@@ -3,7 +3,7 @@ import PropTypes from "prop-types";
 import { LeadOneAndOneSlice } from "@times-components-native/slice-layout";
 import { TileA, TileB, TileZ } from "../../tiles";
 import { ResponsiveSlice } from "../shared";
-import TileVerticalA from "@times-components-native/edition-slices/src/configured-tiles/tile-col-standard";
+import TileColStandard from "@times-components-native/edition-slices/src/configured-tiles/tile-col-standard";
 
 class LeadOneAndOne extends Component {
   constructor(props) {
@@ -37,7 +37,7 @@ class LeadOneAndOne extends Component {
       <LeadOneAndOneSlice
         breakpoint={breakpoint}
         lead={
-          <TileVerticalA
+          <TileColStandard
             breakpoint={breakpoint}
             onPress={onPress}
             tile={lead}
@@ -45,7 +45,7 @@ class LeadOneAndOne extends Component {
           />
         }
         support={
-          <TileVerticalA
+          <TileColStandard
             breakpoint={breakpoint}
             onPress={onPress}
             tile={support}
@@ -61,6 +61,7 @@ class LeadOneAndOne extends Component {
       onPress,
       slice: { lead, support },
     } = this.props;
+
     return (
       <LeadOneAndOneSlice
         breakpoint={breakpoint}
@@ -73,7 +74,7 @@ class LeadOneAndOne extends Component {
           />
         }
         support={
-          <TileVerticalA
+          <TileColStandard
             onPress={onPress}
             tile={support}
             breakpoint={breakpoint}

@@ -51,13 +51,7 @@ const TileColStandard: FC<Props> = ({ onPress, tile, breakpoint }) => {
       <WithoutWhiteSpace
         render={(whiteSpaceHeight: number) => (
           <TileSummary
-            headlineStyle={[
-              styles.headline,
-              {
-                fontSize: config?.headline?.fontSize,
-                lineHeight: config?.headline?.fontSize,
-              },
-            ]}
+            headlineStyle={styles.headline}
             {...(config?.summary && {
               summary: getTileSummary(tile, config?.summary.length),
               summaryStyle: styles.summary,
