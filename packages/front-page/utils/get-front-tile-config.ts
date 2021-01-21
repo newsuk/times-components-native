@@ -43,37 +43,68 @@ export const getFrontTileConfig = (summaryConfig: SummaryConfig) => {
     container.height >=
     headlineWithMargin + straplineWithMargin + bylines.height;
 
-  const heightForContent =
+  const heightForContentWithByline =
     container.height -
     (headlineWithMargin + straplineWithMargin + bylineWithMargin);
-  const canAccommodateContent =
-    heightForContent >= content.lineHeight * minimumNumberOfTeaserTextLines;
+
+  const heightForContentWithoutByline =
+    container.height - (headlineWithMargin + straplineWithMargin);
+
+  const canAccommodateContentWithByline =
+    heightForContentWithByline >=
+    content.lineHeight * minimumNumberOfTeaserTextLines;
+
+  const canAccommodateContentWithoutByline =
+    heightForContentWithoutByline >=
+    content.lineHeight * minimumNumberOfTeaserTextLines;
+
+  const shouldShowContentInsteadOfByline =
+    !canAccommodateContentWithByline && canAccommodateContentWithoutByline;
 
   return {
     headline: {
       show: true,
       marginBottom:
-        canAccommodateStrapline || canAccommodateByline || canAccommodateContent
+        canAccommodateStrapline ||
+        canAccommodateByline ||
+        canAccommodateContentWithByline
           ? headlineMargin
           : 0,
     },
     strapline: {
       show: strapline.height > 0 && canAccommodateStrapline,
       marginBottom:
-        canAccommodateByline || canAccommodateContent
+        canAccommodateByline || canAccommodateContentWithByline
           ? strapline.marginBottom
           : 0,
     },
     byline: {
-      show: bylines.height > 0 && canAccommodateByline,
-      marginBottom: canAccommodateContent ? bylines.marginBottom : 0,
+      show:
+        bylines.height > 0 &&
+        !shouldShowContentInsteadOfByline &&
+        canAccommodateByline,
+      marginBottom: canAccommodateContentWithByline ? bylines.marginBottom : 0,
     },
-    content: {
-      show: canAccommodateContent,
-      marginBottom: 0,
-      numberOfLines: canAccommodateContent
-        ? Math.floor(heightForContent / content.lineHeight)
-        : 0,
-    },
+    content: canAccommodateContentWithByline
+      ? {
+          show: true,
+          marginBottom: 0,
+          numberOfLines: Math.floor(
+            heightForContentWithByline / content.lineHeight,
+          ),
+        }
+      : canAccommodateContentWithoutByline
+      ? {
+          show: true,
+          marginBottom: 0,
+          numberOfLines: Math.floor(
+            heightForContentWithoutByline / content.lineHeight,
+          ),
+        }
+      : {
+          show: false,
+          marginBottom: 0,
+          numberOfLines: 0,
+        },
   };
 };
