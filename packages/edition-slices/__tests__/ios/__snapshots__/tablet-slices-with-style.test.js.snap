@@ -2431,80 +2431,7 @@ exports[`31. top secondary portrait (from topsecondaryfourslice) - medium 1`] = 
 </View>
 `;
 
-exports[`32. top secondary portrait (from topsecondaryfourslice) - medium 1`] = `
-<View
-  style={
-    Object {
-      "alignSelf": "center",
-      "maxWidth": "100%",
-      "paddingHorizontal": 10,
-      "width": 1366,
-    }
-  }
->
-  <View
-    style={
-      Object {
-        "flex": 1,
-        "flexDirection": "row",
-        "marginHorizontal": 20,
-        "paddingVertical": 5,
-      }
-    }
-  >
-    <View
-      style={
-        Object {
-          "width": "66.6%",
-        }
-      }
-    >
-      <TileAT />
-    </View>
-    <View
-      style={
-        Object {
-          "borderColor": "#DBDBDB",
-          "borderRightWidth": 1,
-          "borderStyle": "solid",
-          "marginVertical": 10,
-        }
-      }
-    />
-    <View
-      style={
-        Object {
-          "width": "33.3%",
-        }
-      }
-    >
-      <TileAV />
-      <View
-        style={
-          Object {
-            "borderBottomWidth": 1,
-            "borderColor": "#DBDBDB",
-            "borderStyle": "solid",
-          }
-        }
-      />
-      <TileAV />
-      <View
-        style={
-          Object {
-            "borderBottomWidth": 1,
-            "borderColor": "#DBDBDB",
-            "borderStyle": "solid",
-          }
-        }
-      />
-      <TileAV />
-    </View>
-  </View>
-</View>
-`;
-
-exports[`33. top secondary landscape (from topsecondarytwoandtwoslice) - medium 1`] = `
+exports[`32. top secondary landscape (from topsecondarytwoandtwoslice) - medium 1`] = `
 <View
   style={
     Object {
@@ -2577,7 +2504,7 @@ exports[`33. top secondary landscape (from topsecondarytwoandtwoslice) - medium 
 </View>
 `;
 
-exports[`34. top secondary portrait (from topsecondarytwoandtwoslice) - medium 1`] = `
+exports[`33. top secondary portrait (from topsecondarytwoandtwoslice) - medium 1`] = `
 <View
   style={
     Object {
@@ -2650,7 +2577,7 @@ exports[`34. top secondary portrait (from topsecondarytwoandtwoslice) - medium 1
 </View>
 `;
 
-exports[`35. top secondary landscape (from topsecondarytwonopicandtwoslice) - medium 1`] = `
+exports[`34. top secondary landscape (from topsecondarytwonopicandtwoslice) - medium 1`] = `
 <View
   style={
     Object {
@@ -2723,7 +2650,7 @@ exports[`35. top secondary landscape (from topsecondarytwonopicandtwoslice) - me
 </View>
 `;
 
-exports[`36. top secondary portrait (from topsecondarytwonopicandtwoslice) - medium 1`] = `
+exports[`35. top secondary portrait (from topsecondarytwonopicandtwoslice) - medium 1`] = `
 <View
   style={
     Object {
@@ -2796,7 +2723,7 @@ exports[`36. top secondary portrait (from topsecondarytwonopicandtwoslice) - med
 </View>
 `;
 
-exports[`37. comment lead and cartoon - wide 1`] = `
+exports[`36. comment lead and cartoon - wide 1`] = `
 <View
   style={
     Object {
@@ -2849,7 +2776,7 @@ exports[`37. comment lead and cartoon - wide 1`] = `
 </View>
 `;
 
-exports[`38. daily universal register - wide 1`] = `
+exports[`37. daily universal register - wide 1`] = `
 <View
   style={
     Object {
@@ -2958,7 +2885,7 @@ exports[`38. daily universal register - wide 1`] = `
 </View>
 `;
 
-exports[`39. lead one and one - wide 1`] = `
+exports[`38. lead one and one - wide 1`] = `
 <View
   style={
     Object {
@@ -3010,7 +2937,7 @@ exports[`39. lead one and one - wide 1`] = `
 </View>
 `;
 
-exports[`40. lead one and one - supplement - wide 1`] = `
+exports[`39. lead one and one - supplement - wide 1`] = `
 <View
   style={
     Object {
@@ -3062,7 +2989,7 @@ exports[`40. lead one and one - supplement - wide 1`] = `
 </View>
 `;
 
-exports[`41. lead one full width - wide 1`] = `
+exports[`40. lead one full width - wide 1`] = `
 <View
   style={
     Object {
@@ -3077,7 +3004,7 @@ exports[`41. lead one full width - wide 1`] = `
 </View>
 `;
 
-exports[`42. lead two no pic and two - wide 1`] = `
+exports[`41. lead two no pic and two - wide 1`] = `
 <View
   style={
     Object {
@@ -3158,7 +3085,7 @@ exports[`42. lead two no pic and two - wide 1`] = `
 </View>
 `;
 
-exports[`43. lead two no pic and two - wide 1`] = `
+exports[`42. lead two no pic and two - wide 1`] = `
 <View
   style={
     Object {
@@ -3230,7 +3157,7 @@ exports[`43. lead two no pic and two - wide 1`] = `
 </View>
 `;
 
-exports[`44. leaders slice - wide 1`] = `
+exports[`43. leaders slice - wide 1`] = `
 <View
   style={
     Object {
@@ -3355,7 +3282,7 @@ exports[`44. leaders slice - wide 1`] = `
 </View>
 `;
 
-exports[`45. secondary one and four - wide 1`] = `
+exports[`44. secondary one and four - wide 1`] = `
 <View
   style={
     Object {
@@ -3523,7 +3450,7 @@ exports[`45. secondary one and four - wide 1`] = `
 </View>
 `;
 
-exports[`46. secondary one - wide 1`] = `
+exports[`45. secondary one - wide 1`] = `
 <View
   style={
     Object {
@@ -3538,7 +3465,7 @@ exports[`46. secondary one - wide 1`] = `
 </View>
 `;
 
-exports[`47. supplement secondary one - wide 1`] = `
+exports[`46. supplement secondary one - wide 1`] = `
 <View
   style={
     Object {
@@ -3553,7 +3480,7 @@ exports[`47. supplement secondary one - wide 1`] = `
 </View>
 `;
 
-exports[`48. secondary four - wide 1`] = `
+exports[`47. secondary four - wide 1`] = `
 <View
   style={
     Object {
@@ -3644,7 +3571,7 @@ exports[`48. secondary four - wide 1`] = `
 </View>
 `;
 
-exports[`49. secondary four - consecutive - wide 1`] = `
+exports[`48. secondary four - consecutive - wide 1`] = `
 <View
   style={
     Object {
@@ -3735,7 +3662,7 @@ exports[`49. secondary four - consecutive - wide 1`] = `
 </View>
 `;
 
-exports[`50. secondary four - supplement - wide 1`] = `
+exports[`49. secondary four - supplement - wide 1`] = `
 <View
   style={
     Object {
@@ -3834,7 +3761,7 @@ exports[`50. secondary four - supplement - wide 1`] = `
 </View>
 `;
 
-exports[`51. secondary one and columnist - wide 1`] = `
+exports[`50. secondary one and columnist - wide 1`] = `
 <View
   style={
     Object {
@@ -3887,7 +3814,7 @@ exports[`51. secondary one and columnist - wide 1`] = `
 </View>
 `;
 
-exports[`52. secondary two and two - wide 1`] = `
+exports[`51. secondary two and two - wide 1`] = `
 <View
   style={
     Object {
@@ -3977,7 +3904,7 @@ exports[`52. secondary two and two - wide 1`] = `
 </View>
 `;
 
-exports[`53. supplement secondary two and two - wide 1`] = `
+exports[`52. supplement secondary two and two - wide 1`] = `
 <View
   style={
     Object {
@@ -4085,7 +4012,7 @@ exports[`53. supplement secondary two and two - wide 1`] = `
 </View>
 `;
 
-exports[`54. lead one and four slice - wide 1`] = `
+exports[`53. lead one and four slice - wide 1`] = `
 <View
   style={
     Object {
@@ -4168,7 +4095,7 @@ exports[`54. lead one and four slice - wide 1`] = `
 </View>
 `;
 
-exports[`55. supplement lead one and four slice - wide 1`] = `
+exports[`54. supplement lead one and four slice - wide 1`] = `
 <View
   style={
     Object {
@@ -4274,7 +4201,7 @@ exports[`55. supplement lead one and four slice - wide 1`] = `
 </View>
 `;
 
-exports[`56. standard slice - wide 1`] = `
+exports[`55. standard slice - wide 1`] = `
 <View
   style={
     Object {
@@ -4341,7 +4268,7 @@ exports[`56. standard slice - wide 1`] = `
 </View>
 `;
 
-exports[`57. secondary two no pic and two - wide 1`] = `
+exports[`56. secondary two no pic and two - wide 1`] = `
 <View
   style={
     Object {
@@ -4432,7 +4359,7 @@ exports[`57. secondary two no pic and two - wide 1`] = `
 </View>
 `;
 
-exports[`58. list two and six no pic - wide 1`] = `
+exports[`57. list two and six no pic - wide 1`] = `
 <View
   style={
     Object {
@@ -4632,7 +4559,7 @@ exports[`58. list two and six no pic - wide 1`] = `
 </View>
 `;
 
-exports[`59. puzzle - wide 1`] = `
+exports[`58. puzzle - wide 1`] = `
 <View
   style={
     Object {
@@ -4684,7 +4611,7 @@ exports[`59. puzzle - wide 1`] = `
 </View>
 `;
 
-exports[`60. front lead two - portrait - wide 1`] = `
+exports[`59. front lead two - portrait - wide 1`] = `
 <View
   style={
     Object {
@@ -4761,7 +4688,7 @@ exports[`60. front lead two - portrait - wide 1`] = `
 </View>
 `;
 
-exports[`61. front lead two - landscape - wide 1`] = `
+exports[`60. front lead two - landscape - wide 1`] = `
 <View
   style={
     Object {
@@ -4846,7 +4773,7 @@ exports[`61. front lead two - landscape - wide 1`] = `
 </View>
 `;
 
-exports[`62. front lead one and one - portrait - wide 1`] = `
+exports[`61. front lead one and one - portrait - wide 1`] = `
 <View
   style={
     Object {
@@ -4925,7 +4852,7 @@ exports[`62. front lead one and one - portrait - wide 1`] = `
 </View>
 `;
 
-exports[`63. front lead one and one - landscape - wide 1`] = `
+exports[`62. front lead one and one - landscape - wide 1`] = `
 <View
   style={
     Object {
@@ -5011,7 +4938,7 @@ exports[`63. front lead one and one - landscape - wide 1`] = `
 </View>
 `;
 
-exports[`64. front lead one - portrait - wide 1`] = `
+exports[`63. front lead one - portrait - wide 1`] = `
 <View
   style={
     Object {
@@ -5059,7 +4986,7 @@ exports[`64. front lead one - portrait - wide 1`] = `
 </View>
 `;
 
-exports[`65. front lead one - landscape - wide 1`] = `
+exports[`64. front lead one - landscape - wide 1`] = `
 <View
   style={
     Object {
@@ -5125,7 +5052,7 @@ exports[`65. front lead one - landscape - wide 1`] = `
 </View>
 `;
 
-exports[`66. top secondary landscape (from topsecondaryfourslice) - wide 1`] = `
+exports[`65. top secondary landscape (from topsecondaryfourslice) - wide 1`] = `
 <View
   style={
     Object {
@@ -5198,7 +5125,7 @@ exports[`66. top secondary landscape (from topsecondaryfourslice) - wide 1`] = `
 </View>
 `;
 
-exports[`67. top secondary portrait (from topsecondaryfourslice) - wide 1`] = `
+exports[`66. top secondary portrait (from topsecondaryfourslice) - wide 1`] = `
 <View
   style={
     Object {
@@ -5271,80 +5198,7 @@ exports[`67. top secondary portrait (from topsecondaryfourslice) - wide 1`] = `
 </View>
 `;
 
-exports[`68. top secondary portrait (from topsecondaryfourslice) - wide 1`] = `
-<View
-  style={
-    Object {
-      "alignSelf": "center",
-      "maxWidth": "100%",
-      "paddingHorizontal": 30,
-      "width": 1366,
-    }
-  }
->
-  <View
-    style={
-      Object {
-        "flex": 1,
-        "flexDirection": "row",
-        "marginHorizontal": 20,
-        "paddingVertical": 5,
-      }
-    }
-  >
-    <View
-      style={
-        Object {
-          "width": "66.6%",
-        }
-      }
-    >
-      <TileAT />
-    </View>
-    <View
-      style={
-        Object {
-          "borderColor": "#DBDBDB",
-          "borderRightWidth": 1,
-          "borderStyle": "solid",
-          "marginVertical": 10,
-        }
-      }
-    />
-    <View
-      style={
-        Object {
-          "width": "33.3%",
-        }
-      }
-    >
-      <TileAV />
-      <View
-        style={
-          Object {
-            "borderBottomWidth": 1,
-            "borderColor": "#DBDBDB",
-            "borderStyle": "solid",
-          }
-        }
-      />
-      <TileAV />
-      <View
-        style={
-          Object {
-            "borderBottomWidth": 1,
-            "borderColor": "#DBDBDB",
-            "borderStyle": "solid",
-          }
-        }
-      />
-      <TileAV />
-    </View>
-  </View>
-</View>
-`;
-
-exports[`69. top secondary landscape (from topsecondarytwoandtwoslice) - wide 1`] = `
+exports[`67. top secondary landscape (from topsecondarytwoandtwoslice) - wide 1`] = `
 <View
   style={
     Object {
@@ -5417,7 +5271,7 @@ exports[`69. top secondary landscape (from topsecondarytwoandtwoslice) - wide 1`
 </View>
 `;
 
-exports[`70. top secondary portrait (from topsecondarytwoandtwoslice) - wide 1`] = `
+exports[`68. top secondary portrait (from topsecondarytwoandtwoslice) - wide 1`] = `
 <View
   style={
     Object {
@@ -5490,7 +5344,7 @@ exports[`70. top secondary portrait (from topsecondarytwoandtwoslice) - wide 1`]
 </View>
 `;
 
-exports[`71. top secondary landscape (from topsecondarytwonopicandtwoslice) - wide 1`] = `
+exports[`69. top secondary landscape (from topsecondarytwonopicandtwoslice) - wide 1`] = `
 <View
   style={
     Object {
@@ -5563,7 +5417,7 @@ exports[`71. top secondary landscape (from topsecondarytwonopicandtwoslice) - wi
 </View>
 `;
 
-exports[`72. top secondary portrait (from topsecondarytwonopicandtwoslice) - wide 1`] = `
+exports[`70. top secondary portrait (from topsecondarytwonopicandtwoslice) - wide 1`] = `
 <View
   style={
     Object {
@@ -5636,7 +5490,7 @@ exports[`72. top secondary portrait (from topsecondarytwonopicandtwoslice) - wid
 </View>
 `;
 
-exports[`73. comment lead and cartoon - huge 1`] = `
+exports[`71. comment lead and cartoon - huge 1`] = `
 <View
   style={
     Object {
@@ -5699,7 +5553,7 @@ exports[`73. comment lead and cartoon - huge 1`] = `
 </View>
 `;
 
-exports[`74. daily universal register - huge 1`] = `
+exports[`72. daily universal register - huge 1`] = `
 <View
   style={
     Object {
@@ -5818,7 +5672,7 @@ exports[`74. daily universal register - huge 1`] = `
 </View>
 `;
 
-exports[`75. lead one and one - huge 1`] = `
+exports[`73. lead one and one - huge 1`] = `
 <View
   style={
     Object {
@@ -5880,7 +5734,7 @@ exports[`75. lead one and one - huge 1`] = `
 </View>
 `;
 
-exports[`76. lead one and one - supplement - huge 1`] = `
+exports[`74. lead one and one - supplement - huge 1`] = `
 <View
   style={
     Object {
@@ -5942,7 +5796,7 @@ exports[`76. lead one and one - supplement - huge 1`] = `
 </View>
 `;
 
-exports[`77. lead one full width - huge 1`] = `
+exports[`75. lead one full width - huge 1`] = `
 <View
   style={
     Object {
@@ -5967,7 +5821,7 @@ exports[`77. lead one full width - huge 1`] = `
 </View>
 `;
 
-exports[`78. lead two no pic and two - huge 1`] = `
+exports[`76. lead two no pic and two - huge 1`] = `
 <View
   style={
     Object {
@@ -6058,7 +5912,7 @@ exports[`78. lead two no pic and two - huge 1`] = `
 </View>
 `;
 
-exports[`79. lead two no pic and two - huge 1`] = `
+exports[`77. lead two no pic and two - huge 1`] = `
 <View
   style={
     Object {
@@ -6140,7 +5994,7 @@ exports[`79. lead two no pic and two - huge 1`] = `
 </View>
 `;
 
-exports[`80. leaders slice - huge 1`] = `
+exports[`78. leaders slice - huge 1`] = `
 <View
   style={
     Object {
@@ -6275,7 +6129,7 @@ exports[`80. leaders slice - huge 1`] = `
 </View>
 `;
 
-exports[`81. secondary one and four - huge 1`] = `
+exports[`79. secondary one and four - huge 1`] = `
 <View
   style={
     Object {
@@ -6453,7 +6307,7 @@ exports[`81. secondary one and four - huge 1`] = `
 </View>
 `;
 
-exports[`82. secondary one - huge 1`] = `
+exports[`80. secondary one - huge 1`] = `
 <View
   style={
     Object {
@@ -6478,7 +6332,7 @@ exports[`82. secondary one - huge 1`] = `
 </View>
 `;
 
-exports[`83. supplement secondary one - huge 1`] = `
+exports[`81. supplement secondary one - huge 1`] = `
 <View
   style={
     Object {
@@ -6503,7 +6357,7 @@ exports[`83. supplement secondary one - huge 1`] = `
 </View>
 `;
 
-exports[`84. secondary four - huge 1`] = `
+exports[`82. secondary four - huge 1`] = `
 <View
   style={
     Object {
@@ -6604,7 +6458,7 @@ exports[`84. secondary four - huge 1`] = `
 </View>
 `;
 
-exports[`85. secondary four - consecutive - huge 1`] = `
+exports[`83. secondary four - consecutive - huge 1`] = `
 <View
   style={
     Object {
@@ -6705,7 +6559,7 @@ exports[`85. secondary four - consecutive - huge 1`] = `
 </View>
 `;
 
-exports[`86. secondary four - supplement - huge 1`] = `
+exports[`84. secondary four - supplement - huge 1`] = `
 <View
   style={
     Object {
@@ -6814,7 +6668,7 @@ exports[`86. secondary four - supplement - huge 1`] = `
 </View>
 `;
 
-exports[`87. secondary one and columnist - huge 1`] = `
+exports[`85. secondary one and columnist - huge 1`] = `
 <View
   style={
     Object {
@@ -6877,7 +6731,7 @@ exports[`87. secondary one and columnist - huge 1`] = `
 </View>
 `;
 
-exports[`88. secondary two and two - huge 1`] = `
+exports[`86. secondary two and two - huge 1`] = `
 <View
   style={
     Object {
@@ -6977,7 +6831,7 @@ exports[`88. secondary two and two - huge 1`] = `
 </View>
 `;
 
-exports[`89. supplement secondary two and two - huge 1`] = `
+exports[`87. supplement secondary two and two - huge 1`] = `
 <View
   style={
     Object {
@@ -7077,7 +6931,7 @@ exports[`89. supplement secondary two and two - huge 1`] = `
 </View>
 `;
 
-exports[`90. lead one and four slice - huge 1`] = `
+exports[`88. lead one and four slice - huge 1`] = `
 <View
   style={
     Object {
@@ -7170,7 +7024,7 @@ exports[`90. lead one and four slice - huge 1`] = `
 </View>
 `;
 
-exports[`91. supplement lead one and four slice - huge 1`] = `
+exports[`89. supplement lead one and four slice - huge 1`] = `
 <View
   style={
     Object {
@@ -7286,7 +7140,7 @@ exports[`91. supplement lead one and four slice - huge 1`] = `
 </View>
 `;
 
-exports[`92. standard slice - huge 1`] = `
+exports[`90. standard slice - huge 1`] = `
 <View
   style={
     Object {
@@ -7363,7 +7217,7 @@ exports[`92. standard slice - huge 1`] = `
 </View>
 `;
 
-exports[`93. secondary two no pic and two - huge 1`] = `
+exports[`91. secondary two no pic and two - huge 1`] = `
 <View
   style={
     Object {
@@ -7464,7 +7318,7 @@ exports[`93. secondary two no pic and two - huge 1`] = `
 </View>
 `;
 
-exports[`94. list two and six no pic - huge 1`] = `
+exports[`92. list two and six no pic - huge 1`] = `
 <View
   style={
     Object {
@@ -7674,7 +7528,7 @@ exports[`94. list two and six no pic - huge 1`] = `
 </View>
 `;
 
-exports[`95. puzzle - huge 1`] = `
+exports[`93. puzzle - huge 1`] = `
 <View
   style={
     Object {
@@ -7736,7 +7590,7 @@ exports[`95. puzzle - huge 1`] = `
 </View>
 `;
 
-exports[`96. front lead two - portrait - huge 1`] = `
+exports[`94. front lead two - portrait - huge 1`] = `
 <View
   style={
     Object {
@@ -7823,7 +7677,7 @@ exports[`96. front lead two - portrait - huge 1`] = `
 </View>
 `;
 
-exports[`97. front lead two - landscape - huge 1`] = `
+exports[`95. front lead two - landscape - huge 1`] = `
 <View
   style={
     Object {
@@ -7918,7 +7772,7 @@ exports[`97. front lead two - landscape - huge 1`] = `
 </View>
 `;
 
-exports[`98. front lead one and one - portrait - huge 1`] = `
+exports[`96. front lead one and one - portrait - huge 1`] = `
 <View
   style={
     Object {
@@ -8007,7 +7861,7 @@ exports[`98. front lead one and one - portrait - huge 1`] = `
 </View>
 `;
 
-exports[`99. front lead one and one - landscape - huge 1`] = `
+exports[`97. front lead one and one - landscape - huge 1`] = `
 <View
   style={
     Object {
@@ -8103,7 +7957,7 @@ exports[`99. front lead one and one - landscape - huge 1`] = `
 </View>
 `;
 
-exports[`100. front lead one - portrait - huge 1`] = `
+exports[`98. front lead one - portrait - huge 1`] = `
 <View
   style={
     Object {
@@ -8161,7 +8015,7 @@ exports[`100. front lead one - portrait - huge 1`] = `
 </View>
 `;
 
-exports[`101. front lead one - landscape - huge 1`] = `
+exports[`99. front lead one - landscape - huge 1`] = `
 <View
   style={
     Object {
@@ -8238,7 +8092,7 @@ exports[`101. front lead one - landscape - huge 1`] = `
 </View>
 `;
 
-exports[`102. top secondary landscape (from topsecondaryfourslice) - huge 1`] = `
+exports[`100. top secondary landscape (from topsecondaryfourslice) - huge 1`] = `
 <View
   style={
     Object {
@@ -8321,7 +8175,7 @@ exports[`102. top secondary landscape (from topsecondaryfourslice) - huge 1`] = 
 </View>
 `;
 
-exports[`103. top secondary portrait (from topsecondaryfourslice) - huge 1`] = `
+exports[`101. top secondary portrait (from topsecondaryfourslice) - huge 1`] = `
 <View
   style={
     Object {
@@ -8404,90 +8258,7 @@ exports[`103. top secondary portrait (from topsecondaryfourslice) - huge 1`] = `
 </View>
 `;
 
-exports[`104. top secondary portrait (from topsecondaryfourslice) - huge 1`] = `
-<View
-  style={
-    Object {
-      "alignSelf": "center",
-      "maxWidth": "100%",
-      "paddingHorizontal": 10,
-      "width": 1366,
-    }
-  }
->
-  <View
-    style={
-      Object {
-        "alignSelf": "center",
-        "flex": 1,
-        "width": 1180,
-      }
-    }
-  >
-    <View
-      style={
-        Object {
-          "flex": 1,
-          "flexDirection": "row",
-          "marginHorizontal": 20,
-          "paddingVertical": 5,
-        }
-      }
-    >
-      <View
-        style={
-          Object {
-            "width": "66.6%",
-          }
-        }
-      >
-        <TileAT />
-      </View>
-      <View
-        style={
-          Object {
-            "borderColor": "#DBDBDB",
-            "borderRightWidth": 1,
-            "borderStyle": "solid",
-            "marginVertical": 10,
-          }
-        }
-      />
-      <View
-        style={
-          Object {
-            "width": "33.3%",
-          }
-        }
-      >
-        <TileAV />
-        <View
-          style={
-            Object {
-              "borderBottomWidth": 1,
-              "borderColor": "#DBDBDB",
-              "borderStyle": "solid",
-            }
-          }
-        />
-        <TileAV />
-        <View
-          style={
-            Object {
-              "borderBottomWidth": 1,
-              "borderColor": "#DBDBDB",
-              "borderStyle": "solid",
-            }
-          }
-        />
-        <TileAV />
-      </View>
-    </View>
-  </View>
-</View>
-`;
-
-exports[`105. top secondary landscape (from topsecondarytwoandtwoslice) - huge 1`] = `
+exports[`102. top secondary landscape (from topsecondarytwoandtwoslice) - huge 1`] = `
 <View
   style={
     Object {
@@ -8570,7 +8341,7 @@ exports[`105. top secondary landscape (from topsecondarytwoandtwoslice) - huge 1
 </View>
 `;
 
-exports[`106. top secondary portrait (from topsecondarytwoandtwoslice) - huge 1`] = `
+exports[`103. top secondary portrait (from topsecondarytwoandtwoslice) - huge 1`] = `
 <View
   style={
     Object {
@@ -8653,7 +8424,7 @@ exports[`106. top secondary portrait (from topsecondarytwoandtwoslice) - huge 1`
 </View>
 `;
 
-exports[`107. top secondary landscape (from topsecondarytwonopicandtwoslice) - huge 1`] = `
+exports[`104. top secondary landscape (from topsecondarytwonopicandtwoslice) - huge 1`] = `
 <View
   style={
     Object {
@@ -8736,7 +8507,7 @@ exports[`107. top secondary landscape (from topsecondarytwonopicandtwoslice) - h
 </View>
 `;
 
-exports[`108. top secondary portrait (from topsecondarytwonopicandtwoslice) - huge 1`] = `
+exports[`105. top secondary portrait (from topsecondarytwonopicandtwoslice) - huge 1`] = `
 <View
   style={
     Object {

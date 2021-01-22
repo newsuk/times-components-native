@@ -240,12 +240,6 @@ const slices = [
     orientation: "portrait",
   },
   {
-    mock: mockSecondaryFourSlice(),
-    name: "top secondary portrait (from TopSecondaryFourSlice)",
-    Slice: TopSecondarySlice,
-    orientation: "portrait",
-  },
-  {
     mock: mockSecondaryTwoAndTwoSlice(),
     name: "top secondary landscape (from TopSecondaryTwoAndTwoSlice)",
     Slice: TopSecondarySlice,
