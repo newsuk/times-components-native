@@ -11,7 +11,7 @@ interface Props {
   relativeHeight: number;
   relativeVerticalOffset: number;
   relativeHorizontalOffset: number;
-  fill: boolean;
+  fill?: boolean;
   style: ViewStyle;
   onLayout?: () => void;
   uri: string;

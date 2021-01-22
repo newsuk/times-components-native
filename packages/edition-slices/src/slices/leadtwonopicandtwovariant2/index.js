@@ -61,7 +61,7 @@ class LeadTwoNoPicAndTwoVariant2 extends Component {
         orientation={orientation}
         breakpoint={breakpoint}
         lead1={
-          <TileX
+          <TileVerticalA
             breakpoint={breakpoint}
             onPress={onPress}
             tile={lead1}
@@ -69,7 +69,7 @@ class LeadTwoNoPicAndTwoVariant2 extends Component {
           />
         }
         lead2={
-          <TileY
+          <TileVerticalA
             breakpoint={breakpoint}
             onPress={onPress}
             tile={lead2}

@@ -1,18 +1,24 @@
 import { Tile } from "@times-components-native/fixture-generator/src/types";
 import { editionBreakpoints } from "@times-components-native/styleguide";
 
-type EditionBreakpointKeys = keyof typeof editionBreakpoints;
+export type EditionBreakpointKeys = keyof typeof editionBreakpoints;
 
 type ImageAspectRatios = "3:2" | "2:3" | "16:9" | "4:5";
 
+export type Orientation = "landscape" | "portrait";
+
 export interface TileConfig {
-  showImage?: boolean;
   summary?: { length: number };
-  image?: { ratio: ImageAspectRatios; orientation: "landscape" | "portrait" };
+  portrait?: { ratio: ImageAspectRatios };
+  image?: {
+    ratio: ImageAspectRatios;
+    orientation: Orientation;
+  };
+  headline: { fontSize: number };
 }
 
 type BaseConfig = {
-  [K in EditionBreakpointKeys]?: TileConfig;
+  [K in EditionBreakpointKeys]: TileConfig;
 };
 export interface ConfiguredTile extends Tile {
   config: BaseConfig;

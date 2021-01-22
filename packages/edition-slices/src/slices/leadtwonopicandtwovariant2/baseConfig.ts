@@ -1,36 +1,82 @@
 import { Slice } from "@times-components-native/section/src/utils/transformSlice";
 
-export const baseConfig: Slice = {
-  support1: {
+const lead1Base = {
+  summary: { length: 1000 },
+  headline: { fontSize: 40 },
+};
+
+const lead2Base = {
+  summary: { length: 300 },
+  headline: { fontSize: 30 },
+};
+
+const support1Base = {
+  summary: { length: 800 },
+  headline: { fontSize: 24 },
+  image: { ratio: "3:2", orientation: "landscape" },
+};
+
+const support2Base = {
+  image: { ratio: "2:3", orientation: "portrait" },
+  headline: { fontSize: 28 },
+};
+
+export const baseConfig: Omit<Slice, "name"> = {
+  lead1: {
     config: {
       wide: {
-        summary: { length: 800 },
-        showImage: true,
-        image: { ratio: "3:2", orientation: "landscape" },
+        ...lead1Base,
+        headline: { fontSize: 35 },
       },
       huge: {
-        summary: { length: 800 },
-        showImage: true,
-        image: { ratio: "3:2", orientation: "landscape" },
+        ...lead1Base,
+        headline: { fontSize: 35 },
       },
-      medium: {},
-      small: {},
+      medium: {
+        ...lead1Base,
+      },
+    },
+  },
+  lead2: {
+    config: {
+      wide: {
+        ...lead2Base,
+        headline: { fontSize: 28 },
+      },
+      huge: {
+        ...lead2Base,
+        headline: { fontSize: 28 },
+      },
+      medium: {
+        ...lead2Base,
+      },
+    },
+  },
+  support1: {
+    config: {
+      wide: { ...support1Base, headline: { fontSize: 22 } },
+      huge: { ...support1Base, headline: { fontSize: 22 } },
+      medium: { ...support1Base },
     },
   },
   support2: {
     config: {
       wide: {
-        image: { ratio: "2:3", orientation: "portrait" },
-        showImage: true,
+        ...support2Base,
+        headline: { fontSize: 24 },
+        image: { ratio: "4:5", orientation: "landscape" },
+        portrait: {
+          image: { ratio: "2:3" },
+        },
       },
       huge: {
-        showImage: true,
+        ...support2Base,
+        headline: { fontSize: 24 },
         image: { ratio: "4:5", orientation: "landscape" },
       },
-      medium: {},
-      small: {},
+      medium: {
+        ...support2Base,
+      },
     },
   },
-  lead1: { config: {} },
-  lead2: { config: {} },
 };
