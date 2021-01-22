@@ -69,7 +69,6 @@ Array [
     "elementId": "k.10",
     "id": "k",
     "ignoreSeparator": true,
-    "isConsecutive": true,
     "name": "OtherSlice",
   },
   Object {

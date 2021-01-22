@@ -2,7 +2,6 @@ import memoizeOne from "memoize-one";
 
 const withIsConsecutive = (slice: any) => ({ ...slice, isConsecutive: true });
 
-// in order to
 const consecutivePairs = [
   ["TopSecondaryFourSlice", "SecondaryFourSlice"],
   ["LeadOneAndOneSlice", "SecondaryFourSlice"],

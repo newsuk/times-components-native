@@ -119,6 +119,11 @@ const slices = [
     Slice: SecondaryFourSlice,
   },
   {
+    mock: mockSecondaryFourSlice({ isConsecutive: true }),
+    name: "secondary four - consecutive",
+    Slice: SecondaryFourSlice,
+  },
+  {
     mock: mockSecondaryFourSlice(),
     name: "secondary four - supplement",
     Slice: SupplementSecondaryFourSlice,
@@ -227,6 +232,12 @@ const slices = [
     name: "top secondary landscape (from TopSecondaryFourSlice)",
     Slice: TopSecondarySlice,
     orientation: "landscape",
+  },
+  {
+    mock: mockSecondaryFourSlice(),
+    name: "top secondary portrait (from TopSecondaryFourSlice)",
+    Slice: TopSecondarySlice,
+    orientation: "portrait",
   },
   {
     mock: mockSecondaryFourSlice(),
