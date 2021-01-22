@@ -5,17 +5,7 @@ import {
   globalSpacingStyles,
 } from "@times-components-native/styleguide";
 
-const fontSizeResolver = {
-  [editionBreakpoints.wide]: 30,
-  [editionBreakpoints.huge]: 35,
-  [editionBreakpoints.medium]: 20,
-  [editionBreakpoints.small]: 25,
-};
-
-export default (
-  breakpoint,
-  customStyleOverrides = { fontSizes: fontSizeResolver },
-) => {
+export default (breakpoint, { headline: { fontSize } }) => {
   const sharedStyles = {
     container: {
       flex: 1,
@@ -32,24 +22,6 @@ export default (
     },
   };
 
-  const smallBreakpointStyles = {
-    container: {
-      ...sharedStyles.container,
-      ...sharedStyles.imageContainer,
-      padding: spacing(2),
-      paddingBottom: spacing(4),
-    },
-    headline: {
-      ...sharedStyles.headline,
-      fontSize: customStyleOverrides.fontSizes[breakpoint],
-      lineHeight: customStyleOverrides.fontSizes[breakpoint],
-      marginBottom: spacing(1),
-    },
-    summary: {
-      marginBottom: spacing(1.75),
-    },
-  };
-
   const mediumBreakpointStyles = {
     container: {
       ...sharedStyles.container,
@@ -58,8 +30,8 @@ export default (
     },
     headline: {
       ...sharedStyles.headline,
-      fontSize: customStyleOverrides.fontSizes[breakpoint],
-      lineHeight: customStyleOverrides.fontSizes[breakpoint],
+      fontSize: fontSize,
+      lineHeight: fontSize,
     },
     summary: {
       ...globalSpacingStyles.tabletTeaser,
@@ -77,8 +49,8 @@ export default (
     },
     headline: {
       ...sharedStyles.headline,
-      fontSize: customStyleOverrides.fontSizes[breakpoint],
-      lineHeight: customStyleOverrides.fontSizes[breakpoint],
+      fontSize: fontSize,
+      lineHeight: fontSize,
     },
     summary: {
       ...globalSpacingStyles.tabletTeaser,
@@ -89,13 +61,12 @@ export default (
     ...wideBreakpointStyles,
     headline: {
       ...wideBreakpointStyles.headline,
-      fontSize: customStyleOverrides.fontSizes[breakpoint],
-      lineHeight: customStyleOverrides.fontSizes[breakpoint],
+      fontSize: fontSize,
+      lineHeight: fontSize,
     },
   };
 
   const stylesResolver = {
-    [editionBreakpoints.small]: smallBreakpointStyles,
     [editionBreakpoints.medium]: mediumBreakpointStyles,
     [editionBreakpoints.wide]: wideBreakpointStyles,
     [editionBreakpoints.huge]: hugeBreakpointStyles,

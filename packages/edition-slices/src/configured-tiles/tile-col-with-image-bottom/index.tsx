@@ -10,34 +10,41 @@ import {
 } from "../../tiles/shared";
 import stylesFactory from "./styles";
 import WithoutWhiteSpace from "../../tiles/shared/without-white-space";
-import merge from "lodash.merge";
 import getAspectRatio from "../../utils/getAspectRatio";
 import getCropByRatio from "../../utils/getCropByRatio";
+import {
+  ConfiguredTile,
+  OnArticlePress,
+  Orientation,
+  EditionBreakpointKeys,
+} from "@times-components-native/types";
 
 interface Props {
-  onPress(): void;
-  tile: any;
-  breakpoint: number;
-  config: any;
+  onPress(): OnArticlePress;
+  tile: ConfiguredTile;
+  breakpoint: EditionBreakpointKeys;
+  orientation: Orientation;
 }
-
-// portrait 125 summary
-// landscape 800 summary show image
 
 const TileColImageBottom: FC<Props> = ({
   onPress,
   tile,
   breakpoint = editionBreakpoints.small,
   orientation,
-  tileName,
 }) => {
-  const { config } = tile;
+  if (!tile.config) return null;
 
-  const styles = stylesFactory(breakpoint);
-  console.log("🚀 ~ file: index.tsx ~ line 35 ~ styles", orientation);
+  const config = tile.config[breakpoint];
+
+  const styles = stylesFactory(breakpoint, config);
 
   const renderTileImage = ({ article: { hasVideo } }: any, imageProps: any) => {
-    const crop = getTileImage(tile, getCropByRatio(imageProps?.ratio));
+    const imageRatio =
+      imageProps.portrait && orientation === "portrait"
+        ? imageProps.portrait.image.ratio
+        : imageProps.image.ratio;
+
+    const crop = getTileImage(tile, getCropByRatio(imageRatio));
 
     if (!crop) {
       return null;
@@ -53,17 +60,16 @@ const TileColImageBottom: FC<Props> = ({
 
     return (
       <TileImage
-        aspectRatio={getAspectRatio(imageProps?.ratio)}
+        aspectRatio={getAspectRatio(imageRatio)}
         relativeWidth={relativeWidth}
         relativeHeight={relativeHeight}
         relativeHorizontalOffset={relativeHorizontalOffset}
         relativeVerticalOffset={relativeVerticalOffset}
         style={styles.imageContainer}
         uri={url}
-        fill
         hasVideo={hasVideo}
       />
-    ) as any;
+    );
   };
 
   return (
@@ -83,8 +89,8 @@ const TileColImageBottom: FC<Props> = ({
         )}
       />
       {config?.image &&
-        config.image?.orientation === orientation &&
-        renderTileImage(tile, config.image)}
+        (config.image?.orientation === orientation || config?.portrait) &&
+        renderTileImage(tile, config)}
     </TileLink>
   );
 };

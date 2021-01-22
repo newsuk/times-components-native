@@ -51,10 +51,7 @@ class LeadTwoNoPicAndTwoVariant2 extends Component {
 
     const isLandscape = orientation === "landscape";
 
-    // const Support2 = isLandscape ? TileV : TileA;
     const Support2 = isLandscape ? TileVerticalA : TileColWithImageBottom;
-
-    const Support1 = isLandscape ? TileAL : TileB;
 
     return (
       <LeadTwoNoPicAndTwoVariant2Slice
