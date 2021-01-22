@@ -1,22 +1,35 @@
+const leadBaseConfig = {
+  image: {
+    ratio: "16:9",
+  },
+  headline: {
+    fontSize: 30,
+  },
+  test: {
+    aron: true,
+  },
+};
+
+const supportBaseConfig = {
+  headline: {
+    fontSize: 20,
+  },
+  summary: {
+    length: 800,
+  },
+};
+
 export const leadOneAndOneSliceConfig = {
   lead: {
     config: {
-      image: {
-        ratio: "16:9",
-      },
-      headline: {
-        fontSize: 40,
-      },
+      medium: { ...leadBaseConfig },
+      wide: { ...leadBaseConfig },
     },
   },
   support: {
     config: {
-      headline: {
-        fontSize: 20,
-      },
-      summary: {
-        length: 800,
-      },
+      medium: { ...supportBaseConfig },
+      wide: { ...supportBaseConfig },
     },
   },
 };

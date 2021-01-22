@@ -24,36 +24,50 @@ interface Props {
 }
 
 const TileColStandard: FC<Props> = ({ onPress, tile, breakpoint }) => {
-  const {
-    article: { hasVideo },
-    config,
-  } = tile;
+  const { config } = tile;
 
-  const styles = styleFactory(config, breakpoint);
+  const tileConfig = config[breakpoint];
 
-  const crop =
-    config?.image && getTileImage(tile, getCropByRatio(config?.image?.ratio));
+  const styles = styleFactory(tileConfig, breakpoint);
+
+  const renderTileImage = ({ article: { hasVideo } }: any, imageProps: any) => {
+    const crop = getTileImage(tile, getCropByRatio(imageProps?.ratio));
+
+    if (!crop) {
+      return null;
+    }
+
+    const {
+      relativeWidth,
+      relativeHeight,
+      relativeHorizontalOffset,
+      relativeVerticalOffset,
+      url,
+    } = crop;
+
+    return (
+      <TileImage
+        aspectRatio={getAspectRatio(imageProps?.ratio)}
+        relativeWidth={relativeWidth}
+        relativeHeight={relativeHeight}
+        relativeHorizontalOffset={relativeHorizontalOffset}
+        relativeVerticalOffset={relativeVerticalOffset}
+        style={styles.imageContainer}
+        uri={url}
+        hasVideo={hasVideo}
+      />
+    ) as any;
+  };
 
   return (
     <TileLink onPress={onPress} style={styles.container} tile={tile}>
-      {crop && config?.image && (
-        <TileImage
-          aspectRatio={getAspectRatio(config?.image?.ratio)}
-          relativeWidth={crop.relativeWidth}
-          relativeHeight={crop.relativeHeight}
-          relativeHorizontalOffset={crop.relativeHorizontalOffset}
-          relativeVerticalOffset={crop.relativeVerticalOffset}
-          style={styles.imageContainer}
-          uri={crop.url}
-          hasVideo={hasVideo}
-        />
-      )}
+      {tileConfig.image && renderTileImage(tile, tileConfig.image)}
       <WithoutWhiteSpace
         render={(whiteSpaceHeight: number) => (
           <TileSummary
             headlineStyle={styles.headline}
-            {...(config?.summary && {
-              summary: getTileSummary(tile, config?.summary.length),
+            {...(tileConfig?.summary && {
+              summary: getTileSummary(tile, tileConfig?.summary.length),
               summaryStyle: styles.summary,
             })}
             tile={tile}

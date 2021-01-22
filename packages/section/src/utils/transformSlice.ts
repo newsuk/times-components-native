@@ -25,9 +25,13 @@ const leadOneAndOneNewsTransform = {
   name: "LeadOneAndOneSlice",
   overrides: {
     support: {
-      summary: { length: 800 },
-      image: {
-        ratio: "3:2",
+      config: {
+        medium: {
+          summary: { length: 800 },
+          image: {
+            ratio: "3:2",
+          },
+        },
       },
     },
   },
@@ -38,19 +42,27 @@ const leadOneAndOneRegisterTransform = {
   name: "LeadOneAndOneSlice",
   overrides: {
     lead: {
-      image: {
-        ratio: "16:9",
-      },
-      summary: { length: 800 },
-      headline: {
-        fontSize: 40,
+      config: {
+        medium: {
+          image: {
+            ratio: "16:9",
+          },
+          summary: { length: 800 },
+          headline: {
+            fontSize: 40,
+          },
+        },
       },
     },
     support: {
-      image: {
-        ratio: "3:2",
+      config: {
+        medium: {
+          image: {
+            ratio: "3:2",
+          },
+          summary: { length: 800 },
+        },
       },
-      summary: { length: 800 },
     },
   },
 };
@@ -82,6 +94,9 @@ export const transformSlice = (isTablet: boolean, sectionTitle: string) => (
           [curtileName]: {
             ...slice[curtileName],
             ...baseConfigs[slice.name][curtileName],
+            config: {
+              ...baseConfigs[slice.name][curtileName].config,
+            },
           },
         }
       : acc;
@@ -103,21 +118,35 @@ export const transformSlice = (isTablet: boolean, sectionTitle: string) => (
     };
 
   //merges existing slice tile data with the transform ovverrides
-  const mergedSliceConfig = Object.keys(slice).reduce((acc, curtileName) => {
-    return Object.keys(baseConfigs[slice.name]).includes(curtileName)
-      ? {
-          ...acc,
-          [curtileName]: {
-            ...slice[curtileName],
-            config: merge(
-              baseConfigs[slice.name][curtileName],
-              transformation.overrides[curtileName],
-            ),
-          },
-        }
-      : acc;
-  }, {});
+  const mergeTileOverrideData = Object.keys(slice).reduce(
+    (acc, curtileName) => {
+      if (curtileName === "name") {
+        return acc;
+      }
 
-  // merges ovverrides with exsisting tile data
-  return { ...slice, ...mergedSliceConfig };
+      return Object.keys(transformation.overrides).includes(curtileName)
+        ? {
+            ...acc,
+            [curtileName]: {
+              ...slice[curtileName],
+              config: merge({
+                ...baseConfigs[slice.name][curtileName].config,
+                ...transformation.overrides[curtileName].config,
+              }),
+            },
+          }
+        : {
+            ...acc,
+            [curtileName]: {
+              ...slice[curtileName],
+              config: {
+                ...baseConfigs[slice.name][curtileName].config,
+              },
+            },
+          };
+    },
+    {},
+  );
+
+  return { ...slice, ...mergeTileOverrideData };
 };
