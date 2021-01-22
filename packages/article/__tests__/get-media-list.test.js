@@ -9,6 +9,10 @@ const content = [
       caption: "caption",
       credits: "PA",
       url: "image.com",
+      relativeHeight: 1,
+      relativeWidth: 1,
+      relativeVerticalOffset: 1,
+      relativeHorizontalOffset: 1,
     },
     name: "image",
   },
@@ -30,6 +34,10 @@ const videoLeadAsset = {
     credits: null,
     crop169: {
       url: "image.com",
+      relativeHeight: 1,
+      relativeWidth: 1,
+      relativeVerticalOffset: 1,
+      relativeHorizontalOffset: 1,
     },
     title: "",
   },
@@ -41,6 +49,10 @@ const imageLeadAsset = {
   credits: "image credits",
   crop169: {
     url: "image.com",
+    relativeHeight: 1,
+    relativeWidth: 1,
+    relativeVerticalOffset: 1,
+    relativeHorizontalOffset: 1,
   },
   title: "image title",
   type: "Image",
@@ -57,7 +69,12 @@ describe("getMediaList", () => {
           caption: null,
           credits: "image credits",
           crop169: {
-            url: "image.com",
+            url:
+              "image.com?rel_width=1&rel_height=1&rel_vertical_offset=1&rel_horizontal_offset=1",
+            relativeHeight: 1,
+            relativeWidth: 1,
+            relativeVerticalOffset: 1,
+            relativeHorizontalOffset: 1,
           },
           title: "image title",
           type: "Image",
@@ -69,7 +86,12 @@ describe("getMediaList", () => {
         value: {
           caption: "caption",
           credits: "PA",
-          url: "image.com",
+          url:
+            "image.com?rel_width=1&rel_height=1&rel_vertical_offset=1&rel_horizontal_offset=1",
+          relativeHeight: 1,
+          relativeWidth: 1,
+          relativeVerticalOffset: 1,
+          relativeHorizontalOffset: 1,
         },
       },
       {
@@ -97,7 +119,12 @@ describe("getMediaList", () => {
             caption: null,
             credits: null,
             crop169: {
-              url: "image.com",
+              url:
+                "image.com?rel_width=1&rel_height=1&rel_vertical_offset=1&rel_horizontal_offset=1",
+              relativeHeight: 1,
+              relativeWidth: 1,
+              relativeVerticalOffset: 1,
+              relativeHorizontalOffset: 1,
             },
             title: "",
           },
@@ -110,7 +137,12 @@ describe("getMediaList", () => {
         value: {
           caption: "caption",
           credits: "PA",
-          url: "image.com",
+          url:
+            "image.com?rel_width=1&rel_height=1&rel_vertical_offset=1&rel_horizontal_offset=1",
+          relativeHeight: 1,
+          relativeWidth: 1,
+          relativeVerticalOffset: 1,
+          relativeHorizontalOffset: 1,
         },
       },
       {
@@ -137,7 +169,12 @@ describe("getMediaList", () => {
         value: {
           caption: "caption",
           credits: "PA",
-          url: "image.com",
+          url:
+            "image.com?rel_width=1&rel_height=1&rel_vertical_offset=1&rel_horizontal_offset=1",
+          relativeHeight: 1,
+          relativeWidth: 1,
+          relativeVerticalOffset: 1,
+          relativeHorizontalOffset: 1,
         },
       },
       {
@@ -166,7 +203,12 @@ describe("getMediaList", () => {
             caption: null,
             credits: null,
             crop169: {
-              url: "image.com",
+              url:
+                "image.com?rel_width=1&rel_height=1&rel_vertical_offset=1&rel_horizontal_offset=1",
+              relativeHeight: 1,
+              relativeWidth: 1,
+              relativeVerticalOffset: 1,
+              relativeHorizontalOffset: 1,
             },
             title: "",
           },
@@ -191,7 +233,12 @@ describe("getMediaList", () => {
             caption: null,
             credits: null,
             crop169: {
-              url: "image.com",
+              url:
+                "image.com?rel_width=1&rel_height=1&rel_vertical_offset=1&rel_horizontal_offset=1",
+              relativeHeight: 1,
+              relativeWidth: 1,
+              relativeVerticalOffset: 1,
+              relativeHorizontalOffset: 1,
             },
             title: "",
           },

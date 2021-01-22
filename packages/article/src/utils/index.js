@@ -27,6 +27,16 @@ const getMediaList = (content, leadAsset) => {
             url: appendToInlineImageUrl(leadAsset.crop169),
           },
         }),
+        ...(leadAsset.posterImage &&
+          leadAsset.posterImage.crop169 && {
+            posterImage: {
+              ...leadAsset.posterImage,
+              crop169: {
+                ...leadAsset.posterImage.crop169,
+                url: appendToInlineImageUrl(leadAsset.posterImage.crop169),
+              },
+            },
+          }),
       },
     });
   }
