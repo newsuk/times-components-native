@@ -12,9 +12,16 @@ interface Props extends ResponsiveImageProps {
   hasVideo?: boolean | null;
   style: ViewStyle;
   onLayout?: () => void;
+  videoIconExtraSpacing?: number;
 }
 
-const TileImage: FC<Props> = ({ hasVideo, style, onLayout, ...props }) => {
+const TileImage: FC<Props> = ({
+  hasVideo,
+  style,
+  onLayout,
+  videoIconExtraSpacing = 0,
+  ...props
+}) => {
   const { orientation } = useResponsiveContext();
   const [imageHeight, setImageHeight] = useState(0);
   const [iconSize, setIconSize] = useState(getIconSize(0));
@@ -41,7 +48,12 @@ const TileImage: FC<Props> = ({ hasVideo, style, onLayout, ...props }) => {
             : "tile-image-landscape"
         }
       />
-      <View style={[playIconStyles, { top: imageHeight - iconSize }]}>
+      <View
+        style={[
+          playIconStyles,
+          { top: imageHeight - iconSize - videoIconExtraSpacing },
+        ]}
+      >
         <PlayIcon size={iconSize} />
       </View>
     </View>
