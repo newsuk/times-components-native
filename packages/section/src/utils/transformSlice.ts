@@ -8,6 +8,7 @@ type SliceNameConfig = Record<SliceNames, Slice>;
 
 const baseConfigs: SliceNameConfig = {
   LeadTwoNoPicAndTwoSlice: baseConfig,
+  LeadOneAndOneSlice: baseConfig,
 };
 
 export interface Slice {
@@ -33,7 +34,7 @@ interface TransformSlice {
 }
 
 const leadOneAndOneNewsTransform: TransformSlice = {
-  sectionTitle: "News",
+  sectionTitle: "Law",
   name: "LeadOneAndOneSlice",
   overrides: {
     support: {
@@ -66,6 +67,8 @@ export const transformSlice = (isTablet: boolean, sectionTitle: string) => (
   // no transform object and no default base config so only use slice in old format
   if (!transformation && !baseConfigs[slice.name]) return slice;
 
+  console.log("jjejejejej");
+
   //merges existing slice tile data with the base config
   const mergeBaseConfig = Object.keys(slice).reduce((acc, curtileName) => {
     return Object.keys(baseConfigs[slice.name]).includes(curtileName)
@@ -87,32 +90,43 @@ export const transformSlice = (isTablet: boolean, sectionTitle: string) => (
     };
   }
 
-  // uses base config if someone forgets to set ovverrides in transform
+  // uses base config if someone forgets to set overrides in transform
   if (!transformation?.overrides)
     return {
       ...slice,
       ...mergeBaseConfig,
     };
 
-  //merges existing slice tile data with the transform ovverrides
+  //merges existing slice tile data with the transform overrides
+
   const mergeTileOverrideData = Object.keys(slice).reduce(
     (acc, curtileName) => {
-      return Object.keys(baseConfigs[slice.name]).includes(curtileName)
+      if (curtileName === "name") return acc;
+
+      return Object.keys(transformation.overrides).includes(curtileName)
         ? {
             ...acc,
             [curtileName]: {
               ...slice[curtileName],
-              config: merge(
-                baseConfigs[slice.name][curtileName],
-                transformation.overrides[curtileName],
-              ),
+              config: merge({
+                ...baseConfigs[slice.name][curtileName].config,
+                ...transformation.overrides[curtileName].config,
+              }),
             },
           }
-        : acc;
+        : {
+            ...acc,
+            [curtileName]: {
+              ...slice[curtileName],
+              config: {
+                ...baseConfigs[slice.name][curtileName].config,
+              },
+            },
+          };
     },
     {},
   );
 
-  // merges ovverrides with exsisting tile data
+  // merges overrides with exsisting tile data
   return { ...slice, ...mergeTileOverrideData };
 };
