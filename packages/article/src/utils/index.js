@@ -1,3 +1,13 @@
+const appendToInlineImageUrl = (itemAttributes) => {
+  let url = itemAttributes.url;
+  url = `${url}${url.includes("?") ? "&" : "?"}`;
+  url = `${url}rel_width=${itemAttributes.relativeWidth}`;
+  url = `${url}&rel_height=${itemAttributes.relativeHeight}`;
+  url = `${url}&rel_vertical_offset=${itemAttributes.relativeVerticalOffset}`;
+  url = `${url}&rel_horizontal_offset=${itemAttributes.relativeHorizontalOffset}`;
+  return url;
+};
+
 const getMediaList = (content, leadAsset) => {
   const ast = content || [];
 
@@ -9,7 +19,15 @@ const getMediaList = (content, leadAsset) => {
     mediaList.push({
       index: 0,
       name: "leadAsset",
-      value: leadAsset,
+      value: {
+        ...leadAsset,
+        ...(leadAsset.crop169 && {
+          crop169: {
+            ...leadAsset.crop169,
+            url: appendToInlineImageUrl(leadAsset.crop169),
+          },
+        }),
+      },
     });
   }
 
@@ -34,7 +52,10 @@ const getMediaList = (content, leadAsset) => {
       inlineMedia = {
         index,
         name: "inlineImage",
-        value: item.attributes,
+        value: {
+          ...item.attributes,
+          url: appendToInlineImageUrl(item.attributes),
+        },
       };
     }
     index += 1;
