@@ -111,6 +111,7 @@ export type DropCapProps = {
   height: number;
   narrowContent: boolean;
   originalName: string;
+  scale: string;
   width: number;
 };
 

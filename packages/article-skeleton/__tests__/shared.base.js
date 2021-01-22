@@ -33,7 +33,11 @@ export const renderArticle = (
 ) => (
   <ContextProviderWithDefaults
     value={{
-      theme: { scale: scales.medium, sectionColour: "#FF0000" },
+      theme: {
+        dropCapFont: "dropCap",
+        scale: scales.medium,
+        sectionColour: "#FF0000",
+      },
     }}
   >
     <VariantTestingProvider variants={variants} isTablet={true}>

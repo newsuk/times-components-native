@@ -3,12 +3,10 @@ import TestRenderer from "react-test-renderer";
 
 import { Measurements, ParagraphContent } from "@times-components-native/types";
 import { withTabletContext } from "@times-components-native/test-utils/src/responsiveContextUtil";
-import InlineContent from "../src";
-import { MeasureInlineContent } from "../src/measure/MeasureInlineContent";
+import DropCap from "../src";
 import {
   InlineAdProps,
   InlineArticleImageProps,
-  InlineDropCapProps,
   InlinePullQuoteProps,
 } from "../src/types";
 
@@ -54,64 +52,6 @@ describe("InlineContent", () => {
       style: {},
       width: 300,
     } as InlineAdProps;
-
-    it("generates content measurements for inline ad", () => {
-      const renderer = TestRenderer.create(
-        withTabletContext(<InlineContent {...props} />),
-      );
-      expect(renderer.toJSON()).toMatchSnapshot();
-    });
-
-    it("renders content and inline ad via a render-prop", () => {
-      const renderer = TestRenderer.create(
-        withTabletContext(<InlineContent {...props} />),
-      );
-      const renderMeasuredContentsRenderProp = renderer.root.findByType(
-        MeasureInlineContent,
-      ).props["renderMeasuredContents"];
-
-      const idWithWidth = `0-${windowWidth}`;
-      const contentMeasurements: Measurements = {
-        contents: {
-          lines: {
-            [idWithWidth]: [{ text: "line1" }],
-          },
-          heights: {
-            [idWithWidth]: 40,
-          },
-        },
-        itemHeight: null,
-      };
-
-      expect(
-        renderMeasuredContentsRenderProp(contentMeasurements),
-      ).toMatchSnapshot();
-    });
-  });
-
-  describe("dropcap", () => {
-    const props = {
-      adConfig: {},
-      baseUrl: "some-base-url",
-      contextUrl: "some-context-url",
-      defaultFont: { lineHeight: 26 },
-      display: "inline",
-      height: 600,
-      inlineContent: content,
-      isLoading: false,
-      narrowContent: false,
-      originalName: "ad",
-      skeletonProps: {
-        data: [],
-        isTablet: true,
-        narrowContent: false,
-        scale: 1,
-        windowWidth,
-      },
-      slotName: "native-inline-ad-c",
-      style: {},
-      width: 300,
-    } as InlineDropCapProps;
 
     it("generates content measurements for inline ad", () => {
       const renderer = TestRenderer.create(

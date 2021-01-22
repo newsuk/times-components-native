@@ -26,8 +26,11 @@ export const getInlineItemProps = (
       height,
       originalName,
       narrowContent,
+      skeletonProps,
       width,
     } = props as InlineDropCapProps;
+
+    const scale = skeletonProps.scale as string;
 
     return {
       dropCapColor,
@@ -37,6 +40,7 @@ export const getInlineItemProps = (
       height,
       originalName,
       narrowContent,
+      scale,
       width,
     };
   }

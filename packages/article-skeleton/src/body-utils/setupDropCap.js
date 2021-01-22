@@ -22,13 +22,13 @@ const isDropcapsDisabled = ({ template, dropcapsDisabled }) => {
 
 export const setupDropCap = (skeletonProps, content) => {
   const { data, dropCapFont, scale } = skeletonProps;
-  const dropcapsDisabled = isDropcapsDisabled(data);
 
-  if (dropcapsDisabled) return content;
+  if (isDropcapsDisabled(data)) return content;
 
   const firstParagraph = content.slice(0, 1)[0];
 
-  if (firstParagraph.name !== "paragraph") return content;
+  if (!firstParagraph?.name || firstParagraph.name !== "paragraph")
+    return content;
 
   const firstParagraphFirstChild = firstParagraph.children?.[0];
   const firstParagraphRestOfChildren = firstParagraph.children?.slice(1);
