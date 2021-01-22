@@ -210,7 +210,7 @@ describe("getFrontTileConfig", () => {
         show: false,
       },
       strapline: {
-        marginBottom: 15,
+        marginBottom: 0,
         show: false,
       },
       content: {
@@ -298,7 +298,7 @@ describe("getFrontTileConfig", () => {
         show: true,
       },
       strapline: {
-        marginBottom: 25,
+        marginBottom: 0,
         show: false,
       },
       content: {
@@ -338,11 +338,11 @@ describe("getFrontTileConfig", () => {
         show: true,
       },
       byline: {
-        marginBottom: 20,
+        marginBottom: 0,
         show: false,
       },
       strapline: {
-        marginBottom: 20,
+        marginBottom: 0,
         show: false,
       },
       content: {

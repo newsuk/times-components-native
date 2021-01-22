@@ -22,18 +22,18 @@ interface SummaryConfig {
   };
 }
 
-function isLastItem(items: string[], item: string) {
+const shouldRemoveMarginBottom = (items: string[], item: string) => {
   const pos = items.indexOf(item);
 
   if (pos < 0) return true;
 
   return pos === items.length - 1;
-}
+};
 
-function getNumberOfLines(heightAvailable: number, lineHeight: number) {
+const getNumberOfLines = (heightAvailable: number, lineHeight: number) => {
   if (heightAvailable < 0) return 0;
   return Math.floor(heightAvailable / lineHeight);
-}
+};
 
 export const getFrontTileConfig = (summaryConfig: SummaryConfig) => {
   const { container, headline, strapline, bylines, content } = summaryConfig;
@@ -88,17 +88,19 @@ export const getFrontTileConfig = (summaryConfig: SummaryConfig) => {
   return {
     headline: {
       show: true,
-      marginBottom: isLastItem(itemsToRender, "headline") ? 0 : headlineMargin,
+      marginBottom: shouldRemoveMarginBottom(itemsToRender, "headline")
+        ? 0
+        : headlineMargin,
     },
     strapline: {
       show: itemsToRender.includes("strapline"),
-      marginBottom: isLastItem(itemsToRender, "strapline")
+      marginBottom: shouldRemoveMarginBottom(itemsToRender, "strapline")
         ? 0
         : strapline.marginBottom,
     },
     byline: {
       show: itemsToRender.includes("byline"),
-      marginBottom: isLastItem(itemsToRender, "byline")
+      marginBottom: shouldRemoveMarginBottom(itemsToRender, "byline")
         ? 0
         : bylines.marginBottom,
     },
