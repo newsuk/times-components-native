@@ -22,17 +22,19 @@ interface SummaryConfig {
   };
 }
 
-const shouldRemoveMarginBottom = (items: string[], item: string) => {
-  const pos = items.indexOf(item);
-
-  if (pos < 0) return true;
-
-  return pos === items.length - 1;
-};
-
 const getNumberOfLines = (heightAvailable: number, lineHeight: number) => {
   if (heightAvailable < 0) return 0;
   return Math.floor(heightAvailable / lineHeight);
+};
+
+const calculateMarginBottom = (
+  items: string[],
+  item: string,
+  itemMargin: number,
+) => {
+  const pos = items.indexOf(item);
+
+  return pos < 0 || pos === items.length - 1 ? 0 : itemMargin;
 };
 
 export const getFrontTileConfig = (summaryConfig: SummaryConfig) => {
@@ -88,21 +90,27 @@ export const getFrontTileConfig = (summaryConfig: SummaryConfig) => {
   return {
     headline: {
       show: true,
-      marginBottom: shouldRemoveMarginBottom(itemsToRender, "headline")
-        ? 0
-        : headlineMargin,
+      marginBottom: calculateMarginBottom(
+        itemsToRender,
+        "headline",
+        headlineMargin,
+      ),
     },
     strapline: {
       show: itemsToRender.includes("strapline"),
-      marginBottom: shouldRemoveMarginBottom(itemsToRender, "strapline")
-        ? 0
-        : strapline.marginBottom,
+      marginBottom: calculateMarginBottom(
+        itemsToRender,
+        "strapline",
+        strapline.marginBottom,
+      ),
     },
     byline: {
       show: itemsToRender.includes("byline"),
-      marginBottom: shouldRemoveMarginBottom(itemsToRender, "byline")
-        ? 0
-        : bylines.marginBottom,
+      marginBottom: calculateMarginBottom(
+        itemsToRender,
+        "byline",
+        bylines.marginBottom,
+      ),
     },
     content: {
       show: itemsToRender.includes("content"),
