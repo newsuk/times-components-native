@@ -20,18 +20,23 @@ interface TransformSlice {
   sectionTitle: string;
   transform: (slice: Slice) => Slice;
 }
+
+const sharedSupportConfig = {
+  summary: { length: 800 },
+  image: {
+    ratio: "3:2",
+  },
+};
+
 const leadOneAndOneNewsTransform = {
   sectionTitle: "News",
   name: "LeadOneAndOneSlice",
   overrides: {
     support: {
       config: {
-        medium: {
-          summary: { length: 800 },
-          image: {
-            ratio: "3:2",
-          },
-        },
+        medium: sharedSupportConfig,
+        wide: sharedSupportConfig,
+        huge: sharedSupportConfig,
       },
     },
   },
@@ -56,12 +61,9 @@ const leadOneAndOneRegisterTransform = {
     },
     support: {
       config: {
-        medium: {
-          image: {
-            ratio: "3:2",
-          },
-          summary: { length: 800 },
-        },
+        medium: sharedSupportConfig,
+        wide: sharedSupportConfig,
+        huge: sharedSupportConfig,
       },
     },
   },
