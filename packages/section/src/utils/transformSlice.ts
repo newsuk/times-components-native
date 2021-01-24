@@ -69,25 +69,25 @@ export const transformSlice = (isTablet: boolean, sectionTitle: string) => (
   // no transform object and no default base config so only use slice in old format
   if (!transformation && !baseConfigs[slice.name]) return slice;
 
-  //merges existing slice tile data with the base config
-  const mergeBaseConfig = Object.keys(slice).reduce((acc, curtileName) => {
-    return Object.keys(baseConfigs[slice.name]).includes(curtileName)
-      ? {
-          ...acc,
-          [curtileName]: {
-            ...slice[curtileName],
-            ...baseConfigs[slice.name][curtileName],
-          },
-        }
-      : acc;
-  }, {});
-
   // no transform but base config is truthy so passes the base config to slice that contains a configured tile or tiles
 
   if (
     (!transformation && baseConfigs[slice.name]) ||
     !transformation?.overrides
   ) {
+    //merges existing slice tile data with the base config
+    const mergeBaseConfig = Object.keys(slice).reduce((acc, curtileName) => {
+      return Object.keys(baseConfigs[slice.name]).includes(curtileName)
+        ? {
+            ...acc,
+            [curtileName]: {
+              ...slice[curtileName],
+              ...baseConfigs[slice.name][curtileName],
+            },
+          }
+        : acc;
+    }, {});
+
     return {
       ...slice,
       ...mergeBaseConfig,
@@ -98,7 +98,7 @@ export const transformSlice = (isTablet: boolean, sectionTitle: string) => (
   const mergeTileOverrideData = Object.keys(slice).reduce(
     (acc, curtileName) => {
       {
-        if (curtileName === "name" || curtileName === "id") return acc;
+        if (["name", "id"].includes(curtileName)) return acc;
 
         return {
           ...acc,
