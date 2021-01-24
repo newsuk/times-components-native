@@ -2,7 +2,7 @@ import { baseConfig } from "@times-components-native/edition-slices/src/slices/l
 import { ConfiguredTile } from "@times-components-native/types";
 import merge from "lodash.merge";
 
-type SliceNames = "LeadTwoNoPicAndTwoSlice";
+type SliceNames = "LeadTwoNoPicAndTwoSlice" | "LeadOneAndOneSlice";
 
 type SliceNameConfig = Record<SliceNames, Slice>;
 
@@ -22,6 +22,8 @@ export interface Slice {
 
   lead2?: ConfiguredTile;
 
+  lead?: ConfiguredTile;
+
   name: SliceNames;
   id?: string;
   [key: string]: any;
@@ -34,7 +36,7 @@ interface TransformSlice {
 }
 
 const leadOneAndOneNewsTransform: TransformSlice = {
-  sectionTitle: "Law",
+  sectionTitle: "News",
   name: "LeadOneAndOneSlice",
   overrides: {
     support: {
@@ -67,8 +69,6 @@ export const transformSlice = (isTablet: boolean, sectionTitle: string) => (
   // no transform object and no default base config so only use slice in old format
   if (!transformation && !baseConfigs[slice.name]) return slice;
 
-  console.log("jjejejejej");
-
   //merges existing slice tile data with the base config
   const mergeBaseConfig = Object.keys(slice).reduce((acc, curtileName) => {
     return Object.keys(baseConfigs[slice.name]).includes(curtileName)
@@ -83,46 +83,36 @@ export const transformSlice = (isTablet: boolean, sectionTitle: string) => (
   }, {});
 
   // no transform but base config is truthy so passes the base config to slice that contains a configured tile or tiles
-  if (!transformation && baseConfigs[slice.name]) {
+
+  if (
+    (!transformation && baseConfigs[slice.name]) ||
+    !transformation?.overrides
+  ) {
     return {
       ...slice,
       ...mergeBaseConfig,
     };
   }
 
-  // uses base config if someone forgets to set overrides in transform
-  if (!transformation?.overrides)
-    return {
-      ...slice,
-      ...mergeBaseConfig,
-    };
-
   //merges existing slice tile data with the transform overrides
-
   const mergeTileOverrideData = Object.keys(slice).reduce(
     (acc, curtileName) => {
-      if (curtileName === "name") return acc;
+      {
+        if (curtileName === "name" || curtileName === "id") return acc;
 
-      return Object.keys(transformation.overrides).includes(curtileName)
-        ? {
-            ...acc,
-            [curtileName]: {
-              ...slice[curtileName],
-              config: merge({
-                ...baseConfigs[slice.name][curtileName].config,
-                ...transformation.overrides[curtileName].config,
-              }),
-            },
-          }
-        : {
-            ...acc,
-            [curtileName]: {
-              ...slice[curtileName],
-              config: {
-                ...baseConfigs[slice.name][curtileName].config,
-              },
-            },
-          };
+        return {
+          ...acc,
+          [curtileName]: {
+            ...slice[curtileName],
+            config: Object.keys(transformation.overrides).includes(curtileName)
+              ? merge({
+                  ...baseConfigs[slice.name][curtileName].config,
+                  ...transformation.overrides[curtileName].config,
+                })
+              : { ...baseConfigs[slice.name][curtileName].config },
+          },
+        };
+      }
     },
     {},
   );
