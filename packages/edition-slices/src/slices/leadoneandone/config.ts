@@ -24,12 +24,14 @@ export const leadOneAndOneSliceConfig = {
     config: {
       medium: { ...leadBaseConfig },
       wide: { ...leadBaseConfig },
+      huge: { ...leadBaseConfig },
     },
   },
   support: {
     config: {
       medium: { ...supportBaseConfig },
       wide: { ...supportBaseConfig },
+      huge: { ...supportBaseConfig },
     },
   },
 };

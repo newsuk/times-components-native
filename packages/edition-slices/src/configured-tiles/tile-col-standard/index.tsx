@@ -26,7 +26,9 @@ interface Props {
 const TileColStandard: FC<Props> = ({ onPress, tile, breakpoint }) => {
   const { config } = tile;
 
+  console.log("config", config, breakpoint);
   const tileConfig = config[breakpoint];
+  console.log("tileConfig", tileConfig);
 
   const styles = styleFactory(tileConfig, breakpoint);
 
