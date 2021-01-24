@@ -61,7 +61,6 @@ class LeadOneAndOne extends Component {
       onPress,
       slice: { lead, support },
     } = this.props;
-    console.log("breakpoint", breakpoint);
 
     return (
       <LeadOneAndOneSlice

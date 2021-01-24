@@ -11,7 +11,11 @@ import {
 import styleFactory from "./styles";
 import WithoutWhiteSpace from "../../tiles/shared/without-white-space";
 import PositionedTileStar from "../../tiles/shared/positioned-tile-star";
-import { ConfiguredTile, OnArticlePress } from "@times-components-native/types";
+import {
+  ConfiguredTile,
+  OnArticlePress,
+  EditionBreakpointKeys,
+} from "@times-components-native/types";
 import {
   getAspectRatio,
   getCropByRatio,
@@ -20,17 +24,15 @@ import {
 interface Props {
   onPress: OnArticlePress;
   tile: ConfiguredTile;
-  breakpoint: string;
+  breakpoint: EditionBreakpointKeys;
 }
 
 const TileColStandard: FC<Props> = ({ onPress, tile, breakpoint }) => {
-  const { config } = tile;
+  if (!tile.config) return null;
 
-  console.log("config", config, breakpoint);
-  const tileConfig = config[breakpoint];
-  console.log("tileConfig", tileConfig);
+  const config = tile.config[breakpoint];
 
-  const styles = styleFactory(tileConfig, breakpoint);
+  const styles = styleFactory(config, breakpoint);
 
   const renderTileImage = ({ article: { hasVideo } }: any, imageProps: any) => {
     const crop = getTileImage(tile, getCropByRatio(imageProps?.ratio));
@@ -63,13 +65,13 @@ const TileColStandard: FC<Props> = ({ onPress, tile, breakpoint }) => {
 
   return (
     <TileLink onPress={onPress} style={styles.container} tile={tile}>
-      {tileConfig.image && renderTileImage(tile, tileConfig.image)}
+      {config.image && renderTileImage(tile, config.image)}
       <WithoutWhiteSpace
         render={(whiteSpaceHeight: number) => (
           <TileSummary
             headlineStyle={styles.headline}
-            {...(tileConfig?.summary && {
-              summary: getTileSummary(tile, tileConfig?.summary.length),
+            {...(config?.summary && {
+              summary: getTileSummary(tile, config?.summary.length),
               summaryStyle: styles.summary,
             })}
             tile={tile}
