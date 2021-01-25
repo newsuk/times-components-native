@@ -43,7 +43,7 @@ const TileColWithImageBottom: FC<Props> = ({
 
   const config = tile.config[breakpoint];
 
-  const styles = stylesFactory(breakpoint, config as TileConfig);
+  const styles = stylesFactory(config as TileConfig);
 
   const renderTileImage = (
     { article }: Tile,
