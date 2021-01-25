@@ -54,7 +54,10 @@ const sliceMap = (isInSupplement, sectionTitle) => {
       ? SupplementLeadOneAndOneSlice
       : LeadOneAndOneSlice,
     LeadOneFullWidthSlice,
-    LeadTwoNoPicAndTwoSlice: renderLeadTwoNoPicAndTwoSlice(sectionTitle),
+    LeadTwoNoPicAndTwoSlice: renderLeadTwoNoPicAndTwoSlice(
+      isTablet,
+      sectionTitle,
+    ),
     Puzzle: PuzzleSlice,
     SecondaryFourSlice: isInTabletSupplement
       ? SupplementSecondaryFourSlice
@@ -85,7 +88,7 @@ const sliceMap = (isInSupplement, sectionTitle) => {
 export const getSlice = (isInSupplement, sliceName, sectionTitle) =>
   sliceMap(isInSupplement, sectionTitle)[sliceName];
 
-const renderLeadTwoNoPicAndTwoSlice = (sectionTitle) =>
-  sectionTitle === sectionTitles.sport
+const renderLeadTwoNoPicAndTwoSlice = (isTablet, sectionTitle) =>
+  isTablet && sectionTitle === sectionTitles.sport
     ? LeadTwoNoPicAndTwoVariant2Slice
     : LeadTwoNoPicAndTwoSlice;
