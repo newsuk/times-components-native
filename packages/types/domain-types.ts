@@ -90,3 +90,28 @@ export type ArticleContent =
   | InteractiveContent
   | ImageContent
   | AdContent;
+
+export type SliceName =
+  | "LeadOneAndOneSlice"
+  | "LeadOneAndFourSlice"
+  | "TopSecondaryFourSlice"
+  | "SecondaryFourSlice"
+  | "CommentLeadAndCartoonSlice"
+  | "DailyUniversalRegister"
+  | "LeadersSlice"
+  | "LeadOneFullWidthSlice"
+  | "LeadTwoNoPicAndTwoSlice"
+  | "Puzzle"
+  | "SecondaryOneAndColumnistSlice"
+  | "SecondaryOneAndFourSlice"
+  | "SecondaryOneSlice"
+  | "SecondaryTwoAndTwoSlice"
+  | "SecondaryTwoNoPicAndTwoSlice"
+  | "StandardSlice"
+  | "TwoPicAndSixNoPicSlice"
+  | "LeadTwoFrontSlice"
+  | "LeadOneAndOneFrontSlice"
+  | "LeadOneFullWidthFrontSlice"
+  | "TopSecondaryTwoAndTwoSlice"
+  | "TopSecondaryTwoNoPicAndTwoSlice"
+  | "SectionAd";

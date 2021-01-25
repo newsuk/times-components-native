@@ -1,8 +1,11 @@
 import memoizeOne from "memoize-one";
+import { SliceName } from "@times-components-native/types";
 
 const withIsConsecutive = (slice: any) => ({ ...slice, isConsecutive: true });
 
-const consecutivePairs = [
+type Pair = [SliceName, SliceName];
+
+const consecutivePairs: Pair[] = [
   ["TopSecondaryFourSlice", "SecondaryFourSlice"],
   ["LeadOneAndOneSlice", "SecondaryFourSlice"],
 ];
