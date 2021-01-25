@@ -15,9 +15,9 @@ import {
   prepareSlicesForRender,
   createPuzzleData,
   isSupplementSection,
-  sectionConfigs,
 } from "./utils";
 import { OnArticlePress } from "@times-components-native/types";
+import { SectionTitles } from "./utils/sectionConfigs";
 
 const styles = styleFactory();
 
@@ -31,7 +31,7 @@ interface Props {
   publishedTime: string;
   receiveChildList: (childList: any) => void;
   section: {
-    title: sectionConfigs.SectionTitles;
+    title: SectionTitles;
     cover: any;
     name: string;
     slices: any;
@@ -88,10 +88,11 @@ const Section: React.FC<Props> = ({
     return null;
   };
 
-  const renderItem = (
-    isPuzzle: boolean,
-    sectionTitle: sectionConfigs.SectionTitles,
-  ) => ({ index, item: slice, inTodaysEditionSlice }: any) => (
+  const renderItem = (isPuzzle: boolean, sectionTitle: SectionTitles) => ({
+    index,
+    item: slice,
+    inTodaysEditionSlice,
+  }: any) => (
     <Slice
       index={index}
       length={slices.length}
@@ -132,7 +133,10 @@ const Section: React.FC<Props> = ({
       (slice: any) => slice.name !== "InTheNewsSlice",
     );
 
-    return renderItem(false)({
+    return renderItem(
+      false,
+      sectionTitle,
+    )({
       index: 0,
       item: frontSlice || {},
       inTodaysEditionSlice: inTheNewsSlice || {},

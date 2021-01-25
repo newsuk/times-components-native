@@ -1483,7 +1483,7 @@ export interface EmbeddedComponentResource {
 export interface Tile {
   articleId?: Uuid;
 
-  article?: Article;
+  article: Article;
 
   headline?: string | null;
 
