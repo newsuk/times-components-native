@@ -65,6 +65,7 @@ const TileSummary: React.FC<Props> = ({
   hideLabel = false,
 }) => {
   const {
+    headline: tileHeadline,
     article: {
       expirableFlags,
       longRead,
@@ -168,7 +169,7 @@ const TileSummary: React.FC<Props> = ({
   const renderHeadline = (markAsRead: boolean) => (
     <MarkAsRead markAsRead={markAsRead}>
       <ArticleSummaryHeadline
-        headline={shortHeadline || headline || ""}
+        headline={tileHeadline || shortHeadline || headline || ""}
         style={headlineStyle}
       />
     </MarkAsRead>

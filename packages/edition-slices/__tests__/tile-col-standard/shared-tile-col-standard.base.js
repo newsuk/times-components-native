@@ -1,27 +1,27 @@
 import "../mocks-tiles";
 import { testTile, tile } from "../shared-tile-utils";
-import { TileVerticalA } from "../../src/tiles";
+import { TileColStandard } from "../../src/tiles";
 import { editionBreakpoints } from "@times-components-native/styleguide";
 
 export default () => {
-  describe("tile vertical a", () => {
+  describe("tile col standard", () => {
     it("shows an image", () => {
-      testTile(TileVerticalA, editionBreakpoints.wide, {
+      testTile(TileColStandard, editionBreakpoints.wide, {
         ...tile,
         config: { showImage: true },
       });
     });
 
     it("medium", () => {
-      testTile(TileVerticalA, editionBreakpoints.wide);
+      testTile(TileColStandard, editionBreakpoints.medium);
     });
 
     it("wide", () => {
-      testTile(TileVerticalA, editionBreakpoints.wide);
+      testTile(TileColStandard, editionBreakpoints.wide);
     });
 
     it("huge", () => {
-      testTile(TileVerticalA, editionBreakpoints.huge);
+      testTile(TileColStandard, editionBreakpoints.huge);
     });
   });
 };

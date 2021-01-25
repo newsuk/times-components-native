@@ -31,7 +31,12 @@ export const leadOneAndOneSliceConfig = {
     config: {
       medium: { ...supportBaseConfig },
       wide: { ...supportBaseConfig },
-      huge: { ...supportBaseConfig },
+      huge: {
+        ...supportBaseConfig,
+        headline: {
+          fontSize: 22,
+        },
+      },
     },
   },
 };

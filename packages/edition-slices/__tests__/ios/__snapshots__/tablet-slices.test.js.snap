@@ -76,18 +76,9 @@ exports[`2. daily universal register - medium 1`] = `
 exports[`3. lead one and one - medium 1`] = `
 <View>
   <View>
-    <View>
-      <TileU
-        tileName="lead"
-      />
-    </View>
     <View />
-    <View>
-      <TileVerticalA
-        breakpoint="medium"
-        tileName="support"
-      />
-    </View>
+    <View />
+    <View />
   </View>
 </View>
 `;
@@ -1180,12 +1171,7 @@ exports[`37. lead one and one - wide 1`] = `
       />
     </View>
     <View />
-    <View>
-      <TileVerticalA
-        breakpoint="wide"
-        tileName="support"
-      />
-    </View>
+    <View />
   </View>
 </View>
 `;
@@ -2285,12 +2271,7 @@ exports[`71. lead one and one - huge 1`] = `
         />
       </View>
       <View />
-      <View>
-        <TileVerticalA
-          breakpoint="huge"
-          tileName="support"
-        />
-      </View>
+      <View />
     </View>
   </View>
 </View>
