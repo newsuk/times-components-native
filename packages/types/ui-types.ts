@@ -14,7 +14,7 @@ export interface TileConfig {
     ratio: ImageAspectRatios;
     orientation?: Orientation;
   };
-  headline?: { fontSize: number };
+  headline: { fontSize: number };
 }
 
 type BaseConfig = {
