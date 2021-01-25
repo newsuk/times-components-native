@@ -18,8 +18,14 @@ import {
   Orientation,
   TileConfig,
 } from "@times-components-native/types";
-import getCropByRatio from "../../utils/getCropByRatio";
-import getAspectRatio from "../../utils/getAspectRatio";
+import {
+  Tile,
+  Crop,
+} from "@times-components-native/fixture-generator/src/types";
+import {
+  getAspectRatio,
+  getCropByRatio,
+} from "@times-components-native/image/src/utils";
 
 interface Props {
   onPress: OnArticlePress;
@@ -40,16 +46,13 @@ const TileVerticalA: FC<Props> = ({
 
   const styles = styleFactory(config);
 
-  const renderTileImage = (
-    { article: { hasVideo } }: { article: { hasVideo: boolean } },
-    imageProps: TileConfig,
-  ) => {
+  const renderTileImage = ({ article }: Tile, imageProps: TileConfig) => {
     const imageRatio =
       imageProps.portrait && orientation === "portrait"
         ? imageProps.portrait.ratio
         : imageProps.image?.ratio;
 
-    const crop = getTileImage(tile, getCropByRatio(imageRatio));
+    const crop: Crop = getTileImage(tile, getCropByRatio(imageRatio));
 
     if (!crop) {
       return null;
@@ -72,7 +75,7 @@ const TileVerticalA: FC<Props> = ({
         relativeVerticalOffset={relativeVerticalOffset}
         style={styles.imageContainer}
         uri={url}
-        hasVideo={hasVideo}
+        hasVideo={article?.hasVideo}
       />
     );
   };

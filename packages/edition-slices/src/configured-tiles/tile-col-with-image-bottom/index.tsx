@@ -14,8 +14,10 @@ import {
 } from "../../tiles/shared";
 import stylesFactory from "./styles";
 import WithoutWhiteSpace from "../../tiles/shared/without-white-space";
-import getAspectRatio from "../../utils/getAspectRatio";
-import getCropByRatio from "../../utils/getCropByRatio";
+import {
+  getAspectRatio,
+  getCropByRatio,
+} from "@times-components-native/image/src/utils";
 import {
   ConfiguredTile,
   OnArticlePress,
