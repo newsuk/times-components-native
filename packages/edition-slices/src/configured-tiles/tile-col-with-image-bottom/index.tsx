@@ -92,7 +92,6 @@ const TileColWithImageBottom: FC<Props> = ({
   return (
     <TileLink onPress={onPress} style={styles.container} tile={tile}>
       <WithoutWhiteSpace
-        style={styles.summaryContainer}
         render={(whiteSpaceHeight: number) => (
           <TileSummary
             headlineStyle={styles.headline}
