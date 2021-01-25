@@ -37,10 +37,18 @@ exports[`1. modal image 1`] = `
         imageUrls={
           Array [
             Object {
+              "aspectRatio": 2,
+              "caption": "Caption",
+              "credits": "Credits",
+              "relativeHeight": 1,
+              "relativeHorizontalOffset": 1,
+              "relativeVerticalOffset": 1,
+              "relativeWidth": 1,
               "url": "http://example.com/image.jpg?crop=1016%2C677%2C0%2C0&offline=true",
             },
           ]
         }
+        saveToLocalByLongPress={false}
         useNativeDriver={true}
       />
       <View>
@@ -110,7 +118,14 @@ exports[`1. modal image 1`] = `
           pointerEvents="box-none"
         >
           <View>
-            <View />
+            <View>
+              <Text>
+                Caption
+              </Text>
+              <Text>
+                CREDITS
+              </Text>
+            </View>
           </View>
         </View>
       </View>
@@ -171,10 +186,18 @@ exports[`2. modal image with no caption 1`] = `
         imageUrls={
           Array [
             Object {
+              "aspectRatio": 2,
+              "caption": undefined,
+              "credits": undefined,
+              "relativeHeight": 1,
+              "relativeHorizontalOffset": 1,
+              "relativeVerticalOffset": 1,
+              "relativeWidth": 1,
               "url": "http://example.com/image.jpg?crop=1016%2C677%2C0%2C0&offline=true",
             },
           ]
         }
+        saveToLocalByLongPress={false}
         useNativeDriver={true}
       />
       <View>
@@ -302,10 +325,18 @@ exports[`3. modal image with custom highressize 1`] = `
         imageUrls={
           Array [
             Object {
+              "aspectRatio": 2,
+              "caption": "Caption",
+              "credits": "Credits",
+              "relativeHeight": 1,
+              "relativeHorizontalOffset": 1,
+              "relativeVerticalOffset": 1,
+              "relativeWidth": 1,
               "url": "http://example.com/image.jpg?crop=1016%2C677%2C0%2C0&offline=true",
             },
           ]
         }
+        saveToLocalByLongPress={false}
         useNativeDriver={true}
       />
       <View>
@@ -375,7 +406,14 @@ exports[`3. modal image with custom highressize 1`] = `
           pointerEvents="box-none"
         >
           <View>
-            <View />
+            <View>
+              <Text>
+                Caption
+              </Text>
+              <Text>
+                CREDITS
+              </Text>
+            </View>
           </View>
         </View>
       </View>

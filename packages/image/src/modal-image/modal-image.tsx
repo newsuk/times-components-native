@@ -1,15 +1,15 @@
 import React, { FC, Fragment, useState } from "react";
 import { ImageProps, Modal, SafeAreaView, StyleProp, View } from "react-native";
-import { ResponsiveContext } from "@times-components-native/responsive";
-import Button from "@times-components-native/link";
-import ImageViewer from "react-native-image-zoom-viewer";
 import Url from "url-parse";
+import ImageViewer from "react-native-image-zoom-viewer";
+import Button from "@times-components-native/link";
+import { ResponsiveContext } from "@times-components-native/responsive";
+import { ImageContent } from "@times-components-native/types";
 import CloseButton from "../close-button";
 import ModalCaptionContainer from "../modal-caption-container";
 import Image from "../image";
-import styles, { captionStyles, tabletCaptionStyles } from "../styles";
-import Caption from "@times-components-native/caption";
-import { ImageContent } from "@times-components-native/types";
+import styles from "../styles";
+import ModalCaption from "./modal-caption";
 
 interface ModalImageProps {
   aspectRatio?: number;
@@ -33,7 +33,7 @@ interface ModalImageProps {
 
 const ModalImage: FC<ModalImageProps> = ({
   aspectRatio,
-  caption = null,
+  caption,
   images = [],
   index = 0,
   isSmallImage = false,
@@ -51,6 +51,7 @@ const ModalImage: FC<ModalImageProps> = ({
   const [currentIndex, setCurrentIndex] = useState(0);
 
   const hideModal = () => {
+    setCurrentIndex(0);
     setShowModal(false);
   };
 
@@ -62,32 +63,6 @@ const ModalImage: FC<ModalImageProps> = ({
     if (index || index === 0) {
       setCurrentIndex(index);
     }
-  };
-
-  const renderCaption = ({ isTablet }: { isTablet: boolean }) => {
-    const style = isTablet ? tabletCaptionStyles : captionStyles;
-
-    if (!caption) {
-      return null;
-    }
-
-    if (currentIndex === 0) {
-      return (
-        <Caption style={style} credits={caption.credits} text={caption.text} />
-      );
-    }
-
-    if (images[currentIndex - 1]?.attributes) {
-      return (
-        <Caption
-          style={style}
-          text={images[currentIndex - 1].attributes.caption}
-          credits={images[currentIndex - 1].attributes.credits}
-        />
-      );
-    }
-
-    return null;
   };
 
   if (onImagePress && !isSmallImage) {
@@ -109,40 +84,35 @@ const ModalImage: FC<ModalImageProps> = ({
 
   const mainUrl = new Url(uri, true);
   mainUrl.query.offline = "true";
-  const urls = [{ url: mainUrl.toString() }].concat(
+  const urls = [
+    {
+      url: mainUrl.toString(),
+      credits: caption?.credits,
+      caption: caption?.text,
+      aspectRatio: aspectRatio || 1,
+      relativeHeight,
+      relativeWidth,
+      relativeHorizontalOffset,
+      relativeVerticalOffset,
+    },
+  ].concat(
     images
-      .map((i) => {
-        const offlineUrl = new Url(i.attributes.url, true);
+      .map((image) => {
+        const offlineUrl = new Url(image.attributes.url, true);
         offlineUrl.query.offline = "true";
-        return { url: offlineUrl.toString() };
+        const [ratioWidth, ratioHeight] = image.attributes.ratio.split(":");
+
+        return {
+          ...image.attributes,
+          url: offlineUrl.toString(),
+          aspectRatio:
+            ratioWidth && ratioHeight
+              ? Number(ratioWidth) / Number(ratioHeight)
+              : 1,
+        };
       })
       .filter(({ url }) => url !== mainUrl.toString()),
   );
-
-  const getImagesProps = () => {
-    if (currentIndex === 0) {
-      return {
-        aspectRatio: aspectRatio || 1,
-        relativeHeight: relativeHeight,
-        relativeWidth: relativeWidth,
-        relativeHorizontalOffset: relativeHorizontalOffset,
-        relativeVerticalOffset: relativeVerticalOffset,
-      };
-    }
-
-    const currentImage = images[currentIndex - 1];
-
-    const [ratioWidth, ratioHeight] = currentImage.attributes.ratio.split(":");
-
-    return {
-      aspectRatio: Number(ratioWidth) / Number(ratioHeight),
-      relativeHeight: currentImage.attributes.relativeHeight,
-      relativeWidth: currentImage.attributes.relativeWidth,
-      relativeVerticalOffset: currentImage.attributes.relativeVerticalOffset,
-      relativeHorizontalOffset:
-        currentImage.attributes.relativeHorizontalOffset,
-    };
-  };
 
   const renderImage = ({
     source,
@@ -152,13 +122,6 @@ const ModalImage: FC<ModalImageProps> = ({
   }) => {
     const onlineUrl = new Url(source.uri, true);
     delete onlineUrl.query.offline;
-    const {
-      relativeHorizontalOffset,
-      relativeWidth,
-      relativeHeight,
-      relativeVerticalOffset,
-      aspectRatio,
-    } = getImagesProps();
 
     return (
       <View style={styles.modalImageContainer}>
@@ -169,11 +132,11 @@ const ModalImage: FC<ModalImageProps> = ({
             styles.modalImage,
             isSmallImage ? styles.modalSmallImage : imageStyles,
           ]}
-          relativeWidth={relativeWidth}
-          relativeHeight={relativeHeight}
-          relativeVerticalOffset={relativeVerticalOffset}
-          relativeHorizontalOffset={relativeHorizontalOffset}
-          aspectRatio={aspectRatio}
+          relativeWidth={urls[currentIndex].relativeWidth}
+          relativeHeight={urls[currentIndex].relativeHeight}
+          relativeVerticalOffset={urls[currentIndex].relativeVerticalOffset}
+          relativeHorizontalOffset={urls[currentIndex].relativeHorizontalOffset}
+          aspectRatio={urls[currentIndex].aspectRatio}
         />
       </View>
     );
@@ -208,13 +171,18 @@ const ModalImage: FC<ModalImageProps> = ({
                   useNativeDriver
                   renderImage={renderImage}
                   onSwipeDown={hideModal}
+                  saveToLocalByLongPress={false}
                   enablePreload
                 />
                 <ModalCaptionContainer
                   pointerEvents="none"
                   style={styles.bottomSafeView}
                 >
-                  {renderCaption({ isTablet })}
+                  <ModalCaption
+                    isTablet={isTablet}
+                    text={urls[currentIndex].caption || ""}
+                    credits={urls[currentIndex].credits || ""}
+                  />
                 </ModalCaptionContainer>
               </Fragment>
             )}

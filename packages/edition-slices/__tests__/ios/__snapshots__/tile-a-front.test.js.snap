@@ -687,7 +687,7 @@ Array [
           "width": "100%",
         }
       }
-      headlineMarginBottom={15}
+      headlineMarginBottom={10}
       headlineStyle={
         Object {
           "fontFamily": "TimesModern-Bold",
