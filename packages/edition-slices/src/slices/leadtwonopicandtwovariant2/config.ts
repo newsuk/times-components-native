@@ -6,7 +6,7 @@ const lead1Base = {
 };
 
 const lead2Base = {
-  summary: { length: 300 },
+  summary: { length: 1000 },
   headline: { fontSize: 30 },
 };
 
