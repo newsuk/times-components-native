@@ -7,7 +7,7 @@ import {
 export default ({
   headline: { fontSize },
 }: {
-  headline: { fontSize: Number };
+  headline: { fontSize: number };
 }) => ({
   container: {
     flex: 1,
