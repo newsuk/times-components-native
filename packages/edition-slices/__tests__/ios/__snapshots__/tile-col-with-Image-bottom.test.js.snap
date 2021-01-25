@@ -6,8 +6,6 @@ exports[`tile column with image bottom huge 1`] = `
     Object {
       "flex": 1,
       "padding": 10,
-      "paddingHorizontal": 10,
-      "paddingVertical": 15,
     }
   }
 >
@@ -93,11 +91,7 @@ exports[`tile column with image bottom medium 1`] = `
   linkStyle={
     Object {
       "flex": 1,
-      "marginBottom": 10,
       "padding": 10,
-      "paddingHorizontal": 10,
-      "paddingVertical": 15,
-      "width": "100%",
     }
   }
 >
@@ -165,8 +159,6 @@ exports[`tile column with image bottom shows an image 1`] = `
     Object {
       "flex": 1,
       "padding": 10,
-      "paddingHorizontal": 10,
-      "paddingVertical": 15,
     }
   }
 >
@@ -234,8 +226,6 @@ exports[`tile column with image bottom shows portrait image when in portrait wid
     Object {
       "flex": 1,
       "padding": 10,
-      "paddingHorizontal": 10,
-      "paddingVertical": 15,
     }
   }
 >
@@ -313,8 +303,6 @@ exports[`tile column with image bottom wide 1`] = `
     Object {
       "flex": 1,
       "padding": 10,
-      "paddingHorizontal": 10,
-      "paddingVertical": 15,
     }
   }
 >
