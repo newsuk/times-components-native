@@ -27,7 +27,7 @@ class LeadOneAndOne extends Component {
     );
   }
 
-  renderMedium(breakpoint) {
+  renderMedium(breakpoint, orientation) {
     const {
       onPress,
       slice: { lead, support },
@@ -42,6 +42,7 @@ class LeadOneAndOne extends Component {
             onPress={onPress}
             tile={lead}
             tileName="lead"
+            orientation={orientation}
           />
         }
         support={
@@ -50,13 +51,14 @@ class LeadOneAndOne extends Component {
             onPress={onPress}
             tile={support}
             tileName="support"
+            orientation={orientation}
           />
         }
       />
     );
   }
 
-  renderWide(breakpoint) {
+  renderWide(breakpoint, orientation) {
     const {
       onPress,
       slice: { lead, support },
@@ -79,6 +81,7 @@ class LeadOneAndOne extends Component {
             tile={support}
             breakpoint={breakpoint}
             tileName="support"
+            orientation={orientation}
           />
         }
       />
