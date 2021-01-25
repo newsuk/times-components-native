@@ -117,7 +117,7 @@ export const transformSlice = (isTablet: boolean, sectionTitle: string) => (
             },
           }
         : acc;
-    }, {});
+    }, {} as SliceBaseConfig);
 
     return {
       ...slice,
@@ -144,7 +144,7 @@ export const transformSlice = (isTablet: boolean, sectionTitle: string) => (
           },
         };
       }
-    }, {});
+    }, {} as SliceBaseConfig);
 
   return { ...slice, ...mergedTileConfig };
 };
