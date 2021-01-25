@@ -92,19 +92,19 @@ describe("getFrontTileConfig", () => {
   it("fits headline, strapline and byline", () => {
     const summaryConfig = {
       container: {
-        height: 300,
+        height: 100,
       },
       headline: {
-        height: 80,
+        height: 40,
         marginBottom: 20,
       },
       strapline: {
-        height: 80,
+        height: 20,
         marginTop: 10,
-        marginBottom: 15,
+        marginBottom: 10,
       },
       bylines: {
-        height: 100,
+        height: 20,
         marginBottom: 20,
       },
       content: {
@@ -122,7 +122,7 @@ describe("getFrontTileConfig", () => {
         show: true,
       },
       strapline: {
-        marginBottom: 15,
+        marginBottom: 10,
         show: true,
       },
       content: {
@@ -177,22 +177,22 @@ describe("getFrontTileConfig", () => {
     });
   });
 
-  it("fits headline, strapline, byline and hides content if only 1 line fits", () => {
+  it("fits headline and 2 lines of content if there is no room for headline/byline and content", () => {
     const summaryConfig = {
       container: {
-        height: 320,
+        height: 100,
       },
       headline: {
-        height: 80,
+        height: 20,
         marginBottom: 20,
       },
       strapline: {
-        height: 80,
-        marginTop: 20,
+        height: 0,
+        marginTop: 10,
         marginBottom: 15,
       },
       bylines: {
-        height: 80,
+        height: 40,
         marginBottom: 20,
       },
       content: {
@@ -207,10 +207,54 @@ describe("getFrontTileConfig", () => {
       },
       byline: {
         marginBottom: 0,
+        show: false,
+      },
+      strapline: {
+        marginBottom: 0,
+        show: false,
+      },
+      content: {
+        marginBottom: 0,
+        numberOfLines: 3,
+        show: true,
+      },
+    });
+  });
+
+  it("fits headline, strapline, byline and hides content if only 1 line fits", () => {
+    const summaryConfig = {
+      container: {
+        height: 100,
+      },
+      headline: {
+        height: 20,
+        marginBottom: 20,
+      },
+      strapline: {
+        height: 10,
+        marginTop: 10,
+        marginBottom: 10,
+      },
+      bylines: {
+        height: 40,
+        marginBottom: 20,
+      },
+      content: {
+        lineHeight: 40,
+      },
+    };
+    const config = getFrontTileConfig(summaryConfig);
+    expect(config).toEqual({
+      headline: {
+        marginBottom: 10,
+        show: true,
+      },
+      byline: {
+        marginBottom: 0,
         show: true,
       },
       strapline: {
-        marginBottom: 15,
+        marginBottom: 10,
         show: true,
       },
       content: {
@@ -224,10 +268,10 @@ describe("getFrontTileConfig", () => {
   it("fits headline and byline (when strapline is missing)", () => {
     const summaryConfig = {
       container: {
-        height: 200,
+        height: 100,
       },
       headline: {
-        height: 80,
+        height: 60,
         marginBottom: 20,
       },
       strapline: {
@@ -236,7 +280,7 @@ describe("getFrontTileConfig", () => {
         marginBottom: 25,
       },
       bylines: {
-        height: 100,
+        height: 20,
         marginBottom: 20,
       },
       content: {
@@ -254,7 +298,7 @@ describe("getFrontTileConfig", () => {
         show: true,
       },
       strapline: {
-        marginBottom: 25,
+        marginBottom: 0,
         show: false,
       },
       content: {
@@ -294,11 +338,11 @@ describe("getFrontTileConfig", () => {
         show: true,
       },
       byline: {
-        marginBottom: 20,
+        marginBottom: 0,
         show: false,
       },
       strapline: {
-        marginBottom: 20,
+        marginBottom: 0,
         show: false,
       },
       content: {

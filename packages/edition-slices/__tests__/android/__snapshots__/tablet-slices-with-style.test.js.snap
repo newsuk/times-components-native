@@ -1866,7 +1866,7 @@ exports[`23. front lead two - portrait - medium 1`] = `
       <View
         style={
           Object {
-            "width": "32.751937984496124%",
+            "width": "41.33963178294574%",
           }
         }
       >
@@ -1885,7 +1885,7 @@ exports[`23. front lead two - portrait - medium 1`] = `
       <View
         style={
           Object {
-            "width": "67.10271317829458%",
+            "width": "58.515019379844965%",
           }
         }
       >
@@ -4471,7 +4471,7 @@ exports[`57. front lead two - portrait - wide 1`] = `
       <View
         style={
           Object {
-            "width": "32.89855072463767%",
+            "width": "41.42210144927536%",
           }
         }
       >
@@ -4490,7 +4490,7 @@ exports[`57. front lead two - portrait - wide 1`] = `
       <View
         style={
           Object {
-            "width": "66.99275362318839%",
+            "width": "58.46920289855072%",
           }
         }
       >
@@ -7362,7 +7362,7 @@ exports[`91. front lead two - portrait - huge 1`] = `
         <View
           style={
             Object {
-              "width": "32.89855072463767%",
+              "width": "41.42210144927536%",
             }
           }
         >
@@ -7381,7 +7381,7 @@ exports[`91. front lead two - portrait - huge 1`] = `
         <View
           style={
             Object {
-              "width": "66.99275362318839%",
+              "width": "58.46920289855072%",
             }
           }
         >
