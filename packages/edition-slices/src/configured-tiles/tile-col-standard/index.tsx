@@ -32,7 +32,7 @@ const TileColStandard: FC<Props> = ({ onPress, tile, breakpoint }) => {
 
   const config = tile.config[breakpoint];
 
-  const styles = styleFactory(config, breakpoint);
+  const styles = styleFactory(config);
 
   const renderTileImage = ({ article: { hasVideo } }: any, imageProps: any) => {
     const crop = getTileImage(tile, getCropByRatio(imageProps?.ratio));

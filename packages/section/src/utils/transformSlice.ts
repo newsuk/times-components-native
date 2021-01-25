@@ -30,7 +30,7 @@ export interface Slice {
 interface TransformSlice {
   name: string;
   sectionTitle: string;
-  transform: (slice: Slice) => Slice;
+  overrides: (slice: Slice) => Slice;
 }
 
 const sharedSupportConfig = {
