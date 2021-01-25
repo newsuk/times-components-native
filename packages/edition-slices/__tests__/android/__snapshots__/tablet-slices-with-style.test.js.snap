@@ -188,9 +188,7 @@ exports[`3. lead one and one - medium 1`] = `
           "width": "75%",
         }
       }
-    >
-      <TileU />
-    </View>
+    />
     <View
       style={
         Object {
@@ -207,9 +205,7 @@ exports[`3. lead one and one - medium 1`] = `
           "width": "25%",
         }
       }
-    >
-      <TileVerticalA />
-    </View>
+    />
   </View>
 </View>
 `;
@@ -2844,9 +2840,7 @@ exports[`37. lead one and one - wide 1`] = `
           "width": "16.5%",
         }
       }
-    >
-      <TileVerticalA />
-    </View>
+    />
   </View>
 </View>
 `;
@@ -5553,9 +5547,7 @@ exports[`71. lead one and one - huge 1`] = `
             "width": "16.5%",
           }
         }
-      >
-        <TileVerticalA />
-      </View>
+      />
     </View>
   </View>
 </View>
