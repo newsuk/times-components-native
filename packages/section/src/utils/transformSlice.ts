@@ -101,10 +101,8 @@ export const transformSlice = (isTablet: boolean, sectionTitle: string) => (
       st.sectionTitle.toUpperCase() === sectionTitle.toUpperCase(),
   );
 
-  // no transform object and no default base config so only use slice in old format
   if (!transformation && !baseConfigs[slice.name]) return slice;
 
-  // no transform but base config is truthy so passes the base config to slice that contains a configured tile or tiles
   if (
     (!transformation && baseConfigs[slice.name]) ||
     !transformation?.overrides
@@ -129,7 +127,7 @@ export const transformSlice = (isTablet: boolean, sectionTitle: string) => (
 
   const mergedTileConfig = Object.keys(slice).reduce((acc, curtileName) => {
     {
-      if (["name", "id"].includes(curtileName)) return acc;
+      if (["name", "id", "items"].includes(curtileName)) return acc;
 
       return {
         ...acc,
