@@ -65,9 +65,7 @@ export const baseConfig: Omit<Slice, "name"> = {
         ...support2Base,
         headline: { fontSize: 24 },
         image: { ratio: "4:5", orientation: "landscape" },
-        portrait: {
-          image: { ratio: "2:3" },
-        },
+        portrait: { ratio: "2:3" },
       },
       huge: {
         ...support2Base,
