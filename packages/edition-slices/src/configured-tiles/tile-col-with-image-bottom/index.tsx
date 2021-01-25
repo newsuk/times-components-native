@@ -43,43 +43,50 @@ const TileColWithImageBottom: FC<Props> = ({
 
   const config = tile.config[breakpoint];
 
-  const styles = stylesFactory(breakpoint, config);
+  const styles = stylesFactory(breakpoint, config as TileConfig);
 
   const renderTileImage = (
     { article }: Tile,
     imageProps: Pick<TileConfig, "image" | "portrait">,
   ) => {
-    const imageRatio =
-      imageProps.portrait && orientation === "portrait"
-        ? imageProps.portrait.ratio
-        : imageProps.image?.ratio;
+    if (
+      imageProps.image?.orientation === orientation ||
+      imageProps?.portrait ||
+      !imageProps.image?.orientation
+    ) {
+      const imageRatio =
+        imageProps.portrait && orientation === "portrait"
+          ? imageProps.portrait.ratio
+          : imageProps.image?.ratio;
 
-    if (!imageRatio) return null;
+      if (!imageRatio) return null;
 
-    const crop: Crop = getTileImage(tile, getCropByRatio(imageRatio));
+      const crop: Crop = getTileImage(tile, getCropByRatio(imageRatio));
 
-    if (!crop) return null;
+      if (!crop) return null;
 
-    const {
-      relativeWidth,
-      relativeHeight,
-      relativeHorizontalOffset,
-      relativeVerticalOffset,
-      url,
-    } = crop;
+      const {
+        relativeWidth,
+        relativeHeight,
+        relativeHorizontalOffset,
+        relativeVerticalOffset,
+        url,
+      } = crop;
 
-    return (
-      <TileImage
-        aspectRatio={getAspectRatio(imageRatio)}
-        relativeWidth={relativeWidth}
-        relativeHeight={relativeHeight}
-        relativeHorizontalOffset={relativeHorizontalOffset}
-        relativeVerticalOffset={relativeVerticalOffset}
-        style={styles.imageContainer}
-        uri={url}
-        hasVideo={article?.hasVideo}
-      />
-    );
+      return (
+        <TileImage
+          aspectRatio={getAspectRatio(imageRatio)}
+          relativeWidth={relativeWidth}
+          relativeHeight={relativeHeight}
+          relativeHorizontalOffset={relativeHorizontalOffset}
+          relativeVerticalOffset={relativeVerticalOffset}
+          style={styles.imageContainer}
+          uri={url}
+          hasVideo={article?.hasVideo}
+        />
+      );
+    }
+    return null;
   };
 
   return (
@@ -98,9 +105,7 @@ const TileColWithImageBottom: FC<Props> = ({
           />
         )}
       />
-      {config?.image &&
-        (config.image?.orientation === orientation || config?.portrait) &&
-        renderTileImage(tile, config)}
+      {config?.image && renderTileImage(tile, config)}
     </TileLink>
   );
 };

@@ -15,57 +15,86 @@ import {
   ConfiguredTile,
   OnArticlePress,
   EditionBreakpointKeys,
+  Orientation,
+  TileConfig,
 } from "@times-components-native/types";
 import {
   getAspectRatio,
   getCropByRatio,
 } from "@times-components-native/image/src/utils";
+import {
+  Crop,
+  Tile,
+} from "@times-components-native/fixture-generator/src/types";
 
 interface Props {
   onPress: OnArticlePress;
   tile: ConfiguredTile;
   breakpoint: EditionBreakpointKeys;
+  orientation: Orientation;
 }
 
-const TileColStandard: FC<Props> = ({ onPress, tile, breakpoint }) => {
+const TileColStandard: FC<Props> = ({
+  onPress,
+  tile,
+  breakpoint,
+  orientation,
+}) => {
   if (!tile.config) return null;
 
   const config = tile.config[breakpoint];
 
-  const styles = styleFactory(config, breakpoint);
+  const styles = styleFactory(config as TileConfig);
 
-  const renderTileImage = ({ article: { hasVideo } }: any, imageProps: any) => {
-    const crop = getTileImage(tile, getCropByRatio(imageProps?.ratio));
+  const renderTileImage = (
+    { article }: Tile,
+    imageProps: Pick<TileConfig, "image" | "portrait">,
+  ) => {
+    if (
+      imageProps.image?.orientation === orientation ||
+      imageProps?.portrait ||
+      !imageProps.image?.orientation
+    ) {
+      const imageRatio =
+        imageProps.portrait && orientation === "portrait"
+          ? imageProps.portrait.ratio
+          : imageProps.image?.ratio;
 
-    if (!crop) {
-      return null;
+      if (!imageRatio) return null;
+
+      const crop: Crop = getTileImage(tile, getCropByRatio(imageRatio));
+
+      if (!crop) {
+        return null;
+      }
+
+      const {
+        relativeWidth,
+        relativeHeight,
+        relativeHorizontalOffset,
+        relativeVerticalOffset,
+        url,
+      } = crop;
+
+      return (
+        <TileImage
+          aspectRatio={getAspectRatio(imageRatio)}
+          relativeWidth={relativeWidth}
+          relativeHeight={relativeHeight}
+          relativeHorizontalOffset={relativeHorizontalOffset}
+          relativeVerticalOffset={relativeVerticalOffset}
+          style={styles.imageContainer}
+          uri={url}
+          hasVideo={article.hasVideo}
+        />
+      );
     }
-
-    const {
-      relativeWidth,
-      relativeHeight,
-      relativeHorizontalOffset,
-      relativeVerticalOffset,
-      url,
-    } = crop;
-
-    return (
-      <TileImage
-        aspectRatio={getAspectRatio(imageProps?.ratio)}
-        relativeWidth={relativeWidth}
-        relativeHeight={relativeHeight}
-        relativeHorizontalOffset={relativeHorizontalOffset}
-        relativeVerticalOffset={relativeVerticalOffset}
-        style={styles.imageContainer}
-        uri={url}
-        hasVideo={hasVideo}
-      />
-    ) as any;
+    return null;
   };
 
   return (
     <TileLink onPress={onPress} style={styles.container} tile={tile}>
-      {config.image && renderTileImage(tile, config.image)}
+      {config?.image && renderTileImage(tile, config)}
       <WithoutWhiteSpace
         render={(whiteSpaceHeight: number) => (
           <TileSummary
