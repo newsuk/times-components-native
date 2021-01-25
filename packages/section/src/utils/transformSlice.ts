@@ -1,20 +1,32 @@
 import { leadOneAndOneSliceConfig } from "@times-components-native/edition-slices/src/slices/leadoneandone/config";
-import { TileConfig } from "@times-components-native/types";
+import { ConfiguredTile } from "@times-components-native/types";
 import merge from "lodash.merge";
 
-const baseConfigs = {
+type SliceNames = "LeadTwoNoPicAndTwoSlice" | "LeadOneAndOneSlice";
+
+type SliceNameConfig = Record<SliceNames, Slice>;
+
+const baseConfigs: SliceNameConfig = {
   LeadOneAndOneSlice: leadOneAndOneSliceConfig,
 };
 
-interface Slice {
-  support: {
-    config?: TileConfig;
-  };
-  name: string;
-  id: string;
+export interface Slice {
+  support?: ConfiguredTile;
+
+  support1?: ConfiguredTile;
+
+  support2?: ConfiguredTile;
+
+  lead1?: ConfiguredTile;
+
+  lead2?: ConfiguredTile;
+
+  lead?: ConfiguredTile;
+
+  name: SliceNames;
+  id?: string;
   [key: string]: any;
 }
-
 interface TransformSlice {
   name: string;
   sectionTitle: string;
