@@ -56,10 +56,10 @@ const calculateStyles = (orientation, windowWidth) => {
       paddingTop: spacing(3),
     },
     lead1Container: {
-      width: columnToPercentageWithOrientation({ numberOfColumns: 4 }),
+      width: columnToPercentageWithOrientation({ numberOfColumns: 5 }),
     },
     lead2Container: {
-      width: columnToPercentageWithOrientation({ numberOfColumns: 8 }),
+      width: columnToPercentageWithOrientation({ numberOfColumns: 7 }),
     },
   };
 

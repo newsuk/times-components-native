@@ -53,7 +53,6 @@ const TileZ = ({ onPress, tile, breakpoint = editionBreakpoints.wide }) => {
         relativeVerticalOffset={crop.relativeVerticalOffset}
         style={styles.imageContainer}
         uri={crop.url}
-        fill
         hasVideo={hasVideo}
       />
     </TileLink>

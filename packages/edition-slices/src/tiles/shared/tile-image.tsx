@@ -3,18 +3,12 @@ import { LayoutChangeEvent, View, ViewStyle } from "react-native";
 import { PlayIcon } from "@times-components-native/video";
 import Image from "@times-components-native/image";
 import { playIconStyles } from "./styles";
+import { ResponsiveImageProps } from "@times-components-native/responsive-image/src";
 
-interface Props {
+interface Props extends ResponsiveImageProps {
   hasVideo?: boolean | null;
-  aspectRatio: number;
-  relativeWidth: number;
-  relativeHeight: number;
-  relativeVerticalOffset: number;
-  relativeHorizontalOffset: number;
-  fill?: boolean;
   style: ViewStyle;
   onLayout?: () => void;
-  uri: string;
 }
 
 const TileImage: FC<Props> = ({ hasVideo, style, onLayout, ...props }) => {

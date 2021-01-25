@@ -13,7 +13,6 @@ Array [
   >
     <Image
       aspectRatio={0.8}
-      fill={true}
       style={
         Object {
           "marginBottom": 0,
@@ -617,7 +616,6 @@ Array [
   >
     <Image
       aspectRatio={0.8}
-      fill={true}
       style={
         Object {
           "marginBottom": 0,
@@ -1221,7 +1219,6 @@ Array [
   >
     <Image
       aspectRatio={0.8}
-      fill={true}
       style={
         Object {
           "marginBottom": 0,
@@ -1825,7 +1822,6 @@ Array [
   >
     <Image
       aspectRatio={0.8}
-      fill={true}
       style={
         Object {
           "marginBottom": 0,
@@ -2428,10 +2424,9 @@ Array [
   >
     <Image
       aspectRatio={0.8}
-      fill={true}
       style={
         Object {
-          "marginBottom": 0,
+          "marginBottom": 10,
           "width": "100%",
         }
       }
@@ -2489,7 +2484,7 @@ Array [
           "width": "100%",
         }
       }
-      headlineMarginBottom={10}
+      headlineMarginBottom={15}
       headlineStyle={
         Object {
           "fontFamily": "TimesModern-Bold",
@@ -3031,10 +3026,9 @@ Array [
   >
     <Image
       aspectRatio={0.8}
-      fill={true}
       style={
         Object {
-          "marginBottom": 0,
+          "marginBottom": 10,
           "width": "100%",
         }
       }
@@ -3092,7 +3086,7 @@ Array [
           "width": "100%",
         }
       }
-      headlineMarginBottom={10}
+      headlineMarginBottom={15}
       headlineStyle={
         Object {
           "fontFamily": "TimesModern-Bold",
@@ -3634,10 +3628,9 @@ Array [
   >
     <Image
       aspectRatio={0.8}
-      fill={true}
       style={
         Object {
-          "marginBottom": 0,
+          "marginBottom": 10,
           "width": "100%",
         }
       }
@@ -3695,7 +3688,7 @@ Array [
           "width": "100%",
         }
       }
-      headlineMarginBottom={10}
+      headlineMarginBottom={15}
       headlineStyle={
         Object {
           "fontFamily": "TimesModern-Bold",
@@ -4237,10 +4230,9 @@ Array [
   >
     <Image
       aspectRatio={0.8}
-      fill={true}
       style={
         Object {
-          "marginBottom": 0,
+          "marginBottom": 10,
           "width": "100%",
         }
       }
@@ -4840,10 +4832,9 @@ Array [
   >
     <Image
       aspectRatio={0.8}
-      fill={true}
       style={
         Object {
-          "marginBottom": 0,
+          "marginBottom": 10,
           "width": "100%",
         }
       }

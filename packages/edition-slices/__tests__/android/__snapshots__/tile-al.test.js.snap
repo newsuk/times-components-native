@@ -12,7 +12,6 @@ exports[`tile al huge 1`] = `
 >
   <Image
     aspectRatio={1.5}
-    fill={true}
     style={
       Object {
         "marginBottom": 10,
@@ -110,7 +109,6 @@ exports[`tile al wide 1`] = `
 >
   <Image
     aspectRatio={1.5}
-    fill={true}
     style={
       Object {
         "marginBottom": 10,
