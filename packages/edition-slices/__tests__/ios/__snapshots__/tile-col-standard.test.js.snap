@@ -4,4 +4,158 @@ exports[`tile col standard huge 1`] = `null`;
 
 exports[`tile col standard medium 1`] = `null`;
 
+exports[`tile col standard shows an image 1`] = `
+<Link
+  linkStyle={
+    Object {
+      "flex": 1,
+      "paddingHorizontal": 10,
+      "paddingVertical": 10,
+    }
+  }
+>
+  <Image
+    aspectRatio={0.8}
+    style={
+      Object {
+        "marginBottom": 10,
+      }
+    }
+    uri="https://www.thetimes.co.uk/imageserver/image/%2Fmethode%2Ftimes%2Fprod%2Fweb%2Fbin%2F5a14c64e-06db-11e9-abe2-4909b2eb0130.jpg?crop=1434%2C1792%2C627%2C0"
+  />
+  <View
+    style={
+      Object {
+        "flex": 1,
+      }
+    }
+  >
+    <View>
+      <View>
+        <View
+          style={
+            Object {
+              "marginBottom": 5,
+            }
+          }
+        >
+          <ArticleLabel
+            color="#005B8D"
+            hide={false}
+            isVideo={false}
+            markAsRead={false}
+            title="label"
+          />
+        </View>
+        <Text
+          accessibilityRole="header"
+          aria-level="3"
+          style={
+            Object {
+              "color": "#333333",
+              "fontFamily": "TimesModern-Bold",
+              "fontSize": 24,
+              "fontWeight": "900",
+              "includeFontPadding": false,
+              "lineHeight": 24,
+              "marginBottom": 10,
+            }
+          }
+        >
+          This is tile headline
+        </Text>
+        <ArticleFlags
+          flags={
+            Array [
+              Object {
+                "expiryTime": "2030-03-14T12:00:00.000Z",
+                "type": "EXCLUSIVE",
+              },
+            ]
+          }
+          longRead={true}
+        />
+      </View>
+    </View>
+  </View>
+</Link>
+`;
+
+exports[`tile col standard shows portrait image when in portrait wide (ipad pro) 1`] = `
+<Link
+  linkStyle={
+    Object {
+      "flex": 1,
+      "paddingHorizontal": 10,
+      "paddingVertical": 10,
+    }
+  }
+>
+  <Image
+    aspectRatio={0.8}
+    style={
+      Object {
+        "marginBottom": 10,
+      }
+    }
+    uri="https://www.thetimes.co.uk/imageserver/image/%2Fmethode%2Ftimes%2Fprod%2Fweb%2Fbin%2F5a14c64e-06db-11e9-abe2-4909b2eb0130.jpg?crop=1434%2C1792%2C627%2C0"
+  />
+  <View
+    style={
+      Object {
+        "flex": 1,
+      }
+    }
+  >
+    <View>
+      <View>
+        <View
+          style={
+            Object {
+              "marginBottom": 5,
+            }
+          }
+        >
+          <ArticleLabel
+            color="#005B8D"
+            hide={false}
+            isVideo={false}
+            markAsRead={false}
+            title="label"
+          />
+        </View>
+        <Text
+          accessibilityRole="header"
+          aria-level="3"
+          style={
+            Object {
+              "color": "#333333",
+              "fontFamily": "TimesModern-Bold",
+              "fontSize": 24,
+              "fontWeight": "900",
+              "includeFontPadding": false,
+              "lineHeight": 24,
+              "marginBottom": 10,
+            }
+          }
+        >
+          This is tile headline
+        </Text>
+        <ArticleFlags
+          flags={
+            Array [
+              Object {
+                "expiryTime": "2030-03-14T12:00:00.000Z",
+                "type": "EXCLUSIVE",
+              },
+            ]
+          }
+          longRead={true}
+        />
+      </View>
+    </View>
+  </View>
+</Link>
+`;
+
 exports[`tile col standard wide 1`] = `null`;

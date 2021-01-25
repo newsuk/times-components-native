@@ -2,7 +2,7 @@ import React, { Component } from "react";
 import PropTypes from "prop-types";
 import { LeadTwoNoPicAndTwoVariant2Slice } from "@times-components-native/slice-layout";
 import { ResponsiveSlice } from "../shared";
-import TileVerticalA from "../../configured-tiles/tile-vertical-a";
+import TileColStandard from "../../configured-tiles/tile-col-standard";
 import TileColWithImageBottom from "../../configured-tiles/tile-col-with-image-bottom";
 
 class LeadTwoNoPicAndTwoVariant2 extends Component {
@@ -19,14 +19,14 @@ class LeadTwoNoPicAndTwoVariant2 extends Component {
 
     const isLandscape = orientation === "landscape";
 
-    const Support2 = isLandscape ? TileVerticalA : TileColWithImageBottom;
+    const Support2 = isLandscape ? TileColStandard : TileColWithImageBottom;
 
     return (
       <LeadTwoNoPicAndTwoVariant2Slice
         orientation={orientation}
         breakpoint={breakpoint}
         lead1={
-          <TileVerticalA
+          <TileColStandard
             breakpoint={breakpoint}
             onPress={onPress}
             tile={lead1}
@@ -34,7 +34,7 @@ class LeadTwoNoPicAndTwoVariant2 extends Component {
           />
         }
         lead2={
-          <TileVerticalA
+          <TileColStandard
             breakpoint={breakpoint}
             onPress={onPress}
             tile={lead2}
@@ -42,7 +42,7 @@ class LeadTwoNoPicAndTwoVariant2 extends Component {
           />
         }
         support1={
-          <TileVerticalA
+          <TileColStandard
             breakpoint={breakpoint}
             onPress={onPress}
             tile={support1}
