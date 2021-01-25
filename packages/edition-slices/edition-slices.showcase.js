@@ -132,7 +132,8 @@ const sliceStories = [
   },
   {
     mock: mockLeadTwoNoPicAndTwoSlice(),
-    name: "TBC",
+    name:
+      "Lead two no pic and two variant 2 (tablet only made using configured tiles only col standard and col with image bottom)",
     Slice: LeadTwoNoPicAndTwoVariant2Slice,
   },
   {
