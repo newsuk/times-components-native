@@ -3,7 +3,7 @@ import { editionBreakpoints } from "@times-components-native/styleguide";
 
 export type EditionBreakpointKeys = keyof typeof editionBreakpoints;
 
-type ImageAspectRatios = "3:2" | "2:3" | "16:9" | "4:5";
+type ImageAspectRatios = "16:9" | "3:2" | "4:5" | "2:3";
 
 export type Orientation = "landscape" | "portrait";
 
@@ -12,13 +12,13 @@ export interface TileConfig {
   portrait?: { ratio: ImageAspectRatios };
   image?: {
     ratio: ImageAspectRatios;
-    orientation: Orientation;
+    orientation?: Orientation;
   };
-  headline: { fontSize: number };
+  headline?: { fontSize: number };
 }
 
 type BaseConfig = {
-  [K in EditionBreakpointKeys]: TileConfig;
+  [K in EditionBreakpointKeys]?: TileConfig;
 };
 export interface ConfiguredTile extends Tile {
   config: BaseConfig;

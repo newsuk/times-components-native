@@ -1,12 +1,12 @@
 import "../mocks-tiles";
 import { testTile, tile } from "../shared-tile-utils";
-import { TileVerticalA } from "../../src/tiles";
+import { TileColStandard } from "../../src/tiles";
 import { editionBreakpoints } from "@times-components-native/styleguide";
 
 export default () => {
-  describe("tile vertical a", () => {
+  describe("tile col standard", () => {
     it("shows an image", () => {
-      testTile(TileVerticalA, editionBreakpoints.wide, {
+      testTile(TileColStandard, editionBreakpoints.wide, {
         ...tile,
         config: {
           wide: {
@@ -19,7 +19,7 @@ export default () => {
 
     it("shows portrait image when in portrait wide (ipad pro)", () => {
       testTile(
-        TileVerticalA,
+        TileColStandard,
         editionBreakpoints.wide,
         {
           ...tile,
@@ -38,7 +38,7 @@ export default () => {
     });
 
     it("medium", () => {
-      testTile(TileVerticalA, editionBreakpoints.medium, {
+      testTile(TileColStandard, editionBreakpoints.medium, {
         ...tile,
         config: {
           medium: {
@@ -49,7 +49,7 @@ export default () => {
     });
 
     it("wide", () => {
-      testTile(TileVerticalA, editionBreakpoints.wide, {
+      testTile(TileColStandard, editionBreakpoints.wide, {
         ...tile,
         config: {
           wide: {
@@ -61,7 +61,7 @@ export default () => {
     });
 
     it("huge", () => {
-      testTile(TileVerticalA, editionBreakpoints.huge, {
+      testTile(TileColStandard, editionBreakpoints.huge, {
         ...tile,
         config: {
           huge: {

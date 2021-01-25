@@ -15,13 +15,7 @@ import {
   ConfiguredTile,
   OnArticlePress,
   EditionBreakpointKeys,
-  Orientation,
-  TileConfig,
 } from "@times-components-native/types";
-import {
-  Tile,
-  Crop,
-} from "@times-components-native/fixture-generator/src/types";
 import {
   getAspectRatio,
   getCropByRatio,
@@ -31,28 +25,17 @@ interface Props {
   onPress: OnArticlePress;
   tile: ConfiguredTile;
   breakpoint: EditionBreakpointKeys;
-  orientation: Orientation;
 }
 
-const TileVerticalA: FC<Props> = ({
-  onPress,
-  tile,
-  breakpoint,
-  orientation,
-}) => {
+const TileColStandard: FC<Props> = ({ onPress, tile, breakpoint }) => {
   if (!tile.config) return null;
 
   const config = tile.config[breakpoint];
 
-  const styles = styleFactory(config);
+  const styles = styleFactory(config, breakpoint);
 
-  const renderTileImage = ({ article }: Tile, imageProps: TileConfig) => {
-    const imageRatio =
-      imageProps.portrait && orientation === "portrait"
-        ? imageProps.portrait.ratio
-        : imageProps.image?.ratio;
-
-    const crop: Crop = getTileImage(tile, getCropByRatio(imageRatio));
+  const renderTileImage = ({ article: { hasVideo } }: any, imageProps: any) => {
+    const crop = getTileImage(tile, getCropByRatio(imageProps?.ratio));
 
     if (!crop) {
       return null;
@@ -68,40 +51,38 @@ const TileVerticalA: FC<Props> = ({
 
     return (
       <TileImage
-        aspectRatio={getAspectRatio(imageRatio)}
+        aspectRatio={getAspectRatio(imageProps?.ratio)}
         relativeWidth={relativeWidth}
         relativeHeight={relativeHeight}
         relativeHorizontalOffset={relativeHorizontalOffset}
         relativeVerticalOffset={relativeVerticalOffset}
         style={styles.imageContainer}
         uri={url}
-        hasVideo={article?.hasVideo}
+        hasVideo={hasVideo}
       />
-    );
+    ) as any;
   };
 
   return (
     <TileLink onPress={onPress} style={styles.container} tile={tile}>
-      {config?.image &&
-        (config.image?.orientation === orientation || config?.portrait) &&
-        renderTileImage(tile, config)}
+      {config.image && renderTileImage(tile, config.image)}
       <WithoutWhiteSpace
         render={(whiteSpaceHeight: number) => (
           <TileSummary
             headlineStyle={styles.headline}
-            tile={tile}
-            whiteSpaceHeight={whiteSpaceHeight}
-            withStar={false}
             {...(config?.summary && {
               summary: getTileSummary(tile, config?.summary.length),
               summaryStyle: styles.summary,
             })}
+            tile={tile}
+            whiteSpaceHeight={whiteSpaceHeight}
+            withStar={false}
           />
         )}
       />
-      <PositionedTileStar articleId={tile.article?.id} />
+      <PositionedTileStar articleId={tile.article.id} />
     </TileLink>
   );
 };
 
-export default withTileTracking(TileVerticalA);
+export default withTileTracking(TileColStandard);

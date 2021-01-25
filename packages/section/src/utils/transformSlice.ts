@@ -1,4 +1,5 @@
-import { baseConfig } from "@times-components-native/edition-slices/src/slices/leadtwonopicandtwovariant2/baseConfig";
+import { l2NoPic2V2BaseConfig } from "@times-components-native/edition-slices/src/slices/leadtwonopicandtwovariant2/baseConfig";
+import { leadOneAndOneSliceConfig } from "@times-components-native/edition-slices/src/slices/leadoneandone/config";
 import { ConfiguredTile } from "@times-components-native/types";
 import merge from "lodash.merge";
 
@@ -9,8 +10,8 @@ type SliceBaseConfig = Omit<Slice, "name" | "id">;
 type SliceNameConfig = Record<SliceNames, SliceBaseConfig>;
 
 const baseConfigs: SliceNameConfig = {
-  LeadTwoNoPicAndTwoSlice: baseConfig,
-  LeadOneAndOneSlice: baseConfig,
+  LeadTwoNoPicAndTwoSlice: l2NoPic2V2BaseConfig,
+  LeadOneAndOneSlice: leadOneAndOneSliceConfig,
 };
 
 export interface Slice {
@@ -30,32 +31,64 @@ export interface Slice {
   id: string;
   [key: string]: any;
 }
-
 interface TransformSlice {
   name: string;
   sectionTitle: string;
   overrides: SliceBaseConfig;
 }
 
-const leadOneAndOneNewsTransform: TransformSlice = {
+const sharedSupportConfig = {
+  summary: { length: 800 },
+  image: {
+    ratio: "3:2",
+  },
+};
+
+const leadOneAndOneNewsTransform = {
   sectionTitle: "News",
   name: "LeadOneAndOneSlice",
   overrides: {
     support: {
       config: {
-        huge: {
-          summary: { length: 800 },
-          image: {
-            ratio: "3:2",
-            orientation: "portrait",
-          },
-        },
+        medium: sharedSupportConfig,
+        wide: sharedSupportConfig,
+        huge: sharedSupportConfig,
       },
     },
   },
 };
 
-const sliceTransformations: TransformSlice[] = [leadOneAndOneNewsTransform];
+const leadOneAndOneRegisterTransform = {
+  sectionTitle: "Register",
+  name: "LeadOneAndOneSlice",
+  overrides: {
+    lead: {
+      config: {
+        medium: {
+          image: {
+            ratio: "16:9",
+          },
+          summary: { length: 800 },
+          headline: {
+            fontSize: 40,
+          },
+        },
+      },
+    },
+    support: {
+      config: {
+        medium: sharedSupportConfig,
+        wide: sharedSupportConfig,
+        huge: sharedSupportConfig,
+      },
+    },
+  },
+};
+
+const sliceTransformations: TransformSlice[] = [
+  leadOneAndOneNewsTransform,
+  leadOneAndOneRegisterTransform,
+];
 
 export const transformSlice = (isTablet: boolean, sectionTitle: string) => (
   slice: Slice,
@@ -115,6 +148,6 @@ export const transformSlice = (isTablet: boolean, sectionTitle: string) => (
     }
   }, {});
 
-  // merges overrides with exsisting tile data
+  // merges overrides with existing tile data
   return { ...slice, ...mergedTileConfig };
 };
