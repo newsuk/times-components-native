@@ -1,4 +1,8 @@
 import React, { FC } from "react";
+import {
+  Tile,
+  Crop,
+} from "@times-components-native/fixture-generator/src/types";
 import { editionBreakpoints } from "@times-components-native/styleguide";
 import {
   getTileImage,
@@ -17,6 +21,7 @@ import {
   OnArticlePress,
   Orientation,
   EditionBreakpointKeys,
+  TileConfig,
 } from "@times-components-native/types";
 
 interface Props {
@@ -29,7 +34,7 @@ interface Props {
 const TileColWithImageBottom: FC<Props> = ({
   onPress,
   tile,
-  breakpoint = editionBreakpoints.small,
+  breakpoint = editionBreakpoints.medium,
   orientation,
 }) => {
   if (!tile.config) return null;
@@ -38,17 +43,20 @@ const TileColWithImageBottom: FC<Props> = ({
 
   const styles = stylesFactory(breakpoint, config);
 
-  const renderTileImage = ({ article: { hasVideo } }: any, imageProps: any) => {
+  const renderTileImage = (
+    { article }: Tile,
+    imageProps: Pick<TileConfig, "image" | "portrait">,
+  ) => {
     const imageRatio =
       imageProps.portrait && orientation === "portrait"
         ? imageProps.portrait.ratio
-        : imageProps.image.ratio;
+        : imageProps.image?.ratio;
 
-    const crop = getTileImage(tile, getCropByRatio(imageRatio));
+    if (!imageRatio) return null;
 
-    if (!crop) {
-      return null;
-    }
+    const crop: Crop = getTileImage(tile, getCropByRatio(imageRatio));
+
+    if (!crop) return null;
 
     const {
       relativeWidth,
@@ -67,7 +75,7 @@ const TileColWithImageBottom: FC<Props> = ({
         relativeVerticalOffset={relativeVerticalOffset}
         style={styles.imageContainer}
         uri={url}
-        hasVideo={hasVideo}
+        hasVideo={article?.hasVideo}
       />
     );
   };
@@ -76,7 +84,7 @@ const TileColWithImageBottom: FC<Props> = ({
     <TileLink onPress={onPress} style={styles.container} tile={tile}>
       <WithoutWhiteSpace
         style={styles.summaryContainer}
-        render={(whiteSpaceHeight: any) => (
+        render={(whiteSpaceHeight: number) => (
           <TileSummary
             headlineStyle={styles.headline}
             tile={tile}
