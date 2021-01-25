@@ -77,7 +77,7 @@ export const transformSlice = (isTablet: boolean, sectionTitle: string) => (
     !transformation?.overrides
   ) {
     //merges existing slice tile data with the base config
-    const mergeBaseConfig = Object.keys(slice).reduce((acc, curtileName) => {
+    const mergedBaseConfig = Object.keys(slice).reduce((acc, curtileName) => {
       return Object.keys(baseConfigs[slice.name]).includes(curtileName)
         ? {
             ...acc,
@@ -91,33 +91,30 @@ export const transformSlice = (isTablet: boolean, sectionTitle: string) => (
 
     return {
       ...slice,
-      ...mergeBaseConfig,
+      ...mergedBaseConfig,
     };
   }
 
   //merges existing slice tile data with the transform overrides
-  const mergeTileOverrideData = Object.keys(slice).reduce(
-    (acc, curtileName) => {
-      {
-        if (["name", "id"].includes(curtileName)) return acc;
+  const mergedTileConfig = Object.keys(slice).reduce((acc, curtileName) => {
+    {
+      if (["name", "id"].includes(curtileName)) return acc;
 
-        return {
-          ...acc,
-          [curtileName]: {
-            ...slice[curtileName],
-            config: Object.keys(transformation.overrides).includes(curtileName)
-              ? merge({
-                  ...baseConfigs[slice.name][curtileName].config,
-                  ...transformation.overrides[curtileName].config,
-                })
-              : { ...baseConfigs[slice.name][curtileName].config },
-          },
-        };
-      }
-    },
-    {},
-  );
+      return {
+        ...acc,
+        [curtileName]: {
+          ...slice[curtileName],
+          config: Object.keys(transformation.overrides).includes(curtileName)
+            ? merge({
+                ...baseConfigs[slice.name][curtileName].config,
+                ...transformation.overrides[curtileName].config,
+              })
+            : { ...baseConfigs[slice.name][curtileName].config },
+        },
+      };
+    }
+  }, {});
 
   // merges overrides with exsisting tile data
-  return { ...slice, ...mergeTileOverrideData };
+  return { ...slice, ...mergedTileConfig };
 };
