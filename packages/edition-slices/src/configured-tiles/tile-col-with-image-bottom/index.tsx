@@ -26,7 +26,7 @@ interface Props {
   orientation: Orientation;
 }
 
-const TileColImageBottom: FC<Props> = ({
+const TileColWithImageBottom: FC<Props> = ({
   onPress,
   tile,
   breakpoint = editionBreakpoints.small,
@@ -41,7 +41,7 @@ const TileColImageBottom: FC<Props> = ({
   const renderTileImage = ({ article: { hasVideo } }: any, imageProps: any) => {
     const imageRatio =
       imageProps.portrait && orientation === "portrait"
-        ? imageProps.portrait.image.ratio
+        ? imageProps.portrait.ratio
         : imageProps.image.ratio;
 
     const crop = getTileImage(tile, getCropByRatio(imageRatio));
@@ -95,4 +95,4 @@ const TileColImageBottom: FC<Props> = ({
   );
 };
 
-export default withTileTracking(TileColImageBottom);
+export default withTileTracking(TileColWithImageBottom);
