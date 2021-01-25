@@ -130,20 +130,18 @@ export const transformSlice = (isTablet: boolean, sectionTitle: string) => (
       Object.keys(baseConfigs[slice.name]).includes(sliceKey),
     )
     .reduce((acc, tileName) => {
-      {
-        return {
-          ...acc,
-          [tileName]: {
-            ...slice[tileName],
-            config: transformation.overrides[tileName]
-              ? merge({
-                  ...baseConfigs[slice.name][tileName].config,
-                  ...transformation.overrides[tileName].config,
-                })
-              : { ...baseConfigs[slice.name][tileName].config },
-          },
-        };
-      }
+      return {
+        ...acc,
+        [tileName]: {
+          ...slice[tileName],
+          config: transformation.overrides[tileName]
+            ? merge({
+                ...baseConfigs[slice.name][tileName].config,
+                ...transformation.overrides[tileName].config,
+              })
+            : { ...baseConfigs[slice.name][tileName].config },
+        },
+      };
     }, {} as SliceBaseConfig);
 
   return { ...slice, ...mergedTileConfig };
