@@ -107,13 +107,13 @@ export const transformSlice = (isTablet: boolean, sectionTitle: string) => (
     (!transformation && baseConfigs[slice.name]) ||
     !transformation?.overrides
   ) {
-    const mergedBaseConfig = Object.keys(slice).reduce((acc, curtileName) => {
-      return Object.keys(baseConfigs[slice.name]).includes(curtileName)
+    const mergedBaseConfig = Object.keys(slice).reduce((acc, tileName) => {
+      return Object.keys(baseConfigs[slice.name]).includes(tileName)
         ? {
             ...acc,
-            [curtileName]: {
-              ...slice[curtileName],
-              ...baseConfigs[slice.name][curtileName],
+            [tileName]: {
+              ...slice[tileName],
+              ...baseConfigs[slice.name][tileName],
             },
           }
         : acc;
@@ -125,24 +125,26 @@ export const transformSlice = (isTablet: boolean, sectionTitle: string) => (
     };
   }
 
-  const mergedTileConfig = Object.keys(slice).reduce((acc, curtileName) => {
-    {
-      if (["name", "id", "items"].includes(curtileName)) return acc;
-
-      return {
-        ...acc,
-        [curtileName]: {
-          ...slice[curtileName],
-          config: transformation.overrides[curtileName]
-            ? merge({
-                ...baseConfigs[slice.name][curtileName].config,
-                ...transformation.overrides[curtileName].config,
-              })
-            : { ...baseConfigs[slice.name][curtileName].config },
-        },
-      };
-    }
-  }, {});
+  const mergedTileConfig = Object.keys(slice)
+    .filter((sliceKey) =>
+      Object.keys(baseConfigs[slice.name]).includes(sliceKey),
+    )
+    .reduce((acc, tileName) => {
+      {
+        return {
+          ...acc,
+          [tileName]: {
+            ...slice[tileName],
+            config: transformation.overrides[tileName]
+              ? merge({
+                  ...baseConfigs[slice.name][tileName].config,
+                  ...transformation.overrides[tileName].config,
+                })
+              : { ...baseConfigs[slice.name][tileName].config },
+          },
+        };
+      }
+    }, {});
 
   return { ...slice, ...mergedTileConfig };
 };

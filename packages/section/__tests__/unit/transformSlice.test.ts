@@ -37,7 +37,7 @@ describe("transformSlice", () => {
       expect(transformedSlice).toEqual(originalSlice);
     });
 
-    it("shows not show support tile image on other slices", () => {
+    it("does not leak transform data on other slices", () => {
       const anotherSlice = { ...originalSlice, name: "OtherSlice" } as any;
       const transformedSlice = transformSlice(true, sectionTitle)(anotherSlice);
       expect(transformedSlice).toEqual(anotherSlice);
