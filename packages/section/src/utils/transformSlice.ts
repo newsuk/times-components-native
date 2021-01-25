@@ -104,7 +104,7 @@ export const transformSlice = (isTablet: boolean, sectionTitle: string) => (
         ...acc,
         [curtileName]: {
           ...slice[curtileName],
-          config: Object.keys(transformation.overrides).includes(curtileName)
+          config: transformation.overrides[curtileName]
             ? merge({
                 ...baseConfigs[slice.name][curtileName].config,
                 ...transformation.overrides[curtileName].config,
