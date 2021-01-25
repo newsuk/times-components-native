@@ -1,4 +1,4 @@
-import { baseConfig } from "@times-components-native/edition-slices/src/slices/leadtwonopicandtwovariant2/baseConfig";
+import { l2NoPic2V2Config } from "@times-components-native/edition-slices/src/slices/leadtwonopicandtwovariant2/config";
 import { Slice, transformSlice } from "../../src/utils/transformSlice";
 
 jest.mock(

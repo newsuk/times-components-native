@@ -21,7 +21,7 @@ const support2Base = {
   headline: { fontSize: 28 },
 };
 
-export const l2NoPic2V2BaseConfig: Omit<Slice, "name"> = {
+export const l2NoPic2V2Config: Omit<Slice, "name"> = {
   lead1: {
     config: {
       wide: {
