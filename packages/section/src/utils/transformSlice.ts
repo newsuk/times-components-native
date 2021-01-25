@@ -109,7 +109,6 @@ export const transformSlice = (isTablet: boolean, sectionTitle: string) => (
     (!transformation && baseConfigs[slice.name]) ||
     !transformation?.overrides
   ) {
-    //merges existing slice tile data with the base config
     const mergedBaseConfig = Object.keys(slice).reduce((acc, curtileName) => {
       return Object.keys(baseConfigs[slice.name]).includes(curtileName)
         ? {
@@ -128,7 +127,6 @@ export const transformSlice = (isTablet: boolean, sectionTitle: string) => (
     };
   }
 
-  //merges existing slice tile data with the transform overrides
   const mergedTileConfig = Object.keys(slice).reduce((acc, curtileName) => {
     {
       if (["name", "id"].includes(curtileName)) return acc;
@@ -148,6 +146,5 @@ export const transformSlice = (isTablet: boolean, sectionTitle: string) => (
     }
   }, {});
 
-  // merges overrides with existing tile data
   return { ...slice, ...mergedTileConfig };
 };

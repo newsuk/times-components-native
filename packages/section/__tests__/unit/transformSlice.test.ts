@@ -1,23 +1,18 @@
-import { l2NoPic2V2Config } from "@times-components-native/edition-slices/src/slices/leadtwonopicandtwovariant2/config";
+import { leadOneAndOneSliceConfig } from "@times-components-native/edition-slices/src/slices/leadoneandone/config";
 import { Slice, transformSlice } from "../../src/utils/transformSlice";
 
 jest.mock(
-  "@times-components-native/edition-slices/src/slices/leadtwonopicandtwovariant2/baseConfig",
+  "@times-components-native/edition-slices/src/slices/leadoneandone/config",
   () => ({
-    baseConfig: {
-      lead1: {
+    leadOneAndOneSliceConfig: {
+      lead: {
         config: {
-          mock: "mockLead1",
+          mock: "mockLead",
         },
       },
       support: {
         config: {
           mock: "mockSupport",
-        },
-      },
-      support2: {
-        config: {
-          mock: "mockSupport2",
         },
       },
     },
@@ -55,9 +50,8 @@ describe("transformSlice", () => {
     const originalSliceConfigSlice = {
       id: "a",
       name: "LeadTwoNoPicAndTwoSlice",
-      lead1: {},
-      support: {},
-      support2: {},
+      lead: { config: {} },
+      support: { config: {} },
     } as Slice;
     it("should return base config if no transform found ", () => {
       const transformedSlice = transformSlice(
@@ -66,7 +60,7 @@ describe("transformSlice", () => {
       )(originalSliceConfigSlice);
 
       expect(transformedSlice).toEqual({
-        ...baseConfig,
+        ...originalSliceConfigSlice,
         id: "a",
         name: "LeadTwoNoPicAndTwoSlice",
       });
@@ -78,16 +72,27 @@ describe("transformSlice", () => {
       )({ ...originalSliceConfigSlice, name: "LeadOneAndOneSlice" });
 
       expect(transformedSlice).toEqual({
-        ...baseConfig,
+        ...leadOneAndOneSliceConfig,
         support: {
-          ...baseConfig.support,
+          ...leadOneAndOneSliceConfig.support,
           config: {
-            ...baseConfig.support.config,
+            ...leadOneAndOneSliceConfig.support.config,
             huge: {
               summary: { length: 800 },
               image: {
                 ratio: "3:2",
-                orientation: "portrait",
+              },
+            },
+            wide: {
+              summary: { length: 800 },
+              image: {
+                ratio: "3:2",
+              },
+            },
+            medium: {
+              summary: { length: 800 },
+              image: {
+                ratio: "3:2",
               },
             },
           },
