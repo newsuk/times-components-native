@@ -4,7 +4,9 @@ import merge from "lodash.merge";
 
 type SliceNames = "LeadTwoNoPicAndTwoSlice" | "LeadOneAndOneSlice";
 
-type SliceNameConfig = Record<SliceNames, Slice>;
+type SliceBaseConfig = Omit<Slice, "name" | "id">;
+
+type SliceNameConfig = Record<SliceNames, SliceBaseConfig>;
 
 const baseConfigs: SliceNameConfig = {
   LeadTwoNoPicAndTwoSlice: baseConfig,
@@ -25,14 +27,14 @@ export interface Slice {
   lead?: ConfiguredTile;
 
   name: SliceNames;
-  id?: string;
+  id: string;
   [key: string]: any;
 }
 
 interface TransformSlice {
   name: string;
   sectionTitle: string;
-  overrides: Omit<Slice, "name">;
+  overrides: SliceBaseConfig;
 }
 
 const leadOneAndOneNewsTransform: TransformSlice = {
@@ -70,7 +72,6 @@ export const transformSlice = (isTablet: boolean, sectionTitle: string) => (
   if (!transformation && !baseConfigs[slice.name]) return slice;
 
   // no transform but base config is truthy so passes the base config to slice that contains a configured tile or tiles
-
   if (
     (!transformation && baseConfigs[slice.name]) ||
     !transformation?.overrides
