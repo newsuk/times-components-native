@@ -1,4 +1,9 @@
-import { colours, fonts, globalSpacingStyles, spacing, } from "@times-components-native/styleguide";
+import {
+  colours,
+  fonts,
+  globalSpacingStyles,
+  spacing,
+} from "@times-components-native/styleguide";
 import { getStyleByDeviceSize } from "@times-components-native/styleguide/src/styleguide";
 
 const headline = {
