@@ -2,9 +2,6 @@ import { LeadTwoNoPicAndTwoVariant2SliceConfig } from "@times-components-native/
 import { leadOneAndOneSliceConfig } from "@times-components-native/edition-slices/src/slices/leadoneandone/config";
 import { ConfiguredTile, SliceName } from "@times-components-native/types";
 import merge from "lodash.merge";
-import assign from "lodash/assign";
-// import mergedeepright from "ramda.mergedeepright";
-import mergeright from "ramda.mergeright";
 
 export interface Slice {
   support?: ConfiguredTile;
@@ -130,17 +127,14 @@ export const transformSlice = (isTablet: boolean, sectionTitle: string) => (
   const baseConfig = baseConfigs[slice.name];
   const transformationConfig = transformation?.overrides;
 
-  if (!transformation || !baseConfig) return slice;
+  if (!baseConfig) return slice;
 
-  if ((!transformation && baseConfig) || !transformationConfig) {
+  if (!transformation || !transformationConfig) {
     const mergedBaseConfig = Object.keys(slice).reduce((acc, tileName) => {
       return Object.keys(baseConfig).includes(tileName)
         ? {
             ...acc,
-            [tileName]: {
-              ...slice[tileName],
-              ...baseConfig[tileName],
-            },
+            [tileName]: merge({}, slice[tileName], baseConfig[tileName]),
           }
         : acc;
     }, {} as SliceBaseConfig);
@@ -154,7 +148,6 @@ export const transformSlice = (isTablet: boolean, sectionTitle: string) => (
   const mergedTileConfig = Object.keys(slice)
     .filter((sliceKey) => Object.keys(baseConfig).includes(sliceKey))
     .reduce((acc, tileName) => {
-      console.log(baseConfig[tileName].config, "mergedTileConfig1");
       return {
         ...acc,
         [tileName]: {
@@ -169,8 +162,6 @@ export const transformSlice = (isTablet: boolean, sectionTitle: string) => (
         },
       };
     }, {} as SliceBaseConfig);
-
-  console.log(mergedTileConfig, "mergedTileConfig2");
 
   return { ...slice, ...mergedTileConfig };
 };
