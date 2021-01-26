@@ -17,12 +17,7 @@ export interface Slice {
 
 type SliceBaseConfig = Omit<Slice, "name" | "id">;
 
-type SliceNames = Extract<
-  SliceName,
-  "LeadTwoNoPicAndTwoSlice" | "LeadOneAndOneSlice"
->;
-
-type SliceNameConfig = Record<SliceNames, SliceBaseConfig>;
+type SliceNameConfig = Partial<Record<SliceName, SliceBaseConfig>>;
 
 const baseConfigs: SliceNameConfig = {
   LeadTwoNoPicAndTwoSlice: l2NoPic2V2Config,
@@ -140,7 +135,7 @@ export const transformSlice = (isTablet: boolean, sectionTitle: string) => (
   const baseConfig = baseConfigs[slice.name];
   const transformationConfig = transformation?.overrides;
 
-  if (!transformation && !baseConfig) return slice;
+  if (!transformation || !baseConfig) return slice;
 
   if ((!transformation && baseConfig) || !transformationConfig) {
     const mergedBaseConfig = Object.keys(slice).reduce((acc, tileName) => {
