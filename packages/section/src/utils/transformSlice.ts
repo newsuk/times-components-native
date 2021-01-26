@@ -36,9 +36,17 @@ interface TransformSlice {
 }
 
 const sharedSupportConfig = {
+  headline: { fontSize: 20 },
   summary: { length: 800 },
   image: {
     ratio: "3:2",
+  },
+};
+
+const sharedSupportHugeConfig = {
+  ...sharedSupportConfig,
+  headline: {
+    fontSize: 22,
   },
 };
 
@@ -50,7 +58,7 @@ const leadOneAndOneNewsTransform = {
       config: {
         medium: sharedSupportConfig,
         wide: sharedSupportConfig,
-        huge: sharedSupportConfig,
+        huge: sharedSupportHugeConfig,
       },
     },
   },
@@ -64,7 +72,7 @@ const leadOneAndOneWorldTransform = {
       config: {
         medium: sharedSupportConfig,
         wide: sharedSupportConfig,
-        huge: sharedSupportConfig,
+        huge: sharedSupportHugeConfig,
       },
     },
   },
@@ -78,7 +86,7 @@ const leadOneAndOneSportTransform = {
       config: {
         medium: sharedSupportConfig,
         wide: sharedSupportConfig,
-        huge: sharedSupportConfig,
+        huge: sharedSupportHugeConfig,
       },
     },
   },
