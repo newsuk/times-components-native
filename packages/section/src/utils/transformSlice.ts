@@ -2,6 +2,9 @@ import { l2NoPic2V2Config } from "@times-components-native/edition-slices/src/sl
 import { leadOneAndOneSliceConfig } from "@times-components-native/edition-slices/src/slices/leadoneandone/config";
 import { ConfiguredTile, SliceName } from "@times-components-native/types";
 import merge from "lodash.merge";
+import assign from "lodash/assign";
+// import mergedeepright from "ramda.mergedeepright";
+import mergeright from "ramda.mergeright";
 
 export interface Slice {
   support?: ConfiguredTile;
@@ -31,17 +34,9 @@ interface TransformSlice {
 }
 
 const sharedSupportConfig = {
-  headline: { fontSize: 20 },
   summary: { length: 800 },
   image: {
     ratio: "3:2",
-  },
-};
-
-const sharedSupportHugeConfig = {
-  ...sharedSupportConfig,
-  headline: {
-    fontSize: 22,
   },
 };
 
@@ -53,7 +48,7 @@ const leadOneAndOneNewsTransform = {
       config: {
         medium: sharedSupportConfig,
         wide: sharedSupportConfig,
-        huge: sharedSupportHugeConfig,
+        huge: sharedSupportConfig,
       },
     },
   },
@@ -67,7 +62,7 @@ const leadOneAndOneWorldTransform = {
       config: {
         medium: sharedSupportConfig,
         wide: sharedSupportConfig,
-        huge: sharedSupportHugeConfig,
+        huge: sharedSupportConfig,
       },
     },
   },
@@ -81,7 +76,7 @@ const leadOneAndOneSportTransform = {
       config: {
         medium: sharedSupportConfig,
         wide: sharedSupportConfig,
-        huge: sharedSupportHugeConfig,
+        huge: sharedSupportConfig,
       },
     },
   },
@@ -159,19 +154,23 @@ export const transformSlice = (isTablet: boolean, sectionTitle: string) => (
   const mergedTileConfig = Object.keys(slice)
     .filter((sliceKey) => Object.keys(baseConfig).includes(sliceKey))
     .reduce((acc, tileName) => {
+      console.log(baseConfig[tileName].config, "mergedTileConfig1");
       return {
         ...acc,
         [tileName]: {
           ...slice[tileName],
           config: transformationConfig[tileName]
-            ? merge({
-                ...baseConfig[tileName].config,
-                ...transformationConfig[tileName].config,
-              })
+            ? merge(
+                {},
+                baseConfig[tileName].config,
+                transformationConfig[tileName].config,
+              )
             : { ...baseConfig[tileName].config },
         },
       };
     }, {} as SliceBaseConfig);
+
+  console.log(mergedTileConfig, "mergedTileConfig2");
 
   return { ...slice, ...mergedTileConfig };
 };
