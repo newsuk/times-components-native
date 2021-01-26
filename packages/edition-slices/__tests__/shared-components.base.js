@@ -1,7 +1,5 @@
 import React from "react";
-import { Animated, Text } from "react-native";
-import { delay } from "@times-components-native/test-utils";
-import { shallow } from "enzyme";
+import { Text } from "react-native";
 import TestRenderer from "react-test-renderer";
 import Image from "@times-components-native/image";
 import { SectionContext } from "@times-components-native/context";
@@ -32,6 +30,8 @@ export default () => {
       name:
         "Tile summary falls back to article strapline if strapline is unavailable",
       test: () => {
+        jest.useFakeTimers();
+
         const tileWithoutStrapline = {
           ...tile,
           article: {
@@ -54,6 +54,8 @@ export default () => {
       name:
         "Tile summary falls back to shortHeadline if tileHeadline is unavailable",
       test: () => {
+        jest.useFakeTimers();
+
         const tileWithoutShortHeadline = {
           ...tile,
           article: {
@@ -76,6 +78,8 @@ export default () => {
       name:
         "Tile summary falls back to headline if shortHeadline and tileHeadline is unavailable",
       test: () => {
+        jest.useFakeTimers();
+
         const tileWithoutShortHeadlineAndTileHeadline = {
           ...tile,
           article: {
@@ -97,6 +101,8 @@ export default () => {
     {
       name: "Tile summary hides the label correctly",
       test: () => {
+        jest.useFakeTimers();
+
         const output = TestRenderer.create(
           <TileSummary tile={tile} hideLabel={true} />,
         );
@@ -109,6 +115,8 @@ export default () => {
       name:
         "Tile summary displays the tile summary override if it is available",
       test: () => {
+        jest.useFakeTimers();
+
         const tileWithTeaserOverride = {
           article: {
             ...tile.article,
@@ -143,6 +151,8 @@ export default () => {
     {
       name: "Tile summary displays tile leadAsset override if it is available",
       test: () => {
+        jest.useFakeTimers();
+
         const tileWithLeadAssetOverride = {
           article: {
             ...tile.article,
@@ -179,6 +189,8 @@ export default () => {
       name:
         "Tile summary displays tile listingAsset override if no tile override is available",
       test: () => {
+        jest.useFakeTimers();
+
         const tileWithListingAssetOverride = {
           ...tile,
           article: {
