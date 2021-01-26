@@ -11,8 +11,14 @@ const Slice = ({
   inTodaysEditionSlice,
   adConfig,
   sectionTitle,
+  orientation,
 }) => {
-  const Component = getSlice(isInSupplement, slice.name, sectionTitle);
+  const Component = getSlice(
+    isInSupplement,
+    slice.name,
+    sectionTitle,
+    orientation,
+  );
   return Component ? (
     <Component
       onPress={onPress}

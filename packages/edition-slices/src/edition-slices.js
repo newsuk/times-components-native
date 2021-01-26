@@ -41,7 +41,7 @@ const isTablet =
 
 const { sectionTitles } = sectionConfigs;
 
-const sliceMap = (isInSupplement, sectionTitle) => {
+const sliceMap = (isInSupplement, sectionTitle, orientation) => {
   const isInTabletSupplement = isInSupplement && isTablet;
   return {
     CommentLeadAndCartoonSlice,
@@ -57,6 +57,7 @@ const sliceMap = (isInSupplement, sectionTitle) => {
     LeadTwoNoPicAndTwoSlice: renderLeadTwoNoPicAndTwoSlice(
       isTablet,
       sectionTitle,
+      orientation,
     ),
     Puzzle: PuzzleSlice,
     SecondaryFourSlice: isInTabletSupplement
@@ -85,10 +86,14 @@ const sliceMap = (isInSupplement, sectionTitle) => {
   };
 };
 
-export const getSlice = (isInSupplement, sliceName, sectionTitle) =>
-  sliceMap(isInSupplement, sectionTitle)[sliceName];
+export const getSlice = (
+  isInSupplement,
+  sliceName,
+  sectionTitle,
+  orientation,
+) => sliceMap(isInSupplement, sectionTitle, orientation)[sliceName];
 
-const renderLeadTwoNoPicAndTwoSlice = (isTablet, sectionTitle) =>
-  isTablet && sectionTitle === sectionTitles.sport
+const renderLeadTwoNoPicAndTwoSlice = (isTablet, sectionTitle, orientation) =>
+  isTablet && sectionTitle === sectionTitles.sport && orientation === "portrait"
     ? LeadTwoNoPicAndTwoVariant2Slice
     : LeadTwoNoPicAndTwoSlice;

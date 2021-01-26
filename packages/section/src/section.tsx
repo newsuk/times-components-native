@@ -16,7 +16,7 @@ import {
   createPuzzleData,
   isSupplementSection,
 } from "./utils";
-import { OnArticlePress } from "@times-components-native/types";
+import { OnArticlePress, Orientation } from "@times-components-native/types";
 import { SectionTitles } from "./utils/sectionConfigs";
 
 const styles = styleFactory();
@@ -50,7 +50,8 @@ const Section: React.FC<Props> = ({
   section,
 }) => {
   const { cover, name, slices, title: sectionTitle } = section;
-  const { isTablet, editionBreakpoint } = useResponsiveContext();
+  const { isTablet, editionBreakpoint, orientation } = useResponsiveContext();
+
   const emailPuzzlesButtonExtendedWidth = 170;
   const [emailPuzzlesButtonWidth] = useState(
     new Animated.Value(emailPuzzlesButtonExtendedWidth),
@@ -88,11 +89,11 @@ const Section: React.FC<Props> = ({
     return null;
   };
 
-  const renderItem = (isPuzzle: boolean, sectionTitle: SectionTitles) => ({
-    index,
-    item: slice,
-    inTodaysEditionSlice,
-  }: any) => (
+  const renderItem = (
+    isPuzzle: boolean,
+    sectionTitle: SectionTitles,
+    orientation: Orientation,
+  ) => ({ index, item: slice, inTodaysEditionSlice }: any) => (
     <Slice
       index={index}
       length={slices.length}
@@ -103,6 +104,7 @@ const Section: React.FC<Props> = ({
       inTodaysEditionSlice={inTodaysEditionSlice}
       adConfig={adConfig}
       sectionTitle={sectionTitle}
+      orientation={orientation}
     />
   );
 
@@ -136,6 +138,7 @@ const Section: React.FC<Props> = ({
     return renderItem(
       false,
       sectionTitle,
+      orientation,
     )({
       index: 0,
       item: frontSlice || {},
@@ -166,7 +169,7 @@ const Section: React.FC<Props> = ({
         nestedScrollEnabled
         onViewableItemsChanged={onViewed ? onViewableItemsChanged : null}
         {...(isPuzzle && { onScrollBeginDrag })}
-        renderItem={renderItem(isPuzzle, sectionTitle)}
+        renderItem={renderItem(isPuzzle, sectionTitle, orientation)}
         windowSize={3}
       />
       {isPuzzle && isIOS ? (
