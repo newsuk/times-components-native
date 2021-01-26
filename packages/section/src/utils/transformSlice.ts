@@ -1,4 +1,4 @@
-import { l2NoPic2V2Config } from "@times-components-native/edition-slices/src/slices/leadtwonopicandtwovariant2/config";
+import { LeadTwoNoPicAndTwoVariant2SliceConfig } from "@times-components-native/edition-slices/src/slices/leadtwonopicandtwovariant2/config";
 import { leadOneAndOneSliceConfig } from "@times-components-native/edition-slices/src/slices/leadoneandone/config";
 import { ConfiguredTile, SliceName } from "@times-components-native/types";
 import merge from "lodash.merge";
@@ -23,7 +23,7 @@ type SliceBaseConfig = Omit<Slice, "name" | "id">;
 type SliceNameConfig = Partial<Record<SliceName, SliceBaseConfig>>;
 
 const baseConfigs: SliceNameConfig = {
-  LeadTwoNoPicAndTwoSlice: l2NoPic2V2Config,
+  LeadTwoNoPicAndTwoSlice: LeadTwoNoPicAndTwoVariant2SliceConfig,
   LeadOneAndOneSlice: leadOneAndOneSliceConfig,
 };
 
