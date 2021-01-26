@@ -3,7 +3,7 @@ import PropTypes from "prop-types";
 import { LeadTwoNoPicAndTwoVariant2Slice } from "@times-components-native/slice-layout";
 import { ResponsiveSlice } from "../shared";
 import TileColStandard from "../../configured-tiles/tile-col-standard";
-import TileColWithImageBottom from "../../configured-tiles/tile-col-with-image-bottom";
+import TileColImageBottom from "../../configured-tiles/tile-col-image-bottom";
 
 class LeadTwoNoPicAndTwoVariant2 extends Component {
   constructor(props) {
@@ -19,7 +19,7 @@ class LeadTwoNoPicAndTwoVariant2 extends Component {
 
     const isLandscape = orientation === "landscape";
 
-    const Support2 = isLandscape ? TileColStandard : TileColWithImageBottom;
+    const Support2 = isLandscape ? TileColStandard : TileColImageBottom;
 
     return (
       <LeadTwoNoPicAndTwoVariant2Slice

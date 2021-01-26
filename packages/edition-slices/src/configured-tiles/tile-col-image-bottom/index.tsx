@@ -33,7 +33,7 @@ interface Props {
   orientation: Orientation;
 }
 
-const TileColWithImageBottom: FC<Props> = ({
+const TileColImageBottom: FC<Props> = ({
   onPress,
   tile,
   breakpoint = editionBreakpoints.medium,
@@ -109,4 +109,4 @@ const TileColWithImageBottom: FC<Props> = ({
   );
 };
 
-export default withTileTracking(TileColWithImageBottom);
+export default withTileTracking(TileColImageBottom);
