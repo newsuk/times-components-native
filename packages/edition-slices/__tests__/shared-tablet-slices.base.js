@@ -119,6 +119,11 @@ const slices = [
     Slice: SecondaryFourSlice,
   },
   {
+    mock: mockSecondaryFourSlice({ isConsecutive: true }),
+    name: "secondary four - consecutive",
+    Slice: SecondaryFourSlice,
+  },
+  {
     mock: mockSecondaryFourSlice(),
     name: "secondary four - supplement",
     Slice: SupplementSecondaryFourSlice,

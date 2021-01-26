@@ -73,6 +73,7 @@ interface SecondaryOneAndFourSliceWithName extends SecondaryOneAndFourSlice {
 
 interface SecondaryFourSliceWithName extends SecondaryFourSlice {
   name: string;
+  isConsecutive: boolean;
 }
 
 interface SecondaryTwoAndTwoSliceWithName extends SecondaryTwoAndTwoSlice {
@@ -326,7 +327,11 @@ function mockSecondaryOneAndFourSlice(): SecondaryOneAndFourSliceWithName {
   };
 }
 
-function mockSecondaryFourSlice(): SecondaryFourSliceWithName {
+function mockSecondaryFourSlice(
+  { isConsecutive } = {
+    isConsecutive: false,
+  },
+): SecondaryFourSliceWithName {
   const tiles = getTiles(4);
   return <SecondaryFourSliceWithName>{
     name: "SecondaryFourSlice",
@@ -335,6 +340,7 @@ function mockSecondaryFourSlice(): SecondaryFourSliceWithName {
     secondary3: tiles[2],
     secondary4: tiles[3],
     items: tiles,
+    isConsecutive,
   };
 }
 
