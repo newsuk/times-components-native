@@ -5,7 +5,7 @@ import { ConfiguredTile, OnArticlePress } from "@times-components-native/types";
 
 interface Props {
   onPress: OnArticlePress;
-  style: TextStyle;
+  style?: TextStyle;
   tile: ConfiguredTile;
 }
 const TileLink: FC<Props> = ({
