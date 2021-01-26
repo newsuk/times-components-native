@@ -99,19 +99,19 @@ export const transformSlice = (isTablet: boolean, sectionTitle: string) => (
       st.sectionTitle.toUpperCase() === sectionTitle.toUpperCase(),
   );
 
-  if (!transformation && !baseConfigs[slice.name]) return slice;
+  const baseConfig = baseConfigs[slice.name];
+  const transformationConfig = transformation?.overrides;
 
-  if (
-    (!transformation && baseConfigs[slice.name]) ||
-    !transformation?.overrides
-  ) {
+  if (!transformation && !baseConfig) return slice;
+
+  if ((!transformation && baseConfig) || !transformationConfig) {
     const mergedBaseConfig = Object.keys(slice).reduce((acc, tileName) => {
-      return Object.keys(baseConfigs[slice.name]).includes(tileName)
+      return Object.keys(baseConfig).includes(tileName)
         ? {
             ...acc,
             [tileName]: {
               ...slice[tileName],
-              ...baseConfigs[slice.name][tileName],
+              ...baseConfig[tileName],
             },
           }
         : acc;
@@ -124,20 +124,18 @@ export const transformSlice = (isTablet: boolean, sectionTitle: string) => (
   }
 
   const mergedTileConfig = Object.keys(slice)
-    .filter((sliceKey) =>
-      Object.keys(baseConfigs[slice.name]).includes(sliceKey),
-    )
+    .filter((sliceKey) => Object.keys(baseConfig).includes(sliceKey))
     .reduce((acc, tileName) => {
       return {
         ...acc,
         [tileName]: {
           ...slice[tileName],
-          config: transformation.overrides[tileName]
+          config: transformationConfig[tileName]
             ? merge({
-                ...baseConfigs[slice.name][tileName].config,
-                ...transformation.overrides[tileName].config,
+                ...baseConfig[tileName].config,
+                ...transformationConfig[tileName].config,
               })
-            : { ...baseConfigs[slice.name][tileName].config },
+            : { ...baseConfig[tileName].config },
         },
       };
     }, {} as SliceBaseConfig);
