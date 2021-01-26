@@ -56,6 +56,34 @@ const leadOneAndOneNewsTransform = {
   },
 };
 
+const leadOneAndOneWorldTransform = {
+  sectionTitle: "World",
+  name: "LeadOneAndOneSlice",
+  overrides: {
+    support: {
+      config: {
+        medium: sharedSupportConfig,
+        wide: sharedSupportConfig,
+        huge: sharedSupportConfig,
+      },
+    },
+  },
+};
+
+const leadOneAndOneSportTransform = {
+  sectionTitle: "Sport",
+  name: "LeadOneAndOneSlice",
+  overrides: {
+    support: {
+      config: {
+        medium: sharedSupportConfig,
+        wide: sharedSupportConfig,
+        huge: sharedSupportConfig,
+      },
+    },
+  },
+};
+
 const leadOneAndOneRegisterTransform = {
   sectionTitle: "Register",
   name: "LeadOneAndOneSlice",
@@ -85,6 +113,8 @@ const leadOneAndOneRegisterTransform = {
 
 const sliceTransformations: TransformSlice[] = [
   leadOneAndOneNewsTransform,
+  leadOneAndOneWorldTransform,
+  leadOneAndOneSportTransform,
   leadOneAndOneRegisterTransform,
 ];
 
