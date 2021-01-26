@@ -14,8 +14,8 @@ export default (config: TileConfig) => {
     headline: {
       ...globalSpacingStyles.tabletHeadline,
       fontFamily: fonts.headline,
-      fontSize: config?.headline?.fontSize,
-      lineHeight: config?.headline?.fontSize,
+      fontSize: config.headline?.fontSize,
+      lineHeight: config.headline?.fontSize,
     },
     imageContainer: {
       width: "100%",
