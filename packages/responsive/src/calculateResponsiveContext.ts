@@ -3,6 +3,7 @@ import {
   getNarrowArticleBreakpoint,
   tabletWidth,
 } from "@times-components-native/styleguide";
+import { Orientation } from "@times-components-native/types";
 import { NativeModules } from "react-native";
 
 const config = (NativeModules || {}).ReactConfig;
@@ -20,5 +21,5 @@ export const calculateResponsiveContext = (
     width >= tabletWidth,
   windowWidth: width,
   windowHeight: height,
-  orientation: height > width ? "portrait" : "landscape",
+  orientation: (height > width ? "portrait" : "landscape") as Orientation,
 });

@@ -1,6 +1,7 @@
 import { createContext } from "react";
 import { getDimensions } from "@times-components-native/utils";
 import { calculateResponsiveContext } from "./calculateResponsiveContext";
+import { Orientation } from "@times-components-native/types";
 
 export type ContextType = {
   editionBreakpoint: string;
@@ -9,7 +10,7 @@ export type ContextType = {
   isTablet: boolean;
   windowWidth: number;
   windowHeight: number;
-  orientation: string;
+  orientation: Orientation;
 };
 
 const { width, height, fontScale } = getDimensions();
