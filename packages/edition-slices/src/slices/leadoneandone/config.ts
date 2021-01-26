@@ -1,5 +1,4 @@
-import { SliceConfig } from "@times-components-native/section/src/utils/transformSlice";
-import { TileConfig } from "@times-components-native/types";
+import { SliceBaseConfig, TileConfig } from "@times-components-native/types";
 
 const leadBaseConfig: Pick<TileConfig, "image" | "headline"> = {
   image: {
@@ -19,7 +18,7 @@ const supportBaseConfig: Pick<TileConfig, "headline" | "summary"> = {
   },
 };
 
-export const leadOneAndOneSliceConfig: SliceConfig = {
+export const leadOneAndOneSliceConfig: SliceBaseConfig = {
   lead: {
     config: {
       medium: { ...leadBaseConfig },

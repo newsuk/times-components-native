@@ -12,7 +12,7 @@ import styleFactory from "./styles";
 import WithoutWhiteSpace from "../../tiles/shared/without-white-space";
 import PositionedTileStar from "../../tiles/shared/positioned-tile-star";
 import {
-  ConfiguredTile,
+  TransformConfiguredTile,
   OnArticlePress,
   EditionBreakpointKeys,
   Orientation,
@@ -29,7 +29,7 @@ import {
 
 interface Props {
   onPress: OnArticlePress;
-  tile: ConfiguredTile;
+  tile: TransformConfiguredTile;
   breakpoint: EditionBreakpointKeys;
   orientation: Orientation;
 }

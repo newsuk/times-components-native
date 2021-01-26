@@ -1,4 +1,5 @@
 import { leadOneAndOneSliceConfig } from "@times-components-native/edition-slices/src/slices/leadoneandone/config";
+import { TransformConfiguredTile } from "@times-components-native/types";
 import { Slice, transformSlice } from "../../src/utils/transformSlice";
 
 jest.mock(
@@ -28,7 +29,7 @@ describe("transformSlice", () => {
       name: "LeadTwoNoPicAndTwoSlice",
       lead: { config: {} },
       support: { config: {} },
-    } as Slice;
+    } as Slice<TransformConfiguredTile>;
 
     it("should not make any changes on mobile", () => {
       const transformedSlice = transformSlice(

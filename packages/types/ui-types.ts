@@ -1,4 +1,5 @@
 import { Tile } from "@times-components-native/fixture-generator/src/types";
+import { Slice } from "@times-components-native/section/src/utils/transformSlice";
 import { editionBreakpoints } from "@times-components-native/styleguide";
 
 export type EditionBreakpointKeys = keyof typeof editionBreakpoints;
@@ -7,6 +8,7 @@ type ImageAspectRatios = "16:9" | "3:2" | "4:5" | "2:3";
 
 export type Orientation = "landscape" | "portrait";
 
+type Optional<T, K extends keyof T> = Pick<Partial<T>, K> & Omit<T, K>;
 export interface TileConfig {
   summary?: { length: number };
   portrait?: { ratio: ImageAspectRatios };
@@ -17,11 +19,22 @@ export interface TileConfig {
   headline: { fontSize: number };
 }
 
-type BaseConfig = {
-  [K in EditionBreakpointKeys]?: TileConfig;
+export type TransformTileConfig = Optional<TileConfig, "headline">;
+
+type BaseConfig<T> = {
+  [K in EditionBreakpointKeys]?: T;
 };
-export interface ConfiguredTile extends Tile {
-  config: BaseConfig;
+export interface TransformConfiguredTile extends Tile {
+  config: BaseConfig<TransformTileConfig>;
 }
+
+export type DefaultSliceConfigs = {
+  config: BaseConfig<TileConfig>;
+};
+
+export type SliceBaseConfig = Omit<
+  Slice<Partial<DefaultSliceConfigs>>,
+  "name" | "id"
+>;
 
 export type OnArticlePress = (args: { id: string; isPuff?: boolean }) => void;

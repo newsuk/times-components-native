@@ -1,5 +1,4 @@
-import { SliceConfig } from "@times-components-native/section/src/utils/transformSlice";
-import { TileConfig } from "@times-components-native/types";
+import { SliceBaseConfig, TileConfig } from "@times-components-native/types";
 
 const lead1Base: Pick<TileConfig, "headline" | "summary"> = {
   summary: { length: 1000 },
@@ -22,7 +21,7 @@ const support2Base: Pick<TileConfig, "headline" | "image"> = {
   headline: { fontSize: 28 },
 };
 
-export const LeadTwoNoPicAndTwoVariant2SliceConfig: SliceConfig = {
+export const LeadTwoNoPicAndTwoVariant2SliceConfig: SliceBaseConfig = {
   lead1: {
     config: {
       wide: {

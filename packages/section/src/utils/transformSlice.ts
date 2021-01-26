@@ -1,48 +1,49 @@
 import { LeadTwoNoPicAndTwoVariant2SliceConfig } from "@times-components-native/edition-slices/src/slices/leadtwonopicandtwovariant2/config";
 import { leadOneAndOneSliceConfig } from "@times-components-native/edition-slices/src/slices/leadoneandone/config";
 import {
-  ConfiguredTile,
+  TransformConfiguredTile,
   SliceName,
-  TileConfig,
+  TransformTileConfig,
 } from "@times-components-native/types";
 import merge from "lodash.merge";
 
-type ConfigTile = Omit<ConfiguredTile, "article">;
-export type SliceConfig = Omit<Slice, "Name" | "id">;
+export type SliceMap = Omit<
+  Slice<Partial<TransformConfiguredTile>>,
+  "name" | "id"
+>;
 
-export interface Slice {
-  support?: ConfigTile;
-  support1?: ConfigTile;
-  support2?: ConfigTile;
-  lead1?: ConfigTile;
-  lead2?: ConfigTile;
-  lead?: ConfigTile;
+export type Slice<T> = {
+  support?: T;
+  support1?: T;
+  support2?: T;
+  lead1?: T;
+  lead2?: T;
+  lead?: T;
   name: SliceName;
   id: string;
   [key: string]: any;
+};
+
+type SliceNameMap = Partial<Record<SliceName, SliceMap>>;
+interface TransformSlice {
+  name: string;
+  sectionTitle: string;
+  overrides: Partial<SliceMap>;
 }
 
-type SliceNameConfig = Partial<Record<SliceName, SliceConfig>>;
-
-const baseConfigs: SliceNameConfig = {
+const baseConfigs: SliceNameMap = {
   LeadTwoNoPicAndTwoSlice: LeadTwoNoPicAndTwoVariant2SliceConfig,
   LeadOneAndOneSlice: leadOneAndOneSliceConfig,
 };
 
-interface TransformSlice {
-  name: string;
-  sectionTitle: string;
-  overrides: SliceConfig;
-}
-
-const sharedSupportConfig: Pick<TileConfig, "summary" | "image"> = {
+const sharedSupportConfig: TransformTileConfig = {
   summary: { length: 800 },
   image: {
     ratio: "3:2",
   },
 };
 
-const leadOneAndOneNewsTransform = {
+const leadOneAndOneNewsTransform: TransformSlice = {
   sectionTitle: "News",
   name: "LeadOneAndOneSlice",
   overrides: {
@@ -56,7 +57,7 @@ const leadOneAndOneNewsTransform = {
   },
 };
 
-const leadOneAndOneWorldTransform = {
+const leadOneAndOneWorldTransform: TransformSlice = {
   sectionTitle: "World",
   name: "LeadOneAndOneSlice",
   overrides: {
@@ -70,7 +71,7 @@ const leadOneAndOneWorldTransform = {
   },
 };
 
-const leadOneAndOneSportTransform = {
+const leadOneAndOneSportTransform: TransformSlice = {
   sectionTitle: "Sport",
   name: "LeadOneAndOneSlice",
   overrides: {
@@ -84,7 +85,7 @@ const leadOneAndOneSportTransform = {
   },
 };
 
-const leadOneAndOneRegisterTransform = {
+const leadOneAndOneRegisterTransform: TransformSlice = {
   sectionTitle: "Register",
   name: "LeadOneAndOneSlice",
   overrides: {
@@ -119,8 +120,8 @@ const sliceTransformations: TransformSlice[] = [
 ];
 
 export const transformSlice = (isTablet: boolean, sectionTitle: string) => (
-  slice: Slice,
-): Slice => {
+  slice: Slice<TransformConfiguredTile>,
+): Slice<TransformConfiguredTile> => {
   if (!isTablet) return slice;
 
   const transformation = sliceTransformations.find(

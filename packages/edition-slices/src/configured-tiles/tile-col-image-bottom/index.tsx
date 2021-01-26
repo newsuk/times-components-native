@@ -19,7 +19,7 @@ import {
   getCropByRatio,
 } from "@times-components-native/image/src/utils";
 import {
-  ConfiguredTile,
+  TransformConfiguredTile,
   OnArticlePress,
   Orientation,
   EditionBreakpointKeys,
@@ -28,7 +28,7 @@ import {
 
 interface Props {
   onPress(): OnArticlePress;
-  tile: ConfiguredTile;
+  tile: TransformConfiguredTile;
   breakpoint: EditionBreakpointKeys;
   orientation: Orientation;
 }
