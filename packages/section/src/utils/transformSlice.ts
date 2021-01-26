@@ -1,23 +1,28 @@
 import { LeadTwoNoPicAndTwoVariant2SliceConfig } from "@times-components-native/edition-slices/src/slices/leadtwonopicandtwovariant2/config";
 import { leadOneAndOneSliceConfig } from "@times-components-native/edition-slices/src/slices/leadoneandone/config";
-import { ConfiguredTile, SliceName } from "@times-components-native/types";
+import {
+  ConfiguredTile,
+  SliceName,
+  TileConfig,
+} from "@times-components-native/types";
 import merge from "lodash.merge";
 
+type ConfigTile = Omit<ConfiguredTile, "article">;
+export type SliceConfig = Omit<Slice, "Name" | "id">;
+
 export interface Slice {
-  support?: ConfiguredTile;
-  support1?: ConfiguredTile;
-  support2?: ConfiguredTile;
-  lead1?: ConfiguredTile;
-  lead2?: ConfiguredTile;
-  lead?: ConfiguredTile;
+  support?: ConfigTile;
+  support1?: ConfigTile;
+  support2?: ConfigTile;
+  lead1?: ConfigTile;
+  lead2?: ConfigTile;
+  lead?: ConfigTile;
   name: SliceName;
   id: string;
   [key: string]: any;
 }
 
-type SliceBaseConfig = Omit<Slice, "name" | "id">;
-
-type SliceNameConfig = Partial<Record<SliceName, SliceBaseConfig>>;
+type SliceNameConfig = Partial<Record<SliceName, SliceConfig>>;
 
 const baseConfigs: SliceNameConfig = {
   LeadTwoNoPicAndTwoSlice: LeadTwoNoPicAndTwoVariant2SliceConfig,
@@ -27,10 +32,10 @@ const baseConfigs: SliceNameConfig = {
 interface TransformSlice {
   name: string;
   sectionTitle: string;
-  overrides: SliceBaseConfig;
+  overrides: SliceConfig;
 }
 
-const sharedSupportConfig = {
+const sharedSupportConfig: Pick<TileConfig, "summary" | "image"> = {
   summary: { length: 800 },
   image: {
     ratio: "3:2",
@@ -137,7 +142,7 @@ export const transformSlice = (isTablet: boolean, sectionTitle: string) => (
             [tileName]: merge({}, slice[tileName], baseConfig[tileName]),
           }
         : acc;
-    }, {} as SliceBaseConfig);
+    }, {});
 
     return {
       ...slice,
@@ -161,7 +166,7 @@ export const transformSlice = (isTablet: boolean, sectionTitle: string) => (
             : { ...baseConfig[tileName].config },
         },
       };
-    }, {} as SliceBaseConfig);
+    }, {});
 
   return { ...slice, ...mergedTileConfig };
 };

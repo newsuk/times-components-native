@@ -1,27 +1,28 @@
-import { Slice } from "@times-components-native/section/src/utils/transformSlice";
+import { SliceConfig } from "@times-components-native/section/src/utils/transformSlice";
+import { TileConfig } from "@times-components-native/types";
 
-const lead1Base = {
+const lead1Base: Pick<TileConfig, "headline" | "summary"> = {
   summary: { length: 1000 },
   headline: { fontSize: 40 },
 };
 
-const lead2Base = {
+const lead2Base: Pick<TileConfig, "headline" | "summary"> = {
   summary: { length: 1000 },
   headline: { fontSize: 30 },
 };
 
-const support1Base = {
+const support1Base: Pick<TileConfig, "headline" | "summary" | "image"> = {
   summary: { length: 800 },
   headline: { fontSize: 24 },
   image: { ratio: "3:2", orientation: "landscape" },
 };
 
-const support2Base = {
+const support2Base: Pick<TileConfig, "headline" | "image"> = {
   image: { ratio: "2:3", orientation: "portrait" },
   headline: { fontSize: 28 },
 };
 
-export const LeadTwoNoPicAndTwoVariant2SliceConfig: Omit<Slice, "name"> = {
+export const LeadTwoNoPicAndTwoVariant2SliceConfig: SliceConfig = {
   lead1: {
     config: {
       wide: {
