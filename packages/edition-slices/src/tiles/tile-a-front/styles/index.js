@@ -96,7 +96,7 @@ const styles = {
     },
     "1080": {
       ...sharedLandscapeStyles,
-      headlineMarginBottom: spacing(3),
+      headlineMarginBottom: spacing(2),
       straplineMarginTop: spacing(2),
       straplineMarginBottom: spacing(3),
       headline: {

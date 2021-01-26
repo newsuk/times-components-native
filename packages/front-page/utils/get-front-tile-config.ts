@@ -22,6 +22,21 @@ interface SummaryConfig {
   };
 }
 
+const getNumberOfLines = (heightAvailable: number, lineHeight: number) => {
+  if (heightAvailable < 0) return 0;
+  return Math.floor(heightAvailable / lineHeight);
+};
+
+const calculateMarginBottom = (
+  items: string[],
+  item: string,
+  itemMargin: number,
+) => {
+  const pos = items.indexOf(item);
+
+  return pos < 0 || pos === items.length - 1 ? 0 : itemMargin;
+};
+
 export const getFrontTileConfig = (summaryConfig: SummaryConfig) => {
   const { container, headline, strapline, bylines, content } = summaryConfig;
 
@@ -43,36 +58,67 @@ export const getFrontTileConfig = (summaryConfig: SummaryConfig) => {
     container.height >=
     headlineWithMargin + straplineWithMargin + bylines.height;
 
-  const heightForContent =
+  const heightForContentWithByline =
     container.height -
     (headlineWithMargin + straplineWithMargin + bylineWithMargin);
-  const canAccommodateContent =
-    heightForContent >= content.lineHeight * minimumNumberOfTeaserTextLines;
+
+  const heightForContentWithoutByline =
+    container.height - (headlineWithMargin + straplineWithMargin);
+
+  const canAccommodateContentWithByline =
+    heightForContentWithByline >=
+    content.lineHeight * minimumNumberOfTeaserTextLines;
+
+  const canAccommodateContentWithoutByline =
+    heightForContentWithoutByline >=
+    content.lineHeight * minimumNumberOfTeaserTextLines;
+
+  const shouldShowContentInsteadOfByline =
+    !canAccommodateContentWithByline && canAccommodateContentWithoutByline;
+
+  const itemsToRender = [
+    "headline",
+    strapline.height > 0 && canAccommodateStrapline && "strapline",
+    bylines.height > 0 &&
+      canAccommodateByline &&
+      !shouldShowContentInsteadOfByline &&
+      "byline",
+    (canAccommodateContentWithByline || canAccommodateContentWithoutByline) &&
+      "content",
+  ].filter(Boolean) as string[];
 
   return {
     headline: {
       show: true,
-      marginBottom:
-        canAccommodateStrapline || canAccommodateByline || canAccommodateContent
-          ? headlineMargin
-          : 0,
+      marginBottom: calculateMarginBottom(
+        itemsToRender,
+        "headline",
+        headlineMargin,
+      ),
     },
     strapline: {
-      show: strapline.height > 0 && canAccommodateStrapline,
-      marginBottom:
-        canAccommodateByline || canAccommodateContent
-          ? strapline.marginBottom
-          : 0,
+      show: itemsToRender.includes("strapline"),
+      marginBottom: calculateMarginBottom(
+        itemsToRender,
+        "strapline",
+        strapline.marginBottom,
+      ),
     },
     byline: {
-      show: bylines.height > 0 && canAccommodateByline,
-      marginBottom: canAccommodateContent ? bylines.marginBottom : 0,
+      show: itemsToRender.includes("byline"),
+      marginBottom: calculateMarginBottom(
+        itemsToRender,
+        "byline",
+        bylines.marginBottom,
+      ),
     },
     content: {
-      show: canAccommodateContent,
+      show: itemsToRender.includes("content"),
       marginBottom: 0,
-      numberOfLines: canAccommodateContent
-        ? Math.floor(heightForContent / content.lineHeight)
+      numberOfLines: canAccommodateContentWithByline
+        ? getNumberOfLines(heightForContentWithByline, content.lineHeight)
+        : canAccommodateContentWithoutByline
+        ? getNumberOfLines(heightForContentWithoutByline, content.lineHeight)
         : 0,
     },
   };

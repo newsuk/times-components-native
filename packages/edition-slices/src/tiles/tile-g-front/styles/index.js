@@ -26,10 +26,6 @@ const sharedSummary = {
 
 const sharedStyles = {
   summaryContainer: { ...sharedSummaryContainer, paddingTop: spacing(1) },
-  imageContainer: {
-    width: "100%",
-    marginBottom: 0,
-  },
   summary: { ...sharedSummary },
   bylineMarginBottom: spacing(3),
 };
@@ -41,6 +37,10 @@ const sharedLandscapeStyles = {
     paddingRight: spacing(2),
     flex: 1,
   },
+  imageContainer: {
+    width: "100%",
+    marginBottom: 0,
+  },
   headlineMarginBottom: spacing(1),
 };
 
@@ -50,7 +50,11 @@ const sharedPortraitStyles = {
     paddingLeft: spacing(2),
     flex: 1,
   },
-  headlineMarginBottom: spacing(2),
+  imageContainer: {
+    width: "100%",
+    marginBottom: spacing(2),
+  },
+  headlineMarginBottom: spacing(3),
 };
 
 const styles = {
