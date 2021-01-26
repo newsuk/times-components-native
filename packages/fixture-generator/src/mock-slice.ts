@@ -108,6 +108,10 @@ interface LeadOneFullWidthFrontSliceWithName
   name: string;
 }
 
+interface SliceOptions {
+  hasVideo?: boolean;
+}
+
 function getDailyRegisterItem(): DailyUniversalRegisterItem {
   const dailyRegisterItem = new MockDailyRegister().get();
   return {
@@ -237,9 +241,9 @@ function mockLeadTwoNoPicAndTwoSlice(): LeadTwoNoPicAndTwoSliceWithName {
   };
 }
 
-function mockLeadTwoFrontSlice(
-  hasVideo: boolean = false,
-): LeadTwoFrontSliceWithName {
+function mockLeadTwoFrontSlice({
+  hasVideo = false,
+}: SliceOptions): LeadTwoFrontSliceWithName {
   const tiles = hasVideo ? getVideoTiles(2) : getTiles(2);
   const leadTile = {
     ...tiles[0],
@@ -257,9 +261,9 @@ function mockLeadTwoFrontSlice(
   };
 }
 
-function mockLeadOneAndOneFrontSlice(
-  hasVideo: boolean = false,
-): LeadOneAndOneSliceWithName {
+function mockLeadOneAndOneFrontSlice({
+  hasVideo = false,
+}: SliceOptions): LeadOneAndOneSliceWithName {
   const tiles = hasVideo ? getVideoTiles(2) : getTiles(2);
   const leadTile = {
     ...tiles[0],
@@ -284,9 +288,9 @@ function mockLeadOneAndOneFrontSlice(
   };
 }
 
-function mockLeadOneFullWidthFrontSlice(
-  hasVideo: boolean = false,
-): LeadOneFullWidthFrontSliceWithName {
+function mockLeadOneFullWidthFrontSlice({
+  hasVideo = false,
+}: SliceOptions): LeadOneFullWidthFrontSliceWithName {
   const tiles = hasVideo ? getVideoTiles(1) : getTiles(1);
   const leadTile = {
     ...tiles[0],

@@ -13,7 +13,6 @@ import { InlineItemProps } from "../../src/types";
 jest.mock("@times-components-native/ad", () => "Ad");
 jest.mock("@times-components-native/article-image", () => "ArticleImage");
 jest.mock("@times-components-native/pull-quote", () => "PullQuote");
-jest.mock("react-native-image-zoom-viewer", () => "ImageZoomView");
 
 export const createParagraphWithText = (text: string): ParagraphContent => ({
   id: "some-paragraph-id",

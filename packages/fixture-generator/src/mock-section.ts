@@ -158,7 +158,7 @@ function mockFrontSection(): StandardSectionWithName {
     },
     id: "front-page-section",
     name: "FrontPageSection",
-    slices: [mockLeadTwoFrontSlice()],
+    slices: [mockLeadTwoFrontSlice({})],
     slug: "dummy-section-slug",
     title: "some-title",
   };

@@ -5,8 +5,6 @@ import { PlayIcon } from "@times-components-native/video";
 import Svg from "react-native-svg";
 import { PLAY_ICON_SIZE } from "@times-components-native/video/src/play-icon";
 
-jest.mock("react-native-image-zoom-viewer", () => "ImageZoomView");
-
 export default () => {
   const tests = [
     {
