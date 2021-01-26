@@ -16,6 +16,8 @@ export const testTile = (
   mockTile = tile,
   otherProps = {},
 ) => {
+  // our Tile have dependencies on React Native's Animated which is difficult to mock, and results in tests not stopping gracefully. This fixes this issue (https://github.com/facebook/jest/issues/6434)
+  jest.useFakeTimers();
   const output = TestRenderer.create(
     <Tile
       onPress={() => null}
