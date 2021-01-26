@@ -1,18 +1,11 @@
-import {
-  Article,
-  PublicationName,
-  Url,
-  Flag,
-  Markup,
-  SectionName,
-  TemplateType,
-} from "./types";
+import { Article, Flag, Markup, PublicationName, SectionName, TemplateType, Url, } from "./types";
 import keywords from "./mock-keywords";
 import UUID from "./mock-UUID";
 import getPublicationName from "./mock-publication-name";
 import MockImage from "./mock-image";
 import getArticleSlice from "./mock-slice";
 import MockMarkup from "./mock-markup";
+import MockVideo from "@times-components-native/fixture-generator/src/mock-video";
 
 interface TimesArticle extends Article {
   summary105: Markup | null;
@@ -29,11 +22,11 @@ interface TimesArticle extends Article {
 class MockArticle {
   article: TimesArticle;
 
-  constructor() {
+  constructor(hasVideo: boolean = false) {
     this.article = {
-      leadAsset: new MockImage().get(),
+      leadAsset: hasVideo ? new MockVideo().get() : new MockImage().get(),
       listingAsset: new MockImage().get(),
-      hasVideo: false,
+      hasVideo: hasVideo,
       commentsEnabled: false,
       isBookmarked: false,
       commercialTags: ["commercial tag"],

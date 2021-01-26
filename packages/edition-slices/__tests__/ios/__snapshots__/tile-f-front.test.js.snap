@@ -73,6 +73,7 @@ Array [
           "width": "100%",
         }
       }
+      hasVideo={true}
       headlineMarginBottom={10}
       headlineStyle={
         Object {
@@ -685,6 +686,7 @@ Array [
           "width": "100%",
         }
       }
+      hasVideo={true}
       headlineMarginBottom={10}
       headlineStyle={
         Object {
@@ -1297,6 +1299,7 @@ Array [
           "width": "100%",
         }
       }
+      hasVideo={true}
       headlineMarginBottom={5}
       headlineStyle={
         Object {
@@ -1851,7 +1854,6 @@ Array [
       aspectRatio={1.7777777777777777}
       style={
         Object {
-          "marginBottom": 15,
           "width": "100%",
         }
       }
@@ -1910,12 +1912,14 @@ Array [
           "width": "100%",
         }
       }
+      hasVideo={true}
       headlineMarginBottom={10}
       headlineStyle={
         Object {
           "fontFamily": "TimesModern-Bold",
           "fontSize": 55,
           "lineHeight": 55,
+          "paddingTop": 10,
         }
       }
       justified={true}
@@ -2464,7 +2468,6 @@ Array [
       aspectRatio={1.7777777777777777}
       style={
         Object {
-          "marginBottom": 5,
           "width": "100%",
         }
       }
@@ -2514,12 +2517,14 @@ Array [
         ]
       }
       columnCount={3}
+      hasVideo={true}
       headlineMarginBottom={20}
       headlineStyle={
         Object {
           "fontFamily": "TimesModern-Bold",
           "fontSize": 42,
           "lineHeight": 42,
+          "paddingTop": 5,
         }
       }
       justified={true}
@@ -3068,7 +3073,6 @@ Array [
       aspectRatio={1.7777777777777777}
       style={
         Object {
-          "marginBottom": 10,
           "width": "100%",
         }
       }
@@ -3118,12 +3122,14 @@ Array [
         ]
       }
       columnCount={3}
+      hasVideo={true}
       headlineMarginBottom={20}
       headlineStyle={
         Object {
           "fontFamily": "TimesModern-Bold",
           "fontSize": 45,
           "lineHeight": 45,
+          "paddingTop": 10,
         }
       }
       justified={true}
@@ -3672,7 +3678,6 @@ Array [
       aspectRatio={1.7777777777777777}
       style={
         Object {
-          "marginBottom": 10,
           "width": "100%",
         }
       }
@@ -3722,12 +3727,14 @@ Array [
         ]
       }
       columnCount={3}
+      hasVideo={true}
       headlineMarginBottom={20}
       headlineStyle={
         Object {
           "fontFamily": "TimesModern-Bold",
           "fontSize": 45,
           "lineHeight": 45,
+          "paddingTop": 10,
         }
       }
       justified={true}
@@ -4276,7 +4283,6 @@ Array [
       aspectRatio={1.7777777777777777}
       style={
         Object {
-          "marginBottom": 10,
           "width": "100%",
         }
       }
@@ -4326,12 +4332,14 @@ Array [
         ]
       }
       columnCount={3}
+      hasVideo={true}
       headlineMarginBottom={20}
       headlineStyle={
         Object {
           "fontFamily": "TimesModern-Bold",
           "fontSize": 50,
           "lineHeight": 50,
+          "paddingTop": 10,
         }
       }
       justified={true}
@@ -4880,7 +4888,6 @@ Array [
       aspectRatio={1.7777777777777777}
       style={
         Object {
-          "marginBottom": 10,
           "width": "100%",
         }
       }
@@ -4930,12 +4937,14 @@ Array [
         ]
       }
       columnCount={3}
+      hasVideo={true}
       headlineMarginBottom={20}
       headlineStyle={
         Object {
           "fontFamily": "TimesModern-Bold",
           "fontSize": 55,
           "lineHeight": 55,
+          "paddingTop": 10,
         }
       }
       justified={true}

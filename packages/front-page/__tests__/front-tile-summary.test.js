@@ -17,6 +17,8 @@ jest.mock("@times-components-native/front-page/front-page-byline", () => ({
   FrontPageByline: "FrontPageByline",
 }));
 
+jest.mock("react-native-image-zoom-viewer", () => "ImageZoomView");
+
 const mockContainerHeight = 200;
 jest.mock("@times-components-native/front-page/MeasureContainer", () => {
   const MockMeasureContainer = ({ render }) => {

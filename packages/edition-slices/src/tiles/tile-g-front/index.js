@@ -4,14 +4,13 @@ import PropTypes from "prop-types";
 
 import { FrontTileSummary } from "@times-components-native/front-page";
 import { useResponsiveContext } from "@times-components-native/responsive";
-import { Orientation } from "@times-components-native/responsive/src/context";
 
 import { getTileImage, TileImage, TileLink, withTileTracking } from "../shared";
 import { getStyle } from "./styles";
-import { spacing } from "@times-components-native/styleguide";
 
 const TileGFront = ({ onPress, tile, orientation }) => {
-  const { windowWidth, windowHeight, isTablet } = useResponsiveContext();
+  const { windowWidth, windowHeight } = useResponsiveContext();
+
   const crop = getTileImage(tile, "crop45");
   const styles = getStyle(orientation, windowWidth, windowHeight);
 
@@ -20,11 +19,6 @@ const TileGFront = ({ onPress, tile, orientation }) => {
   }
 
   const { article } = tile;
-
-  const videoIconExtraSpacing =
-    article.hasVideo && isTablet && orientation === Orientation.PORTRAIT
-      ? spacing(2)
-      : 0;
 
   return (
     <TileLink onPress={onPress} style={styles.container} tile={tile}>
@@ -37,7 +31,7 @@ const TileGFront = ({ onPress, tile, orientation }) => {
         style={styles.imageContainer}
         uri={crop.url}
         hasVideo={article.hasVideo}
-        videoIconExtraSpacing={videoIconExtraSpacing}
+        hideVideoIcon
       />
       <FrontTileSummary
         headlineStyle={styles.headline}
@@ -52,6 +46,7 @@ const TileGFront = ({ onPress, tile, orientation }) => {
         straplineMarginBottom={0}
         summaryLineHeight={styles.summary.lineHeight}
         containerStyle={styles.summaryContainer}
+        hasVideo={article.hasVideo}
       />
     </TileLink>
   );
@@ -60,6 +55,7 @@ const TileGFront = ({ onPress, tile, orientation }) => {
 TileGFront.propTypes = {
   onPress: PropTypes.func.isRequired,
   tile: PropTypes.shape({}).isRequired,
+  orientation: PropTypes.oneOf(["portrait" | "landscape"]),
 };
 
 export default withTileTracking(TileGFront);
