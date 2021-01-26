@@ -1,9 +1,4 @@
-import {
-  fonts,
-  spacing,
-  globalSpacingStyles,
-  colours,
-} from "@times-components-native/styleguide";
+import { colours, fonts, globalSpacingStyles, spacing, } from "@times-components-native/styleguide";
 import { getStyleByDeviceSize } from "@times-components-native/styleguide/src/styleguide";
 
 const headline = {
@@ -240,5 +235,5 @@ const styles = {
   },
 };
 
-export const getStyle = (orientation, windowWidth, windowHeight) => console.log(orientation, windowWidth) ||
+export const getStyle = (orientation, windowWidth, windowHeight) =>
   getStyleByDeviceSize(styles[orientation], windowWidth, windowHeight);

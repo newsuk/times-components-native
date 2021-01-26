@@ -1,4 +1,12 @@
-import { Article, Flag, Markup, PublicationName, SectionName, TemplateType, Url, } from "./types";
+import {
+  Article,
+  Flag,
+  Markup,
+  PublicationName,
+  SectionName,
+  TemplateType,
+  Url,
+} from "./types";
 import keywords from "./mock-keywords";
 import UUID from "./mock-UUID";
 import getPublicationName from "./mock-publication-name";
