@@ -58,6 +58,61 @@ describe("consecutiveItemsFlagger", () => {
     expect(newData).toEqual(flaggedData);
   });
 
+  it("should add isConsecutive property to alternating slices", () => {
+    const originalData = [
+      { id: "a", name: "LeadersSlice" },
+      { id: "b", name: "SecondaryFourSlice" },
+      { id: "c", name: "SecondaryFourSlice" },
+      { id: "d", name: "SecondaryFourSlice" },
+      { id: "e", name: "SecondaryFourSlice" },
+    ];
+
+    const flaggedData = [
+      { id: "a", name: "LeadersSlice" },
+      { id: "b", name: "SecondaryFourSlice" },
+      { id: "c", name: "SecondaryFourSlice", isConsecutive: true },
+      { id: "d", name: "SecondaryFourSlice" },
+      { id: "e", name: "SecondaryFourSlice", isConsecutive: true },
+    ];
+
+    const newData = consecutiveItemsFlagger(originalData);
+    expect(newData).toEqual(flaggedData);
+  });
+
+  it("should add isConsecutive property on a SecondaryFourSlice that follows a TopSecondaryFourSlice", () => {
+    const originalData = [
+      { id: "a", name: "TopSecondaryFourSlice" },
+      { id: "b", name: "SecondaryFourSlice" },
+      { id: "c", name: "OtherSlice" },
+    ];
+
+    const flaggedData = [
+      { id: "a", name: "TopSecondaryFourSlice" },
+      { id: "b", name: "SecondaryFourSlice", isConsecutive: true },
+      { id: "c", name: "OtherSlice" },
+    ];
+
+    const newData = consecutiveItemsFlagger(originalData);
+    expect(newData).toEqual(flaggedData);
+  });
+
+  it("should add isConsecutive property on a SecondaryFourSlice that follows a LeadOneAndOneSlice", () => {
+    const originalData = [
+      { id: "a", name: "LeadOneAndOneSlice" },
+      { id: "b", name: "SecondaryFourSlice" },
+      { id: "c", name: "OtherSlice" },
+    ];
+
+    const flaggedData = [
+      { id: "a", name: "LeadOneAndOneSlice" },
+      { id: "b", name: "SecondaryFourSlice", isConsecutive: true },
+      { id: "c", name: "OtherSlice" },
+    ];
+
+    const newData = consecutiveItemsFlagger(originalData);
+    expect(newData).toEqual(flaggedData);
+  });
+
   it("should not mutate passed data", () => {
     const originalData = [
       { id: "a", name: "LeadersSlice" },
