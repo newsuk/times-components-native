@@ -26,8 +26,8 @@ describe("transformSlice", () => {
     const originalSlice = {
       id: "a",
       name: "LeadOneAndOneSlice",
-      support: { config: {} },
-      lead: { config: {} },
+      support: {},
+      lead: {},
     } as Slice;
     it("should not make any changes on mobile", () => {
       const transformedSlice = transformSlice(
