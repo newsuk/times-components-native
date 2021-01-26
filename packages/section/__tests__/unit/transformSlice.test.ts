@@ -20,32 +20,8 @@ jest.mock(
 );
 
 describe("transformSlice", () => {
-  describe("for the News section", () => {
-    const sectionTitle = "News";
-
-    const originalSlice = {
-      id: "a",
-      name: "LeadOneAndOneSlice",
-      support: {},
-      lead: {},
-    } as Slice;
-    it("should not make any changes on mobile", () => {
-      const transformedSlice = transformSlice(
-        false,
-        sectionTitle,
-      )(originalSlice);
-      expect(transformedSlice).toEqual(originalSlice);
-    });
-
-    it("does not leak transform data on other slices", () => {
-      const anotherSlice = { ...originalSlice, name: "OtherSlice" } as any;
-      const transformedSlice = transformSlice(true, sectionTitle)(anotherSlice);
-      expect(transformedSlice).toEqual(anotherSlice);
-    });
-  });
-
   describe("transform with base configs", () => {
-    const sectionTitle = "Sport";
+    const sectionTitle = "News";
 
     const originalSliceConfigSlice = {
       id: "a",
@@ -53,6 +29,23 @@ describe("transformSlice", () => {
       lead: { config: {} },
       support: { config: {} },
     } as Slice;
+
+    it("should not make any changes on mobile", () => {
+      const transformedSlice = transformSlice(
+        false,
+        sectionTitle,
+      )(originalSliceConfigSlice);
+      expect(transformedSlice).toEqual(originalSliceConfigSlice);
+    });
+
+    it("does not leak transform data onto other slices", () => {
+      const anotherSlice = {
+        ...originalSliceConfigSlice,
+        name: "OtherSlice",
+      } as any;
+      const transformedSlice = transformSlice(true, sectionTitle)(anotherSlice);
+      expect(transformedSlice).toEqual(anotherSlice);
+    });
     it("should return base config if no transform found ", () => {
       const transformedSlice = transformSlice(
         true,
