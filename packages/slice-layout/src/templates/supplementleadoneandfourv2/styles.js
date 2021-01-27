@@ -44,7 +44,7 @@ const wideBreakpointStyles = {
     marginHorizontal: spacing(2),
   },
   supportTilesContainer: {
-    marginHorizontal: spacing(4),
+    marginHorizontal: spacing(2), // TODO this needs to be 2 on portrait/4 on landscape - or fixed elsewhere.
   },
 };
 
