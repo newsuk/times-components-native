@@ -1,11 +1,5 @@
 /* eslint-disable global-require */
-import { FontStorage } from "@times-components-native/typeset";
 import { setupInlineContent } from "../../src/body-utils/setupInlineContent";
-
-FontStorage.registerFont(
-  "TimesDigitalW04",
-  () => require("@times-components-native/test-utils").TestFont,
-);
 
 const createParagraph = (textValue) => ({
   name: "paragraph",

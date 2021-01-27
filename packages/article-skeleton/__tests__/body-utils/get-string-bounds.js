@@ -9,9 +9,6 @@ FontStorage.registerFont(
 
 export default () => {
   it("should return a bounding box", () => {
-    console.log(
-      "QWYERWUERWERWERQYWERQWYERWQYRYUQWYYWRYWRYTRYQWRTQTRUWTRYUQTRTWYTQWTWYQTUQ",
-    );
     const fontSettings = {
       fontFamily: "TimesDigitalW04",
       fontStyle: "",
