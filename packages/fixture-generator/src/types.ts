@@ -1481,7 +1481,7 @@ export interface EmbeddedComponentResource {
 
 /** An article presentation */
 export interface Tile {
-  articleId?: Uuid;
+  articleId: Uuid;
 
   article: Article;
 
