@@ -15,6 +15,8 @@ export type ContextType = {
   windowWidth: number;
   windowHeight: number;
   orientation: Orientation;
+  isPortrait: boolean;
+  isLandscape: boolean;
 };
 
 const { width, height, fontScale } = getDimensions();

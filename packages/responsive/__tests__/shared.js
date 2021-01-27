@@ -9,7 +9,7 @@ import * as Utils from "@times-components-native/utils";
 
 jest.mock("@times-components-native/utils", () => ({
   __esModule: true,
-  getDimensions: () => ({ width: 100, height: 100 }),
+  getDimensions: () => ({ width: 100, height: 200 }),
   addDimensionsListener: () => null,
   removeDimensionsListener: () => null,
 }));

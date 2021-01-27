@@ -6,6 +6,8 @@ exports[`1. an error 1`] = `
     Object {
       "editionBreakpoint": "small",
       "fontScale": 1,
+      "isLandscape": false,
+      "isPortrait": true,
       "isTablet": false,
       "narrowArticleBreakpoint": undefined,
       "orientation": "portrait",
@@ -24,6 +26,8 @@ exports[`2. loading 1`] = `
     Object {
       "editionBreakpoint": "small",
       "fontScale": 1,
+      "isLandscape": false,
+      "isPortrait": true,
       "isTablet": false,
       "narrowArticleBreakpoint": undefined,
       "orientation": "portrait",
@@ -42,6 +46,8 @@ exports[`3. an article with no headline falls back to use shortheadline 1`] = `
     Object {
       "editionBreakpoint": "small",
       "fontScale": 1,
+      "isLandscape": false,
+      "isPortrait": true,
       "isTablet": false,
       "narrowArticleBreakpoint": undefined,
       "orientation": "portrait",
@@ -128,6 +134,8 @@ exports[`4. an article with ads 1`] = `
     Object {
       "editionBreakpoint": "small",
       "fontScale": 1,
+      "isLandscape": false,
+      "isPortrait": true,
       "isTablet": false,
       "narrowArticleBreakpoint": undefined,
       "orientation": "portrait",
