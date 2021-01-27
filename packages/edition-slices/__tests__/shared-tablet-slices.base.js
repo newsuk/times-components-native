@@ -119,6 +119,11 @@ const slices = [
     Slice: SecondaryFourSlice,
   },
   {
+    mock: mockSecondaryFourSlice({ isConsecutive: true }),
+    name: "secondary four - consecutive",
+    Slice: SecondaryFourSlice,
+  },
+  {
     mock: mockSecondaryFourSlice(),
     name: "secondary four - supplement",
     Slice: SupplementSecondaryFourSlice,
@@ -169,7 +174,7 @@ const slices = [
     Slice: PuzzleSlice,
   },
   {
-    mock: mockLeadTwoFrontSlice(),
+    mock: mockLeadTwoFrontSlice({}),
     name: "front lead two - portrait",
     Slice: LeadTwoFrontSlice,
     orientation: "portrait",
@@ -178,7 +183,7 @@ const slices = [
     },
   },
   {
-    mock: mockLeadTwoFrontSlice(),
+    mock: mockLeadTwoFrontSlice({}),
     name: "front lead two - landscape",
     Slice: LeadTwoFrontSlice,
     orientation: "landscape",
@@ -187,7 +192,7 @@ const slices = [
     },
   },
   {
-    mock: mockLeadOneAndOneFrontSlice(),
+    mock: mockLeadOneAndOneFrontSlice({}),
     name: "front lead one and one - portrait",
     Slice: LeadOneAndOneFrontSlice,
     orientation: "portrait",
@@ -196,7 +201,7 @@ const slices = [
     },
   },
   {
-    mock: mockLeadOneAndOneFrontSlice(),
+    mock: mockLeadOneAndOneFrontSlice({}),
     name: "front lead one and one - landscape",
     Slice: LeadOneAndOneFrontSlice,
     orientation: "landscape",
@@ -205,7 +210,7 @@ const slices = [
     },
   },
   {
-    mock: mockLeadOneFullWidthFrontSlice(),
+    mock: mockLeadOneFullWidthFrontSlice({}),
     name: "front lead one - portrait",
     Slice: LeadOneFullWidthFrontSlice,
     orientation: "portrait",
@@ -214,7 +219,7 @@ const slices = [
     },
   },
   {
-    mock: mockLeadOneFullWidthFrontSlice(),
+    mock: mockLeadOneFullWidthFrontSlice({}),
     name: "front lead one - landscape",
     Slice: LeadOneFullWidthFrontSlice,
     orientation: "landscape",

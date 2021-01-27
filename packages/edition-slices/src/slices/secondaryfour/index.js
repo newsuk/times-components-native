@@ -43,6 +43,10 @@ class SecondaryFour extends Component {
       slice: { isConsecutive, secondary1, secondary2, secondary3, secondary4 },
     } = this.props;
 
+    const tiles = isConsecutive
+      ? [secondary3, secondary4, secondary1, secondary2]
+      : [secondary1, secondary2, secondary3, secondary4];
+
     return (
       <SecondaryFourSlice
         breakpoint={breakpoint}
@@ -51,7 +55,7 @@ class SecondaryFour extends Component {
           <TileAR
             breakpoint={breakpoint}
             onPress={onPress}
-            tile={secondary1}
+            tile={tiles[0]}
             tileName="secondary1"
           />
         }
@@ -59,7 +63,7 @@ class SecondaryFour extends Component {
           <TileAR
             breakpoint={breakpoint}
             onPress={onPress}
-            tile={secondary2}
+            tile={tiles[1]}
             tileName="secondary2"
           />
         }
@@ -67,7 +71,7 @@ class SecondaryFour extends Component {
           <TileB
             breakpoint={breakpoint}
             onPress={onPress}
-            tile={secondary3}
+            tile={tiles[2]}
             tileName="secondary3"
             additionalHeadlineStyles={stylesFactory(breakpoint)}
           />
@@ -76,7 +80,7 @@ class SecondaryFour extends Component {
           <TileB
             breakpoint={breakpoint}
             onPress={onPress}
-            tile={secondary4}
+            tile={tiles[3]}
             tileName="secondary4"
             additionalHeadlineStyles={stylesFactory(breakpoint)}
           />

@@ -13,8 +13,6 @@ import {
 import { hash, iterator } from "@times-components-native/test-utils";
 import Image, { ModalImage } from "../src";
 
-jest.mock("react-native-image-zoom-viewer", () => "ImageZoomView");
-
 jest.useFakeTimers();
 
 export default () => {

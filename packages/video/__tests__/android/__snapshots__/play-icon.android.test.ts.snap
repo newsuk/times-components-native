@@ -248,7 +248,7 @@ exports[`4. playicon with containerwidth of 563 1`] = `
 </RNSVGSvgView>
 `;
 
-exports[`5. playicon 1`] = `
+exports[`5. playicon with containerwidth of 755 1`] = `
 <RNSVGSvgView
   align="xMidYMid"
   bbHeight={76}
@@ -275,6 +275,130 @@ exports[`5. playicon 1`] = `
   vbHeight={64}
   vbWidth={64}
   width={76}
+>
+  <RNSVGGroup
+    fill={null}
+    propList={
+      Array [
+        "fill",
+      ]
+    }
+  >
+    <RNSVGRect
+      fill={-16711667}
+      height="64"
+      opacity={0.6}
+      propList={
+        Array [
+          "fill",
+        ]
+      }
+      width="64"
+      x={0}
+      y={0}
+    />
+    <RNSVGPath
+      d="M20 16V48L44 32L20 16Z"
+      fill={-1}
+      propList={
+        Array [
+          "fill",
+        ]
+      }
+    />
+  </RNSVGGroup>
+</RNSVGSvgView>
+`;
+
+exports[`6. playicon with size prop only 1`] = `
+<RNSVGSvgView
+  align="xMidYMid"
+  bbHeight={48}
+  bbWidth={48}
+  fill="none"
+  focusable={false}
+  height={48}
+  meetOrSlice={0}
+  minX={0}
+  minY={0}
+  style={
+    Array [
+      Object {
+        "backgroundColor": "transparent",
+        "borderWidth": 0,
+      },
+      Object {
+        "flex": 0,
+        "height": 48,
+        "width": 48,
+      },
+    ]
+  }
+  vbHeight={64}
+  vbWidth={64}
+  width={48}
+>
+  <RNSVGGroup
+    fill={null}
+    propList={
+      Array [
+        "fill",
+      ]
+    }
+  >
+    <RNSVGRect
+      fill={-16711667}
+      height="64"
+      opacity={0.6}
+      propList={
+        Array [
+          "fill",
+        ]
+      }
+      width="64"
+      x={0}
+      y={0}
+    />
+    <RNSVGPath
+      d="M20 16V48L44 32L20 16Z"
+      fill={-1}
+      propList={
+        Array [
+          "fill",
+        ]
+      }
+    />
+  </RNSVGGroup>
+</RNSVGSvgView>
+`;
+
+exports[`7. playicon with size and containerwidth props 1`] = `
+<RNSVGSvgView
+  align="xMidYMid"
+  bbHeight={64}
+  bbWidth={64}
+  fill="none"
+  focusable={false}
+  height={64}
+  meetOrSlice={0}
+  minX={0}
+  minY={0}
+  style={
+    Array [
+      Object {
+        "backgroundColor": "transparent",
+        "borderWidth": 0,
+      },
+      Object {
+        "flex": 0,
+        "height": 64,
+        "width": 64,
+      },
+    ]
+  }
+  vbHeight={64}
+  vbWidth={64}
+  width={64}
 >
   <RNSVGGroup
     fill={null}

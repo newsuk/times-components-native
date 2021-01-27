@@ -59,7 +59,7 @@ const bylines = [
 
 const props = {
   summary: summaryContent,
-  tile: new MockTile().get(),
+  tile: new MockTile({}).get(),
   whiteSpaceHeight: 40,
   bylines: bylines,
   containerStyle: { backgroundColor: "red" },

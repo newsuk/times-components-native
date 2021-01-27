@@ -1,7 +1,6 @@
 import React from "react";
 import { Text } from "react-native";
 import PropTypes from "prop-types";
-import { propTypes as treePropType } from "@times-components-native/markup-forest";
 import { renderAst as defaultRenderAst } from "./article-summary";
 import styles from "./styles";
 
@@ -35,7 +34,7 @@ const ArticleSummaryContent = ({
 };
 
 ArticleSummaryContent.propTypes = {
-  ast: PropTypes.arrayOf(treePropType),
+  ast: PropTypes.oneOfType([PropTypes.array, PropTypes.object]),
   className: PropTypes.string,
   style: PropTypes.shape({}),
 };

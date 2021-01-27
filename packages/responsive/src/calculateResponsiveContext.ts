@@ -4,6 +4,7 @@ import {
   tabletWidth,
 } from "@times-components-native/styleguide";
 import { NativeModules } from "react-native";
+import { ContextType, Orientation } from "./context";
 
 const config = (NativeModules || {}).ReactConfig;
 
@@ -11,7 +12,7 @@ export const calculateResponsiveContext = (
   width: number,
   height: number,
   fontScale: number,
-) => ({
+): ContextType => ({
   editionBreakpoint: getEditionBreakpoint(width),
   narrowArticleBreakpoint: getNarrowArticleBreakpoint(width),
   fontScale,
@@ -20,5 +21,7 @@ export const calculateResponsiveContext = (
     width >= tabletWidth,
   windowWidth: width,
   windowHeight: height,
-  orientation: height > width ? "portrait" : "landscape",
+  orientation: height > width ? Orientation.PORTRAIT : Orientation.LANDSCAPE,
+  isPortrait: height > width,
+  isLandscape: width > height,
 });
