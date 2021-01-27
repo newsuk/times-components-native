@@ -26,7 +26,7 @@ class MockArticle {
     this.article = {
       leadAsset: hasVideo ? new MockVideo().get() : new MockImage().get(),
       listingAsset: new MockImage().get(),
-      hasVideo: hasVideo,
+      hasVideo,
       commentsEnabled: false,
       isBookmarked: false,
       commercialTags: ["commercial tag"],

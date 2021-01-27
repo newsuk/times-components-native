@@ -5,7 +5,6 @@ class MockTile {
   tile: Tile;
 
   constructor({ hasVideo = false }) {
-    console.log(hasVideo);
     const article = new MockArticle({ hasVideo }).get();
 
     this.tile = {
