@@ -1,12 +1,12 @@
 import "../mocks-tiles";
 import { testTile, tile } from "../shared-tile-utils";
-import { TileColWithImageBottom } from "../../src/tiles";
+import { TileColImageBottom } from "../../src/tiles";
 import { editionBreakpoints } from "@times-components-native/styleguide";
 
 export default () => {
   describe("tile column with image bottom", () => {
     it("shows an image", () => {
-      testTile(TileColWithImageBottom, editionBreakpoints.wide, {
+      testTile(TileColImageBottom, editionBreakpoints.wide, {
         ...tile,
         config: {
           wide: {
@@ -19,7 +19,7 @@ export default () => {
 
     it("shows portrait image when in portrait wide (ipad pro)", () => {
       testTile(
-        TileColWithImageBottom,
+        TileColImageBottom,
         editionBreakpoints.wide,
         {
           ...tile,
@@ -38,7 +38,7 @@ export default () => {
     });
 
     it("medium", () => {
-      testTile(TileColWithImageBottom, editionBreakpoints.medium, {
+      testTile(TileColImageBottom, editionBreakpoints.medium, {
         ...tile,
         config: {
           medium: {
@@ -49,7 +49,7 @@ export default () => {
     });
 
     it("wide", () => {
-      testTile(TileColWithImageBottom, editionBreakpoints.wide, {
+      testTile(TileColImageBottom, editionBreakpoints.wide, {
         ...tile,
         config: {
           wide: {
@@ -61,7 +61,7 @@ export default () => {
     });
 
     it("huge", () => {
-      testTile(TileColWithImageBottom, editionBreakpoints.huge, {
+      testTile(TileColImageBottom, editionBreakpoints.huge, {
         ...tile,
         config: {
           huge: {

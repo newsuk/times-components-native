@@ -33,6 +33,7 @@ import {
   LeadersSlice,
   LeadOneAndFourSlice,
   LeadTwoNoPicAndTwoSlice,
+  LeadTwoNoPicAndTwoVariant2Slice,
   PuzzleSlice,
   SecondaryOneAndFourSlice,
   SecondaryOneSlice,
@@ -91,6 +92,12 @@ const slices = [
     mock: mockLeadTwoNoPicAndTwoSlice(),
     name: "lead two no pic and two",
     Slice: LeadTwoNoPicAndTwoSlice,
+    orientation: "portrait",
+  },
+  {
+    mock: mockLeadTwoNoPicAndTwoSlice(),
+    name: "lead two no pic and two variant 2",
+    Slice: LeadTwoNoPicAndTwoVariant2Slice,
     orientation: "portrait",
   },
   {
