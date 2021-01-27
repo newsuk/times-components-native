@@ -293,7 +293,6 @@ function mockLeadOneAndOneFrontSlice({
 function mockLeadOneFullWidthFrontSlice({
   hasVideo = false,
 }: SliceOptions): LeadOneFullWidthFrontSliceWithName {
-  console.log('hasVideo', hasVideo);
   const tiles = hasVideo ? getVideoTiles(1) : getTiles(1);
   const leadTile = {
     ...tiles[0],
