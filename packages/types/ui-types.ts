@@ -1,12 +1,11 @@
 import { Tile } from "@times-components-native/fixture-generator/src/types";
+import { Orientation } from "@times-components-native/responsive/src/context";
 import { Slice } from "@times-components-native/section/src/utils/transformSlice";
 import { editionBreakpoints } from "@times-components-native/styleguide";
 
 export type EditionBreakpointKeys = keyof typeof editionBreakpoints;
 
 type ImageAspectRatios = "16:9" | "3:2" | "4:5" | "2:3";
-
-export type Orientation = "landscape" | "portrait";
 
 type Optional<T, K extends keyof T> = Pick<Partial<T>, K> & Omit<T, K>;
 export interface TileConfig {
