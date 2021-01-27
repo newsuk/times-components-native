@@ -2,26 +2,17 @@ import { fonts } from "@times-components-native/styleguide";
 import React from "react";
 import { Platform, Text, View } from "react-native";
 
-const fontAdditionalSpacingMap: Record<string, number> = {
+const scaleMap: Record<string, number> = {
+  medium: 1,
+  large: 1.17,
+  xlarge: 1.27,
+};
+
+const fontAdditionalPaddingMap: Record<string, number> = {
   cultureMagazine: 2,
   dropCap: 0,
   stMagazine: 1,
   styleMagazine: 0,
-};
-
-const convertScale = (scale: string): number => {
-  let scaleValue;
-  switch (scale) {
-    case "large":
-      scaleValue = 1.17;
-      break;
-    case "xlarge":
-      scaleValue = 1.27;
-      break;
-    default:
-      scaleValue = 1;
-  }
-  return scaleValue;
 };
 
 interface Props {
@@ -43,12 +34,12 @@ const DropCap: React.FC<Props> = ({
   scale,
   width,
 }) => {
-  const scaleValue = convertScale(scale);
+  const baseAdditionalPadding = Platform.OS === "ios" ? 23 : 20;
+  const fontSpecificPadding = fontAdditionalPaddingMap[dropCapFont] ?? 0;
+  const scaleValue = scaleMap[scale] ?? 1;
 
-  const dpPadding =
-    ((Platform.OS === "ios" ? 23 : 20) +
-      fontAdditionalSpacingMap[dropCapFont]) *
-    scaleValue;
+  const additionalPadding =
+    (baseAdditionalPadding + fontSpecificPadding) * scaleValue;
 
   return (
     <View
@@ -66,9 +57,8 @@ const DropCap: React.FC<Props> = ({
             color: dropCapColor,
             fontFamily: fonts[dropCapFont],
             fontSize: dropCapFontSize,
-            includeFontPadding: false,
             lineHeight: height,
-            paddingTop: dpPadding,
+            paddingTop: additionalPadding,
             width,
           },
         ]}

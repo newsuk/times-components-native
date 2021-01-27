@@ -92,15 +92,16 @@ describe("InlineContent", () => {
   describe("dropcap", () => {
     const props = {
       adConfig: {},
-      baseUrl: "some-base-url",
-      contextUrl: "some-context-url",
       defaultFont: { lineHeight: 26 },
       display: "inline",
-      height: 600,
+      dropCapColor: "#13354E",
+      dropCapFont: "dropCap",
+      dropCapFontSize: 216,
+      dropCapText: "T",
+      height: 153.5625,
       inlineContent: content,
-      isLoading: false,
       narrowContent: false,
-      originalName: "ad",
+      originalName: "dropcap",
       skeletonProps: {
         data: [],
         isTablet: true,
@@ -108,19 +109,17 @@ describe("InlineContent", () => {
         scale: 1,
         windowWidth,
       },
-      slotName: "native-inline-ad-c",
-      style: {},
-      width: 300,
+      width: 128.8828125,
     } as InlineDropCapProps;
 
-    it("generates content measurements for inline ad", () => {
+    it("generates content measurements for dropcap", () => {
       const renderer = TestRenderer.create(
         withTabletContext(<InlineContent {...props} />),
       );
       expect(renderer.toJSON()).toMatchSnapshot();
     });
 
-    it("renders content and inline ad via a render-prop", () => {
+    it("renders content and dropcap via a render-prop", () => {
       const renderer = TestRenderer.create(
         withTabletContext(<InlineContent {...props} />),
       );
@@ -149,10 +148,12 @@ describe("InlineContent", () => {
 
   describe("image", () => {
     const props = {
+      adConfig: {},
       caption: "some caption",
       credits: "some credits",
       defaultFont: { lineHeight: 26 },
       display: "inline",
+      height: 900,
       imageIndex: 0,
       inlineContent: content,
       narrowContent: false,
@@ -165,7 +166,12 @@ describe("InlineContent", () => {
       relativeHorizontalOffset: 0,
       relativeVerticalOffset: 0,
       relativeWidth: 1600,
+      skeletonProps: {
+        isTablet: true,
+        narrowContent: false,
+      },
       url: "some image url",
+      width: 1600,
     } as InlineArticleImageProps;
 
     it("generates content measurements for inline image", () => {
@@ -204,6 +210,7 @@ describe("InlineContent", () => {
 
   describe("pullQuote", () => {
     const props = {
+      adConfig: {},
       caption: {
         name: "some caption",
         text: "some text",
@@ -211,11 +218,18 @@ describe("InlineContent", () => {
       },
       children: [{ string: "some pull quote text" }],
       defaultFont: { lineHeight: 26 },
+      display: "inline",
+      height: 200,
       inlineContent: content,
+      narrowContent: false,
       onTwitterLinkPress: () => {
         return;
       },
       originalName: "pullQuote",
+      skeletonProps: {
+        isTablet: true,
+        narrowContent: false,
+      },
       width: 231,
     } as InlinePullQuoteProps;
 

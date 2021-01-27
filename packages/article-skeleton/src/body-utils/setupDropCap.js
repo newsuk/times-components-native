@@ -20,54 +20,74 @@ const isDropcapsDisabled = ({ template, dropcapsDisabled }) => {
   return !templateWithDropCaps.includes(template);
 };
 
+const extractDropCapText = (node) => {
+  const { children } = node;
+
+  if (!children?.length) return;
+
+  const firstChild = children[0];
+  const restOfChildren = node.children?.slice(1);
+
+  if (firstChild.name === "text") {
+    const firstChildText = firstChild?.attributes?.value;
+
+    if (!firstChildText || !firstChildText.length) return;
+
+    const dropCapLength = /^["“‘']/.test(firstChildText) ? 2 : 1;
+    const dropCapText = firstChildText.slice(0, dropCapLength);
+
+    const truncatedTextStartIndex =
+      firstChildText.charAt(dropCapLength) === " "
+        ? dropCapLength + 1
+        : dropCapLength;
+
+    const modifiedNode = {
+      ...node,
+      children: [
+        {
+          ...firstChild,
+          attributes: {
+            ...firstChild.attributes,
+            value: firstChildText.slice(truncatedTextStartIndex),
+          },
+        },
+        ...restOfChildren,
+      ],
+    };
+
+    return [dropCapText, modifiedNode];
+  }
+
+  const dropCapParts = extractDropCapText(firstChild);
+
+  if (!dropCapParts) return;
+
+  const [dropCapText, modifiedFirstChild] = dropCapParts;
+
+  return [
+    dropCapText,
+    {
+      ...node,
+      children: [modifiedFirstChild, ...restOfChildren],
+    },
+  ];
+};
+
 export const setupDropCap = (skeletonProps, content) => {
-  const { data, dropCapFont, scale } = skeletonProps;
+  const { data, dropCapFont = "dropCap", scale } = skeletonProps;
 
   if (isDropcapsDisabled(data)) return content;
 
-  const firstParagraph = content.slice(0, 1)[0];
+  const firstParagraph = content[0];
 
   if (!firstParagraph?.name || firstParagraph.name !== "paragraph")
     return content;
 
-  const firstParagraphFirstChild = firstParagraph.children?.[0];
-  const firstParagraphRestOfChildren = firstParagraph.children?.slice(1);
+  const dropCapParts = extractDropCapText(firstParagraph);
 
-  const firstParagraphFirstChildText =
-    firstParagraphFirstChild?.attributes?.value;
+  if (!dropCapParts) return content;
 
-  if (
-    firstParagraphFirstChild?.name !== "text" ||
-    !firstParagraphFirstChildText
-  )
-    return content;
-
-  const dropCapLength = /^["“‘']/.test(firstParagraphFirstChildText) ? 2 : 1;
-  const dropCapText = firstParagraphFirstChildText.slice(0, dropCapLength);
-
-  const truncatedParagraphStartIndex =
-    firstParagraphFirstChildText.charAt(dropCapLength) === " "
-      ? dropCapLength + 1
-      : dropCapLength;
-
-  const modifiedFirstParagraph = [
-    {
-      ...firstParagraph,
-      children: [
-        {
-          ...firstParagraphFirstChild,
-          attributes: {
-            ...firstParagraphFirstChild.attributes,
-            value: firstParagraphFirstChildText.slice(
-              truncatedParagraphStartIndex,
-            ),
-          },
-        },
-        ...firstParagraphRestOfChildren,
-      ],
-    },
-  ];
-
+  const [dropCapText, modifiedFirstParagraph] = dropCapParts;
   const restOfContent = content.slice(1);
 
   const { fontFactory } = styleguide({ scale });
@@ -99,11 +119,11 @@ export const setupDropCap = (skeletonProps, content) => {
       name: "inlineContent",
       attributes: {
         dropCapColor: colours.section[data.section],
-        dropCapFont: dropCapFont || "dropCap",
+        dropCapFont: dropCapFont,
         dropCapFontSize: fontSize,
         dropCapText,
         height,
-        inlineContent: modifiedFirstParagraph,
+        inlineContent: [modifiedFirstParagraph],
         originalName: "dropcap",
         skeletonProps,
         width,

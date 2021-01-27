@@ -1,0 +1,156 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`DropCap renders a dropcap for large scale 1`] = `
+<View
+  style={
+    Array [
+      Object {
+        "height": 87.546,
+        "width": 103.824,
+      },
+    ]
+  }
+>
+  <Text
+    allowFontScaling={false}
+    style={
+      Array [
+        Object {
+          "color": "#13354E",
+          "fontFamily": "TimesModern-Regular",
+          "fontSize": 126,
+          "lineHeight": 84.546,
+          "paddingTop": 23.4,
+          "width": 103.824,
+        },
+      ]
+    }
+  >
+    A
+  </Text>
+</View>
+`;
+
+exports[`DropCap renders a dropcap for medium scale 1`] = `
+<View
+  style={
+    Array [
+      Object {
+        "height": 75.468,
+        "width": 88.992,
+      },
+    ]
+  }
+>
+  <Text
+    allowFontScaling={false}
+    style={
+      Array [
+        Object {
+          "color": "#13354E",
+          "fontFamily": "TimesModern-Regular",
+          "fontSize": 108,
+          "lineHeight": 72.468,
+          "paddingTop": 20,
+          "width": 88.992,
+        },
+      ]
+    }
+  >
+    A
+  </Text>
+</View>
+`;
+
+exports[`DropCap renders a dropcap for xlarge scale 1`] = `
+<View
+  style={
+    Array [
+      Object {
+        "height": 95.598,
+        "width": 113.712,
+      },
+    ]
+  }
+>
+  <Text
+    allowFontScaling={false}
+    style={
+      Array [
+        Object {
+          "color": "#13354E",
+          "fontFamily": "TimesModern-Regular",
+          "fontSize": 138,
+          "lineHeight": 92.598,
+          "paddingTop": 25.4,
+          "width": 113.712,
+        },
+      ]
+    }
+  >
+    A
+  </Text>
+</View>
+`;
+
+exports[`DropCap renders a dropcap with default font padding if provided font not in map 1`] = `
+<View
+  style={
+    Array [
+      Object {
+        "height": 75.468,
+        "width": 88.992,
+      },
+    ]
+  }
+>
+  <Text
+    allowFontScaling={false}
+    style={
+      Array [
+        Object {
+          "color": "#13354E",
+          "fontFamily": "TimesDigitalW04",
+          "fontSize": 108,
+          "lineHeight": 72.468,
+          "paddingTop": 20,
+          "width": 88.992,
+        },
+      ]
+    }
+  >
+    A
+  </Text>
+</View>
+`;
+
+exports[`DropCap renders a dropcap with default scale if provided scale unknown 1`] = `
+<View
+  style={
+    Array [
+      Object {
+        "height": 75.468,
+        "width": 88.992,
+      },
+    ]
+  }
+>
+  <Text
+    allowFontScaling={false}
+    style={
+      Array [
+        Object {
+          "color": "#13354E",
+          "fontFamily": "TimesModern-Regular",
+          "fontSize": 108,
+          "lineHeight": 72.468,
+          "paddingTop": 20,
+          "width": 88.992,
+        },
+      ]
+    }
+  >
+    A
+  </Text>
+</View>
+`;
