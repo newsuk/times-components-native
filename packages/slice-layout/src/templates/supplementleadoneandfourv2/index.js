@@ -5,7 +5,7 @@ import HorizontalLayout from "../horizontallayout";
 import stylesFactory from "./styles";
 import { ResponsiveSlice } from "@times-components-native/edition-slices/src/slices/shared";
 
-const SupplementLeadOneAndFourSliceV2 = ({
+const SupplementLeadOneAndFourV2Slice = ({
   breakpoint,
   orientation,
   lead,
@@ -61,4 +61,4 @@ const SupplementLeadOneAndFourSliceV2 = ({
   );
 };
 
-export default SupplementLeadOneAndFourSliceV2;
+export default SupplementLeadOneAndFourV2Slice;
