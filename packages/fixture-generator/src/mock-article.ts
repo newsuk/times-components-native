@@ -1,12 +1,4 @@
-import {
-  Article,
-  Flag,
-  Markup,
-  PublicationName,
-  SectionName,
-  TemplateType,
-  Url,
-} from "./types";
+import { Article, Flag, Markup, PublicationName, SectionName, TemplateType, Url, } from "./types";
 import keywords from "./mock-keywords";
 import UUID from "./mock-UUID";
 import getPublicationName from "./mock-publication-name";
@@ -30,7 +22,7 @@ interface TimesArticle extends Article {
 class MockArticle {
   article: TimesArticle;
 
-  constructor(hasVideo: boolean = false) {
+  constructor({ hasVideo = false }) {
     this.article = {
       leadAsset: hasVideo ? new MockVideo().get() : new MockImage().get(),
       listingAsset: new MockImage().get(),

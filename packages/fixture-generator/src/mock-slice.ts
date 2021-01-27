@@ -122,11 +122,13 @@ function getDailyRegisterItem(): DailyUniversalRegisterItem {
 }
 
 function getTiles(count: number): Array<Tile> {
-  return new Array(count).fill(0).map(() => new MockTile().get());
+  return new Array(count).fill(0).map(() => new MockTile({}).get());
 }
 
 function getVideoTiles(count: number): Array<Tile> {
-  return new Array(count).fill(0).map(() => new MockTile(true).get());
+  return new Array(count)
+    .fill(0)
+    .map(() => new MockTile({ hasVideo: true }).get());
 }
 
 function getDailyRegister(count: number): Array<DailyUniversalRegisterItem> {
@@ -291,6 +293,7 @@ function mockLeadOneAndOneFrontSlice({
 function mockLeadOneFullWidthFrontSlice({
   hasVideo = false,
 }: SliceOptions): LeadOneFullWidthFrontSliceWithName {
+  console.log('hasVideo', hasVideo);
   const tiles = hasVideo ? getVideoTiles(1) : getTiles(1);
   const leadTile = {
     ...tiles[0],

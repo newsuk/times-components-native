@@ -4,8 +4,9 @@ import MockArticle from "./mock-article";
 class MockTile {
   tile: Tile;
 
-  constructor(hasVideo: boolean = false) {
-    const article = new MockArticle(hasVideo).get();
+  constructor({ hasVideo = false }) {
+    console.log(hasVideo);
+    const article = new MockArticle({ hasVideo }).get();
 
     this.tile = {
       articleId: "dc4ed2e8-4584-11e9-924d-9729bcd51a7f",

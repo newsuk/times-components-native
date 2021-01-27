@@ -73,7 +73,7 @@ Array [
           "width": "100%",
         }
       }
-      hasVideo={true}
+      hasVideo={false}
       headlineMarginBottom={10}
       headlineStyle={
         Object {
@@ -686,7 +686,7 @@ Array [
           "width": "100%",
         }
       }
-      hasVideo={true}
+      hasVideo={false}
       headlineMarginBottom={10}
       headlineStyle={
         Object {
@@ -1299,7 +1299,7 @@ Array [
           "width": "100%",
         }
       }
-      hasVideo={true}
+      hasVideo={false}
       headlineMarginBottom={5}
       headlineStyle={
         Object {
@@ -1912,7 +1912,7 @@ Array [
           "width": "100%",
         }
       }
-      hasVideo={true}
+      hasVideo={false}
       headlineMarginBottom={10}
       headlineStyle={
         Object {
@@ -2517,7 +2517,7 @@ Array [
         ]
       }
       columnCount={3}
-      hasVideo={true}
+      hasVideo={false}
       headlineMarginBottom={20}
       headlineStyle={
         Object {
@@ -3122,7 +3122,7 @@ Array [
         ]
       }
       columnCount={3}
-      hasVideo={true}
+      hasVideo={false}
       headlineMarginBottom={20}
       headlineStyle={
         Object {
@@ -3727,7 +3727,7 @@ Array [
         ]
       }
       columnCount={3}
-      hasVideo={true}
+      hasVideo={false}
       headlineMarginBottom={20}
       headlineStyle={
         Object {
@@ -4332,7 +4332,7 @@ Array [
         ]
       }
       columnCount={3}
-      hasVideo={true}
+      hasVideo={false}
       headlineMarginBottom={20}
       headlineStyle={
         Object {
@@ -4937,7 +4937,7 @@ Array [
         ]
       }
       columnCount={3}
-      hasVideo={true}
+      hasVideo={false}
       headlineMarginBottom={20}
       headlineStyle={
         Object {

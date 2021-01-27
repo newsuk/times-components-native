@@ -50,7 +50,7 @@ const TileFFront = ({ onPress, tile, orientation }) => {
         columnCount={3}
         bylines={article.bylines}
         bylineMarginBottom={styles.bylineMarginBottom}
-        hasVideo
+        hasVideo={article.hasVideo}
       />
     </TileLink>
   );
