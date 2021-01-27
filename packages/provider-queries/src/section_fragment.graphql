@@ -336,15 +336,15 @@ fragment commonSlicesSection on StandardSectionSlice {
     support1 {
       headline
       leadAsset {
-        ...leadAsset32
+        ...leadAsset169and32
       }
       article {
         ...baseArticleProps
         leadAsset {
-          ...leadAsset32
+          ...leadAsset169and32
         }
         listingAsset {
-          ...leadAsset32
+          ...leadAsset169and32
         }
         summary300: summary(maxCharCount: 300)
       }
@@ -353,15 +353,15 @@ fragment commonSlicesSection on StandardSectionSlice {
     support2 {
       headline
       leadAsset {
-        ...leadAsset32
+        ...leadAsset169and32
       }
       article {
         ...baseArticleProps
         leadAsset {
-          ...leadAsset32
+          ...leadAsset169and32
         }
         listingAsset {
-          ...leadAsset32
+          ...leadAsset169and32
         }
         summary300: summary(maxCharCount: 300)
       }
@@ -370,15 +370,15 @@ fragment commonSlicesSection on StandardSectionSlice {
     support3 {
       headline
       leadAsset {
-        ...leadAsset32
+        ...leadAsset169and32
       }
       article {
         ...baseArticleProps
         leadAsset {
-          ...leadAsset32
+          ...leadAsset169and32
         }
         listingAsset {
-          ...leadAsset32
+          ...leadAsset169and32
         }
         summary300: summary(maxCharCount: 300)
       }
@@ -387,15 +387,15 @@ fragment commonSlicesSection on StandardSectionSlice {
     support4 {
       headline
       leadAsset {
-        ...leadAsset32
+        ...leadAsset169and32
       }
       article {
         ...baseArticleProps
         leadAsset {
-          ...leadAsset32
+          ...leadAsset169and32
         }
         listingAsset {
-          ...leadAsset32
+          ...leadAsset169and32
         }
         summary300: summary(maxCharCount: 300)
       }

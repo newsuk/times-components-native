@@ -9,13 +9,19 @@ const mediumBreakpointStyles = {
     marginHorizontal: spacing(4),
   },
   landscapeContainer: {
-    flexDirection: "row",
+    marginHorizontal: spacing(4),
   },
   portraitLeadContainer: {
     width: "100%",
   },
   landscapeLeadContainer: {
-    width: "66.667%",
+    width: "100%",
+  },
+  supportTilesContainer: {
+    marginHorizontal: spacing(2),
+  },
+  landscapeSupportContainer: {
+    marginHorizontal: spacing(4),
   },
   horizontalSupportContainer: {
     flex: 1,
