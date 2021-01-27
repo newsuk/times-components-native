@@ -1,8 +1,8 @@
 import {
-  fonts,
-  spacing,
-  globalSpacingStyles,
   colours,
+  fonts,
+  globalSpacingStyles,
+  spacing,
 } from "@times-components-native/styleguide";
 import { getStyleByDeviceSize } from "@times-components-native/styleguide/src/styleguide";
 
@@ -64,11 +64,11 @@ const sharedPortraitStyles = {
 const portrait834 = {
   ...sharedPortraitStyles,
   headline: {
+    paddingTop: spacing(2),
     ...headline,
   },
   imageContainer: {
     width: "100%",
-    marginBottom: spacing(2),
   },
   strapline: {
     ...strapline,
@@ -121,12 +121,12 @@ const styles = {
       ...sharedLandscapeStyles,
       imageContainer: {
         width: "100%",
-        marginBottom: spacing(3),
       },
       headline: {
         ...headline,
         fontSize: 55,
         lineHeight: 55,
+        paddingTop: spacing(2),
       },
       strapline: {
         ...strapline,
@@ -142,10 +142,10 @@ const styles = {
         ...headline,
         fontSize: 42,
         lineHeight: 42,
+        paddingTop: spacing(1),
       },
       imageContainer: {
         width: "100%",
-        marginBottom: spacing(1),
       },
       strapline: {
         ...strapline,
@@ -162,10 +162,10 @@ const styles = {
         ...headline,
         fontSize: 45,
         lineHeight: 45,
+        paddingTop: spacing(2),
       },
       imageContainer: {
         width: "100%",
-        marginBottom: spacing(2),
       },
       strapline: {
         ...strapline,
@@ -218,10 +218,10 @@ const styles = {
         ...headline,
         fontSize: 55,
         lineHeight: 55,
+        paddingTop: spacing(2),
       },
       imageContainer: {
         width: "100%",
-        marginBottom: spacing(2),
       },
       strapline: {
         ...strapline,

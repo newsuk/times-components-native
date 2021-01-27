@@ -15,6 +15,7 @@ const sharedSummaryContainer = {
 
 const sharedHeadline = {
   ...globalSpacingStyles.tabletHeadline,
+  paddingTop: spacing(2),
   fontFamily: fonts.headline,
 };
 
@@ -52,7 +53,6 @@ const sharedPortraitStyles = {
   },
   imageContainer: {
     width: "100%",
-    marginBottom: spacing(2),
   },
   headlineMarginBottom: spacing(3),
 };

@@ -4,25 +4,25 @@ import {
   DailyUniversalRegister,
   DailyUniversalRegisterItem,
   Flag,
-  StandardSlice,
+  LeadersSlice,
   LeadOneAndFourSlice,
-  LeadOneFullWidthSlice,
   LeadOneAndOneSlice,
   LeadOneAndTwoSlice,
+  LeadOneFullWidthFrontSlice,
+  LeadOneFullWidthSlice,
+  LeadTwoFrontSlice,
   LeadTwoNoPicAndTwoSlice,
-  LeadersSlice,
-  SecondaryOneSlice,
-  SecondaryOneAndColumnistSlice,
+  PuffLiteInput,
+  Puzzle,
   SecondaryFourSlice,
+  SecondaryOneAndColumnistSlice,
+  SecondaryOneAndFourSlice,
+  SecondaryOneSlice,
   SecondaryTwoAndTwoSlice,
   SecondaryTwoNoPicAndTwoSlice,
-  TwoPicAndSixNoPicSlice,
+  StandardSlice,
   Tile,
-  SecondaryOneAndFourSlice,
-  Puzzle,
-  LeadOneFullWidthFrontSlice,
-  LeadTwoFrontSlice,
-  PuffLiteInput,
+  TwoPicAndSixNoPicSlice,
 } from "./types";
 import MockPuzzle from "./mock-puzzle";
 
@@ -34,6 +34,7 @@ import inTodaysEditionFixture from "@times-components-native/in-todays-edition/f
 interface LeadOneAndFourSliceWithName extends LeadOneAndFourSlice {
   name: string;
 }
+
 interface StandardSliceWithName extends StandardSlice {
   name: string;
 }
@@ -107,6 +108,10 @@ interface LeadOneFullWidthFrontSliceWithName
   name: string;
 }
 
+interface SliceOptions {
+  hasVideo?: boolean;
+}
+
 function getDailyRegisterItem(): DailyUniversalRegisterItem {
   const dailyRegisterItem = new MockDailyRegister().get();
   return {
@@ -117,7 +122,13 @@ function getDailyRegisterItem(): DailyUniversalRegisterItem {
 }
 
 function getTiles(count: number): Array<Tile> {
-  return new Array(count).fill(0).map(() => new MockTile().get());
+  return new Array(count).fill(0).map(() => new MockTile({}).get());
+}
+
+function getVideoTiles(count: number): Array<Tile> {
+  return new Array(count)
+    .fill(0)
+    .map(() => new MockTile({ hasVideo: true }).get());
 }
 
 function getDailyRegister(count: number): Array<DailyUniversalRegisterItem> {
@@ -232,8 +243,10 @@ function mockLeadTwoNoPicAndTwoSlice(): LeadTwoNoPicAndTwoSliceWithName {
   };
 }
 
-function mockLeadTwoFrontSlice(): LeadTwoFrontSliceWithName {
-  const tiles = getTiles(2);
+function mockLeadTwoFrontSlice({
+  hasVideo = false,
+}: SliceOptions): LeadTwoFrontSliceWithName {
+  const tiles = hasVideo ? getVideoTiles(2) : getTiles(2);
   const leadTile = {
     ...tiles[0],
     article: {
@@ -250,8 +263,10 @@ function mockLeadTwoFrontSlice(): LeadTwoFrontSliceWithName {
   };
 }
 
-function mockLeadOneAndOneFrontSlice(): LeadOneAndOneSliceWithName {
-  const tiles = getTiles(2);
+function mockLeadOneAndOneFrontSlice({
+  hasVideo = false,
+}: SliceOptions): LeadOneAndOneSliceWithName {
+  const tiles = hasVideo ? getVideoTiles(2) : getTiles(2);
   const leadTile = {
     ...tiles[0],
     article: {
@@ -275,8 +290,10 @@ function mockLeadOneAndOneFrontSlice(): LeadOneAndOneSliceWithName {
   };
 }
 
-function mockLeadOneFullWidthFrontSlice(): LeadOneFullWidthFrontSliceWithName {
-  const tiles = getTiles(1);
+function mockLeadOneFullWidthFrontSlice({
+  hasVideo = false,
+}: SliceOptions): LeadOneFullWidthFrontSliceWithName {
+  const tiles = hasVideo ? getVideoTiles(1) : getTiles(1);
   const leadTile = {
     ...tiles[0],
     article: {

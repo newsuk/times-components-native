@@ -12,6 +12,8 @@ import { FrontPageByline } from "./front-page-byline";
 import { MeasureContainer } from "./MeasureContainer";
 import { getFrontTileConfig } from "./utils/get-front-tile-config";
 import { useResponsiveContext } from "@times-components-native/responsive";
+import { PlayIcon } from "@times-components-native/video";
+import { getIconSize } from "@times-components-native/video/src/play-icon";
 
 interface Props {
   columnCount?: number;
@@ -31,6 +33,7 @@ interface Props {
   bylineMarginBottom: number;
   justified?: boolean;
   summaryLineHeight: number;
+  hasVideo?: boolean;
 }
 
 const renderContent = (
@@ -109,6 +112,7 @@ const FrontTileSummary: React.FC<Props> = (props) => {
     straplineMarginBottom,
     headlineMarginBottom,
     summaryLineHeight,
+    hasVideo = false,
   } = props;
   const styles = styleFactory();
   const [headlineHeight, setHeadlineHeight] = useState();
@@ -228,6 +232,13 @@ const FrontTileSummary: React.FC<Props> = (props) => {
                       frontTileConfig.content.numberOfLines * summaryLineHeight,
                     contentWidth: width,
                   })}
+                {hasVideo && (
+                  <View
+                    style={{ position: "absolute", top: -getIconSize(width) }}
+                  >
+                    <PlayIcon size={getIconSize(width)} />
+                  </View>
+                )}
               </TileSummaryContainer>
             );
           }}

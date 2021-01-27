@@ -1,7 +1,5 @@
 /* eslint-disable global-require */
 import React from "react";
-import { ScrollView } from "react-native";
-import { delay } from "@times-components-native/test-utils";
 import TestRenderer from "react-test-renderer";
 import mockDate from "mockdate";
 import {

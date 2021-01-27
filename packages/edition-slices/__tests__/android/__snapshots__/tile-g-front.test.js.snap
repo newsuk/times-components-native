@@ -73,12 +73,14 @@ Array [
           "width": "100%",
         }
       }
+      hasVideo={false}
       headlineMarginBottom={5}
       headlineStyle={
         Object {
           "fontFamily": "TimesModern-Bold",
           "fontSize": 22,
           "lineHeight": 22,
+          "paddingTop": 10,
         }
       }
       straplineMarginBottom={0}
@@ -676,12 +678,14 @@ Array [
           "width": "100%",
         }
       }
+      hasVideo={false}
       headlineMarginBottom={5}
       headlineStyle={
         Object {
           "fontFamily": "TimesModern-Bold",
           "fontSize": 25,
           "lineHeight": 25,
+          "paddingTop": 10,
         }
       }
       straplineMarginBottom={0}
@@ -1279,12 +1283,14 @@ Array [
           "width": "100%",
         }
       }
+      hasVideo={false}
       headlineMarginBottom={10}
       headlineStyle={
         Object {
           "fontFamily": "TimesModern-Bold",
           "fontSize": 24,
           "lineHeight": 24,
+          "paddingTop": 10,
         }
       }
       straplineMarginBottom={0}
@@ -1882,12 +1888,14 @@ Array [
           "width": "100%",
         }
       }
+      hasVideo={false}
       headlineMarginBottom={10}
       headlineStyle={
         Object {
           "fontFamily": "TimesModern-Bold",
           "fontSize": 35,
           "lineHeight": 35,
+          "paddingTop": 10,
         }
       }
       straplineMarginBottom={0}
@@ -2426,7 +2434,6 @@ Array [
       aspectRatio={0.8}
       style={
         Object {
-          "marginBottom": 10,
           "width": "100%",
         }
       }
@@ -2484,12 +2491,14 @@ Array [
           "width": "100%",
         }
       }
+      hasVideo={false}
       headlineMarginBottom={15}
       headlineStyle={
         Object {
           "fontFamily": "TimesModern-Bold",
           "fontSize": 28,
           "lineHeight": 28,
+          "paddingTop": 10,
         }
       }
       straplineMarginBottom={0}
@@ -3028,7 +3037,6 @@ Array [
       aspectRatio={0.8}
       style={
         Object {
-          "marginBottom": 10,
           "width": "100%",
         }
       }
@@ -3086,12 +3094,14 @@ Array [
           "width": "100%",
         }
       }
+      hasVideo={false}
       headlineMarginBottom={15}
       headlineStyle={
         Object {
           "fontFamily": "TimesModern-Bold",
           "fontSize": 28,
           "lineHeight": 28,
+          "paddingTop": 10,
         }
       }
       straplineMarginBottom={0}
@@ -3630,7 +3640,6 @@ Array [
       aspectRatio={0.8}
       style={
         Object {
-          "marginBottom": 10,
           "width": "100%",
         }
       }
@@ -3688,12 +3697,14 @@ Array [
           "width": "100%",
         }
       }
+      hasVideo={false}
       headlineMarginBottom={15}
       headlineStyle={
         Object {
           "fontFamily": "TimesModern-Bold",
           "fontSize": 30,
           "lineHeight": 30,
+          "paddingTop": 10,
         }
       }
       straplineMarginBottom={0}
@@ -4232,7 +4243,6 @@ Array [
       aspectRatio={0.8}
       style={
         Object {
-          "marginBottom": 10,
           "width": "100%",
         }
       }
@@ -4290,12 +4300,14 @@ Array [
           "width": "100%",
         }
       }
+      hasVideo={false}
       headlineMarginBottom={15}
       headlineStyle={
         Object {
           "fontFamily": "TimesModern-Bold",
           "fontSize": 32,
           "lineHeight": 32,
+          "paddingTop": 10,
         }
       }
       straplineMarginBottom={0}
@@ -4834,7 +4846,6 @@ Array [
       aspectRatio={0.8}
       style={
         Object {
-          "marginBottom": 10,
           "width": "100%",
         }
       }
@@ -4892,12 +4903,14 @@ Array [
           "width": "100%",
         }
       }
+      hasVideo={false}
       headlineMarginBottom={15}
       headlineStyle={
         Object {
           "fontFamily": "TimesModern-Bold",
           "fontSize": 40,
           "lineHeight": 40,
+          "paddingTop": 10,
         }
       }
       straplineMarginBottom={0}
