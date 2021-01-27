@@ -24,6 +24,7 @@ import {
   TopSecondarySlice,
   SectionAd,
   SupplementLeadOneAndFourSlice,
+  SupplementLeadOneAndFourV2Slice,
   SupplementLeadOneAndOneSlice,
   SupplementSecondaryFourSlice,
   SupplementSecondaryOneSlice,
@@ -44,7 +45,7 @@ const sliceMap = (isInSupplement) => {
     DailyUniversalRegister: DailyRegisterLeadFourSlice,
     LeadersSlice,
     LeadOneAndFourSlice: isInTabletSupplement
-      ? SupplementLeadOneAndFourSlice
+      ? SupplementLeadOneAndFourV2Slice
       : LeadOneAndFourSlice,
     LeadOneAndOneSlice: isInTabletSupplement
       ? SupplementLeadOneAndOneSlice
