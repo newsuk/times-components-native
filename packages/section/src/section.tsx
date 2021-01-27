@@ -16,8 +16,9 @@ import {
   createPuzzleData,
   isSupplementSection,
 } from "./utils";
-import { OnArticlePress, Orientation } from "@times-components-native/types";
+import { OnArticlePress } from "@times-components-native/types";
 import { SectionTitles } from "./utils/sectionConfigs";
+import { Orientation } from "@times-components-native/responsive/src/context";
 
 const styles = styleFactory();
 

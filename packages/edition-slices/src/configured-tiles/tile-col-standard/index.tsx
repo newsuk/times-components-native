@@ -15,7 +15,6 @@ import {
   TransformConfiguredTile,
   OnArticlePress,
   EditionBreakpointKeys,
-  Orientation,
   TileConfig,
 } from "@times-components-native/types";
 import {
@@ -26,6 +25,7 @@ import {
   Crop,
   Tile,
 } from "@times-components-native/fixture-generator/src/types";
+import { Orientation } from "@times-components-native/responsive/src/context";
 
 interface Props {
   onPress: OnArticlePress;

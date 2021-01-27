@@ -1,3 +1,4 @@
+import { Orientation } from "@times-components-native/responsive/src/context";
 import { SliceBaseConfig, TileConfig } from "@times-components-native/types";
 
 const lead1Base: Pick<TileConfig, "headline" | "summary"> = {
@@ -13,11 +14,11 @@ const lead2Base: Pick<TileConfig, "headline" | "summary"> = {
 const support1Base: Pick<TileConfig, "headline" | "summary" | "image"> = {
   summary: { length: 800 },
   headline: { fontSize: 24 },
-  image: { ratio: "3:2", orientation: "landscape" },
+  image: { ratio: "3:2", orientation: Orientation.LANDSCAPE },
 };
 
 const support2Base: Pick<TileConfig, "headline" | "image"> = {
-  image: { ratio: "2:3", orientation: "portrait" },
+  image: { ratio: "2:3", orientation: Orientation.PORTRAIT },
   headline: { fontSize: 28 },
 };
 

@@ -21,10 +21,10 @@ import {
 import {
   TransformConfiguredTile,
   OnArticlePress,
-  Orientation,
   EditionBreakpointKeys,
   TileConfig,
 } from "@times-components-native/types";
+import { Orientation } from "@times-components-native/responsive/src/context";
 
 interface Props {
   onPress(): OnArticlePress;
