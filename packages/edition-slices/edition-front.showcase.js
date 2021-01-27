@@ -46,18 +46,33 @@ const renderSlice = (Component, data) => () => {
 };
 const sliceStories = [
   {
-    mock: mockLeadTwoFrontSlice(),
+    mock: mockLeadTwoFrontSlice({}),
     name: "Front Lead Two",
     Slice: LeadTwoFrontSlice,
   },
   {
-    mock: mockLeadOneAndOneFrontSlice(),
+    mock: mockLeadTwoFrontSlice({ hasVideo: true }),
+    name: "Front Lead Two with Video",
+    Slice: LeadTwoFrontSlice,
+  },
+  {
+    mock: mockLeadOneAndOneFrontSlice({}),
     name: "Front Lead One And One",
     Slice: LeadOneAndOneFrontSlice,
   },
   {
-    mock: mockLeadOneFullWidthFrontSlice(),
+    mock: mockLeadOneAndOneFrontSlice({ hasVideo: true }),
+    name: "Front Lead One And One with Video",
+    Slice: LeadOneAndOneFrontSlice,
+  },
+  {
+    mock: mockLeadOneFullWidthFrontSlice({}),
     name: "Front Lead One",
+    Slice: LeadOneFullWidthFrontSlice,
+  },
+  {
+    mock: mockLeadOneFullWidthFrontSlice({ hasVideo: true }),
+    name: "Front Lead One with Video",
     Slice: LeadOneFullWidthFrontSlice,
   },
 ];

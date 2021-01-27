@@ -3,13 +3,14 @@ import React from "react";
 import PropTypes from "prop-types";
 
 import { FrontTileSummary } from "@times-components-native/front-page";
-
-import { getTileImage, TileLink, withTileTracking, TileImage } from "../shared";
-import { getStyle } from "./styles";
 import { useResponsiveContext } from "@times-components-native/responsive";
+
+import { getTileImage, TileImage, TileLink, withTileTracking } from "../shared";
+import { getStyle } from "./styles";
 
 const TileGFront = ({ onPress, tile, orientation }) => {
   const { windowWidth, windowHeight } = useResponsiveContext();
+
   const crop = getTileImage(tile, "crop45");
   const styles = getStyle(orientation, windowWidth, windowHeight);
 
@@ -30,6 +31,7 @@ const TileGFront = ({ onPress, tile, orientation }) => {
         style={styles.imageContainer}
         uri={crop.url}
         hasVideo={article.hasVideo}
+        hideVideoIcon
       />
       <FrontTileSummary
         headlineStyle={styles.headline}
@@ -44,6 +46,7 @@ const TileGFront = ({ onPress, tile, orientation }) => {
         straplineMarginBottom={0}
         summaryLineHeight={styles.summary.lineHeight}
         containerStyle={styles.summaryContainer}
+        hasVideo={article.hasVideo}
       />
     </TileLink>
   );
@@ -52,6 +55,7 @@ const TileGFront = ({ onPress, tile, orientation }) => {
 TileGFront.propTypes = {
   onPress: PropTypes.func.isRequired,
   tile: PropTypes.shape({}).isRequired,
+  orientation: PropTypes.oneOf(["portrait" | "landscape"]),
 };
 
 export default withTileTracking(TileGFront);
