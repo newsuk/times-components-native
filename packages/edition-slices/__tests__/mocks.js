@@ -5,6 +5,17 @@ jest.mock("../src/tiles", () => {
   });
   return tileMocks;
 });
+
+jest.mock("../src/configured-tiles", () => {
+  const tileMocks = {};
+  Object.keys(require.requireActual("../src/configured-tiles")).forEach(
+    (key) => {
+      tileMocks[key] = key;
+    },
+  );
+  return tileMocks;
+});
+
 jest.mock("@times-components-native/article-flag", () => ({
   ArticleFlags: "ArticleFlags",
 }));
