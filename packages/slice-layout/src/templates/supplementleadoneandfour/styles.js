@@ -17,9 +17,7 @@ const mediumBreakpointStyles = {
   landscapeLeadContainer: {
     width: "100%",
   },
-  supportTilesContainer: {
-    marginHorizontal: spacing(2),
-  },
+  supportTilesContainer: {},
   landscapeSupportContainer: {
     marginHorizontal: spacing(4),
   },
@@ -44,6 +42,9 @@ const wideBreakpointStyles = {
   portraitContainer: {
     ...mediumBreakpointStyles.container,
     marginHorizontal: spacing(2),
+  },
+  supportTilesContainer: {
+    marginHorizontal: spacing(4),
   },
 };
 
