@@ -7,26 +7,30 @@ import {
 } from "@times-components-native/types";
 import merge from "lodash.merge";
 
-export type SliceMap = Omit<
-  Slice<Partial<TransformConfiguredTile>>,
-  "name" | "id"
->;
+type TileNames =
+  | "support"
+  | "support1"
+  | "support2"
+  | "lead1"
+  | "lead2"
+  | "lead";
 
 export type Slice<T> = {
-  support?: T;
-  support1?: T;
-  support2?: T;
-  lead1?: T;
-  lead2?: T;
-  lead?: T;
+  [k in TileNames]?: T;
+} & {
   name: SliceName;
   id: string;
   [key: string]: any;
 };
 
+export type SliceMap = Omit<
+  Slice<Partial<TransformConfiguredTile>>,
+  "name" | "id"
+>;
+
 type SliceNameMap = Partial<Record<SliceName, SliceMap>>;
 interface TransformSlice {
-  name: string;
+  name: SliceName;
   sectionTitle: string;
   overrides: Partial<SliceMap>;
 }
