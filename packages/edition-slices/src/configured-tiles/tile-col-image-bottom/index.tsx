@@ -27,7 +27,7 @@ import {
 import { Orientation } from "@times-components-native/responsive/src/context";
 
 interface Props {
-  onPress(): OnArticlePress;
+  onPress: OnArticlePress;
   tile: TransformConfiguredTile;
   breakpoint: EditionBreakpointKeys;
   orientation: Orientation;
@@ -61,7 +61,7 @@ const TileColImageBottom: FC<Props> = ({
 
       if (!imageRatio) return null;
 
-      const crop: Crop = getTileImage(tile, getCropByRatio(imageRatio));
+      const crop: Crop | null = getTileImage(tile, getCropByRatio(imageRatio));
 
       if (!crop) return null;
 
