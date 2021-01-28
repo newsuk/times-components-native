@@ -27,6 +27,7 @@ import {
   LeadOneAndOneSlice,
   LeadOneFullWidthSlice,
   LeadTwoNoPicAndTwoSlice,
+  LeadTwoNoPicAndTwoVariant2Slice,
   ListTwoAndSixNoPicSlice,
   SecondaryFourSlice,
   SecondaryOneAndColumnistSlice,
@@ -128,6 +129,12 @@ const sliceStories = [
     name:
       "Lead Two no pic and Two (Mobile: F,B,D,E, Tablet: X,Y,E,D Wide: X,Y,AL,E)",
     Slice: LeadTwoNoPicAndTwoSlice,
+  },
+  {
+    mock: mockLeadTwoNoPicAndTwoSlice(),
+    name:
+      "Lead two no pic and two variant 2 (tablet only made using configured tiles only col standard and col with image bottom)",
+    Slice: LeadTwoNoPicAndTwoVariant2Slice,
   },
   {
     mock: mockSecondaryOneSlice(),

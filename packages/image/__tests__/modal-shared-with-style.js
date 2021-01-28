@@ -14,8 +14,6 @@ import { setIsTablet } from "./mocks";
 
 import ModalImage from "../src/modal-image";
 
-jest.mock("react-native-image-zoom-viewer", () => "ImageZoomView");
-
 const props = {
   caption: {
     text: "Caption",

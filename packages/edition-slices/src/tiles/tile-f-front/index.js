@@ -32,6 +32,7 @@ const TileFFront = ({ onPress, tile, orientation }) => {
         style={styles.imageContainer}
         uri={imageCrop.url}
         hasVideo={article.hasVideo}
+        hideVideoIcon
       />
       <FrontTileSummary
         containerStyle={styles.summaryContainer}
@@ -49,6 +50,7 @@ const TileFFront = ({ onPress, tile, orientation }) => {
         columnCount={3}
         bylines={article.bylines}
         bylineMarginBottom={styles.bylineMarginBottom}
+        hasVideo={article.hasVideo}
       />
     </TileLink>
   );

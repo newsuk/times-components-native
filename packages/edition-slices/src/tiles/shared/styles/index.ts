@@ -36,13 +36,8 @@ const starUnderneathTextStyles = {
 };
 
 const playIconStyles: ViewStyle = {
-  justifyContent: "flex-end",
-  bottom: 0,
   left: 0,
   position: "absolute",
-  zIndex: 2,
-  width: "100%",
-  height: "100%",
 };
 
 export {

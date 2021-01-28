@@ -33,6 +33,7 @@ import {
   LeadersSlice,
   LeadOneAndFourSlice,
   LeadTwoNoPicAndTwoSlice,
+  LeadTwoNoPicAndTwoVariant2Slice,
   PuzzleSlice,
   SecondaryOneAndFourSlice,
   SecondaryOneSlice,
@@ -91,6 +92,12 @@ const slices = [
     mock: mockLeadTwoNoPicAndTwoSlice(),
     name: "lead two no pic and two",
     Slice: LeadTwoNoPicAndTwoSlice,
+    orientation: "portrait",
+  },
+  {
+    mock: mockLeadTwoNoPicAndTwoSlice(),
+    name: "lead two no pic and two variant 2",
+    Slice: LeadTwoNoPicAndTwoVariant2Slice,
     orientation: "portrait",
   },
   {
@@ -174,7 +181,7 @@ const slices = [
     Slice: PuzzleSlice,
   },
   {
-    mock: mockLeadTwoFrontSlice(),
+    mock: mockLeadTwoFrontSlice({}),
     name: "front lead two - portrait",
     Slice: LeadTwoFrontSlice,
     orientation: "portrait",
@@ -183,7 +190,7 @@ const slices = [
     },
   },
   {
-    mock: mockLeadTwoFrontSlice(),
+    mock: mockLeadTwoFrontSlice({}),
     name: "front lead two - landscape",
     Slice: LeadTwoFrontSlice,
     orientation: "landscape",
@@ -192,7 +199,7 @@ const slices = [
     },
   },
   {
-    mock: mockLeadOneAndOneFrontSlice(),
+    mock: mockLeadOneAndOneFrontSlice({}),
     name: "front lead one and one - portrait",
     Slice: LeadOneAndOneFrontSlice,
     orientation: "portrait",
@@ -201,7 +208,7 @@ const slices = [
     },
   },
   {
-    mock: mockLeadOneAndOneFrontSlice(),
+    mock: mockLeadOneAndOneFrontSlice({}),
     name: "front lead one and one - landscape",
     Slice: LeadOneAndOneFrontSlice,
     orientation: "landscape",
@@ -210,7 +217,7 @@ const slices = [
     },
   },
   {
-    mock: mockLeadOneFullWidthFrontSlice(),
+    mock: mockLeadOneFullWidthFrontSlice({}),
     name: "front lead one - portrait",
     Slice: LeadOneFullWidthFrontSlice,
     orientation: "portrait",
@@ -219,7 +226,7 @@ const slices = [
     },
   },
   {
-    mock: mockLeadOneFullWidthFrontSlice(),
+    mock: mockLeadOneFullWidthFrontSlice({}),
     name: "front lead one - landscape",
     Slice: LeadOneFullWidthFrontSlice,
     orientation: "landscape",
