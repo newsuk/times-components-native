@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import PropTypes from "prop-types";
 import { LeadOneAndOneSlice } from "@times-components-native/slice-layout";
-import { TileA, TileB, TileU, TileZ, TileVerticalA } from "../../tiles";
+import { TileA, TileB, TileZ, TileColStandard } from "../../tiles";
 import { ResponsiveSlice } from "../shared";
 
 class LeadOneAndOne extends Component {
@@ -26,32 +26,43 @@ class LeadOneAndOne extends Component {
     );
   }
 
-  renderMedium(breakpoint) {
+  renderMedium(breakpoint, orientation) {
     const {
       onPress,
       slice: { lead, support },
     } = this.props;
+
     return (
       <LeadOneAndOneSlice
         breakpoint={breakpoint}
-        lead={<TileU onPress={onPress} tile={lead} tileName="lead" />}
+        lead={
+          <TileColStandard
+            breakpoint={breakpoint}
+            onPress={onPress}
+            tile={lead}
+            tileName="lead"
+            orientation={orientation}
+          />
+        }
         support={
-          <TileVerticalA
+          <TileColStandard
             breakpoint={breakpoint}
             onPress={onPress}
             tile={support}
             tileName="support"
+            orientation={orientation}
           />
         }
       />
     );
   }
 
-  renderWide(breakpoint) {
+  renderWide(breakpoint, orientation) {
     const {
       onPress,
       slice: { lead, support },
     } = this.props;
+
     return (
       <LeadOneAndOneSlice
         breakpoint={breakpoint}
@@ -64,11 +75,12 @@ class LeadOneAndOne extends Component {
           />
         }
         support={
-          <TileVerticalA
+          <TileColStandard
             onPress={onPress}
             tile={support}
             breakpoint={breakpoint}
             tileName="support"
+            orientation={orientation}
           />
         }
       />

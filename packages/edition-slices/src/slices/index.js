@@ -7,6 +7,7 @@ export { default as LeadOneFullWidthSlice } from "./leadonefullwidth";
 export { default as LeadersSlice } from "./leaders";
 export { default as ListTwoAndSixNoPicSlice } from "./listtwoandsixnopic";
 export { default as LeadTwoNoPicAndTwoSlice } from "./leadtwonopicandtwo";
+export { default as LeadTwoNoPicAndTwoVariant2Slice } from "./leadtwonopicandtwovariant2";
 export { default as SecondaryOneSlice } from "./secondaryone";
 export { default as SecondaryOneAndColumnistSlice } from "./secondaryoneandcolumnist";
 export { default as SecondaryFourSlice } from "./secondaryfour";
