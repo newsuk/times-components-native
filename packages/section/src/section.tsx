@@ -17,6 +17,8 @@ import {
   isSupplementSection,
 } from "./utils";
 import { OnArticlePress } from "@times-components-native/types";
+import { SectionTitles } from "./utils/sectionConfigs";
+import { Orientation } from "@times-components-native/responsive/src/context";
 
 const styles = styleFactory();
 
@@ -29,7 +31,12 @@ interface Props {
   onViewed: (item: any, slices: any[]) => void;
   publishedTime: string;
   receiveChildList: (childList: any) => void;
-  section: any;
+  section: {
+    title: SectionTitles;
+    cover: any;
+    name: string;
+    slices: any;
+  };
 }
 
 const Section: React.FC<Props> = ({
@@ -44,7 +51,8 @@ const Section: React.FC<Props> = ({
   section,
 }) => {
   const { cover, name, slices, title: sectionTitle } = section;
-  const { isTablet, editionBreakpoint } = useResponsiveContext();
+  const { isTablet, editionBreakpoint, orientation } = useResponsiveContext();
+
   const emailPuzzlesButtonExtendedWidth = 170;
   const [emailPuzzlesButtonWidth] = useState(
     new Animated.Value(emailPuzzlesButtonExtendedWidth),
@@ -82,7 +90,7 @@ const Section: React.FC<Props> = ({
     return null;
   };
 
-  const renderItem = (isPuzzle: boolean) => ({
+  const renderItem = (isPuzzle: boolean, orientation: Orientation) => ({
     index,
     item: slice,
     inTodaysEditionSlice,
@@ -96,6 +104,8 @@ const Section: React.FC<Props> = ({
       isInSupplement={isSupplementSection(sectionTitle)}
       inTodaysEditionSlice={inTodaysEditionSlice}
       adConfig={adConfig}
+      sectionTitle={sectionTitle}
+      orientation={orientation}
     />
   );
 
@@ -126,7 +136,10 @@ const Section: React.FC<Props> = ({
       (slice: any) => slice.name !== "InTheNewsSlice",
     );
 
-    return renderItem(false)({
+    return renderItem(
+      false,
+      orientation,
+    )({
       index: 0,
       item: frontSlice || {},
       inTodaysEditionSlice: inTheNewsSlice || {},
@@ -156,7 +169,7 @@ const Section: React.FC<Props> = ({
         nestedScrollEnabled
         onViewableItemsChanged={onViewed ? onViewableItemsChanged : null}
         {...(isPuzzle && { onScrollBeginDrag })}
-        renderItem={renderItem(isPuzzle)}
+        renderItem={renderItem(isPuzzle, orientation)}
         windowSize={3}
       />
       {isPuzzle && isIOS ? (
