@@ -44,6 +44,7 @@ export { default as TileAW } from "./tile-aw";
 export { default as TileAX } from "./tile-ax";
 export { default as TileAY } from "./tile-ay";
 export { default as TileAZ } from "./tile-az";
+export { default as TileAZV2 } from "./tile-az-v2";
 export { default as TileBA } from "./tile-ba";
 export { default as TileBB } from "./tile-bb";
 export { default as TileBC } from "./tile-bc";

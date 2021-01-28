@@ -205,6 +205,22 @@ fragment leadAsset32and45 on Media {
   }
 }
 
+fragment leadAsset54 on Media {
+  __typename
+  ... on Video {
+    posterImage {
+      crop54: crop(ratio: "5:4") {
+        ...sectionCropProps
+      }
+    }
+  }
+  ... on Image {
+    crop54: crop(ratio: "5:4") {
+      ...sectionCropProps
+    }
+  }
+}
+
 fragment leadAsset54and32 on Media {
   __typename
   ... on Video {
@@ -322,14 +338,17 @@ fragment commonSlicesSection on StandardSectionSlice {
       headline
       leadAsset {
         ...leadAsset169
+        ...leadAsset54
       }
       article {
         ...baseArticleProps
         leadAsset {
           ...leadAsset169
+          ...leadAsset54
         }
         listingAsset {
           ...leadAsset169
+          ...leadAsset54
         }
       }
     }
