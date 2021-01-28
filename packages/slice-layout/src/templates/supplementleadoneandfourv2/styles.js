@@ -4,22 +4,14 @@ import {
 } from "@times-components-native/styleguide";
 
 const mediumBreakpointStyles = {
-  portraitContainer: {
-    flex: 1,
-    marginHorizontal: spacing(4),
-  },
-  landscapeContainer: {
-    marginHorizontal: spacing(4),
-  },
-  portraitLeadContainer: {
+  leadContainer: {
     width: "100%",
   },
-  landscapeLeadContainer: {
-    width: "100%",
+  portraitSupportContainer: {
+    marginHorizontal: spacing(4),
   },
-  supportTilesContainer: {},
   landscapeSupportContainer: {
-    marginHorizontal: spacing(4),
+    marginHorizontal: spacing(2),
   },
   horizontalSupportContainer: {
     flex: 1,
@@ -39,12 +31,8 @@ const mediumBreakpointStyles = {
 
 const wideBreakpointStyles = {
   ...mediumBreakpointStyles,
-  portraitContainer: {
-    ...mediumBreakpointStyles.container,
+  portraitSupportContainer: {
     marginHorizontal: spacing(2),
-  },
-  supportTilesContainer: {
-    marginHorizontal: spacing(2), // TODO this needs to be 2 on portrait/4 on landscape - or fixed elsewhere.
   },
 };
 

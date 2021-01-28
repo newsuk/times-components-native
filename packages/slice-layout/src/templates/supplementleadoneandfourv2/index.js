@@ -18,7 +18,13 @@ const SupplementLeadOneAndFourV2Slice = ({
 
   const renderSupportTiles = () => {
     return (
-      <View style={styles.supportTilesContainer}>
+      <View
+        style={
+          orientation === "landscape"
+            ? styles.landscapeSupportContainer
+            : styles.portraitSupportContainer
+        }
+      >
         <HorizontalLayout
           containerStyle={styles.horizontalSupportContainer}
           tiles={[
@@ -38,21 +44,9 @@ const SupplementLeadOneAndFourV2Slice = ({
     );
   };
 
-  if (orientation === "landscape") {
-    return (
-      <View>
-        <View style={styles.landscapeLeadContainer}>{lead}</View>
-        <ResponsiveSlice
-          renderSmall={() => null} // TODO need to add something here in order to render something on android portrait
-          renderMedium={renderSupportTiles}
-        />
-      </View>
-    );
-  }
-
   return (
-    <View style={styles.portraitContainer}>
-      <View style={styles.portraitLeadContainer}>{lead}</View>
+    <View>
+      <View style={styles.leadContainer}>{lead}</View>
       <ResponsiveSlice
         renderSmall={() => null} // TODO need to add something here in order to render something on android portrait
         renderMedium={renderSupportTiles}
