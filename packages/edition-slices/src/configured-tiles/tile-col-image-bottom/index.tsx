@@ -47,46 +47,49 @@ const TileColImageBottom: FC<Props> = ({
 
   const renderTileImage = (
     { article }: Tile,
-    imageProps: Pick<TileConfig, "image" | "portrait">,
+    imageConfig: Pick<TileConfig, "image" | "portrait">,
   ) => {
     if (
-      imageProps.image?.orientation === orientation ||
-      imageProps?.portrait ||
-      !imageProps.image?.orientation
+      !(
+        imageConfig.image?.orientation === orientation ||
+        imageConfig?.portrait ||
+        !imageConfig.image?.orientation
+      )
     ) {
-      const imageRatio =
-        imageProps.portrait && orientation === "portrait"
-          ? imageProps.portrait.ratio
-          : imageProps.image?.ratio;
-
-      if (!imageRatio) return null;
-
-      const crop: Crop | null = getTileImage(tile, getCropByRatio(imageRatio));
-
-      if (!crop) return null;
-
-      const {
-        relativeWidth,
-        relativeHeight,
-        relativeHorizontalOffset,
-        relativeVerticalOffset,
-        url,
-      } = crop;
-
-      return (
-        <TileImage
-          aspectRatio={getAspectRatio(imageRatio)}
-          relativeWidth={relativeWidth}
-          relativeHeight={relativeHeight}
-          relativeHorizontalOffset={relativeHorizontalOffset}
-          relativeVerticalOffset={relativeVerticalOffset}
-          style={styles.imageContainer}
-          uri={url}
-          hasVideo={article?.hasVideo}
-        />
-      );
+      return null;
     }
-    return null;
+
+    const imageRatio =
+      imageConfig.portrait && orientation === "portrait"
+        ? imageConfig.portrait.ratio
+        : imageConfig.image?.ratio;
+
+    if (!imageRatio) return null;
+
+    const crop: Crop | null = getTileImage(tile, getCropByRatio(imageRatio));
+
+    if (!crop) return null;
+
+    const {
+      relativeWidth,
+      relativeHeight,
+      relativeHorizontalOffset,
+      relativeVerticalOffset,
+      url,
+    } = crop;
+
+    return (
+      <TileImage
+        aspectRatio={getAspectRatio(imageRatio)}
+        relativeWidth={relativeWidth}
+        relativeHeight={relativeHeight}
+        relativeHorizontalOffset={relativeHorizontalOffset}
+        relativeVerticalOffset={relativeVerticalOffset}
+        style={styles.imageContainer}
+        uri={url}
+        hasVideo={article?.hasVideo}
+      />
+    );
   };
 
   return (
