@@ -1,7 +1,7 @@
 {
   "name": "times-components-native",
   "private": true,
-  "version": "2.1.2",
+  "version": "2.2.0",
   "description": "A collection of react-native components for The Times and Sunday Times",
   "main": "index.js",
   "engines": {
@@ -117,6 +117,7 @@
     "@storybook/addon-ondevice-knobs": "5.3.19",
     "@storybook/react-native": "5.3.19",
     "@types/jest": "24.0.2",
+    "@types/lodash.merge": "^4.6.6",
     "@types/lodash.omitby": "^4.6.6",
     "@types/point-in-polygon": "1.0.0",
     "@types/react-native": "0.63.6",

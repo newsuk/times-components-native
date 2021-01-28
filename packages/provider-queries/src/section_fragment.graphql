@@ -482,9 +482,11 @@ fragment commonSlicesSection on StandardSectionSlice {
         ...baseArticleProps
         summary125: summary(maxCharCount: 125)
         summary300: summary(maxCharCount: 300)
+        summary1000: summary(maxCharCount: 1000)
       }
       teaser125: teaser(maxCharCount: 125)
       teaser300: teaser(maxCharCount: 300)
+      teaser1000: teaser(maxCharCount: 1000)
     }
     support1 {
       headline
@@ -509,14 +511,17 @@ fragment commonSlicesSection on StandardSectionSlice {
       headline
       leadAsset {
         ...leadAsset32and45
+        ...leadAsset23
       }
       article {
         ...baseArticleProps
         leadAsset {
           ...leadAsset32and45
+          ...leadAsset23
         }
         listingAsset {
           ...leadAsset32and45
+          ...leadAsset23
         }
         summary125: summary(maxCharCount: 125)
         summary800: summary(maxCharCount: 800)
@@ -1012,7 +1017,7 @@ fragment frontSlicesSection on FrontPageSectionSlice {
           ... on ArticleLink {
             articleId
           }
-           ... on Link {
+          ... on Link {
             url
           }
         }

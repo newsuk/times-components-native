@@ -1,5 +1,21 @@
 import url from "url";
 
+export const getAspectRatio = (ratio) => {
+  if (!ratio) return ratio;
+
+  const [ratioWidth, ratioHeight] = ratio.split(":");
+
+  return Number(ratioWidth) / Number(ratioHeight);
+};
+
+export const getCropByRatio = (ratio) => {
+  if (!ratio) return ratio;
+
+  const [ratioWidth, ratioHeight] = ratio.split(":");
+
+  return `crop${ratioWidth}${ratioHeight}`;
+};
+
 const appendParamsToQuery = (uriString, paramMap) => {
   if (!uriString || !paramMap) {
     return uriString;
