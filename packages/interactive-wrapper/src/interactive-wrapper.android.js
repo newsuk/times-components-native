@@ -25,7 +25,7 @@ class InteractiveWrapper extends Component {
     this.state = {
       height: 1,
       hasError: false,
-      hasLoaded: false,
+      isLoading: true,
     };
     this.handleOnShouldStartLoadWithRequest = this.handleOnShouldStartLoadWithRequest.bind(
       this,
@@ -34,7 +34,7 @@ class InteractiveWrapper extends Component {
   }
 
   onLoadEnd() {
-    this.setState({ hasLoaded: true });
+    this.setState({ isLoading: false });
     if (this.webview) {
       this.webview.postMessage("thetimes.co.uk", "*");
     }
@@ -71,12 +71,10 @@ class InteractiveWrapper extends Component {
       config: { dev, environment, platform, version },
       id,
     } = this.props;
-    const { height, hasError, hasLoaded } = this.state;
+    const { height, hasError, isLoading } = this.state;
     const uri = `${editorialLambdaProtocol}${editorialLambdaOrigin}/${editorialLambdaSlug}/${id}?dev=${dev}&env=${environment}&platform=${platform}&version=${version}`;
 
-    if (hasError || !hasLoaded) {
-      return null;
-    }
+    if (hasError || isLoading) return null;
 
     return (
       <AutoHeightWebView
