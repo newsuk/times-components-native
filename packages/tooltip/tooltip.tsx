@@ -11,11 +11,8 @@ interface Props {
   displayedInView: boolean;
   offsetX?: number;
   offsetY?: number;
-  onClose?: <T = unknown, R = unknown>(args?: T) => R;
-  onTooltipPresented: <T = unknown, R = unknown>(
-    args: T,
-    articleId: string,
-  ) => R;
+  onClose?(): void;
+  onTooltipPresented(type: string, articleId: string): void;
   placement?: "bottom" | "top" | "left";
   tooltips: [string];
   type: string;
