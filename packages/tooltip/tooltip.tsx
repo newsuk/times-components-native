@@ -12,11 +12,15 @@ interface Props {
   offsetX?: number;
   offsetY?: number;
   onClose?: <T = unknown, R = unknown>(args?: T) => R;
-  onTooltipPresented: <T = unknown, R = unknown>(args?: T) => R;
+  onTooltipPresented: <T = unknown, R = unknown>(
+    args: T,
+    articleId: string,
+  ) => R;
   placement?: "bottom" | "top" | "left";
   tooltips: [string];
   type: string;
   width?: number;
+  articleId: string;
 }
 
 const Tooltip: React.FC<Props> = ({
@@ -32,6 +36,7 @@ const Tooltip: React.FC<Props> = ({
   tooltips,
   type,
   width = 256,
+  articleId,
 }) => {
   const { isTablet } = useResponsiveContext();
   const [opacity] = useState(new Animated.Value(1));
@@ -62,7 +67,7 @@ const Tooltip: React.FC<Props> = ({
   );
 
   if (displayedInView && onTooltipPresented) {
-    onTooltipPresented(type);
+    onTooltipPresented(type, articleId);
   }
 
   return (
@@ -70,7 +75,7 @@ const Tooltip: React.FC<Props> = ({
       {tooltips.includes(type) && isTablet && (
         <ViewportAwareView
           onViewportEnter={() => {
-            onTooltipPresented(type);
+            onTooltipPresented(type, articleId);
           }}
         >
           <Animated.View
