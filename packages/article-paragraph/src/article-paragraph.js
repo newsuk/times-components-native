@@ -25,10 +25,7 @@ const BodyParagraph = ({
         styles.articleTextElement,
         isTablet && styles.articleMainContentRowTablet,
         isTablet && inline && styles.articleInlineContentRowTablet,
-        isTablet &&
-          inline &&
-          split &&
-          styles.articleInlineSplitContentRowTablet,
+        inline && split && styles.articleInlineSplitContentRowTablet,
         narrowContent && getNarrowContentStyle(narrowArticleBreakpoint.content),
         style,
       ].concat(height ? [{ height: height }] : [])}

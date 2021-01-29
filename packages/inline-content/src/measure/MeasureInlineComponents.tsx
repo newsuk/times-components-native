@@ -22,7 +22,7 @@ export const MeasureContent: React.FC<Props> = memo(
       attributes: { ...content.attributes, inline: true },
     };
 
-    const { data, isTablet, narrowContent, scale } = skeletonProps;
+    const { isTablet, narrowContent, scale } = skeletonProps;
 
     return (
       <View
@@ -38,7 +38,6 @@ export const MeasureContent: React.FC<Props> = memo(
         {renderTrees(
           [inlineContent],
           getRenderers({
-            data,
             interactiveConfig: {},
             onLinkPress: null,
             onTwitterLinkPress: null,
@@ -47,8 +46,6 @@ export const MeasureContent: React.FC<Props> = memo(
             isTablet,
             adConfig: {},
             images: [],
-            dropcapsDisabled: true,
-            dropCapFont: "dropCap",
             scale,
             analyticsStream: null,
             narrowContent,

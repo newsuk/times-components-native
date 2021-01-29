@@ -17,20 +17,6 @@ import fixup from "./body-utils";
 import ErrorBoundary from "./boundary";
 import { useResponsiveContext } from "@times-components-native/responsive";
 
-const templateWithDropCaps = [
-  "indepth",
-  "maincomment",
-  "magazinestandard",
-  "magazinecomment",
-];
-
-const isDropcapsDisabled = ({ template, dropcapsDisabled }) => {
-  if (dropcapsDisabled) {
-    return true;
-  }
-  return !templateWithDropCaps.includes(template);
-};
-
 const ArticleWithContent = (props) => {
   const {
     Header,
@@ -108,8 +94,7 @@ const ArticleWithContent = (props) => {
 
   const images = fixedContent.filter((node) => node.name === "image");
 
-  const dropcapsDisabled = isDropcapsDisabled(data);
-  const renderChild = render(renderers({ dropcapsDisabled, ...props, images }));
+  const renderChild = render(renderers({ ...props, images }));
   // eslint-disable-next-line react/prop-types
   const Child = useCallback(
     ({ item, index }) => (

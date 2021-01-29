@@ -29,6 +29,13 @@ interface BaseInlineContentProps {
   width: number;
 }
 
+export interface InlineDropCapProps extends BaseInlineContentProps {
+  dropCapColor: string;
+  dropCapFont: string;
+  dropCapFontSize: number;
+  dropCapText: string;
+}
+
 export interface InlineAdProps extends BaseInlineContentProps {
   baseUrl: string;
   contextUrl: string;
@@ -60,6 +67,7 @@ export interface InlinePullQuoteProps extends BaseInlineContentProps {
 export type InlineContentProps =
   | InlineAdProps
   | InlineArticleImageProps
+  | InlineDropCapProps
   | InlinePullQuoteProps;
 
 export type AdProps = {
@@ -95,6 +103,18 @@ export type ArticleImageProps = {
   originalName: string;
 };
 
+export type DropCapProps = {
+  dropCapColor: string;
+  dropCapFont: string;
+  dropCapFontSize: number;
+  dropCapText: string;
+  height: number;
+  narrowContent: boolean;
+  originalName: string;
+  scale: string;
+  width: number;
+};
+
 export type PullQuoteProps = {
   caption: string;
   children: [{ string: string }];
@@ -105,4 +125,8 @@ export type PullQuoteProps = {
   width: number;
 };
 
-export type InlineItemProps = AdProps | ArticleImageProps | PullQuoteProps;
+export type InlineItemProps =
+  | AdProps
+  | ArticleImageProps
+  | DropCapProps
+  | PullQuoteProps;
