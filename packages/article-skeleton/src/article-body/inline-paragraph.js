@@ -17,7 +17,6 @@ import { useResponsiveContext } from "@times-components-native/responsive";
 const InlineParagraph = ({
   onLinkPress,
   isTablet,
-  dropCap,
   str,
   scale,
   inline,
@@ -45,13 +44,12 @@ const InlineParagraph = ({
     Infinity,
     0,
     0,
-    dropCap ? [dropCap.exclusion] : [],
+    [],
   );
 
-  const slice = str.charAt(1) === " " ? 2 : dropCap.length;
   const [positionedTextItems, positionTextItemSettings] = useMemo(() => {
     const manager = new LayoutManager(
-      dropCap ? str.slice(slice) : str,
+      str,
       [container],
       inlineExclusion ? [inlineExclusion.exclusion] : [],
     );
@@ -67,15 +65,9 @@ const InlineParagraph = ({
     return null;
   }
 
-  const dropCapLeftPosition = narrowContent ? 0 : gutters - spacing(2);
   const inlineContentWidth = contentWidth * 0.35;
 
   return [
-    dropCap && (
-      <View key={`${uid}:dropcap`} style={{ left: dropCapLeftPosition }}>
-        {dropCap.element}
-      </View>
-    ),
     inline && (
       <View
         key={`${uid}:inline-paragraph`}
@@ -108,7 +100,6 @@ const InlineParagraph = ({
       uid={uid}
       key={`${uid}:paragraph-wrapper`}
       height={Math.max(
-        dropCap ? defaultFont.lineHeight * 3 : 0,
         !positionedTextItems.length
           ? 0
           : positionedTextItems[positionedTextItems.length - 1].position.y +
@@ -168,7 +159,6 @@ const InlineParagraph = ({
 InlineParagraph.propTypes = {
   onLinkPress: PropTypes.func.isRequired,
   isTablet: PropTypes.bool.isRequired,
-  dropCap: PropTypes.oneOfType([PropTypes.object, PropTypes.boolean]),
   str: PropTypes.object.isRequired,
   scale: PropTypes.string.isRequired,
   inline: PropTypes.object.isRequired,

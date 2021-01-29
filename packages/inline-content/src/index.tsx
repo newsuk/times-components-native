@@ -32,6 +32,7 @@ const InlineContent = (props: InlineContentProps) => {
     originalName,
     skeletonProps,
   } = props;
+  const { isTablet } = skeletonProps;
   const { windowWidth } = useResponsiveContext();
   const { lineHeight } = defaultFont;
   const availableWidth = Math.min(
@@ -41,6 +42,7 @@ const InlineContent = (props: InlineContentProps) => {
       : tabletWidth,
   );
   const isAd = originalName === "ad";
+  const isDropCap = originalName === "dropcap";
 
   let inlineItemWidth = availableWidth * 0.35;
   let inlineContentHeight: number;
@@ -56,7 +58,13 @@ const InlineContent = (props: InlineContentProps) => {
     inlineItemWidth = adWidth + adHorizontalSpacing;
   }
 
-  const inlineContentWidth = availableWidth - inlineItemWidth;
+  if (isDropCap) {
+    const { height: dropCapHeight, width: dropCapWidth } = props;
+    inlineContentHeight = dropCapHeight;
+    inlineItemWidth = dropCapWidth;
+  }
+
+  const inlineContentWidth = availableWidth - inlineItemWidth - spacing(2);
 
   const renderChild = render(
     // @ts-ignore
@@ -122,9 +130,7 @@ const InlineContent = (props: InlineContentProps) => {
         const inlineItemToRender = (
           <View
             style={[
-              narrowContent
-                ? styles.inlineItemNarrowContainer
-                : styles.inlineItemContainer,
+              styles.inlineItemContainer,
               {
                 width: inlineItemWidth,
                 height: isAd ? adContainerHeight : itemHeight,
@@ -151,7 +157,11 @@ const InlineContent = (props: InlineContentProps) => {
             <View
               style={[
                 styles.container,
-                { height: requiredInlineContentHeight },
+                {
+                  height: requiredInlineContentHeight,
+                  alignSelf: narrowContent ? "flex-start" : "center",
+                },
+                !isTablet && { width: availableWidth },
               ]}
             >
               {isAd
