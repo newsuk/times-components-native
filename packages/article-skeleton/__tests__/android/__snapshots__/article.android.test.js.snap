@@ -66,7 +66,7 @@ exports[`1. a full article with all content items with dropcap template 1`] = `
                 style={
                   Array [
                     Object {
-                      "height": 156.5625,
+                      "height": 153.5625,
                       "width": 128.8828125,
                     },
                   ]
@@ -1593,7 +1593,7 @@ exports[`5. an article with a nested markup in first paragraph displays a drop c
                 style={
                   Array [
                     Object {
-                      "height": 184.6171875,
+                      "height": 181.6171875,
                       "width": 148.5,
                     },
                   ]
@@ -3202,7 +3202,7 @@ exports[`15. an article starting with single quote 1`] = `
                 style={
                   Array [
                     Object {
-                      "height": 169.11328125,
+                      "height": 166.11328125,
                       "width": 171.28125,
                     },
                   ]
@@ -3390,7 +3390,7 @@ exports[`16. an article starting with double quote 1`] = `
                 style={
                   Array [
                     Object {
-                      "height": 169.11328125,
+                      "height": 166.11328125,
                       "width": 204.50390625,
                     },
                   ]
@@ -6257,7 +6257,7 @@ exports[`20. an article with inline paragraph 1`] = `
                 style={
                   Array [
                     Object {
-                      "height": 156.5625,
+                      "height": 153.5625,
                       "width": 58.74609375,
                     },
                   ]

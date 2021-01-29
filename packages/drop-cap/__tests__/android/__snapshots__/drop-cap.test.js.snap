@@ -5,7 +5,7 @@ exports[`DropCap renders a dropcap for large scale 1`] = `
   style={
     Array [
       Object {
-        "height": 87.546,
+        "height": 84.546,
         "width": 103.824,
       },
     ]
@@ -36,7 +36,7 @@ exports[`DropCap renders a dropcap for medium scale 1`] = `
   style={
     Array [
       Object {
-        "height": 75.468,
+        "height": 72.468,
         "width": 88.992,
       },
     ]
@@ -67,7 +67,7 @@ exports[`DropCap renders a dropcap for xlarge scale 1`] = `
   style={
     Array [
       Object {
-        "height": 95.598,
+        "height": 92.598,
         "width": 113.712,
       },
     ]
@@ -98,7 +98,7 @@ exports[`DropCap renders a dropcap with default font padding if provided font no
   style={
     Array [
       Object {
-        "height": 75.468,
+        "height": 72.468,
         "width": 88.992,
       },
     ]
@@ -129,7 +129,7 @@ exports[`DropCap renders a dropcap with default scale if provided scale unknown 
   style={
     Array [
       Object {
-        "height": 75.468,
+        "height": 72.468,
         "width": 88.992,
       },
     ]
