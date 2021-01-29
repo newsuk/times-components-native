@@ -14,6 +14,7 @@ export const propTypes = {
   tooltipOffsetX: PropTypes.number,
   tooltipOffsetY: PropTypes.number,
   tooltips: PropTypes.array,
+  articleId: PropTypes.string,
 };
 
 export const defaultProps = {

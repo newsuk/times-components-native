@@ -43,6 +43,7 @@ const ArticleBylineWithLinks = ({ ast, ...props }) => {
     tooltipOffsetX,
     tooltipOffsetY,
     tooltips,
+    articleId,
   } = props;
 
   const textStyle = centered ? [styles.text, styles.centered] : styles.text;
@@ -72,6 +73,7 @@ const ArticleBylineWithLinks = ({ ast, ...props }) => {
       type={tooltipType}
       tooltips={tooltips}
       width={236}
+      articleId={articleId}
     >
       {byline}
     </Tooltip>
