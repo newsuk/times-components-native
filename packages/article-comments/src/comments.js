@@ -40,6 +40,7 @@ const Comments = ({
       tooltips={tooltips}
       placement="right"
       width={narrowContent ? 165 : 207}
+      articleId={articleId}
     >
       <Context.Consumer>
         {({ theme: { scale } }) => {

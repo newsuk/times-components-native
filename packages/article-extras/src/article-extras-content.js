@@ -55,6 +55,7 @@ const ArticleExtrasContent = ({
           onTooltipPresented={onTooltipPresented}
           tooltips={tooltips}
           topics={topics}
+          articleId={articleId}
         />
       ) : null}
       <ArticleComments
