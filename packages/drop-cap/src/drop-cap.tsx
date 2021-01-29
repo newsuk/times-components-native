@@ -8,11 +8,19 @@ const scaleMap: Record<string, number> = {
   xlarge: 1.27,
 };
 
-const fontAdditionalPaddingMap: Record<string, number> = {
-  cultureMagazine: 2,
-  dropCap: 0,
-  stMagazine: 1,
-  styleMagazine: 0,
+const fontAdditionalPaddingMap: Record<string, Record<string, number>> = {
+  android: {
+    cultureMagazine: 5,
+    dropCap: 0,
+    stMagazine: 7,
+    styleMagazine: 3,
+  },
+  ios: {
+    cultureMagazine: 2,
+    dropCap: 0,
+    stMagazine: 1,
+    styleMagazine: 0,
+  },
 };
 
 interface Props {
@@ -34,8 +42,10 @@ const DropCap: React.FC<Props> = ({
   scale,
   width,
 }) => {
+  const additionalHeight = Platform.OS === "ios" ? 3 : 0;
   const baseAdditionalPadding = Platform.OS === "ios" ? 23 : 20;
-  const fontSpecificPadding = fontAdditionalPaddingMap[dropCapFont] ?? 0;
+  const fontSpecificPadding =
+    fontAdditionalPaddingMap[Platform.OS][dropCapFont] ?? 0;
   const scaleValue = scaleMap[scale] ?? 1;
 
   const additionalPadding =
@@ -46,7 +56,7 @@ const DropCap: React.FC<Props> = ({
       style={[
         {
           width,
-          height: height + 3,
+          height: height + additionalHeight,
         },
       ]}
     >
