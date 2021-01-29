@@ -20,10 +20,12 @@ class InteractiveWrapper extends Component {
       .catch((err) => console.error("An error occurred", err)); // eslint-disable-line no-console
   }
 
-  constructor() {
-    super();
+  constructor(props) {
+    super(props);
     this.state = {
       height: 1,
+      hasError: false,
+      hasLoaded: false,
     };
     this.handleOnShouldStartLoadWithRequest = this.handleOnShouldStartLoadWithRequest.bind(
       this,
@@ -32,10 +34,17 @@ class InteractiveWrapper extends Component {
   }
 
   onLoadEnd() {
+    this.setState({ hasLoaded: true });
     if (this.webview) {
       this.webview.postMessage("thetimes.co.uk", "*");
     }
   }
+
+  handleHttpError = (event) => {
+    if (event?.nativeEvent?.statusCode > 300) {
+      this.setState({ hasError: true });
+    }
+  };
 
   updateHeight = (passedHeight) => {
     const { height } = this.state;
@@ -62,8 +71,12 @@ class InteractiveWrapper extends Component {
       config: { dev, environment, platform, version },
       id,
     } = this.props;
-    const { height } = this.state;
+    const { height, hasError, hasLoaded } = this.state;
     const uri = `${editorialLambdaProtocol}${editorialLambdaOrigin}/${editorialLambdaSlug}/${id}?dev=${dev}&env=${environment}&platform=${platform}&version=${version}`;
+
+    if (hasError || !hasLoaded) {
+      return null;
+    }
 
     return (
       <AutoHeightWebView
@@ -78,6 +91,7 @@ class InteractiveWrapper extends Component {
         onShouldStartLoadWithRequest={this.handleOnShouldStartLoadWithRequest}
         source={{ uri }}
         style={{ height, width: "100%" }}
+        onHttpError={this.handleHttpError}
       />
     );
   }
