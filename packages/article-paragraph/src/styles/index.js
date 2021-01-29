@@ -1,9 +1,9 @@
 import styleguide from "@times-components-native/styleguide";
 import sharedStylesFactory from "./shared";
 
-export default (dropCapFont, scale) => {
+export default (scale) => {
   const { spacing } = styleguide({ scale });
-  const sharedStyles = sharedStylesFactory(dropCapFont, scale);
+  const sharedStyles = sharedStylesFactory(scale);
 
   return {
     ...sharedStyles,

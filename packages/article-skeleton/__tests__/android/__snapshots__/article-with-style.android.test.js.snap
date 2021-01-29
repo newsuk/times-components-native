@@ -30,161 +30,93 @@ exports[`1. a full article with all content items with dropcap template 1`] = `
           }
         }
       >
-        <View
+        <RCTScrollView
           style={
             Object {
-              "left": 0,
-            }
-          }
-        >
-          <Text
-            style={
-              Object {
-                "color": undefined,
-                "fontFamily": "TimesModern-Regular",
-                "fontSize": 216,
-                "left": 10,
-                "lineHeight": 204.23812500000003,
-                "position": "absolute",
-              }
-            }
-          >
-            T
-          </Text>
-        </View>
-        <View
-          style={
-            Object {
-              "height": 260,
-              "marginBottom": 20,
-              "paddingLeft": 10,
-              "paddingRight": 10,
+              "transform": Array [
+                Object {
+                  "translateX": -1000,
+                },
+              ],
             }
           }
         >
           <View>
-            <Text
+            <View
               style={
                 Object {
-                  "color": "#000000",
-                  "fontFamily": "TimesDigitalW04",
-                  "fontSize": 36,
-                  "left": 139,
-                  "lineHeight": 52,
-                  "position": "absolute",
-                  "top": 0,
+                  "width": 128.8828125,
                 }
               }
             >
-              h
-            </Text>
-            <Text
+              <View
+                style={
+                  Object {
+                    "height": 153.5625,
+                    "width": 128.8828125,
+                  }
+                }
+              >
+                <Text
+                  style={
+                    Object {
+                      "color": undefined,
+                      "fontFamily": "TimesModern-Regular",
+                      "fontSize": 216,
+                      "lineHeight": 153.5625,
+                      "paddingTop": 20,
+                      "width": 128.8828125,
+                    }
+                  }
+                >
+                  T
+                </Text>
+              </View>
+            </View>
+            <View
               style={
                 Object {
-                  "color": "#000000",
-                  "fontFamily": "TimesDigitalW04",
-                  "fontSize": 36,
-                  "left": 158.828125,
-                  "lineHeight": 52,
-                  "position": "absolute",
-                  "top": 0,
+                  "width": 161.1171875,
                 }
               }
             >
-              is
-            </Text>
-            <Text
-              style={
-                Object {
-                  "color": "#000000",
-                  "fontFamily": "TimesDigitalW04",
-                  "fontSize": 36,
-                  "left": 139,
-                  "lineHeight": 52,
-                  "position": "absolute",
-                  "top": 52,
-                }
-              }
-            >
-              being
-            </Text>
-            <Text
-              style={
-                Object {
-                  "color": "#000000",
-                  "fontFamily": "TimesDigitalW04",
-                  "fontSize": 36,
-                  "left": 139,
-                  "lineHeight": 52,
-                  "position": "absolute",
-                  "top": 104,
-                }
-              }
-            >
-              Black
-            </Text>
-            <Text
-              style={
-                Object {
-                  "color": "#000000",
-                  "fontFamily": "TimesDigitalW04",
-                  "fontSize": 36,
-                  "left": 0,
-                  "lineHeight": 52,
-                  "position": "absolute",
-                  "top": 156,
-                }
-              }
-            >
-              History
-            </Text>
-            <Text
-              style={
-                Object {
-                  "color": "#000000",
-                  "fontFamily": "TimesDigitalW04",
-                  "fontSize": 36,
-                  "left": 123.345703125,
-                  "lineHeight": 52,
-                  "position": "absolute",
-                  "top": 156,
-                }
-              }
-            >
-              Month,
-            </Text>
-            <Text
-              style={
-                Object {
-                  "color": "#000000",
-                  "fontFamily": "TimesDigitalW04",
-                  "fontSize": 36,
-                  "left": 0,
-                  "lineHeight": 52,
-                  "position": "absolute",
-                  "top": 208,
-                }
-              }
-            >
-              last
-            </Text>
-            <Text
-              style={
-                Object {
-                  "color": "#000000",
-                  "fontFamily": "TimesDigitalW04",
-                  "fontSize": 36,
-                  "left": 67.552734375,
-                  "lineHeight": 52,
-                  "position": "absolute",
-                  "top": 208,
-                }
-              }
-            >
-              week
-            </Text>
+              <View>
+                <View
+                  style={
+                    Object {
+                      "marginBottom": 20,
+                      "paddingLeft": 10,
+                      "paddingRight": 10,
+                    }
+                  }
+                >
+                  <View>
+                    <Text
+                      style={
+                        Object {
+                          "lineHeight": 52,
+                        }
+                      }
+                    >
+                      <Text
+                        style={
+                          Object {
+                            "color": "#000000",
+                            "fontFamily": "TimesDigitalW04",
+                            "fontSize": 36,
+                            "lineHeight": 52,
+                          }
+                        }
+                      >
+                        his being Black History Month, last week
+                      </Text>
+                    </Text>
+                  </View>
+                </View>
+              </View>
+            </View>
           </View>
-        </View>
+        </RCTScrollView>
       </View>
       <View
         style={
@@ -1003,345 +935,94 @@ exports[`5. an article with a nested markup in first paragraph displays a drop c
           }
         }
       >
-        <View
+        <RCTScrollView
           style={
             Object {
-              "left": 0,
-            }
-          }
-        >
-          <Text
-            style={
-              Object {
-                "color": undefined,
-                "fontFamily": "TimesModern-Regular",
-                "fontSize": 216,
-                "left": 10,
-                "lineHeight": 241.55085937500002,
-                "position": "absolute",
-              }
-            }
-          >
-            Q
-          </Text>
-        </View>
-        <View
-          style={
-            Object {
-              "height": 416,
-              "marginBottom": 20,
-              "paddingLeft": 10,
-              "paddingRight": 10,
+              "transform": Array [
+                Object {
+                  "translateX": -1000,
+                },
+              ],
             }
           }
         >
           <View>
-            <Text
+            <View
               style={
                 Object {
-                  "color": "#000000",
-                  "fontFamily": "TimesDigitalW04",
-                  "fontSize": 36,
-                  "fontWeight": "bold",
-                  "left": 159,
-                  "lineHeight": 52,
-                  "position": "absolute",
-                  "top": 0,
+                  "width": 148.5,
                 }
               }
             >
-              S
-            </Text>
-            <Text
+              <View
+                style={
+                  Object {
+                    "height": 181.6171875,
+                    "width": 148.5,
+                  }
+                }
+              >
+                <Text
+                  style={
+                    Object {
+                      "color": undefined,
+                      "fontFamily": "TimesModern-Regular",
+                      "fontSize": 216,
+                      "lineHeight": 181.6171875,
+                      "paddingTop": 20,
+                      "width": 148.5,
+                    }
+                  }
+                >
+                  Q
+                </Text>
+              </View>
+            </View>
+            <View
               style={
                 Object {
-                  "color": "#000000",
-                  "fontFamily": "TimesDigitalW04",
-                  "fontSize": 36,
-                  "fontWeight": "bold",
-                  "left": 180.357421875,
-                  "lineHeight": 52,
-                  "position": "absolute",
-                  "top": 0,
+                  "width": 141.5,
                 }
               }
             >
-              ome
-            </Text>
-            <Text
-              style={
-                Object {
-                  "color": "#000000",
-                  "fontFamily": "TimesDigitalW04",
-                  "fontSize": 36,
-                  "fontWeight": "bold",
-                  "left": 159,
-                  "lineHeight": 52,
-                  "position": "absolute",
-                  "top": 52,
-                }
-              }
-            >
-              years
-            </Text>
-            <Text
-              style={
-                Object {
-                  "color": "#000000",
-                  "fontFamily": "TimesDigitalW04",
-                  "fontSize": 36,
-                  "fontWeight": "bold",
-                  "left": 159,
-                  "lineHeight": 52,
-                  "position": "absolute",
-                  "top": 104,
-                }
-              }
-            >
-              ago
-            </Text>
-            <Text
-              style={
-                Object {
-                  "color": "#000000",
-                  "fontFamily": "TimesDigitalW04",
-                  "fontSize": 36,
-                  "fontWeight": "bold",
-                  "left": 228.22265625,
-                  "lineHeight": 52,
-                  "position": "absolute",
-                  "top": 104,
-                }
-              }
-            >
-              I
-            </Text>
-            <Text
-              style={
-                Object {
-                  "color": "#000000",
-                  "fontFamily": "TimesDigitalW04",
-                  "fontSize": 36,
-                  "fontWeight": "bold",
-                  "left": 159,
-                  "lineHeight": 52,
-                  "position": "absolute",
-                  "top": 156,
-                }
-              }
-            >
-              made
-            </Text>
-            <Text
-              style={
-                Object {
-                  "color": "#000000",
-                  "fontFamily": "TimesDigitalW04",
-                  "fontSize": 36,
-                  "fontWeight": "bold",
-                  "left": 0,
-                  "lineHeight": 52,
-                  "position": "absolute",
-                  "top": 208,
-                }
-              }
-            >
-              the
-            </Text>
-            <Text
-              style={
-                Object {
-                  "color": "#000000",
-                  "fontFamily": "TimesDigitalW04",
-                  "fontSize": 36,
-                  "fontWeight": "bold",
-                  "left": 59.572265625,
-                  "lineHeight": 52,
-                  "position": "absolute",
-                  "top": 208,
-                }
-              }
-            >
-              decision
-            </Text>
-            <Text
-              style={
-                Object {
-                  "color": "#000000",
-                  "fontFamily": "TimesDigitalW04",
-                  "fontSize": 36,
-                  "fontWeight": "bold",
-                  "left": 203.1328125,
-                  "lineHeight": 52,
-                  "position": "absolute",
-                  "top": 208,
-                }
-              }
-            >
-              to
-            </Text>
-            <Text
-              style={
-                Object {
-                  "color": "#000000",
-                  "fontFamily": "TimesDigitalW04",
-                  "fontSize": 36,
-                  "fontWeight": "bold",
-                  "left": 0,
-                  "lineHeight": 52,
-                  "position": "absolute",
-                  "top": 260,
-                }
-              }
-            >
-              take
-            </Text>
-            <Text
-              style={
-                Object {
-                  "color": "#000000",
-                  "fontFamily": "TimesDigitalW04",
-                  "fontSize": 36,
-                  "fontWeight": "bold",
-                  "left": 77.220703125,
-                  "lineHeight": 52,
-                  "position": "absolute",
-                  "top": 260,
-                }
-              }
-            >
-              as
-            </Text>
-            <Text
-              style={
-                Object {
-                  "color": "#000000",
-                  "fontFamily": "TimesDigitalW04",
-                  "fontSize": 36,
-                  "fontWeight": "bold",
-                  "left": 124.27734375,
-                  "lineHeight": 52,
-                  "position": "absolute",
-                  "top": 260,
-                }
-              }
-            >
-              a
-            </Text>
-            <Text
-              style={
-                Object {
-                  "color": "#000000",
-                  "fontFamily": "TimesDigitalW04",
-                  "fontSize": 36,
-                  "fontWeight": "bold",
-                  "left": 152.771484375,
-                  "lineHeight": 52,
-                  "position": "absolute",
-                  "top": 260,
-                }
-              }
-            >
-              friend
-            </Text>
-            <Text
-              style={
-                Object {
-                  "color": "#000000",
-                  "fontFamily": "TimesDigitalW04",
-                  "fontSize": 36,
-                  "fontWeight": "bold",
-                  "left": 254.337890625,
-                  "lineHeight": 52,
-                  "position": "absolute",
-                  "top": 260,
-                }
-              }
-            >
-              a
-            </Text>
-            <Text
-              style={
-                Object {
-                  "color": "#000000",
-                  "fontFamily": "TimesDigitalW04",
-                  "fontSize": 36,
-                  "fontWeight": "bold",
-                  "left": 0,
-                  "lineHeight": 52,
-                  "position": "absolute",
-                  "top": 312,
-                }
-              }
-            >
-              woman
-            </Text>
-            <Text
-              style={
-                Object {
-                  "color": "#000000",
-                  "fontFamily": "TimesDigitalW04",
-                  "fontSize": 36,
-                  "fontWeight": "bold",
-                  "left": 127.494140625,
-                  "lineHeight": 52,
-                  "position": "absolute",
-                  "top": 312,
-                }
-              }
-            >
-              who
-            </Text>
-            <Text
-              style={
-                Object {
-                  "color": "#000000",
-                  "fontFamily": "TimesDigitalW04",
-                  "fontSize": 36,
-                  "fontWeight": "bold",
-                  "left": 203.818359375,
-                  "lineHeight": 52,
-                  "position": "absolute",
-                  "top": 312,
-                }
-              }
-            >
-              is
-            </Text>
-            <Text
-              style={
-                Object {
-                  "color": "#000000",
-                  "fontFamily": "TimesDigitalW04",
-                  "fontSize": 36,
-                  "fontWeight": "bold",
-                  "left": 0,
-                  "lineHeight": 52,
-                  "position": "absolute",
-                  "top": 364,
-                }
-              }
-            >
-              very
-            </Text>
-            <Text
-              style={
-                Object {
-                  "color": "#000000",
-                  "fontFamily": "TimesDigitalW04",
-                  "fontSize": 36,
-                  "fontWeight": "bold",
-                  "left": 74.724609375,
-                  "lineHeight": 52,
-                  "position": "absolute",
-                  "top": 364,
-                }
-              }
-            >
-              opinionated.
-            </Text>
+              <View>
+                <View
+                  style={
+                    Object {
+                      "marginBottom": 20,
+                      "paddingLeft": 10,
+                      "paddingRight": 10,
+                    }
+                  }
+                >
+                  <View>
+                    <Text
+                      style={
+                        Object {
+                          "lineHeight": 52,
+                        }
+                      }
+                    >
+                      <Text
+                        style={
+                          Object {
+                            "color": "#000000",
+                            "fontFamily": "TimesDigitalW04",
+                            "fontSize": 36,
+                            "fontWeight": "bold",
+                            "lineHeight": 52,
+                          }
+                        }
+                      >
+                        Some years ago I made the decision to take as a friend a woman who is very opinionated.
+                      </Text>
+                    </Text>
+                  </View>
+                </View>
+              </View>
+            </View>
           </View>
-        </View>
+        </RCTScrollView>
       </View>
       <View
         style={
@@ -2411,386 +2092,93 @@ exports[`15. an article starting with single quote 1`] = `
           }
         }
       >
-        <View
+        <RCTScrollView
           style={
             Object {
-              "left": 0,
-            }
-          }
-        >
-          <Text
-            style={
-              Object {
-                "color": undefined,
-                "fontFamily": "TimesModern-Regular",
-                "fontSize": 216,
-                "left": 10,
-                "lineHeight": 220.9306640625,
-                "position": "absolute",
-              }
-            }
-          >
-            ‘S
-          </Text>
-        </View>
-        <View
-          style={
-            Object {
-              "height": 624,
-              "marginBottom": 20,
-              "paddingLeft": 10,
-              "paddingRight": 10,
+              "transform": Array [
+                Object {
+                  "translateX": -1000,
+                },
+              ],
             }
           }
         >
           <View>
-            <Text
+            <View
               style={
                 Object {
-                  "color": "#000000",
-                  "fontFamily": "TimesDigitalW04",
-                  "fontSize": 36,
-                  "left": 182,
-                  "lineHeight": 52,
-                  "position": "absolute",
-                  "top": 0,
+                  "width": 171.28125,
                 }
               }
             >
-              o
-            </Text>
-            <Text
+              <View
+                style={
+                  Object {
+                    "height": 166.11328125,
+                    "width": 171.28125,
+                  }
+                }
+              >
+                <Text
+                  style={
+                    Object {
+                      "color": undefined,
+                      "fontFamily": "TimesModern-Regular",
+                      "fontSize": 216,
+                      "lineHeight": 166.11328125,
+                      "paddingTop": 20,
+                      "width": 171.28125,
+                    }
+                  }
+                >
+                  ‘S
+                </Text>
+              </View>
+            </View>
+            <View
               style={
                 Object {
-                  "color": "#000000",
-                  "fontFamily": "TimesDigitalW04",
-                  "fontSize": 36,
-                  "left": 202.53125,
-                  "lineHeight": 52,
-                  "position": "absolute",
-                  "top": 0,
+                  "width": 118.71875,
                 }
               }
             >
-              rting
-            </Text>
-            <Text
-              style={
-                Object {
-                  "color": "#000000",
-                  "fontFamily": "TimesDigitalW04",
-                  "fontSize": 36,
-                  "left": 0,
-                  "lineHeight": 52,
-                  "position": "absolute",
-                  "top": 208,
-                }
-              }
-            >
-              eyebrows?!
-            </Text>
-            <Text
-              style={
-                Object {
-                  "color": "#000000",
-                  "fontFamily": "TimesDigitalW04",
-                  "fontSize": 36,
-                  "left": 0,
-                  "lineHeight": 52,
-                  "position": "absolute",
-                  "top": 260,
-                }
-              }
-            >
-              Really?
-            </Text>
-            <Text
-              style={
-                Object {
-                  "color": "#000000",
-                  "fontFamily": "TimesDigitalW04",
-                  "fontSize": 36,
-                  "left": 121.236328125,
-                  "lineHeight": 52,
-                  "position": "absolute",
-                  "top": 260,
-                }
-              }
-            >
-              During
-            </Text>
-            <Text
-              style={
-                Object {
-                  "color": "#000000",
-                  "fontFamily": "TimesDigitalW04",
-                  "fontSize": 36,
-                  "left": 234.580078125,
-                  "lineHeight": 52,
-                  "position": "absolute",
-                  "top": 260,
-                }
-              }
-            >
-              a
-            </Text>
-            <Text
-              style={
-                Object {
-                  "color": "#000000",
-                  "fontFamily": "TimesDigitalW04",
-                  "fontSize": 36,
-                  "left": 0,
-                  "lineHeight": 52,
-                  "position": "absolute",
-                  "top": 312,
-                }
-              }
-            >
-              pandemic?!”
-            </Text>
-            <Text
-              style={
-                Object {
-                  "color": "#000000",
-                  "fontFamily": "TimesDigitalW04",
-                  "fontSize": 36,
-                  "left": 206.173828125,
-                  "lineHeight": 52,
-                  "position": "absolute",
-                  "top": 312,
-                }
-              }
-            >
-              This
-            </Text>
-            <Text
-              style={
-                Object {
-                  "color": "#000000",
-                  "fontFamily": "TimesDigitalW04",
-                  "fontSize": 36,
-                  "left": 0,
-                  "lineHeight": 52,
-                  "position": "absolute",
-                  "top": 364,
-                }
-              }
-            >
-              tweet
-            </Text>
-            <Text
-              style={
-                Object {
-                  "color": "#000000",
-                  "fontFamily": "TimesDigitalW04",
-                  "fontSize": 36,
-                  "left": 97.62890625,
-                  "lineHeight": 52,
-                  "position": "absolute",
-                  "top": 364,
-                }
-              }
-            >
-              landed
-            </Text>
-            <Text
-              style={
-                Object {
-                  "color": "#000000",
-                  "fontFamily": "TimesDigitalW04",
-                  "fontSize": 36,
-                  "left": 214.400390625,
-                  "lineHeight": 52,
-                  "position": "absolute",
-                  "top": 364,
-                }
-              }
-            >
-              in
-            </Text>
-            <Text
-              style={
-                Object {
-                  "color": "#000000",
-                  "fontFamily": "TimesDigitalW04",
-                  "fontSize": 36,
-                  "left": 0,
-                  "lineHeight": 52,
-                  "position": "absolute",
-                  "top": 416,
-                }
-              }
-            >
-              my
-            </Text>
-            <Text
-              style={
-                Object {
-                  "color": "#000000",
-                  "fontFamily": "TimesDigitalW04",
-                  "fontSize": 36,
-                  "left": 57.498046875,
-                  "lineHeight": 52,
-                  "position": "absolute",
-                  "top": 416,
-                }
-              }
-            >
-              Twitter
-            </Text>
-            <Text
-              style={
-                Object {
-                  "color": "#000000",
-                  "fontFamily": "TimesDigitalW04",
-                  "fontSize": 36,
-                  "left": 177.451171875,
-                  "lineHeight": 52,
-                  "position": "absolute",
-                  "top": 416,
-                }
-              }
-            >
-              feed
-            </Text>
-            <Text
-              style={
-                Object {
-                  "color": "#000000",
-                  "fontFamily": "TimesDigitalW04",
-                  "fontSize": 36,
-                  "left": 0,
-                  "lineHeight": 52,
-                  "position": "absolute",
-                  "top": 468,
-                }
-              }
-            >
-              after
-            </Text>
-            <Text
-              style={
-                Object {
-                  "color": "#000000",
-                  "fontFamily": "TimesDigitalW04",
-                  "fontSize": 36,
-                  "left": 84.005859375,
-                  "lineHeight": 52,
-                  "position": "absolute",
-                  "top": 468,
-                }
-              }
-            >
-              talking
-            </Text>
-            <Text
-              style={
-                Object {
-                  "color": "#000000",
-                  "fontFamily": "TimesDigitalW04",
-                  "fontSize": 36,
-                  "left": 200.0390625,
-                  "lineHeight": 52,
-                  "position": "absolute",
-                  "top": 468,
-                }
-              }
-            >
-              to
-            </Text>
-            <Text
-              style={
-                Object {
-                  "color": "#000000",
-                  "fontFamily": "TimesDigitalW04",
-                  "fontSize": 36,
-                  "left": 0,
-                  "lineHeight": 52,
-                  "position": "absolute",
-                  "top": 520,
-                }
-              }
-            >
-              Jenni
-            </Text>
-            <Text
-              style={
-                Object {
-                  "color": "#000000",
-                  "fontFamily": "TimesDigitalW04",
-                  "fontSize": 36,
-                  "left": 96.310546875,
-                  "lineHeight": 52,
-                  "position": "absolute",
-                  "top": 520,
-                }
-              }
-            >
-              Murray
-            </Text>
-            <Text
-              style={
-                Object {
-                  "color": "#000000",
-                  "fontFamily": "TimesDigitalW04",
-                  "fontSize": 36,
-                  "left": 216.509765625,
-                  "lineHeight": 52,
-                  "position": "absolute",
-                  "top": 520,
-                }
-              }
-            >
-              on
-            </Text>
-            <Text
-              style={
-                Object {
-                  "color": "#000000",
-                  "fontFamily": "TimesDigitalW04",
-                  "fontSize": 36,
-                  "left": 0,
-                  "lineHeight": 52,
-                  "position": "absolute",
-                  "top": 572,
-                }
-              }
-            >
-              BBC
-            </Text>
-            <Text
-              style={
-                Object {
-                  "color": "#000000",
-                  "fontFamily": "TimesDigitalW04",
-                  "fontSize": 36,
-                  "left": 77.16796875,
-                  "lineHeight": 52,
-                  "position": "absolute",
-                  "top": 572,
-                }
-              }
-            >
-              Radio
-            </Text>
-            <Text
-              style={
-                Object {
-                  "color": "#000000",
-                  "fontFamily": "TimesDigitalW04",
-                  "fontSize": 36,
-                  "left": 177.3984375,
-                  "lineHeight": 52,
-                  "position": "absolute",
-                  "top": 572,
-                }
-              }
-            >
-              4
-            </Text>
+              <View>
+                <View
+                  style={
+                    Object {
+                      "marginBottom": 20,
+                      "paddingLeft": 10,
+                      "paddingRight": 10,
+                    }
+                  }
+                >
+                  <View>
+                    <Text
+                      style={
+                        Object {
+                          "lineHeight": 52,
+                        }
+                      }
+                    >
+                      <Text
+                        style={
+                          Object {
+                            "color": "#000000",
+                            "fontFamily": "TimesDigitalW04",
+                            "fontSize": 36,
+                            "lineHeight": 52,
+                          }
+                        }
+                      >
+                        orting eyebrows?! Really? During a pandemic?!” This tweet landed in my Twitter feed after talking to Jenni Murray on BBC Radio 4 
+                      </Text>
+                    </Text>
+                  </View>
+                </View>
+              </View>
+            </View>
           </View>
-        </View>
+        </RCTScrollView>
       </View>
       <View
         style={
@@ -2850,386 +2238,93 @@ exports[`16. an article starting with double quote 1`] = `
           }
         }
       >
-        <View
+        <RCTScrollView
           style={
             Object {
-              "left": 0,
-            }
-          }
-        >
-          <Text
-            style={
-              Object {
-                "color": undefined,
-                "fontFamily": "TimesModern-Regular",
-                "fontSize": 216,
-                "left": 10,
-                "lineHeight": 220.9306640625,
-                "position": "absolute",
-              }
-            }
-          >
-            “S
-          </Text>
-        </View>
-        <View
-          style={
-            Object {
-              "height": 624,
-              "marginBottom": 20,
-              "paddingLeft": 10,
-              "paddingRight": 10,
+              "transform": Array [
+                Object {
+                  "translateX": -1000,
+                },
+              ],
             }
           }
         >
           <View>
-            <Text
+            <View
               style={
                 Object {
-                  "color": "#000000",
-                  "fontFamily": "TimesDigitalW04",
-                  "fontSize": 36,
-                  "left": 215,
-                  "lineHeight": 52,
-                  "position": "absolute",
-                  "top": 0,
+                  "width": 204.50390625,
                 }
               }
             >
-              o
-            </Text>
-            <Text
+              <View
+                style={
+                  Object {
+                    "height": 166.11328125,
+                    "width": 204.50390625,
+                  }
+                }
+              >
+                <Text
+                  style={
+                    Object {
+                      "color": undefined,
+                      "fontFamily": "TimesModern-Regular",
+                      "fontSize": 216,
+                      "lineHeight": 166.11328125,
+                      "paddingTop": 20,
+                      "width": 204.50390625,
+                    }
+                  }
+                >
+                  “S
+                </Text>
+              </View>
+            </View>
+            <View
               style={
                 Object {
-                  "color": "#000000",
-                  "fontFamily": "TimesDigitalW04",
-                  "fontSize": 36,
-                  "left": 0,
-                  "lineHeight": 52,
-                  "position": "absolute",
-                  "top": 208,
+                  "width": 85.49609375,
                 }
               }
             >
-              rting
-            </Text>
-            <Text
-              style={
-                Object {
-                  "color": "#000000",
-                  "fontFamily": "TimesDigitalW04",
-                  "fontSize": 36,
-                  "left": 82.529296875,
-                  "lineHeight": 52,
-                  "position": "absolute",
-                  "top": 208,
-                }
-              }
-            >
-              eyebrows?!
-            </Text>
-            <Text
-              style={
-                Object {
-                  "color": "#000000",
-                  "fontFamily": "TimesDigitalW04",
-                  "fontSize": 36,
-                  "left": 0,
-                  "lineHeight": 52,
-                  "position": "absolute",
-                  "top": 260,
-                }
-              }
-            >
-              Really?
-            </Text>
-            <Text
-              style={
-                Object {
-                  "color": "#000000",
-                  "fontFamily": "TimesDigitalW04",
-                  "fontSize": 36,
-                  "left": 121.236328125,
-                  "lineHeight": 52,
-                  "position": "absolute",
-                  "top": 260,
-                }
-              }
-            >
-              During
-            </Text>
-            <Text
-              style={
-                Object {
-                  "color": "#000000",
-                  "fontFamily": "TimesDigitalW04",
-                  "fontSize": 36,
-                  "left": 234.580078125,
-                  "lineHeight": 52,
-                  "position": "absolute",
-                  "top": 260,
-                }
-              }
-            >
-              a
-            </Text>
-            <Text
-              style={
-                Object {
-                  "color": "#000000",
-                  "fontFamily": "TimesDigitalW04",
-                  "fontSize": 36,
-                  "left": 0,
-                  "lineHeight": 52,
-                  "position": "absolute",
-                  "top": 312,
-                }
-              }
-            >
-              pandemic?!”
-            </Text>
-            <Text
-              style={
-                Object {
-                  "color": "#000000",
-                  "fontFamily": "TimesDigitalW04",
-                  "fontSize": 36,
-                  "left": 206.173828125,
-                  "lineHeight": 52,
-                  "position": "absolute",
-                  "top": 312,
-                }
-              }
-            >
-              This
-            </Text>
-            <Text
-              style={
-                Object {
-                  "color": "#000000",
-                  "fontFamily": "TimesDigitalW04",
-                  "fontSize": 36,
-                  "left": 0,
-                  "lineHeight": 52,
-                  "position": "absolute",
-                  "top": 364,
-                }
-              }
-            >
-              tweet
-            </Text>
-            <Text
-              style={
-                Object {
-                  "color": "#000000",
-                  "fontFamily": "TimesDigitalW04",
-                  "fontSize": 36,
-                  "left": 97.62890625,
-                  "lineHeight": 52,
-                  "position": "absolute",
-                  "top": 364,
-                }
-              }
-            >
-              landed
-            </Text>
-            <Text
-              style={
-                Object {
-                  "color": "#000000",
-                  "fontFamily": "TimesDigitalW04",
-                  "fontSize": 36,
-                  "left": 214.400390625,
-                  "lineHeight": 52,
-                  "position": "absolute",
-                  "top": 364,
-                }
-              }
-            >
-              in
-            </Text>
-            <Text
-              style={
-                Object {
-                  "color": "#000000",
-                  "fontFamily": "TimesDigitalW04",
-                  "fontSize": 36,
-                  "left": 0,
-                  "lineHeight": 52,
-                  "position": "absolute",
-                  "top": 416,
-                }
-              }
-            >
-              my
-            </Text>
-            <Text
-              style={
-                Object {
-                  "color": "#000000",
-                  "fontFamily": "TimesDigitalW04",
-                  "fontSize": 36,
-                  "left": 57.498046875,
-                  "lineHeight": 52,
-                  "position": "absolute",
-                  "top": 416,
-                }
-              }
-            >
-              Twitter
-            </Text>
-            <Text
-              style={
-                Object {
-                  "color": "#000000",
-                  "fontFamily": "TimesDigitalW04",
-                  "fontSize": 36,
-                  "left": 177.451171875,
-                  "lineHeight": 52,
-                  "position": "absolute",
-                  "top": 416,
-                }
-              }
-            >
-              feed
-            </Text>
-            <Text
-              style={
-                Object {
-                  "color": "#000000",
-                  "fontFamily": "TimesDigitalW04",
-                  "fontSize": 36,
-                  "left": 0,
-                  "lineHeight": 52,
-                  "position": "absolute",
-                  "top": 468,
-                }
-              }
-            >
-              after
-            </Text>
-            <Text
-              style={
-                Object {
-                  "color": "#000000",
-                  "fontFamily": "TimesDigitalW04",
-                  "fontSize": 36,
-                  "left": 84.005859375,
-                  "lineHeight": 52,
-                  "position": "absolute",
-                  "top": 468,
-                }
-              }
-            >
-              talking
-            </Text>
-            <Text
-              style={
-                Object {
-                  "color": "#000000",
-                  "fontFamily": "TimesDigitalW04",
-                  "fontSize": 36,
-                  "left": 200.0390625,
-                  "lineHeight": 52,
-                  "position": "absolute",
-                  "top": 468,
-                }
-              }
-            >
-              to
-            </Text>
-            <Text
-              style={
-                Object {
-                  "color": "#000000",
-                  "fontFamily": "TimesDigitalW04",
-                  "fontSize": 36,
-                  "left": 0,
-                  "lineHeight": 52,
-                  "position": "absolute",
-                  "top": 520,
-                }
-              }
-            >
-              Jenni
-            </Text>
-            <Text
-              style={
-                Object {
-                  "color": "#000000",
-                  "fontFamily": "TimesDigitalW04",
-                  "fontSize": 36,
-                  "left": 96.310546875,
-                  "lineHeight": 52,
-                  "position": "absolute",
-                  "top": 520,
-                }
-              }
-            >
-              Murray
-            </Text>
-            <Text
-              style={
-                Object {
-                  "color": "#000000",
-                  "fontFamily": "TimesDigitalW04",
-                  "fontSize": 36,
-                  "left": 216.509765625,
-                  "lineHeight": 52,
-                  "position": "absolute",
-                  "top": 520,
-                }
-              }
-            >
-              on
-            </Text>
-            <Text
-              style={
-                Object {
-                  "color": "#000000",
-                  "fontFamily": "TimesDigitalW04",
-                  "fontSize": 36,
-                  "left": 0,
-                  "lineHeight": 52,
-                  "position": "absolute",
-                  "top": 572,
-                }
-              }
-            >
-              BBC
-            </Text>
-            <Text
-              style={
-                Object {
-                  "color": "#000000",
-                  "fontFamily": "TimesDigitalW04",
-                  "fontSize": 36,
-                  "left": 77.16796875,
-                  "lineHeight": 52,
-                  "position": "absolute",
-                  "top": 572,
-                }
-              }
-            >
-              Radio
-            </Text>
-            <Text
-              style={
-                Object {
-                  "color": "#000000",
-                  "fontFamily": "TimesDigitalW04",
-                  "fontSize": 36,
-                  "left": 177.3984375,
-                  "lineHeight": 52,
-                  "position": "absolute",
-                  "top": 572,
-                }
-              }
-            >
-              4
-            </Text>
+              <View>
+                <View
+                  style={
+                    Object {
+                      "marginBottom": 20,
+                      "paddingLeft": 10,
+                      "paddingRight": 10,
+                    }
+                  }
+                >
+                  <View>
+                    <Text
+                      style={
+                        Object {
+                          "lineHeight": 52,
+                        }
+                      }
+                    >
+                      <Text
+                        style={
+                          Object {
+                            "color": "#000000",
+                            "fontFamily": "TimesDigitalW04",
+                            "fontSize": 36,
+                            "lineHeight": 52,
+                          }
+                        }
+                      >
+                        orting eyebrows?! Really? During a pandemic?!” This tweet landed in my Twitter feed after talking to Jenni Murray on BBC Radio 4 
+                      </Text>
+                    </Text>
+                  </View>
+                </View>
+              </View>
+            </View>
           </View>
-        </View>
+        </RCTScrollView>
       </View>
       <View
         style={
