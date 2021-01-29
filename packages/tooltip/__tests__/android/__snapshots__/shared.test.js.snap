@@ -59,53 +59,6 @@ exports[`Tooltip renders correctly when type is in tooltips array 1`] = `
           }
         }
       >
-        <View
-          style={
-            Object {
-              "height": 16,
-              "opacity": 1,
-              "position": "absolute",
-              "right": 5,
-              "top": 10,
-              "width": 16,
-              "zIndex": 1,
-            }
-          }
-        >
-          <View
-            style={
-              Object {
-                "backgroundColor": "#FFFFFF",
-                "height": 16,
-                "left": 5,
-                "top": -2,
-                "transform": Array [
-                  Object {
-                    "rotate": "45deg",
-                  },
-                ],
-                "width": 1,
-              }
-            }
-          />
-          <View
-            style={
-              Object {
-                "backgroundColor": "#FFFFFF",
-                "height": 16,
-                "left": 5,
-                "position": "absolute",
-                "top": -2,
-                "transform": Array [
-                  Object {
-                    "rotate": "-45deg",
-                  },
-                ],
-                "width": 1,
-              }
-            }
-          />
-        </View>
         <Text
           style={
             Object {
@@ -189,53 +142,6 @@ exports[`Tooltip renders correctly with supplied offsets 1`] = `
           }
         }
       >
-        <View
-          style={
-            Object {
-              "height": 16,
-              "opacity": 1,
-              "position": "absolute",
-              "right": 5,
-              "top": 10,
-              "width": 16,
-              "zIndex": 1,
-            }
-          }
-        >
-          <View
-            style={
-              Object {
-                "backgroundColor": "#FFFFFF",
-                "height": 16,
-                "left": 5,
-                "top": -2,
-                "transform": Array [
-                  Object {
-                    "rotate": "45deg",
-                  },
-                ],
-                "width": 1,
-              }
-            }
-          />
-          <View
-            style={
-              Object {
-                "backgroundColor": "#FFFFFF",
-                "height": 16,
-                "left": 5,
-                "position": "absolute",
-                "top": -2,
-                "transform": Array [
-                  Object {
-                    "rotate": "-45deg",
-                  },
-                ],
-                "width": 1,
-              }
-            }
-          />
-        </View>
         <Text
           style={
             Object {
@@ -320,53 +226,6 @@ exports[`Tooltip renders correctly with supplied placement right 1`] = `
           }
         }
       >
-        <View
-          style={
-            Object {
-              "height": 16,
-              "opacity": 1,
-              "position": "absolute",
-              "right": 5,
-              "top": 10,
-              "width": 16,
-              "zIndex": 1,
-            }
-          }
-        >
-          <View
-            style={
-              Object {
-                "backgroundColor": "#FFFFFF",
-                "height": 16,
-                "left": 5,
-                "top": -2,
-                "transform": Array [
-                  Object {
-                    "rotate": "45deg",
-                  },
-                ],
-                "width": 1,
-              }
-            }
-          />
-          <View
-            style={
-              Object {
-                "backgroundColor": "#FFFFFF",
-                "height": 16,
-                "left": 5,
-                "position": "absolute",
-                "top": -2,
-                "transform": Array [
-                  Object {
-                    "rotate": "-45deg",
-                  },
-                ],
-                "width": 1,
-              }
-            }
-          />
-        </View>
         <Text
           style={
             Object {
@@ -450,53 +309,6 @@ exports[`Tooltip renders correctly with supplied placement top 1`] = `
           }
         }
       >
-        <View
-          style={
-            Object {
-              "height": 16,
-              "opacity": 1,
-              "position": "absolute",
-              "right": 5,
-              "top": 10,
-              "width": 16,
-              "zIndex": 1,
-            }
-          }
-        >
-          <View
-            style={
-              Object {
-                "backgroundColor": "#FFFFFF",
-                "height": 16,
-                "left": 5,
-                "top": -2,
-                "transform": Array [
-                  Object {
-                    "rotate": "45deg",
-                  },
-                ],
-                "width": 1,
-              }
-            }
-          />
-          <View
-            style={
-              Object {
-                "backgroundColor": "#FFFFFF",
-                "height": 16,
-                "left": 5,
-                "position": "absolute",
-                "top": -2,
-                "transform": Array [
-                  Object {
-                    "rotate": "-45deg",
-                  },
-                ],
-                "width": 1,
-              }
-            }
-          />
-        </View>
         <Text
           style={
             Object {
@@ -588,53 +400,6 @@ exports[`Tooltip renders correctly with supplied width 1`] = `
           }
         }
       >
-        <View
-          style={
-            Object {
-              "height": 16,
-              "opacity": 1,
-              "position": "absolute",
-              "right": 5,
-              "top": 10,
-              "width": 16,
-              "zIndex": 1,
-            }
-          }
-        >
-          <View
-            style={
-              Object {
-                "backgroundColor": "#FFFFFF",
-                "height": 16,
-                "left": 5,
-                "top": -2,
-                "transform": Array [
-                  Object {
-                    "rotate": "45deg",
-                  },
-                ],
-                "width": 1,
-              }
-            }
-          />
-          <View
-            style={
-              Object {
-                "backgroundColor": "#FFFFFF",
-                "height": 16,
-                "left": 5,
-                "position": "absolute",
-                "top": -2,
-                "transform": Array [
-                  Object {
-                    "rotate": "-45deg",
-                  },
-                ],
-                "width": 1,
-              }
-            }
-          />
-        </View>
         <Text
           style={
             Object {
