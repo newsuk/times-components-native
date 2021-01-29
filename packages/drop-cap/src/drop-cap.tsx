@@ -18,7 +18,7 @@ const fontAdditionalPaddingMap: Record<string, Record<string, number>> = {
   ios: {
     cultureMagazine: 2,
     dropCap: 0,
-    stMagazine: 1,
+    stMagazine: 4,
     styleMagazine: 0,
   },
 };
@@ -42,7 +42,6 @@ const DropCap: React.FC<Props> = ({
   scale,
   width,
 }) => {
-  const additionalHeight = Platform.OS === "ios" ? 3 : 0;
   const baseAdditionalPadding = Platform.OS === "ios" ? 23 : 20;
   const fontSpecificPadding =
     fontAdditionalPaddingMap[Platform.OS][dropCapFont] ?? 0;
@@ -56,7 +55,7 @@ const DropCap: React.FC<Props> = ({
       style={[
         {
           width,
-          height: height + additionalHeight,
+          height,
         },
       ]}
     >
