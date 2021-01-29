@@ -11,6 +11,7 @@ const ShowTopics = ({
   onTooltipPresented,
   narrowContent,
   tooltips,
+  articleId,
 }) => {
   const { isTablet, narrowArticleBreakpoint } = useResponsiveContext();
 
@@ -31,6 +32,7 @@ const ShowTopics = ({
           onTooltipPresented={onTooltipPresented}
           topics={topics}
           tooltips={tooltips}
+          articleId={articleId}
         />
       </View>
     );
@@ -50,6 +52,7 @@ ShowTopics.propTypes = {
     }).isRequired,
   ),
   tooltips: PropTypes.array,
+  articleId: PropTypes.string,
 };
 
 ShowTopics.defaultProps = {
