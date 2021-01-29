@@ -10,6 +10,7 @@ import {
   LeadOneAndOneSlice,
   LeadOneFullWidthSlice,
   LeadTwoNoPicAndTwoSlice,
+  LeadTwoNoPicAndTwoVariant2Slice,
   ListTwoAndSixNoPicSlice,
   SecondaryFourSlice,
   SecondaryOneAndColumnistSlice,
@@ -29,6 +30,7 @@ import {
   SupplementSecondaryOneSlice,
   SupplementSecondaryTwoAndTwoSlice,
 } from "./slices";
+import { sectionConfigs } from "@times-components-native/section/src/utils";
 
 const config = (NativeModules || {}).ReactConfig;
 
@@ -37,7 +39,9 @@ const isTablet =
   (config && config.breakpoint && config.breakpoint !== "small") ||
   width > tabletWidth;
 
-const sliceMap = (isInSupplement) => {
+const { sectionTitles } = sectionConfigs;
+
+const sliceMap = (isInSupplement, sectionTitle, orientation) => {
   const isInTabletSupplement = isInSupplement && isTablet;
   return {
     CommentLeadAndCartoonSlice,
@@ -50,7 +54,11 @@ const sliceMap = (isInSupplement) => {
       ? SupplementLeadOneAndOneSlice
       : LeadOneAndOneSlice,
     LeadOneFullWidthSlice,
-    LeadTwoNoPicAndTwoSlice,
+    LeadTwoNoPicAndTwoSlice: renderLeadTwoNoPicAndTwoSlice(
+      isTablet,
+      sectionTitle,
+      orientation,
+    ),
     Puzzle: PuzzleSlice,
     SecondaryFourSlice: isInTabletSupplement
       ? SupplementSecondaryFourSlice
@@ -78,5 +86,14 @@ const sliceMap = (isInSupplement) => {
   };
 };
 
-export const getSlice = (isInSupplement, sliceName) =>
-  sliceMap(isInSupplement)[sliceName];
+export const getSlice = (
+  isInSupplement,
+  sliceName,
+  sectionTitle,
+  orientation,
+) => sliceMap(isInSupplement, sectionTitle, orientation)[sliceName];
+
+const renderLeadTwoNoPicAndTwoSlice = (isTablet, sectionTitle, orientation) =>
+  isTablet && sectionTitle === sectionTitles.sport && orientation === "portrait"
+    ? LeadTwoNoPicAndTwoVariant2Slice
+    : LeadTwoNoPicAndTwoSlice;

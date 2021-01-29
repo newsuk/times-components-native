@@ -3,6 +3,7 @@ export { default as LeadOneAndFourSlice } from "./templates/leadoneandfour";
 export { default as LeadOneAndOneSlice } from "./templates/leadoneandone";
 export { default as LeadOneAndTwoSlice } from "./templates/leadoneandtwo";
 export { default as LeadTwoNoPicAndTwoSlice } from "./templates/leadtwonopicandtwo";
+export { default as LeadTwoNoPicAndTwoVariant2Slice } from "./templates/leadtwonopicandtwovariant2";
 export { default as OpinionOneAndTwoSlice } from "./templates/opiniononeandtwo";
 export { default as SecondaryOneAndColumnistSlice } from "./templates/secondaryoneandcolumnist";
 export { default as SecondaryFourSlice } from "./templates/secondaryfour";

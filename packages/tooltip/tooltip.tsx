@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { Animated, Text, TouchableOpacity, View } from "react-native";
+import { Animated, Text, TouchableOpacity, View, Platform } from "react-native";
 // @ts-ignore
 import { Viewport } from "@skele/components";
 import { useResponsiveContext } from "@times-components-native/responsive";
@@ -79,7 +79,7 @@ const Tooltip: React.FC<Props> = ({
             }}
           >
             <View style={styles.container}>
-              {closeButton}
+              {Platform.OS === "ios" && closeButton}
               <Text style={styles.text} allowFontScaling={false}>
                 {content}
               </Text>

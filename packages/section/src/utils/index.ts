@@ -3,6 +3,7 @@ import { createPuzzleData } from "./createPuzzleData";
 import { isSupplementSection } from "./isSupplementSection";
 import { getEmailPuzzlesUrl } from "./getEmailPuzzlesUrl";
 import { getImage } from "./getImage";
+import * as sectionConfigs from "./sectionConfigs";
 
 export {
   getEmailPuzzlesUrl,
@@ -10,4 +11,5 @@ export {
   createPuzzleData,
   getImage,
   isSupplementSection,
+  sectionConfigs,
 };
