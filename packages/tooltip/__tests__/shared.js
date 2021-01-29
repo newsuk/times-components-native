@@ -18,15 +18,19 @@ export const withTabletContext = (WrappedComponent, isTablet = true) => (
 
 export default () => {
   describe("Tooltip", () => {
-    it("renders correctly when type is in tooltips array", () => {
-      const onTooltipPresentedMock = jest.fn();
+    const mockArticleId = "mockArticleId";
+    const onTooltipPresentedMock = jest.fn();
 
+    beforeEach(() => jest.clearAllMocks());
+
+    it("renders correctly when type is in tooltips array", () => {
       const output = TestRenderer.create(
         <Tooltip
           content={<Text>foo</Text>}
           onTooltipPresented={onTooltipPresentedMock}
           type="testtype"
           tooltips={["testtype"]}
+          articleId={mockArticleId}
         >
           bar
         </Tooltip>,
@@ -35,8 +39,6 @@ export default () => {
     });
 
     it("does not render tooltip when tooltip type is not in tooltips array", () => {
-      const onTooltipPresentedMock = jest.fn();
-
       const output = TestRenderer.create(
         withTabletContext(
           <Tooltip
@@ -53,8 +55,6 @@ export default () => {
     });
 
     it("does not render tooltip if not in tablet", () => {
-      const onTooltipPresentedMock = jest.fn();
-
       const output = TestRenderer.create(
         withTabletContext(
           <Tooltip
@@ -62,6 +62,7 @@ export default () => {
             onTooltipPresented={onTooltipPresentedMock}
             type="testtype"
             tooltips={["testtype"]}
+            articleId={mockArticleId}
           >
             bar
           </Tooltip>,
@@ -72,14 +73,13 @@ export default () => {
     });
 
     it("renders correctly with supplied width", () => {
-      const onTooltipPresentedMock = jest.fn();
-
       const output = TestRenderer.create(
         <Tooltip
           content={<Text>foo</Text>}
           onTooltipPresented={onTooltipPresentedMock}
           type="testtype"
           tooltips={["testtype"]}
+          articleId={mockArticleId}
           width={100}
         >
           bar
@@ -89,14 +89,13 @@ export default () => {
     });
 
     it("renders correctly with supplied placement top", () => {
-      const onTooltipPresentedMock = jest.fn();
-
       const output = TestRenderer.create(
         <Tooltip
           content={<Text>foo</Text>}
           onTooltipPresented={onTooltipPresentedMock}
           type="testtype"
           tooltips={["testtype"]}
+          articleId={mockArticleId}
           placement="top"
         >
           bar
@@ -106,14 +105,13 @@ export default () => {
     });
 
     it("renders correctly with supplied placement right", () => {
-      const onTooltipPresentedMock = jest.fn();
-
       const output = TestRenderer.create(
         <Tooltip
           content={<Text>foo</Text>}
           onTooltipPresented={onTooltipPresentedMock}
           type="testtype"
           tooltips={["testtype"]}
+          articleId={mockArticleId}
           placement="right"
         >
           bar
@@ -123,14 +121,13 @@ export default () => {
     });
 
     it("renders correctly with supplied offsets", () => {
-      const onTooltipPresentedMock = jest.fn();
-
       const output = TestRenderer.create(
         <Tooltip
           content={<Text>foo</Text>}
           onTooltipPresented={onTooltipPresentedMock}
           type="testtype"
           tooltips={["testtype"]}
+          articleId={mockArticleId}
           offsetX={10}
           offsetY={10}
           arrowOffset={10}
@@ -142,25 +139,23 @@ export default () => {
     });
 
     it("onTooltipPresented is called correctly on Viewport Enter", async () => {
-      const onTooltipPresentedMock = jest.fn();
-
       const testInstance = shallow(
         <Tooltip
           content={<Text>foo</Text>}
           onTooltipPresented={onTooltipPresentedMock}
           type="testtype"
           tooltips={["testtype"]}
+          articleId={mockArticleId}
         >
           bar
         </Tooltip>,
       );
       testInstance.children().at(0).props().onViewportEnter();
-      expect(onTooltipPresentedMock).toBeCalled();
+
+      expect(onTooltipPresentedMock).toBeCalledWith("testtype", mockArticleId);
     });
 
     it("onTooltipPresented is called correctly if tooltip is displayed in view", async () => {
-      const onTooltipPresentedMock = jest.fn();
-
       shallow(
         <Tooltip
           content={<Text>foo</Text>}
@@ -168,11 +163,13 @@ export default () => {
           onTooltipPresented={onTooltipPresentedMock}
           type="testtype"
           tooltips={["testtype"]}
+          articleId={mockArticleId}
         >
           bar
         </Tooltip>,
       );
-      expect(onTooltipPresentedMock).toBeCalled();
+
+      expect(onTooltipPresentedMock).toBeCalledWith("testtype", mockArticleId);
     });
   });
 };
