@@ -8,6 +8,85 @@ exports[`Tooltip hides tooltip close button on android only 1`] = `
     }
   }
 >
+  <View>
+    <View
+      style={
+        Object {
+          "opacity": 1,
+        }
+      }
+    >
+      <View
+        style={
+          Object {
+            "backgroundColor": "#006699",
+            "borderRadius": 3,
+            "bottom": 0,
+            "left": 0,
+            "position": "absolute",
+            "shadowColor": "#000000",
+            "shadowOffset": Object {
+              "height": 3,
+              "width": 3,
+            },
+            "shadowOpacity": 0.3,
+            "shadowRadius": 3,
+            "width": 256,
+          }
+        }
+      >
+        <Text
+          style={
+            Object {
+              "color": "#FFFFFF",
+              "fontFamily": "GillSansMTStd-Medium",
+              "fontSize": 16,
+              "lineHeight": 18,
+              "paddingHorizontal": 30,
+              "paddingRight": 35,
+              "paddingVertical": 20,
+              "textAlign": "left",
+            }
+          }
+        >
+          <Text>
+            foo
+          </Text>
+        </Text>
+        <View
+          style={
+            Object {
+              "backgroundColor": "transparent",
+              "borderBottomColor": "transparent",
+              "borderLeftColor": "transparent",
+              "borderLeftWidth": 12,
+              "borderRightColor": "transparent",
+              "borderRightWidth": 12,
+              "borderStyle": "solid",
+              "borderTopColor": "#006699",
+              "borderTopWidth": 8,
+              "bottom": -8,
+              "left": 20,
+              "position": "absolute",
+              "shadowColor": "#000000",
+              "shadowOffset": Object {
+                "height": 3,
+                "width": 3,
+              },
+              "shadowOpacity": 0.3,
+              "shadowRadius": 4,
+              "top": "auto",
+              "transform": Array [
+                Object {
+                  "rotateX": "0deg",
+                },
+              ],
+            }
+          }
+        />
+      </View>
+    </View>
+  </View>
   bar
 </View>
 `;
