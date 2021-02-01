@@ -1,7 +1,6 @@
 import Tooltip from "../tooltip";
 import TestRenderer from "react-test-renderer";
 import { ResponsiveContext } from "@times-components-native/responsive";
-import { shallow } from "enzyme";
 import React from "react";
 import { Text } from "react-native";
 import "./serializers-with-all-styles";
@@ -22,14 +21,16 @@ export default () => {
       const onTooltipPresentedMock = jest.fn();
 
       const output = TestRenderer.create(
-        <Tooltip
-          content={<Text>foo</Text>}
-          onTooltipPresented={onTooltipPresentedMock}
-          type="testtype"
-          tooltips={["testtype"]}
-        >
-          bar
-        </Tooltip>,
+        withTabletContext(
+          <Tooltip
+            content={<Text>foo</Text>}
+            onTooltipPresented={onTooltipPresentedMock}
+            type="testtype"
+            tooltips={["testtype"]}
+          >
+            bar
+          </Tooltip>,
+        ),
       );
       expect(output).toMatchSnapshot();
     });
@@ -75,15 +76,17 @@ export default () => {
       const onTooltipPresentedMock = jest.fn();
 
       const output = TestRenderer.create(
-        <Tooltip
-          content={<Text>foo</Text>}
-          onTooltipPresented={onTooltipPresentedMock}
-          type="testtype"
-          tooltips={["testtype"]}
-          width={100}
-        >
-          bar
-        </Tooltip>,
+        withTabletContext(
+          <Tooltip
+            content={<Text>foo</Text>}
+            onTooltipPresented={onTooltipPresentedMock}
+            type="testtype"
+            tooltips={["testtype"]}
+            width={100}
+          >
+            bar
+          </Tooltip>,
+        ),
       );
       expect(output).toMatchSnapshot();
     });
@@ -92,15 +95,17 @@ export default () => {
       const onTooltipPresentedMock = jest.fn();
 
       const output = TestRenderer.create(
-        <Tooltip
-          content={<Text>foo</Text>}
-          onTooltipPresented={onTooltipPresentedMock}
-          type="testtype"
-          tooltips={["testtype"]}
-          placement="top"
-        >
-          bar
-        </Tooltip>,
+        withTabletContext(
+          <Tooltip
+            content={<Text>foo</Text>}
+            onTooltipPresented={onTooltipPresentedMock}
+            type="testtype"
+            tooltips={["testtype"]}
+            placement="top"
+          >
+            bar
+          </Tooltip>,
+        ),
       );
       expect(output).toMatchSnapshot();
     });
@@ -109,15 +114,17 @@ export default () => {
       const onTooltipPresentedMock = jest.fn();
 
       const output = TestRenderer.create(
-        <Tooltip
-          content={<Text>foo</Text>}
-          onTooltipPresented={onTooltipPresentedMock}
-          type="testtype"
-          tooltips={["testtype"]}
-          placement="right"
-        >
-          bar
-        </Tooltip>,
+        withTabletContext(
+          <Tooltip
+            content={<Text>foo</Text>}
+            onTooltipPresented={onTooltipPresentedMock}
+            type="testtype"
+            tooltips={["testtype"]}
+            placement="right"
+          >
+            bar
+          </Tooltip>,
+        ),
       );
       expect(output).toMatchSnapshot();
     });
@@ -126,17 +133,19 @@ export default () => {
       const onTooltipPresentedMock = jest.fn();
 
       const output = TestRenderer.create(
-        <Tooltip
-          content={<Text>foo</Text>}
-          onTooltipPresented={onTooltipPresentedMock}
-          type="testtype"
-          tooltips={["testtype"]}
-          offsetX={10}
-          offsetY={10}
-          arrowOffset={10}
-        >
-          bar
-        </Tooltip>,
+        withTabletContext(
+          <Tooltip
+            content={<Text>foo</Text>}
+            onTooltipPresented={onTooltipPresentedMock}
+            type="testtype"
+            tooltips={["testtype"]}
+            offsetX={10}
+            offsetY={10}
+            arrowOffset={10}
+          >
+            bar
+          </Tooltip>,
+        ),
       );
       expect(output).toMatchSnapshot();
     });
@@ -144,33 +153,40 @@ export default () => {
     it("onTooltipPresented is called correctly on Viewport Enter", async () => {
       const onTooltipPresentedMock = jest.fn();
 
-      const testInstance = shallow(
-        <Tooltip
-          content={<Text>foo</Text>}
-          onTooltipPresented={onTooltipPresentedMock}
-          type="testtype"
-          tooltips={["testtype"]}
-        >
-          bar
-        </Tooltip>,
+      const output = TestRenderer.create(
+        withTabletContext(
+          <Tooltip
+            content={<Text>foo</Text>}
+            onTooltipPresented={onTooltipPresentedMock}
+            type="testtype"
+            tooltips={["testtype"]}
+          >
+            bar
+          </Tooltip>,
+        ),
       );
-      testInstance.children().at(0).props().onViewportEnter();
+      const viewportAwareView = output.root.findByProps({
+        testID: "viewportAwareView",
+      });
+      viewportAwareView.props.onViewportEnter();
       expect(onTooltipPresentedMock).toBeCalled();
     });
 
     it("onTooltipPresented is called correctly if tooltip is displayed in view", async () => {
       const onTooltipPresentedMock = jest.fn();
 
-      shallow(
-        <Tooltip
-          content={<Text>foo</Text>}
-          displayedInView={true}
-          onTooltipPresented={onTooltipPresentedMock}
-          type="testtype"
-          tooltips={["testtype"]}
-        >
-          bar
-        </Tooltip>,
+      TestRenderer.create(
+        withTabletContext(
+          <Tooltip
+            content={<Text>foo</Text>}
+            displayedInView={true}
+            onTooltipPresented={onTooltipPresentedMock}
+            type="testtype"
+            tooltips={["testtype"]}
+          >
+            bar
+          </Tooltip>,
+        ),
       );
       expect(onTooltipPresentedMock).toBeCalled();
     });

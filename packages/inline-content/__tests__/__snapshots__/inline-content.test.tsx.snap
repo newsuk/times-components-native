@@ -23,7 +23,7 @@ exports[`InlineContent ad generates content measurements for inline ad 1`] = `
     Object {
       "contentHeight": 630,
       "contentLineHeight": 26,
-      "contentWidth": 329,
+      "contentWidth": 437,
       "itemWidth": 321,
     }
   }
@@ -48,7 +48,7 @@ exports[`InlineContent ad renders content and inline ad via a render-prop 1`] = 
         Object {
           "flex": 1,
           "flexDirection": "row",
-          "width": 660,
+          "width": 768,
         },
         Object {
           "alignSelf": "center",
@@ -62,7 +62,7 @@ exports[`InlineContent ad renders content and inline ad via a render-prop 1`] = 
       style={
         Object {
           "height": 630,
-          "width": 329,
+          "width": 437,
         }
       }
     >
@@ -373,7 +373,7 @@ exports[`InlineContent dropcap generates content measurements for dropcap 1`] = 
     Object {
       "contentHeight": 153.5625,
       "contentLineHeight": 26,
-      "contentWidth": 521.1171875,
+      "contentWidth": 629.1171875,
       "itemWidth": 128.8828125,
     }
   }
@@ -411,7 +411,7 @@ exports[`InlineContent dropcap renders content and dropcap via a render-prop 1`]
         Object {
           "flex": 1,
           "flexDirection": "row",
-          "width": 660,
+          "width": 768,
         },
         Object {
           "alignSelf": "center",
@@ -451,7 +451,7 @@ exports[`InlineContent dropcap renders content and dropcap via a render-prop 1`]
       style={
         Object {
           "height": 153.5625,
-          "width": 521.1171875,
+          "width": 629.1171875,
         }
       }
     >
@@ -704,8 +704,8 @@ exports[`InlineContent image generates content measurements for inline image 1`]
     Object {
       "contentHeight": 0,
       "contentLineHeight": 26,
-      "contentWidth": 419,
-      "itemWidth": 230.99999999999997,
+      "contentWidth": 489.20000000000005,
+      "itemWidth": 268.79999999999995,
     }
   }
   itemProps={
@@ -748,7 +748,7 @@ exports[`InlineContent image renders content and inline image via a render-prop 
         Object {
           "flex": 1,
           "flexDirection": "row",
-          "width": 660,
+          "width": 768,
         },
         Object {
           "alignSelf": "center",
@@ -767,7 +767,7 @@ exports[`InlineContent image renders content and inline image via a render-prop 
           },
           Object {
             "height": 0,
-            "width": 230.99999999999997,
+            "width": 268.79999999999995,
           },
         ]
       }
@@ -801,7 +801,7 @@ exports[`InlineContent image renders content and inline image via a render-prop 
       style={
         Object {
           "height": 0,
-          "width": 419,
+          "width": 489.20000000000005,
         }
       }
     />
@@ -1052,8 +1052,8 @@ exports[`InlineContent pullQuote generates content measurements for pullQuote 1`
     Object {
       "contentHeight": 0,
       "contentLineHeight": 26,
-      "contentWidth": 419,
-      "itemWidth": 230.99999999999997,
+      "contentWidth": 489.20000000000005,
+      "itemWidth": 268.79999999999995,
     }
   }
   itemProps={
@@ -1068,7 +1068,7 @@ exports[`InlineContent pullQuote generates content measurements for pullQuote 1`
       "originalName": "pullQuote",
       "text": "some text",
       "twitter": "some twitter text",
-      "width": 230.99999999999997,
+      "width": 268.79999999999995,
     }
   }
   renderMeasuredContents={[Function]}
@@ -1089,7 +1089,7 @@ exports[`InlineContent pullQuote renders content and pullQuote ad via a render-p
         Object {
           "flex": 1,
           "flexDirection": "row",
-          "width": 660,
+          "width": 768,
         },
         Object {
           "alignSelf": "center",
@@ -1108,7 +1108,7 @@ exports[`InlineContent pullQuote renders content and pullQuote ad via a render-p
           },
           Object {
             "height": 0,
-            "width": 230.99999999999997,
+            "width": 268.79999999999995,
           },
         ]
       }
@@ -1119,7 +1119,7 @@ exports[`InlineContent pullQuote renders content and pullQuote ad via a render-p
         originalName="pullQuote"
         text="some text"
         twitter="some twitter text"
-        width={230.99999999999997}
+        width={268.79999999999995}
       >
         some pull quote text
       </PullQuote>
@@ -1128,7 +1128,7 @@ exports[`InlineContent pullQuote renders content and pullQuote ad via a render-p
       style={
         Object {
           "height": 0,
-          "width": 419,
+          "width": 489.20000000000005,
         }
       }
     />

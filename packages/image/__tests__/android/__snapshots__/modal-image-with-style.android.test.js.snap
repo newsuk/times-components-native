@@ -17,7 +17,7 @@ exports[`1. landscape default modal 1`] = `
       <View
         style={
           Object {
-            "padding": 20,
+            "padding": 15,
             "position": "absolute",
             "right": 5,
             "top": 0,
@@ -30,10 +30,10 @@ exports[`1. landscape default modal 1`] = `
             Object {
               "alignItems": "center",
               "backgroundColor": "rgba(0, 0, 0, 0.5)",
-              "borderRadius": 30,
-              "height": 30,
+              "borderRadius": 25,
+              "height": 25,
               "justifyContent": "center",
-              "width": 30,
+              "width": 25,
             }
           }
         >
@@ -65,7 +65,7 @@ exports[`1. landscape default modal 1`] = `
           <View
             style={
               Object {
-                "margin": 20,
+                "margin": 15,
                 "paddingTop": 5,
               }
             }
@@ -151,7 +151,7 @@ exports[`2. portrait default modal 1`] = `
       <View
         style={
           Object {
-            "padding": 20,
+            "padding": 15,
             "position": "absolute",
             "right": 5,
             "top": 0,
@@ -164,10 +164,10 @@ exports[`2. portrait default modal 1`] = `
             Object {
               "alignItems": "center",
               "backgroundColor": "rgba(0, 0, 0, 0.5)",
-              "borderRadius": 30,
-              "height": 30,
+              "borderRadius": 25,
+              "height": 25,
               "justifyContent": "center",
-              "width": 30,
+              "width": 25,
             }
           }
         >
@@ -199,7 +199,7 @@ exports[`2. portrait default modal 1`] = `
           <View
             style={
               Object {
-                "margin": 20,
+                "margin": 15,
                 "paddingTop": 5,
               }
             }
@@ -285,7 +285,7 @@ exports[`3. tablet landscape default modal 1`] = `
       <View
         style={
           Object {
-            "padding": 20,
+            "padding": 15,
             "position": "absolute",
             "right": 5,
             "top": 0,
@@ -298,10 +298,10 @@ exports[`3. tablet landscape default modal 1`] = `
             Object {
               "alignItems": "center",
               "backgroundColor": "rgba(0, 0, 0, 0.5)",
-              "borderRadius": 30,
-              "height": 30,
+              "borderRadius": 25,
+              "height": 25,
               "justifyContent": "center",
-              "width": 30,
+              "width": 25,
             }
           }
         >
@@ -333,7 +333,7 @@ exports[`3. tablet landscape default modal 1`] = `
           <View
             style={
               Object {
-                "margin": 20,
+                "margin": 15,
                 "paddingTop": 5,
               }
             }
@@ -419,7 +419,7 @@ exports[`4. tablet portrait default modal 1`] = `
       <View
         style={
           Object {
-            "padding": 20,
+            "padding": 15,
             "position": "absolute",
             "right": 5,
             "top": 0,
@@ -432,10 +432,10 @@ exports[`4. tablet portrait default modal 1`] = `
             Object {
               "alignItems": "center",
               "backgroundColor": "rgba(0, 0, 0, 0.5)",
-              "borderRadius": 30,
-              "height": 30,
+              "borderRadius": 25,
+              "height": 25,
               "justifyContent": "center",
-              "width": 30,
+              "width": 25,
             }
           }
         >
@@ -467,7 +467,7 @@ exports[`4. tablet portrait default modal 1`] = `
           <View
             style={
               Object {
-                "margin": 20,
+                "margin": 15,
                 "paddingTop": 5,
               }
             }
