@@ -140,7 +140,7 @@ exports[`full article with style on tablet 1`] = `
         "alignSelf": "center",
         "paddingLeft": 10,
         "paddingRight": 10,
-        "width": 660,
+        "width": 768,
       }
     }
   >
@@ -151,7 +151,7 @@ exports[`full article with style on tablet 1`] = `
           "marginTop": 30,
           "paddingLeft": 10,
           "paddingRight": 10,
-          "width": 660,
+          "width": 768,
         }
       }
     >

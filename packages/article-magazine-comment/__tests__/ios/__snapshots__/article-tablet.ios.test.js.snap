@@ -11,7 +11,7 @@ exports[`1. article magazine comment - tablet 1`] = `
         "marginLeft": 10,
         "marginRight": 10,
         "paddingTop": 35,
-        "width": 660,
+        "width": 768,
       }
     }
   >
@@ -127,7 +127,7 @@ exports[`1. article magazine comment - tablet 1`] = `
       Object {
         "alignSelf": "center",
         "marginBottom": 20,
-        "width": 640,
+        "width": 748,
       }
     }
   >
