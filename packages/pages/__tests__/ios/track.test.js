@@ -1,3 +1,3 @@
-import shared from "../track.ios";
+import shared from "../track";
 
 shared();

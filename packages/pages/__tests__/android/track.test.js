@@ -1,3 +1,3 @@
-import shared from "../track.android";
+import shared from "../track";
 
 shared();
