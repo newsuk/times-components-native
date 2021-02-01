@@ -41,7 +41,7 @@ class InteractiveWrapper extends Component {
   }
 
   handleHttpError = (event) => {
-    if (event?.nativeEvent?.statusCode > 300) {
+    if (event?.nativeEvent?.statusCode >= 400) {
       this.setState({ hasError: true });
     }
   };
