@@ -134,7 +134,7 @@ ArticleSummary.propTypes = {
     PropTypes.array,
     PropTypes.object,
     PropTypes.bool,
-  ]), 
+  ]),
 };
 
 ArticleSummary.defaultProps = {

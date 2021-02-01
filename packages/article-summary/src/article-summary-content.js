@@ -1,5 +1,5 @@
 import React from "react";
-import { Text } from "react-native";
+import { Dimensions, Text } from "react-native";
 import PropTypes from "prop-types";
 import { renderAst as defaultRenderAst } from "./article-summary";
 import styles from "./styles";
@@ -13,9 +13,10 @@ const ArticleSummaryContent = ({
   lineHeight = styles.text.lineHeight,
   renderAst = defaultRenderAst,
 }) => {
+  const { fontScale } = Dimensions.get("screen");
   const numberOfLinesToRender =
     whiteSpaceHeight > 0
-      ? whiteSpaceHeight / lineHeight + initialLines
+      ? whiteSpaceHeight / (lineHeight * fontScale) + initialLines
       : initialLines;
 
   const numberOfLinesProp = whiteSpaceHeight !== undefined && {

@@ -10,7 +10,6 @@ import {
   TileSummary,
   TileImage,
   withTileTracking,
-  getTileSummary,
 } from "../shared";
 import stylesFactory from "./styles";
 import { View } from "react-native";
@@ -29,9 +28,7 @@ const TileAWV2 = ({
   const {
     article: { hasVideo },
   } = tile;
-  const height = 590;
-
-  console.log(tile.article.content);
+  const height = 600;
 
   return (
     <TileLink
@@ -39,7 +36,7 @@ const TileAWV2 = ({
       style={[styles.container, { backgroundColor: colours.functional.border }]}
       tile={tile}
     >
-      <View style={{ height: height }}>
+      <View style={{ height }}>
         <TileImage
           aspectRatio={5 / 4}
           relativeWidth={crop.relativeWidth}
@@ -56,7 +53,8 @@ const TileAWV2 = ({
           <TileSummary
             whiteSpaceHeight={whiteSpaceHeight}
             headlineStyle={styles.headline}
-            style={[styles.summaryContainer]}
+            labelColour={colours.functional.brandColour}
+            style={styles.summaryContainer}
             summary={tile.article.content}
             summaryStyle={styles.teaserText}
             tile={tile}

@@ -8,15 +8,13 @@ import {
 const fontSizeResolver = {
   [editionBreakpoints.medium]: 38,
   [editionBreakpoints.wide]: 38,
-  [editionBreakpoints.huge]: 38,
+  [editionBreakpoints.huge]: 40,
 };
 
 export default (breakpoint) => ({
   container: {
     flex: 1,
     flexDirection: "row",
-    paddingRight: spacing(2),
-    paddingBottom: spacing(2),
   },
   headline: {
     color: colours.functional.brandColour,
@@ -34,7 +32,6 @@ export default (breakpoint) => ({
   summaryContainer: {
     flex: 1,
     flexGrow: 1,
-    alignItems: "center",
     justifyContent: "center",
     backgroundColor: colours.functional.whriteGrey,
     padding: spacing(6),
