@@ -120,3 +120,5 @@ exports[`renders correctly 1`] = `
   />
 </View>
 `;
+
+exports[`should not render if error 1`] = `null`;
