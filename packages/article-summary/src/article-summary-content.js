@@ -36,7 +36,7 @@ const ArticleSummaryContent = ({
 ArticleSummaryContent.propTypes = {
   ast: PropTypes.oneOfType([PropTypes.array, PropTypes.object]),
   className: PropTypes.string,
-  style: PropTypes.shape({}),
+  style: PropTypes.oneOfType([PropTypes.array, PropTypes.object]),
 };
 
 ArticleSummaryContent.defaultProps = {

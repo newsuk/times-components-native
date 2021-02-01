@@ -350,7 +350,10 @@ fragment commonSlicesSection on StandardSectionSlice {
           ...leadAsset169
           ...leadAsset54
         }
+        content
+        summary1000: summary(maxCharCount: 1000)
       }
+      teaser1000: teaser(maxCharCount: 1000)
     }
     support1 {
       headline
