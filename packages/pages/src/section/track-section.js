@@ -8,6 +8,7 @@ const { onSectionLoaded } = NativeModules.SectionEvents || {
 export default (event) => {
   if (event.object === "Section" && event.action === "Viewed") {
     onSectionLoaded(event.attrs.sectionName, event);
+  } else {
+    track(event);
   }
-  track(event);
 };
