@@ -20,7 +20,7 @@ exports[`1. article in depth - tablet 1`] = `
       style={
         Object {
           "alignItems": "center",
-          "width": 660,
+          "width": 768,
         }
       }
     >
@@ -88,7 +88,7 @@ exports[`1. article in depth - tablet 1`] = `
         "marginHorizontal": 10,
         "marginVertical": 20,
         "paddingVertical": 10,
-        "width": 660,
+        "width": 768,
       }
     }
   >

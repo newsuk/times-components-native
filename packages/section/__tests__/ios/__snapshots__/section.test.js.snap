@@ -348,7 +348,7 @@ exports[`should render Secondary 2 No Pic and 2 instead of Secondary 2 and 2 for
 <RCTScrollView>
   <View>
     <View>
-      <SecondaryTwoNoPicAndTwoSlice />
+      <SecondaryTwoAndTwoSlice />
       <View>
         <View
           style={

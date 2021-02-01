@@ -838,11 +838,8 @@ exports[`key facts without title on tablet 1`] = `
 <View
   style={
     Object {
-      "alignSelf": "center",
-      "flexDirection": "row",
-      "marginHorizontal": 0,
-      "marginVertical": 10,
-      "width": "80.8%",
+      "marginHorizontal": 10,
+      "marginVertical": 5,
     }
   }
 >
