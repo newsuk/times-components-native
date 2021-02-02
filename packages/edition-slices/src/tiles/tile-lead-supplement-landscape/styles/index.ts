@@ -17,7 +17,7 @@ export default (breakpoint: string) =>
     container: {
       flex: 1,
       flexDirection: "row",
-      backgroundColor: colours.functional.border,
+      backgroundColor: colours.functional.whiteGrey,
     },
     headline: {
       color: colours.functional.brandColour,
@@ -34,7 +34,7 @@ export default (breakpoint: string) =>
     },
     summaryContainer: {
       flex: 1,
-      backgroundColor: colours.functional.whriteGrey,
+      backgroundColor: colours.functional.whiteGrey,
       padding: spacing(6),
     },
   });
