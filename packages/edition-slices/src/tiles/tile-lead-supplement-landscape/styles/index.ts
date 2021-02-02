@@ -4,17 +4,19 @@ import {
   spacing,
   editionBreakpoints,
 } from "@times-components-native/styleguide";
+import { TextStyle } from "react-native";
 
-const fontSizeResolver = {
+const fontSizeResolver: Record<string, number> = {
   [editionBreakpoints.medium]: 38,
   [editionBreakpoints.wide]: 38,
   [editionBreakpoints.huge]: 40,
 };
 
-export default (breakpoint) => ({
+export default (breakpoint: string) => ({
   container: {
     flex: 1,
     flexDirection: "row",
+    backgroundColor: colours.functional.border,
   },
   headline: {
     color: colours.functional.brandColour,
@@ -22,7 +24,7 @@ export default (breakpoint) => ({
     fontWeight: "normal",
     fontSize: fontSizeResolver[breakpoint],
     lineHeight: fontSizeResolver[breakpoint],
-  },
+  } as TextStyle,
   teaserText: {
     fontSize: 15,
     lineHeight: 22,
@@ -31,8 +33,6 @@ export default (breakpoint) => ({
   },
   summaryContainer: {
     flex: 1,
-    flexGrow: 1,
-    justifyContent: "center",
     backgroundColor: colours.functional.whriteGrey,
     padding: spacing(6),
   },
