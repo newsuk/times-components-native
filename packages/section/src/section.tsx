@@ -106,6 +106,7 @@ const Section: React.FC<Props> = ({
       adConfig={adConfig}
       sectionTitle={sectionTitle}
       orientation={orientation}
+      isTablet={isTablet}
     />
   );
 
