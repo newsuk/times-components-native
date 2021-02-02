@@ -10,9 +10,7 @@ const mediumBreakpointStyles = {
   portraitSupportContainer: {
     marginHorizontal: spacing(4),
   },
-  landscapeSupportContainer: {
-    marginHorizontal: spacing(2),
-  },
+  landscapeSupportContainer: {},
   horizontalSupportContainer: {
     flex: 1,
     flexDirection: "row",
@@ -31,7 +29,17 @@ const mediumBreakpointStyles = {
 
 const wideBreakpointStyles = {
   ...mediumBreakpointStyles,
+  landscapeSupportContainer: {
+    marginHorizontal: spacing(4),
+  },
   portraitSupportContainer: {
+    marginHorizontal: spacing(2),
+  },
+};
+
+const hugeBreakpointStyles = {
+  ...wideBreakpointStyles,
+  landscapeSupportContainer: {
     marginHorizontal: spacing(2),
   },
 };
@@ -40,6 +48,6 @@ const stylesResolver = {
   [editionBreakpoints.small]: {},
   [editionBreakpoints.medium]: mediumBreakpointStyles,
   [editionBreakpoints.wide]: wideBreakpointStyles,
-  [editionBreakpoints.huge]: wideBreakpointStyles,
+  [editionBreakpoints.huge]: hugeBreakpointStyles,
 };
 export default (breakpoint) => stylesResolver[breakpoint];
