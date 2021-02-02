@@ -1,6 +1,10 @@
 /* eslint-disable react/require-default-props */
-import React from "react";
+import React, { FC } from "react";
 import { editionBreakpoints } from "@times-components-native/styleguide";
+import { useResponsiveContext } from "@times-components-native/responsive";
+import { OnArticlePress } from "@times-components-native/types";
+import { Tile } from "@times-components-native/fixture-generator/src/types";
+
 import {
   getTileImage,
   TileLink,
@@ -10,15 +14,28 @@ import {
 } from "../shared";
 import stylesFactory from "./styles";
 
-const TileAZV2 = ({
+interface Props {
+  onPress: OnArticlePress;
+  breakpoint: string;
+  tile: Tile;
+}
+
+const TileLeadSupplementPortrait: FC<Props> = ({
   onPress,
   tile,
   breakpoint = editionBreakpoints.medium,
 }) => {
-  const styles = stylesFactory(breakpoint);
   const crop = getTileImage(tile, "crop54");
 
+  const { sectionContentWidth, sectionContentHeight } = useResponsiveContext();
+
   if (!crop) return null;
+
+  const imageAspectRatio = 5 / 4;
+  const summaryHeight =
+    sectionContentHeight - sectionContentWidth / imageAspectRatio;
+
+  const styles = stylesFactory(breakpoint, summaryHeight);
 
   const {
     article: { hasVideo },
@@ -27,7 +44,7 @@ const TileAZV2 = ({
   return (
     <TileLink onPress={onPress} style={styles.container} tile={tile}>
       <TileImage
-        aspectRatio={5 / 4}
+        aspectRatio={imageAspectRatio}
         relativeWidth={crop.relativeWidth}
         relativeHeight={crop.relativeHeight}
         relativeHorizontalOffset={crop.relativeHorizontalOffset}
@@ -47,4 +64,4 @@ const TileAZV2 = ({
   );
 };
 
-export default withTileTracking(TileAZV2);
+export default withTileTracking(TileLeadSupplementPortrait);

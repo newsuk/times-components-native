@@ -1,7 +1,7 @@
 import React from "react";
 import { useResponsiveContext } from "@times-components-native/responsive";
 import { SupplementLeadOneAndFourV2Slice } from "@times-components-native/slice-layout";
-import { TileAW, TileAZV2, TileBC } from "../../tiles";
+import { TileAW, TileLeadSupplementPortrait, TileBC } from "../../tiles";
 
 const SupplementLeadOneAndFourV2 = (props) => {
   const { editionBreakpoint: breakpoint, orientation } = useResponsiveContext();
@@ -11,7 +11,8 @@ const SupplementLeadOneAndFourV2 = (props) => {
     slice: { lead, support1, support2, support3, support4 },
   } = props;
 
-  const LeadTile = orientation === "portrait" ? TileAZV2 : TileAW;
+  const LeadTile =
+    orientation === "portrait" ? TileLeadSupplementPortrait : TileAW;
 
   return (
     <SupplementLeadOneAndFourV2Slice

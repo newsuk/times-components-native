@@ -39,17 +39,6 @@ interface Props {
   };
 }
 
-const useComponentSize = () => {
-  const [size, setSize] = useState(null);
-
-  const onLayout = useCallback((event) => {
-    const { width, height } = event.nativeEvent.layout;
-    setSize({ width, height });
-  }, []);
-
-  return [size, onLayout];
-};
-
 const Section: React.FC<Props> = ({
   adConfig,
   onArticlePress,
@@ -68,11 +57,6 @@ const Section: React.FC<Props> = ({
   const [emailPuzzlesButtonWidth] = useState(
     new Animated.Value(emailPuzzlesButtonExtendedWidth),
   );
-
-  const [size, onLayout] = useComponentSize();
-  if (size) {
-    console.log(size.height, size.width);
-  }
 
   const isIOS = Platform.OS === "ios";
 
@@ -169,7 +153,7 @@ const Section: React.FC<Props> = ({
   if (slices) receiveChildList(data);
 
   return (
-    <View onLayout={onLayout}>
+    <>
       <FlatList
         contentContainerStyle={
           isTablet && isPuzzle && styles.additionalContainerPadding
@@ -197,17 +181,7 @@ const Section: React.FC<Props> = ({
           onPress={onEmailPuzzleButtonPress}
         />
       ) : null}
-      {size && (
-        <View
-          style={{
-            position: "absolute",
-            height: size.height - 3,
-            width: size.width,
-            backgroundColor: "red",
-          }}
-        ></View>
-      )}
-    </View>
+    </>
   );
 };
 

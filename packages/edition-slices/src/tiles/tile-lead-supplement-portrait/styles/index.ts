@@ -10,22 +10,16 @@ const fontSizeResolver = {
   [editionBreakpoints.wide]: 45,
 };
 
-const horizontalMarginResolver = {
-  [editionBreakpoints.medium]: spacing(6),
-  [editionBreakpoints.wide]: spacing(10),
-};
-
 const horizontalPaddingResolver = {
   [editionBreakpoints.medium]: spacing(10),
   [editionBreakpoints.wide]: spacing(28),
 };
 
-export default (breakpoint) => ({
+export default (breakpoint, summaryHeight) => ({
   container: {
     flex: 1,
     borderBottomWidth: 1,
     borderBottomColor: colours.functional.keyline,
-    marginHorizontal: -horizontalMarginResolver[breakpoint],
   },
   headline: {
     color: colours.functional.brandColour,
@@ -34,7 +28,6 @@ export default (breakpoint) => ({
     fontSize: fontSizeResolver[breakpoint],
     lineHeight: fontSizeResolver[breakpoint],
     textAlign: "center",
-    marginHorizontal: horizontalMarginResolver[breakpoint],
   },
   imageContainer: {
     width: "100%",
@@ -46,5 +39,6 @@ export default (breakpoint) => ({
     backgroundColor: colours.functional.border,
     paddingHorizontal: horizontalPaddingResolver[breakpoint],
     paddingVertical: spacing(4),
+    height: summaryHeight,
   },
 });
