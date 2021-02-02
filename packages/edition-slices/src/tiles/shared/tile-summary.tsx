@@ -1,5 +1,5 @@
 import React, { useEffect, useState, ReactNode } from "react";
-import { Animated, StyleProp, ViewStyle } from "react-native";
+import { Animated, StyleProp, TextStyle, ViewStyle } from "react-native";
 import ArticleSummary, {
   ArticleSummaryContent,
   ArticleSummaryHeadline,
@@ -24,7 +24,7 @@ interface Props {
   bylineStyle?: StyleProp<ViewStyle>;
   flagColour?: any;
   flagsStyle?: StyleProp<ViewStyle>;
-  headlineStyle?: StyleProp<ViewStyle>;
+  headlineStyle?: StyleProp<TextStyle>;
   labelColour?: string;
   linesOfTeaserToRender?: number;
   strapline?: string;
