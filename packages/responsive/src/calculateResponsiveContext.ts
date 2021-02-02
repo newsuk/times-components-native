@@ -24,6 +24,6 @@ export const calculateResponsiveContext = (
   orientation: height > width ? Orientation.PORTRAIT : Orientation.LANDSCAPE,
   isPortrait: height > width,
   isLandscape: width > height,
-  sectionContentWidth: 820,
-  sectionContentHeight: 836,
+  sectionContentWidth: width,
+  sectionContentHeight: height - 220,
 });
