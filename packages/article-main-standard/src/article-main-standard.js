@@ -13,6 +13,7 @@ import {
   getStandardTemplateCrop,
 } from "@times-components-native/utils";
 import { tabletWidth } from "@times-components-native/styleguide";
+import Caption from "@times-components-native/caption";
 import Context from "@times-components-native/context";
 import ArticleHeader from "./article-header/article-header";
 import ArticleMeta from "./article-meta/article-meta";
@@ -62,6 +63,12 @@ class ArticlePage extends Component {
                 getImageCrop={getStandardTemplateCrop}
                 onImagePress={onImagePress}
                 onVideoPress={onVideoPress}
+                renderCaption={({ caption }) => (
+                  <Caption
+                    {...caption}
+                    style={!isTablet && { container: styles.captionContainer }}
+                  />
+                )}
                 style={[styles.leadAsset, isTablet && styles.leadAssetTablet]}
                 width={Math.min(parentProps.width, tabletWidth)}
                 extraContent={getExtraImagesContent(article)}
