@@ -79,7 +79,7 @@ module.exports = {
     "react/jsx-filename-extension": [1, { "extensions": [".js", ".jsx", ".ts", ".tsx"] }],
     "react-hooks/rules-of-hooks": "error",
     "react-hooks/exhaustive-deps": "off",
-    "@typescript-eslint/no-unused-vars": ["warn", { "ignoreRestSiblings": true }],
+    "@typescript-eslint/no-unused-vars": ["error", { "ignoreRestSiblings": true }],
     "@typescript-eslint/no-inferrable-types": "off",
     "@typescript-eslint/no-non-null-assertion": "off",
     "@typescript-eslint/ban-ts-comment": "off",

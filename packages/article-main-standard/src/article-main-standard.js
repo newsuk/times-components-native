@@ -32,7 +32,6 @@ class ArticlePage extends Component {
   renderHeader(parentProps) {
     const {
       article,
-      onArticleRead,
       onAuthorPress,
       onImagePress,
       onTooltipPresented,
