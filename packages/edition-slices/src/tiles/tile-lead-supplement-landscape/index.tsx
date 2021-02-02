@@ -1,9 +1,6 @@
 /* eslint-disable react/require-default-props */
 import React, { FC } from "react";
-import {
-  colours,
-  editionBreakpoints,
-} from "@times-components-native/styleguide";
+import { editionBreakpoints } from "@times-components-native/styleguide";
 import {
   getTileImage,
   TileLink,
@@ -58,7 +55,6 @@ const TileLeadSupplementLandscape: FC<Props> = ({
           <TileSummary
             whiteSpaceHeight={whiteSpaceHeight}
             headlineStyle={styles.headline}
-            labelColour={colours.functional.brandColour}
             style={styles.summaryContainer}
             summary={getTileSummary(tile, 1000)}
             summaryStyle={styles.teaserText}

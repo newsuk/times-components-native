@@ -52,7 +52,7 @@ exports[`tile lead supplement landscape huge 1`] = `
           }
         >
           <ArticleLabel
-            color="#1D1D1B"
+            color="#005B8D"
             hide={false}
             isVideo={false}
             markAsRead={false}
@@ -164,7 +164,7 @@ exports[`tile lead supplement landscape medium 1`] = `
           }
         >
           <ArticleLabel
-            color="#1D1D1B"
+            color="#005B8D"
             hide={false}
             isVideo={false}
             markAsRead={false}
@@ -276,7 +276,7 @@ exports[`tile lead supplement landscape wide 1`] = `
           }
         >
           <ArticleLabel
-            color="#1D1D1B"
+            color="#005B8D"
             hide={false}
             isVideo={false}
             markAsRead={false}
