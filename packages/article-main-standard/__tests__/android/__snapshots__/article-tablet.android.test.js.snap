@@ -140,6 +140,7 @@ exports[`1. article main standard - tablet 1`] = `
         }
       >
         <ModalImage />
+        <Caption />
       </View>
     </View>
   </View>
