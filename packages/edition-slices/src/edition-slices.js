@@ -1,6 +1,3 @@
-import { getDimensions } from "@times-components-native/utils";
-import { tabletWidth } from "@times-components-native/styleguide";
-import { NativeModules } from "react-native";
 import {
   CommentLeadAndCartoonSlice,
   DailyRegisterLeadFourSlice,
@@ -32,16 +29,9 @@ import {
 } from "./slices";
 import { sectionConfigs } from "@times-components-native/section/src/utils";
 
-const config = (NativeModules || {}).ReactConfig;
-
-const { width } = getDimensions();
-const isTablet =
-  (config && config.breakpoint && config.breakpoint !== "small") ||
-  width > tabletWidth;
-
 const { sectionTitles } = sectionConfigs;
 
-const sliceMap = (isInSupplement, sectionTitle, orientation) => {
+const sliceMap = (isInSupplement, sectionTitle, orientation, isTablet) => {
   const isInTabletSupplement = isInSupplement && isTablet;
   return {
     CommentLeadAndCartoonSlice,
@@ -91,7 +81,8 @@ export const getSlice = (
   sliceName,
   sectionTitle,
   orientation,
-) => sliceMap(isInSupplement, sectionTitle, orientation)[sliceName];
+  isTablet,
+) => sliceMap(isInSupplement, sectionTitle, orientation, isTablet)[sliceName];
 
 const renderLeadTwoNoPicAndTwoSlice = (isTablet, sectionTitle, orientation) =>
   isTablet && sectionTitle === sectionTitles.sport && orientation === "portrait"

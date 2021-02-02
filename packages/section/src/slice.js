@@ -1,6 +1,6 @@
+import { getSlice } from "@times-components-native/edition-slices";
 import React from "react";
 import PropTypes from "prop-types";
-import { getSlice } from "@times-components-native/edition-slices";
 import withSliceTrackingContext from "./slice-tracking-context";
 
 const Slice = ({
@@ -12,12 +12,14 @@ const Slice = ({
   adConfig,
   sectionTitle,
   orientation,
+  isTablet,
 }) => {
   const Component = getSlice(
     isInSupplement,
     slice.name,
     sectionTitle,
     orientation,
+    isTablet,
   );
   return Component ? (
     <Component
