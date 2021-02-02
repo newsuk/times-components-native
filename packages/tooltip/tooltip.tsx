@@ -57,13 +57,17 @@ const Tooltip: React.FC<Props> = ({
   };
 
   const closeButton = (
-    <TouchableOpacity onPress={onClosePress} style={styles.close}>
+    <TouchableOpacity
+      onPress={onClosePress}
+      style={styles.close}
+      testID="closeButton"
+    >
       <View style={styles.crossDiagonal1} />
       <View style={styles.crossDiagonal2} />
     </TouchableOpacity>
   );
 
-  if (displayedInView && onTooltipPresented) {
+  if (isTablet && displayedInView && onTooltipPresented) {
     onTooltipPresented(type, articleId);
   }
 
@@ -71,6 +75,7 @@ const Tooltip: React.FC<Props> = ({
     <View style={styles.wrapper}>
       {tooltips.includes(type) && isTablet && (
         <ViewportAwareView
+          testID="viewportAwareView"
           onViewportEnter={() => {
             onTooltipPresented(type, articleId);
           }}

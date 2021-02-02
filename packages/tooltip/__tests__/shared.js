@@ -1,7 +1,6 @@
 import Tooltip from "../tooltip";
 import TestRenderer from "react-test-renderer";
 import { ResponsiveContext } from "@times-components-native/responsive";
-import { shallow } from "enzyme";
 import React from "react";
 import { Text } from "react-native";
 import "./serializers-with-all-styles";
@@ -25,15 +24,17 @@ export default () => {
 
     it("renders correctly when type is in tooltips array", () => {
       const output = TestRenderer.create(
-        <Tooltip
-          content={<Text>foo</Text>}
-          onTooltipPresented={onTooltipPresentedMock}
-          type="testtype"
-          tooltips={["testtype"]}
-          articleId={mockArticleId}
-        >
-          bar
-        </Tooltip>,
+        withTabletContext(
+          <Tooltip
+            content={<Text>foo</Text>}
+            onTooltipPresented={onTooltipPresentedMock}
+            type="testtype"
+            tooltips={["testtype"]}
+            articleId={mockArticleId}
+          >
+            bar
+          </Tooltip>,
+        ),
       );
       expect(output).toMatchSnapshot();
     });
@@ -46,6 +47,7 @@ export default () => {
             onTooltipPresented={onTooltipPresentedMock}
             type="testtype"
             tooltips={[""]}
+            articleId={mockArticleId}
           >
             bar
           </Tooltip>,
@@ -74,99 +76,113 @@ export default () => {
 
     it("renders correctly with supplied width", () => {
       const output = TestRenderer.create(
-        <Tooltip
-          content={<Text>foo</Text>}
-          onTooltipPresented={onTooltipPresentedMock}
-          type="testtype"
-          tooltips={["testtype"]}
-          articleId={mockArticleId}
-          width={100}
-        >
-          bar
-        </Tooltip>,
+        withTabletContext(
+          <Tooltip
+            content={<Text>foo</Text>}
+            onTooltipPresented={onTooltipPresentedMock}
+            type="testtype"
+            tooltips={["testtype"]}
+            width={100}
+            articleId={mockArticleId}
+          >
+            bar
+          </Tooltip>,
+        ),
       );
       expect(output).toMatchSnapshot();
     });
 
     it("renders correctly with supplied placement top", () => {
       const output = TestRenderer.create(
-        <Tooltip
-          content={<Text>foo</Text>}
-          onTooltipPresented={onTooltipPresentedMock}
-          type="testtype"
-          tooltips={["testtype"]}
-          articleId={mockArticleId}
-          placement="top"
-        >
-          bar
-        </Tooltip>,
+        withTabletContext(
+          <Tooltip
+            content={<Text>foo</Text>}
+            onTooltipPresented={onTooltipPresentedMock}
+            type="testtype"
+            tooltips={["testtype"]}
+            placement="top"
+            articleId={mockArticleId}
+          >
+            bar
+          </Tooltip>,
+        ),
       );
       expect(output).toMatchSnapshot();
     });
 
     it("renders correctly with supplied placement right", () => {
       const output = TestRenderer.create(
-        <Tooltip
-          content={<Text>foo</Text>}
-          onTooltipPresented={onTooltipPresentedMock}
-          type="testtype"
-          tooltips={["testtype"]}
-          articleId={mockArticleId}
-          placement="right"
-        >
-          bar
-        </Tooltip>,
+        withTabletContext(
+          <Tooltip
+            content={<Text>foo</Text>}
+            onTooltipPresented={onTooltipPresentedMock}
+            type="testtype"
+            tooltips={["testtype"]}
+            placement="right"
+            articleId={mockArticleId}
+          >
+            bar
+          </Tooltip>,
+        ),
       );
       expect(output).toMatchSnapshot();
     });
 
     it("renders correctly with supplied offsets", () => {
       const output = TestRenderer.create(
-        <Tooltip
-          content={<Text>foo</Text>}
-          onTooltipPresented={onTooltipPresentedMock}
-          type="testtype"
-          tooltips={["testtype"]}
-          articleId={mockArticleId}
-          offsetX={10}
-          offsetY={10}
-          arrowOffset={10}
-        >
-          bar
-        </Tooltip>,
+        withTabletContext(
+          <Tooltip
+            content={<Text>foo</Text>}
+            onTooltipPresented={onTooltipPresentedMock}
+            type="testtype"
+            tooltips={["testtype"]}
+            offsetX={10}
+            offsetY={10}
+            arrowOffset={10}
+            articleId={mockArticleId}
+          >
+            bar
+          </Tooltip>,
+        ),
       );
       expect(output).toMatchSnapshot();
     });
 
     it("onTooltipPresented is called correctly on Viewport Enter", async () => {
-      const testInstance = shallow(
-        <Tooltip
-          content={<Text>foo</Text>}
-          onTooltipPresented={onTooltipPresentedMock}
-          type="testtype"
-          tooltips={["testtype"]}
-          articleId={mockArticleId}
-        >
-          bar
-        </Tooltip>,
+      const output = TestRenderer.create(
+        withTabletContext(
+          <Tooltip
+            content={<Text>foo</Text>}
+            onTooltipPresented={onTooltipPresentedMock}
+            type="testtype"
+            tooltips={["testtype"]}
+            articleId={mockArticleId}
+          >
+            bar
+          </Tooltip>,
+        ),
       );
-      testInstance.children().at(0).props().onViewportEnter();
-
+      const viewportAwareView = output.root.findByProps({
+        testID: "viewportAwareView",
+      });
+      viewportAwareView.props.onViewportEnter();
       expect(onTooltipPresentedMock).toBeCalledWith("testtype", mockArticleId);
     });
 
     it("onTooltipPresented is called correctly if tooltip is displayed in view", async () => {
-      shallow(
-        <Tooltip
-          content={<Text>foo</Text>}
-          displayedInView={true}
-          onTooltipPresented={onTooltipPresentedMock}
-          type="testtype"
-          tooltips={["testtype"]}
-          articleId={mockArticleId}
-        >
-          bar
-        </Tooltip>,
+      TestRenderer.create(
+        withTabletContext(
+          <Tooltip
+            content={<Text>foo</Text>}
+            displayedInView={true}
+            onTooltipPresented={onTooltipPresentedMock}
+            type="testtype"
+            tooltips={["testtype"]}
+            articleId={mockArticleId}
+          >
+            bar
+          </Tooltip>,
+        ),
       );
 
       expect(onTooltipPresentedMock).toBeCalledWith("testtype", mockArticleId);

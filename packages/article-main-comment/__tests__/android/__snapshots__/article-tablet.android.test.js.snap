@@ -9,7 +9,7 @@ exports[`1. article main comment - tablet 1`] = `
         "marginBottom": 0,
         "paddingBottom": 20,
         "paddingTop": 35,
-        "width": 660,
+        "width": 768,
       }
     }
   >
@@ -20,7 +20,7 @@ exports[`1. article main comment - tablet 1`] = `
           "alignSelf": "center",
           "paddingLeft": 10,
           "paddingRight": 10,
-          "width": 660,
+          "width": 768,
         }
       }
     >
