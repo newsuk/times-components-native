@@ -26,7 +26,6 @@ import { useResponsiveContext } from "@times-components-native/responsive";
 import { toSubscript, toSuperscript } from "@times-components-native/utils";
 
 export default ({
-  data,
   interactiveConfig,
   onLinkPress,
   onTwitterLinkPress,
@@ -35,8 +34,6 @@ export default ({
   isTablet,
   adConfig,
   images = [],
-  dropcapsDisabled,
-  dropCapFont = "dropCap",
   scale,
   analyticsStream,
   narrowContent,
@@ -167,12 +164,9 @@ export default ({
           index={index}
           tree={tree}
           scale={scale}
-          dropcapsDisabled={dropcapsDisabled}
           isTablet={isTablet}
           defaultFont={defaultFont}
           onLinkPress={onLinkPress}
-          data={data}
-          dropCapFont={dropCapFont}
           narrowContent={narrowContent}
           onParagraphTextLayout={onParagraphTextLayout}
         >

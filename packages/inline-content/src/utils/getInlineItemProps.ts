@@ -2,6 +2,7 @@ import {
   InlineAdProps,
   InlineArticleImageProps,
   InlineContentProps,
+  InlineDropCapProps,
   InlineItemProps,
   InlinePullQuoteProps,
 } from "../types";
@@ -14,6 +15,34 @@ export const getInlineItemProps = (
 
   if (originalName === "ad") {
     return props as InlineAdProps;
+  }
+
+  if (originalName === "dropcap") {
+    const {
+      dropCapColor,
+      dropCapFont,
+      dropCapFontSize,
+      dropCapText,
+      height,
+      originalName,
+      narrowContent,
+      skeletonProps,
+      width,
+    } = props as InlineDropCapProps;
+
+    const scale = skeletonProps.scale as string;
+
+    return {
+      dropCapColor,
+      dropCapFont,
+      dropCapFontSize,
+      dropCapText,
+      height,
+      originalName,
+      narrowContent,
+      scale,
+      width,
+    };
   }
 
   if (originalName === "image") {
