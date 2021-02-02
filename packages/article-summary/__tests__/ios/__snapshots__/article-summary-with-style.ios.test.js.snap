@@ -143,7 +143,7 @@ exports[`2. article summary content component with the given style 1`] = `
 
 exports[`3. article summary content component with white space height and lineheight 1`] = `
 <Text
-  numberOfLines={4}
+  numberOfLines={3}
   style={
     Object {
       "color": "#696969",
