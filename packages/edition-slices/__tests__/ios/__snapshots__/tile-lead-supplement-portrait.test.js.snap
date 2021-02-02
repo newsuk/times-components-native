@@ -1,24 +1,23 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`tile lead supplement portrait portrait medium 1`] = `
+exports[`tile lead supplement portrait medium 1`] = `
 <Link
   linkStyle={
     Object {
       "borderBottomColor": "#DBDBDB",
       "borderBottomWidth": 1,
       "flex": 1,
-      "marginHorizontal": -30,
     }
   }
 >
   <Image
-    aspectRatio={1.5}
+    aspectRatio={1.25}
     style={
       Object {
         "width": "100%",
       }
     }
-    uri="https://www.thetimes.co.uk/imageserver/image/methode%2Ftimes%2Fprod%2Fweb%2Fbin%2Fd3abdbfc-1776-11e6-b4ba-d249b128bacc.jpg?crop=620%2C348%2C0%2C32"
+    uri="https://www.thetimes.co.uk/imageserver/image/%2Fmethode%2Ftimes%2Fprod%2Fweb%2Fbin%2F5a14c64e-06db-11e9-abe2-4909b2eb0130.jpg?crop=1250%2C1000%2C627%2C0"
   />
   <View
     style={
@@ -26,6 +25,7 @@ exports[`tile lead supplement portrait portrait medium 1`] = `
         "alignItems": "center",
         "backgroundColor": "#F0F0F0",
         "flex": 1,
+        "height": 180,
         "justifyContent": "center",
         "paddingHorizontal": 50,
         "paddingVertical": 20,
@@ -59,7 +59,6 @@ exports[`tile lead supplement portrait portrait medium 1`] = `
           "includeFontPadding": false,
           "lineHeight": 40,
           "marginBottom": 10,
-          "marginHorizontal": 30,
           "textAlign": "center",
         }
       }
@@ -81,25 +80,24 @@ exports[`tile lead supplement portrait portrait medium 1`] = `
 </Link>
 `;
 
-exports[`tile lead supplement portrait portrait wide 1`] = `
+exports[`tile lead supplement portrait wide 1`] = `
 <Link
   linkStyle={
     Object {
       "borderBottomColor": "#DBDBDB",
       "borderBottomWidth": 1,
       "flex": 1,
-      "marginHorizontal": -50,
     }
   }
 >
   <Image
-    aspectRatio={1.5}
+    aspectRatio={1.25}
     style={
       Object {
         "width": "100%",
       }
     }
-    uri="https://www.thetimes.co.uk/imageserver/image/methode%2Ftimes%2Fprod%2Fweb%2Fbin%2Fd3abdbfc-1776-11e6-b4ba-d249b128bacc.jpg?crop=620%2C348%2C0%2C32"
+    uri="https://www.thetimes.co.uk/imageserver/image/%2Fmethode%2Ftimes%2Fprod%2Fweb%2Fbin%2F5a14c64e-06db-11e9-abe2-4909b2eb0130.jpg?crop=1250%2C1000%2C627%2C0"
   />
   <View
     style={
@@ -107,6 +105,7 @@ exports[`tile lead supplement portrait portrait wide 1`] = `
         "alignItems": "center",
         "backgroundColor": "#F0F0F0",
         "flex": 1,
+        "height": 180,
         "justifyContent": "center",
         "paddingHorizontal": 140,
         "paddingVertical": 20,
@@ -140,7 +139,6 @@ exports[`tile lead supplement portrait portrait wide 1`] = `
           "includeFontPadding": false,
           "lineHeight": 45,
           "marginBottom": 10,
-          "marginHorizontal": 50,
           "textAlign": "center",
         }
       }
