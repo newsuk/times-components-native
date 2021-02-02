@@ -17,6 +17,7 @@ import WithoutWhiteSpace from "@times-components-native/edition-slices/src/tiles
 import { useResponsiveContext } from "@times-components-native/responsive";
 import { OnArticlePress } from "@times-components-native/types";
 import { Tile } from "@times-components-native/fixture-generator/src/types";
+import { getTileSummary } from "@times-components-native/edition-slices/src/tiles/shared";
 
 interface Props {
   onPress: OnArticlePress;
@@ -59,7 +60,7 @@ const TileLeadSupplementLandscape: FC<Props> = ({
             headlineStyle={styles.headline}
             labelColour={colours.functional.brandColour}
             style={styles.summaryContainer}
-            summary={tile.article.content}
+            summary={getTileSummary(tile, 1000)}
             summaryStyle={styles.teaserText}
             tile={tile}
             centeredStar
