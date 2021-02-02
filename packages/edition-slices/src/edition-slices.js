@@ -29,8 +29,11 @@ import {
   SupplementSecondaryTwoAndTwoSlice,
 } from "./slices";
 import { sectionConfigs } from "@times-components-native/section/src/utils";
+import { Platform } from "react-native";
 
 const { sectionTitles } = sectionConfigs;
+
+const isIOS = Platform.OS === "ios";
 
 const sliceMap = (isInSupplement, sectionTitle, orientation, isTablet) => {
   const isInTabletSupplement = isInSupplement && isTablet;
@@ -39,7 +42,9 @@ const sliceMap = (isInSupplement, sectionTitle, orientation, isTablet) => {
     DailyUniversalRegister: DailyRegisterLeadFourSlice,
     LeadersSlice,
     LeadOneAndFourSlice: isInTabletSupplement
-      ? SupplementLeadOneAndFourV2Slice
+      ? isIOS
+        ? SupplementLeadOneAndFourV2Slice
+        : SupplementLeadOneAndFourSlice
       : LeadOneAndFourSlice,
     LeadOneAndOneSlice: isInTabletSupplement
       ? SupplementLeadOneAndOneSlice
