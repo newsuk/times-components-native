@@ -32,9 +32,6 @@ const wideBreakpointStyles = {
   landscapeSupportContainer: {
     marginHorizontal: spacing(4),
   },
-  portraitSupportContainer: {
-    marginHorizontal: spacing(2),
-  },
 };
 
 const hugeBreakpointStyles = {
