@@ -4485,7 +4485,7 @@ exports[`58. supplement lead one and four slice v2 - wide 1`] = `
     <View
       style={
         Object {
-          "marginHorizontal": 10,
+          "marginHorizontal": 20,
         }
       }
     >
@@ -7631,7 +7631,7 @@ exports[`95. supplement lead one and four slice v2 - huge 1`] = `
       <View
         style={
           Object {
-            "marginHorizontal": 10,
+            "marginHorizontal": 20,
           }
         }
       >
