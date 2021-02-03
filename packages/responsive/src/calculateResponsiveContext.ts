@@ -12,6 +12,7 @@ export const calculateResponsiveContext = (
   width: number,
   height: number,
   fontScale: number,
+  contentSize?: { width: number; height: number },
 ): ContextType => ({
   editionBreakpoint: getEditionBreakpoint(width),
   narrowArticleBreakpoint: getNarrowArticleBreakpoint(width),
@@ -24,6 +25,6 @@ export const calculateResponsiveContext = (
   orientation: height > width ? Orientation.PORTRAIT : Orientation.LANDSCAPE,
   isPortrait: height > width,
   isLandscape: width > height,
-  sectionContentWidth: width,
-  sectionContentHeight: height - 220,
+  sectionContentWidth: contentSize?.width ?? 0, // todo remove `?? 0` once android also passes contentSize
+  sectionContentHeight: contentSize?.height ?? 0,
 });
