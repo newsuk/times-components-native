@@ -59,7 +59,7 @@ exports[`1. article summary component with a single paragraph 1`] = `
     }
   >
     <Text>
-
+      
       Test paragraph
       ...
     </Text>
@@ -134,7 +134,7 @@ exports[`2. article summary content component with the given style 1`] = `
   }
 >
   <Text>
-
+    
     Test
     ...
   </Text>
@@ -156,7 +156,7 @@ exports[`3. article summary content component with white space height and linehe
   }
 >
   <Text>
-
+    
     Test
     ...
   </Text>
@@ -178,7 +178,7 @@ exports[`4. article summary content component without white space height 1`] = `
   }
 >
   <Text>
-
+    
     Test
     ...
   </Text>
