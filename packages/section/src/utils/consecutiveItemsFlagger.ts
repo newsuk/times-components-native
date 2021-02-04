@@ -18,7 +18,7 @@ const doesListIncludePair = (
   pairs: Pair[],
   previousName: string,
   currentName: string,
-) => consecutivePairs.some(([a, b]) => previousName == a && currentName == b);
+) => pairs.some(([a, b]) => previousName == a && currentName == b);
 
 const isConsecutivePair = (
   currentName: string,
