@@ -493,7 +493,7 @@ exports[`tablet full article with style in the culture magazine 1`] = `
       style={
         Object {
           "alignItems": "center",
-          "width": 768,
+          "width": 660,
         }
       }
     >
@@ -562,7 +562,7 @@ exports[`tablet full article with style in the culture magazine 1`] = `
         "marginHorizontal": 10,
         "marginVertical": 20,
         "paddingVertical": 10,
-        "width": 768,
+        "width": 660,
       }
     }
   >
@@ -646,7 +646,7 @@ exports[`tablet full article with style in the style magazine 1`] = `
       style={
         Object {
           "alignItems": "center",
-          "width": 768,
+          "width": 660,
         }
       }
     >
@@ -716,7 +716,7 @@ exports[`tablet full article with style in the style magazine 1`] = `
         "marginHorizontal": 10,
         "marginVertical": 20,
         "paddingVertical": 10,
-        "width": 768,
+        "width": 660,
       }
     }
   >
@@ -800,7 +800,7 @@ exports[`tablet full article with style in the sunday times magazine 1`] = `
       style={
         Object {
           "alignItems": "center",
-          "width": 768,
+          "width": 660,
         }
       }
     >
@@ -869,7 +869,7 @@ exports[`tablet full article with style in the sunday times magazine 1`] = `
         "marginHorizontal": 10,
         "marginVertical": 20,
         "paddingVertical": 10,
-        "width": 768,
+        "width": 660,
       }
     }
   >
