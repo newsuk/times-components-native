@@ -10,14 +10,19 @@ import {
 } from "../shared";
 import stylesFactory from "./styles";
 
-const TileY = ({ onPress, tile, breakpoint = editionBreakpoints.medium }) => {
-  const styles = stylesFactory(breakpoint);
+const TileY = ({
+  onPress,
+  tile,
+  breakpoint = editionBreakpoints.medium,
+  orientation,
+}) => {
+  const styles = stylesFactory(breakpoint, orientation);
 
   return (
     <TileLink onPress={onPress} style={styles.container} tile={tile}>
       <TileSummary
         headlineStyle={styles.headline}
-        summary={getTileSummary(tile, 300)}
+        summary={getTileSummary(tile, orientation === "portrait" ? 1000 : 300)}
         summaryStyle={styles.summary}
         tile={tile}
       />

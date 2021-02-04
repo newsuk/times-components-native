@@ -12,8 +12,13 @@ import stylesFactory from "./styles";
 import WithoutWhiteSpace from "../shared/without-white-space";
 import PositionedTileStar from "../shared/positioned-tile-star";
 
-const TileX = ({ onPress, tile, breakpoint = editionBreakpoints.medium }) => {
-  const styles = stylesFactory(breakpoint);
+const TileX = ({
+  onPress,
+  tile,
+  breakpoint = editionBreakpoints.medium,
+  orientation,
+}) => {
+  const styles = stylesFactory(breakpoint, orientation);
 
   return (
     <TileLink onPress={onPress} style={styles.container} tile={tile}>
