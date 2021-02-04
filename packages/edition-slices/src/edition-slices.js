@@ -35,40 +35,57 @@ const { sectionTitles } = sectionConfigs;
 
 const isIOS = Platform.OS === "ios";
 
+const selectLeadOneAndFourSlice = (isInTabletSupplement) =>
+  isInTabletSupplement
+    ? isIOS
+      ? SupplementLeadOneAndFourV2Slice
+      : SupplementLeadOneAndFourSlice
+    : LeadOneAndFourSlice;
+
+const selectLeadOneAndOneSlice = (isInTabletSupplement) =>
+  isInTabletSupplement ? SupplementLeadOneAndOneSlice : LeadOneAndOneSlice;
+
+const selectSecondaryFourSlice = (isInTabletSupplement) =>
+  isInTabletSupplement ? SupplementSecondaryFourSlice : SecondaryFourSlice;
+
+const selectSecondaryOneSlice = (isInTabletSupplement) =>
+  isInTabletSupplement ? SupplementSecondaryOneSlice : SecondaryOneSlice;
+
+const selectSecondaryTwoAndTwoSlice = (isTablet, isInSupplement) =>
+  isTablet
+    ? isInSupplement
+      ? SupplementSecondaryTwoAndTwoSlice
+      : SecondaryTwoNoPicAndTwoSlice
+    : SecondaryTwoAndTwoSlice;
+
+const selectLeadTwoNoPicAndTwoSlice = (isTablet, sectionTitle, orientation) =>
+  isTablet && sectionTitle === sectionTitles.sport && orientation === "portrait"
+    ? LeadTwoNoPicAndTwoVariant2Slice
+    : LeadTwoNoPicAndTwoSlice;
+
 const sliceMap = (isInSupplement, sectionTitle, orientation, isTablet) => {
   const isInTabletSupplement = isInSupplement && isTablet;
   return {
     CommentLeadAndCartoonSlice,
     DailyUniversalRegister: DailyRegisterLeadFourSlice,
     LeadersSlice,
-    LeadOneAndFourSlice: isInTabletSupplement
-      ? isIOS
-        ? SupplementLeadOneAndFourV2Slice
-        : SupplementLeadOneAndFourSlice
-      : LeadOneAndFourSlice,
-    LeadOneAndOneSlice: isInTabletSupplement
-      ? SupplementLeadOneAndOneSlice
-      : LeadOneAndOneSlice,
+    LeadOneAndFourSlice: selectLeadOneAndFourSlice(isInTabletSupplement),
+    LeadOneAndOneSlice: selectLeadOneAndOneSlice(isInTabletSupplement),
     LeadOneFullWidthSlice,
-    LeadTwoNoPicAndTwoSlice: renderLeadTwoNoPicAndTwoSlice(
+    LeadTwoNoPicAndTwoSlice: selectLeadTwoNoPicAndTwoSlice(
       isTablet,
       sectionTitle,
       orientation,
     ),
     Puzzle: PuzzleSlice,
-    SecondaryFourSlice: isInTabletSupplement
-      ? SupplementSecondaryFourSlice
-      : SecondaryFourSlice,
+    SecondaryFourSlice: selectSecondaryFourSlice(isInTabletSupplement),
     SecondaryOneAndColumnistSlice,
     SecondaryOneAndFourSlice,
-    SecondaryOneSlice: isInTabletSupplement
-      ? SupplementSecondaryOneSlice
-      : SecondaryOneSlice,
-    SecondaryTwoAndTwoSlice: isTablet
-      ? isInSupplement
-        ? SupplementSecondaryTwoAndTwoSlice
-        : SecondaryTwoNoPicAndTwoSlice
-      : SecondaryTwoAndTwoSlice,
+    SecondaryOneSlice: selectSecondaryOneSlice(isInTabletSupplement),
+    SecondaryTwoAndTwoSlice: selectSecondaryTwoAndTwoSlice(
+      isTablet,
+      isInSupplement,
+    ),
     SecondaryTwoNoPicAndTwoSlice,
     StandardSlice,
     TwoPicAndSixNoPicSlice: ListTwoAndSixNoPicSlice,
@@ -89,8 +106,3 @@ export const getSlice = (
   orientation,
   isTablet,
 ) => sliceMap(isInSupplement, sectionTitle, orientation, isTablet)[sliceName];
-
-const renderLeadTwoNoPicAndTwoSlice = (isTablet, sectionTitle, orientation) =>
-  isTablet && sectionTitle === sectionTitles.sport && orientation === "portrait"
-    ? LeadTwoNoPicAndTwoVariant2Slice
-    : LeadTwoNoPicAndTwoSlice;
