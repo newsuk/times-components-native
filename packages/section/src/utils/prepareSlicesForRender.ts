@@ -6,9 +6,10 @@ import { consecutiveItemsFlagger } from "./consecutiveItemsFlagger";
 export const prepareSlicesForRender = (
   isTablet: boolean,
   sectionTitle: string,
+  orientation: string,
 ) =>
   pipe(
     buildSliceData(isTablet, sectionTitle),
-    consecutiveItemsFlagger,
+    consecutiveItemsFlagger(orientation),
     insertSectionAd(isTablet),
   );
