@@ -93,14 +93,6 @@ const sizes = {
       width: 970,
     },
   ],
-  leaderboard: [
-    {
-      orientation: ["landscape", "portrait"],
-      height: 90,
-      sizes: [leaderboard],
-      width: 728,
-    },
-  ],
   singleMPU: [
     {
       orientation: ["landscape", "portrait"],
