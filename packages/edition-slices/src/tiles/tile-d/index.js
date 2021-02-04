@@ -11,11 +11,10 @@ import {
   getTileSummary,
   TileImage,
 } from "../shared";
-import stylesFactory from "./styles";
+import styles from "./styles";
 
 const TileD = ({ onPress, tile, breakpoint = editionBreakpoints.small }) => {
   const crop = getTileImage(tile, "crop32");
-  const styles = stylesFactory(breakpoint);
 
   if (!crop) {
     return null;
