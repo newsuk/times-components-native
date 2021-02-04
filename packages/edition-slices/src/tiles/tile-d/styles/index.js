@@ -49,7 +49,7 @@ const mediumWideBreakpointStyles = {
 };
 
 const stylesResolver = {
-  [editionBreakpoints.small]: smallBreakpointStyles,
+  [editionBreakpoints.small]: mediumWideBreakpointStyles,
   [editionBreakpoints.medium]: mediumWideBreakpointStyles,
   [editionBreakpoints.wide]: mediumWideBreakpointStyles,
 };

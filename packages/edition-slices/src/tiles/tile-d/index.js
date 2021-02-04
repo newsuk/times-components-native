@@ -43,7 +43,7 @@ const TileD = ({ onPress, tile, breakpoint = editionBreakpoints.small }) => {
           <TileSummary
             headlineStyle={styles.headline}
             style={styles.summaryContainer}
-            summary={getTileSummary(tile, 125)}
+            summary={getTileSummary(tile, breakpoint === "wide" ? 125 : 0)}
             summaryStyle={styles.summary}
             tile={tile}
             whiteSpaceHeight={whiteSpaceHeight}
