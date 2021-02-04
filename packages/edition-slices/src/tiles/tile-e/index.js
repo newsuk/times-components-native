@@ -13,9 +13,14 @@ import {
 import stylesFactory from "./styles";
 import WithoutWhiteSpace from "../shared/without-white-space";
 
-const TileE = ({ onPress, tile, breakpoint = editionBreakpoints.small }) => {
+const TileE = ({
+  onPress,
+  tile,
+  breakpoint = editionBreakpoints.small,
+  orientation,
+}) => {
   const crop = getTileImage(tile, "crop45");
-  const styles = stylesFactory(breakpoint);
+  const styles = stylesFactory(breakpoint, orientation);
 
   if (!crop) {
     return null;

@@ -139,11 +139,13 @@ exports[`6. lead two no pic and two - medium 1`] = `
     <View>
       <TileX
         breakpoint="medium"
+        orientation="landscape"
         tileName="lead1"
       />
       <View />
       <TileY
         breakpoint="medium"
+        orientation="landscape"
         tileName="lead2"
       />
     </View>
@@ -158,6 +160,7 @@ exports[`6. lead two no pic and two - medium 1`] = `
     <View>
       <TileE
         breakpoint="medium"
+        orientation="landscape"
         tileName="support2"
       />
     </View>
@@ -171,11 +174,13 @@ exports[`7. lead two no pic and two - medium 1`] = `
     <View>
       <TileX
         breakpoint="medium"
+        orientation="portrait"
         tileName="lead1"
       />
       <View />
       <TileY
         breakpoint="medium"
+        orientation="portrait"
         tileName="lead2"
       />
     </View>
@@ -183,6 +188,7 @@ exports[`7. lead two no pic and two - medium 1`] = `
     <View>
       <TileE
         breakpoint="medium"
+        orientation="portrait"
         tileName="support2"
       />
       <View />
@@ -1350,11 +1356,13 @@ exports[`43. lead two no pic and two - wide 1`] = `
     <View>
       <TileX
         breakpoint="wide"
+        orientation="landscape"
         tileName="lead1"
       />
       <View />
       <TileY
         breakpoint="wide"
+        orientation="landscape"
         tileName="lead2"
       />
     </View>
@@ -1369,6 +1377,7 @@ exports[`43. lead two no pic and two - wide 1`] = `
     <View>
       <TileE
         breakpoint="wide"
+        orientation="landscape"
         tileName="support2"
       />
     </View>
@@ -1382,11 +1391,13 @@ exports[`44. lead two no pic and two - wide 1`] = `
     <View>
       <TileX
         breakpoint="wide"
+        orientation="portrait"
         tileName="lead1"
       />
       <View />
       <TileY
         breakpoint="wide"
+        orientation="portrait"
         tileName="lead2"
       />
     </View>
@@ -1394,6 +1405,7 @@ exports[`44. lead two no pic and two - wide 1`] = `
     <View>
       <TileE
         breakpoint="wide"
+        orientation="portrait"
         tileName="support2"
       />
       <View />
@@ -2586,11 +2598,13 @@ exports[`80. lead two no pic and two - huge 1`] = `
       <View>
         <TileX
           breakpoint="huge"
+          orientation="landscape"
           tileName="lead1"
         />
         <View />
         <TileY
           breakpoint="huge"
+          orientation="landscape"
           tileName="lead2"
         />
       </View>
@@ -2605,6 +2619,7 @@ exports[`80. lead two no pic and two - huge 1`] = `
       <View>
         <TileE
           breakpoint="huge"
+          orientation="landscape"
           tileName="support2"
         />
       </View>
@@ -2620,11 +2635,13 @@ exports[`81. lead two no pic and two - huge 1`] = `
       <View>
         <TileX
           breakpoint="huge"
+          orientation="portrait"
           tileName="lead1"
         />
         <View />
         <TileY
           breakpoint="huge"
+          orientation="portrait"
           tileName="lead2"
         />
       </View>
@@ -2632,6 +2649,7 @@ exports[`81. lead two no pic and two - huge 1`] = `
       <View>
         <TileE
           breakpoint="huge"
+          orientation="portrait"
           tileName="support2"
         />
         <View />

@@ -5,20 +5,43 @@ import { TileY } from "../../src/tiles";
 
 export default () => {
   describe("tile y", () => {
-    it("medium", () => {
-      testTile(TileY, editionBreakpoints.medium);
-    });
+    describe("portrait", () => {
+      it("medium", () => {
+        testTile(TileY, editionBreakpoints.medium, undefined, {
+          orientation: "portrait",
+        });
+      });
 
-    it("wide", () => {
-      testTile(TileY, editionBreakpoints.wide);
-    });
+      it("wide", () => {
+        testTile(TileY, editionBreakpoints.wide, undefined, {
+          orientation: "portrait",
+        });
+      });
 
-    it("huge", () => {
-      testTile(TileY, editionBreakpoints.huge);
+      it("huge", () => {
+        testTile(TileY, editionBreakpoints.huge, undefined, {
+          orientation: "portrait",
+        });
+      });
     });
+    describe("landscape", () => {
+      it("medium", () => {
+        testTile(TileY, editionBreakpoints.medium, undefined, {
+          orientation: "landscape",
+        });
+      });
 
-    it("without breakpoint should be like medium", () => {
-      testTile(TileY);
+      it("wide", () => {
+        testTile(TileY, editionBreakpoints.wide, undefined, {
+          orientation: "landscape",
+        });
+      });
+
+      it("huge", () => {
+        testTile(TileY, editionBreakpoints.huge, undefined, {
+          orientation: "landscape",
+        });
+      });
     });
   });
 };

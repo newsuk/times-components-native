@@ -7,12 +7,21 @@ import {
 } from "@times-components-native/styleguide";
 
 const fontSizeResolver = {
-  [editionBreakpoints.medium]: 40,
-  [editionBreakpoints.wide]: 40,
-  [editionBreakpoints.huge]: 45,
+  [editionBreakpoints.medium]: {
+    portrait: 40,
+    landscape: 40,
+  },
+  [editionBreakpoints.wide]: {
+    portrait: 50,
+    landscape: 40,
+  },
+  [editionBreakpoints.huge]: {
+    portrait: 45,
+    landscape: 45,
+  },
 };
 
-export default (breakpoint) => ({
+export default (breakpoint, orientation) => ({
   container: {
     flex: 1,
     padding: spacing(2),
@@ -21,8 +30,8 @@ export default (breakpoint) => ({
   headline: {
     ...globalSpacingStyles.tabletHeadline,
     fontFamily: fonts.headline,
-    fontSize: fontSizeResolver[breakpoint],
-    lineHeight: fontSizeResolver[breakpoint],
+    fontSize: fontSizeResolver[breakpoint][orientation],
+    lineHeight: fontSizeResolver[breakpoint][orientation],
   },
   strapline: {
     fontFamily: fonts.headlineRegular,
