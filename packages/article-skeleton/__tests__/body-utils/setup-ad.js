@@ -51,7 +51,7 @@ export default () => {
       ).toEqual(contentWithoutAd);
     });
 
-    it("should remove ad if tablet and template is not mainstandard", () => {
+    it("should remove ad if tablet and template is not supported template", () => {
       const contentWithoutAd = content.filter((item) => item.name !== "ad");
       expect(
         setupAd({
@@ -73,23 +73,40 @@ export default () => {
   });
 
   describe("setupArticleMpuAd", () => {
-    it("should return content with an inline double mpu ad present and attributes overriden when no non-paragraph content within threshold", () => {
-      const longContent = [
+    it("should return content with ad removed if less than 6 paragraphs", () => {
+      const shortContent = [
         createParagraph("a"),
         createParagraph("b"),
         createParagraph("c"),
         createParagraph("d"),
         createParagraph("e"),
         { name: "ad", children: [] },
+      ];
+
+      const newSkeletonProps = {
+        ...skeletonProps,
+        data: { ...skeletonProps.data, content: shortContent },
+      };
+
+      expect(setupAd(newSkeletonProps)).toEqual([
+        createParagraph("a"),
+        createParagraph("b"),
+        createParagraph("c"),
+        createParagraph("d"),
+        createParagraph("e"),
+      ]);
+    });
+
+    it("should return content with the inline single mpu ad present when between 6 and 7 paragraphs", () => {
+      const longContent = [
+        createParagraph("a"),
+        createParagraph("b"),
+        createParagraph("c"),
+        createParagraph("d"),
+        { name: "ad", children: [] },
+        createParagraph("e"),
         createParagraph("f"),
         createParagraph("g"),
-        createParagraph("h"),
-        createParagraph("i"),
-        createParagraph("j"),
-        createParagraph("k"),
-        createParagraph("l"),
-        { name: "image", children: [] },
-        createParagraph("m"),
       ];
 
       const newSkeletonProps = {
@@ -106,29 +123,22 @@ export default () => {
           name: "inlineContent",
           attributes: {
             width: 300,
-            height: 600,
-            slotName: "native-double-mpu",
+            height: 250,
+            slotName: "native-single-mpu",
             inlineContent: [
               createParagraph("e"),
               createParagraph("f"),
               createParagraph("g"),
-              createParagraph("h"),
-              createParagraph("i"),
-              createParagraph("j"),
-              createParagraph("k"),
             ],
             originalName: "ad",
             skeletonProps: newSkeletonProps,
           },
           children: [],
         },
-        createParagraph("l"),
-        { name: "image", children: [] },
-        createParagraph("m"),
       ]);
     });
 
-    it("should return content with the inline single mpu ad present when non-paragraph content within threshold", () => {
+    it("should return content with the inline single mpu ad present when 8 or more paragraphs and non-paragraph content within threshold", () => {
       const longContent = [
         createParagraph("a"),
         createParagraph("b"),
@@ -179,6 +189,61 @@ export default () => {
           children: [],
         },
         createParagraph("l"),
+        createParagraph("m"),
+      ]);
+    });
+
+    it("should return content with an inline double mpu ad present and attributes overriden when more than 8 and no non-paragraph content within threshold", () => {
+      const longContent = [
+        createParagraph("a"),
+        createParagraph("b"),
+        createParagraph("c"),
+        createParagraph("d"),
+        createParagraph("e"),
+        { name: "ad", children: [] },
+        createParagraph("f"),
+        createParagraph("g"),
+        createParagraph("h"),
+        createParagraph("i"),
+        createParagraph("j"),
+        createParagraph("k"),
+        createParagraph("l"),
+        { name: "image", children: [] },
+        createParagraph("m"),
+      ];
+
+      const newSkeletonProps = {
+        ...skeletonProps,
+        data: { ...skeletonProps.data, content: longContent },
+      };
+
+      expect(setupAd(newSkeletonProps)).toEqual([
+        createParagraph("a"),
+        createParagraph("b"),
+        createParagraph("c"),
+        createParagraph("d"),
+        {
+          name: "inlineContent",
+          attributes: {
+            width: 300,
+            height: 600,
+            slotName: "native-double-mpu",
+            inlineContent: [
+              createParagraph("e"),
+              createParagraph("f"),
+              createParagraph("g"),
+              createParagraph("h"),
+              createParagraph("i"),
+              createParagraph("j"),
+              createParagraph("k"),
+            ],
+            originalName: "ad",
+            skeletonProps: newSkeletonProps,
+          },
+          children: [],
+        },
+        createParagraph("l"),
+        { name: "image", children: [] },
         createParagraph("m"),
       ]);
     });
