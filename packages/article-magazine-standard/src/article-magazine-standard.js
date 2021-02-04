@@ -1,4 +1,5 @@
 /* eslint-disable consistent-return */
+
 import React, { Component } from "react";
 import { View } from "react-native";
 import ArticleError from "@times-components-native/article-error";

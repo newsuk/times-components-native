@@ -36,7 +36,7 @@ exports[`1. with inline video 1`] = `
               "alignSelf": "center",
               "flexDirection": "column",
               "paddingBottom": 25,
-              "width": 768,
+              "width": 660,
             }
           }
         >

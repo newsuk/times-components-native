@@ -1,4 +1,5 @@
 import { prepareSlicesForRender } from "../../src/utils/prepareSlicesForRender";
+import { Orientation } from "@times-components-native/responsive/src/context";
 
 describe("prepareSlicesForRender", () => {
   it("should transform data", () => {
@@ -17,7 +18,11 @@ describe("prepareSlicesForRender", () => {
       { id: "l", name: "DailyUniversalRegister" },
     ];
 
-    const prepararedData = prepareSlicesForRender(true, "News")(originalData);
+    const prepararedData = prepareSlicesForRender(
+      true,
+      "News",
+      Orientation.LANDSCAPE,
+    )(originalData);
     expect(prepararedData).toMatchSnapshot();
   });
 });

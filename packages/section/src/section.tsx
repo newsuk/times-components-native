@@ -106,6 +106,7 @@ const Section: React.FC<Props> = ({
       adConfig={adConfig}
       sectionTitle={sectionTitle}
       orientation={orientation}
+      isTablet={isTablet}
     />
   );
 
@@ -148,7 +149,7 @@ const Section: React.FC<Props> = ({
 
   const data = isPuzzle
     ? createPuzzleData(isTablet, sectionTitle)(slices, editionBreakpoint)
-    : prepareSlicesForRender(isTablet, sectionTitle)(slices);
+    : prepareSlicesForRender(isTablet, sectionTitle, orientation)(slices);
 
   if (slices) receiveChildList(data);
 

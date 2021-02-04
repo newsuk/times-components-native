@@ -1,12 +1,13 @@
 import {
   getEditionBreakpoint,
   getNarrowArticleBreakpoint,
-  tabletWidth,
 } from "@times-components-native/styleguide";
 import { NativeModules } from "react-native";
 import { ContextType, Orientation } from "./context";
 
 const config = (NativeModules || {}).ReactConfig;
+
+const minTabletWidth = 768;
 
 export const calculateResponsiveContext = (
   width: number,
@@ -18,7 +19,7 @@ export const calculateResponsiveContext = (
   fontScale,
   isTablet:
     (config && config.breakpoint && config.breakpoint !== "small") ||
-    width >= tabletWidth,
+    width >= minTabletWidth,
   windowWidth: width,
   windowHeight: height,
   orientation: height > width ? Orientation.PORTRAIT : Orientation.LANDSCAPE,
