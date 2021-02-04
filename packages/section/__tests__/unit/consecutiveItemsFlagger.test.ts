@@ -1,6 +1,8 @@
 import { consecutiveItemsFlagger } from "../../src/utils/consecutiveItemsFlagger";
+import { Orientation } from "@times-components-native/responsive/src/context";
 
 describe("consecutiveItemsFlagger", () => {
+  const landscape = Orientation.LANDSCAPE;
   it("should not add any properties if there aren't any consecutive slices", () => {
     const originalData = [
       { id: "a", name: "LeadersSlice" },
@@ -17,7 +19,7 @@ describe("consecutiveItemsFlagger", () => {
       { id: "l", name: "SecondaryFourSlice" },
     ];
 
-    const newData = consecutiveItemsFlagger(originalData);
+    const newData = consecutiveItemsFlagger(landscape)(originalData);
 
     expect(newData).toEqual(originalData);
   });
@@ -53,7 +55,7 @@ describe("consecutiveItemsFlagger", () => {
       { isConsecutive: true, id: "l", name: "DailyUniversalRegister" },
     ];
 
-    const newData = consecutiveItemsFlagger(originalData);
+    const newData = consecutiveItemsFlagger(landscape)(originalData);
     expect(newData).toMatchSnapshot();
     expect(newData).toEqual(flaggedData);
   });
@@ -75,7 +77,7 @@ describe("consecutiveItemsFlagger", () => {
       { id: "e", name: "SecondaryFourSlice", isConsecutive: true },
     ];
 
-    const newData = consecutiveItemsFlagger(originalData);
+    const newData = consecutiveItemsFlagger(landscape)(originalData);
     expect(newData).toEqual(flaggedData);
   });
 
@@ -92,11 +94,11 @@ describe("consecutiveItemsFlagger", () => {
       { id: "c", name: "OtherSlice" },
     ];
 
-    const newData = consecutiveItemsFlagger(originalData);
+    const newData = consecutiveItemsFlagger(landscape)(originalData);
     expect(newData).toEqual(flaggedData);
   });
 
-  it("should add isConsecutive property on a SecondaryFourSlice that follows a LeadOneAndOneSlice", () => {
+  it("should add isConsecutive property on a SecondaryFourSlice that follows a LeadOneAndOneSlice on portrait", () => {
     const originalData = [
       { id: "a", name: "LeadOneAndOneSlice" },
       { id: "b", name: "SecondaryFourSlice" },
@@ -109,7 +111,26 @@ describe("consecutiveItemsFlagger", () => {
       { id: "c", name: "OtherSlice" },
     ];
 
-    const newData = consecutiveItemsFlagger(originalData);
+    const newData = consecutiveItemsFlagger(Orientation.PORTRAIT)(originalData);
+    expect(newData).toEqual(flaggedData);
+  });
+
+  it("should not add isConsecutive property on a SecondaryFourSlice that follows a LeadOneAndOneSlice on landscape", () => {
+    const originalData = [
+      { id: "a", name: "LeadOneAndOneSlice" },
+      { id: "b", name: "SecondaryFourSlice" },
+      { id: "c", name: "OtherSlice" },
+    ];
+
+    const flaggedData = [
+      { id: "a", name: "LeadOneAndOneSlice" },
+      { id: "b", name: "SecondaryFourSlice" },
+      { id: "c", name: "OtherSlice" },
+    ];
+
+    const newData = consecutiveItemsFlagger(Orientation.LANDSCAPE)(
+      originalData,
+    );
     expect(newData).toEqual(flaggedData);
   });
 
@@ -129,7 +150,7 @@ describe("consecutiveItemsFlagger", () => {
       { id: "l", name: "SecondaryFourSlice" },
     ];
     const json = JSON.stringify(originalData);
-    consecutiveItemsFlagger(originalData);
+    consecutiveItemsFlagger(landscape)(originalData);
     expect(JSON.stringify(originalData)).toEqual(json);
   });
 });
