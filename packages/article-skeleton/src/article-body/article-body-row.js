@@ -175,7 +175,6 @@ export default ({
       );
     },
     ad(key, attributes) {
-      console.log("DASDASDASDASDASDASASADASAAAAAAAAAA", attributes);
       return (
         <Ad
           key={key}
