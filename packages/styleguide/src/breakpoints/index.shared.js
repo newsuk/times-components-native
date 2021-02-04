@@ -31,7 +31,7 @@ const narrowArticleWidths = {
 export default {
   huge: 1320,
   medium: 768,
-  nativeTablet: 768,
+  nativeTablet: 660,
   nativeTabletWide: 1366,
   small: 520,
   wide: 1024,

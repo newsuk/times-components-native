@@ -75,7 +75,7 @@ exports[`2. article list 1`] = `
               "backgroundColor": "#DBDBDB",
               "flex": 1,
               "height": 1,
-              "maxWidth": 768,
+              "maxWidth": 660,
             }
           }
         />
@@ -95,7 +95,7 @@ exports[`2. article list 1`] = `
           style={
             Object {
               "flex": 1,
-              "maxWidth": 768,
+              "maxWidth": 660,
             }
           }
         >
@@ -105,7 +105,7 @@ exports[`2. article list 1`] = `
                 "backgroundColor": "#DBDBDB",
                 "flex": 1,
                 "height": 1,
-                "maxWidth": 768,
+                "maxWidth": 660,
               }
             }
           />
