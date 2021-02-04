@@ -2391,7 +2391,7 @@ exports[`17. an article skeleton with responsive items 1`] = `
               "marginBottom": 20,
               "paddingLeft": 10,
               "paddingRight": 10,
-              "width": 768,
+              "width": 660,
             }
           }
         >
@@ -2493,7 +2493,7 @@ exports[`17. an article skeleton with responsive items 1`] = `
               "marginBottom": 20,
               "paddingLeft": 10,
               "paddingRight": 10,
-              "width": 768,
+              "width": 660,
             }
           }
         >
@@ -2541,7 +2541,7 @@ exports[`17. an article skeleton with responsive items 1`] = `
               "marginBottom": 20,
               "paddingLeft": 10,
               "paddingRight": 10,
-              "width": 768,
+              "width": 660,
             }
           }
         >
@@ -2883,7 +2883,7 @@ exports[`17. an article skeleton with responsive items 1`] = `
               "marginBottom": 0,
               "paddingLeft": 10,
               "paddingRight": 10,
-              "width": 768,
+              "width": 660,
             }
           }
         >
@@ -2921,7 +2921,7 @@ exports[`17. an article skeleton with responsive items 1`] = `
               "marginBottom": 0,
               "paddingLeft": 10,
               "paddingRight": 10,
-              "width": 768,
+              "width": 660,
             }
           }
         >
@@ -2959,7 +2959,7 @@ exports[`17. an article skeleton with responsive items 1`] = `
               "marginBottom": 0,
               "paddingLeft": 10,
               "paddingRight": 10,
-              "width": 768,
+              "width": 660,
             }
           }
         >
@@ -2997,7 +2997,7 @@ exports[`17. an article skeleton with responsive items 1`] = `
               "marginBottom": 0,
               "paddingLeft": 10,
               "paddingRight": 10,
-              "width": 768,
+              "width": 660,
             }
           }
         >
@@ -3035,7 +3035,7 @@ exports[`17. an article skeleton with responsive items 1`] = `
               "marginBottom": 0,
               "paddingLeft": 10,
               "paddingRight": 10,
-              "width": 768,
+              "width": 660,
             }
           }
         >
