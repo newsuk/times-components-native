@@ -4,7 +4,7 @@ const styles = {
   container: {
     flexDirection: "row",
     padding: spacing(2),
-    paddingBottom: spacing(3),
+    paddingBottom: spacing(2),
   },
   headline: {
     fontFamily: fonts.headline,
