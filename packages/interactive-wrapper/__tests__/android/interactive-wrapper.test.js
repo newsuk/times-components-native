@@ -75,7 +75,6 @@ const props = {
 
 it("renders correctly", () => {
   const testInstance = TestRenderer.create(<InteractiveWrapper {...props} />);
-  testInstance.root.instance.setState({ isLoading: false });
   expect(testInstance.toJSON()).toMatchSnapshot();
 });
 
