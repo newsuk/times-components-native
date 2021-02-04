@@ -1,10 +1,23 @@
 import "../mocks-tiles";
+import { editionBreakpoints } from "@times-components-native/styleguide";
 import { testTile } from "../shared-tile-utils";
 import { TileD } from "../../src/tiles";
 
 export default () => {
   describe("tile d", () => {
-    it("all breakpoints", () => {
+    it("small", () => {
+      testTile(TileD, editionBreakpoints.small);
+    });
+
+    it("medium", () => {
+      testTile(TileD, editionBreakpoints.medium);
+    });
+
+    it("wide", () => {
+      testTile(TileD, editionBreakpoints.wide);
+    });
+
+    it("without breakpoint should be like small", () => {
       testTile(TileD);
     });
   });

@@ -1,6 +1,33 @@
-import { fonts, spacing } from "@times-components-native/styleguide";
+import {
+  fonts,
+  fontFactory,
+  spacing,
+  editionBreakpoints,
+} from "@times-components-native/styleguide";
 
-const styles = {
+const smallBreakpointStyles = {
+  container: {
+    flexDirection: "row",
+    padding: spacing(2),
+  },
+  headline: {
+    ...fontFactory({
+      font: "headline",
+      fontSize: "infoTitle",
+    }),
+    marginBottom: spacing(1),
+  },
+  imageContainer: {
+    width: "50%",
+  },
+  summaryContainer: {
+    width: "50%",
+    paddingLeft: spacing(2),
+    paddingBottom: spacing(1),
+  },
+};
+
+const mediumWideBreakpointStyles = {
   container: {
     flexDirection: "row",
     padding: spacing(2),
@@ -21,4 +48,10 @@ const styles = {
   },
 };
 
-export default styles;
+const stylesResolver = {
+  [editionBreakpoints.small]: mediumWideBreakpointStyles,
+  [editionBreakpoints.medium]: mediumWideBreakpointStyles,
+  [editionBreakpoints.wide]: mediumWideBreakpointStyles,
+};
+
+export default (breakpoint) => stylesResolver[breakpoint];
