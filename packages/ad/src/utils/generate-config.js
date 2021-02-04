@@ -40,6 +40,7 @@ export const sizeMap = {
   header: sizes.header,
   mpu: sizes.mpu,
   "native-inline-ad": sizes.native,
+  "native-leaderboard": sizes.leaderboard,
   "native-single-mpu": sizes.singleMPU,
   "native-double-mpu": sizes.doubleMPU,
   "native-section-ad": sizes.section,
