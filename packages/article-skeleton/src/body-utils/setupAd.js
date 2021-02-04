@@ -127,7 +127,7 @@ export const setupAd = (skeletonProps) => {
 
   if (!currentAdSlotIndex) return cleanedContent;
 
-  // If tablet, only show on mainstandard template
+  // If tablet, only show on mainstandard/indepth/magazinestandard template
   if (isTablet && !templatesWithAds.includes(template))
     return contentWithoutAdSlot;
 
