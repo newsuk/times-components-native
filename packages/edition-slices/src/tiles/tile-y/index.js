@@ -17,12 +17,17 @@ const TileY = ({
   orientation,
 }) => {
   const styles = stylesFactory(breakpoint, orientation);
+  const summaryLength =
+    (breakpoint === "wide" && orientation === "portrait") ||
+    breakpoint === "huge"
+      ? 1000
+      : 300;
 
   return (
     <TileLink onPress={onPress} style={styles.container} tile={tile}>
       <TileSummary
         headlineStyle={styles.headline}
-        summary={getTileSummary(tile, orientation === "portrait" ? 1000 : 300)}
+        summary={getTileSummary(tile, summaryLength)}
         summaryStyle={styles.summary}
         tile={tile}
       />

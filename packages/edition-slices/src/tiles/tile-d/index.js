@@ -24,7 +24,6 @@ const TileD = ({ onPress, tile, breakpoint = editionBreakpoints.small }) => {
   const {
     article: { hasVideo },
   } = tile;
-  console.log("title D", tile.article.shortHeadline);
 
   return (
     <TileLink onPress={onPress} style={styles.container} tile={tile}>

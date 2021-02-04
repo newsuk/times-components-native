@@ -57,8 +57,8 @@ const hugeBreakpointStyles = {
   ...wideBreakpointStyles,
   headline: {
     ...wideBreakpointStyles.headline,
-    fontSize: 20,
-    lineHeight: 20,
+    fontSize: 28,
+    lineHeight: 28,
   },
 };
 
