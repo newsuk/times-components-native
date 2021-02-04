@@ -13,6 +13,10 @@ export default () => {
       testTile(TileD, editionBreakpoints.medium);
     });
 
+    it("wide", () => {
+      testTile(TileD, editionBreakpoints.wide);
+    });
+
     it("without breakpoint should be like small", () => {
       testTile(TileD);
     });

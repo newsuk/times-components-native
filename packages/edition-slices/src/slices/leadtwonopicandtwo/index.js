@@ -23,12 +23,7 @@ class LeadTwoNoPicAndTwo extends Component {
         lead1={<TileF onPress={onPress} tile={lead1} tileName="lead1" />}
         lead2={<TileB onPress={onPress} tile={lead2} tileName="lead2" />}
         support1={
-          <TileD
-            onPress={onPress}
-            tile={support1}
-            tileName="support1"
-            orientation={orientation}
-          />
+          <TileD onPress={onPress} tile={support1} tileName="support1" />
         }
         support2={
           <TileE
