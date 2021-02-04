@@ -97,6 +97,31 @@ export default () => {
       ]);
     });
 
+    it("should return content with a leaderboard/billboard if non paragraph precedes and follows 5th paragraph", () => {
+      const crowdedContent = [
+        createParagraph("a"),
+        createParagraph("b"),
+        createParagraph("c"),
+        createParagraph("d"),
+        { name: "image", children: [] },
+        createParagraph("e"),
+        { name: "ad", children: [] },
+        { name: "image", children: [] },
+        createParagraph("f"),
+        createParagraph("g"),
+        createParagraph("h"),
+        createParagraph("i"),
+        createParagraph("j"),
+      ];
+
+      const newSkeletonProps = {
+        ...skeletonProps,
+        data: { ...skeletonProps.data, content: crowdedContent },
+      };
+
+      expect(setupAd(newSkeletonProps)).toEqual(crowdedContent);
+    });
+
     it("should return content with the inline single mpu ad present when between 6 and 7 paragraphs", () => {
       const longContent = [
         createParagraph("a"),

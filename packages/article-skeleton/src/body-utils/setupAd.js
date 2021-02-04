@@ -14,6 +14,7 @@ const setupArticleMpuAd = (
   let nthParagraphIndex = currentAdSlotIndex;
 
   let hasNonParagraphContentBeforeThreshold = false;
+  let lastParagraphIndex;
 
   const numberOfParagraphs = contentWithoutAdSlot.reduce(
     (count, item, index) => {
@@ -23,8 +24,9 @@ const setupArticleMpuAd = (
         return count;
       }
       if (count === adPosition) {
-        nthParagraphIndex = index - 1;
+        nthParagraphIndex = lastParagraphIndex;
       }
+      lastParagraphIndex = index;
       return count + 1;
     },
     0,
@@ -34,22 +36,25 @@ const setupArticleMpuAd = (
 
   const adSlotIndex = nthParagraphIndex;
 
-  let showLeaderboard = false;
-
   if (
     contentWithoutAdSlot[nthParagraphIndex - 1]?.name !== "paragraph" &&
     contentWithoutAdSlot[nthParagraphIndex + 1]?.name !== "paragraph"
   ) {
-    showLeaderboard = true;
-    return contentWithoutAdSlot;
+    return [
+      ...contentWithoutAdSlot.slice(0, adSlotIndex + 1),
+      {
+        name: "ad",
+        children: [],
+      },
+      ...contentWithoutAdSlot.slice(adSlotIndex + 1),
+    ];
   }
 
-  const slotName = showLeaderboard
-    ? "native-inline-ad"
-    : numberOfParagraphs < singleMPUThreshold ||
-      hasNonParagraphContentBeforeThreshold
-    ? "native-single-mpu"
-    : "native-double-mpu";
+  const slotName =
+    numberOfParagraphs < singleMPUThreshold ||
+    hasNonParagraphContentBeforeThreshold
+      ? "native-single-mpu"
+      : "native-double-mpu";
 
   const { height, width } = sizeMap[slotName][0];
 
@@ -121,8 +126,6 @@ export const setupAd = (skeletonProps) => {
   });
 
   if (!currentAdSlotIndex) return cleanedContent;
-
-  console.log("TTTTTTTTfjdskjsdklfjdslkfjsdkjfdslk234!!567899", template);
 
   // If tablet, only show on mainstandard template
   if (isTablet && !templatesWithAds.includes(template))
