@@ -44,6 +44,9 @@ const setupArticleMpuAd = (
       ...contentWithoutAdSlot.slice(0, adSlotIndex + 1),
       {
         name: "ad",
+        attributes: {
+          slotName: "native-leaderboard",
+        },
         children: [],
       },
       ...contentWithoutAdSlot.slice(adSlotIndex + 1),

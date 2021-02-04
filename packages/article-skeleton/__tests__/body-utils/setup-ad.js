@@ -97,7 +97,7 @@ export default () => {
       ]);
     });
 
-    it("should return content with a leaderboard/billboard if non paragraph precedes and follows 5th paragraph", () => {
+    it("should return content with a leaderboard if non paragraph precedes and follows 5th paragraph", () => {
       const crowdedContent = [
         createParagraph("a"),
         createParagraph("b"),
@@ -119,7 +119,25 @@ export default () => {
         data: { ...skeletonProps.data, content: crowdedContent },
       };
 
-      expect(setupAd(newSkeletonProps)).toEqual(crowdedContent);
+      expect(setupAd(newSkeletonProps)).toEqual([
+        createParagraph("a"),
+        createParagraph("b"),
+        createParagraph("c"),
+        createParagraph("d"),
+        { name: "image", children: [] },
+        createParagraph("e"),
+        {
+          name: "ad",
+          attributes: { slotName: "native-leaderboard" },
+          children: [],
+        },
+        { name: "image", children: [] },
+        createParagraph("f"),
+        createParagraph("g"),
+        createParagraph("h"),
+        createParagraph("i"),
+        createParagraph("j"),
+      ]);
     });
 
     it("should return content with the inline single mpu ad present when between 6 and 7 paragraphs", () => {
