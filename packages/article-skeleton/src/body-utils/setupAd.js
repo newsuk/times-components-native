@@ -6,30 +6,59 @@ const setupArticleMpuAd = (
   skeletonProps,
 ) => {
   const adPosition = 5;
+  const showMPUThreshold = 6;
+  const singleMPUThreshold = 8;
   const doubleMPUThreshold = 10;
 
   // Get index of nth (adPosition) paragraph
   let nthParagraphIndex = currentAdSlotIndex;
 
   let hasNonParagraphContentBeforeThreshold = false;
+  let lastParagraphIndex;
 
-  contentWithoutAdSlot.reduce((count, item, index) => {
-    if (item.name !== "paragraph") {
-      if (index < doubleMPUThreshold)
-        hasNonParagraphContentBeforeThreshold = true;
-      return count;
-    }
-    if (count === adPosition) {
-      nthParagraphIndex = index - 1;
-    }
-    return count + 1;
-  }, 0);
+  const numberOfParagraphs = contentWithoutAdSlot.reduce(
+    (count, item, index) => {
+      if (item.name !== "paragraph") {
+        if (index < doubleMPUThreshold)
+          hasNonParagraphContentBeforeThreshold = true;
+        return count;
+      }
+      if (count === adPosition) {
+        nthParagraphIndex = lastParagraphIndex;
+      }
+      lastParagraphIndex = index;
+      return count + 1;
+    },
+    0,
+  );
+
+  if (numberOfParagraphs < showMPUThreshold) return contentWithoutAdSlot;
 
   const adSlotIndex = nthParagraphIndex;
 
-  const slotName = hasNonParagraphContentBeforeThreshold
-    ? "native-single-mpu"
-    : "native-double-mpu";
+  if (
+    contentWithoutAdSlot[nthParagraphIndex - 1]?.name !== "paragraph" &&
+    contentWithoutAdSlot[nthParagraphIndex + 1]?.name !== "paragraph"
+  ) {
+    return [
+      ...contentWithoutAdSlot.slice(0, adSlotIndex + 1),
+      {
+        name: "ad",
+        attributes: {
+          slotName: "native-leaderboard",
+        },
+        children: [],
+      },
+      ...contentWithoutAdSlot.slice(adSlotIndex + 1),
+    ];
+  }
+
+  const slotName =
+    numberOfParagraphs < singleMPUThreshold ||
+    hasNonParagraphContentBeforeThreshold
+      ? "native-single-mpu"
+      : "native-double-mpu";
+
   const { height, width } = sizeMap[slotName][0];
 
   const contentBeforeAd = contentWithoutAdSlot.slice(0, adSlotIndex);
@@ -77,6 +106,8 @@ const setupArticleMpuAd = (
   ];
 };
 
+const templatesWithAds = ["mainstandard", "indepth", "magazinestandard"];
+
 export const setupAd = (skeletonProps) => {
   const {
     isTablet,
@@ -99,8 +130,9 @@ export const setupAd = (skeletonProps) => {
 
   if (!currentAdSlotIndex) return cleanedContent;
 
-  // If tablet, only show on mainstandard template
-  if (isTablet && template !== "mainstandard") return contentWithoutAdSlot;
+  // If tablet, only show on mainstandard/indepth/magazinestandard template
+  if (isTablet && !templatesWithAds.includes(template))
+    return contentWithoutAdSlot;
 
   return setupArticleMpuAd(
     currentAdSlotIndex,
