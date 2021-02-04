@@ -130,7 +130,11 @@ ArticleSummary.propTypes = {
   }),
   saveStar: PropTypes.node,
   strapline: PropTypes.node,
-  style: PropTypes.shape({}),
+  style: PropTypes.oneOfType([
+    PropTypes.array,
+    PropTypes.object,
+    PropTypes.bool,
+  ]),
 };
 
 ArticleSummary.defaultProps = {
