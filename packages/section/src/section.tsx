@@ -161,7 +161,6 @@ const Section: React.FC<Props> = ({
         }
         removeClippedSubviews
         data={data}
-        initialNumToRender={isTablet ? 5 : 2}
         ItemSeparatorComponent={(leadingItem) =>
           renderItemSeperator(isPuzzle)(leadingItem, editionBreakpoint)
         }
@@ -171,7 +170,6 @@ const Section: React.FC<Props> = ({
         onViewableItemsChanged={onViewed ? onViewableItemsChanged : null}
         {...(isPuzzle && { onScrollBeginDrag })}
         renderItem={renderItem(isPuzzle, orientation)}
-        windowSize={3}
       />
       {isPuzzle && isIOS ? (
         <FloatingActionButton
