@@ -1,9 +1,9 @@
-import React, { Component } from "react";
+import React, { PureComponent } from "react";
 import PropTypes from "prop-types";
 import { TileA, TileW } from "../../tiles";
 import { ResponsiveSlice } from "../shared";
 
-class SecondaryOneSlice extends Component {
+class SecondaryOneSlice extends PureComponent {
   constructor(props) {
     super(props);
     this.renderSmall = this.renderSmall.bind(this);

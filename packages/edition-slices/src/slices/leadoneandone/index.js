@@ -1,10 +1,12 @@
-import React, { Component } from "react";
+import React, { PureComponent } from "react";
 import PropTypes from "prop-types";
 import { LeadOneAndOneSlice } from "@times-components-native/slice-layout";
 import { TileA, TileB, TileZ, TileColStandard } from "../../tiles";
 import { ResponsiveSlice } from "../shared";
+import { LogBox } from "react-native";
 
-class LeadOneAndOne extends Component {
+LogBox.ignoreAllLogs();
+class LeadOneAndOne extends PureComponent {
   constructor(props) {
     super(props);
     this.renderSmall = this.renderSmall.bind(this);

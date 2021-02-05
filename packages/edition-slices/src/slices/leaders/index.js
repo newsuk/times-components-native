@@ -1,4 +1,4 @@
-import React, { Component } from "react";
+import React, { PureComponent } from "react";
 import { View, Text } from "react-native";
 import { SectionContext } from "@times-components-native/context";
 import { Leaders } from "@times-components-native/slice-layout";
@@ -21,7 +21,7 @@ const renderHead = (styles, breakpoint) => (
   </SectionContext.Consumer>
 );
 
-class LeadersSlice extends Component {
+class LeadersSlice extends PureComponent {
   constructor(props) {
     super(props);
     this.renderSlice = this.renderSlice.bind(this);

@@ -1,4 +1,4 @@
-import React, { Component } from "react";
+import React, { PureComponent } from "react";
 import { View } from "react-native";
 import PropTypes from "prop-types";
 import {
@@ -9,7 +9,7 @@ import { TileK } from "../../tiles";
 import { ResponsiveSlice } from "../shared";
 import styles from "./styles";
 
-class Standard extends Component {
+class Standard extends PureComponent {
   constructor(props) {
     super(props);
 
