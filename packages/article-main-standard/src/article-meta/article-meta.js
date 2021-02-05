@@ -17,6 +17,7 @@ function ArticleMeta({
   onAuthorPress,
   onTooltipPresented,
   tooltips,
+  articleId,
 }) {
   return (
     <View style={[styles.articleMeta, isTablet && styles.articleMetaTablet]}>
@@ -31,6 +32,7 @@ function ArticleMeta({
               tooltips={tooltips}
               tooltipOffsetX={-20}
               tooltipOffsetY={26}
+              articleId={articleId}
             />
           </View>
         </View>

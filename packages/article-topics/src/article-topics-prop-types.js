@@ -15,6 +15,7 @@ export const topicsPropTypes = {
       slug: PropTypes.string,
     }).isRequired,
   ).isRequired,
+  articleId: PropTypes.string,
 };
 
 export const topicsDefaultProps = {

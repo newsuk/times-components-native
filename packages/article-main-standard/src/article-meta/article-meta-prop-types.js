@@ -20,6 +20,7 @@ export const propTypes = {
   publicationName: PropTypes.string,
   publishedTime: PropTypes.string,
   tooltips: PropTypes.arrayOf.isRequired,
+  articleId: PropTypes.string,
 };
 
 export const defaultProps = {

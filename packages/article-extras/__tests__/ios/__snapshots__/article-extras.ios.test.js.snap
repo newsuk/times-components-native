@@ -4,7 +4,9 @@ exports[`1. article extras content 1`] = `
 <View>
   <RelatedArticles />
   <View>
-    <ArticleTopics />
+    <ArticleTopics
+      articleId="dummy-article-id"
+    />
   </View>
   <ArticleComments
     articleId="dummy-article-id"
@@ -20,7 +22,9 @@ exports[`2. article extras content on tablet 1`] = `
 <View>
   <RelatedArticles />
   <View>
-    <ArticleTopics />
+    <ArticleTopics
+      articleId="dummy-article-id"
+    />
   </View>
   <ArticleComments
     articleId="dummy-article-id"

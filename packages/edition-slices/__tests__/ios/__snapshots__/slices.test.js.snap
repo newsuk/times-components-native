@@ -211,7 +211,6 @@ exports[`2. leaders 2`] = `
 </View>
 `;
 
-
 exports[`3. lead one and one 1`] = `
 <View>
   <TileA
@@ -2645,6 +2644,7 @@ exports[`6. lead two no pic and two 1`] = `
   />
   <View />
   <TileE
+    orientation="portrait"
     tileName="support2"
   />
 </View>

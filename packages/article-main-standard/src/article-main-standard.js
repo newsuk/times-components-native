@@ -93,6 +93,7 @@ class ArticlePage extends Component {
                 publicationName={publicationName}
                 publishedTime={publishedTime}
                 tooltips={tooltips}
+                articleId={article.id}
               />
             </Fragment>
           );

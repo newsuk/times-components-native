@@ -3,7 +3,12 @@ import { calculateResponsiveContext } from "@times-components-native/responsive/
 import React from "react";
 
 const withResponsiveContext = (WrappedComponent: any, width: number) => (
-  <ResponsiveContext.Provider value={calculateResponsiveContext(width, 400, 1)}>
+  <ResponsiveContext.Provider
+    value={calculateResponsiveContext(width, 400, 1, {
+      width: 1024,
+      height: 600,
+    })}
+  >
     {WrappedComponent}
   </ResponsiveContext.Provider>
 );

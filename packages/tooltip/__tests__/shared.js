@@ -17,9 +17,12 @@ export const withTabletContext = (WrappedComponent, isTablet = true) => (
 
 export default () => {
   describe("Tooltip", () => {
-    it("renders correctly when type is in tooltips array", () => {
-      const onTooltipPresentedMock = jest.fn();
+    const mockArticleId = "mockArticleId";
+    const onTooltipPresentedMock = jest.fn();
 
+    beforeEach(() => jest.clearAllMocks());
+
+    it("renders correctly when type is in tooltips array", () => {
       const output = TestRenderer.create(
         withTabletContext(
           <Tooltip
@@ -27,6 +30,7 @@ export default () => {
             onTooltipPresented={onTooltipPresentedMock}
             type="testtype"
             tooltips={["testtype"]}
+            articleId={mockArticleId}
           >
             bar
           </Tooltip>,
@@ -36,8 +40,6 @@ export default () => {
     });
 
     it("does not render tooltip when tooltip type is not in tooltips array", () => {
-      const onTooltipPresentedMock = jest.fn();
-
       const output = TestRenderer.create(
         withTabletContext(
           <Tooltip
@@ -45,6 +47,7 @@ export default () => {
             onTooltipPresented={onTooltipPresentedMock}
             type="testtype"
             tooltips={[""]}
+            articleId={mockArticleId}
           >
             bar
           </Tooltip>,
@@ -54,8 +57,6 @@ export default () => {
     });
 
     it("does not render tooltip if not in tablet", () => {
-      const onTooltipPresentedMock = jest.fn();
-
       const output = TestRenderer.create(
         withTabletContext(
           <Tooltip
@@ -63,6 +64,7 @@ export default () => {
             onTooltipPresented={onTooltipPresentedMock}
             type="testtype"
             tooltips={["testtype"]}
+            articleId={mockArticleId}
           >
             bar
           </Tooltip>,
@@ -73,8 +75,6 @@ export default () => {
     });
 
     it("renders correctly with supplied width", () => {
-      const onTooltipPresentedMock = jest.fn();
-
       const output = TestRenderer.create(
         withTabletContext(
           <Tooltip
@@ -83,6 +83,7 @@ export default () => {
             type="testtype"
             tooltips={["testtype"]}
             width={100}
+            articleId={mockArticleId}
           >
             bar
           </Tooltip>,
@@ -92,8 +93,6 @@ export default () => {
     });
 
     it("renders correctly with supplied placement top", () => {
-      const onTooltipPresentedMock = jest.fn();
-
       const output = TestRenderer.create(
         withTabletContext(
           <Tooltip
@@ -102,6 +101,7 @@ export default () => {
             type="testtype"
             tooltips={["testtype"]}
             placement="top"
+            articleId={mockArticleId}
           >
             bar
           </Tooltip>,
@@ -111,8 +111,6 @@ export default () => {
     });
 
     it("renders correctly with supplied placement right", () => {
-      const onTooltipPresentedMock = jest.fn();
-
       const output = TestRenderer.create(
         withTabletContext(
           <Tooltip
@@ -121,6 +119,7 @@ export default () => {
             type="testtype"
             tooltips={["testtype"]}
             placement="right"
+            articleId={mockArticleId}
           >
             bar
           </Tooltip>,
@@ -130,8 +129,6 @@ export default () => {
     });
 
     it("renders correctly with supplied offsets", () => {
-      const onTooltipPresentedMock = jest.fn();
-
       const output = TestRenderer.create(
         withTabletContext(
           <Tooltip
@@ -142,6 +139,7 @@ export default () => {
             offsetX={10}
             offsetY={10}
             arrowOffset={10}
+            articleId={mockArticleId}
           >
             bar
           </Tooltip>,
@@ -151,8 +149,6 @@ export default () => {
     });
 
     it("onTooltipPresented is called correctly on Viewport Enter", async () => {
-      const onTooltipPresentedMock = jest.fn();
-
       const output = TestRenderer.create(
         withTabletContext(
           <Tooltip
@@ -160,6 +156,7 @@ export default () => {
             onTooltipPresented={onTooltipPresentedMock}
             type="testtype"
             tooltips={["testtype"]}
+            articleId={mockArticleId}
           >
             bar
           </Tooltip>,
@@ -169,12 +166,10 @@ export default () => {
         testID: "viewportAwareView",
       });
       viewportAwareView.props.onViewportEnter();
-      expect(onTooltipPresentedMock).toBeCalled();
+      expect(onTooltipPresentedMock).toBeCalledWith("testtype", mockArticleId);
     });
 
     it("onTooltipPresented is called correctly if tooltip is displayed in view", async () => {
-      const onTooltipPresentedMock = jest.fn();
-
       TestRenderer.create(
         withTabletContext(
           <Tooltip
@@ -183,12 +178,14 @@ export default () => {
             onTooltipPresented={onTooltipPresentedMock}
             type="testtype"
             tooltips={["testtype"]}
+            articleId={mockArticleId}
           >
             bar
           </Tooltip>,
         ),
       );
-      expect(onTooltipPresentedMock).toBeCalled();
+
+      expect(onTooltipPresentedMock).toBeCalledWith("testtype", mockArticleId);
     });
   });
 };

@@ -1,15 +1,13 @@
 import React, { FC } from "react";
 import Link from "@times-components-native/link";
-import { TextStyle } from "react-native";
-import {
-  TransformConfiguredTile,
-  OnArticlePress,
-} from "@times-components-native/types";
+import { StyleProp, ViewStyle } from "react-native";
+import { OnArticlePress } from "@times-components-native/types";
+import { Tile } from "@times-components-native/fixture-generator/src/types";
 
 interface Props {
   onPress: OnArticlePress;
-  style?: TextStyle;
-  tile: TransformConfiguredTile;
+  style?: StyleProp<ViewStyle>;
+  tile: Tile;
 }
 const TileLink: FC<Props> = ({
   children,

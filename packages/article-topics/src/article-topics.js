@@ -16,9 +16,11 @@ const renderArticleTopics = (
   onPress,
   onTooltipPresented,
   fontStyle,
+  articleId,
 ) =>
   topics.map(({ name, slug }, index) => (
     <ArticleTopic
+      articleId={articleId}
       fontSize={fontStyle.fontSize}
       index={index}
       key={slug}
@@ -39,6 +41,7 @@ const ArticleTopics = ({
   tooltips,
   tooltipDisplayedInView,
   topics,
+  articleId,
 }) => (
   <Context.Consumer>
     {({ theme: { scale } }) => {
@@ -56,6 +59,7 @@ const ArticleTopics = ({
               font: "supporting",
               fontSize: "link",
             }),
+            articleId,
           )}
         </View>
       );
