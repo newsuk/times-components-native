@@ -18,6 +18,7 @@ import PullQuote from "@times-components-native/pull-quote";
 import Video from "@times-components-native/video";
 import ArticleParagraphWrapper from "@times-components-native/article-paragraph";
 import ArticleParagraph from "./article-body-paragraph";
+import ArticleParagraph2 from "@times-components-native/article-paragraph/src/article-paragraph";
 import InsetCaption from "./inset-caption";
 import styleFactory from "../styles/article-body";
 import ArticleLink from "./article-link";
@@ -66,19 +67,23 @@ export default ({
 
   return {
     text(key, attributes) {
-      const attr = {
-        tag: "FONT",
-        settings: fontConfig.body,
-      };
-      return new AttributedString(
-        attributes.value,
-        attributes.value.split("").map(() => [attr]),
-      );
+      return <Text>{attributes.value}</Text>;
     },
-    inline(key, attributes, renderedChildren) {
-      return AttributedString.join(renderedChildren);
-    },
+    // text(key, attributes) {
+    //   const attr = {
+    //     tag: "FONT",
+    //     settings: fontConfig.body,
+    //   };
+    //   return new AttributedString(
+    //     attributes.value,
+    //     attributes.value.split("").map(() => [attr]),
+    //   );
+    // },
+    // inline(key, attributes, renderedChildren) {
+    //   return AttributedString.join(renderedChildren);
+    // },
     heading2(key, attributes, children, index, tree) {
+      alert("HEADING2");
       const childStr = AttributedString.join(children);
       return (
         <ArticleParagraphWrapper
@@ -108,14 +113,17 @@ export default ({
       return this.heading2(key, attributes, children, index, tree);
     },
     bold(key, attributes, children) {
-      const childStr = AttributedString.join(children);
-      const attr = {
-        tag: "FONT",
-        settings: fontConfig.bold,
-      };
-      childStr.addAttribute(0, childStr.length, attr);
-      return childStr;
+      return <Text>{children}</Text>;
     },
+    // bold(key, attributes, children) {
+    //   const childStr = AttributedString.join(children);
+    //   const attr = {
+    //     tag: "FONT",
+    //     settings: fontConfig.bold,
+    //   };
+    //   childStr.addAttribute(0, childStr.length, attr);
+    //   return childStr;
+    // },
     emphasis(key, attributes, children) {
       return this.bold(key, attributes, children);
     },
@@ -123,57 +131,70 @@ export default ({
       return this.bold(key, attributes, children);
     },
     italic(key, attributes, children) {
-      const childStr = AttributedString.join(children);
-      const attr = {
-        tag: "FONT",
-        settings: fontConfig.italic,
-      };
-      childStr.addAttribute(0, childStr.length, attr);
-      return childStr;
+      return <Text>{children}</Text>;
     },
+    // italic(key, attributes, children) {
+    //   const childStr = AttributedString.join(children);
+    //   const attr = {
+    //     tag: "FONT",
+    //     settings: fontConfig.italic,
+    //   };
+    //   childStr.addAttribute(0, childStr.length, attr);
+    //   return childStr;
+    // },
     link(key, { href, canonicalId, type }, children) {
-      if (!children.length) {
-        return new AttributedString("", []);
-      }
-      const childStr = AttributedString.join(children);
-      const attr = {
-        tag: "LINK",
-        href,
-        canonicalId,
-        type,
-      };
-      childStr.addAttribute(0, childStr.length, attr);
-      return childStr;
+      // if (!children.length) {
+      //   return new AttributedString("", []);
+      // }
+      // const childStr = AttributedString.join(children);
+      // const attr = {
+      //   tag: "LINK",
+      //   href,
+      //   canonicalId,
+      //   type,
+      // };
+      // childStr.addAttribute(0, childStr.length, attr);
+      // return childStr;
+      return <Text>{children}</Text>;
     },
-    subscript(key, attributes, children) {
-      const childStr = AttributedString.join(children);
-      childStr.string = toSubscript(childStr.string);
-      return childStr;
-    },
-    superscript(key, attributes, children) {
-      const childStr = AttributedString.join(children);
-      childStr.string = toSuperscript(childStr.string);
-      return childStr;
-    },
-    paragraph(key, attributes, children, index, tree) {
+    // subscript(key, attributes, children) {
+    //   const childStr = AttributedString.join(children);
+    //   childStr.string = toSubscript(childStr.string);
+    //   return childStr;
+    // },
+    // superscript(key, attributes, children) {
+    //   const childStr = AttributedString.join(children);
+    //   childStr.string = toSuperscript(childStr.string);
+    //   return childStr;
+    // },
+    paragraph(key, attributes, children) {
       return (
-        <ArticleParagraph
-          LinkComponent={ArticleLink}
-          key={key}
-          attributes={attributes}
-          index={index}
-          tree={tree}
-          scale={scale}
-          isTablet={isTablet}
-          defaultFont={defaultFont}
-          onLinkPress={onLinkPress}
-          narrowContent={narrowContent}
-          onParagraphTextLayout={onParagraphTextLayout}
-        >
-          {children}
-        </ArticleParagraph>
+        <ArticleParagraph2 narrowContent={narrowContent}>
+          <Text style={defaultFont} onTextLayout={onParagraphTextLayout}>
+            {children}
+          </Text>
+        </ArticleParagraph2>
       );
     },
+    // paragraph(key, attributes, children, index, tree) {
+    //   return (
+    //     <ArticleParagraph
+    //       LinkComponent={ArticleLink}
+    //       key={key}
+    //       attributes={attributes}
+    //       index={index}
+    //       tree={tree}
+    //       scale={scale}
+    //       isTablet={isTablet}
+    //       defaultFont={defaultFont}
+    //       onLinkPress={onLinkPress}
+    //       narrowContent={narrowContent}
+    //       onParagraphTextLayout={onParagraphTextLayout}
+    //     >
+    //       {children}
+    //     </ArticleParagraph>
+    //   );
+    // },
     ad(key, attributes) {
       return (
         <Ad
@@ -298,11 +319,7 @@ export default ({
       );
     },
     break() {
-      const attr = {
-        tag: "FONT",
-        settings: fontConfig.body,
-      };
-      return new AttributedString("\n", [[attr]]);
+      return <Text>{`\n`}</Text>;
     },
     keyFacts(key, attributes, children, index, tree) {
       return (
@@ -385,7 +402,7 @@ export default ({
       );
     },
     unknown(key, attributes, children) {
-      return AttributedString.join(children);
+      return null;
     },
   };
 };

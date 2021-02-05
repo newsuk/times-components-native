@@ -50,6 +50,8 @@ export const InnerMeasureInlineContent: React.FC<
     (!itemProps || itemHeight !== null)
   ) {
     return renderMeasuredContents(measurementState);
+  } else {
+    console.log(contentParameters);
   }
 
   return (
