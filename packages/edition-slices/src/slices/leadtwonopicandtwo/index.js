@@ -26,7 +26,12 @@ class LeadTwoNoPicAndTwo extends Component {
           <TileD onPress={onPress} tile={support1} tileName="support1" />
         }
         support2={
-          <TileE onPress={onPress} tile={support2} tileName="support2" />
+          <TileE
+            onPress={onPress}
+            tile={support2}
+            tileName="support2"
+            orientation={orientation}
+          />
         }
       />
     );
@@ -49,6 +54,7 @@ class LeadTwoNoPicAndTwo extends Component {
             onPress={onPress}
             tile={lead1}
             tileName="lead1"
+            orientation={orientation}
           />
         }
         lead2={
@@ -57,6 +63,7 @@ class LeadTwoNoPicAndTwo extends Component {
             onPress={onPress}
             tile={lead2}
             tileName="lead2"
+            orientation={orientation}
           />
         }
         support1={
@@ -73,6 +80,7 @@ class LeadTwoNoPicAndTwo extends Component {
             onPress={onPress}
             tile={support2}
             tileName="support2"
+            orientation={orientation}
           />
         }
       />

@@ -5,7 +5,7 @@ import {
   editionBreakpoints,
 } from "@times-components-native/styleguide";
 
-const styles = {
+const smallBreakpointStyles = {
   container: {
     flexDirection: "row-reverse",
     padding: spacing(2),
@@ -57,16 +57,36 @@ const hugeBreakpointStyles = {
   ...wideBreakpointStyles,
   headline: {
     ...wideBreakpointStyles.headline,
-    fontSize: 20,
-    lineHeight: 20,
+    fontSize: 28,
+    lineHeight: 28,
   },
 };
 
 const stylesResolver = {
-  [editionBreakpoints.small]: styles,
-  [editionBreakpoints.medium]: mediumBreakpointStyles,
-  [editionBreakpoints.wide]: wideBreakpointStyles,
-  [editionBreakpoints.huge]: hugeBreakpointStyles,
+  [editionBreakpoints.small]: {
+    portrait: smallBreakpointStyles,
+    landscape: smallBreakpointStyles,
+  },
+  [editionBreakpoints.medium]: {
+    portrait: mediumBreakpointStyles,
+    landscape: mediumBreakpointStyles,
+  },
+  [editionBreakpoints.wide]: {
+    portrait: {
+      ...wideBreakpointStyles,
+      headline: {
+        ...wideBreakpointStyles.headline,
+        fontSize: 28,
+        lineHeight: 28,
+      },
+    },
+    landscape: wideBreakpointStyles,
+  },
+  [editionBreakpoints.huge]: {
+    portrait: hugeBreakpointStyles,
+    landscape: hugeBreakpointStyles,
+  },
 };
 
-export default (breakpoint) => stylesResolver[breakpoint];
+export default (breakpoint, orientation) =>
+  stylesResolver[breakpoint][orientation];

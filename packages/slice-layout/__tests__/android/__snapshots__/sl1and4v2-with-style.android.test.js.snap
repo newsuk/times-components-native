@@ -1,0 +1,49 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`1. supplement lead one and four v2 - medium 1`] = `
+<View>
+  <View
+    style={
+      Object {
+        "width": "100%",
+      }
+    }
+  >
+    <Text>
+      lead
+    </Text>
+  </View>
+</View>
+`;
+
+exports[`2. supplement lead one and four v2 - wide 1`] = `
+<View>
+  <View
+    style={
+      Object {
+        "width": "100%",
+      }
+    }
+  >
+    <Text>
+      lead
+    </Text>
+  </View>
+</View>
+`;
+
+exports[`3. supplement lead one and four v2 - huge 1`] = `
+<View>
+  <View
+    style={
+      Object {
+        "width": "100%",
+      }
+    }
+  >
+    <Text>
+      lead
+    </Text>
+  </View>
+</View>
+`;

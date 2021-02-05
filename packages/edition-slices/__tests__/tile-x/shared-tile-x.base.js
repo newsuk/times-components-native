@@ -5,16 +5,43 @@ import { TileX } from "../../src/tiles";
 
 export default () => {
   describe("tile x", () => {
-    it("medium", () => {
-      testTile(TileX, editionBreakpoints.medium);
-    });
+    describe("portrait", () => {
+      it("medium", () => {
+        testTile(TileX, editionBreakpoints.medium, undefined, {
+          orientation: "portrait",
+        });
+      });
 
-    it("wide", () => {
-      testTile(TileX, editionBreakpoints.wide);
-    });
+      it("wide", () => {
+        testTile(TileX, editionBreakpoints.wide, undefined, {
+          orientation: "portrait",
+        });
+      });
 
-    it("huge", () => {
-      testTile(TileX, editionBreakpoints.huge);
+      it("huge", () => {
+        testTile(TileX, editionBreakpoints.huge, undefined, {
+          orientation: "portrait",
+        });
+      });
+    });
+    describe("landscape", () => {
+      it("medium", () => {
+        testTile(TileX, editionBreakpoints.medium, undefined, {
+          orientation: "landscape",
+        });
+      });
+
+      it("wide", () => {
+        testTile(TileX, editionBreakpoints.wide, undefined, {
+          orientation: "landscape",
+        });
+      });
+
+      it("huge", () => {
+        testTile(TileX, editionBreakpoints.huge, undefined, {
+          orientation: "landscape",
+        });
+      });
     });
   });
 };

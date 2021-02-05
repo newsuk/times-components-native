@@ -2,11 +2,13 @@
 import React from "react";
 import PropTypes from "prop-types";
 import { editionBreakpoints } from "@times-components-native/styleguide";
+import WithoutWhiteSpace from "../shared/without-white-space";
 import {
   getTileImage,
   TileLink,
   TileSummary,
   withTileTracking,
+  getTileSummary,
   TileImage,
 } from "../shared";
 import stylesFactory from "./styles";
@@ -35,10 +37,18 @@ const TileD = ({ onPress, tile, breakpoint = editionBreakpoints.small }) => {
         uri={crop.url}
         hasVideo={hasVideo}
       />
-      <TileSummary
-        headlineStyle={styles.headline}
-        style={styles.summaryContainer}
-        tile={tile}
+      <WithoutWhiteSpace
+        render={(whiteSpaceHeight) => (
+          <TileSummary
+            headlineStyle={styles.headline}
+            style={styles.summaryContainer}
+            summary={getTileSummary(tile, breakpoint === "wide" ? 125 : 0)}
+            summaryStyle={styles.summary}
+            tile={tile}
+            whiteSpaceHeight={whiteSpaceHeight}
+            withStar={false}
+          />
+        )}
       />
     </TileLink>
   );

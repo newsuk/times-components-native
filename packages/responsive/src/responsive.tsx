@@ -13,6 +13,10 @@ interface DimensionChangeEvent {
 }
 
 interface Props {
+  contentSize?: {
+    width: number;
+    height: number;
+  };
   displayHeight?: number | undefined;
   displayWidth?: number | undefined;
   fontScale?: number | undefined;
@@ -22,6 +26,7 @@ const ResponsiveProvider: React.FC<Props> = ({
   children,
   displayWidth,
   displayHeight,
+  contentSize,
   fontScale: initialFontScale,
 }) => {
   const { fontScale, width, height } =
@@ -34,13 +39,13 @@ const ResponsiveProvider: React.FC<Props> = ({
       : getDimensions();
 
   const [state, setState] = useState(
-    calculateResponsiveContext(width, height, fontScale),
+    calculateResponsiveContext(width, height, fontScale, contentSize),
   );
 
   const onDimensionChange = ({
     window: { fontScale, width, height },
   }: DimensionChangeEvent) =>
-    setState(calculateResponsiveContext(width, height, fontScale));
+    setState(calculateResponsiveContext(width, height, fontScale, contentSize));
 
   useEffect(() => {
     const listener = addDimensionsListener("change", onDimensionChange);

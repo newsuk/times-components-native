@@ -2644,6 +2644,7 @@ exports[`6. lead two no pic and two 1`] = `
   />
   <View />
   <TileE
+    orientation="portrait"
     tileName="support2"
   />
 </View>
