@@ -92,7 +92,7 @@ const ArticleBase = ({
           onRelatedArticlePress={(event, { url }) => onArticlePress(url)}
           onTopicPress={(event, { slug }) => onTopicPress(slug)}
           onTwitterLinkPress={(_, { url }) => onLinkPress(url)}
-          onTooltipPresented={onTooltipPresented}
+          // onTooltipPresented={onTooltipPresented}
           onVideoPress={(event, info) => onVideoPress(info)}
           pageSection={pageSection}
           referralUrl={referralUrl}

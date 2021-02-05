@@ -20,7 +20,9 @@ const ArticlePage = (props) => {
     displayWidth,
     fontScale,
   } = props;
-  const data = article ? JSON.parse(article).data.article : null;
+  const data = article
+    ? React.useMemo(() => JSON.parse(article).data.article)
+    : null;
   const openInBrowser = (data || {}).url
     ? () => Linking.openURL(data.url)
     : undefined;

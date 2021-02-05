@@ -33,6 +33,11 @@ const SimpleParagraph = ({
     return null;
   }
 
+  if (textItems.length > 1) {
+    // console.log("LARGE TEXT ITEM");
+    // console.log(textItems.length);
+    // console.log(textItems);
+  }
   return (
     <ArticleParagraphWrapper
       ast={tree}
@@ -54,6 +59,7 @@ const SimpleParagraph = ({
           const type = href ? href.type : null;
           const canonicalId = href ? href.canonicalId : null;
           if (href) {
+            console.log("AAAAAAAAAAAAAAA HREF");
             const { color, ...linkStyle } = style;
             return (
               <LinkComponent
