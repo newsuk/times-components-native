@@ -23,6 +23,16 @@ Object {
 }
 `;
 
+exports[`default section page click tracking: onArticlePress 1`] = `
+Array [
+  Array [
+    Object {
+      "id": "522abf2c-e752-11e8-9f32-f2801f1b9fd1",
+    },
+  ],
+]
+`;
+
 exports[`puzzle section page click tracking 1`] = `
 Object {
   "action": "Pressed",
