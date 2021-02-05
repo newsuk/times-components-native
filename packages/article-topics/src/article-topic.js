@@ -18,6 +18,7 @@ const ArticleTopic = ({
   slug,
   tooltipDisplayedInView,
   tooltips,
+  articleId,
 }) => {
   const fontSizeStyle = fontSize ? { fontSize } : null;
   const lineHeightStyle = lineHeight ? { lineHeight } : null;
@@ -71,6 +72,7 @@ const ArticleTopic = ({
       type={tooltipType}
       tooltips={tooltips}
       width={236}
+      articleId={articleId}
     >
       {articleTopic}
     </Tooltip>

@@ -9,6 +9,7 @@ export const topicPropTypes = {
   slug: PropTypes.string.isRequired,
   tooltipDisplayedInView: PropTypes.bool,
   tooltips: PropTypes.array,
+  articleId: PropTypes.string,
 };
 
 export const topicDefaultProps = {
