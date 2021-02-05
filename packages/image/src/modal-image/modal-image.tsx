@@ -11,31 +11,71 @@ import Image from "../image";
 import styles from "../styles";
 import ModalCaption from "./modal-caption";
 
-interface ModalImageProps {
+interface MainImage {
+  uri: string;
+  relativeHeight?: number;
+  relativeHorizontalOffset?: number;
+  relativeVerticalOffset?: number;
+  relativeWidth?: number;
   aspectRatio?: number;
   caption?: {
     text: string;
     credits: string;
   } | null;
+}
+
+interface ModalImageProps extends MainImage {
   images?: ImageContent[];
   index?: number;
   isSmallImage?: boolean;
   onImagePress?: (index: number) => void | null;
-  relativeHeight?: number;
-  relativeHorizontalOffset?: number;
-  relativeVerticalOffset?: number;
-  relativeWidth?: number;
   rounded?: boolean;
   show?: boolean;
   imageStyles?: StyleProp<ImageProps>;
-  uri: string;
 }
+
+const computeAspectRatio = (ratio?: number | string) => {
+  if (!ratio) {
+    return 1;
+  }
+
+  if (typeof ratio === "string") {
+    const [ratioWidth, ratioHeight] = ratio.split(":");
+    return Number(ratioWidth) / Number(ratioHeight);
+  }
+  return ratio;
+};
+
+const getUrls = (images: ImageContent[], mainImage: MainImage) => {
+  if (!images.length) {
+    return [
+      {
+        ...mainImage,
+        url: mainImage.uri,
+        imageIndex: 0,
+        caption: mainImage.caption?.text,
+        credits: mainImage.caption?.credits,
+      },
+    ];
+  }
+
+  return images.map((image) => {
+    const offlineUrl = new Url(image.attributes.url, true);
+    offlineUrl.query.offline = "true";
+
+    return {
+      ...image.attributes,
+      url: offlineUrl.toString(),
+      aspectRatio: computeAspectRatio(image.attributes.ratio),
+    };
+  });
+};
 
 const ModalImage: FC<ModalImageProps> = ({
   aspectRatio,
+  images: initialImages = [],
   caption,
-  images = [],
-  index = 0,
+  index: initialIndex = 0,
   isSmallImage = false,
   onImagePress = null,
   relativeHeight,
@@ -48,10 +88,10 @@ const ModalImage: FC<ModalImageProps> = ({
   uri = "",
 }) => {
   const [showModal, setShowModal] = useState(show || false);
-  const [currentIndex, setCurrentIndex] = useState(0);
+  const [currentIndex, setCurrentIndex] = useState(initialIndex);
 
   const hideModal = () => {
-    setCurrentIndex(0);
+    setCurrentIndex(initialIndex);
     setShowModal(false);
   };
 
@@ -65,9 +105,19 @@ const ModalImage: FC<ModalImageProps> = ({
     }
   };
 
+  const images = getUrls(initialImages, {
+    uri,
+    aspectRatio,
+    relativeHeight,
+    relativeWidth,
+    relativeHorizontalOffset,
+    relativeVerticalOffset,
+    caption,
+  });
+
   if (onImagePress && !isSmallImage) {
     return (
-      <Button onPress={() => onImagePress(index)}>
+      <Button onPress={() => onImagePress(currentIndex)}>
         <Image
           uri={uri}
           rounded={rounded}
@@ -81,38 +131,6 @@ const ModalImage: FC<ModalImageProps> = ({
       </Button>
     );
   }
-
-  const mainUrl = new Url(uri, true);
-  mainUrl.query.offline = "true";
-  const urls = [
-    {
-      url: mainUrl.toString(),
-      credits: caption?.credits,
-      caption: caption?.text,
-      aspectRatio: aspectRatio || 1,
-      relativeHeight,
-      relativeWidth,
-      relativeHorizontalOffset,
-      relativeVerticalOffset,
-    },
-  ].concat(
-    images
-      .map((image) => {
-        const offlineUrl = new Url(image.attributes.url, true);
-        offlineUrl.query.offline = "true";
-        const [ratioWidth, ratioHeight] = image.attributes.ratio.split(":");
-
-        return {
-          ...image.attributes,
-          url: offlineUrl.toString(),
-          aspectRatio:
-            ratioWidth && ratioHeight
-              ? Number(ratioWidth) / Number(ratioHeight)
-              : 1,
-        };
-      })
-      .filter(({ url }) => url !== mainUrl.toString()),
-  );
 
   const renderImage = ({
     source,
@@ -132,11 +150,13 @@ const ModalImage: FC<ModalImageProps> = ({
             styles.modalImage,
             isSmallImage ? styles.modalSmallImage : imageStyles,
           ]}
-          relativeWidth={urls[currentIndex].relativeWidth}
-          relativeHeight={urls[currentIndex].relativeHeight}
-          relativeVerticalOffset={urls[currentIndex].relativeVerticalOffset}
-          relativeHorizontalOffset={urls[currentIndex].relativeHorizontalOffset}
-          aspectRatio={urls[currentIndex].aspectRatio}
+          relativeWidth={images[currentIndex].relativeWidth}
+          relativeHeight={images[currentIndex].relativeHeight}
+          relativeVerticalOffset={images[currentIndex].relativeVerticalOffset}
+          relativeHorizontalOffset={
+            images[currentIndex].relativeHorizontalOffset
+          }
+          aspectRatio={images[currentIndex].aspectRatio}
         />
       </View>
     );
@@ -164,7 +184,7 @@ const ModalImage: FC<ModalImageProps> = ({
                   <CloseButton isTablet={isTablet} onPress={hideModal} />
                 </SafeAreaView>
                 <ImageViewer
-                  imageUrls={urls}
+                  imageUrls={images}
                   renderIndicator={() => <View />}
                   enableSwipeDown
                   onChange={handleSetCurrentIndex}
@@ -173,6 +193,7 @@ const ModalImage: FC<ModalImageProps> = ({
                   onSwipeDown={hideModal}
                   saveToLocalByLongPress={false}
                   enablePreload
+                  index={currentIndex}
                 />
                 <ModalCaptionContainer
                   pointerEvents="none"
@@ -180,8 +201,8 @@ const ModalImage: FC<ModalImageProps> = ({
                 >
                   <ModalCaption
                     isTablet={isTablet}
-                    text={urls[currentIndex].caption || ""}
-                    credits={urls[currentIndex].credits || ""}
+                    text={images[currentIndex]?.caption || ""}
+                    credits={images[currentIndex]?.credits || ""}
                   />
                 </ModalCaptionContainer>
               </Fragment>

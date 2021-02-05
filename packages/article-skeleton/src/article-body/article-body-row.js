@@ -1,12 +1,12 @@
 /* eslint-disable prefer-destructuring */
 import React from "react";
-import { View, Text, Dimensions, Platform } from "react-native";
+import { Dimensions, Platform, Text, View } from "react-native";
 import styleguide, {
   colours,
-  tabletWidth,
-  tabletRowPadding,
   getNarrowArticleBreakpoint,
   spacing,
+  tabletRowPadding,
+  tabletWidth,
 } from "@times-components-native/styleguide";
 import { AttributedString } from "@times-components-native/typeset";
 import Ad from "@times-components-native/ad";

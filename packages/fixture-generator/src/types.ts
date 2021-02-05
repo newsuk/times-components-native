@@ -1,3 +1,5 @@
+import TimesImage from "@times-components-native/fixture-generator/src/times-image";
+
 export interface DateFilter {
   from: DateTime;
 
@@ -1410,6 +1412,8 @@ export interface Image {
   crop?: Crop | null;
 
   crops: Crop[];
+
+  __typename: "Image";
 }
 
 /** The selected area for a given image and its ratio */
@@ -1460,9 +1464,11 @@ export interface Video {
 
   brightcoveAccountId?: string | null;
 
-  posterImage?: Image | null;
+  posterImage?: PosterImage | null;
 
   is360?: boolean | null;
+
+  __typename: "Video";
 }
 
 export interface EmbeddedContent {
@@ -2757,7 +2763,7 @@ export interface CancelSubscriptionMutationArgs {
 
 export type ArticleByline = TextByline | AuthorByline;
 
-export type Media = Image | Video;
+export type Media = TimesImage | Video;
 
 export type DraftTileArticle = Article | DraftArticle;
 
@@ -2826,3 +2832,14 @@ export type StandardSectionSlice =
   | InTheNewsSlice
   | PuffSlice
   | DailyUniversalRegister;
+
+export interface PosterImage {
+  crop11: Crop | null;
+  crop169: Crop | null;
+  crop23: Crop | null;
+  crop32: Crop | null;
+  crop45: Crop | null;
+  crop54: Crop | null;
+  id: string;
+  url: string;
+}

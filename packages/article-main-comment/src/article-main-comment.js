@@ -1,9 +1,8 @@
 /* eslint-disable consistent-return */
-
 import React, { Component } from "react";
 import ArticleError from "@times-components-native/article-error";
 import ArticleSkeleton from "@times-components-native/article-skeleton";
-import { getHeadline } from "@times-components-native/utils";
+import { getExtraImagesContent, getHeadline } from "@times-components-native/utils";
 import { ResponsiveContext } from "@times-components-native/responsive";
 import Context from "@times-components-native/context";
 import ArticleHeader from "./article-header/article-header";
@@ -11,6 +10,7 @@ import {
   articlePropTypes,
   articleDefaultProps,
 } from "./article-prop-types/article-prop-types";
+import ArticleLeadAsset from "@times-components-native/article-lead-asset";
 
 class ArticlePage extends Component {
   constructor(props) {

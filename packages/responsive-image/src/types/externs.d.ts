@@ -27,6 +27,12 @@ declare module "@times-components-native/styleguide" {
 }
 
 declare module "@times-components-native/utils" {
+  import TimesImage from "@times-components-native/fixture-generator/src/times-image";
+  import {
+    Crop,
+    PosterImage,
+  } from "@times-components-native/fixture-generator/src/types";
+
   type appendToImageURL = (
     url: string,
     key: string,
@@ -34,6 +40,7 @@ declare module "@times-components-native/utils" {
   ) => string;
 
   type getDimensions = () => any;
+  type getStandardTemplateCrop = (leadAsset: TimesImage | PosterImage) => Crop;
   type addDimensionsListener = (string, any) => any;
   type removeDimensionsListener = (string, any) => any;
   type calculateContentWidth = (number, string) => number;
@@ -45,6 +52,7 @@ declare module "@times-components-native/utils" {
   export const calculateContentWidth: calculateContentWidth;
   export const addDimensionsListener: addDimensionsListener;
   export const removeDimensionsListener: removeDimensionsListener;
+  export const getStandardTemplateCrop: getStandardTemplateCrop;
 }
 
 declare module "react-native-hooks" {

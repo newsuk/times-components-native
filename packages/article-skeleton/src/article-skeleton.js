@@ -1,21 +1,42 @@
 import React, { useCallback, useEffect, useMemo, useState } from "react";
-import { View, ScrollView } from "react-native";
+import { ScrollView, View } from "react-native";
 import PropTypes from "prop-types";
 import { withTrackScrollDepth } from "@times-components-native/tracking";
 import { Viewport } from "@skele/components";
 import { render } from "@times-components-native/markup-forest";
 import ArticleExtras from "@times-components-native/article-extras";
 import {
-  articleSkeletonPropTypes,
   articleSkeletonDefaultProps,
+  articleSkeletonPropTypes,
 } from "./article-skeleton-prop-types";
 import articleTrackingContext from "./tracking/article-tracking-context";
 import Gutter, { maxWidth } from "./gutter";
 import styles from "./styles/shared";
-import renderers from "./article-body/article-body-row";
+import getRenderers from "./article-body/article-body-row";
 import fixup from "./body-utils";
 import ErrorBoundary from "./boundary";
 import { useResponsiveContext } from "@times-components-native/responsive";
+import {
+  getStandardTemplateCrop,
+  isTemplateWithLeadAssetInGallery,
+} from "@times-components-native/utils";
+
+const getAllImages = (template, leadAsset, fixedContent) => {
+  if (isTemplateWithLeadAssetInGallery(template)) {
+    return [
+      {
+        attributes: {
+          ...getStandardTemplateCrop(leadAsset),
+          caption: leadAsset.caption,
+          credits: leadAsset.credits,
+          imageIndex: 0,
+        },
+      },
+    ].concat(fixedContent.filter((node) => node.name === "image"));
+  }
+
+  return fixedContent.filter((node) => node.name === "image");
+};
 
 const ArticleWithContent = (props) => {
   const {
@@ -37,7 +58,7 @@ const ArticleWithContent = (props) => {
 
   const [hasBeenRead, setHasBeenRead] = useState(false);
 
-  const { id, url, content, template } = data;
+  const { id, url, content, template, leadAsset } = data;
 
   const setArticleRead = () => {
     setHasBeenRead(true);
@@ -92,10 +113,18 @@ const ArticleWithContent = (props) => {
     isTablet,
   ]);
 
-  const images = fixedContent.filter((node) => node.name === "image");
+  const leadAssetAndArticleImages = getAllImages(
+    template,
+    leadAsset,
+    fixedContent,
+  );
 
-  const renderChild = render(renderers({ ...props, images }));
-  // eslint-disable-next-line react/prop-types
+  const renderers = getRenderers({
+    ...props,
+    images: leadAssetAndArticleImages,
+  });
+  const renderChild = render(renderers);
+
   const Child = useCallback(
     ({ item, index }) => (
       <Gutter>

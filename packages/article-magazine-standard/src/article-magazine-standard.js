@@ -5,6 +5,7 @@ import { View } from "react-native";
 import ArticleError from "@times-components-native/article-error";
 import ArticleSkeleton from "@times-components-native/article-skeleton";
 import {
+  getExtraImagesContent,
   getHeadline,
   getLeadAsset,
   getStandardTemplateCrop,
@@ -20,6 +21,7 @@ import {
   articleDefaultProps,
 } from "./article-prop-types/article-prop-types";
 import styles from "./styles";
+import ArticleLeadAsset from "@times-components-native/article-lead-asset";
 
 class ArticleMagazineStandard extends Component {
   constructor(props) {
@@ -81,6 +83,7 @@ class ArticleMagazineStandard extends Component {
                 { zIndex: 0 },
               ]}
               width={Math.min(width, tabletWidth)}
+              extraContent={getExtraImagesContent(article)}
             />
           </View>
         )}

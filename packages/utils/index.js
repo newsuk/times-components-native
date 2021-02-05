@@ -3,6 +3,7 @@ export * from "./src/strings";
 export * from "./src/dimensions-util";
 export * from "./src/subscript-superscript-mapper";
 export * from "./src/get-extra-images-content";
+export * from "./src/is-template-with-lead-asset-in-gallery";
 
 export { default as clean } from "./src/props";
 export { default as addMissingProtocol } from "./src/add-missing-protocol";
