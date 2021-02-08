@@ -370,8 +370,8 @@ export default ({
         </View>
       );
     },
-    unknown() {
-      return null;
+    unknown(key, attributes, children) {
+      return children;
     },
   };
 };
