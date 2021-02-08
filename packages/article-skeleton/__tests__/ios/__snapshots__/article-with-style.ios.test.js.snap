@@ -94,20 +94,14 @@ exports[`1. a full article with all content items with dropcap template 1`] = `
                     <Text
                       style={
                         Object {
+                          "color": "#000000",
+                          "fontFamily": "TimesDigitalW04",
+                          "fontSize": 36,
                           "lineHeight": 52,
                         }
                       }
                     >
-                      <Text
-                        style={
-                          Object {
-                            "color": "#000000",
-                            "fontFamily": "TimesDigitalW04",
-                            "fontSize": 36,
-                            "lineHeight": 52,
-                          }
-                        }
-                      >
+                      <Text>
                         his being Black History Month, last week
                       </Text>
                     </Text>
@@ -198,6 +192,9 @@ exports[`1. a full article with all content items with dropcap template 1`] = `
             <Text
               style={
                 Object {
+                  "color": "#000000",
+                  "fontFamily": "TimesDigitalW04",
+                  "fontSize": 36,
                   "lineHeight": 52,
                 }
               }
@@ -207,15 +204,17 @@ exports[`1. a full article with all content items with dropcap template 1`] = `
                   Object {
                     "color": "#006699",
                     "fontFamily": "TimesDigitalW04",
-                    "fontSize": 36,
-                    "lineHeight": 52,
+                    "fontSize": 18,
+                    "lineHeight": 26,
                     "marginBottom": 25,
                     "marginTop": 0,
                     "textDecorationLine": "underline",
                   }
                 }
               >
-                Some Link
+                <Text>
+                  Some Link
+                </Text>
               </Text>
             </Text>
           </View>
@@ -244,20 +243,14 @@ exports[`1. a full article with all content items with dropcap template 1`] = `
             <Text
               style={
                 Object {
+                  "color": "#000000",
+                  "fontFamily": "TimesDigitalW04",
+                  "fontSize": 36,
                   "lineHeight": 52,
                 }
               }
             >
-              <Text
-                style={
-                  Object {
-                    "color": "#000000",
-                    "fontFamily": "TimesDigitalW04",
-                    "fontSize": 36,
-                    "lineHeight": 52,
-                  }
-                }
-              >
+              <Text>
                 Some content
               </Text>
             </Text>
@@ -286,9 +279,7 @@ exports[`1. a full article with all content items with dropcap template 1`] = `
           }
         }
       >
-        <PullQuote>
-          The pull quote content
-        </PullQuote>
+        <PullQuote />
       </View>
       <View
         style={
@@ -587,7 +578,9 @@ exports[`1. a full article with all content items with dropcap template 1`] = `
                 }
               }
             >
-              This is heading 2
+              <Text>
+                This is heading 2
+              </Text>
             </Text>
           </View>
         </View>
@@ -623,7 +616,9 @@ exports[`1. a full article with all content items with dropcap template 1`] = `
                 }
               }
             >
-              This is heading 3
+              <Text>
+                This is heading 3
+              </Text>
             </Text>
           </View>
         </View>
@@ -659,7 +654,9 @@ exports[`1. a full article with all content items with dropcap template 1`] = `
                 }
               }
             >
-              This is heading 4
+              <Text>
+                This is heading 4
+              </Text>
             </Text>
           </View>
         </View>
@@ -695,7 +692,9 @@ exports[`1. a full article with all content items with dropcap template 1`] = `
                 }
               }
             >
-              This is heading 5
+              <Text>
+                This is heading 5
+              </Text>
             </Text>
           </View>
         </View>
@@ -731,7 +730,9 @@ exports[`1. a full article with all content items with dropcap template 1`] = `
                 }
               }
             >
-              This is heading 6
+              <Text>
+                This is heading 6
+              </Text>
             </Text>
           </View>
         </View>
@@ -999,6 +1000,9 @@ exports[`5. an article with a nested markup in first paragraph displays a drop c
                     <Text
                       style={
                         Object {
+                          "color": "#000000",
+                          "fontFamily": "TimesDigitalW04",
+                          "fontSize": 36,
                           "lineHeight": 52,
                         }
                       }
@@ -1006,15 +1010,13 @@ exports[`5. an article with a nested markup in first paragraph displays a drop c
                       <Text
                         style={
                           Object {
-                            "color": "#000000",
-                            "fontFamily": "TimesDigitalW04",
-                            "fontSize": 36,
                             "fontWeight": "bold",
-                            "lineHeight": 52,
                           }
                         }
                       >
-                        Some years ago I made the decision to take as a friend a woman who is very opinionated.
+                        <Text>
+                          Some years ago I made the decision to take as a friend a woman who is very opinionated.
+                        </Text>
                       </Text>
                     </Text>
                   </View>
@@ -1047,6 +1049,9 @@ exports[`5. an article with a nested markup in first paragraph displays a drop c
             <Text
               style={
                 Object {
+                  "color": "#000000",
+                  "fontFamily": "TimesDigitalW04",
+                  "fontSize": 36,
                   "lineHeight": 52,
                 }
               }
@@ -1054,15 +1059,13 @@ exports[`5. an article with a nested markup in first paragraph displays a drop c
               <Text
                 style={
                   Object {
-                    "color": "#000000",
-                    "fontFamily": "TimesDigitalW04",
-                    "fontSize": 36,
                     "fontWeight": "bold",
-                    "lineHeight": 52,
                   }
                 }
               >
-                When she does come to social events, she dominates.
+                <Text>
+                  When she does come to social events, she dominates.
+                </Text>
               </Text>
             </Text>
           </View>
@@ -1147,7 +1150,9 @@ exports[`6. an article with heading tags 1`] = `
                 }
               }
             >
-              This is heading 2
+              <Text>
+                This is heading 2
+              </Text>
             </Text>
           </View>
         </View>
@@ -1183,7 +1188,9 @@ exports[`6. an article with heading tags 1`] = `
                 }
               }
             >
-              This is heading 3
+              <Text>
+                This is heading 3
+              </Text>
             </Text>
           </View>
         </View>
@@ -1259,6 +1266,9 @@ exports[`7. an article with link 1`] = `
             <Text
               style={
                 Object {
+                  "color": "#000000",
+                  "fontFamily": "TimesDigitalW04",
+                  "fontSize": 36,
                   "lineHeight": 52,
                 }
               }
@@ -1268,26 +1278,19 @@ exports[`7. an article with link 1`] = `
                   Object {
                     "color": "#006699",
                     "fontFamily": "TimesDigitalW04",
-                    "fontSize": 36,
-                    "lineHeight": 52,
+                    "fontSize": 18,
+                    "lineHeight": 26,
                     "marginBottom": 25,
                     "marginTop": 0,
                     "textDecorationLine": "underline",
                   }
                 }
               >
-                Jack Dorsey
+                <Text>
+                  Jack Dorsey
+                </Text>
               </Text>
-              <Text
-                style={
-                  Object {
-                    "color": "#000000",
-                    "fontFamily": "TimesDigitalW04",
-                    "fontSize": 36,
-                    "lineHeight": 52,
-                  }
-                }
-              >
+              <Text>
                  said today that while the company was unlikely to open its offices before September, almost all staff could now work permanently from wherever they want.
               </Text>
             </Text>
@@ -1365,20 +1368,14 @@ exports[`8. an article with italic link 1`] = `
             <Text
               style={
                 Object {
+                  "color": "#000000",
+                  "fontFamily": "TimesDigitalW04",
+                  "fontSize": 36,
                   "lineHeight": 52,
                 }
               }
             >
-              <Text
-                style={
-                  Object {
-                    "color": "#000000",
-                    "fontFamily": "TimesDigitalW04",
-                    "fontSize": 36,
-                    "lineHeight": 52,
-                  }
-                }
-              >
+              <Text>
                 In his 2015 book on the tournaments, 
               </Text>
               <Text
@@ -1386,27 +1383,27 @@ exports[`8. an article with italic link 1`] = `
                   Object {
                     "color": "#006699",
                     "fontFamily": "TimesDigitalW04",
-                    "fontSize": 36,
-                    "fontStyle": "italic",
-                    "lineHeight": 52,
+                    "fontSize": 18,
+                    "lineHeight": 26,
                     "marginBottom": 25,
                     "marginTop": 0,
                     "textDecorationLine": "underline",
                   }
                 }
               >
-                Superforecasting
-              </Text>
-              <Text
-                style={
-                  Object {
-                    "color": "#000000",
-                    "fontFamily": "TimesDigitalW04",
-                    "fontSize": 36,
-                    "lineHeight": 52,
+                <Text
+                  style={
+                    Object {
+                      "fontStyle": "italic",
+                    }
                   }
-                }
-              >
+                >
+                  <Text>
+                    Superforecasting
+                  </Text>
+                </Text>
+              </Text>
+              <Text>
                 , Professor Tetlock said the most accurate predictors all used very similar methods. They used a historical “base rate” for predicting how likely an event was, adjusting constantly in the light of new information.
               </Text>
             </Text>
@@ -1484,6 +1481,9 @@ exports[`9. an article with bold text followed by bold link 1`] = `
             <Text
               style={
                 Object {
+                  "color": "#000000",
+                  "fontFamily": "TimesDigitalW04",
+                  "fontSize": 36,
                   "lineHeight": 52,
                 }
               }
@@ -1491,31 +1491,30 @@ exports[`9. an article with bold text followed by bold link 1`] = `
               <Text
                 style={
                   Object {
-                    "color": "#000000",
-                    "fontFamily": "TimesDigitalW04",
-                    "fontSize": 36,
                     "fontWeight": "bold",
-                    "lineHeight": 52,
                   }
                 }
               >
-                2 
-              </Text>
-              <Text
-                style={
-                  Object {
-                    "color": "#006699",
-                    "fontFamily": "TimesDigitalW04",
-                    "fontSize": 36,
-                    "fontWeight": "bold",
-                    "lineHeight": 52,
-                    "marginBottom": 25,
-                    "marginTop": 0,
-                    "textDecorationLine": "underline",
+                <Text>
+                  2 
+                </Text>
+                <Text
+                  style={
+                    Object {
+                      "color": "#006699",
+                      "fontFamily": "TimesDigitalW04",
+                      "fontSize": 18,
+                      "lineHeight": 26,
+                      "marginBottom": 25,
+                      "marginTop": 0,
+                      "textDecorationLine": "underline",
+                    }
                   }
-                }
-              >
-                Becoming by Michelle Obama
+                >
+                  <Text>
+                    Becoming by Michelle Obama
+                  </Text>
+                </Text>
               </Text>
             </Text>
           </View>
@@ -1592,20 +1591,14 @@ exports[`10. an article with italic and normal text link 1`] = `
             <Text
               style={
                 Object {
+                  "color": "#000000",
+                  "fontFamily": "TimesDigitalW04",
+                  "fontSize": 36,
                   "lineHeight": 52,
                 }
               }
             >
-              <Text
-                style={
-                  Object {
-                    "color": "#000000",
-                    "fontFamily": "TimesDigitalW04",
-                    "fontSize": 36,
-                    "lineHeight": 52,
-                  }
-                }
-              >
+              <Text>
                 Family Action is one of two charities being supported by 
               </Text>
               <Text
@@ -1613,42 +1606,30 @@ exports[`10. an article with italic and normal text link 1`] = `
                   Object {
                     "color": "#006699",
                     "fontFamily": "TimesDigitalW04",
-                    "fontSize": 36,
-                    "fontStyle": "italic",
-                    "lineHeight": 52,
+                    "fontSize": 18,
+                    "lineHeight": 26,
                     "marginBottom": 25,
                     "marginTop": 0,
                     "textDecorationLine": "underline",
                   }
                 }
               >
-                The Times
-              </Text>
-              <Text
-                style={
-                  Object {
-                    "color": "#006699",
-                    "fontFamily": "TimesDigitalW04",
-                    "fontSize": 36,
-                    "lineHeight": 52,
-                    "marginBottom": 25,
-                    "marginTop": 0,
-                    "textDecorationLine": "underline",
+                <Text
+                  style={
+                    Object {
+                      "fontStyle": "italic",
+                    }
                   }
-                }
-              >
-                 Coronavirus Charity Appeal
+                >
+                  <Text>
+                    The Times
+                  </Text>
+                </Text>
+                <Text>
+                   Coronavirus Charity Appeal
+                </Text>
               </Text>
-              <Text
-                style={
-                  Object {
-                    "color": "#000000",
-                    "fontFamily": "TimesDigitalW04",
-                    "fontSize": 36,
-                    "lineHeight": 52,
-                  }
-                }
-              >
+              <Text>
                  to support people in greatest hardship under the restrictions. The second charity is The Big Issue Foundation.
               </Text>
             </Text>
@@ -1726,6 +1707,9 @@ exports[`11. an article with bold and italic text at the same time 1`] = `
             <Text
               style={
                 Object {
+                  "color": "#000000",
+                  "fontFamily": "TimesDigitalW04",
+                  "fontSize": 36,
                   "lineHeight": 52,
                 }
               }
@@ -1733,16 +1717,21 @@ exports[`11. an article with bold and italic text at the same time 1`] = `
               <Text
                 style={
                   Object {
-                    "color": "#000000",
-                    "fontFamily": "TimesDigitalW04",
-                    "fontSize": 36,
-                    "fontStyle": "italic",
                     "fontWeight": "bold",
-                    "lineHeight": 52,
                   }
                 }
               >
-                Conversations with Friends
+                <Text
+                  style={
+                    Object {
+                      "fontStyle": "italic",
+                    }
+                  }
+                >
+                  <Text>
+                    Conversations with Friends
+                  </Text>
+                </Text>
               </Text>
             </Text>
           </View>
@@ -1819,23 +1808,13 @@ exports[`12. an article with text wrapped in inline element 1`] = `
             <Text
               style={
                 Object {
+                  "color": "#000000",
+                  "fontFamily": "TimesDigitalW04",
+                  "fontSize": 36,
                   "lineHeight": 52,
                 }
               }
-            >
-              <Text
-                style={
-                  Object {
-                    "color": "#000000",
-                    "fontFamily": "TimesDigitalW04",
-                    "fontSize": 36,
-                    "lineHeight": 52,
-                  }
-                }
-              >
-                They may have been improved by the controversy that ensued when Watson appeared on the cover of Vanity Fair to promote it, wearing a top that partially exposed her breasts. She rejected criticism that the pose was at odds with her claim to be a feminist. “Feminism is not a stick with which to beat other women. It’s about liberation. It’s about equality,” she said, adding: “I really don’t know what my tits have to do with it.” 
-              </Text>
-            </Text>
+            />
           </View>
         </View>
       </View>
@@ -1910,33 +1889,15 @@ exports[`13. an article with paragraph with text and inline element 1`] = `
             <Text
               style={
                 Object {
+                  "color": "#000000",
+                  "fontFamily": "TimesDigitalW04",
+                  "fontSize": 36,
                   "lineHeight": 52,
                 }
               }
             >
-              <Text
-                style={
-                  Object {
-                    "color": "#000000",
-                    "fontFamily": "TimesDigitalW04",
-                    "fontSize": 36,
-                    "lineHeight": 52,
-                  }
-                }
-              >
+              <Text>
                 20. 
-              </Text>
-              <Text
-                style={
-                  Object {
-                    "color": "#000000",
-                    "fontFamily": "TimesDigitalW04",
-                    "fontSize": 36,
-                    "lineHeight": 52,
-                  }
-                }
-              >
-                Participants’ names and general locations will be published if they are the winner of the Competition in accordance with regulatory requirements, both during this and future promotions by the Promoter or any associated or subsidiary company of News Corp UK & Ireland Limited.
               </Text>
             </Text>
           </View>
@@ -2013,6 +1974,9 @@ exports[`14. an article with inline inside a bold tag 1`] = `
             <Text
               style={
                 Object {
+                  "color": "#000000",
+                  "fontFamily": "TimesDigitalW04",
+                  "fontSize": 36,
                   "lineHeight": 52,
                 }
               }
@@ -2020,16 +1984,10 @@ exports[`14. an article with inline inside a bold tag 1`] = `
               <Text
                 style={
                   Object {
-                    "color": "#000000",
-                    "fontFamily": "TimesDigitalW04",
-                    "fontSize": 36,
                     "fontWeight": "bold",
-                    "lineHeight": 52,
                   }
                 }
-              >
-                Meera Menon, 15, 100min
-              </Text>
+              />
             </Text>
           </View>
         </View>
@@ -2156,20 +2114,14 @@ exports[`15. an article starting with single quote 1`] = `
                     <Text
                       style={
                         Object {
+                          "color": "#000000",
+                          "fontFamily": "TimesDigitalW04",
+                          "fontSize": 36,
                           "lineHeight": 52,
                         }
                       }
                     >
-                      <Text
-                        style={
-                          Object {
-                            "color": "#000000",
-                            "fontFamily": "TimesDigitalW04",
-                            "fontSize": 36,
-                            "lineHeight": 52,
-                          }
-                        }
-                      >
+                      <Text>
                         orting eyebrows?! Really? During a pandemic?!” This tweet landed in my Twitter feed after talking to Jenni Murray on BBC Radio 4 
                       </Text>
                     </Text>
@@ -2302,20 +2254,14 @@ exports[`16. an article starting with double quote 1`] = `
                     <Text
                       style={
                         Object {
+                          "color": "#000000",
+                          "fontFamily": "TimesDigitalW04",
+                          "fontSize": 36,
                           "lineHeight": 52,
                         }
                       }
                     >
-                      <Text
-                        style={
-                          Object {
-                            "color": "#000000",
-                            "fontFamily": "TimesDigitalW04",
-                            "fontSize": 36,
-                            "lineHeight": 52,
-                          }
-                        }
-                      >
+                      <Text>
                         orting eyebrows?! Really? During a pandemic?!” This tweet landed in my Twitter feed after talking to Jenni Murray on BBC Radio 4 
                       </Text>
                     </Text>
@@ -2399,20 +2345,14 @@ exports[`17. an article skeleton with responsive items 1`] = `
             <Text
               style={
                 Object {
+                  "color": "#000000",
+                  "fontFamily": "TimesDigitalW04",
+                  "fontSize": 36,
                   "lineHeight": 52,
                 }
               }
             >
-              <Text
-                style={
-                  Object {
-                    "color": "#000000",
-                    "fontFamily": "TimesDigitalW04",
-                    "fontSize": 36,
-                    "lineHeight": 52,
-                  }
-                }
-              >
+              <Text>
                 This being Black History Month, last week
               </Text>
             </Text>
@@ -2501,6 +2441,9 @@ exports[`17. an article skeleton with responsive items 1`] = `
             <Text
               style={
                 Object {
+                  "color": "#000000",
+                  "fontFamily": "TimesDigitalW04",
+                  "fontSize": 36,
                   "lineHeight": 52,
                 }
               }
@@ -2510,15 +2453,17 @@ exports[`17. an article skeleton with responsive items 1`] = `
                   Object {
                     "color": "#006699",
                     "fontFamily": "TimesDigitalW04",
-                    "fontSize": 36,
-                    "lineHeight": 52,
+                    "fontSize": 18,
+                    "lineHeight": 26,
                     "marginBottom": 25,
                     "marginTop": 0,
                     "textDecorationLine": "underline",
                   }
                 }
               >
-                Some Link
+                <Text>
+                  Some Link
+                </Text>
               </Text>
             </Text>
           </View>
@@ -2549,20 +2494,14 @@ exports[`17. an article skeleton with responsive items 1`] = `
             <Text
               style={
                 Object {
+                  "color": "#000000",
+                  "fontFamily": "TimesDigitalW04",
+                  "fontSize": 36,
                   "lineHeight": 52,
                 }
               }
             >
-              <Text
-                style={
-                  Object {
-                    "color": "#000000",
-                    "fontFamily": "TimesDigitalW04",
-                    "fontSize": 36,
-                    "lineHeight": 52,
-                  }
-                }
-              >
+              <Text>
                 Some content
               </Text>
             </Text>
@@ -2591,9 +2530,7 @@ exports[`17. an article skeleton with responsive items 1`] = `
           }
         }
       >
-        <PullQuote>
-          The pull quote content
-        </PullQuote>
+        <PullQuote />
       </View>
       <View
         style={
@@ -2899,7 +2836,9 @@ exports[`17. an article skeleton with responsive items 1`] = `
                 }
               }
             >
-              This is heading 2
+              <Text>
+                This is heading 2
+              </Text>
             </Text>
           </View>
         </View>
@@ -2937,7 +2876,9 @@ exports[`17. an article skeleton with responsive items 1`] = `
                 }
               }
             >
-              This is heading 3
+              <Text>
+                This is heading 3
+              </Text>
             </Text>
           </View>
         </View>
@@ -2975,7 +2916,9 @@ exports[`17. an article skeleton with responsive items 1`] = `
                 }
               }
             >
-              This is heading 4
+              <Text>
+                This is heading 4
+              </Text>
             </Text>
           </View>
         </View>
@@ -3013,7 +2956,9 @@ exports[`17. an article skeleton with responsive items 1`] = `
                 }
               }
             >
-              This is heading 5
+              <Text>
+                This is heading 5
+              </Text>
             </Text>
           </View>
         </View>
@@ -3051,7 +2996,9 @@ exports[`17. an article skeleton with responsive items 1`] = `
                 }
               }
             >
-              This is heading 6
+              <Text>
+                This is heading 6
+              </Text>
             </Text>
           </View>
         </View>
