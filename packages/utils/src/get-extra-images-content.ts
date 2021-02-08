@@ -1,8 +1,8 @@
-import { getStandardTemplateCrop } from "@times-components-native/utils";
 import {
   Article,
   Media,
 } from "@times-components-native/fixture-generator/src/types";
+import getStandardTemplateCrop from "./crop-config";
 
 const getCrop = (leadAsset?: Media) => {
   if (!leadAsset) {

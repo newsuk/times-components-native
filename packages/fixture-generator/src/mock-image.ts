@@ -6,6 +6,7 @@ class MockImage {
 
   constructor() {
     this.image = {
+      __typename: "Image",
       id: UUID(),
       crops: [],
       crop: {
