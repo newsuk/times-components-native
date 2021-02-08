@@ -41,7 +41,7 @@ describe("SingleColumn", () => {
   });
 
   it("renders additional invisible line to ensure last visible line is justified", () => {
-    const column = [{ ...articleContent, split: true }];
+    const column = [{ ...articleContent, attributes: { split: true } }];
 
     const renderer = TestRenderer.create(
       <SingleColumn

@@ -3,14 +3,22 @@ import React from "react";
 import { StyleSheet, View, TextStyle } from "react-native";
 
 import { spacing } from "@times-components-native/styleguide";
-import { ArticleContent } from "@times-components-native/types";
+import {
+  ArticleContent,
+  ParagraphContent,
+} from "@times-components-native/types";
 import { ColumnContents, ColumnParameters } from "../types";
 import { getRenderers } from "@times-components-native/front-page/front-renderer";
 import { appendInvisibleLineToArticleContent } from "../utils/appendInvisibleLineToArticleContent";
 
+const isParagraph = (content: ArticleContent): content is ParagraphContent =>
+  content.name === "paragraph";
+
 const justifyLastLine = (contents: ArticleContent[]): ArticleContent[] =>
   contents.map((content) =>
-    content.split ? appendInvisibleLineToArticleContent(content) : content,
+    isParagraph(content) && content.attributes?.split
+      ? appendInvisibleLineToArticleContent(content)
+      : content,
   );
 
 export const Columns: React.FC<{ children: React.ReactNode }> = ({

@@ -106,7 +106,6 @@ export const splitParagraphContent = (
     name: articleContent.name,
     children: [],
     id: uuid(),
-    split: true, // TODO potentially remove,
   };
   const emptyArticleContentB: ArticleContent = {
     name: articleContent.name,
