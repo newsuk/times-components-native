@@ -8,7 +8,6 @@ import styleguide, {
   getNarrowArticleBreakpoint,
   spacing,
 } from "@times-components-native/styleguide";
-import { AttributedString } from "@times-components-native/typeset";
 import Ad from "@times-components-native/ad";
 import InlineContent from "@times-components-native/inline-content";
 import ArticleImage from "@times-components-native/article-image";
@@ -17,14 +16,11 @@ import KeyFacts from "@times-components-native/key-facts";
 import PullQuote from "@times-components-native/pull-quote";
 import Video from "@times-components-native/video";
 import ArticleParagraphWrapper from "@times-components-native/article-paragraph";
-import ArticleParagraph from "./article-body-paragraph";
-import ArticleParagraph2 from "@times-components-native/article-paragraph/src/article-paragraph";
 import InsetCaption from "./inset-caption";
 import styleFactory from "../styles/article-body";
 import ArticleLink from "./article-link";
 import InlineNewsletterPuff from "./inline-newsletter-puff";
 import { useResponsiveContext } from "@times-components-native/responsive";
-import { toSubscript, toSuperscript } from "@times-components-native/utils";
 
 export default ({
   interactiveConfig,
@@ -76,6 +72,7 @@ export default ({
             { marginBottom: 0 },
             narrowContent && { alignSelf: "flex-start" },
           ]}
+          ast={children}
         >
           <Text style={styles[tree.name]}>{children}</Text>
         </ArticleParagraphWrapper>
@@ -106,18 +103,6 @@ export default ({
       return <Text style={fontConfig.italic}>{children}</Text>;
     },
     link(key, { href, canonicalId, type }, children) {
-      // if (!children.length) {
-      //   return new AttributedString("", []);
-      // }
-      // const childStr = AttributedString.join(children);
-      // const attr = {
-      //   tag: "LINK",
-      //   href,
-      //   canonicalId,
-      //   type,
-      // };
-      // childStr.addAttribute(0, childStr.length, attr);
-      // return childStr;
       return (
         <ArticleLink
           url={href}
@@ -133,21 +118,40 @@ export default ({
         </ArticleLink>
       );
     },
-    // subscript(key, attributes, children) {
-    //   const childStr = AttributedString.join(children);
-    //   childStr.string = toSubscript(childStr.string);
-    //   return childStr;
-    // },
-    // superscript(key, attributes, children) {
-    //   const childStr = AttributedString.join(children);
-    //   childStr.string = toSuperscript(childStr.string);
-    //   return childStr;
-    // },
+    subscript(key, attributes, children) {
+      return (
+        <View style={{ flexDirection: "row", alignItems: "flex-start" }}>
+          <Text
+            style={{
+              fontSize: defaultFont.fontSize * 0.5,
+              lineHeight: defaultFont.fontSize * 0.5,
+            }}
+          >
+            {children}
+          </Text>
+        </View>
+      );
+    },
+    superscript(key, attributes, children) {
+      return (
+        <View style={{ flexDirection: "row", alignItems: "flex-end" }}>
+          <Text
+            style={{
+              fontSize: defaultFont.fontSize * 0.5,
+              lineHeight: 30,
+            }}
+          >
+            {children}
+          </Text>
+        </View>
+      );
+    },
     paragraph(key, attributes, children) {
       return (
         <ArticleParagraphWrapper
           narrowContent={narrowContent}
           attributes={attributes}
+          ast={children}
         >
           <Text
             onTextLayout={onParagraphTextLayout}
@@ -160,25 +164,6 @@ export default ({
         </ArticleParagraphWrapper>
       );
     },
-    // paragraph(key, attributes, children, index, tree) {
-    //   return (
-    //     <ArticleParagraph
-    //       LinkComponent={ArticleLink}
-    //       key={key}
-    //       attributes={attributes}
-    //       index={index}
-    //       tree={tree}
-    //       scale={scale}
-    //       isTablet={isTablet}
-    //       defaultFont={defaultFont}
-    //       onLinkPress={onLinkPress}
-    //       narrowContent={narrowContent}
-    //       onParagraphTextLayout={onParagraphTextLayout}
-    //     >
-    //       {children}
-    //     </ArticleParagraph>
-    //   );
-    // },
     ad(key, attributes) {
       return (
         <Ad

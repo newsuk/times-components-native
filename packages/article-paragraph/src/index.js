@@ -7,13 +7,13 @@ const ArticleParagraphWrapper = ({
   children,
   height,
   style,
+  ast,
   narrowContent,
   attributes,
 }) => {
-  // const { children: astChildren } = ast;
-  // if (!astChildren || astChildren.length === 0) {
-  //   return null;
-  // }
+  if (!ast || ast.length === 0) {
+    return null;
+  }
 
   return (
     <ArticleParagraph
@@ -30,6 +30,7 @@ const ArticleParagraphWrapper = ({
 
 ArticleParagraphWrapper.propTypes = {
   children: PropTypes.node.isRequired,
+  ast: PropTypes.object.isRequired,
   height: PropTypes.number,
   style: PropTypes.object,
   narrowContent: PropTypes.bool,
