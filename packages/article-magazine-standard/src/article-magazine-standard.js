@@ -21,7 +21,6 @@ import {
   articleDefaultProps,
 } from "./article-prop-types/article-prop-types";
 import styles from "./styles";
-import ArticleLeadAsset from "@times-components-native/article-lead-asset";
 
 class ArticleMagazineStandard extends Component {
   constructor(props) {

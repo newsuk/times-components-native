@@ -1,7 +1,10 @@
 import React from "react";
 import { NativeModules, Platform } from "react-native";
 import Article from "@times-components-native/article";
-import { ContextProviderWithDefaults, defaults, } from "@times-components-native/context";
+import {
+  ContextProviderWithDefaults,
+  defaults,
+} from "@times-components-native/context";
 import { themeFactory } from "@times-components-native/styleguide";
 import { VariantTestingProvider } from "@times-components-native/variant-testing";
 import adTargetConfig from "./ad-targeting-config";
