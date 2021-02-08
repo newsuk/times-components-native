@@ -134,7 +134,6 @@ const InlineContent = (props: InlineContentProps) => {
               {
                 width: inlineItemWidth,
                 height: isAd ? adContainerHeight : itemHeight,
-                backgroundColor: "green",
               },
             ]}
           >
@@ -145,7 +144,6 @@ const InlineContent = (props: InlineContentProps) => {
         const inlineContentToRender = (
           <View
             style={{
-              backgroundColor: "red",
               height: requiredInlineContentHeight,
               width: inlineContentWidth,
             }}

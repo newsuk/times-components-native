@@ -56,6 +56,7 @@ export interface ParagraphContent extends ContentMetadata {
   children: ParagraphContentChild[];
   attributes?: {
     tab?: boolean;
+    split?: boolean;
   };
 }
 

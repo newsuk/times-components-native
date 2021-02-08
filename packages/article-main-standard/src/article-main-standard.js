@@ -1,5 +1,5 @@
 /* eslint-disable consistent-return */
-import React, { PureComponent, Fragment } from "react";
+import React, { Component, Fragment } from "react";
 import { View } from "react-native";
 import PropTypes from "prop-types";
 import ArticleError from "@times-components-native/article-error";
@@ -23,7 +23,7 @@ import {
   articleDefaultProps,
 } from "./article-prop-types/article-prop-types";
 
-class ArticlePage extends PureComponent {
+class ArticlePage extends Component {
   constructor(props) {
     super(props);
     this.renderHeader = this.renderHeader.bind(this);

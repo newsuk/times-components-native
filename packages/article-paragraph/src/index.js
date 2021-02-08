@@ -4,28 +4,24 @@ import PropTypes from "prop-types";
 import ArticleParagraph from "./article-paragraph";
 
 const ArticleParagraphWrapper = ({
-  ast,
   children,
-  uid,
   height,
   style,
   narrowContent,
   attributes,
 }) => {
-  const { children: astChildren } = ast;
-  if (!astChildren || astChildren.length === 0) {
-    return null;
-  }
+  // const { children: astChildren } = ast;
+  // if (!astChildren || astChildren.length === 0) {
+  //   return null;
+  // }
 
   return (
     <ArticleParagraph
       height={height}
-      key={`paragraph-${uid}`}
-      testID={`paragraph-${uid}`}
       style={style}
       narrowContent={narrowContent}
       attributes={attributes}
-      split={ast.split}
+      split={attributes?.split ?? false}
     >
       {children}
     </ArticleParagraph>
@@ -33,9 +29,7 @@ const ArticleParagraphWrapper = ({
 };
 
 ArticleParagraphWrapper.propTypes = {
-  ast: PropTypes.object.isRequired,
   children: PropTypes.node.isRequired,
-  uid: PropTypes.string.isRequired,
   height: PropTypes.number,
   style: PropTypes.object,
   narrowContent: PropTypes.bool,
