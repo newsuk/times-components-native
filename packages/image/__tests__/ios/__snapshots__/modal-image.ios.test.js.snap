@@ -46,7 +46,7 @@ exports[`1. modal image 1`] = `
               "relativeVerticalOffset": 1,
               "relativeWidth": 1,
               "uri": "http://example.com/image.jpg?crop=1016%2C677%2C0%2C0",
-              "url": "http://example.com/image.jpg?crop=1016%2C677%2C0%2C0",
+              "url": "http://example.com/image.jpg?crop=1016%2C677%2C0%2C0&offline=true",
             },
           ]
         }
@@ -198,7 +198,7 @@ exports[`2. modal image with no caption 1`] = `
               "relativeVerticalOffset": 1,
               "relativeWidth": 1,
               "uri": "http://example.com/image.jpg?crop=1016%2C677%2C0%2C0",
-              "url": "http://example.com/image.jpg?crop=1016%2C677%2C0%2C0",
+              "url": "http://example.com/image.jpg?crop=1016%2C677%2C0%2C0&offline=true",
             },
           ]
         }
@@ -340,7 +340,7 @@ exports[`3. modal image with custom highressize 1`] = `
               "relativeVerticalOffset": 1,
               "relativeWidth": 1,
               "uri": "http://example.com/image.jpg?crop=1016%2C677%2C0%2C0",
-              "url": "http://example.com/image.jpg?crop=1016%2C677%2C0%2C0",
+              "url": "http://example.com/image.jpg?crop=1016%2C677%2C0%2C0&offline=true",
             },
           ]
         }
