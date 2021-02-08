@@ -22,7 +22,7 @@ import {
 } from "@times-components-native/utils";
 
 const getAllImages = (template, leadAsset, fixedContent) => {
-  if (isTemplateWithLeadAssetInGallery(template)) {
+  if (isTemplateWithLeadAssetInGallery(template) && leadAsset) {
     return [
       {
         attributes: {
@@ -32,7 +32,8 @@ const getAllImages = (template, leadAsset, fixedContent) => {
           imageIndex: 0,
         },
       },
-    ].concat(fixedContent.filter((node) => node.name === "image"));
+      ...fixedContent.filter((node) => node.name === "image"),
+    ];
   }
 
   return fixedContent.filter((node) => node.name === "image");

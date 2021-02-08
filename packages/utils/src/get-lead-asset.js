@@ -7,16 +7,19 @@ export const defaultAsset = {
   leadAsset: null,
 };
 
+const getDisplayImage = (leadAsset, isVideo) => {
+  if (isVideo && leadAsset.posterImage) {
+    return getStandardTemplateCrop(leadAsset.posterImage);
+  }
+
+  return getStandardTemplateCrop(leadAsset);
+};
+
 export default function getLeadAsset({ leadAsset }) {
   if (!leadAsset) return defaultAsset;
 
-  /* eslint no-underscore-dangle: ["error", { "allow": ["__typename"] }] */
-
   const isVideo = leadAsset.__typename === "Video";
-  const displayImage = isVideo
-    ? getStandardTemplateCrop(leadAsset.posterImage)
-    : getStandardTemplateCrop(leadAsset);
-
+  const displayImage = getDisplayImage(leadAsset, isVideo);
   if (!displayImage) return defaultAsset;
 
   const aspectRatio = displayImage.ratio;

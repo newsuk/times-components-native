@@ -48,10 +48,13 @@ const computeAspectRatio = (ratio?: number | string) => {
 
 const getUrls = (images: ImageContent[], mainImage: MainImage) => {
   if (!images.length) {
+    const offlineUrl = new Url(mainImage.uri, true);
+    offlineUrl.query.offline = "true";
+
     return [
       {
         ...mainImage,
-        url: mainImage.uri,
+        url: offlineUrl.toString(),
         imageIndex: 0,
         caption: mainImage.caption?.text,
         credits: mainImage.caption?.credits,

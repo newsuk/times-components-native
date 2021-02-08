@@ -3758,7 +3758,7 @@ exports[`19. renders content 1`] = `
           imageOptions={
             Object {
               "display": "primary",
-              "index": undefined,
+              "index": 1,
               "narrowContent": undefined,
               "ratio": "1500:1000",
               "relativeHeight": undefined,
@@ -3772,9 +3772,20 @@ exports[`19. renders content 1`] = `
             Array [
               Object {
                 "attributes": Object {
+                  "__typename": "Crop",
+                  "caption": "Some Caption",
+                  "credits": "Some Credits",
+                  "imageIndex": 0,
+                  "ratio": "16:9",
+                  "url": "https://crop169.io",
+                },
+              },
+              Object {
+                "attributes": Object {
                   "caption": "All the latest stories in culture and books.",
                   "credits": "The credits",
                   "display": "primary",
+                  "imageIndex": 1,
                   "ratio": "1500:1000",
                   "url": "https://www.thetimes.co.uk/imageserver/image/methode%2Ftimes%2Fprod%2Fweb%2Fbin%2Fb7ac990a-d872-11e7-9b16-edd3826708d6.jpg?crop=3959%2C2639%2C0%2C0",
                 },
@@ -3786,6 +3797,7 @@ exports[`19. renders content 1`] = `
                   "caption": "All the latest stories in culture and books.",
                   "credits": "The credits",
                   "display": "secondary",
+                  "imageIndex": 2,
                   "ratio": "3:2",
                   "url": "https://www.thetimes.co.uk/imageserver/image/methode%2Ftimes%2Fprod%2Fweb%2Fbin%2F4476fabc-be54-11e7-b58a-4186f6049f2e.jpg?crop=5760%2C3840%2C0%2C0",
                 },
@@ -3797,6 +3809,7 @@ exports[`19. renders content 1`] = `
                   "caption": "All the latest stories in culture and books.",
                   "credits": "The credits",
                   "display": "inline",
+                  "imageIndex": 3,
                   "ratio": "1:1.50",
                   "url": "https://www.thetimes.co.uk/imageserver/image/methode%2Ftimes%2Fprod%2Fweb%2Fbin%2Fdb30ed6a-be62-11e7-b58a-4186f6049f2e.jpg?crop=384%2C576%2C0%2C0",
                 },
@@ -3808,6 +3821,7 @@ exports[`19. renders content 1`] = `
                   "caption": "All the latest stories in culture and books.",
                   "credits": "The credits",
                   "display": "inline",
+                  "imageIndex": 4,
                   "ratio": "3:2",
                   "url": "https://www.thetimes.co.uk/imageserver/image/methode%2Ftimes%2Fprod%2Fweb%2Fbin%2F3ac674bc-beb2-11e7-8bb9-94e1372175c0.jpg?crop=5576%2C3717%2C0%2C0",
                 },
@@ -3961,7 +3975,7 @@ exports[`19. renders content 1`] = `
           imageOptions={
             Object {
               "display": "secondary",
-              "index": undefined,
+              "index": 2,
               "narrowContent": undefined,
               "ratio": "3:2",
               "relativeHeight": undefined,
@@ -3975,9 +3989,20 @@ exports[`19. renders content 1`] = `
             Array [
               Object {
                 "attributes": Object {
+                  "__typename": "Crop",
+                  "caption": "Some Caption",
+                  "credits": "Some Credits",
+                  "imageIndex": 0,
+                  "ratio": "16:9",
+                  "url": "https://crop169.io",
+                },
+              },
+              Object {
+                "attributes": Object {
                   "caption": "All the latest stories in culture and books.",
                   "credits": "The credits",
                   "display": "primary",
+                  "imageIndex": 1,
                   "ratio": "1500:1000",
                   "url": "https://www.thetimes.co.uk/imageserver/image/methode%2Ftimes%2Fprod%2Fweb%2Fbin%2Fb7ac990a-d872-11e7-9b16-edd3826708d6.jpg?crop=3959%2C2639%2C0%2C0",
                 },
@@ -3989,6 +4014,7 @@ exports[`19. renders content 1`] = `
                   "caption": "All the latest stories in culture and books.",
                   "credits": "The credits",
                   "display": "secondary",
+                  "imageIndex": 2,
                   "ratio": "3:2",
                   "url": "https://www.thetimes.co.uk/imageserver/image/methode%2Ftimes%2Fprod%2Fweb%2Fbin%2F4476fabc-be54-11e7-b58a-4186f6049f2e.jpg?crop=5760%2C3840%2C0%2C0",
                 },
@@ -4000,6 +4026,7 @@ exports[`19. renders content 1`] = `
                   "caption": "All the latest stories in culture and books.",
                   "credits": "The credits",
                   "display": "inline",
+                  "imageIndex": 3,
                   "ratio": "1:1.50",
                   "url": "https://www.thetimes.co.uk/imageserver/image/methode%2Ftimes%2Fprod%2Fweb%2Fbin%2Fdb30ed6a-be62-11e7-b58a-4186f6049f2e.jpg?crop=384%2C576%2C0%2C0",
                 },
@@ -4011,6 +4038,7 @@ exports[`19. renders content 1`] = `
                   "caption": "All the latest stories in culture and books.",
                   "credits": "The credits",
                   "display": "inline",
+                  "imageIndex": 4,
                   "ratio": "3:2",
                   "url": "https://www.thetimes.co.uk/imageserver/image/methode%2Ftimes%2Fprod%2Fweb%2Fbin%2F3ac674bc-beb2-11e7-8bb9-94e1372175c0.jpg?crop=5576%2C3717%2C0%2C0",
                 },
@@ -4241,7 +4269,7 @@ exports[`19. renders content 1`] = `
           imageOptions={
             Object {
               "display": "secondary",
-              "index": undefined,
+              "index": 3,
               "narrowContent": undefined,
               "ratio": "1:1.50",
               "relativeHeight": undefined,
@@ -4255,9 +4283,20 @@ exports[`19. renders content 1`] = `
             Array [
               Object {
                 "attributes": Object {
+                  "__typename": "Crop",
+                  "caption": "Some Caption",
+                  "credits": "Some Credits",
+                  "imageIndex": 0,
+                  "ratio": "16:9",
+                  "url": "https://crop169.io",
+                },
+              },
+              Object {
+                "attributes": Object {
                   "caption": "All the latest stories in culture and books.",
                   "credits": "The credits",
                   "display": "primary",
+                  "imageIndex": 1,
                   "ratio": "1500:1000",
                   "url": "https://www.thetimes.co.uk/imageserver/image/methode%2Ftimes%2Fprod%2Fweb%2Fbin%2Fb7ac990a-d872-11e7-9b16-edd3826708d6.jpg?crop=3959%2C2639%2C0%2C0",
                 },
@@ -4269,6 +4308,7 @@ exports[`19. renders content 1`] = `
                   "caption": "All the latest stories in culture and books.",
                   "credits": "The credits",
                   "display": "secondary",
+                  "imageIndex": 2,
                   "ratio": "3:2",
                   "url": "https://www.thetimes.co.uk/imageserver/image/methode%2Ftimes%2Fprod%2Fweb%2Fbin%2F4476fabc-be54-11e7-b58a-4186f6049f2e.jpg?crop=5760%2C3840%2C0%2C0",
                 },
@@ -4280,6 +4320,7 @@ exports[`19. renders content 1`] = `
                   "caption": "All the latest stories in culture and books.",
                   "credits": "The credits",
                   "display": "inline",
+                  "imageIndex": 3,
                   "ratio": "1:1.50",
                   "url": "https://www.thetimes.co.uk/imageserver/image/methode%2Ftimes%2Fprod%2Fweb%2Fbin%2Fdb30ed6a-be62-11e7-b58a-4186f6049f2e.jpg?crop=384%2C576%2C0%2C0",
                 },
@@ -4291,6 +4332,7 @@ exports[`19. renders content 1`] = `
                   "caption": "All the latest stories in culture and books.",
                   "credits": "The credits",
                   "display": "inline",
+                  "imageIndex": 4,
                   "ratio": "3:2",
                   "url": "https://www.thetimes.co.uk/imageserver/image/methode%2Ftimes%2Fprod%2Fweb%2Fbin%2F3ac674bc-beb2-11e7-8bb9-94e1372175c0.jpg?crop=5576%2C3717%2C0%2C0",
                 },
@@ -4385,7 +4427,7 @@ exports[`19. renders content 1`] = `
           imageOptions={
             Object {
               "display": "secondary",
-              "index": undefined,
+              "index": 4,
               "narrowContent": undefined,
               "ratio": "3:2",
               "relativeHeight": undefined,
@@ -4399,9 +4441,20 @@ exports[`19. renders content 1`] = `
             Array [
               Object {
                 "attributes": Object {
+                  "__typename": "Crop",
+                  "caption": "Some Caption",
+                  "credits": "Some Credits",
+                  "imageIndex": 0,
+                  "ratio": "16:9",
+                  "url": "https://crop169.io",
+                },
+              },
+              Object {
+                "attributes": Object {
                   "caption": "All the latest stories in culture and books.",
                   "credits": "The credits",
                   "display": "primary",
+                  "imageIndex": 1,
                   "ratio": "1500:1000",
                   "url": "https://www.thetimes.co.uk/imageserver/image/methode%2Ftimes%2Fprod%2Fweb%2Fbin%2Fb7ac990a-d872-11e7-9b16-edd3826708d6.jpg?crop=3959%2C2639%2C0%2C0",
                 },
@@ -4413,6 +4466,7 @@ exports[`19. renders content 1`] = `
                   "caption": "All the latest stories in culture and books.",
                   "credits": "The credits",
                   "display": "secondary",
+                  "imageIndex": 2,
                   "ratio": "3:2",
                   "url": "https://www.thetimes.co.uk/imageserver/image/methode%2Ftimes%2Fprod%2Fweb%2Fbin%2F4476fabc-be54-11e7-b58a-4186f6049f2e.jpg?crop=5760%2C3840%2C0%2C0",
                 },
@@ -4424,6 +4478,7 @@ exports[`19. renders content 1`] = `
                   "caption": "All the latest stories in culture and books.",
                   "credits": "The credits",
                   "display": "inline",
+                  "imageIndex": 3,
                   "ratio": "1:1.50",
                   "url": "https://www.thetimes.co.uk/imageserver/image/methode%2Ftimes%2Fprod%2Fweb%2Fbin%2Fdb30ed6a-be62-11e7-b58a-4186f6049f2e.jpg?crop=384%2C576%2C0%2C0",
                 },
@@ -4435,6 +4490,7 @@ exports[`19. renders content 1`] = `
                   "caption": "All the latest stories in culture and books.",
                   "credits": "The credits",
                   "display": "inline",
+                  "imageIndex": 4,
                   "ratio": "3:2",
                   "url": "https://www.thetimes.co.uk/imageserver/image/methode%2Ftimes%2Fprod%2Fweb%2Fbin%2F3ac674bc-beb2-11e7-8bb9-94e1372175c0.jpg?crop=5576%2C3717%2C0%2C0",
                 },
