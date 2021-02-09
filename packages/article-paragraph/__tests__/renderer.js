@@ -6,10 +6,10 @@ import ArticleParagraph from "../src";
 export default (ast) => {
   const rendered = renderTree(ast, {
     ...renderers,
-    paragraph(key, attributes, children, indx, node) {
+    paragraph(key, attributes, children, indx) {
       return (
         <ArticleParagraph
-          ast={node}
+          ast={children}
           key={indx}
           uid={indx}
           attributes={attributes}
