@@ -7,7 +7,7 @@ import ArticleSkeleton from "@times-components-native/article-skeleton";
 import ArticleLeadAsset from "@times-components-native/article-lead-asset";
 import { ResponsiveContext } from "@times-components-native/responsive";
 import {
-  getExtraImagesContent,
+  getAllArticleImages,
   getHeadline,
   getLeadAsset,
   getStandardTemplateCrop,
@@ -70,7 +70,7 @@ class ArticlePage extends Component {
                 )}
                 style={[styles.leadAsset, isTablet && styles.leadAssetTablet]}
                 width={Math.min(parentProps.width, tabletWidth)}
-                extraContent={getExtraImagesContent(article)}
+                extraContent={getAllArticleImages(article)}
               />
             </View>
           );

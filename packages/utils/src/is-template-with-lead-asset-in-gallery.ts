@@ -1,6 +1,8 @@
-import { Template } from "@times-components-native/article-skeleton/types";
+import { TemplateType } from "@times-components-native/fixture-generator/src/types";
 
-export const isTemplateWithLeadAssetInGallery = (template: Template) =>
-  template === Template.MAIN_STANDARD ||
-  template === Template.IN_DEPTH ||
-  template === Template.MAGAZINE_STANDARD;
+export const isTemplateWithLeadAssetInGallery = (template: TemplateType) =>
+  [
+    TemplateType.Mainstandard,
+    TemplateType.Indepth,
+    TemplateType.Magazinestandard,
+  ].includes(template);

@@ -5,7 +5,7 @@ import { View } from "react-native";
 import ArticleError from "@times-components-native/article-error";
 import ArticleSkeleton from "@times-components-native/article-skeleton";
 import {
-  getExtraImagesContent,
+  getAllArticleImages,
   getHeadline,
   getLeadAsset,
   getStandardTemplateCrop,
@@ -82,7 +82,7 @@ class ArticleMagazineStandard extends Component {
                 { zIndex: 0 },
               ]}
               width={Math.min(width, tabletWidth)}
-              extraContent={getExtraImagesContent(article)}
+              extraContent={getAllArticleImages(article)}
             />
           </View>
         )}

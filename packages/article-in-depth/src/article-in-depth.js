@@ -8,7 +8,7 @@ import ArticleLeadAsset from "@times-components-native/article-lead-asset";
 import { CentredCaption } from "@times-components-native/caption";
 import { ResponsiveContext } from "@times-components-native/responsive";
 import {
-  getExtraImagesContent,
+  getAllArticleImages,
   getHeadline,
   getLeadAsset,
   getStandardTemplateCrop,
@@ -70,7 +70,7 @@ class ArticleInDepth extends Component {
               }
               style={[styles.leadAsset, isTablet && styles.leadAssetTablet]}
               width={width}
-              extraContent={getExtraImagesContent(article)}
+              extraContent={getAllArticleImages(article)}
             />
             <View
               style={[

@@ -22,7 +22,7 @@ const getCrop = (leadAsset?: Media) => {
   return crop;
 };
 
-export const getExtraImagesContent = (article: Article) => {
+export const getAllArticleImages = (article: Article) => {
   if (!article || !article.content || !article.leadAsset) {
     return [];
   }
