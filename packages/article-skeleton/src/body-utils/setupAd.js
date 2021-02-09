@@ -10,9 +10,14 @@ const setupArticleMpuAd = (
   const singleMPUThreshold = 8;
   const doubleMPUThreshold = 10;
 
+  const {
+    data: { template },
+  } = skeletonProps;
+
+  const isCommentTemplate = /comment/.test(template);
+
   // Get index of nth (adPosition) paragraph
   let nthParagraphIndex = currentAdSlotIndex;
-
   let hasNonParagraphContentBeforeThreshold = false;
   let lastParagraphIndex;
 
@@ -45,7 +50,9 @@ const setupArticleMpuAd = (
       {
         name: "ad",
         attributes: {
-          slotName: "native-leaderboard",
+          slotName: isCommentTemplate
+            ? "native-single-mpu"
+            : "native-leaderboard",
         },
         children: [],
       },
@@ -106,7 +113,13 @@ const setupArticleMpuAd = (
   ];
 };
 
-const templatesWithAds = ["mainstandard", "indepth", "magazinestandard"];
+const templatesWithAds = [
+  "mainstandard",
+  "maincomment",
+  "indepth",
+  "magazinestandard",
+  "magazinecomment",
+];
 
 export const setupAd = (skeletonProps) => {
   const {

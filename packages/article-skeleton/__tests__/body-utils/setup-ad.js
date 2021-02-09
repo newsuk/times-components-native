@@ -50,26 +50,6 @@ export default () => {
         }),
       ).toEqual(contentWithoutAd);
     });
-
-    it("should remove ad if tablet and template is not supported template", () => {
-      const contentWithoutAd = content.filter((item) => item.name !== "ad");
-      expect(
-        setupAd({
-          ...skeletonProps,
-          data: { ...skeletonProps.data, template: "maincomment" },
-        }),
-      ).toEqual(contentWithoutAd);
-    });
-
-    it("should not remove ad if not tablet and template is not mainstandard", () => {
-      expect(
-        setupAd({
-          ...skeletonProps,
-          isTablet: false,
-          data: { ...skeletonProps.data, template: "maincomment" },
-        }),
-      ).toEqual(content);
-    });
   });
 
   describe("setupArticleMpuAd", () => {
@@ -97,7 +77,7 @@ export default () => {
       ]);
     });
 
-    it("should return content with a leaderboard if non paragraph precedes and follows 5th paragraph", () => {
+    it("should return content with a leaderboard if non paragraph precedes and follows 5th paragraph and not comment template", () => {
       const crowdedContent = [
         createParagraph("a"),
         createParagraph("b"),
@@ -129,6 +109,53 @@ export default () => {
         {
           name: "ad",
           attributes: { slotName: "native-leaderboard" },
+          children: [],
+        },
+        { name: "image", children: [] },
+        createParagraph("f"),
+        createParagraph("g"),
+        createParagraph("h"),
+        createParagraph("i"),
+        createParagraph("j"),
+      ]);
+    });
+
+    it("should return content with a single mpu (not inlined) if non paragraph precedes and follows 5th paragraph and is comment template", () => {
+      const crowdedContent = [
+        createParagraph("a"),
+        createParagraph("b"),
+        createParagraph("c"),
+        createParagraph("d"),
+        { name: "image", children: [] },
+        createParagraph("e"),
+        { name: "ad", children: [] },
+        { name: "image", children: [] },
+        createParagraph("f"),
+        createParagraph("g"),
+        createParagraph("h"),
+        createParagraph("i"),
+        createParagraph("j"),
+      ];
+
+      const newSkeletonProps = {
+        ...skeletonProps,
+        data: {
+          ...skeletonProps.data,
+          content: crowdedContent,
+          template: "maincomment",
+        },
+      };
+
+      expect(setupAd(newSkeletonProps)).toEqual([
+        createParagraph("a"),
+        createParagraph("b"),
+        createParagraph("c"),
+        createParagraph("d"),
+        { name: "image", children: [] },
+        createParagraph("e"),
+        {
+          name: "ad",
+          attributes: { slotName: "native-single-mpu" },
           children: [],
         },
         { name: "image", children: [] },
