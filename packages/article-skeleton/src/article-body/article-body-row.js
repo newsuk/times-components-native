@@ -179,6 +179,7 @@ export default ({
         <Ad
           key={key}
           adConfig={adConfig}
+          narrowContent={narrowContent}
           slotName="native-inline-ad"
           {...attributes}
         />
