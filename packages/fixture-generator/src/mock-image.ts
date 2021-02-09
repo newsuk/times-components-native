@@ -1,5 +1,5 @@
 import UUID from "./mock-UUID";
-import TimesImage from "./times-image";
+import { TimesImage } from "@times-components-native/fixture-generator/src/types";
 
 class MockImage {
   image: TimesImage;

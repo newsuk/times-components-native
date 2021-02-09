@@ -1,6 +1,5 @@
-import { Puzzle } from "./types";
+import { Puzzle, TimesImage } from "./types";
 import UUID from "./mock-UUID";
-import TimesImage from "./times-image";
 
 class PuzzleImage {
   image: TimesImage;

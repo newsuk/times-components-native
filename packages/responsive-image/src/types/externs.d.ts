@@ -27,10 +27,10 @@ declare module "@times-components-native/styleguide" {
 }
 
 declare module "@times-components-native/utils" {
-  import TimesImage from "@times-components-native/fixture-generator/src/times-image";
   import {
     Crop,
     PosterImage,
+    TimesImage,
   } from "@times-components-native/fixture-generator/src/types";
 
   type appendToImageURL = (
