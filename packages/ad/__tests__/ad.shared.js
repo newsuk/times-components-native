@@ -51,4 +51,16 @@ export default () => {
 
     expect(wrapper).toMatchSnapshot();
   });
+
+  it("advert with narrow content", () => {
+    const wrapper = shallow(
+      <AdComposer adConfig={adConfig}>
+        <Fragment>
+          <Ad {...props} slotName="header" narrowContent={true} />
+        </Fragment>
+      </AdComposer>,
+    );
+
+    expect(wrapper).toMatchSnapshot();
+  });
 };

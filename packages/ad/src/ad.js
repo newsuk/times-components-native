@@ -4,6 +4,7 @@ import { Subscriber } from "react-broadcast";
 import { View, Text } from "react-native";
 import NetInfo from "@react-native-community/netinfo";
 import { useResponsiveContext } from "@times-components-native/responsive";
+import { getNarrowArticleBreakpoint } from "@times-components-native/styleguide";
 
 import { getPrebidSlotConfig, getSlotConfig, prebidConfig } from "./utils";
 import adInit from "./utils/ad-init";
@@ -82,11 +83,12 @@ export class AdBase extends Component {
       contextUrl,
       display,
       isLoading,
+      narrowContent,
+      orientation,
+      screenWidth,
       slotName,
       style,
       width,
-      screenWidth,
-      orientation,
     } = this.props;
     const { config, hasError, isAdReady, offline } = this.state;
 
@@ -134,7 +136,11 @@ export class AdBase extends Component {
       !isAdReady || hasError
         ? { width: 0 }
         : {
-            width: width || screenWidth,
+            width:
+              width ||
+              (narrowContent
+                ? getNarrowArticleBreakpoint(screenWidth).content
+                : screenWidth),
           };
 
     const isInline = display === "inline";

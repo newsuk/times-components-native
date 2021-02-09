@@ -14,6 +14,21 @@ exports[`advert 1`] = `
 </Broadcast>
 `;
 
+exports[`advert with narrow content 1`] = `
+<Broadcast
+  channel="adConfig"
+>
+  <Ad
+    baseUrl="https://www.thetimes.co.uk/"
+    contextUrl="https://www.thetimes.co.uk"
+    isLoading={false}
+    narrowContent={true}
+    section="news"
+    slotName="header"
+  />
+</Broadcast>
+`;
+
 exports[`advert with width 1`] = `
 <Broadcast
   channel="adConfig"
