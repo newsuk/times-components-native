@@ -1,8 +1,7 @@
 /* eslint-disable prefer-destructuring */
 import React from "react";
 import { View, Text, Dimensions, Platform } from "react-native";
-import styleguide, {
-  colours,
+import {
   tabletWidth,
   tabletRowPadding,
   getNarrowArticleBreakpoint,
@@ -36,30 +35,8 @@ export default ({
   narrowContent,
   onParagraphTextLayout,
 }) => {
-  const styles = styleFactory(scale);
-  const { fontFactory } = styleguide({ scale });
-
-  const defaultFont = {
-    ...fontFactory({
-      font: "body",
-      fontSize: "bodyMobile",
-    }),
-    color: colours.functional.black,
-  };
-
   const { fontScale } = Dimensions.get("window");
-  defaultFont.fontSize *= fontScale;
-  defaultFont.lineHeight *= fontScale;
-
-  const fontConfig = {
-    body: defaultFont,
-    bold: {
-      fontWeight: "bold",
-    },
-    italic: {
-      fontStyle: "italic",
-    },
-  };
+  const styles = styleFactory({ scale, narrowContent, fontScale });
 
   return {
     text(key, attributes) {
@@ -67,13 +44,7 @@ export default ({
     },
     heading2(key, attributes, children, index, tree) {
       return (
-        <ArticleParagraphWrapper
-          style={[
-            { marginBottom: 0 },
-            narrowContent && { alignSelf: "flex-start" },
-          ]}
-          ast={children}
-        >
+        <ArticleParagraphWrapper style={styles.headingContainer} ast={children}>
           <Text style={styles[tree.name]}>{children}</Text>
         </ArticleParagraphWrapper>
       );
@@ -91,7 +62,7 @@ export default ({
       return this.heading2(key, attributes, children, index, tree);
     },
     bold(key, attributes, children) {
-      return <Text style={fontConfig.bold}>{children}</Text>;
+      return <Text style={styles.bold}>{children}</Text>;
     },
     emphasis(key, attributes, children) {
       return this.bold(key, attributes, children);
@@ -100,7 +71,7 @@ export default ({
       return this.bold(key, attributes, children);
     },
     italic(key, attributes, children) {
-      return <Text style={fontConfig.italic}>{children}</Text>;
+      return <Text style={styles.italic}>{children}</Text>;
     },
     link(key, { href, canonicalId, type }, children) {
       return (
@@ -120,29 +91,15 @@ export default ({
     },
     subscript(key, attributes, children) {
       return (
-        <View style={{ flexDirection: "row", alignItems: "flex-start" }}>
-          <Text
-            style={{
-              fontSize: defaultFont.fontSize * 0.5,
-              lineHeight: defaultFont.fontSize * 0.5,
-            }}
-          >
-            {children}
-          </Text>
+        <View style={styles.subscriptContainer}>
+          <Text style={styles.subscript}>{children}</Text>
         </View>
       );
     },
     superscript(key, attributes, children) {
       return (
-        <View style={{ flexDirection: "row", alignItems: "flex-end" }}>
-          <Text
-            style={{
-              fontSize: defaultFont.fontSize * 0.5,
-              lineHeight: 30,
-            }}
-          >
-            {children}
-          </Text>
+        <View style={styles.superscriptContainer}>
+          <Text style={styles.superscript}>{children}</Text>
         </View>
       );
     },
@@ -157,7 +114,7 @@ export default ({
             onTextLayout={onParagraphTextLayout}
             selectable
             allowFontScaling={false}
-            style={defaultFont}
+            style={styles.defaultFont}
           >
             {children}
           </Text>
@@ -180,7 +137,7 @@ export default ({
         <InlineContent
           key={key}
           adConfig={adConfig}
-          defaultFont={defaultFont}
+          defaultFont={styles.defaultFont}
           onImagePress={onImagePress}
           onTwitterLinkPress={onTwitterLinkPress}
           narrowContent={narrowContent}
