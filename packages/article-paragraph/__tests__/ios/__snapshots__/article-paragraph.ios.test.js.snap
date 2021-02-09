@@ -1,10 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`empty paragraph 1`] = `
-<View>
-  <View />
-</View>
-`;
+exports[`empty paragraph 1`] = `null`;
 
 exports[`paragraph 1`] = `
 <View>
