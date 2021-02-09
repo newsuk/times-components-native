@@ -106,13 +106,13 @@ export default ({
       return (
         <ArticleLink
           url={href}
-          onPress={(e) => {
-            return onLinkPress(e, {
+          onPress={(e) =>
+            onLinkPress(e, {
               canonicalId,
               type,
               url: href,
-            });
-          }}
+            })
+          }
         >
           {children}
         </ArticleLink>

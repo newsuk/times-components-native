@@ -11,9 +11,7 @@ const ArticleParagraphWrapper = ({
   narrowContent,
   attributes,
 }) => {
-  if (!ast || ast.length === 0) {
-    return null;
-  }
+  if (!ast?.length) return null;
 
   return (
     <ArticleParagraph
