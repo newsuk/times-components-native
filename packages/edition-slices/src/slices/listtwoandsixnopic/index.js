@@ -1,10 +1,10 @@
-import React, { Component } from "react";
+import React, { PureComponent } from "react";
 import PropTypes from "prop-types";
 import { ListTwoAndSixNoPic } from "@times-components-native/slice-layout";
 import { ResponsiveSlice } from "../shared";
 import { TileL, TileC, TileAS } from "../../tiles";
 
-class ListTwoAndSixNoPicSlice extends Component {
+class ListTwoAndSixNoPicSlice extends PureComponent {
   constructor(props) {
     super(props);
     this.renderSlice = this.renderSlice.bind(this);

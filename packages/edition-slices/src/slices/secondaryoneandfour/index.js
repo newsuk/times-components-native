@@ -1,4 +1,4 @@
-import React, { Component } from "react";
+import React, { PureComponent } from "react";
 import { View } from "react-native";
 import PropTypes from "prop-types";
 import { SectionContext } from "@times-components-native/context";
@@ -11,7 +11,7 @@ import { TileO, TileN } from "../../tiles";
 import styleFactory from "./styles";
 import { ResponsiveSlice } from "../shared";
 
-class SecondaryOneAndFour extends Component {
+class SecondaryOneAndFour extends PureComponent {
   constructor(props) {
     super(props);
     this.renderSlice = this.renderSlice.bind(this);

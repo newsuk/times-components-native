@@ -1,9 +1,9 @@
-import React, { Component } from "react";
+import React, { PureComponent } from "react";
 import PropTypes from "prop-types";
 import { TileA, TileR } from "../../tiles";
 import { ResponsiveSlice } from "../shared";
 
-class LeadOneFullWidthSlice extends Component {
+class LeadOneFullWidthSlice extends PureComponent {
   constructor(props) {
     super(props);
     this.renderSmall = this.renderSmall.bind(this);

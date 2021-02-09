@@ -1,4 +1,4 @@
-import React, { Component } from "react";
+import React, { PureComponent } from "react";
 import { View } from "react-native";
 import { editionBreakpoints } from "@times-components-native/styleguide";
 import propTypes from "./proptypes";
@@ -6,7 +6,7 @@ import stylesFactory from "./styles";
 import { ResponsiveSlice } from "../shared";
 import { TileAJ, TileAK } from "../../tiles";
 
-class Puzzle extends Component {
+class Puzzle extends PureComponent {
   constructor(props) {
     super(props);
     this.renderPuzzles = this.renderPuzzles.bind(this);
