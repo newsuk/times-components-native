@@ -1,4 +1,4 @@
-import React, { Component } from "react";
+import React, { PureComponent } from "react";
 import { View, Text } from "react-native";
 import PropTypes from "prop-types";
 import {
@@ -10,7 +10,7 @@ import { TileS } from "../../tiles";
 import styleFactory from "./styles";
 import Logo from "./logo";
 
-class DailyRegisterLeadFour extends Component {
+class DailyRegisterLeadFour extends PureComponent {
   constructor(props) {
     super(props);
     this.renderSmall = this.renderSmall.bind(this);

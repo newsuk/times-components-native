@@ -22,6 +22,7 @@ jest.mock("react-native", () => {
 });
 
 import { ResponsiveContext } from "@times-components-native/responsive";
+import { calculateResponsiveContext } from "@times-components-native/responsive/src/calculateResponsiveContext";
 jest.mock("@times-components-native/image", () => ({
   __esModule: true,
   default: "TimesImage",
@@ -41,7 +42,7 @@ class WithTrackingContext extends Component {
     const { onArticlePress, onPuzzlePress, section } = this.props;
     return (
       <ResponsiveContext.Provider
-        value={{ isTablet: false, editionBreakpoint: "small" }}
+        value={calculateResponsiveContext(400, 600, 1)}
       >
         <Section
           analyticsStream={() => null}
