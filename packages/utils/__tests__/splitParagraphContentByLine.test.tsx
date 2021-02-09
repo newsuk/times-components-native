@@ -343,7 +343,7 @@ describe("splitParagraphContent", () => {
     expect(firstArticleContent).toEqual({
       name: "paragraph",
       id: "id1",
-      split: true,
+      attributes: { split: true },
       children: [
         {
           name: "text",
@@ -397,7 +397,7 @@ describe("splitParagraphContent", () => {
     expect(firstArticleContent).toEqual({
       name: "paragraph",
       id: expect.any(String),
-      split: true,
+      attributes: { split: true },
       children: [
         {
           name: "text",
@@ -458,7 +458,7 @@ describe("splitParagraphContent", () => {
     expect(firstArticleContent).toEqual({
       name: "paragraph",
       id: expect.any(String),
-      split: true,
+      attributes: { split: true },
       children: [
         {
           name: "text",
@@ -526,7 +526,7 @@ describe("splitParagraphContent", () => {
     expect(firstArticleContent).toEqual({
       name: "paragraph",
       id: "id1",
-      split: true,
+      attributes: { split: true },
       children: [
         {
           name: "text",
@@ -615,7 +615,7 @@ describe("splitParagraphContentByLine", () => {
       ],
       id: "id1",
       name: "paragraph",
-      split: true,
+      attributes: { split: true },
     });
     expect(paragraphContents[1]).toEqual({
       children: [

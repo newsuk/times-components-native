@@ -8,7 +8,6 @@ import styleguide, {
   getNarrowArticleBreakpoint,
   spacing,
 } from "@times-components-native/styleguide";
-import { AttributedString } from "@times-components-native/typeset";
 import Ad from "@times-components-native/ad";
 import InlineContent from "@times-components-native/inline-content";
 import ArticleImage from "@times-components-native/article-image";
@@ -17,13 +16,11 @@ import KeyFacts from "@times-components-native/key-facts";
 import PullQuote from "@times-components-native/pull-quote";
 import Video from "@times-components-native/video";
 import ArticleParagraphWrapper from "@times-components-native/article-paragraph";
-import ArticleParagraph from "./article-body-paragraph";
 import InsetCaption from "./inset-caption";
 import styleFactory from "../styles/article-body";
 import ArticleLink from "./article-link";
 import InlineNewsletterPuff from "./inline-newsletter-puff";
 import { useResponsiveContext } from "@times-components-native/responsive";
-import { toSubscript, toSuperscript } from "@times-components-native/utils";
 
 export default ({
   interactiveConfig,
@@ -66,32 +63,18 @@ export default ({
 
   return {
     text(key, attributes) {
-      const attr = {
-        tag: "FONT",
-        settings: fontConfig.body,
-      };
-      return new AttributedString(
-        attributes.value,
-        attributes.value.split("").map(() => [attr]),
-      );
-    },
-    inline(key, attributes, renderedChildren) {
-      return AttributedString.join(renderedChildren);
+      return <Text>{attributes.value}</Text>;
     },
     heading2(key, attributes, children, index, tree) {
-      const childStr = AttributedString.join(children);
       return (
         <ArticleParagraphWrapper
-          key={key}
-          ast={tree}
           style={[
             { marginBottom: 0 },
             narrowContent && { alignSelf: "flex-start" },
           ]}
+          ast={children}
         >
-          <Text selectable style={styles[tree.name]}>
-            {childStr.string}
-          </Text>
+          <Text style={styles[tree.name]}>{children}</Text>
         </ArticleParagraphWrapper>
       );
     },
@@ -108,13 +91,7 @@ export default ({
       return this.heading2(key, attributes, children, index, tree);
     },
     bold(key, attributes, children) {
-      const childStr = AttributedString.join(children);
-      const attr = {
-        tag: "FONT",
-        settings: fontConfig.bold,
-      };
-      childStr.addAttribute(0, childStr.length, attr);
-      return childStr;
+      return <Text style={fontConfig.bold}>{children}</Text>;
     },
     emphasis(key, attributes, children) {
       return this.bold(key, attributes, children);
@@ -123,55 +100,68 @@ export default ({
       return this.bold(key, attributes, children);
     },
     italic(key, attributes, children) {
-      const childStr = AttributedString.join(children);
-      const attr = {
-        tag: "FONT",
-        settings: fontConfig.italic,
-      };
-      childStr.addAttribute(0, childStr.length, attr);
-      return childStr;
+      return <Text style={fontConfig.italic}>{children}</Text>;
     },
     link(key, { href, canonicalId, type }, children) {
-      if (!children.length) {
-        return new AttributedString("", []);
-      }
-      const childStr = AttributedString.join(children);
-      const attr = {
-        tag: "LINK",
-        href,
-        canonicalId,
-        type,
-      };
-      childStr.addAttribute(0, childStr.length, attr);
-      return childStr;
-    },
-    subscript(key, attributes, children) {
-      const childStr = AttributedString.join(children);
-      childStr.string = toSubscript(childStr.string);
-      return childStr;
-    },
-    superscript(key, attributes, children) {
-      const childStr = AttributedString.join(children);
-      childStr.string = toSuperscript(childStr.string);
-      return childStr;
-    },
-    paragraph(key, attributes, children, index, tree) {
       return (
-        <ArticleParagraph
-          LinkComponent={ArticleLink}
-          key={key}
-          attributes={attributes}
-          index={index}
-          tree={tree}
-          scale={scale}
-          isTablet={isTablet}
-          defaultFont={defaultFont}
-          onLinkPress={onLinkPress}
-          narrowContent={narrowContent}
-          onParagraphTextLayout={onParagraphTextLayout}
+        <ArticleLink
+          url={href}
+          onPress={(e) =>
+            onLinkPress(e, {
+              canonicalId,
+              type,
+              url: href,
+            })
+          }
         >
           {children}
-        </ArticleParagraph>
+        </ArticleLink>
+      );
+    },
+    subscript(key, attributes, children) {
+      return (
+        <View style={{ flexDirection: "row", alignItems: "flex-start" }}>
+          <Text
+            style={{
+              fontSize: defaultFont.fontSize * 0.5,
+              lineHeight: defaultFont.fontSize * 0.5,
+            }}
+          >
+            {children}
+          </Text>
+        </View>
+      );
+    },
+    superscript(key, attributes, children) {
+      return (
+        <View style={{ flexDirection: "row", alignItems: "flex-end" }}>
+          <Text
+            style={{
+              fontSize: defaultFont.fontSize * 0.5,
+              lineHeight: 30,
+            }}
+          >
+            {children}
+          </Text>
+        </View>
+      );
+    },
+    paragraph(key, attributes, children) {
+      return (
+        <ArticleParagraphWrapper
+          narrowContent={narrowContent}
+          attributes={attributes}
+          ast={children}
+        >
+          <Text
+            onTextLayout={onParagraphTextLayout}
+            selectable
+            allowFontScaling={false}
+            style={defaultFont}
+          >
+            {children}
+          </Text>
+        </ArticleParagraphWrapper>
       );
     },
     ad(key, attributes) {
@@ -299,11 +289,7 @@ export default ({
       );
     },
     break() {
-      const attr = {
-        tag: "FONT",
-        settings: fontConfig.body,
-      };
-      return new AttributedString("\n", [[attr]]);
+      return <Text>{`\n`}</Text>;
     },
     keyFacts(key, attributes, children, index, tree) {
       return (
@@ -386,7 +372,7 @@ export default ({
       );
     },
     unknown(key, attributes, children) {
-      return AttributedString.join(children);
+      return children;
     },
   };
 };

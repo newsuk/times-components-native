@@ -102,10 +102,10 @@ export const splitParagraphContent = (
 ): [ParagraphContent, ParagraphContent] => {
   const emptyArticleContentA: ArticleContent = {
     ...articleContent,
+    attributes: { ...articleContent.attributes, split: true },
     name: articleContent.name,
     children: [],
     id: uuid(),
-    split: true,
   };
   const emptyArticleContentB: ArticleContent = {
     name: articleContent.name,

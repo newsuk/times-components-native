@@ -48,7 +48,6 @@ export type ParagraphContentChild =
 
 export interface ContentMetadata {
   id?: string;
-  split?: boolean;
 }
 
 export interface ParagraphContent extends ContentMetadata {
@@ -56,6 +55,7 @@ export interface ParagraphContent extends ContentMetadata {
   children: ParagraphContentChild[];
   attributes?: {
     tab?: boolean;
+    split?: boolean;
   };
 }
 
