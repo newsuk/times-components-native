@@ -118,7 +118,11 @@ const ArticleWithContent = (props) => {
           </Gutter>
 
           {fixedContent.map((item, index) => (
-            <ContentChild key={index} item={item} index={index} />
+            <ContentChild
+              key={`fixedContent-${index}`}
+              item={item}
+              index={index}
+            />
           ))}
         </ScrollView>
       </Viewport.Tracker>
