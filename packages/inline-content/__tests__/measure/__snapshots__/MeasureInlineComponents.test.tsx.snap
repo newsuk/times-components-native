@@ -16,7 +16,7 @@ exports[`MeasureContent renders the content 1`] = `
         },
         false,
         false,
-        undefined,
+        false,
         false,
         Object {},
       ]
@@ -29,22 +29,14 @@ exports[`MeasureContent renders the content 1`] = `
         selectable={true}
         style={
           Object {
+            "color": "#000000",
+            "fontFamily": "TimesDigitalW04",
+            "fontSize": 36,
             "lineHeight": 52,
           }
         }
       >
-        <Text
-          allowFontScaling={false}
-          selectable={true}
-          style={
-            Object {
-              "color": "#000000",
-              "fontFamily": "TimesDigitalW04",
-              "fontSize": 36,
-              "lineHeight": 52,
-            }
-          }
-        >
+        <Text>
           abc
         </Text>
       </Text>

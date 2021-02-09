@@ -1,4 +1,4 @@
-import React, { useCallback, useEffect, useMemo, useState } from "react";
+import React, { useEffect, useMemo, useState } from "react";
 import { ScrollView, View } from "react-native";
 import PropTypes from "prop-types";
 import { withTrackScrollDepth } from "@times-components-native/tracking";
@@ -79,76 +79,53 @@ const ArticleWithContent = (props) => {
     !hasBeenRead && setArticleRead();
   };
 
-  const header = useMemo(
-    () => (
-      <Gutter>
-        <Header width={Math.min(maxWidth, windowWidth)} />
-      </Gutter>
-    ),
-    [windowWidth],
+  const Footer = () => (
+    <Gutter>
+      <ArticleExtras
+        analyticsStream={analyticsStream}
+        articleId={id}
+        articleUrl={url}
+        onCommentGuidelinesPress={onCommentGuidelinesPress}
+        onCommentsPress={onCommentsPress}
+        onRelatedArticlePress={onRelatedArticlePress}
+        onTooltipPresented={onTooltipPresented}
+        onTopicPress={onTopicPress}
+        narrowContent={narrowContent}
+        template={template}
+        tooltips={tooltips}
+      />
+    </Gutter>
   );
 
-  const footer = useMemo(
-    () => (
-      <Gutter>
-        <ArticleExtras
-          analyticsStream={analyticsStream}
-          articleId={id}
-          articleUrl={url}
-          onCommentGuidelinesPress={onCommentGuidelinesPress}
-          onCommentsPress={onCommentsPress}
-          onRelatedArticlePress={onRelatedArticlePress}
-          onTooltipPresented={onTooltipPresented}
-          onTopicPress={onTopicPress}
-          narrowContent={narrowContent}
-          template={template}
-          tooltips={tooltips}
-        />
-      </Gutter>
-    ),
-    [],
+  const [fixedContent, images] = useMemo(() => {
+    const fixedContentMemo = [...fixup(props), { name: "footer" }];
+    const imagesMemo = getAllImages(template, leadAsset, fixedContentMemo);
+    return [fixedContentMemo, imagesMemo];
+  }, [content, isTablet]);
+
+  const renderChild = render(getRenderers({ ...props, images }));
+
+  const Child = ({ item, index }) => (
+    <Gutter>
+      <ErrorBoundary>
+        {item.name === "footer" ? (
+          <Footer />
+        ) : (
+          renderChild(item, index.toString(), index)
+        )}
+      </ErrorBoundary>
+    </Gutter>
   );
 
-  const fixedContent = useMemo(() => [...fixup(props), { name: "footer" }], [
-    content,
-    isTablet,
-  ]);
-
-  const leadAssetAndArticleImages = getAllImages(
-    template,
-    leadAsset,
-    fixedContent,
-  );
-
-  const renderers = getRenderers({
-    ...props,
-    images: leadAssetAndArticleImages,
-  });
-  const renderChild = render(renderers);
-
-  const Child = useCallback(
-    ({ item, index }) => (
-      <Gutter>
-        <ErrorBoundary>
-          {item.name === "footer"
-            ? footer
-            : renderChild(item, index.toString(), index)}
-        </ErrorBoundary>
-      </Gutter>
-    ),
-    [footer],
-  );
-
-  const renderItem = (item, index) => {
-    const toRender = Child({ item, index });
+  const ContentChild = ({ item, index }) => {
     return narrowContent ? (
-      <View style={styles.keylineWrapper}>{toRender}</View>
+      <View style={styles.keylineWrapper}>
+        <Child item={item} index={index} />
+      </View>
     ) : (
-      toRender
+      <Child item={item} index={index} />
     );
   };
-
-  const processedContent = fixedContent.map(renderItem);
 
   return (
     <View style={styles.articleContainer}>
@@ -158,8 +135,17 @@ const ArticleWithContent = (props) => {
           onScroll={handleScroll}
           scrollEventThrottle={400}
         >
-          {header}
-          {processedContent}
+          <Gutter>
+            <Header width={Math.min(maxWidth, windowWidth)} />
+          </Gutter>
+
+          {fixedContent.map((item, index) => (
+            <ContentChild
+              key={`fixedContent-${index}`}
+              item={item}
+              index={index}
+            />
+          ))}
         </ScrollView>
       </Viewport.Tracker>
     </View>

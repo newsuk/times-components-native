@@ -333,6 +333,76 @@ exports[`section page 1`] = `
         />
       </View>
     </View>
+    <View>
+      <LeadTwoNoPicAndTwoSlice />
+      <View>
+        <View
+          style={
+            Object {
+              "backgroundColor": "#DBDBDB",
+              "height": 1,
+              "marginHorizontal": 0,
+            }
+          }
+        />
+      </View>
+    </View>
+    <View>
+      <SecondaryOneSlice />
+      <View>
+        <View
+          style={
+            Object {
+              "backgroundColor": "#DBDBDB",
+              "height": 1,
+              "marginHorizontal": 0,
+            }
+          }
+        />
+      </View>
+    </View>
+    <View>
+      <SecondaryFourSlice />
+      <View>
+        <View
+          style={
+            Object {
+              "backgroundColor": "#DBDBDB",
+              "height": 1,
+              "marginHorizontal": 0,
+            }
+          }
+        />
+      </View>
+    </View>
+    <View>
+      <SecondaryTwoNoPicAndTwoSlice />
+      <View>
+        <View
+          style={
+            Object {
+              "backgroundColor": "#DBDBDB",
+              "height": 1,
+              "marginHorizontal": 0,
+            }
+          }
+        />
+      </View>
+    </View>
+    <View>
+      <SecondaryTwoNoPicAndTwoSlice />
+      <View>
+        <View
+          style={
+            Object {
+              "backgroundColor": "#DBDBDB",
+              "height": 1,
+              "marginHorizontal": 0,
+            }
+          }
+        />
+      </View>
+    </View>
     <View
       style={
         Object {

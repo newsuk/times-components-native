@@ -1,10 +1,10 @@
-import React, { Component } from "react";
+import React, { PureComponent } from "react";
 import { CommentLeadAndCartoon } from "@times-components-native/slice-layout";
 import PropTypes from "prop-types";
 import { TileP, TileQ, TileAH, TileAI } from "../../tiles";
 import { ResponsiveSlice } from "../shared";
 
-class CommentLeadAndCartoonSlice extends Component {
+class CommentLeadAndCartoonSlice extends PureComponent {
   constructor(props) {
     super(props);
     this.renderSmall = this.renderSmall.bind(this);

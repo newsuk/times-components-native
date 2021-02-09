@@ -1,5 +1,12 @@
 import * as opentype from "opentype.js";
-import { TypographySettings } from "./AttributedString";
+
+export interface TypographySettings {
+  lineHeight?: number;
+  fontSize?: number;
+  fontFamily?: string;
+  fontStyle?: "italic" | "normal";
+  fontWeight?: "bold" | "normal";
+}
 
 class FontStorage {
   private fonts: Record<string, opentype.Font>;

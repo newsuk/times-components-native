@@ -1,10 +1,10 @@
-import React, { Component } from "react";
+import React, { PureComponent } from "react";
 import PropTypes from "prop-types";
 import { LeadTwoNoPicAndTwoSlice } from "@times-components-native/slice-layout";
 import { TileB, TileD, TileE, TileF, TileX, TileY, TileAL } from "../../tiles";
 import { ResponsiveSlice } from "../shared";
 
-class LeadTwoNoPicAndTwo extends Component {
+class LeadTwoNoPicAndTwo extends PureComponent {
   constructor(props) {
     super(props);
     this.renderSmall = this.renderSmall.bind(this);

@@ -1,11 +1,11 @@
-import React, { Component } from "react";
+import React, { PureComponent } from "react";
 import PropTypes from "prop-types";
 import { SecondaryFourSlice } from "@times-components-native/slice-layout";
 import { TileC, TileAR, TileB } from "../../tiles";
 import { ResponsiveSlice } from "../shared";
 import stylesFactory from "./styles";
 
-class SecondaryFour extends Component {
+class SecondaryFour extends PureComponent {
   constructor(props) {
     super(props);
     this.renderSmall = this.renderSmall.bind(this);
