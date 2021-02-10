@@ -3,8 +3,8 @@ import { spacing } from "@times-components-native/styleguide";
 import sharedStylesFactory from "./shared";
 import globalStyle from "../shared";
 
-const nativeStyles = (scale) => {
-  const sharedStyles = sharedStylesFactory(scale);
+const nativeStyles = (options) => {
+  const sharedStyles = sharedStylesFactory(options);
   return {
     ...sharedStyles,
     articleTextElement: {
@@ -14,10 +14,10 @@ const nativeStyles = (scale) => {
   };
 };
 
-const styles = (scale) =>
+const styles = (options) =>
   StyleSheet.create({
     ...globalStyle,
-    ...nativeStyles(scale),
+    ...nativeStyles(options),
   });
 
 export default styles;

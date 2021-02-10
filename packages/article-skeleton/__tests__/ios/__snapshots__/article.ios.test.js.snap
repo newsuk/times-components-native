@@ -1014,12 +1014,9 @@ exports[`1. a full article with all content items with dropcap template 1`] = `
               false,
               undefined,
               false,
-              Array [
-                Object {
-                  "marginBottom": 0,
-                },
-                undefined,
-              ],
+              Object {
+                "marginBottom": 0,
+              },
             ]
           }
         >
@@ -1071,12 +1068,9 @@ exports[`1. a full article with all content items with dropcap template 1`] = `
               false,
               undefined,
               false,
-              Array [
-                Object {
-                  "marginBottom": 0,
-                },
-                undefined,
-              ],
+              Object {
+                "marginBottom": 0,
+              },
             ]
           }
         >
@@ -1128,12 +1122,9 @@ exports[`1. a full article with all content items with dropcap template 1`] = `
               false,
               undefined,
               false,
-              Array [
-                Object {
-                  "marginBottom": 0,
-                },
-                undefined,
-              ],
+              Object {
+                "marginBottom": 0,
+              },
             ]
           }
         >
@@ -1185,12 +1176,9 @@ exports[`1. a full article with all content items with dropcap template 1`] = `
               false,
               undefined,
               false,
-              Array [
-                Object {
-                  "marginBottom": 0,
-                },
-                undefined,
-              ],
+              Object {
+                "marginBottom": 0,
+              },
             ]
           }
         >
@@ -1242,12 +1230,9 @@ exports[`1. a full article with all content items with dropcap template 1`] = `
               false,
               undefined,
               false,
-              Array [
-                Object {
-                  "marginBottom": 0,
-                },
-                undefined,
-              ],
+              Object {
+                "marginBottom": 0,
+              },
             ]
           }
         >
@@ -1827,12 +1812,9 @@ exports[`6. an article with heading tags 1`] = `
               false,
               undefined,
               false,
-              Array [
-                Object {
-                  "marginBottom": 0,
-                },
-                undefined,
-              ],
+              Object {
+                "marginBottom": 0,
+              },
             ]
           }
         >
@@ -1884,12 +1866,9 @@ exports[`6. an article with heading tags 1`] = `
               false,
               undefined,
               false,
-              Array [
-                Object {
-                  "marginBottom": 0,
-                },
-                undefined,
-              ],
+              Object {
+                "marginBottom": 0,
+              },
             ]
           }
         >
