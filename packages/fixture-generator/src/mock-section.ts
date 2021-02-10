@@ -130,7 +130,6 @@ function mockMagazineSection(title: string): MagazineSectionWithName {
     },
     cover: {
       id: "dummy-cover-id",
-      __typename: "Image",
       crops: [
         {
           ratio: "35:43",

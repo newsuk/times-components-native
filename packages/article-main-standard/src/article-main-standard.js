@@ -10,7 +10,7 @@ import {
   getAllArticleImages,
   getHeadline,
   getLeadAsset,
-  getStandardTemplateCrop,
+  getCropByPriority,
 } from "@times-components-native/utils";
 import { tabletWidth } from "@times-components-native/styleguide";
 import Caption from "@times-components-native/caption";
@@ -59,7 +59,7 @@ class ArticlePage extends Component {
             <View key="leadAsset" testID="leadAsset">
               <ArticleLeadAsset
                 {...getLeadAsset(article)}
-                getImageCrop={getStandardTemplateCrop}
+                getImageCrop={getCropByPriority}
                 onImagePress={onImagePress}
                 onVideoPress={onVideoPress}
                 renderCaption={({ caption }) => (

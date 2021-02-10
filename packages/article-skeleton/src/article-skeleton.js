@@ -17,16 +17,16 @@ import fixup from "./body-utils";
 import ErrorBoundary from "./boundary";
 import { useResponsiveContext } from "@times-components-native/responsive";
 import {
-  getStandardTemplateCrop,
+  getCropByPriority,
   isTemplateWithLeadAssetInGallery,
 } from "@times-components-native/utils";
 
 const getAllImages = (template, leadAsset, fixedContent) => {
-  if (isTemplateWithLeadAssetInGallery(template) && leadAsset) {
+  if (isTemplateWithLeadAssetInGallery(template, leadAsset)) {
     return [
       {
         attributes: {
-          ...getStandardTemplateCrop(leadAsset),
+          ...getCropByPriority(leadAsset),
           caption: leadAsset.caption,
           credits: leadAsset.credits,
           imageIndex: 0,

@@ -369,7 +369,6 @@ export interface DailyUniversalRegisterItemInput {
 
   content: Markup;
 }
-
 /** all the booleans were left as we can default them to false/true in Ingestdepending on the fieldarrays were left as required because we can supply empty onesthese comments should be deleted before merging!!! */
 export interface DraftArticleInput {
   authors: Slug[];
@@ -997,7 +996,6 @@ export enum WorkDeskName {
   Weekend = "weekend",
   World = "world",
 }
-
 /** Predefined template names that should be used by all systems interested in templates to denote the template layout */
 export enum Template {
   Default = "DEFAULT",
@@ -1412,8 +1410,6 @@ export interface Image {
   crop?: Crop | null;
 
   crops: Crop[];
-
-  __typename: "Image";
 }
 
 /** The selected area for a given image and its ratio */
@@ -1445,16 +1441,6 @@ export interface ExpirableFlag {
   expiryTime?: DateTime | null;
 }
 
-export interface TimesImage extends Image {
-  crop11?: Crop | null;
-  crop169?: Crop | null;
-  crop23?: Crop | null;
-  crop32?: Crop | null;
-  crop45?: Crop | null;
-  crop54?: Crop | null;
-  crop1251?: Crop | null;
-}
-
 export interface Video {
   id: Uuid;
 
@@ -1474,11 +1460,9 @@ export interface Video {
 
   brightcoveAccountId?: string | null;
 
-  posterImage?: PosterImage | null;
+  posterImage?: Image | null;
 
   is360?: boolean | null;
-
-  __typename: "Video";
 }
 
 export interface EmbeddedContent {
@@ -2566,11 +2550,9 @@ export interface AuthorQueryArgs {
   /** An author's URL slug */
   slug: Slug;
 }
-
 export interface ArticleQueryArgs {
   id: string;
 }
-
 export interface ArticlesQueryArgs {
   updatedSince?: DateTime | null;
 
@@ -2580,39 +2562,31 @@ export interface ArticlesQueryArgs {
 
   shortIdentifier?: string | null;
 }
-
 export interface DraftArticleQueryArgs {
   id: string;
 }
-
 export interface DraftArticlesQueryArgs {
   ids?: string[] | null;
 }
-
 export interface EditionQueryArgs {
   id: string;
 
   minRevision?: BigInt | null;
 }
-
 export interface EditionsQueryArgs {
   updatedSince?: DateTime | null;
 
   ids?: string[] | null;
 }
-
 export interface SectionQueryArgs {
   id: string;
 }
-
 export interface SportCompetitionQueryArgs {
   id: string;
 }
-
 export interface TagQueryArgs {
   id: string;
 }
-
 export interface TagsQueryArgs {
   ids?: string[] | null;
 
@@ -2628,45 +2602,37 @@ export interface TagsQueryArgs {
 
   isOverflow?: boolean | null;
 }
-
 export interface TopicQueryArgs {
   slug?: Slug | null;
 
   id?: string | null;
 }
-
 export interface TopicsQueryArgs {
   cursor?: Cursor | null;
 
   first?: number | null;
 }
-
 export interface NewsletterQueryArgs {
   code: string;
 }
-
 export interface ListAuthorArticlesArgs {
   /** The maximum number of articles you want to take, defaults to 10 */
   first?: number | null;
   /** The number of articles to skip over, useful for paging, defaults to 0 */
   skip?: number | null;
 }
-
 export interface ContentArticleArgs {
   /** If a teaser is required, use to truncate the article content by words. Ifthe client doesn't have permission for the content, the maximum will be thelesser of the predefined teaser length and requested maximum */
   maxWordCount?: number | null;
   /** If summary text is required, use to truncate the article content bycharacters. If the client doesn't have permission for the content, themaximum will be the lesser of the predefined teaser length and requestedmaximum. Has no effect if maxWordCount is specified */
   maxCharCount?: number | null;
 }
-
 export interface SummaryArticleArgs {
   maxCharCount?: number | null;
 }
-
 export interface TopicsArticleArgs {
   maxCount?: number | null;
 }
-
 export interface TagsArticleArgs {
   cursor?: Cursor | null;
 
@@ -2674,7 +2640,6 @@ export interface TagsArticleArgs {
 
   desc?: boolean | null;
 }
-
 export interface SynonymsArticleArgs {
   cursor?: Cursor | null;
 
@@ -2682,7 +2647,6 @@ export interface SynonymsArticleArgs {
 
   desc?: boolean | null;
 }
-
 export interface TopicConnectionArticleArgs {
   cursor?: Cursor | null;
 
@@ -2690,15 +2654,12 @@ export interface TopicConnectionArticleArgs {
 
   desc?: boolean | null;
 }
-
 export interface CropImageArgs {
   ratio: Ratio;
 }
-
 export interface TeaserTileArgs {
   maxCharCount?: number | null;
 }
-
 export interface ArticleConnectionTopicArgs {
   cursor?: Cursor | null;
 
@@ -2706,7 +2667,6 @@ export interface ArticleConnectionTopicArgs {
 
   desc?: boolean | null;
 }
-
 export interface TagConnectionTopicArgs {
   cursor?: Cursor | null;
 
@@ -2714,14 +2674,12 @@ export interface TagConnectionTopicArgs {
 
   desc?: boolean | null;
 }
-
 export interface ListTopicArticlesArgs {
   /** The maximum number of articles you want to take, defaults to 10 */
   first?: number | null;
   /** The number of articles to skip over, useful for paging, defaults to 0 */
   skip?: number | null;
 }
-
 export interface SynonymsTagArgs {
   cursor?: Cursor | null;
 
@@ -2729,7 +2687,6 @@ export interface SynonymsTagArgs {
 
   desc?: boolean | null;
 }
-
 export interface ArticlesTagArgs {
   cursor?: Cursor | null;
 
@@ -2737,33 +2694,27 @@ export interface ArticlesTagArgs {
 
   desc?: boolean | null;
 }
-
 export interface ListArticlesArgs {
   /** The maximum number of articles you want to take, defaults to 10 */
   first?: number | null;
   /** The number of articles to skip over, useful for paging, defaults to 0 */
   skip?: number | null;
 }
-
 export interface ContentDraftArticleArgs {
   /** If a teaser is required, use to truncate the article content by words. Ifthe client doesn't have permission for the content, the maximum will be thelesser of the predefined teaser length and requested maximum */
   maxWordCount?: number | null;
   /** If summary text is required, use to truncate the article content bycharacters. If the client doesn't have permission for the content, themaximum will be the lesser of the predefined teaser length and requestedmaximum. Has no effect if maxWordCount is specified */
   maxCharCount?: number | null;
 }
-
 export interface SummaryDraftArticleArgs {
   maxCharCount?: number | null;
 }
-
 export interface TeaserDraftTileArgs {
   maxCharCount?: number | null;
 }
-
 export interface SectionsEditionArgs {
   includeFrontPage?: boolean | null;
 }
-
 export interface ListEditionsPagedArgs {
   /** The maximum number of editions you want to take, defaults to 10 */
   first?: number | null;
@@ -2774,33 +2725,26 @@ export interface ListEditionsPagedArgs {
   /** Region filter, to get the editions for a specific region */
   region?: Region | null;
 }
-
 export interface SpotimCodeBUserArgs {
   codeA: string;
 }
-
 export interface BookmarksUserArgs {
   first?: number | null;
 
   skip?: number | null;
 }
-
 export interface SaveBookmarksMutationArgs {
   bookmarks: BookmarkSaveInput[];
 }
-
 export interface UnsaveBookmarksMutationArgs {
   bookmarks: BookmarkUnsaveInput[];
 }
-
 export interface SubscribeNewsletterMutationArgs {
   code: string;
 }
-
 export interface UnsubscribeNewsletterMutationArgs {
   code: string;
 }
-
 export interface CancelSubscriptionMutationArgs {
   id: string;
 
@@ -2813,7 +2757,7 @@ export interface CancelSubscriptionMutationArgs {
 
 export type ArticleByline = TextByline | AuthorByline;
 
-export type Media = TimesImage | Video;
+export type Media = Image | Video;
 
 export type DraftTileArticle = Article | DraftArticle;
 
@@ -2882,15 +2826,3 @@ export type StandardSectionSlice =
   | InTheNewsSlice
   | PuffSlice
   | DailyUniversalRegister;
-
-export interface PosterImage {
-  crop11?: Crop | null;
-  crop169?: Crop | null;
-  crop23?: Crop | null;
-  crop32?: Crop | null;
-  crop45?: Crop | null;
-  crop54?: Crop | null;
-  crop1251?: Crop | null;
-  id: string;
-  title: string;
-}

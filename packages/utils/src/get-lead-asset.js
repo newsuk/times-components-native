@@ -1,4 +1,4 @@
-import getStandardTemplateCrop from "./crop-config";
+import { getCropByPriority } from "./get-crop-by-priority";
 
 export const defaultAsset = {
   aspectRatio: "1:1",
@@ -9,10 +9,10 @@ export const defaultAsset = {
 
 const getDisplayImage = (leadAsset, isVideo) => {
   if (isVideo && leadAsset.posterImage) {
-    return getStandardTemplateCrop(leadAsset.posterImage);
+    return getCropByPriority(leadAsset.posterImage);
   }
 
-  return getStandardTemplateCrop(leadAsset);
+  return getCropByPriority(leadAsset);
 };
 
 export default function getLeadAsset({ leadAsset }) {

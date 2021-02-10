@@ -1,5 +1,6 @@
-import { Puzzle, TimesImage } from "./types";
+import { Puzzle } from "./types";
 import UUID from "./mock-UUID";
+import { TimesImage } from "@times-components-native/types";
 
 class PuzzleImage {
   image: TimesImage;

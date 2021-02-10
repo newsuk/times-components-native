@@ -1,4 +1,4 @@
-import getStandardTemplateCrop from "../src/crop-config";
+import { getCropByPriority } from "../src/get-crop-by-priority";
 
 const leadAsset = {
   crop11: {
@@ -31,12 +31,12 @@ const leadAsset = {
 
 describe("for the standard template it should", () => {
   it("return the 16:9 crop when present", () => {
-    expect(getStandardTemplateCrop(leadAsset)!.ratio).toEqual("16:9");
+    expect(getCropByPriority(leadAsset)!.ratio).toEqual("16:9");
   });
 
   it("return the 3:2 crop", () => {
     const leadAssetNo169 = { ...leadAsset, crop169: null };
-    expect(getStandardTemplateCrop(leadAssetNo169)!.ratio).toEqual("3:2");
+    expect(getCropByPriority(leadAssetNo169)!.ratio).toEqual("3:2");
   });
 
   it("return the 1.25:1 crop", () => {
@@ -45,7 +45,7 @@ describe("for the standard template it should", () => {
       crop32: null,
       crop169: null,
     };
-    expect(getStandardTemplateCrop(leadAssetNo32)!.ratio).toEqual("1.25:1");
+    expect(getCropByPriority(leadAssetNo32)!.ratio).toEqual("1.25:1");
   });
 
   it("return the 1:1 crop", () => {
@@ -55,7 +55,7 @@ describe("for the standard template it should", () => {
       crop169: null,
       crop1251: null,
     };
-    expect(getStandardTemplateCrop(leadAssetNo1251)!.ratio).toEqual("1:1");
+    expect(getCropByPriority(leadAssetNo1251)!.ratio).toEqual("1:1");
   });
 
   it("return the 4:5 crop", () => {
@@ -66,7 +66,7 @@ describe("for the standard template it should", () => {
       crop169: null,
       crop1251: null,
     };
-    expect(getStandardTemplateCrop(leadAssetNo11)!.ratio).toEqual("4:5");
+    expect(getCropByPriority(leadAssetNo11)!.ratio).toEqual("4:5");
   });
 
   it("return the 2:3 crop", () => {
@@ -78,6 +78,6 @@ describe("for the standard template it should", () => {
       crop169: null,
       crop1251: null,
     };
-    expect(getStandardTemplateCrop(leadAssetNo23)!.ratio).toEqual("2:3");
+    expect(getCropByPriority(leadAssetNo23)!.ratio).toEqual("2:3");
   });
 });

@@ -1,10 +1,19 @@
+import { Article } from "@times-components-native/fixture-generator/src/types";
+import { getCropByPriority } from "./get-crop-by-priority";
 import {
-  Article,
-  Media,
-} from "@times-components-native/fixture-generator/src/types";
-import getStandardTemplateCrop from "./crop-config";
+  MediaTypename,
+  PosterImage,
+  TimesImage,
+} from "@times-components-native/types";
 
-const getCrop = (leadAsset?: Media) => {
+const getCrop = (
+  leadAsset?:
+    | {
+        posterImage?: PosterImage;
+        __typename: MediaTypename;
+      }
+    | TimesImage,
+) => {
   if (!leadAsset) {
     return null;
   }
@@ -12,17 +21,26 @@ const getCrop = (leadAsset?: Media) => {
   let crop = null;
 
   if (leadAsset.__typename === "Video" && leadAsset.posterImage) {
-    crop = getStandardTemplateCrop(leadAsset.posterImage);
+    crop = getCropByPriority(leadAsset.posterImage);
   }
 
   if (leadAsset.__typename === "Image") {
-    crop = getStandardTemplateCrop(leadAsset);
+    crop = getCropByPriority(leadAsset as TimesImage);
   }
 
   return crop;
 };
 
-export const getAllArticleImages = (article: Article) => {
+export const getAllArticleImages = (article: {
+  content: Article["content"];
+  leadAsset:
+    | TimesImage
+    | {
+        posterImage?: PosterImage;
+        __typename: MediaTypename;
+        caption?: string;
+      };
+}) => {
   if (!article || !article.content || !article.leadAsset) {
     return [];
   }

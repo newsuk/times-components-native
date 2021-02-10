@@ -50,7 +50,6 @@ const getUrls = (images: ImageContent[], mainImage: MainImage) => {
   if (!images.length) {
     const offlineUrl = new Url(mainImage.uri, true);
     offlineUrl.query.offline = "true";
-
     return [
       {
         ...mainImage,
