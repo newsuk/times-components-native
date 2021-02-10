@@ -10,6 +10,11 @@ import { scales } from "@times-components-native/styleguide";
 import { MessageManager } from "@times-components-native/message-bar";
 import { getMediaList, addIndexesToInlineImages } from "./utils";
 
+const whyDidYouRender = require("@welldone-software/why-did-you-render");
+whyDidYouRender(React, {
+  trackAllPureComponents: true,
+});
+
 export const getComponentByTemplate = (template, isTablet) => {
   const templates = {
     indepth: ArticleInDepth,
