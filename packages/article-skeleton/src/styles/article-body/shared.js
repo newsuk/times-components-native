@@ -1,7 +1,18 @@
 import styleguide, { tabletWidth } from "@times-components-native/styleguide";
 
-const sharedStyles = (scale) => {
+const sharedStyles = ({ scale, narrowContent, fontScale }) => {
   const { colours, fontFactory, spacing, lineHeight } = styleguide({ scale });
+
+  const defaultFont = {
+    ...fontFactory({
+      font: "body",
+      fontSize: "bodyMobile",
+    }),
+    color: colours.functional.black,
+  };
+  defaultFont.fontSize *= fontScale;
+  defaultFont.lineHeight *= fontScale;
+
   return {
     ad: {
       borderBottomColor: colours.functional.keyline,
@@ -40,6 +51,11 @@ const sharedStyles = (scale) => {
     containerTablet: {
       alignSelf: "center",
       width: tabletWidth,
+    },
+    defaultFont,
+    headingContainer: {
+      marginBottom: 0,
+      ...(narrowContent && { alignSelf: "flex-start" }),
     },
     imageContainerTablet: {
       alignSelf: "center",
@@ -103,6 +119,21 @@ const sharedStyles = (scale) => {
       }),
       marginBottom: spacing(2),
       color: colours.functional.black,
+    },
+    body: defaultFont,
+    bold: {
+      fontWeight: "bold",
+    },
+    italic: { fontStyle: "italic" },
+    subscriptContainer: { flexDirection: "row", alignItems: "flex-start" },
+    subscript: {
+      fontSize: defaultFont.fontSize * 0.5,
+      lineHeight: defaultFont.fontSize * 0.5,
+    },
+    superscriptContainer: { flexDirection: "row", alignItems: "flex-end" },
+    superscript: {
+      fontSize: defaultFont.fontSize * 0.5,
+      lineHeight: 30,
     },
   };
 };
