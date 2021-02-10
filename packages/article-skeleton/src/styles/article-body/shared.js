@@ -52,7 +52,7 @@ const sharedStyles = ({ scale, narrowContent, fontScale }) => {
       alignSelf: "center",
       width: tabletWidth,
     },
-    defaultFont: defaultFont,
+    defaultFont,
     headingContainer: {
       marginBottom: 0,
       ...(narrowContent && { alignSelf: "flex-start" }),
