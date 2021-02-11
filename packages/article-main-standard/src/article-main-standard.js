@@ -115,6 +115,7 @@ class ArticlePage extends Component {
   }
 
   render() {
+    console.log("DomContext ArticleMainStandard");
     const { error, refetch, isLoading } = this.props;
 
     if (error) {
@@ -208,4 +209,5 @@ ArticlePage.defaultProps = {
   referralUrl: null,
 };
 
+ArticlePage.whyDidYouRender = true;
 export default ArticlePage;

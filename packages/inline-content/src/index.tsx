@@ -25,6 +25,7 @@ import { InlineContentProps } from "./types";
 import styles from "./styles";
 
 const InlineContent = (props: InlineContentProps) => {
+  console.log("DomContext InlineContent RENDERED");
   const {
     defaultFont,
     inlineContent,
@@ -110,6 +111,7 @@ const InlineContent = (props: InlineContentProps) => {
       itemProps={!isAd ? itemProps : undefined}
       skeletonProps={skeletonProps}
       renderMeasuredContents={(contentMeasurements) => {
+        console.log("DomContext renderMeasuredContents");
         const { chunks, currentInlineContentHeight } = chunkInlineContent(
           paragraphs,
           contentMeasurements,

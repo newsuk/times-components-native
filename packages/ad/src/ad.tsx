@@ -131,6 +131,7 @@ export class AdBase extends PureComponent<Props, State> {
       orientation,
       width,
     } = this.props;
+
     const { hasError, isAdReady, offline } = this.state;
     // const [config, data] = memoizeOne(() => {
     //   const slotConfig = getSlotConfig(
@@ -174,6 +175,7 @@ export class AdBase extends PureComponent<Props, State> {
             onRenderError={this.setAdError}
             isInline={isInline}
             maxHeight={config.maxSizes.height}
+            paragraph={this.props.paragraph}
             {...sizeProps}
           />
         )}

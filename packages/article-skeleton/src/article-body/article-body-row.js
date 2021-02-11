@@ -175,7 +175,7 @@ export default ({
         />
       );
     },
-    inlineContent(key, attributes, children) {
+    inlineContent(key, attributes, children, a, b) {
       return (
         <InlineContent
           key={key}
