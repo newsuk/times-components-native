@@ -1,5 +1,4 @@
 import React from "react";
-import { AdComposer } from "@times-components-native/ad";
 import { AuthorProfileProvider } from "@times-components-native/provider";
 import {
   authorProfile as makeParams,
@@ -22,10 +21,6 @@ const preventDefaultedAction = (decorateAction) =>
       return ["[SyntheticEvent (storybook prevented default)]", ...args];
     },
   ]);
-
-const {
-  defaultProps: { adConfig },
-} = AdComposer;
 
 const getProps = (decorateAction) => ({
   adConfig,
