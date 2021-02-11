@@ -17,12 +17,11 @@ import fixup from "./body-utils";
 import ErrorBoundary from "./boundary";
 import { useResponsiveContext } from "@times-components-native/responsive";
 
-const ArticleWithContent = (props) => {
+const MemoisedArticle = React.memo((props) => {
   const {
     Header,
     data,
     analyticsStream,
-    onArticleRead,
     onCommentGuidelinesPress,
     onCommentsPress,
     onTooltipPresented,
@@ -35,27 +34,7 @@ const ArticleWithContent = (props) => {
 
   const { windowWidth } = useResponsiveContext();
 
-  const [hasBeenRead, setHasBeenRead] = useState(false);
-
   const { id, url, content, template } = data;
-
-  const setArticleRead = () => {
-    setHasBeenRead(true);
-    onArticleRead && onArticleRead(id);
-  };
-
-  useEffect(() => {
-    if (!hasBeenRead) {
-      const delay = setTimeout(() => {
-        setArticleRead();
-      }, 6000);
-      return () => clearTimeout(delay);
-    }
-  }, [hasBeenRead]);
-
-  const handleScroll = () => {
-    !hasBeenRead && setArticleRead();
-  };
 
   const Footer = () => (
     <Gutter>
@@ -106,6 +85,42 @@ const ArticleWithContent = (props) => {
   };
 
   return (
+    <>
+      <Gutter>
+        <Header width={Math.min(maxWidth, windowWidth)} />
+      </Gutter>
+
+      {fixedContent.map((item, index) => (
+        <ContentChild key={`fixedContent-${index}`} item={item} index={index} />
+      ))}
+    </>
+  );
+});
+
+const ArticleWithContent = (props) => {
+  const { onArticleRead, data } = props;
+
+  const [hasBeenRead, setHasBeenRead] = useState(false);
+
+  const setArticleRead = () => {
+    setHasBeenRead(true);
+    onArticleRead && onArticleRead(data.id);
+  };
+
+  useEffect(() => {
+    if (!hasBeenRead) {
+      const delay = setTimeout(() => {
+        setArticleRead();
+      }, 6000);
+      return () => clearTimeout(delay);
+    }
+  }, [hasBeenRead]);
+
+  const handleScroll = () => {
+    !hasBeenRead && setArticleRead();
+  };
+
+  return (
     <View style={styles.articleContainer}>
       <Viewport.Tracker>
         <ScrollView
@@ -113,17 +128,7 @@ const ArticleWithContent = (props) => {
           onScroll={handleScroll}
           scrollEventThrottle={400}
         >
-          <Gutter>
-            <Header width={Math.min(maxWidth, windowWidth)} />
-          </Gutter>
-
-          {fixedContent.map((item, index) => (
-            <ContentChild
-              key={`fixedContent-${index}`}
-              item={item}
-              index={index}
-            />
-          ))}
+          <MemoisedArticle {...props} />
         </ScrollView>
       </Viewport.Tracker>
     </View>
