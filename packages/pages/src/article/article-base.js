@@ -8,7 +8,7 @@ import {
 import { themeFactory } from "@times-components-native/styleguide";
 import { VariantTestingProvider } from "@times-components-native/variant-testing";
 import adTargetConfig from "./ad-targeting-config";
-import { propTypes, defaultProps } from "./article-prop-types";
+import { defaultProps, propTypes } from "./article-prop-types";
 import trackArticle from "./track-article";
 
 const { appVersion = "", environment = "prod" } = NativeModules.ReactConfig;
