@@ -13,6 +13,7 @@ import {
 } from "@times-components-native/provider-queries";
 import storybookReporter from "@times-components-native/tealium-utils";
 import AuthorProfile from "./src/author-profile";
+import adConfig from "@times-components-native/ad/fixtures/article-ad-config.json";
 
 const preventDefaultedAction = (decorateAction) =>
   decorateAction([
