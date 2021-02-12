@@ -18,7 +18,7 @@ export default () => {
 
   it("with specified values", () => {
     const testInstance = TestRenderer.create(
-      <Responsive fontScale={1} displayHeight={100} displayWidth={200}>
+      <Responsive fontScale={1} displayHeight={1000} displayWidth={400}>
         <ResponsiveContext.Consumer>
           {(context) => JSON.stringify(context)}
         </ResponsiveContext.Consumer>
@@ -31,9 +31,9 @@ export default () => {
   it("calculates section content height", () => {
     const { sectionContentHeight } = calculateResponsiveContext(500, 1000, 1);
 
-    //  1000
+    //  1000 (screen height)
     // -  10 (bottom inset)
-    // -  5 (top inset)
+    // -  5  (top inset)
     // - 200 (approximate nav height)
     // _____
     //   785

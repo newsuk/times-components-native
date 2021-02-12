@@ -3,18 +3,15 @@ import PropTypes from "prop-types";
 
 import Responsive from "@times-components-native/responsive";
 import Section from "./section";
-import { SafeAreaProvider } from "react-native-safe-area-context";
 
 const SectionPage = (props) => (
-  <SafeAreaProvider>
-    <Responsive
-      displayWidth={props.displayWidth}
-      displayHeight={props.displayHeight}
-      fontScale={props.fontScale}
-    >
-      <Section {...props} section={JSON.parse(props.section)} />
-    </Responsive>
-  </SafeAreaProvider>
+  <Responsive
+    displayWidth={props.displayWidth}
+    displayHeight={props.displayHeight}
+    fontScale={props.fontScale}
+  >
+    <Section {...props} section={JSON.parse(props.section)} />
+  </Responsive>
 );
 
 SectionPage.propTypes = {
