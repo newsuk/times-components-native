@@ -142,7 +142,16 @@ class SectionPage extends Component {
       sectionName: section.name,
     });
 
-    const readArticles = [];
+    const readArticles = [
+      {
+        id: "78b9db5c-6c41-11eb-acad-72136628cce4",
+        highlight: false,
+      },
+      {
+        id: "5c7fbf42-6c46-11eb-acad-72136628cce4",
+        highlight: true,
+      },
+    ];
 
     return (
       <SectionContext.Provider

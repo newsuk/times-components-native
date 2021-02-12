@@ -22,17 +22,18 @@ function renderAst(ast) {
 }
 
 function ArticleSummaryLabel(props) {
-  const { markAsRead, hide, title, isVideo } = props;
+  const { articleReadState, hide, title, isVideo } = props;
   const labelOpacity = useRef(new Animated.Value(1)).current;
+  const articleReadOpacity = 0.6;
 
   useEffect(() => {
     Animated.timing(labelOpacity, {
       delay: ARTICLE_READ_ANIMATION.delay,
       duration: ARTICLE_READ_ANIMATION.duration,
-      toValue: 0.6,
+      toValue: articleReadOpacity,
       useNativeDriver: true,
     }).start();
-  }, [markAsRead]);
+  }, [articleReadState]);
 
   if (hide || (!title && !isVideo)) {
     return null;
@@ -44,7 +45,7 @@ function ArticleSummaryLabel(props) {
     </View>
   );
 
-  return markAsRead ? (
+  return articleReadState.animate ? (
     <Animated.View
       style={{
         opacity: labelOpacity,
@@ -52,6 +53,14 @@ function ArticleSummaryLabel(props) {
     >
       {Label}
     </Animated.View>
+  ) : articleReadState.read ? (
+    <View
+      style={{
+        opacity: articleReadOpacity,
+      }}
+    >
+      {Label}
+    </View>
   ) : (
     Label
   );
@@ -126,7 +135,10 @@ ArticleSummary.propTypes = {
     isVideo: PropTypes.bool,
     title: PropTypes.string,
     hide: PropTypes.bool,
-    markAsRead: PropTypes.bool,
+    articleReadState: PropTypes.shape({
+      read: PropTypes.bool,
+      animate: PropTypes.bool,
+    }),
   }),
   saveStar: PropTypes.node,
   strapline: PropTypes.node,
@@ -145,7 +157,10 @@ ArticleSummary.defaultProps = {
   headline: null,
   labelProps: {
     hide: false,
-    markAsRead: false,
+    markAsRead: {
+      read: false,
+      animate: false,
+    },
   },
   saveStar: null,
   strapline: null,
