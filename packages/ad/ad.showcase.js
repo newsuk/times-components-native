@@ -3,16 +3,14 @@
 import React, { Fragment } from "react";
 import { Text } from "react-native";
 import { NewTab } from "@times-components-native/storybook";
-import Ad, { AdComposer, SponsoredAd } from "./index";
+import Ad, { SponsoredAd } from "./index";
 import adConfig from "./fixtures/article-ad-config.json";
 
 const withOpenInNewWindow = (children) => (
-  <AdComposer adConfig={adConfig}>
-    <Fragment>
-      <NewTab />
-      {children}
-    </Fragment>
-  </AdComposer>
+  <Fragment>
+    <NewTab />
+    {children}
+  </Fragment>
 );
 
 const slotNames = [
@@ -34,7 +32,12 @@ const renderAd = (slotName) => (
         The pixel ad is below. It&rsquo;s invisible.
       </Text>
     )}
-    <Ad contextUrl={articleContextURL} section="news" slotName={slotName} />
+    <Ad
+      contextUrl={articleContextURL}
+      section="news"
+      slotName={slotName}
+      adConfig={adConfig}
+    />
   </Fragment>
 );
 
