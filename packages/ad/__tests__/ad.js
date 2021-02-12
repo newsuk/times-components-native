@@ -10,7 +10,7 @@ import {
 } from "@times-components-native/jest-serializer";
 import { iterator } from "@times-components-native/test-utils";
 import adConfig from "../fixtures/article-ad-config.json";
-import Ad, { AdComposer } from "../src/ad";
+import Ad from "../src/ad";
 
 export default () => {
   addSerializers(
@@ -31,13 +31,12 @@ export default () => {
       name: "one ad slot",
       test: () => {
         const testInstance = TestRenderer.create(
-          <AdComposer adConfig={adConfig}>
-            <Ad
-              contextUrl={articleContextURL}
-              section="news"
-              slotName="header"
-            />
-          </AdComposer>,
+          <Ad
+            contextUrl={articleContextURL}
+            section="news"
+            slotName="header"
+            adConfig={adConfig}
+          />,
         );
 
         expect(testInstance).toMatchSnapshot();
@@ -47,20 +46,20 @@ export default () => {
       name: "two ad slots",
       test: () => {
         const testInstance = TestRenderer.create(
-          <AdComposer adConfig={adConfig}>
-            <Fragment>
-              <Ad
-                contextUrl={articleContextURL}
-                section="news"
-                slotName="header"
-              />
-              <Ad
-                contextUrl={articleContextURL}
-                section="news"
-                slotName="intervention"
-              />
-            </Fragment>
-          </AdComposer>,
+          <Fragment>
+            <Ad
+              contextUrl={articleContextURL}
+              section="news"
+              slotName="header"
+              adConfig={adConfig}
+            />
+            <Ad
+              contextUrl={articleContextURL}
+              section="news"
+              slotName="intervention"
+              adConfig={adConfig}
+            />
+          </Fragment>,
         );
 
         expect(testInstance).toMatchSnapshot();
