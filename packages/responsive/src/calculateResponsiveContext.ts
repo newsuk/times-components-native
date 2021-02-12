@@ -9,7 +9,7 @@ import { initialWindowMetrics } from "react-native-safe-area-context";
 const config = (NativeModules || {}).ReactConfig;
 
 const minTabletWidth = 768;
-const approximateNavHeight = 200;
+const approximateNavHeightOnTablet = 200;
 
 export const calculateResponsiveContext = (
   width: number,
@@ -20,7 +20,7 @@ export const calculateResponsiveContext = (
     height -
     ((initialWindowMetrics?.insets.bottom ?? 0) +
       (initialWindowMetrics?.insets.top ?? 0)) -
-    approximateNavHeight;
+    approximateNavHeightOnTablet;
 
   return {
     editionBreakpoint: getEditionBreakpoint(width),
