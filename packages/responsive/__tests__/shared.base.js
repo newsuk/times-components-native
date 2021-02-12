@@ -1,6 +1,7 @@
 import React from "react";
 import TestRenderer from "react-test-renderer";
 import Responsive, { ResponsiveContext } from "../src/responsive";
+import { calculateResponsiveContext } from "../src/calculateResponsiveContext";
 
 export default () => {
   it("with default values", () => {
@@ -25,5 +26,17 @@ export default () => {
     );
 
     expect(testInstance).toMatchSnapshot();
+  });
+
+  it("calculates section content height", () => {
+    const { sectionContentHeight } = calculateResponsiveContext(500, 1000, 1);
+
+    //  1000
+    // -  10 (bottom inset)
+    // -  5 (top inset)
+    // - 200 (approximate nav height)
+    // _____
+    //   785
+    expect(sectionContentHeight).toEqual(785);
   });
 };
