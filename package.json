@@ -1,7 +1,7 @@
 {
   "name": "times-components-native",
   "private": true,
-  "version": "3.0.1-beta",
+  "version": "3.0.2",
   "description": "A collection of react-native components for The Times and Sunday Times",
   "main": "index.js",
   "engines": {
@@ -87,7 +87,6 @@
     "prop-types": "15.7.2",
     "react": "16.13.1",
     "react-apollo": "2.5.5",
-    "react-broadcast": "0.5.2",
     "react-display-name": "0.2.3",
     "react-dom": "16.9.0",
     "react-native": "0.63.2",
