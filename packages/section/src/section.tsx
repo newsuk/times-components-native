@@ -70,7 +70,9 @@ const Section: FC<Props> = ({
   //   ? getSliceIndexByArticleId(scrollToArticleId, slices)
   //   : null;
 
-  const sliceIndexFromArticle = sectionTitle === "News" ? 7 : 0;
+  console.log("STSTTSTSTSTS333", sectionTitle);
+
+  const sliceIndexFromArticle = sectionTitle === "News" ? 6 : 0;
 
   const onEmailPuzzleButtonPress = () =>
     onLinkPress({
@@ -108,15 +110,15 @@ const Section: FC<Props> = ({
     sliceOffset += height;
     addToOffsetCount++;
     if (addToOffsetCount === sliceIndexFromArticle) {
-      // console.log(
-      //   "sosososososoosososoosososossosoosoos2222233334444",
-      //   sliceOffset,
-      //   addToOffsetCount,
-      // );
+      console.log(
+        "sosososososoosososoosososossosoosoos2222233334444",
+        sliceOffset,
+        addToOffsetCount,
+      );
       setTimeout(() => {
         flatListRef.current.scrollToOffset({ offset: sliceOffset });
         sliceOffset = 0;
-      }, 500);
+      }, 2000);
     }
     // setSliceOffset((currOffset) => (currOffset += height));
   };
@@ -148,25 +150,28 @@ const Section: FC<Props> = ({
     // );
     return (
       <View
+        style={{ flex: 1 }}
         onLayout={(event) => {
           if (!sliceIndexFromArticle || index > sliceIndexFromArticle) return;
           // if (index === 0) {
           //   sliceOffset = 0;
           //   addToOffsetCount = 0;
           // }
-          // console.log(
-          //   "SSSSSSSSSSSSSSSSSSSS2233445555",
-          //   typeof event.nativeEvent.layout.height,
-          //   index,
-          //   sliceIndexFromArticle,
-          // );
+          console.log(
+            "SSSSSSSSSSSSSSSSSSSS2233445555",
+            event.nativeEvent.layout.height,
+            index,
+            slice.name,
+            sliceIndexFromArticle,
+          );
           if (
-            index <= sliceIndexFromArticle &&
-            addToOffsetCount <= sliceIndexFromArticle
+            index < sliceIndexFromArticle &&
+            addToOffsetCount < sliceIndexFromArticle
           ) {
             const height = event?.nativeEvent?.layout?.height ?? 0;
             console.log(
-              "erwuoirewoiruweueo4483758758437893457",
+              "erwuoirewoiruweueo448375875843789345799999",
+              index,
               sectionTitle,
               sliceIndexFromArticle,
               sliceOffset,
