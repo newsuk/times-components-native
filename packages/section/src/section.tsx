@@ -1,4 +1,4 @@
-import React, { useCallback, useState } from "react";
+import React, { FC, useEffect, useCallback, useRef, useState } from "react";
 import { Animated, FlatList, Platform, View } from "react-native";
 import { useResponsiveContext } from "@times-components-native/responsive";
 import { withTrackScrollDepth } from "@times-components-native/tracking";
@@ -11,10 +11,11 @@ import MagazineCover from "./magazine-cover";
 import Slice from "./slice";
 import styleFactory from "./styles";
 import {
-  getEmailPuzzlesUrl,
-  prepareSlicesForRender,
   createPuzzleData,
+  getEmailPuzzlesUrl,
+  getSliceIndexByArticleId,
   isSupplementSection,
+  prepareSlicesForRender,
 } from "./utils";
 import { OnArticlePress } from "@times-components-native/types";
 import { SectionTitles } from "./utils/sectionConfigs";
@@ -37,9 +38,10 @@ interface Props {
     name: string;
     slices: any;
   };
+  scrollToArticleId?: string;
 }
 
-const Section: React.FC<Props> = ({
+const Section: FC<Props> = ({
   adConfig,
   onArticlePress,
   onLinkPress,
@@ -49,9 +51,13 @@ const Section: React.FC<Props> = ({
   publishedTime,
   receiveChildList,
   section,
+  scrollToArticleId,
 }) => {
+  // const [sliceOffset, setSliceOffset] = useState(0);
   const { cover, name, slices, title: sectionTitle } = section;
   const { isTablet, editionBreakpoint, orientation } = useResponsiveContext();
+
+  const flatListRef = useRef(null);
 
   const emailPuzzlesButtonExtendedWidth = 170;
   const [emailPuzzlesButtonWidth] = useState(
@@ -59,6 +65,12 @@ const Section: React.FC<Props> = ({
   );
 
   const isIOS = Platform.OS === "ios";
+
+  // const sliceIndexFromArticle = scrollToArticleId
+  //   ? getSliceIndexByArticleId(scrollToArticleId, slices)
+  //   : null;
+
+  const sliceIndexFromArticle = sectionTitle === "News" ? 7 : 0;
 
   const onEmailPuzzleButtonPress = () =>
     onLinkPress({
@@ -90,25 +102,98 @@ const Section: React.FC<Props> = ({
     return null;
   };
 
+  let sliceOffset = 0;
+  let addToOffsetCount = 0;
+  const addToOffset = (height: number) => {
+    sliceOffset += height;
+    addToOffsetCount++;
+    if (addToOffsetCount === sliceIndexFromArticle) {
+      // console.log(
+      //   "sosososososoosososoosososossosoosoos2222233334444",
+      //   sliceOffset,
+      //   addToOffsetCount,
+      // );
+      setTimeout(() => {
+        flatListRef.current.scrollToOffset({ offset: sliceOffset });
+        sliceOffset = 0;
+      }, 500);
+    }
+    // setSliceOffset((currOffset) => (currOffset += height));
+  };
+  // const scrollToOffset = () => {
+  //   setTimeout(() => {
+  //     console.log(
+  //       "sosososososoosososoosososossosoosoos2222233334444",
+  //       sliceOffset,
+  //     );
+  //     flatListRef.current.scrollToOffset({ offset: sliceOffset });
+  //   }, 1000);
+  // };
+
+  // useEffect(() => {
+  //   sliceOffset = 0;
+  //   addToOffsetCount = 0;
+  // }, []);
+
   const renderItem = (isPuzzle: boolean, orientation: Orientation) => ({
     index,
     item: slice,
     inTodaysEditionSlice,
-  }: any) => (
-    <Slice
-      index={index}
-      length={slices.length}
-      onPress={isPuzzle ? onPuzzlePress : onArticlePress}
-      onLinkPress={onLinkPress}
-      slice={slice}
-      isInSupplement={isSupplementSection(sectionTitle)}
-      inTodaysEditionSlice={inTodaysEditionSlice}
-      adConfig={adConfig}
-      sectionTitle={sectionTitle}
-      orientation={orientation}
-      isTablet={isTablet}
-    />
-  );
+  }: any) => {
+    // console.log(
+    //   "54768947693478934758943758934795",
+    //   section.name,
+    //   slice.name,
+    //   index,
+    // );
+    return (
+      <View
+        onLayout={(event) => {
+          if (!sliceIndexFromArticle || index > sliceIndexFromArticle) return;
+          // if (index === 0) {
+          //   sliceOffset = 0;
+          //   addToOffsetCount = 0;
+          // }
+          // console.log(
+          //   "SSSSSSSSSSSSSSSSSSSS2233445555",
+          //   typeof event.nativeEvent.layout.height,
+          //   index,
+          //   sliceIndexFromArticle,
+          // );
+          if (
+            index <= sliceIndexFromArticle &&
+            addToOffsetCount <= sliceIndexFromArticle
+          ) {
+            const height = event?.nativeEvent?.layout?.height ?? 0;
+            console.log(
+              "erwuoirewoiruweueo4483758758437893457",
+              sectionTitle,
+              sliceIndexFromArticle,
+              sliceOffset,
+              addToOffsetCount,
+              height,
+            );
+            addToOffset(height);
+          }
+          // if (index === sliceIndexFromArticle) scrollToOffset();
+        }}
+      >
+        <Slice
+          index={index}
+          length={slices.length}
+          onPress={isPuzzle ? onPuzzlePress : onArticlePress}
+          onLinkPress={onLinkPress}
+          slice={slice}
+          isInSupplement={isSupplementSection(sectionTitle)}
+          inTodaysEditionSlice={inTodaysEditionSlice}
+          adConfig={adConfig}
+          sectionTitle={sectionTitle}
+          orientation={orientation}
+          isTablet={isTablet}
+        />
+      </View>
+    );
+  };
 
   const renderItemSeperator = (isPuzzle: boolean) => (
     { leadingItem }: any,
@@ -151,11 +236,24 @@ const Section: React.FC<Props> = ({
     ? createPuzzleData(isTablet, sectionTitle)(slices, editionBreakpoint)
     : prepareSlicesForRender(isTablet, sectionTitle, orientation)(slices);
 
+  // data.map((item, index) => {
+  //   if (sectionTitle === "News" && index === sliceIndexFromArticle) {
+  //     console.log(
+  //       "EUOIREIRWEIORWEIOREWIOREWIOY",
+  //       sliceIndexFromArticle,
+  //       section.title,
+  //       item.name,
+  //       index,
+  //     );
+  //   }
+  // });
+
   if (slices) receiveChildList(data);
 
   return (
     <>
       <FlatList
+        ref={flatListRef}
         contentContainerStyle={
           isTablet && isPuzzle && styles.additionalContainerPadding
         }
@@ -170,6 +268,8 @@ const Section: React.FC<Props> = ({
         onViewableItemsChanged={onViewed ? onViewableItemsChanged : null}
         {...(isPuzzle && { onScrollBeginDrag })}
         renderItem={renderItem(isPuzzle, orientation)}
+        // onScrollToIndexFailed={() => null}
+        // initialScrollIndex={sliceIndex}
       />
       {isPuzzle && isIOS ? (
         <FloatingActionButton
