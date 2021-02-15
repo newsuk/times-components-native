@@ -12,7 +12,7 @@ import { ResponsiveContext } from "@times-components-native/responsive";
 interface Props {
   bylines?: BylineInput[];
   bylineStyle?: StyleProp<ViewStyle>;
-  bylineOnTop: boolean;
+  bylineOnTop?: boolean;
   flagColour?: any;
   flagsStyle?: StyleProp<ViewStyle>;
   headlineStyle?: StyleProp<TextStyle>;
