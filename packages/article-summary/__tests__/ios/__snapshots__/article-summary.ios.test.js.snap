@@ -4,6 +4,12 @@ exports[`1. article summary component with a single paragraph 1`] = `
 <View>
   <View>
     <ArticleLabel
+      articleReadState={
+        Object {
+          "animate": false,
+          "read": false,
+        }
+      }
       color="#333333"
       markAsRead={false}
       title="Test label"
@@ -44,6 +50,12 @@ exports[`1. article summary component with a single paragraph 1`] = `
   </Text>
   <Text>
     <ArticleByline
+      articleReadState={
+        Object {
+          "animate": false,
+          "read": false,
+        }
+      }
       ast={
         Array [
           Object {
@@ -108,6 +120,12 @@ exports[`2. article summary component with multiple paragraphs 1`] = `
   </Text>
   <Text>
     <ArticleByline
+      articleReadState={
+        Object {
+          "animate": false,
+          "read": false,
+        }
+      }
       ast={
         Array [
           Object {
@@ -182,6 +200,12 @@ exports[`4. article summary component containing links 1`] = `
 <View>
   <View>
     <ArticleLabel
+      articleReadState={
+        Object {
+          "animate": false,
+          "read": false,
+        }
+      }
       color="#333333"
       title="Test label"
     />
@@ -219,6 +243,12 @@ exports[`5. article summary component with headline and no content 1`] = `
 <View>
   <View>
     <ArticleLabel
+      articleReadState={
+        Object {
+          "animate": false,
+          "read": false,
+        }
+      }
       color="#333333"
       title="Test label"
     />
@@ -242,6 +272,12 @@ exports[`6. article summary component with empty content at the end trimmed 1`] 
 <View>
   <View>
     <ArticleLabel
+      articleReadState={
+        Object {
+          "animate": false,
+          "read": false,
+        }
+      }
       color="#333333"
       title="Test label"
     />
@@ -274,6 +310,12 @@ exports[`6. article summary component with empty content at the end trimmed 1`] 
   </Text>
   <Text>
     <ArticleByline
+      articleReadState={
+        Object {
+          "animate": false,
+          "read": false,
+        }
+      }
       ast={
         Array [
           Object {
@@ -348,6 +390,12 @@ exports[`8. article summary component with no label 1`] = `
   </Text>
   <Text>
     <ArticleByline
+      articleReadState={
+        Object {
+          "animate": false,
+          "read": false,
+        }
+      }
       ast={
         Array [
           Object {
@@ -378,6 +426,12 @@ exports[`9. article summary component with no headline 1`] = `
 <View>
   <View>
     <ArticleLabel
+      articleReadState={
+        Object {
+          "animate": false,
+          "read": false,
+        }
+      }
       color="#333333"
       title="Test label"
     />
@@ -402,6 +456,12 @@ exports[`10. article summary component with no date publication 1`] = `
 <View>
   <View>
     <ArticleLabel
+      articleReadState={
+        Object {
+          "animate": false,
+          "read": false,
+        }
+      }
       color="#333333"
       title="Test label"
     />
@@ -421,6 +481,12 @@ exports[`10. article summary component with no date publication 1`] = `
   </Text>
   <Text>
     <ArticleByline
+      articleReadState={
+        Object {
+          "animate": false,
+          "read": false,
+        }
+      }
       ast={
         Array [
           Object {
@@ -451,6 +517,12 @@ exports[`11. article summary component with a video label 1`] = `
 <View>
   <View>
     <VideoLabel
+      articleReadState={
+        Object {
+          "animate": false,
+          "read": false,
+        }
+      }
       color="#333333"
       isVideo={true}
       title="Test label"
@@ -477,6 +549,12 @@ exports[`11. article summary component with a video label 1`] = `
   </Text>
   <Text>
     <ArticleByline
+      articleReadState={
+        Object {
+          "animate": false,
+          "read": false,
+        }
+      }
       ast={
         Array [
           Object {
@@ -507,6 +585,12 @@ exports[`12. article summary component with a strapline 1`] = `
 <View>
   <View>
     <ArticleLabel
+      articleReadState={
+        Object {
+          "animate": false,
+          "read": false,
+        }
+      }
       color="#333333"
       title="Test label"
     />
@@ -552,6 +636,12 @@ exports[`12. article summary component with a strapline 1`] = `
   </Text>
   <Text>
     <ArticleByline
+      articleReadState={
+        Object {
+          "animate": false,
+          "read": false,
+        }
+      }
       ast={
         Array [
           Object {
@@ -645,6 +735,12 @@ exports[`18. article summary component with a single paragraph and flag on table
 <View>
   <View>
     <ArticleLabel
+      articleReadState={
+        Object {
+          "animate": false,
+          "read": false,
+        }
+      }
       color="#333333"
       markAsRead={false}
       title="Camilla Long"
@@ -685,6 +781,12 @@ exports[`18. article summary component with a single paragraph and flag on table
   </Text>
   <Text>
     <ArticleByline
+      articleReadState={
+        Object {
+          "animate": false,
+          "read": false,
+        }
+      }
       ast={
         Array [
           Object {
@@ -726,6 +828,12 @@ exports[`19. article summary component with a strapline and flag on tablet 1`] =
 <View>
   <View>
     <ArticleLabel
+      articleReadState={
+        Object {
+          "animate": false,
+          "read": false,
+        }
+      }
       color="#333333"
       title="Camilla Long"
     />
@@ -771,6 +879,12 @@ exports[`19. article summary component with a strapline and flag on tablet 1`] =
   </Text>
   <Text>
     <ArticleByline
+      articleReadState={
+        Object {
+          "animate": false,
+          "read": false,
+        }
+      }
       ast={
         Array [
           Object {
@@ -853,6 +967,12 @@ exports[`20. article summary component with hidden label 1`] = `
   </Text>
   <Text>
     <ArticleByline
+      articleReadState={
+        Object {
+          "animate": false,
+          "read": false,
+        }
+      }
       ast={
         Array [
           Object {
@@ -894,6 +1014,12 @@ exports[`21. article summary component when article read state is read 1`] = `
 <View>
   <View>
     <ArticleLabel
+      articleReadState={
+        Object {
+          "animate": false,
+          "read": false,
+        }
+      }
       color="#333333"
       markAsRead={false}
       title="Camilla Long"
@@ -934,6 +1060,12 @@ exports[`21. article summary component when article read state is read 1`] = `
   </Text>
   <Text>
     <ArticleByline
+      articleReadState={
+        Object {
+          "animate": false,
+          "read": false,
+        }
+      }
       ast={
         Array [
           Object {
@@ -975,6 +1107,12 @@ exports[`22. article summary component when article read state is read and shoul
 <View>
   <View>
     <ArticleLabel
+      articleReadState={
+        Object {
+          "animate": false,
+          "read": false,
+        }
+      }
       color="#333333"
       markAsRead={false}
       title="Camilla Long"
@@ -1015,6 +1153,12 @@ exports[`22. article summary component when article read state is read and shoul
   </Text>
   <Text>
     <ArticleByline
+      articleReadState={
+        Object {
+          "animate": false,
+          "read": false,
+        }
+      }
       ast={
         Array [
           Object {

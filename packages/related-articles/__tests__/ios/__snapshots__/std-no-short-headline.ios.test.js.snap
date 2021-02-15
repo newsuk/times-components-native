@@ -36,6 +36,12 @@ exports[`1. no short headline 1`] = `
               <View>
                 <View>
                   <ArticleLabel
+                    articleReadState={
+                      Object {
+                        "animate": false,
+                        "read": false,
+                      }
+                    }
                     color="#004D6D"
                     isVideo={false}
                     title="test label"
