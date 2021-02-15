@@ -20,19 +20,40 @@ function renderAst(ast) {
   return renderTrees(summarise(ast), renderer);
 }
 
-function ArticleSummaryLabel(props) {
-  const { articleReadState, hide, title, isVideo } = props;
-  const labelOpacity = useRef(new Animated.Value(1)).current;
-  const articleReadOpacity = 0.6;
+const MarkAsRead = (articleReadState, children) => {
+  const animationOpacity = useRef(new Animated.Value(1)).current;
+  const opacity = 0.57;
 
   useEffect(() => {
-    Animated.timing(labelOpacity, {
+    Animated.timing(animationOpacity, {
       delay: ARTICLE_READ_ANIMATION.delay,
       duration: ARTICLE_READ_ANIMATION.duration,
-      toValue: articleReadOpacity,
+      toValue: opacity,
       useNativeDriver: true,
     }).start();
   }, [articleReadState]);
+
+  return articleReadState.animate ? (
+    <Animated.View
+      style={{
+        opacity: animationOpacity,
+      }}
+    >
+      {children}
+    </Animated.View>
+  ) : (
+    <View
+      style={{
+        opacity: opacity,
+      }}
+    >
+      {children}
+    </View>
+  );
+};
+
+function ArticleSummaryLabel(props) {
+  const { articleReadState, hide, title, isVideo } = props;
 
   if (hide || (!title && !isVideo)) {
     return null;
@@ -44,69 +65,21 @@ function ArticleSummaryLabel(props) {
     </View>
   );
 
-  return articleReadState.animate ? (
-    <Animated.View
-      style={{
-        opacity: labelOpacity,
-      }}
-    >
-      {Label}
-    </Animated.View>
-  ) : articleReadState.read ? (
-    <View
-      style={{
-        opacity: articleReadOpacity,
-      }}
-    >
-      {Label}
-    </View>
-  ) : (
-    Label
-  );
+  if (!articleReadState) return Label;
+
+  return <MarkAsRead articleReadState={articleReadState}>{Label}</MarkAsRead>;
 }
 
 function Byline(props) {
   const { ast, articleReadState, bylineClass } = props;
 
-  const labelOpacity = useRef(new Animated.Value(1)).current;
-  const articleReadOpacity = 0.6;
-
-  useEffect(() => {
-    Animated.timing(labelOpacity, {
-      delay: ARTICLE_READ_ANIMATION.delay,
-      duration: ARTICLE_READ_ANIMATION.duration,
-      toValue: articleReadOpacity,
-      useNativeDriver: true,
-    }).start();
-  }, [articleReadState]);
-
   if (!ast || ast.length === 0) return null;
 
-  const byline = (
-    <Text>
-      <ArticleByline {...props} className={bylineClass} />
-    </Text>
-  );
+  const byline = <ArticleByline {...props} className={bylineClass} />;
 
-  return articleReadState.animate ? (
-    <Animated.View
-      style={{
-        opacity: labelOpacity,
-      }}
-    >
-      {byline}
-    </Animated.View>
-  ) : articleReadState.read ? (
-    <View
-      style={{
-        opacity: articleReadOpacity,
-      }}
-    >
-      {byline}
-    </View>
-  ) : (
-    byline
-  );
+  if (!articleReadState) return byline;
+
+  return <MarkAsRead articleReadState={articleReadState}>{byline}</MarkAsRead>;
 }
 
 function ArticleSummary(props) {
@@ -149,7 +122,11 @@ ArticleSummary.propTypes = {
   bylineProps: PropTypes.shape({
     ...articleBylinePropTypes,
     bylineClass: PropTypes.string,
-    isOpinionByline: PropTypes.bool,
+    bylineOnTop: PropTypes.bool,
+    articleReadState: PropTypes.shape({
+      read: PropTypes.bool,
+      animationOpacity: PropTypes.bool,
+    }),
   }),
   content: PropTypes.node,
   datePublicationProps: PropTypes.shape({
