@@ -144,12 +144,20 @@ class SectionPage extends Component {
 
     const readArticles = [
       {
-        id: "78b9db5c-6c41-11eb-acad-72136628cce4",
+        id: "a832a8c4-6c86-11eb-bc24-b1bb9cd3bc5f",
         highlight: false,
       },
       {
-        id: "5c7fbf42-6c46-11eb-acad-72136628cce4",
+        id: "e237ba76-6d23-11eb-bc24-b1bb9cd3bc5f",
         highlight: true,
+      },
+      {
+        id: "de2749dc-6d4c-11eb-bc24-b1bb9cd3bc5f",
+        highlight: true,
+      },
+      {
+        id: "29f1f8e0-6d4c-11eb-bc24-b1bb9cd3bc5f",
+        highlight: false,
       },
     ];
 

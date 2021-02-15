@@ -2,7 +2,6 @@ import React, { useRef, useEffect } from "react";
 import { Animated, Text, View } from "react-native";
 import PropTypes from "prop-types";
 import ArticleByline, {
-  ArticleBylineOpinion,
   articleBylinePropTypes,
 } from "@times-components-native/article-byline";
 import ArticleLabel from "@times-components-native/article-label";
@@ -67,18 +66,46 @@ function ArticleSummaryLabel(props) {
 }
 
 function Byline(props) {
-  const { ast, isOpinionByline, bylineClass } = props;
+  const { ast, articleReadState, bylineClass } = props;
+
+  const labelOpacity = useRef(new Animated.Value(1)).current;
+  const articleReadOpacity = 0.6;
+
+  useEffect(() => {
+    Animated.timing(labelOpacity, {
+      delay: ARTICLE_READ_ANIMATION.delay,
+      duration: ARTICLE_READ_ANIMATION.duration,
+      toValue: articleReadOpacity,
+      useNativeDriver: true,
+    }).start();
+  }, [articleReadState]);
 
   if (!ast || ast.length === 0) return null;
 
-  const BylineComponent = isOpinionByline
-    ? ArticleBylineOpinion
-    : ArticleByline;
-
-  return (
+  const byline = (
     <Text>
-      <BylineComponent {...props} className={bylineClass} />
+      <ArticleByline {...props} className={bylineClass} />
     </Text>
+  );
+
+  return articleReadState.animate ? (
+    <Animated.View
+      style={{
+        opacity: labelOpacity,
+      }}
+    >
+      {byline}
+    </Animated.View>
+  ) : articleReadState.read ? (
+    <View
+      style={{
+        opacity: articleReadOpacity,
+      }}
+    >
+      {byline}
+    </View>
+  ) : (
+    byline
   );
 }
 
@@ -95,13 +122,14 @@ function ArticleSummary(props) {
     saveStar,
   } = props;
 
-  const { isOpinionByline = false } = bylineProps || {};
+  const { bylineOnTop = false } = bylineProps || {};
+
   const byline = bylineProps ? <Byline {...bylineProps} /> : null;
 
   return (
     <View style={style}>
       {labelProps ? <ArticleSummaryLabel {...labelProps} /> : null}
-      {isOpinionByline && byline}
+      {bylineOnTop && byline}
       {headline}
       {strapline}
       {flags}
@@ -112,7 +140,7 @@ function ArticleSummary(props) {
           <DatePublication {...datePublicationProps} />
         </Text>
       ) : null}
-      {!isOpinionByline && byline}
+      {!bylineOnTop && byline}
     </View>
   );
 }
