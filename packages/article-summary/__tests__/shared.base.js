@@ -7,7 +7,6 @@ import ArticleSummary, {
 } from "../src/article-summary";
 import defaultFixture from "../fixtures/default";
 import withSummaryLinksFixture from "../fixtures/with-summary-links";
-import opinionBylineFixture from "../fixtures/opinion-byline";
 import articleMultiFixture from "../fixtures/article-multi";
 import emptyParagraphFixture from "../fixtures/article-empty-paragraph";
 import noBylineFixture from "../fixtures/no-byline";
@@ -68,23 +67,6 @@ export default () => {
           <ArticleSummary
             {...defaultFixture({
               flags,
-              headline,
-              label,
-              paragraph,
-            })}
-          />,
-        );
-
-        expect(testInstance.toJSON()).toMatchSnapshot();
-      },
-    },
-    {
-      name: "article summary with opinion byline",
-      test: () => {
-        const testInstance = TestRenderer.create(
-          <ArticleSummary
-            {...opinionBylineFixture({
-              byline,
               headline,
               label,
               paragraph,
