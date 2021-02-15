@@ -11,6 +11,7 @@ Array [
         "hideOnMobile": false,
         "id": "522abf2c-e752-11e8-9f32-f2801f1b9fd1",
         "image": Object {
+          "__typename": "Image",
           "crop11": null,
           "crop169": null,
           "crop23": null,
@@ -30,6 +31,7 @@ Array [
         "hideOnMobile": false,
         "id": "522abf2c-e752-11e8-9f32-f2801f1b9fd1",
         "image": Object {
+          "__typename": "Image",
           "crop11": null,
           "crop169": null,
           "crop23": null,
@@ -49,6 +51,7 @@ Array [
         "hideOnMobile": false,
         "id": "522abf2c-e752-11e8-9f32-f2801f1b9fd1",
         "image": Object {
+          "__typename": "Image",
           "crop11": null,
           "crop169": null,
           "crop23": null,
@@ -75,6 +78,7 @@ Array [
         "hideOnMobile": false,
         "id": "522abf2c-e752-11e8-9f32-f2801f1b9fd1",
         "image": Object {
+          "__typename": "Image",
           "crop11": null,
           "crop169": null,
           "crop23": null,
@@ -94,6 +98,7 @@ Array [
         "hideOnMobile": false,
         "id": "522abf2c-e752-11e8-9f32-f2801f1b9fd1",
         "image": Object {
+          "__typename": "Image",
           "crop11": null,
           "crop169": null,
           "crop23": null,
@@ -113,6 +118,7 @@ Array [
         "hideOnMobile": false,
         "id": "522abf2c-e752-11e8-9f32-f2801f1b9fd1",
         "image": Object {
+          "__typename": "Image",
           "crop11": null,
           "crop169": null,
           "crop23": null,
@@ -144,6 +150,7 @@ Array [
         "hideOnMobile": false,
         "id": "522abf2c-e752-11e8-9f32-f2801f1b9fd1",
         "image": Object {
+          "__typename": "Image",
           "crop11": null,
           "crop169": null,
           "crop23": null,
@@ -163,6 +170,7 @@ Array [
         "hideOnMobile": false,
         "id": "522abf2c-e752-11e8-9f32-f2801f1b9fd1",
         "image": Object {
+          "__typename": "Image",
           "crop11": null,
           "crop169": null,
           "crop23": null,
@@ -182,6 +190,7 @@ Array [
         "hideOnMobile": false,
         "id": "522abf2c-e752-11e8-9f32-f2801f1b9fd1",
         "image": Object {
+          "__typename": "Image",
           "crop11": null,
           "crop169": null,
           "crop23": null,
@@ -208,6 +217,7 @@ Array [
         "hideOnMobile": false,
         "id": "522abf2c-e752-11e8-9f32-f2801f1b9fd1",
         "image": Object {
+          "__typename": "Image",
           "crop11": null,
           "crop169": null,
           "crop23": null,
@@ -227,6 +237,7 @@ Array [
         "hideOnMobile": false,
         "id": "522abf2c-e752-11e8-9f32-f2801f1b9fd1",
         "image": Object {
+          "__typename": "Image",
           "crop11": null,
           "crop169": null,
           "crop23": null,
@@ -246,6 +257,7 @@ Array [
         "hideOnMobile": false,
         "id": "522abf2c-e752-11e8-9f32-f2801f1b9fd1",
         "image": Object {
+          "__typename": "Image",
           "crop11": null,
           "crop169": null,
           "crop23": null,
@@ -272,6 +284,7 @@ Array [
         "hideOnMobile": false,
         "id": "522abf2c-e752-11e8-9f32-f2801f1b9fd1",
         "image": Object {
+          "__typename": "Image",
           "crop11": null,
           "crop169": null,
           "crop23": null,
@@ -303,6 +316,7 @@ Array [
         "hideOnMobile": false,
         "id": "522abf2c-e752-11e8-9f32-f2801f1b9fd1",
         "image": Object {
+          "__typename": "Image",
           "crop11": null,
           "crop169": null,
           "crop23": null,
@@ -322,6 +336,7 @@ Array [
         "hideOnMobile": false,
         "id": "522abf2c-e752-11e8-9f32-f2801f1b9fd1",
         "image": Object {
+          "__typename": "Image",
           "crop11": null,
           "crop169": null,
           "crop23": null,
@@ -341,6 +356,7 @@ Array [
         "hideOnMobile": false,
         "id": "522abf2c-e752-11e8-9f32-f2801f1b9fd1",
         "image": Object {
+          "__typename": "Image",
           "crop11": null,
           "crop169": null,
           "crop23": null,
@@ -367,6 +383,7 @@ Array [
         "hideOnMobile": false,
         "id": "522abf2c-e752-11e8-9f32-f2801f1b9fd1",
         "image": Object {
+          "__typename": "Image",
           "crop11": null,
           "crop169": null,
           "crop23": null,
@@ -386,6 +403,7 @@ Array [
         "hideOnMobile": false,
         "id": "522abf2c-e752-11e8-9f32-f2801f1b9fd1",
         "image": Object {
+          "__typename": "Image",
           "crop11": null,
           "crop169": null,
           "crop23": null,
@@ -405,6 +423,7 @@ Array [
         "hideOnMobile": false,
         "id": "522abf2c-e752-11e8-9f32-f2801f1b9fd1",
         "image": Object {
+          "__typename": "Image",
           "crop11": null,
           "crop169": null,
           "crop23": null,
@@ -431,6 +450,7 @@ Array [
         "hideOnMobile": true,
         "id": "522abf2c-e752-11e8-9f32-f2801f1b9fd1",
         "image": Object {
+          "__typename": "Image",
           "crop11": null,
           "crop169": null,
           "crop23": null,

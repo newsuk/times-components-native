@@ -12,10 +12,32 @@ import {
 import articleTrackingContext from "./tracking/article-tracking-context";
 import Gutter, { maxWidth } from "./gutter";
 import styles from "./styles/shared";
-import renderers from "./article-body/article-body-row";
+import getRenderers from "./article-body/article-body-row";
 import fixup from "./body-utils";
 import ErrorBoundary from "./boundary";
 import { useResponsiveContext } from "@times-components-native/responsive";
+import {
+  getCropByPriority,
+  isTemplateWithLeadAssetInGallery,
+} from "@times-components-native/utils";
+
+const getAllImages = (template, leadAsset, fixedContent) => {
+  if (isTemplateWithLeadAssetInGallery(template, leadAsset)) {
+    return [
+      {
+        attributes: {
+          ...getCropByPriority(leadAsset),
+          caption: leadAsset.caption,
+          credits: leadAsset.credits,
+          imageIndex: 0,
+        },
+      },
+      ...fixedContent.filter((node) => node.name === "image"),
+    ];
+  }
+
+  return fixedContent.filter((node) => node.name === "image");
+};
 
 const MemoisedArticle = React.memo((props) => {
   const {
@@ -34,7 +56,7 @@ const MemoisedArticle = React.memo((props) => {
 
   const { windowWidth } = useResponsiveContext();
 
-  const { id, url, content, template } = data;
+  const { id, url, content, template, leadAsset } = data;
 
   const Footer = () => (
     <Gutter>
@@ -56,11 +78,11 @@ const MemoisedArticle = React.memo((props) => {
 
   const [fixedContent, images] = useMemo(() => {
     const fixedContentMemo = [...fixup(props), { name: "footer" }];
-    const imagesMemo = fixedContentMemo.filter((node) => node.name === "image");
+    const imagesMemo = getAllImages(template, leadAsset, fixedContentMemo);
     return [fixedContentMemo, imagesMemo];
   }, [content, isTablet]);
 
-  const renderChild = render(renderers({ ...props, images }));
+  const renderChild = render(getRenderers({ ...props, images }));
 
   const Child = ({ item, index }) => (
     <Gutter>

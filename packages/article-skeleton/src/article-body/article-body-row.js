@@ -1,11 +1,11 @@
 /* eslint-disable prefer-destructuring */
 import React from "react";
-import { View, Text, Dimensions, Platform } from "react-native";
+import { Dimensions, Platform, Text, View } from "react-native";
 import {
-  tabletWidth,
-  tabletRowPadding,
   getNarrowArticleBreakpoint,
   spacing,
+  tabletRowPadding,
+  tabletWidth,
 } from "@times-components-native/styleguide";
 import Ad from "@times-components-native/ad";
 import InlineContent from "@times-components-native/inline-content";

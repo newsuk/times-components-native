@@ -8,10 +8,10 @@ import ArticleLeadAsset from "@times-components-native/article-lead-asset";
 import { CentredCaption } from "@times-components-native/caption";
 import { ResponsiveContext } from "@times-components-native/responsive";
 import {
-  getExtraImagesContent,
+  getAllArticleImages,
   getHeadline,
   getLeadAsset,
-  getStandardTemplateCrop,
+  getCropByPriority,
 } from "@times-components-native/utils";
 import Context from "@times-components-native/context";
 import ArticleHeader from "./article-header/article-header";
@@ -62,7 +62,7 @@ class ArticleInDepth extends Component {
             />
             <ArticleLeadAsset
               {...getLeadAsset(article)}
-              getImageCrop={getStandardTemplateCrop}
+              getImageCrop={getCropByPriority}
               onImagePress={onImagePress}
               onVideoPress={onVideoPress}
               renderCaption={({ caption }) =>
@@ -70,7 +70,7 @@ class ArticleInDepth extends Component {
               }
               style={[styles.leadAsset, isTablet && styles.leadAssetTablet]}
               width={width}
-              extraContent={getExtraImagesContent(article)}
+              extraContent={getAllArticleImages(article)}
             />
             <View
               style={[

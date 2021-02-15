@@ -823,6 +823,7 @@ exports[`25. puzzle - medium 1`] = `
         id="0"
         image={
           Object {
+            "__typename": "Image",
             "crop11": null,
             "crop169": null,
             "crop23": null,
@@ -845,6 +846,7 @@ exports[`25. puzzle - medium 1`] = `
         id="1"
         image={
           Object {
+            "__typename": "Image",
             "crop11": null,
             "crop169": null,
             "crop23": null,
@@ -867,6 +869,7 @@ exports[`25. puzzle - medium 1`] = `
         id="2"
         image={
           Object {
+            "__typename": "Image",
             "crop11": null,
             "crop169": null,
             "crop23": null,
@@ -2054,6 +2057,7 @@ exports[`62. puzzle - wide 1`] = `
         id="0"
         image={
           Object {
+            "__typename": "Image",
             "crop11": null,
             "crop169": null,
             "crop23": null,
@@ -2076,6 +2080,7 @@ exports[`62. puzzle - wide 1`] = `
         id="1"
         image={
           Object {
+            "__typename": "Image",
             "crop11": null,
             "crop169": null,
             "crop23": null,
@@ -2098,6 +2103,7 @@ exports[`62. puzzle - wide 1`] = `
         id="2"
         image={
           Object {
+            "__typename": "Image",
             "crop11": null,
             "crop169": null,
             "crop23": null,
@@ -3328,6 +3334,7 @@ exports[`99. puzzle - huge 1`] = `
           id="0"
           image={
             Object {
+              "__typename": "Image",
               "crop11": null,
               "crop169": null,
               "crop23": null,
@@ -3350,6 +3357,7 @@ exports[`99. puzzle - huge 1`] = `
           id="1"
           image={
             Object {
+              "__typename": "Image",
               "crop11": null,
               "crop169": null,
               "crop23": null,
@@ -3372,6 +3380,7 @@ exports[`99. puzzle - huge 1`] = `
           id="2"
           image={
             Object {
+              "__typename": "Image",
               "crop11": null,
               "crop169": null,
               "crop23": null,
