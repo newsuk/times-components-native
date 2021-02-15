@@ -258,6 +258,7 @@ Array [
             ],
             "label": "label",
             "leadAsset": Object {
+              "__typename": "Image",
               "crop": Object {
                 "ratio": "16:9",
                 "url": "https://www.thetimes.co.uk/imageserver/image/methode%2Ftimes%2Fprod%2Fweb%2Fbin%2Fd3abdbfc-1776-11e6-b4ba-d249b128bacc.jpg?crop=620%2C348%2C0%2C32",
@@ -291,6 +292,7 @@ Array [
               "title": "Rise of centenarian drivers as elderly push on",
             },
             "listingAsset": Object {
+              "__typename": "Image",
               "crop": Object {
                 "ratio": "16:9",
                 "url": "https://www.thetimes.co.uk/imageserver/image/methode%2Ftimes%2Fprod%2Fweb%2Fbin%2Fd3abdbfc-1776-11e6-b4ba-d249b128bacc.jpg?crop=620%2C348%2C0%2C32",
@@ -572,6 +574,7 @@ Array [
           "articleId": "dc4ed2e8-4584-11e9-924d-9729bcd51a7f",
           "headline": "This is tile headline",
           "leadAsset": Object {
+            "__typename": "Image",
             "crop": Object {
               "ratio": "16:9",
               "url": "https://www.thetimes.co.uk/imageserver/image/methode%2Ftimes%2Fprod%2Fweb%2Fbin%2Fd3abdbfc-1776-11e6-b4ba-d249b128bacc.jpg?crop=620%2C348%2C0%2C32",
@@ -871,6 +874,7 @@ Array [
             ],
             "label": "label",
             "leadAsset": Object {
+              "__typename": "Image",
               "crop": Object {
                 "ratio": "16:9",
                 "url": "https://www.thetimes.co.uk/imageserver/image/methode%2Ftimes%2Fprod%2Fweb%2Fbin%2Fd3abdbfc-1776-11e6-b4ba-d249b128bacc.jpg?crop=620%2C348%2C0%2C32",
@@ -904,6 +908,7 @@ Array [
               "title": "Rise of centenarian drivers as elderly push on",
             },
             "listingAsset": Object {
+              "__typename": "Image",
               "crop": Object {
                 "ratio": "16:9",
                 "url": "https://www.thetimes.co.uk/imageserver/image/methode%2Ftimes%2Fprod%2Fweb%2Fbin%2Fd3abdbfc-1776-11e6-b4ba-d249b128bacc.jpg?crop=620%2C348%2C0%2C32",
@@ -1185,6 +1190,7 @@ Array [
           "articleId": "dc4ed2e8-4584-11e9-924d-9729bcd51a7f",
           "headline": "This is tile headline",
           "leadAsset": Object {
+            "__typename": "Image",
             "crop": Object {
               "ratio": "16:9",
               "url": "https://www.thetimes.co.uk/imageserver/image/methode%2Ftimes%2Fprod%2Fweb%2Fbin%2Fd3abdbfc-1776-11e6-b4ba-d249b128bacc.jpg?crop=620%2C348%2C0%2C32",
@@ -1484,6 +1490,7 @@ Array [
             ],
             "label": "label",
             "leadAsset": Object {
+              "__typename": "Image",
               "crop": Object {
                 "ratio": "16:9",
                 "url": "https://www.thetimes.co.uk/imageserver/image/methode%2Ftimes%2Fprod%2Fweb%2Fbin%2Fd3abdbfc-1776-11e6-b4ba-d249b128bacc.jpg?crop=620%2C348%2C0%2C32",
@@ -1517,6 +1524,7 @@ Array [
               "title": "Rise of centenarian drivers as elderly push on",
             },
             "listingAsset": Object {
+              "__typename": "Image",
               "crop": Object {
                 "ratio": "16:9",
                 "url": "https://www.thetimes.co.uk/imageserver/image/methode%2Ftimes%2Fprod%2Fweb%2Fbin%2Fd3abdbfc-1776-11e6-b4ba-d249b128bacc.jpg?crop=620%2C348%2C0%2C32",
@@ -1798,6 +1806,7 @@ Array [
           "articleId": "dc4ed2e8-4584-11e9-924d-9729bcd51a7f",
           "headline": "This is tile headline",
           "leadAsset": Object {
+            "__typename": "Image",
             "crop": Object {
               "ratio": "16:9",
               "url": "https://www.thetimes.co.uk/imageserver/image/methode%2Ftimes%2Fprod%2Fweb%2Fbin%2Fd3abdbfc-1776-11e6-b4ba-d249b128bacc.jpg?crop=620%2C348%2C0%2C32",
@@ -2098,6 +2107,7 @@ Array [
             ],
             "label": "label",
             "leadAsset": Object {
+              "__typename": "Image",
               "crop": Object {
                 "ratio": "16:9",
                 "url": "https://www.thetimes.co.uk/imageserver/image/methode%2Ftimes%2Fprod%2Fweb%2Fbin%2Fd3abdbfc-1776-11e6-b4ba-d249b128bacc.jpg?crop=620%2C348%2C0%2C32",
@@ -2131,6 +2141,7 @@ Array [
               "title": "Rise of centenarian drivers as elderly push on",
             },
             "listingAsset": Object {
+              "__typename": "Image",
               "crop": Object {
                 "ratio": "16:9",
                 "url": "https://www.thetimes.co.uk/imageserver/image/methode%2Ftimes%2Fprod%2Fweb%2Fbin%2Fd3abdbfc-1776-11e6-b4ba-d249b128bacc.jpg?crop=620%2C348%2C0%2C32",
@@ -2412,6 +2423,7 @@ Array [
           "articleId": "dc4ed2e8-4584-11e9-924d-9729bcd51a7f",
           "headline": "This is tile headline",
           "leadAsset": Object {
+            "__typename": "Image",
             "crop": Object {
               "ratio": "16:9",
               "url": "https://www.thetimes.co.uk/imageserver/image/methode%2Ftimes%2Fprod%2Fweb%2Fbin%2Fd3abdbfc-1776-11e6-b4ba-d249b128bacc.jpg?crop=620%2C348%2C0%2C32",
@@ -2703,6 +2715,7 @@ Array [
             ],
             "label": "label",
             "leadAsset": Object {
+              "__typename": "Image",
               "crop": Object {
                 "ratio": "16:9",
                 "url": "https://www.thetimes.co.uk/imageserver/image/methode%2Ftimes%2Fprod%2Fweb%2Fbin%2Fd3abdbfc-1776-11e6-b4ba-d249b128bacc.jpg?crop=620%2C348%2C0%2C32",
@@ -2736,6 +2749,7 @@ Array [
               "title": "Rise of centenarian drivers as elderly push on",
             },
             "listingAsset": Object {
+              "__typename": "Image",
               "crop": Object {
                 "ratio": "16:9",
                 "url": "https://www.thetimes.co.uk/imageserver/image/methode%2Ftimes%2Fprod%2Fweb%2Fbin%2Fd3abdbfc-1776-11e6-b4ba-d249b128bacc.jpg?crop=620%2C348%2C0%2C32",
@@ -3017,6 +3031,7 @@ Array [
           "articleId": "dc4ed2e8-4584-11e9-924d-9729bcd51a7f",
           "headline": "This is tile headline",
           "leadAsset": Object {
+            "__typename": "Image",
             "crop": Object {
               "ratio": "16:9",
               "url": "https://www.thetimes.co.uk/imageserver/image/methode%2Ftimes%2Fprod%2Fweb%2Fbin%2Fd3abdbfc-1776-11e6-b4ba-d249b128bacc.jpg?crop=620%2C348%2C0%2C32",
@@ -3308,6 +3323,7 @@ Array [
             ],
             "label": "label",
             "leadAsset": Object {
+              "__typename": "Image",
               "crop": Object {
                 "ratio": "16:9",
                 "url": "https://www.thetimes.co.uk/imageserver/image/methode%2Ftimes%2Fprod%2Fweb%2Fbin%2Fd3abdbfc-1776-11e6-b4ba-d249b128bacc.jpg?crop=620%2C348%2C0%2C32",
@@ -3341,6 +3357,7 @@ Array [
               "title": "Rise of centenarian drivers as elderly push on",
             },
             "listingAsset": Object {
+              "__typename": "Image",
               "crop": Object {
                 "ratio": "16:9",
                 "url": "https://www.thetimes.co.uk/imageserver/image/methode%2Ftimes%2Fprod%2Fweb%2Fbin%2Fd3abdbfc-1776-11e6-b4ba-d249b128bacc.jpg?crop=620%2C348%2C0%2C32",
@@ -3622,6 +3639,7 @@ Array [
           "articleId": "dc4ed2e8-4584-11e9-924d-9729bcd51a7f",
           "headline": "This is tile headline",
           "leadAsset": Object {
+            "__typename": "Image",
             "crop": Object {
               "ratio": "16:9",
               "url": "https://www.thetimes.co.uk/imageserver/image/methode%2Ftimes%2Fprod%2Fweb%2Fbin%2Fd3abdbfc-1776-11e6-b4ba-d249b128bacc.jpg?crop=620%2C348%2C0%2C32",
@@ -3913,6 +3931,7 @@ Array [
             ],
             "label": "label",
             "leadAsset": Object {
+              "__typename": "Image",
               "crop": Object {
                 "ratio": "16:9",
                 "url": "https://www.thetimes.co.uk/imageserver/image/methode%2Ftimes%2Fprod%2Fweb%2Fbin%2Fd3abdbfc-1776-11e6-b4ba-d249b128bacc.jpg?crop=620%2C348%2C0%2C32",
@@ -3946,6 +3965,7 @@ Array [
               "title": "Rise of centenarian drivers as elderly push on",
             },
             "listingAsset": Object {
+              "__typename": "Image",
               "crop": Object {
                 "ratio": "16:9",
                 "url": "https://www.thetimes.co.uk/imageserver/image/methode%2Ftimes%2Fprod%2Fweb%2Fbin%2Fd3abdbfc-1776-11e6-b4ba-d249b128bacc.jpg?crop=620%2C348%2C0%2C32",
@@ -4227,6 +4247,7 @@ Array [
           "articleId": "dc4ed2e8-4584-11e9-924d-9729bcd51a7f",
           "headline": "This is tile headline",
           "leadAsset": Object {
+            "__typename": "Image",
             "crop": Object {
               "ratio": "16:9",
               "url": "https://www.thetimes.co.uk/imageserver/image/methode%2Ftimes%2Fprod%2Fweb%2Fbin%2Fd3abdbfc-1776-11e6-b4ba-d249b128bacc.jpg?crop=620%2C348%2C0%2C32",
@@ -4518,6 +4539,7 @@ Array [
             ],
             "label": "label",
             "leadAsset": Object {
+              "__typename": "Image",
               "crop": Object {
                 "ratio": "16:9",
                 "url": "https://www.thetimes.co.uk/imageserver/image/methode%2Ftimes%2Fprod%2Fweb%2Fbin%2Fd3abdbfc-1776-11e6-b4ba-d249b128bacc.jpg?crop=620%2C348%2C0%2C32",
@@ -4551,6 +4573,7 @@ Array [
               "title": "Rise of centenarian drivers as elderly push on",
             },
             "listingAsset": Object {
+              "__typename": "Image",
               "crop": Object {
                 "ratio": "16:9",
                 "url": "https://www.thetimes.co.uk/imageserver/image/methode%2Ftimes%2Fprod%2Fweb%2Fbin%2Fd3abdbfc-1776-11e6-b4ba-d249b128bacc.jpg?crop=620%2C348%2C0%2C32",
@@ -4832,6 +4855,7 @@ Array [
           "articleId": "dc4ed2e8-4584-11e9-924d-9729bcd51a7f",
           "headline": "This is tile headline",
           "leadAsset": Object {
+            "__typename": "Image",
             "crop": Object {
               "ratio": "16:9",
               "url": "https://www.thetimes.co.uk/imageserver/image/methode%2Ftimes%2Fprod%2Fweb%2Fbin%2Fd3abdbfc-1776-11e6-b4ba-d249b128bacc.jpg?crop=620%2C348%2C0%2C32",
@@ -5123,6 +5147,7 @@ Array [
             ],
             "label": "label",
             "leadAsset": Object {
+              "__typename": "Image",
               "crop": Object {
                 "ratio": "16:9",
                 "url": "https://www.thetimes.co.uk/imageserver/image/methode%2Ftimes%2Fprod%2Fweb%2Fbin%2Fd3abdbfc-1776-11e6-b4ba-d249b128bacc.jpg?crop=620%2C348%2C0%2C32",
@@ -5156,6 +5181,7 @@ Array [
               "title": "Rise of centenarian drivers as elderly push on",
             },
             "listingAsset": Object {
+              "__typename": "Image",
               "crop": Object {
                 "ratio": "16:9",
                 "url": "https://www.thetimes.co.uk/imageserver/image/methode%2Ftimes%2Fprod%2Fweb%2Fbin%2Fd3abdbfc-1776-11e6-b4ba-d249b128bacc.jpg?crop=620%2C348%2C0%2C32",
@@ -5437,6 +5463,7 @@ Array [
           "articleId": "dc4ed2e8-4584-11e9-924d-9729bcd51a7f",
           "headline": "This is tile headline",
           "leadAsset": Object {
+            "__typename": "Image",
             "crop": Object {
               "ratio": "16:9",
               "url": "https://www.thetimes.co.uk/imageserver/image/methode%2Ftimes%2Fprod%2Fweb%2Fbin%2Fd3abdbfc-1776-11e6-b4ba-d249b128bacc.jpg?crop=620%2C348%2C0%2C32",

@@ -11,8 +11,8 @@ exports[`1. an error 1`] = `
       "isTablet": false,
       "narrowArticleBreakpoint": undefined,
       "orientation": "portrait",
-      "sectionContentHeight": 600,
-      "sectionContentWidth": 1024,
+      "sectionContentHeightTablet": 200,
+      "sectionContentWidth": 300,
       "windowHeight": 400,
       "windowWidth": 300,
     }
@@ -33,8 +33,8 @@ exports[`2. loading 1`] = `
       "isTablet": false,
       "narrowArticleBreakpoint": undefined,
       "orientation": "portrait",
-      "sectionContentHeight": 600,
-      "sectionContentWidth": 1024,
+      "sectionContentHeightTablet": 200,
+      "sectionContentWidth": 300,
       "windowHeight": 400,
       "windowWidth": 300,
     }
@@ -55,8 +55,8 @@ exports[`3. an article with no headline falls back to use shortheadline 1`] = `
       "isTablet": false,
       "narrowArticleBreakpoint": undefined,
       "orientation": "portrait",
-      "sectionContentHeight": 600,
-      "sectionContentWidth": 1024,
+      "sectionContentHeightTablet": 200,
+      "sectionContentWidth": 300,
       "windowHeight": 400,
       "windowWidth": 300,
     }
@@ -118,6 +118,23 @@ exports[`3. an article with no headline falls back to use shortheadline 1`] = `
               "text": "Some Caption",
             }
           }
+          images={
+            Array [
+              Object {
+                "attributes": Object {
+                  "caption": "Some Caption",
+                  "credits": "Some Credits",
+                  "display": "",
+                  "ratio": "16:9",
+                  "relativeHeight": undefined,
+                  "relativeHorizontalOffset": undefined,
+                  "relativeVerticalOffset": undefined,
+                  "relativeWidth": undefined,
+                  "url": "https://crop169.io",
+                },
+              },
+            ]
+          }
           index={0}
           onImagePress={null}
           uri="https://crop169.io"
@@ -143,8 +160,8 @@ exports[`4. an article with ads 1`] = `
       "isTablet": false,
       "narrowArticleBreakpoint": undefined,
       "orientation": "portrait",
-      "sectionContentHeight": 600,
-      "sectionContentWidth": 1024,
+      "sectionContentHeightTablet": 200,
+      "sectionContentWidth": 300,
       "windowHeight": 400,
       "windowWidth": 300,
     }
@@ -205,6 +222,23 @@ exports[`4. an article with ads 1`] = `
               "credits": "Some Credits",
               "text": "Some Caption",
             }
+          }
+          images={
+            Array [
+              Object {
+                "attributes": Object {
+                  "caption": "Some Caption",
+                  "credits": "Some Credits",
+                  "display": "",
+                  "ratio": "16:9",
+                  "relativeHeight": undefined,
+                  "relativeHorizontalOffset": undefined,
+                  "relativeVerticalOffset": undefined,
+                  "relativeWidth": undefined,
+                  "url": "https://crop169.io",
+                },
+              },
+            ]
           }
           index={0}
           onImagePress={null}

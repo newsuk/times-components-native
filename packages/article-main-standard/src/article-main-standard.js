@@ -7,10 +7,10 @@ import ArticleSkeleton from "@times-components-native/article-skeleton";
 import ArticleLeadAsset from "@times-components-native/article-lead-asset";
 import { ResponsiveContext } from "@times-components-native/responsive";
 import {
-  getExtraImagesContent,
+  getAllArticleImages,
   getHeadline,
   getLeadAsset,
-  getStandardTemplateCrop,
+  getCropByPriority,
 } from "@times-components-native/utils";
 import { tabletWidth } from "@times-components-native/styleguide";
 import Caption from "@times-components-native/caption";
@@ -59,7 +59,7 @@ class ArticlePage extends Component {
             <View key="leadAsset" testID="leadAsset">
               <ArticleLeadAsset
                 {...getLeadAsset(article)}
-                getImageCrop={getStandardTemplateCrop}
+                getImageCrop={getCropByPriority}
                 onImagePress={onImagePress}
                 onVideoPress={onVideoPress}
                 renderCaption={({ caption }) => (
@@ -70,7 +70,7 @@ class ArticlePage extends Component {
                 )}
                 style={[styles.leadAsset, isTablet && styles.leadAssetTablet]}
                 width={Math.min(parentProps.width, tabletWidth)}
-                extraContent={getExtraImagesContent(article)}
+                extraContent={getAllArticleImages(article)}
               />
             </View>
           );

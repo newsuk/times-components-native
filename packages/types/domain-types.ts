@@ -1,3 +1,9 @@
+import {
+  Crop,
+  Image,
+  Uuid,
+} from "@times-components-native/fixture-generator/src/types";
+
 interface TextContentChild {
   name: "text";
   children: ParagraphContentChild[];
@@ -115,3 +121,38 @@ export type SliceName =
   | "TopSecondaryTwoAndTwoSlice"
   | "TopSecondaryTwoNoPicAndTwoSlice"
   | "SectionAd";
+
+export interface Crops {
+  crop11?: Crop | null;
+  crop169?: Crop | null;
+  crop23?: Crop | null;
+  crop32?: Crop | null;
+  crop45?: Crop | null;
+  crop54?: Crop | null;
+  crop1251?: Crop | null;
+}
+
+export interface TimesImage extends Image, Crops {
+  __typename: "Image";
+}
+
+export interface PosterImage extends Crops {
+  id: string;
+  title: string;
+}
+
+export type MediaTypename = "Video" | "Image";
+
+export interface Video {
+  id: Uuid;
+  caption?: string | null;
+  title?: string | null;
+  brightcovePolicyKey?: string | null;
+  brightcovePlayerId?: string | null;
+  brightcoveVideoId?: string | null;
+  paidOnly?: boolean | null;
+  skySports?: boolean | null;
+  brightcoveAccountId?: string | null;
+  posterImage?: Image | null;
+  is360?: boolean | null;
+}

@@ -1,5 +1,4 @@
 /* eslint-disable consistent-return */
-
 import React, { Component } from "react";
 import ArticleError from "@times-components-native/article-error";
 import ArticleSkeleton from "@times-components-native/article-skeleton";
