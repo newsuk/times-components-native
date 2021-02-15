@@ -2,7 +2,6 @@
 import React from "react";
 import { iterator } from "@times-components-native/test-utils";
 import { ContextProviderWithDefaults } from "@times-components-native/context";
-import { VariantTestingProvider } from "@times-components-native/variant-testing";
 import { scales } from "@times-components-native/styleguide";
 import ArticleSkeleton from "../src/article-skeleton";
 import contentWithNestedFirstParagraph from "../fixtures/bold-article-content";
@@ -24,12 +23,13 @@ import {
   paragraphStartingWithDoubleQuote,
 } from "../fixtures/dropcap-article-content";
 import { withMobileContext } from "@times-components-native/test-utils";
+import { RemoteConfigProvider } from "@times-components-native/remote-config";
 
 export const renderArticle = (
   data,
   header = null,
   isTablet = false,
-  variants = {},
+  config = {},
 ) => (
   <ContextProviderWithDefaults
     value={{
@@ -40,7 +40,7 @@ export const renderArticle = (
       },
     }}
   >
-    <VariantTestingProvider variants={variants} isTablet={true}>
+    <RemoteConfigProvider config={config}>
       <ArticleSkeleton
         adConfig={adConfig}
         analyticsStream={() => null}
@@ -57,7 +57,7 @@ export const renderArticle = (
         onVideoPress={() => null}
         spotAccountId=""
       />
-    </VariantTestingProvider>
+    </RemoteConfigProvider>
   </ContextProviderWithDefaults>
 );
 

@@ -1,6 +1,5 @@
-import React from "react";
-import { Text, View } from "react-native";
-import PropTypes from "prop-types";
+import React, { FC } from "react";
+import { GestureResponderEvent, Text, View } from "react-native";
 import Context from "@times-components-native/context";
 import Button from "@times-components-native/button";
 import { TextLink } from "@times-components-native/link";
@@ -8,13 +7,27 @@ import styleguide from "@times-components-native/styleguide";
 import Tooltip from "@times-components-native/tooltip";
 import styles from "./styles";
 
-const Comments = ({
+export type CommentsProps = {
+  articleId: string;
+  commentCount?: number;
+  narrowContent?: boolean;
+  onCommentGuidelinesPress: () => void;
+  onCommentsPress: (
+    event: GestureResponderEvent,
+    { articleId, url }: { articleId: string; url: string },
+  ) => void;
+  onTooltipPresented?: () => void;
+  tooltips: string[];
+  url: string;
+};
+
+const Comments: FC<CommentsProps> = ({
   articleId,
-  commentCount,
-  narrowContent,
+  commentCount = 0,
+  narrowContent = false,
   onCommentGuidelinesPress,
   onCommentsPress,
-  onTooltipPresented,
+  onTooltipPresented = () => null,
   tooltips = [],
   url,
 }) => (
@@ -25,7 +38,12 @@ const Comments = ({
     <Text style={styles.supporting}>
       Comments are subject to our community guidelines, which can be
       viewed&nbsp;
-      <TextLink onPress={onCommentGuidelinesPress} style={styles.link}>
+      <TextLink
+        onPress={onCommentGuidelinesPress}
+        style={styles.link}
+        target={null}
+        url={null}
+      >
         here
       </TextLink>
     </Text>
@@ -63,19 +81,5 @@ const Comments = ({
     </Tooltip>
   </View>
 );
-
-Comments.propTypes = {
-  articleId: PropTypes.string.isRequired,
-  commentCount: PropTypes.number.isRequired,
-  narrowContent: PropTypes.bool,
-  onCommentGuidelinesPress: PropTypes.func.isRequired,
-  onCommentsPress: PropTypes.func.isRequired,
-  onTooltipPresented: PropTypes.func,
-  url: PropTypes.string.isRequired,
-};
-
-Comments.defaultProps = {
-  onTooltipPresented: () => null,
-};
 
 export default Comments;

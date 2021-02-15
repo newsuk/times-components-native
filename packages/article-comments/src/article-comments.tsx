@@ -1,20 +1,26 @@
-import React from "react";
-import PropTypes from "prop-types";
-import Comments from "./comments";
+import React, { FC } from "react";
+import Comments, { CommentsProps } from "./comments";
 import DisabledComments from "./disabled-comments";
+import { useRemoteConfigContext } from "@times-components-native/remote-config";
 
-const ArticleComments = ({
+interface Props extends CommentsProps {
+  commentsEnabled?: boolean;
+}
+
+const ArticleComments: FC<Props> = ({
   articleId,
-  commentCount,
-  commentsEnabled,
+  commentCount = 0,
+  commentsEnabled = false,
   narrowContent,
   onCommentGuidelinesPress,
   onCommentsPress,
   onTooltipPresented,
   tooltips,
   url,
-}) =>
-  commentsEnabled ? (
+}) => {
+  const config = useRemoteConfigContext();
+
+  return commentsEnabled && !config?.commentsGloballyDisabled ? (
     <Comments
       articleId={articleId}
       commentCount={commentCount}
@@ -28,20 +34,6 @@ const ArticleComments = ({
   ) : (
     <DisabledComments onCommentGuidelinesPress={onCommentGuidelinesPress} />
   );
-
-ArticleComments.propTypes = {
-  articleId: PropTypes.string.isRequired,
-  commentCount: PropTypes.number,
-  commentsEnabled: PropTypes.bool,
-  narrowContent: PropTypes.bool.isRequired,
-  onCommentGuidelinesPress: PropTypes.func.isRequired,
-  onCommentsPress: PropTypes.func.isRequired,
-  url: PropTypes.string.isRequired,
-};
-
-ArticleComments.defaultProps = {
-  commentCount: 0,
-  commentsEnabled: false,
 };
 
 export default ArticleComments;

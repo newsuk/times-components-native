@@ -4,9 +4,9 @@ import PropTypes from "prop-types";
 
 import { SectionContext } from "@times-components-native/context";
 import Section from "@times-components-native/section";
-import { VariantTestingProvider } from "@times-components-native/variant-testing";
 import trackSection from "./track-section";
 import adTargetConfig from "./ad-targeting-config";
+import { RemoteConfigProvider } from "@times-components-native/remote-config";
 
 const {
   getOpenedPuzzleCount,
@@ -135,7 +135,7 @@ class SectionPage extends Component {
   }
 
   render() {
-    const { publicationName, publishedTime, variants } = this.props;
+    const { publicationName, publishedTime, remoteConfig } = this.props;
     const { recentlyOpenedPuzzleCount, savedArticles, section } = this.state;
 
     const adConfig = adTargetConfig({
@@ -156,7 +156,7 @@ class SectionPage extends Component {
           readArticles,
         }}
       >
-        <VariantTestingProvider variants={variants}>
+        <RemoteConfigProvider config={remoteConfig}>
           <Section
             adConfig={adConfig}
             analyticsStream={trackSection}
@@ -168,7 +168,7 @@ class SectionPage extends Component {
             publicationName={publicationName}
             publishedTime={publishedTime}
           />
-        </VariantTestingProvider>
+        </RemoteConfigProvider>
       </SectionContext.Provider>
     );
   }
