@@ -28,12 +28,12 @@ export default () => {
     expect(testInstance).toMatchSnapshot();
   });
 
-  it("calculates section content height", () => {
+  it("calculates section content height on tablet", () => {
     const { sectionContentHeight } = calculateResponsiveContext(500, 1000, 1);
 
     //  1000 (screen height)
     // -  10 (bottom inset)
-    // -  5  (top inset)
+    // -   5 (top inset)
     // - 200 (approximate nav height)
     // _____
     //   785
