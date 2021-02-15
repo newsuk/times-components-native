@@ -1,7 +1,6 @@
 /* eslint-disable react/require-default-props */
 import React from "react";
 import PropTypes from "prop-types";
-import Byline from "@times-components-native/article-byline";
 import { editionBreakpoints } from "@times-components-native/styleguide";
 import {
   getTileImage,
