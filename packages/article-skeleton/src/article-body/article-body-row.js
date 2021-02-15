@@ -77,6 +77,7 @@ export default ({
       return (
         <ArticleLink
           url={href}
+          style={styles.articleLink}
           onPress={(e) =>
             onLinkPress(e, {
               canonicalId,
