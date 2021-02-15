@@ -204,10 +204,8 @@ exports[`1. a full article with all content items with dropcap template 1`] = `
                   Object {
                     "color": "#006699",
                     "fontFamily": "TimesDigitalW04",
-                    "fontSize": 18,
-                    "lineHeight": 26,
-                    "marginBottom": 25,
-                    "marginTop": 0,
+                    "fontSize": 36,
+                    "lineHeight": 52,
                     "textDecorationLine": "underline",
                   }
                 }
@@ -1278,10 +1276,8 @@ exports[`7. an article with link 1`] = `
                   Object {
                     "color": "#006699",
                     "fontFamily": "TimesDigitalW04",
-                    "fontSize": 18,
-                    "lineHeight": 26,
-                    "marginBottom": 25,
-                    "marginTop": 0,
+                    "fontSize": 36,
+                    "lineHeight": 52,
                     "textDecorationLine": "underline",
                   }
                 }
@@ -1383,10 +1379,8 @@ exports[`8. an article with italic link 1`] = `
                   Object {
                     "color": "#006699",
                     "fontFamily": "TimesDigitalW04",
-                    "fontSize": 18,
-                    "lineHeight": 26,
-                    "marginBottom": 25,
-                    "marginTop": 0,
+                    "fontSize": 36,
+                    "lineHeight": 52,
                     "textDecorationLine": "underline",
                   }
                 }
@@ -1503,10 +1497,8 @@ exports[`9. an article with bold text followed by bold link 1`] = `
                     Object {
                       "color": "#006699",
                       "fontFamily": "TimesDigitalW04",
-                      "fontSize": 18,
-                      "lineHeight": 26,
-                      "marginBottom": 25,
-                      "marginTop": 0,
+                      "fontSize": 36,
+                      "lineHeight": 52,
                       "textDecorationLine": "underline",
                     }
                   }
@@ -1606,10 +1598,8 @@ exports[`10. an article with italic and normal text link 1`] = `
                   Object {
                     "color": "#006699",
                     "fontFamily": "TimesDigitalW04",
-                    "fontSize": 18,
-                    "lineHeight": 26,
-                    "marginBottom": 25,
-                    "marginTop": 0,
+                    "fontSize": 36,
+                    "lineHeight": 52,
                     "textDecorationLine": "underline",
                   }
                 }
@@ -2464,10 +2454,8 @@ exports[`17. an article skeleton with responsive items 1`] = `
                   Object {
                     "color": "#006699",
                     "fontFamily": "TimesDigitalW04",
-                    "fontSize": 18,
-                    "lineHeight": 26,
-                    "marginBottom": 25,
-                    "marginTop": 0,
+                    "fontSize": 36,
+                    "lineHeight": 52,
                     "textDecorationLine": "underline",
                   }
                 }

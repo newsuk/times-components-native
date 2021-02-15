@@ -27,13 +27,16 @@ const TileLeadSupplementPortrait: FC<Props> = ({
 }) => {
   const crop = getTileImage(tile, "crop54");
 
-  const { sectionContentWidth, sectionContentHeight } = useResponsiveContext();
+  const {
+    sectionContentWidth,
+    sectionContentHeightTablet,
+  } = useResponsiveContext();
 
   if (!crop) return null;
 
   const imageAspectRatio = 5 / 4;
   const summaryHeight =
-    sectionContentHeight - sectionContentWidth / imageAspectRatio;
+    sectionContentHeightTablet - sectionContentWidth / imageAspectRatio;
 
   const styles = stylesFactory(breakpoint, summaryHeight);
 
