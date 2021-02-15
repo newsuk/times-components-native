@@ -344,14 +344,34 @@ export default () => {
       },
     },
     {
-      name: "article summary component when article is marked as read",
+      name: "article summary component when article read state is read",
       test: () => {
         const testInstance = TestRenderer.create(
           <ArticleSummary
             {...defaultFixture({
-              markAsRead: true,
+              articleReadState: {
+                read: true,
+                animate: false,
+              },
             })}
-            isTablet={isTablet}
+          />,
+        );
+
+        expect(testInstance.toJSON()).toMatchSnapshot();
+      },
+    },
+    {
+      name:
+        "article summary component when article read state is read and should be animated",
+      test: () => {
+        const testInstance = TestRenderer.create(
+          <ArticleSummary
+            {...defaultFixture({
+              articleReadState: {
+                read: true,
+                animate: true,
+              },
+            })}
           />,
         );
 

@@ -86,6 +86,7 @@ function ArticleSummaryByline(props) {
 
 function ArticleSummary(props) {
   const {
+    articleReadState,
     bylineProps,
     content,
     datePublicationProps,
@@ -99,11 +100,23 @@ function ArticleSummary(props) {
 
   const { bylineOnTop = false } = bylineProps || {};
 
-  const byline = bylineProps ? <ArticleSummaryByline {...bylineProps} /> : null;
+  const byline = bylineProps ? (
+    <Text>
+      <ArticleSummaryByline
+        {...bylineProps}
+        articleReadState={articleReadState}
+      />
+    </Text>
+  ) : null;
 
   return (
     <View style={style}>
-      {labelProps ? <ArticleSummaryLabel {...labelProps} /> : null}
+      {labelProps ? (
+        <ArticleSummaryLabel
+          {...labelProps}
+          articleReadState={articleReadState}
+        />
+      ) : null}
       {bylineOnTop && byline}
       {headline}
       {strapline}
@@ -121,14 +134,14 @@ function ArticleSummary(props) {
 }
 
 ArticleSummary.propTypes = {
+  articleReadState: PropTypes.shape({
+    read: PropTypes.bool,
+    animationOpacity: PropTypes.bool,
+  }),
   bylineProps: PropTypes.shape({
     ...articleBylinePropTypes,
     bylineClass: PropTypes.string,
     bylineOnTop: PropTypes.bool,
-    articleReadState: PropTypes.shape({
-      read: PropTypes.bool,
-      animationOpacity: PropTypes.bool,
-    }),
   }),
   content: PropTypes.node,
   datePublicationProps: PropTypes.shape({
@@ -142,10 +155,6 @@ ArticleSummary.propTypes = {
     isVideo: PropTypes.bool,
     title: PropTypes.string,
     hide: PropTypes.bool,
-    articleReadState: PropTypes.shape({
-      read: PropTypes.bool,
-      animate: PropTypes.bool,
-    }),
   }),
   saveStar: PropTypes.node,
   strapline: PropTypes.node,
@@ -157,6 +166,10 @@ ArticleSummary.propTypes = {
 };
 
 ArticleSummary.defaultProps = {
+  articleReadState: {
+    read: false,
+    animate: false,
+  },
   bylineProps: null,
   content: null,
   datePublicationProps: null,
@@ -164,10 +177,6 @@ ArticleSummary.defaultProps = {
   headline: null,
   labelProps: {
     hide: false,
-    articleReadState: {
-      read: false,
-      animate: false,
-    },
   },
   saveStar: null,
   strapline: null,

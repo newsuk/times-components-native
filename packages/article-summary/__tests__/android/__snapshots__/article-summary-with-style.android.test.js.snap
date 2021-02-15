@@ -10,6 +10,12 @@ exports[`1. article summary component with a single paragraph 1`] = `
     }
   >
     <ArticleLabel
+      articleReadState={
+        Object {
+          "animate": false,
+          "read": false,
+        }
+      }
       color="#333333"
       markAsRead={false}
       title="Test label"
@@ -83,6 +89,12 @@ exports[`1. article summary component with a single paragraph 1`] = `
   </Text>
   <Text>
     <ArticleByline
+      articleReadState={
+        Object {
+          "animate": false,
+          "read": false,
+        }
+      }
       ast={
         Array [
           Object {

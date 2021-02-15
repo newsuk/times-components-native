@@ -234,11 +234,8 @@ const ArticleSummary: React.FC<Props> = ({
 
   return (
     <ArticleSummaryComponent
-      bylineProps={
-        bylines
-          ? { articleReadState, ast: bylines, bylineStyle, bylineOnTop }
-          : null
-      }
+      articleReadState={articleReadState}
+      bylineProps={bylines ? { ast: bylines, bylineStyle, bylineOnTop } : null}
       content={summary && renderContent(articleReadState)}
       flags={renderFlags(articleReadState)}
       headline={renderHeadline(articleReadState)}
@@ -250,7 +247,6 @@ const ArticleSummary: React.FC<Props> = ({
         isVideo: hasVideo,
         title: label,
         hide: hideLabel,
-        articleReadState,
       }}
       strapline={renderStrapline(articleReadState)}
       saveStar={withStar && renderSaveStar()}
