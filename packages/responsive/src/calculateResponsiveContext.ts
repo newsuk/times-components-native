@@ -34,5 +34,5 @@ export const calculateResponsiveContext = (
   isPortrait: height > width,
   isLandscape: width > height,
   sectionContentWidth: width,
-  sectionContentHeight: calculateSectionContentHeightTablet(height),
+  sectionContentHeightTablet: calculateSectionContentHeightTablet(height),
 });

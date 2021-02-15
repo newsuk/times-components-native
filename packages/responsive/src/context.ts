@@ -18,7 +18,7 @@ export type ContextType = {
   isPortrait: boolean;
   isLandscape: boolean;
   sectionContentWidth: number;
-  sectionContentHeight: number;
+  sectionContentHeightTablet: number;
 };
 
 const { width, height, fontScale } = getDimensions();

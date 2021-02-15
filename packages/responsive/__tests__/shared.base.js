@@ -29,7 +29,11 @@ export default () => {
   });
 
   it("calculates section content height on tablet", () => {
-    const { sectionContentHeight } = calculateResponsiveContext(500, 1000, 1);
+    const { sectionContentHeightTablet } = calculateResponsiveContext(
+      500,
+      1000,
+      1,
+    );
 
     //  1000 (screen height)
     // -  10 (bottom inset)
@@ -37,6 +41,6 @@ export default () => {
     // - 200 (approximate nav height)
     // _____
     //   785
-    expect(sectionContentHeight).toEqual(785);
+    expect(sectionContentHeightTablet).toEqual(785);
   });
 };
