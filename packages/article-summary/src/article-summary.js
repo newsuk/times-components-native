@@ -22,7 +22,7 @@ function renderAst(ast) {
 
 const MarkAsRead = ({ children, articleReadState }) => {
   const animationOpacity = useRef(new Animated.Value(1)).current;
-  const opacity = 0.17;
+  const opacity = 0.57;
 
   useEffect(() => {
     Animated.timing(animationOpacity, {
@@ -164,7 +164,7 @@ ArticleSummary.defaultProps = {
   headline: null,
   labelProps: {
     hide: false,
-    markAsRead: {
+    articleReadState: {
       read: false,
       animate: false,
     },
