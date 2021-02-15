@@ -20,7 +20,7 @@ function renderAst(ast) {
   return renderTrees(summarise(ast), renderer);
 }
 
-const MarkAsRead = (articleReadState, children) => {
+const MarkAsRead = ({ children, articleReadState }) => {
   const animationOpacity = useRef(new Animated.Value(1)).current;
   const opacity = 0.57;
 
@@ -70,16 +70,16 @@ function ArticleSummaryLabel(props) {
   return <MarkAsRead articleReadState={articleReadState}>{Label}</MarkAsRead>;
 }
 
-function Byline(props) {
+function ArticleSummaryByline(props) {
   const { ast, articleReadState, bylineClass } = props;
 
   if (!ast || ast.length === 0) return null;
 
-  const byline = <ArticleByline {...props} className={bylineClass} />;
+  const Byline = <ArticleByline {...props} className={bylineClass} />;
 
-  if (!articleReadState) return byline;
+  if (!articleReadState) return Byline;
 
-  return <MarkAsRead articleReadState={articleReadState}>{byline}</MarkAsRead>;
+  return <MarkAsRead articleReadState={articleReadState}>{Byline}</MarkAsRead>;
 }
 
 function ArticleSummary(props) {
@@ -97,7 +97,7 @@ function ArticleSummary(props) {
 
   const { bylineOnTop = false } = bylineProps || {};
 
-  const byline = bylineProps ? <Byline {...bylineProps} /> : null;
+  const byline = bylineProps ? <ArticleSummaryByline {...bylineProps} /> : null;
 
   return (
     <View style={style}>
