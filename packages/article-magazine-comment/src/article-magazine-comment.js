@@ -6,7 +6,7 @@ import ArticleSkeleton from "@times-components-native/article-skeleton";
 import {
   getHeadline,
   getLeadAsset,
-  getStandardTemplateCrop,
+  getCropByPriority,
 } from "@times-components-native/utils";
 import { CentredCaption } from "@times-components-native/caption";
 import ArticleLeadAsset from "@times-components-native/article-lead-asset";
@@ -70,7 +70,7 @@ class ArticleMagazineComment extends Component {
             />
             <ArticleLeadAsset
               {...getLeadAsset(article)}
-              getImageCrop={getStandardTemplateCrop}
+              getImageCrop={getCropByPriority}
               onImagePress={onImagePress}
               onVideoPress={onVideoPress}
               renderCaption={({ caption }) => <CentredCaption {...caption} />}

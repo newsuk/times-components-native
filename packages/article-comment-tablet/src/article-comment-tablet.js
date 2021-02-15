@@ -7,7 +7,7 @@ import ArticleSkeleton from "@times-components-native/article-skeleton";
 import {
   getHeadline,
   getLeadAsset,
-  getStandardTemplateCrop,
+  getCropByPriority,
 } from "@times-components-native/utils";
 import ArticleLeadAsset from "@times-components-native/article-lead-asset";
 import { ResponsiveContext } from "@times-components-native/responsive";
@@ -60,7 +60,7 @@ class ArticlePage extends Component {
         {showLeadAsset && (
           <ArticleLeadAsset
             {...getLeadAsset(article)}
-            getImageCrop={getStandardTemplateCrop}
+            getImageCrop={getCropByPriority}
             onImagePress={onImagePress}
             onVideoPress={onVideoPress}
             renderCaption={({ caption }) => (

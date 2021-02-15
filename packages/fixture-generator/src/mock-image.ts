@@ -1,11 +1,12 @@
 import UUID from "./mock-UUID";
-import TimesImage from "./times-image";
+import { TimesImage } from "@times-components-native/types";
 
 class MockImage {
   image: TimesImage;
 
   constructor() {
     this.image = {
+      __typename: "Image",
       id: UUID(),
       crops: [],
       crop: {
