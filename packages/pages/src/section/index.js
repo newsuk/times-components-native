@@ -6,7 +6,6 @@ import Section from "./section";
 
 const SectionPage = (props) => (
   <Responsive
-    contentSize={props.contentSize}
     displayWidth={props.displayWidth}
     displayHeight={props.displayHeight}
     fontScale={props.fontScale}

@@ -1,7 +1,7 @@
 {
   "name": "times-components-native",
   "private": true,
-  "version": "3.0.2",
+  "version": "3.0.3",
   "description": "A collection of react-native components for The Times and Sunday Times",
   "main": "index.js",
   "engines": {
@@ -94,6 +94,7 @@
     "react-native-device-info": "7.3.1",
     "react-native-image-zoom-viewer": "3.0.1",
     "react-native-navigation": "^6.11.0",
+    "react-native-safe-area-context": "3.1.9",
     "react-native-svg": "12.1.0",
     "react-native-v8": "0.63.2-patch.1",
     "react-native-webview": "10.9.3",

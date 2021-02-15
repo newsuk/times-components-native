@@ -9,9 +9,18 @@ import * as Utils from "@times-components-native/utils";
 
 jest.mock("@times-components-native/utils", () => ({
   __esModule: true,
-  getDimensions: () => ({ width: 100, height: 200 }),
+  getDimensions: () => ({ width: 500, height: 1000 }),
   addDimensionsListener: () => null,
   removeDimensionsListener: () => null,
+}));
+
+jest.mock("react-native-safe-area-context", () => ({
+  initialWindowMetrics: {
+    insets: {
+      bottom: 10,
+      top: 5,
+    },
+  },
 }));
 
 export default () => {

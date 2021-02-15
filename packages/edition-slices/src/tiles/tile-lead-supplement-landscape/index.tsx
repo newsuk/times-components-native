@@ -26,7 +26,7 @@ const TileLeadSupplementLandscape: FC<Props> = ({
   tile,
   breakpoint = editionBreakpoints.medium,
 }) => {
-  const height = useResponsiveContext().sectionContentHeight;
+  const height = useResponsiveContext().sectionContentHeightTablet;
   const styles = stylesFactory(breakpoint)!;
   const crop = getTileImage(tile, "crop54");
 

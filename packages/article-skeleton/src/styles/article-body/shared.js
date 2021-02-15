@@ -1,7 +1,7 @@
 import styleguide, { tabletWidth } from "@times-components-native/styleguide";
 
 const sharedStyles = ({ scale, narrowContent, fontScale }) => {
-  const { colours, fontFactory, spacing, lineHeight } = styleguide({ scale });
+  const { colours, fontFactory, spacing } = styleguide({ scale });
 
   const defaultFont = {
     ...fontFactory({
@@ -24,17 +24,8 @@ const sharedStyles = ({ scale, narrowContent, fontScale }) => {
       paddingVertical: spacing(2),
     },
     articleLink: {
+      ...defaultFont,
       color: colours.functional.action,
-      ...fontFactory({
-        font: "body",
-        fontSize: "bodyMobile",
-      }),
-      lineHeight: lineHeight({
-        font: "body",
-        fontSize: "bodyMobile",
-      }),
-      marginBottom: spacing(5),
-      marginTop: 0,
     },
     articleMainContentRow: {
       paddingLeft: spacing(2),
