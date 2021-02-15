@@ -22,7 +22,7 @@ function renderAst(ast) {
 
 const MarkAsRead = ({ children, articleReadState }) => {
   const animationOpacity = useRef(new Animated.Value(1)).current;
-  const opacity = 0.57;
+  const opacity = 0.17;
 
   useEffect(() => {
     Animated.timing(animationOpacity, {
@@ -41,7 +41,7 @@ const MarkAsRead = ({ children, articleReadState }) => {
     >
       {children}
     </Animated.View>
-  ) : (
+  ) : articleReadState.read ? (
     <View
       style={{
         opacity: opacity,
@@ -49,6 +49,8 @@ const MarkAsRead = ({ children, articleReadState }) => {
     >
       {children}
     </View>
+  ) : (
+    children
   );
 };
 
