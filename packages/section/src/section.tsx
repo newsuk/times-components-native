@@ -53,7 +53,6 @@ const Section: FC<Props> = ({
   section,
   scrollToArticleId,
 }) => {
-  // const [sliceOffset, setSliceOffset] = useState(0);
   const { cover, name, slices, title: sectionTitle } = section;
   const { isTablet, editionBreakpoint, orientation } = useResponsiveContext();
 
@@ -72,7 +71,7 @@ const Section: FC<Props> = ({
 
   console.log("STSTTSTSTSTS333", sectionTitle);
 
-  const sliceIndexFromArticle = sectionTitle === "News" ? 6 : 0;
+  const sliceIndexFromArticle = sectionTitle === "News" ? 3 : 0;
 
   const onEmailPuzzleButtonPress = () =>
     onLinkPress({
@@ -110,95 +109,46 @@ const Section: FC<Props> = ({
     sliceOffset += height;
     addToOffsetCount++;
     if (addToOffsetCount === sliceIndexFromArticle) {
-      console.log(
-        "sosososososoosososoosososossosoosoos2222233334444",
-        sliceOffset,
-        addToOffsetCount,
-      );
       setTimeout(() => {
         flatListRef.current.scrollToOffset({ offset: sliceOffset });
         sliceOffset = 0;
-      }, 2000);
+      }, 1000);
     }
-    // setSliceOffset((currOffset) => (currOffset += height));
   };
-  // const scrollToOffset = () => {
-  //   setTimeout(() => {
-  //     console.log(
-  //       "sosososososoosososoosososossosoosoos2222233334444",
-  //       sliceOffset,
-  //     );
-  //     flatListRef.current.scrollToOffset({ offset: sliceOffset });
-  //   }, 1000);
-  // };
-
-  // useEffect(() => {
-  //   sliceOffset = 0;
-  //   addToOffsetCount = 0;
-  // }, []);
 
   const renderItem = (isPuzzle: boolean, orientation: Orientation) => ({
     index,
     item: slice,
     inTodaysEditionSlice,
-  }: any) => {
-    // console.log(
-    //   "54768947693478934758943758934795",
-    //   section.name,
-    //   slice.name,
-    //   index,
-    // );
-    return (
-      <View
-        style={{ flex: 1 }}
-        onLayout={(event) => {
-          if (!sliceIndexFromArticle || index > sliceIndexFromArticle) return;
-          // if (index === 0) {
-          //   sliceOffset = 0;
-          //   addToOffsetCount = 0;
-          // }
-          console.log(
-            "SSSSSSSSSSSSSSSSSSSS2233445555",
-            event.nativeEvent.layout.height,
-            index,
-            slice.name,
-            sliceIndexFromArticle,
-          );
-          if (
-            index < sliceIndexFromArticle &&
-            addToOffsetCount < sliceIndexFromArticle
-          ) {
-            const height = event?.nativeEvent?.layout?.height ?? 0;
-            console.log(
-              "erwuoirewoiruweueo448375875843789345799999",
-              index,
-              sectionTitle,
-              sliceIndexFromArticle,
-              sliceOffset,
-              addToOffsetCount,
-              height,
-            );
-            addToOffset(height);
-          }
-          // if (index === sliceIndexFromArticle) scrollToOffset();
-        }}
-      >
-        <Slice
-          index={index}
-          length={slices.length}
-          onPress={isPuzzle ? onPuzzlePress : onArticlePress}
-          onLinkPress={onLinkPress}
-          slice={slice}
-          isInSupplement={isSupplementSection(sectionTitle)}
-          inTodaysEditionSlice={inTodaysEditionSlice}
-          adConfig={adConfig}
-          sectionTitle={sectionTitle}
-          orientation={orientation}
-          isTablet={isTablet}
-        />
-      </View>
-    );
-  };
+  }: any) => (
+    <View
+      style={{ flex: 1 }}
+      onLayout={(event) => {
+        if (!sliceIndexFromArticle || index > sliceIndexFromArticle) return;
+        if (
+          index < sliceIndexFromArticle &&
+          addToOffsetCount < sliceIndexFromArticle
+        ) {
+          const height = event?.nativeEvent?.layout?.height ?? 0;
+          addToOffset(height);
+        }
+      }}
+    >
+      <Slice
+        index={index}
+        length={slices.length}
+        onPress={isPuzzle ? onPuzzlePress : onArticlePress}
+        onLinkPress={onLinkPress}
+        slice={slice}
+        isInSupplement={isSupplementSection(sectionTitle)}
+        inTodaysEditionSlice={inTodaysEditionSlice}
+        adConfig={adConfig}
+        sectionTitle={sectionTitle}
+        orientation={orientation}
+        isTablet={isTablet}
+      />
+    </View>
+  );
 
   const renderItemSeperator = (isPuzzle: boolean) => (
     { leadingItem }: any,
@@ -241,18 +191,6 @@ const Section: FC<Props> = ({
     ? createPuzzleData(isTablet, sectionTitle)(slices, editionBreakpoint)
     : prepareSlicesForRender(isTablet, sectionTitle, orientation)(slices);
 
-  // data.map((item, index) => {
-  //   if (sectionTitle === "News" && index === sliceIndexFromArticle) {
-  //     console.log(
-  //       "EUOIREIRWEIORWEIOREWIOREWIOY",
-  //       sliceIndexFromArticle,
-  //       section.title,
-  //       item.name,
-  //       index,
-  //     );
-  //   }
-  // });
-
   if (slices) receiveChildList(data);
 
   return (
@@ -273,8 +211,6 @@ const Section: FC<Props> = ({
         onViewableItemsChanged={onViewed ? onViewableItemsChanged : null}
         {...(isPuzzle && { onScrollBeginDrag })}
         renderItem={renderItem(isPuzzle, orientation)}
-        // onScrollToIndexFailed={() => null}
-        // initialScrollIndex={sliceIndex}
       />
       {isPuzzle && isIOS ? (
         <FloatingActionButton
