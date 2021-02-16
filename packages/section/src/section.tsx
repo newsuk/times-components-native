@@ -1,4 +1,4 @@
-import React, { FC, useEffect, useCallback, useRef, useState } from "react";
+import React, { FC, useCallback, useRef, useState } from "react";
 import { Animated, FlatList, Platform, View } from "react-native";
 import { useResponsiveContext } from "@times-components-native/responsive";
 import { withTrackScrollDepth } from "@times-components-native/tracking";
@@ -56,7 +56,7 @@ const Section: FC<Props> = ({
   const { cover, name, slices, title: sectionTitle } = section;
   const { isTablet, editionBreakpoint, orientation } = useResponsiveContext();
 
-  const flatListRef = useRef(null);
+  const flatListRef = useRef<FlatList>(null);
 
   const emailPuzzlesButtonExtendedWidth = 170;
   const [emailPuzzlesButtonWidth] = useState(
@@ -64,14 +64,6 @@ const Section: FC<Props> = ({
   );
 
   const isIOS = Platform.OS === "ios";
-
-  // const sliceIndexFromArticle = scrollToArticleId
-  //   ? getSliceIndexByArticleId(scrollToArticleId, slices)
-  //   : null;
-
-  console.log("STSTTSTSTSTS333", sectionTitle);
-
-  const sliceIndexFromArticle = sectionTitle === "News" ? 3 : 0;
 
   const onEmailPuzzleButtonPress = () =>
     onLinkPress({
@@ -105,32 +97,40 @@ const Section: FC<Props> = ({
 
   let sliceOffset = 0;
   let addToOffsetCount = 0;
-  const addToOffset = (height: number) => {
+  const addToOffset = (height: number, sliceOffsetIndex: number) => {
     sliceOffset += height;
     addToOffsetCount++;
-    if (addToOffsetCount === sliceIndexFromArticle) {
+    if (addToOffsetCount === sliceOffsetIndex) {
       setTimeout(() => {
-        flatListRef.current.scrollToOffset({ offset: sliceOffset });
+        flatListRef.current?.scrollToOffset({ offset: sliceOffset });
         sliceOffset = 0;
       }, 1000);
     }
   };
 
-  const renderItem = (isPuzzle: boolean, orientation: Orientation) => ({
-    index,
-    item: slice,
-    inTodaysEditionSlice,
-  }: any) => (
+  const renderItem = (
+    isPuzzle: boolean,
+    orientation: Orientation,
+    sliceOffsetIndex: number,
+  ) => ({ index, item: slice, inTodaysEditionSlice }: any) => (
     <View
       style={{ flex: 1 }}
       onLayout={(event) => {
-        if (!sliceIndexFromArticle || index > sliceIndexFromArticle) return;
-        if (
-          index < sliceIndexFromArticle &&
-          addToOffsetCount < sliceIndexFromArticle
-        ) {
+        if (!sliceOffsetIndex || index > sliceOffsetIndex) return;
+        console.log(
+          "FDSJFKLSDJFKLDSJFKLSDJFLKSDJFLKSDJFKLDS",
+          sectionTitle,
+          index,
+        );
+        if (index < sliceOffsetIndex && addToOffsetCount < sliceOffsetIndex) {
+          console.log(
+            "FDSJFKLSDJFKLDSJFKLSDJFLKSDJFLKSDJFKLDS2222222222",
+            sectionTitle,
+            index,
+          );
+          // if (index < sliceOffsetIndex) {
           const height = event?.nativeEvent?.layout?.height ?? 0;
-          addToOffset(height);
+          addToOffset(height, sliceOffsetIndex);
         }
       }}
     >
@@ -180,6 +180,7 @@ const Section: FC<Props> = ({
     return renderItem(
       false,
       orientation,
+      0,
     )({
       index: 0,
       item: frontSlice || {},
@@ -192,6 +193,18 @@ const Section: FC<Props> = ({
     : prepareSlicesForRender(isTablet, sectionTitle, orientation)(slices);
 
   if (slices) receiveChildList(data);
+
+  scrollToArticleId =
+    sectionTitle === "News"
+      ? "eb796c0a-6f9f-11eb-811f-f64a7b4cb430"
+      : undefined;
+  // scrollToArticleId = "cd1cd32c-6ef6-11eb-bd2f-f33f509764cd";
+
+  const sliceIndexFromArticle = scrollToArticleId
+    ? getSliceIndexByArticleId(scrollToArticleId, data)
+    : 0;
+
+  // const sliceIndexFromArticle = sectionTitle === "News" ? 3 : 0;
 
   return (
     <>
@@ -210,7 +223,7 @@ const Section: FC<Props> = ({
         nestedScrollEnabled
         onViewableItemsChanged={onViewed ? onViewableItemsChanged : null}
         {...(isPuzzle && { onScrollBeginDrag })}
-        renderItem={renderItem(isPuzzle, orientation)}
+        renderItem={renderItem(isPuzzle, orientation, sliceIndexFromArticle)}
       />
       {isPuzzle && isIOS ? (
         <FloatingActionButton

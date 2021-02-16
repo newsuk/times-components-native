@@ -1,11 +1,10 @@
-export const getSliceIndexByArticleId = (articleId: string, slices: any[]) => {
-  let currentIndex = 0;
-  slices?.forEach((slice: any, index: number) => {
-    slice.items?.forEach((item: any) => {
-      if (articleId === item.articleId) {
-        currentIndex = index;
-      }
+export const getSliceIndexByArticleId = (articleId: string, data: any[]) => {
+  const sliceIndex = data.findIndex((slice: any) => {
+    if (!slice.items) return false;
+    return !slice.items.every((item: any) => {
+      if (articleId === item.articleId) return false;
+      return true;
     });
   });
-  return currentIndex;
+  return sliceIndex !== -1 ? sliceIndex : 0;
 };
