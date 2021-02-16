@@ -8,3 +8,8 @@ export interface IconProps {
   strokeColour: string;
   title?: string;
 }
+
+export enum EMaskUnits {
+  USER_SPACE_ON_USE = "userSpaceOnUse",
+  OBJECT_BOUNDING_BOX = "objectBoundingBox",
+}

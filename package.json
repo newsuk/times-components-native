@@ -2,7 +2,7 @@
   "name": "times-components-native",
   "private": true,
   "version": "3.0.1",
-  "description": "A collection of react-native components for The Times and Sunday Times",
+  "description": "A collection ofreact-native components for The Times and Sunday Times",
   "main": "index.js",
   "engines": {
     "node": ">=10.13.0 <13",
@@ -49,9 +49,13 @@
       "searchDir": [
         "packages"
       ],
-      "pattern": "**/*.stories.js",
+      "pattern": "**/*.stories{.js, .ts}",
       "outputFile": "./app/storybook/story-loader.js"
     }
+  },
+  "resolutions": {
+    "react": "16.13.1",
+    "react-dom": "16.9.0"
   },
   "homepage": "https://github.com/newsuk/times-components-native#readme",
   "dependencies": {
@@ -59,6 +63,7 @@
     "@react-native-community/async-storage": "^1.11.0",
     "@react-native-community/netinfo": "5.9.9",
     "@skele/components": "1.0.0-alpha.40",
+    "algoliasearch": "^4.8.5",
     "apollo-cache-inmemory": "1.5.1",
     "apollo-client": "2.5.1",
     "apollo-link": "1.2.4",
@@ -90,6 +95,7 @@
     "react-broadcast": "0.5.2",
     "react-display-name": "0.2.3",
     "react-dom": "16.9.0",
+    "react-instantsearch-native": "6.9.0",
     "react-native": "0.63.2",
     "react-native-autoheight-webview": "1.5.1",
     "react-native-device-info": "7.3.1",
@@ -118,6 +124,7 @@
     "@types/jest": "24.0.2",
     "@types/lodash.merge": "^4.6.6",
     "@types/lodash.omitby": "^4.6.6",
+    "@types/react-instantsearch-native": "^6.3.0",
     "@types/react-native": "0.63.6",
     "@types/react-test-renderer": "16.9.3",
     "@types/url-parse": "1.4.3",

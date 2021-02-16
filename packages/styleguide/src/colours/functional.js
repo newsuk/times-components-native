@@ -33,6 +33,7 @@ const functionalColours = {
   whiteGrey: "#F5F5F5",
   darkGrey: "#999999",
   red: "#CC0000",
+  searchText: "#C2C2C2",
 };
 
 export default functionalColours;
