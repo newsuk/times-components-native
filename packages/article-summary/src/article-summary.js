@@ -188,6 +188,7 @@ export {
   ArticleSummaryHeadline,
   ArticleSummaryLabel,
   ArticleSummaryStrapline,
+  MarkAsRead,
   renderAst,
   renderer,
   summarise,

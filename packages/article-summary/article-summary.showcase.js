@@ -31,11 +31,32 @@ export default {
       component: () =>
         story(
           <ArticleSummary
-            {...defaultFixture({ markAsRead: true })}
+            {...defaultFixture({
+              articleReadState: {
+                read: true,
+                animate: false,
+              },
+            })}
             isTablet={isTablet}
           />,
         ),
       name: "Article marked as read",
+      type: "story",
+    },
+    {
+      component: () =>
+        story(
+          <ArticleSummary
+            {...defaultFixture({
+              articleReadState: {
+                read: true,
+                animate: true,
+              },
+            })}
+            isTablet={isTablet}
+          />,
+        ),
+      name: "Article marked as read and should be animated",
       type: "story",
     },
     {

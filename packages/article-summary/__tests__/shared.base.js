@@ -4,6 +4,7 @@ import { iterator } from "@times-components-native/test-utils";
 import ArticleSummary, {
   renderAst,
   ArticleSummaryContent,
+  MarkAsRead,
 } from "../src/article-summary";
 import defaultFixture from "../fixtures/default";
 import withSummaryLinksFixture from "../fixtures/with-summary-links";
@@ -17,6 +18,7 @@ import noHeadline from "../fixtures/no-headline";
 import noDatePublication from "../fixtures/no-datepublication";
 import videoLabelFixture from "../fixtures/video-label";
 import straplineFixture from "../fixtures/strapline";
+import { ARTICLE_READ_ANIMATION } from "@times-components-native/styleguide";
 
 jest.mock("@times-components-native/article-byline", () => ({
   __esModule: true,
@@ -29,6 +31,7 @@ jest.mock("@times-components-native/article-flag", () => ({
 jest.mock("@times-components-native/article-label", () => "ArticleLabel");
 jest.mock("@times-components-native/date-publication", () => "DatePublication");
 jest.mock("@times-components-native/video-label", () => "VideoLabel");
+jest.useFakeTimers();
 
 export default () => {
   const byline = "A byline";
@@ -358,9 +361,10 @@ export default () => {
       },
     },
     {
-      name: "article summary component when article read state is read",
-      test: () => {
-        const testInstance = TestRenderer.create(
+      name:
+        "article summary label has reduced opacity when article read state is read",
+      async test() {
+        const output = TestRenderer.create(
           <ArticleSummary
             {...defaultFixture({
               articleReadState: {
@@ -370,15 +374,17 @@ export default () => {
             })}
           />,
         );
-
-        expect(testInstance.toJSON()).toMatchSnapshot();
+        expect(
+          output.root.findAllByType(MarkAsRead)[0].children[0].props.style
+            .opacity,
+        ).toStrictEqual(0.57);
       },
     },
     {
       name:
-        "article summary component when article read state is read and should be animated",
-      test: () => {
-        const testInstance = TestRenderer.create(
+        "article summary label has reduced opactiy after animating when article read state is set to animate",
+      async test() {
+        const output = TestRenderer.create(
           <ArticleSummary
             {...defaultFixture({
               articleReadState: {
@@ -388,8 +394,17 @@ export default () => {
             })}
           />,
         );
-
-        expect(testInstance.toJSON()).toMatchSnapshot();
+        expect(
+          output.root.findAllByType(MarkAsRead)[0].children[0].props.style
+            .opacity._value,
+        ).toEqual(1);
+        jest.advanceTimersByTime(
+          ARTICLE_READ_ANIMATION.delay + ARTICLE_READ_ANIMATION.duration,
+        );
+        expect(
+          output.root.findAllByType(MarkAsRead)[0].children[0].props.style
+            .opacity._value,
+        ).toEqual(0.57);
       },
     },
   ];
