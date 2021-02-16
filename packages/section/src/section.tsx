@@ -11,6 +11,7 @@ import MagazineCover from "./magazine-cover";
 import Slice from "./slice";
 import styleFactory from "./styles";
 import {
+  addToFlatlistOffset,
   createPuzzleData,
   getEmailPuzzlesUrl,
   getSliceIndexByArticleId,
@@ -95,44 +96,21 @@ const Section: FC<Props> = ({
     return null;
   };
 
-  let sliceOffset = 0;
-  let addToOffsetCount = 0;
-  const addToOffset = (height: number, sliceOffsetIndex: number) => {
-    sliceOffset += height;
-    addToOffsetCount++;
-    if (addToOffsetCount === sliceOffsetIndex) {
-      setTimeout(() => {
-        flatListRef.current?.scrollToOffset({ offset: sliceOffset });
-        sliceOffset = 0;
-      }, 1000);
-    }
-  };
-
   const renderItem = (
     isPuzzle: boolean,
     orientation: Orientation,
     sliceOffsetIndex: number,
   ) => ({ index, item: slice, inTodaysEditionSlice }: any) => (
     <View
-      style={{ flex: 1 }}
       onLayout={(event) => {
         if (!sliceOffsetIndex || index > sliceOffsetIndex) return;
-        console.log(
-          "FDSJFKLSDJFKLDSJFKLSDJFLKSDJFLKSDJFKLDS",
-          sectionTitle,
-          index,
-        );
-        if (index < sliceOffsetIndex && addToOffsetCount < sliceOffsetIndex) {
-          console.log(
-            "FDSJFKLSDJFKLDSJFKLSDJFLKSDJFLKSDJFKLDS2222222222",
-            sectionTitle,
-            index,
-          );
-          // if (index < sliceOffsetIndex) {
+        if (index < sliceOffsetIndex) {
           const height = event?.nativeEvent?.layout?.height ?? 0;
-          addToOffset(height, sliceOffsetIndex);
+          addToFlatlistOffset(index, height, sliceOffsetIndex, flatListRef);
         }
       }}
+      style={{ flex: 1 }}
+      testID="sliceRenderView"
     >
       <Slice
         index={index}
@@ -194,17 +172,17 @@ const Section: FC<Props> = ({
 
   if (slices) receiveChildList(data);
 
-  scrollToArticleId =
-    sectionTitle === "News"
-      ? "eb796c0a-6f9f-11eb-811f-f64a7b4cb430"
-      : undefined;
+  // scrollToArticleId =
+  //   sectionTitle === "News"
+  //     ? "eb796c0a-6f9f-11eb-811f-f64a7b4cb430"
+  //     : undefined;
+  // News = "eb796c0a-6f9f-11eb-811f-f64a7b4cb430"
+  // Times2 = "075c38fa-6fb2-11eb-bd2f-f33f509764cd"
   // scrollToArticleId = "cd1cd32c-6ef6-11eb-bd2f-f33f509764cd";
 
   const sliceIndexFromArticle = scrollToArticleId
     ? getSliceIndexByArticleId(scrollToArticleId, data)
     : 0;
-
-  // const sliceIndexFromArticle = sectionTitle === "News" ? 3 : 0;
 
   return (
     <>

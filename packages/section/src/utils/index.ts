@@ -1,3 +1,4 @@
+import { addToFlatlistOffset } from "./addToFlatlistOffset";
 import { prepareSlicesForRender } from "./prepareSlicesForRender";
 import { createPuzzleData } from "./createPuzzleData";
 import { isSupplementSection } from "./isSupplementSection";
@@ -7,11 +8,12 @@ import { getSliceIndexByArticleId } from "./getSliceIndexByArticleId";
 import * as sectionConfigs from "./sectionConfigs";
 
 export {
-  getEmailPuzzlesUrl,
-  prepareSlicesForRender,
+  addToFlatlistOffset,
   createPuzzleData,
+  getEmailPuzzlesUrl,
   getImage,
   getSliceIndexByArticleId,
   isSupplementSection,
+  prepareSlicesForRender,
   sectionConfigs,
 };

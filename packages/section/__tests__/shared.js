@@ -12,9 +12,10 @@ import {
   print,
 } from "@times-components-native/jest-serializer";
 import TestRenderer from "react-test-renderer";
-import SectionItemSeparator from "../src/section-item-separator";
-import Section from "../src/section";
 import PuzzleBar from "../src/puzzle-bar";
+import Section from "../src/section";
+import SectionItemSeparator from "../src/section-item-separator";
+import { addToFlatlistOffset, getSliceIndexByArticleId } from "../src/utils";
 
 // fixes issues with hooks not being allowed during test run
 jest.mock("react", () => {
@@ -42,6 +43,15 @@ jest.mock("@times-components-native/image", () => ({
   __esModule: true,
   default: "TimesImage",
 }));
+
+jest.mock("../src/utils", () => {
+  const utils = require.requireActual("../src/utils");
+  return {
+    ...utils,
+    addToFlatlistOffset: jest.fn(),
+    getSliceIndexByArticleId: jest.fn(),
+  };
+});
 
 export default () => {
   beforeEach(() => {
@@ -74,6 +84,58 @@ export default () => {
         />,
       ).toJSON(),
     ).toMatchSnapshot();
+
+    expect(getSliceIndexByArticleId).not.toHaveBeenCalled();
+  });
+
+  it("should call getSliceIndexByArticleId if scrollToArticleId is set", () => {
+    const edition = new MockEdition().get();
+
+    TestRenderer.create(
+      <Section
+        analyticsStream={() => null}
+        onArticlePress={() => null}
+        onPuzzleBarPress={() => null}
+        onPuzzlePress={() => null}
+        publicationName="TIMES"
+        recentlyOpenedPuzzleCount={1}
+        section={edition.sections[0]}
+        scrollToArticleId={123}
+      />,
+    );
+
+    expect(getSliceIndexByArticleId).toHaveBeenCalled();
+  });
+
+  it("should call addToFlatlistOffset if scrollToArticleId is set and articleId found in slice", () => {
+    const edition = new MockEdition().get();
+
+    getSliceIndexByArticleId.mockImplementation(() => 4);
+
+    const renderer = TestRenderer.create(
+      <Section
+        analyticsStream={() => null}
+        onArticlePress={() => null}
+        onPuzzleBarPress={() => null}
+        onPuzzlePress={() => null}
+        publicationName="TIMES"
+        recentlyOpenedPuzzleCount={1}
+        section={edition.sections[0]}
+        scrollToArticleId={123}
+      />,
+    );
+
+    TestRenderer.act(() => {
+      renderer.root
+        .findAllByProps({ testID: "sliceRenderView" })
+        .forEach((slice) =>
+          slice.props["onLayout"]({
+            nativeEvent: { layout: { height: 50 } },
+          }),
+        );
+    });
+
+    expect(addToFlatlistOffset).toHaveBeenCalled();
   });
 
   it("should render Secondary 2 No Pic and 2 instead of Secondary 2 and 2 for tablet", () => {
