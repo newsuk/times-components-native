@@ -1010,7 +1010,7 @@ exports[`20. article summary component with hidden label 1`] = `
 </View>
 `;
 
-exports[`21. article summary component when article read state is read 1`] = `
+exports[`21. article summary component with byline on top 1`] = `
 <View>
   <View>
     <ArticleLabel
@@ -1103,7 +1103,100 @@ exports[`21. article summary component when article read state is read 1`] = `
 </View>
 `;
 
-exports[`22. article summary component when article read state is read and should be animated 1`] = `
+exports[`22. article summary component when article read state is read 1`] = `
+<View>
+  <View>
+    <ArticleLabel
+      articleReadState={
+        Object {
+          "animate": false,
+          "read": false,
+        }
+      }
+      color="#333333"
+      markAsRead={false}
+      title="Camilla Long"
+    />
+  </View>
+  <Text
+    accessibilityRole="header"
+    aria-level="3"
+  >
+    Top medal for forces dog who took a bite out of the Taliban
+  </Text>
+  <ArticleFlags
+    flags={
+      Array [
+        Object {
+          "expiryTime": "2020-03-13T12:00:00.000Z",
+          "type": "UPDATED",
+        },
+        Object {
+          "expiryTime": "2019-03-14T12:00:00.000Z",
+          "type": "EXCLUSIVE",
+        },
+      ]
+    }
+  />
+  <Text>
+    <Text>
+      
+      The special forces dog fought on under fire, even after shrapnel from Taliban grenades tore into his belly and legs, blew out a front tooth and damaged his right ear.
+      ...
+    </Text>
+  </Text>
+  <Text>
+    <DatePublication
+      date="2017-11-17T00:01:00.000Z"
+      publication="TIMES"
+    />
+  </Text>
+  <Text>
+    <ArticleByline
+      articleReadState={
+        Object {
+          "animate": false,
+          "read": false,
+        }
+      }
+      ast={
+        Array [
+          Object {
+            "attributes": Object {
+              "slug": "camilla-long",
+            },
+            "children": Array [
+              Object {
+                "attributes": Object {
+                  "value": "Camilla Long",
+                },
+                "children": Array [],
+                "name": "text",
+              },
+            ],
+            "name": "author",
+          },
+          Object {
+            "attributes": Object {},
+            "children": Array [
+              Object {
+                "attributes": Object {
+                  "value": ", Environment Editor",
+                },
+                "children": Array [],
+                "name": "text",
+              },
+            ],
+            "name": "inline",
+          },
+        ]
+      }
+    />
+  </Text>
+</View>
+`;
+
+exports[`23. article summary component when article read state is read and should be animated 1`] = `
 <View>
   <View>
     <ArticleLabel

@@ -344,6 +344,20 @@ export default () => {
       },
     },
     {
+      name: "article summary component with byline on top",
+      test: () => {
+        const testInstance = TestRenderer.create(
+          <ArticleSummary
+            {...defaultFixture({
+              bylineOnTop: true,
+            })}
+          />,
+        );
+
+        expect(testInstance.toJSON()).toMatchSnapshot();
+      },
+    },
+    {
       name: "article summary component when article read state is read",
       test: () => {
         const testInstance = TestRenderer.create(
