@@ -3,7 +3,7 @@ import React, { createContext, FC, ReactNode, useContext } from "react";
 type RemoteConfig = {
   commentsGloballyDisabled?: boolean;
   variants?: {
-    articleMpuTestVariant?: "A" | "B";
+    [key: string]: string;
   };
 };
 
