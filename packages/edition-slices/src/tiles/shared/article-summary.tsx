@@ -32,7 +32,7 @@ type ArticleReadState = {
 type MarkAsReadProps = {
   articleReadState: ArticleReadState;
   children: ReactNode;
-  opacityAnimation?: Animated.Value;
+  opacityAnimation: Animated.Value;
   opacity: number;
 };
 
@@ -61,6 +61,29 @@ interface Props {
   hideLabel?: boolean;
   whiteSpaceHeight?: number;
 }
+
+export const MarkAsRead = ({
+  children,
+  articleReadState,
+  opacityAnimation,
+  opacity,
+}: MarkAsReadProps) => (
+  <>
+    {articleReadState.animate ? (
+      <Animated.View
+        style={{
+          opacity: opacityAnimation,
+        }}
+      >
+        {children}
+      </Animated.View>
+    ) : articleReadState.read ? (
+      <View style={{ opacity }}>{children}</View>
+    ) : (
+      children
+    )}
+  </>
+);
 
 const ArticleSummary: React.FC<Props> = ({
   bylines,
@@ -146,29 +169,6 @@ const ArticleSummary: React.FC<Props> = ({
     ]).start();
   }, [articleReadState]);
 
-  const MarkAsRead = ({
-    children,
-    articleReadState,
-    opacityAnimation = standardOpacity,
-    opacity = articleReadOpacity.standard,
-  }: MarkAsReadProps) => (
-    <>
-      {articleReadState.animate ? (
-        <Animated.View
-          style={{
-            opacity: opacityAnimation,
-          }}
-        >
-          {children}
-        </Animated.View>
-      ) : articleReadState.read ? (
-        <View style={{ opacity }}>{children}</View>
-      ) : (
-        children
-      )}
-    </>
-  );
-
   const renderContent = (articleReadState: ArticleReadState) => (
     <MarkAsRead
       articleReadState={articleReadState}
@@ -188,6 +188,7 @@ const ArticleSummary: React.FC<Props> = ({
   const renderFlags = (articleReadState: ArticleReadState) => (
     <MarkAsRead
       articleReadState={articleReadState}
+      opacityAnimation={standardOpacity}
       opacity={articleReadOpacity.standard}
     >
       <ArticleFlags
@@ -212,6 +213,7 @@ const ArticleSummary: React.FC<Props> = ({
   const renderHeadline = (articleReadState: ArticleReadState) => (
     <MarkAsRead
       articleReadState={articleReadState}
+      opacityAnimation={standardOpacity}
       opacity={articleReadOpacity.standard}
     >
       <ArticleSummaryHeadline

@@ -377,7 +377,7 @@ export default () => {
         expect(
           output.root.findAllByType(MarkAsRead)[0].children[0].props.style
             .opacity,
-        ).toStrictEqual(0.57);
+        ).toEqual(0.57);
       },
     },
     {
