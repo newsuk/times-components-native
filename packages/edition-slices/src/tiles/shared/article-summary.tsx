@@ -1,5 +1,12 @@
 import React, { useEffect, useState, ReactNode } from "react";
-import { Animated, StyleProp, TextStyle, ViewStyle, View } from "react-native";
+import {
+  Animated,
+  Platform,
+  StyleProp,
+  TextStyle,
+  ViewStyle,
+  View,
+} from "react-native";
 import {
   default as ArticleSummaryComponent,
   ArticleSummaryContent,
@@ -131,7 +138,7 @@ const ArticleSummary: React.FC<Props> = ({
   const sharedTimingConfig = {
     delay: ARTICLE_READ_ANIMATION.DELAY,
     duration: ARTICLE_READ_ANIMATION.DURATION,
-    useNativeDriver: true,
+    useNativeDriver: Platform.OS === "ios",
   };
 
   const articleReadOpacity = {
