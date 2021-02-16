@@ -22,4 +22,23 @@ export default () => {
 
     expect(testInstance).toMatchSnapshot();
   });
+
+  it("with commentsGloballyDisabled and articleMpuTestVariant A", () => {
+    const testInstance = TestRenderer.create(
+      <RemoteConfigProvider
+        config={{
+          commentsGloballyDisabled: true,
+          variants: {
+            articleMpuTestVariant: "A",
+          },
+        }}
+      >
+        <RemoteConfigContext.Consumer>
+          {(context) => JSON.stringify(context)}
+        </RemoteConfigContext.Consumer>
+      </RemoteConfigProvider>,
+    );
+
+    expect(testInstance).toMatchSnapshot();
+  });
 };

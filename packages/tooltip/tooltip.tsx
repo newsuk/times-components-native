@@ -5,7 +5,7 @@ import { Viewport } from "@skele/components";
 import { useResponsiveContext } from "@times-components-native/responsive";
 import generateStyles from "./styles";
 
-interface Props {
+export interface TooltipProps {
   arrowOffset?: number;
   content: string | ReactNode;
   displayedInView?: boolean;
@@ -20,7 +20,7 @@ interface Props {
   articleId: string;
 }
 
-const Tooltip: React.FC<Props> = ({
+const Tooltip: React.FC<TooltipProps> = ({
   arrowOffset = 20,
   content,
   children,

@@ -1,3 +1,5 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
+exports[`with commentsGloballyDisabled and articleMpuTestVariant A 1`] = `"{\\"commentsGloballyDisabled\\":true,\\"variants\\":{\\"articleMpuTestVariant\\":\\"A\\"}}"`;
+
 exports[`with default values 1`] = `"{\\"commentsGloballyDisabled\\":false,\\"variants\\":{}}"`;

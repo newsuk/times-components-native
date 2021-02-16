@@ -14,5 +14,6 @@ export default ({ count, enabled }) =>
       onCommentsPress={() => null}
       spotAccountId=""
       url="dummy-article-url"
+      tooltips={[]}
     />,
   );

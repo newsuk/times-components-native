@@ -1,22 +1,23 @@
 import React, { FC } from "react";
-import { GestureResponderEvent, Text, View } from "react-native";
+import { GestureResponderEvent, Text, TextProps, View } from "react-native";
 import Context from "@times-components-native/context";
 import Button from "@times-components-native/button";
 import { TextLink } from "@times-components-native/link";
 import styleguide from "@times-components-native/styleguide";
 import Tooltip from "@times-components-native/tooltip";
 import styles from "./styles";
+import { TooltipProps } from "@times-components-native/tooltip/tooltip";
 
 export type CommentsProps = {
   articleId: string;
   commentCount?: number;
   narrowContent?: boolean;
-  onCommentGuidelinesPress: () => void;
+  onCommentGuidelinesPress: TextProps["onPress"];
   onCommentsPress: (
     event: GestureResponderEvent,
     { articleId, url }: { articleId: string; url: string },
   ) => void;
-  onTooltipPresented?: () => void;
+  onTooltipPresented?: TooltipProps["onTooltipPresented"];
   tooltips: string[];
   url: string;
 };
