@@ -5,17 +5,33 @@ import InfiniteHits from "@times-components-native/search/src/infinite-hits";
 import { withTrackingContext } from "@times-components-native/tracking";
 import { SearchBar } from "./search-bar/search-bar";
 import { ALGOLIA_API_KEY, ALGOLIA_APP_ID, ALGOLIA_INDEX } from "./config";
+import { GestureResponderEvent } from "react-native";
 
 const searchClient = algoliasearch(ALGOLIA_APP_ID, ALGOLIA_API_KEY);
 
-export interface SearchProps {}
+export interface SearchProps {
+}
+
+export interface AlgoliaSearchState {
+  query: string;
+  page: number;
+}
 
 const Search: FC<SearchProps> = () => {
-  const [searchState, setSearchState] = useState({
+  const [searchState, setSearchState] = useState<AlgoliaSearchState>({
     query: "",
+    page: 1,
   });
-  const handleStateChange = (args) => {
+  console.log("searchState", searchState);
+  const handleStateChange = (args: AlgoliaSearchState) => {
     setSearchState(args);
+  };
+
+  const handleArticlePress = (
+    e: GestureResponderEvent,
+    { id, url }: { id: string; url: string },
+  ) => {
+    console.log("Article press", e, { id, url });
   };
 
   return (
@@ -25,7 +41,10 @@ const Search: FC<SearchProps> = () => {
       onSearchStateChange={handleStateChange}
     >
       <SearchBar />
-      <InfiniteHits onArticlePress={() => {}} query={searchState.query} />
+      <InfiniteHits
+        onArticlePress={handleArticlePress}
+        query={searchState.query}
+      />
     </InstantSearch>
   );
 };

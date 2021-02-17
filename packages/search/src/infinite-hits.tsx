@@ -1,12 +1,17 @@
 import React, { FC } from "react";
-import { connectInfiniteHits, connectSearchBox,  } from "react-instantsearch-native";
+import { connectInfiniteHits, connectSearchBox, } from "react-instantsearch-native";
 import ArticleList from "@times-components-native/article-list";
+import { GestureResponderEvent } from "react-native";
+import { InfiniteHitsProvided } from "react-instantsearch-core";
 
-export interface InfiniteHitsProps {
-  onArticlePress: () => void;
+export interface InfiniteHitsProps extends InfiniteHitsProvided {
+  onArticlePress: (
+    e: GestureResponderEvent,
+    { id, url }: { id: string; url: string },
+  ) => void;
 }
 
-const InfiniteHits: FC<InfiniteHitsProps> = connectInfiniteHits((props) => {
+const InfiniteHits: FC<InfiniteHitsProps> = (props) => {
   const {
     hits,
     refineNext,
@@ -38,6 +43,7 @@ const InfiniteHits: FC<InfiniteHitsProps> = connectInfiniteHits((props) => {
       showImages={false}
     />
   );
-});
+};
 
-export default connectSearchBox(InfiniteHits);
+const connectedWithHits = connectInfiniteHits(InfiniteHits);
+export default connectSearchBox(connectedWithHits);
