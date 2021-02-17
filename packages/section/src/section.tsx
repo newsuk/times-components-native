@@ -172,14 +172,6 @@ const Section: FC<Props> = ({
 
   if (slices) receiveChildList(data);
 
-  // scrollToArticleId =
-  //   sectionTitle === "News"
-  //     ? "eb796c0a-6f9f-11eb-811f-f64a7b4cb430"
-  //     : undefined;
-  // News = "eb796c0a-6f9f-11eb-811f-f64a7b4cb430"
-  // Times2 = "075c38fa-6fb2-11eb-bd2f-f33f509764cd"
-  // scrollToArticleId = "cd1cd32c-6ef6-11eb-bd2f-f33f509764cd";
-
   const sliceIndexFromArticle = scrollToArticleId
     ? getSliceIndexByArticleId(scrollToArticleId, data)
     : 0;
