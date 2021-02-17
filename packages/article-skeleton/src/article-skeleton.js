@@ -119,10 +119,13 @@ const MemoisedArticle = React.memo((props) => {
   );
 });
 
+export const ScrollContext = React.createContext({ offset: 0 });
+
 const ArticleWithContent = (props) => {
   const { onArticleRead, data } = props;
 
   const [hasBeenRead, setHasBeenRead] = useState(false);
+  const [contentOffset, setContentOffset] = useState(0);
 
   const setArticleRead = () => {
     setHasBeenRead(true);
@@ -138,20 +141,23 @@ const ArticleWithContent = (props) => {
     }
   }, [hasBeenRead]);
 
-  const handleScroll = () => {
+  const handleScroll = (e) => {
+    setContentOffset(e.nativeEvent.contentOffset.y);
     !hasBeenRead && setArticleRead();
   };
 
   return (
     <View style={styles.articleContainer}>
       <Viewport.Tracker>
-        <ScrollView
-          contentInsetAdjustmentBehavior="automatic"
-          onScroll={handleScroll}
-          scrollEventThrottle={400}
-        >
-          <MemoisedArticle {...props} />
-        </ScrollView>
+        <ScrollContext.Provider value={{ offset: contentOffset }}>
+          <ScrollView
+            contentInsetAdjustmentBehavior="automatic"
+            onScroll={handleScroll}
+            scrollEventThrottle={1}
+          >
+            <MemoisedArticle {...props} />
+          </ScrollView>
+        </ScrollContext.Provider>
       </Viewport.Tracker>
     </View>
   );
