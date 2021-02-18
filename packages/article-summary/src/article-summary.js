@@ -2,7 +2,6 @@ import React, { useRef, useEffect } from "react";
 import { Animated, Text, View } from "react-native";
 import PropTypes from "prop-types";
 import ArticleByline, {
-  ArticleBylineOpinion,
   articleBylinePropTypes,
 } from "@times-components-native/article-byline";
 import ArticleLabel from "@times-components-native/article-label";
@@ -21,18 +20,42 @@ function renderAst(ast) {
   return renderTrees(summarise(ast), renderer);
 }
 
-function ArticleSummaryLabel(props) {
-  const { markAsRead, hide, title, isVideo } = props;
-  const labelOpacity = useRef(new Animated.Value(1)).current;
+const MarkAsRead = ({ children, articleReadState }) => {
+  const animationOpacity = useRef(new Animated.Value(1)).current;
+  const opacity = 0.57;
 
   useEffect(() => {
-    Animated.timing(labelOpacity, {
+    Animated.timing(animationOpacity, {
       delay: ARTICLE_READ_ANIMATION.delay,
       duration: ARTICLE_READ_ANIMATION.duration,
-      toValue: 0.6,
+      toValue: opacity,
       useNativeDriver: true,
     }).start();
-  }, [markAsRead]);
+  }, [articleReadState]);
+
+  return articleReadState.animate ? (
+    <Animated.View
+      style={{
+        opacity: animationOpacity,
+      }}
+    >
+      {children}
+    </Animated.View>
+  ) : articleReadState.read ? (
+    <View
+      style={{
+        opacity: opacity,
+      }}
+    >
+      {children}
+    </View>
+  ) : (
+    children
+  );
+};
+
+function ArticleSummaryLabel(props) {
+  const { articleReadState, hide, title, isVideo } = props;
 
   if (hide || (!title && !isVideo)) {
     return null;
@@ -44,37 +67,26 @@ function ArticleSummaryLabel(props) {
     </View>
   );
 
-  return markAsRead ? (
-    <Animated.View
-      style={{
-        opacity: labelOpacity,
-      }}
-    >
-      {Label}
-    </Animated.View>
-  ) : (
-    Label
-  );
+  if (!articleReadState) return Label;
+
+  return <MarkAsRead articleReadState={articleReadState}>{Label}</MarkAsRead>;
 }
 
-function Byline(props) {
-  const { ast, isOpinionByline, bylineClass } = props;
+function ArticleSummaryByline(props) {
+  const { ast, articleReadState, bylineClass } = props;
 
   if (!ast || ast.length === 0) return null;
 
-  const BylineComponent = isOpinionByline
-    ? ArticleBylineOpinion
-    : ArticleByline;
+  const Byline = <ArticleByline {...props} className={bylineClass} />;
 
-  return (
-    <Text>
-      <BylineComponent {...props} className={bylineClass} />
-    </Text>
-  );
+  if (!articleReadState) return Byline;
+
+  return <MarkAsRead articleReadState={articleReadState}>{Byline}</MarkAsRead>;
 }
 
 function ArticleSummary(props) {
   const {
+    articleReadState,
     bylineProps,
     content,
     datePublicationProps,
@@ -86,13 +98,26 @@ function ArticleSummary(props) {
     saveStar,
   } = props;
 
-  const { isOpinionByline = false } = bylineProps || {};
-  const byline = bylineProps ? <Byline {...bylineProps} /> : null;
+  const { bylineOnTop = false } = bylineProps || {};
+
+  const byline = bylineProps ? (
+    <Text>
+      <ArticleSummaryByline
+        {...bylineProps}
+        articleReadState={articleReadState}
+      />
+    </Text>
+  ) : null;
 
   return (
     <View style={style}>
-      {labelProps ? <ArticleSummaryLabel {...labelProps} /> : null}
-      {isOpinionByline && byline}
+      {labelProps ? (
+        <ArticleSummaryLabel
+          {...labelProps}
+          articleReadState={articleReadState}
+        />
+      ) : null}
+      {bylineOnTop && byline}
       {headline}
       {strapline}
       {flags}
@@ -103,16 +128,20 @@ function ArticleSummary(props) {
           <DatePublication {...datePublicationProps} />
         </Text>
       ) : null}
-      {!isOpinionByline && byline}
+      {!bylineOnTop && byline}
     </View>
   );
 }
 
 ArticleSummary.propTypes = {
+  articleReadState: PropTypes.shape({
+    read: PropTypes.bool,
+    animationOpacity: PropTypes.bool,
+  }),
   bylineProps: PropTypes.shape({
     ...articleBylinePropTypes,
     bylineClass: PropTypes.string,
-    isOpinionByline: PropTypes.bool,
+    bylineOnTop: PropTypes.bool,
   }),
   content: PropTypes.node,
   datePublicationProps: PropTypes.shape({
@@ -126,7 +155,6 @@ ArticleSummary.propTypes = {
     isVideo: PropTypes.bool,
     title: PropTypes.string,
     hide: PropTypes.bool,
-    markAsRead: PropTypes.bool,
   }),
   saveStar: PropTypes.node,
   strapline: PropTypes.node,
@@ -138,6 +166,10 @@ ArticleSummary.propTypes = {
 };
 
 ArticleSummary.defaultProps = {
+  articleReadState: {
+    read: false,
+    animate: false,
+  },
   bylineProps: null,
   content: null,
   datePublicationProps: null,
@@ -145,7 +177,6 @@ ArticleSummary.defaultProps = {
   headline: null,
   labelProps: {
     hide: false,
-    markAsRead: false,
   },
   saveStar: null,
   strapline: null,
@@ -157,6 +188,7 @@ export {
   ArticleSummaryHeadline,
   ArticleSummaryLabel,
   ArticleSummaryStrapline,
+  MarkAsRead,
   renderAst,
   renderer,
   summarise,

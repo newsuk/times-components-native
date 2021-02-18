@@ -36,6 +36,12 @@ exports[`1. three related articles 1`] = `
               <View>
                 <View>
                   <ArticleLabel
+                    articleReadState={
+                      Object {
+                        "animate": false,
+                        "read": false,
+                      }
+                    }
                     color="#A31D24"
                     title="first label"
                   />
@@ -96,6 +102,12 @@ exports[`1. three related articles 1`] = `
               <View>
                 <View>
                   <ArticleLabel
+                    articleReadState={
+                      Object {
+                        "animate": false,
+                        "read": false,
+                      }
+                    }
                     color="#008347"
                     title="second label"
                   />
@@ -156,6 +168,12 @@ exports[`1. three related articles 1`] = `
               <View>
                 <View>
                   <ArticleLabel
+                    articleReadState={
+                      Object {
+                        "animate": false,
+                        "read": false,
+                      }
+                    }
                     color="#1A1F24"
                     title="third label"
                   />
