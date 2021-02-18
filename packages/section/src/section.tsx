@@ -1,5 +1,12 @@
-import React, { FC, useCallback, useRef, useState } from "react";
-import { Animated, FlatList, Platform, View } from "react-native";
+import React, { FC, useCallback, useEffect, useRef, useState } from "react";
+import {
+  Animated,
+  FlatList,
+  NativeEventEmitter,
+  NativeModules,
+  Platform,
+  View,
+} from "react-native";
 import { useResponsiveContext } from "@times-components-native/responsive";
 import { withTrackScrollDepth } from "@times-components-native/tracking";
 import { IconEmail } from "@times-components-native/icons";
@@ -11,7 +18,6 @@ import MagazineCover from "./magazine-cover";
 import Slice from "./slice";
 import styleFactory from "./styles";
 import {
-  addToFlatlistOffset,
   createPuzzleData,
   getEmailPuzzlesUrl,
   getSliceIndexByArticleId,
@@ -23,6 +29,8 @@ import { SectionTitles } from "./utils/sectionConfigs";
 import { Orientation } from "@times-components-native/responsive/src/context";
 
 const styles = styleFactory();
+const { SectionEvents } = NativeModules;
+const sectionEventEmitter = new NativeEventEmitter(SectionEvents);
 
 interface Props {
   adConfig: any;
@@ -52,10 +60,11 @@ const Section: FC<Props> = ({
   publishedTime,
   receiveChildList,
   section,
-  scrollToArticleId,
 }) => {
   const { cover, name, slices, title: sectionTitle } = section;
   const { isTablet, editionBreakpoint, orientation } = useResponsiveContext();
+
+  const sliceOffsets: Record<number, number> = {};
 
   const flatListRef = useRef<FlatList>(null);
 
@@ -63,6 +72,34 @@ const Section: FC<Props> = ({
   const [emailPuzzlesButtonWidth] = useState(
     new Animated.Value(emailPuzzlesButtonExtendedWidth),
   );
+
+  const scrollToOffset = (event: { articleId: string }) => {
+    const { articleId } = event;
+    const sliceIndexFromArticle = articleId
+      ? getSliceIndexByArticleId(articleId, data)
+      : 0;
+
+    const sliceOffset = Object.entries(sliceOffsets).reduce(
+      (acc: number, [sliceIndex, sliceHeight]) =>
+        parseInt(sliceIndex) < sliceIndexFromArticle ? acc + sliceHeight : acc,
+      0,
+    );
+    if (sliceOffset) {
+      flatListRef.current?.scrollToOffset({
+        offset: sliceOffset,
+      });
+    }
+  };
+
+  useEffect(() => {
+    const sectionEventsListener = sectionEventEmitter.addListener(
+      "scrollToArticleId",
+      scrollToOffset,
+    );
+    return () => {
+      sectionEventsListener.remove();
+    };
+  }, []);
 
   const isIOS = Platform.OS === "ios";
 
@@ -96,18 +133,15 @@ const Section: FC<Props> = ({
     return null;
   };
 
-  const renderItem = (
-    isPuzzle: boolean,
-    orientation: Orientation,
-    sliceOffsetIndex: number,
-  ) => ({ index, item: slice, inTodaysEditionSlice }: any) => (
+  const renderItem = (isPuzzle: boolean, orientation: Orientation) => ({
+    index,
+    item: slice,
+    inTodaysEditionSlice,
+  }: any) => (
     <View
       onLayout={(event) => {
-        if (!sliceOffsetIndex || index > sliceOffsetIndex) return;
-        if (index < sliceOffsetIndex) {
-          const height = event?.nativeEvent?.layout?.height ?? 0;
-          addToFlatlistOffset(index, height, sliceOffsetIndex, flatListRef);
-        }
+        const height = event?.nativeEvent?.layout?.height ?? 0;
+        sliceOffsets[index] = height;
       }}
       style={{ flex: 1 }}
       testID="sliceRenderView"
@@ -158,7 +192,6 @@ const Section: FC<Props> = ({
     return renderItem(
       false,
       orientation,
-      0,
     )({
       index: 0,
       item: frontSlice || {},
@@ -171,10 +204,6 @@ const Section: FC<Props> = ({
     : prepareSlicesForRender(isTablet, sectionTitle, orientation)(slices);
 
   if (slices) receiveChildList(data);
-
-  const sliceIndexFromArticle = scrollToArticleId
-    ? getSliceIndexByArticleId(scrollToArticleId, data)
-    : 0;
 
   return (
     <>
@@ -193,7 +222,7 @@ const Section: FC<Props> = ({
         nestedScrollEnabled
         onViewableItemsChanged={onViewed ? onViewableItemsChanged : null}
         {...(isPuzzle && { onScrollBeginDrag })}
-        renderItem={renderItem(isPuzzle, orientation, sliceIndexFromArticle)}
+        renderItem={renderItem(isPuzzle, orientation)}
       />
       {isPuzzle && isIOS ? (
         <FloatingActionButton

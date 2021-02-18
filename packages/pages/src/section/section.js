@@ -135,12 +135,7 @@ class SectionPage extends Component {
   }
 
   render() {
-    const {
-      publicationName,
-      publishedTime,
-      scrollToArticleId,
-      variants,
-    } = this.props;
+    const { publicationName, publishedTime, variants } = this.props;
     const { recentlyOpenedPuzzleCount, savedArticles, section } = this.state;
 
     const adConfig = adTargetConfig({
@@ -171,7 +166,6 @@ class SectionPage extends Component {
             onPuzzlePress={onPuzzlePress}
             publicationName={publicationName}
             publishedTime={publishedTime}
-            scrollToArticleId={scrollToArticleId}
             section={section}
           />
         </VariantTestingProvider>
