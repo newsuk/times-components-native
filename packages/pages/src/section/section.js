@@ -38,6 +38,7 @@ class SectionPage extends Component {
     const { section } = this.props;
     this.state = {
       recentlyOpenedPuzzleCount: props ? props.recentlyOpenedPuzzleCount : 0,
+      readArticles: props ? props.readArticles : [],
       savedArticles: null,
       section,
     };
@@ -136,30 +137,16 @@ class SectionPage extends Component {
 
   render() {
     const { publicationName, publishedTime, variants } = this.props;
-    const { recentlyOpenedPuzzleCount, savedArticles, section } = this.state;
+    const {
+      recentlyOpenedPuzzleCount,
+      readArticles,
+      savedArticles,
+      section,
+    } = this.state;
 
     const adConfig = adTargetConfig({
       sectionName: section.name,
     });
-
-    const readArticles = [
-      {
-        id: "a832a8c4-6c86-11eb-bc24-b1bb9cd3bc5f",
-        highlight: false,
-      },
-      {
-        id: "e237ba76-6d23-11eb-bc24-b1bb9cd3bc5f",
-        highlight: true,
-      },
-      {
-        id: "de2749dc-6d4c-11eb-bc24-b1bb9cd3bc5f",
-        highlight: true,
-      },
-      {
-        id: "29f1f8e0-6d4c-11eb-bc24-b1bb9cd3bc5f",
-        highlight: false,
-      },
-    ];
 
     return (
       <SectionContext.Provider
