@@ -2,6 +2,7 @@ import React, { FC } from "react";
 import Comments, { CommentsProps } from "./comments";
 import DisabledComments from "./disabled-comments";
 import { useRemoteConfigContext } from "@times-components-native/remote-config";
+import GloballyDisabledComments from "@times-components-native/article-comments/src/globally-disabled-comments";
 
 interface Props extends CommentsProps {
   commentsEnabled?: boolean;
@@ -20,7 +21,17 @@ const ArticleComments: FC<Props> = ({
 }) => {
   const config = useRemoteConfigContext();
 
-  return commentsEnabled && !config?.commentsGloballyDisabled ? (
+  if (config?.commentsGloballyDisabled) {
+    return <GloballyDisabledComments />;
+  }
+
+  if (!commentsEnabled) {
+    return (
+      <DisabledComments onCommentGuidelinesPress={onCommentGuidelinesPress} />
+    );
+  }
+
+  return (
     <Comments
       articleId={articleId}
       commentCount={commentCount}
@@ -31,8 +42,6 @@ const ArticleComments: FC<Props> = ({
       tooltips={tooltips}
       url={url}
     />
-  ) : (
-    <DisabledComments onCommentGuidelinesPress={onCommentGuidelinesPress} />
   );
 };
 
