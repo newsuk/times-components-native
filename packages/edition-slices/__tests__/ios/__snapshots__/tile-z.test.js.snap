@@ -37,10 +37,15 @@ exports[`tile z huge 1`] = `
             }
           >
             <ArticleLabel
+              articleReadState={
+                Object {
+                  "animate": false,
+                  "read": false,
+                }
+              }
               color="#005B8D"
               hide={false}
               isVideo={false}
-              markAsRead={false}
               title="label"
             />
           </View>
@@ -144,10 +149,15 @@ exports[`tile z wide 1`] = `
             }
           >
             <ArticleLabel
+              articleReadState={
+                Object {
+                  "animate": false,
+                  "read": false,
+                }
+              }
               color="#005B8D"
               hide={false}
               isVideo={false}
-              markAsRead={false}
               title="label"
             />
           </View>
@@ -251,10 +261,15 @@ exports[`tile z without breakpoint should be like wide 1`] = `
             }
           >
             <ArticleLabel
+              articleReadState={
+                Object {
+                  "animate": false,
+                  "read": false,
+                }
+              }
               color="#005B8D"
               hide={false}
               isVideo={false}
-              markAsRead={false}
               title="label"
             />
           </View>

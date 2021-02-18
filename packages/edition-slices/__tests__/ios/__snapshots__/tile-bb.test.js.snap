@@ -35,10 +35,15 @@ exports[`tile bb landscape huge 1`] = `
       }
     >
       <ArticleLabel
+        articleReadState={
+          Object {
+            "animate": false,
+            "read": false,
+          }
+        }
         color="#005B8D"
         hide={false}
         isVideo={false}
-        markAsRead={false}
         title="label"
       />
     </View>
@@ -109,10 +114,15 @@ exports[`tile bb landscape medium 1`] = `
       }
     >
       <ArticleLabel
+        articleReadState={
+          Object {
+            "animate": false,
+            "read": false,
+          }
+        }
         color="#005B8D"
         hide={false}
         isVideo={false}
-        markAsRead={false}
         title="label"
       />
     </View>
@@ -183,10 +193,15 @@ exports[`tile bb landscape wide 1`] = `
       }
     >
       <ArticleLabel
+        articleReadState={
+          Object {
+            "animate": false,
+            "read": false,
+          }
+        }
         color="#005B8D"
         hide={false}
         isVideo={false}
-        markAsRead={false}
         title="label"
       />
     </View>
