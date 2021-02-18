@@ -29,7 +29,7 @@ export default () => {
         config={{
           commentsGloballyDisabled: true,
           variants: {
-            articleMpuTestVariant: "A",
+            testVariant: "A",
           },
         }}
       >
