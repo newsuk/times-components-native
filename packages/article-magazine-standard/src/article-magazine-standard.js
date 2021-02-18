@@ -106,6 +106,7 @@ class ArticleMagazineStandard extends Component {
       analyticsStream,
       article,
       interactiveConfig,
+      onArticleRead,
       onAuthorPress,
       onCommentGuidelinesPress,
       onCommentsPress,
@@ -134,6 +135,7 @@ class ArticleMagazineStandard extends Component {
                 Header={this.renderHeader}
                 interactiveConfig={interactiveConfig}
                 isTablet={isTablet}
+                onArticleRead={onArticleRead}
                 onAuthorPress={onAuthorPress}
                 onCommentGuidelinesPress={onCommentGuidelinesPress}
                 onCommentsPress={onCommentsPress}

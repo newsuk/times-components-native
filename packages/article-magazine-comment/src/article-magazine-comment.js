@@ -102,6 +102,7 @@ class ArticleMagazineComment extends Component {
       analyticsStream,
       article,
       interactiveConfig,
+      onArticleRead,
       onAuthorPress,
       onCommentGuidelinesPress,
       onCommentsPress,
@@ -130,6 +131,7 @@ class ArticleMagazineComment extends Component {
                 interactiveConfig={interactiveConfig}
                 isTablet={isTablet}
                 dropCapFont={dropCapFont}
+                onArticleRead={onArticleRead}
                 onAuthorPress={onAuthorPress}
                 onCommentGuidelinesPress={onCommentGuidelinesPress}
                 onCommentsPress={onCommentsPress}
