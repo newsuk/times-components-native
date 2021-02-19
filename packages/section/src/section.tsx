@@ -72,25 +72,6 @@ const Section: FC<Props> = ({
     new Animated.Value(emailPuzzlesButtonExtendedWidth),
   );
 
-  const scrollToOffset = (event: { articleId: string }) => {
-    const { articleId } = event;
-    const sliceIndexFromArticle = articleId
-      ? getSliceIndexByArticleId(articleId, data)
-      : 0;
-
-    const sliceOffset = Object.entries(sliceOffsets.current).reduce(
-      (acc: number, [sliceIndex, sliceHeight]) =>
-        parseInt(sliceIndex) < sliceIndexFromArticle ? acc + sliceHeight : acc,
-      0,
-    );
-
-    if (sliceOffset) {
-      flatListRef.current?.scrollToOffset({
-        offset: sliceOffset,
-      });
-    }
-  };
-
   useEffect(() => {
     const sectionEventsListener = sectionEventEmitter.addListener(
       "scrollToArticleId",
@@ -204,6 +185,25 @@ const Section: FC<Props> = ({
     : prepareSlicesForRender(isTablet, sectionTitle, orientation)(slices);
 
   if (slices) receiveChildList(data);
+
+  const scrollToOffset = (event: { articleId: string }) => {
+    const { articleId } = event;
+    const sliceIndexFromArticle = articleId
+      ? getSliceIndexByArticleId(articleId, data)
+      : 0;
+
+    const sliceOffset = Object.entries(sliceOffsets.current).reduce(
+      (acc: number, [sliceIndex, sliceHeight]) =>
+        parseInt(sliceIndex) < sliceIndexFromArticle ? acc + sliceHeight : acc,
+      0,
+    );
+
+    if (sliceOffset) {
+      flatListRef.current?.scrollToOffset({
+        offset: sliceOffset,
+      });
+    }
+  };
 
   return (
     <>
