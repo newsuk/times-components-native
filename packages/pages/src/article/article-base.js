@@ -72,7 +72,7 @@ const ArticleBase = ({
           error={omitErrors ? null : error}
           interactiveConfig={interactiveConfig}
           isLoading={isLoading || (omitErrors && error)}
-          onArticleRead={(id) => onArticleRead(id)}
+          onArticleRead={onArticleRead}
           onAuthorPress={(event, { slug }) => onAuthorPress(slug)}
           onCommentGuidelinesPress={() => onCommentGuidelinesPress()}
           onCommentsPress={(event, { articleId: id, url }) =>
