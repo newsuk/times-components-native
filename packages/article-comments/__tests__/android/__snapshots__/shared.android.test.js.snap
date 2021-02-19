@@ -50,7 +50,7 @@ exports[`enabled comments 1`] = `
 exports[`should render disabled-comments if commentsGloballyDisabled 1`] = `
 <View>
   <Text>
-    Apologies, comments are currently unavailable
+    Comments are currently unavailable
   </Text>
 </View>
 `;

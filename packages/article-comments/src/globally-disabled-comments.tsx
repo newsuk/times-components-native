@@ -4,9 +4,7 @@ import styleguide from "@times-components-native/styleguide";
 
 const GloballyDisabledComments = () => (
   <View style={styles.container}>
-    <Text style={styles.headline}>
-      Apologies, comments are currently unavailable
-    </Text>
+    <Text style={styles.headline}>Comments are currently unavailable</Text>
   </View>
 );
 
