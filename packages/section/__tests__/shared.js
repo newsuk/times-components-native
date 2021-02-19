@@ -1,6 +1,7 @@
 /* eslint-disable global-require */
 import React from "react";
 
+import "./mocks";
 import { MockEdition } from "@times-components-native/fixture-generator";
 import { SectionContext } from "@times-components-native/context";
 import { editionBreakpoints } from "@times-components-native/styleguide";
