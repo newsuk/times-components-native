@@ -4,9 +4,9 @@ import PropTypes from "prop-types";
 
 import { SectionContext } from "@times-components-native/context";
 import Section from "@times-components-native/section";
-import { VariantTestingProvider } from "@times-components-native/variant-testing";
 import trackSection from "./track-section";
 import adTargetConfig from "./ad-targeting-config";
+import { RemoteConfigProvider } from "@times-components-native/remote-config";
 
 const {
   getOpenedPuzzleCount,
@@ -38,6 +38,7 @@ class SectionPage extends Component {
     const { section } = this.props;
     this.state = {
       recentlyOpenedPuzzleCount: props ? props.recentlyOpenedPuzzleCount : 0,
+      readArticles: props ? props.readArticles : [],
       savedArticles: null,
       section,
     };
@@ -135,14 +136,17 @@ class SectionPage extends Component {
   }
 
   render() {
-    const { publicationName, publishedTime, variants } = this.props;
-    const { recentlyOpenedPuzzleCount, savedArticles, section } = this.state;
+    const { publicationName, publishedTime, remoteConfig } = this.props;
+    const {
+      recentlyOpenedPuzzleCount,
+      readArticles,
+      savedArticles,
+      section,
+    } = this.state;
 
     const adConfig = adTargetConfig({
       sectionName: section.name,
     });
-
-    const readArticles = [];
 
     return (
       <SectionContext.Provider
@@ -156,7 +160,7 @@ class SectionPage extends Component {
           readArticles,
         }}
       >
-        <VariantTestingProvider variants={variants}>
+        <RemoteConfigProvider config={remoteConfig}>
           <Section
             adConfig={adConfig}
             analyticsStream={trackSection}
@@ -168,7 +172,7 @@ class SectionPage extends Component {
             publishedTime={publishedTime}
             section={section}
           />
-        </VariantTestingProvider>
+        </RemoteConfigProvider>
       </SectionContext.Provider>
     );
   }

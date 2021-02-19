@@ -4,10 +4,10 @@ import { iterator } from "@times-components-native/test-utils";
 import ArticleSummary, {
   renderAst,
   ArticleSummaryContent,
+  MarkAsRead,
 } from "../src/article-summary";
 import defaultFixture from "../fixtures/default";
 import withSummaryLinksFixture from "../fixtures/with-summary-links";
-import opinionBylineFixture from "../fixtures/opinion-byline";
 import articleMultiFixture from "../fixtures/article-multi";
 import emptyParagraphFixture from "../fixtures/article-empty-paragraph";
 import noBylineFixture from "../fixtures/no-byline";
@@ -18,6 +18,7 @@ import noHeadline from "../fixtures/no-headline";
 import noDatePublication from "../fixtures/no-datepublication";
 import videoLabelFixture from "../fixtures/video-label";
 import straplineFixture from "../fixtures/strapline";
+import { ARTICLE_READ_ANIMATION } from "@times-components-native/styleguide";
 
 jest.mock("@times-components-native/article-byline", () => ({
   __esModule: true,
@@ -30,6 +31,7 @@ jest.mock("@times-components-native/article-flag", () => ({
 jest.mock("@times-components-native/article-label", () => "ArticleLabel");
 jest.mock("@times-components-native/date-publication", () => "DatePublication");
 jest.mock("@times-components-native/video-label", () => "VideoLabel");
+jest.useFakeTimers();
 
 export default () => {
   const byline = "A byline";
@@ -68,23 +70,6 @@ export default () => {
           <ArticleSummary
             {...defaultFixture({
               flags,
-              headline,
-              label,
-              paragraph,
-            })}
-          />,
-        );
-
-        expect(testInstance.toJSON()).toMatchSnapshot();
-      },
-    },
-    {
-      name: "article summary with opinion byline",
-      test: () => {
-        const testInstance = TestRenderer.create(
-          <ArticleSummary
-            {...opinionBylineFixture({
-              byline,
               headline,
               label,
               paragraph,
@@ -362,18 +347,64 @@ export default () => {
       },
     },
     {
-      name: "article summary component when article is marked as read",
+      name: "article summary component with byline on top",
       test: () => {
         const testInstance = TestRenderer.create(
           <ArticleSummary
             {...defaultFixture({
-              markAsRead: true,
+              bylineOnTop: true,
             })}
-            isTablet={isTablet}
           />,
         );
 
         expect(testInstance.toJSON()).toMatchSnapshot();
+      },
+    },
+    {
+      name:
+        "article summary label has reduced opacity when article read state is read",
+      async test() {
+        const output = TestRenderer.create(
+          <ArticleSummary
+            {...defaultFixture({
+              articleReadState: {
+                read: true,
+                animate: false,
+              },
+            })}
+          />,
+        );
+        expect(
+          output.root.findAllByType(MarkAsRead)[0].children[0].props.style
+            .opacity,
+        ).toEqual(0.57);
+      },
+    },
+    {
+      name:
+        "article summary label has reduced opactiy after animating when article read state is set to animate",
+      async test() {
+        const output = TestRenderer.create(
+          <ArticleSummary
+            {...defaultFixture({
+              articleReadState: {
+                read: true,
+                animate: true,
+              },
+            })}
+          />,
+        );
+        expect(
+          output.root.findAllByType(MarkAsRead)[0].children[0].props.style
+            .opacity._value,
+        ).toEqual(1);
+        jest.advanceTimersByTime(
+          ARTICLE_READ_ANIMATION.delay + ARTICLE_READ_ANIMATION.duration,
+        );
+        expect(
+          output.root.findAllByType(MarkAsRead)[0].children[0].props.style
+            .opacity._value,
+        ).toEqual(0.57);
       },
     },
   ];

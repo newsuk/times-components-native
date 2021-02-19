@@ -11,7 +11,10 @@ export const propTypes = {
   scale: PropTypes.string,
   sectionName: PropTypes.string,
   showInteractives: PropTypes.bool,
-  variants: PropTypes.shape({}),
+  remoteConfig: PropTypes.shape({
+    commentsGloballyDisabled: PropTypes.bool,
+    variants: PropTypes.shape({}),
+  }),
   fontScale: PropTypes.number,
   displayHeight: PropTypes.number,
   displayWidth: PropTypes.number,
@@ -28,4 +31,8 @@ export const defaultProps = {
   scale: null,
   sectionName: null,
   showInteractives: false,
+  remoteConfig: {
+    commentsGloballyDisabled: false,
+    variants: PropTypes.shape({}),
+  },
 };
