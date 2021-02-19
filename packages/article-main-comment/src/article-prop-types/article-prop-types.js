@@ -8,6 +8,7 @@ const articlePropTypes = {
   ...articlePagePropTypes,
   adConfig: PropTypes.shape({}).isRequired,
   interactiveConfig: PropTypes.shape({}),
+  onArticleRead: PropTypes.func.isRequired,
   onAuthorPress: PropTypes.func.isRequired,
   onCommentGuidelinesPress: PropTypes.func.isRequired,
   onCommentsPress: PropTypes.func.isRequired,

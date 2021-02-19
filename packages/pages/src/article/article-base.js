@@ -15,6 +15,7 @@ const { appVersion = "", environment = "prod" } = NativeModules.ReactConfig;
 
 const {
   onArticlePress,
+  onArticleRead,
   onAuthorPress,
   onCommentsPress,
   onCommentGuidelinesPress,
@@ -71,9 +72,7 @@ const ArticleBase = ({
           error={omitErrors ? null : error}
           interactiveConfig={interactiveConfig}
           isLoading={isLoading || (omitErrors && error)}
-          onArticleRead={() => {
-            // @TODO onArticleRead
-          }}
+          onArticleRead={onArticleRead}
           onAuthorPress={(event, { slug }) => onAuthorPress(slug)}
           onCommentGuidelinesPress={() => onCommentGuidelinesPress()}
           onCommentsPress={(event, { articleId: id, url }) =>
