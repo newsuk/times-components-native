@@ -53,7 +53,6 @@ const sharedStyles = ({ scale, narrowContent, fontScale }) => {
     },
     interactiveContainer: {
       marginBottom: spacing(4),
-      paddingHorizontal: spacing(2),
     },
     interactiveContainerTablet: {
       alignSelf: "center",
