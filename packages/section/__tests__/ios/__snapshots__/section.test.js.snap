@@ -1,6 +1,16 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Front Page section 1`] = `<LeadTwoFrontSlice />`;
+exports[`Front Page section 1`] = `
+<View
+  style={
+    Object {
+      "flex": 1,
+    }
+  }
+>
+  <LeadTwoFrontSlice />
+</View>
+`;
 
 exports[`Sunday Times magazine section 1`] = `
 <RCTScrollView>
@@ -63,7 +73,15 @@ exports[`Sunday Times magazine section 1`] = `
       </View>
     </View>
     <View>
-      <StandardSlice />
+      <View
+        style={
+          Object {
+            "flex": 1,
+          }
+        }
+      >
+        <StandardSlice />
+      </View>
     </View>
   </View>
 </RCTScrollView>
@@ -130,7 +148,15 @@ exports[`Times magazine section 1`] = `
       </View>
     </View>
     <View>
-      <StandardSlice />
+      <View
+        style={
+          Object {
+            "flex": 1,
+          }
+        }
+      >
+        <StandardSlice />
+      </View>
     </View>
   </View>
 </RCTScrollView>
@@ -265,7 +291,15 @@ exports[`section page 1`] = `
 <RCTScrollView>
   <View>
     <View>
-      <LeadOneAndFourSlice />
+      <View
+        style={
+          Object {
+            "flex": 1,
+          }
+        }
+      >
+        <LeadOneAndFourSlice />
+      </View>
       <View>
         <View
           style={
@@ -279,7 +313,15 @@ exports[`section page 1`] = `
       </View>
     </View>
     <View>
-      <LeadOneFullWidthSlice />
+      <View
+        style={
+          Object {
+            "flex": 1,
+          }
+        }
+      >
+        <LeadOneFullWidthSlice />
+      </View>
       <View>
         <View
           style={
@@ -293,7 +335,15 @@ exports[`section page 1`] = `
       </View>
     </View>
     <View>
-      <LeadOneAndOneSlice />
+      <View
+        style={
+          Object {
+            "flex": 1,
+          }
+        }
+      >
+        <LeadOneAndOneSlice />
+      </View>
       <View>
         <View
           style={
@@ -307,7 +357,15 @@ exports[`section page 1`] = `
       </View>
     </View>
     <View>
-      <SectionAd />
+      <View
+        style={
+          Object {
+            "flex": 1,
+          }
+        }
+      >
+        <SectionAd />
+      </View>
       <View>
         <View
           style={
@@ -321,6 +379,13 @@ exports[`section page 1`] = `
       </View>
     </View>
     <View>
+      <View
+        style={
+          Object {
+            "flex": 1,
+          }
+        }
+      />
       <View>
         <View
           style={
@@ -334,7 +399,15 @@ exports[`section page 1`] = `
       </View>
     </View>
     <View>
-      <LeadTwoNoPicAndTwoSlice />
+      <View
+        style={
+          Object {
+            "flex": 1,
+          }
+        }
+      >
+        <LeadTwoNoPicAndTwoSlice />
+      </View>
       <View>
         <View
           style={
@@ -348,7 +421,15 @@ exports[`section page 1`] = `
       </View>
     </View>
     <View>
-      <SecondaryOneSlice />
+      <View
+        style={
+          Object {
+            "flex": 1,
+          }
+        }
+      >
+        <SecondaryOneSlice />
+      </View>
       <View>
         <View
           style={
@@ -362,7 +443,15 @@ exports[`section page 1`] = `
       </View>
     </View>
     <View>
-      <SecondaryFourSlice />
+      <View
+        style={
+          Object {
+            "flex": 1,
+          }
+        }
+      >
+        <SecondaryFourSlice />
+      </View>
       <View>
         <View
           style={
@@ -376,7 +465,15 @@ exports[`section page 1`] = `
       </View>
     </View>
     <View>
-      <SecondaryTwoNoPicAndTwoSlice />
+      <View
+        style={
+          Object {
+            "flex": 1,
+          }
+        }
+      >
+        <SecondaryTwoNoPicAndTwoSlice />
+      </View>
       <View>
         <View
           style={
@@ -390,7 +487,15 @@ exports[`section page 1`] = `
       </View>
     </View>
     <View>
-      <SecondaryTwoNoPicAndTwoSlice />
+      <View
+        style={
+          Object {
+            "flex": 1,
+          }
+        }
+      >
+        <SecondaryTwoNoPicAndTwoSlice />
+      </View>
       <View>
         <View
           style={
@@ -418,7 +523,15 @@ exports[`should render Secondary 2 No Pic and 2 instead of Secondary 2 and 2 for
 <RCTScrollView>
   <View>
     <View>
-      <SecondaryTwoNoPicAndTwoSlice />
+      <View
+        style={
+          Object {
+            "flex": 1,
+          }
+        }
+      >
+        <SecondaryTwoNoPicAndTwoSlice />
+      </View>
       <View>
         <View
           style={
@@ -432,7 +545,15 @@ exports[`should render Secondary 2 No Pic and 2 instead of Secondary 2 and 2 for
       </View>
     </View>
     <View>
-      <SecondaryTwoNoPicAndTwoSlice />
+      <View
+        style={
+          Object {
+            "flex": 1,
+          }
+        }
+      >
+        <SecondaryTwoNoPicAndTwoSlice />
+      </View>
     </View>
   </View>
 </RCTScrollView>

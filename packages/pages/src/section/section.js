@@ -168,9 +168,9 @@ class SectionPage extends Component {
             onLinkPress={onLinkPress}
             onPuzzleBarPress={onPuzzleBarPress}
             onPuzzlePress={onPuzzlePress}
-            section={section}
             publicationName={publicationName}
             publishedTime={publishedTime}
+            section={section}
           />
         </RemoteConfigProvider>
       </SectionContext.Provider>

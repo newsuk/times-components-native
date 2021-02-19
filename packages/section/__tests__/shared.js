@@ -1,5 +1,7 @@
 /* eslint-disable global-require */
 import React from "react";
+
+import "./mocks";
 import { MockEdition } from "@times-components-native/fixture-generator";
 import { SectionContext } from "@times-components-native/context";
 import { editionBreakpoints } from "@times-components-native/styleguide";
@@ -12,9 +14,10 @@ import {
   print,
 } from "@times-components-native/jest-serializer";
 import TestRenderer from "react-test-renderer";
-import SectionItemSeparator from "../src/section-item-separator";
-import Section from "../src/section";
 import PuzzleBar from "../src/puzzle-bar";
+import Section from "../src/section";
+import SectionItemSeparator from "../src/section-item-separator";
+import { getSliceIndexByArticleId } from "../src/utils";
 
 // fixes issues with hooks not being allowed during test run
 jest.mock("react", () => {
@@ -42,6 +45,14 @@ jest.mock("@times-components-native/image", () => ({
   __esModule: true,
   default: "TimesImage",
 }));
+
+jest.mock("../src/utils", () => {
+  const utils = require.requireActual("../src/utils");
+  return {
+    ...utils,
+    getSliceIndexByArticleId: jest.fn(),
+  };
+});
 
 export default () => {
   beforeEach(() => {
@@ -74,6 +85,8 @@ export default () => {
         />,
       ).toJSON(),
     ).toMatchSnapshot();
+
+    expect(getSliceIndexByArticleId).not.toHaveBeenCalled();
   });
 
   it("should render Secondary 2 No Pic and 2 instead of Secondary 2 and 2 for tablet", () => {
