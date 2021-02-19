@@ -5,6 +5,7 @@ import {
   NativeEventEmitter,
   NativeModules,
   Platform,
+  StyleSheet,
   View,
 } from "react-native";
 import { useResponsiveContext } from "@times-components-native/responsive";
@@ -123,7 +124,7 @@ const Section: FC<Props> = ({
       onLayout={(event) => {
         sliceOffsets.current[index] = event?.nativeEvent?.layout?.height ?? 0;
       }}
-      style={{ flex: 1 }}
+      style={sliceStyles.sliceContainer}
     >
       <Slice
         index={index}
@@ -245,5 +246,11 @@ Section.defaultProps = {
   onViewed: () => null,
   receiveChildList: () => null,
 };
+
+const sliceStyles = StyleSheet.create({
+  sliceContainer: {
+    flex: 1,
+  },
+});
 
 export default withTrackingContext(withTrackScrollDepth(Section));
