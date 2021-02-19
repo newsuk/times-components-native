@@ -178,7 +178,6 @@ SectionPage.propTypes = {
   publicationName: PropTypes.string,
   recentlyOpenedPuzzleCount: PropTypes.number,
   section: PropTypes.shape({}),
-  scrollToArticleId: PropTypes.string,
 };
 
 SectionPage.defaultProps = {

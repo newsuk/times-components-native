@@ -64,9 +64,8 @@ const Section: FC<Props> = ({
   const { cover, name, slices, title: sectionTitle } = section;
   const { isTablet, editionBreakpoint, orientation } = useResponsiveContext();
 
-  const sliceOffsets: Record<number, number> = {};
-
   const flatListRef = useRef<FlatList>(null);
+  const sliceOffsets = useRef<Record<string, number>>({});
 
   const emailPuzzlesButtonExtendedWidth = 170;
   const [emailPuzzlesButtonWidth] = useState(
@@ -79,11 +78,12 @@ const Section: FC<Props> = ({
       ? getSliceIndexByArticleId(articleId, data)
       : 0;
 
-    const sliceOffset = Object.entries(sliceOffsets).reduce(
+    const sliceOffset = Object.entries(sliceOffsets.current).reduce(
       (acc: number, [sliceIndex, sliceHeight]) =>
         parseInt(sliceIndex) < sliceIndexFromArticle ? acc + sliceHeight : acc,
       0,
     );
+
     if (sliceOffset) {
       flatListRef.current?.scrollToOffset({
         offset: sliceOffset,
@@ -141,7 +141,7 @@ const Section: FC<Props> = ({
     <View
       onLayout={(event) => {
         const height = event?.nativeEvent?.layout?.height ?? 0;
-        sliceOffsets[index] = height;
+        sliceOffsets.current[index] = height;
       }}
       style={{ flex: 1 }}
       testID="sliceRenderView"
