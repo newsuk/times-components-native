@@ -159,7 +159,6 @@ exports[`1. a full article with all content items with dropcap template 1`] = `
             Array [
               Object {
                 "marginBottom": 20,
-                "paddingHorizontal": 10,
               },
               false,
               false,
@@ -1343,7 +1342,6 @@ exports[`2. an article with interactives 1`] = `
             Array [
               Object {
                 "marginBottom": 20,
-                "paddingHorizontal": 10,
               },
               false,
               false,
@@ -1375,7 +1373,6 @@ exports[`2. an article with interactives 1`] = `
             Array [
               Object {
                 "marginBottom": 20,
-                "paddingHorizontal": 10,
               },
               false,
               Object {
@@ -4407,7 +4404,6 @@ exports[`19. renders content 1`] = `
             Array [
               Object {
                 "marginBottom": 20,
-                "paddingHorizontal": 10,
               },
               undefined,
               false,
