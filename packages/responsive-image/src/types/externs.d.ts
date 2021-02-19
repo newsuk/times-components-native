@@ -20,10 +20,10 @@ declare module "@times-components-native/styleguide" {
   export const tabletWidth: number;
   export const getEditionBreakpoint = (number) => string;
   export const getNarrowArticleBreakpoint = (number) => string;
-  export const styleguide;
   export const fontFactory;
   export const globalSpacingStyles;
   export const fonts;
+  export default styleguide;
 }
 
 declare module "@times-components-native/utils" {

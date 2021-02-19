@@ -1,25 +1,29 @@
-import React from "react";
-import { Text, View } from "react-native";
-import PropTypes from "prop-types";
+import React, { FC } from "react";
+import { Text, TextProps, View } from "react-native";
 import { TextLink } from "@times-components-native/link";
 import styles from "./styles";
 
-const DisabledComments = ({ onCommentGuidelinesPress }) => (
+type Props = {
+  onCommentGuidelinesPress: TextProps["onPress"];
+};
+
+const DisabledComments: FC<Props> = ({ onCommentGuidelinesPress }) => (
   <View style={styles.container}>
     <Text style={styles.headline}>
       Comments for this article have been turned off
     </Text>
     <Text style={styles.supporting}>
       For more details, please see our {"\n"}
-      <TextLink onPress={onCommentGuidelinesPress} style={styles.link}>
+      <TextLink
+        onPress={onCommentGuidelinesPress}
+        style={styles.link}
+        target={null}
+        url={null}
+      >
         community guidelines
       </TextLink>
     </Text>
   </View>
 );
-
-DisabledComments.propTypes = {
-  onCommentGuidelinesPress: PropTypes.func.isRequired,
-};
 
 export default DisabledComments;

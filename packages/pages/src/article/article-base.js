@@ -6,10 +6,10 @@ import {
   defaults,
 } from "@times-components-native/context";
 import { themeFactory } from "@times-components-native/styleguide";
-import { VariantTestingProvider } from "@times-components-native/variant-testing";
 import adTargetConfig from "./ad-targeting-config";
 import { defaultProps, propTypes } from "./article-prop-types";
 import trackArticle from "./track-article";
+import { RemoteConfigProvider } from "@times-components-native/remote-config";
 
 const { appVersion = "", environment = "prod" } = NativeModules.ReactConfig;
 
@@ -37,7 +37,7 @@ const ArticleBase = ({
   omitErrors,
   scale,
   sectionName: pageSection,
-  variants,
+  remoteConfig,
   tooltips,
 }) => {
   const { section: articleSection, template } = article || {};
@@ -64,7 +64,7 @@ const ArticleBase = ({
 
   return (
     <ContextProviderWithDefaults value={{ theme }}>
-      <VariantTestingProvider variants={variants}>
+      <RemoteConfigProvider config={remoteConfig}>
         <Article
           adConfig={adConfig}
           analyticsStream={trackArticle}
@@ -98,7 +98,7 @@ const ArticleBase = ({
           refetch={refetch}
           tooltips={tooltips}
         />
-      </VariantTestingProvider>
+      </RemoteConfigProvider>
     </ContextProviderWithDefaults>
   );
 };
