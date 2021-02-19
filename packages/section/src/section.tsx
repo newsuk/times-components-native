@@ -121,11 +121,9 @@ const Section: FC<Props> = ({
   }: any) => (
     <View
       onLayout={(event) => {
-        const height = event?.nativeEvent?.layout?.height ?? 0;
-        sliceOffsets.current[index] = height;
+        sliceOffsets.current[index] = event?.nativeEvent?.layout?.height ?? 0;
       }}
       style={{ flex: 1 }}
-      testID="sliceRenderView"
     >
       <Slice
         index={index}
