@@ -126,7 +126,6 @@ exports[`1. a full article with all content items with dropcap template 1`] = `
           style={
             Object {
               "marginBottom": 20,
-              "paddingHorizontal": 10,
             }
           }
         >
@@ -797,7 +796,6 @@ exports[`2. an article with interactives 1`] = `
           style={
             Object {
               "marginBottom": 20,
-              "paddingHorizontal": 10,
             }
           }
         >
@@ -2374,7 +2372,6 @@ exports[`17. an article skeleton with responsive items 1`] = `
           style={
             Object {
               "marginBottom": 20,
-              "paddingHorizontal": 10,
             }
           }
         >
