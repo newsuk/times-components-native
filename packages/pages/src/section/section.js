@@ -38,7 +38,7 @@ class SectionPage extends Component {
     const { section } = this.props;
     this.state = {
       recentlyOpenedPuzzleCount: props ? props.recentlyOpenedPuzzleCount : 0,
-      readArticles: props ? props.readArticles : [],
+      readArticles: [],
       savedArticles: null,
       section,
     };
@@ -46,6 +46,7 @@ class SectionPage extends Component {
     this.toggleArticleSaveStatus = this.toggleArticleSaveStatus.bind(this);
     this.syncAppData = this.syncAppData.bind(this);
     this.updateSectionData = this.updateSectionData.bind(this);
+    this.updateReadArticles = this.updateReadArticles.bind(this);
     this.onArticleSavePress = this.onArticleSavePress.bind(this);
     this.isSyncing = false;
   }
@@ -54,6 +55,10 @@ class SectionPage extends Component {
     AppState.addEventListener("change", this.onAppStateChange);
     DeviceEventEmitter.addListener("updateSavedArticles", this.syncAppData);
     DeviceEventEmitter.addListener("updateSectionData", this.updateSectionData);
+    DeviceEventEmitter.addListener(
+      "updateReadArticles",
+      this.updateReadArticles,
+    );
     this.syncAppData();
   }
 
@@ -63,6 +68,10 @@ class SectionPage extends Component {
     DeviceEventEmitter.removeListener(
       "updateSectionData",
       this.updateSectionData,
+    );
+    DeviceEventEmitter.removeListener(
+      "updateReadArticles",
+      this.updateReadArticles,
     );
   }
 
@@ -127,6 +136,10 @@ class SectionPage extends Component {
         this.setState({ section: JSON.parse(data) });
       });
     }
+  }
+
+  updateReadArticles(readArticles) {
+    this.setState({ readArticles });
   }
 
   toggleArticleSaveStatus(save, articleId) {
