@@ -6,17 +6,15 @@ import {
 } from "react-native";
 import CloseRoundIcon from "@times-components-native/icons/src/icons/close-round";
 
-export interface CloseButtonProps {
+export interface XButtonProps {
   onPress: TouchableOpacityProps["onPress"];
 }
 
-const CloseButton: FC<CloseButtonProps> = ({ onPress }) => {
-  return (
-    <TouchableOpacity onPress={onPress} style={styles.closeIconContainer}>
-      <CloseRoundIcon />
-    </TouchableOpacity>
-  );
-};
+const XButton: FC<XButtonProps> = ({ onPress }) => (
+  <TouchableOpacity onPress={onPress} style={styles.closeIconContainer}>
+    <CloseRoundIcon />
+  </TouchableOpacity>
+);
 
 const styles = StyleSheet.create({
   closeIconContainer: {
@@ -26,4 +24,4 @@ const styles = StyleSheet.create({
   },
 });
 
-export default CloseButton;
+export default XButton;

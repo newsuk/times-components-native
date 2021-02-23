@@ -7,6 +7,7 @@ import Section from "./section-showcase-helper";
 const Article = Page("Article");
 const AuthorProfile = Page("AuthorProfile");
 const Topic = Page("Topic");
+const Search = Page("Search");
 
 export default {
   children: [
@@ -51,6 +52,13 @@ export default {
         return <Topic topicSlug={topicSlug} />;
       },
       name: "Topic",
+      type: "story",
+    },
+    {
+      component: () => {
+        return <Search />;
+      },
+      name: "Search",
       type: "story",
     },
   ],

@@ -10009,7 +10009,7 @@ react-inspector@^4.0.0:
     is-dom "^1.0.9"
     prop-types "^15.6.1"
 
-react-instantsearch-core@^6.9.0:
+react-instantsearch-core@6.9.0, react-instantsearch-core@^6.9.0:
   version "6.9.0"
   resolved "https://registry.yarnpkg.com/react-instantsearch-core/-/react-instantsearch-core-6.9.0.tgz#7dc05082a2df50f50181e77bb0a2fab0d245f5ea"
   integrity sha512-xLNyF0mUBq7MaLQgmosBnxac7YnLTuanu5TKZkH7RFEVC2T5mi4fINtG6vAkOkVjiH90abv2wdPY6UjE/Vt6kQ==

@@ -37,6 +37,7 @@
 		81AB9BB82411601600AC10FF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */; };
 		A6CBA86FE3C3FAE284518F4A /* libPods-TimesComponents.a in Frameworks */ = {isa = PBXBuildFile; fileRef = A780229AAC4D71C1774B1C3B /* libPods-TimesComponents.a */; };
 		ADEADA3F25419A9B00B6B55C /* GillSansMTStd-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = ADEADA3925418E7A00B6B55C /* GillSansMTStd-Bold.ttf */; };
+		B9B81D2125E4144900D1505D /* SearchEvents.m in Sources */ = {isa = PBXBuildFile; fileRef = B9B81D2025E4144900D1505D /* SearchEvents.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -95,6 +96,7 @@
 		A780229AAC4D71C1774B1C3B /* libPods-TimesComponents.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-TimesComponents.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		ADEADA3925418E7A00B6B55C /* GillSansMTStd-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "GillSansMTStd-Bold.ttf"; path = "../../dist/public/fonts/GillSansMTStd-Bold.ttf"; sourceTree = "<group>"; };
 		B5382007B5E2DE215910BC69 /* Pods-TimesComponents.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TimesComponents.debug.xcconfig"; path = "Target Support Files/Pods-TimesComponents/Pods-TimesComponents.debug.xcconfig"; sourceTree = "<group>"; };
+		B9B81D2025E4144900D1505D /* SearchEvents.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = SearchEvents.m; path = " /  SearchEvents.m /  TimesComponents / /  Created by Konstantinidis, Emmanouil on 21/07/2020. /  Copyright © 2020 Facebook. All rights reserved. /  #import <Foundation/Foundation.h> #import <React/SearchEvents.m"; sourceTree = "<group>"; };
 		D64F3BD61DAF3B2659F8DC6D /* Pods-TimesComponents-TimesComponentsTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TimesComponents-TimesComponentsTests.debug.xcconfig"; path = "Target Support Files/Pods-TimesComponents-TimesComponentsTests/Pods-TimesComponents-TimesComponentsTests.debug.xcconfig"; sourceTree = "<group>"; };
 		DB2FEFA28A97B26CA78469CC /* Pods-TimesComponents-tvOS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TimesComponents-tvOS.debug.xcconfig"; path = "Target Support Files/Pods-TimesComponents-tvOS/Pods-TimesComponents-tvOS.debug.xcconfig"; sourceTree = "<group>"; };
 		DE57A50E48CCB121CD6EB8CD /* Pods-TimesComponents.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TimesComponents.release.xcconfig"; path = "Target Support Files/Pods-TimesComponents/Pods-TimesComponents.release.xcconfig"; sourceTree = "<group>"; };
@@ -164,6 +166,7 @@
 				120322AF24E1A58B00D265FF /* ReactAnalytics.m */,
 				120322B124E1A58B00D265FF /* ReactConfig.m */,
 				120322B024E1A58B00D265FF /* TopicEvents.m */,
+				B9B81D2025E4144900D1505D /* SearchEvents.m */,
 			);
 			path = "Native Modules";
 			sourceTree = "<group>";
@@ -646,6 +649,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B9B81D2125E4144900D1505D /* SearchEvents.m in Sources */,
 				13B07FBC1A68108700A75B9A /* AppDelegate.m in Sources */,
 				120322B524E1A58B00D265FF /* TopicEvents.m in Sources */,
 				120322B324E1A58B00D265FF /* ArticleEvents.m in Sources */,
