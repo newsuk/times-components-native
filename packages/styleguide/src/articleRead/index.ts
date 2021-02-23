@@ -1,4 +1,4 @@
 export const ARTICLE_READ_ANIMATION = {
-  DELAY: 500,
-  DURATION: 500,
+  DELAY: 1000,
+  DURATION: 1000,
 };
