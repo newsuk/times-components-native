@@ -1,7 +1,7 @@
 {
   "name": "times-components-native",
   "private": true,
-  "version": "4.0.0-beta",
+  "version": "4.0.1-beta",
   "description": "A collection of react-native components for The Times and Sunday Times",
   "main": "index.js",
   "engines": {
@@ -100,7 +100,7 @@
     "react-native-webview": "10.9.3",
     "unfetch": "^4.1.0",
     "url-parse": "1.4.7",
-    "v8-android": "8.84.0",
+    "v8-android": "9.88.0",
     "zen-observable": "0.8.11"
   },
   "devDependencies": {
