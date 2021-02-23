@@ -14,9 +14,8 @@ import { ResponsiveContext } from "@times-components-native/responsive";
 import { editionBreakpoints } from "@times-components-native/styleguide";
 import { TileH, TileX } from "../src/tiles";
 import { TileLink, TileStar, TileSummary } from "../src/tiles/shared";
-import { MarkAsRead } from "../src/tiles/shared/article-summary";
 import { ResponsiveSlice } from "../src/slices/shared";
-import { ARTICLE_READ_ANIMATION } from "@times-components-native/styleguide";
+
 // eslint-disable-next-line global-require
 jest.mock("react-native", () => {
   const rn = require.requireActual("react-native");
@@ -368,74 +367,6 @@ export default () => {
         expect(output.root.findByType(StarButton).props.isDark).toEqual(true);
       },
     },
-    // {
-    //   name:
-    //     "Tile Article Summary has reduced opacity when article is marked as read on tablet",
-    //   test: () => {
-    //     jest.useFakeTimers();
-    //     const readArticles = [
-    //       {
-    //         id: "522abf2c-e752-11e8-9f32-f2801f1b9fd1",
-    //         highlight: false,
-    //       },
-    //     ];
-
-    //     const output = TestRenderer.create(
-    //       <ResponsiveContext.Provider value={{ isTablet: true }}>
-    //         <SectionContext.Provider
-    //           value={{
-    //             readArticles,
-    //           }}
-    //         >
-    //           <TileSummary tile={tile} />,
-    //         </SectionContext.Provider>
-    //         ,
-    //       </ResponsiveContext.Provider>,
-    //     );
-
-    //     expect(
-    //       output.root.findAllByType(MarkAsRead)[0].children[0].props.style
-    //         .opacity,
-    //     ).toEqual(0.57);
-    //   },
-    // },
-    // {
-    //   name:
-    //     "Tile Article Summary animates to correct opacity when article is marked as read and animated on tablet",
-    //   test: () => {
-    //     const readArticles = [
-    //       {
-    //         id: "522abf2c-e752-11e8-9f32-f2801f1b9fd1",
-    //         highlight: true,
-    //       },
-    //     ];
-
-    //     const output = TestRenderer.create(
-    //       <ResponsiveContext.Provider value={{ isTablet: true }}>
-    //         <SectionContext.Provider
-    //           value={{
-    //             readArticles,
-    //           }}
-    //         >
-    //           <TileSummary tile={tile} />,
-    //         </SectionContext.Provider>
-    //         ,
-    //       </ResponsiveContext.Provider>,
-    //     );
-
-    //     expect(
-    //       output.root.findAllByType(MarkAsRead)[0].children[0].props.style
-    //         .opacity._value,
-    //     ).toEqual(1);
-    //     jest.advanceTimersByTime(
-    //       ARTICLE_READ_ANIMATION.delay + ARTICLE_READ_ANIMATION.duration,
-    //     );
-    //     expect(
-    //       output.root.findAllByType(MarkAsRead)[0].children[0].props.style
-    //         .opacity._value,
-    //     ).toEqual(0.57);
-    //   },
-    // },
     {
       name: "Responsive Slice renders small layout if no breakpoint",
       test: () => {
