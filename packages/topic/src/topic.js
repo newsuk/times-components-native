@@ -20,9 +20,6 @@ const Topic = ({
   pageSize: initPageSize,
   onArticlePress,
   onNext,
-  displayHeight,
-  displayWidth,
-  fontScale,
   onPrev,
   refetch,
   slug,
@@ -90,11 +87,7 @@ const Topic = ({
           });
 
         return (
-          <Responsive
-            displayWidth={displayWidth}
-            displayHeight={displayHeight}
-            fontScale={fontScale}
-          >
+          <Responsive>
             <Head {...{ description, name, slug }} />
             <ArticleList
               adConfig={adConfig}

@@ -12,26 +12,8 @@ interface DimensionChangeEvent {
   window: ScaledSize;
 }
 
-interface Props {
-  displayHeight?: number | undefined;
-  displayWidth?: number | undefined;
-  fontScale?: number | undefined;
-}
-
-const ResponsiveProvider: React.FC<Props> = ({
-  children,
-  displayWidth,
-  displayHeight,
-  fontScale: initialFontScale,
-}) => {
-  const { fontScale, width, height } =
-    displayWidth && displayHeight && initialFontScale
-      ? {
-          width: displayWidth,
-          height: displayHeight,
-          fontScale: initialFontScale,
-        }
-      : getDimensions();
+const ResponsiveProvider: React.FC = ({ children }) => {
+  const { fontScale, width, height } = getDimensions();
 
   const [state, setState] = useState(
     calculateResponsiveContext(width, height, fontScale),

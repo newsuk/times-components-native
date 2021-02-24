@@ -35,9 +35,6 @@ export default () => {
       return null;
     },
     slug: "some-slug",
-    displayWidth: 1024,
-    displayHeight: 768,
-    fontScale: 1,
   };
 
   shared(props);

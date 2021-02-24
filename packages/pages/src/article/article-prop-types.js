@@ -15,9 +15,6 @@ export const propTypes = {
     commentsGloballyDisabled: PropTypes.bool,
     variants: PropTypes.shape({}),
   }),
-  fontScale: PropTypes.number,
-  displayHeight: PropTypes.number,
-  displayWidth: PropTypes.number,
 };
 
 export const defaultProps = {

@@ -27,9 +27,6 @@ const AuthorProfile = ({
   pageSize: initPageSize,
   refetch,
   slug,
-  displayWidth,
-  displayHeight,
-  fontScale,
 }) => {
   const emptyStateMessage =
     "Unfortunately, there are no articles relating to this author";
@@ -112,11 +109,7 @@ const AuthorProfile = ({
           });
 
         return (
-          <Responsive
-            fontScale={fontScale}
-            displayHeight={displayHeight}
-            displayWidth={displayWidth}
-          >
+          <Responsive>
             <ArticleList
               adConfig={adConfig}
               articleListHeader={articleListHeader}
