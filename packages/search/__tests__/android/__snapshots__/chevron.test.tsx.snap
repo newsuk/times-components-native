@@ -1,0 +1,107 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Chevron should render correctly 1`] = `
+<View
+  accessible={true}
+  focusable={true}
+  onClick={[Function]}
+  onResponderGrant={[Function]}
+  onResponderMove={[Function]}
+  onResponderRelease={[Function]}
+  onResponderTerminate={[Function]}
+  onResponderTerminationRequest={[Function]}
+  onStartShouldSetResponder={[Function]}
+  style={
+    Object {
+      "left": 4,
+      "opacity": 1,
+      "position": "absolute",
+      "top": 6,
+      "zIndex": 1,
+    }
+  }
+>
+  <RNSVGSvgView
+    align="xMidYMid"
+    bbHeight="24"
+    bbWidth="24"
+    fill="none"
+    focusable={false}
+    height="24"
+    meetOrSlice={0}
+    minX={0}
+    minY={0}
+    style={
+      Array [
+        Object {
+          "backgroundColor": "transparent",
+          "borderWidth": 0,
+        },
+        Object {
+          "flex": 0,
+          "height": 24,
+          "width": 24,
+        },
+      ]
+    }
+    vbHeight={24}
+    vbWidth={24}
+    width="24"
+  >
+    <RNSVGGroup
+      fill={null}
+      propList={
+        Array [
+          "fill",
+        ]
+      }
+    >
+      <RNSVGMask
+        height="24"
+        maskContentUnits={1}
+        maskTransform={
+          Array [
+            1,
+            0,
+            0,
+            1,
+            0,
+            0,
+          ]
+        }
+        maskUnits={1}
+        name="mask0"
+        width="24"
+        x="0"
+        y="0"
+      >
+        <RNSVGPath
+          d="M15.41 7.41L14 6L8 12L14 18L15.41 16.59L10.83 12L15.41 7.41Z"
+          fill={-1}
+          propList={
+            Array [
+              "fill",
+            ]
+          }
+        />
+      </RNSVGMask>
+      <RNSVGGroup
+        mask="mask0"
+      >
+        <RNSVGRect
+          fill={-1}
+          height="24"
+          propList={
+            Array [
+              "fill",
+            ]
+          }
+          width="24"
+          x={0}
+          y={0}
+        />
+      </RNSVGGroup>
+    </RNSVGGroup>
+  </RNSVGSvgView>
+</View>
+`;

@@ -1,5 +1,9 @@
 import React, { FC } from "react";
-import { StyleSheet, TouchableOpacity, TouchableOpacityProps } from "react-native";
+import {
+  StyleSheet,
+  TouchableOpacity,
+  TouchableOpacityProps,
+} from "react-native";
 import { LeftChevron } from "@times-components-native/icons/src/icons";
 
 export interface ChevronProps {

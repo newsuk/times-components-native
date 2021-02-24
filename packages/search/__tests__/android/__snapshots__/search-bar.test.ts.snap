@@ -1,0 +1,120 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`EmptySearchMessage 1`] = `
+<View
+  style={
+    Object {
+      "flex": 1,
+      "justifyContent": "center",
+    }
+  }
+>
+  <Text
+    style={
+      Object {
+        "color": "#696969",
+        "marginBottom": 25,
+        "textAlign": "center",
+      }
+    }
+  >
+    Popular thing to search for:
+  </Text>
+  <Text
+    style={
+      Object {
+        "color": "#696969",
+        "textAlign": "center",
+      }
+    }
+  >
+    Articles
+  </Text>
+  <Text
+    style={
+      Object {
+        "color": "#696969",
+        "textAlign": "center",
+      }
+    }
+  >
+    Topics
+  </Text>
+  <Text
+    style={
+      Object {
+        "color": "#696969",
+        "textAlign": "center",
+      }
+    }
+  >
+    Journalists
+  </Text>
+</View>
+`;
+
+exports[`Search Bar CancelButton 1`] = `
+<View
+  accessible={true}
+  focusable={true}
+  onClick={[Function]}
+  onResponderGrant={[Function]}
+  onResponderMove={[Function]}
+  onResponderRelease={[Function]}
+  onResponderTerminate={[Function]}
+  onResponderTerminationRequest={[Function]}
+  onStartShouldSetResponder={[Function]}
+  style={
+    Object {
+      "opacity": 1,
+      "position": "absolute",
+      "right": 10,
+      "top": 15,
+      "zIndex": 1,
+    }
+  }
+>
+  <RNSVGSvgView
+    align="xMidYMid"
+    aria-label="icon-close"
+    bbHeight={24}
+    bbWidth={24}
+    focusable={false}
+    height={24}
+    meetOrSlice={0}
+    minX={0}
+    minY={0}
+    style={
+      Array [
+        Object {
+          "backgroundColor": "transparent",
+          "borderWidth": 0,
+        },
+        Object {
+          "flex": 0,
+          "height": 24,
+          "width": 24,
+        },
+      ]
+    }
+    title="Close Icon"
+    vbHeight={28}
+    vbWidth={28}
+    width={24}
+  >
+    <RNSVGGroup>
+      <RNSVGPath
+        d="M15.617 14l4.683 5.838-.462.462L14 15.617 8.162 20.3l-.462-.462L12.383 14 7.7 8.162l.462-.462L14 12.383 19.838 7.7l.462.462z"
+        fill={-1}
+        propList={
+          Array [
+            "fill",
+            "stroke",
+          ]
+        }
+        stroke={-1}
+      />
+    </RNSVGGroup>
+  </RNSVGSvgView>
+</View>
+`;

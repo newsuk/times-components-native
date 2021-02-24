@@ -1,10 +1,8 @@
-import React, { FC } from "react";
+import React from "react";
 import Svg, { G, Mask, Path, Rect } from "react-native-svg";
 import { EMaskUnits } from "@times-components-native/icons/src/icons/types";
 
-export interface LeftChevronProps {}
-
-const LeftChevron: FC<LeftChevronProps> = () => {
+const LeftChevron = () => {
   return (
     <Svg width="24" height="24" viewBox="0 0 24 24" fill="none">
       <Mask

@@ -26,5 +26,4 @@ const GlassMagnifier: FC = () => (
   </Svg>
 );
 
-
 export default GlassMagnifier;

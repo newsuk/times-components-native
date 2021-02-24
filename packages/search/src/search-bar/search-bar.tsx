@@ -41,9 +41,7 @@ export const SearchBar = connectSearchBox(({ currentRefinement, refine }) => {
           defaultValue={currentRefinement}
           onChangeText={handleSetText}
           keyboardType="web-search"
-          placeholderTextColor={
-            isIOS ? colours.functional.searchText : "#C2C2C2"
-          }
+          placeholderTextColor={colours.functional.searchText}
           value={text}
         />
         {text && isIOS ? <XButton onPress={handlePressX} /> : null}
@@ -56,7 +54,7 @@ export const SearchBar = connectSearchBox(({ currentRefinement, refine }) => {
 const styles = StyleSheet.create({
   container: {
     paddingHorizontal: 0,
-    backgroundColor: "#01000D",
+    backgroundColor: colours.functional.backgroundTertiary,
     flexDirection: "row",
   },
   inputContainer: {
@@ -73,7 +71,9 @@ const styles = StyleSheet.create({
     lineHeight: 22,
     padding: 4,
     paddingLeft: 30,
-    backgroundColor: isIOS ? "rgba(255, 255, 255, 0.4)" : "#01000D",
+    backgroundColor: isIOS
+      ? colours.functional.transparentWhite
+      : colours.functional.backgroundTertiary,
     color: colours.functional.white,
   },
   cancel: {

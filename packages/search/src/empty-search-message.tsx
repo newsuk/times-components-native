@@ -1,6 +1,6 @@
 import React from "react";
 import { StyleSheet, Text, View } from "react-native";
-import { spacing } from "@times-components-native/styleguide";
+import { colours, spacing } from "@times-components-native/styleguide";
 
 const EmptySearchMessage = () => (
   <View style={styles.container}>
@@ -19,11 +19,11 @@ const styles = StyleSheet.create({
   title: {
     textAlign: "center",
     marginBottom: spacing(5),
-    color: "#696969",
+    color: colours.functional.secondary,
   },
   text: {
     textAlign: "center",
-    color: "#696969",
+    color: colours.functional.secondary,
   },
 });
 

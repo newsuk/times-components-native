@@ -1,6 +1,10 @@
 import React, { FC } from "react";
 import IconClose from "@times-components-native/icons/src/icons/close";
-import { StyleSheet, TouchableOpacity, TouchableOpacityProps } from "react-native";
+import {
+  StyleSheet,
+  TouchableOpacity,
+  TouchableOpacityProps,
+} from "react-native";
 
 export interface CancelButtonProps {
   onPress: TouchableOpacityProps["onPress"];
