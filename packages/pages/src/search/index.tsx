@@ -14,7 +14,6 @@ export interface SearchPageProps {
 
 const SearchPage = withErrorBoundaries(
   ({ algoliaConfig = null }: SearchPageProps) => {
-
     const handleArticlePress = (
       e: GestureResponderEvent,
       { url }: { id: string; url: string },

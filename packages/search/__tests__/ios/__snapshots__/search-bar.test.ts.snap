@@ -1,0 +1,96 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`EmptySearchMessage 1`] = `
+<View
+  style={
+    Object {
+      "flex": 1,
+      "justifyContent": "center",
+    }
+  }
+>
+  <Text
+    style={
+      Object {
+        "color": "#696969",
+        "marginBottom": 25,
+        "textAlign": "center",
+      }
+    }
+  >
+    Popular thing to search for:
+  </Text>
+  <Text
+    style={
+      Object {
+        "color": "#696969",
+        "textAlign": "center",
+      }
+    }
+  >
+    Articles
+  </Text>
+  <Text
+    style={
+      Object {
+        "color": "#696969",
+        "textAlign": "center",
+      }
+    }
+  >
+    Topics
+  </Text>
+  <Text
+    style={
+      Object {
+        "color": "#696969",
+        "textAlign": "center",
+      }
+    }
+  >
+    Journalists
+  </Text>
+</View>
+`;
+
+exports[`Search Bar CancelButton 1`] = `
+<View
+  style={
+    Object {
+      "justifyContent": "center",
+      "paddingRight": 16,
+    }
+  }
+>
+  <View
+    accessible={true}
+    focusable={true}
+    onClick={[Function]}
+    onResponderGrant={[Function]}
+    onResponderMove={[Function]}
+    onResponderRelease={[Function]}
+    onResponderTerminate={[Function]}
+    onResponderTerminationRequest={[Function]}
+    onStartShouldSetResponder={[Function]}
+    style={
+      Object {
+        "opacity": 1,
+      }
+    }
+  >
+    <Text
+      style={
+        Object {
+          "color": "#FFFFFF",
+          "fontFamily": "GillSansMTStd-Medium",
+          "fontSize": 18,
+          "lineHeight": undefined,
+          "marginTop": 5,
+        }
+      }
+    >
+      Cancel
+    </Text>
+  </View>
+</View>
+`;

@@ -1,10 +1,8 @@
-import React, { FC } from "react";
+import React from "react";
 import { StyleSheet, Text, View } from "react-native";
 import { spacing } from "@times-components-native/styleguide";
 
-export interface EmptySearchMessageProps {}
-
-const EmptySearchMessage: FC<EmptySearchMessageProps> = () => (
+const EmptySearchMessage = () => (
   <View style={styles.container}>
     <Text style={styles.title}>Popular thing to search for:</Text>
     <Text style={styles.text}>Articles</Text>

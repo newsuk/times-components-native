@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useCallback, useState } from "react";
 import { Keyboard, Platform, StyleSheet, TextInput, View } from "react-native";
 import { connectSearchBox } from "react-instantsearch-native";
 import { colours, fontFactory } from "@times-components-native/styleguide";
@@ -6,15 +6,21 @@ import CancelButton from "./cancel-button";
 import XButton from "./x-button";
 import Magnifier from "./magnifier";
 import Chevron from "./chevron";
+import debounce from "lodash.debounce";
 
 const isIOS = Platform.OS === "ios";
 
 export const SearchBar = connectSearchBox(({ currentRefinement, refine }) => {
   const [text, setText] = useState(currentRefinement);
 
+  const debouncedRefine = useCallback(
+    debounce((nextValue) => refine(nextValue), 300),
+    [],
+  );
+
   const handleSetText = (val: string) => {
     setText(val);
-    refine(val);
+    debouncedRefine(val);
   };
 
   const handlePressX = () => {
