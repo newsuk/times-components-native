@@ -134,8 +134,6 @@ const ArticleWithContent = (props) => {
   let articleReadDelay = null;
 
   const setArticleReadTimeout = (articleId) => {
-    console.log("setArticleReadTimeout FIRED on ", data.url);
-
     if (articleId === data.id && !hasBeenRead) {
       articleReadDelay = setTimeout(() => {
         setArticleRead();
@@ -144,7 +142,6 @@ const ArticleWithContent = (props) => {
   };
 
   useEffect(() => {
-    console.log("IN THE USE EFFECT");
     const updateReadArticlesEventsListener = articleEventEmitter.addListener(
       "onArticleFocus",
       setArticleReadTimeout,

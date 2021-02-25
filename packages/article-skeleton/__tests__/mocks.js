@@ -1,4 +1,3 @@
-import { mockNativeModules } from "@times-components-native/mocks";
 // eslint-disable-next-line global-require
 jest.mock("@times-components-native/ad", () => require("./ad-mock"));
 jest.mock("@times-components-native/article-extras", () => "ArticleExtras");
@@ -30,4 +29,12 @@ jest.mock("@times-components-native/related-articles", () => "RelatedArticles");
 jest.mock("@times-components-native/watermark", () => "Watermark");
 jest.mock("@times-components-native/video", () => "Video");
 jest.mock("@times-components-native/video-label", () => "VideoLabel");
-mockNativeModules();
+
+// eslint-disable-next-line global-require
+jest.mock("react-native", () => {
+  const rn = require.requireActual("react-native");
+  rn.NativeModules.ArticleEvents = {
+    addListener: jest.fn(),
+  };
+  return rn;
+});
