@@ -1,3 +1,4 @@
+import { mockNativeModules } from "@times-components-native/mocks";
 import React from "react";
 import TestRenderer from "react-test-renderer";
 import ArticleMainStandard from "@times-components-native/article-main-standard";
@@ -12,15 +13,7 @@ import {
 } from "@times-components-native/test-utils";
 
 jest.mock("@times-components-native/image", () => "TimesImage");
-
-// eslint-disable-next-line global-require
-jest.mock("react-native", () => {
-  const rn = require.requireActual("react-native");
-  rn.NativeModules.ArticleEvents = {
-    addListener: jest.fn(),
-  };
-  return rn;
-});
+mockNativeModules();
 
 const requiredProps = {
   adConfig: {},

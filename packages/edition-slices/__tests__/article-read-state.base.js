@@ -1,12 +1,6 @@
+import { mockNativeModules } from "@times-components-native/mocks";
 import { getArticleReadState } from "../src/tiles/shared/article-summary";
-// eslint-disable-next-line global-require
-jest.mock("react-native", () => {
-  const rn = require.requireActual("react-native");
-  rn.NativeModules.SectionEvents = {
-    addListener: jest.fn(),
-  };
-  return rn;
-});
+mockNativeModules();
 
 export default () => {
   describe("getArticleReadState", () => {
