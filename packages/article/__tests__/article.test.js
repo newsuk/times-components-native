@@ -13,6 +13,15 @@ import {
 
 jest.mock("@times-components-native/image", () => "TimesImage");
 
+// eslint-disable-next-line global-require
+jest.mock("react-native", () => {
+  const rn = require.requireActual("react-native");
+  rn.NativeModules.ArticleEvents = {
+    addListener: jest.fn(),
+  };
+  return rn;
+});
+
 const requiredProps = {
   adConfig: {},
   analyticsStream: () => null,
