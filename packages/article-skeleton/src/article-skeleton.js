@@ -129,19 +129,22 @@ const MemoisedArticle = React.memo((props) => {
 
 const ArticleWithContent = (props) => {
   const { onArticleRead, data } = props;
-  const articlReadTimerDuration = 6000;
+  const articleReadTimerDuration = 6000;
   let hasBeenRead = false;
   let articleReadDelay = null;
 
   const setArticleReadTimeout = (articleId) => {
+    console.log("setArticleReadTimeout FIRED on ", data.url);
+
     if (articleId === data.id && !hasBeenRead) {
       articleReadDelay = setTimeout(() => {
         setArticleRead();
-      }, articlReadTimerDuration);
+      }, articleReadTimerDuration);
     } else clearTimeout(articleReadDelay);
   };
 
   useEffect(() => {
+    console.log("IN THE USE EFFECT");
     const updateReadArticlesEventsListener = articleEventEmitter.addListener(
       "onArticleFocus",
       setArticleReadTimeout,
