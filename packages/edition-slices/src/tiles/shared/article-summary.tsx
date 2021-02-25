@@ -175,13 +175,8 @@ const ArticleSummary: React.FC<Props> = ({
     };
   }, []);
 
-  const updateReadArticles = (readArticles: [ArticleRead]) => {
-    // console.log(
-    //   "updateReadArticles",
-    //   getArticleReadState(isTablet, readArticles, id),
-    // );
+  const updateReadArticles = (readArticles: [ArticleRead]) =>
     setArticleReadState(getArticleReadState(isTablet, readArticles, id));
-  };
 
   useEffect(() => {
     Animated.parallel([
