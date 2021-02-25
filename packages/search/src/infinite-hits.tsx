@@ -4,15 +4,17 @@ import {
   connectSearchBox,
 } from "react-instantsearch-native";
 import ArticleList from "@times-components-native/article-list";
-import { GestureResponderEvent } from "react-native";
+import { GestureResponderEvent, View } from "react-native";
 import {
   InfiniteHitsProvided,
   SearchBoxProvided,
 } from "react-instantsearch-core";
 import EmptySearchMessage from "@times-components-native/search/src/empty-search-message";
+import Hightlights from "@times-components-native/search/src/hightlights/hightlights";
+import { Hit } from "./types";
 
 export interface InfiniteHitsProps
-  extends InfiniteHitsProvided,
+  extends InfiniteHitsProvided<Hit>,
     SearchBoxProvided {
   onArticlePress: (
     e: GestureResponderEvent,
@@ -28,6 +30,7 @@ const InfiniteHits: FC<InfiniteHitsProps> = (props) => {
     onArticlePress,
     currentRefinement,
   } = props;
+  console.log(props);
   const handleFetchMore = () => {
     if (!hasMore) {
       return Promise.resolve();
@@ -41,18 +44,23 @@ const InfiniteHits: FC<InfiniteHitsProps> = (props) => {
     return <EmptySearchMessage />;
   }
 
+  console.log("hits", hits);
+
   return (
-    <ArticleList
-      adConfig={{}}
-      articles={currentRefinement ? hits : []}
-      articlesLoading={false}
-      onArticlePress={onArticlePress}
-      emptyStateMessage="There were no results for your search term"
-      error={false}
-      fetchMore={handleFetchMore}
-      showImages={false}
-      withResume
-    />
+    <View>
+      <Hightlights hits={hits} />
+      <ArticleList
+        adConfig={{}}
+        articles={currentRefinement ? hits : []}
+        articlesLoading={false}
+        onArticlePress={onArticlePress}
+        emptyStateMessage="There were no results for your search term"
+        error={false}
+        fetchMore={handleFetchMore}
+        showImages={false}
+        withResume
+      />
+    </View>
   );
 };
 
