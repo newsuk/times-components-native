@@ -129,17 +129,16 @@ const MemoisedArticle = React.memo((props) => {
 
 const ArticleWithContent = (props) => {
   const { onArticleRead, data } = props;
-  const articlReadTimeoutDuration = 6000;
+  const articlReadTimerDuration = 6000;
   let hasBeenRead = false;
+  let articleReadDelay = null;
 
   const setArticleReadTimeout = (articleId) => {
-    let delay;
     if (articleId === data.id && !hasBeenRead) {
-      delay = setTimeout(() => {
+      articleReadDelay = setTimeout(() => {
         setArticleRead();
-      }, articlReadTimeoutDuration);
-      return () => clearTimeout(delay);
-    } else return () => clearTimeout(delay);
+      }, articlReadTimerDuration);
+    } else clearTimeout(articleReadDelay);
   };
 
   useEffect(() => {
@@ -155,6 +154,7 @@ const ArticleWithContent = (props) => {
   const setArticleRead = () => {
     if (hasBeenRead) return;
     hasBeenRead = true;
+    console.log("SET ARTICLE READ", data.url);
     onArticleRead && onArticleRead(data.id);
   };
 
@@ -179,19 +179,6 @@ const ArticleWithContent = (props) => {
 
 ArticleWithContent.propTypes = {
   ...articleSkeletonPropTypes,
-  interactiveConfig: PropTypes.shape({}),
-  onCommentGuidelinesPress: PropTypes.func.isRequired,
-  onCommentsPress: PropTypes.func.isRequired,
-  onLinkPress: PropTypes.func.isRequired,
-  onRelatedArticlePress: PropTypes.func.isRequired,
-  onTooltipPresented: PropTypes.func,
-  onTwitterLinkPress: PropTypes.func.isRequired,
-  onVideoPress: PropTypes.func.isRequired,
-  onImagePress: PropTypes.func.isRequired,
-  tooltips: PropTypes.array,
-};
-ArticleWithContent.defaultProps = {
-  ...articleSkeletonDefaultProps,
   interactiveConfig: {},
   onTooltipPresented: () => null,
   tooltips: [],
