@@ -13,7 +13,7 @@ exports[`tile lead supplement landscape huge 1`] = `
   <View
     style={
       Object {
-        "height": 0,
+        "height": 1134,
       }
     }
   >
@@ -21,7 +21,7 @@ exports[`tile lead supplement landscape huge 1`] = `
       aspectRatio={1.25}
       style={
         Object {
-          "height": 0,
+          "height": 1134,
         }
       }
       uri="https://www.thetimes.co.uk/imageserver/image/%2Fmethode%2Ftimes%2Fprod%2Fweb%2Fbin%2F5a14c64e-06db-11e9-abe2-4909b2eb0130.jpg?crop=1250%2C1000%2C627%2C0"
@@ -52,10 +52,15 @@ exports[`tile lead supplement landscape huge 1`] = `
           }
         >
           <ArticleLabel
+            articleReadState={
+              Object {
+                "animate": false,
+                "read": false,
+              }
+            }
             color="#005B8D"
             hide={false}
             isVideo={false}
-            markAsRead={false}
             title="label"
           />
         </View>
@@ -125,7 +130,7 @@ exports[`tile lead supplement landscape medium 1`] = `
   <View
     style={
       Object {
-        "height": 0,
+        "height": 1134,
       }
     }
   >
@@ -133,7 +138,7 @@ exports[`tile lead supplement landscape medium 1`] = `
       aspectRatio={1.25}
       style={
         Object {
-          "height": 0,
+          "height": 1134,
         }
       }
       uri="https://www.thetimes.co.uk/imageserver/image/%2Fmethode%2Ftimes%2Fprod%2Fweb%2Fbin%2F5a14c64e-06db-11e9-abe2-4909b2eb0130.jpg?crop=1250%2C1000%2C627%2C0"
@@ -164,10 +169,15 @@ exports[`tile lead supplement landscape medium 1`] = `
           }
         >
           <ArticleLabel
+            articleReadState={
+              Object {
+                "animate": false,
+                "read": false,
+              }
+            }
             color="#005B8D"
             hide={false}
             isVideo={false}
-            markAsRead={false}
             title="label"
           />
         </View>
@@ -237,7 +247,7 @@ exports[`tile lead supplement landscape wide 1`] = `
   <View
     style={
       Object {
-        "height": 0,
+        "height": 1134,
       }
     }
   >
@@ -245,7 +255,7 @@ exports[`tile lead supplement landscape wide 1`] = `
       aspectRatio={1.25}
       style={
         Object {
-          "height": 0,
+          "height": 1134,
         }
       }
       uri="https://www.thetimes.co.uk/imageserver/image/%2Fmethode%2Ftimes%2Fprod%2Fweb%2Fbin%2F5a14c64e-06db-11e9-abe2-4909b2eb0130.jpg?crop=1250%2C1000%2C627%2C0"
@@ -276,10 +286,15 @@ exports[`tile lead supplement landscape wide 1`] = `
           }
         >
           <ArticleLabel
+            articleReadState={
+              Object {
+                "animate": false,
+                "read": false,
+              }
+            }
             color="#005B8D"
             hide={false}
             isVideo={false}
-            markAsRead={false}
             title="label"
           />
         </View>

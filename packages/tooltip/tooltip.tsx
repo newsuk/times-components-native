@@ -1,26 +1,26 @@
-import React, { useState } from "react";
+import React, { ReactNode, useState } from "react";
 import { Animated, Text, TouchableOpacity, View, Platform } from "react-native";
 // @ts-ignore
 import { Viewport } from "@skele/components";
 import { useResponsiveContext } from "@times-components-native/responsive";
 import generateStyles from "./styles";
 
-interface Props {
+export interface TooltipProps {
   arrowOffset?: number;
-  content: string;
-  displayedInView: boolean;
+  content: string | ReactNode;
+  displayedInView?: boolean;
   offsetX?: number;
   offsetY?: number;
   onClose?(): void;
   onTooltipPresented(type: string, articleId: string): void;
-  placement?: "bottom" | "top" | "left";
-  tooltips: [string];
+  placement?: "bottom" | "top" | "left" | "right";
+  tooltips: string[];
   type: string;
   width?: number;
   articleId: string;
 }
 
-const Tooltip: React.FC<Props> = ({
+const Tooltip: React.FC<TooltipProps> = ({
   arrowOffset = 20,
   content,
   children,

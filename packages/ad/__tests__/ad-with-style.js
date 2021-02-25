@@ -12,7 +12,7 @@ import {
 import { iterator } from "@times-components-native/test-utils";
 import adInit from "../src/utils/ad-init";
 import adConfig from "../fixtures/article-ad-config.json";
-import { AdBase, AdComposer } from "../src/ad";
+import { AdBase } from "../src/ad";
 
 jest.mock("../src/utils/ad-init");
 adInit.mockImplementation(() => ({
@@ -29,6 +29,7 @@ const props = {
   },
   screenWidth: 1024,
   orientation: "landscape",
+  adConfig,
 };
 
 export default () => {
@@ -50,12 +51,10 @@ export default () => {
       name: "multiple ad slots",
       test: () => {
         const testInstance = TestRenderer.create(
-          <AdComposer adConfig={adConfig}>
-            <Fragment>
-              <AdBase {...props} slotName="header" />
-              <AdBase {...props} slotName="pixel" />
-            </Fragment>
-          </AdComposer>,
+          <Fragment>
+            <AdBase {...props} slotName="header" />
+            <AdBase {...props} slotName="pixel" />
+          </Fragment>,
         );
 
         const AdComponent = testInstance.root.findAllByType(AdBase);
@@ -69,11 +68,9 @@ export default () => {
       name: "return null if there is an error in the loading of scripts",
       test: () => {
         const testInstance = TestRenderer.create(
-          <AdComposer adConfig={adConfig}>
-            <Fragment>
-              <AdBase {...props} slotName="header" />
-            </Fragment>
-          </AdComposer>,
+          <Fragment>
+            <AdBase {...props} slotName="header" />
+          </Fragment>,
         );
 
         const AdComponent = testInstance.root.findByType(AdBase);

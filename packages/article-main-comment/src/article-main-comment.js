@@ -1,5 +1,4 @@
 /* eslint-disable consistent-return */
-
 import React, { Component } from "react";
 import ArticleError from "@times-components-native/article-error";
 import ArticleSkeleton from "@times-components-native/article-skeleton";
@@ -76,6 +75,7 @@ class ArticlePage extends Component {
       analyticsStream,
       article,
       interactiveConfig,
+      onArticleRead,
       onAuthorPress,
       onCommentGuidelinesPress,
       onCommentsPress,
@@ -104,6 +104,7 @@ class ArticlePage extends Component {
                 Header={this.renderHeader}
                 interactiveConfig={interactiveConfig}
                 isTablet={isTablet}
+                onArticleRead={onArticleRead}
                 onAuthorPress={onAuthorPress}
                 onCommentGuidelinesPress={onCommentGuidelinesPress}
                 onCommentsPress={onCommentsPress}

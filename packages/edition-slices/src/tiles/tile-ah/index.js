@@ -1,7 +1,6 @@
 /* eslint-disable react/require-default-props */
 import React from "react";
 import PropTypes from "prop-types";
-import Byline from "@times-components-native/article-byline";
 import { editionBreakpoints } from "@times-components-native/styleguide";
 import {
   getTileImage,
@@ -34,8 +33,10 @@ const TileAH = ({ onPress, tile, breakpoint = editionBreakpoints.medium }) => {
         rounded
         resizeMode="cover"
       />
-      <Byline ast={tile.article.bylines} bylineStyle={styles.byline} />
       <TileSummary
+        bylines={tile.article.bylines}
+        bylineOnTop={true}
+        bylineStyle={styles.byline}
         headlineStyle={styles.headline}
         strapline={getTileStrapline(tile)}
         straplineStyle={styles.strapline}

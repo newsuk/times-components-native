@@ -13,8 +13,12 @@ export default ({
   headline = defaultHeadline,
   label = defaultLabel,
   paragraph = defaultParagraph,
-  markAsRead = false,
+  articleReadState = {
+    read: false,
+    animate: false,
+  },
 } = {}) => ({
+  articleReadState,
   bylineProps: {
     ast: [
       {
@@ -82,6 +86,5 @@ export default ({
   labelProps: {
     color: colours.functional.primary,
     title: label,
-    markAsRead,
   },
 });

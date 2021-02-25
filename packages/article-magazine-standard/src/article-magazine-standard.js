@@ -5,9 +5,10 @@ import { View } from "react-native";
 import ArticleError from "@times-components-native/article-error";
 import ArticleSkeleton from "@times-components-native/article-skeleton";
 import {
+  getAllArticleImages,
   getHeadline,
   getLeadAsset,
-  getStandardTemplateCrop,
+  getCropByPriority,
 } from "@times-components-native/utils";
 import { CentredCaption } from "@times-components-native/caption";
 import { ResponsiveContext } from "@times-components-native/responsive";
@@ -70,7 +71,7 @@ class ArticleMagazineStandard extends Component {
             />
             <LeadAsset
               {...getLeadAsset(article)}
-              getImageCrop={getStandardTemplateCrop}
+              getImageCrop={getCropByPriority}
               onImagePress={onImagePress}
               onVideoPress={onVideoPress}
               renderCaption={({ caption }) => <CentredCaption {...caption} />}
@@ -81,6 +82,7 @@ class ArticleMagazineStandard extends Component {
                 { zIndex: 0 },
               ]}
               width={Math.min(width, tabletWidth)}
+              extraContent={getAllArticleImages(article)}
             />
           </View>
         )}
@@ -104,6 +106,7 @@ class ArticleMagazineStandard extends Component {
       analyticsStream,
       article,
       interactiveConfig,
+      onArticleRead,
       onAuthorPress,
       onCommentGuidelinesPress,
       onCommentsPress,
@@ -132,6 +135,7 @@ class ArticleMagazineStandard extends Component {
                 Header={this.renderHeader}
                 interactiveConfig={interactiveConfig}
                 isTablet={isTablet}
+                onArticleRead={onArticleRead}
                 onAuthorPress={onAuthorPress}
                 onCommentGuidelinesPress={onCommentGuidelinesPress}
                 onCommentsPress={onCommentsPress}

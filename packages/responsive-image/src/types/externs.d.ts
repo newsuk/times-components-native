@@ -20,13 +20,16 @@ declare module "@times-components-native/styleguide" {
   export const tabletWidth: number;
   export const getEditionBreakpoint = (number) => string;
   export const getNarrowArticleBreakpoint = (number) => string;
-  export const styleguide;
   export const fontFactory;
   export const globalSpacingStyles;
   export const fonts;
+  export default styleguide;
 }
 
 declare module "@times-components-native/utils" {
+  import { Crop } from "@times-components-native/fixture-generator/src/types";
+  import { TimesImage } from "@times-components-native/types";
+
   type appendToImageURL = (
     url: string,
     key: string,
@@ -34,6 +37,7 @@ declare module "@times-components-native/utils" {
   ) => string;
 
   type getDimensions = () => any;
+  type getCropByPriority = (leadAsset: TimesImage) => Crop;
   type addDimensionsListener = (string, any) => any;
   type removeDimensionsListener = (string, any) => any;
   type calculateContentWidth = (number, string) => number;
@@ -45,6 +49,7 @@ declare module "@times-components-native/utils" {
   export const calculateContentWidth: calculateContentWidth;
   export const addDimensionsListener: addDimensionsListener;
   export const removeDimensionsListener: removeDimensionsListener;
+  export const getCropByPriority: getCropByPriority;
 }
 
 declare module "react-native-hooks" {

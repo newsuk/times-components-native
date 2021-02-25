@@ -1,5 +1,7 @@
 import React, { Component } from "react";
 import PropTypes from "prop-types";
+
+import "./mocks";
 import { MockEdition } from "@times-components-native/fixture-generator";
 import Link from "@times-components-native/link";
 import { SectionContext } from "@times-components-native/context";
