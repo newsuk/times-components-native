@@ -138,6 +138,9 @@ const ArticleWithContent = (props) => {
       articleReadDelay = setTimeout(() => {
         setArticleRead();
       }, articleReadTimerDuration);
+      return () => {
+        clearTimeout(articleReadDelay);
+      };
     } else clearTimeout(articleReadDelay);
   };
 
