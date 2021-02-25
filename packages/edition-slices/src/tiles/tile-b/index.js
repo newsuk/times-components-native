@@ -25,6 +25,7 @@ const TileB = ({
     ...additionalHeadlineStyles,
   };
 
+  console.log("tile article content", tile.article.content);
   return (
     <TileLink onPress={onPress} style={styles.container} tile={tile}>
       <WithoutWhiteSpace
@@ -32,7 +33,7 @@ const TileB = ({
         render={(whiteSpaceHeight) => (
           <TileSummary
             headlineStyle={headLineStyles}
-            summary={getTileSummary(tile, withMoreTeaser ? 800 : 125)}
+            summary={tile.article.content}
             summaryStyle={styles.summary}
             tile={tile}
             whiteSpaceHeight={whiteSpaceHeight}
