@@ -2,15 +2,11 @@ import React, { FC } from "react";
 import InfiniteHits from "@times-components-native/search/src/infinite-hits";
 import { withTrackingContext } from "@times-components-native/tracking";
 import { SearchBar } from "./search-bar/search-bar";
-import { GestureResponderEvent } from "react-native";
 import { InstantSearch } from "react-instantsearch-native";
 import algoliasearch from "algoliasearch";
 
 export interface SearchProps {
-  onArticlePress: (
-    e: GestureResponderEvent,
-    { id, url }: { id: string; url: string },
-  ) => void;
+  onArticlePress: (url: string) => void;
   algoliaConfig: {
     ALGOLIA_APP_ID: string;
     ALGOLIA_API_KEY: string;
