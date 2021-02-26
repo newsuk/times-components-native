@@ -1,5 +1,5 @@
 import React from "react";
-import { GestureResponderEvent, NativeModules } from "react-native";
+import { NativeModules } from "react-native";
 import { Search } from "@times-components-native/search";
 import withNativeProvider from "./../with-native-provider";
 import { withErrorBoundaries } from "@times-components-native/pages/src/with-error-boundaries";
@@ -14,13 +14,6 @@ export interface SearchPageProps {
 
 const SearchPage = withErrorBoundaries(
   ({ algoliaConfig = null }: SearchPageProps) => {
-    const handleArticlePress = (
-      e: GestureResponderEvent,
-      { url }: { id: string; url: string },
-    ) => {
-      onArticlePress(url);
-    };
-
     if (!algoliaConfig) {
       return null;
     }
@@ -28,7 +21,7 @@ const SearchPage = withErrorBoundaries(
     const SearchPageView = withNativeProvider(
       <Search
         analyticsStream={track}
-        onArticlePress={handleArticlePress}
+        onArticlePress={onArticlePress}
         algoliaConfig={algoliaConfig}
       />,
     );

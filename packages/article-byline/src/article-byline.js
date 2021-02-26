@@ -5,10 +5,8 @@ import renderByline from "./render-byline";
 import { propTypes, defaultProps } from "./article-byline-prop-types";
 import styles from "./styles";
 
-const AuthorComponent = ({ children, className, bylineStyle }) => (
-  <Text className={className} style={[styles.nonLinkText, bylineStyle]}>
-    {children}
-  </Text>
+const AuthorComponent = ({ children, bylineStyle }) => (
+  <Text style={[styles.nonLinkText, bylineStyle]}>{children}</Text>
 );
 
 const ArticleByline = ({ ast, ...props }) =>

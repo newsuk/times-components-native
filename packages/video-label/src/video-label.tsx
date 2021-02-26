@@ -1,10 +1,14 @@
-import React from "react";
-import { View, Text } from "react-native";
+import React, { FC } from "react";
+import { Text, View } from "react-native";
 import { IconVideo } from "@times-components-native/icons";
-import PropTypes from "prop-types";
 import styles from "./style";
 
-const VideoLabel = ({ color, title }) => (
+export interface VideoLabel {
+  color?: string;
+  title?: string;
+}
+
+const VideoLabel: FC<VideoLabel> = ({ color = "black", title = "" }) => (
   <View style={styles.container}>
     <View style={styles.iconContainer}>
       <IconVideo fillColour={color} height={9} />
@@ -14,15 +18,5 @@ const VideoLabel = ({ color, title }) => (
     </Text>
   </View>
 );
-
-VideoLabel.propTypes = {
-  color: PropTypes.string,
-  title: PropTypes.string,
-};
-
-VideoLabel.defaultProps = {
-  color: "black",
-  title: "",
-};
 
 export default VideoLabel;

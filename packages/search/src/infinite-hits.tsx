@@ -1,25 +1,15 @@
 import React, { FC } from "react";
-import {
-  connectInfiniteHits,
-  connectSearchBox,
-} from "react-instantsearch-native";
-import ArticleList from "@times-components-native/article-list";
-import { GestureResponderEvent, View } from "react-native";
-import {
-  InfiniteHitsProvided,
-  SearchBoxProvided,
-} from "react-instantsearch-core";
+import { connectInfiniteHits, connectSearchBox, } from "react-instantsearch-native";
+import { View } from "react-native";
+import { InfiniteHitsProvided, SearchBoxProvided, } from "react-instantsearch-core";
 import EmptySearchMessage from "@times-components-native/search/src/empty-search-message";
-import Hightlights from "@times-components-native/search/src/hightlights/hightlights";
 import { Hit } from "./types";
+import SearchList from "@times-components-native/search/src/search-list/search-list";
 
 export interface InfiniteHitsProps
   extends InfiniteHitsProvided<Hit>,
     SearchBoxProvided {
-  onArticlePress: (
-    e: GestureResponderEvent,
-    { id, url }: { id: string; url: string },
-  ) => void;
+  onArticlePress: (url: string) => void;
 }
 
 const InfiniteHits: FC<InfiniteHitsProps> = (props) => {
@@ -30,7 +20,6 @@ const InfiniteHits: FC<InfiniteHitsProps> = (props) => {
     onArticlePress,
     currentRefinement,
   } = props;
-  console.log(props);
   const handleFetchMore = () => {
     if (!hasMore) {
       return Promise.resolve();
@@ -48,17 +37,23 @@ const InfiniteHits: FC<InfiniteHitsProps> = (props) => {
 
   return (
     <View>
-      <Hightlights hits={hits} />
-      <ArticleList
-        adConfig={{}}
-        articles={currentRefinement ? hits : []}
-        articlesLoading={false}
-        onArticlePress={onArticlePress}
+      {/*<Hightlights hits={hits} />*/}
+      {/*<ArticleList*/}
+      {/*  adConfig={{}}*/}
+      {/*  articles={currentRefinement ? hits : []}*/}
+      {/*  articlesLoading={false}*/}
+      {/*  onArticlePress={onArticlePress}*/}
+      {/*  emptyStateMessage="There were no results for your search term"*/}
+      {/*  error={false}*/}
+      {/*  fetchMore={handleFetchMore}*/}
+      {/*  showImages={false}*/}
+      {/*  withResume*/}
+      {/*/>*/}
+      <SearchList
+        hits={hits}
         emptyStateMessage="There were no results for your search term"
-        error={false}
+        onArticlePress={onArticlePress}
         fetchMore={handleFetchMore}
-        showImages={false}
-        withResume
       />
     </View>
   );

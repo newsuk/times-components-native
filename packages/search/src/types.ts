@@ -37,7 +37,7 @@ export interface Hit {
     title: string;
   };
   objectID: string;
-  publicationName: string;
+  publicationName?: "sundaytimes" | "times" | null;
   publishedTime: string;
   section: string;
   shortHeadline: string;

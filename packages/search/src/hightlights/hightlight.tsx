@@ -26,7 +26,7 @@ const Highlight: FC<Hightlight> = ({ highlight, attribute, hit }) => {
             {result.isHighlighted ? (
               <Text style={{ color: "black" }}>{result.value}</Text>
             ) : (
-              result.value.replace(regex, "")
+              `${result.value.replace(regex, "").substring(0, 50)}...`
             )}
           </Text>
         );

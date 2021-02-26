@@ -29,6 +29,7 @@ declare module "@times-components-native/styleguide" {
 declare module "@times-components-native/utils" {
   import { Crop } from "@times-components-native/fixture-generator/src/types";
   import { TimesImage } from "@times-components-native/types";
+  import { string } from "prop-types";
 
   type appendToImageURL = (
     url: string,
@@ -36,12 +37,22 @@ declare module "@times-components-native/utils" {
     value: string | number,
   ) => string;
 
+  type Color =
+    | string
+    | {
+        alpha: number;
+        blue: number;
+        green: number;
+        red: number;
+      };
+  type gqlRgbaToHex = (color: Color) => string;
   type getDimensions = () => any;
   type getCropByPriority = (leadAsset: TimesImage) => Crop;
   type addDimensionsListener = (string, any) => any;
   type removeDimensionsListener = (string, any) => any;
   type calculateContentWidth = (number, string) => number;
   type clean = <T>(obj: Dictionary<T>) => Dictionary<T>;
+  type getHeadline = (headline?: string, shortHeadline?: string) => string;
 
   export const clean: clean;
   export const appendToImageURL: appendToImageURL;
@@ -50,6 +61,8 @@ declare module "@times-components-native/utils" {
   export const addDimensionsListener: addDimensionsListener;
   export const removeDimensionsListener: removeDimensionsListener;
   export const getCropByPriority: getCropByPriority;
+  export const gqlRgbaToHex: gqlRgbaToHex;
+  export const getHeadline: getHeadline;
 }
 
 declare module "react-native-hooks" {
