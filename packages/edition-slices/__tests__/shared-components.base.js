@@ -9,7 +9,6 @@ import {
 } from "@times-components-native/article-summary";
 import { iterator } from "@times-components-native/test-utils";
 import { mockEditionSlice } from "@times-components-native/fixture-generator";
-import { mockNativeModules } from "@times-components-native/mocks";
 import StarButton from "@times-components-native/star-button";
 import { ResponsiveContext } from "@times-components-native/responsive";
 import { editionBreakpoints } from "@times-components-native/styleguide";
@@ -17,12 +16,20 @@ import { TileH, TileX } from "../src/tiles";
 import { TileLink, TileStar, TileSummary } from "../src/tiles/shared";
 import { ResponsiveSlice } from "../src/slices/shared";
 
+// eslint-disable-next-line global-require
+jest.mock("react-native", () => {
+  const rn = require.requireActual("react-native");
+  rn.NativeModules.SectionEvents = {
+    addListener: jest.fn(),
+  };
+  return rn;
+});
+
 jest.mock("@times-components-native/article-flag", () => ({
   ArticleFlags: "ArticleFlags",
 }));
 
 jest.mock("@times-components-native/image", () => "TimesImage");
-mockNativeModules();
 
 const tile = mockEditionSlice(1).items[0];
 
