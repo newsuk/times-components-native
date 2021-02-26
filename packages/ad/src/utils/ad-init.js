@@ -256,12 +256,13 @@ export default ({ el, data, platform, eventCallback, window }) => {
         return this.waitUntilReady();
       },
 
-      init() {
+      init(requestNonPersonalizedAds) {
         googletag.cmd.push(() => {
           const pubads = googletag.pubads();
           pubads.disableInitialLoad();
           pubads.enableSingleRequest();
           pubads.collapseEmptyDivs(true, true);
+          pubads.setRequestNonPersonalizedAds(requestNonPersonalizedAds)
 
           pubads.addEventListener("slotRenderEnded", (event) => {
             if (
@@ -299,8 +300,8 @@ export default ({ el, data, platform, eventCallback, window }) => {
         });
       },
 
-      process({ pageTargeting } = data) {
-        this.init();
+      process({ requestNonPersonalizedAds, pageTargeting } = data) {
+        this.init(requestNonPersonalizedAds);
         this.setPageTargeting(pageTargeting);
         return this.waitUntilReady();
       },

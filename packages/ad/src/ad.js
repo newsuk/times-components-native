@@ -38,6 +38,7 @@ const determineData = (config, props) => {
     debug: adConfig.debug || false,
     disableAds: adConfig.disabled || false,
     networkId: adConfig.networkId,
+    requestNonPersonalizedAds: adConfig.requestNonPersonalizedAds,
     pageTargeting: adConfig.pageTargeting,
     prebidConfig: Object.assign(prebidConfig, {
       bidders: adConfig.biddersConfig.bidders,

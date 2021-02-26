@@ -9,6 +9,7 @@ export default ({ adTestMode, article, sectionName }) => ({
   bidInitialiser: Promise.resolve(),
   globalSlots: [],
   networkId: config.adNetworkId,
+  requestNonPersonalizedAds: config.isLimitAdTrackingEnabled,
   pageTargeting: {
     aid: article.id,
     cont_type: "art",

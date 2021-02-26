@@ -6,6 +6,7 @@ export const propTypes = {
     biddersConfig: PropTypes.shape({}),
     bidderSlots: PropTypes.arrayOf(PropTypes.string),
     networkId: PropTypes.string.isRequired,
+    requestNonPersonalizedAds: PropTypes.bool.isRequired,
     pageTargeting: PropTypes.shape({}),
     slotTargeting: PropTypes.shape({}),
   }),
@@ -45,6 +46,7 @@ export const defaultProps = {
     bidInitialiser: Promise.resolve(),
     globalSlots: ["ad-pixel", "ad-pixelskin", "ad-pixelteads"],
     networkId: "25436805",
+    requestNonPersonalizedAds: true,
     pageTargeting: {
       label: "This is label",
       title: "This is title",

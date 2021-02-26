@@ -9,6 +9,7 @@ export default ({ adTestMode = null, sectionName }) => ({
   bidInitialiser: Promise.resolve(),
   globalSlots: [],
   networkId: config.adNetworkId,
+  requestNonPersonalizedAds: config.isLimitAdTrackingEnabled,
   pageTargeting: {
     cont_type: "art",
     cos: Platform.OS === "ios" ? "iOS" : "Android",
