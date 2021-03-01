@@ -90,6 +90,7 @@ class ArticlePage extends Component {
       analyticsStream,
       article,
       interactiveConfig,
+      onArticleRead,
       onAuthorPress,
       onCommentGuidelinesPress,
       onCommentsPress,
@@ -147,6 +148,7 @@ class ArticlePage extends Component {
                     Header={this.renderHeader}
                     interactiveConfig={interactiveConfig}
                     isTablet={isTablet}
+                    onArticleRead={onArticleRead}
                     onCommentGuidelinesPress={onCommentGuidelinesPress}
                     onCommentsPress={onCommentsPress}
                     onImagePress={onImagePress}
