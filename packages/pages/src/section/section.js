@@ -38,7 +38,6 @@ class SectionPage extends Component {
     const { section } = this.props;
     this.state = {
       recentlyOpenedPuzzleCount: props ? props.recentlyOpenedPuzzleCount : 0,
-      readArticles: props ? props.readArticles : [],
       savedArticles: null,
       section,
     };
@@ -137,12 +136,7 @@ class SectionPage extends Component {
 
   render() {
     const { publicationName, publishedTime, remoteConfig } = this.props;
-    const {
-      recentlyOpenedPuzzleCount,
-      readArticles,
-      savedArticles,
-      section,
-    } = this.state;
+    const { recentlyOpenedPuzzleCount, savedArticles, section } = this.state;
 
     const adConfig = adTargetConfig({
       sectionName: section.name,
@@ -157,7 +151,6 @@ class SectionPage extends Component {
           publicationName,
           recentlyOpenedPuzzleCount,
           savedArticles,
-          readArticles,
         }}
       >
         <RemoteConfigProvider config={remoteConfig}>

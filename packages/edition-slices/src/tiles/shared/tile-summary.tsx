@@ -6,7 +6,6 @@ import {
   Markup,
   Tile,
 } from "@times-components-native/fixture-generator/src/types";
-import { SectionContext } from "@times-components-native/context";
 import { ResponsiveContext } from "@times-components-native/responsive";
 
 interface Props {
@@ -59,35 +58,30 @@ const TileSummary: React.FC<Props> = ({
   return (
     <ResponsiveContext.Consumer>
       {({ isTablet }) => (
-        <SectionContext.Consumer>
-          {({ readArticles }) => (
-            <ArticleSummary
-              isTablet={isTablet}
-              readArticles={readArticles}
-              bylines={bylines}
-              bylineStyle={bylineStyle}
-              bylineOnTop={bylineOnTop}
-              flagColour={flagColour}
-              flagsStyle={flagsStyle}
-              headlineStyle={headlineStyle}
-              labelColour={labelColour}
-              linesOfTeaserToRender={linesOfTeaserToRender}
-              strapline={strapline}
-              straplineStyle={straplineStyle}
-              style={style}
-              summary={summary}
-              summaryStyle={summaryStyle}
-              tile={tile}
-              withStar={withStar}
-              whiteSpaceHeight={whiteSpaceHeight}
-              underneathTextStar={underneathTextStar}
-              centeredStar={centeredStar}
-              isDarkStar={isDarkStar}
-              starStyle={starStyle}
-              hideLabel={hideLabel}
-            />
-          )}
-        </SectionContext.Consumer>
+        <ArticleSummary
+          isTablet={isTablet}
+          bylines={bylines}
+          bylineStyle={bylineStyle}
+          bylineOnTop={bylineOnTop}
+          flagColour={flagColour}
+          flagsStyle={flagsStyle}
+          headlineStyle={headlineStyle}
+          labelColour={labelColour}
+          linesOfTeaserToRender={linesOfTeaserToRender}
+          strapline={strapline}
+          straplineStyle={straplineStyle}
+          style={style}
+          summary={summary}
+          summaryStyle={summaryStyle}
+          tile={tile}
+          withStar={withStar}
+          whiteSpaceHeight={whiteSpaceHeight}
+          underneathTextStar={underneathTextStar}
+          centeredStar={centeredStar}
+          isDarkStar={isDarkStar}
+          starStyle={starStyle}
+          hideLabel={hideLabel}
+        />
       )}
     </ResponsiveContext.Consumer>
   );

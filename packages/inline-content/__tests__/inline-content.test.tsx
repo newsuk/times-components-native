@@ -21,6 +21,15 @@ jest.mock("@times-components-native/ad", () => "Ad");
 jest.mock("@times-components-native/article-image", () => "ArticleImage");
 jest.mock("@times-components-native/pull-quote", () => "PullQuote");
 
+// eslint-disable-next-line global-require
+jest.mock("react-native", () => {
+  const rn = require.requireActual("react-native");
+  rn.NativeModules.ArticleEvents = {
+    addListener: jest.fn(),
+  };
+  return rn;
+});
+
 export const createParagraphWithText = (text: string): ParagraphContent => ({
   name: "paragraph",
   children: [{ name: "text", children: [], attributes: { value: text } }],

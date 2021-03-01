@@ -188,16 +188,6 @@ export default () => {
         expect(testInstance.toJSON()).toMatchSnapshot();
       },
     },
-    {
-      name: "onArticleRead is called after 6 seconds",
-      async test() {
-        const onArticleRead = jest.fn();
-        TestRenderer.create(renderArticle({ onArticleRead }));
-        expect(onArticleRead).not.toHaveBeenCalled();
-        jest.advanceTimersByTime(6000);
-        expect(onArticleRead).toHaveBeenCalledTimes(1);
-      },
-    },
   ];
 
   shared(TestRenderer.create, tests);

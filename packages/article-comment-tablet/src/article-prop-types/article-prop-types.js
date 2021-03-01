@@ -9,6 +9,7 @@ const articlePropTypes = {
   adConfig: PropTypes.shape({}).isRequired,
   adPosition: PropTypes.number,
   interactiveConfig: PropTypes.shape({}),
+  onArticleRead: PropTypes.func.isRequired,
   onAuthorPress: PropTypes.func.isRequired,
   onCommentGuidelinesPress: PropTypes.func.isRequired,
   onCommentsPress: PropTypes.func.isRequired,
