@@ -7,12 +7,22 @@ import ArticleListItemSeparator from "@times-components-native/article-list/src/
 
 export interface SearchListProps {
   hits: Hit[];
-  emptyStateMessage: string;
   onArticlePress: (url: string) => void;
   fetchMore: () => void;
 }
 
-const SearchList: FC<SearchListProps> = ({ hits, onArticlePress }) => {
+const SearchList: FC<SearchListProps> = ({
+  hits,
+  onArticlePress,
+  fetchMore,
+}) => {
+  const handleFetchMore = () => {
+    // Workaround for iOS Flatlist bug (https://github.com/facebook/react-native/issues/16067)
+    if (hits.length > 0) {
+      return fetchMore();
+    }
+  };
+
   return (
     <FlatList
       data={hits}
@@ -23,6 +33,8 @@ const SearchList: FC<SearchListProps> = ({ hits, onArticlePress }) => {
       ListEmptyComponent={
         <ArticleListEmptyState message="There were no results for your search term" />
       }
+      nestedScrollEnabled
+      onEndReached={handleFetchMore}
     />
   );
 };

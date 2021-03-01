@@ -11,6 +11,7 @@ import styleguide, { tabletWidth } from "@times-components-native/styleguide";
 import Link from "@times-components-native/link";
 import Highlight from "@times-components-native/search/src/hightlights/hightlight";
 import FormattedDate from "@times-components-native/search/src/search-list/formatted-date";
+import SearchListItemByline from "@times-components-native/search/src/search-list/search-list-item-byline";
 
 export interface SearchListItemProps {
   item: Hit;
@@ -19,7 +20,7 @@ export interface SearchListItemProps {
 
 const SearchListItem: FC<SearchListItemProps> = ({ item, onItemPress }) => {
   const { headline, shortHeadline, url } = item;
-  console.log("item", item.section, item.label);
+
   return (
     <ResponsiveContext.Consumer>
       {({ isTablet }) => (
@@ -41,7 +42,7 @@ const SearchListItem: FC<SearchListItemProps> = ({ item, onItemPress }) => {
                   colours.section.default
                 }
               />
-              {/* @TODO: Add Byline!*/}
+              <SearchListItemByline byline={item.byline} />
               <ArticleSummaryHeadline
                 headline={getHeadline(headline, shortHeadline)}
               />
@@ -83,6 +84,10 @@ const styles = StyleSheet.create({
     paddingHorizontal: spacing(2),
     flexDirection: "row",
     justifyContent: "center",
+  },
+  byLineContainer: {
+    marginTop: spacing(1),
+    marginBottom: spacing(2),
   },
 });
 
