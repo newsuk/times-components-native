@@ -138,9 +138,6 @@ const ArticleWithContent = (props) => {
       articleReadDelay = setTimeout(() => {
         setArticleRead();
       }, articleReadTimerDuration);
-      return () => {
-        clearTimeout(articleReadDelay);
-      };
     } else clearTimeout(articleReadDelay);
   };
 
@@ -157,7 +154,6 @@ const ArticleWithContent = (props) => {
   const setArticleRead = () => {
     if (hasBeenRead) return;
     hasBeenRead = true;
-    console.log("SET ARTICLE READ", data.url);
     onArticleRead && onArticleRead(data.id);
   };
 

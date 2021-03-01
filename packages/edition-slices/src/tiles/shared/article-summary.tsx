@@ -78,10 +78,12 @@ export const getArticleReadState = (
   readArticles: Array<ArticleRead> | null,
   articleId: string,
 ): ArticleReadState => ({
-  read: isTablet && !!readArticles?.some((obj) => obj.id === articleId),
+  read:
+    isTablet && (readArticles?.some((obj) => obj.id === articleId) ?? false),
   animate:
     isTablet &&
-    !!readArticles?.some((obj) => obj.highlight && obj.id === articleId),
+    (readArticles?.some((obj) => obj.highlight && obj.id === articleId) ??
+      false),
 });
 
 export const MarkAsRead = ({
@@ -166,19 +168,15 @@ const ArticleSummary: React.FC<Props> = ({
   });
 
   useEffect(() => {
-    const updateReadArticlesEventsListener = sectionEventEmitter.addListener(
-      "updateReadArticles",
-      updateReadArticles,
-    );
-    return () => {
-      updateReadArticlesEventsListener.remove();
-    };
+    sectionEventEmitter.addListener("updateReadArticles", updateReadArticles);
   }, []);
 
-  const updateReadArticles = (readArticles: [ArticleRead]) =>
+  const updateReadArticles = (readArticles: ArticleRead[]) =>
     setArticleReadState(getArticleReadState(isTablet, readArticles, id));
 
   useEffect(() => {
+    if (!articleReadState.animate) return;
+
     Animated.parallel([
       Animated.timing(standardOpacity, {
         ...sharedTimingConfig,
@@ -193,7 +191,7 @@ const ArticleSummary: React.FC<Props> = ({
         toValue: articleReadOpacity.summary,
       }),
     ]).start();
-  }, [articleReadState]);
+  }, [articleReadState.animate]);
 
   const renderContent = (articleReadState: ArticleReadState) => (
     <MarkAsRead
