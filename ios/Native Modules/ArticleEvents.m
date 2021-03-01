@@ -8,11 +8,17 @@
 
 #import <Foundation/Foundation.h>
 #import <React/RCTBridgeModule.h>
+#import <React/RCTEventEmitter.h>
 
-@interface ArticleEvents : NSObject <RCTBridgeModule>
+
+@interface ArticleEvents : RCTEventEmitter <RCTBridgeModule>
 @end
 
 @implementation ArticleEvents
+
+-(NSArray<NSString *> *)supportedEvents {
+    return @[@"onArticleFocus"];
+}
 
 RCT_EXPORT_MODULE();
 
@@ -54,5 +60,10 @@ RCT_EXPORT_METHOD(onCommentsPress:(NSString *) articleId url:(NSString *) url)
 RCT_EXPORT_METHOD(onCommentGuidelinesPress)
 {
   NSLog(@"onCommentGuidelinesPress");
+}
+
+RCT_EXPORT_METHOD(onArticleRead: (NSString *) id)
+{
+  NSLog(@"onArticleRead %@", id);
 }
 @end

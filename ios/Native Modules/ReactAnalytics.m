@@ -16,7 +16,7 @@
 
 RCT_EXPORT_MODULE();
 
-RCT_EXPORT_METHOD(track:(NSString *) data)
+RCT_EXPORT_METHOD(track:(NSDictionary *) data)
 {
   NSLog(@"track %@", data);
 }
