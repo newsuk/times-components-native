@@ -21,7 +21,7 @@ const ArticleHeader = ({
   flags,
   hasVideo,
   headline,
-  isTablet,
+  isArticleTablet,
   label,
   longRead,
   onAuthorPress,
@@ -31,9 +31,14 @@ const ArticleHeader = ({
 }) => (
   <Context.Consumer>
     {({ theme: { headlineFont, headlineCase } }) => (
-      <View style={[styles.container, isTablet && styles.containerTablet]}>
+      <View
+        style={[styles.container, isArticleTablet && styles.containerTablet]}
+      >
         <View
-          style={[styles.authorImage, isTablet && styles.authorImageTablet]}
+          style={[
+            styles.authorImage,
+            isArticleTablet && styles.authorImageTablet,
+          ]}
         >
           <ModalImage aspectRatio={1} uri={authorImage} rounded />
         </View>
@@ -44,7 +49,7 @@ const ArticleHeader = ({
             {
               ...fontFactory({
                 font: headlineFont || "headline",
-                fontSize: isTablet ? "pageHeadline" : "headline",
+                fontSize: isArticleTablet ? "pageHeadline" : "headline",
               }),
             },
             headlineCase ? { textTransform: headlineCase } : null,
@@ -57,7 +62,7 @@ const ArticleHeader = ({
         <Meta
           bylines={bylines}
           hasElementsAbove={flags.length > 0 || standfirst}
-          isTablet={isTablet}
+          isArticleTablet={isArticleTablet}
           onAuthorPress={onAuthorPress}
           publicationName={publicationName}
           publishedTime={publishedTime}

@@ -4,14 +4,14 @@ import { colours } from "@times-components-native/styleguide";
 const articleLabelPropTypes = {
   color: PropTypes.string,
   isVideo: PropTypes.bool,
-  isTablet: PropTypes.bool,
+  isArticleTablet: PropTypes.bool,
   label: PropTypes.string,
 };
 
 const articleLabelDefaultProps = {
   color: colours.section.default,
   isVideo: false,
-  isTablet: false,
+  isArticleTablet: false,
   label: null,
 };
 

@@ -10,7 +10,7 @@ import { defaultProps, propTypes } from "./article-meta-prop-types";
 import styles from "../styles/article-meta";
 
 function ArticleMeta({
-  isTablet,
+  isArticleTablet,
   bylines,
   publicationName,
   publishedTime,
@@ -20,7 +20,9 @@ function ArticleMeta({
   articleId,
 }) {
   return (
-    <View style={[styles.articleMeta, isTablet && styles.articleMetaTablet]}>
+    <View
+      style={[styles.articleMeta, isArticleTablet && styles.articleMetaTablet]}
+    >
       {hasBylineData(bylines) && (
         <View style={styles.articleMetaElementWithBorder}>
           <View style={styles.datePublication}>

@@ -14,12 +14,12 @@ import styles from "../styles";
 
 const ArticleMeta = ({
   bylines,
-  isTablet,
+  isArticleTablet,
   onAuthorPress,
   publicationName,
   publishedTime,
 }) => (
-  <View style={isTablet && styles.metaContainerTabletFlow}>
+  <View style={isArticleTablet && styles.metaContainerTabletFlow}>
     {hasBylineData(bylines) && (
       <Fragment>
         <View style={styles.meta}>
@@ -34,14 +34,14 @@ const ArticleMeta = ({
             )}
           </Context.Consumer>
         </View>
-        {isTablet && <View style={styles.separator} />}
+        {isArticleTablet && <View style={styles.separator} />}
       </Fragment>
     )}
     <View style={styles.meta}>
       <Text
         style={[
           styles.datePublication,
-          isTablet && styles.datePulicationTablet,
+          isArticleTablet && styles.datePulicationTablet,
         ]}
       >
         <DatePublication date={publishedTime} publication={publicationName} />

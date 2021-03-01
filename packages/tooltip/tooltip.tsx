@@ -35,7 +35,7 @@ const Tooltip: React.FC<TooltipProps> = ({
   width = 256,
   articleId,
 }) => {
-  const { isTablet } = useResponsiveContext();
+  const { isArticleTablet } = useResponsiveContext();
   const [opacity] = useState(new Animated.Value(1));
   const ViewportAwareView = Viewport.Aware(View);
 
@@ -67,13 +67,13 @@ const Tooltip: React.FC<TooltipProps> = ({
     </TouchableOpacity>
   );
 
-  if (isTablet && displayedInView && onTooltipPresented) {
+  if (isArticleTablet && displayedInView && onTooltipPresented) {
     onTooltipPresented(type, articleId);
   }
 
   return (
     <View style={styles.wrapper}>
-      {tooltips.includes(type) && isTablet && (
+      {tooltips.includes(type) && isArticleTablet && (
         <ViewportAwareView
           testID="viewportAwareView"
           onViewportEnter={() => {

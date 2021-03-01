@@ -63,7 +63,22 @@ const Section: FC<Props> = ({
   section,
 }) => {
   const { cover, name, slices, title: sectionTitle } = section;
-  const { isTablet, editionBreakpoint, orientation } = useResponsiveContext();
+  const {
+    isTablet,
+    editionBreakpoint,
+    orientation,
+    windowWidth,
+    windowHeight,
+  } = useResponsiveContext();
+
+  console.log(
+    "GHKSLDGHKSDLGHSDLGSDKLGSKLDGSKDLGJDSKJKSDJLKDS22222222233333333444444444",
+    isTablet,
+    editionBreakpoint,
+    orientation,
+    windowWidth,
+    windowHeight,
+  );
 
   const flatListRef = useRef<FlatList>(null);
   const sliceOffsets = useRef<Record<string, number>>({});
@@ -108,6 +123,7 @@ const Section: FC<Props> = ({
   }, []);
 
   const getHeaderComponent = (isPuzzle: boolean, isMagazine: boolean) => {
+    console.log("456745685760457605476054764576095qwrewrrwerew", isMagazine);
     if (isPuzzle) return <PuzzleBar onPress={onPuzzleBarPress} />;
 
     if (isMagazine) return <MagazineCover cover={cover} />;

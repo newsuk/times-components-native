@@ -5,9 +5,9 @@ import propTypes from "./key-facts-shared-prop-types";
 import styles from "./styles";
 
 const KeyFactsContainer = ({ children }) => {
-  const { isTablet } = useResponsiveContext();
+  const { isArticleTablet } = useResponsiveContext();
   return (
-    <View style={[styles.container, isTablet && styles.containerTablet]}>
+    <View style={[styles.container, isArticleTablet && styles.containerTablet]}>
       {children}
     </View>
   );

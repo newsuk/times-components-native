@@ -17,7 +17,7 @@ import styles from "../styles";
 const ArticleHeader = ({
   bylines,
   flags,
-  isTablet,
+  isArticleTablet,
   hasVideo,
   headline,
   label,
@@ -31,7 +31,9 @@ const ArticleHeader = ({
 }) => (
   <Context.Consumer>
     {({ theme: { headlineFont, headlineCase } }) => (
-      <View style={[styles.container, isTablet && styles.tabletContainer]}>
+      <View
+        style={[styles.container, isArticleTablet && styles.tabletContainer]}
+      >
         <Label isVideo={hasVideo} label={label} />
         <Text
           style={[
@@ -39,7 +41,7 @@ const ArticleHeader = ({
             {
               ...fontFactory({
                 font: headlineFont || "headline",
-                fontSize: isTablet ? "pageHeadline" : "headline",
+                fontSize: isArticleTablet ? "pageHeadline" : "headline",
               }),
             },
             headlineCase ? { textTransform: headlineCase } : null,
@@ -51,7 +53,7 @@ const ArticleHeader = ({
         <Standfirst standfirst={standfirst} />
         <Meta
           bylines={bylines}
-          isTablet={isTablet}
+          isArticleTablet={isArticleTablet}
           onAuthorPress={onAuthorPress}
           onTooltipPresented={onTooltipPresented}
           publicationName={publicationName}

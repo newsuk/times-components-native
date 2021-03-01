@@ -175,15 +175,18 @@ const ModalImage: FC<ModalImageProps> = ({
       >
         <View style={styles.modal}>
           <ResponsiveContext.Consumer>
-            {({ isTablet }) => (
+            {({ isArticleTablet }) => (
               <Fragment>
                 <SafeAreaView
                   style={[
                     styles.buttonContainer,
-                    isTablet && styles.buttonContainerTablet,
+                    isArticleTablet && styles.buttonContainerTablet,
                   ]}
                 >
-                  <CloseButton isTablet={isTablet} onPress={hideModal} />
+                  <CloseButton
+                    isArticleTablet={isArticleTablet}
+                    onPress={hideModal}
+                  />
                 </SafeAreaView>
                 <ImageViewer
                   imageUrls={images}
@@ -202,7 +205,7 @@ const ModalImage: FC<ModalImageProps> = ({
                   style={styles.bottomSafeView}
                 >
                   <ModalCaption
-                    isTablet={isTablet}
+                    isArticleTablet={isArticleTablet}
                     text={images[currentIndex]?.caption || ""}
                     credits={images[currentIndex]?.credits || ""}
                   />

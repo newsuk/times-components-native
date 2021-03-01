@@ -16,16 +16,21 @@ const Separator = () => <View style={styles.separator} />;
 
 const ArticleMeta = ({
   bylines,
-  isTablet,
+  isArticleTablet,
   onAuthorPress,
   onTooltipPresented,
   publicationName,
   publishedTime,
   tooltips,
 }) => (
-  <View style={[styles.metaContainer, isTablet && styles.metaContainerTablet]}>
+  <View
+    style={[
+      styles.metaContainer,
+      isArticleTablet && styles.metaContainerTablet,
+    ]}
+  >
     {hasBylineData(bylines) && (
-      <View style={[styles.meta, isTablet && styles.metaTablet]}>
+      <View style={[styles.meta, isArticleTablet && styles.metaTablet]}>
         <Context.Consumer>
           {({ theme: { sectionColour } }) => (
             <ArticleBylineWithLinks
@@ -42,12 +47,12 @@ const ArticleMeta = ({
         </Context.Consumer>
       </View>
     )}
-    {isTablet ? <Separator /> : null}
-    <View style={[styles.meta, isTablet && styles.metaTablet]}>
+    {isArticleTablet ? <Separator /> : null}
+    <View style={[styles.meta, isArticleTablet && styles.metaTablet]}>
       <Text
         style={[
           styles.datePublication,
-          isTablet && styles.datePublicationTablet,
+          isArticleTablet && styles.datePublicationTablet,
         ]}
       >
         <DatePublication date={publishedTime} publication={publicationName} />

@@ -27,10 +27,12 @@ const ArticleHeader = ({
   publishedTime,
   standfirst,
 }) => {
-  const { isTablet } = useResponsiveContext();
+  const { isArticleTablet } = useResponsiveContext();
   return (
-    <View style={[styles.header, isTablet && styles.headerTablet]}>
-      <View style={[styles.container, isTablet && styles.containerTablet]}>
+    <View style={[styles.header, isArticleTablet && styles.headerTablet]}>
+      <View
+        style={[styles.container, isArticleTablet && styles.containerTablet]}
+      >
         <ModalImage
           aspectRatio={1}
           imageStyles={styles.authorImage}
@@ -43,7 +45,7 @@ const ArticleHeader = ({
         <Text
           style={[
             styles.articleHeadline,
-            isTablet && styles.articleHeadlineTablet,
+            isArticleTablet && styles.articleHeadlineTablet,
           ]}
         >
           {headline}
@@ -53,7 +55,7 @@ const ArticleHeader = ({
         <Meta
           bylines={bylines}
           hasStandfirst={standfirst}
-          isTablet={isTablet}
+          isArticleTablet={isArticleTablet}
           onAuthorPress={onAuthorPress}
           publicationName={publicationName}
           publishedTime={publishedTime}

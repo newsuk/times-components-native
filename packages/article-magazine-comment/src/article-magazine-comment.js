@@ -52,7 +52,7 @@ class ArticleMagazineComment extends Component {
 
     return (
       <ResponsiveContext.Consumer>
-        {({ isTablet }) => (
+        {({ isArticleTablet }) => (
           <Fragment>
             <ArticleHeader
               authorImage={authorImage}
@@ -60,7 +60,7 @@ class ArticleMagazineComment extends Component {
               flags={expirableFlags}
               hasVideo={hasVideo}
               headline={getHeadline(headline, shortHeadline)}
-              isTablet={isTablet}
+              isArticleTablet={isArticleTablet}
               label={label}
               longRead={longRead}
               onAuthorPress={onAuthorPress}
@@ -76,7 +76,7 @@ class ArticleMagazineComment extends Component {
               renderCaption={({ caption }) => <CentredCaption {...caption} />}
               style={[
                 styles.leadAssetContainer,
-                isTablet && styles.leadAssetContainerTablet,
+                isArticleTablet && styles.leadAssetContainerTablet,
               ]}
               width={Math.min(width, tabletWidth)}
             />
@@ -120,7 +120,7 @@ class ArticleMagazineComment extends Component {
 
     return (
       <ResponsiveContext.Consumer>
-        {({ isTablet }) => (
+        {({ isArticleTablet }) => (
           <Context.Consumer>
             {({ theme: { scale, dropCapFont } }) => (
               <ArticleSkeleton
@@ -129,7 +129,7 @@ class ArticleMagazineComment extends Component {
                 data={article}
                 Header={this.renderHeader}
                 interactiveConfig={interactiveConfig}
-                isTablet={isTablet}
+                isArticleTablet={isArticleTablet}
                 dropCapFont={dropCapFont}
                 onArticleRead={onArticleRead}
                 onAuthorPress={onAuthorPress}

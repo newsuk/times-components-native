@@ -93,7 +93,7 @@ class ArticlePage extends Component {
 
     return (
       <ResponsiveContext.Consumer>
-        {({ isTablet }) => (
+        {({ isArticleTablet }) => (
           <Context.Consumer>
             {({ theme: { scale, dropCapFont } }) => (
               <ArticleSkeleton
@@ -103,7 +103,7 @@ class ArticlePage extends Component {
                 dropCapFont={dropCapFont}
                 Header={this.renderHeader}
                 interactiveConfig={interactiveConfig}
-                isTablet={isTablet}
+                isArticleTablet={isArticleTablet}
                 onArticleRead={onArticleRead}
                 onAuthorPress={onAuthorPress}
                 onCommentGuidelinesPress={onCommentGuidelinesPress}

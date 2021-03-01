@@ -22,10 +22,11 @@ const ArticleTopic = ({
 }) => {
   const fontSizeStyle = fontSize ? { fontSize } : null;
   const lineHeightStyle = lineHeight ? { lineHeight } : null;
-  const { isTablet } = useResponsiveContext();
+  const { isArticleTablet } = useResponsiveContext();
 
   const tooltipType = "topics";
-  const showTooltip = isTablet && index === 0 && tooltips.includes(tooltipType);
+  const showTooltip =
+    isArticleTablet && index === 0 && tooltips.includes(tooltipType);
   const [isHighlighted, setIsHighlighted] = useState(showTooltip);
 
   const unhighlightTopic = () => {

@@ -13,14 +13,14 @@ const ShowTopics = ({
   tooltips,
   articleId,
 }) => {
-  const { isTablet, narrowArticleBreakpoint } = useResponsiveContext();
+  const { isArticleTablet, narrowArticleBreakpoint } = useResponsiveContext();
 
   if (topics && topics.length > 0) {
     return (
       <View
         style={[
           styles.topicsContainer,
-          isTablet && styles.topicsContainerTablet,
+          isArticleTablet && styles.topicsContainerTablet,
           narrowContent &&
             styles.narrow && {
               maxWidth: narrowArticleBreakpoint.content,

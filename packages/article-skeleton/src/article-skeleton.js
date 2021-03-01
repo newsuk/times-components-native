@@ -49,7 +49,7 @@ const MemoisedArticle = React.memo((props) => {
     onTooltipPresented,
     onRelatedArticlePress,
     onTopicPress,
-    isTablet,
+    isArticleTablet,
     narrowContent,
     tooltips,
   } = props;
@@ -80,7 +80,7 @@ const MemoisedArticle = React.memo((props) => {
     const fixedContentMemo = [...fixup(props), { name: "footer" }];
     const imagesMemo = getAllImages(template, leadAsset, fixedContentMemo);
     return [fixedContentMemo, imagesMemo];
-  }, [content, isTablet]);
+  }, [content, isArticleTablet]);
 
   const renderChild = render(getRenderers({ ...props, images }));
 

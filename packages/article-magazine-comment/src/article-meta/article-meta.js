@@ -14,7 +14,7 @@ const Separator = () => <View style={styles.separator} />;
 
 const ArticleMeta = ({
   bylines,
-  isTablet,
+  isArticleTablet,
   hasElementsAbove,
   onAuthorPress,
   publicationName,
@@ -24,20 +24,20 @@ const ArticleMeta = ({
     style={[
       styles.metaContainer,
       !hasElementsAbove && styles.metaSpacer,
-      isTablet && styles.metaContainerTablet,
+      isArticleTablet && styles.metaContainerTablet,
     ]}
   >
     {hasBylineData(bylines) && (
-      <View style={[styles.meta, isTablet && styles.metaTablet]}>
+      <View style={[styles.meta, isArticleTablet && styles.metaTablet]}>
         <ArticleBylineWithLinks ast={bylines} onAuthorPress={onAuthorPress} />
       </View>
     )}
-    {isTablet ? <Separator /> : null}
-    <View style={[styles.meta, isTablet && styles.metaTablet]}>
+    {isArticleTablet ? <Separator /> : null}
+    <View style={[styles.meta, isArticleTablet && styles.metaTablet]}>
       <Text
         style={[
           styles.datePublication,
-          isTablet && styles.datePublicationTablet,
+          isArticleTablet && styles.datePublicationTablet,
         ]}
       >
         <DatePublication date={publishedTime} publication={publicationName} />

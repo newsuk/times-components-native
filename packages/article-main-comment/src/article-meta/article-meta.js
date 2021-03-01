@@ -15,7 +15,7 @@ const Separator = () => <View style={styles.separator} />;
 const ArticleMeta = ({
   bylines,
   hasStandfirst,
-  isTablet,
+  isArticleTablet,
   onAuthorPress,
   publicationName,
   publishedTime,
@@ -24,7 +24,7 @@ const ArticleMeta = ({
     style={[
       styles.metaContainer,
       !hasStandfirst && styles.metaFlagSpacer,
-      isTablet && styles.metaContainerTablet,
+      isArticleTablet && styles.metaContainerTablet,
     ]}
   >
     {hasBylineData(bylines) && (
@@ -34,12 +34,12 @@ const ArticleMeta = ({
         </View>
       </Fragment>
     )}
-    {isTablet ? <Separator /> : null}
+    {isArticleTablet ? <Separator /> : null}
     <View style={styles.meta}>
       <Text
         style={[
           styles.datePublication,
-          isTablet && styles.datePublicationTablet,
+          isArticleTablet && styles.datePublicationTablet,
         ]}
       >
         <DatePublication date={publishedTime} publication={publicationName} />
