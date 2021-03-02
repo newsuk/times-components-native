@@ -6,6 +6,7 @@ import {
 } from "@times-components-native/styleguide";
 
 const tabletPaddingHorizontalResolver = {
+  [editionBreakpoints.small]: 0,
   [editionBreakpoints.medium]: spacing(2),
   [editionBreakpoints.wide]: spacing(6),
   [editionBreakpoints.huge]: spacing(2),

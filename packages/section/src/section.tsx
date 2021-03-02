@@ -123,7 +123,6 @@ const Section: FC<Props> = ({
   }, []);
 
   const getHeaderComponent = (isPuzzle: boolean, isMagazine: boolean) => {
-    console.log("456745685760457605476054764576095qwrewrrwerew", isMagazine);
     if (isPuzzle) return <PuzzleBar onPress={onPuzzleBarPress} />;
 
     if (isMagazine) return <MagazineCover cover={cover} />;

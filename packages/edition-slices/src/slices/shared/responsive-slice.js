@@ -38,6 +38,11 @@ const ResponsiveSlice = ({
         </Gutter>
       );
     case editionBreakpoints.small:
+      return (
+        <Gutter grow={grow}>
+          {renderMedium(editionBreakpoints.medium, orientation)}
+        </Gutter>
+      );
     default:
       return <>{renderSmall(editionBreakpoint, orientation)}</>;
   }
