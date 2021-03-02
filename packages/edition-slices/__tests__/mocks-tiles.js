@@ -1,4 +1,3 @@
-import { mockNativeModules } from "@times-components-native/mocks";
 jest.mock("@times-components-native/article-flag", () => ({
   ArticleFlags: "ArticleFlags",
 }));
@@ -9,4 +8,3 @@ jest.mock("@times-components-native/article-label", () => "ArticleLabel");
 jest.mock("@times-components-native/front-page", () => ({
   FrontTileSummary: "FrontTileSummary",
 }));
-mockNativeModules();
