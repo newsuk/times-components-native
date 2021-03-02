@@ -206,6 +206,7 @@ class DOMContext extends PureComponent {
     const { loaded } = this.state;
 
     return (
+      // Note that this ViewportAwareView must be contained by a Viewport.Tracker to work properly
       <ViewportAwareView
         onViewportEnter={this.loadAd}
         style={{
