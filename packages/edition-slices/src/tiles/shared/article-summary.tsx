@@ -2,6 +2,8 @@ import React, { useEffect, useState, ReactNode } from "react";
 import {
   Animated,
   Platform,
+  NativeEventEmitter,
+  NativeModules,
   StyleProp,
   TextStyle,
   ViewStyle,
@@ -25,6 +27,9 @@ import {
   ARTICLE_READ_ANIMATION,
 } from "@times-components-native/styleguide/index";
 import PositionedTileStar from "./positioned-tile-star";
+
+const { SectionEvents } = NativeModules;
+const sectionEventEmitter = new NativeEventEmitter(SectionEvents);
 
 type ArticleRead = {
   id: string;
@@ -63,11 +68,23 @@ interface Props {
   centeredStar?: boolean;
   isDarkStar?: boolean;
   isTablet: boolean;
-  readArticles: [ArticleRead] | null;
   starStyle?: StyleProp<ViewStyle>;
   hideLabel?: boolean;
   whiteSpaceHeight?: number;
 }
+
+export const getArticleReadState = (
+  isTablet: boolean,
+  readArticles: Array<ArticleRead> | null,
+  articleId: string,
+): ArticleReadState => ({
+  read:
+    isTablet && (readArticles?.some((obj) => obj.id === articleId) ?? false),
+  animate:
+    isTablet &&
+    (readArticles?.some((obj) => obj.highlight && obj.id === articleId) ??
+      false),
+});
 
 export const MarkAsRead = ({
   children,
@@ -106,7 +123,6 @@ const ArticleSummary: React.FC<Props> = ({
   style,
   summary,
   summaryStyle,
-  readArticles,
   tile,
   withStar = true,
   whiteSpaceHeight,
@@ -131,10 +147,6 @@ const ArticleSummary: React.FC<Props> = ({
     },
   } = tile;
 
-  const [standardOpacity] = useState(new Animated.Value(1));
-  const [straplineOpacity] = useState(new Animated.Value(1));
-  const [summaryOpacity] = useState(new Animated.Value(1));
-
   const sharedTimingConfig = {
     delay: ARTICLE_READ_ANIMATION.DELAY,
     duration: ARTICLE_READ_ANIMATION.DURATION,
@@ -146,20 +158,25 @@ const ArticleSummary: React.FC<Props> = ({
     summary: 0.7,
   };
 
-  const getArticleReadState = (
-    isTablet: boolean,
-    readArticles: Array<ArticleRead> | null,
-    articleId: string,
-  ): ArticleReadState => ({
-    read: isTablet && !!readArticles?.some((obj) => obj.id === articleId),
-    animate:
-      isTablet &&
-      !!readArticles?.some((obj) => obj.highlight && obj.id === articleId),
+  const [standardOpacity] = useState(new Animated.Value(1));
+  const [straplineOpacity] = useState(new Animated.Value(1));
+  const [summaryOpacity] = useState(new Animated.Value(1));
+
+  const [articleReadState, setArticleReadState] = useState({
+    read: false,
+    animate: false,
   });
 
-  const articleReadState = getArticleReadState(isTablet, readArticles, id);
+  useEffect(() => {
+    sectionEventEmitter.addListener("updateReadArticles", updateReadArticles);
+  }, []);
+
+  const updateReadArticles = (readArticles: ArticleRead[]) =>
+    setArticleReadState(getArticleReadState(isTablet, readArticles, id));
 
   useEffect(() => {
+    if (!articleReadState.animate) return;
+
     Animated.parallel([
       Animated.timing(standardOpacity, {
         ...sharedTimingConfig,
@@ -174,7 +191,7 @@ const ArticleSummary: React.FC<Props> = ({
         toValue: articleReadOpacity.summary,
       }),
     ]).start();
-  }, [articleReadState]);
+  }, [articleReadState.animate]);
 
   const renderContent = (articleReadState: ArticleReadState) => (
     <MarkAsRead
