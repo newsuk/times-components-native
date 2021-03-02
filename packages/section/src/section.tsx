@@ -28,6 +28,7 @@ import {
 import { OnArticlePress } from "@times-components-native/types";
 import { SectionTitles } from "./utils/sectionConfigs";
 import { Orientation } from "@times-components-native/responsive/src/context";
+// @ts-ignore
 import { Viewport } from "@skele/components";
 
 const styles = styleFactory();
