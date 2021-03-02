@@ -2,8 +2,6 @@ import React, { useEffect, useState, ReactNode } from "react";
 import {
   Animated,
   Platform,
-  NativeEventEmitter,
-  NativeModules,
   StyleProp,
   TextStyle,
   ViewStyle,
@@ -27,9 +25,6 @@ import {
   ARTICLE_READ_ANIMATION,
 } from "@times-components-native/styleguide/index";
 import PositionedTileStar from "./positioned-tile-star";
-
-const { SectionEvents } = NativeModules;
-const sectionEventEmitter = new NativeEventEmitter(SectionEvents);
 
 type ArticleRead = {
   id: string;
@@ -57,6 +52,7 @@ interface Props {
   headlineStyle?: StyleProp<TextStyle>;
   labelColour?: string;
   linesOfTeaserToRender?: number;
+  readArticles: ArticleRead[] | null;
   strapline?: string;
   straplineStyle?: StyleProp<ViewStyle>;
   style?: StyleProp<ViewStyle>;
@@ -118,6 +114,7 @@ const ArticleSummary: React.FC<Props> = ({
   headlineStyle,
   labelColour,
   linesOfTeaserToRender,
+  readArticles,
   strapline,
   straplineStyle,
   style,
@@ -162,17 +159,7 @@ const ArticleSummary: React.FC<Props> = ({
   const [straplineOpacity] = useState(new Animated.Value(1));
   const [summaryOpacity] = useState(new Animated.Value(1));
 
-  const [articleReadState, setArticleReadState] = useState({
-    read: false,
-    animate: false,
-  });
-
-  useEffect(() => {
-    sectionEventEmitter.addListener("updateReadArticles", updateReadArticles);
-  }, []);
-
-  const updateReadArticles = (readArticles: ArticleRead[]) =>
-    setArticleReadState(getArticleReadState(isTablet, readArticles, id));
+  const articleReadState = getArticleReadState(isTablet, readArticles, id);
 
   useEffect(() => {
     if (!articleReadState.animate) return;
