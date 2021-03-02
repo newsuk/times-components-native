@@ -28,7 +28,7 @@ import {
 import { OnArticlePress } from "@times-components-native/types";
 import { SectionTitles } from "./utils/sectionConfigs";
 import { Orientation } from "@times-components-native/responsive/src/context";
-import { Viewport } from "@skele/components"
+import { Viewport } from "@skele/components";
 
 const styles = styleFactory();
 const { SectionEvents } = NativeModules;
