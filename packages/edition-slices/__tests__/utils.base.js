@@ -1,4 +1,5 @@
 import { mockEditionSlice } from "@times-components-native/fixture-generator";
+import "./mocks";
 import {
   getTileImage,
   getTileSummary,

@@ -6,7 +6,6 @@ describe("pages - track sections", () => {
   it("section page view tracking calls only onSectionLoaded", () => {
     const {
       SectionEvents: { onSectionLoaded },
-      ReactAnalytics: { track },
     } = NativeModules;
 
     trackSection({
@@ -16,6 +15,5 @@ describe("pages - track sections", () => {
     });
 
     expect(onSectionLoaded).toHaveBeenCalled();
-    expect(track).toHaveBeenCalled();
   });
 });
