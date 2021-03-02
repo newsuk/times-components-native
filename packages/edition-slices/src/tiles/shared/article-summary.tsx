@@ -2,8 +2,6 @@ import React, { useEffect, useState, ReactNode } from "react";
 import {
   Animated,
   Platform,
-  NativeEventEmitter,
-  NativeModules,
   StyleProp,
   TextStyle,
   ViewStyle,
@@ -27,9 +25,6 @@ import {
   ARTICLE_READ_ANIMATION,
 } from "@times-components-native/styleguide/index";
 import PositionedTileStar from "./positioned-tile-star";
-
-const { SectionEvents } = NativeModules;
-const sectionEventEmitter = new NativeEventEmitter(SectionEvents);
 
 type ArticleRead = {
   id: string;

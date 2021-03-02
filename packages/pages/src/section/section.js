@@ -161,8 +161,6 @@ class SectionPage extends Component {
       sectionName: section.name,
     });
 
-    console.log("RENDER THE SECTION PAGE!!!!");
-
     return (
       <SectionContext.Provider
         value={{
