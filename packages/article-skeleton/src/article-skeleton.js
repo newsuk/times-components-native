@@ -154,6 +154,7 @@ const ArticleWithContent = (props) => {
   const setArticleRead = () => {
     if (hasBeenRead) return;
     hasBeenRead = true;
+    console.log("SETTING ARTICLE READ");
     onArticleRead && onArticleRead(data.id);
   };
 
