@@ -1,4 +1,4 @@
-import React, { useEffect, useState, ReactNode } from "react";
+import React, { useEffect, useRef, useState, ReactNode } from "react";
 import {
   Animated,
   Platform,
@@ -42,7 +42,6 @@ type ArticleReadState = {
 };
 
 type MarkAsReadProps = {
-  articleReadState: ArticleReadState;
   children: ReactNode;
   opacityAnimation: Animated.Value;
   opacity: number;
@@ -162,20 +161,33 @@ const ArticleSummary: React.FC<Props> = ({
   const [straplineOpacity] = useState(new Animated.Value(1));
   const [summaryOpacity] = useState(new Animated.Value(1));
 
-  const [articleReadState, setArticleReadState] = useState({
+  const articleReadState = useRef<ArticleReadState>({
     read: false,
     animate: false,
   });
 
   useEffect(() => {
-    sectionEventEmitter.addListener("updateReadArticles", updateReadArticles);
+    console.log("USE EFFECT");
+    const updateReadArticlesEmitter = sectionEventEmitter.addListener(
+      "updateReadArticles",
+      updateReadArticles,
+    );
+    return () => {
+      updateReadArticlesEmitter.remove();
+    };
   }, []);
 
-  const updateReadArticles = (readArticles: ArticleRead[]) =>
-    setArticleReadState(getArticleReadState(isTablet, readArticles, id));
+  const updateReadArticles = (readArticles: ArticleRead[]) => {
+    articleReadState.current = getArticleReadState(isTablet, readArticles, id);
+  };
 
   useEffect(() => {
-    if (!articleReadState.animate) return;
+    console.log(
+      "articleReadState.current.animate",
+      articleReadState.current.animate,
+      shortHeadline,
+    );
+    if (!articleReadState.current.animate) return;
 
     Animated.parallel([
       Animated.timing(standardOpacity, {
@@ -191,11 +203,11 @@ const ArticleSummary: React.FC<Props> = ({
         toValue: articleReadOpacity.summary,
       }),
     ]).start();
-  }, [articleReadState.animate]);
+  }, [articleReadState.current.animate]);
 
   const renderContent = (articleReadState: ArticleReadState) => (
     <MarkAsRead
-      articleReadState={articleReadState}
+      articleReadState={articleReadState.current}
       opacityAnimation={summaryOpacity}
       opacity={articleReadOpacity.summary}
     >
@@ -211,7 +223,7 @@ const ArticleSummary: React.FC<Props> = ({
 
   const renderFlags = (articleReadState: ArticleReadState) => (
     <MarkAsRead
-      articleReadState={articleReadState}
+      articleReadState={articleReadState.current}
       opacityAnimation={standardOpacity}
       opacity={articleReadOpacity.standard}
     >
@@ -236,7 +248,7 @@ const ArticleSummary: React.FC<Props> = ({
 
   const renderHeadline = (articleReadState: ArticleReadState) => (
     <MarkAsRead
-      articleReadState={articleReadState}
+      articleReadState={articleReadState.current}
       opacityAnimation={standardOpacity}
       opacity={articleReadOpacity.standard}
     >
@@ -250,7 +262,7 @@ const ArticleSummary: React.FC<Props> = ({
   const renderStrapline = (articleReadState: ArticleReadState) =>
     strapline && (
       <MarkAsRead
-        articleReadState={articleReadState}
+        articleReadState={articleReadState.current}
         opacityAnimation={straplineOpacity}
         opacity={articleReadOpacity.standard}
       >
