@@ -67,18 +67,18 @@ const Section: FC<Props> = ({
     isTablet,
     editionBreakpoint,
     orientation,
-    windowWidth,
-    windowHeight,
+    // windowWidth,
+    // windowHeight,
   } = useResponsiveContext();
 
-  console.log(
-    "GHKSLDGHKSDLGHSDLGSDKLGSKLDGSKDLGJDSKJKSDJLKDS22222222233333333444444444",
-    isTablet,
-    editionBreakpoint,
-    orientation,
-    windowWidth,
-    windowHeight,
-  );
+  // console.log(
+  //   "GHKSLDGHKSDLGHSDLGSDKLGSKLDGSKDLGJDSKJKSDJLKDS22222222233333333444444444",
+  //   isTablet,
+  //   editionBreakpoint,
+  //   orientation,
+  //   windowWidth,
+  //   windowHeight,
+  // );
 
   const flatListRef = useRef<FlatList>(null);
   const sliceOffsets = useRef<Record<string, number>>({});
