@@ -1,5 +1,3 @@
-import { mockNativeModules } from "@times-components-native/mocks";
-
 jest.mock("../src/tiles", () => {
   const tileMocks = {};
   Object.keys(require.requireActual("../src/tiles")).forEach((key) => {
@@ -24,4 +22,3 @@ jest.mock(
   "@times-components-native/in-todays-edition",
   () => "InTodaysEdition",
 );
-mockNativeModules();
