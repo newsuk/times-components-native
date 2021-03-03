@@ -210,7 +210,7 @@ const Section: FC<Props> = ({
     <>
       <Viewport.Tracker>
         <FlatList
-          ref={flatListRef}
+          ref={(ref) => (flatListRef.current = ref)}
           contentContainerStyle={
             isTablet && isPuzzle && styles.additionalContainerPadding
           }
