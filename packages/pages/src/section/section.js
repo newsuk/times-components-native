@@ -38,7 +38,7 @@ class SectionPage extends Component {
     const { section } = this.props;
     this.state = {
       recentlyOpenedPuzzleCount: props ? props.recentlyOpenedPuzzleCount : 0,
-      readArticles: props ? props.readArticles : [],
+      readArticles: [],
       savedArticles: null,
       section,
     };
@@ -47,6 +47,7 @@ class SectionPage extends Component {
     this.syncAppData = this.syncAppData.bind(this);
     this.updateSectionData = this.updateSectionData.bind(this);
     this.onArticleSavePress = this.onArticleSavePress.bind(this);
+    this.updateReadArticles = this.updateReadArticles.bind(this);
     this.isSyncing = false;
   }
 
@@ -54,6 +55,10 @@ class SectionPage extends Component {
     AppState.addEventListener("change", this.onAppStateChange);
     DeviceEventEmitter.addListener("updateSavedArticles", this.syncAppData);
     DeviceEventEmitter.addListener("updateSectionData", this.updateSectionData);
+    DeviceEventEmitter.addListener(
+      "updateReadArticles",
+      this.updateReadArticles,
+    );
     this.syncAppData();
   }
 
@@ -63,6 +68,10 @@ class SectionPage extends Component {
     DeviceEventEmitter.removeListener(
       "updateSectionData",
       this.updateSectionData,
+    );
+    DeviceEventEmitter.removeListener(
+      "updateReadArticles",
+      this.updateReadArticles,
     );
   }
 
@@ -135,11 +144,15 @@ class SectionPage extends Component {
     this.setState({ savedArticles });
   }
 
+  updateReadArticles(readArticles) {
+    this.setState({ readArticles });
+  }
+
   render() {
     const { publicationName, publishedTime, remoteConfig } = this.props;
     const {
-      recentlyOpenedPuzzleCount,
       readArticles,
+      recentlyOpenedPuzzleCount,
       savedArticles,
       section,
     } = this.state;
@@ -155,9 +168,9 @@ class SectionPage extends Component {
             ? this.onArticleSavePress
             : null,
           publicationName,
+          readArticles,
           recentlyOpenedPuzzleCount,
           savedArticles,
-          readArticles,
         }}
       >
         <RemoteConfigProvider config={remoteConfig}>

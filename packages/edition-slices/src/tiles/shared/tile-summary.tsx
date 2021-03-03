@@ -63,7 +63,6 @@ const TileSummary: React.FC<Props> = ({
           {({ readArticles }) => (
             <ArticleSummary
               isTablet={isTablet}
-              readArticles={readArticles}
               bylines={bylines}
               bylineStyle={bylineStyle}
               bylineOnTop={bylineOnTop}
@@ -72,6 +71,7 @@ const TileSummary: React.FC<Props> = ({
               headlineStyle={headlineStyle}
               labelColour={labelColour}
               linesOfTeaserToRender={linesOfTeaserToRender}
+              readArticles={readArticles}
               strapline={strapline}
               straplineStyle={straplineStyle}
               style={style}
