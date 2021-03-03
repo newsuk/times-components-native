@@ -67,7 +67,7 @@ const Section: FC<Props> = ({
   const { cover, name, slices, title: sectionTitle } = section;
   const { isTablet, editionBreakpoint, orientation } = useResponsiveContext();
 
-  const flatListRef = useRef<FlatList>(null);
+  const flatListRef = useRef<FlatList | null>(null);
   const sliceOffsets = useRef<Record<string, number>>({});
 
   const emailPuzzlesButtonExtendedWidth = 170;
@@ -210,7 +210,7 @@ const Section: FC<Props> = ({
     <>
       <Viewport.Tracker>
         <FlatList
-          ref={flatListRef}
+          ref={(ref) => (flatListRef.current = ref)}
           contentContainerStyle={
             isTablet && isPuzzle && styles.additionalContainerPadding
           }
