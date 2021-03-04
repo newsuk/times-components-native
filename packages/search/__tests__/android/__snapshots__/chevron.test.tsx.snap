@@ -13,7 +13,7 @@ exports[`Chevron should render correctly 1`] = `
   onStartShouldSetResponder={[Function]}
   style={
     Object {
-      "left": 4,
+      "left": 0,
       "opacity": 1,
       "position": "absolute",
       "top": 6,

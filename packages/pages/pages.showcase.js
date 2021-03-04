@@ -55,9 +55,15 @@ export default {
       type: "story",
     },
     {
-      component: () => {
-        return <Search />;
-      },
+      component: () => (
+        <Search
+          algoliaConfig={{
+            ALGOLIA_APP_ID: "testingLQ0QIEJAZP",
+            ALGOLIA_API_KEY: "583d94fc81c0da8395ac9ec1ed76fbfe",
+            ALGOLIA_INDEX: "ci_articles",
+          }}
+        />
+      ),
       name: "Search",
       type: "story",
     },

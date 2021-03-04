@@ -27,15 +27,21 @@ const getSearchClient = (algoliaConfig: SearchProps["algoliaConfig"]) => {
   return searchClient;
 };
 
-const Search: FC<SearchProps> = ({ onArticlePress, algoliaConfig }) => (
-  <InstantSearch
-    indexName={algoliaConfig.ALGOLIA_INDEX}
-    searchClient={getSearchClient(algoliaConfig)}
-  >
-    <SearchBar />
-    <InfiniteHits onArticlePress={onArticlePress} />
-  </InstantSearch>
-);
+const Search: FC<SearchProps> = ({ onArticlePress, algoliaConfig }) => {
+  if (!algoliaConfig) {
+    return null;
+  }
+
+  return (
+    <InstantSearch
+      indexName="dev_articles_by_published_date_asc"
+      searchClient={getSearchClient(algoliaConfig)}
+    >
+      <SearchBar />
+      <InfiniteHits onArticlePress={onArticlePress} />
+    </InstantSearch>
+  );
+};
 
 const trackingContext = (Component: React.FC<any>) =>
   withTrackingContext(Component, {

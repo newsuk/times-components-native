@@ -6,14 +6,15 @@ import { withErrorBoundaries } from "@times-components-native/pages/src/with-err
 import { SearchProps } from "@times-components-native/search/src/search";
 
 const { track } = NativeModules.ReactAnalytics;
-// const { onArticlePress } = NativeModules.SearchEvents;
-console.log(NativeModules);
+const { onArticlePress } = NativeModules.SearchEvents;
 export interface SearchPageProps {
   algoliaConfig: SearchProps["algoliaConfig"] | null;
 }
 
 const SearchPage = withErrorBoundaries(
   ({ algoliaConfig = null }: SearchPageProps) => {
+    console.log(algoliaConfig);
+
     if (!algoliaConfig) {
       return null;
     }
@@ -21,7 +22,7 @@ const SearchPage = withErrorBoundaries(
     const SearchPageView = withNativeProvider(
       <Search
         analyticsStream={track}
-        onArticlePress={() => null}
+        onArticlePress={onArticlePress}
         algoliaConfig={algoliaConfig}
       />,
     );

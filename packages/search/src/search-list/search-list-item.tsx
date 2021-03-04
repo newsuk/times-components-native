@@ -9,9 +9,9 @@ import { getHeadline } from "@times-components-native/utils";
 import { ResponsiveContext } from "@times-components-native/responsive";
 import styleguide, { tabletWidth } from "@times-components-native/styleguide";
 import Link from "@times-components-native/link";
-import Highlight from "@times-components-native/search/src/hightlights/hightlight";
-import FormattedDate from "@times-components-native/search/src/search-list/formatted-date";
-import SearchListItemByline from "@times-components-native/search/src/search-list/search-list-item-byline";
+import FormattedDate from "./formatted-date";
+import SearchListItemByline from "./search-list-item-byline";
+import SearchListItemSnippet from "./search-list-item-snippet";
 
 export interface SearchListItemProps {
   item: Hit;
@@ -20,7 +20,6 @@ export interface SearchListItemProps {
 
 const SearchListItem: FC<SearchListItemProps> = ({ item, onItemPress }) => {
   const { headline, shortHeadline, url } = item;
-
   return (
     <ResponsiveContext.Consumer>
       {({ isTablet }) => (
@@ -38,7 +37,10 @@ const SearchListItem: FC<SearchListItemProps> = ({ item, onItemPress }) => {
                 title={item.label}
                 isVideo={item.hasVideo}
                 color={
-                  (item.section && colours.section[item.section]) ||
+                  (item.section &&
+                    colours.section[
+                      item.section as keyof typeof colours.section
+                    ]) ||
                   colours.section.default
                 }
               />
@@ -46,7 +48,11 @@ const SearchListItem: FC<SearchListItemProps> = ({ item, onItemPress }) => {
               <ArticleSummaryHeadline
                 headline={getHeadline(headline, shortHeadline)}
               />
-              <Highlight attribute="content" key={item.url} hit={item} />
+              <SearchListItemSnippet
+                attribute="content"
+                key={item.url}
+                hit={item}
+              />
               <FormattedDate
                 publishedTime={item.publishedTime}
                 publicationName={item.publicationName}

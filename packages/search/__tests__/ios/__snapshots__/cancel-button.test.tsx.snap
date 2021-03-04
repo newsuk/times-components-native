@@ -6,7 +6,7 @@ exports[`CancelButton should render correctly 1`] = `
     Object {
       "left": 4,
       "position": "absolute",
-      "top": 8,
+      "top": 6,
     }
   }
 >

@@ -1,0 +1,58 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Search Bar List FormattedDate should render correctly 1`] = `
+<Text
+  style={
+    Object {
+      "color": "#696969",
+      "fontFamily": "GillSansMTStd-Medium",
+      "fontSize": 13,
+      "lineHeight": 15,
+      "marginVertical": 10,
+    }
+  }
+  testID="datePublication"
+>
+  Tuesday September 08 2020, 12.01am BST, The Times
+</Text>
+`;
+
+exports[`SearchListItemByline should render correctly 1`] = `
+<View
+  style={
+    Object {
+      "marginBottom": 10,
+      "marginTop": 5,
+    }
+  }
+>
+  <Text
+    style={
+      Object {
+        "color": "#333333",
+        "flexDirection": "row",
+        "fontFamily": "GillSansMTStd-Medium",
+        "fontSize": 13,
+        "lineHeight": 15,
+      }
+    }
+  >
+    <Text
+      style={
+        Array [
+          Object {
+            "color": "#333333",
+            "flexDirection": "row",
+            "fontFamily": "GillSansMTStd-Medium",
+            "fontSize": 13,
+            "lineHeight": 15,
+          },
+          undefined,
+        ]
+      }
+    >
+      Bojan Pancevski, Brussels
+    </Text>
+  </Text>
+</View>
+`;

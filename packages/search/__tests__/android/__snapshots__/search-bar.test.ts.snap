@@ -13,42 +13,11 @@ exports[`EmptySearchMessage 1`] = `
     style={
       Object {
         "color": "#696969",
-        "marginBottom": 25,
         "textAlign": "center",
       }
     }
   >
-    Popular thing to search for:
-  </Text>
-  <Text
-    style={
-      Object {
-        "color": "#696969",
-        "textAlign": "center",
-      }
-    }
-  >
-    Articles
-  </Text>
-  <Text
-    style={
-      Object {
-        "color": "#696969",
-        "textAlign": "center",
-      }
-    }
-  >
-    Topics
-  </Text>
-  <Text
-    style={
-      Object {
-        "color": "#696969",
-        "textAlign": "center",
-      }
-    }
-  >
-    Journalists
+    Search for articles, topics, journalists
   </Text>
 </View>
 `;

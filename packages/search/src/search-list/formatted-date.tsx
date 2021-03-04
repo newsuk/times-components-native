@@ -12,20 +12,18 @@ export interface FormattedDateProps {
 const FormattedDate: FC<FormattedDateProps> = ({
   publishedTime,
   publicationName,
-}) => {
-  return (
-    <Text style={styles.metaText} testID="datePublication">
-      <DatePublication
-        date={publishedTime}
-        publication={
-          publicationName &&
-          (publicationName.toUpperCase() as "SUNDAYTIMES" | "TIMES")
-        }
-        showDay
-      />
-    </Text>
-  );
-};
+}) => (
+  <Text style={styles.metaText} testID="datePublication">
+    <DatePublication
+      date={publishedTime}
+      publication={
+        publicationName &&
+        (publicationName.toUpperCase() as "SUNDAYTIMES" | "TIMES")
+      }
+      showDay
+    />
+  </Text>
+);
 
 const { colours, fontFactory, spacing } = styleguide();
 const styles = StyleSheet.create({

@@ -11,7 +11,7 @@ const Magnifier = () => (
 const styles = StyleSheet.create({
   container: {
     position: "absolute",
-    top: 8,
+    top: 6,
     left: 4,
   },
 });
