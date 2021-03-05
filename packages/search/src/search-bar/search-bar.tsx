@@ -76,12 +76,4 @@ const styles = StyleSheet.create({
       : colours.functional.backgroundTertiary,
     color: colours.functional.white,
   },
-  cancel: {
-    color: colours.functional.white,
-    ...fontFactory({
-      font: "supporting",
-      fontSize: "body",
-    }),
-    marginTop: 5,
-  },
 });

@@ -29,7 +29,7 @@ const getSearchClient = (algoliaConfig: SearchProps["algoliaConfig"]) => {
 
 const Search: FC<SearchProps> = ({ onArticlePress, algoliaConfig }) => (
   <InstantSearch
-    indexName="dev_articles_by_published_date_asc"
+    indexName={algoliaConfig.ALGOLIA_INDEX}
     searchClient={getSearchClient(algoliaConfig)}
   >
     <SearchBar />
