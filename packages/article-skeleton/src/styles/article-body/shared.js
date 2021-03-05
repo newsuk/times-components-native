@@ -1,6 +1,11 @@
 import styleguide, { tabletWidth } from "@times-components-native/styleguide";
 
-const sharedStyles = ({ scale, narrowContent, fontScale }) => {
+const sharedStyles = ({
+  scale,
+  narrowContent,
+  fontScale,
+  narrowArticleBreakpoint,
+}) => {
   const { colours, fontFactory, spacing } = styleguide({ scale });
 
   const defaultFont = {
@@ -57,6 +62,10 @@ const sharedStyles = ({ scale, narrowContent, fontScale }) => {
     interactiveContainerTablet: {
       alignSelf: "center",
       width: tabletWidth,
+      ...(narrowContent && {
+        alignSelf: "flex-start",
+        maxWidth: narrowArticleBreakpoint.content,
+      }),
     },
     interactiveContainerFullWidth: {
       width: "100%",
