@@ -1,10 +1,11 @@
 import TestRenderer from "react-test-renderer";
 import React from "react";
-import SearchList from "@times-components-native/search/src/search-list/search-list";
-import FormattedDate from "@times-components-native/search/src/search-list/formatted-date";
-import SearchListItemByline from "@times-components-native/search/src/search-list/search-list-item-byline";
+import SearchList from "../src/search-list/search-list";
+import FormattedDate from "../src/search-list/formatted-date";
+import SearchListItemByline from "../src/search-list/search-list-item-byline";
+import SearchListItemSnippet from "../src/search-list/search-list-item-snippet";
 
-const mockHits = require("./mock-hits.json");
+const mockHits = require("../__mocks__/mock-hits.json");
 
 export default () => {
   describe("Search Bar List", () => {
@@ -34,6 +35,18 @@ export default () => {
   it("SearchListItemByline should render correctly", () => {
     const testInstance = TestRenderer.create(
       <SearchListItemByline byline={mockHits[0].byline} />,
+    );
+
+    expect(testInstance).toMatchSnapshot();
+  });
+
+  it("SearchListItemSnippet should render correctly", () => {
+    const testInstance = TestRenderer.create(
+      <SearchListItemSnippet
+        hit={mockHits[0]}
+        attribute="content"
+        key={mockHits[0].url}
+      />,
     );
 
     expect(testInstance).toMatchSnapshot();

@@ -45,4 +45,4 @@ const styles = StyleSheet.create({
 });
 
 // @FIXME: TYPES
-export default connectHighlight<any>(SearchListItemSnippet);
+export default connectHighlight(SearchListItemSnippet);

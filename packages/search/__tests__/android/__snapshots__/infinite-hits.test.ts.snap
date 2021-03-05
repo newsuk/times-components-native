@@ -1,23 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Search Bar List FormattedDate should render correctly 1`] = `
-<Text
-  style={
-    Object {
-      "color": "#696969",
-      "fontFamily": "GillSansMTStd-Medium",
-      "fontSize": 13,
-      "lineHeight": 15,
-      "marginVertical": 10,
-    }
-  }
-  testID="datePublication"
->
-  Tuesday September 08 2020, 12.01am BST, The Times
-</Text>
-`;
-
-exports[`Search Bar List SearchList should render correctly 1`] = `
+exports[`InfiniteHits should render correctly 1`] = `
 <View
   style={
     Object {
@@ -1192,75 +1175,4 @@ exports[`Search Bar List SearchList should render correctly 1`] = `
     </RCTScrollView>
   </View>
 </View>
-`;
-
-exports[`SearchListItemByline should render correctly 1`] = `
-<View
-  style={
-    Object {
-      "marginBottom": 10,
-      "marginTop": 5,
-    }
-  }
->
-  <Text
-    style={
-      Object {
-        "color": "#333333",
-        "flexDirection": "row",
-        "fontFamily": "GillSansMTStd-Medium",
-        "fontSize": 13,
-        "lineHeight": 13,
-      }
-    }
-  >
-    <Text
-      style={
-        Array [
-          Object {
-            "color": "#333333",
-            "flexDirection": "row",
-            "fontFamily": "GillSansMTStd-Medium",
-            "fontSize": 13,
-            "lineHeight": 13,
-          },
-          undefined,
-        ]
-      }
-    >
-      Bojan Pancevski, Brussels
-    </Text>
-  </Text>
-</View>
-`;
-
-exports[`SearchListItemSnippet should render correctly 1`] = `
-<Text>
-  <Text
-    style={
-      Object {
-        "color": "#696969",
-      }
-    }
-  >
-    <Text
-      style={
-        Object {
-          "color": "#000000",
-        }
-      }
-    >
-      Elvis
-    </Text>
-  </Text>
-  <Text
-    style={
-      Object {
-        "color": "#696969",
-      }
-    }
-  >
-    is the king
-  </Text>
-</Text>
 `;

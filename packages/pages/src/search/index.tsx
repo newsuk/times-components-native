@@ -13,7 +13,6 @@ export interface SearchPageProps {
 
 const SearchPage = withErrorBoundaries(
   ({ algoliaConfig = null }: SearchPageProps) => {
-    console.log(algoliaConfig);
 
     if (!algoliaConfig) {
       return null;

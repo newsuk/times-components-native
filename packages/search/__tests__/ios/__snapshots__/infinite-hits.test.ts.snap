@@ -1,23 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Search Bar List FormattedDate should render correctly 1`] = `
-<Text
-  style={
-    Object {
-      "color": "#696969",
-      "fontFamily": "GillSansMTStd-Medium",
-      "fontSize": 13,
-      "lineHeight": 15,
-      "marginVertical": 10,
-    }
-  }
-  testID="datePublication"
->
-  Tuesday September 08 2020, 12.01am BST, The Times
-</Text>
-`;
-
-exports[`Search Bar List SearchList should render correctly 1`] = `
+exports[`InfiniteHits should render correctly 1`] = `
 <View
   style={
     Object {
@@ -747,7 +730,7 @@ exports[`Search Bar List SearchList should render correctly 1`] = `
       onScroll={[Function]}
       onScrollBeginDrag={[Function]}
       onScrollEndDrag={[Function]}
-      removeClippedSubviews={true}
+      removeClippedSubviews={false}
       renderItem={[Function]}
       scrollEventThrottle={50}
       stickyHeaderIndices={Array []}
@@ -763,13 +746,6 @@ exports[`Search Bar List SearchList should render correctly 1`] = `
           <View
             accessible={true}
             focusable={true}
-            nativeBackgroundAndroid={
-              Object {
-                "attribute": "selectableItemBackground",
-                "rippleRadius": undefined,
-                "type": "ThemeAttrAndroid",
-              }
-            }
             onClick={[Function]}
             onResponderGrant={[Function]}
             onResponderMove={[Function]}
@@ -777,7 +753,11 @@ exports[`Search Bar List SearchList should render correctly 1`] = `
             onResponderTerminate={[Function]}
             onResponderTerminationRequest={[Function]}
             onStartShouldSetResponder={[Function]}
-            style={Object {}}
+            style={
+              Object {
+                "opacity": 1,
+              }
+            }
           >
             <View
               style={
@@ -802,7 +782,7 @@ exports[`Search Bar List SearchList should render correctly 1`] = `
                       "flexDirection": "row",
                       "fontFamily": "GillSansMTStd-Medium",
                       "fontSize": 13,
-                      "lineHeight": 13,
+                      "lineHeight": 15,
                     }
                   }
                 >
@@ -814,7 +794,7 @@ exports[`Search Bar List SearchList should render correctly 1`] = `
                           "flexDirection": "row",
                           "fontFamily": "GillSansMTStd-Medium",
                           "fontSize": 13,
-                          "lineHeight": 13,
+                          "lineHeight": 15,
                         },
                         undefined,
                       ]
@@ -910,13 +890,6 @@ exports[`Search Bar List SearchList should render correctly 1`] = `
           <View
             accessible={true}
             focusable={true}
-            nativeBackgroundAndroid={
-              Object {
-                "attribute": "selectableItemBackground",
-                "rippleRadius": undefined,
-                "type": "ThemeAttrAndroid",
-              }
-            }
             onClick={[Function]}
             onResponderGrant={[Function]}
             onResponderMove={[Function]}
@@ -924,7 +897,11 @@ exports[`Search Bar List SearchList should render correctly 1`] = `
             onResponderTerminate={[Function]}
             onResponderTerminationRequest={[Function]}
             onStartShouldSetResponder={[Function]}
-            style={Object {}}
+            style={
+              Object {
+                "opacity": 1,
+              }
+            }
           >
             <View
               style={
@@ -949,7 +926,7 @@ exports[`Search Bar List SearchList should render correctly 1`] = `
                       "flexDirection": "row",
                       "fontFamily": "GillSansMTStd-Medium",
                       "fontSize": 13,
-                      "lineHeight": 13,
+                      "lineHeight": 15,
                     }
                   }
                 >
@@ -961,7 +938,7 @@ exports[`Search Bar List SearchList should render correctly 1`] = `
                           "flexDirection": "row",
                           "fontFamily": "GillSansMTStd-Medium",
                           "fontSize": 13,
-                          "lineHeight": 13,
+                          "lineHeight": 15,
                         },
                         undefined,
                       ]
@@ -1057,13 +1034,6 @@ exports[`Search Bar List SearchList should render correctly 1`] = `
           <View
             accessible={true}
             focusable={true}
-            nativeBackgroundAndroid={
-              Object {
-                "attribute": "selectableItemBackground",
-                "rippleRadius": undefined,
-                "type": "ThemeAttrAndroid",
-              }
-            }
             onClick={[Function]}
             onResponderGrant={[Function]}
             onResponderMove={[Function]}
@@ -1071,7 +1041,11 @@ exports[`Search Bar List SearchList should render correctly 1`] = `
             onResponderTerminate={[Function]}
             onResponderTerminationRequest={[Function]}
             onStartShouldSetResponder={[Function]}
-            style={Object {}}
+            style={
+              Object {
+                "opacity": 1,
+              }
+            }
           >
             <View
               style={
@@ -1096,7 +1070,7 @@ exports[`Search Bar List SearchList should render correctly 1`] = `
                       "flexDirection": "row",
                       "fontFamily": "GillSansMTStd-Medium",
                       "fontSize": 13,
-                      "lineHeight": 13,
+                      "lineHeight": 15,
                     }
                   }
                 >
@@ -1108,7 +1082,7 @@ exports[`Search Bar List SearchList should render correctly 1`] = `
                           "flexDirection": "row",
                           "fontFamily": "GillSansMTStd-Medium",
                           "fontSize": 13,
-                          "lineHeight": 13,
+                          "lineHeight": 15,
                         },
                         undefined,
                       ]
@@ -1192,75 +1166,4 @@ exports[`Search Bar List SearchList should render correctly 1`] = `
     </RCTScrollView>
   </View>
 </View>
-`;
-
-exports[`SearchListItemByline should render correctly 1`] = `
-<View
-  style={
-    Object {
-      "marginBottom": 10,
-      "marginTop": 5,
-    }
-  }
->
-  <Text
-    style={
-      Object {
-        "color": "#333333",
-        "flexDirection": "row",
-        "fontFamily": "GillSansMTStd-Medium",
-        "fontSize": 13,
-        "lineHeight": 13,
-      }
-    }
-  >
-    <Text
-      style={
-        Array [
-          Object {
-            "color": "#333333",
-            "flexDirection": "row",
-            "fontFamily": "GillSansMTStd-Medium",
-            "fontSize": 13,
-            "lineHeight": 13,
-          },
-          undefined,
-        ]
-      }
-    >
-      Bojan Pancevski, Brussels
-    </Text>
-  </Text>
-</View>
-`;
-
-exports[`SearchListItemSnippet should render correctly 1`] = `
-<Text>
-  <Text
-    style={
-      Object {
-        "color": "#696969",
-      }
-    }
-  >
-    <Text
-      style={
-        Object {
-          "color": "#000000",
-        }
-      }
-    >
-      Elvis
-    </Text>
-  </Text>
-  <Text
-    style={
-      Object {
-        "color": "#696969",
-      }
-    }
-  >
-    is the king
-  </Text>
-</Text>
 `;

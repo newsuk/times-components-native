@@ -43,12 +43,18 @@ export interface Hit {
   shortHeadline: string;
   url: string;
   _position: number;
-  _snippetResult?: {
-    content: {
-      matchedLevel: string;
-      value: string;
-    };
-  };
+  _snippetResult?:
+    | {
+        content:
+          | {
+              fullyHighlighted: boolean;
+              matchLevel: string;
+              matchedWords: string[];
+              value: string;
+            }
+          | string;
+      }
+    | any;
   _highlightResult?: {
     byline: {
       children: {

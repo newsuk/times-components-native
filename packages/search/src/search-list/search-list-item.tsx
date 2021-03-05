@@ -7,7 +7,7 @@ import {
 } from "@times-components-native/article-summary";
 import { getHeadline } from "@times-components-native/utils";
 import { ResponsiveContext } from "@times-components-native/responsive";
-import styleguide, { tabletWidth } from "@times-components-native/styleguide";
+import styleguide from "@times-components-native/styleguide";
 import Link from "@times-components-native/link";
 import FormattedDate from "./formatted-date";
 import SearchListItemByline from "./search-list-item-byline";
@@ -23,43 +23,37 @@ const SearchListItem: FC<SearchListItemProps> = ({ item, onItemPress }) => {
   return (
     <ResponsiveContext.Consumer>
       {({ isTablet }) => (
-        <View style={styles.container}>
-          <Link onPress={() => onItemPress(url)}>
-            <View
-              style={
-                isTablet
-                  ? styles.listItemContainerTablet
-                  : styles.listItemContainer
+        <Link onPress={() => onItemPress(url)}>
+          <View
+            style={
+              isTablet
+                ? styles.listItemContainerTablet
+                : styles.listItemContainer
+            }
+          >
+            <ArticleSummaryLabel
+              articleReadState={{ animate: false, read: false }}
+              title={item.label}
+              isVideo={item.hasVideo}
+              color={
+                (item.section &&
+                  colours.section[
+                    item.section as keyof typeof colours.section
+                  ]) ||
+                colours.section.default
               }
-            >
-              <ArticleSummaryLabel
-                articleReadState={{ animate: false, read: false }}
-                title={item.label}
-                isVideo={item.hasVideo}
-                color={
-                  (item.section &&
-                    colours.section[
-                      item.section as keyof typeof colours.section
-                    ]) ||
-                  colours.section.default
-                }
-              />
-              <SearchListItemByline byline={item.byline} />
-              <ArticleSummaryHeadline
-                headline={getHeadline(headline, shortHeadline)}
-              />
-              <SearchListItemSnippet
-                attribute="content"
-                key={item.url}
-                hit={item}
-              />
-              <FormattedDate
-                publishedTime={item.publishedTime}
-                publicationName={item.publicationName}
-              />
-            </View>
-          </Link>
-        </View>
+            />
+            <SearchListItemByline byline={item.byline} />
+            <ArticleSummaryHeadline
+              headline={getHeadline(headline, shortHeadline)}
+            />
+            <SearchListItemSnippet attribute="content" hit={item} />
+            <FormattedDate
+              publishedTime={item.publishedTime}
+              publicationName={item.publicationName}
+            />
+          </View>
+        </Link>
       )}
     </ResponsiveContext.Consumer>
   );
@@ -68,32 +62,12 @@ const SearchListItem: FC<SearchListItemProps> = ({ item, onItemPress }) => {
 const { colours, spacing } = styleguide();
 
 const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    maxWidth: tabletWidth,
-    flexDirection: "row",
-  },
   listItemContainer: {
     paddingHorizontal: spacing(2),
     paddingVertical: spacing(2),
   },
   listItemContainerTablet: {
     paddingVertical: spacing(3),
-  },
-  listItemSeparator: {
-    backgroundColor: colours.functional.keyline,
-    height: 1,
-    flex: 1,
-    maxWidth: tabletWidth,
-  },
-  listItemSeparatorContainer: {
-    paddingHorizontal: spacing(2),
-    flexDirection: "row",
-    justifyContent: "center",
-  },
-  byLineContainer: {
-    marginTop: spacing(1),
-    marginBottom: spacing(2),
   },
 });
 
