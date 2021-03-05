@@ -1,6 +1,3 @@
-import { View } from "react-native";
-import { connectSearchBox } from "react-instantsearch-native";
-
 const React = require("react");
 // eslint-disable-next-line no-undef
 const MockReactInstantSearch = jest.genMockFromModule(
@@ -30,7 +27,5 @@ MockReactInstantSearch.connectHighlight = (Component) => () => (
 MockReactInstantSearch.connectSearchBox = (Component) => () => (
   <Component hits={fakeHits} />
 );
-MockReactInstantSearch.InstantSearch = (Component) => () => (
-  <Component />
-);
+MockReactInstantSearch.InstantSearch = (Component) => () => <Component />;
 module.exports = MockReactInstantSearch;

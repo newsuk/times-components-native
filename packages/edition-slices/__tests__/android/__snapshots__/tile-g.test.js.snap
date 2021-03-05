@@ -58,15 +58,7 @@ exports[`tile g huge 1`] = `
           }
         >
           <ArticleLabel
-            articleReadState={
-              Object {
-                "animate": false,
-                "read": false,
-              }
-            }
             color="#005B8D"
-            hide={false}
-            isVideo={false}
             title="label"
           />
         </View>
@@ -162,15 +154,7 @@ exports[`tile g medium 1`] = `
           }
         >
           <ArticleLabel
-            articleReadState={
-              Object {
-                "animate": false,
-                "read": false,
-              }
-            }
             color="#005B8D"
-            hide={false}
-            isVideo={false}
             title="label"
           />
         </View>
@@ -264,15 +248,7 @@ exports[`tile g small 1`] = `
           }
         >
           <ArticleLabel
-            articleReadState={
-              Object {
-                "animate": false,
-                "read": false,
-              }
-            }
             color="#005B8D"
-            hide={false}
-            isVideo={false}
             title="label"
           />
         </View>
@@ -368,15 +344,7 @@ exports[`tile g wide 1`] = `
           }
         >
           <ArticleLabel
-            articleReadState={
-              Object {
-                "animate": false,
-                "read": false,
-              }
-            }
             color="#005B8D"
-            hide={false}
-            isVideo={false}
             title="label"
           />
         </View>
@@ -472,15 +440,7 @@ exports[`tile g without breakpoint should be like small 1`] = `
           }
         >
           <ArticleLabel
-            articleReadState={
-              Object {
-                "animate": false,
-                "read": false,
-              }
-            }
             color="#005B8D"
-            hide={false}
-            isVideo={false}
             title="label"
           />
         </View>

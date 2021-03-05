@@ -64,7 +64,7 @@ const DropCap: React.FC<Props> = ({
         style={[
           {
             color: dropCapColor,
-            fontFamily: fonts[dropCapFont],
+            fontFamily: fonts[dropCapFont as keyof typeof fonts],
             fontSize: dropCapFontSize,
             lineHeight: height,
             paddingTop: additionalPadding,

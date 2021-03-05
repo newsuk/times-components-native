@@ -26,15 +26,7 @@ exports[`tile column with image bottom huge 1`] = `
           }
         >
           <ArticleLabel
-            articleReadState={
-              Object {
-                "animate": false,
-                "read": false,
-              }
-            }
             color="#005B8D"
-            hide={false}
-            isVideo={false}
             title="label"
           />
         </View>
@@ -117,15 +109,7 @@ exports[`tile column with image bottom medium 1`] = `
           }
         >
           <ArticleLabel
-            articleReadState={
-              Object {
-                "animate": false,
-                "read": false,
-              }
-            }
             color="#005B8D"
-            hide={false}
-            isVideo={false}
             title="label"
           />
         </View>
@@ -189,15 +173,7 @@ exports[`tile column with image bottom shows an image 1`] = `
           }
         >
           <ArticleLabel
-            articleReadState={
-              Object {
-                "animate": false,
-                "read": false,
-              }
-            }
             color="#005B8D"
-            hide={false}
-            isVideo={false}
             title="label"
           />
         </View>
@@ -261,15 +237,7 @@ exports[`tile column with image bottom shows portrait image when in portrait wid
           }
         >
           <ArticleLabel
-            articleReadState={
-              Object {
-                "animate": false,
-                "read": false,
-              }
-            }
             color="#005B8D"
-            hide={false}
-            isVideo={false}
             title="label"
           />
         </View>
@@ -343,15 +311,7 @@ exports[`tile column with image bottom wide 1`] = `
           }
         >
           <ArticleLabel
-            articleReadState={
-              Object {
-                "animate": false,
-                "read": false,
-              }
-            }
             color="#005B8D"
-            hide={false}
-            isVideo={false}
             title="label"
           />
         </View>

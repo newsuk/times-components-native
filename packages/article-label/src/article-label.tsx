@@ -15,10 +15,17 @@ export type ArticleLabelProps = {
   title: string;
 };
 
-const ArticleLabel: FC<ArticleLabelProps> = ({ color = "black", title }) => (
-  <Text style={[styles.title, { color: gqlRgbaToHex(color) || color }]}>
-    {title.toUpperCase()}
-  </Text>
-);
+const ArticleLabel: FC<ArticleLabelProps> = ({ color = "black", title }) => {
+  return (
+    <Text
+      style={[
+        styles.title,
+        { color: gqlRgbaToHex(color) || (color as string | undefined) },
+      ]}
+    >
+      {title.toUpperCase()}
+    </Text>
+  );
+};
 
 export default ArticleLabel;

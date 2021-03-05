@@ -880,6 +880,7 @@ exports[`InfiniteHits should render correctly 1`] = `
             style={
               Object {
                 "backgroundColor": "#DBDBDB",
+                "flex": 1,
                 "height": 1,
                 "maxWidth": 660,
               }
@@ -1027,6 +1028,7 @@ exports[`InfiniteHits should render correctly 1`] = `
             style={
               Object {
                 "backgroundColor": "#DBDBDB",
+                "flex": 1,
                 "height": 1,
                 "maxWidth": 660,
               }

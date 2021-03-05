@@ -9,6 +9,7 @@ const styles = StyleSheet.create({
   },
   listItemSeparator: {
     ...sharedStyles.listItemSeparator,
+    flex: 1,
     maxWidth: tabletWidth,
   },
   listItemSeparatorContainer: {
