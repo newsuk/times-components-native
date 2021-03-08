@@ -24,7 +24,6 @@ const { spacing } = styleguide();
 
 const styles = StyleSheet.create({
   byLineContainer: {
-    marginTop: spacing(1),
     marginBottom: spacing(2),
   },
 });

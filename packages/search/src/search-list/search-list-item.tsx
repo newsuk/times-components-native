@@ -43,10 +43,10 @@ const SearchListItem: FC<SearchListItemProps> = ({ item, onItemPress }) => {
                 colours.section.default
               }
             />
-            <SearchListItemByline byline={item.byline} />
             <ArticleSummaryHeadline
               headline={getHeadline(headline, shortHeadline)}
             />
+            <SearchListItemByline byline={item.byline} />
             <SearchListItemSnippet attribute="content" hit={item} />
             <FormattedDate
               publishedTime={item.publishedTime}

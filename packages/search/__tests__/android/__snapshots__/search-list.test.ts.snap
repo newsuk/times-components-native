@@ -787,43 +787,6 @@ exports[`Search Bar List SearchList should render correctly 1`] = `
                 }
               }
             >
-              <View
-                style={
-                  Object {
-                    "marginBottom": 10,
-                    "marginTop": 5,
-                  }
-                }
-              >
-                <Text
-                  style={
-                    Object {
-                      "color": "#333333",
-                      "flexDirection": "row",
-                      "fontFamily": "GillSansMTStd-Medium",
-                      "fontSize": 13,
-                      "lineHeight": 13,
-                    }
-                  }
-                >
-                  <Text
-                    style={
-                      Array [
-                        Object {
-                          "color": "#333333",
-                          "flexDirection": "row",
-                          "fontFamily": "GillSansMTStd-Medium",
-                          "fontSize": 13,
-                          "lineHeight": 13,
-                        },
-                        undefined,
-                      ]
-                    }
-                  >
-                    Bojan Pancevski, Brussels
-                  </Text>
-                </Text>
-              </View>
               <Text
                 accessibilityRole="header"
                 allowFontScaling={false}
@@ -849,97 +812,10 @@ exports[`Search Bar List SearchList should render correctly 1`] = `
               >
                 EU orders inquiry into £100m contracts awarded without tender
               </Text>
-              <Text>
-                <Text
-                  style={
-                    Object {
-                      "color": "#696969",
-                    }
-                  }
-                >
-                  <Text
-                    style={
-                      Object {
-                        "color": "#000000",
-                      }
-                    }
-                  >
-                    Elvis
-                  </Text>
-                </Text>
-                <Text
-                  style={
-                    Object {
-                      "color": "#696969",
-                    }
-                  }
-                >
-                  is the king
-                </Text>
-              </Text>
-              <Text
-                style={
-                  Object {
-                    "color": "#696969",
-                    "fontFamily": "GillSansMTStd-Medium",
-                    "fontSize": 13,
-                    "lineHeight": 15,
-                    "marginVertical": 10,
-                  }
-                }
-                testID="datePublication"
-              >
-                Sunday March 22 2015, 12.01am GMT, The Sunday Times
-              </Text>
-            </View>
-          </View>
-          <View
-            style={
-              Object {
-                "backgroundColor": "#DBDBDB",
-                "flex": 1,
-                "height": 1,
-                "maxWidth": 660,
-              }
-            }
-          />
-        </View>
-        <View
-          onLayout={[Function]}
-          style={null}
-        >
-          <View
-            accessible={true}
-            focusable={true}
-            nativeBackgroundAndroid={
-              Object {
-                "attribute": "selectableItemBackground",
-                "rippleRadius": undefined,
-                "type": "ThemeAttrAndroid",
-              }
-            }
-            onClick={[Function]}
-            onResponderGrant={[Function]}
-            onResponderMove={[Function]}
-            onResponderRelease={[Function]}
-            onResponderTerminate={[Function]}
-            onResponderTerminationRequest={[Function]}
-            onStartShouldSetResponder={[Function]}
-            style={Object {}}
-          >
-            <View
-              style={
-                Object {
-                  "paddingHorizontal": 10,
-                  "paddingVertical": 10,
-                }
-              }
-            >
               <View
                 style={
                   Object {
                     "marginBottom": 10,
-                    "marginTop": 5,
                   }
                 }
               >
@@ -972,31 +848,6 @@ exports[`Search Bar List SearchList should render correctly 1`] = `
                   </Text>
                 </Text>
               </View>
-              <Text
-                accessibilityRole="header"
-                allowFontScaling={false}
-                aria-level="3"
-                className=""
-                style={
-                  Array [
-                    Object {
-                      "color": "#333333",
-                      "fontFamily": "TimesModern-Bold",
-                      "fontWeight": "900",
-                      "includeFontPadding": false,
-                      "marginBottom": 10,
-                    },
-                    Object {
-                      "fontFamily": "TimesModern-Bold",
-                      "fontSize": 22,
-                      "lineHeight": 27,
-                    },
-                    Object {},
-                  ]
-                }
-              >
-                Copy of: EU orders inquiry into £100m contracts awarded without tender
-              </Text>
               <Text>
                 <Text
                   style={
@@ -1083,11 +934,182 @@ exports[`Search Bar List SearchList should render correctly 1`] = `
                 }
               }
             >
+              <Text
+                accessibilityRole="header"
+                allowFontScaling={false}
+                aria-level="3"
+                className=""
+                style={
+                  Array [
+                    Object {
+                      "color": "#333333",
+                      "fontFamily": "TimesModern-Bold",
+                      "fontWeight": "900",
+                      "includeFontPadding": false,
+                      "marginBottom": 10,
+                    },
+                    Object {
+                      "fontFamily": "TimesModern-Bold",
+                      "fontSize": 22,
+                      "lineHeight": 27,
+                    },
+                    Object {},
+                  ]
+                }
+              >
+                Copy of: EU orders inquiry into £100m contracts awarded without tender
+              </Text>
               <View
                 style={
                   Object {
                     "marginBottom": 10,
-                    "marginTop": 5,
+                  }
+                }
+              >
+                <Text
+                  style={
+                    Object {
+                      "color": "#333333",
+                      "flexDirection": "row",
+                      "fontFamily": "GillSansMTStd-Medium",
+                      "fontSize": 13,
+                      "lineHeight": 13,
+                    }
+                  }
+                >
+                  <Text
+                    style={
+                      Array [
+                        Object {
+                          "color": "#333333",
+                          "flexDirection": "row",
+                          "fontFamily": "GillSansMTStd-Medium",
+                          "fontSize": 13,
+                          "lineHeight": 13,
+                        },
+                        undefined,
+                      ]
+                    }
+                  >
+                    Bojan Pancevski, Brussels
+                  </Text>
+                </Text>
+              </View>
+              <Text>
+                <Text
+                  style={
+                    Object {
+                      "color": "#696969",
+                    }
+                  }
+                >
+                  <Text
+                    style={
+                      Object {
+                        "color": "#000000",
+                      }
+                    }
+                  >
+                    Elvis
+                  </Text>
+                </Text>
+                <Text
+                  style={
+                    Object {
+                      "color": "#696969",
+                    }
+                  }
+                >
+                  is the king
+                </Text>
+              </Text>
+              <Text
+                style={
+                  Object {
+                    "color": "#696969",
+                    "fontFamily": "GillSansMTStd-Medium",
+                    "fontSize": 13,
+                    "lineHeight": 15,
+                    "marginVertical": 10,
+                  }
+                }
+                testID="datePublication"
+              >
+                Sunday March 22 2015, 12.01am GMT, The Sunday Times
+              </Text>
+            </View>
+          </View>
+          <View
+            style={
+              Object {
+                "backgroundColor": "#DBDBDB",
+                "flex": 1,
+                "height": 1,
+                "maxWidth": 660,
+              }
+            }
+          />
+        </View>
+        <View
+          onLayout={[Function]}
+          style={null}
+        >
+          <View
+            accessible={true}
+            focusable={true}
+            nativeBackgroundAndroid={
+              Object {
+                "attribute": "selectableItemBackground",
+                "rippleRadius": undefined,
+                "type": "ThemeAttrAndroid",
+              }
+            }
+            onClick={[Function]}
+            onResponderGrant={[Function]}
+            onResponderMove={[Function]}
+            onResponderRelease={[Function]}
+            onResponderTerminate={[Function]}
+            onResponderTerminationRequest={[Function]}
+            onStartShouldSetResponder={[Function]}
+            style={Object {}}
+          >
+            <View
+              style={
+                Object {
+                  "paddingHorizontal": 10,
+                  "paddingVertical": 10,
+                }
+              }
+            >
+              <Text
+                accessibilityRole="header"
+                allowFontScaling={false}
+                aria-level="3"
+                className=""
+                style={
+                  Array [
+                    Object {
+                      "color": "#333333",
+                      "fontFamily": "TimesModern-Bold",
+                      "fontWeight": "900",
+                      "includeFontPadding": false,
+                      "marginBottom": 10,
+                    },
+                    Object {
+                      "fontFamily": "TimesModern-Bold",
+                      "fontSize": 22,
+                      "lineHeight": 27,
+                    },
+                    Object {},
+                  ]
+                }
+              >
+                Where to buy property in Bath, Somerset
+              </Text>
+              <View
+                style={
+                  Object {
+                    "marginBottom": 10,
                   }
                 }
               >
@@ -1120,31 +1142,6 @@ exports[`Search Bar List SearchList should render correctly 1`] = `
                   </Text>
                 </Text>
               </View>
-              <Text
-                accessibilityRole="header"
-                allowFontScaling={false}
-                aria-level="3"
-                className=""
-                style={
-                  Array [
-                    Object {
-                      "color": "#333333",
-                      "fontFamily": "TimesModern-Bold",
-                      "fontWeight": "900",
-                      "includeFontPadding": false,
-                      "marginBottom": 10,
-                    },
-                    Object {
-                      "fontFamily": "TimesModern-Bold",
-                      "fontSize": 22,
-                      "lineHeight": 27,
-                    },
-                    Object {},
-                  ]
-                }
-              >
-                Where to buy property in Bath, Somerset
-              </Text>
               <Text>
                 <Text
                   style={
@@ -1201,7 +1198,6 @@ exports[`SearchListItemByline should render correctly 1`] = `
   style={
     Object {
       "marginBottom": 10,
-      "marginTop": 5,
     }
   }
 >
