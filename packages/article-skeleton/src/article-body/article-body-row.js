@@ -36,7 +36,13 @@ export default ({
   onParagraphTextLayout,
 }) => {
   const { fontScale } = Dimensions.get("window");
-  const styles = styleFactory({ scale, narrowContent, fontScale });
+  const { narrowArticleBreakpoint } = useResponsiveContext();
+  const styles = styleFactory({
+    scale,
+    narrowContent,
+    fontScale,
+    narrowArticleBreakpoint,
+  });
 
   return {
     text(key, attributes) {

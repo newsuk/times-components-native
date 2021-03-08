@@ -25,13 +25,15 @@ const MarkAsRead = ({ children, articleReadState }) => {
   const opacity = 0.57;
 
   useEffect(() => {
+    if (!articleReadState.animate) return;
+
     Animated.timing(animationOpacity, {
       delay: ARTICLE_READ_ANIMATION.delay,
       duration: ARTICLE_READ_ANIMATION.duration,
       toValue: opacity,
       useNativeDriver: true,
     }).start();
-  }, [articleReadState]);
+  }, [articleReadState.animate]);
 
   return articleReadState.animate ? (
     <Animated.View

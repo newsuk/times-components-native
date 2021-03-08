@@ -28,6 +28,8 @@ import {
 import { OnArticlePress } from "@times-components-native/types";
 import { SectionTitles } from "./utils/sectionConfigs";
 import { Orientation } from "@times-components-native/responsive/src/context";
+// @ts-ignore
+import { Viewport } from "@skele/components";
 
 const styles = styleFactory();
 const { SectionEvents } = NativeModules;
@@ -80,7 +82,7 @@ const Section: FC<Props> = ({
   //   windowHeight,
   // );
 
-  const flatListRef = useRef<FlatList>(null);
+  const flatListRef = useRef<FlatList | null>(null);
   const sliceOffsets = useRef<Record<string, number>>({});
 
   const emailPuzzlesButtonExtendedWidth = 170;
@@ -221,23 +223,25 @@ const Section: FC<Props> = ({
 
   return (
     <>
-      <FlatList
-        ref={flatListRef}
-        contentContainerStyle={
-          isTablet && isPuzzle && styles.additionalContainerPadding
-        }
-        removeClippedSubviews
-        data={data}
-        ItemSeparatorComponent={(leadingItem) =>
-          renderItemSeperator(isPuzzle)(leadingItem, editionBreakpoint)
-        }
-        keyExtractor={(item) => item.elementId}
-        ListHeaderComponent={getHeaderComponent(isPuzzle, isMagazine)}
-        nestedScrollEnabled
-        onViewableItemsChanged={onViewed ? onViewableItemsChanged : null}
-        {...(isPuzzle && { onScrollBeginDrag })}
-        renderItem={renderItem(isPuzzle, orientation)}
-      />
+      <Viewport.Tracker>
+        <FlatList
+          ref={(ref) => (flatListRef.current = ref)}
+          contentContainerStyle={
+            isTablet && isPuzzle && styles.additionalContainerPadding
+          }
+          removeClippedSubviews
+          data={data}
+          ItemSeparatorComponent={(leadingItem) =>
+            renderItemSeperator(isPuzzle)(leadingItem, editionBreakpoint)
+          }
+          keyExtractor={(item) => item.elementId}
+          ListHeaderComponent={getHeaderComponent(isPuzzle, isMagazine)}
+          nestedScrollEnabled
+          onViewableItemsChanged={onViewed ? onViewableItemsChanged : null}
+          {...(isPuzzle && { onScrollBeginDrag })}
+          renderItem={renderItem(isPuzzle, orientation)}
+        />
+      </Viewport.Tracker>
       {isPuzzle && isIOS ? (
         <FloatingActionButton
           animatedWidth={emailPuzzlesButtonWidth}
