@@ -14,6 +14,7 @@ const ResponsiveSlice = ({
 }) => {
   const { editionBreakpoint, orientation } = useResponsiveContext();
   switch (editionBreakpoint) {
+    case editionBreakpoints.smallTablet:
     case editionBreakpoints.medium:
       return (
         <Gutter grow={grow}>
@@ -38,11 +39,6 @@ const ResponsiveSlice = ({
         </Gutter>
       );
     case editionBreakpoints.small:
-      return (
-        <Gutter grow={grow}>
-          {renderMedium(editionBreakpoints.medium, orientation)}
-        </Gutter>
-      );
     default:
       return <>{renderSmall(editionBreakpoint, orientation)}</>;
   }

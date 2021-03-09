@@ -6,6 +6,7 @@ import {
 
 const fontSizeResolver = {
   [editionBreakpoints.small]: 20,
+  [editionBreakpoints.smallTablet]: 18,
   [editionBreakpoints.medium]: 18,
   [editionBreakpoints.wide]: 20,
   [editionBreakpoints.huge]: 22,

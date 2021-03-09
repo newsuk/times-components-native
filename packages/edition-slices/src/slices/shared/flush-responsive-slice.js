@@ -10,8 +10,8 @@ const FlushResponsiveSlice = ({
   const { editionBreakpoint, orientation } = useResponsiveContext();
   switch (editionBreakpoint) {
     case editionBreakpoints.small:
-      return renderMedium(editionBreakpoints.medium, orientation);
-    // return renderSmall(editionBreakpoint, orientation);
+      return renderSmall(editionBreakpoint, orientation);
+    case editionBreakpoints.smallTablet:
     case editionBreakpoints.medium:
       return renderMedium(editionBreakpoint, orientation);
     case editionBreakpoints.wide:

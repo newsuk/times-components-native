@@ -6,6 +6,7 @@ import {
 } from "@times-components-native/styleguide";
 
 const fontSizeResolver = {
+  [editionBreakpoints.smallTablet]: 30,
   [editionBreakpoints.medium]: 30,
   [editionBreakpoints.wide]: 35,
   [editionBreakpoints.huge]: 45,

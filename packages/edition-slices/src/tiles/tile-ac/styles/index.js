@@ -12,6 +12,7 @@ const paddingVerticalResolver = {
 };
 
 const fontSizeResolver = {
+  [editionBreakpoints.smallTablet]: 30,
   [editionBreakpoints.medium]: 30,
   [editionBreakpoints.wide]: 30,
   [editionBreakpoints.huge]: 35,

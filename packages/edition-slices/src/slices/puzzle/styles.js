@@ -35,6 +35,7 @@ const wideBreakpointStyles = {
 
 const breakPointsStyles = {
   [editionBreakpoints.small]: smallBreakpointStyles,
+  [editionBreakpoints.smallTablet]: mediumBreakpointStyles,
   [editionBreakpoints.medium]: mediumBreakpointStyles,
   [editionBreakpoints.wide]: wideBreakpointStyles,
   [editionBreakpoints.huge]: wideBreakpointStyles,

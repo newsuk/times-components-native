@@ -57,6 +57,7 @@ const hugeBreakpointStyles = {
 };
 
 const stylesResolver = {
+  smallTablet: mediumBreakpointStyles,
   medium: mediumBreakpointStyles,
   wide: wideBreakpointStyles,
   huge: hugeBreakpointStyles,

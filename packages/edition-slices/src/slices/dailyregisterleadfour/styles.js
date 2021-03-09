@@ -87,6 +87,7 @@ const wideBreakpointStyle = {
 
 const stylesResolver = {
   small: smallBreakpointStyles,
+  smallTablet: mediumBreakpointStyles,
   medium: mediumBreakpointStyles,
   wide: wideBreakpointStyle,
   huge: wideBreakpointStyle,
