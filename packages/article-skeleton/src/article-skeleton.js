@@ -154,10 +154,12 @@ const ArticleWithContent = (props) => {
   const setArticleRead = () => {
     if (hasBeenRead) return;
     hasBeenRead = true;
+    console.log("ARTICLE READ!!!!");
     onArticleRead && onArticleRead(data.id);
   };
 
   const handleScroll = () => {
+    console.log("handleScroll");
     !hasBeenRead && setArticleRead();
   };
 
@@ -166,6 +168,7 @@ const ArticleWithContent = (props) => {
       <Viewport.Tracker>
         <ScrollView
           contentInsetAdjustmentBehavior="automatic"
+          nestedScrollEnabled
           onScroll={handleScroll}
           scrollEventThrottle={400}
         >
