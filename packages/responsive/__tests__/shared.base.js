@@ -16,18 +16,6 @@ export default () => {
     expect(testInstance).toMatchSnapshot();
   });
 
-  it("with specified values", () => {
-    const testInstance = TestRenderer.create(
-      <Responsive>
-        <ResponsiveContext.Consumer>
-          {(context) => JSON.stringify(context)}
-        </ResponsiveContext.Consumer>
-      </Responsive>,
-    );
-
-    expect(testInstance).toMatchSnapshot();
-  });
-
   it("calculates section content height on tablet", () => {
     const { sectionContentHeightTablet } = calculateResponsiveContext(
       500,
