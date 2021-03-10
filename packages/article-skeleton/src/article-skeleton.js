@@ -154,12 +154,10 @@ const ArticleWithContent = (props) => {
   const setArticleRead = () => {
     if (hasBeenRead) return;
     hasBeenRead = true;
-    console.log("ARTICLE READ!!!!");
     onArticleRead && onArticleRead(data.id);
   };
 
   const handleScroll = () => {
-    console.log("handleScroll");
     !hasBeenRead && setArticleRead();
   };
 
