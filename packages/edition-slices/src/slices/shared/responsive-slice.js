@@ -13,6 +13,7 @@ const ResponsiveSlice = ({
   grow = false,
 }) => {
   const { editionBreakpoint, orientation } = useResponsiveContext();
+
   switch (editionBreakpoint) {
     case editionBreakpoints.smallTablet:
     case editionBreakpoints.medium:

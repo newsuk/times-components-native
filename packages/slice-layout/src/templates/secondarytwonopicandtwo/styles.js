@@ -3,7 +3,14 @@ import {
   editionBreakpoints,
 } from "@times-components-native/styleguide";
 
+const sharedBreakpointStyles = {
+  secondaryColSeparator: {
+    marginVertical: spacing(3),
+  },
+};
+
 const mediumBreakpointStyles = {
+  ...sharedBreakpointStyles,
   container: {
     flex: 1,
     marginHorizontal: spacing(4),
@@ -14,9 +21,6 @@ const mediumBreakpointStyles = {
   },
   item: {
     flex: 1,
-  },
-  secondaryColSeparator: {
-    marginVertical: spacing(3),
   },
   supportColSeparator: {
     marginBottom: spacing(3),
@@ -32,6 +36,7 @@ const smallTabletBreakpointStyles = {
 };
 
 const wideBreakpointStyles = {
+  ...sharedBreakpointStyles,
   rowContainer: {
     flex: 1,
     flexDirection: "row",
@@ -57,5 +62,4 @@ const stylesResolver = {
   [editionBreakpoints.huge]: wideBreakpointStyles,
 };
 
-export default (breakpoint) =>
-  Object.assign(mediumBreakpointStyles, stylesResolver[breakpoint] || {});
+export default (breakpoint) => stylesResolver[breakpoint];

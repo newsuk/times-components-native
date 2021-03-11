@@ -7,7 +7,6 @@ import {
 
 const tabletPaddingHorizontalResolver = {
   [editionBreakpoints.small]: 0,
-  // [editionBreakpoints.smallTablet]: spacing(2),
   [editionBreakpoints.smallTablet]: 0,
   [editionBreakpoints.medium]: spacing(2),
   [editionBreakpoints.wide]: spacing(6),
