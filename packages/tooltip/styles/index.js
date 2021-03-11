@@ -121,6 +121,14 @@ const generateStyles = (options) => {
       containerPlacementStyles = { top: options.offsetY };
   }
 
+  if (options.flexDirectionColumnReverse) {
+    wrapperPlacementStyles = { flexDirection: "column-reverse" };
+    containerPlacementStyles = {
+      ...{ position: "relative" },
+      ...containerPlacementStyles,
+    };
+  }
+
   return {
     ...styles,
     wrapper: [styles.wrapper, wrapperPlacementStyles],
