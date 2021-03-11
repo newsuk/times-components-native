@@ -4,6 +4,7 @@ exports[`1. article with header 1`] = `
 <View>
   <RCTScrollView
     contentInsetAdjustmentBehavior="automatic"
+    nestedScrollEnabled={true}
     scrollEventThrottle={400}
   >
     <View>

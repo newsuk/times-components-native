@@ -4,6 +4,7 @@ exports[`1. a primary image 1`] = `
 <View>
   <RCTScrollView
     contentInsetAdjustmentBehavior="automatic"
+    nestedScrollEnabled={true}
     scrollEventThrottle={400}
   >
     <View>
@@ -65,6 +66,7 @@ exports[`2. a fullwidth image 1`] = `
 <View>
   <RCTScrollView
     contentInsetAdjustmentBehavior="automatic"
+    nestedScrollEnabled={true}
     scrollEventThrottle={400}
   >
     <View>
@@ -126,6 +128,7 @@ exports[`3. a secondary image 1`] = `
 <View>
   <RCTScrollView
     contentInsetAdjustmentBehavior="automatic"
+    nestedScrollEnabled={true}
     scrollEventThrottle={400}
   >
     <View>
@@ -187,6 +190,7 @@ exports[`4. an inline image 1`] = `
 <View>
   <RCTScrollView
     contentInsetAdjustmentBehavior="automatic"
+    nestedScrollEnabled={true}
     scrollEventThrottle={400}
   >
     <View>
