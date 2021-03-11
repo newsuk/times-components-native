@@ -37,6 +37,14 @@ const mediumBreakpointStyles = {
   },
 };
 
+const smallTabletBreakpointStyles = {
+  ...mediumBreakpointStyles,
+  container: {
+    ...mediumBreakpointStyles.container,
+    marginHorizontal: spacing(1),
+  },
+};
+
 const wideBreakpointStyles = {
   ...sharedMediumAndWide,
   container: {
@@ -49,7 +57,7 @@ const wideBreakpointStyles = {
 
 const stylesResolver = {
   small: smallBreakpointStyles,
-  smallTablet: mediumBreakpointStyles,
+  smallTablet: smallTabletBreakpointStyles,
   medium: mediumBreakpointStyles,
   wide: wideBreakpointStyles,
   huge: wideBreakpointStyles,

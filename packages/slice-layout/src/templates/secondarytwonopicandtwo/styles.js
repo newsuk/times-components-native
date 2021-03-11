@@ -23,6 +23,14 @@ const mediumBreakpointStyles = {
   },
 };
 
+const smallTabletBreakpointStyles = {
+  ...mediumBreakpointStyles,
+  container: {
+    ...mediumBreakpointStyles.container,
+    marginHorizontal: spacing(1),
+  },
+};
+
 const wideBreakpointStyles = {
   rowContainer: {
     flex: 1,
@@ -43,7 +51,7 @@ const wideBreakpointStyles = {
 };
 
 const stylesResolver = {
-  [editionBreakpoints.smallTablet]: mediumBreakpointStyles,
+  [editionBreakpoints.smallTablet]: smallTabletBreakpointStyles,
   [editionBreakpoints.medium]: mediumBreakpointStyles,
   [editionBreakpoints.wide]: wideBreakpointStyles,
   [editionBreakpoints.huge]: wideBreakpointStyles,

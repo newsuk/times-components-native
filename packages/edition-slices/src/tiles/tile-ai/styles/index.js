@@ -4,6 +4,7 @@ import {
 } from "@times-components-native/styleguide";
 
 const keylinePadding = {
+  [editionBreakpoints.smallTablet]: spacing(2),
   [editionBreakpoints.medium]: spacing(2),
   [editionBreakpoints.wide]: spacing(3),
   [editionBreakpoints.huge]: spacing(3),

@@ -6,6 +6,7 @@ import {
 } from "@times-components-native/styleguide";
 
 const paddingVerticalResolver = {
+  [editionBreakpoints.smallTablet]: spacing(8),
   [editionBreakpoints.medium]: spacing(8),
   [editionBreakpoints.wide]: spacing(6),
   [editionBreakpoints.huge]: spacing(14),

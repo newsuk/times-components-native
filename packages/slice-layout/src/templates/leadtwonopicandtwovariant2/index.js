@@ -14,7 +14,7 @@ const LeadTwoNoPicAndTwoVariant2Slice = ({
   support1,
   support2,
 }) => {
-  const styles = styleFactory(orientation);
+  const styles = styleFactory(breakpoint, orientation);
 
   if (breakpoint === editionBreakpoints.small) {
     return <VerticalLayout tiles={[lead1, lead2, support1, support2]} />;

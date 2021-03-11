@@ -65,22 +65,7 @@ const Section: FC<Props> = ({
   section,
 }) => {
   const { cover, name, slices, title: sectionTitle } = section;
-  const {
-    isTablet,
-    editionBreakpoint,
-    orientation,
-    // windowWidth,
-    // windowHeight,
-  } = useResponsiveContext();
-
-  // console.log(
-  //   "GHKSLDGHKSDLGHSDLGSDKLGSKLDGSKDLGJDSKJKSDJLKDS22222222233333333444444444",
-  //   isTablet,
-  //   editionBreakpoint,
-  //   orientation,
-  //   windowWidth,
-  //   windowHeight,
-  // );
+  const { isTablet, editionBreakpoint, orientation } = useResponsiveContext();
 
   const flatListRef = useRef<FlatList | null>(null);
   const sliceOffsets = useRef<Record<string, number>>({});

@@ -33,6 +33,14 @@ const mediumBreakpointStyles = {
   },
 };
 
+const smallTabletBreakpointStyles = {
+  ...mediumBreakpointStyles,
+  portraitContainer: {
+    ...mediumBreakpointStyles.container,
+    marginHorizontal: spacing(1),
+  },
+};
+
 const wideBreakpointStyles = {
   ...mediumBreakpointStyles,
   portraitContainer: {
@@ -43,7 +51,7 @@ const wideBreakpointStyles = {
 
 const stylesResolver = {
   [editionBreakpoints.small]: {},
-  [editionBreakpoints.smallTablet]: mediumBreakpointStyles,
+  [editionBreakpoints.smallTablet]: smallTabletBreakpointStyles,
   [editionBreakpoints.medium]: mediumBreakpointStyles,
   [editionBreakpoints.wide]: wideBreakpointStyles,
   [editionBreakpoints.huge]: wideBreakpointStyles,

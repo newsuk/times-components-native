@@ -2,9 +2,16 @@ import React from "react";
 import { View } from "react-native";
 import { ItemColSeparator } from "../shared";
 import VerticalLayout from "../verticallayout";
-import styles from "./styles";
+import stylesFactory from "./styles";
 
-const TopSecondarySlice = ({ lead, support1, support2, support3 }) => {
+const TopSecondarySlice = ({
+  breakpoint,
+  lead,
+  support1,
+  support2,
+  support3,
+}) => {
+  const styles = stylesFactory(breakpoint);
   return (
     <View style={styles.container}>
       <View style={styles.leadContainer}>{lead}</View>
