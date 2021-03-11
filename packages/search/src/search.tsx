@@ -2,7 +2,7 @@ import React, { FC } from "react";
 import InfiniteHits from "@times-components-native/search/src/infinite-hits";
 import { SearchBar } from "./search-bar/search-bar";
 import { InstantSearch } from "react-instantsearch-native";
-import algoliasearch from "algoliasearch";
+import algoliasearch, { SearchClient } from "algoliasearch";
 import { withTrackingContext } from "@times-components-native/tracking";
 
 export interface SearchProps {
@@ -14,7 +14,7 @@ export interface SearchProps {
   };
 }
 
-let searchClient: any = null;
+let searchClient: SearchClient | null = null;
 const getSearchClient = (algoliaConfig: SearchProps["algoliaConfig"]) => {
   if (searchClient) {
     return searchClient;
@@ -27,15 +27,20 @@ const getSearchClient = (algoliaConfig: SearchProps["algoliaConfig"]) => {
   return searchClient;
 };
 
-const Search: FC<SearchProps> = ({ onArticlePress, algoliaConfig }) => (
-  <InstantSearch
-    indexName={algoliaConfig.ALGOLIA_INDEX}
-    searchClient={getSearchClient(algoliaConfig)}
-  >
-    <SearchBar />
-    <InfiniteHits onArticlePress={onArticlePress} />
-  </InstantSearch>
-);
+const Search: FC<SearchProps> = ({ onArticlePress, algoliaConfig }) => {
+  if (!algoliaConfig) {
+    return null;
+  }
+  return (
+    <InstantSearch
+      indexName={algoliaConfig.ALGOLIA_INDEX}
+      searchClient={getSearchClient(algoliaConfig)}
+    >
+      <SearchBar />
+      <InfiniteHits onArticlePress={onArticlePress} />
+    </InstantSearch>
+  );
+};
 
 const trackingContext = (Component: React.FC<any>) =>
   withTrackingContext(Component, {

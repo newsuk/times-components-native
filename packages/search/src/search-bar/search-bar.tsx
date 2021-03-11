@@ -23,10 +23,11 @@ export const SearchBar = connectSearchBox(({ currentRefinement, refine }) => {
     debouncedRefine(val);
   };
 
-  const handlePressX = () => {
+  const handleResetSearch = () => {
     handleSetText("");
   };
-  const handlePressCancel = () => {
+
+  const handleCancelSearch = () => {
     handleSetText("");
     Keyboard.dismiss();
   };
@@ -34,7 +35,7 @@ export const SearchBar = connectSearchBox(({ currentRefinement, refine }) => {
   return (
     <View style={styles.container}>
       <View style={styles.inputContainer}>
-        {isIOS ? <Magnifier /> : <Chevron onPress={handlePressX} />}
+        {isIOS ? <Magnifier /> : <Chevron onPress={handleCancelSearch} />}
         <TextInput
           placeholder="Search our archive"
           style={styles.input}
@@ -43,10 +44,11 @@ export const SearchBar = connectSearchBox(({ currentRefinement, refine }) => {
           keyboardType="web-search"
           placeholderTextColor={colours.functional.searchText}
           value={text}
+          autoFocus
         />
-        {text && isIOS ? <XButton onPress={handlePressX} /> : null}
+        {text && isIOS ? <XButton onPress={handleResetSearch} /> : null}
       </View>
-      <CancelButton onPress={handlePressCancel} />
+      <CancelButton onPress={isIOS ? handleCancelSearch : handleResetSearch} />
     </View>
   );
 });

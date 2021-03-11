@@ -3,6 +3,11 @@ import React from "react";
 import { sections } from "@times-components-native/storybook";
 import Page from "./src/pages";
 import Section from "./section-showcase-helper";
+import {
+  ALGOLIA_API_KEY,
+  ALGOLIA_APP_ID,
+  ALGOLIA_INDEX,
+} from "@times-components-native/pages/src/search/config";
 
 const Article = Page("Article");
 const AuthorProfile = Page("AuthorProfile");
@@ -58,9 +63,9 @@ export default {
       component: () => (
         <Search
           algoliaConfig={{
-            ALGOLIA_APP_ID: "testingLQ0QIEJAZP",
-            ALGOLIA_API_KEY: "583d94fc81c0da8395ac9ec1ed76fbfe",
-            ALGOLIA_INDEX: "ci_articles",
+            ALGOLIA_APP_ID: ALGOLIA_APP_ID,
+            ALGOLIA_API_KEY: ALGOLIA_API_KEY,
+            ALGOLIA_INDEX: ALGOLIA_INDEX,
           }}
         />
       ),
