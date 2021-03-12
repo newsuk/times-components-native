@@ -13,7 +13,9 @@ const props = {
 };
 
 const withTabletContext = (WrappedComponent) => (
-  <ResponsiveContext.Provider value={{ isTablet: true, screenWidth: 1000 }}>
+  <ResponsiveContext.Provider
+    value={{ isTablet: true, isArticleTablet: true, screenWidth: 1000 }}
+  >
     {WrappedComponent}
   </ResponsiveContext.Provider>
 );

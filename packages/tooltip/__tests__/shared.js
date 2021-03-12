@@ -5,10 +5,10 @@ import React from "react";
 import { Text } from "react-native";
 import "./serializers-with-all-styles";
 
-export const withTabletContext = (WrappedComponent, isTablet = true) => (
+export const withTabletContext = (WrappedComponent, isArticleTablet = true) => (
   <ResponsiveContext.Provider
     value={{
-      isTablet: isTablet,
+      isArticleTablet: isArticleTablet,
     }}
   >
     {WrappedComponent}
