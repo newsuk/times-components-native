@@ -42,6 +42,7 @@ exports[`Search Bar List SearchList should render correctly 1`] = `
           message="There were no results for your search term"
         />
       }
+      ListFooterComponent={[Function]}
       contentContainerStyle={
         Object {
           "flexGrow": 1,
@@ -1186,6 +1187,21 @@ exports[`Search Bar List SearchList should render correctly 1`] = `
               </Text>
             </View>
           </View>
+        </View>
+        <View
+          onLayout={[Function]}
+        >
+          <ActivityIndicator
+            animating={true}
+            color="#696969"
+            hidesWhenStopped={true}
+            size="large"
+            style={
+              Object {
+                "padding": 20,
+              }
+            }
+          />
         </View>
       </View>
     </RCTScrollView>

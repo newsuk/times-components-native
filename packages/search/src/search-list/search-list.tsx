@@ -5,6 +5,7 @@ import SearchListItem from "./search-list-item";
 import { Hit } from "../types";
 import ArticleListItemSeparator from "@times-components-native/article-list/src/article-list-item-separator";
 import { tabletWidth } from "@times-components-native/styleguide";
+import SearchListLoader from "@times-components-native/search/src/search-list/search-list-loader";
 
 export interface SearchListProps {
   hits: Hit[];
@@ -37,6 +38,7 @@ const SearchList: FC<SearchListProps> = ({
           ListEmptyComponent={
             <ArticleListEmptyState message="There were no results for your search term" />
           }
+          ListFooterComponent={SearchListLoader}
           nestedScrollEnabled
           onEndReached={handleFetchMore}
         />

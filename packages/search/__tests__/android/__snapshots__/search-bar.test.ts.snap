@@ -244,6 +244,7 @@ exports[`Search Bar should render correctly 1`] = `
     </View>
     <TextInput
       allowFontScaling={true}
+      autoFocus={true}
       keyboardType="web-search"
       onChangeText={[Function]}
       placeholder="Search our archive"
