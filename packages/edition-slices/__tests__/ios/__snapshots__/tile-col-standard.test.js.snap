@@ -320,6 +320,79 @@ exports[`tile col standard shows portrait image when in portrait wide (ipad pro)
 </Link>
 `;
 
+exports[`tile col standard smallTablet 1`] = `
+<Link
+  linkStyle={
+    Object {
+      "flex": 1,
+      "paddingHorizontal": 10,
+      "paddingVertical": 10,
+    }
+  }
+>
+  <View
+    style={
+      Object {
+        "flex": 1,
+      }
+    }
+  >
+    <View>
+      <View>
+        <View
+          style={
+            Object {
+              "marginBottom": 5,
+            }
+          }
+        >
+          <ArticleLabel
+            articleReadState={
+              Object {
+                "animate": false,
+                "read": false,
+              }
+            }
+            color="#005B8D"
+            hide={false}
+            isVideo={false}
+            title="label"
+          />
+        </View>
+        <Text
+          accessibilityRole="header"
+          aria-level="3"
+          style={
+            Object {
+              "color": "#333333",
+              "fontFamily": "TimesModern-Bold",
+              "fontSize": 24,
+              "fontWeight": "900",
+              "includeFontPadding": false,
+              "lineHeight": 24,
+              "marginBottom": 10,
+            }
+          }
+        >
+          This is tile headline
+        </Text>
+        <ArticleFlags
+          flags={
+            Array [
+              Object {
+                "expiryTime": "2030-03-14T12:00:00.000Z",
+                "type": "EXCLUSIVE",
+              },
+            ]
+          }
+          longRead={true}
+        />
+      </View>
+    </View>
+  </View>
+</Link>
+`;
+
 exports[`tile col standard wide 1`] = `
 <Link
   linkStyle={

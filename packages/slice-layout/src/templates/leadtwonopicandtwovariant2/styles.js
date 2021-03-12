@@ -63,8 +63,8 @@ const smallTabletLandscapeStyles = {
 };
 
 const defaultStyles = {
-  portrait: smallTabletPortraitStyles,
-  landscape: smallTabletLandscapeStyles,
+  portrait: portraitStyles,
+  landscape: landscapeStyles,
 };
 
 const smallTabletBreakpointStyles = {

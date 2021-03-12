@@ -21,6 +21,20 @@ export default (renderComponent) => {
       },
     },
     {
+      name: "comment lead and cartoon - smallTablet",
+      test() {
+        const output = renderComponent(
+          <CommentLeadAndCartoon
+            breakpoint={editionBreakpoints.smallTablet}
+            cartoon={createItem("cartoon-1")}
+            lead={createItem("lead-1")}
+          />,
+        );
+
+        expect(output).toMatchSnapshot();
+      },
+    },
+    {
       name: "comment lead and cartoon - medium",
       test() {
         const output = renderComponent(

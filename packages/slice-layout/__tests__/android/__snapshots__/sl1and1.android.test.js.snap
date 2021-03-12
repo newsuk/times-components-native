@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`1. supplement lead one and one - medium 1`] = `
+exports[`1. supplement lead one and one - smalltablet 1`] = `
 <View>
   <View>
     <Text>
@@ -16,7 +16,7 @@ exports[`1. supplement lead one and one - medium 1`] = `
 </View>
 `;
 
-exports[`2. supplement lead one and one - wide 1`] = `
+exports[`2. supplement lead one and one - medium 1`] = `
 <View>
   <View>
     <Text>
@@ -32,7 +32,23 @@ exports[`2. supplement lead one and one - wide 1`] = `
 </View>
 `;
 
-exports[`3. supplement lead one and one - huge 1`] = `
+exports[`3. supplement lead one and one - wide 1`] = `
+<View>
+  <View>
+    <Text>
+      lead
+    </Text>
+  </View>
+  <View />
+  <View>
+    <Text>
+      support
+    </Text>
+  </View>
+</View>
+`;
+
+exports[`4. supplement lead one and one - huge 1`] = `
 <View>
   <View>
     <Text>

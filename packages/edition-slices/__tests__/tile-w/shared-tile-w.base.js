@@ -5,6 +5,10 @@ import { TileW } from "../../src/tiles";
 
 export default () => {
   describe("tile w", () => {
+    it("smallTablet", () => {
+      testTile(TileW, editionBreakpoints.smallTablet);
+    });
+
     it("medium", () => {
       testTile(TileW, editionBreakpoints.medium);
     });
