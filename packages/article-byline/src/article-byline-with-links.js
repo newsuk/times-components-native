@@ -48,8 +48,9 @@ const ArticleBylineWithLinks = ({ ast, ...props }) => {
 
   const textStyle = centered ? [styles.text, styles.centered] : styles.text;
   const tooltipType = "profile";
+
   const showTooltip =
-    !disableTooltip && hasAuthorData(ast) && tooltips.includes(tooltipType);
+    !disableTooltip && hasAuthorData(ast) && ["profile"].includes(tooltipType);
 
   const byline = renderByline(
     withTrackEvents(AuthorComponent),
@@ -71,7 +72,7 @@ const ArticleBylineWithLinks = ({ ast, ...props }) => {
       offsetY={tooltipOffsetY}
       onTooltipPresented={onTooltipPresented}
       type={tooltipType}
-      tooltips={tooltips}
+      tooltips={["profile"]}
       width={236}
       articleId={articleId}
     >

@@ -28,7 +28,7 @@ function ArticleMeta({
               ast={bylines}
               onAuthorPress={onAuthorPress}
               onTooltipPresented={onTooltipPresented}
-              tooltipArrowOffset={30}
+              tooltipArrowOffset={130}
               tooltips={tooltips}
               tooltipOffsetX={-20}
               tooltipOffsetY={26}

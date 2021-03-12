@@ -24,6 +24,7 @@ const sharedStyles = {
     alignItems: "center",
     paddingLeft: spacing(2),
     paddingRight: spacing(2),
+    marginBottom: 60,
   },
   containerTablet: {
     alignSelf: "center",
@@ -41,7 +42,6 @@ const sharedStyles = {
     marginTop: "auto",
   },
   header: {
-    // TODO: put back after design signoff
     marginBottom: spacing(3),
     paddingBottom: spacing(4),
     paddingTop: spacing(7),

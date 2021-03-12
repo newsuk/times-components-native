@@ -17,8 +17,10 @@ const ArticleMeta = ({
   hasStandfirst,
   isTablet,
   onAuthorPress,
+  onTooltipPresented,
   publicationName,
   publishedTime,
+  tooltips,
 }) => (
   <View
     style={[
@@ -30,7 +32,15 @@ const ArticleMeta = ({
     {hasBylineData(bylines) && (
       <Fragment>
         <View style={styles.meta}>
-          <ArticleBylineWithLinks ast={bylines} onAuthorPress={onAuthorPress} />
+          <ArticleBylineWithLinks
+            ast={bylines}
+            onAuthorPress={onAuthorPress}
+            onTooltipPresented={onTooltipPresented}
+            tooltipArrowOffset={110}
+            tooltips={tooltips}
+            tooltipOffsetX={-90}
+            tooltipOffsetY={25}
+          />
         </View>
       </Fragment>
     )}
