@@ -166,6 +166,7 @@ const ArticleWithContent = (props) => {
       <Viewport.Tracker>
         <ScrollView
           contentInsetAdjustmentBehavior="automatic"
+          nestedScrollEnabled
           onScroll={handleScroll}
           scrollEventThrottle={400}
         >
