@@ -36,10 +36,10 @@ const ArticleMeta = ({
             ast={bylines}
             onAuthorPress={onAuthorPress}
             onTooltipPresented={onTooltipPresented}
-            tooltipArrowOffset={110}
+            tooltipArrowOffset={130}
             tooltips={tooltips}
-            tooltipOffsetX={-90}
-            tooltipOffsetY={25}
+            tooltipOffsetX={-110}
+            tooltipOffsetY={21}
           />
         </View>
       </Fragment>

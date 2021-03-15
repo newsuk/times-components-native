@@ -24,7 +24,7 @@ const sharedStyles = {
     alignItems: "center",
     paddingLeft: spacing(2),
     paddingRight: spacing(2),
-    marginBottom: 60,
+    marginBottom: 35,
   },
   containerTablet: {
     alignSelf: "center",
@@ -65,6 +65,7 @@ const sharedStyles = {
     borderBottomWidth: 1,
     borderTopColor: colours.functional.keyline,
     borderTopWidth: 1,
+    zIndex: 10,
   },
   metaContainerTablet: {
     flexDirection: "row",
