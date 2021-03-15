@@ -1,3 +1,4 @@
+import videoLabel from "@times-components-native/article-summary/fixtures/video-label";
 import sizes from "./sizes";
 
 const getMaxSizes = (adSizes) => {
@@ -71,6 +72,7 @@ const getSlotConfig = (slotName, width, orientation) => {
     maxSizes,
     sizes: adSizes,
     slotName,
+    "test=video": "test=video",
   };
 };
 

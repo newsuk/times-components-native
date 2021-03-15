@@ -51,6 +51,7 @@ const determineData = (config, props) => {
     slotName,
     slots,
     slotTargeting: adConfig.slotTargeting,
+    "test=video": "test=video",
   };
 };
 
@@ -120,6 +121,7 @@ export class AdBase extends PureComponent {
     const { hasError, isAdReady, offline } = this.state;
     const config = getSlotConfig(slotName, width || screenWidth, orientation);
     const data = determineData(config, this.props);
+    console.log("data", data);
 
     if (hasError || offline) return null;
 

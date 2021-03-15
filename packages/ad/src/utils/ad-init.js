@@ -228,7 +228,9 @@ export default ({ el, data, platform, eventCallback, window }) => {
               Math.random() * 10,
             ).toString();
             slot.setTargeting("timestestgroup", randomTestingGroup);
+            console.log("slot LOG", slot);
             slot.setTargeting("pos", slotName);
+            slot.setTargeting("test", "video");
             googletag.display(slotName);
             eventCallback(
               "warn",

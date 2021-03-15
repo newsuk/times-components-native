@@ -29,5 +29,7 @@ export default ({ adTestMode, article, sectionName }) => ({
     section: sectionName,
     slot: sectionName.toLowerCase(),
     zone: "current_edition",
+    test: "video",
+    pos: "native-inline-ad",
   },
 });
