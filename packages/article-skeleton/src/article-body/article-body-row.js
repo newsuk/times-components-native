@@ -18,6 +18,7 @@ import ArticleParagraphWrapper from "@times-components-native/article-paragraph"
 import InsetCaption from "./inset-caption";
 import styleFactory from "../styles/article-body";
 import ArticleLink from "./article-link";
+import ArticleEndTracking from "./article-end-tracking";
 import InlineNewsletterPuff from "./inline-newsletter-puff";
 import { useResponsiveContext } from "@times-components-native/responsive";
 
@@ -138,6 +139,9 @@ export default ({
           {...attributes}
         />
       );
+    },
+    articleEndTracking(key, attributes) {
+      return <ArticleEndTracking />;
     },
     inlineContent(key, attributes, children) {
       return (
