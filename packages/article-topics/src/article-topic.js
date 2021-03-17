@@ -25,7 +25,7 @@ const ArticleTopic = ({
   const { isTablet } = useResponsiveContext();
 
   const tooltipType = "topics";
-  const showTooltip = isTablet && index === 0 && tooltips.includes(tooltipType);
+  const showTooltip = index === 0 && tooltips.includes(tooltipType);
   const [isHighlighted, setIsHighlighted] = useState(showTooltip);
 
   const unhighlightTopic = () => {
@@ -71,7 +71,7 @@ const ArticleTopic = ({
       placement="top"
       type={tooltipType}
       tooltips={tooltips}
-      width={236}
+      width={isTablet ? 236 : 207}
       articleId={articleId}
     >
       {articleTopic}
