@@ -3,16 +3,18 @@
 exports[`1. article summary component with a single paragraph 1`] = `
 <View>
   <View>
-    <ArticleLabel
-      articleReadState={
-        Object {
-          "animate": false,
-          "read": false,
+    <View>
+      <ArticleLabel
+        articleReadState={
+          Object {
+            "animate": false,
+            "read": false,
+          }
         }
-      }
-      color="#333333"
-      title="Test label"
-    />
+        color="#333333"
+        title="Test label"
+      />
+    </View>
   </View>
   <Text
     accessibilityRole="header"
@@ -48,46 +50,48 @@ exports[`1. article summary component with a single paragraph 1`] = `
     />
   </Text>
   <Text>
-    <ArticleByline
-      articleReadState={
-        Object {
-          "animate": false,
-          "read": false,
+    <View>
+      <ArticleByline
+        articleReadState={
+          Object {
+            "animate": false,
+            "read": false,
+          }
         }
-      }
-      ast={
-        Array [
-          Object {
-            "attributes": Object {
-              "slug": "camilla-long",
+        ast={
+          Array [
+            Object {
+              "attributes": Object {
+                "slug": "camilla-long",
+              },
+              "children": Array [
+                Object {
+                  "attributes": Object {
+                    "value": "Camilla Long",
+                  },
+                  "children": Array [],
+                  "name": "text",
+                },
+              ],
+              "name": "author",
             },
-            "children": Array [
-              Object {
-                "attributes": Object {
-                  "value": "Camilla Long",
+            Object {
+              "attributes": Object {},
+              "children": Array [
+                Object {
+                  "attributes": Object {
+                    "value": ", Environment Editor",
+                  },
+                  "children": Array [],
+                  "name": "text",
                 },
-                "children": Array [],
-                "name": "text",
-              },
-            ],
-            "name": "author",
-          },
-          Object {
-            "attributes": Object {},
-            "children": Array [
-              Object {
-                "attributes": Object {
-                  "value": ", Environment Editor",
-                },
-                "children": Array [],
-                "name": "text",
-              },
-            ],
-            "name": "inline",
-          },
-        ]
-      }
-    />
+              ],
+              "name": "inline",
+            },
+          ]
+        }
+      />
+    </View>
   </Text>
 </View>
 `;
@@ -118,35 +122,37 @@ exports[`2. article summary component with multiple paragraphs 1`] = `
     />
   </Text>
   <Text>
-    <ArticleByline
-      articleReadState={
-        Object {
-          "animate": false,
-          "read": false,
-        }
-      }
-      ast={
-        Array [
+    <View>
+      <ArticleByline
+        articleReadState={
           Object {
-            "byline": Array [
-              Object {
-                "attributes": Object {},
-                "children": Array [
-                  Object {
-                    "attributes": Object {
-                      "value": "A byline",
+            "animate": false,
+            "read": false,
+          }
+        }
+        ast={
+          Array [
+            Object {
+              "byline": Array [
+                Object {
+                  "attributes": Object {},
+                  "children": Array [
+                    Object {
+                      "attributes": Object {
+                        "value": "A byline",
+                      },
+                      "children": Array [],
+                      "name": "text",
                     },
-                    "children": Array [],
-                    "name": "text",
-                  },
-                ],
-                "name": "inline",
-              },
-            ],
-          },
-        ]
-      }
-    />
+                  ],
+                  "name": "inline",
+                },
+              ],
+            },
+          ]
+        }
+      />
+    </View>
   </Text>
 </View>
 `;
@@ -198,16 +204,18 @@ exports[`3. article summary component with content including line breaks 1`] = `
 exports[`4. article summary component containing links 1`] = `
 <View>
   <View>
-    <ArticleLabel
-      articleReadState={
-        Object {
-          "animate": false,
-          "read": false,
+    <View>
+      <ArticleLabel
+        articleReadState={
+          Object {
+            "animate": false,
+            "read": false,
+          }
         }
-      }
-      color="#333333"
-      title="Test label"
-    />
+        color="#333333"
+        title="Test label"
+      />
+    </View>
   </View>
   <Text
     accessibilityRole="header"
@@ -241,16 +249,18 @@ exports[`4. article summary component containing links 1`] = `
 exports[`5. article summary component with headline and no content 1`] = `
 <View>
   <View>
-    <ArticleLabel
-      articleReadState={
-        Object {
-          "animate": false,
-          "read": false,
+    <View>
+      <ArticleLabel
+        articleReadState={
+          Object {
+            "animate": false,
+            "read": false,
+          }
         }
-      }
-      color="#333333"
-      title="Test label"
-    />
+        color="#333333"
+        title="Test label"
+      />
+    </View>
   </View>
   <Text
     accessibilityRole="header"
@@ -270,16 +280,18 @@ exports[`5. article summary component with headline and no content 1`] = `
 exports[`6. article summary component with empty content at the end trimmed 1`] = `
 <View>
   <View>
-    <ArticleLabel
-      articleReadState={
-        Object {
-          "animate": false,
-          "read": false,
+    <View>
+      <ArticleLabel
+        articleReadState={
+          Object {
+            "animate": false,
+            "read": false,
+          }
         }
-      }
-      color="#333333"
-      title="Test label"
-    />
+        color="#333333"
+        title="Test label"
+      />
+    </View>
   </View>
   <Text
     accessibilityRole="header"
@@ -308,35 +320,37 @@ exports[`6. article summary component with empty content at the end trimmed 1`] 
     />
   </Text>
   <Text>
-    <ArticleByline
-      articleReadState={
-        Object {
-          "animate": false,
-          "read": false,
-        }
-      }
-      ast={
-        Array [
+    <View>
+      <ArticleByline
+        articleReadState={
           Object {
-            "byline": Array [
-              Object {
-                "attributes": Object {},
-                "children": Array [
-                  Object {
-                    "attributes": Object {
-                      "value": "A byline",
+            "animate": false,
+            "read": false,
+          }
+        }
+        ast={
+          Array [
+            Object {
+              "byline": Array [
+                Object {
+                  "attributes": Object {},
+                  "children": Array [
+                    Object {
+                      "attributes": Object {
+                        "value": "A byline",
+                      },
+                      "children": Array [],
+                      "name": "text",
                     },
-                    "children": Array [],
-                    "name": "text",
-                  },
-                ],
-                "name": "inline",
-              },
-            ],
-          },
-        ]
-      }
-    />
+                  ],
+                  "name": "inline",
+                },
+              ],
+            },
+          ]
+        }
+      />
+    </View>
   </Text>
 </View>
 `;
@@ -388,35 +402,37 @@ exports[`8. article summary component with no label 1`] = `
     />
   </Text>
   <Text>
-    <ArticleByline
-      articleReadState={
-        Object {
-          "animate": false,
-          "read": false,
-        }
-      }
-      ast={
-        Array [
+    <View>
+      <ArticleByline
+        articleReadState={
           Object {
-            "byline": Array [
-              Object {
-                "attributes": Object {},
-                "children": Array [
-                  Object {
-                    "attributes": Object {
-                      "value": "A byline",
+            "animate": false,
+            "read": false,
+          }
+        }
+        ast={
+          Array [
+            Object {
+              "byline": Array [
+                Object {
+                  "attributes": Object {},
+                  "children": Array [
+                    Object {
+                      "attributes": Object {
+                        "value": "A byline",
+                      },
+                      "children": Array [],
+                      "name": "text",
                     },
-                    "children": Array [],
-                    "name": "text",
-                  },
-                ],
-                "name": "inline",
-              },
-            ],
-          },
-        ]
-      }
-    />
+                  ],
+                  "name": "inline",
+                },
+              ],
+            },
+          ]
+        }
+      />
+    </View>
   </Text>
 </View>
 `;
@@ -424,16 +440,18 @@ exports[`8. article summary component with no label 1`] = `
 exports[`9. article summary component with no headline 1`] = `
 <View>
   <View>
-    <ArticleLabel
-      articleReadState={
-        Object {
-          "animate": false,
-          "read": false,
+    <View>
+      <ArticleLabel
+        articleReadState={
+          Object {
+            "animate": false,
+            "read": false,
+          }
         }
-      }
-      color="#333333"
-      title="Test label"
-    />
+        color="#333333"
+        title="Test label"
+      />
+    </View>
   </View>
   <Text>
     <Text>
@@ -454,16 +472,18 @@ exports[`9. article summary component with no headline 1`] = `
 exports[`10. article summary component with no date publication 1`] = `
 <View>
   <View>
-    <ArticleLabel
-      articleReadState={
-        Object {
-          "animate": false,
-          "read": false,
+    <View>
+      <ArticleLabel
+        articleReadState={
+          Object {
+            "animate": false,
+            "read": false,
+          }
         }
-      }
-      color="#333333"
-      title="Test label"
-    />
+        color="#333333"
+        title="Test label"
+      />
+    </View>
   </View>
   <Text
     accessibilityRole="header"
@@ -479,35 +499,37 @@ exports[`10. article summary component with no date publication 1`] = `
     </Text>
   </Text>
   <Text>
-    <ArticleByline
-      articleReadState={
-        Object {
-          "animate": false,
-          "read": false,
-        }
-      }
-      ast={
-        Array [
+    <View>
+      <ArticleByline
+        articleReadState={
           Object {
-            "byline": Array [
-              Object {
-                "attributes": Object {},
-                "children": Array [
-                  Object {
-                    "attributes": Object {
-                      "value": "A byline",
+            "animate": false,
+            "read": false,
+          }
+        }
+        ast={
+          Array [
+            Object {
+              "byline": Array [
+                Object {
+                  "attributes": Object {},
+                  "children": Array [
+                    Object {
+                      "attributes": Object {
+                        "value": "A byline",
+                      },
+                      "children": Array [],
+                      "name": "text",
                     },
-                    "children": Array [],
-                    "name": "text",
-                  },
-                ],
-                "name": "inline",
-              },
-            ],
-          },
-        ]
-      }
-    />
+                  ],
+                  "name": "inline",
+                },
+              ],
+            },
+          ]
+        }
+      />
+    </View>
   </Text>
 </View>
 `;
@@ -515,17 +537,19 @@ exports[`10. article summary component with no date publication 1`] = `
 exports[`11. article summary component with a video label 1`] = `
 <View>
   <View>
-    <VideoLabel
-      articleReadState={
-        Object {
-          "animate": false,
-          "read": false,
+    <View>
+      <VideoLabel
+        articleReadState={
+          Object {
+            "animate": false,
+            "read": false,
+          }
         }
-      }
-      color="#333333"
-      isVideo={true}
-      title="Test label"
-    />
+        color="#333333"
+        isVideo={true}
+        title="Test label"
+      />
+    </View>
   </View>
   <Text
     accessibilityRole="header"
@@ -547,35 +571,37 @@ exports[`11. article summary component with a video label 1`] = `
     />
   </Text>
   <Text>
-    <ArticleByline
-      articleReadState={
-        Object {
-          "animate": false,
-          "read": false,
-        }
-      }
-      ast={
-        Array [
+    <View>
+      <ArticleByline
+        articleReadState={
           Object {
-            "byline": Array [
-              Object {
-                "attributes": Object {},
-                "children": Array [
-                  Object {
-                    "attributes": Object {
-                      "value": "A byline",
+            "animate": false,
+            "read": false,
+          }
+        }
+        ast={
+          Array [
+            Object {
+              "byline": Array [
+                Object {
+                  "attributes": Object {},
+                  "children": Array [
+                    Object {
+                      "attributes": Object {
+                        "value": "A byline",
+                      },
+                      "children": Array [],
+                      "name": "text",
                     },
-                    "children": Array [],
-                    "name": "text",
-                  },
-                ],
-                "name": "inline",
-              },
-            ],
-          },
-        ]
-      }
-    />
+                  ],
+                  "name": "inline",
+                },
+              ],
+            },
+          ]
+        }
+      />
+    </View>
   </Text>
 </View>
 `;
@@ -583,16 +609,18 @@ exports[`11. article summary component with a video label 1`] = `
 exports[`12. article summary component with a strapline 1`] = `
 <View>
   <View>
-    <ArticleLabel
-      articleReadState={
-        Object {
-          "animate": false,
-          "read": false,
+    <View>
+      <ArticleLabel
+        articleReadState={
+          Object {
+            "animate": false,
+            "read": false,
+          }
         }
-      }
-      color="#333333"
-      title="Test label"
-    />
+        color="#333333"
+        title="Test label"
+      />
+    </View>
   </View>
   <Text
     accessibilityRole="header"
@@ -634,54 +662,56 @@ exports[`12. article summary component with a strapline 1`] = `
     />
   </Text>
   <Text>
-    <ArticleByline
-      articleReadState={
-        Object {
-          "animate": false,
-          "read": false,
+    <View>
+      <ArticleByline
+        articleReadState={
+          Object {
+            "animate": false,
+            "read": false,
+          }
         }
-      }
-      ast={
-        Array [
-          Object {
-            "byline": Array [
-              Object {
-                "attributes": Object {
-                  "slug": "camilla-long",
+        ast={
+          Array [
+            Object {
+              "byline": Array [
+                Object {
+                  "attributes": Object {
+                    "slug": "camilla-long",
+                  },
+                  "children": Array [
+                    Object {
+                      "attributes": Object {
+                        "value": "Camilla Long",
+                      },
+                      "children": Array [],
+                      "name": "text",
+                    },
+                  ],
+                  "name": "author",
                 },
-                "children": Array [
-                  Object {
-                    "attributes": Object {
-                      "value": "Camilla Long",
+              ],
+            },
+            Object {
+              "byline": Array [
+                Object {
+                  "attributes": Object {},
+                  "children": Array [
+                    Object {
+                      "attributes": Object {
+                        "value": ", Environment Editor",
+                      },
+                      "children": Array [],
+                      "name": "text",
                     },
-                    "children": Array [],
-                    "name": "text",
-                  },
-                ],
-                "name": "author",
-              },
-            ],
-          },
-          Object {
-            "byline": Array [
-              Object {
-                "attributes": Object {},
-                "children": Array [
-                  Object {
-                    "attributes": Object {
-                      "value": ", Environment Editor",
-                    },
-                    "children": Array [],
-                    "name": "text",
-                  },
-                ],
-                "name": "inline",
-              },
-            ],
-          },
-        ]
-      }
-    />
+                  ],
+                  "name": "inline",
+                },
+              ],
+            },
+          ]
+        }
+      />
+    </View>
   </Text>
 </View>
 `;
@@ -733,16 +763,18 @@ exports[`17. article summary content component without white space height 1`] = 
 exports[`18. article summary component with a single paragraph and flag on tablet 1`] = `
 <View>
   <View>
-    <ArticleLabel
-      articleReadState={
-        Object {
-          "animate": false,
-          "read": false,
+    <View>
+      <ArticleLabel
+        articleReadState={
+          Object {
+            "animate": false,
+            "read": false,
+          }
         }
-      }
-      color="#333333"
-      title="Camilla Long"
-    />
+        color="#333333"
+        title="Camilla Long"
+      />
+    </View>
   </View>
   <Text
     accessibilityRole="header"
@@ -778,46 +810,48 @@ exports[`18. article summary component with a single paragraph and flag on table
     />
   </Text>
   <Text>
-    <ArticleByline
-      articleReadState={
-        Object {
-          "animate": false,
-          "read": false,
+    <View>
+      <ArticleByline
+        articleReadState={
+          Object {
+            "animate": false,
+            "read": false,
+          }
         }
-      }
-      ast={
-        Array [
-          Object {
-            "attributes": Object {
-              "slug": "camilla-long",
+        ast={
+          Array [
+            Object {
+              "attributes": Object {
+                "slug": "camilla-long",
+              },
+              "children": Array [
+                Object {
+                  "attributes": Object {
+                    "value": "Camilla Long",
+                  },
+                  "children": Array [],
+                  "name": "text",
+                },
+              ],
+              "name": "author",
             },
-            "children": Array [
-              Object {
-                "attributes": Object {
-                  "value": "Camilla Long",
+            Object {
+              "attributes": Object {},
+              "children": Array [
+                Object {
+                  "attributes": Object {
+                    "value": ", Environment Editor",
+                  },
+                  "children": Array [],
+                  "name": "text",
                 },
-                "children": Array [],
-                "name": "text",
-              },
-            ],
-            "name": "author",
-          },
-          Object {
-            "attributes": Object {},
-            "children": Array [
-              Object {
-                "attributes": Object {
-                  "value": ", Environment Editor",
-                },
-                "children": Array [],
-                "name": "text",
-              },
-            ],
-            "name": "inline",
-          },
-        ]
-      }
-    />
+              ],
+              "name": "inline",
+            },
+          ]
+        }
+      />
+    </View>
   </Text>
 </View>
 `;
@@ -825,16 +859,18 @@ exports[`18. article summary component with a single paragraph and flag on table
 exports[`19. article summary component with a strapline and flag on tablet 1`] = `
 <View>
   <View>
-    <ArticleLabel
-      articleReadState={
-        Object {
-          "animate": false,
-          "read": false,
+    <View>
+      <ArticleLabel
+        articleReadState={
+          Object {
+            "animate": false,
+            "read": false,
+          }
         }
-      }
-      color="#333333"
-      title="Camilla Long"
-    />
+        color="#333333"
+        title="Camilla Long"
+      />
+    </View>
   </View>
   <Text
     accessibilityRole="header"
@@ -876,54 +912,56 @@ exports[`19. article summary component with a strapline and flag on tablet 1`] =
     />
   </Text>
   <Text>
-    <ArticleByline
-      articleReadState={
-        Object {
-          "animate": false,
-          "read": false,
+    <View>
+      <ArticleByline
+        articleReadState={
+          Object {
+            "animate": false,
+            "read": false,
+          }
         }
-      }
-      ast={
-        Array [
-          Object {
-            "byline": Array [
-              Object {
-                "attributes": Object {
-                  "slug": "camilla-long",
+        ast={
+          Array [
+            Object {
+              "byline": Array [
+                Object {
+                  "attributes": Object {
+                    "slug": "camilla-long",
+                  },
+                  "children": Array [
+                    Object {
+                      "attributes": Object {
+                        "value": "Camilla Long",
+                      },
+                      "children": Array [],
+                      "name": "text",
+                    },
+                  ],
+                  "name": "author",
                 },
-                "children": Array [
-                  Object {
-                    "attributes": Object {
-                      "value": "Camilla Long",
+              ],
+            },
+            Object {
+              "byline": Array [
+                Object {
+                  "attributes": Object {},
+                  "children": Array [
+                    Object {
+                      "attributes": Object {
+                        "value": ", Environment Editor",
+                      },
+                      "children": Array [],
+                      "name": "text",
                     },
-                    "children": Array [],
-                    "name": "text",
-                  },
-                ],
-                "name": "author",
-              },
-            ],
-          },
-          Object {
-            "byline": Array [
-              Object {
-                "attributes": Object {},
-                "children": Array [
-                  Object {
-                    "attributes": Object {
-                      "value": ", Environment Editor",
-                    },
-                    "children": Array [],
-                    "name": "text",
-                  },
-                ],
-                "name": "inline",
-              },
-            ],
-          },
-        ]
-      }
-    />
+                  ],
+                  "name": "inline",
+                },
+              ],
+            },
+          ]
+        }
+      />
+    </View>
   </Text>
 </View>
 `;
@@ -964,46 +1002,48 @@ exports[`20. article summary component with hidden label 1`] = `
     />
   </Text>
   <Text>
-    <ArticleByline
-      articleReadState={
-        Object {
-          "animate": false,
-          "read": false,
+    <View>
+      <ArticleByline
+        articleReadState={
+          Object {
+            "animate": false,
+            "read": false,
+          }
         }
-      }
-      ast={
-        Array [
-          Object {
-            "attributes": Object {
-              "slug": "camilla-long",
+        ast={
+          Array [
+            Object {
+              "attributes": Object {
+                "slug": "camilla-long",
+              },
+              "children": Array [
+                Object {
+                  "attributes": Object {
+                    "value": "Camilla Long",
+                  },
+                  "children": Array [],
+                  "name": "text",
+                },
+              ],
+              "name": "author",
             },
-            "children": Array [
-              Object {
-                "attributes": Object {
-                  "value": "Camilla Long",
+            Object {
+              "attributes": Object {},
+              "children": Array [
+                Object {
+                  "attributes": Object {
+                    "value": ", Environment Editor",
+                  },
+                  "children": Array [],
+                  "name": "text",
                 },
-                "children": Array [],
-                "name": "text",
-              },
-            ],
-            "name": "author",
-          },
-          Object {
-            "attributes": Object {},
-            "children": Array [
-              Object {
-                "attributes": Object {
-                  "value": ", Environment Editor",
-                },
-                "children": Array [],
-                "name": "text",
-              },
-            ],
-            "name": "inline",
-          },
-        ]
-      }
-    />
+              ],
+              "name": "inline",
+            },
+          ]
+        }
+      />
+    </View>
   </Text>
 </View>
 `;
@@ -1011,16 +1051,18 @@ exports[`20. article summary component with hidden label 1`] = `
 exports[`21. article summary component with byline on top 1`] = `
 <View>
   <View>
-    <ArticleLabel
-      articleReadState={
-        Object {
-          "animate": false,
-          "read": false,
+    <View>
+      <ArticleLabel
+        articleReadState={
+          Object {
+            "animate": false,
+            "read": false,
+          }
         }
-      }
-      color="#333333"
-      title="Camilla Long"
-    />
+        color="#333333"
+        title="Camilla Long"
+      />
+    </View>
   </View>
   <Text
     accessibilityRole="header"
@@ -1056,46 +1098,48 @@ exports[`21. article summary component with byline on top 1`] = `
     />
   </Text>
   <Text>
-    <ArticleByline
-      articleReadState={
-        Object {
-          "animate": false,
-          "read": false,
+    <View>
+      <ArticleByline
+        articleReadState={
+          Object {
+            "animate": false,
+            "read": false,
+          }
         }
-      }
-      ast={
-        Array [
-          Object {
-            "attributes": Object {
-              "slug": "camilla-long",
+        ast={
+          Array [
+            Object {
+              "attributes": Object {
+                "slug": "camilla-long",
+              },
+              "children": Array [
+                Object {
+                  "attributes": Object {
+                    "value": "Camilla Long",
+                  },
+                  "children": Array [],
+                  "name": "text",
+                },
+              ],
+              "name": "author",
             },
-            "children": Array [
-              Object {
-                "attributes": Object {
-                  "value": "Camilla Long",
+            Object {
+              "attributes": Object {},
+              "children": Array [
+                Object {
+                  "attributes": Object {
+                    "value": ", Environment Editor",
+                  },
+                  "children": Array [],
+                  "name": "text",
                 },
-                "children": Array [],
-                "name": "text",
-              },
-            ],
-            "name": "author",
-          },
-          Object {
-            "attributes": Object {},
-            "children": Array [
-              Object {
-                "attributes": Object {
-                  "value": ", Environment Editor",
-                },
-                "children": Array [],
-                "name": "text",
-              },
-            ],
-            "name": "inline",
-          },
-        ]
-      }
-    />
+              ],
+              "name": "inline",
+            },
+          ]
+        }
+      />
+    </View>
   </Text>
 </View>
 `;
