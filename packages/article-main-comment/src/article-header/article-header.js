@@ -30,7 +30,7 @@ const ArticleHeader = ({
   tooltips,
 }) => {
   const withBylineTooltip =
-    hasBylineData(bylines) && ["profile"].includes("profile");
+    hasBylineData(bylines) && tooltips.includes("profile");
   return (
     <View style={styles.header}>
       <View

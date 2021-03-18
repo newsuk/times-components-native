@@ -54,7 +54,7 @@ class ArticleInDepth extends Component {
     } = article;
 
     const withBylineTooltip =
-      hasBylineData(bylines) && ["profile"].includes("profile");
+      hasBylineData(bylines) && tooltips.includes("profile");
 
     return (
       <ResponsiveContext.Consumer>

@@ -114,7 +114,7 @@ exports[`enabled comments 1`] = `
   <View
     style={
       Object {
-        "flexDirection": "row-reverse",
+        "flexDirection": "column-reverse",
         "zIndex": 9999,
       }
     }

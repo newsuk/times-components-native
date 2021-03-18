@@ -98,9 +98,9 @@ exports[`1. an article 1`] = `
                 },
               ]
             }
-            tooltipArrowOffset={30}
-            tooltipOffsetX={-20}
-            tooltipOffsetY={26}
+            tooltipArrowOffset={120}
+            tooltipOffsetX={20}
+            tooltipOffsetY={38}
           />
         </View>
       </View>
@@ -139,9 +139,9 @@ exports[`4. an article with no headline falls back to use shortheadline 1`] = `
         <View>
           <ArticleBylineWithLinks
             articleId="198c4b2f-ecec-4f34-be53-c89f83bc1b44"
-            tooltipArrowOffset={30}
-            tooltipOffsetX={-20}
-            tooltipOffsetY={26}
+            tooltipArrowOffset={120}
+            tooltipOffsetX={20}
+            tooltipOffsetY={38}
           />
         </View>
       </View>
@@ -176,9 +176,9 @@ exports[`5. an article with ads 1`] = `
         <View>
           <ArticleBylineWithLinks
             articleId="198c4b2f-ecec-4f34-be53-c89f83bc1b44"
-            tooltipArrowOffset={30}
-            tooltipOffsetX={-20}
-            tooltipOffsetY={26}
+            tooltipArrowOffset={120}
+            tooltipOffsetX={20}
+            tooltipOffsetY={38}
           />
         </View>
       </View>
@@ -269,9 +269,9 @@ exports[`6. an article with no byline 1`] = `
         <View>
           <ArticleBylineWithLinks
             articleId="198c4b2f-ecec-4f34-be53-c89f83bc1b44"
-            tooltipArrowOffset={30}
-            tooltipOffsetX={-20}
-            tooltipOffsetY={26}
+            tooltipArrowOffset={120}
+            tooltipOffsetX={20}
+            tooltipOffsetY={38}
           />
         </View>
       </View>
@@ -377,9 +377,9 @@ exports[`7. an article with no label 1`] = `
                 },
               ]
             }
-            tooltipArrowOffset={30}
-            tooltipOffsetX={-20}
-            tooltipOffsetY={26}
+            tooltipArrowOffset={120}
+            tooltipOffsetX={20}
+            tooltipOffsetY={38}
           />
         </View>
       </View>

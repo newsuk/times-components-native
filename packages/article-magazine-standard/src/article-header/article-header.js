@@ -32,7 +32,7 @@ const ArticleHeader = ({
   tooltips,
 }) => {
   const withBylineTooltip =
-    hasBylineData(bylines) && ["profile"].includes("profile");
+    hasBylineData(bylines) && tooltips.includes("profile");
   return (
     <Context.Consumer>
       {({ theme: { headlineFont, headlineCase } }) => (

@@ -47,13 +47,11 @@ const ArticleBylineWithLinks = ({ ast, ...props }) => {
     tooltips,
   } = props;
 
-  const { isTablet } = useResponsiveContext();
-
   const textStyle = centered ? [styles.text, styles.centered] : styles.text;
   const tooltipType = "profile";
 
   const showTooltip =
-    !disableTooltip && hasAuthorData(ast) && ["profile"].includes(tooltipType);
+    !disableTooltip && hasAuthorData(ast) && tooltips.includes(tooltipType);
 
   const byline = renderByline(
     withTrackEvents(AuthorComponent),
@@ -76,7 +74,7 @@ const ArticleBylineWithLinks = ({ ast, ...props }) => {
       offsetY={tooltipOffsetY}
       onTooltipPresented={onTooltipPresented}
       type={tooltipType}
-      tooltips={["profile"]}
+      tooltips={tooltips}
       width={256}
     >
       {byline}

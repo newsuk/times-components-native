@@ -17,7 +17,13 @@ class ArticlePage extends Component {
   }
 
   renderHeader() {
-    const { article, onAuthorPress, onImagePress } = this.props;
+    const {
+      article,
+      onAuthorPress,
+      onImagePress,
+      onTooltipPresented,
+      tooltips,
+    } = this.props;
     const {
       bylines,
       expirableFlags,
@@ -42,6 +48,7 @@ class ArticlePage extends Component {
 
     return (
       <ArticleHeader
+        articleId={article.id}
         authorImage={authorImage}
         bylines={bylines}
         flags={expirableFlags}
@@ -51,9 +58,11 @@ class ArticlePage extends Component {
         longRead={longRead}
         onAuthorPress={onAuthorPress}
         onImagePress={onImagePress}
+        onTooltipPresented={onTooltipPresented}
         publicationName={publicationName}
         publishedTime={publishedTime}
         standfirst={standfirst}
+        tooltips={tooltips}
       />
     );
   }

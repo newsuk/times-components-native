@@ -52,6 +52,7 @@ const Comments: FC<CommentsProps> = ({
         </TextLink>
       </Text>
       <Tooltip
+        articleId={articleId}
         arrowOffset={isTablet ? 43 : 90}
         flexDirectionColumnReverse={!isTablet}
         content={
@@ -64,7 +65,6 @@ const Comments: FC<CommentsProps> = ({
         tooltips={tooltips}
         placement={isTablet ? "right" : "bottom"}
         width={narrowContent ? 165 : 207}
-        articleId={articleId}
       >
         <Context.Consumer>
           {({ theme: { scale } }) => {
