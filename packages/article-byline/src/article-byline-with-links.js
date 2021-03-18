@@ -5,7 +5,6 @@ import { TextLink } from "@times-components-native/link";
 import Tooltip from "@times-components-native/tooltip";
 import renderByline from "./render-byline";
 import { propTypes, defaultProps } from "./article-byline-prop-types";
-import { useResponsiveContext } from "@times-components-native/responsive";
 import styles from "./styles";
 import withTrackEvents from "../tracking/with-track-events";
 import hasAuthorData from "./has-author-data";
