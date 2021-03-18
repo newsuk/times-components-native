@@ -9,6 +9,7 @@ import styles from "./styles";
 import { topicDefaultProps, topicPropTypes } from "./article-topic-prop-types";
 
 const ArticleTopic = ({
+  articleId,
   fontSize,
   index,
   lineHeight,
@@ -18,7 +19,6 @@ const ArticleTopic = ({
   slug,
   tooltipDisplayedInView,
   tooltips,
-  articleId,
 }) => {
   const fontSizeStyle = fontSize ? { fontSize } : null;
   const lineHeightStyle = lineHeight ? { lineHeight } : null;
@@ -63,6 +63,7 @@ const ArticleTopic = ({
 
   const articleTopicWithTooltip = (
     <Tooltip
+      articleId={articleId}
       content={<Text>Tap a topic to see more of our coverage</Text>}
       displayedInView={tooltipDisplayedInView}
       offsetY={5}
@@ -72,7 +73,6 @@ const ArticleTopic = ({
       type={tooltipType}
       tooltips={tooltips}
       width={isTablet ? 236 : 207}
-      articleId={articleId}
     >
       {articleTopic}
     </Tooltip>

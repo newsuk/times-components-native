@@ -10,6 +10,7 @@ import { defaultProps, propTypes } from "./article-meta-prop-types";
 import styles from "../styles/article-meta";
 
 function ArticleMeta({
+  articleId,
   isTablet,
   bylines,
   publicationName,
@@ -17,22 +18,29 @@ function ArticleMeta({
   onAuthorPress,
   onTooltipPresented,
   tooltips,
-  articleId,
 }) {
+  const withBylineTooltip =
+    hasBylineData(bylines) && ["profile"].includes("profile");
   return (
-    <View style={[styles.articleMeta, isTablet && styles.articleMetaTablet]}>
+    <View
+      style={[
+        styles.articleMeta,
+        isTablet && styles.articleMetaTablet,
+        !isTablet && withBylineTooltip && styles.articleMetaWidthMargin,
+      ]}
+    >
       {hasBylineData(bylines) && (
         <View style={styles.articleMetaElementWithBorder}>
           <View style={styles.datePublication}>
             <ArticleBylineWithLinks
+              articleId={articleId}
               ast={bylines}
               onAuthorPress={onAuthorPress}
               onTooltipPresented={onTooltipPresented}
-              tooltipArrowOffset={130}
+              tooltipArrowOffset={isTablet ? 130 : 120}
               tooltips={tooltips}
-              tooltipOffsetX={-20}
-              tooltipOffsetY={26}
-              articleId={articleId}
+              tooltipOffsetX={isTablet ? -20 : 20}
+              tooltipOffsetY={isTablet ? 26 : 38}
             />
           </View>
         </View>

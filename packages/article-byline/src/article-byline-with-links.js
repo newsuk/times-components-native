@@ -36,6 +36,7 @@ const AuthorComponent = ({
 
 const ArticleBylineWithLinks = ({ ast, ...props }) => {
   const {
+    articleId,
     centered,
     disableTooltip,
     onTooltipPresented,
@@ -44,7 +45,6 @@ const ArticleBylineWithLinks = ({ ast, ...props }) => {
     tooltipOffsetX,
     tooltipOffsetY,
     tooltips,
-    articleId,
   } = props;
 
   const { isTablet } = useResponsiveContext();
@@ -64,6 +64,7 @@ const ArticleBylineWithLinks = ({ ast, ...props }) => {
 
   const bylineWithTooltip = (
     <Tooltip
+      articleId={articleId}
       content={
         <Text>
           To view all articles from this journalist, just tap their name
@@ -76,8 +77,7 @@ const ArticleBylineWithLinks = ({ ast, ...props }) => {
       onTooltipPresented={onTooltipPresented}
       type={tooltipType}
       tooltips={["profile"]}
-      width={isTablet ? 236 : 285}
-      articleId={articleId}
+      width={256}
     >
       {byline}
     </Tooltip>
