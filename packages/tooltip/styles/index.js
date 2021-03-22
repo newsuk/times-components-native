@@ -122,7 +122,11 @@ const generateStyles = (options) => {
   }
 
   if (options.flexDirectionColumnReverse) {
-    wrapperPlacementStyles = { flexDirection: "column-reverse" };
+    wrapperPlacementStyles = {
+      flexDirection: "column-reverse",
+      justifyContent: "space-between",
+      height: 180,
+    };
     containerPlacementStyles = {
       ...{ position: "relative" },
       ...containerPlacementStyles,
