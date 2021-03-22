@@ -1,5 +1,6 @@
 import React, { FC } from "react";
 import { GestureResponderEvent, Text, TextProps, View } from "react-native";
+import { useResponsiveContext } from "@times-components-native/responsive";
 import Context from "@times-components-native/context";
 import Button from "@times-components-native/button";
 import { TextLink } from "@times-components-native/link";
@@ -31,56 +32,61 @@ const Comments: FC<CommentsProps> = ({
   onTooltipPresented = () => null,
   tooltips = [],
   url,
-}) => (
-  <View style={styles.container}>
-    <Text style={styles.headline}>{`${commentCount} ${
-      commentCount === 1 ? "comment" : "comments"
-    }`}</Text>
-    <Text style={styles.supporting}>
-      Comments are subject to our community guidelines, which can be
-      viewed&nbsp;
-      <TextLink
-        onPress={onCommentGuidelinesPress}
-        style={styles.link}
-        target={null}
-        url={null}
+}) => {
+  const { isTablet } = useResponsiveContext();
+  return (
+    <View style={styles.container}>
+      <Text style={styles.headline}>{`${commentCount} ${
+        commentCount === 1 ? "comment" : "comments"
+      }`}</Text>
+      <Text style={styles.supporting}>
+        Comments are subject to our community guidelines, which can be
+        viewed&nbsp;
+        <TextLink
+          onPress={onCommentGuidelinesPress}
+          style={styles.link}
+          target={null}
+          url={null}
+        >
+          here
+        </TextLink>
+      </Text>
+      <Tooltip
+        articleId={articleId}
+        arrowOffset={isTablet ? 43 : 90}
+        flexDirectionColumnReverse={!isTablet}
+        content={
+          <Text>Tap to read comments and join in with the conversation</Text>
+        }
+        offsetX={isTablet ? 12 : 3}
+        offsetY={isTablet ? 0 : 15}
+        onTooltipPresented={onTooltipPresented}
+        type="commenting"
+        tooltips={tooltips}
+        placement={isTablet ? "right" : "bottom"}
+        width={narrowContent ? 165 : 207}
       >
-        here
-      </TextLink>
-    </Text>
-    <Tooltip
-      arrowOffset={43}
-      content={
-        <Text>Tap to read comments and join in with the conversation</Text>
-      }
-      offsetX={12}
-      onTooltipPresented={onTooltipPresented}
-      type="commenting"
-      tooltips={tooltips}
-      placement="right"
-      width={narrowContent ? 165 : 207}
-      articleId={articleId}
-    >
-      <Context.Consumer>
-        {({ theme: { scale } }) => {
-          const themedStyleguide = styleguide({ scale });
-          const fontFactory = themedStyleguide.fontFactory({
-            font: "supporting",
-            fontSize: "button",
-          });
-          return (
-            <Button
-              fontSize={fontFactory.fontSize}
-              lineHeight={fontFactory.lineHeight}
-              onPress={(e) => onCommentsPress(e, { articleId, url })}
-              style={styles.button}
-              title={commentCount > 0 ? "View comments" : "Post a comment"}
-            />
-          );
-        }}
-      </Context.Consumer>
-    </Tooltip>
-  </View>
-);
+        <Context.Consumer>
+          {({ theme: { scale } }) => {
+            const themedStyleguide = styleguide({ scale });
+            const fontFactory = themedStyleguide.fontFactory({
+              font: "supporting",
+              fontSize: "button",
+            });
+            return (
+              <Button
+                fontSize={fontFactory.fontSize}
+                lineHeight={fontFactory.lineHeight}
+                onPress={(e) => onCommentsPress(e, { articleId, url })}
+                style={styles.button}
+                title={commentCount > 0 ? "View comments" : "Post a comment"}
+              />
+            );
+          }}
+        </Context.Consumer>
+      </Tooltip>
+    </View>
+  );
+};
 
 export default Comments;

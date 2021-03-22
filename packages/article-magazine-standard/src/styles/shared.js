@@ -18,6 +18,9 @@ const sharedStyles = {
     paddingRight: spacing(2),
     paddingTop: spacing(7),
   },
+  containerWithMargin: {
+    marginBottom: 100,
+  },
   datePublication: {
     ...fontFactory({
       font: "supporting",

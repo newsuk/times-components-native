@@ -98,7 +98,7 @@ const styles = StyleSheet.create({
 const generateStyles = (options) => {
   let arrowPlacementStyles,
     wrapperPlacementStyles = {},
-    containerPlacementStyles;
+    containerPlacementStyles = [];
 
   switch (options.placement) {
     case "top":
@@ -106,7 +106,7 @@ const generateStyles = (options) => {
         styles.arrowBottom,
         { left: options.arrowOffset },
       ];
-      containerPlacementStyles = { bottom: options.offsetY };
+      containerPlacementStyles = [{ bottom: options.offsetY }];
       break;
     case "right":
       arrowPlacementStyles = [styles.arrowRight, { top: options.arrowOffset }];
@@ -118,7 +118,19 @@ const generateStyles = (options) => {
       break;
     default:
       arrowPlacementStyles = { left: options.arrowOffset };
-      containerPlacementStyles = { top: options.offsetY };
+      containerPlacementStyles = [{ top: options.offsetY }];
+  }
+
+  if (options.flexDirectionColumnReverse) {
+    wrapperPlacementStyles = {
+      flexDirection: "column-reverse",
+      justifyContent: "space-between",
+      height: 180,
+    };
+    containerPlacementStyles = {
+      ...{ position: "relative" },
+      ...containerPlacementStyles,
+    };
   }
 
   return {

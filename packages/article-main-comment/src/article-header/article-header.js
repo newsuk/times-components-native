@@ -1,9 +1,9 @@
 import React from "react";
 import { Text, View } from "react-native";
 import PropTypes from "prop-types";
+import { hasBylineData } from "@times-components-native/article-byline";
 import { ArticleFlags } from "@times-components-native/article-flag";
 import { ModalImage } from "@times-components-native/image";
-import { useResponsiveContext } from "@times-components-native/responsive";
 import Label from "../article-label/article-label";
 import Meta from "../article-meta/article-meta";
 import Standfirst from "../article-standfirst/article-standfirst";
@@ -14,6 +14,7 @@ import {
 import styles from "../styles";
 
 const ArticleHeader = ({
+  articleId,
   authorImage,
   bylines,
   flags,
@@ -26,11 +27,18 @@ const ArticleHeader = ({
   publicationName,
   publishedTime,
   standfirst,
+  tooltips,
 }) => {
-  const { isTablet } = useResponsiveContext();
+  const withBylineTooltip =
+    hasBylineData(bylines) && tooltips.includes("profile");
   return (
-    <View style={[styles.header, isTablet && styles.headerTablet]}>
-      <View style={[styles.container, isTablet && styles.containerTablet]}>
+    <View style={styles.header}>
+      <View
+        style={[
+          styles.container,
+          withBylineTooltip && styles.containerWithMargin,
+        ]}
+      >
         <ModalImage
           aspectRatio={1}
           imageStyles={styles.authorImage}
@@ -40,23 +48,17 @@ const ArticleHeader = ({
           isSmallImage
         />
         <Label isVideo={hasVideo} label={label} />
-        <Text
-          style={[
-            styles.articleHeadline,
-            isTablet && styles.articleHeadlineTablet,
-          ]}
-        >
-          {headline}
-        </Text>
+        <Text style={styles.articleHeadline}>{headline}</Text>
         <ArticleFlags flags={flags} longRead={longRead} withContainer />
         <Standfirst standfirst={standfirst} />
         <Meta
+          articleId={articleId}
           bylines={bylines}
           hasStandfirst={standfirst}
-          isTablet={isTablet}
           onAuthorPress={onAuthorPress}
           publicationName={publicationName}
           publishedTime={publishedTime}
+          tooltips={tooltips}
         />
       </View>
     </View>
