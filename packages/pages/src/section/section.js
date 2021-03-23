@@ -26,9 +26,7 @@ const {
 
 const onArticlePress = ({ id, isPuff = false }) =>
   onArticlePressBridge(id, isPuff);
-const onLinkPress = ({ url, isExternal = true }) =>
-  onLinkPressBridge(url, isExternal);
-
+const onLinkPress = ({ url }) => onLinkPressBridge(url);
 const onPuzzlePress = ({ id, title, url }) =>
   onPuzzlePressBridge(url, title, id);
 

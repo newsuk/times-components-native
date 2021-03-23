@@ -10,8 +10,6 @@ import {
 } from "react-native";
 import { useResponsiveContext } from "@times-components-native/responsive";
 import { withTrackScrollDepth } from "@times-components-native/tracking";
-import { IconEmail } from "@times-components-native/icons";
-import FloatingActionButton from "@times-components-native/floating-action-button";
 import SectionItemSeparator from "./section-item-separator";
 import withTrackingContext from "./section-tracking-context";
 import PuzzleBar from "./puzzle-bar";
@@ -20,7 +18,6 @@ import Slice from "./slice";
 import styleFactory from "./styles";
 import {
   createPuzzleData,
-  getEmailPuzzlesUrl,
   getSliceIndexByArticleId,
   isSupplementSection,
   prepareSlicesForRender,
@@ -60,7 +57,6 @@ const Section: FC<Props> = ({
   onPuzzlePress,
   onPuzzleBarPress,
   onViewed,
-  publishedTime,
   receiveChildList,
   section,
 }) => {
@@ -69,11 +65,6 @@ const Section: FC<Props> = ({
 
   const flatListRef = useRef<FlatList | null>(null);
   const sliceOffsets = useRef<Record<string, number>>({});
-
-  const emailPuzzlesButtonExtendedWidth = 170;
-  const [emailPuzzlesButtonWidth] = useState(
-    new Animated.Value(emailPuzzlesButtonExtendedWidth),
-  );
 
   useEffect(() => {
     const sectionEventsListener = sectionEventEmitter.addListener(
@@ -84,22 +75,6 @@ const Section: FC<Props> = ({
       sectionEventsListener.remove();
     };
   }, []);
-
-  const isIOS = Platform.OS === "ios";
-
-  const onEmailPuzzleButtonPress = () =>
-    onLinkPress({
-      url: getEmailPuzzlesUrl(publishedTime),
-      isExternal: false,
-    });
-
-  const onScrollBeginDrag = () => {
-    Animated.timing(emailPuzzlesButtonWidth, {
-      toValue: 0,
-      duration: 200,
-      useNativeDriver: false,
-    }).start();
-  };
 
   const onViewableItemsChanged = useCallback((info) => {
     if (!onViewed || !info.changed || !info.changed.length) return [];
@@ -207,36 +182,24 @@ const Section: FC<Props> = ({
   };
 
   return (
-    <>
-      <Viewport.Tracker>
-        <FlatList
-          ref={(ref) => (flatListRef.current = ref)}
-          contentContainerStyle={
-            isTablet && isPuzzle && styles.additionalContainerPadding
-          }
-          removeClippedSubviews
-          data={data}
-          ItemSeparatorComponent={(leadingItem) =>
-            renderItemSeperator(isPuzzle)(leadingItem, editionBreakpoint)
-          }
-          keyExtractor={(item) => item.elementId}
-          ListHeaderComponent={getHeaderComponent(isPuzzle, isMagazine)}
-          nestedScrollEnabled
-          onViewableItemsChanged={onViewed ? onViewableItemsChanged : null}
-          {...(isPuzzle && { onScrollBeginDrag })}
-          renderItem={renderItem(isPuzzle, orientation)}
-        />
-      </Viewport.Tracker>
-      {isPuzzle && isIOS ? (
-        <FloatingActionButton
-          animatedWidth={emailPuzzlesButtonWidth}
-          extendedWidth={emailPuzzlesButtonExtendedWidth}
-          text="Email me puzzles"
-          icon={<IconEmail width={22} height={23} />}
-          onPress={onEmailPuzzleButtonPress}
-        />
-      ) : null}
-    </>
+    <Viewport.Tracker>
+      <FlatList
+        ref={(ref) => (flatListRef.current = ref)}
+        contentContainerStyle={
+          isTablet && isPuzzle && styles.additionalContainerPadding
+        }
+        removeClippedSubviews
+        data={data}
+        ItemSeparatorComponent={(leadingItem) =>
+          renderItemSeperator(isPuzzle)(leadingItem, editionBreakpoint)
+        }
+        keyExtractor={(item) => item.elementId}
+        ListHeaderComponent={getHeaderComponent(isPuzzle, isMagazine)}
+        nestedScrollEnabled
+        onViewableItemsChanged={onViewed ? onViewableItemsChanged : null}
+        renderItem={renderItem(isPuzzle, orientation)}
+      />
+    </Viewport.Tracker>
   );
 };
 
