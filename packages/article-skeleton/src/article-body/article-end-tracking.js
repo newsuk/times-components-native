@@ -1,23 +1,17 @@
 import React from "react";
-import { Text, View } from "react-native";
+import { View } from "react-native";
 import PropTypes from "prop-types";
 import { Viewport } from "@skele/components";
-import articleLinkTrackingEvents from "./article-link-tracking-events";
 
-const ArticleEndTracking = (props) => {
+import { withTrackEvents } from "@times-components-native/tracking";
+
+const ArticleEndTracking = ({ onViewed }) => {
   const ViewportAwareView = Viewport.Aware(View);
 
-  const articleEndViewed = () => {
-    console.log("HERE!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!");
-  };
-
   return (
-    <ViewportAwareView
-      testID="viewportAwareView"
-      onViewportEnter={articleEndViewed}
-    >
+    <ViewportAwareView testID="viewportAwareView" onViewportEnter={onViewed}>
       <ViewportAwareView>
-        <Text>Wibble2</Text>
+        <View />
       </ViewportAwareView>
     </ViewportAwareView>
   );
@@ -30,4 +24,18 @@ ArticleEndTracking.defaultProps = {};
 ArticleEndTracking.propTypes = {
   linkType: PropTypes.string,
 };
-export default articleLinkTrackingEvents(ArticleEndTracking);
+
+export default withTrackEvents(ArticleEndTracking, {
+  analyticsEvents: [
+    {
+      actionName: "onViewed",
+      eventName: "onViewed",
+      getAttrs: () => ({
+        event_navigation_action: "navigation",
+        event_navigation_name: "article : view end",
+        event_navigation_browsing_method: "scroll",
+      }),
+      trackingName: "ArticleEndTracking",
+    },
+  ],
+});

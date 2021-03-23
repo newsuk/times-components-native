@@ -724,6 +724,17 @@ exports[`1. article with header 1`] = `
         </View>
       </View>
       <View>
+        <View
+          inViewport={false}
+        >
+          <View
+            inViewport={false}
+          >
+            <View />
+          </View>
+        </View>
+      </View>
+      <View>
         <View>
           <ArticleExtras
             articleId="198c4b2f-ecec-4f34-be53-c89f83bc1b44"

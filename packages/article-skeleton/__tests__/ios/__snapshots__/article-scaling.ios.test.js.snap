@@ -67,6 +67,22 @@ exports[`1. scaled medium full article 1`] = `
           }
         }
       >
+        <View>
+          <View>
+            <View />
+          </View>
+        </View>
+      </View>
+      <View
+        style={
+          Object {
+            "backgroundColor": "#ffffff",
+            "maxWidth": "100%",
+            "overflow": "visible",
+            "width": undefined,
+          }
+        }
+      >
         <View
           style={
             Object {
@@ -152,6 +168,22 @@ exports[`2. scaled large full article 1`] = `
           }
         }
       >
+        <View>
+          <View>
+            <View />
+          </View>
+        </View>
+      </View>
+      <View
+        style={
+          Object {
+            "backgroundColor": "#ffffff",
+            "maxWidth": "100%",
+            "overflow": "visible",
+            "width": undefined,
+          }
+        }
+      >
         <View
           style={
             Object {
@@ -224,6 +256,22 @@ exports[`3. scaled xlarge full article 1`] = `
                 Some content
               </Text>
             </Text>
+          </View>
+        </View>
+      </View>
+      <View
+        style={
+          Object {
+            "backgroundColor": "#ffffff",
+            "maxWidth": "100%",
+            "overflow": "visible",
+            "width": undefined,
+          }
+        }
+      >
+        <View>
+          <View>
+            <View />
           </View>
         </View>
       </View>

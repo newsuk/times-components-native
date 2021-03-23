@@ -1,9 +1,7 @@
-export const setupArticleEndTracking = (skeletonProps, content) => {
-  content.push({
+export const setupArticleEndTracking = (skeletonProps, content) => [
+  ...content,
+  {
     name: "articleEndTracking",
-    // attributes: { value: "Wibble" },
     children: [],
-  });
-
-  return content;
-};
+  },
+];

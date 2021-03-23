@@ -42,6 +42,22 @@ exports[`1. a primary image 1`] = `
           }
         }
       >
+        <View>
+          <View>
+            <View />
+          </View>
+        </View>
+      </View>
+      <View
+        style={
+          Object {
+            "backgroundColor": "#ffffff",
+            "maxWidth": "100%",
+            "overflow": "visible",
+            "width": undefined,
+          }
+        }
+      >
         <View
           style={
             Object {
@@ -91,6 +107,22 @@ exports[`2. a fullwidth image 1`] = `
         }
       >
         <ArticleImage />
+      </View>
+      <View
+        style={
+          Object {
+            "backgroundColor": "#ffffff",
+            "maxWidth": "100%",
+            "overflow": "visible",
+            "width": undefined,
+          }
+        }
+      >
+        <View>
+          <View>
+            <View />
+          </View>
+        </View>
       </View>
       <View
         style={
@@ -162,6 +194,22 @@ exports[`3. a secondary image 1`] = `
           }
         }
       >
+        <View>
+          <View>
+            <View />
+          </View>
+        </View>
+      </View>
+      <View
+        style={
+          Object {
+            "backgroundColor": "#ffffff",
+            "maxWidth": "100%",
+            "overflow": "visible",
+            "width": undefined,
+          }
+        }
+      >
         <View
           style={
             Object {
@@ -211,6 +259,22 @@ exports[`4. an inline image 1`] = `
         }
       >
         <ArticleImage />
+      </View>
+      <View
+        style={
+          Object {
+            "backgroundColor": "#ffffff",
+            "maxWidth": "100%",
+            "overflow": "visible",
+            "width": undefined,
+          }
+        }
+      >
+        <View>
+          <View>
+            <View />
+          </View>
+        </View>
       </View>
       <View
         style={

@@ -1269,6 +1269,31 @@ exports[`1. a full article with all content items with dropcap template 1`] = `
         }
       >
         <View
+          inViewport={false}
+        >
+          <View
+            inViewport={false}
+          >
+            <View />
+          </View>
+        </View>
+      </View>
+      <View
+        style={
+          Array [
+            Object {
+              "overflow": "hidden",
+            },
+            Object {
+              "backgroundColor": "#ffffff",
+              "maxWidth": "100%",
+              "overflow": "visible",
+              "width": undefined,
+            },
+          ]
+        }
+      >
+        <View
           style={
             Array [
               Object {
@@ -1405,6 +1430,31 @@ exports[`2. an article with interactives 1`] = `
         }
       >
         <View
+          inViewport={false}
+        >
+          <View
+            inViewport={false}
+          >
+            <View />
+          </View>
+        </View>
+      </View>
+      <View
+        style={
+          Array [
+            Object {
+              "overflow": "hidden",
+            },
+            Object {
+              "backgroundColor": "#ffffff",
+              "maxWidth": "100%",
+              "overflow": "visible",
+              "width": undefined,
+            },
+          ]
+        }
+      >
+        <View
           style={
             Array [
               Object {
@@ -1460,6 +1510,31 @@ exports[`3. an article with no content 1`] = `
           ]
         }
       />
+      <View
+        style={
+          Array [
+            Object {
+              "overflow": "hidden",
+            },
+            Object {
+              "backgroundColor": "#ffffff",
+              "maxWidth": "100%",
+              "overflow": "visible",
+              "width": undefined,
+            },
+          ]
+        }
+      >
+        <View
+          inViewport={false}
+        >
+          <View
+            inViewport={false}
+          >
+            <View />
+          </View>
+        </View>
+      </View>
       <View
         style={
           Array [
@@ -1728,6 +1803,31 @@ exports[`5. an article with a nested markup in first paragraph displays a drop c
         }
       >
         <View
+          inViewport={false}
+        >
+          <View
+            inViewport={false}
+          >
+            <View />
+          </View>
+        </View>
+      </View>
+      <View
+        style={
+          Array [
+            Object {
+              "overflow": "hidden",
+            },
+            Object {
+              "backgroundColor": "#ffffff",
+              "maxWidth": "100%",
+              "overflow": "visible",
+              "width": undefined,
+            },
+          ]
+        }
+      >
+        <View
           style={
             Array [
               Object {
@@ -1907,6 +2007,31 @@ exports[`6. an article with heading tags 1`] = `
         }
       >
         <View
+          inViewport={false}
+        >
+          <View
+            inViewport={false}
+          >
+            <View />
+          </View>
+        </View>
+      </View>
+      <View
+        style={
+          Array [
+            Object {
+              "overflow": "hidden",
+            },
+            Object {
+              "backgroundColor": "#ffffff",
+              "maxWidth": "100%",
+              "overflow": "visible",
+              "width": undefined,
+            },
+          ]
+        }
+      >
+        <View
           style={
             Array [
               Object {
@@ -2031,6 +2156,31 @@ exports[`7. an article with link 1`] = `
                  said today that while the company was unlikely to open its offices before September, almost all staff could now work permanently from wherever they want.
               </Text>
             </Text>
+          </View>
+        </View>
+      </View>
+      <View
+        style={
+          Array [
+            Object {
+              "overflow": "hidden",
+            },
+            Object {
+              "backgroundColor": "#ffffff",
+              "maxWidth": "100%",
+              "overflow": "visible",
+              "width": undefined,
+            },
+          ]
+        }
+      >
+        <View
+          inViewport={false}
+        >
+          <View
+            inViewport={false}
+          >
+            <View />
           </View>
         </View>
       </View>
@@ -2204,6 +2354,31 @@ exports[`8. an article with italic link 1`] = `
         }
       >
         <View
+          inViewport={false}
+        >
+          <View
+            inViewport={false}
+          >
+            <View />
+          </View>
+        </View>
+      </View>
+      <View
+        style={
+          Array [
+            Object {
+              "overflow": "hidden",
+            },
+            Object {
+              "backgroundColor": "#ffffff",
+              "maxWidth": "100%",
+              "overflow": "visible",
+              "width": undefined,
+            },
+          ]
+        }
+      >
+        <View
           style={
             Array [
               Object {
@@ -2336,6 +2511,31 @@ exports[`9. an article with bold text followed by bold link 1`] = `
                 </Text>
               </Text>
             </Text>
+          </View>
+        </View>
+      </View>
+      <View
+        style={
+          Array [
+            Object {
+              "overflow": "hidden",
+            },
+            Object {
+              "backgroundColor": "#ffffff",
+              "maxWidth": "100%",
+              "overflow": "visible",
+              "width": undefined,
+            },
+          ]
+        }
+      >
+        <View
+          inViewport={false}
+        >
+          <View
+            inViewport={false}
+          >
+            <View />
           </View>
         </View>
       </View>
@@ -2512,6 +2712,31 @@ exports[`10. an article with italic and normal text link 1`] = `
         }
       >
         <View
+          inViewport={false}
+        >
+          <View
+            inViewport={false}
+          >
+            <View />
+          </View>
+        </View>
+      </View>
+      <View
+        style={
+          Array [
+            Object {
+              "overflow": "hidden",
+            },
+            Object {
+              "backgroundColor": "#ffffff",
+              "maxWidth": "100%",
+              "overflow": "visible",
+              "width": undefined,
+            },
+          ]
+        }
+      >
+        <View
           style={
             Array [
               Object {
@@ -2651,6 +2876,31 @@ exports[`11. an article with bold and italic text at the same time 1`] = `
         }
       >
         <View
+          inViewport={false}
+        >
+          <View
+            inViewport={false}
+          >
+            <View />
+          </View>
+        </View>
+      </View>
+      <View
+        style={
+          Array [
+            Object {
+              "overflow": "hidden",
+            },
+            Object {
+              "backgroundColor": "#ffffff",
+              "maxWidth": "100%",
+              "overflow": "visible",
+              "width": undefined,
+            },
+          ]
+        }
+      >
+        <View
           style={
             Array [
               Object {
@@ -2755,6 +3005,31 @@ exports[`12. an article with text wrapped in inline element 1`] = `
                 They may have been improved by the controversy that ensued when Watson appeared on the cover of Vanity Fair to promote it, wearing a top that partially exposed her breasts. She rejected criticism that the pose was at odds with her claim to be a feminist. “Feminism is not a stick with which to beat other women. It’s about liberation. It’s about equality,” she said, adding: “I really don’t know what my tits have to do with it.” 
               </Text>
             </Text>
+          </View>
+        </View>
+      </View>
+      <View
+        style={
+          Array [
+            Object {
+              "overflow": "hidden",
+            },
+            Object {
+              "backgroundColor": "#ffffff",
+              "maxWidth": "100%",
+              "overflow": "visible",
+              "width": undefined,
+            },
+          ]
+        }
+      >
+        <View
+          inViewport={false}
+        >
+          <View
+            inViewport={false}
+          >
+            <View />
           </View>
         </View>
       </View>
@@ -2900,6 +3175,31 @@ exports[`13. an article with paragraph with text and inline element 1`] = `
         }
       >
         <View
+          inViewport={false}
+        >
+          <View
+            inViewport={false}
+          >
+            <View />
+          </View>
+        </View>
+      </View>
+      <View
+        style={
+          Array [
+            Object {
+              "overflow": "hidden",
+            },
+            Object {
+              "backgroundColor": "#ffffff",
+              "maxWidth": "100%",
+              "overflow": "visible",
+              "width": undefined,
+            },
+          ]
+        }
+      >
+        <View
           style={
             Array [
               Object {
@@ -3012,6 +3312,31 @@ exports[`14. an article with inline inside a bold tag 1`] = `
                 </Text>
               </Text>
             </Text>
+          </View>
+        </View>
+      </View>
+      <View
+        style={
+          Array [
+            Object {
+              "overflow": "hidden",
+            },
+            Object {
+              "backgroundColor": "#ffffff",
+              "maxWidth": "100%",
+              "overflow": "visible",
+              "width": undefined,
+            },
+          ]
+        }
+      >
+        <View
+          inViewport={false}
+        >
+          <View
+            inViewport={false}
+          >
+            <View />
           </View>
         </View>
       </View>
@@ -3213,6 +3538,31 @@ exports[`15. an article starting with single quote 1`] = `
         }
       >
         <View
+          inViewport={false}
+        >
+          <View
+            inViewport={false}
+          >
+            <View />
+          </View>
+        </View>
+      </View>
+      <View
+        style={
+          Array [
+            Object {
+              "overflow": "hidden",
+            },
+            Object {
+              "backgroundColor": "#ffffff",
+              "maxWidth": "100%",
+              "overflow": "visible",
+              "width": undefined,
+            },
+          ]
+        }
+      >
+        <View
           style={
             Array [
               Object {
@@ -3378,6 +3728,31 @@ exports[`16. an article starting with double quote 1`] = `
             </View>
           </View>
         </RCTScrollView>
+      </View>
+      <View
+        style={
+          Array [
+            Object {
+              "overflow": "hidden",
+            },
+            Object {
+              "backgroundColor": "#ffffff",
+              "maxWidth": "100%",
+              "overflow": "visible",
+              "width": undefined,
+            },
+          ]
+        }
+      >
+        <View
+          inViewport={false}
+        >
+          <View
+            inViewport={false}
+          >
+            <View />
+          </View>
+        </View>
       </View>
       <View
         style={
@@ -5871,6 +6246,31 @@ exports[`19. renders content 1`] = `
         }
       >
         <View
+          inViewport={false}
+        >
+          <View
+            inViewport={false}
+          >
+            <View />
+          </View>
+        </View>
+      </View>
+      <View
+        style={
+          Array [
+            Object {
+              "overflow": "hidden",
+            },
+            Object {
+              "backgroundColor": "#ffffff",
+              "maxWidth": "100%",
+              "overflow": "visible",
+              "width": undefined,
+            },
+          ]
+        }
+      >
+        <View
           style={
             Array [
               Object {
@@ -6073,6 +6473,31 @@ exports[`20. an article with inline paragraph 1`] = `
             </View>
           </View>
         </RCTScrollView>
+      </View>
+      <View
+        style={
+          Array [
+            Object {
+              "overflow": "hidden",
+            },
+            Object {
+              "backgroundColor": "#ffffff",
+              "maxWidth": "100%",
+              "overflow": "visible",
+              "width": undefined,
+            },
+          ]
+        }
+      >
+        <View
+          inViewport={false}
+        >
+          <View
+            inViewport={false}
+          >
+            <View />
+          </View>
+        </View>
       </View>
       <View
         style={

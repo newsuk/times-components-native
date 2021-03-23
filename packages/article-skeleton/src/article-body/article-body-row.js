@@ -140,8 +140,14 @@ export default ({
         />
       );
     },
-    articleEndTracking(key, attributes) {
-      return <ArticleEndTracking />;
+    articleEndTracking() {
+      return (
+        <ArticleEndTracking
+          onViewed={() => {
+            return;
+          }}
+        />
+      );
     },
     inlineContent(key, attributes, children) {
       return (

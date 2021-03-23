@@ -49,6 +49,17 @@ exports[`1. a primary image 1`] = `
         />
       </View>
       <View>
+        <View
+          inViewport={false}
+        >
+          <View
+            inViewport={false}
+          >
+            <View />
+          </View>
+        </View>
+      </View>
+      <View>
         <View>
           <ArticleExtras
             articleId="198c4b2f-ecec-4f34-be53-c89f83bc1b44"
@@ -109,6 +120,17 @@ exports[`2. a fullwidth image 1`] = `
             ]
           }
         />
+      </View>
+      <View>
+        <View
+          inViewport={false}
+        >
+          <View
+            inViewport={false}
+          >
+            <View />
+          </View>
+        </View>
       </View>
       <View>
         <View>
@@ -173,6 +195,17 @@ exports[`3. a secondary image 1`] = `
         />
       </View>
       <View>
+        <View
+          inViewport={false}
+        >
+          <View
+            inViewport={false}
+          >
+            <View />
+          </View>
+        </View>
+      </View>
+      <View>
         <View>
           <ArticleExtras
             articleId="198c4b2f-ecec-4f34-be53-c89f83bc1b44"
@@ -233,6 +266,17 @@ exports[`4. an inline image 1`] = `
             ]
           }
         />
+      </View>
+      <View>
+        <View
+          inViewport={false}
+        >
+          <View
+            inViewport={false}
+          >
+            <View />
+          </View>
+        </View>
       </View>
       <View>
         <View>
