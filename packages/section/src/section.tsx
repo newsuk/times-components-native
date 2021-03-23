@@ -1,10 +1,8 @@
-import React, { FC, useCallback, useEffect, useRef, useState } from "react";
+import React, { FC, useCallback, useEffect, useRef } from "react";
 import {
-  Animated,
   FlatList,
   NativeEventEmitter,
   NativeModules,
-  Platform,
   StyleSheet,
   View,
 } from "react-native";
