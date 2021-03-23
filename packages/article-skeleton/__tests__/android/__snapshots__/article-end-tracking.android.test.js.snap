@@ -6,11 +6,7 @@ exports[`ArticleEndTracking renders the component and triggers the onViewed call
   onViewportEnter={[Function]}
   testID="viewportAwareView"
 >
-  <View
-    inViewport={false}
-  >
-    <View />
-  </View>
+  <View />
 </View>
 `;
 

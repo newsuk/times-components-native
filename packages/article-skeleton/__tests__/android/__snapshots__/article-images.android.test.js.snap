@@ -52,11 +52,7 @@ exports[`1. a primary image 1`] = `
         <View
           inViewport={false}
         >
-          <View
-            inViewport={false}
-          >
-            <View />
-          </View>
+          <View />
         </View>
       </View>
       <View>
@@ -125,11 +121,7 @@ exports[`2. a fullwidth image 1`] = `
         <View
           inViewport={false}
         >
-          <View
-            inViewport={false}
-          >
-            <View />
-          </View>
+          <View />
         </View>
       </View>
       <View>
@@ -198,11 +190,7 @@ exports[`3. a secondary image 1`] = `
         <View
           inViewport={false}
         >
-          <View
-            inViewport={false}
-          >
-            <View />
-          </View>
+          <View />
         </View>
       </View>
       <View>
@@ -271,11 +259,7 @@ exports[`4. an inline image 1`] = `
         <View
           inViewport={false}
         >
-          <View
-            inViewport={false}
-          >
-            <View />
-          </View>
+          <View />
         </View>
       </View>
       <View>

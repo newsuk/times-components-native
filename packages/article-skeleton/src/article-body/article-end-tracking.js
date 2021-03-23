@@ -10,9 +10,7 @@ const ArticleEndTracking = ({ onViewed }) => {
 
   return (
     <ViewportAwareView testID="viewportAwareView" onViewportEnter={onViewed}>
-      <ViewportAwareView>
-        <View />
-      </ViewportAwareView>
+      <View />
     </ViewportAwareView>
   );
 };
@@ -22,7 +20,7 @@ ArticleEndTracking.displayName = "ArticleEndTracking";
 ArticleEndTracking.defaultProps = {};
 
 ArticleEndTracking.propTypes = {
-  linkType: PropTypes.string,
+  onViewed: PropTypes.func.isRequired,
 };
 
 export default withTrackEvents(ArticleEndTracking, {
