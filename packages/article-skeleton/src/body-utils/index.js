@@ -3,6 +3,7 @@ import memoize from "memoize-one";
 import { setupAd } from "./setupAd";
 import { setupDropCap } from "./setupDropCap";
 import { setupInlineContent } from "./setupInlineContent";
+import { setupArticleEndTracking } from "./setupArticleEndTracking";
 import { isTemplateWithLeadAssetInGallery } from "@times-components-native/utils";
 
 export { getStringBounds } from "./getStringBounds";
@@ -43,5 +44,8 @@ const addIndexToImages = (skeletonProps) => {
 
 export default memoize((skeletonProps) => {
   const props = addIndexToImages(skeletonProps);
-  return setupInlineContent(props, setupDropCap(props, setupAd(props)));
+  return setupArticleEndTracking(
+    props,
+    setupInlineContent(props, setupDropCap(props, setupAd(props))),
+  );
 });

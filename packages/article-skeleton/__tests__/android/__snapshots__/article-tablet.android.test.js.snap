@@ -76,6 +76,18 @@ exports[`1. with inline video 1`] = `
           }
         }
       >
+        <View />
+      </View>
+      <View
+        style={
+          Object {
+            "backgroundColor": "#ffffff",
+            "maxWidth": "100%",
+            "overflow": "visible",
+            "width": undefined,
+          }
+        }
+      >
         <View
           style={
             Object {
@@ -136,6 +148,18 @@ exports[`2. with ad on mainstandard 1`] = `
           }
         }
       >
+        <View />
+      </View>
+      <View
+        style={
+          Object {
+            "backgroundColor": "#ffffff",
+            "maxWidth": "100%",
+            "overflow": "visible",
+            "width": undefined,
+          }
+        }
+      >
         <View
           style={
             Object {
@@ -185,6 +209,18 @@ exports[`3. with ad on maincomment 1`] = `
         }
       >
         <Ad />
+      </View>
+      <View
+        style={
+          Object {
+            "backgroundColor": "#ffffff",
+            "maxWidth": "100%",
+            "overflow": "visible",
+            "width": undefined,
+          }
+        }
+      >
+        <View />
       </View>
       <View
         style={
