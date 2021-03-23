@@ -1,29 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`1. iconemail renders with different colours 1`] = `
-<RNSVGSvgView>
-  <RNSVGGroup>
-    <RNSVGGroup
-      fill={null}
-    >
-      <RNSVGPath
-        fill={-4671304}
-      />
-      <RNSVGPath
-        fill={-1}
-      />
-      <RNSVGPath
-        fill={-3355444}
-      />
-      <RNSVGPath
-        fill={-4013374}
-      />
-    </RNSVGGroup>
-  </RNSVGGroup>
-</RNSVGSvgView>
-`;
-
-exports[`2. iconfacebook renders with different colours 1`] = `
+exports[`1. iconfacebook renders with different colours 1`] = `
 <RNSVGSvgView>
   <RNSVGGroup>
     <RNSVGGroup
@@ -36,7 +13,7 @@ exports[`2. iconfacebook renders with different colours 1`] = `
 </RNSVGSvgView>
 `;
 
-exports[`3. iconforwardarrow renders with different colours 1`] = `
+exports[`2. iconforwardarrow renders with different colours 1`] = `
 <RNSVGSvgView>
   <RNSVGGroup>
     <RNSVGGroup
@@ -48,7 +25,7 @@ exports[`3. iconforwardarrow renders with different colours 1`] = `
 </RNSVGSvgView>
 `;
 
-exports[`4. iconstar renders with different colours 1`] = `
+exports[`3. iconstar renders with different colours 1`] = `
 <RNSVGSvgView>
   <RNSVGGroup>
     <RNSVGPath
@@ -59,7 +36,7 @@ exports[`4. iconstar renders with different colours 1`] = `
 </RNSVGSvgView>
 `;
 
-exports[`5. iconcopylink renders with different colours 1`] = `
+exports[`4. iconcopylink renders with different colours 1`] = `
 <RNSVGSvgView>
   <RNSVGGroup>
     <RNSVGPath
@@ -70,7 +47,7 @@ exports[`5. iconcopylink renders with different colours 1`] = `
 </RNSVGSvgView>
 `;
 
-exports[`6. iconsavebookmark renders with different colours 1`] = `
+exports[`5. iconsavebookmark renders with different colours 1`] = `
 <RNSVGSvgView>
   <RNSVGGroup>
     <RNSVGPath
@@ -81,7 +58,7 @@ exports[`6. iconsavebookmark renders with different colours 1`] = `
 </RNSVGSvgView>
 `;
 
-exports[`7. icontwitter renders with different colours 1`] = `
+exports[`6. icontwitter renders with different colours 1`] = `
 <RNSVGSvgView>
   <RNSVGGroup>
     <RNSVGPath
@@ -92,7 +69,7 @@ exports[`7. icontwitter renders with different colours 1`] = `
 </RNSVGSvgView>
 `;
 
-exports[`8. iconvideo renders with different colours 1`] = `
+exports[`7. iconvideo renders with different colours 1`] = `
 <RNSVGSvgView>
   <RNSVGGroup>
     <RNSVGRect
@@ -107,7 +84,7 @@ exports[`8. iconvideo renders with different colours 1`] = `
 </RNSVGSvgView>
 `;
 
-exports[`9. iconvideo360player renders with different colours 1`] = `
+exports[`8. iconvideo360player renders with different colours 1`] = `
 <RNSVGSvgView>
   <RNSVGGroup>
     <RNSVGPath
@@ -118,7 +95,7 @@ exports[`9. iconvideo360player renders with different colours 1`] = `
 </RNSVGSvgView>
 `;
 
-exports[`10. thestlogo renders with different colours 1`] = `
+exports[`9. thestlogo renders with different colours 1`] = `
 <RNSVGSvgView>
   <RNSVGGroup>
     <RNSVGPath
@@ -129,7 +106,7 @@ exports[`10. thestlogo renders with different colours 1`] = `
 </RNSVGSvgView>
 `;
 
-exports[`11. thetimeslogo renders with different colours 1`] = `
+exports[`10. thetimeslogo renders with different colours 1`] = `
 <RNSVGSvgView>
   <RNSVGGroup>
     <RNSVGPath
@@ -140,7 +117,7 @@ exports[`11. thetimeslogo renders with different colours 1`] = `
 </RNSVGSvgView>
 `;
 
-exports[`12. closeicon renders with different colours 1`] = `
+exports[`11. closeicon renders with different colours 1`] = `
 <RNSVGSvgView>
   <RNSVGGroup>
     <RNSVGPath
