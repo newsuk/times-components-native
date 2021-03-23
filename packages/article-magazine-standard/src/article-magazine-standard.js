@@ -55,6 +55,7 @@ class ArticleMagazineStandard extends Component {
         {({ isArticleTablet }) => (
           <View>
             <ArticleHeader
+              articleId={article.id}
               bylines={bylines}
               flags={expirableFlags}
               hasVideo={hasVideo}

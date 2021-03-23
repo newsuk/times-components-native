@@ -27,6 +27,9 @@ const sharedStyles = {
     marginRight: 0,
     zIndex: 1,
   },
+  articleMetaWidthMargin: {
+    marginBottom: 85,
+  },
   byline: {
     ...fontFactory({
       font: "supporting",

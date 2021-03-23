@@ -10,38 +10,35 @@ import DatePublication from "@times-components-native/date-publication";
 import metaPropTypes from "./article-meta-prop-types";
 import styles from "../styles";
 
-const Separator = () => <View style={styles.separator} />;
-
 const ArticleMeta = ({
+  articleId,
   bylines,
   hasStandfirst,
-  isArticleTablet,
   onAuthorPress,
+  onTooltipPresented,
   publicationName,
   publishedTime,
+  tooltips,
 }) => (
-  <View
-    style={[
-      styles.metaContainer,
-      !hasStandfirst && styles.metaFlagSpacer,
-      isArticleTablet && styles.metaContainerTablet,
-    ]}
-  >
+  <View style={[styles.metaContainer, !hasStandfirst && styles.metaFlagSpacer]}>
     {hasBylineData(bylines) && (
       <Fragment>
         <View style={styles.meta}>
-          <ArticleBylineWithLinks ast={bylines} onAuthorPress={onAuthorPress} />
+          <ArticleBylineWithLinks
+            articleId={articleId}
+            ast={bylines}
+            onAuthorPress={onAuthorPress}
+            onTooltipPresented={onTooltipPresented}
+            tooltipArrowOffset={120}
+            tooltips={tooltips}
+            tooltipOffsetX={-95}
+            tooltipOffsetY={44}
+          />
         </View>
       </Fragment>
     )}
-    {isArticleTablet ? <Separator /> : null}
     <View style={styles.meta}>
-      <Text
-        style={[
-          styles.datePublication,
-          isArticleTablet && styles.datePublicationTablet,
-        ]}
-      >
+      <Text style={[styles.datePublication]}>
         <DatePublication date={publishedTime} publication={publicationName} />
       </Text>
     </View>

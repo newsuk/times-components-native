@@ -10,8 +10,6 @@ import {
 } from "@times-components-native/utils";
 import { CentredCaption } from "@times-components-native/caption";
 import ArticleLeadAsset from "@times-components-native/article-lead-asset";
-import { ResponsiveContext } from "@times-components-native/responsive";
-import { tabletWidth } from "@times-components-native/styleguide";
 import Context from "@times-components-native/context";
 import ArticleHeader from "./article-header/article-header";
 import {
@@ -27,7 +25,14 @@ class ArticleMagazineComment extends Component {
   }
 
   renderHeader({ width }) {
-    const { article, onAuthorPress, onImagePress, onVideoPress } = this.props;
+    const {
+      article,
+      onAuthorPress,
+      onImagePress,
+      onTooltipPresented,
+      onVideoPress,
+      tooltips,
+    } = this.props;
     const {
       bylines,
       expirableFlags,
@@ -51,38 +56,33 @@ class ArticleMagazineComment extends Component {
         : null;
 
     return (
-      <ResponsiveContext.Consumer>
-        {({ isArticleTablet }) => (
-          <Fragment>
-            <ArticleHeader
-              authorImage={authorImage}
-              bylines={bylines}
-              flags={expirableFlags}
-              hasVideo={hasVideo}
-              headline={getHeadline(headline, shortHeadline)}
-              isArticleTablet={isArticleTablet}
-              label={label}
-              longRead={longRead}
-              onAuthorPress={onAuthorPress}
-              publicationName={publicationName}
-              publishedTime={publishedTime}
-              standfirst={standfirst}
-            />
-            <ArticleLeadAsset
-              {...getLeadAsset(article)}
-              getImageCrop={getCropByPriority}
-              onImagePress={onImagePress}
-              onVideoPress={onVideoPress}
-              renderCaption={({ caption }) => <CentredCaption {...caption} />}
-              style={[
-                styles.leadAssetContainer,
-                isArticleTablet && styles.leadAssetContainerTablet,
-              ]}
-              width={Math.min(width, tabletWidth)}
-            />
-          </Fragment>
-        )}
-      </ResponsiveContext.Consumer>
+      <Fragment>
+        <ArticleHeader
+          articleId={article.id}
+          authorImage={authorImage}
+          bylines={bylines}
+          flags={expirableFlags}
+          hasVideo={hasVideo}
+          headline={getHeadline(headline, shortHeadline)}
+          label={label}
+          longRead={longRead}
+          onAuthorPress={onAuthorPress}
+          onTooltipPresented={onTooltipPresented}
+          publicationName={publicationName}
+          publishedTime={publishedTime}
+          standfirst={standfirst}
+          tooltips={tooltips}
+        />
+        <ArticleLeadAsset
+          {...getLeadAsset(article)}
+          getImageCrop={getCropByPriority}
+          onImagePress={onImagePress}
+          onVideoPress={onVideoPress}
+          renderCaption={({ caption }) => <CentredCaption {...caption} />}
+          style={styles.leadAssetContainer}
+          width={width}
+        />
+      </Fragment>
     );
   }
 
@@ -119,40 +119,35 @@ class ArticleMagazineComment extends Component {
     } = this.props;
 
     return (
-      <ResponsiveContext.Consumer>
-        {({ isArticleTablet }) => (
-          <Context.Consumer>
-            {({ theme: { scale, dropCapFont } }) => (
-              <ArticleSkeleton
-                adConfig={adConfig}
-                analyticsStream={analyticsStream}
-                data={article}
-                Header={this.renderHeader}
-                interactiveConfig={interactiveConfig}
-                isArticleTablet={isArticleTablet}
-                dropCapFont={dropCapFont}
-                onArticleRead={onArticleRead}
-                onAuthorPress={onAuthorPress}
-                onCommentGuidelinesPress={onCommentGuidelinesPress}
-                onCommentsPress={onCommentsPress}
-                onImagePress={onImagePress}
-                onLinkPress={onLinkPress}
-                onRelatedArticlePress={onRelatedArticlePress}
-                onTooltipPresented={onTooltipPresented}
-                onTopicPress={onTopicPress}
-                onTwitterLinkPress={onTwitterLinkPress}
-                onVideoPress={onVideoPress}
-                onViewableItemsChanged={
-                  onViewed ? this.onViewableItemsChanged : null
-                }
-                receiveChildList={receiveChildList}
-                scale={scale}
-                tooltips={tooltips}
-              />
-            )}
-          </Context.Consumer>
+      <Context.Consumer>
+        {({ theme: { scale, dropCapFont } }) => (
+          <ArticleSkeleton
+            adConfig={adConfig}
+            analyticsStream={analyticsStream}
+            data={article}
+            Header={this.renderHeader}
+            interactiveConfig={interactiveConfig}
+            dropCapFont={dropCapFont}
+            onArticleRead={onArticleRead}
+            onAuthorPress={onAuthorPress}
+            onCommentGuidelinesPress={onCommentGuidelinesPress}
+            onCommentsPress={onCommentsPress}
+            onImagePress={onImagePress}
+            onLinkPress={onLinkPress}
+            onRelatedArticlePress={onRelatedArticlePress}
+            onTooltipPresented={onTooltipPresented}
+            onTopicPress={onTopicPress}
+            onTwitterLinkPress={onTwitterLinkPress}
+            onVideoPress={onVideoPress}
+            onViewableItemsChanged={
+              onViewed ? this.onViewableItemsChanged : null
+            }
+            receiveChildList={receiveChildList}
+            scale={scale}
+            tooltips={tooltips}
+          />
         )}
-      </ResponsiveContext.Consumer>
+      </Context.Consumer>
     );
   }
 }

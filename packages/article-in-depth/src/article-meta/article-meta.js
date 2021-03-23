@@ -13,11 +13,14 @@ import metaPropTypes from "./article-meta-prop-types";
 import styles from "../styles";
 
 const ArticleMeta = ({
+  articleId,
   bylines,
   isArticleTablet,
   onAuthorPress,
+  onTooltipPresented,
   publicationName,
   publishedTime,
+  tooltips,
 }) => (
   <View style={isArticleTablet && styles.metaContainerTabletFlow}>
     {hasBylineData(bylines) && (
@@ -26,10 +29,15 @@ const ArticleMeta = ({
           <Context.Consumer>
             {({ theme: { sectionColour } }) => (
               <ArticleBylineWithLinks
+                articleId={articleId}
                 ast={bylines}
                 color={sectionColour || colours.section.default}
                 onAuthorPress={onAuthorPress}
-                disableTooltip={true}
+                onTooltipPresented={onTooltipPresented}
+                tooltipArrowOffset={120}
+                tooltips={tooltips}
+                tooltipOffsetX={isArticleTablet ? -50 : -90}
+                tooltipOffsetY={isArticleTablet ? 26 : 40}
               />
             )}
           </Context.Consumer>

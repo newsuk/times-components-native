@@ -110,6 +110,24 @@ export default () => {
       expect(output).toMatchSnapshot();
     });
 
+    it("renders correctly with flexDirectionColumnReverse", () => {
+      const output = TestRenderer.create(
+        withTabletContext(
+          <Tooltip
+            content={<Text>foo</Text>}
+            onTooltipPresented={onTooltipPresentedMock}
+            type="testtype"
+            tooltips={["testtype"]}
+            flexDirectionColumnReverse
+            articleId={mockArticleId}
+          >
+            bar
+          </Tooltip>,
+        ),
+      );
+      expect(output).toMatchSnapshot();
+    });
+
     it("renders correctly with supplied placement right", () => {
       const output = TestRenderer.create(
         withTabletContext(

@@ -19,16 +19,15 @@ export default () => {
 
   const skeletonProps = {
     data: { content, template: "mainstandard" },
-    isTablet: true,
     isArticleTablet: true,
     narrowContent: false,
   };
 
   describe("setupAd", () => {
     it("should return content untouched if not tablet", () => {
-      expect(
-        setupAd({ ...skeletonProps, isTablet: false, isArticleTablet: false }),
-      ).toEqual(content);
+      expect(setupAd({ ...skeletonProps, isArticleTablet: false })).toEqual(
+        content,
+      );
     });
 
     it("should return content untouched if no ad block present in content", () => {

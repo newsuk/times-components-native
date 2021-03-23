@@ -15,6 +15,7 @@ import styles from "../styles";
 const Separator = () => <View style={styles.separator} />;
 
 const ArticleMeta = ({
+  articleId,
   bylines,
   isArticleTablet,
   onAuthorPress,
@@ -34,14 +35,15 @@ const ArticleMeta = ({
         <Context.Consumer>
           {({ theme: { sectionColour } }) => (
             <ArticleBylineWithLinks
+              articleId={articleId}
               ast={bylines}
               color={sectionColour || colours.section.default}
               onAuthorPress={onAuthorPress}
               onTooltipPresented={onTooltipPresented}
-              tooltipArrowOffset={35}
+              tooltipArrowOffset={isTablet ? 35 : 120}
               tooltips={tooltips}
-              tooltipOffsetX={-10}
-              tooltipOffsetY={25}
+              tooltipOffsetX={isTablet ? -10 : -45}
+              tooltipOffsetY={isTablet ? 25 : 55}
             />
           )}
         </Context.Consumer>

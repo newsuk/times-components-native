@@ -10,36 +10,33 @@ import DatePublication from "@times-components-native/date-publication";
 import metaPropTypes from "./article-meta-prop-types";
 import styles from "../styles";
 
-const Separator = () => <View style={styles.separator} />;
-
 const ArticleMeta = ({
+  articleId,
   bylines,
-  isArticleTablet,
   hasElementsAbove,
   onAuthorPress,
+  onTooltipPresented,
   publicationName,
   publishedTime,
+  tooltips,
 }) => (
-  <View
-    style={[
-      styles.metaContainer,
-      !hasElementsAbove && styles.metaSpacer,
-      isArticleTablet && styles.metaContainerTablet,
-    ]}
-  >
+  <View style={[styles.metaContainer, !hasElementsAbove && styles.metaSpacer]}>
     {hasBylineData(bylines) && (
-      <View style={[styles.meta, isArticleTablet && styles.metaTablet]}>
-        <ArticleBylineWithLinks ast={bylines} onAuthorPress={onAuthorPress} />
+      <View style={styles.meta}>
+        <ArticleBylineWithLinks
+          articleId={articleId}
+          ast={bylines}
+          onAuthorPress={onAuthorPress}
+          onTooltipPresented={onTooltipPresented}
+          tooltipArrowOffset={120}
+          tooltips={tooltips}
+          tooltipOffsetX={-95}
+          tooltipOffsetY={54}
+        />
       </View>
     )}
-    {isArticleTablet ? <Separator /> : null}
-    <View style={[styles.meta, isArticleTablet && styles.metaTablet]}>
-      <Text
-        style={[
-          styles.datePublication,
-          isArticleTablet && styles.datePublicationTablet,
-        ]}
-      >
+    <View style={styles.meta}>
+      <Text style={styles.datePublication}>
         <DatePublication date={publishedTime} publication={publicationName} />
       </Text>
     </View>

@@ -3,6 +3,7 @@
 import React, { Component, Fragment } from "react";
 import { View } from "react-native";
 import ArticleError from "@times-components-native/article-error";
+import { hasBylineData } from "@times-components-native/article-byline";
 import ArticleSkeleton from "@times-components-native/article-skeleton";
 import ArticleLeadAsset from "@times-components-native/article-lead-asset";
 import { CentredCaption } from "@times-components-native/caption";
@@ -29,7 +30,14 @@ class ArticleInDepth extends Component {
   }
 
   renderHeader({ width }) {
-    const { article, onAuthorPress, onImagePress, onVideoPress } = this.props;
+    const {
+      article,
+      onAuthorPress,
+      onImagePress,
+      onTooltipPresented,
+      onVideoPress,
+      tooltips,
+    } = this.props;
     const {
       backgroundColour,
       bylines,
@@ -44,6 +52,9 @@ class ArticleInDepth extends Component {
       standfirst,
       textColour,
     } = article;
+
+    const withBylineTooltip =
+      hasBylineData(bylines) && tooltips.includes("profile");
 
     return (
       <ResponsiveContext.Consumer>
@@ -79,6 +90,7 @@ class ArticleInDepth extends Component {
               style={[
                 styles.metaContainer,
                 isArticleTablet && styles.metaContainerTablet,
+                withBylineTooltip && styles.metaContainerWithMargin,
               ]}
             >
               <Meta
@@ -86,9 +98,11 @@ class ArticleInDepth extends Component {
                 bylines={bylines}
                 isArticleTablet={isArticleTablet}
                 onAuthorPress={onAuthorPress}
+                onTooltipPresented={onTooltipPresented}
                 publicationName={publicationName}
                 publishedTime={publishedTime}
                 textColour={textColour}
+                tooltips={tooltips}
               />
             </View>
           </Fragment>
@@ -126,7 +140,6 @@ class ArticleInDepth extends Component {
       onVideoPress,
       onViewed,
       receiveChildList,
-      tooltips,
     } = this.props;
 
     return (
@@ -158,7 +171,6 @@ class ArticleInDepth extends Component {
                 }
                 receiveChildList={receiveChildList}
                 scale={scale}
-                tooltips={tooltips}
               />
             )}
           </Context.Consumer>

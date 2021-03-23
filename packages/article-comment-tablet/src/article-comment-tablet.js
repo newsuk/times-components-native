@@ -129,6 +129,7 @@ class ArticlePage extends Component {
                 ]}
               >
                 <ArticleLeftColumn
+                  articleId={article.id}
                   authorImage={authorImage}
                   bylines={bylines}
                   onAuthorPress={onAuthorPress}

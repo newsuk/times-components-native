@@ -1,6 +1,7 @@
 import React from "react";
 import { Text, View } from "react-native";
 import PropTypes from "prop-types";
+import { hasBylineData } from "@times-components-native/article-byline";
 import { ArticleFlags } from "@times-components-native/article-flag";
 import { ModalImage } from "@times-components-native/image";
 import Context from "@times-components-native/context";
@@ -16,61 +17,67 @@ import {
 import styles from "../styles";
 
 const ArticleHeader = ({
+  articleId,
   authorImage,
   bylines,
   flags,
   hasVideo,
   headline,
-  isArticleTablet,
   label,
   longRead,
   onAuthorPress,
+  onTooltipPresented,
   publicationName,
   publishedTime,
   standfirst,
-}) => (
-  <Context.Consumer>
-    {({ theme: { headlineFont, headlineCase } }) => (
-      <View
-        style={[styles.container, isArticleTablet && styles.containerTablet]}
-      >
+  tooltips,
+}) => {
+  const withBylineTooltip =
+    hasBylineData(bylines) && tooltips.includes("profile");
+  return (
+    <Context.Consumer>
+      {({ theme: { headlineFont, headlineCase } }) => (
         <View
           style={[
-            styles.authorImage,
-            isArticleTablet && styles.authorImageTablet,
+            styles.container,
+            withBylineTooltip && styles.containerWithMargin,
           ]}
         >
-          <ModalImage aspectRatio={1} uri={authorImage} rounded />
+          <View style={styles.authorImage}>
+            <ModalImage aspectRatio={1} uri={authorImage} rounded />
+          </View>
+          <Label isVideo={hasVideo} label={label} />
+          <Text
+            style={[
+              styles.articleHeadline,
+              {
+                ...fontFactory({
+                  font: headlineFont || "headline",
+                  fontSize: "headline",
+                }),
+              },
+              headlineCase ? { textTransform: headlineCase } : null,
+            ]}
+          >
+            {headline}
+          </Text>
+          <ArticleFlags flags={flags} longRead={longRead} withContainer />
+          <Standfirst standfirst={standfirst} />
+          <Meta
+            articleId={articleId}
+            bylines={bylines}
+            hasElementsAbove={flags.length > 0 || standfirst}
+            onAuthorPress={onAuthorPress}
+            onTooltipPresented={onTooltipPresented}
+            publicationName={publicationName}
+            publishedTime={publishedTime}
+            tooltips={tooltips}
+          />
         </View>
-        <Label isVideo={hasVideo} label={label} />
-        <Text
-          style={[
-            styles.articleHeadline,
-            {
-              ...fontFactory({
-                font: headlineFont || "headline",
-                fontSize: isArticleTablet ? "pageHeadline" : "headline",
-              }),
-            },
-            headlineCase ? { textTransform: headlineCase } : null,
-          ]}
-        >
-          {headline}
-        </Text>
-        <ArticleFlags flags={flags} longRead={longRead} withContainer />
-        <Standfirst standfirst={standfirst} />
-        <Meta
-          bylines={bylines}
-          hasElementsAbove={flags.length > 0 || standfirst}
-          isArticleTablet={isArticleTablet}
-          onAuthorPress={onAuthorPress}
-          publicationName={publicationName}
-          publishedTime={publishedTime}
-        />
-      </View>
-    )}
-  </Context.Consumer>
-);
+      )}
+    </Context.Consumer>
+  );
+};
 
 ArticleHeader.propTypes = {
   ...articleHeaderPropTypes,
