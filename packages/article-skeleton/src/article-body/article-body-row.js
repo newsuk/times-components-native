@@ -18,6 +18,7 @@ import ArticleParagraphWrapper from "@times-components-native/article-paragraph"
 import InsetCaption from "./inset-caption";
 import styleFactory from "../styles/article-body";
 import ArticleLink from "./article-link";
+import ArticleEndTracking from "./article-end-tracking";
 import InlineNewsletterPuff from "./inline-newsletter-puff";
 import { useResponsiveContext } from "@times-components-native/responsive";
 
@@ -136,6 +137,15 @@ export default ({
           narrowContent={narrowContent}
           slotName="native-inline-ad"
           {...attributes}
+        />
+      );
+    },
+    articleEndTracking() {
+      return (
+        <ArticleEndTracking
+          onViewed={() => {
+            return;
+          }}
         />
       );
     },
