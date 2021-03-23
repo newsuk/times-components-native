@@ -86,6 +86,7 @@ class ArticlePage extends Component {
                 standfirst={standfirst}
               />
               <ArticleMeta
+                articleId={article.id}
                 bylines={bylines}
                 isTablet={isTablet}
                 onAuthorPress={onAuthorPress}
@@ -93,7 +94,6 @@ class ArticlePage extends Component {
                 publicationName={publicationName}
                 publishedTime={publishedTime}
                 tooltips={tooltips}
-                articleId={article.id}
               />
             </Fragment>
           );

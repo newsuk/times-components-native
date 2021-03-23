@@ -11,10 +11,6 @@ const nativeStyles = {
     width: 100,
     marginBottom: spacing(2),
   },
-  authorImageTablet: {
-    height: 108,
-    width: 108,
-  },
   standFirst: {
     ...sharedStyles.standFirst,
     lineHeight: 25,

@@ -1,6 +1,7 @@
 import PropTypes from "prop-types";
 
 export const propTypes = {
+  articleId: PropTypes.string,
   ast: PropTypes.arrayOf(PropTypes.shape({})).isRequired,
   onAuthorPress: PropTypes.func,
   onTooltipPresented: PropTypes.func,
@@ -14,7 +15,6 @@ export const propTypes = {
   tooltipOffsetX: PropTypes.number,
   tooltipOffsetY: PropTypes.number,
   tooltips: PropTypes.array,
-  articleId: PropTypes.string,
 };
 
 export const defaultProps = {

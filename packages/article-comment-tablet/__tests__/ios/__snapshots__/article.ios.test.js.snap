@@ -15,6 +15,7 @@ exports[`3. an article with no headline falls back to use shortheadline 1`] = `
       />
       <View>
         <ArticleBylineWithLinks
+          articleId="198c4b2f-ecec-4f34-be53-c89f83bc1b44"
           ast={
             Array [
               Object {
@@ -53,6 +54,7 @@ exports[`3. an article with no headline falls back to use shortheadline 1`] = `
     </View>
     <View>
       <ArticleTopics
+        articleId="198c4b2f-ecec-4f34-be53-c89f83bc1b44"
         tooltipDisplayedInView={true}
         topics={
           Array [
@@ -101,6 +103,7 @@ exports[`4. an article with ads 1`] = `
       />
       <View>
         <ArticleBylineWithLinks
+          articleId="198c4b2f-ecec-4f34-be53-c89f83bc1b44"
           ast={
             Array [
               Object {
@@ -139,6 +142,7 @@ exports[`4. an article with ads 1`] = `
     </View>
     <View>
       <ArticleTopics
+        articleId="198c4b2f-ecec-4f34-be53-c89f83bc1b44"
         tooltipDisplayedInView={true}
         topics={
           Array [
