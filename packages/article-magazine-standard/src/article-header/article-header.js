@@ -63,7 +63,7 @@ const ArticleHeader = ({
           <Meta
             articleId={articleId}
             bylines={bylines}
-            isTablet={isArticleTablet}
+            isArticleTablet={isArticleTablet}
             onAuthorPress={onAuthorPress}
             onTooltipPresented={onTooltipPresented}
             publicationName={publicationName}
