@@ -726,9 +726,7 @@ exports[`1. article with header 1`] = `
       <View>
         <View
           inViewport={false}
-        >
-          <View />
-        </View>
+        />
       </View>
       <View>
         <View>

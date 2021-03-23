@@ -5,9 +5,7 @@ exports[`ArticleEndTracking renders the component and triggers the onViewed call
   inViewport={false}
   onViewportEnter={[Function]}
   testID="viewportAwareView"
->
-  <View />
-</View>
+/>
 `;
 
 exports[`ArticleEndTracking should track the viewed component in analytics 1`] = `

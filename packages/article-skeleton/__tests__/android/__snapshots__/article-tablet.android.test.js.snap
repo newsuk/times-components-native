@@ -76,9 +76,7 @@ exports[`1. with inline video 1`] = `
           }
         }
       >
-        <View>
-          <View />
-        </View>
+        <View />
       </View>
       <View
         style={
@@ -150,9 +148,7 @@ exports[`2. with ad on mainstandard 1`] = `
           }
         }
       >
-        <View>
-          <View />
-        </View>
+        <View />
       </View>
       <View
         style={
@@ -224,9 +220,7 @@ exports[`3. with ad on maincomment 1`] = `
           }
         }
       >
-        <View>
-          <View />
-        </View>
+        <View />
       </View>
       <View
         style={

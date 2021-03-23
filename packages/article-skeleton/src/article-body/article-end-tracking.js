@@ -9,9 +9,7 @@ const ArticleEndTracking = ({ onViewed }) => {
   const ViewportAwareView = Viewport.Aware(View);
 
   return (
-    <ViewportAwareView testID="viewportAwareView" onViewportEnter={onViewed}>
-      <View />
-    </ViewportAwareView>
+    <ViewportAwareView testID="viewportAwareView" onViewportEnter={onViewed} />
   );
 };
 

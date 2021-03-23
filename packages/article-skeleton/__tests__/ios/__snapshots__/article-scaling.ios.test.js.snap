@@ -67,9 +67,7 @@ exports[`1. scaled medium full article 1`] = `
           }
         }
       >
-        <View>
-          <View />
-        </View>
+        <View />
       </View>
       <View
         style={
@@ -166,9 +164,7 @@ exports[`2. scaled large full article 1`] = `
           }
         }
       >
-        <View>
-          <View />
-        </View>
+        <View />
       </View>
       <View
         style={
@@ -265,9 +261,7 @@ exports[`3. scaled xlarge full article 1`] = `
           }
         }
       >
-        <View>
-          <View />
-        </View>
+        <View />
       </View>
       <View
         style={
