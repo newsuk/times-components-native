@@ -11,7 +11,7 @@ import styles from "../styles/article-meta";
 
 function ArticleMeta({
   articleId,
-  isTablet,
+  isArticleTablet,
   bylines,
   publicationName,
   publishedTime,
@@ -25,8 +25,8 @@ function ArticleMeta({
     <View
       style={[
         styles.articleMeta,
-        isTablet && styles.articleMetaTablet,
-        !isTablet && withBylineTooltip && styles.articleMetaWidthMargin,
+        isArticleTablet && styles.articleMetaTablet,
+        !isArticleTablet && withBylineTooltip && styles.articleMetaWidthMargin,
       ]}
     >
       {hasBylineData(bylines) && (
@@ -37,10 +37,10 @@ function ArticleMeta({
               ast={bylines}
               onAuthorPress={onAuthorPress}
               onTooltipPresented={onTooltipPresented}
-              tooltipArrowOffset={isTablet ? 130 : 120}
+              tooltipArrowOffset={isArticleTablet ? 130 : 120}
               tooltips={tooltips}
-              tooltipOffsetX={isTablet ? -20 : 20}
-              tooltipOffsetY={isTablet ? 26 : 38}
+              tooltipOffsetX={isArticleTablet ? -20 : 20}
+              tooltipOffsetY={isArticleTablet ? 26 : 38}
             />
           </View>
         </View>

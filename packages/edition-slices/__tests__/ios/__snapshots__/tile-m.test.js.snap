@@ -160,6 +160,57 @@ exports[`tile m small 1`] = `
 </Link>
 `;
 
+exports[`tile m smallTablet 1`] = `
+<Link
+  linkStyle={
+    Object {
+      "paddingBottom": 30,
+    }
+  }
+>
+  <View>
+    <Text
+      accessibilityRole="header"
+      aria-level="3"
+      style={
+        Object {
+          "color": "#1D1D1B",
+          "fontFamily": "TimesModern-Bold",
+          "fontSize": 20,
+          "fontWeight": "900",
+          "includeFontPadding": false,
+          "lineHeight": 20,
+          "marginBottom": 10,
+          "marginTop": 30,
+          "textAlign": "center",
+        }
+      }
+    >
+      Driving Off
+    </Text>
+    <Text
+      accessibilityRole="header"
+      aria-level="4"
+      style={
+        Object {
+          "color": "#333333",
+          "fontFamily": "TimesModern-Regular",
+          "fontSize": 16,
+          "includeFontPadding": false,
+          "lineHeight": 19,
+          "marginBottom": 10,
+          "paddingBottom": 5,
+          "textAlign": "center",
+        }
+      }
+    >
+      Three Conservative MPs resign
+    </Text>
+    <ArticleFlags />
+  </View>
+</Link>
+`;
+
 exports[`tile m wide 1`] = `
 <Link
   linkStyle={

@@ -5,12 +5,14 @@ import {
 } from "@times-components-native/styleguide";
 
 const headlineFontSizeResolver = {
+  [editionBreakpoints.smallTablet]: 20,
   [editionBreakpoints.medium]: 20,
   [editionBreakpoints.wide]: 20,
   [editionBreakpoints.huge]: 22,
 };
 
 const containerHeightResolver = {
+  [editionBreakpoints.smallTablet]: 143,
   [editionBreakpoints.medium]: 143,
   [editionBreakpoints.wide]: 195,
   [editionBreakpoints.huge]: 243,

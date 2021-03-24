@@ -8,6 +8,7 @@ import {
 
 const fontSizeResolver = {
   [editionBreakpoints.small]: 18,
+  [editionBreakpoints.smallTablet]: 18,
   [editionBreakpoints.medium]: 18,
   [editionBreakpoints.wide]: 28,
   [editionBreakpoints.huge]: 35,
@@ -100,6 +101,7 @@ const hugeBreakpointStyles = {
 
 const styleResolver = {
   [editionBreakpoints.small]: smallBreakpointStyles,
+  [editionBreakpoints.smallTablet]: mediumBreakpointStyles,
   [editionBreakpoints.medium]: mediumBreakpointStyles,
   [editionBreakpoints.wide]: wideBreakpointStyles,
   [editionBreakpoints.huge]: hugeBreakpointStyles,

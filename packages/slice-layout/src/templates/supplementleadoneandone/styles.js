@@ -1,6 +1,6 @@
 import { spacing, colours } from "@times-components-native/styleguide";
 
-const styles = {
+const mediumBreakpointStyles = {
   container: {
     flex: 1,
     flexDirection: "row",
@@ -21,18 +21,28 @@ const styles = {
   },
 };
 
-const wideBreakpointStyles = {
-  ...styles,
+const smallTabletBreakpointStyles = {
+  ...mediumBreakpointStyles,
   container: {
-    ...styles.container,
+    ...mediumBreakpointStyles.container,
+    marginHorizontal: spacing(1),
+  },
+};
+
+const wideBreakpointStyles = {
+  ...mediumBreakpointStyles,
+  container: {
+    ...mediumBreakpointStyles.container,
     marginHorizontal: spacing(2),
   },
 };
 
 const stylesToReturn = {
-  medium: styles,
+  smallTablet: smallTabletBreakpointStyles,
+  medium: mediumBreakpointStyles,
   huge: wideBreakpointStyles,
   wide: wideBreakpointStyles,
 };
 
-export default (breakpoint) => stylesToReturn[breakpoint] || styles;
+export default (breakpoint) =>
+  stylesToReturn[breakpoint] || mediumBreakpointStyles;

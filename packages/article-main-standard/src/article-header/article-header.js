@@ -14,7 +14,7 @@ const ArticleHeader = ({
   flags,
   hasVideo,
   headline,
-  isTablet,
+  isArticleTablet,
   label,
   longRead,
   standfirst,
@@ -25,8 +25,8 @@ const ArticleHeader = ({
     <View
       style={[
         styles.articleMainContentRow,
-        isTablet && styles.articleMainContentRowTablet,
-        isTablet && styles.headerTablet,
+        isArticleTablet && styles.articleMainContentRowTablet,
+        isArticleTablet && styles.headerTablet,
       ]}
     >
       <HeaderLabel isVideo={hasVideo} label={label} />
@@ -36,7 +36,7 @@ const ArticleHeader = ({
           styles.articleHeadLineText,
           !(hasActiveFlags || longRead || standfirst) &&
             styles.articleHeadlineSpacer,
-          isTablet && styles.articleHeadLineTextTablet,
+          isArticleTablet && styles.articleHeadLineTextTablet,
         ]}
       >
         {headline}
@@ -58,7 +58,7 @@ ArticleHeader.propTypes = {
   flags: PropTypes.arrayOf(PropTypes.string),
   hasVideo: PropTypes.bool,
   headline: PropTypes.string.isRequired,
-  isTablet: PropTypes.bool,
+  isArticleTablet: PropTypes.bool,
   label: PropTypes.string,
   longRead: PropTypes.bool,
   standfirst: PropTypes.string,
@@ -67,7 +67,7 @@ ArticleHeader.propTypes = {
 ArticleHeader.defaultProps = {
   flags: [],
   hasVideo: false,
-  isTablet: false,
+  isArticleTablet: false,
   label: null,
   longRead: false,
   standfirst: null,

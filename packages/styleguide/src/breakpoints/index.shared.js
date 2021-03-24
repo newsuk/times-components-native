@@ -1,13 +1,15 @@
 const editionBreakpoints = {
   huge: "huge",
   medium: "medium",
+  smallTablet: "smallTablet",
   small: "small",
   wide: "wide",
 };
 
 const editionBreakpointWidths = {
-  huge: 1366,
+  smallTablet: 600,
   medium: 768,
+  huge: 1366,
   wide: 1024,
 };
 const editionMaxWidth = editionBreakpointWidths.huge;
@@ -29,13 +31,15 @@ const narrowArticleWidths = {
 };
 
 export default {
-  huge: 1320,
+  small: 520,
+  smallTablet: 600,
   medium: 768,
+  wide: 1024,
+  huge: 1320,
   nativeTablet: 660,
   nativeTabletWide: 1366,
-  small: 520,
-  wide: 1024,
 };
+
 export {
   editionBreakpoints,
   editionMaxWidth,

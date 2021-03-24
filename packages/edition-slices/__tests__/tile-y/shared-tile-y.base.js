@@ -6,6 +6,12 @@ import { TileY } from "../../src/tiles";
 export default () => {
   describe("tile y", () => {
     describe("portrait", () => {
+      it("smallTablet", () => {
+        testTile(TileY, editionBreakpoints.smallTablet, undefined, {
+          orientation: "portrait",
+        });
+      });
+
       it("medium", () => {
         testTile(TileY, editionBreakpoints.medium, undefined, {
           orientation: "portrait",
@@ -25,6 +31,12 @@ export default () => {
       });
     });
     describe("landscape", () => {
+      it("smallTablet", () => {
+        testTile(TileY, editionBreakpoints.smallTablet, undefined, {
+          orientation: "landscape",
+        });
+      });
+
       it("medium", () => {
         testTile(TileY, editionBreakpoints.medium, undefined, {
           orientation: "landscape",

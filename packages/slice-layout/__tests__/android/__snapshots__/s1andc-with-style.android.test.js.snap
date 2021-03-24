@@ -20,7 +20,53 @@ exports[`1. secondary one and columnist - small 1`] = `
 </View>
 `;
 
-exports[`2. secondary one and columnist - medium 1`] = `
+exports[`2. secondary one and columnist - smalltablet 1`] = `
+<View
+  style={
+    Object {
+      "flex": 1,
+      "flexDirection": "row",
+      "marginHorizontal": 5,
+    }
+  }
+>
+  <View
+    style={
+      Object {
+        "width": "75%",
+      }
+    }
+  >
+    <Text>
+      columnist
+    </Text>
+  </View>
+  <View
+    style={
+      Object {
+        "borderColor": "#DBDBDB",
+        "borderRightWidth": 1,
+        "borderStyle": "solid",
+        "marginVertical": 15,
+      }
+    }
+  />
+  <View
+    style={
+      Object {
+        "paddingVertical": 5,
+        "width": "25%",
+      }
+    }
+  >
+    <Text>
+      secondary
+    </Text>
+  </View>
+</View>
+`;
+
+exports[`3. secondary one and columnist - medium 1`] = `
 <View
   style={
     Object {

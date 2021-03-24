@@ -22,7 +22,9 @@ const TileS = ({
 }) => {
   const styles = styleFactory(breakpoint);
   const headLineStyles =
-    breakpoint === editionBreakpoints.medium && logo
+    [editionBreakpoints.smallTablet, editionBreakpoints.medium].includes(
+      breakpoint,
+    ) && logo
       ? styles.titleWithoutMargin
       : styles.title;
 

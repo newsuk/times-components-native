@@ -6,6 +6,12 @@ import { TileAW } from "../../src/tiles";
 export default () => {
   describe("tile aw", () => {
     describe("landscape", () => {
+      it("smallTablet", () => {
+        testTile(TileAW, editionBreakpoints.smallTablet, undefined, {
+          orientation: "landscape",
+        });
+      });
+
       it("medium", () => {
         testTile(TileAW, editionBreakpoints.medium, undefined, {
           orientation: "landscape",

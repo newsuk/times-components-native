@@ -109,7 +109,7 @@ const renderArticleSkeleton = ({
     <MockBookmarksProvider otherMocks={mocks} delay={1000} articleId={data.id}>
       <Responsive>
         <ResponsiveContext.Consumer>
-          {({ isTablet }) => (
+          {({ isArticleTablet }) => (
             <ContextProviderWithDefaults
               value={{ theme: { scale, sectionColour } }}
             >
@@ -152,7 +152,7 @@ const renderArticleSkeleton = ({
                   "onImagePress",
                 )}
                 onViewableItemsChanged={() => null}
-                isTablet={isTablet}
+                isArticleTablet={isArticleTablet}
                 scale={scale}
               />
             </ContextProviderWithDefaults>

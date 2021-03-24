@@ -302,6 +302,7 @@ export default () => {
   });
 
   const tests = [
+    ...tabletTester("smallTablet"),
     ...tabletTester("medium"),
     ...tabletTester("wide"),
     ...tabletTester("huge"),

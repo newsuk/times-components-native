@@ -5,13 +5,13 @@ import propTypes from "./key-facts-title-prop-types";
 import styles from "./styles";
 
 const KeyFactsTitle = ({ color, fontStyle, title }) => {
-  const { isTablet } = useResponsiveContext();
+  const { isArticleTablet } = useResponsiveContext();
 
   return (
     <Text
       style={[
         styles.title,
-        isTablet && styles.titleTablet,
+        isArticleTablet && styles.titleTablet,
         { color },
         fontStyle,
       ]}

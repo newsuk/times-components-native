@@ -32,7 +32,7 @@ exports[`1. supplement secondary two and two - small 1`] = `
 </View>
 `;
 
-exports[`2. supplement secondary two and two - medium 1`] = `
+exports[`2. supplement secondary two and two - smalltablet 1`] = `
 <View>
   <View>
     <View>
@@ -64,7 +64,7 @@ exports[`2. supplement secondary two and two - medium 1`] = `
 </View>
 `;
 
-exports[`3. supplement secondary two and two - wide 1`] = `
+exports[`3. supplement secondary two and two - medium 1`] = `
 <View>
   <View>
     <View>
@@ -96,7 +96,39 @@ exports[`3. supplement secondary two and two - wide 1`] = `
 </View>
 `;
 
-exports[`4. supplement secondary two and two - huge 1`] = `
+exports[`4. supplement secondary two and two - wide 1`] = `
+<View>
+  <View>
+    <View>
+      <Text>
+        secondary-1
+      </Text>
+    </View>
+    <View />
+    <View>
+      <Text>
+        secondary-2
+      </Text>
+    </View>
+  </View>
+  <View />
+  <View>
+    <View>
+      <Text>
+        support-1
+      </Text>
+    </View>
+    <View />
+    <View>
+      <Text>
+        support-2
+      </Text>
+    </View>
+  </View>
+</View>
+`;
+
+exports[`5. supplement secondary two and two - huge 1`] = `
 <View>
   <View>
     <Text>

@@ -5,6 +5,10 @@ import { editionBreakpoints } from "@times-components-native/styleguide";
 
 export default () => {
   describe("tile lead supplement landscape", () => {
+    it("smallTablet", () => {
+      testTile(TileLeadSupplementLandscape, editionBreakpoints.smallTablet);
+    });
+
     it("medium", () => {
       testTile(TileLeadSupplementLandscape, editionBreakpoints.medium);
     });

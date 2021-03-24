@@ -58,14 +58,14 @@ class ArticleInDepth extends Component {
 
     return (
       <ResponsiveContext.Consumer>
-        {({ isTablet }) => (
+        {({ isArticleTablet }) => (
           <Fragment>
             <ArticleHeader
               backgroundColour={backgroundColour}
               flags={expirableFlags}
               hasVideo={hasVideo}
               headline={getHeadline(headline, shortHeadline)}
-              isTablet={isTablet}
+              isArticleTablet={isArticleTablet}
               label={label}
               longRead={longRead}
               standfirst={standfirst}
@@ -79,21 +79,24 @@ class ArticleInDepth extends Component {
               renderCaption={({ caption }) =>
                 caption && caption.text && <CentredCaption {...caption} />
               }
-              style={[styles.leadAsset, isTablet && styles.leadAssetTablet]}
+              style={[
+                styles.leadAsset,
+                isArticleTablet && styles.leadAssetTablet,
+              ]}
               width={width}
               extraContent={getAllArticleImages(article)}
             />
             <View
               style={[
                 styles.metaContainer,
-                isTablet && styles.metaContainerTablet,
+                isArticleTablet && styles.metaContainerTablet,
                 withBylineTooltip && styles.metaContainerWithMargin,
               ]}
             >
               <Meta
                 backgroundColour={backgroundColour}
                 bylines={bylines}
-                isTablet={isTablet}
+                isArticleTablet={isArticleTablet}
                 onAuthorPress={onAuthorPress}
                 onTooltipPresented={onTooltipPresented}
                 publicationName={publicationName}
@@ -141,7 +144,7 @@ class ArticleInDepth extends Component {
 
     return (
       <ResponsiveContext.Consumer>
-        {({ isTablet }) => (
+        {({ isArticleTablet }) => (
           <Context.Consumer>
             {({ theme: { scale, dropCapFont } }) => (
               <ArticleSkeleton
@@ -151,7 +154,7 @@ class ArticleInDepth extends Component {
                 dropCapFont={dropCapFont}
                 Header={this.renderHeader}
                 interactiveConfig={interactiveConfig}
-                isTablet={isTablet}
+                isArticleTablet={isArticleTablet}
                 onArticleRead={onArticleRead}
                 onAuthorPress={onAuthorPress}
                 onCommentGuidelinesPress={onCommentGuidelinesPress}

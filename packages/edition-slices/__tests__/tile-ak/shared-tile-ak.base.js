@@ -8,6 +8,10 @@ import { TileAK } from "../../src/tiles";
 
 export default () => {
   describe("tile ak", () => {
+    it("smallTablet", () => {
+      testPuzzleTile(TileAK, editionBreakpoints.smallTablet);
+    });
+
     it("medium", () => {
       testPuzzleTile(TileAK, editionBreakpoints.medium);
     });

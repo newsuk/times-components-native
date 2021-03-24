@@ -12,7 +12,7 @@ exports[`1. comment lead and cartoon - small 1`] = `
 </View>
 `;
 
-exports[`2. comment lead and cartoon - medium 1`] = `
+exports[`2. comment lead and cartoon - smalltablet 1`] = `
 <View>
   <View>
     <Text>
@@ -28,7 +28,23 @@ exports[`2. comment lead and cartoon - medium 1`] = `
 </View>
 `;
 
-exports[`3. comment lead and cartoon - wide 1`] = `
+exports[`3. comment lead and cartoon - medium 1`] = `
+<View>
+  <View>
+    <Text>
+      lead-1
+    </Text>
+  </View>
+  <View />
+  <View>
+    <Text>
+      cartoon-1
+    </Text>
+  </View>
+</View>
+`;
+
+exports[`4. comment lead and cartoon - wide 1`] = `
 <View>
   <View>
     <Text>

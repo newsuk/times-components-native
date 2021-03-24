@@ -19,7 +19,7 @@ const ArticleHeader = ({
   articleId,
   bylines,
   flags,
-  isTablet,
+  isArticleTablet,
   hasVideo,
   headline,
   label,
@@ -39,8 +39,8 @@ const ArticleHeader = ({
         <View
           style={[
             styles.container,
-            isTablet && styles.tabletContainer,
-            !isTablet && withBylineTooltip && styles.containerWithMargin,
+            isArticleTablet && styles.tabletContainer,
+            !isArticleTablet && withBylineTooltip && styles.containerWithMargin,
           ]}
         >
           <Label isVideo={hasVideo} label={label} />
@@ -50,7 +50,7 @@ const ArticleHeader = ({
               {
                 ...fontFactory({
                   font: headlineFont || "headline",
-                  fontSize: isTablet ? "pageHeadline" : "headline",
+                  fontSize: isArticleTablet ? "pageHeadline" : "headline",
                 }),
               },
               headlineCase ? { textTransform: headlineCase } : null,
@@ -63,7 +63,7 @@ const ArticleHeader = ({
           <Meta
             articleId={articleId}
             bylines={bylines}
-            isTablet={isTablet}
+            isArticleTablet={isArticleTablet}
             onAuthorPress={onAuthorPress}
             onTooltipPresented={onTooltipPresented}
             publicationName={publicationName}
