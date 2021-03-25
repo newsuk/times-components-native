@@ -588,6 +588,31 @@ export default () => {
       },
     },
     {
+      name:
+        "Responsive Slice renders medium layout when in smallTablet breakpoint",
+      test: () => {
+        const renderSmallMock = jest.fn();
+        const renderMediumMock = jest.fn();
+        const renderWideMock = jest.fn();
+        const renderHugeMock = jest.fn();
+
+        TestRenderer.create(
+          <ResponsiveContext.Provider
+            value={{ editionBreakpoint: editionBreakpoints.smallTablet }}
+          >
+            <ResponsiveSlice
+              renderSmall={renderSmallMock}
+              renderMedium={renderMediumMock}
+              renderWide={renderWideMock}
+              renderHuge={renderHugeMock}
+            />
+          </ResponsiveContext.Provider>,
+        );
+
+        expect(renderMediumMock).toHaveBeenCalled();
+      },
+    },
+    {
       name: "Responsive Slice renders small layout when in small breakpoint",
       test: () => {
         const renderSmallMock = jest.fn();

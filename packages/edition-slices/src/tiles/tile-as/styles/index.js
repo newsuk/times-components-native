@@ -6,6 +6,7 @@ import {
 } from "@times-components-native/styleguide";
 
 const headlineFontSize = {
+  [editionBreakpoints.smallTablet]: 18,
   [editionBreakpoints.medium]: 18,
   [editionBreakpoints.wide]: 20,
   [editionBreakpoints.huge]: 22,

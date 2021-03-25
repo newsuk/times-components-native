@@ -10,12 +10,14 @@ import { scales } from "@times-components-native/styleguide";
 import { MessageManager } from "@times-components-native/message-bar";
 import { getMediaList, addIndexesToInlineImages } from "./utils";
 
-export const getComponentByTemplate = (template, isTablet) => {
+export const getComponentByTemplate = (template, isArticleTablet) => {
   const templates = {
     indepth: ArticleInDepth,
-    magazinecomment: isTablet ? ArticleCommentTablet : ArticleMagazineComment,
+    magazinecomment: isArticleTablet
+      ? ArticleCommentTablet
+      : ArticleMagazineComment,
     magazinestandard: ArticleMagazineStandard,
-    maincomment: isTablet ? ArticleCommentTablet : ArticleMainComment,
+    maincomment: isArticleTablet ? ArticleCommentTablet : ArticleMainComment,
     mainstandard: ArticleMainStandard,
   };
 
@@ -30,7 +32,7 @@ export class TakeoverBailout extends Error {
 }
 
 const Article = (props) => {
-  const { isTablet } = useResponsiveContext();
+  const { isArticleTablet } = useResponsiveContext();
   const { article, onImagePress } = props;
   const { leadAsset, template } = article || {};
 
@@ -44,7 +46,7 @@ const Article = (props) => {
     const mediaList = getMediaList(content, leadAsset);
     onImagePressArticle = (index) => onImagePress(index, mediaList);
   }
-  const Component = getComponentByTemplate(template, isTablet);
+  const Component = getComponentByTemplate(template, isArticleTablet);
   const newProps = {
     ...props,
     article: {

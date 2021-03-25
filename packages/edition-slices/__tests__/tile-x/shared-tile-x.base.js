@@ -6,6 +6,12 @@ import { TileX } from "../../src/tiles";
 export default () => {
   describe("tile x", () => {
     describe("portrait", () => {
+      it("smallTablet", () => {
+        testTile(TileX, editionBreakpoints.smallTablet, undefined, {
+          orientation: "portrait",
+        });
+      });
+
       it("medium", () => {
         testTile(TileX, editionBreakpoints.medium, undefined, {
           orientation: "portrait",
@@ -25,6 +31,12 @@ export default () => {
       });
     });
     describe("landscape", () => {
+      it("smallTablet", () => {
+        testTile(TileX, editionBreakpoints.smallTablet, undefined, {
+          orientation: "landscape",
+        });
+      });
+
       it("medium", () => {
         testTile(TileX, editionBreakpoints.medium, undefined, {
           orientation: "landscape",

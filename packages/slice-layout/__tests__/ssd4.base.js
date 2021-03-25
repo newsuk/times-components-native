@@ -7,6 +7,22 @@ import { SupplementSecondaryFourSlice } from "../src/slice-layout";
 export default (renderComponent) => {
   const tests = [
     {
+      name: "supplement secondary four - smallTablet",
+      test() {
+        const output = renderComponent(
+          <SupplementSecondaryFourSlice
+            breakpoint={editionBreakpoints.smallTablet}
+            secondary1={createItem("secondary-1")}
+            secondary2={createItem("secondary-2")}
+            secondary3={createItem("secondary-3")}
+            secondary4={createItem("secondary-4")}
+          />,
+        );
+
+        expect(output).toMatchSnapshot();
+      },
+    },
+    {
       name: "supplement secondary four - medium",
       test() {
         const output = renderComponent(

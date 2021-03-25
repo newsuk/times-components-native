@@ -7,6 +7,7 @@ import {
 import { StyleSheet } from "react-native";
 
 const fontSizeResolver: Record<string, number> = {
+  [editionBreakpoints.smallTablet]: 38,
   [editionBreakpoints.medium]: 38,
   [editionBreakpoints.wide]: 38,
   [editionBreakpoints.huge]: 40,

@@ -15,7 +15,7 @@ const BodyParagraph = ({
   split,
 }) => {
   const { inline } = attributes || false;
-  const { isTablet, narrowArticleBreakpoint } = useResponsiveContext();
+  const { isArticleTablet, narrowArticleBreakpoint } = useResponsiveContext();
   const getNarrowContentStyle = (width) => [styles.narrow, { maxWidth: width }];
 
   return (
@@ -23,8 +23,8 @@ const BodyParagraph = ({
       style={[
         styles.articleMainContentRow,
         styles.articleTextElement,
-        isTablet && styles.articleMainContentRowTablet,
-        isTablet && inline && styles.articleInlineContentRowTablet,
+        isArticleTablet && styles.articleMainContentRowTablet,
+        isArticleTablet && inline && styles.articleInlineContentRowTablet,
         inline && split && styles.articleInlineSplitContentRowTablet,
         narrowContent && getNarrowContentStyle(narrowArticleBreakpoint.content),
         style,

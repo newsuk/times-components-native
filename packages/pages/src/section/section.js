@@ -149,7 +149,7 @@ class SectionPage extends Component {
   }
 
   render() {
-    const { publicationName, publishedTime, remoteConfig } = this.props;
+    const { publicationName, remoteConfig } = this.props;
     const {
       readArticles,
       recentlyOpenedPuzzleCount,
@@ -182,7 +182,6 @@ class SectionPage extends Component {
             onPuzzleBarPress={onPuzzleBarPress}
             onPuzzlePress={onPuzzlePress}
             publicationName={publicationName}
-            publishedTime={publishedTime}
             section={section}
           />
         </RemoteConfigProvider>

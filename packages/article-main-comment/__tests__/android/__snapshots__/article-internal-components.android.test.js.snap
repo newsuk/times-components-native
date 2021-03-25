@@ -75,6 +75,9 @@ exports[`6. article meta 1`] = `
           },
         ]
       }
+      tooltipArrowOffset={120}
+      tooltipOffsetX={-95}
+      tooltipOffsetY={44}
     />
   </View>
   <View>

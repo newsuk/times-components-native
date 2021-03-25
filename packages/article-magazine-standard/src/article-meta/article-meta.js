@@ -15,39 +15,46 @@ import styles from "../styles";
 const Separator = () => <View style={styles.separator} />;
 
 const ArticleMeta = ({
+  articleId,
   bylines,
-  isTablet,
+  isArticleTablet,
   onAuthorPress,
   onTooltipPresented,
   publicationName,
   publishedTime,
   tooltips,
 }) => (
-  <View style={[styles.metaContainer, isTablet && styles.metaContainerTablet]}>
+  <View
+    style={[
+      styles.metaContainer,
+      isArticleTablet && styles.metaContainerTablet,
+    ]}
+  >
     {hasBylineData(bylines) && (
-      <View style={[styles.meta, isTablet && styles.metaTablet]}>
+      <View style={[styles.meta, isArticleTablet && styles.metaTablet]}>
         <Context.Consumer>
           {({ theme: { sectionColour } }) => (
             <ArticleBylineWithLinks
+              articleId={articleId}
               ast={bylines}
               color={sectionColour || colours.section.default}
               onAuthorPress={onAuthorPress}
               onTooltipPresented={onTooltipPresented}
-              tooltipArrowOffset={35}
+              tooltipArrowOffset={isArticleTablet ? 35 : 120}
               tooltips={tooltips}
-              tooltipOffsetX={-10}
-              tooltipOffsetY={25}
+              tooltipOffsetX={isArticleTablet ? -10 : -45}
+              tooltipOffsetY={isArticleTablet ? 25 : 55}
             />
           )}
         </Context.Consumer>
       </View>
     )}
-    {isTablet ? <Separator /> : null}
-    <View style={[styles.meta, isTablet && styles.metaTablet]}>
+    {isArticleTablet ? <Separator /> : null}
+    <View style={[styles.meta, isArticleTablet && styles.metaTablet]}>
       <Text
         style={[
           styles.datePublication,
-          isTablet && styles.datePublicationTablet,
+          isArticleTablet && styles.datePublicationTablet,
         ]}
       >
         <DatePublication date={publishedTime} publication={publicationName} />

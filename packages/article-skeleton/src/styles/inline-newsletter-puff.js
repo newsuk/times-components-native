@@ -117,6 +117,7 @@ const hugeBreakpointStyle = { ...wideBreakpointStyles };
 
 const stylesResolver = {
   [editionBreakpoints.small]: smallBreakpointStyles,
+  [editionBreakpoints.smallTablet]: smallBreakpointStyles,
   [editionBreakpoints.medium]: mediumBreakpointStyles,
   [editionBreakpoints.wide]: wideBreakpointStyles,
   [editionBreakpoints.huge]: hugeBreakpointStyle,

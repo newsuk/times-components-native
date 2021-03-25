@@ -10,13 +10,13 @@ import {
 } from "./article-topics-prop-types";
 
 const renderArticleTopics = (
+  articleId,
   tooltipDisplayedInView,
   tooltips,
   topics,
   onPress,
   onTooltipPresented,
   fontStyle,
-  articleId,
 ) =>
   topics.map(({ name, slug }, index) => (
     <ArticleTopic
@@ -35,13 +35,13 @@ const renderArticleTopics = (
   ));
 
 const ArticleTopics = ({
+  articleId,
   onPress,
   onTooltipPresented,
   style,
   tooltips,
   tooltipDisplayedInView,
   topics,
-  articleId,
 }) => (
   <Context.Consumer>
     {({ theme: { scale } }) => {
@@ -50,6 +50,7 @@ const ArticleTopics = ({
       return (
         <View style={[styles.topicGroup, style]}>
           {renderArticleTopics(
+            articleId,
             tooltipDisplayedInView,
             tooltips,
             topics,
@@ -59,7 +60,6 @@ const ArticleTopics = ({
               font: "supporting",
               fontSize: "link",
             }),
-            articleId,
           )}
         </View>
       );

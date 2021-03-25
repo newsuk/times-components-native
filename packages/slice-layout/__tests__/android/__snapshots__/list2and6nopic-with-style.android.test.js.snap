@@ -122,7 +122,212 @@ Array [
 ]
 `;
 
-exports[`2. list two and six no pic - medium 1`] = `
+exports[`2. list two and six no pic - smalltablet 1`] = `
+<View
+  style={
+    Object {
+      "flex": 1,
+      "flexDirection": "row",
+      "marginHorizontal": 5,
+      "marginVertical": 5,
+    }
+  }
+>
+  <View
+    style={
+      Object {
+        "flex": 1,
+      }
+    }
+  >
+    <Text>
+      lead-1
+    </Text>
+  </View>
+  <View
+    style={
+      Object {
+        "borderColor": "#DBDBDB",
+        "borderRightWidth": 1,
+        "borderStyle": "solid",
+        "marginVertical": 10,
+      }
+    }
+  />
+  <View
+    style={
+      Object {
+        "flex": 1,
+      }
+    }
+  >
+    <Text>
+      lead-2
+    </Text>
+  </View>
+  <View
+    style={
+      Object {
+        "borderColor": "#DBDBDB",
+        "borderRightWidth": 1,
+        "borderStyle": "solid",
+        "marginVertical": 10,
+      }
+    }
+  />
+  <View
+    style={
+      Object {
+        "width": "50%",
+      }
+    }
+  >
+    <View
+      style={
+        Object {
+          "flex": 1,
+          "flexDirection": "row",
+        }
+      }
+    >
+      <View
+        style={
+          Object {
+            "width": "50%",
+          }
+        }
+      >
+        <Text>
+          support-1
+        </Text>
+      </View>
+      <View
+        style={
+          Object {
+            "borderColor": "#DBDBDB",
+            "borderRightWidth": 1,
+            "borderStyle": "solid",
+            "marginVertical": 10,
+          }
+        }
+      />
+      <View
+        style={
+          Object {
+            "width": "50%",
+          }
+        }
+      >
+        <Text>
+          support-2
+        </Text>
+      </View>
+    </View>
+    <View
+      style={
+        Object {
+          "borderBottomWidth": 1,
+          "borderColor": "#DBDBDB",
+          "borderStyle": "solid",
+        }
+      }
+    />
+    <View
+      style={
+        Object {
+          "flex": 1,
+          "flexDirection": "row",
+        }
+      }
+    >
+      <View
+        style={
+          Object {
+            "width": "50%",
+          }
+        }
+      >
+        <Text>
+          support-3
+        </Text>
+      </View>
+      <View
+        style={
+          Object {
+            "borderColor": "#DBDBDB",
+            "borderRightWidth": 1,
+            "borderStyle": "solid",
+            "marginVertical": 10,
+          }
+        }
+      />
+      <View
+        style={
+          Object {
+            "width": "50%",
+          }
+        }
+      >
+        <Text>
+          support-4
+        </Text>
+      </View>
+    </View>
+    <View
+      style={
+        Object {
+          "borderBottomWidth": 1,
+          "borderColor": "#DBDBDB",
+          "borderStyle": "solid",
+        }
+      }
+    />
+    <View
+      style={
+        Object {
+          "flex": 1,
+          "flexDirection": "row",
+        }
+      }
+    >
+      <View
+        style={
+          Object {
+            "width": "50%",
+          }
+        }
+      >
+        <Text>
+          support-5
+        </Text>
+      </View>
+      <View
+        style={
+          Object {
+            "borderColor": "#DBDBDB",
+            "borderRightWidth": 1,
+            "borderStyle": "solid",
+            "marginVertical": 10,
+          }
+        }
+      />
+      <View
+        style={
+          Object {
+            "width": "50%",
+          }
+        }
+      >
+        <Text>
+          support-6
+        </Text>
+      </View>
+    </View>
+  </View>
+</View>
+`;
+
+exports[`3. list two and six no pic - medium 1`] = `
 <View
   style={
     Object {
@@ -327,7 +532,7 @@ exports[`2. list two and six no pic - medium 1`] = `
 </View>
 `;
 
-exports[`3. list two and six no pic - wide 1`] = `
+exports[`4. list two and six no pic - wide 1`] = `
 <View
   style={
     Object {
@@ -532,7 +737,7 @@ exports[`3. list two and six no pic - wide 1`] = `
 </View>
 `;
 
-exports[`4. list two and six no pic - huge 1`] = `
+exports[`5. list two and six no pic - huge 1`] = `
 <View
   style={
     Object {

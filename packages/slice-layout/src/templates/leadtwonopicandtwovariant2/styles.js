@@ -1,4 +1,7 @@
-import { spacing } from "@times-components-native/styleguide";
+import {
+  editionBreakpoints,
+  spacing,
+} from "@times-components-native/styleguide";
 
 const sharedStyles = {
   container: {
@@ -24,6 +27,14 @@ const portraitStyles = {
   },
 };
 
+const smallTabletPortraitStyles = {
+  ...portraitStyles,
+  container: {
+    ...portraitStyles.container,
+    marginHorizontal: spacing(1),
+  },
+};
+
 const landscapeStyles = {
   container: {
     ...sharedStyles.container,
@@ -43,9 +54,31 @@ const landscapeStyles = {
   },
 };
 
-const stylesResolver = {
+const smallTabletLandscapeStyles = {
+  ...landscapeStyles,
+  container: {
+    ...landscapeStyles.container,
+    marginHorizontal: spacing(1),
+  },
+};
+
+const defaultStyles = {
   portrait: portraitStyles,
   landscape: landscapeStyles,
 };
 
-export default (orientation) => stylesResolver[orientation] || {};
+const smallTabletBreakpointStyles = {
+  portrait: smallTabletPortraitStyles,
+  landscape: smallTabletLandscapeStyles,
+};
+
+const stylesResolver = {
+  [editionBreakpoints.small]: defaultStyles,
+  [editionBreakpoints.smallTablet]: smallTabletBreakpointStyles,
+  [editionBreakpoints.medium]: defaultStyles,
+  [editionBreakpoints.wide]: defaultStyles,
+  [editionBreakpoints.huge]: defaultStyles,
+};
+
+export default (breakpoint, orientation) =>
+  stylesResolver[breakpoint][orientation] || {};

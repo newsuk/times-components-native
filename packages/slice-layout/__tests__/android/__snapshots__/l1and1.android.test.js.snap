@@ -12,7 +12,7 @@ exports[`1. lead one and one - small 1`] = `
 </View>
 `;
 
-exports[`2. lead one and one - medium 1`] = `
+exports[`2. lead one and one - smalltablet 1`] = `
 <View>
   <View>
     <Text>
@@ -28,7 +28,7 @@ exports[`2. lead one and one - medium 1`] = `
 </View>
 `;
 
-exports[`3. lead one and one - wide 1`] = `
+exports[`3. lead one and one - medium 1`] = `
 <View>
   <View>
     <Text>
@@ -44,7 +44,23 @@ exports[`3. lead one and one - wide 1`] = `
 </View>
 `;
 
-exports[`4. lead one and one - huge 1`] = `
+exports[`4. lead one and one - wide 1`] = `
+<View>
+  <View>
+    <Text>
+      lead
+    </Text>
+  </View>
+  <View />
+  <View>
+    <Text>
+      support
+    </Text>
+  </View>
+</View>
+`;
+
+exports[`5. lead one and one - huge 1`] = `
 <View>
   <View>
     <Text>

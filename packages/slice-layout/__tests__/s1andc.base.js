@@ -20,6 +20,20 @@ export default (renderComponent) => {
       },
     },
     {
+      name: "secondary one and columnist - smallTablet",
+      test() {
+        const output = renderComponent(
+          <SecondaryOneAndColumnistSlice
+            breakpoint={editionBreakpoints.smallTablet}
+            columnist={createItem("columnist")}
+            secondary={createItem("secondary")}
+          />,
+        );
+
+        expect(output).toMatchSnapshot();
+      },
+    },
+    {
       name: "secondary one and columnist - medium",
       test() {
         const output = renderComponent(

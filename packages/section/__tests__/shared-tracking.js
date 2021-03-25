@@ -10,7 +10,6 @@ import TestRenderer from "react-test-renderer";
 import Section from "../src/section";
 
 jest.mock("@times-components-native/icons", () => ({
-  IconEmail: "IconEmail",
   IconForwardArrow: "IconForwardArrow",
   IconStar: "IconStar",
   IconVideo: "IconVideo",

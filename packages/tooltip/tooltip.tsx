@@ -2,13 +2,13 @@ import React, { ReactNode, useState } from "react";
 import { Animated, Text, TouchableOpacity, View, Platform } from "react-native";
 // @ts-ignore
 import { Viewport } from "@skele/components";
-import { useResponsiveContext } from "@times-components-native/responsive";
 import generateStyles from "./styles";
 
 export interface TooltipProps {
   arrowOffset?: number;
   content: string | ReactNode;
   displayedInView?: boolean;
+  flexDirectionColumnReverse?: boolean;
   offsetX?: number;
   offsetY?: number;
   onClose?(): void;
@@ -25,6 +25,7 @@ const Tooltip: React.FC<TooltipProps> = ({
   content,
   children,
   displayedInView = false,
+  flexDirectionColumnReverse = false,
   offsetX = 0,
   offsetY = 0,
   onClose,
@@ -35,12 +36,12 @@ const Tooltip: React.FC<TooltipProps> = ({
   width = 256,
   articleId,
 }) => {
-  const { isTablet } = useResponsiveContext();
   const [opacity] = useState(new Animated.Value(1));
   const ViewportAwareView = Viewport.Aware(View);
 
   const styles = generateStyles({
     arrowOffset,
+    flexDirectionColumnReverse,
     offsetX,
     offsetY,
     placement,
@@ -67,13 +68,13 @@ const Tooltip: React.FC<TooltipProps> = ({
     </TouchableOpacity>
   );
 
-  if (isTablet && displayedInView && onTooltipPresented) {
+  if (displayedInView && onTooltipPresented) {
     onTooltipPresented(type, articleId);
   }
 
   return (
     <View style={styles.wrapper}>
-      {tooltips.includes(type) && isTablet && (
+      {tooltips.includes(type) && (
         <ViewportAwareView
           testID="viewportAwareView"
           onViewportEnter={() => {

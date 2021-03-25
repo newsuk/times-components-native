@@ -15,6 +15,7 @@ declare module "@times-components-native/styleguide" {
     huge: "huge";
     medium: "medium";
     small: "small";
+    smallTablet: "smallTablet";
     wide: "wide";
   };
   export const tabletWidth: number;

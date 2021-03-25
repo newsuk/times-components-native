@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`1. supplement lead one and four v2 - medium 1`] = `
+exports[`1. supplement lead one and four v2 - smalltablet 1`] = `
 <View>
   <View
     style={
@@ -13,10 +13,120 @@ exports[`1. supplement lead one and four v2 - medium 1`] = `
       lead
     </Text>
   </View>
+  <View
+    style={
+      Object {
+        "alignSelf": "center",
+        "maxWidth": "100%",
+        "paddingHorizontal": 0,
+        "width": 1366,
+      }
+    }
+  >
+    <View
+      style={
+        Object {
+          "marginHorizontal": 5,
+        }
+      }
+    >
+      <View
+        style={
+          Object {
+            "flex": 1,
+            "flexDirection": "row",
+          }
+        }
+      >
+        <View
+          style={
+            Object {
+              "flex": 1,
+            }
+          }
+        >
+          <Text>
+            support-1
+          </Text>
+        </View>
+        <View
+          style={
+            Object {
+              "borderColor": "#DBDBDB",
+              "borderRightWidth": 1,
+              "borderStyle": "solid",
+              "marginVertical": 10,
+            }
+          }
+        />
+        <View
+          style={
+            Object {
+              "flex": 1,
+            }
+          }
+        >
+          <Text>
+            support-2
+          </Text>
+        </View>
+      </View>
+      <View
+        style={
+          Object {
+            "borderBottomWidth": 1,
+            "borderColor": "#DBDBDB",
+            "borderStyle": "solid",
+          }
+        }
+      />
+      <View
+        style={
+          Object {
+            "flex": 1,
+            "flexDirection": "row",
+          }
+        }
+      >
+        <View
+          style={
+            Object {
+              "flex": 1,
+            }
+          }
+        >
+          <Text>
+            support-3
+          </Text>
+        </View>
+        <View
+          style={
+            Object {
+              "borderColor": "#DBDBDB",
+              "borderRightWidth": 1,
+              "borderStyle": "solid",
+              "marginVertical": 10,
+            }
+          }
+        />
+        <View
+          style={
+            Object {
+              "flex": 1,
+            }
+          }
+        >
+          <Text>
+            support-4
+          </Text>
+        </View>
+      </View>
+    </View>
+  </View>
 </View>
 `;
 
-exports[`2. supplement lead one and four v2 - wide 1`] = `
+exports[`2. supplement lead one and four v2 - medium 1`] = `
 <View>
   <View
     style={
@@ -29,10 +139,120 @@ exports[`2. supplement lead one and four v2 - wide 1`] = `
       lead
     </Text>
   </View>
+  <View
+    style={
+      Object {
+        "alignSelf": "center",
+        "maxWidth": "100%",
+        "paddingHorizontal": 0,
+        "width": 1366,
+      }
+    }
+  >
+    <View
+      style={
+        Object {
+          "marginHorizontal": 20,
+        }
+      }
+    >
+      <View
+        style={
+          Object {
+            "flex": 1,
+            "flexDirection": "row",
+          }
+        }
+      >
+        <View
+          style={
+            Object {
+              "flex": 1,
+            }
+          }
+        >
+          <Text>
+            support-1
+          </Text>
+        </View>
+        <View
+          style={
+            Object {
+              "borderColor": "#DBDBDB",
+              "borderRightWidth": 1,
+              "borderStyle": "solid",
+              "marginVertical": 10,
+            }
+          }
+        />
+        <View
+          style={
+            Object {
+              "flex": 1,
+            }
+          }
+        >
+          <Text>
+            support-2
+          </Text>
+        </View>
+      </View>
+      <View
+        style={
+          Object {
+            "borderBottomWidth": 1,
+            "borderColor": "#DBDBDB",
+            "borderStyle": "solid",
+          }
+        }
+      />
+      <View
+        style={
+          Object {
+            "flex": 1,
+            "flexDirection": "row",
+          }
+        }
+      >
+        <View
+          style={
+            Object {
+              "flex": 1,
+            }
+          }
+        >
+          <Text>
+            support-3
+          </Text>
+        </View>
+        <View
+          style={
+            Object {
+              "borderColor": "#DBDBDB",
+              "borderRightWidth": 1,
+              "borderStyle": "solid",
+              "marginVertical": 10,
+            }
+          }
+        />
+        <View
+          style={
+            Object {
+              "flex": 1,
+            }
+          }
+        >
+          <Text>
+            support-4
+          </Text>
+        </View>
+      </View>
+    </View>
+  </View>
 </View>
 `;
 
-exports[`3. supplement lead one and four v2 - huge 1`] = `
+exports[`3. supplement lead one and four v2 - wide 1`] = `
 <View>
   <View
     style={
@@ -44,6 +264,242 @@ exports[`3. supplement lead one and four v2 - huge 1`] = `
     <Text>
       lead
     </Text>
+  </View>
+  <View
+    style={
+      Object {
+        "alignSelf": "center",
+        "maxWidth": "100%",
+        "paddingHorizontal": 0,
+        "width": 1366,
+      }
+    }
+  >
+    <View
+      style={
+        Object {
+          "marginHorizontal": 20,
+        }
+      }
+    >
+      <View
+        style={
+          Object {
+            "flex": 1,
+            "flexDirection": "row",
+          }
+        }
+      >
+        <View
+          style={
+            Object {
+              "flex": 1,
+            }
+          }
+        >
+          <Text>
+            support-1
+          </Text>
+        </View>
+        <View
+          style={
+            Object {
+              "borderColor": "#DBDBDB",
+              "borderRightWidth": 1,
+              "borderStyle": "solid",
+              "marginVertical": 10,
+            }
+          }
+        />
+        <View
+          style={
+            Object {
+              "flex": 1,
+            }
+          }
+        >
+          <Text>
+            support-2
+          </Text>
+        </View>
+      </View>
+      <View
+        style={
+          Object {
+            "borderBottomWidth": 1,
+            "borderColor": "#DBDBDB",
+            "borderStyle": "solid",
+          }
+        }
+      />
+      <View
+        style={
+          Object {
+            "flex": 1,
+            "flexDirection": "row",
+          }
+        }
+      >
+        <View
+          style={
+            Object {
+              "flex": 1,
+            }
+          }
+        >
+          <Text>
+            support-3
+          </Text>
+        </View>
+        <View
+          style={
+            Object {
+              "borderColor": "#DBDBDB",
+              "borderRightWidth": 1,
+              "borderStyle": "solid",
+              "marginVertical": 10,
+            }
+          }
+        />
+        <View
+          style={
+            Object {
+              "flex": 1,
+            }
+          }
+        >
+          <Text>
+            support-4
+          </Text>
+        </View>
+      </View>
+    </View>
+  </View>
+</View>
+`;
+
+exports[`4. supplement lead one and four v2 - huge 1`] = `
+<View>
+  <View
+    style={
+      Object {
+        "width": "100%",
+      }
+    }
+  >
+    <Text>
+      lead
+    </Text>
+  </View>
+  <View
+    style={
+      Object {
+        "alignSelf": "center",
+        "maxWidth": "100%",
+        "paddingHorizontal": 0,
+        "width": 1366,
+      }
+    }
+  >
+    <View
+      style={
+        Object {
+          "marginHorizontal": 20,
+        }
+      }
+    >
+      <View
+        style={
+          Object {
+            "flex": 1,
+            "flexDirection": "row",
+          }
+        }
+      >
+        <View
+          style={
+            Object {
+              "flex": 1,
+            }
+          }
+        >
+          <Text>
+            support-1
+          </Text>
+        </View>
+        <View
+          style={
+            Object {
+              "borderColor": "#DBDBDB",
+              "borderRightWidth": 1,
+              "borderStyle": "solid",
+              "marginVertical": 10,
+            }
+          }
+        />
+        <View
+          style={
+            Object {
+              "flex": 1,
+            }
+          }
+        >
+          <Text>
+            support-2
+          </Text>
+        </View>
+      </View>
+      <View
+        style={
+          Object {
+            "borderBottomWidth": 1,
+            "borderColor": "#DBDBDB",
+            "borderStyle": "solid",
+          }
+        }
+      />
+      <View
+        style={
+          Object {
+            "flex": 1,
+            "flexDirection": "row",
+          }
+        }
+      >
+        <View
+          style={
+            Object {
+              "flex": 1,
+            }
+          }
+        >
+          <Text>
+            support-3
+          </Text>
+        </View>
+        <View
+          style={
+            Object {
+              "borderColor": "#DBDBDB",
+              "borderRightWidth": 1,
+              "borderStyle": "solid",
+              "marginVertical": 10,
+            }
+          }
+        />
+        <View
+          style={
+            Object {
+              "flex": 1,
+            }
+          }
+        >
+          <Text>
+            support-4
+          </Text>
+        </View>
+      </View>
+    </View>
   </View>
 </View>
 `;

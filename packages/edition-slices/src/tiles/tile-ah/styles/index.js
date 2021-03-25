@@ -8,12 +8,14 @@ import {
 } from "@times-components-native/styleguide";
 
 const headlineFontSizeResolver = {
+  [editionBreakpoints.smallTablet]: 30,
   [editionBreakpoints.medium]: 30,
   [editionBreakpoints.wide]: 40,
   [editionBreakpoints.huge]: 45,
 };
 
 const keylinePadding = {
+  [editionBreakpoints.smallTablet]: spacing(2),
   [editionBreakpoints.medium]: spacing(2),
   [editionBreakpoints.wide]: spacing(3),
   [editionBreakpoints.huge]: spacing(3),

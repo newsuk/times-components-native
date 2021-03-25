@@ -18,6 +18,7 @@ const articlePagePropTypes = {
   }),
   isLoading: PropTypes.bool,
   receiveChildList: PropTypes.func,
+  tooltips: PropTypes.array,
 };
 
 const articlePageDefaultProps = {
@@ -25,6 +26,7 @@ const articlePageDefaultProps = {
   error: null,
   isLoading: false,
   receiveChildList: () => null,
+  tooltips: [],
 };
 
 export { articlePagePropTypes, articlePageDefaultProps };

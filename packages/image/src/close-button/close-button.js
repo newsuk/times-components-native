@@ -5,9 +5,12 @@ import Button from "@times-components-native/link";
 import styles from "../styles";
 import closeImagePath from "../../assets/close-button.png";
 
-const CloseButton = ({ isTablet, onPress }) => (
+const CloseButton = ({ isArticleTablet, onPress }) => (
   <Button
-    linkStyle={[styles.closeButton, isTablet && styles.closeButtonTablet]}
+    linkStyle={[
+      styles.closeButton,
+      isArticleTablet && styles.closeButtonTablet,
+    ]}
     onPress={onPress}
   >
     <Image
@@ -19,7 +22,7 @@ const CloseButton = ({ isTablet, onPress }) => (
 );
 
 CloseButton.propTypes = {
-  isTablet: PropTypes.bool.isRequired,
+  isArticleTablet: PropTypes.bool.isRequired,
   onPress: PropTypes.func.isRequired,
 };
 

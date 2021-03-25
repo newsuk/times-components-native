@@ -1,7 +1,4 @@
-import styleguide, {
-  tabletRowPadding,
-  tabletWidth,
-} from "@times-components-native/styleguide";
+import styleguide from "@times-components-native/styleguide";
 
 const { colours, fontFactory, spacing } = styleguide();
 const sharedStyles = {
@@ -24,9 +21,8 @@ const sharedStyles = {
     marginRight: spacing(2),
     paddingTop: spacing(7),
   },
-  containerTablet: {
-    alignSelf: "center",
-    width: tabletWidth,
+  containerWithMargin: {
+    marginBottom: 100,
   },
   datePublication: {
     ...fontFactory({
@@ -36,18 +32,11 @@ const sharedStyles = {
     color: colours.functional.secondary,
     marginTop: spacing(3),
   },
-  datePublicationTablet: {
-    marginTop: "auto",
-  },
   label: {
     marginBottom: spacing(2),
   },
   leadAssetContainer: {
     marginBottom: spacing(4),
-  },
-  leadAssetContainerTablet: {
-    alignSelf: "center",
-    width: tabletWidth - tabletRowPadding,
   },
   meta: {
     flexDirection: "row",
@@ -55,13 +44,6 @@ const sharedStyles = {
   },
   metaContainer: {
     alignItems: "center",
-  },
-  metaContainerTablet: {
-    flexDirection: "row",
-    justifyContent: "center",
-  },
-  metaTablet: {
-    paddingTop: spacing(1),
   },
   separator: {
     borderRightColor: colours.functional.keyline,

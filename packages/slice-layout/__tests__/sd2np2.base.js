@@ -23,6 +23,22 @@ export default (renderComponent) => {
       },
     },
     {
+      name: "secondary two no pic and two - smallTablet",
+      test() {
+        const output = renderComponent(
+          <SecondaryTwoNoPicAndTwoSlice
+            breakpoint={editionBreakpoints.smallTablet}
+            secondary1={createItem("secondary-1")}
+            secondary2={createItem("secondary-2")}
+            support1={createItem("support-1")}
+            support2={createItem("support-2")}
+          />,
+        );
+
+        expect(output).toMatchSnapshot();
+      },
+    },
+    {
       name: "secondary two no pic and two - medium",
       test() {
         const output = renderComponent(

@@ -14,8 +14,11 @@ const getEditionBreakpoint = (width) => {
   if (config && config.breakpoint) {
     return config.breakpoint;
   }
-  if (width < editionBreakpointWidths.medium) {
+  if (width < editionBreakpointWidths.smallTablet) {
     return editionBreakpoints.small;
+  }
+  if (width < editionBreakpointWidths.medium) {
+    return editionBreakpoints.smallTablet;
   }
   if (width < editionBreakpointWidths.wide) {
     return editionBreakpoints.medium;

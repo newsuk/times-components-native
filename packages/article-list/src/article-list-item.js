@@ -75,13 +75,13 @@ class ArticleListItem extends Component {
 
     return (
       <ResponsiveContext.Consumer>
-        {({ isTablet }) => (
+        {({ isArticleTablet }) => (
           <View style={{ flexDirection: "row", justifyContent: "center" }}>
             <View style={{ flex: 1, maxWidth: tabletWidth }}>
               <Link onPress={this.onItemPress} url={url}>
                 <View
                   style={
-                    isTablet
+                    isArticleTablet
                       ? styles.listItemContainerTablet
                       : styles.listItemContainer
                   }

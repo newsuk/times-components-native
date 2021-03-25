@@ -1,7 +1,7 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`width values should update on device rotation 1`] = `"{\\"editionBreakpoint\\":\\"small\\",\\"isTablet\\":false,\\"windowWidth\\":500,\\"windowHeight\\":1000,\\"orientation\\":\\"portrait\\",\\"isPortrait\\":true,\\"isLandscape\\":false,\\"sectionContentWidth\\":500,\\"sectionContentHeightTablet\\":785}"`;
+exports[`width values should update on device rotation 1`] = `"{\\"editionBreakpoint\\":\\"small\\",\\"isTablet\\":false,\\"isArticleTablet\\":false,\\"windowWidth\\":500,\\"windowHeight\\":1000,\\"orientation\\":\\"portrait\\",\\"isPortrait\\":true,\\"isLandscape\\":false,\\"sectionContentWidth\\":500,\\"sectionContentHeightTablet\\":785}"`;
 
-exports[`width values should update on device rotation: after width update 1`] = `"{\\"editionBreakpoint\\":\\"small\\",\\"isTablet\\":false,\\"windowWidth\\":500,\\"windowHeight\\":1000,\\"orientation\\":\\"portrait\\",\\"isPortrait\\":true,\\"isLandscape\\":false,\\"sectionContentWidth\\":500,\\"sectionContentHeightTablet\\":785}"`;
+exports[`width values should update on device rotation: after width update 1`] = `"{\\"editionBreakpoint\\":\\"small\\",\\"isTablet\\":false,\\"isArticleTablet\\":false,\\"windowWidth\\":500,\\"windowHeight\\":1000,\\"orientation\\":\\"portrait\\",\\"isPortrait\\":true,\\"isLandscape\\":false,\\"sectionContentWidth\\":500,\\"sectionContentHeightTablet\\":785}"`;
 
-exports[`with default values 1`] = `"{\\"editionBreakpoint\\":\\"small\\",\\"isTablet\\":false,\\"windowWidth\\":500,\\"windowHeight\\":1000,\\"orientation\\":\\"portrait\\",\\"isPortrait\\":true,\\"isLandscape\\":false,\\"sectionContentWidth\\":500,\\"sectionContentHeightTablet\\":785}"`;
+exports[`with default values 1`] = `"{\\"editionBreakpoint\\":\\"small\\",\\"isTablet\\":false,\\"isArticleTablet\\":false,\\"windowWidth\\":500,\\"windowHeight\\":1000,\\"orientation\\":\\"portrait\\",\\"isPortrait\\":true,\\"isLandscape\\":false,\\"sectionContentWidth\\":500,\\"sectionContentHeightTablet\\":785}"`;
