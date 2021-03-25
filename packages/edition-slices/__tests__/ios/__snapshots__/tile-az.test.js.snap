@@ -120,25 +120,27 @@ exports[`tile az portrait smallTablet 1`] = `
       }
     }
   >
-    <View
-      style={
-        Object {
-          "marginBottom": 5,
-        }
-      }
-    >
-      <ArticleLabel
-        articleReadState={
+    <View>
+      <View
+        style={
           Object {
-            "animate": false,
-            "read": false,
+            "marginBottom": 5,
           }
         }
-        color="#005B8D"
-        hide={false}
-        isVideo={false}
-        title="label"
-      />
+      >
+        <ArticleLabel
+          articleReadState={
+            Object {
+              "animate": false,
+              "read": false,
+            }
+          }
+          color="#005B8D"
+          hide={false}
+          isVideo={false}
+          title="label"
+        />
+      </View>
     </View>
     <Text
       accessibilityRole="header"

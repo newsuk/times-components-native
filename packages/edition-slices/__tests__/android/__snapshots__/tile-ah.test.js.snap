@@ -302,48 +302,52 @@ exports[`tile ah smallTablet 1`] = `
     }
   >
     <Text>
-      <Text
-        style={
-          Object {
-            "color": "#333333",
-            "flexDirection": "row",
-            "fontFamily": "GillSansMTStd-Medium",
-            "fontSize": 13,
-            "lineHeight": 13,
-          }
-        }
-      >
+      <View>
         <Text
           style={
             Object {
-              "color": "#850029",
+              "color": "#333333",
               "flexDirection": "row",
               "fontFamily": "GillSansMTStd-Medium",
-              "fontSize": 12,
-              "letterSpacing": 0.6,
-              "lineHeight": 12,
-              "textTransform": "uppercase",
+              "fontSize": 13,
+              "lineHeight": 13,
             }
           }
         >
-          Richard Lloyd Parry
-        </Text>
-        <Text
-          style={
-            Object {
-              "color": "#850029",
-              "flexDirection": "row",
-              "fontFamily": "GillSansMTStd-Medium",
-              "fontSize": 12,
-              "letterSpacing": 0.6,
-              "lineHeight": 12,
-              "textTransform": "uppercase",
+          <Text
+            style={
+              Object {
+                "color": "#850029",
+                "flexDirection": "row",
+                "fontFamily": "GillSansMTStd-Medium",
+                "fontSize": 12,
+                "fontWeight": "100",
+                "letterSpacing": 1,
+                "lineHeight": 13,
+                "textTransform": "uppercase",
+              }
             }
-          }
-        >
-          , Hanoi
+          >
+            Richard Lloyd Parry
+          </Text>
+          <Text
+            style={
+              Object {
+                "color": "#850029",
+                "flexDirection": "row",
+                "fontFamily": "GillSansMTStd-Medium",
+                "fontSize": 12,
+                "fontWeight": "100",
+                "letterSpacing": 1,
+                "lineHeight": 13,
+                "textTransform": "uppercase",
+              }
+            }
+          >
+            , Hanoi
+          </Text>
         </Text>
-      </Text>
+      </View>
     </Text>
     <Text
       accessibilityRole="header"
