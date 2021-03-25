@@ -90,6 +90,7 @@ const wideBreakpointStyle = {
 
 const styleResolver = {
   [editionBreakpoints.small]: smallBreakpointStyles,
+  [editionBreakpoints.smallTablet]: mediumBreakpointStyles,
   [editionBreakpoints.medium]: mediumBreakpointStyles,
   [editionBreakpoints.wide]: wideBreakpointStyle,
   [editionBreakpoints.huge]: wideBreakpointStyle,

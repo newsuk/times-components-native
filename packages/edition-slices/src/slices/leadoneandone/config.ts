@@ -21,6 +21,7 @@ const supportBaseConfig: Pick<TileConfig, "headline" | "summary"> = {
 export const leadOneAndOneSliceConfig: SliceBaseConfig = {
   lead: {
     config: {
+      smallTablet: { ...leadBaseConfig },
       medium: { ...leadBaseConfig },
       wide: { ...leadBaseConfig },
       huge: { ...leadBaseConfig },
@@ -28,6 +29,7 @@ export const leadOneAndOneSliceConfig: SliceBaseConfig = {
   },
   support: {
     config: {
+      smallTablet: { ...supportBaseConfig },
       medium: { ...supportBaseConfig },
       wide: { ...supportBaseConfig },
       huge: {

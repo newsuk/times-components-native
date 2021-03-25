@@ -20,6 +20,20 @@ export default (renderComponent) => {
       },
     },
     {
+      name: "lead one and one - smallTablet",
+      test() {
+        const output = renderComponent(
+          <LeadOneAndOneSlice
+            breakpoint={editionBreakpoints.smallTablet}
+            lead={createItem("lead")}
+            support={createItem("support")}
+          />,
+        );
+
+        expect(output).toMatchSnapshot();
+      },
+    },
+    {
       name: "lead one and one - medium",
       test() {
         const output = renderComponent(

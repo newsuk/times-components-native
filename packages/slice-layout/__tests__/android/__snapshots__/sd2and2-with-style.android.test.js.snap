@@ -74,7 +74,112 @@ Array [
 ]
 `;
 
-exports[`2. secondary two and two - medium 1`] = `
+exports[`2. secondary two and two - smalltablet 1`] = `
+<View
+  style={
+    Object {
+      "flex": 1,
+      "marginHorizontal": 5,
+    }
+  }
+>
+  <View
+    style={
+      Object {
+        "flex": 1,
+        "flexDirection": "row",
+        "paddingBottom": 5,
+      }
+    }
+  >
+    <View
+      style={
+        Object {
+          "width": "50%",
+        }
+      }
+    >
+      <Text>
+        secondary-1
+      </Text>
+    </View>
+    <View
+      style={
+        Object {
+          "borderColor": "#DBDBDB",
+          "borderRightWidth": 1,
+          "borderStyle": "solid",
+          "marginVertical": 10,
+        }
+      }
+    />
+    <View
+      style={
+        Object {
+          "width": "50%",
+        }
+      }
+    >
+      <Text>
+        secondary-2
+      </Text>
+    </View>
+  </View>
+  <View
+    style={
+      Object {
+        "borderBottomWidth": 1,
+        "borderColor": "#DBDBDB",
+        "borderStyle": "solid",
+      }
+    }
+  />
+  <View
+    style={
+      Object {
+        "flex": 1,
+        "flexDirection": "row",
+        "paddingBottom": 5,
+      }
+    }
+  >
+    <View
+      style={
+        Object {
+          "width": "50%",
+        }
+      }
+    >
+      <Text>
+        support-1
+      </Text>
+    </View>
+    <View
+      style={
+        Object {
+          "borderColor": "#DBDBDB",
+          "borderRightWidth": 1,
+          "borderStyle": "solid",
+          "marginVertical": 10,
+        }
+      }
+    />
+    <View
+      style={
+        Object {
+          "width": "50%",
+        }
+      }
+    >
+      <Text>
+        support-2
+      </Text>
+    </View>
+  </View>
+</View>
+`;
+
+exports[`3. secondary two and two - medium 1`] = `
 <View
   style={
     Object {
@@ -179,7 +284,7 @@ exports[`2. secondary two and two - medium 1`] = `
 </View>
 `;
 
-exports[`3. secondary two and two - wide 1`] = `
+exports[`4. secondary two and two - wide 1`] = `
 <View
   style={
     Object {
@@ -266,7 +371,7 @@ exports[`3. secondary two and two - wide 1`] = `
 </View>
 `;
 
-exports[`4. secondary two and two - huge 1`] = `
+exports[`5. secondary two and two - huge 1`] = `
 <View
   style={
     Object {

@@ -22,7 +22,7 @@ const ArticleTopic = ({
 }) => {
   const fontSizeStyle = fontSize ? { fontSize } : null;
   const lineHeightStyle = lineHeight ? { lineHeight } : null;
-  const { isTablet } = useResponsiveContext();
+  const { isArticleTablet } = useResponsiveContext();
 
   const tooltipType = "topics";
   const showTooltip = index === 0 && tooltips.includes(tooltipType);
@@ -72,7 +72,7 @@ const ArticleTopic = ({
       placement="top"
       type={tooltipType}
       tooltips={tooltips}
-      width={isTablet ? 236 : 207}
+      width={isArticleTablet ? 236 : 207}
     >
       {articleTopic}
     </Tooltip>

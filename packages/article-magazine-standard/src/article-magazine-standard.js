@@ -52,7 +52,7 @@ class ArticleMagazineStandard extends Component {
 
     return (
       <ResponsiveContext.Consumer>
-        {({ isTablet }) => (
+        {({ isArticleTablet }) => (
           <View>
             <ArticleHeader
               articleId={article.id}
@@ -60,7 +60,7 @@ class ArticleMagazineStandard extends Component {
               flags={expirableFlags}
               hasVideo={hasVideo}
               headline={getHeadline(headline, shortHeadline)}
-              isTablet={isTablet}
+              isArticleTablet={isArticleTablet}
               label={label}
               longRead={longRead}
               onAuthorPress={onAuthorPress}
@@ -78,8 +78,8 @@ class ArticleMagazineStandard extends Component {
               renderCaption={({ caption }) => <CentredCaption {...caption} />}
               style={[
                 styles.leadAssetContainer,
-                isTablet && styles.leadAssetContainerTablet,
-                isTablet && styles.tabletContainer,
+                isArticleTablet && styles.leadAssetContainerTablet,
+                isArticleTablet && styles.tabletContainer,
                 { zIndex: 0 },
               ]}
               width={Math.min(width, tabletWidth)}
@@ -125,7 +125,7 @@ class ArticleMagazineStandard extends Component {
 
     return (
       <ResponsiveContext.Consumer>
-        {({ isTablet }) => (
+        {({ isArticleTablet }) => (
           <Context.Consumer>
             {({ theme: { scale, dropCapFont } }) => (
               <ArticleSkeleton
@@ -135,7 +135,7 @@ class ArticleMagazineStandard extends Component {
                 dropCapFont={dropCapFont}
                 Header={this.renderHeader}
                 interactiveConfig={interactiveConfig}
-                isTablet={isTablet}
+                isArticleTablet={isArticleTablet}
                 onArticleRead={onArticleRead}
                 onAuthorPress={onAuthorPress}
                 onCommentGuidelinesPress={onCommentGuidelinesPress}

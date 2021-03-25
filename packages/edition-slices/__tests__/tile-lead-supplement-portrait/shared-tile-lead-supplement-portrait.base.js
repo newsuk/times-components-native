@@ -5,6 +5,10 @@ import { TileLeadSupplementPortrait } from "../../src/tiles";
 
 export default () => {
   describe("tile lead supplement portrait", () => {
+    it("smallTablet", () => {
+      testTile(TileLeadSupplementPortrait, editionBreakpoints.smallTablet);
+    });
+
     it("medium", () => {
       testTile(TileLeadSupplementPortrait, editionBreakpoints.medium);
     });

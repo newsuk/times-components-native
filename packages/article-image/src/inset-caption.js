@@ -10,11 +10,11 @@ const captionStyle = {
 };
 
 const CaptionComponentPrimaryNative = ({ text, credits, CaptionComponent }) => {
-  const { isTablet } = useResponsiveContext();
+  const { isArticleTablet } = useResponsiveContext();
   return (
     <CaptionComponent
       credits={credits}
-      style={isTablet ? {} : captionStyle}
+      style={isArticleTablet ? {} : captionStyle}
       text={text}
     />
   );

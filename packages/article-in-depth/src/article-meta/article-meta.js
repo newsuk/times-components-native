@@ -15,14 +15,14 @@ import styles from "../styles";
 const ArticleMeta = ({
   articleId,
   bylines,
-  isTablet,
+  isArticleTablet,
   onAuthorPress,
   onTooltipPresented,
   publicationName,
   publishedTime,
   tooltips,
 }) => (
-  <View style={isTablet && styles.metaContainerTabletFlow}>
+  <View style={isArticleTablet && styles.metaContainerTabletFlow}>
     {hasBylineData(bylines) && (
       <Fragment>
         <View style={styles.meta}>
@@ -36,20 +36,20 @@ const ArticleMeta = ({
                 onTooltipPresented={onTooltipPresented}
                 tooltipArrowOffset={120}
                 tooltips={tooltips}
-                tooltipOffsetX={isTablet ? -50 : -90}
-                tooltipOffsetY={isTablet ? 26 : 40}
+                tooltipOffsetX={isArticleTablet ? -50 : -90}
+                tooltipOffsetY={isArticleTablet ? 26 : 40}
               />
             )}
           </Context.Consumer>
         </View>
-        {isTablet && <View style={styles.separator} />}
+        {isArticleTablet && <View style={styles.separator} />}
       </Fragment>
     )}
     <View style={styles.meta}>
       <Text
         style={[
           styles.datePublication,
-          isTablet && styles.datePulicationTablet,
+          isArticleTablet && styles.datePulicationTablet,
         ]}
       >
         <DatePublication date={publishedTime} publication={publicationName} />

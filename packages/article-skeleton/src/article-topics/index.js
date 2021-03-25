@@ -6,14 +6,14 @@ import { useResponsiveContext } from "@times-components-native/responsive";
 import styles from "../styles/article-topics";
 
 const ShowTopics = ({ topics, onPress }) => {
-  const { isTablet } = useResponsiveContext();
+  const { isArticleTablet } = useResponsiveContext();
 
   if (topics && topics.length > 0) {
     return (
       <View
         style={[
           styles.topicsContainer,
-          isTablet && styles.topicsContainerTablet,
+          isArticleTablet && styles.topicsContainerTablet,
         ]}
       >
         <ArticleTopics onPress={onPress} topics={topics} />

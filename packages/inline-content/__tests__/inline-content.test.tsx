@@ -54,6 +54,7 @@ describe("InlineContent", () => {
       skeletonProps: {
         data: [],
         isTablet: true,
+        isArticleTablet: true,
         narrowContent: false,
         scale: 1,
         windowWidth,
@@ -113,6 +114,7 @@ describe("InlineContent", () => {
       skeletonProps: {
         data: [],
         isTablet: true,
+        isArticleTablet: true,
         narrowContent: false,
         scale: 1,
         windowWidth,
@@ -176,6 +178,7 @@ describe("InlineContent", () => {
       relativeWidth: 1600,
       skeletonProps: {
         isTablet: true,
+        isArticleTablet: true,
         narrowContent: false,
       },
       url: "some image url",
@@ -236,6 +239,7 @@ describe("InlineContent", () => {
       originalName: "pullQuote",
       skeletonProps: {
         isTablet: true,
+        isArticleTablet: true,
         narrowContent: false,
       },
       width: 231,

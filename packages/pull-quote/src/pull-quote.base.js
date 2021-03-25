@@ -17,7 +17,7 @@ const PullQuotes = ({
   text,
   twitter,
 }) => {
-  const { isTablet, windowWidth } = useResponsiveContext();
+  const { isArticleTablet, windowWidth } = useResponsiveContext();
   const {
     theme: { pullQuoteFont, sectionColour = colours.section.default },
   } = useAppContext();
@@ -25,7 +25,10 @@ const PullQuotes = ({
 
   return (
     <View
-      style={[styles.container, isTablet && { width: contentWidth * 0.35 }]}
+      style={[
+        styles.container,
+        isArticleTablet && { width: contentWidth * 0.35 },
+      ]}
     >
       <Text
         style={[quoteStyleFactory(pullQuoteFont), { color: sectionColour }]}

@@ -28,7 +28,7 @@ import { RemoteConfigProvider } from "@times-components-native/remote-config";
 export const renderArticle = (
   data,
   header = null,
-  isTablet = false,
+  isArticleTablet = false,
   config = {},
 ) => (
   <ContextProviderWithDefaults
@@ -46,7 +46,7 @@ export const renderArticle = (
         analyticsStream={() => null}
         data={data}
         header={header}
-        isTablet={isTablet}
+        isArticleTablet={isArticleTablet}
         onAuthorPress={() => null}
         onCommentGuidelinesPress={() => null}
         onCommentsPress={() => null}

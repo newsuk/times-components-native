@@ -7,6 +7,20 @@ import { SupplementLeadOneAndOneSlice } from "../src/slice-layout";
 export default (renderComponent) => {
   const tests = [
     {
+      name: "supplement lead one and one - smallTablet",
+      test() {
+        const output = renderComponent(
+          <SupplementLeadOneAndOneSlice
+            breakpoint={editionBreakpoints.smallTablet}
+            lead={createItem("lead")}
+            support={createItem("support")}
+          />,
+        );
+
+        expect(output).toMatchSnapshot();
+      },
+    },
+    {
       name: "supplement lead one and one - medium",
       test() {
         const output = renderComponent(

@@ -57,6 +57,7 @@ export default () => {
     data: { content, section: "News", template: "maincomment" },
     dropCapFont: "dropCap",
     isTablet: true,
+    isArticleTablet: true,
     narrowContent: false,
     scale: 1,
   };
@@ -261,6 +262,7 @@ export default () => {
         {
           data: { content, section: "News", template: "maincomment" },
           isTablet: true,
+          isArticleTablet: true,
           narrowContent: false,
           scale: 1,
         },

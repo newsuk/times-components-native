@@ -89,6 +89,12 @@ describe("transformSlice", () => {
                 ratio: "3:2",
               },
             },
+            smallTablet: {
+              summary: { length: 800 },
+              image: {
+                ratio: "3:2",
+              },
+            },
           },
         },
         id: "a",

@@ -12,6 +12,12 @@ export default () => {
         });
       });
 
+      it("smallTablet", () => {
+        testTile(TileE, editionBreakpoints.smallTablet, undefined, {
+          orientation: "portrait",
+        });
+      });
+
       it("medium", () => {
         testTile(TileE, editionBreakpoints.medium, undefined, {
           orientation: "portrait",

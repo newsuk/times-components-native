@@ -53,6 +53,7 @@ const leadOneAndOneNewsTransform: TransformSlice = {
   overrides: {
     support: {
       config: {
+        smallTablet: sharedSupportConfig,
         medium: sharedSupportConfig,
         wide: sharedSupportConfig,
         huge: sharedSupportConfig,
@@ -67,6 +68,7 @@ const leadOneAndOneWorldTransform: TransformSlice = {
   overrides: {
     support: {
       config: {
+        smallTablet: sharedSupportConfig,
         medium: sharedSupportConfig,
         wide: sharedSupportConfig,
         huge: sharedSupportConfig,
@@ -81,6 +83,7 @@ const leadOneAndOneSportTransform: TransformSlice = {
   overrides: {
     support: {
       config: {
+        smallTablet: sharedSupportConfig,
         medium: sharedSupportConfig,
         wide: sharedSupportConfig,
         huge: sharedSupportConfig,
@@ -95,6 +98,15 @@ const leadOneAndOneRegisterTransform: TransformSlice = {
   overrides: {
     lead: {
       config: {
+        smallTablet: {
+          image: {
+            ratio: "16:9",
+          },
+          summary: { length: 800 },
+          headline: {
+            fontSize: 40,
+          },
+        },
         medium: {
           image: {
             ratio: "16:9",
@@ -108,6 +120,7 @@ const leadOneAndOneRegisterTransform: TransformSlice = {
     },
     support: {
       config: {
+        smallTablet: sharedSupportConfig,
         medium: sharedSupportConfig,
         wide: sharedSupportConfig,
         huge: sharedSupportConfig,

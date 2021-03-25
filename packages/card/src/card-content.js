@@ -42,14 +42,16 @@ class CardContent extends Component {
       showImage,
     } = this.props;
 
-    const renderImage = (isTablet) => {
+    const renderImage = (isArticleTablet) => {
       if (!showImage) return null;
 
       return (
         <View
           className={imageContainerClass}
           style={[
-            isTablet ? styles.imageContainerTablet : styles.imageContainer,
+            isArticleTablet
+              ? styles.imageContainerTablet
+              : styles.imageContainer,
             imageStyle,
             isReversed ? styles.reversedImageContainer : "",
           ]}
@@ -69,18 +71,20 @@ class CardContent extends Component {
 
     return (
       <ResponsiveContext.Consumer>
-        {({ isTablet }) => (
+        {({ isArticleTablet }) => (
           <View
             style={[
-              isTablet ? styles.cardContainerTablet : styles.cardContainer,
+              isArticleTablet
+                ? styles.cardContainerTablet
+                : styles.cardContainer,
               isReversed ? styles.reversedCardContainer : "",
             ]}
           >
-            {!isReversed ? renderImage(isTablet) : null}
+            {!isReversed ? renderImage(isArticleTablet) : null}
             <View
               className={contentContainerClass}
               style={[
-                isTablet
+                isArticleTablet
                   ? styles.contentContainerTablet
                   : styles.contentContainer,
                 isReversed ? styles.reversedContentContainer : "",
@@ -89,7 +93,7 @@ class CardContent extends Component {
             >
               {isLoading ? <Loading /> : children}
             </View>
-            {isReversed ? renderImage(isTablet) : null}
+            {isReversed ? renderImage(isArticleTablet) : null}
           </View>
         )}
       </ResponsiveContext.Consumer>

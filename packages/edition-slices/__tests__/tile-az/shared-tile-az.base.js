@@ -6,6 +6,12 @@ import { TileAZ } from "../../src/tiles";
 export default () => {
   describe("tile az", () => {
     describe("portrait", () => {
+      it("smallTablet", () => {
+        testTile(TileAZ, editionBreakpoints.smallTablet, undefined, {
+          orientation: "portrait",
+        });
+      });
+
       it("medium", () => {
         testTile(TileAZ, editionBreakpoints.medium, undefined, {
           orientation: "portrait",

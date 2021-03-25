@@ -23,6 +23,23 @@ export default (renderComponent) => {
       },
     },
     {
+      name: "lead one and four - smallTablet",
+      test() {
+        const output = renderComponent(
+          <LeadOneAndFourSlice
+            breakpoint={editionBreakpoints.smallTablet}
+            lead={createItem("lead")}
+            support1={createItem("support-1")}
+            support2={createItem("support-2")}
+            support3={createItem("support-3")}
+            support4={createItem("support-4")}
+          />,
+        );
+
+        expect(output).toMatchSnapshot();
+      },
+    },
+    {
       name: "lead one and four - medium",
       test() {
         const output = renderComponent(
