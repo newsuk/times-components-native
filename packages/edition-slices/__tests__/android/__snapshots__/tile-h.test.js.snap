@@ -17,25 +17,27 @@ exports[`tile h without breakpoint 1`] = `
       }
     }
   >
-    <View
-      style={
-        Object {
-          "marginBottom": 5,
-        }
-      }
-    >
-      <ArticleLabel
-        articleReadState={
+    <View>
+      <View
+        style={
           Object {
-            "animate": false,
-            "read": false,
+            "marginBottom": 5,
           }
         }
-        color="#005B8D"
-        hide={false}
-        isVideo={false}
-        title="label"
-      />
+      >
+        <ArticleLabel
+          articleReadState={
+            Object {
+              "animate": false,
+              "read": false,
+            }
+          }
+          color="#005B8D"
+          hide={false}
+          isVideo={false}
+          title="label"
+        />
+      </View>
     </View>
     <Text
       accessibilityRole="header"
@@ -84,17 +86,7 @@ exports[`tile h without breakpoint 1`] = `
       </Text>
     </Text>
     <Text>
-      <Text
-        style={
-          Object {
-            "color": "#333333",
-            "flexDirection": "row",
-            "fontFamily": "GillSansMTStd-Medium",
-            "fontSize": 13,
-            "lineHeight": 13,
-          }
-        }
-      >
+      <View>
         <Text
           style={
             Object {
@@ -106,22 +98,34 @@ exports[`tile h without breakpoint 1`] = `
             }
           }
         >
-          Richard Lloyd Parry
-        </Text>
-        <Text
-          style={
-            Object {
-              "color": "#333333",
-              "flexDirection": "row",
-              "fontFamily": "GillSansMTStd-Medium",
-              "fontSize": 13,
-              "lineHeight": 13,
+          <Text
+            style={
+              Object {
+                "color": "#333333",
+                "flexDirection": "row",
+                "fontFamily": "GillSansMTStd-Medium",
+                "fontSize": 13,
+                "lineHeight": 13,
+              }
             }
-          }
-        >
-          , Hanoi
+          >
+            Richard Lloyd Parry
+          </Text>
+          <Text
+            style={
+              Object {
+                "color": "#333333",
+                "flexDirection": "row",
+                "fontFamily": "GillSansMTStd-Medium",
+                "fontSize": 13,
+                "lineHeight": 13,
+              }
+            }
+          >
+            , Hanoi
+          </Text>
         </Text>
-      </Text>
+      </View>
     </Text>
   </View>
   <Image

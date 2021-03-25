@@ -35,16 +35,18 @@ exports[`1. two related articles 1`] = `
             >
               <View>
                 <View>
-                  <ArticleLabel
-                    articleReadState={
-                      Object {
-                        "animate": false,
-                        "read": false,
+                  <View>
+                    <ArticleLabel
+                      articleReadState={
+                        Object {
+                          "animate": false,
+                          "read": false,
+                        }
                       }
-                    }
-                    color="#C74600"
-                    title="first label"
-                  />
+                      color="#C74600"
+                      title="first label"
+                    />
+                  </View>
                 </View>
                 <Text
                   accessibilityRole="header"
@@ -65,11 +67,13 @@ exports[`1. two related articles 1`] = `
                   March 13 2015, 6.54pm
                 </Text>
                 <Text>
-                  <Text>
+                  <View>
                     <Text>
-                      Camilla Long, Environment Editor
+                      <Text>
+                        Camilla Long, Environment Editor
+                      </Text>
                     </Text>
-                  </Text>
+                  </View>
                 </Text>
               </View>
             </Card>
@@ -101,16 +105,18 @@ exports[`1. two related articles 1`] = `
             >
               <View>
                 <View>
-                  <ArticleLabel
-                    articleReadState={
-                      Object {
-                        "animate": false,
-                        "read": false,
+                  <View>
+                    <ArticleLabel
+                      articleReadState={
+                        Object {
+                          "animate": false,
+                          "read": false,
+                        }
                       }
-                    }
-                    color="#6C6C69"
-                    title="second label"
-                  />
+                      color="#6C6C69"
+                      title="second label"
+                    />
+                  </View>
                 </View>
                 <Text
                   accessibilityRole="header"
@@ -131,11 +137,13 @@ exports[`1. two related articles 1`] = `
                   January 17 2018, 12.00pm
                 </Text>
                 <Text>
-                  <Text>
+                  <View>
                     <Text>
-                      Camilla Long, Environment Editor
+                      <Text>
+                        Camilla Long, Environment Editor
+                      </Text>
                     </Text>
-                  </Text>
+                  </View>
                 </Text>
               </View>
             </Card>

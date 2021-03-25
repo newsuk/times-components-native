@@ -8,6 +8,5 @@ options:
 - `height`
 - `width`
 
-The icons include `diamond`, `email`, `facebook`, `star`, `twitter`, and
+The icons include `facebook`, `star`, `twitter`, and
 `video`.
-
