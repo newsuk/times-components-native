@@ -35,17 +35,19 @@ exports[`1. has video 1`] = `
             >
               <View>
                 <View>
-                  <VideoLabel
-                    articleReadState={
-                      Object {
-                        "animate": false,
-                        "read": false,
+                  <View>
+                    <VideoLabel
+                      articleReadState={
+                        Object {
+                          "animate": false,
+                          "read": false,
+                        }
                       }
-                    }
-                    color="#DB133B"
-                    isVideo={true}
-                    title="BAYEUX TAPESTRY"
-                  />
+                      color="#DB133B"
+                      isVideo={true}
+                      title="BAYEUX TAPESTRY"
+                    />
+                  </View>
                 </View>
                 <Text
                   accessibilityRole="header"
@@ -66,14 +68,16 @@ exports[`1. has video 1`] = `
                   March 13 2015, 6.54pm
                 </Text>
                 <Text>
-                  <Text>
+                  <View>
                     <Text>
-                      Camilla Long
+                      <Text>
+                        Camilla Long
+                      </Text>
+                      <Text>
+                        , Environment Editor
+                      </Text>
                     </Text>
-                    <Text>
-                      , Environment Editor
-                    </Text>
-                  </Text>
+                  </View>
                 </Text>
               </View>
             </Card>

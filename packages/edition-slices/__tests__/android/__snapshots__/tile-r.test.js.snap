@@ -21,25 +21,27 @@ exports[`tile r huge 1`] = `
     uri="https://www.thetimes.co.uk/imageserver/image/methode%2Ftimes%2Fprod%2Fweb%2Fbin%2Fd3abdbfc-1776-11e6-b4ba-d249b128bacc.jpg?crop=620%2C348%2C0%2C32"
   />
   <View>
-    <View
-      style={
-        Object {
-          "marginBottom": 5,
-        }
-      }
-    >
-      <ArticleLabel
-        articleReadState={
+    <View>
+      <View
+        style={
           Object {
-            "animate": false,
-            "read": false,
+            "marginBottom": 5,
           }
         }
-        color="#005B8D"
-        hide={false}
-        isVideo={false}
-        title="label"
-      />
+      >
+        <ArticleLabel
+          articleReadState={
+            Object {
+              "animate": false,
+              "read": false,
+            }
+          }
+          color="#005B8D"
+          hide={false}
+          isVideo={false}
+          title="label"
+        />
+      </View>
     </View>
     <Text
       accessibilityRole="header"
@@ -94,25 +96,27 @@ exports[`tile r medium 1`] = `
     uri="https://www.thetimes.co.uk/imageserver/image/methode%2Ftimes%2Fprod%2Fweb%2Fbin%2Fd3abdbfc-1776-11e6-b4ba-d249b128bacc.jpg?crop=620%2C348%2C0%2C32"
   />
   <View>
-    <View
-      style={
-        Object {
-          "marginBottom": 5,
-        }
-      }
-    >
-      <ArticleLabel
-        articleReadState={
+    <View>
+      <View
+        style={
           Object {
-            "animate": false,
-            "read": false,
+            "marginBottom": 5,
           }
         }
-        color="#005B8D"
-        hide={false}
-        isVideo={false}
-        title="label"
-      />
+      >
+        <ArticleLabel
+          articleReadState={
+            Object {
+              "animate": false,
+              "read": false,
+            }
+          }
+          color="#005B8D"
+          hide={false}
+          isVideo={false}
+          title="label"
+        />
+      </View>
     </View>
     <Text
       accessibilityRole="header"
@@ -167,25 +171,27 @@ exports[`tile r smallTablet 1`] = `
     uri="https://www.thetimes.co.uk/imageserver/image/methode%2Ftimes%2Fprod%2Fweb%2Fbin%2Fd3abdbfc-1776-11e6-b4ba-d249b128bacc.jpg?crop=620%2C348%2C0%2C32"
   />
   <View>
-    <View
-      style={
-        Object {
-          "marginBottom": 5,
-        }
-      }
-    >
-      <ArticleLabel
-        articleReadState={
+    <View>
+      <View
+        style={
           Object {
-            "animate": false,
-            "read": false,
+            "marginBottom": 5,
           }
         }
-        color="#005B8D"
-        hide={false}
-        isVideo={false}
-        title="label"
-      />
+      >
+        <ArticleLabel
+          articleReadState={
+            Object {
+              "animate": false,
+              "read": false,
+            }
+          }
+          color="#005B8D"
+          hide={false}
+          isVideo={false}
+          title="label"
+        />
+      </View>
     </View>
     <Text
       accessibilityRole="header"
@@ -240,25 +246,27 @@ exports[`tile r wide 1`] = `
     uri="https://www.thetimes.co.uk/imageserver/image/methode%2Ftimes%2Fprod%2Fweb%2Fbin%2Fd3abdbfc-1776-11e6-b4ba-d249b128bacc.jpg?crop=620%2C348%2C0%2C32"
   />
   <View>
-    <View
-      style={
-        Object {
-          "marginBottom": 5,
-        }
-      }
-    >
-      <ArticleLabel
-        articleReadState={
+    <View>
+      <View
+        style={
           Object {
-            "animate": false,
-            "read": false,
+            "marginBottom": 5,
           }
         }
-        color="#005B8D"
-        hide={false}
-        isVideo={false}
-        title="label"
-      />
+      >
+        <ArticleLabel
+          articleReadState={
+            Object {
+              "animate": false,
+              "read": false,
+            }
+          }
+          color="#005B8D"
+          hide={false}
+          isVideo={false}
+          title="label"
+        />
+      </View>
     </View>
     <Text
       accessibilityRole="header"
@@ -313,25 +321,27 @@ exports[`tile r without breakpoint should be like medium 1`] = `
     uri="https://www.thetimes.co.uk/imageserver/image/methode%2Ftimes%2Fprod%2Fweb%2Fbin%2Fd3abdbfc-1776-11e6-b4ba-d249b128bacc.jpg?crop=620%2C348%2C0%2C32"
   />
   <View>
-    <View
-      style={
-        Object {
-          "marginBottom": 5,
-        }
-      }
-    >
-      <ArticleLabel
-        articleReadState={
+    <View>
+      <View
+        style={
           Object {
-            "animate": false,
-            "read": false,
+            "marginBottom": 5,
           }
         }
-        color="#005B8D"
-        hide={false}
-        isVideo={false}
-        title="label"
-      />
+      >
+        <ArticleLabel
+          articleReadState={
+            Object {
+              "animate": false,
+              "read": false,
+            }
+          }
+          color="#005B8D"
+          hide={false}
+          isVideo={false}
+          title="label"
+        />
+      </View>
     </View>
     <Text
       accessibilityRole="header"

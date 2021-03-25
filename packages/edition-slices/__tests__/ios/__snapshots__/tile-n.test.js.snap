@@ -34,25 +34,27 @@ exports[`tile n huge 1`] = `
         }
       }
     >
-      <View
-        style={
-          Object {
-            "marginBottom": 5,
-          }
-        }
-      >
-        <ArticleLabel
-          articleReadState={
+      <View>
+        <View
+          style={
             Object {
-              "animate": false,
-              "read": false,
+              "marginBottom": 5,
             }
           }
-          color="#CCC"
-          hide={false}
-          isVideo={false}
-          title="label"
-        />
+        >
+          <ArticleLabel
+            articleReadState={
+              Object {
+                "animate": false,
+                "read": false,
+              }
+            }
+            color="#CCC"
+            hide={false}
+            isVideo={false}
+            title="label"
+          />
+        </View>
       </View>
       <Text
         accessibilityRole="header"
@@ -123,25 +125,27 @@ exports[`tile n medium 1`] = `
         }
       }
     >
-      <View
-        style={
-          Object {
-            "marginBottom": 5,
-          }
-        }
-      >
-        <ArticleLabel
-          articleReadState={
+      <View>
+        <View
+          style={
             Object {
-              "animate": false,
-              "read": false,
+              "marginBottom": 5,
             }
           }
-          color="#CCC"
-          hide={false}
-          isVideo={false}
-          title="label"
-        />
+        >
+          <ArticleLabel
+            articleReadState={
+              Object {
+                "animate": false,
+                "read": false,
+              }
+            }
+            color="#CCC"
+            hide={false}
+            isVideo={false}
+            title="label"
+          />
+        </View>
       </View>
       <Text
         accessibilityRole="header"
@@ -228,25 +232,27 @@ exports[`tile n small 1`] = `
         }
       }
     >
-      <View
-        style={
-          Object {
-            "marginBottom": 5,
-          }
-        }
-      >
-        <ArticleLabel
-          articleReadState={
+      <View>
+        <View
+          style={
             Object {
-              "animate": false,
-              "read": false,
+              "marginBottom": 5,
             }
           }
-          color="#CCC"
-          hide={false}
-          isVideo={false}
-          title="label"
-        />
+        >
+          <ArticleLabel
+            articleReadState={
+              Object {
+                "animate": false,
+                "read": false,
+              }
+            }
+            color="#CCC"
+            hide={false}
+            isVideo={false}
+            title="label"
+          />
+        </View>
       </View>
       <Text
         accessibilityRole="header"
@@ -332,25 +338,27 @@ exports[`tile n smallTablet 1`] = `
         }
       }
     >
-      <View
-        style={
-          Object {
-            "marginBottom": 5,
-          }
-        }
-      >
-        <ArticleLabel
-          articleReadState={
+      <View>
+        <View
+          style={
             Object {
-              "animate": false,
-              "read": false,
+              "marginBottom": 5,
             }
           }
-          color="#CCC"
-          hide={false}
-          isVideo={false}
-          title="label"
-        />
+        >
+          <ArticleLabel
+            articleReadState={
+              Object {
+                "animate": false,
+                "read": false,
+              }
+            }
+            color="#CCC"
+            hide={false}
+            isVideo={false}
+            title="label"
+          />
+        </View>
       </View>
       <Text
         accessibilityRole="header"
@@ -436,25 +444,27 @@ exports[`tile n wide 1`] = `
         }
       }
     >
-      <View
-        style={
-          Object {
-            "marginBottom": 5,
-          }
-        }
-      >
-        <ArticleLabel
-          articleReadState={
+      <View>
+        <View
+          style={
             Object {
-              "animate": false,
-              "read": false,
+              "marginBottom": 5,
             }
           }
-          color="#CCC"
-          hide={false}
-          isVideo={false}
-          title="label"
-        />
+        >
+          <ArticleLabel
+            articleReadState={
+              Object {
+                "animate": false,
+                "read": false,
+              }
+            }
+            color="#CCC"
+            hide={false}
+            isVideo={false}
+            title="label"
+          />
+        </View>
       </View>
       <Text
         accessibilityRole="header"
@@ -541,25 +551,27 @@ exports[`tile n with default star 1`] = `
         }
       }
     >
-      <View
-        style={
-          Object {
-            "marginBottom": 5,
-          }
-        }
-      >
-        <ArticleLabel
-          articleReadState={
+      <View>
+        <View
+          style={
             Object {
-              "animate": false,
-              "read": false,
+              "marginBottom": 5,
             }
           }
-          color="#CCC"
-          hide={false}
-          isVideo={false}
-          title="label"
-        />
+        >
+          <ArticleLabel
+            articleReadState={
+              Object {
+                "animate": false,
+                "read": false,
+              }
+            }
+            color="#CCC"
+            hide={false}
+            isVideo={false}
+            title="label"
+          />
+        </View>
       </View>
       <Text
         accessibilityRole="header"
@@ -646,25 +658,27 @@ exports[`tile n without breakpoint should be like small 1`] = `
         }
       }
     >
-      <View
-        style={
-          Object {
-            "marginBottom": 5,
-          }
-        }
-      >
-        <ArticleLabel
-          articleReadState={
+      <View>
+        <View
+          style={
             Object {
-              "animate": false,
-              "read": false,
+              "marginBottom": 5,
             }
           }
-          color="#CCC"
-          hide={false}
-          isVideo={false}
-          title="label"
-        />
+        >
+          <ArticleLabel
+            articleReadState={
+              Object {
+                "animate": false,
+                "read": false,
+              }
+            }
+            color="#CCC"
+            hide={false}
+            isVideo={false}
+            title="label"
+          />
+        </View>
       </View>
       <Text
         accessibilityRole="header"

@@ -50,14 +50,16 @@ exports[`default styles 1`] = `
           <View>
             <Card>
               <View>
-                <View
-                  style={
-                    Object {
-                      "marginBottom": 5,
+                <View>
+                  <View
+                    style={
+                      Object {
+                        "marginBottom": 5,
+                      }
                     }
-                  }
-                >
-                  <ArticleLabel />
+                  >
+                    <ArticleLabel />
+                  </View>
                 </View>
                 <Text
                   style={
@@ -110,17 +112,7 @@ exports[`default styles 1`] = `
                   March 13 2015, 6.54pm
                 </Text>
                 <Text>
-                  <Text
-                    style={
-                      Object {
-                        "color": "#333333",
-                        "flexDirection": "row",
-                        "fontFamily": "GillSansMTStd-Medium",
-                        "fontSize": 13,
-                        "lineHeight": 13,
-                      }
-                    }
-                  >
+                  <View>
                     <Text
                       style={
                         Object {
@@ -132,22 +124,34 @@ exports[`default styles 1`] = `
                         }
                       }
                     >
-                      Camilla Long
-                    </Text>
-                    <Text
-                      style={
-                        Object {
-                          "color": "#333333",
-                          "flexDirection": "row",
-                          "fontFamily": "GillSansMTStd-Medium",
-                          "fontSize": 13,
-                          "lineHeight": 13,
+                      <Text
+                        style={
+                          Object {
+                            "color": "#333333",
+                            "flexDirection": "row",
+                            "fontFamily": "GillSansMTStd-Medium",
+                            "fontSize": 13,
+                            "lineHeight": 13,
+                          }
                         }
-                      }
-                    >
-                      , Environment Editor
+                      >
+                        Camilla Long
+                      </Text>
+                      <Text
+                        style={
+                          Object {
+                            "color": "#333333",
+                            "flexDirection": "row",
+                            "fontFamily": "GillSansMTStd-Medium",
+                            "fontSize": 13,
+                            "lineHeight": 13,
+                          }
+                        }
+                      >
+                        , Environment Editor
+                      </Text>
                     </Text>
-                  </Text>
+                  </View>
                 </Text>
               </View>
             </Card>

@@ -35,17 +35,19 @@ exports[`1. a single related article 1`] = `
             >
               <View>
                 <View>
-                  <ArticleLabel
-                    articleReadState={
-                      Object {
-                        "animate": false,
-                        "read": false,
+                  <View>
+                    <ArticleLabel
+                      articleReadState={
+                        Object {
+                          "animate": false,
+                          "read": false,
+                        }
                       }
-                    }
-                    color="#004D6D"
-                    isVideo={false}
-                    title="test label"
-                  />
+                      color="#004D6D"
+                      isVideo={false}
+                      title="test label"
+                    />
+                  </View>
                 </View>
                 <Text
                   accessibilityRole="header"
@@ -66,14 +68,16 @@ exports[`1. a single related article 1`] = `
                   March 13 2015, 6.54pm
                 </Text>
                 <Text>
-                  <Text>
+                  <View>
                     <Text>
-                      Camilla Long
+                      <Text>
+                        Camilla Long
+                      </Text>
+                      <Text>
+                        , Environment Editor
+                      </Text>
                     </Text>
-                    <Text>
-                      , Environment Editor
-                    </Text>
-                  </Text>
+                  </View>
                 </Text>
               </View>
             </Card>

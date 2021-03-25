@@ -1,5 +1,5 @@
 import React, { useRef, useEffect } from "react";
-import { Animated, Text, View } from "react-native";
+import { Animated, Platform, Text, View } from "react-native";
 import PropTypes from "prop-types";
 import ArticleByline, {
   articleBylinePropTypes,
@@ -28,10 +28,10 @@ const MarkAsRead = ({ children, articleReadState }) => {
     if (!articleReadState.animate) return;
 
     Animated.timing(animationOpacity, {
-      delay: ARTICLE_READ_ANIMATION.delay,
-      duration: ARTICLE_READ_ANIMATION.duration,
+      delay: ARTICLE_READ_ANIMATION.DELAY,
+      duration: ARTICLE_READ_ANIMATION.DURATION,
       toValue: opacity,
-      useNativeDriver: true,
+      useNativeDriver: Platform.OS === "ios",
     }).start();
   }, [articleReadState.animate]);
 
@@ -52,7 +52,7 @@ const MarkAsRead = ({ children, articleReadState }) => {
       {children}
     </View>
   ) : (
-    children
+    <View>{children}</View>
   );
 };
 
@@ -63,15 +63,13 @@ function ArticleSummaryLabel(props) {
     return null;
   }
 
-  const Label = (
-    <View style={styles.labelWrapper}>
-      {isVideo ? <VideoLabel {...props} /> : <ArticleLabel {...props} />}
-    </View>
+  return (
+    <MarkAsRead articleReadState={articleReadState} title={title}>
+      <View style={styles.labelWrapper}>
+        {isVideo ? <VideoLabel {...props} /> : <ArticleLabel {...props} />}
+      </View>
+    </MarkAsRead>
   );
-
-  if (!articleReadState) return Label;
-
-  return <MarkAsRead articleReadState={articleReadState}>{Label}</MarkAsRead>;
 }
 
 function ArticleSummaryByline(props) {
@@ -79,11 +77,11 @@ function ArticleSummaryByline(props) {
 
   if (!ast || ast.length === 0) return null;
 
-  const Byline = <ArticleByline {...props} className={bylineClass} />;
-
-  if (!articleReadState) return Byline;
-
-  return <MarkAsRead articleReadState={articleReadState}>{Byline}</MarkAsRead>;
+  return (
+    <MarkAsRead articleReadState={articleReadState}>
+      <ArticleByline {...props} className={bylineClass} />
+    </MarkAsRead>
+  );
 }
 
 function ArticleSummary(props) {
