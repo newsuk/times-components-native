@@ -369,24 +369,6 @@ exports[`tile ah smallTablet 1`] = `
     >
       This is tile headline
     </Text>
-    <Text
-      accessibilityRole="header"
-      aria-level="4"
-      style={
-        Object {
-          "color": "#696969",
-          "fontFamily": "TimesDigitalW04-Regular",
-          "fontSize": 14,
-          "includeFontPadding": false,
-          "lineHeight": 20,
-          "marginBottom": 10,
-          "paddingBottom": 0,
-          "textAlign": "center",
-        }
-      }
-    >
-      Three Conservative MPs resign
-    </Text>
     <ArticleFlags
       flags={
         Array [
