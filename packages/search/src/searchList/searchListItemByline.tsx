@@ -1,8 +1,8 @@
 import React, { FC } from "react";
-import { StyleSheet, View } from "react-native";
+import { View } from "react-native";
 import ArticleByline from "@times-components-native/article-byline";
-import styleguide from "@times-components-native/styleguide";
 import { Hit } from "../types";
+import { styles } from "./styles/searchListItemByLineStyles";
 
 export interface SearchListItemBylineProps {
   byline: Hit["byline"];
@@ -19,13 +19,5 @@ const SearchListItemByline: FC<SearchListItemBylineProps> = ({ byline }) => {
     </View>
   );
 };
-
-const { spacing } = styleguide();
-
-const styles = StyleSheet.create({
-  byLineContainer: {
-    marginBottom: spacing(2),
-  },
-});
 
 export default SearchListItemByline;

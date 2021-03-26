@@ -61,7 +61,7 @@
   "dependencies": {
     "@react-native-community/art": "1.2.0",
     "@react-native-community/async-storage": "^1.11.0",
-    "@react-native-community/netinfo": "5.9.9",
+    "@react-native-community/netinfo": "^6.0.0",
     "@skele/components": "1.0.0-alpha.40",
     "algoliasearch": "4.8.5",
     "apollo-cache-inmemory": "1.5.1",

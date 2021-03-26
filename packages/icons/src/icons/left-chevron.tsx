@@ -2,7 +2,11 @@ import React from "react";
 import Svg, { G, Mask, Path, Rect } from "react-native-svg";
 import { EMaskUnits } from "@times-components-native/icons/src/icons/types";
 
-const LeftChevron = () => {
+interface LeftChevronProps {
+  color?: string;
+}
+
+const LeftChevron: React.FC<LeftChevronProps> = ({ color = "white" }) => {
   return (
     <Svg width="24" height="24" viewBox="0 0 24 24" fill="none">
       <Mask
@@ -16,11 +20,11 @@ const LeftChevron = () => {
       >
         <Path
           d="M15.41 7.41L14 6L8 12L14 18L15.41 16.59L10.83 12L15.41 7.41Z"
-          fill="white"
+          fill={color}
         />
       </Mask>
       <G mask="url(#mask0)">
-        <Rect width="24" height="24" fill="white" />
+        <Rect width="24" height="24" fill={color} />
       </G>
     </Svg>
   );

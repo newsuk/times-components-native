@@ -1,5 +1,5 @@
 import React, { FC } from "react";
-import { StyleSheet, View } from "react-native";
+import { View } from "react-native";
 import { Hit } from "../types";
 import {
   ArticleSummaryHeadline,
@@ -9,9 +9,12 @@ import { getHeadline } from "@times-components-native/utils";
 import { ResponsiveContext } from "@times-components-native/responsive";
 import styleguide from "@times-components-native/styleguide";
 import Link from "@times-components-native/link";
-import FormattedDate from "./formatted-date";
-import SearchListItemByline from "./search-list-item-byline";
-import SearchListItemSnippet from "./search-list-item-snippet";
+import FormattedDate from "./formattedDate";
+import SearchListItemByline from "./searchListItemByline";
+import SearchListItemSnippet from "./searchListItemSnippet";
+import { styles } from "./styles/searchListItemStyles";
+
+const { colours } = styleguide();
 
 export interface SearchListItemProps {
   item: Hit;
@@ -58,17 +61,5 @@ const SearchListItem: FC<SearchListItemProps> = ({ item, onItemPress }) => {
     </ResponsiveContext.Consumer>
   );
 };
-
-const { colours, spacing } = styleguide();
-
-const styles = StyleSheet.create({
-  listItemContainer: {
-    paddingHorizontal: spacing(2),
-    paddingVertical: spacing(2),
-  },
-  listItemContainerTablet: {
-    paddingVertical: spacing(3),
-  },
-});
 
 export default SearchListItem;

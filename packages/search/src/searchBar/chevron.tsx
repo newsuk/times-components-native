@@ -1,28 +1,17 @@
 import React, { FC } from "react";
-import {
-  StyleSheet,
-  TouchableOpacity,
-  TouchableOpacityProps,
-} from "react-native";
+import { TouchableOpacity, TouchableOpacityProps } from "react-native";
 import { LeftChevron } from "@times-components-native/icons/src/icons";
+import { styles } from "./styles/chevronStyles";
 
 export interface ChevronProps {
   onPress: TouchableOpacityProps["onPress"];
+  color?: string;
 }
 
-const Chevron: FC<ChevronProps> = ({ onPress }) => (
+const Chevron: FC<ChevronProps> = ({ onPress, color }) => (
   <TouchableOpacity style={styles.container} onPress={onPress}>
-    <LeftChevron />
+    <LeftChevron color={color} />
   </TouchableOpacity>
 );
-
-const styles = StyleSheet.create({
-  container: {
-    position: "absolute",
-    top: 6,
-    left: 0,
-    zIndex: 1,
-  },
-});
 
 export default Chevron;

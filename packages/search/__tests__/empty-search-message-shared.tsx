@@ -1,6 +1,6 @@
 import TestRenderer from "react-test-renderer";
 import React from "react";
-import EmptySearchMessage from "../src/empty-search-message";
+import EmptySearchMessage from "../src/emptySearchMessage";
 
 export default () => {
   describe("EmptySearchMessage", () => {

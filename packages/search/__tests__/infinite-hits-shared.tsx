@@ -1,6 +1,6 @@
 import TestRenderer from "react-test-renderer";
 import React from "react";
-import InfiniteHits from "../src/infinite-hits";
+import InfiniteHits from "../src/infiniteHits";
 
 export default () => {
   describe("InfiniteHits", () => {

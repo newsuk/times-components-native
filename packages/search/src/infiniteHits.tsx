@@ -7,14 +7,16 @@ import {
   InfiniteHitsProvided,
   SearchBoxProvided,
 } from "react-instantsearch-core";
-import EmptySearchMessage from "./empty-search-message";
+import EmptySearchMessage from "./emptySearchMessage";
 import { Hit } from "./types";
-import SearchList from "./search-list/search-list";
+import SearchList from "./searchList/searchList";
+import { OfflineMessage } from "./offlineMessage";
 
 export interface InfiniteHitsProps
   extends InfiniteHitsProvided<Hit>,
     SearchBoxProvided {
   onArticlePress: (url: string) => void;
+  isConnected: boolean | null;
 }
 
 const InfiniteHits: FC<InfiniteHitsProps> = ({
@@ -23,6 +25,7 @@ const InfiniteHits: FC<InfiniteHitsProps> = ({
   hasMore,
   onArticlePress,
   currentRefinement,
+  isConnected,
 }) => {
   const handleFetchMore = () => {
     if (!hasMore) {
@@ -30,6 +33,10 @@ const InfiniteHits: FC<InfiniteHitsProps> = ({
     }
     refineNext();
   };
+
+  if (!isConnected) {
+    return <OfflineMessage />;
+  }
 
   if (!currentRefinement) {
     return <EmptySearchMessage />;

@@ -1,9 +1,9 @@
 import TestRenderer from "react-test-renderer";
 import React from "react";
-import SearchList from "../src/search-list/search-list";
-import FormattedDate from "../src/search-list/formatted-date";
-import SearchListItemByline from "../src/search-list/search-list-item-byline";
-import SearchListItemSnippet from "../src/search-list/search-list-item-snippet";
+import SearchList from "../src/searchList/searchList";
+import FormattedDate from "../src/searchList/formattedDate";
+import SearchListItemByline from "../src/searchList/searchListItemByline";
+import SearchListItemSnippet from "../src/searchList/searchListItemSnippet";
 
 const mockHits = require("../__mocks__/mock-hits.json");
 
