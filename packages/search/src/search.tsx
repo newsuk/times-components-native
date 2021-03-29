@@ -16,9 +16,7 @@ export interface SearchProps {
 
 let searchClient: SearchClient | null = null;
 const getSearchClient = (algoliaConfig: SearchProps["algoliaConfig"]) => {
-  if (searchClient) {
-    return searchClient;
-  }
+  if (searchClient) return searchClient;
 
   searchClient = algoliasearch(
     algoliaConfig.ALGOLIA_APP_ID,

@@ -42,7 +42,7 @@ export const SearchBar = connectSearchBox(({ currentRefinement, refine }) => {
           defaultValue={currentRefinement}
           onChangeText={handleSetText}
           keyboardType="web-search"
-          placeholderTextColor={colours.functional.searchText}
+          placeholderTextColor={colours.functional.lightGreyText}
           value={text}
           autoFocus
         />
