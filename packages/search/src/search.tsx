@@ -1,10 +1,10 @@
-import React, { FC, useEffect, useState } from "react";
+import React, { FC } from "react";
 import InfiniteHits from "@times-components-native/search/src/infiniteHits";
 import { SearchBarComponent } from "./searchBar/searchBar";
 import { connectSearchBox, InstantSearch } from "react-instantsearch-native";
 import algoliasearch, { SearchClient } from "algoliasearch";
 import { withTrackingContext } from "@times-components-native/tracking";
-import NetInfo from "@react-native-community/netinfo";
+import { useIsConnected } from "@times-components-native/utils/src/useIsConnected";
 
 export interface SearchProps {
   onArticlePress: (url: string) => void;
@@ -29,18 +29,7 @@ const getSearchClient = (algoliaConfig: SearchProps["algoliaConfig"]) => {
 };
 
 const Search: FC<SearchProps> = ({ onArticlePress, algoliaConfig }) => {
-  const [isConnected, setIsConnected] = useState<boolean | null>(true);
-  useEffect(() => {
-    const unsubscribe = NetInfo.addEventListener((state) => {
-      setIsConnected(state.isConnected);
-    });
-
-    return () => unsubscribe();
-  }, []);
-
-  if (!algoliaConfig) {
-    return null;
-  }
+  const isConnected = useIsConnected();
 
   const ConnectedSearchBar = connectSearchBox((props) => (
     <SearchBarComponent {...props} isConnected={isConnected} />
