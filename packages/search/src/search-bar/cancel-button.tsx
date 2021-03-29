@@ -6,7 +6,11 @@ import {
   TouchableOpacityProps,
   View,
 } from "react-native";
-import { colours, fontFactory } from "@times-components-native/styleguide";
+import {
+  colours,
+  fontFactory,
+  spacing
+} from "@times-components-native/styleguide";
 
 export interface CancelButtonProps {
   onPress: TouchableOpacityProps["onPress"];
@@ -23,7 +27,7 @@ const CancelButton: FC<CancelButtonProps> = ({ onPress }) => (
 const styles = StyleSheet.create({
   cancelContainer: {
     justifyContent: "center",
-    paddingRight: 16,
+    paddingRight: spacing(3),
   },
   cancel: {
     color: colours.functional.white,
@@ -31,7 +35,7 @@ const styles = StyleSheet.create({
       font: "supporting",
       fontSize: "body",
     }),
-    marginTop: 5,
+    marginTop: spacing(1),
   },
 });
 

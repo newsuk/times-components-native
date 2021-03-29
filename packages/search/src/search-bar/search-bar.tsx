@@ -1,7 +1,11 @@
 import React, { useCallback, useState } from "react";
 import { Keyboard, Platform, StyleSheet, TextInput, View } from "react-native";
 import { connectSearchBox } from "react-instantsearch-native";
-import { colours, fontFactory } from "@times-components-native/styleguide";
+import {
+  colours,
+  fontFactory,
+  spacing
+} from "@times-components-native/styleguide";
 import CancelButton from "./cancel-button";
 import XButton from "./x-button";
 import Magnifier from "./magnifier";
@@ -61,7 +65,7 @@ const styles = StyleSheet.create({
   },
   inputContainer: {
     flex: 1,
-    marginLeft: 16,
+    marginLeft: spacing(3),
     marginRight: 8,
     marginVertical: 8,
   },
@@ -72,7 +76,7 @@ const styles = StyleSheet.create({
     }),
     lineHeight: 22,
     padding: 4,
-    paddingLeft: 30,
+    paddingLeft: spacing(6),
     backgroundColor: isIOS
       ? colours.functional.transparentWhite
       : colours.functional.backgroundTertiary,

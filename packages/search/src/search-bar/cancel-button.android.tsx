@@ -5,6 +5,7 @@ import {
   TouchableOpacity,
   TouchableOpacityProps,
 } from "react-native";
+import { spacing } from "@times-components-native/styleguide";
 
 export interface CancelButtonProps {
   onPress: TouchableOpacityProps["onPress"];
@@ -20,8 +21,8 @@ const styles = StyleSheet.create({
   container: {
     position: "absolute",
     zIndex: 1,
-    top: 15,
-    right: 10,
+    top: spacing(3),
+    right: spacing(2),
   },
 });
 
