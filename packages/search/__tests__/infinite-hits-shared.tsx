@@ -1,12 +1,12 @@
 import TestRenderer from "react-test-renderer";
 import React from "react";
-import InfiniteHits from "../src/infinite-hits";
+import SearchResults from "../src/search-results";
 
 export default () => {
-  describe("InfiniteHits", () => {
+  describe("SearchResults", () => {
     it("should render correctly", () => {
       const testInstance = TestRenderer.create(
-        <InfiniteHits onArticlePress={() => null} />,
+        <SearchResults onArticlePress={() => null} />,
       );
 
       expect(testInstance).toMatchSnapshot();

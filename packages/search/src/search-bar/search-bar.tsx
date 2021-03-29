@@ -4,7 +4,7 @@ import { connectSearchBox } from "react-instantsearch-native";
 import {
   colours,
   fontFactory,
-  spacing
+  spacing,
 } from "@times-components-native/styleguide";
 import CancelButton from "./cancel-button";
 import XButton from "./x-button";

@@ -1,5 +1,5 @@
 import React, { FC } from "react";
-import InfiniteHits from "@times-components-native/search/src/infinite-hits";
+import SearchResults from "@times-components-native/search/src/search-results";
 import { SearchBar } from "./search-bar/search-bar";
 import { InstantSearch } from "react-instantsearch-native";
 import algoliasearch, { SearchClient } from "algoliasearch";
@@ -35,7 +35,7 @@ const Search: FC<SearchProps> = ({ onArticlePress, algoliaConfig }) => {
       searchClient={getSearchClient(algoliaConfig)}
     >
       <SearchBar />
-      <InfiniteHits onArticlePress={onArticlePress} />
+      <SearchResults onArticlePress={onArticlePress} />
     </InstantSearch>
   );
 };

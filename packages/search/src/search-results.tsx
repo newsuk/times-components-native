@@ -17,7 +17,7 @@ export interface InfiniteHitsProps
   onArticlePress: (url: string) => void;
 }
 
-const InfiniteHits: FC<InfiniteHitsProps> = ({
+const SearchResults: FC<InfiniteHitsProps> = ({
   hits,
   refineNext,
   hasMore,
@@ -44,5 +44,5 @@ const InfiniteHits: FC<InfiniteHitsProps> = ({
   );
 };
 
-const connectedWithHits = connectInfiniteHits(InfiniteHits);
+const connectedWithHits = connectInfiniteHits(SearchResults);
 export default connectSearchBox(connectedWithHits);
