@@ -41,9 +41,7 @@ exports[`1. a primary image 1`] = `
             "width": undefined,
           }
         }
-      >
-        <View />
-      </View>
+      />
       <View
         style={
           Object {
@@ -113,9 +111,7 @@ exports[`2. a fullwidth image 1`] = `
             "width": undefined,
           }
         }
-      >
-        <View />
-      </View>
+      />
       <View
         style={
           Object {
@@ -185,9 +181,7 @@ exports[`3. a secondary image 1`] = `
             "width": undefined,
           }
         }
-      >
-        <View />
-      </View>
+      />
       <View
         style={
           Object {
@@ -257,9 +251,7 @@ exports[`4. an inline image 1`] = `
             "width": undefined,
           }
         }
-      >
-        <View />
-      </View>
+      />
       <View
         style={
           Object {

@@ -75,9 +75,7 @@ exports[`1. with inline video 1`] = `
             "width": undefined,
           }
         }
-      >
-        <View />
-      </View>
+      />
       <View
         style={
           Object {
@@ -147,9 +145,7 @@ exports[`2. with ad on mainstandard 1`] = `
             "width": undefined,
           }
         }
-      >
-        <View />
-      </View>
+      />
       <View
         style={
           Object {
@@ -219,9 +215,7 @@ exports[`3. with ad on maincomment 1`] = `
             "width": undefined,
           }
         }
-      >
-        <View />
-      </View>
+      />
       <View
         style={
           Object {

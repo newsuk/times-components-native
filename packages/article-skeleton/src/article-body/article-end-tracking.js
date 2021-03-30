@@ -1,11 +1,13 @@
 import React from "react";
-import { View } from "react-native";
+import { Platform, View } from "react-native";
 import PropTypes from "prop-types";
 import { Viewport } from "@skele/components";
 
 import { withTrackEvents } from "@times-components-native/tracking";
 
 const ArticleEndTracking = ({ onViewed }) => {
+  if (Platform.OS === "android") return null;
+
   const ViewportAwareView = Viewport.Aware(View);
 
   return (
