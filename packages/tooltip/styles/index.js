@@ -125,10 +125,12 @@ const generateStyles = (options) => {
     wrapperPlacementStyles = {
       flexDirection: "column-reverse",
       justifyContent: "space-between",
-      height: 180,
     };
     containerPlacementStyles = {
-      ...{ position: "relative" },
+      ...{
+        position: "relative",
+        marginTop: spacing(4),
+      },
       ...containerPlacementStyles,
     };
   }
