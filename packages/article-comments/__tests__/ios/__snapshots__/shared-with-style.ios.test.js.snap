@@ -115,7 +115,6 @@ exports[`enabled comments 1`] = `
     style={
       Object {
         "flexDirection": "column-reverse",
-        "height": 180,
         "justifyContent": "space-between",
         "zIndex": 9999,
       }
