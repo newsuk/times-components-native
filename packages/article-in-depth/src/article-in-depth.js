@@ -3,6 +3,7 @@
 import React, { Component, Fragment } from "react";
 import { View } from "react-native";
 import ArticleError from "@times-components-native/article-error";
+import { hasBylineData } from "@times-components-native/article-byline";
 import ArticleSkeleton from "@times-components-native/article-skeleton";
 import ArticleLeadAsset from "@times-components-native/article-lead-asset";
 import { CentredCaption } from "@times-components-native/caption";
@@ -29,7 +30,14 @@ class ArticleInDepth extends Component {
   }
 
   renderHeader({ width }) {
-    const { article, onAuthorPress, onImagePress, onVideoPress } = this.props;
+    const {
+      article,
+      onAuthorPress,
+      onImagePress,
+      onTooltipPresented,
+      onVideoPress,
+      tooltips,
+    } = this.props;
     const {
       backgroundColour,
       bylines,
@@ -45,16 +53,19 @@ class ArticleInDepth extends Component {
       textColour,
     } = article;
 
+    const withBylineTooltip =
+      hasBylineData(bylines) && tooltips.includes("profile");
+
     return (
       <ResponsiveContext.Consumer>
-        {({ isTablet }) => (
+        {({ isArticleTablet }) => (
           <Fragment>
             <ArticleHeader
               backgroundColour={backgroundColour}
               flags={expirableFlags}
               hasVideo={hasVideo}
               headline={getHeadline(headline, shortHeadline)}
-              isTablet={isTablet}
+              isArticleTablet={isArticleTablet}
               label={label}
               longRead={longRead}
               standfirst={standfirst}
@@ -68,24 +79,30 @@ class ArticleInDepth extends Component {
               renderCaption={({ caption }) =>
                 caption && caption.text && <CentredCaption {...caption} />
               }
-              style={[styles.leadAsset, isTablet && styles.leadAssetTablet]}
+              style={[
+                styles.leadAsset,
+                isArticleTablet && styles.leadAssetTablet,
+              ]}
               width={width}
               extraContent={getAllArticleImages(article)}
             />
             <View
               style={[
                 styles.metaContainer,
-                isTablet && styles.metaContainerTablet,
+                isArticleTablet && styles.metaContainerTablet,
+                withBylineTooltip && styles.metaContainerWithMargin,
               ]}
             >
               <Meta
                 backgroundColour={backgroundColour}
                 bylines={bylines}
-                isTablet={isTablet}
+                isArticleTablet={isArticleTablet}
                 onAuthorPress={onAuthorPress}
+                onTooltipPresented={onTooltipPresented}
                 publicationName={publicationName}
                 publishedTime={publishedTime}
                 textColour={textColour}
+                tooltips={tooltips}
               />
             </View>
           </Fragment>
@@ -123,12 +140,11 @@ class ArticleInDepth extends Component {
       onVideoPress,
       onViewed,
       receiveChildList,
-      tooltips,
     } = this.props;
 
     return (
       <ResponsiveContext.Consumer>
-        {({ isTablet }) => (
+        {({ isArticleTablet }) => (
           <Context.Consumer>
             {({ theme: { scale, dropCapFont } }) => (
               <ArticleSkeleton
@@ -138,7 +154,7 @@ class ArticleInDepth extends Component {
                 dropCapFont={dropCapFont}
                 Header={this.renderHeader}
                 interactiveConfig={interactiveConfig}
-                isTablet={isTablet}
+                isArticleTablet={isArticleTablet}
                 onArticleRead={onArticleRead}
                 onAuthorPress={onAuthorPress}
                 onCommentGuidelinesPress={onCommentGuidelinesPress}
@@ -155,7 +171,6 @@ class ArticleInDepth extends Component {
                 }
                 receiveChildList={receiveChildList}
                 scale={scale}
-                tooltips={tooltips}
               />
             )}
           </Context.Consumer>

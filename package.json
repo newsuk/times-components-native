@@ -1,7 +1,7 @@
 {
   "name": "times-components-native",
   "private": true,
-  "version": "5.0.4-beta",
+  "version": "5.3.1",
   "description": "A collection of react-native components for The Times and Sunday Times",
   "main": "index.js",
   "engines": {
@@ -52,10 +52,6 @@
       "pattern": "**/*.stories{.js, .ts}",
       "outputFile": "./app/storybook/story-loader.js"
     }
-  },
-  "resolutions": {
-    "react": "16.13.1",
-    "react-dom": "16.9.0"
   },
   "homepage": "https://github.com/newsuk/times-components-native#readme",
   "dependencies": {

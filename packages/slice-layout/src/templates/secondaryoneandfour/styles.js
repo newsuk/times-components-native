@@ -39,7 +39,12 @@ const mediumBreakpointStyles = {
   },
 };
 
-export default (breakpoint) =>
-  breakpoint === editionBreakpoints.small
-    ? smallBreakpointStyles
-    : mediumBreakpointStyles;
+const styleResolver = {
+  [editionBreakpoints.small]: smallBreakpointStyles,
+  [editionBreakpoints.smallTablet]: mediumBreakpointStyles,
+  [editionBreakpoints.medium]: mediumBreakpointStyles,
+  [editionBreakpoints.wide]: mediumBreakpointStyles,
+  [editionBreakpoints.huge]: mediumBreakpointStyles,
+};
+
+export default (breakpoint) => styleResolver[breakpoint];

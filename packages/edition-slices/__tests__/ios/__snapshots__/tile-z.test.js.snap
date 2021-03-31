@@ -29,17 +29,19 @@ exports[`tile z huge 1`] = `
     >
       <View>
         <View>
-          <View
-            style={
-              Object {
-                "marginBottom": 5,
+          <View>
+            <View
+              style={
+                Object {
+                  "marginBottom": 5,
+                }
               }
-            }
-          >
-            <ArticleLabel
-              color="#005B8D"
-              title="label"
-            />
+            >
+              <ArticleLabel
+                color="#005B8D"
+                title="label"
+              />
+            </View>
           </View>
           <Text
             accessibilityRole="header"
@@ -133,17 +135,19 @@ exports[`tile z wide 1`] = `
     >
       <View>
         <View>
-          <View
-            style={
-              Object {
-                "marginBottom": 5,
+          <View>
+            <View
+              style={
+                Object {
+                  "marginBottom": 5,
+                }
               }
-            }
-          >
-            <ArticleLabel
-              color="#005B8D"
-              title="label"
-            />
+            >
+              <ArticleLabel
+                color="#005B8D"
+                title="label"
+              />
+            </View>
           </View>
           <Text
             accessibilityRole="header"
@@ -237,17 +241,19 @@ exports[`tile z without breakpoint should be like wide 1`] = `
     >
       <View>
         <View>
-          <View
-            style={
-              Object {
-                "marginBottom": 5,
+          <View>
+            <View
+              style={
+                Object {
+                  "marginBottom": 5,
+                }
               }
-            }
-          >
-            <ArticleLabel
-              color="#005B8D"
-              title="label"
-            />
+            >
+              <ArticleLabel
+                color="#005B8D"
+                title="label"
+              />
+            </View>
           </View>
           <Text
             accessibilityRole="header"

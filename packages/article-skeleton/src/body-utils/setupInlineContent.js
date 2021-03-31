@@ -3,8 +3,8 @@ export const setupInlineContent = (
   unprocessedContent,
   processedContent = [],
 ) => {
-  const { isTablet } = skeletonProps;
-  if (!isTablet) return unprocessedContent;
+  const { isArticleTablet } = skeletonProps;
+  if (!isArticleTablet) return unprocessedContent;
 
   const numberOfCandidateParagraphsToInline = 7;
 

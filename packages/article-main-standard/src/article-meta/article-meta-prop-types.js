@@ -14,13 +14,13 @@ const nodeShape = {
 };
 
 export const propTypes = {
+  articleId: PropTypes.string.isRequired,
   bylines: PropTypes.arrayOf(PropTypes.shape(nodeShape)),
   onAuthorPress: PropTypes.func,
   onTooltipPresented: PropTypes.func.isRequired,
   publicationName: PropTypes.string,
   publishedTime: PropTypes.string,
   tooltips: PropTypes.arrayOf.isRequired,
-  articleId: PropTypes.string,
 };
 
 export const defaultProps = {

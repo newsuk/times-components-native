@@ -119,7 +119,7 @@ class ArticlePage extends Component {
 
     return (
       <ResponsiveContext.Consumer>
-        {({ isTablet, narrowArticleBreakpoint }) => (
+        {({ isArticleTablet, narrowArticleBreakpoint }) => (
           <Context.Consumer>
             {({ theme: { scale, dropCapFont } }) => (
               <View
@@ -129,6 +129,7 @@ class ArticlePage extends Component {
                 ]}
               >
                 <ArticleLeftColumn
+                  articleId={article.id}
                   authorImage={authorImage}
                   bylines={bylines}
                   onAuthorPress={onAuthorPress}
@@ -147,7 +148,7 @@ class ArticlePage extends Component {
                     dropCapFont={dropCapFont}
                     Header={this.renderHeader}
                     interactiveConfig={interactiveConfig}
-                    isTablet={isTablet}
+                    isArticleTablet={isArticleTablet}
                     onArticleRead={onArticleRead}
                     onCommentGuidelinesPress={onCommentGuidelinesPress}
                     onCommentsPress={onCommentsPress}

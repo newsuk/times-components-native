@@ -5,6 +5,10 @@ import { TileAV } from "../../src/tiles";
 
 export default () => {
   describe("tile as", () => {
+    it("smallTablet", () => {
+      testTile(TileAV, editionBreakpoints.smallTablet);
+    });
+
     it("medium", () => {
       testTile(TileAV, editionBreakpoints.medium);
     });

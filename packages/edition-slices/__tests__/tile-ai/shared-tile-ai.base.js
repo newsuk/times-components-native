@@ -5,6 +5,10 @@ import { TileAI } from "../../src/tiles";
 
 export default () => {
   describe("tile ai", () => {
+    it("smallTablet", () => {
+      testTile(TileAI, editionBreakpoints.smallTablet);
+    });
+
     it("medium", () => {
       testTile(TileAI, editionBreakpoints.medium);
     });

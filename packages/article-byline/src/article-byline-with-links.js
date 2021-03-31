@@ -35,21 +35,20 @@ const AuthorComponent = ({
 
 const ArticleBylineWithLinks = ({ ast, ...props }) => {
   const {
+    articleId,
     centered,
-    disableTooltip,
     onTooltipPresented,
     tooltipArrowOffset,
     tooltipDisplayedInView,
     tooltipOffsetX,
     tooltipOffsetY,
     tooltips,
-    articleId,
   } = props;
 
   const textStyle = centered ? [styles.text, styles.centered] : styles.text;
   const tooltipType = "profile";
-  const showTooltip =
-    !disableTooltip && hasAuthorData(ast) && tooltips.includes(tooltipType);
+
+  const showTooltip = hasAuthorData(ast) && tooltips.includes(tooltipType);
 
   const byline = renderByline(
     withTrackEvents(AuthorComponent),
@@ -60,6 +59,7 @@ const ArticleBylineWithLinks = ({ ast, ...props }) => {
 
   const bylineWithTooltip = (
     <Tooltip
+      articleId={articleId}
       content={
         <Text>
           To view all articles from this journalist, just tap their name
@@ -72,8 +72,7 @@ const ArticleBylineWithLinks = ({ ast, ...props }) => {
       onTooltipPresented={onTooltipPresented}
       type={tooltipType}
       tooltips={tooltips}
-      width={236}
-      articleId={articleId}
+      width={256}
     >
       {byline}
     </Tooltip>

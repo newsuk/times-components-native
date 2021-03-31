@@ -3,7 +3,6 @@ import React, { Component } from "react";
 import ArticleError from "@times-components-native/article-error";
 import ArticleSkeleton from "@times-components-native/article-skeleton";
 import { getHeadline } from "@times-components-native/utils";
-import { ResponsiveContext } from "@times-components-native/responsive";
 import Context from "@times-components-native/context";
 import ArticleHeader from "./article-header/article-header";
 import {
@@ -18,7 +17,13 @@ class ArticlePage extends Component {
   }
 
   renderHeader() {
-    const { article, onAuthorPress, onImagePress } = this.props;
+    const {
+      article,
+      onAuthorPress,
+      onImagePress,
+      onTooltipPresented,
+      tooltips,
+    } = this.props;
     const {
       bylines,
       expirableFlags,
@@ -43,6 +48,7 @@ class ArticlePage extends Component {
 
     return (
       <ArticleHeader
+        articleId={article.id}
         authorImage={authorImage}
         bylines={bylines}
         flags={expirableFlags}
@@ -52,9 +58,11 @@ class ArticlePage extends Component {
         longRead={longRead}
         onAuthorPress={onAuthorPress}
         onImagePress={onImagePress}
+        onTooltipPresented={onTooltipPresented}
         publicationName={publicationName}
         publishedTime={publishedTime}
         standfirst={standfirst}
+        tooltips={tooltips}
       />
     );
   }
@@ -92,40 +100,35 @@ class ArticlePage extends Component {
     } = this.props;
 
     return (
-      <ResponsiveContext.Consumer>
-        {({ isTablet }) => (
-          <Context.Consumer>
-            {({ theme: { scale, dropCapFont } }) => (
-              <ArticleSkeleton
-                adConfig={adConfig}
-                analyticsStream={analyticsStream}
-                data={article}
-                dropCapFont={dropCapFont}
-                Header={this.renderHeader}
-                interactiveConfig={interactiveConfig}
-                isTablet={isTablet}
-                onArticleRead={onArticleRead}
-                onAuthorPress={onAuthorPress}
-                onCommentGuidelinesPress={onCommentGuidelinesPress}
-                onCommentsPress={onCommentsPress}
-                onImagePress={onImagePress}
-                onLinkPress={onLinkPress}
-                onRelatedArticlePress={onRelatedArticlePress}
-                onTooltipPresented={onTooltipPresented}
-                onTopicPress={onTopicPress}
-                onTwitterLinkPress={onTwitterLinkPress}
-                onVideoPress={onVideoPress}
-                onViewableItemsChanged={
-                  onViewed ? this.onViewableItemsChanged : null
-                }
-                receiveChildList={receiveChildList}
-                scale={scale}
-                tooltips={tooltips}
-              />
-            )}
-          </Context.Consumer>
+      <Context.Consumer>
+        {({ theme: { scale, dropCapFont } }) => (
+          <ArticleSkeleton
+            adConfig={adConfig}
+            analyticsStream={analyticsStream}
+            data={article}
+            dropCapFont={dropCapFont}
+            Header={this.renderHeader}
+            interactiveConfig={interactiveConfig}
+            onArticleRead={onArticleRead}
+            onAuthorPress={onAuthorPress}
+            onCommentGuidelinesPress={onCommentGuidelinesPress}
+            onCommentsPress={onCommentsPress}
+            onImagePress={onImagePress}
+            onLinkPress={onLinkPress}
+            onRelatedArticlePress={onRelatedArticlePress}
+            onTooltipPresented={onTooltipPresented}
+            onTopicPress={onTopicPress}
+            onTwitterLinkPress={onTwitterLinkPress}
+            onVideoPress={onVideoPress}
+            onViewableItemsChanged={
+              onViewed ? this.onViewableItemsChanged : null
+            }
+            receiveChildList={receiveChildList}
+            scale={scale}
+            tooltips={tooltips}
+          />
         )}
-      </ResponsiveContext.Consumer>
+      </Context.Consumer>
     );
   }
 }

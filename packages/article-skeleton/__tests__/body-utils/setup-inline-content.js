@@ -25,13 +25,14 @@ export default () => {
       const skeletonProps = {
         data: { content: contentWithImages, template: "mainstandard" },
         isTablet: true,
+        isArticleTablet: true,
         narrowContent: false,
       };
 
       it("should return content untouched if not tablet", () => {
         expect(
           setupInlineContent(
-            { ...skeletonProps, isTablet: false },
+            { ...skeletonProps, isTablet: false, isArticleTablet: false },
             contentWithImages,
           ),
         ).toEqual(contentWithImages);
@@ -96,6 +97,7 @@ export default () => {
       const skeletonProps = {
         data: { content: contentWithPullQuotes, template: "mainstandard" },
         isTablet: true,
+        isArticleTablet: true,
         narrowContent: false,
       };
 
@@ -158,6 +160,7 @@ export default () => {
       const skeletonProps = {
         data: { content: contentWithMix, template: "mainstandard" },
         isTablet: true,
+        isArticleTablet: true,
         narrowContent: false,
       };
 

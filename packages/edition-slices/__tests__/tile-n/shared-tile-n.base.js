@@ -11,6 +11,10 @@ export default () => {
       testTile(TileN, editionBreakpoints.small);
     });
 
+    it("smallTablet", () => {
+      testTile(TileN, editionBreakpoints.smallTablet);
+    });
+
     it("medium", () => {
       testTile(TileN, editionBreakpoints.medium);
     });

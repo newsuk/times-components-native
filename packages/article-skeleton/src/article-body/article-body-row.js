@@ -18,6 +18,7 @@ import ArticleParagraphWrapper from "@times-components-native/article-paragraph"
 import InsetCaption from "./inset-caption";
 import styleFactory from "../styles/article-body";
 import ArticleLink from "./article-link";
+import ArticleEndTracking from "./article-end-tracking";
 import InlineNewsletterPuff from "./inline-newsletter-puff";
 import { useResponsiveContext } from "@times-components-native/responsive";
 
@@ -27,7 +28,7 @@ export default ({
   onTwitterLinkPress,
   onVideoPress,
   onImagePress,
-  isTablet,
+  isArticleTablet,
   adConfig,
   images = [],
   scale,
@@ -139,6 +140,15 @@ export default ({
         />
       );
     },
+    articleEndTracking() {
+      return (
+        <ArticleEndTracking
+          onViewed={() => {
+            return;
+          }}
+        />
+      );
+    },
     inlineContent(key, attributes, children) {
       return (
         <InlineContent
@@ -180,7 +190,7 @@ export default ({
           key={key}
           imageOptions={{
             display:
-              !isTablet && caption && display === "inline"
+              !isArticleTablet && caption && display === "inline"
                 ? "secondary"
                 : display,
             ratio,
@@ -210,8 +220,8 @@ export default ({
             key={key}
             style={[
               styles.interactiveContainer,
-              isTablet && styles.interactiveContainerTablet,
-              isTablet &&
+              isArticleTablet && styles.interactiveContainerTablet,
+              isArticleTablet &&
                 display === "fullwidth" &&
                 styles.interactiveContainerFullWidth,
             ]}
@@ -244,7 +254,7 @@ export default ({
           key={key}
           style={[
             styles.interactiveContainer,
-            isTablet && styles.interactiveContainerTablet,
+            isArticleTablet && styles.interactiveContainerTablet,
             display === "fullwidth" && styles.interactiveContainerFullWidth,
           ]}
         >
@@ -257,7 +267,7 @@ export default ({
     },
     keyFacts(key, attributes, children, index, tree) {
       return (
-        <View style={isTablet && styles.containerTablet}>
+        <View style={isArticleTablet && styles.containerTablet}>
           <KeyFacts ast={tree} key={key} onLinkPress={onLinkPress} />
         </View>
       );
@@ -293,8 +303,8 @@ export default ({
       const aspectRatio = 16 / 9;
 
       const getWideContentWidth = () => {
-        const contentWidth = isTablet ? tabletWidth : windowWidth;
-        return contentWidth - (isTablet && tabletRowPadding);
+        const contentWidth = isArticleTablet ? tabletWidth : windowWidth;
+        return contentWidth - (isArticleTablet && tabletRowPadding);
       };
 
       const contentWidth = narrowContent
@@ -314,7 +324,7 @@ export default ({
           key={key}
           style={[
             styles.primaryContainer,
-            isTablet && styles.containerTablet,
+            isArticleTablet && styles.containerTablet,
             narrowContent && {
               alignSelf: "stretch",
               marginLeft: spacing(2),

@@ -13,7 +13,11 @@ import WithoutWhiteSpace from "../shared/without-white-space";
 
 const TileAD = ({ onPress, tile, breakpoint = editionBreakpoints.medium }) => {
   const styles = stylesFactory(breakpoint);
-  const showSummary = breakpoint !== editionBreakpoints.medium;
+  const showSummary = ![
+    editionBreakpoints.smallTablet,
+    editionBreakpoints.medium,
+  ].includes(breakpoint);
+
   return (
     <TileLink onPress={onPress} style={styles.container} tile={tile}>
       <WithoutWhiteSpace

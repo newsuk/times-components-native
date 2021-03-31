@@ -8,10 +8,6 @@ const appStyles = {
     ...nativeStyles.articleHeadline,
     marginBottom: spacing(3),
   },
-  metaTablet: {
-    ...nativeStyles.metaTablet,
-    paddingTop: "auto",
-  },
   standFirst: {
     ...nativeStyles.standFirst,
     marginBottom: spacing(2.5),

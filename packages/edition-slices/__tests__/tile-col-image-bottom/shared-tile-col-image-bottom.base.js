@@ -37,6 +37,17 @@ export default () => {
       );
     });
 
+    it("smallTablet", () => {
+      testTile(TileColImageBottom, editionBreakpoints.smallTablet, {
+        ...tile,
+        config: {
+          smallTablet: {
+            headline: { fontSize: 24 },
+          },
+        },
+      });
+    });
+
     it("medium", () => {
       testTile(TileColImageBottom, editionBreakpoints.medium, {
         ...tile,

@@ -3,8 +3,10 @@ import {
   getNarrowArticleBreakpoint,
 } from "@times-components-native/styleguide";
 import { NativeModules } from "react-native";
-import { ContextType, Orientation } from "./context";
+import { isTablet } from "react-native-device-info";
 import { initialWindowMetrics } from "react-native-safe-area-context";
+
+import { ContextType, Orientation } from "./context";
 
 const config = (NativeModules || {}).ReactConfig;
 
@@ -25,7 +27,8 @@ export const calculateResponsiveContext = (
   editionBreakpoint: getEditionBreakpoint(width),
   narrowArticleBreakpoint: getNarrowArticleBreakpoint(width),
   fontScale,
-  isTablet:
+  isTablet: isTablet ? isTablet() : false,
+  isArticleTablet:
     (config && config.breakpoint && config.breakpoint !== "small") ||
     width >= minTabletWidth,
   windowWidth: width,

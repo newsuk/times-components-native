@@ -18,17 +18,19 @@ exports[`tile b huge 1`] = `
   >
     <View>
       <View>
-        <View
-          style={
-            Object {
-              "marginBottom": 5,
+        <View>
+          <View
+            style={
+              Object {
+                "marginBottom": 5,
+              }
             }
-          }
-        >
-          <ArticleLabel
-            color="#005B8D"
-            title="label"
-          />
+          >
+            <ArticleLabel
+              color="#005B8D"
+              title="label"
+            />
+          </View>
         </View>
         <Text
           accessibilityRole="header"
@@ -101,17 +103,19 @@ exports[`tile b medium 1`] = `
   >
     <View>
       <View>
-        <View
-          style={
-            Object {
-              "marginBottom": 5,
+        <View>
+          <View
+            style={
+              Object {
+                "marginBottom": 5,
+              }
             }
-          }
-        >
-          <ArticleLabel
-            color="#005B8D"
-            title="label"
-          />
+          >
+            <ArticleLabel
+              color="#005B8D"
+              title="label"
+            />
+          </View>
         </View>
         <Text
           accessibilityRole="header"
@@ -185,17 +189,19 @@ exports[`tile b small 1`] = `
   >
     <View>
       <View>
-        <View
-          style={
-            Object {
-              "marginBottom": 5,
+        <View>
+          <View
+            style={
+              Object {
+                "marginBottom": 5,
+              }
             }
-          }
-        >
-          <ArticleLabel
-            color="#005B8D"
-            title="label"
-          />
+          >
+            <ArticleLabel
+              color="#005B8D"
+              title="label"
+            />
+          </View>
         </View>
         <Text
           accessibilityRole="header"
@@ -250,6 +256,91 @@ exports[`tile b small 1`] = `
 </Link>
 `;
 
+exports[`tile b smallTablet 1`] = `
+<Link
+  linkStyle={
+    Object {
+      "flex": 1,
+      "padding": 10,
+    }
+  }
+>
+  <View
+    style={
+      Object {
+        "flex": 1,
+      }
+    }
+  >
+    <View>
+      <View>
+        <View>
+          <View
+            style={
+              Object {
+                "marginBottom": 5,
+              }
+            }
+          >
+            <ArticleLabel
+              color="#005B8D"
+              title="label"
+            />
+          </View>
+        </View>
+        <Text
+          accessibilityRole="header"
+          aria-level="3"
+          style={
+            Object {
+              "color": "#333333",
+              "fontFamily": "TimesModern-Bold",
+              "fontSize": 20,
+              "fontWeight": "900",
+              "includeFontPadding": false,
+              "lineHeight": 20,
+              "marginBottom": 10,
+            }
+          }
+        >
+          This is tile headline
+        </Text>
+        <ArticleFlags
+          flags={
+            Array [
+              Object {
+                "expiryTime": "2030-03-14T12:00:00.000Z",
+                "type": "EXCLUSIVE",
+              },
+            ]
+          }
+          longRead={true}
+        />
+        <Text
+          numberOfLines={2}
+          style={
+            Object {
+              "color": "#696969",
+              "flexWrap": "wrap",
+              "fontFamily": "TimesDigitalW04",
+              "fontSize": 14,
+              "lineHeight": 20,
+              "marginBottom": 0,
+            }
+          }
+        >
+          <Text>
+            
+            Theresa May has two objectives tomorrow when MPs get to vote on Brexit — the trouble is both are fraught with difficulty.
+            ...
+          </Text>
+        </Text>
+      </View>
+    </View>
+  </View>
+</Link>
+`;
+
 exports[`tile b wide 1`] = `
 <Link
   linkStyle={
@@ -268,17 +359,19 @@ exports[`tile b wide 1`] = `
   >
     <View>
       <View>
-        <View
-          style={
-            Object {
-              "marginBottom": 5,
+        <View>
+          <View
+            style={
+              Object {
+                "marginBottom": 5,
+              }
             }
-          }
-        >
-          <ArticleLabel
-            color="#005B8D"
-            title="label"
-          />
+          >
+            <ArticleLabel
+              color="#005B8D"
+              title="label"
+            />
+          </View>
         </View>
         <Text
           accessibilityRole="header"
@@ -351,17 +444,19 @@ exports[`tile b with more teaser 1`] = `
   >
     <View>
       <View>
-        <View
-          style={
-            Object {
-              "marginBottom": 5,
+        <View>
+          <View
+            style={
+              Object {
+                "marginBottom": 5,
+              }
             }
-          }
-        >
-          <ArticleLabel
-            color="#005B8D"
-            title="label"
-          />
+          >
+            <ArticleLabel
+              color="#005B8D"
+              title="label"
+            />
+          </View>
         </View>
         <Text
           accessibilityRole="header"
@@ -435,17 +530,19 @@ exports[`tile b without breakpoint should be like small 1`] = `
   >
     <View>
       <View>
-        <View
-          style={
-            Object {
-              "marginBottom": 5,
+        <View>
+          <View
+            style={
+              Object {
+                "marginBottom": 5,
+              }
             }
-          }
-        >
-          <ArticleLabel
-            color="#005B8D"
-            title="label"
-          />
+          >
+            <ArticleLabel
+              color="#005B8D"
+              title="label"
+            />
+          </View>
         </View>
         <Text
           accessibilityRole="header"

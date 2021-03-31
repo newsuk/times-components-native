@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`InfiniteHits should render correctly 1`] = `
+exports[`SearchResults should render correctly 1`] = `
 <View
   style={
     Object {

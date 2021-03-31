@@ -2,17 +2,19 @@
 
 exports[`1. article summary component with a single paragraph 1`] = `
 <View>
-  <View
-    style={
-      Object {
-        "marginBottom": 5,
+  <View>
+    <View
+      style={
+        Object {
+          "marginBottom": 5,
+        }
       }
-    }
-  >
-    <ArticleLabel
-      color="#333333"
-      title="Test label"
-    />
+    >
+      <ArticleLabel
+        color="#333333"
+        title="Test label"
+      />
+    </View>
   </View>
   <Text
     accessibilityRole="header"
@@ -81,46 +83,48 @@ exports[`1. article summary component with a single paragraph 1`] = `
     />
   </Text>
   <Text>
-    <ArticleByline
-      articleReadState={
-        Object {
-          "animate": false,
-          "read": false,
+    <View>
+      <ArticleByline
+        articleReadState={
+          Object {
+            "animate": false,
+            "read": false,
+          }
         }
-      }
-      ast={
-        Array [
-          Object {
-            "attributes": Object {
-              "slug": "camilla-long",
+        ast={
+          Array [
+            Object {
+              "attributes": Object {
+                "slug": "camilla-long",
+              },
+              "children": Array [
+                Object {
+                  "attributes": Object {
+                    "value": "Camilla Long",
+                  },
+                  "children": Array [],
+                  "name": "text",
+                },
+              ],
+              "name": "author",
             },
-            "children": Array [
-              Object {
-                "attributes": Object {
-                  "value": "Camilla Long",
+            Object {
+              "attributes": Object {},
+              "children": Array [
+                Object {
+                  "attributes": Object {
+                    "value": ", Environment Editor",
+                  },
+                  "children": Array [],
+                  "name": "text",
                 },
-                "children": Array [],
-                "name": "text",
-              },
-            ],
-            "name": "author",
-          },
-          Object {
-            "attributes": Object {},
-            "children": Array [
-              Object {
-                "attributes": Object {
-                  "value": ", Environment Editor",
-                },
-                "children": Array [],
-                "name": "text",
-              },
-            ],
-            "name": "inline",
-          },
-        ]
-      }
-    />
+              ],
+              "name": "inline",
+            },
+          ]
+        }
+      />
+    </View>
   </Text>
 </View>
 `;

@@ -1,6 +1,6 @@
 import React, { FC } from "react";
-import InfiniteHits from "@times-components-native/search/src/infiniteHits";
 import { SearchBarComponent } from "./searchBar/searchBar";
+import SearchResults from "@times-components-native/search/src/search-results";
 import { connectSearchBox, InstantSearch } from "react-instantsearch-native";
 import algoliasearch, { SearchClient } from "algoliasearch";
 import { withTrackingContext } from "@times-components-native/tracking";
@@ -17,9 +17,7 @@ export interface SearchProps {
 
 let searchClient: SearchClient | null = null;
 const getSearchClient = (algoliaConfig: SearchProps["algoliaConfig"]) => {
-  if (searchClient) {
-    return searchClient;
-  }
+  if (searchClient) return searchClient;
 
   searchClient = algoliasearch(
     algoliaConfig.ALGOLIA_APP_ID,
@@ -40,7 +38,10 @@ const Search: FC<SearchProps> = ({ onArticlePress, algoliaConfig }) => {
       searchClient={getSearchClient(algoliaConfig)}
     >
       <ConnectedSearchBar />
-      <InfiniteHits onArticlePress={onArticlePress} isConnected={isConnected} />
+      <SearchResults
+        onArticlePress={onArticlePress}
+        isConnected={isConnected}
+      />
     </InstantSearch>
   );
 };

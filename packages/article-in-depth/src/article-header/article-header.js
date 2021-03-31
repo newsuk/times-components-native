@@ -18,7 +18,7 @@ const ArticleHeader = ({
   flags,
   hasVideo,
   headline,
-  isTablet,
+  isArticleTablet,
   label,
   longRead,
   standfirst,
@@ -34,16 +34,19 @@ const ArticleHeader = ({
           style={[
             styles.container,
             { backgroundColor: backgroundColour, width: "100%" },
-            isTablet && styles.containerTablet,
+            isArticleTablet && styles.containerTablet,
           ]}
         >
           <View
-            style={[styles.headerText, isTablet && styles.headerTextTablet]}
+            style={[
+              styles.headerText,
+              isArticleTablet && styles.headerTextTablet,
+            ]}
           >
             <Label
               color={textColour}
               isVideo={hasVideo}
-              isTablet={isTablet}
+              isArticleTablet={isArticleTablet}
               label={label}
             />
             <Text
@@ -53,7 +56,7 @@ const ArticleHeader = ({
                   color: textColour,
                   ...fontFactory({
                     font: headlineFont || "headline",
-                    fontSize: isTablet ? "pageHeadline" : "headline",
+                    fontSize: isArticleTablet ? "pageHeadline" : "headline",
                   }),
                 },
                 headlineCase ? { textTransform: headlineCase } : null,

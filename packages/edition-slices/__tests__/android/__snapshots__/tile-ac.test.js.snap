@@ -30,17 +30,19 @@ exports[`tile ac huge 1`] = `
       }
     }
   >
-    <View
-      style={
-        Object {
-          "marginBottom": 5,
+    <View>
+      <View
+        style={
+          Object {
+            "marginBottom": 5,
+          }
         }
-      }
-    >
-      <ArticleLabel
-        color="#005B8D"
-        title="label"
-      />
+      >
+        <ArticleLabel
+          color="#005B8D"
+          title="label"
+        />
+      </View>
     </View>
     <Text
       accessibilityRole="header"
@@ -105,17 +107,96 @@ exports[`tile ac medium 1`] = `
       }
     }
   >
-    <View
+    <View>
+      <View
+        style={
+          Object {
+            "marginBottom": 5,
+          }
+        }
+      >
+        <ArticleLabel
+          color="#005B8D"
+          title="label"
+        />
+      </View>
+    </View>
+    <Text
+      accessibilityRole="header"
+      aria-level="3"
       style={
         Object {
-          "marginBottom": 5,
+          "color": "#1D1D1B",
+          "fontFamily": "TimesModern-Bold",
+          "fontSize": 30,
+          "fontWeight": "900",
+          "includeFontPadding": false,
+          "lineHeight": 30,
+          "marginBottom": 10,
+          "textAlign": "center",
         }
       }
     >
-      <ArticleLabel
-        color="#005B8D"
-        title="label"
-      />
+      This is tile headline
+    </Text>
+    <ArticleFlags
+      flags={
+        Array [
+          Object {
+            "expiryTime": "2030-03-14T12:00:00.000Z",
+            "type": "EXCLUSIVE",
+          },
+        ]
+      }
+      longRead={true}
+    />
+  </View>
+</Link>
+`;
+
+exports[`tile ac smallTablet 1`] = `
+<Link
+  linkStyle={
+    Object {
+      "flex": 1,
+      "padding": 10,
+    }
+  }
+>
+  <Image
+    aspectRatio={1.7777777777777777}
+    style={
+      Object {
+        "width": "100%",
+      }
+    }
+    uri="https://www.thetimes.co.uk/imageserver/image/methode%2Ftimes%2Fprod%2Fweb%2Fbin%2Fd3abdbfc-1776-11e6-b4ba-d249b128bacc.jpg?crop=620%2C348%2C0%2C32"
+  />
+  <View
+    style={
+      Object {
+        "alignItems": "center",
+        "backgroundColor": "#F0F0F0",
+        "flex": 1,
+        "justifyContent": "center",
+        "paddingHorizontal": 20,
+        "paddingVertical": 40,
+      }
+    }
+  >
+    <View>
+      <View
+        style={
+          Object {
+            "marginBottom": 5,
+          }
+        }
+      >
+        <ArticleLabel
+          color="#005B8D"
+          title="label"
+        />
+      </View>
     </View>
     <Text
       accessibilityRole="header"
@@ -180,17 +261,19 @@ exports[`tile ac wide 1`] = `
       }
     }
   >
-    <View
-      style={
-        Object {
-          "marginBottom": 5,
+    <View>
+      <View
+        style={
+          Object {
+            "marginBottom": 5,
+          }
         }
-      }
-    >
-      <ArticleLabel
-        color="#005B8D"
-        title="label"
-      />
+      >
+        <ArticleLabel
+          color="#005B8D"
+          title="label"
+        />
+      </View>
     </View>
     <Text
       accessibilityRole="header"
@@ -255,17 +338,19 @@ exports[`tile ac without breakpoint should be like medium 1`] = `
       }
     }
   >
-    <View
-      style={
-        Object {
-          "marginBottom": 5,
+    <View>
+      <View
+        style={
+          Object {
+            "marginBottom": 5,
+          }
         }
-      }
-    >
-      <ArticleLabel
-        color="#005B8D"
-        title="label"
-      />
+      >
+        <ArticleLabel
+          color="#005B8D"
+          title="label"
+        />
+      </View>
     </View>
     <Text
       accessibilityRole="header"

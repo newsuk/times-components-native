@@ -3,13 +3,17 @@ import Caption from "@times-components-native/caption";
 import { captionStyles, tabletCaptionStyles } from "../styles";
 
 export interface ModalCaptionProps {
-  isTablet: boolean;
+  isArticleTablet: boolean;
   credits: string;
   text: string;
 }
 
-const ModalCaption: FC<ModalCaptionProps> = ({ isTablet, text, credits }) => {
-  const style = isTablet ? tabletCaptionStyles : captionStyles;
+const ModalCaption: FC<ModalCaptionProps> = ({
+  isArticleTablet,
+  text,
+  credits,
+}) => {
+  const style = isArticleTablet ? tabletCaptionStyles : captionStyles;
 
   if (!text && !credits) {
     return null;

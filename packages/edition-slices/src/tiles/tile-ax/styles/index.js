@@ -7,6 +7,10 @@ import {
 } from "@times-components-native/styleguide";
 
 const fontSizeResolver = {
+  [editionBreakpoints.smallTablet]: {
+    portrait: 24,
+    landscape: 28,
+  },
   [editionBreakpoints.medium]: {
     portrait: 24,
     landscape: 28,

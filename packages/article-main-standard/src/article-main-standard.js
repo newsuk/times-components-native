@@ -54,7 +54,7 @@ class ArticlePage extends Component {
 
     return (
       <ResponsiveContext.Consumer>
-        {({ isTablet }) => {
+        {({ isArticleTablet }) => {
           const leadAsset = (
             <View key="leadAsset" testID="leadAsset">
               <ArticleLeadAsset
@@ -65,10 +65,15 @@ class ArticlePage extends Component {
                 renderCaption={({ caption }) => (
                   <Caption
                     {...caption}
-                    style={!isTablet && { container: styles.captionContainer }}
+                    style={
+                      !isArticleTablet && { container: styles.captionContainer }
+                    }
                   />
                 )}
-                style={[styles.leadAsset, isTablet && styles.leadAssetTablet]}
+                style={[
+                  styles.leadAsset,
+                  isArticleTablet && styles.leadAssetTablet,
+                ]}
                 width={Math.min(parentProps.width, tabletWidth)}
                 extraContent={getAllArticleImages(article)}
               />
@@ -80,33 +85,33 @@ class ArticlePage extends Component {
                 flags={expirableFlags}
                 hasVideo={hasVideo}
                 headline={getHeadline(headline, shortHeadline)}
-                isTablet={isTablet}
+                isArticleTablet={isArticleTablet}
                 label={label}
                 longRead={longRead}
                 standfirst={standfirst}
               />
               <ArticleMeta
+                articleId={article.id}
                 bylines={bylines}
-                isTablet={isTablet}
+                isArticleTablet={isArticleTablet}
                 onAuthorPress={onAuthorPress}
                 onTooltipPresented={onTooltipPresented}
                 publicationName={publicationName}
                 publishedTime={publishedTime}
                 tooltips={tooltips}
-                articleId={article.id}
               />
             </Fragment>
           );
           return (
             <View
               style={
-                isTablet && [
+                isArticleTablet && [
                   styles.articleMainContentRow,
                   styles.articleMainContentRowTablet,
                 ]
               }
             >
-              {isTablet ? [header, leadAsset] : [leadAsset, header]}
+              {isArticleTablet ? [header, leadAsset] : [leadAsset, header]}
             </View>
           );
         }}
@@ -149,7 +154,7 @@ class ArticlePage extends Component {
 
     return (
       <ResponsiveContext.Consumer>
-        {({ isTablet }) => (
+        {({ isArticleTablet }) => (
           <Context.Consumer>
             {({ theme: { scale, dropCapFont } }) => (
               <ArticleSkeleton
@@ -159,7 +164,7 @@ class ArticlePage extends Component {
                 dropCapFont={dropCapFont}
                 Header={this.renderHeader}
                 interactiveConfig={interactiveConfig}
-                isTablet={isTablet}
+                isArticleTablet={isArticleTablet}
                 onArticleRead={onArticleRead}
                 onAuthorPress={onAuthorPress}
                 onCommentGuidelinesPress={onCommentGuidelinesPress}

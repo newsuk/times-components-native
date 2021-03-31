@@ -1,71 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`1. iconemail renders 1`] = `
-<RNSVGSvgView
-  bbWidth={20}
-  focusable={false}
-  style={
-    Object {
-      "backgroundColor": "transparent",
-      "borderWidth": 0,
-    }
-  }
-  title="IconEmail"
-  width={20}
->
-  <RNSVGGroup>
-    <RNSVGGroup
-      fill={null}
-      fillRule={0}
-      propList={
-        Array [
-          "fill",
-          "fillRule",
-        ]
-      }
-    >
-      <RNSVGPath
-        d="2dca68e6b455fb04a2975586f95f2052"
-        fill={4290295992}
-        propList={
-          Array [
-            "fill",
-          ]
-        }
-      />
-      <RNSVGPath
-        d="d08f2857f91d1cb7ade3298227eeb176"
-        fill={4294967295}
-        propList={
-          Array [
-            "fill",
-          ]
-        }
-      />
-      <RNSVGPath
-        d="59952cd14b0c0c6204892147f26f685a"
-        fill={4291611852}
-        propList={
-          Array [
-            "fill",
-          ]
-        }
-      />
-      <RNSVGPath
-        d="27656d0344be367be22064a8124ce9dc"
-        fill={4290953922}
-        propList={
-          Array [
-            "fill",
-          ]
-        }
-      />
-    </RNSVGGroup>
-  </RNSVGGroup>
-</RNSVGSvgView>
-`;
-
-exports[`2. iconfacebook renders 1`] = `
+exports[`1. iconfacebook renders 1`] = `
 <ARTSurfaceView
   style={
     Object {
@@ -130,7 +65,7 @@ exports[`2. iconfacebook renders 1`] = `
 </ARTSurfaceView>
 `;
 
-exports[`3. iconforwardarrow renders 1`] = `
+exports[`2. iconforwardarrow renders 1`] = `
 <ARTSurfaceView
   style={
     Object {
@@ -195,7 +130,7 @@ exports[`3. iconforwardarrow renders 1`] = `
 </ARTSurfaceView>
 `;
 
-exports[`4. iconstar renders 1`] = `
+exports[`3. iconstar renders 1`] = `
 <RNSVGSvgView
   align="xMidYMid"
   aria-label="icon-save-star"
@@ -229,7 +164,7 @@ exports[`4. iconstar renders 1`] = `
 </RNSVGSvgView>
 `;
 
-exports[`5. iconcopylink renders 1`] = `
+exports[`4. iconcopylink renders 1`] = `
 <RNSVGSvgView
   align="xMidYMid"
   aria-label="icon-copy-link"
@@ -268,7 +203,7 @@ exports[`5. iconcopylink renders 1`] = `
 </RNSVGSvgView>
 `;
 
-exports[`6. iconsavebookmark renders 1`] = `
+exports[`5. iconsavebookmark renders 1`] = `
 <ARTSurfaceView
   style={
     Object {
@@ -320,7 +255,7 @@ exports[`6. iconsavebookmark renders 1`] = `
 </ARTSurfaceView>
 `;
 
-exports[`7. icontwitter renders 1`] = `
+exports[`6. icontwitter renders 1`] = `
 <ARTSurfaceView
   style={
     Object {
@@ -372,7 +307,7 @@ exports[`7. icontwitter renders 1`] = `
 </ARTSurfaceView>
 `;
 
-exports[`8. iconvideo renders 1`] = `
+exports[`7. iconvideo renders 1`] = `
 <ARTSurfaceView
   style={
     Object {
@@ -451,7 +386,7 @@ exports[`8. iconvideo renders 1`] = `
 </ARTSurfaceView>
 `;
 
-exports[`9. iconvideo360player renders 1`] = `
+exports[`8. iconvideo360player renders 1`] = `
 <ARTSurfaceView
   style={
     Object {
@@ -503,7 +438,7 @@ exports[`9. iconvideo360player renders 1`] = `
 </ARTSurfaceView>
 `;
 
-exports[`10. thestlogo renders 1`] = `
+exports[`9. thestlogo renders 1`] = `
 <ARTSurfaceView
   style={
     Object {
@@ -555,7 +490,7 @@ exports[`10. thestlogo renders 1`] = `
 </ARTSurfaceView>
 `;
 
-exports[`11. thetimeslogo renders 1`] = `
+exports[`10. thetimeslogo renders 1`] = `
 <ARTSurfaceView
   style={
     Object {
@@ -607,7 +542,7 @@ exports[`11. thetimeslogo renders 1`] = `
 </ARTSurfaceView>
 `;
 
-exports[`12. closeicon renders 1`] = `
+exports[`11. closeicon renders 1`] = `
 <RNSVGSvgView
   align="xMidYMid"
   aria-label="icon-close"
@@ -648,7 +583,7 @@ exports[`12. closeicon renders 1`] = `
 </RNSVGSvgView>
 `;
 
-exports[`13. closeroundicon renders 1`] = `
+exports[`12. closeroundicon renders 1`] = `
 <RNSVGSvgView
   align="xMidYMid"
   bbHeight="24"
@@ -729,7 +664,7 @@ exports[`13. closeroundicon renders 1`] = `
 </RNSVGSvgView>
 `;
 
-exports[`14. glassmagnifiericon renders 1`] = `
+exports[`13. glassmagnifiericon renders 1`] = `
 <RNSVGSvgView
   align="xMidYMid"
   bbHeight="24"
@@ -810,7 +745,7 @@ exports[`14. glassmagnifiericon renders 1`] = `
 </RNSVGSvgView>
 `;
 
-exports[`15. leftchevron renders 1`] = `
+exports[`14. leftchevron renders 1`] = `
 <RNSVGSvgView
   align="xMidYMid"
   bbHeight="24"

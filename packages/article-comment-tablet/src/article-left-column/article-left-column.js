@@ -11,6 +11,7 @@ import ArticleTopics from "@times-components-native/article-topics";
 import articleLeftColumnPropTypes from "./article-left-column-prop-types";
 
 const ArticleLeftColumn = ({
+  articleId,
   authorImage,
   bylines,
   onAuthorPress,
@@ -25,6 +26,7 @@ const ArticleLeftColumn = ({
       {hasBylineData(bylines) && (
         <View style={styles.bylines}>
           <ArticleBylineWithLinks
+            articleId={articleId}
             ast={bylines}
             centered
             onAuthorPress={onAuthorPress}
@@ -41,6 +43,7 @@ const ArticleLeftColumn = ({
     {topics ? (
       <View style={styles.topicsContainer}>
         <ArticleTopics
+          articleId={articleId}
           onTooltipPresented={onTooltipPresented}
           onPress={onTopicPress}
           tooltipDisplayedInView={true}

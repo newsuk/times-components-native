@@ -123,10 +123,10 @@ const templatesWithAds = [
 
 export const setupAd = (skeletonProps) => {
   const {
-    isTablet,
+    isArticleTablet,
     data: { content, template },
   } = skeletonProps;
-  if (!isTablet) return content;
+  if (!isArticleTablet) return content;
 
   let currentAdSlotIndex;
 
@@ -144,7 +144,7 @@ export const setupAd = (skeletonProps) => {
   if (!currentAdSlotIndex) return cleanedContent;
 
   // If tablet, only show on mainstandard/indepth/magazinestandard template
-  if (isTablet && !templatesWithAds.includes(template))
+  if (isArticleTablet && !templatesWithAds.includes(template))
     return contentWithoutAdSlot;
 
   return setupArticleMpuAd(

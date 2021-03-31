@@ -6,16 +6,19 @@ import {
 } from "@times-components-native/styleguide";
 
 const fontSizeResolver = {
+  [editionBreakpoints.smallTablet]: 40,
   [editionBreakpoints.medium]: 40,
   [editionBreakpoints.wide]: 45,
 };
 
 const horizontalMarginResolver = {
+  [editionBreakpoints.smallTablet]: spacing(6),
   [editionBreakpoints.medium]: spacing(6),
   [editionBreakpoints.wide]: spacing(10),
 };
 
 const horizontalPaddingResolver = {
+  [editionBreakpoints.smallTablet]: spacing(10),
   [editionBreakpoints.medium]: spacing(10),
   [editionBreakpoints.wide]: spacing(28),
 };

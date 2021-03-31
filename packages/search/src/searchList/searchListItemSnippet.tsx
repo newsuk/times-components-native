@@ -7,7 +7,7 @@ import { styles } from "./styles/searchListItemSnippetStyles";
 
 export type SearchListItemSnippetProps = HighlightProps<Hit["_snippetResult"]>;
 
-const regex = /(<([^>]+)>)/gi;
+const removeHtmlTags = /(<([^>]+)>)/gi;
 
 const SearchListItemSnippet: FC<SearchListItemSnippetProps> = ({
   highlight,
@@ -27,7 +27,7 @@ const SearchListItemSnippet: FC<SearchListItemSnippetProps> = ({
           {result.isHighlighted ? (
             <Text style={styles.hightlighted}>{result.value}</Text>
           ) : (
-            result.value.replace(regex, "")
+            result.value.replace(removeHtmlTags, "")
           )}
         </Text>
       ))}

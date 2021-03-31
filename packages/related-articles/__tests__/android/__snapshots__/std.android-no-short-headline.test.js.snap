@@ -35,10 +35,12 @@ exports[`1. no short headline 1`] = `
             >
               <View>
                 <View>
-                  <ArticleLabel
-                    color="#004D6D"
-                    title="test label"
-                  />
+                  <View>
+                    <ArticleLabel
+                      color="#004D6D"
+                      title="test label"
+                    />
+                  </View>
                 </View>
                 <Text
                   accessibilityRole="header"
@@ -59,14 +61,16 @@ exports[`1. no short headline 1`] = `
                   March 13 2015, 6.54pm
                 </Text>
                 <Text>
-                  <Text>
+                  <View>
                     <Text>
-                      Camilla Long
+                      <Text>
+                        Camilla Long
+                      </Text>
+                      <Text>
+                        , Environment Editor
+                      </Text>
                     </Text>
-                    <Text>
-                      , Environment Editor
-                    </Text>
-                  </Text>
+                  </View>
                 </Text>
               </View>
             </Card>

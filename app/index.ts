@@ -93,7 +93,6 @@ const startTabs = () => {
                 bottomTab: {
                   ...bottomTabOptions,
                   text: "Search",
-                  icon: IconPast6Days,
                 },
               },
             },

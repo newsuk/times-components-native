@@ -1,6 +1,1227 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`1. comment lead and cartoon - medium 1`] = `
+exports[`1. comment lead and cartoon - smalltablet 1`] = `
+<View>
+  <View>
+    <View>
+      <TileAH
+        breakpoint="smallTablet"
+        tileName="lead"
+      />
+    </View>
+    <View />
+    <View>
+      <TileAI
+        breakpoint="smallTablet"
+        tileName="cartoon"
+      />
+    </View>
+  </View>
+</View>
+`;
+
+exports[`2. daily universal register - smalltablet 1`] = `
+<View>
+  <View>
+    <Image
+      resizeMode="contain"
+      source={
+        Object {
+          "testUri": "../../../packages/edition-slices/assets/daily-universal-register.png",
+        }
+      }
+    />
+    <Text>
+      Daily Universal Register
+    </Text>
+    <View>
+      <View>
+        <TileS
+          breakpoint="smallTablet"
+        />
+        <View />
+        <TileS
+          breakpoint="smallTablet"
+          logo={
+            <Logo
+              imageUri="https://www.thetimes.co.uk/d/img/DUR-nature-80d36dd1cd.png"
+              ratio={1}
+              type="nature notes"
+            />
+          }
+        />
+      </View>
+      <View />
+      <View>
+        <TileS
+          breakpoint="smallTablet"
+        />
+        <View />
+        <TileS
+          breakpoint="smallTablet"
+          logo={
+            <Logo
+              imageUri="https://www.thetimes.co.uk/d/img/DUR-birthdays-94b2272911.png"
+              ratio={1}
+              type="birthdays"
+            />
+          }
+        />
+      </View>
+    </View>
+  </View>
+</View>
+`;
+
+exports[`3. lead one and one - smalltablet 1`] = `
+<View>
+  <View>
+    <View>
+      <TileColStandard
+        breakpoint="smallTablet"
+        orientation="portrait"
+        tileName="lead"
+      />
+    </View>
+    <View />
+    <View>
+      <TileColStandard
+        breakpoint="smallTablet"
+        orientation="portrait"
+        tileName="support"
+      />
+    </View>
+  </View>
+</View>
+`;
+
+exports[`4. lead one and one - supplement - smalltablet 1`] = `
+<View>
+  <View>
+    <View>
+      <TileU
+        headlineStyle={
+          Object {
+            "color": "#1D1D1B",
+            "fontFamily": "TimesModern-Regular",
+            "fontSize": 40,
+            "fontWeight": "normal",
+            "lineHeight": 40,
+          }
+        }
+        tileName="lead"
+      />
+    </View>
+    <View />
+    <View>
+      <TileAX
+        breakpoint="smallTablet"
+        orientation="portrait"
+        tileName="support"
+      />
+    </View>
+  </View>
+</View>
+`;
+
+exports[`5. lead one full width - smalltablet 1`] = `
+<View>
+  <TileR
+    breakpoint="smallTablet"
+    tileName="lead"
+  />
+</View>
+`;
+
+exports[`6. lead two no pic and two - smalltablet 1`] = `
+<View>
+  <View>
+    <View>
+      <TileX
+        breakpoint="smallTablet"
+        orientation="landscape"
+        tileName="lead1"
+      />
+      <View />
+      <TileY
+        breakpoint="smallTablet"
+        orientation="landscape"
+        tileName="lead2"
+      />
+    </View>
+    <View />
+    <View>
+      <TileAL
+        breakpoint="smallTablet"
+        tileName="support1"
+      />
+    </View>
+    <View />
+    <View>
+      <TileE
+        breakpoint="smallTablet"
+        orientation="landscape"
+        tileName="support2"
+      />
+    </View>
+  </View>
+</View>
+`;
+
+exports[`7. lead two no pic and two - smalltablet 1`] = `
+<View>
+  <View>
+    <View>
+      <TileX
+        breakpoint="smallTablet"
+        orientation="portrait"
+        tileName="lead1"
+      />
+      <View />
+      <TileY
+        breakpoint="smallTablet"
+        orientation="portrait"
+        tileName="lead2"
+      />
+    </View>
+    <View />
+    <View>
+      <TileE
+        breakpoint="smallTablet"
+        orientation="portrait"
+        tileName="support2"
+      />
+      <View />
+      <TileD
+        breakpoint="smallTablet"
+        tileName="support1"
+      />
+    </View>
+  </View>
+</View>
+`;
+
+exports[`8. lead two no pic and two variant 2 - smalltablet 1`] = `
+<View>
+  <View>
+    <View>
+      <TileColStandard
+        breakpoint="smallTablet"
+        tileName="lead1"
+      />
+      <View />
+      <TileColStandard
+        breakpoint="smallTablet"
+        tileName="lead2"
+      />
+    </View>
+    <View />
+    <View>
+      <TileColImageBottom
+        breakpoint="smallTablet"
+        orientation="portrait"
+        tileName="support2"
+      />
+      <View />
+      <TileColStandard
+        breakpoint="smallTablet"
+        orientation="portrait"
+        tileName="support1"
+      />
+    </View>
+  </View>
+</View>
+`;
+
+exports[`9. leaders slice - smalltablet 1`] = `
+<View>
+  <View>
+    <View>
+      <Image
+        resizeMode="contain"
+        source={
+          Object {
+            "testUri": "../../../packages/edition-slices/assets/times-leading-header.png",
+          }
+        }
+      />
+      <View>
+        <Text>
+           Leading Articles 
+        </Text>
+      </View>
+    </View>
+    <View>
+      <View>
+        <TileM
+          breakpoint="smallTablet"
+          tileName="leader2"
+        />
+      </View>
+      <View />
+      <View>
+        <TileM
+          breakpoint="smallTablet"
+          tileName="leader1"
+        />
+      </View>
+      <View />
+      <View>
+        <TileM
+          breakpoint="smallTablet"
+          tileName="leader3"
+        />
+      </View>
+    </View>
+  </View>
+</View>
+`;
+
+exports[`10. secondary one and four - smalltablet 1`] = `
+<View>
+  <View>
+    <View>
+      <TheTimesLogo
+        height={37}
+        width={35}
+      />
+    </View>
+    <View />
+    <View>
+      <View>
+        <TileN
+          breakpoint="smallTablet"
+          tileName="secondary"
+        />
+      </View>
+      <View />
+      <View>
+        <View>
+          <View>
+            <TileO
+              breakpoint="smallTablet"
+              tileName="support1"
+            />
+          </View>
+          <View />
+          <View>
+            <TileO
+              breakpoint="smallTablet"
+              tileName="support2"
+            />
+          </View>
+        </View>
+        <View />
+        <View>
+          <View>
+            <TileO
+              breakpoint="smallTablet"
+              tileName="support3"
+            />
+          </View>
+          <View />
+          <View>
+            <TileO
+              breakpoint="smallTablet"
+              tileName="support4"
+            />
+          </View>
+        </View>
+      </View>
+    </View>
+  </View>
+</View>
+`;
+
+exports[`11. secondary one - smalltablet 1`] = `
+<View>
+  <TileW
+    breakpoint="smallTablet"
+    tileName="secondary"
+  />
+</View>
+`;
+
+exports[`12. supplement secondary one - smalltablet 1`] = `
+<View>
+  <TileBF
+    breakpoint="smallTablet"
+    tileName="secondary"
+  />
+</View>
+`;
+
+exports[`13. secondary four - smalltablet 1`] = `
+<View>
+  <View>
+    <View>
+      <View>
+        <TileAR
+          breakpoint="smallTablet"
+          tileName="secondary1"
+        />
+      </View>
+      <View />
+      <View>
+        <TileAR
+          breakpoint="smallTablet"
+          tileName="secondary2"
+        />
+      </View>
+    </View>
+    <View />
+    <View>
+      <TileB
+        breakpoint="smallTablet"
+        tileName="secondary3"
+      />
+      <View />
+      <TileB
+        breakpoint="smallTablet"
+        tileName="secondary4"
+      />
+    </View>
+  </View>
+</View>
+`;
+
+exports[`14. secondary four - consecutive - smalltablet 1`] = `
+<View>
+  <View>
+    <View>
+      <View>
+        <TileAR
+          breakpoint="smallTablet"
+          tileName="secondary1"
+        />
+      </View>
+      <View />
+      <View>
+        <TileAR
+          breakpoint="smallTablet"
+          tileName="secondary2"
+        />
+      </View>
+    </View>
+    <View />
+    <View>
+      <TileB
+        breakpoint="smallTablet"
+        tileName="secondary3"
+      />
+      <View />
+      <TileB
+        breakpoint="smallTablet"
+        tileName="secondary4"
+      />
+    </View>
+  </View>
+</View>
+`;
+
+exports[`15. secondary four - supplement - smalltablet 1`] = `
+<View>
+  <View>
+    <View>
+      <View>
+        <TileAY
+          breakpoint="smallTablet"
+          tileName="secondary1"
+        />
+      </View>
+      <View />
+      <View>
+        <TileAY
+          breakpoint="smallTablet"
+          tileName="secondary2"
+        />
+      </View>
+      <View />
+      <View>
+        <TileAY
+          breakpoint="smallTablet"
+          tileName="secondary3"
+        />
+      </View>
+      <View />
+      <View>
+        <TileAY
+          breakpoint="smallTablet"
+          tileName="secondary4"
+        />
+      </View>
+    </View>
+  </View>
+</View>
+`;
+
+exports[`16. secondary one and columnist - smalltablet 1`] = `
+<View>
+  <View>
+    <View>
+      <TileAB
+        breakpoint="smallTablet"
+        tileName="columnist"
+      />
+    </View>
+    <View />
+    <View>
+      <TileB
+        breakpoint="smallTablet"
+        tileName="secondary"
+        withMoreTeaser={true}
+      />
+    </View>
+  </View>
+</View>
+`;
+
+exports[`17. secondary two and two - smalltablet 1`] = `
+<View>
+  <View>
+    <View>
+      <View>
+        <TileV
+          tileName="secondary1"
+        />
+      </View>
+      <View />
+      <View>
+        <TileV
+          tileName="secondary2"
+        />
+      </View>
+    </View>
+    <View />
+    <View>
+      <View>
+        <TileG
+          breakpoint="smallTablet"
+          tileName="support1"
+        />
+      </View>
+      <View />
+      <View>
+        <TileG
+          breakpoint="smallTablet"
+          tileName="support2"
+        />
+      </View>
+    </View>
+  </View>
+</View>
+`;
+
+exports[`18. supplement secondary two and two - smalltablet 1`] = `
+<View>
+  <View>
+    <View>
+      <View>
+        <TileBC
+          breakpoint="smallTablet"
+          tileName="secondary1"
+        />
+      </View>
+      <View />
+      <View>
+        <TileBC
+          breakpoint="smallTablet"
+          tileName="secondary2"
+        />
+      </View>
+    </View>
+    <View />
+    <View>
+      <View>
+        <TileBD
+          breakpoint="smallTablet"
+          tileName="support1"
+        />
+      </View>
+      <View />
+      <View>
+        <TileBD
+          breakpoint="smallTablet"
+          tileName="support2"
+        />
+      </View>
+    </View>
+  </View>
+</View>
+`;
+
+exports[`19. lead one and four slice - smalltablet 1`] = `
+<View>
+  <View>
+    <View>
+      <TileAC
+        breakpoint="smallTablet"
+        tileName="lead"
+      />
+    </View>
+    <View />
+    <View>
+      <TileAD
+        breakpoint="smallTablet"
+        tileName="support1"
+      />
+      <View />
+      <TileAD
+        breakpoint="smallTablet"
+        tileName="support2"
+      />
+      <View />
+      <TileAD
+        breakpoint="smallTablet"
+        tileName="support3"
+      />
+      <View />
+      <TileAD
+        breakpoint="smallTablet"
+        tileName="support4"
+      />
+    </View>
+  </View>
+</View>
+`;
+
+exports[`20. supplement lead one and four slice - smalltablet 1`] = `
+<View>
+  <View>
+    <View>
+      <TileAZ
+        breakpoint="smallTablet"
+        tileName="lead"
+      />
+    </View>
+    <View>
+      <View>
+        <TileBA
+          breakpoint="smallTablet"
+          tileName="support1"
+        />
+      </View>
+      <View />
+      <View>
+        <TileBA
+          breakpoint="smallTablet"
+          tileName="support2"
+        />
+      </View>
+      <View />
+      <View>
+        <TileBA
+          breakpoint="smallTablet"
+          tileName="support3"
+        />
+      </View>
+      <View />
+      <View>
+        <TileBA
+          breakpoint="smallTablet"
+          tileName="support4"
+        />
+      </View>
+    </View>
+  </View>
+</View>
+`;
+
+exports[`21. supplement lead one and four slice v2 - smalltablet 1`] = `
+<View>
+  <View>
+    <TileLeadSupplementPortrait
+      breakpoint="smallTablet"
+      tileName="lead"
+    />
+  </View>
+  <View>
+    <View>
+      <View>
+        <View>
+          <TileBC
+            breakpoint="smallTablet"
+            tileName="support1"
+          />
+        </View>
+        <View />
+        <View>
+          <TileBC
+            breakpoint="smallTablet"
+            tileName="support2"
+          />
+        </View>
+      </View>
+      <View />
+      <View>
+        <View>
+          <TileBC
+            breakpoint="smallTablet"
+            tileName="support3"
+          />
+        </View>
+        <View />
+        <View>
+          <TileBC
+            breakpoint="smallTablet"
+            tileName="support4"
+          />
+        </View>
+      </View>
+    </View>
+  </View>
+</View>
+`;
+
+exports[`22. standard slice - smalltablet 1`] = `
+<View>
+  <View>
+    <View>
+      <TileK
+        breakpoint="smallTablet"
+        tileName="standardItem1"
+      />
+      <View />
+      <TileK
+        breakpoint="smallTablet"
+        tileName="standardItem2"
+      />
+      <View />
+      <TileK
+        breakpoint="smallTablet"
+        tileName="standardItem3"
+      />
+      <View />
+      <TileK
+        breakpoint="smallTablet"
+        tileName="standardItem4"
+      />
+      <View />
+      <TileK
+        breakpoint="smallTablet"
+        tileName="standardItem5"
+      />
+    </View>
+  </View>
+</View>
+`;
+
+exports[`23. secondary two no pic and two - smalltablet 1`] = `
+<View>
+  <View>
+    <View>
+      <View>
+        <TileAE
+          breakpoint="smallTablet"
+          tileName="secondary1"
+        />
+      </View>
+      <View />
+      <View>
+        <TileAE
+          breakpoint="smallTablet"
+          tileName="secondary2"
+        />
+      </View>
+    </View>
+    <View />
+    <View>
+      <View>
+        <TileG
+          breakpoint="smallTablet"
+          tileName="support1"
+        />
+      </View>
+      <View />
+      <View>
+        <TileG
+          breakpoint="smallTablet"
+          tileName="support2"
+        />
+      </View>
+    </View>
+  </View>
+</View>
+`;
+
+exports[`24. list two and six no pic - smalltablet 1`] = `
+<View>
+  <View>
+    <View>
+      <TileAS
+        breakpoint="smallTablet"
+        tileName="lead1"
+      />
+    </View>
+    <View />
+    <View>
+      <TileAS
+        breakpoint="smallTablet"
+        tileName="lead2"
+      />
+    </View>
+    <View />
+    <View>
+      <View>
+        <View>
+          <TileL
+            breakpoint="smallTablet"
+            tileName="support1"
+          />
+        </View>
+        <View />
+        <View>
+          <TileL
+            breakpoint="smallTablet"
+            tileName="support2"
+          />
+        </View>
+      </View>
+      <View />
+      <View>
+        <View>
+          <TileL
+            breakpoint="smallTablet"
+            tileName="support3"
+          />
+        </View>
+        <View />
+        <View>
+          <TileL
+            breakpoint="smallTablet"
+            tileName="support4"
+          />
+        </View>
+      </View>
+      <View />
+      <View>
+        <View>
+          <TileL
+            breakpoint="smallTablet"
+            tileName="support5"
+          />
+        </View>
+        <View />
+        <View>
+          <TileL
+            breakpoint="smallTablet"
+            tileName="support6"
+          />
+        </View>
+      </View>
+    </View>
+  </View>
+</View>
+`;
+
+exports[`25. puzzle - smalltablet 1`] = `
+<View>
+  <View>
+    <View>
+      <TileAK
+        breakpoint="smallTablet"
+        id="0"
+        image={
+          Object {
+            "__typename": "Image",
+            "crop11": null,
+            "crop169": null,
+            "crop23": null,
+            "crop32": Object {
+              "url": "https://www.thetimes.co.uk/imageserver/image/%2Fpuzzles%2Ficons%2F33b27655-dcc9-421f-906f-b2b10dd26865.png?crop=1250%2C833%2C0%2C0",
+            },
+            "crop45": null,
+            "crop54": null,
+            "crops": Array [],
+            "id": "522abf2c-e752-11e8-9f32-f2801f1b9fd1",
+          }
+        }
+        title="Times Concise medium No 7881"
+        url="/crossword/123"
+      />
+    </View>
+    <View>
+      <TileAK
+        breakpoint="smallTablet"
+        id="1"
+        image={
+          Object {
+            "__typename": "Image",
+            "crop11": null,
+            "crop169": null,
+            "crop23": null,
+            "crop32": Object {
+              "url": "https://www.thetimes.co.uk/imageserver/image/%2Fpuzzles%2Ficons%2F33b27655-dcc9-421f-906f-b2b10dd26865.png?crop=1250%2C833%2C0%2C0",
+            },
+            "crop45": null,
+            "crop54": null,
+            "crops": Array [],
+            "id": "522abf2c-e752-11e8-9f32-f2801f1b9fd1",
+          }
+        }
+        title="Times Concise medium No 7881"
+        url="/crossword/123"
+      />
+    </View>
+    <View>
+      <TileAK
+        breakpoint="smallTablet"
+        id="2"
+        image={
+          Object {
+            "__typename": "Image",
+            "crop11": null,
+            "crop169": null,
+            "crop23": null,
+            "crop32": Object {
+              "url": "https://www.thetimes.co.uk/imageserver/image/%2Fpuzzles%2Ficons%2F33b27655-dcc9-421f-906f-b2b10dd26865.png?crop=1250%2C833%2C0%2C0",
+            },
+            "crop45": null,
+            "crop54": null,
+            "crops": Array [],
+            "id": "522abf2c-e752-11e8-9f32-f2801f1b9fd1",
+          }
+        }
+        title="Times Concise medium No 7881"
+        url="/crossword/123"
+      />
+    </View>
+  </View>
+</View>
+`;
+
+exports[`26. front lead two - portrait - smalltablet 1`] = `
+<View>
+  <View>
+    <View>
+      <View>
+        <TileHFront
+          orientation="portrait"
+          tileName="lead1"
+        />
+      </View>
+      <View />
+      <View>
+        <TileGFront
+          orientation="portrait"
+          tileName="lead2"
+        />
+      </View>
+    </View>
+    <View>
+      <InTodaysEdition
+        orientation="portrait"
+      />
+    </View>
+  </View>
+</View>
+`;
+
+exports[`27. front lead two - landscape - smalltablet 1`] = `
+<View>
+  <View>
+    <View>
+      <View>
+        <TileHFront
+          orientation="landscape"
+          tileName="lead1"
+        />
+      </View>
+      <View />
+      <View>
+        <TileGFront
+          orientation="landscape"
+          tileName="lead2"
+        />
+      </View>
+      <View />
+      <View>
+        <InTodaysEdition
+          orientation="landscape"
+        />
+      </View>
+    </View>
+  </View>
+</View>
+`;
+
+exports[`28. front lead one and one - portrait - smalltablet 1`] = `
+<View>
+  <View>
+    <View>
+      <View>
+        <TileAFront
+          orientation="portrait"
+          tileName="lead"
+        />
+      </View>
+      <View />
+      <View>
+        <TileBFront
+          orientation="portrait"
+          showKeyline={true}
+          tileName="support"
+        />
+      </View>
+    </View>
+    <View>
+      <InTodaysEdition
+        orientation="portrait"
+      />
+    </View>
+  </View>
+</View>
+`;
+
+exports[`29. front lead one and one - landscape - smalltablet 1`] = `
+<View>
+  <View>
+    <View>
+      <View>
+        <TileAFront
+          orientation="landscape"
+          tileName="lead"
+        />
+      </View>
+      <View />
+      <View>
+        <TileBFront
+          orientation="landscape"
+          showKeyline={false}
+          tileName="support"
+        />
+      </View>
+      <View />
+      <View>
+        <InTodaysEdition
+          orientation="landscape"
+        />
+      </View>
+    </View>
+  </View>
+</View>
+`;
+
+exports[`30. front lead one - portrait - smalltablet 1`] = `
+<View>
+  <View>
+    <View>
+      <TileFFront
+        orientation="portrait"
+        tileName="lead"
+      />
+    </View>
+    <View>
+      <InTodaysEdition
+        orientation="portrait"
+      />
+    </View>
+  </View>
+</View>
+`;
+
+exports[`31. front lead one - landscape - smalltablet 1`] = `
+<View>
+  <View>
+    <View>
+      <View>
+        <TileFFront
+          orientation="landscape"
+          tileName="lead"
+        />
+      </View>
+      <View />
+      <View>
+        <InTodaysEdition
+          orientation="landscape"
+        />
+      </View>
+    </View>
+  </View>
+</View>
+`;
+
+exports[`32. top secondary landscape (from topsecondaryfourslice) - smalltablet 1`] = `
+<View>
+  <View>
+    <View>
+      <TileAU
+        breakpoint="smallTablet"
+        tileName="lead"
+      />
+    </View>
+    <View />
+    <View>
+      <TileAV
+        breakpoint="smallTablet"
+        tileName="support1"
+      />
+      <View />
+      <TileAV
+        breakpoint="smallTablet"
+        tileName="support2"
+      />
+      <View />
+      <TileAV
+        breakpoint="smallTablet"
+        tileName="support3"
+      />
+    </View>
+  </View>
+</View>
+`;
+
+exports[`33. top secondary portrait (from topsecondaryfourslice) - smalltablet 1`] = `
+<View>
+  <View>
+    <View>
+      <TileAT
+        breakpoint="smallTablet"
+        tileName="lead"
+      />
+    </View>
+    <View />
+    <View>
+      <TileAV
+        breakpoint="smallTablet"
+        tileName="support1"
+      />
+      <View />
+      <TileAV
+        breakpoint="smallTablet"
+        tileName="support2"
+      />
+      <View />
+      <TileAV
+        breakpoint="smallTablet"
+        tileName="support3"
+      />
+    </View>
+  </View>
+</View>
+`;
+
+exports[`34. top secondary landscape (from topsecondarytwoandtwoslice) - smalltablet 1`] = `
+<View>
+  <View>
+    <View>
+      <TileAU
+        breakpoint="smallTablet"
+        tileName="lead"
+      />
+    </View>
+    <View />
+    <View>
+      <TileAV
+        breakpoint="smallTablet"
+        tileName="support1"
+      />
+      <View />
+      <TileAV
+        breakpoint="smallTablet"
+        tileName="support2"
+      />
+      <View />
+      <TileAV
+        breakpoint="smallTablet"
+        tileName="support3"
+      />
+    </View>
+  </View>
+</View>
+`;
+
+exports[`35. top secondary portrait (from topsecondarytwoandtwoslice) - smalltablet 1`] = `
+<View>
+  <View>
+    <View>
+      <TileAT
+        breakpoint="smallTablet"
+        tileName="lead"
+      />
+    </View>
+    <View />
+    <View>
+      <TileAV
+        breakpoint="smallTablet"
+        tileName="support1"
+      />
+      <View />
+      <TileAV
+        breakpoint="smallTablet"
+        tileName="support2"
+      />
+      <View />
+      <TileAV
+        breakpoint="smallTablet"
+        tileName="support3"
+      />
+    </View>
+  </View>
+</View>
+`;
+
+exports[`36. top secondary landscape (from topsecondarytwonopicandtwoslice) - smalltablet 1`] = `
+<View>
+  <View>
+    <View>
+      <TileAU
+        breakpoint="smallTablet"
+        tileName="lead"
+      />
+    </View>
+    <View />
+    <View>
+      <TileAV
+        breakpoint="smallTablet"
+        tileName="support1"
+      />
+      <View />
+      <TileAV
+        breakpoint="smallTablet"
+        tileName="support2"
+      />
+      <View />
+      <TileAV
+        breakpoint="smallTablet"
+        tileName="support3"
+      />
+    </View>
+  </View>
+</View>
+`;
+
+exports[`37. top secondary portrait (from topsecondarytwonopicandtwoslice) - smalltablet 1`] = `
+<View>
+  <View>
+    <View>
+      <TileAT
+        breakpoint="smallTablet"
+        tileName="lead"
+      />
+    </View>
+    <View />
+    <View>
+      <TileAV
+        breakpoint="smallTablet"
+        tileName="support1"
+      />
+      <View />
+      <TileAV
+        breakpoint="smallTablet"
+        tileName="support2"
+      />
+      <View />
+      <TileAV
+        breakpoint="smallTablet"
+        tileName="support3"
+      />
+    </View>
+  </View>
+</View>
+`;
+
+exports[`38. comment lead and cartoon - medium 1`] = `
 <View>
   <View>
     <View>
@@ -20,7 +1241,7 @@ exports[`1. comment lead and cartoon - medium 1`] = `
 </View>
 `;
 
-exports[`2. daily universal register - medium 1`] = `
+exports[`39. daily universal register - medium 1`] = `
 <View>
   <View>
     <Image
@@ -73,7 +1294,7 @@ exports[`2. daily universal register - medium 1`] = `
 </View>
 `;
 
-exports[`3. lead one and one - medium 1`] = `
+exports[`40. lead one and one - medium 1`] = `
 <View>
   <View>
     <View>
@@ -95,7 +1316,7 @@ exports[`3. lead one and one - medium 1`] = `
 </View>
 `;
 
-exports[`4. lead one and one - supplement - medium 1`] = `
+exports[`41. lead one and one - supplement - medium 1`] = `
 <View>
   <View>
     <View>
@@ -124,7 +1345,7 @@ exports[`4. lead one and one - supplement - medium 1`] = `
 </View>
 `;
 
-exports[`5. lead one full width - medium 1`] = `
+exports[`42. lead one full width - medium 1`] = `
 <View>
   <TileR
     breakpoint="medium"
@@ -133,7 +1354,7 @@ exports[`5. lead one full width - medium 1`] = `
 </View>
 `;
 
-exports[`6. lead two no pic and two - medium 1`] = `
+exports[`43. lead two no pic and two - medium 1`] = `
 <View>
   <View>
     <View>
@@ -168,7 +1389,7 @@ exports[`6. lead two no pic and two - medium 1`] = `
 </View>
 `;
 
-exports[`7. lead two no pic and two - medium 1`] = `
+exports[`44. lead two no pic and two - medium 1`] = `
 <View>
   <View>
     <View>
@@ -201,7 +1422,7 @@ exports[`7. lead two no pic and two - medium 1`] = `
 </View>
 `;
 
-exports[`8. lead two no pic and two variant 2 - medium 1`] = `
+exports[`45. lead two no pic and two variant 2 - medium 1`] = `
 <View>
   <View>
     <View>
@@ -233,7 +1454,7 @@ exports[`8. lead two no pic and two variant 2 - medium 1`] = `
 </View>
 `;
 
-exports[`9. leaders slice - medium 1`] = `
+exports[`46. leaders slice - medium 1`] = `
 <View>
   <View>
     <View>
@@ -277,7 +1498,7 @@ exports[`9. leaders slice - medium 1`] = `
 </View>
 `;
 
-exports[`10. secondary one and four - medium 1`] = `
+exports[`47. secondary one and four - medium 1`] = `
 <View>
   <View>
     <View>
@@ -333,7 +1554,7 @@ exports[`10. secondary one and four - medium 1`] = `
 </View>
 `;
 
-exports[`11. secondary one - medium 1`] = `
+exports[`48. secondary one - medium 1`] = `
 <View>
   <TileW
     breakpoint="medium"
@@ -342,7 +1563,7 @@ exports[`11. secondary one - medium 1`] = `
 </View>
 `;
 
-exports[`12. supplement secondary one - medium 1`] = `
+exports[`49. supplement secondary one - medium 1`] = `
 <View>
   <TileBF
     breakpoint="medium"
@@ -351,7 +1572,7 @@ exports[`12. supplement secondary one - medium 1`] = `
 </View>
 `;
 
-exports[`13. secondary four - medium 1`] = `
+exports[`50. secondary four - medium 1`] = `
 <View>
   <View>
     <View>
@@ -385,7 +1606,7 @@ exports[`13. secondary four - medium 1`] = `
 </View>
 `;
 
-exports[`14. secondary four - consecutive - medium 1`] = `
+exports[`51. secondary four - consecutive - medium 1`] = `
 <View>
   <View>
     <View>
@@ -419,7 +1640,7 @@ exports[`14. secondary four - consecutive - medium 1`] = `
 </View>
 `;
 
-exports[`15. secondary four - supplement - medium 1`] = `
+exports[`52. secondary four - supplement - medium 1`] = `
 <View>
   <View>
     <View>
@@ -455,7 +1676,7 @@ exports[`15. secondary four - supplement - medium 1`] = `
 </View>
 `;
 
-exports[`16. secondary one and columnist - medium 1`] = `
+exports[`53. secondary one and columnist - medium 1`] = `
 <View>
   <View>
     <View>
@@ -476,7 +1697,7 @@ exports[`16. secondary one and columnist - medium 1`] = `
 </View>
 `;
 
-exports[`17. secondary two and two - medium 1`] = `
+exports[`54. secondary two and two - medium 1`] = `
 <View>
   <View>
     <View>
@@ -512,7 +1733,7 @@ exports[`17. secondary two and two - medium 1`] = `
 </View>
 `;
 
-exports[`18. supplement secondary two and two - medium 1`] = `
+exports[`55. supplement secondary two and two - medium 1`] = `
 <View>
   <View>
     <View>
@@ -550,7 +1771,7 @@ exports[`18. supplement secondary two and two - medium 1`] = `
 </View>
 `;
 
-exports[`19. lead one and four slice - medium 1`] = `
+exports[`56. lead one and four slice - medium 1`] = `
 <View>
   <View>
     <View>
@@ -585,7 +1806,7 @@ exports[`19. lead one and four slice - medium 1`] = `
 </View>
 `;
 
-exports[`20. supplement lead one and four slice - medium 1`] = `
+exports[`57. supplement lead one and four slice - medium 1`] = `
 <View>
   <View>
     <View>
@@ -627,7 +1848,7 @@ exports[`20. supplement lead one and four slice - medium 1`] = `
 </View>
 `;
 
-exports[`21. supplement lead one and four slice v2 - medium 1`] = `
+exports[`58. supplement lead one and four slice v2 - medium 1`] = `
 <View>
   <View>
     <TileLeadSupplementPortrait
@@ -673,7 +1894,7 @@ exports[`21. supplement lead one and four slice v2 - medium 1`] = `
 </View>
 `;
 
-exports[`22. standard slice - medium 1`] = `
+exports[`59. standard slice - medium 1`] = `
 <View>
   <View>
     <View>
@@ -706,7 +1927,7 @@ exports[`22. standard slice - medium 1`] = `
 </View>
 `;
 
-exports[`23. secondary two no pic and two - medium 1`] = `
+exports[`60. secondary two no pic and two - medium 1`] = `
 <View>
   <View>
     <View>
@@ -744,7 +1965,7 @@ exports[`23. secondary two no pic and two - medium 1`] = `
 </View>
 `;
 
-exports[`24. list two and six no pic - medium 1`] = `
+exports[`61. list two and six no pic - medium 1`] = `
 <View>
   <View>
     <View>
@@ -814,7 +2035,7 @@ exports[`24. list two and six no pic - medium 1`] = `
 </View>
 `;
 
-exports[`25. puzzle - medium 1`] = `
+exports[`62. puzzle - medium 1`] = `
 <View>
   <View>
     <View>
@@ -890,7 +2111,7 @@ exports[`25. puzzle - medium 1`] = `
 </View>
 `;
 
-exports[`26. front lead two - portrait - medium 1`] = `
+exports[`63. front lead two - portrait - medium 1`] = `
 <View>
   <View>
     <View>
@@ -917,7 +2138,7 @@ exports[`26. front lead two - portrait - medium 1`] = `
 </View>
 `;
 
-exports[`27. front lead two - landscape - medium 1`] = `
+exports[`64. front lead two - landscape - medium 1`] = `
 <View>
   <View>
     <View>
@@ -945,7 +2166,7 @@ exports[`27. front lead two - landscape - medium 1`] = `
 </View>
 `;
 
-exports[`28. front lead one and one - portrait - medium 1`] = `
+exports[`65. front lead one and one - portrait - medium 1`] = `
 <View>
   <View>
     <View>
@@ -973,7 +2194,7 @@ exports[`28. front lead one and one - portrait - medium 1`] = `
 </View>
 `;
 
-exports[`29. front lead one and one - landscape - medium 1`] = `
+exports[`66. front lead one and one - landscape - medium 1`] = `
 <View>
   <View>
     <View>
@@ -1002,7 +2223,7 @@ exports[`29. front lead one and one - landscape - medium 1`] = `
 </View>
 `;
 
-exports[`30. front lead one - portrait - medium 1`] = `
+exports[`67. front lead one - portrait - medium 1`] = `
 <View>
   <View>
     <View>
@@ -1020,7 +2241,7 @@ exports[`30. front lead one - portrait - medium 1`] = `
 </View>
 `;
 
-exports[`31. front lead one - landscape - medium 1`] = `
+exports[`68. front lead one - landscape - medium 1`] = `
 <View>
   <View>
     <View>
@@ -1041,7 +2262,7 @@ exports[`31. front lead one - landscape - medium 1`] = `
 </View>
 `;
 
-exports[`32. top secondary landscape (from topsecondaryfourslice) - medium 1`] = `
+exports[`69. top secondary landscape (from topsecondaryfourslice) - medium 1`] = `
 <View>
   <View>
     <View>
@@ -1071,7 +2292,7 @@ exports[`32. top secondary landscape (from topsecondaryfourslice) - medium 1`] =
 </View>
 `;
 
-exports[`33. top secondary portrait (from topsecondaryfourslice) - medium 1`] = `
+exports[`70. top secondary portrait (from topsecondaryfourslice) - medium 1`] = `
 <View>
   <View>
     <View>
@@ -1101,7 +2322,7 @@ exports[`33. top secondary portrait (from topsecondaryfourslice) - medium 1`] = 
 </View>
 `;
 
-exports[`34. top secondary landscape (from topsecondarytwoandtwoslice) - medium 1`] = `
+exports[`71. top secondary landscape (from topsecondarytwoandtwoslice) - medium 1`] = `
 <View>
   <View>
     <View>
@@ -1131,7 +2352,7 @@ exports[`34. top secondary landscape (from topsecondarytwoandtwoslice) - medium 
 </View>
 `;
 
-exports[`35. top secondary portrait (from topsecondarytwoandtwoslice) - medium 1`] = `
+exports[`72. top secondary portrait (from topsecondarytwoandtwoslice) - medium 1`] = `
 <View>
   <View>
     <View>
@@ -1161,7 +2382,7 @@ exports[`35. top secondary portrait (from topsecondarytwoandtwoslice) - medium 1
 </View>
 `;
 
-exports[`36. top secondary landscape (from topsecondarytwonopicandtwoslice) - medium 1`] = `
+exports[`73. top secondary landscape (from topsecondarytwonopicandtwoslice) - medium 1`] = `
 <View>
   <View>
     <View>
@@ -1191,7 +2412,7 @@ exports[`36. top secondary landscape (from topsecondarytwonopicandtwoslice) - me
 </View>
 `;
 
-exports[`37. top secondary portrait (from topsecondarytwonopicandtwoslice) - medium 1`] = `
+exports[`74. top secondary portrait (from topsecondarytwonopicandtwoslice) - medium 1`] = `
 <View>
   <View>
     <View>
@@ -1221,7 +2442,7 @@ exports[`37. top secondary portrait (from topsecondarytwonopicandtwoslice) - med
 </View>
 `;
 
-exports[`38. comment lead and cartoon - wide 1`] = `
+exports[`75. comment lead and cartoon - wide 1`] = `
 <View>
   <View>
     <View>
@@ -1241,7 +2462,7 @@ exports[`38. comment lead and cartoon - wide 1`] = `
 </View>
 `;
 
-exports[`39. daily universal register - wide 1`] = `
+exports[`76. daily universal register - wide 1`] = `
 <View>
   <View>
     <Image
@@ -1294,7 +2515,7 @@ exports[`39. daily universal register - wide 1`] = `
 </View>
 `;
 
-exports[`40. lead one and one - wide 1`] = `
+exports[`77. lead one and one - wide 1`] = `
 <View>
   <View>
     <View>
@@ -1315,7 +2536,7 @@ exports[`40. lead one and one - wide 1`] = `
 </View>
 `;
 
-exports[`41. lead one and one - supplement - wide 1`] = `
+exports[`78. lead one and one - supplement - wide 1`] = `
 <View>
   <View>
     <View>
@@ -1344,7 +2565,7 @@ exports[`41. lead one and one - supplement - wide 1`] = `
 </View>
 `;
 
-exports[`42. lead one full width - wide 1`] = `
+exports[`79. lead one full width - wide 1`] = `
 <View>
   <TileR
     breakpoint="wide"
@@ -1353,7 +2574,7 @@ exports[`42. lead one full width - wide 1`] = `
 </View>
 `;
 
-exports[`43. lead two no pic and two - wide 1`] = `
+exports[`80. lead two no pic and two - wide 1`] = `
 <View>
   <View>
     <View>
@@ -1388,7 +2609,7 @@ exports[`43. lead two no pic and two - wide 1`] = `
 </View>
 `;
 
-exports[`44. lead two no pic and two - wide 1`] = `
+exports[`81. lead two no pic and two - wide 1`] = `
 <View>
   <View>
     <View>
@@ -1421,7 +2642,7 @@ exports[`44. lead two no pic and two - wide 1`] = `
 </View>
 `;
 
-exports[`45. lead two no pic and two variant 2 - wide 1`] = `
+exports[`82. lead two no pic and two variant 2 - wide 1`] = `
 <View>
   <View>
     <View>
@@ -1453,7 +2674,7 @@ exports[`45. lead two no pic and two variant 2 - wide 1`] = `
 </View>
 `;
 
-exports[`46. leaders slice - wide 1`] = `
+exports[`83. leaders slice - wide 1`] = `
 <View>
   <View>
     <View>
@@ -1497,7 +2718,7 @@ exports[`46. leaders slice - wide 1`] = `
 </View>
 `;
 
-exports[`47. secondary one and four - wide 1`] = `
+exports[`84. secondary one and four - wide 1`] = `
 <View>
   <View>
     <View>
@@ -1553,7 +2774,7 @@ exports[`47. secondary one and four - wide 1`] = `
 </View>
 `;
 
-exports[`48. secondary one - wide 1`] = `
+exports[`85. secondary one - wide 1`] = `
 <View>
   <TileW
     breakpoint="wide"
@@ -1562,7 +2783,7 @@ exports[`48. secondary one - wide 1`] = `
 </View>
 `;
 
-exports[`49. supplement secondary one - wide 1`] = `
+exports[`86. supplement secondary one - wide 1`] = `
 <View>
   <TileBF
     breakpoint="wide"
@@ -1571,7 +2792,7 @@ exports[`49. supplement secondary one - wide 1`] = `
 </View>
 `;
 
-exports[`50. secondary four - wide 1`] = `
+exports[`87. secondary four - wide 1`] = `
 <View>
   <View>
     <View>
@@ -1617,7 +2838,7 @@ exports[`50. secondary four - wide 1`] = `
 </View>
 `;
 
-exports[`51. secondary four - consecutive - wide 1`] = `
+exports[`88. secondary four - consecutive - wide 1`] = `
 <View>
   <View>
     <View>
@@ -1663,7 +2884,7 @@ exports[`51. secondary four - consecutive - wide 1`] = `
 </View>
 `;
 
-exports[`52. secondary four - supplement - wide 1`] = `
+exports[`89. secondary four - supplement - wide 1`] = `
 <View>
   <View>
     <View>
@@ -1699,7 +2920,7 @@ exports[`52. secondary four - supplement - wide 1`] = `
 </View>
 `;
 
-exports[`53. secondary one and columnist - wide 1`] = `
+exports[`90. secondary one and columnist - wide 1`] = `
 <View>
   <View>
     <View>
@@ -1720,7 +2941,7 @@ exports[`53. secondary one and columnist - wide 1`] = `
 </View>
 `;
 
-exports[`54. secondary two and two - wide 1`] = `
+exports[`91. secondary two and two - wide 1`] = `
 <View>
   <View>
     <View>
@@ -1750,7 +2971,7 @@ exports[`54. secondary two and two - wide 1`] = `
 </View>
 `;
 
-exports[`55. supplement secondary two and two - wide 1`] = `
+exports[`92. supplement secondary two and two - wide 1`] = `
 <View>
   <View>
     <View>
@@ -1788,7 +3009,7 @@ exports[`55. supplement secondary two and two - wide 1`] = `
 </View>
 `;
 
-exports[`56. lead one and four slice - wide 1`] = `
+exports[`93. lead one and four slice - wide 1`] = `
 <View>
   <View>
     <View>
@@ -1823,7 +3044,7 @@ exports[`56. lead one and four slice - wide 1`] = `
 </View>
 `;
 
-exports[`57. supplement lead one and four slice - wide 1`] = `
+exports[`94. supplement lead one and four slice - wide 1`] = `
 <View>
   <View>
     <View>
@@ -1865,7 +3086,7 @@ exports[`57. supplement lead one and four slice - wide 1`] = `
 </View>
 `;
 
-exports[`58. supplement lead one and four slice v2 - wide 1`] = `
+exports[`95. supplement lead one and four slice v2 - wide 1`] = `
 <View>
   <View>
     <TileLeadSupplementPortrait
@@ -1911,7 +3132,7 @@ exports[`58. supplement lead one and four slice v2 - wide 1`] = `
 </View>
 `;
 
-exports[`59. standard slice - wide 1`] = `
+exports[`96. standard slice - wide 1`] = `
 <View>
   <View>
     <View>
@@ -1944,7 +3165,7 @@ exports[`59. standard slice - wide 1`] = `
 </View>
 `;
 
-exports[`60. secondary two no pic and two - wide 1`] = `
+exports[`97. secondary two no pic and two - wide 1`] = `
 <View>
   <View>
     <View>
@@ -1978,7 +3199,7 @@ exports[`60. secondary two no pic and two - wide 1`] = `
 </View>
 `;
 
-exports[`61. list two and six no pic - wide 1`] = `
+exports[`98. list two and six no pic - wide 1`] = `
 <View>
   <View>
     <View>
@@ -2048,7 +3269,7 @@ exports[`61. list two and six no pic - wide 1`] = `
 </View>
 `;
 
-exports[`62. puzzle - wide 1`] = `
+exports[`99. puzzle - wide 1`] = `
 <View>
   <View>
     <View>
@@ -2124,7 +3345,7 @@ exports[`62. puzzle - wide 1`] = `
 </View>
 `;
 
-exports[`63. front lead two - portrait - wide 1`] = `
+exports[`100. front lead two - portrait - wide 1`] = `
 <View>
   <View>
     <View>
@@ -2151,7 +3372,7 @@ exports[`63. front lead two - portrait - wide 1`] = `
 </View>
 `;
 
-exports[`64. front lead two - landscape - wide 1`] = `
+exports[`101. front lead two - landscape - wide 1`] = `
 <View>
   <View>
     <View>
@@ -2179,7 +3400,7 @@ exports[`64. front lead two - landscape - wide 1`] = `
 </View>
 `;
 
-exports[`65. front lead one and one - portrait - wide 1`] = `
+exports[`102. front lead one and one - portrait - wide 1`] = `
 <View>
   <View>
     <View>
@@ -2207,7 +3428,7 @@ exports[`65. front lead one and one - portrait - wide 1`] = `
 </View>
 `;
 
-exports[`66. front lead one and one - landscape - wide 1`] = `
+exports[`103. front lead one and one - landscape - wide 1`] = `
 <View>
   <View>
     <View>
@@ -2236,7 +3457,7 @@ exports[`66. front lead one and one - landscape - wide 1`] = `
 </View>
 `;
 
-exports[`67. front lead one - portrait - wide 1`] = `
+exports[`104. front lead one - portrait - wide 1`] = `
 <View>
   <View>
     <View>
@@ -2254,7 +3475,7 @@ exports[`67. front lead one - portrait - wide 1`] = `
 </View>
 `;
 
-exports[`68. front lead one - landscape - wide 1`] = `
+exports[`105. front lead one - landscape - wide 1`] = `
 <View>
   <View>
     <View>
@@ -2275,7 +3496,7 @@ exports[`68. front lead one - landscape - wide 1`] = `
 </View>
 `;
 
-exports[`69. top secondary landscape (from topsecondaryfourslice) - wide 1`] = `
+exports[`106. top secondary landscape (from topsecondaryfourslice) - wide 1`] = `
 <View>
   <View>
     <View>
@@ -2305,7 +3526,7 @@ exports[`69. top secondary landscape (from topsecondaryfourslice) - wide 1`] = `
 </View>
 `;
 
-exports[`70. top secondary portrait (from topsecondaryfourslice) - wide 1`] = `
+exports[`107. top secondary portrait (from topsecondaryfourslice) - wide 1`] = `
 <View>
   <View>
     <View>
@@ -2335,7 +3556,7 @@ exports[`70. top secondary portrait (from topsecondaryfourslice) - wide 1`] = `
 </View>
 `;
 
-exports[`71. top secondary landscape (from topsecondarytwoandtwoslice) - wide 1`] = `
+exports[`108. top secondary landscape (from topsecondarytwoandtwoslice) - wide 1`] = `
 <View>
   <View>
     <View>
@@ -2365,7 +3586,7 @@ exports[`71. top secondary landscape (from topsecondarytwoandtwoslice) - wide 1`
 </View>
 `;
 
-exports[`72. top secondary portrait (from topsecondarytwoandtwoslice) - wide 1`] = `
+exports[`109. top secondary portrait (from topsecondarytwoandtwoslice) - wide 1`] = `
 <View>
   <View>
     <View>
@@ -2395,7 +3616,7 @@ exports[`72. top secondary portrait (from topsecondarytwoandtwoslice) - wide 1`]
 </View>
 `;
 
-exports[`73. top secondary landscape (from topsecondarytwonopicandtwoslice) - wide 1`] = `
+exports[`110. top secondary landscape (from topsecondarytwonopicandtwoslice) - wide 1`] = `
 <View>
   <View>
     <View>
@@ -2425,7 +3646,7 @@ exports[`73. top secondary landscape (from topsecondarytwonopicandtwoslice) - wi
 </View>
 `;
 
-exports[`74. top secondary portrait (from topsecondarytwonopicandtwoslice) - wide 1`] = `
+exports[`111. top secondary portrait (from topsecondarytwonopicandtwoslice) - wide 1`] = `
 <View>
   <View>
     <View>
@@ -2455,7 +3676,7 @@ exports[`74. top secondary portrait (from topsecondarytwonopicandtwoslice) - wid
 </View>
 `;
 
-exports[`75. comment lead and cartoon - huge 1`] = `
+exports[`112. comment lead and cartoon - huge 1`] = `
 <View>
   <View>
     <View>
@@ -2477,7 +3698,7 @@ exports[`75. comment lead and cartoon - huge 1`] = `
 </View>
 `;
 
-exports[`76. daily universal register - huge 1`] = `
+exports[`113. daily universal register - huge 1`] = `
 <View>
   <View>
     <View>
@@ -2532,7 +3753,7 @@ exports[`76. daily universal register - huge 1`] = `
 </View>
 `;
 
-exports[`77. lead one and one - huge 1`] = `
+exports[`114. lead one and one - huge 1`] = `
 <View>
   <View>
     <View>
@@ -2555,7 +3776,7 @@ exports[`77. lead one and one - huge 1`] = `
 </View>
 `;
 
-exports[`78. lead one and one - supplement - huge 1`] = `
+exports[`115. lead one and one - supplement - huge 1`] = `
 <View>
   <View>
     <View>
@@ -2586,7 +3807,7 @@ exports[`78. lead one and one - supplement - huge 1`] = `
 </View>
 `;
 
-exports[`79. lead one full width - huge 1`] = `
+exports[`116. lead one full width - huge 1`] = `
 <View>
   <View>
     <TileR
@@ -2597,7 +3818,7 @@ exports[`79. lead one full width - huge 1`] = `
 </View>
 `;
 
-exports[`80. lead two no pic and two - huge 1`] = `
+exports[`117. lead two no pic and two - huge 1`] = `
 <View>
   <View>
     <View>
@@ -2634,7 +3855,7 @@ exports[`80. lead two no pic and two - huge 1`] = `
 </View>
 `;
 
-exports[`81. lead two no pic and two - huge 1`] = `
+exports[`118. lead two no pic and two - huge 1`] = `
 <View>
   <View>
     <View>
@@ -2669,7 +3890,7 @@ exports[`81. lead two no pic and two - huge 1`] = `
 </View>
 `;
 
-exports[`82. lead two no pic and two variant 2 - huge 1`] = `
+exports[`119. lead two no pic and two variant 2 - huge 1`] = `
 <View>
   <View>
     <View>
@@ -2703,7 +3924,7 @@ exports[`82. lead two no pic and two variant 2 - huge 1`] = `
 </View>
 `;
 
-exports[`83. leaders slice - huge 1`] = `
+exports[`120. leaders slice - huge 1`] = `
 <View>
   <View>
     <View>
@@ -2749,7 +3970,7 @@ exports[`83. leaders slice - huge 1`] = `
 </View>
 `;
 
-exports[`84. secondary one and four - huge 1`] = `
+exports[`121. secondary one and four - huge 1`] = `
 <View>
   <View>
     <View>
@@ -2807,7 +4028,7 @@ exports[`84. secondary one and four - huge 1`] = `
 </View>
 `;
 
-exports[`85. secondary one - huge 1`] = `
+exports[`122. secondary one - huge 1`] = `
 <View>
   <View>
     <TileW
@@ -2818,7 +4039,7 @@ exports[`85. secondary one - huge 1`] = `
 </View>
 `;
 
-exports[`86. supplement secondary one - huge 1`] = `
+exports[`123. supplement secondary one - huge 1`] = `
 <View>
   <View>
     <TileBF
@@ -2829,7 +4050,7 @@ exports[`86. supplement secondary one - huge 1`] = `
 </View>
 `;
 
-exports[`87. secondary four - huge 1`] = `
+exports[`124. secondary four - huge 1`] = `
 <View>
   <View>
     <View>
@@ -2877,7 +4098,7 @@ exports[`87. secondary four - huge 1`] = `
 </View>
 `;
 
-exports[`88. secondary four - consecutive - huge 1`] = `
+exports[`125. secondary four - consecutive - huge 1`] = `
 <View>
   <View>
     <View>
@@ -2925,7 +4146,7 @@ exports[`88. secondary four - consecutive - huge 1`] = `
 </View>
 `;
 
-exports[`89. secondary four - supplement - huge 1`] = `
+exports[`126. secondary four - supplement - huge 1`] = `
 <View>
   <View>
     <View>
@@ -2963,7 +4184,7 @@ exports[`89. secondary four - supplement - huge 1`] = `
 </View>
 `;
 
-exports[`90. secondary one and columnist - huge 1`] = `
+exports[`127. secondary one and columnist - huge 1`] = `
 <View>
   <View>
     <View>
@@ -2986,7 +4207,7 @@ exports[`90. secondary one and columnist - huge 1`] = `
 </View>
 `;
 
-exports[`91. secondary two and two - huge 1`] = `
+exports[`128. secondary two and two - huge 1`] = `
 <View>
   <View>
     <View>
@@ -3018,7 +4239,7 @@ exports[`91. secondary two and two - huge 1`] = `
 </View>
 `;
 
-exports[`92. supplement secondary two and two - huge 1`] = `
+exports[`129. supplement secondary two and two - huge 1`] = `
 <View>
   <View>
     <View>
@@ -3052,7 +4273,7 @@ exports[`92. supplement secondary two and two - huge 1`] = `
 </View>
 `;
 
-exports[`93. lead one and four slice - huge 1`] = `
+exports[`130. lead one and four slice - huge 1`] = `
 <View>
   <View>
     <View>
@@ -3089,7 +4310,7 @@ exports[`93. lead one and four slice - huge 1`] = `
 </View>
 `;
 
-exports[`94. supplement lead one and four slice - huge 1`] = `
+exports[`131. supplement lead one and four slice - huge 1`] = `
 <View>
   <View>
     <View>
@@ -3133,7 +4354,7 @@ exports[`94. supplement lead one and four slice - huge 1`] = `
 </View>
 `;
 
-exports[`95. supplement lead one and four slice v2 - huge 1`] = `
+exports[`132. supplement lead one and four slice v2 - huge 1`] = `
 <View>
   <View>
     <TileLeadSupplementPortrait
@@ -3181,7 +4402,7 @@ exports[`95. supplement lead one and four slice v2 - huge 1`] = `
 </View>
 `;
 
-exports[`96. standard slice - huge 1`] = `
+exports[`133. standard slice - huge 1`] = `
 <View>
   <View>
     <View>
@@ -3216,7 +4437,7 @@ exports[`96. standard slice - huge 1`] = `
 </View>
 `;
 
-exports[`97. secondary two no pic and two - huge 1`] = `
+exports[`134. secondary two no pic and two - huge 1`] = `
 <View>
   <View>
     <View>
@@ -3252,7 +4473,7 @@ exports[`97. secondary two no pic and two - huge 1`] = `
 </View>
 `;
 
-exports[`98. list two and six no pic - huge 1`] = `
+exports[`135. list two and six no pic - huge 1`] = `
 <View>
   <View>
     <View>
@@ -3324,7 +4545,7 @@ exports[`98. list two and six no pic - huge 1`] = `
 </View>
 `;
 
-exports[`99. puzzle - huge 1`] = `
+exports[`136. puzzle - huge 1`] = `
 <View>
   <View>
     <View>
@@ -3402,7 +4623,7 @@ exports[`99. puzzle - huge 1`] = `
 </View>
 `;
 
-exports[`100. front lead two - portrait - huge 1`] = `
+exports[`137. front lead two - portrait - huge 1`] = `
 <View>
   <View>
     <View>
@@ -3431,7 +4652,7 @@ exports[`100. front lead two - portrait - huge 1`] = `
 </View>
 `;
 
-exports[`101. front lead two - landscape - huge 1`] = `
+exports[`138. front lead two - landscape - huge 1`] = `
 <View>
   <View>
     <View>
@@ -3461,7 +4682,7 @@ exports[`101. front lead two - landscape - huge 1`] = `
 </View>
 `;
 
-exports[`102. front lead one and one - portrait - huge 1`] = `
+exports[`139. front lead one and one - portrait - huge 1`] = `
 <View>
   <View>
     <View>
@@ -3491,7 +4712,7 @@ exports[`102. front lead one and one - portrait - huge 1`] = `
 </View>
 `;
 
-exports[`103. front lead one and one - landscape - huge 1`] = `
+exports[`140. front lead one and one - landscape - huge 1`] = `
 <View>
   <View>
     <View>
@@ -3522,7 +4743,7 @@ exports[`103. front lead one and one - landscape - huge 1`] = `
 </View>
 `;
 
-exports[`104. front lead one - portrait - huge 1`] = `
+exports[`141. front lead one - portrait - huge 1`] = `
 <View>
   <View>
     <View>
@@ -3542,7 +4763,7 @@ exports[`104. front lead one - portrait - huge 1`] = `
 </View>
 `;
 
-exports[`105. front lead one - landscape - huge 1`] = `
+exports[`142. front lead one - landscape - huge 1`] = `
 <View>
   <View>
     <View>
@@ -3565,7 +4786,7 @@ exports[`105. front lead one - landscape - huge 1`] = `
 </View>
 `;
 
-exports[`106. top secondary landscape (from topsecondaryfourslice) - huge 1`] = `
+exports[`143. top secondary landscape (from topsecondaryfourslice) - huge 1`] = `
 <View>
   <View>
     <View>
@@ -3597,7 +4818,7 @@ exports[`106. top secondary landscape (from topsecondaryfourslice) - huge 1`] = 
 </View>
 `;
 
-exports[`107. top secondary portrait (from topsecondaryfourslice) - huge 1`] = `
+exports[`144. top secondary portrait (from topsecondaryfourslice) - huge 1`] = `
 <View>
   <View>
     <View>
@@ -3629,7 +4850,7 @@ exports[`107. top secondary portrait (from topsecondaryfourslice) - huge 1`] = `
 </View>
 `;
 
-exports[`108. top secondary landscape (from topsecondarytwoandtwoslice) - huge 1`] = `
+exports[`145. top secondary landscape (from topsecondarytwoandtwoslice) - huge 1`] = `
 <View>
   <View>
     <View>
@@ -3661,7 +4882,7 @@ exports[`108. top secondary landscape (from topsecondarytwoandtwoslice) - huge 1
 </View>
 `;
 
-exports[`109. top secondary portrait (from topsecondarytwoandtwoslice) - huge 1`] = `
+exports[`146. top secondary portrait (from topsecondarytwoandtwoslice) - huge 1`] = `
 <View>
   <View>
     <View>
@@ -3693,7 +4914,7 @@ exports[`109. top secondary portrait (from topsecondarytwoandtwoslice) - huge 1`
 </View>
 `;
 
-exports[`110. top secondary landscape (from topsecondarytwonopicandtwoslice) - huge 1`] = `
+exports[`147. top secondary landscape (from topsecondarytwonopicandtwoslice) - huge 1`] = `
 <View>
   <View>
     <View>
@@ -3725,7 +4946,7 @@ exports[`110. top secondary landscape (from topsecondarytwonopicandtwoslice) - h
 </View>
 `;
 
-exports[`111. top secondary portrait (from topsecondarytwonopicandtwoslice) - huge 1`] = `
+exports[`148. top secondary portrait (from topsecondarytwonopicandtwoslice) - huge 1`] = `
 <View>
   <View>
     <View>

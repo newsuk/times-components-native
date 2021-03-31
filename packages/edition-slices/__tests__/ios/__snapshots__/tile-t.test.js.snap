@@ -27,17 +27,19 @@ exports[`tile t without breakpoint 1`] = `
       }
     }
   >
-    <View
-      style={
-        Object {
-          "marginBottom": 5,
+    <View>
+      <View
+        style={
+          Object {
+            "marginBottom": 5,
+          }
         }
-      }
-    >
-      <ArticleLabel
-        color="#005B8D"
-        title="label"
-      />
+      >
+        <ArticleLabel
+          color="#005B8D"
+          title="label"
+        />
+      </View>
     </View>
     <Text
       accessibilityRole="header"

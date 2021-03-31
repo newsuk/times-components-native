@@ -35,10 +35,12 @@ exports[`1. two related articles 1`] = `
             >
               <View>
                 <View>
-                  <ArticleLabel
-                    color="#C74600"
-                    title="first label"
-                  />
+                  <View>
+                    <ArticleLabel
+                      color="#C74600"
+                      title="first label"
+                    />
+                  </View>
                 </View>
                 <Text
                   accessibilityRole="header"
@@ -59,11 +61,13 @@ exports[`1. two related articles 1`] = `
                   March 13 2015, 6.54pm
                 </Text>
                 <Text>
-                  <Text>
+                  <View>
                     <Text>
-                      Camilla Long, Environment Editor
+                      <Text>
+                        Camilla Long, Environment Editor
+                      </Text>
                     </Text>
-                  </Text>
+                  </View>
                 </Text>
               </View>
             </Card>
@@ -95,10 +99,12 @@ exports[`1. two related articles 1`] = `
             >
               <View>
                 <View>
-                  <ArticleLabel
-                    color="#6C6C69"
-                    title="second label"
-                  />
+                  <View>
+                    <ArticleLabel
+                      color="#6C6C69"
+                      title="second label"
+                    />
+                  </View>
                 </View>
                 <Text
                   accessibilityRole="header"
@@ -119,11 +125,13 @@ exports[`1. two related articles 1`] = `
                   January 17 2018, 12.00pm
                 </Text>
                 <Text>
-                  <Text>
+                  <View>
                     <Text>
-                      Camilla Long, Environment Editor
+                      <Text>
+                        Camilla Long, Environment Editor
+                      </Text>
                     </Text>
-                  </Text>
+                  </View>
                 </Text>
               </View>
             </Card>

@@ -19,17 +19,19 @@ exports[`tile ad huge 1`] = `
   >
     <View>
       <View>
-        <View
-          style={
-            Object {
-              "marginBottom": 5,
+        <View>
+          <View
+            style={
+              Object {
+                "marginBottom": 5,
+              }
             }
-          }
-        >
-          <ArticleLabel
-            color="#005B8D"
-            title="label"
-          />
+          >
+            <ArticleLabel
+              color="#005B8D"
+              title="label"
+            />
+          </View>
         </View>
         <Text
           accessibilityRole="header"
@@ -103,17 +105,86 @@ exports[`tile ad medium 1`] = `
   >
     <View>
       <View>
-        <View
+        <View>
+          <View
+            style={
+              Object {
+                "marginBottom": 5,
+              }
+            }
+          >
+            <ArticleLabel
+              color="#005B8D"
+              title="label"
+            />
+          </View>
+        </View>
+        <Text
+          accessibilityRole="header"
+          aria-level="3"
           style={
             Object {
-              "marginBottom": 5,
+              "color": "#333333",
+              "fontFamily": "TimesModern-Bold",
+              "fontSize": 20,
+              "fontWeight": "900",
+              "includeFontPadding": false,
+              "lineHeight": 20,
+              "marginBottom": 10,
             }
           }
         >
-          <ArticleLabel
-            color="#005B8D"
-            title="label"
-          />
+          This is tile headline
+        </Text>
+        <ArticleFlags
+          flags={
+            Array [
+              Object {
+                "expiryTime": "2030-03-14T12:00:00.000Z",
+                "type": "EXCLUSIVE",
+              },
+            ]
+          }
+          longRead={true}
+        />
+      </View>
+    </View>
+  </View>
+</Link>
+`;
+
+exports[`tile ad smallTablet 1`] = `
+<Link
+  linkStyle={
+    Object {
+      "flex": 1,
+      "flexDirection": "row",
+      "padding": 10,
+    }
+  }
+>
+  <View
+    style={
+      Object {
+        "flex": 1,
+      }
+    }
+  >
+    <View>
+      <View>
+        <View>
+          <View
+            style={
+              Object {
+                "marginBottom": 5,
+              }
+            }
+          >
+            <ArticleLabel
+              color="#005B8D"
+              title="label"
+            />
+          </View>
         </View>
         <Text
           accessibilityRole="header"
@@ -168,17 +239,19 @@ exports[`tile ad wide 1`] = `
   >
     <View>
       <View>
-        <View
-          style={
-            Object {
-              "marginBottom": 5,
+        <View>
+          <View
+            style={
+              Object {
+                "marginBottom": 5,
+              }
             }
-          }
-        >
-          <ArticleLabel
-            color="#005B8D"
-            title="label"
-          />
+          >
+            <ArticleLabel
+              color="#005B8D"
+              title="label"
+            />
+          </View>
         </View>
         <Text
           accessibilityRole="header"
@@ -252,17 +325,19 @@ exports[`tile ad without breakpoint should be like medium 1`] = `
   >
     <View>
       <View>
-        <View
-          style={
-            Object {
-              "marginBottom": 5,
+        <View>
+          <View
+            style={
+              Object {
+                "marginBottom": 5,
+              }
             }
-          }
-        >
-          <ArticleLabel
-            color="#005B8D"
-            title="label"
-          />
+          >
+            <ArticleLabel
+              color="#005B8D"
+              title="label"
+            />
+          </View>
         </View>
         <Text
           accessibilityRole="header"

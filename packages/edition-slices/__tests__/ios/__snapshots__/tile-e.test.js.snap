@@ -19,17 +19,19 @@ exports[`tile e landscape huge 1`] = `
   >
     <View>
       <View>
-        <View
-          style={
-            Object {
-              "marginBottom": 5,
+        <View>
+          <View
+            style={
+              Object {
+                "marginBottom": 5,
+              }
             }
-          }
-        >
-          <ArticleLabel
-            color="#005B8D"
-            title="label"
-          />
+          >
+            <ArticleLabel
+              color="#005B8D"
+              title="label"
+            />
+          </View>
         </View>
         <Text
           accessibilityRole="header"
@@ -95,17 +97,19 @@ exports[`tile e landscape medium 1`] = `
   >
     <View>
       <View>
-        <View
-          style={
-            Object {
-              "marginBottom": 5,
+        <View>
+          <View
+            style={
+              Object {
+                "marginBottom": 5,
+              }
             }
-          }
-        >
-          <ArticleLabel
-            color="#005B8D"
-            title="label"
-          />
+          >
+            <ArticleLabel
+              color="#005B8D"
+              title="label"
+            />
+          </View>
         </View>
         <Text
           accessibilityRole="header"
@@ -177,17 +181,19 @@ exports[`tile e landscape small 1`] = `
           }
         }
       >
-        <View
-          style={
-            Object {
-              "marginBottom": 5,
+        <View>
+          <View
+            style={
+              Object {
+                "marginBottom": 5,
+              }
             }
-          }
-        >
-          <ArticleLabel
-            color="#005B8D"
-            title="label"
-          />
+          >
+            <ArticleLabel
+              color="#005B8D"
+              title="label"
+            />
+          </View>
         </View>
         <Text
           accessibilityRole="header"
@@ -270,17 +276,19 @@ exports[`tile e landscape wide 1`] = `
   >
     <View>
       <View>
-        <View
-          style={
-            Object {
-              "marginBottom": 5,
+        <View>
+          <View
+            style={
+              Object {
+                "marginBottom": 5,
+              }
             }
-          }
-        >
-          <ArticleLabel
-            color="#005B8D"
-            title="label"
-          />
+          >
+            <ArticleLabel
+              color="#005B8D"
+              title="label"
+            />
+          </View>
         </View>
         <Text
           accessibilityRole="header"
@@ -346,17 +354,19 @@ exports[`tile e portrait huge 1`] = `
   >
     <View>
       <View>
-        <View
-          style={
-            Object {
-              "marginBottom": 5,
+        <View>
+          <View
+            style={
+              Object {
+                "marginBottom": 5,
+              }
             }
-          }
-        >
-          <ArticleLabel
-            color="#005B8D"
-            title="label"
-          />
+          >
+            <ArticleLabel
+              color="#005B8D"
+              title="label"
+            />
+          </View>
         </View>
         <Text
           accessibilityRole="header"
@@ -422,17 +432,19 @@ exports[`tile e portrait medium 1`] = `
   >
     <View>
       <View>
-        <View
-          style={
-            Object {
-              "marginBottom": 5,
+        <View>
+          <View
+            style={
+              Object {
+                "marginBottom": 5,
+              }
             }
-          }
-        >
-          <ArticleLabel
-            color="#005B8D"
-            title="label"
-          />
+          >
+            <ArticleLabel
+              color="#005B8D"
+              title="label"
+            />
+          </View>
         </View>
         <Text
           accessibilityRole="header"
@@ -504,17 +516,19 @@ exports[`tile e portrait small 1`] = `
           }
         }
       >
-        <View
-          style={
-            Object {
-              "marginBottom": 5,
+        <View>
+          <View
+            style={
+              Object {
+                "marginBottom": 5,
+              }
             }
-          }
-        >
-          <ArticleLabel
-            color="#005B8D"
-            title="label"
-          />
+          >
+            <ArticleLabel
+              color="#005B8D"
+              title="label"
+            />
+          </View>
         </View>
         <Text
           accessibilityRole="header"
@@ -578,6 +592,84 @@ exports[`tile e portrait small 1`] = `
 </Link>
 `;
 
+exports[`tile e portrait smallTablet 1`] = `
+<Link
+  linkStyle={
+    Object {
+      "flexDirection": "column-reverse",
+      "padding": 10,
+      "paddingBottom": 0,
+    }
+  }
+>
+  <View
+    style={
+      Object {
+        "flex": 1,
+      }
+    }
+  >
+    <View>
+      <View>
+        <View>
+          <View
+            style={
+              Object {
+                "marginBottom": 5,
+              }
+            }
+          >
+            <ArticleLabel
+              color="#005B8D"
+              title="label"
+            />
+          </View>
+        </View>
+        <Text
+          accessibilityRole="header"
+          aria-level="3"
+          style={
+            Object {
+              "color": "#333333",
+              "fontFamily": "TimesModern-Bold",
+              "fontSize": 20,
+              "fontWeight": "900",
+              "includeFontPadding": false,
+              "lineHeight": 20,
+              "marginBottom": 10,
+            }
+          }
+        >
+          This is tile headline
+        </Text>
+        <ArticleFlags
+          flags={
+            Array [
+              Object {
+                "expiryTime": "2030-03-14T12:00:00.000Z",
+                "type": "EXCLUSIVE",
+              },
+            ]
+          }
+          longRead={true}
+        />
+      </View>
+    </View>
+  </View>
+  <Image
+    aspectRatio={0.8}
+    style={
+      Object {
+        "marginBottom": 10,
+        "marginTop": 5,
+        "width": "100%",
+      }
+    }
+    uri="https://www.thetimes.co.uk/imageserver/image/%2Fmethode%2Ftimes%2Fprod%2Fweb%2Fbin%2F5a14c64e-06db-11e9-abe2-4909b2eb0130.jpg?crop=1434%2C1792%2C627%2C0"
+  />
+</Link>
+`;
+
 exports[`tile e portrait wide 1`] = `
 <Link
   linkStyle={
@@ -597,17 +689,19 @@ exports[`tile e portrait wide 1`] = `
   >
     <View>
       <View>
-        <View
-          style={
-            Object {
-              "marginBottom": 5,
+        <View>
+          <View
+            style={
+              Object {
+                "marginBottom": 5,
+              }
             }
-          }
-        >
-          <ArticleLabel
-            color="#005B8D"
-            title="label"
-          />
+          >
+            <ArticleLabel
+              color="#005B8D"
+              title="label"
+            />
+          </View>
         </View>
         <Text
           accessibilityRole="header"
