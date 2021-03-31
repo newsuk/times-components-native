@@ -48,11 +48,7 @@ exports[`1. a primary image 1`] = `
           }
         />
       </View>
-      <View>
-        <View
-          inViewport={false}
-        />
-      </View>
+      <View />
       <View>
         <View>
           <ArticleExtras
@@ -115,11 +111,7 @@ exports[`2. a fullwidth image 1`] = `
           }
         />
       </View>
-      <View>
-        <View
-          inViewport={false}
-        />
-      </View>
+      <View />
       <View>
         <View>
           <ArticleExtras
@@ -182,11 +174,7 @@ exports[`3. a secondary image 1`] = `
           }
         />
       </View>
-      <View>
-        <View
-          inViewport={false}
-        />
-      </View>
+      <View />
       <View>
         <View>
           <ArticleExtras
@@ -249,11 +237,7 @@ exports[`4. an inline image 1`] = `
           }
         />
       </View>
-      <View>
-        <View
-          inViewport={false}
-        />
-      </View>
+      <View />
       <View>
         <View>
           <ArticleExtras
