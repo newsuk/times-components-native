@@ -32,7 +32,7 @@ const InlineContent = (props: InlineContentProps) => {
     originalName,
     skeletonProps,
   } = props;
-  const { isTablet } = skeletonProps;
+  const { isArticleTablet } = skeletonProps;
   const { windowWidth } = useResponsiveContext();
   const { lineHeight } = defaultFont;
   const availableWidth = Math.min(
@@ -161,7 +161,7 @@ const InlineContent = (props: InlineContentProps) => {
                   height: requiredInlineContentHeight,
                   alignSelf: narrowContent ? "flex-start" : "center",
                 },
-                !isTablet && { width: availableWidth },
+                !isArticleTablet && { width: availableWidth },
               ]}
             >
               {isAd

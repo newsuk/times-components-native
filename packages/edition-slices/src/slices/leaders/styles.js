@@ -70,6 +70,14 @@ const mediumBreakpointStyles = {
   },
 };
 
+const smallTabletBreakpointStyles = {
+  ...mediumBreakpointStyles,
+  container: {
+    ...mediumBreakpointStyles.container,
+    marginHorizontal: spacing(3),
+  },
+};
+
 const wideBreakpointStyles = {
   ...mediumBreakpointStyles,
   container: {
@@ -80,6 +88,7 @@ const wideBreakpointStyles = {
 
 const breakPointsStyles = {
   [editionBreakpoints.small]: smallBreakpointStyles,
+  [editionBreakpoints.smallTablet]: smallTabletBreakpointStyles,
   [editionBreakpoints.medium]: mediumBreakpointStyles,
   [editionBreakpoints.wide]: wideBreakpointStyles,
   [editionBreakpoints.huge]: wideBreakpointStyles,

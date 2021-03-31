@@ -12,6 +12,7 @@ export type ContextType = {
   narrowArticleBreakpoint: string;
   fontScale: number;
   isTablet: boolean;
+  isArticleTablet: boolean;
   windowWidth: number;
   windowHeight: number;
   orientation: Orientation;

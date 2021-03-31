@@ -6,6 +6,7 @@ import {
 } from "@times-components-native/styleguide";
 
 const headlineFontResolver = {
+  [editionBreakpoints.smallTablet]: 30,
   [editionBreakpoints.medium]: 30,
   [editionBreakpoints.wide]: 30,
   [editionBreakpoints.huge]: 35,

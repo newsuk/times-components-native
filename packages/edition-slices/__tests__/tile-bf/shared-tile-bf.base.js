@@ -5,6 +5,10 @@ import { TileBF } from "../../src/tiles";
 
 export default () => {
   describe("tile bf", () => {
+    it("smallTablet", () => {
+      testTile(TileBF, editionBreakpoints.smallTablet);
+    });
+
     it("medium", () => {
       testTile(TileBF, editionBreakpoints.medium);
     });

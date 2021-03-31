@@ -1,6 +1,7 @@
 import PropTypes from "prop-types";
 
 const articleLeftColumnPropTypes = {
+  articleId: PropTypes.string.isRequired,
   authorImage: PropTypes.string.isRequired,
   bylines: PropTypes.arrayOf(PropTypes.shape({})).isRequired,
   onAuthorPress: PropTypes.func.isRequired,

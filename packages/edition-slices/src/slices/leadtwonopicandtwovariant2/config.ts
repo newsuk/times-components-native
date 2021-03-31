@@ -33,9 +33,8 @@ export const LeadTwoNoPicAndTwoVariant2SliceConfig: SliceBaseConfig = {
         ...lead1Base,
         headline: { fontSize: 35 },
       },
-      medium: {
-        ...lead1Base,
-      },
+      medium: { ...lead1Base },
+      smallTablet: { ...lead1Base },
     },
   },
   lead2: {
@@ -48,9 +47,8 @@ export const LeadTwoNoPicAndTwoVariant2SliceConfig: SliceBaseConfig = {
         ...lead2Base,
         headline: { fontSize: 28 },
       },
-      medium: {
-        ...lead2Base,
-      },
+      medium: { ...lead2Base },
+      smallTablet: { ...lead2Base },
     },
   },
   support1: {
@@ -58,6 +56,7 @@ export const LeadTwoNoPicAndTwoVariant2SliceConfig: SliceBaseConfig = {
       wide: { ...support1Base, headline: { fontSize: 22 } },
       huge: { ...support1Base, headline: { fontSize: 22 } },
       medium: { ...support1Base },
+      smallTablet: { ...support1Base },
     },
   },
   support2: {
@@ -73,9 +72,8 @@ export const LeadTwoNoPicAndTwoVariant2SliceConfig: SliceBaseConfig = {
         headline: { fontSize: 24 },
         image: { ratio: "4:5", orientation: "landscape" },
       },
-      medium: {
-        ...support2Base,
-      },
+      medium: { ...support2Base },
+      smallTablet: { ...support2Base },
     },
   },
 };

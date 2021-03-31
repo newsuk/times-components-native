@@ -12,7 +12,7 @@ import reviewFixture from "./fixtures/review";
 import straplineFixture from "./fixtures/strapline";
 
 const story = (m) => <View style={{ padding: 20 }}>{m}</View>;
-const isTablet = true;
+const isArticleTablet = true;
 
 export default {
   children: [
@@ -23,7 +23,12 @@ export default {
     },
     {
       component: () =>
-        story(<ArticleSummary {...defaultFixture()} isTablet={isTablet} />),
+        story(
+          <ArticleSummary
+            {...defaultFixture()}
+            isArticleTablet={isArticleTablet}
+          />,
+        ),
       name: "Default on tablet",
       type: "story",
     },
@@ -37,7 +42,7 @@ export default {
                 animate: false,
               },
             })}
-            isTablet={isTablet}
+            isArticleTablet={isArticleTablet}
           />,
         ),
       name: "Article marked as read",
@@ -53,7 +58,7 @@ export default {
                 animate: true,
               },
             })}
-            isTablet={isTablet}
+            isArticleTablet={isArticleTablet}
           />,
         ),
       name: "Article marked as read and should be animated",

@@ -16,17 +16,19 @@ exports[`tile l huge 1`] = `
       }
     }
   >
-    <View
-      style={
-        Object {
-          "marginBottom": 5,
+    <View>
+      <View
+        style={
+          Object {
+            "marginBottom": 5,
+          }
         }
-      }
-    >
-      <ArticleLabel
-        color="#005B8D"
-        title="label"
-      />
+      >
+        <ArticleLabel
+          color="#005B8D"
+          title="label"
+        />
+      </View>
     </View>
     <Text
       accessibilityRole="header"
@@ -76,17 +78,19 @@ exports[`tile l medium 1`] = `
       }
     }
   >
-    <View
-      style={
-        Object {
-          "marginBottom": 5,
+    <View>
+      <View
+        style={
+          Object {
+            "marginBottom": 5,
+          }
         }
-      }
-    >
-      <ArticleLabel
-        color="#005B8D"
-        title="label"
-      />
+      >
+        <ArticleLabel
+          color="#005B8D"
+          title="label"
+        />
+      </View>
     </View>
     <Text
       accessibilityRole="header"
@@ -136,17 +140,19 @@ exports[`tile l small 1`] = `
       }
     }
   >
-    <View
-      style={
-        Object {
-          "marginBottom": 5,
+    <View>
+      <View
+        style={
+          Object {
+            "marginBottom": 5,
+          }
         }
-      }
-    >
-      <ArticleLabel
-        color="#005B8D"
-        title="label"
-      />
+      >
+        <ArticleLabel
+          color="#005B8D"
+          title="label"
+        />
+      </View>
     </View>
     <Text
       accessibilityRole="header"
@@ -160,6 +166,68 @@ exports[`tile l small 1`] = `
           "includeFontPadding": false,
           "lineHeight": 20,
           "marginBottom": 5,
+        }
+      }
+    >
+      This is tile headline
+    </Text>
+    <ArticleFlags
+      flags={
+        Array [
+          Object {
+            "expiryTime": "2030-03-14T12:00:00.000Z",
+            "type": "EXCLUSIVE",
+          },
+        ]
+      }
+      longRead={true}
+    />
+  </View>
+</Link>
+`;
+
+exports[`tile l smallTablet 1`] = `
+<Link
+  linkStyle={
+    Object {
+      "flex": 1,
+      "padding": 10,
+    }
+  }
+>
+  <View
+    style={
+      Object {
+        "flex": 1,
+      }
+    }
+  >
+    <View>
+      <View
+        style={
+          Object {
+            "marginBottom": 5,
+          }
+        }
+      >
+        <ArticleLabel
+          color="#005B8D"
+          title="label"
+        />
+      </View>
+    </View>
+    <Text
+      accessibilityRole="header"
+      aria-level="3"
+      style={
+        Object {
+          "color": "#333333",
+          "fontFamily": "TimesModern-Bold",
+          "fontSize": 18,
+          "fontWeight": "900",
+          "includeFontPadding": false,
+          "lineHeight": 18,
+          "marginBottom": 10,
         }
       }
     >
@@ -196,17 +264,19 @@ exports[`tile l wide 1`] = `
       }
     }
   >
-    <View
-      style={
-        Object {
-          "marginBottom": 5,
+    <View>
+      <View
+        style={
+          Object {
+            "marginBottom": 5,
+          }
         }
-      }
-    >
-      <ArticleLabel
-        color="#005B8D"
-        title="label"
-      />
+      >
+        <ArticleLabel
+          color="#005B8D"
+          title="label"
+        />
+      </View>
     </View>
     <Text
       accessibilityRole="header"
@@ -256,17 +326,19 @@ exports[`tile l without breakpoint should be like small 1`] = `
       }
     }
   >
-    <View
-      style={
-        Object {
-          "marginBottom": 5,
+    <View>
+      <View
+        style={
+          Object {
+            "marginBottom": 5,
+          }
         }
-      }
-    >
-      <ArticleLabel
-        color="#005B8D"
-        title="label"
-      />
+      >
+        <ArticleLabel
+          color="#005B8D"
+          title="label"
+        />
+      </View>
     </View>
     <Text
       accessibilityRole="header"

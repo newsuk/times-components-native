@@ -1,4 +1,3 @@
-export { default as IconEmail } from "./icons/email";
 export { default as IconFacebook } from "./icons/facebook";
 export { default as IconForwardArrow } from "./icons/forward-arrow";
 export { default as IconStar } from "./icons/star";

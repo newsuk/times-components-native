@@ -23,6 +23,10 @@ jest.mock("react-native-safe-area-context", () => ({
   },
 }));
 
+jest.mock("react-native-device-info", () => ({
+  isTablet: () => false,
+}));
+
 export default () => {
   shared();
 

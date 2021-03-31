@@ -6,6 +6,7 @@ import {
 } from "@times-components-native/styleguide";
 
 const fontSizeResolver = {
+  [editionBreakpoints.smallTablet]: 20,
   [editionBreakpoints.medium]: 20,
   [editionBreakpoints.wide]: 24,
 };
@@ -83,6 +84,7 @@ const wideBreakpointStyles = {
 };
 
 const stylesResolver = {
+  [editionBreakpoints.smallTablet]: mediumBreakpointStyles,
   [editionBreakpoints.medium]: mediumBreakpointStyles,
   [editionBreakpoints.wide]: wideBreakpointStyles,
 };

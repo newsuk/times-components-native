@@ -10,6 +10,7 @@ const headlineSizeResolver = {
   [editionBreakpoints.wide]: 22,
   [editionBreakpoints.small]: 18,
   [editionBreakpoints.medium]: 22,
+  [editionBreakpoints.smallTablet]: 22,
 };
 
 export default (breakpoint) => ({

@@ -16,6 +16,7 @@ const articleHeaderPropTypes = {
   publicationName: PropTypes.string.isRequired,
   publishedTime: PropTypes.string.isRequired,
   standfirst: PropTypes.string,
+  tooltips: PropTypes.array.isRequired,
 };
 
 const articleHeaderDefaultProps = {

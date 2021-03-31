@@ -1,6 +1,102 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`1. supplement secondary four - medium 1`] = `
+exports[`1. supplement secondary four - smalltablet 1`] = `
+<View
+  style={
+    Object {
+      "flex": 1,
+      "flexDirection": "row",
+      "marginHorizontal": 5,
+    }
+  }
+>
+  <View
+    style={
+      Object {
+        "flex": 2,
+        "flexDirection": "row",
+      }
+    }
+  >
+    <View
+      style={
+        Object {
+          "flex": 1,
+        }
+      }
+    >
+      <Text>
+        secondary-1
+      </Text>
+    </View>
+    <View
+      style={
+        Object {
+          "borderColor": "#DBDBDB",
+          "borderRightWidth": 1,
+          "borderStyle": "solid",
+          "marginVertical": 15,
+        }
+      }
+    />
+    <View
+      style={
+        Object {
+          "flex": 1,
+        }
+      }
+    >
+      <Text>
+        secondary-2
+      </Text>
+    </View>
+    <View
+      style={
+        Object {
+          "borderColor": "#DBDBDB",
+          "borderRightWidth": 1,
+          "borderStyle": "solid",
+          "marginVertical": 15,
+        }
+      }
+    />
+    <View
+      style={
+        Object {
+          "flex": 1,
+        }
+      }
+    >
+      <Text>
+        secondary-3
+      </Text>
+    </View>
+    <View
+      style={
+        Object {
+          "borderColor": "#DBDBDB",
+          "borderRightWidth": 1,
+          "borderStyle": "solid",
+          "marginVertical": 15,
+        }
+      }
+    />
+    <View
+      style={
+        Object {
+          "flex": 1,
+        }
+      }
+    >
+      <Text>
+        secondary-4
+      </Text>
+    </View>
+  </View>
+</View>
+`;
+
+exports[`2. supplement secondary four - medium 1`] = `
 <View
   style={
     Object {
@@ -96,7 +192,7 @@ exports[`1. supplement secondary four - medium 1`] = `
 </View>
 `;
 
-exports[`2. supplement secondary four - medium - with isconsecutive 1`] = `
+exports[`3. supplement secondary four - medium - with isconsecutive 1`] = `
 <View
   style={
     Object {
@@ -192,7 +288,7 @@ exports[`2. supplement secondary four - medium - with isconsecutive 1`] = `
 </View>
 `;
 
-exports[`3. supplement secondary four - wide 1`] = `
+exports[`4. supplement secondary four - wide 1`] = `
 <View
   style={
     Object {
@@ -288,7 +384,7 @@ exports[`3. supplement secondary four - wide 1`] = `
 </View>
 `;
 
-exports[`4. supplement secondary four - wide - with isconsecutive 1`] = `
+exports[`5. supplement secondary four - wide - with isconsecutive 1`] = `
 <View
   style={
     Object {

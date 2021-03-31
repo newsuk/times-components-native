@@ -5,11 +5,9 @@ exports[`1. article main comment - tablet 1`] = `
   <View
     style={
       Object {
-        "alignSelf": "center",
         "marginBottom": 0,
         "paddingBottom": 20,
         "paddingTop": 35,
-        "width": 660,
       }
     }
   >
@@ -17,10 +15,8 @@ exports[`1. article main comment - tablet 1`] = `
       style={
         Object {
           "alignItems": "center",
-          "alignSelf": "center",
           "paddingLeft": 10,
           "paddingRight": 10,
-          "width": 660,
         }
       }
     >
@@ -39,8 +35,8 @@ exports[`1. article main comment - tablet 1`] = `
           Object {
             "color": "#1D1D1B",
             "fontFamily": "TimesModern-Bold",
-            "fontSize": 45,
-            "lineHeight": 45,
+            "fontSize": 30,
+            "lineHeight": 36,
             "marginBottom": 13.75,
             "textAlign": "center",
           }
@@ -72,11 +68,10 @@ exports[`1. article main comment - tablet 1`] = `
             "borderBottomWidth": 1,
             "borderTopColor": "#DBDBDB",
             "borderTopWidth": 1,
-            "flexDirection": "row",
-            "justifyContent": "center",
             "marginTop": 5,
             "paddingVertical": 10,
             "width": "100%",
+            "zIndex": 10,
           }
         }
       >
@@ -93,16 +88,6 @@ exports[`1. article main comment - tablet 1`] = `
         <View
           style={
             Object {
-              "borderRightColor": "#DBDBDB",
-              "borderRightWidth": 1,
-              "height": 15,
-              "marginHorizontal": 10,
-            }
-          }
-        />
-        <View
-          style={
-            Object {
               "flexDirection": "row",
               "flexWrap": "wrap",
             }
@@ -115,7 +100,7 @@ exports[`1. article main comment - tablet 1`] = `
                 "fontFamily": "GillSansMTStd-Medium",
                 "fontSize": 13,
                 "lineHeight": 15,
-                "marginTop": "auto",
+                "marginTop": 5,
               }
             }
           >

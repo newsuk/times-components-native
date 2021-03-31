@@ -21,17 +21,19 @@ exports[`tile au wide 1`] = `
     uri="https://www.thetimes.co.uk/imageserver/image/methode%2Ftimes%2Fprod%2Fweb%2Fbin%2Fd3abdbfc-1776-11e6-b4ba-d249b128bacc.jpg?crop=620%2C348%2C0%2C32"
   />
   <View>
-    <View
-      style={
-        Object {
-          "marginBottom": 5,
+    <View>
+      <View
+        style={
+          Object {
+            "marginBottom": 5,
+          }
         }
-      }
-    >
-      <ArticleLabel
-        color="#005B8D"
-        title="label"
-      />
+      >
+        <ArticleLabel
+          color="#005B8D"
+          title="label"
+        />
+      </View>
     </View>
     <Text
       accessibilityRole="header"

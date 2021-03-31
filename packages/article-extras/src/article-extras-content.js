@@ -22,8 +22,8 @@ const ArticleExtrasContent = ({
   template,
   tooltips,
 }) => {
-  const { isTablet, narrowArticleBreakpoint } = useResponsiveContext();
-  const isMobileMainStandard = !isTablet && template === "mainstandard";
+  const { isArticleTablet, narrowArticleBreakpoint } = useResponsiveContext();
+  const isMobileMainStandard = !isArticleTablet && template === "mainstandard";
 
   const {
     commentCount,
@@ -37,7 +37,7 @@ const ArticleExtrasContent = ({
   return (
     <View
       style={[
-        isTablet && styles.extrasTablet,
+        isArticleTablet && styles.extrasTablet,
         narrowContent && getNarrowContentStyle(narrowArticleBreakpoint.content),
       ]}
     >
@@ -69,7 +69,7 @@ const ArticleExtrasContent = ({
         tooltips={tooltips}
         url={articleUrl}
       />
-      {(isTablet || isMobileMainStandard) && (
+      {(isArticleTablet || isMobileMainStandard) && (
         <SponsoredAd
           numberOfAds={isMobileMainStandard ? 2 : narrowContent ? 3 : 4}
         />

@@ -32,7 +32,11 @@ const SecondaryTwoAndTwoSlice = ({
     );
   }
 
-  if (breakpoint === editionBreakpoints.medium) {
+  if (
+    [editionBreakpoints.smallTablet, editionBreakpoints.medium].includes(
+      breakpoint,
+    )
+  ) {
     return (
       <View style={styles.container}>
         <HorizontalLayout

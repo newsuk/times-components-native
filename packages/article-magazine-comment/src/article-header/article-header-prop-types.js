@@ -1,6 +1,7 @@
 import PropTypes from "prop-types";
 
 const articleHeaderPropTypes = {
+  articleId: PropTypes.string.isRequired,
   authorImage: PropTypes.string.isRequired,
   bylines: PropTypes.arrayOf(PropTypes.shape({})).isRequired,
   flags: PropTypes.arrayOf(
@@ -16,6 +17,7 @@ const articleHeaderPropTypes = {
   publicationName: PropTypes.string.isRequired,
   publishedTime: PropTypes.string.isRequired,
   standfirst: PropTypes.string,
+  tooltips: PropTypes.array.isRequired,
 };
 
 const articleHeaderDefaultProps = {

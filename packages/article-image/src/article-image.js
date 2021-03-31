@@ -6,7 +6,7 @@ import { propTypes, defaultPropTypes } from "./article-image-prop-types";
 import styles from "./styles";
 
 const ArticleImageNative = (props) => {
-  const { isTablet, narrowArticleBreakpoint } = useResponsiveContext();
+  const { isArticleTablet, narrowArticleBreakpoint } = useResponsiveContext();
   const {
     imageOptions: { display, uri, narrowContent },
   } = props;
@@ -16,7 +16,7 @@ const ArticleImageNative = (props) => {
       key={uri}
       style={[
         styles[`${display}Container`],
-        isTablet && styles[`${display}ContainerTablet`],
+        isArticleTablet && styles[`${display}ContainerTablet`],
         narrowContent && [
           styles[`${display}ContainerNarrow`],
           {

@@ -7,11 +7,13 @@ import {
 import { StyleSheet } from "react-native";
 
 const fontSizeResolver: Record<string, number> = {
+  [editionBreakpoints.smallTablet]: 40,
   [editionBreakpoints.medium]: 40,
   [editionBreakpoints.wide]: 45,
 };
 
 const horizontalPaddingResolver: Record<string, number> = {
+  [editionBreakpoints.smallTablet]: spacing(10),
   [editionBreakpoints.medium]: spacing(10),
   [editionBreakpoints.wide]: spacing(28),
 };

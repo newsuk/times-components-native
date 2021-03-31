@@ -21,17 +21,19 @@ exports[`tile bf huge 1`] = `
     }
   >
     <View>
-      <View
-        style={
-          Object {
-            "marginBottom": 5,
+      <View>
+        <View
+          style={
+            Object {
+              "marginBottom": 5,
+            }
           }
-        }
-      >
-        <ArticleLabel
-          color="#005B8D"
-          title="label"
-        />
+        >
+          <ArticleLabel
+            color="#005B8D"
+            title="label"
+          />
+        </View>
       </View>
       <Text
         accessibilityRole="header"
@@ -100,17 +102,100 @@ exports[`tile bf medium 1`] = `
     }
   >
     <View>
-      <View
+      <View>
+        <View
+          style={
+            Object {
+              "marginBottom": 5,
+            }
+          }
+        >
+          <ArticleLabel
+            color="#005B8D"
+            title="label"
+          />
+        </View>
+      </View>
+      <Text
+        accessibilityRole="header"
+        aria-level="3"
         style={
           Object {
-            "marginBottom": 5,
+            "color": "#333333",
+            "fontFamily": "TimesModern-Regular",
+            "fontSize": 25,
+            "fontWeight": "normal",
+            "includeFontPadding": false,
+            "lineHeight": 25,
+            "marginBottom": 10,
           }
         }
       >
-        <ArticleLabel
-          color="#005B8D"
-          title="label"
-        />
+        This is tile headline
+      </Text>
+      <ArticleFlags
+        flags={
+          Array [
+            Object {
+              "expiryTime": "2030-03-14T12:00:00.000Z",
+              "type": "EXCLUSIVE",
+            },
+          ]
+        }
+        longRead={true}
+      />
+    </View>
+  </View>
+  <View
+    style={
+      Object {
+        "flex": 2,
+        "paddingLeft": 10,
+      }
+    }
+  >
+    <Image
+      aspectRatio={1.7777777777777777}
+      uri="https://www.thetimes.co.uk/imageserver/image/methode%2Ftimes%2Fprod%2Fweb%2Fbin%2Fd3abdbfc-1776-11e6-b4ba-d249b128bacc.jpg?crop=620%2C348%2C0%2C32"
+    />
+  </View>
+</Link>
+`;
+
+exports[`tile bf smallTablet 1`] = `
+<Link
+  linkStyle={
+    Object {
+      "backgroundColor": "#F5F5F5",
+      "flex": 1,
+      "flexDirection": "row",
+      "marginHorizontal": 15,
+      "marginVertical": 10,
+    }
+  }
+>
+  <View
+    style={
+      Object {
+        "flex": 1,
+        "padding": 15,
+      }
+    }
+  >
+    <View>
+      <View>
+        <View
+          style={
+            Object {
+              "marginBottom": 5,
+            }
+          }
+        >
+          <ArticleLabel
+            color="#005B8D"
+            title="label"
+          />
+        </View>
       </View>
       <Text
         accessibilityRole="header"
@@ -179,17 +264,19 @@ exports[`tile bf wide 1`] = `
     }
   >
     <View>
-      <View
-        style={
-          Object {
-            "marginBottom": 5,
+      <View>
+        <View
+          style={
+            Object {
+              "marginBottom": 5,
+            }
           }
-        }
-      >
-        <ArticleLabel
-          color="#005B8D"
-          title="label"
-        />
+        >
+          <ArticleLabel
+            color="#005B8D"
+            title="label"
+          />
+        </View>
       </View>
       <Text
         accessibilityRole="header"
@@ -258,17 +345,19 @@ exports[`tile bf without breakpoint should be like medium 1`] = `
     }
   >
     <View>
-      <View
-        style={
-          Object {
-            "marginBottom": 5,
+      <View>
+        <View
+          style={
+            Object {
+              "marginBottom": 5,
+            }
           }
-        }
-      >
-        <ArticleLabel
-          color="#005B8D"
-          title="label"
-        />
+        >
+          <ArticleLabel
+            color="#005B8D"
+            title="label"
+          />
+        </View>
       </View>
       <Text
         accessibilityRole="header"

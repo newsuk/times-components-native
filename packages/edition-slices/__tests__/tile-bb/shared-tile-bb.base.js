@@ -6,6 +6,12 @@ import { TileBB } from "../../src/tiles";
 export default () => {
   describe("tile bb", () => {
     describe("landscape", () => {
+      it("smallTablet", () => {
+        testTile(TileBB, editionBreakpoints.smallTablet, undefined, {
+          orientation: "landscape",
+        });
+      });
+
       it("medium", () => {
         testTile(TileBB, editionBreakpoints.medium, undefined, {
           orientation: "landscape",

@@ -77,6 +77,9 @@ const styles = StyleSheet.create({
     justifyContent: "center",
     width: "100%",
   },
+  metaContainerWithMargin: {
+    marginBottom: 95,
+  },
   separator: {
     borderRightColor: colours.functional.keyline,
     borderRightWidth: 1,

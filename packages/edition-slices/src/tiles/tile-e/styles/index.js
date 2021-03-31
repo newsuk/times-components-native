@@ -67,6 +67,10 @@ const stylesResolver = {
     portrait: smallBreakpointStyles,
     landscape: smallBreakpointStyles,
   },
+  [editionBreakpoints.smallTablet]: {
+    portrait: mediumBreakpointStyles,
+    landscape: mediumBreakpointStyles,
+  },
   [editionBreakpoints.medium]: {
     portrait: mediumBreakpointStyles,
     landscape: mediumBreakpointStyles,

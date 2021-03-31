@@ -9,6 +9,7 @@ import styles from "./styles";
 import { topicDefaultProps, topicPropTypes } from "./article-topic-prop-types";
 
 const ArticleTopic = ({
+  articleId,
   fontSize,
   index,
   lineHeight,
@@ -18,14 +19,13 @@ const ArticleTopic = ({
   slug,
   tooltipDisplayedInView,
   tooltips,
-  articleId,
 }) => {
   const fontSizeStyle = fontSize ? { fontSize } : null;
   const lineHeightStyle = lineHeight ? { lineHeight } : null;
-  const { isTablet } = useResponsiveContext();
+  const { isArticleTablet } = useResponsiveContext();
 
   const tooltipType = "topics";
-  const showTooltip = isTablet && index === 0 && tooltips.includes(tooltipType);
+  const showTooltip = index === 0 && tooltips.includes(tooltipType);
   const [isHighlighted, setIsHighlighted] = useState(showTooltip);
 
   const unhighlightTopic = () => {
@@ -63,6 +63,7 @@ const ArticleTopic = ({
 
   const articleTopicWithTooltip = (
     <Tooltip
+      articleId={articleId}
       content={<Text>Tap a topic to see more of our coverage</Text>}
       displayedInView={tooltipDisplayedInView}
       offsetY={5}
@@ -71,8 +72,7 @@ const ArticleTopic = ({
       placement="top"
       type={tooltipType}
       tooltips={tooltips}
-      width={236}
-      articleId={articleId}
+      width={isArticleTablet ? 236 : 207}
     >
       {articleTopic}
     </Tooltip>
