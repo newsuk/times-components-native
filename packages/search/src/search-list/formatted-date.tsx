@@ -1,8 +1,8 @@
 import React, { FC } from "react";
-import { StyleSheet, Text } from "react-native";
+import { Text } from "react-native";
 import DatePublication from "@times-components-native/date-publication";
 import { Hit } from "../types";
-import styleguide from "@times-components-native/styleguide";
+import { styles } from "./styles/formatted-date-styles";
 
 export interface FormattedDateProps {
   publishedTime: Hit["publishedTime"];
@@ -24,17 +24,5 @@ const FormattedDate: FC<FormattedDateProps> = ({
     />
   </Text>
 );
-
-const { colours, fontFactory, spacing } = styleguide();
-const styles = StyleSheet.create({
-  metaText: {
-    color: colours.functional.secondary,
-    ...fontFactory({
-      font: "supporting",
-      fontSize: "cardMeta",
-    }),
-    marginVertical: spacing(2),
-  },
-});
 
 export default FormattedDate;

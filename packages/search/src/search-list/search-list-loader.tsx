@@ -1,6 +1,7 @@
 import React from "react";
-import { ActivityIndicator, StyleSheet } from "react-native";
-import { colours, spacing } from "@times-components-native/styleguide";
+import { ActivityIndicator } from "react-native";
+import { colours } from "@times-components-native/styleguide";
+import { styles } from "./styles/search-list-loader-styles";
 
 const SearchListLoader = () => (
   <ActivityIndicator
@@ -9,11 +10,5 @@ const SearchListLoader = () => (
     size="large"
   />
 );
-
-const styles = StyleSheet.create({
-  loader: {
-    padding: spacing(4),
-  },
-});
 
 export default SearchListLoader;

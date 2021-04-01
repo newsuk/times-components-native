@@ -5,6 +5,7 @@ export * from "./src/subscript-superscript-mapper";
 export * from "./src/get-all-article-images";
 export * from "./src/is-template-with-lead-asset-in-gallery";
 export * from "./src/get-crop-by-priority";
+export * from "./src/platformUtils";
 
 export { default as clean } from "./src/props";
 export { default as addMissingProtocol } from "./src/add-missing-protocol";

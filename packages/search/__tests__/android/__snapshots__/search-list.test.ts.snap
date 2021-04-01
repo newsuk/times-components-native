@@ -1209,7 +1209,7 @@ exports[`Search Bar List SearchList should render correctly 1`] = `
 </View>
 `;
 
-exports[`SearchListItemByline should render correctly 1`] = `
+exports[`SearchListItemByLine should render correctly 1`] = `
 <View
   style={
     Object {

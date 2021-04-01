@@ -6,7 +6,7 @@ export default () => {
   describe("SearchResults", () => {
     it("should render correctly", () => {
       const testInstance = TestRenderer.create(
-        <SearchResults onArticlePress={() => null} />,
+        <SearchResults onArticlePress={() => null} isConnected={true}/>,
       );
 
       expect(testInstance).toMatchSnapshot();

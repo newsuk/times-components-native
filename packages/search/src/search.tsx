@@ -1,9 +1,10 @@
 import React, { FC } from "react";
+import { SearchBarComponent } from "./search-bar/search-bar";
 import SearchResults from "@times-components-native/search/src/search-results";
-import { SearchBar } from "./search-bar/search-bar";
-import { InstantSearch } from "react-instantsearch-native";
+import { connectSearchBox, InstantSearch } from "react-instantsearch-native";
 import algoliasearch, { SearchClient } from "algoliasearch";
 import { withTrackingContext } from "@times-components-native/tracking";
+import { useIsConnected } from "@times-components-native/utils/src/useIsConnected";
 
 export interface SearchProps {
   onArticlePress: (url: string) => void;
@@ -26,16 +27,21 @@ const getSearchClient = (algoliaConfig: SearchProps["algoliaConfig"]) => {
 };
 
 const Search: FC<SearchProps> = ({ onArticlePress, algoliaConfig }) => {
-  if (!algoliaConfig) {
-    return null;
-  }
+  const isConnected = useIsConnected();
+
+  const ConnectedSearchBar = connectSearchBox((props) => (
+    <SearchBarComponent {...props} isConnected={isConnected} />
+  ));
   return (
     <InstantSearch
       indexName={algoliaConfig.ALGOLIA_INDEX}
       searchClient={getSearchClient(algoliaConfig)}
     >
-      <SearchBar />
-      <SearchResults onArticlePress={onArticlePress} />
+      <ConnectedSearchBar />
+      <SearchResults
+        onArticlePress={onArticlePress}
+        isConnected={isConnected}
+      />
     </InstantSearch>
   );
 };

@@ -1,19 +1,16 @@
 import React from "react";
 import { GlassMagnifierIcon } from "@times-components-native/icons/src/icons";
-import { StyleSheet, View } from "react-native";
+import { View } from "react-native";
+import { styles } from "./styles/magnifier-styles";
 
-const Magnifier = () => (
+interface MagnifierProps {
+  color?: string;
+}
+
+const Magnifier: React.FC<MagnifierProps> = ({ color }) => (
   <View style={styles.container}>
-    <GlassMagnifierIcon />
+    <GlassMagnifierIcon color={color} />
   </View>
 );
-
-const styles = StyleSheet.create({
-  container: {
-    position: "absolute",
-    top: 6,
-    left: 4,
-  },
-});
 
 export default Magnifier;

@@ -2,8 +2,8 @@ import React, { FC } from "react";
 import { connectHighlight } from "react-instantsearch-native";
 import { HighlightProps } from "react-instantsearch-core";
 import { Hit } from "../types";
-import { StyleSheet, Text } from "react-native";
-import { colours } from "@times-components-native/styleguide";
+import { Text } from "react-native";
+import { styles } from "./styles/search-list-item-snippet-styles";
 
 export type SearchListItemSnippetProps = HighlightProps<Hit["_snippetResult"]>;
 
@@ -34,15 +34,6 @@ const SearchListItemSnippet: FC<SearchListItemSnippetProps> = ({
     </Text>
   );
 };
-
-const styles = StyleSheet.create({
-  text: {
-    color: colours.functional.secondary,
-  },
-  hightlighted: {
-    color: colours.functional.black,
-  },
-});
 
 // @FIXME: TYPES
 export default connectHighlight(SearchListItemSnippet);

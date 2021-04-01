@@ -1,5 +1,5 @@
 import React, { FC } from "react";
-import { StyleSheet, View } from "react-native";
+import { View } from "react-native";
 import { Hit } from "../types";
 import {
   ArticleSummaryHeadline,
@@ -10,8 +10,11 @@ import { ResponsiveContext } from "@times-components-native/responsive";
 import styleguide from "@times-components-native/styleguide";
 import Link from "@times-components-native/link";
 import FormattedDate from "./formatted-date";
-import SearchListItemByline from "./search-list-item-byline";
+import SearchListItemByLine from "./search-list-item-by-line";
 import SearchListItemSnippet from "./search-list-item-snippet";
+import { styles } from "./styles/search-list-item-styles";
+
+const { colours } = styleguide();
 
 export interface SearchListItemProps {
   item: Hit;
@@ -46,7 +49,7 @@ const SearchListItem: FC<SearchListItemProps> = ({ item, onItemPress }) => {
             <ArticleSummaryHeadline
               headline={getHeadline(headline, shortHeadline)}
             />
-            <SearchListItemByline byline={item.byline} />
+            <SearchListItemByLine byline={item.byline} />
             <SearchListItemSnippet attribute="content" hit={item} />
             <FormattedDate
               publishedTime={item.publishedTime}
@@ -58,17 +61,5 @@ const SearchListItem: FC<SearchListItemProps> = ({ item, onItemPress }) => {
     </ResponsiveContext.Consumer>
   );
 };
-
-const { colours, spacing } = styleguide();
-
-const styles = StyleSheet.create({
-  listItemContainer: {
-    paddingHorizontal: spacing(2),
-    paddingVertical: spacing(2),
-  },
-  listItemContainerTablet: {
-    paddingVertical: spacing(3),
-  },
-});
 
 export default SearchListItem;

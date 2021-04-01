@@ -1,11 +1,11 @@
 import React, { FC } from "react";
 import { ArticleListEmptyState } from "@times-components-native/article-list";
-import { FlatList, StyleSheet, View } from "react-native";
+import { FlatList, View } from "react-native";
 import SearchListItem from "./search-list-item";
 import { Hit } from "../types";
 import ArticleListItemSeparator from "@times-components-native/article-list/src/article-list-item-separator";
-import { tabletWidth } from "@times-components-native/styleguide";
 import SearchListLoader from "@times-components-native/search/src/search-list/search-list-loader";
+import { styles } from "./styles/search-list-styles";
 
 export interface SearchListProps {
   hits: Hit[];
@@ -46,20 +46,5 @@ const SearchList: FC<SearchListProps> = ({
     </View>
   );
 };
-
-const styles = StyleSheet.create({
-  container: {
-    flexDirection: "row",
-    justifyContent: "center",
-    flex: 1,
-  },
-  contentContainer: {
-    flexGrow: 1,
-  },
-  subContainer: {
-    flexGrow: 1,
-    maxWidth: tabletWidth,
-  },
-});
 
 export default SearchList;
