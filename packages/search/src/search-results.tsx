@@ -7,10 +7,10 @@ import {
   InfiniteHitsProvided,
   SearchBoxProvided,
 } from "react-instantsearch-core";
-import EmptySearchMessage from "./emptySearchMessage";
+import EmptySearchMessage from "./empty-search-message";
 import { Hit } from "./types";
-import SearchList from "./searchList/searchList";
-import { OfflineMessage } from "./offlineMessage";
+import SearchList from "./search-list/search-list";
+import { OfflineMessage } from "./offline-message";
 
 export interface InfiniteHitsProps
   extends InfiniteHitsProvided<Hit>,

@@ -9,10 +9,10 @@ import { getHeadline } from "@times-components-native/utils";
 import { ResponsiveContext } from "@times-components-native/responsive";
 import styleguide from "@times-components-native/styleguide";
 import Link from "@times-components-native/link";
-import FormattedDate from "./formattedDate";
-import SearchListItemByline from "./searchListItemByline";
-import SearchListItemSnippet from "./searchListItemSnippet";
-import { styles } from "./styles/searchListItemStyles";
+import FormattedDate from "./formatted-date";
+import SearchListItemByLine from "./search-list-item-by-line";
+import SearchListItemSnippet from "./search-list-item-snippet";
+import { styles } from "./styles/search-list-item-styles";
 
 const { colours } = styleguide();
 
@@ -49,7 +49,7 @@ const SearchListItem: FC<SearchListItemProps> = ({ item, onItemPress }) => {
             <ArticleSummaryHeadline
               headline={getHeadline(headline, shortHeadline)}
             />
-            <SearchListItemByline byline={item.byline} />
+            <SearchListItemByLine byline={item.byline} />
             <SearchListItemSnippet attribute="content" hit={item} />
             <FormattedDate
               publishedTime={item.publishedTime}

@@ -1,7 +1,7 @@
 import React, { FC } from "react";
 import { TouchableOpacity, TouchableOpacityProps } from "react-native";
 import CloseRoundIcon from "@times-components-native/icons/src/icons/close-round";
-import { styles } from "./styles/xButtonStyles";
+import { styles } from "./styles/x-button-styles";
 
 export interface XButtonProps {
   onPress: TouchableOpacityProps["onPress"];

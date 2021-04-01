@@ -1,8 +1,8 @@
 import TestRenderer from "react-test-renderer";
 import React from "react";
-import EmptySearchMessage from "../src/emptySearchMessage";
-import CancelButton from "../src/searchBar/cancelButton";
-import { SearchBar } from "../src/searchBar/searchBar";
+import EmptySearchMessage from "../src/empty-search-message";
+import CancelButton from "../src/search-bar/cancel-button";
+import { SearchBar } from "../src/search-bar/search-bar";
 
 export default () => {
   it("EmptySearchMessage", () => {

@@ -2,13 +2,13 @@ import React, { FC } from "react";
 import { View } from "react-native";
 import ArticleByline from "@times-components-native/article-byline";
 import { Hit } from "../types";
-import { styles } from "./styles/searchListItemByLineStyles";
+import { styles } from "./styles/search-list-item-by-line-styles";
 
 export interface SearchListItemBylineProps {
   byline: Hit["byline"];
 }
 
-const SearchListItemByline: FC<SearchListItemBylineProps> = ({ byline }) => {
+const SearchListItemByLine: FC<SearchListItemBylineProps> = ({ byline }) => {
   if (!byline.length) {
     return null;
   }
@@ -20,4 +20,4 @@ const SearchListItemByline: FC<SearchListItemBylineProps> = ({ byline }) => {
   );
 };
 
-export default SearchListItemByline;
+export default SearchListItemByLine;

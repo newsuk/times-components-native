@@ -1,29 +1,28 @@
 import React, { FC } from "react";
 import IconClose from "@times-components-native/icons/src/icons/close";
-import {
-  StyleSheet,
-  TouchableOpacity,
-  TouchableOpacityProps,
-} from "react-native";
-import { spacing } from "@times-components-native/styleguide";
+import { TouchableOpacity } from "react-native";
+import { styles } from "./styles/cancel-button-styles";
+import { CancelButtonProps } from "./cancel-button";
+import { colours } from "@times-components-native/styleguide";
 
-export interface CancelButtonProps {
-  onPress: TouchableOpacityProps["onPress"];
-}
+const ICON_SIZE = 24;
 
-const CancelButton: FC<CancelButtonProps> = ({ onPress }) => (
-  <TouchableOpacity style={styles.container} onPress={onPress}>
-    <IconClose fillColour="#fff" height={24} width={24} />
+const CancelButton: FC<CancelButtonProps> = ({ onPress, isConnected }) => (
+  <TouchableOpacity
+    style={styles.androidContainer}
+    onPress={onPress}
+    disabled={!isConnected}
+  >
+    <IconClose
+      fillColour={
+        isConnected
+          ? colours.functional.searchText
+          : colours.functional.offlineSearchText
+      }
+      height={ICON_SIZE}
+      width={ICON_SIZE}
+    />
   </TouchableOpacity>
 );
-
-const styles = StyleSheet.create({
-  container: {
-    position: "absolute",
-    zIndex: 1,
-    top: spacing(3),
-    right: spacing(2),
-  },
-});
 
 export default CancelButton;

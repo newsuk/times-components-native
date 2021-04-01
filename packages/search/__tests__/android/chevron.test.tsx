@@ -1,5 +1,5 @@
 import TestRenderer from "react-test-renderer";
-import Chevron from "@times-components-native/search/src/searchBar/chevron";
+import Chevron from "@times-components-native/search/src/search-bar/chevron";
 import React from "react";
 
 describe("Chevron", () => {

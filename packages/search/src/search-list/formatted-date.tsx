@@ -2,7 +2,7 @@ import React, { FC } from "react";
 import { Text } from "react-native";
 import DatePublication from "@times-components-native/date-publication";
 import { Hit } from "../types";
-import { styles } from "./styles/formattedDateStyles";
+import { styles } from "./styles/formatted-date-styles";
 
 export interface FormattedDateProps {
   publishedTime: Hit["publishedTime"];

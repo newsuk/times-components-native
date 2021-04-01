@@ -1,7 +1,7 @@
 import React from "react";
 import { GlassMagnifierIcon } from "@times-components-native/icons/src/icons";
 import { View } from "react-native";
-import { styles } from "./styles/magnifierStyles";
+import { styles } from "./styles/magnifier-styles";
 
 interface MagnifierProps {
   color?: string;

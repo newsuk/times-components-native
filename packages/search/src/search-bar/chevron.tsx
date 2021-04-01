@@ -1,7 +1,7 @@
 import React, { FC } from "react";
 import { TouchableOpacity, TouchableOpacityProps } from "react-native";
 import { LeftChevron } from "@times-components-native/icons/src/icons";
-import { styles } from "./styles/chevronStyles";
+import { styles } from "./styles/chevron-styles";
 
 export interface ChevronProps {
   onPress: TouchableOpacityProps["onPress"];

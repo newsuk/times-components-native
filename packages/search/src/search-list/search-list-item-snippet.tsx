@@ -3,7 +3,7 @@ import { connectHighlight } from "react-instantsearch-native";
 import { HighlightProps } from "react-instantsearch-core";
 import { Hit } from "../types";
 import { Text } from "react-native";
-import { styles } from "./styles/searchListItemSnippetStyles";
+import { styles } from "./styles/search-list-item-snippet-styles";
 
 export type SearchListItemSnippetProps = HighlightProps<Hit["_snippetResult"]>;
 

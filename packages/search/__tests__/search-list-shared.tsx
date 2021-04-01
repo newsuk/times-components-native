@@ -1,9 +1,9 @@
 import TestRenderer from "react-test-renderer";
 import React from "react";
-import SearchList from "../src/searchList/searchList";
-import FormattedDate from "../src/searchList/formattedDate";
-import SearchListItemByline from "../src/searchList/searchListItemByline";
-import SearchListItemSnippet from "../src/searchList/searchListItemSnippet";
+import SearchList from "../src/search-list/search-list";
+import FormattedDate from "../src/search-list/formatted-date";
+import SearchListItemByLine from "../src/search-list/search-list-item-by-line";
+import SearchListItemSnippet from "../src/search-list/search-list-item-snippet";
 
 const mockHits = require("../__mocks__/mock-hits.json");
 
@@ -32,9 +32,9 @@ export default () => {
     });
   });
 
-  it("SearchListItemByline should render correctly", () => {
+  it("SearchListItemByLine should render correctly", () => {
     const testInstance = TestRenderer.create(
-      <SearchListItemByline byline={mockHits[0].byline} />,
+      <SearchListItemByLine byline={mockHits[0].byline} />,
     );
 
     expect(testInstance).toMatchSnapshot();

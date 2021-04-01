@@ -1,11 +1,11 @@
 import React, { FC } from "react";
 import { ArticleListEmptyState } from "@times-components-native/article-list";
 import { FlatList, View } from "react-native";
-import SearchListItem from "./searchListItem";
+import SearchListItem from "./search-list-item";
 import { Hit } from "../types";
 import ArticleListItemSeparator from "@times-components-native/article-list/src/article-list-item-separator";
-import SearchListLoader from "@times-components-native/search/src/searchList/searchListLoader";
-import { styles } from "./styles/searchListStyles";
+import SearchListLoader from "@times-components-native/search/src/search-list/search-list-loader";
+import { styles } from "./styles/search-list-styles";
 
 export interface SearchListProps {
   hits: Hit[];

@@ -1,6 +1,6 @@
 import React from "react";
 import TestRenderer from "react-test-renderer";
-import Magnifier from "../../src/searchBar/magnifier";
+import Magnifier from "../../src/search-bar/magnifier";
 
 describe("Magnifier", () => {
   it("Should render correctly", () => {

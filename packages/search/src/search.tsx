@@ -1,5 +1,5 @@
 import React, { FC } from "react";
-import { SearchBarComponent } from "./searchBar/searchBar";
+import { SearchBarComponent } from "./search-bar/search-bar";
 import SearchResults from "@times-components-native/search/src/search-results";
 import { connectSearchBox, InstantSearch } from "react-instantsearch-native";
 import algoliasearch, { SearchClient } from "algoliasearch";

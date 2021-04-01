@@ -1,6 +1,6 @@
 import React from "react";
 import { Text, View } from "react-native";
-import { styles } from "./styles/emptySearchMessageStyles";
+import { styles } from "./styles/empty-search-message-styles";
 
 const { container, text, title } = styles;
 
