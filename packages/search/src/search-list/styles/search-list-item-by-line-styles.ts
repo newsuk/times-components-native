@@ -4,7 +4,7 @@ import { StyleSheet } from "react-native";
 const { spacing } = styleguide();
 
 export const styles = StyleSheet.create({
-  byLineContainer: {
+  bylineContainer: {
     marginBottom: spacing(2),
   },
 });

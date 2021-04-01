@@ -1,5 +1,9 @@
 import { StyleSheet } from "react-native";
-import { colours, fontFactory } from "@times-components-native/styleguide";
+import {
+  colours,
+  fontFactory,
+  spacing
+} from "@times-components-native/styleguide";
 import { isIOS } from "@times-components-native/utils/src/platformUtils";
 
 export const styles = StyleSheet.create({
@@ -21,7 +25,7 @@ export const styles = StyleSheet.create({
     }),
     lineHeight: 22,
     padding: 4,
-    paddingLeft: 30,
+    paddingLeft: spacing(6),
     backgroundColor: isIOS
       ? colours.functional.transparentWhite
       : colours.functional.backgroundTertiary,

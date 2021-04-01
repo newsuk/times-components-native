@@ -14,7 +14,7 @@ const SearchListItemByLine: FC<SearchListItemBylineProps> = ({ byline }) => {
   }
 
   return (
-    <View style={styles.byLineContainer}>
+    <View style={styles.bylineContainer}>
       <ArticleByline ast={[{ byline: byline }]} />
     </View>
   );
