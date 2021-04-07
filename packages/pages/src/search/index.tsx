@@ -7,7 +7,6 @@ import { SearchProps } from "@times-components-native/search/src/search";
 const { track } = NativeModules.ReactAnalytics;
 const { onArticlePress } = NativeModules.SearchEvents;
 
-// TODO: remove this comment
 export interface SearchPageProps {
   algoliaConfig: SearchProps["algoliaConfig"] | null;
 }

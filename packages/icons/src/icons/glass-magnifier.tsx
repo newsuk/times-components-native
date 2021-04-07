@@ -1,14 +1,15 @@
 import React, { FC } from "react";
 import Svg, { G, Mask, Path, Rect } from "react-native-svg";
 import { EMaskUnits } from "@times-components-native/icons/src/icons/types";
-import functional
-  from "@times-components-native/styleguide/src/colours/functional";
+import functional from "@times-components-native/styleguide/src/colours/functional";
 
 interface GlassMagnifierProps {
   color?: string;
 }
 
-const GlassMagnifier: FC<GlassMagnifierProps> = ({ color = functional.white}) => (
+const GlassMagnifier: FC<GlassMagnifierProps> = ({
+  color = functional.white,
+}) => (
   <Svg width="24" height="24" viewBox="0 0 24 24" fill="none">
     <Mask
       id="mask0"

@@ -2,7 +2,7 @@ import { StyleSheet } from "react-native";
 import {
   colours,
   fontFactory,
-  spacing
+  spacing,
 } from "@times-components-native/styleguide";
 import { isIOS } from "@times-components-native/utils/src/platformUtils";
 
