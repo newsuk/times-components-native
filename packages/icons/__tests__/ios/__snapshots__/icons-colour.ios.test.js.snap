@@ -166,3 +166,66 @@ exports[`11. closeicon renders with different colours 1`] = `
   </RNSVGGroup>
 </RNSVGSvgView>
 `;
+
+exports[`12. closeroundicon renders with different colours 1`] = `
+<RNSVGSvgView
+  fill="none"
+>
+  <RNSVGGroup
+    fill={null}
+  >
+    <RNSVGMask>
+      <RNSVGPath
+        fill={4294967295}
+      />
+    </RNSVGMask>
+    <RNSVGGroup>
+      <RNSVGRect
+        fill={4294967295}
+      />
+    </RNSVGGroup>
+  </RNSVGGroup>
+</RNSVGSvgView>
+`;
+
+exports[`13. glassmagnifiericon renders with different colours 1`] = `
+<RNSVGSvgView
+  fill="none"
+>
+  <RNSVGGroup
+    fill={null}
+  >
+    <RNSVGMask>
+      <RNSVGPath
+        fill={4294967295}
+      />
+    </RNSVGMask>
+    <RNSVGGroup>
+      <RNSVGRect
+        fill={4294967295}
+      />
+    </RNSVGGroup>
+  </RNSVGGroup>
+</RNSVGSvgView>
+`;
+
+exports[`14. leftchevron renders with different colours 1`] = `
+<RNSVGSvgView
+  fill="none"
+>
+  <RNSVGGroup
+    fill={null}
+  >
+    <RNSVGMask>
+      <RNSVGPath
+        fill={4294967295}
+      />
+    </RNSVGMask>
+    <RNSVGGroup>
+      <RNSVGRect
+        fill={4294967295}
+      />
+    </RNSVGGroup>
+  </RNSVGGroup>
+</RNSVGSvgView>
+`;

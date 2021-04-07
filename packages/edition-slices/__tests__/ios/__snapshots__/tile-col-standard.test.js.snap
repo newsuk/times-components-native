@@ -28,15 +28,7 @@ exports[`tile col standard huge 1`] = `
             }
           >
             <ArticleLabel
-              articleReadState={
-                Object {
-                  "animate": false,
-                  "read": false,
-                }
-              }
               color="#005B8D"
-              hide={false}
-              isVideo={false}
               title="label"
             />
           </View>
@@ -122,15 +114,7 @@ exports[`tile col standard medium 1`] = `
             }
           >
             <ArticleLabel
-              articleReadState={
-                Object {
-                  "animate": false,
-                  "read": false,
-                }
-              }
               color="#005B8D"
-              hide={false}
-              isVideo={false}
               title="label"
             />
           </View>
@@ -197,15 +181,7 @@ exports[`tile col standard shows an image 1`] = `
             }
           >
             <ArticleLabel
-              articleReadState={
-                Object {
-                  "animate": false,
-                  "read": false,
-                }
-              }
               color="#005B8D"
-              hide={false}
-              isVideo={false}
               title="label"
             />
           </View>
@@ -281,15 +257,7 @@ exports[`tile col standard shows portrait image when in portrait wide (ipad pro)
             }
           >
             <ArticleLabel
-              articleReadState={
-                Object {
-                  "animate": false,
-                  "read": false,
-                }
-              }
               color="#005B8D"
-              hide={false}
-              isVideo={false}
               title="label"
             />
           </View>
@@ -356,15 +324,7 @@ exports[`tile col standard smallTablet 1`] = `
             }
           >
             <ArticleLabel
-              articleReadState={
-                Object {
-                  "animate": false,
-                  "read": false,
-                }
-              }
               color="#005B8D"
-              hide={false}
-              isVideo={false}
               title="label"
             />
           </View>
@@ -431,15 +391,7 @@ exports[`tile col standard wide 1`] = `
             }
           >
             <ArticleLabel
-              articleReadState={
-                Object {
-                  "animate": false,
-                  "read": false,
-                }
-              }
               color="#005B8D"
-              hide={false}
-              isVideo={false}
               title="label"
             />
           </View>

@@ -26,15 +26,7 @@ exports[`tile n huge 1`] = `
         }
       >
         <ArticleLabel
-          articleReadState={
-            Object {
-              "animate": false,
-              "read": false,
-            }
-          }
           color="#CCC"
-          hide={false}
-          isVideo={false}
           title="label"
         />
       </View>
@@ -99,15 +91,7 @@ exports[`tile n medium 1`] = `
         }
       >
         <ArticleLabel
-          articleReadState={
-            Object {
-              "animate": false,
-              "read": false,
-            }
-          }
           color="#CCC"
-          hide={false}
-          isVideo={false}
           title="label"
         />
       </View>
@@ -174,15 +158,7 @@ exports[`tile n small 1`] = `
         }
       >
         <ArticleLabel
-          articleReadState={
-            Object {
-              "animate": false,
-              "read": false,
-            }
-          }
           color="#CCC"
-          hide={false}
-          isVideo={false}
           title="label"
         />
       </View>
@@ -246,15 +222,7 @@ exports[`tile n smallTablet 1`] = `
         }
       >
         <ArticleLabel
-          articleReadState={
-            Object {
-              "animate": false,
-              "read": false,
-            }
-          }
           color="#CCC"
-          hide={false}
-          isVideo={false}
           title="label"
         />
       </View>
@@ -319,15 +287,7 @@ exports[`tile n wide 1`] = `
         }
       >
         <ArticleLabel
-          articleReadState={
-            Object {
-              "animate": false,
-              "read": false,
-            }
-          }
           color="#CCC"
-          hide={false}
-          isVideo={false}
           title="label"
         />
       </View>
@@ -394,15 +354,7 @@ exports[`tile n with default star 1`] = `
         }
       >
         <ArticleLabel
-          articleReadState={
-            Object {
-              "animate": false,
-              "read": false,
-            }
-          }
           color="#CCC"
-          hide={false}
-          isVideo={false}
           title="label"
         />
       </View>

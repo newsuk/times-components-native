@@ -15,6 +15,9 @@ export default (page) => {
     case "Topic": {
       return withErrorBoundaries(require("./topic").default);
     }
+    case "Search": {
+      return withErrorBoundaries(require("./search").default);
+    }
     default: {
       return withErrorBoundaries(require("./article").default);
     }

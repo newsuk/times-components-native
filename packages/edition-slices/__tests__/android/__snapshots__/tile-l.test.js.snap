@@ -25,15 +25,7 @@ exports[`tile l huge 1`] = `
         }
       >
         <ArticleLabel
-          articleReadState={
-            Object {
-              "animate": false,
-              "read": false,
-            }
-          }
           color="#005B8D"
-          hide={false}
-          isVideo={false}
           title="label"
         />
       </View>
@@ -95,15 +87,7 @@ exports[`tile l medium 1`] = `
         }
       >
         <ArticleLabel
-          articleReadState={
-            Object {
-              "animate": false,
-              "read": false,
-            }
-          }
           color="#005B8D"
-          hide={false}
-          isVideo={false}
           title="label"
         />
       </View>
@@ -165,15 +149,7 @@ exports[`tile l small 1`] = `
         }
       >
         <ArticleLabel
-          articleReadState={
-            Object {
-              "animate": false,
-              "read": false,
-            }
-          }
           color="#005B8D"
-          hide={false}
-          isVideo={false}
           title="label"
         />
       </View>
@@ -235,15 +211,7 @@ exports[`tile l smallTablet 1`] = `
         }
       >
         <ArticleLabel
-          articleReadState={
-            Object {
-              "animate": false,
-              "read": false,
-            }
-          }
           color="#005B8D"
-          hide={false}
-          isVideo={false}
           title="label"
         />
       </View>
@@ -305,15 +273,7 @@ exports[`tile l wide 1`] = `
         }
       >
         <ArticleLabel
-          articleReadState={
-            Object {
-              "animate": false,
-              "read": false,
-            }
-          }
           color="#005B8D"
-          hide={false}
-          isVideo={false}
           title="label"
         />
       </View>
@@ -375,15 +335,7 @@ exports[`tile l without breakpoint should be like small 1`] = `
         }
       >
         <ArticleLabel
-          articleReadState={
-            Object {
-              "animate": false,
-              "read": false,
-            }
-          }
           color="#005B8D"
-          hide={false}
-          isVideo={false}
           title="label"
         />
       </View>

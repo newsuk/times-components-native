@@ -1,0 +1,1280 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Search Bar List FormattedDate should render correctly 1`] = `
+<Text
+  style={
+    Object {
+      "color": "#696969",
+      "fontFamily": "GillSansMTStd-Medium",
+      "fontSize": 13,
+      "lineHeight": 15,
+      "marginVertical": 10,
+    }
+  }
+  testID="datePublication"
+>
+  Tuesday September 08 2020, 12.01am BST, The Times
+</Text>
+`;
+
+exports[`Search Bar List SearchList should render correctly 1`] = `
+<View
+  style={
+    Object {
+      "flex": 1,
+      "flexDirection": "row",
+      "justifyContent": "center",
+    }
+  }
+>
+  <View
+    style={
+      Object {
+        "flexGrow": 1,
+        "maxWidth": 660,
+      }
+    }
+  >
+    <RCTScrollView
+      ItemSeparatorComponent={[Function]}
+      ListEmptyComponent={
+        <ArticleListEmptyState
+          message="There were no results for your search term"
+        />
+      }
+      ListFooterComponent={[Function]}
+      contentContainerStyle={
+        Object {
+          "flexGrow": 1,
+        }
+      }
+      data={
+        Array [
+          Object {
+            "__position": 1,
+            "_highlightResult": Object {
+              "algoliaData": Object {
+                "publishedTimestamp": Object {
+                  "matchLevel": "none",
+                  "matchedWords": Array [],
+                  "value": "1426982460000",
+                },
+                "recencyIndex": Object {
+                  "matchLevel": "none",
+                  "matchedWords": Array [],
+                  "value": "0",
+                },
+              },
+              "byline": Array [
+                Object {
+                  "children": Array [
+                    Object {
+                      "attributes": Object {
+                        "value": Object {
+                          "matchLevel": "none",
+                          "matchedWords": Array [],
+                          "value": "Bojan Pancevski, Brussels",
+                        },
+                      },
+                      "name": Object {
+                        "matchLevel": "none",
+                        "matchedWords": Array [],
+                        "value": "text",
+                      },
+                    },
+                  ],
+                  "name": Object {
+                    "matchLevel": "none",
+                    "matchedWords": Array [],
+                    "value": "inline",
+                  },
+                },
+              ],
+              "content": Object {
+                "fullyHighlighted": false,
+                "matchLevel": "full",
+                "matchedWords": Array [
+                  "a",
+                ],
+                "value": "<p><em>Update on 29 March 2019: Solicitors for IMG have informed The Sunday Times that in January 2019, the European Court of Justice overturned the decision of the Commission. IMG has been found to be <ais-highlight-0000000000>a</ais-highlight-0000000000>n international organisation.</em></p><p> </p><p>EUROPEAN prosecutors have been <ais-highlight-0000000000>a</ais-highlight-0000000000>sked to scrutinise <ais-highlight-0000000000>a</ais-highlight-0000000000> consultancy run by <ais-highlight-0000000000>a</ais-highlight-0000000000> Serbian-based Italian businessman that has been <ais-highlight-0000000000>a</ais-highlight-0000000000>warded contracts worth hundreds of millions of pounds without public tender.</p><p>The European Union’s investigations <ais-highlight-0000000000>a</ais-highlight-0000000000>rm has called on <ais-highlight-0000000000>a</ais-highlight-0000000000>uthorities in France <ais-highlight-0000000000>a</ais-highlight-0000000000>nd Belgium to look into the International Management Group (IMG), <ais-highlight-0000000000>a</ais-highlight-0000000000> consultancy that runs projects in crisis zones, for “possible fraud <ais-highlight-0000000000>a</ais-highlight-0000000000>nd <ais-highlight-0000000000>a</ais-highlight-0000000000>ssociated money laundering”.</p><p>The consultancy has nothing to do with the New York-based IMG sports group.</p><p><ais-highlight-0000000000>A</ais-highlight-0000000000>n EU report seen by The Sunday Times <ais-highlight-0000000000>a</ais-highlight-0000000000>ccuses IMG, which has received <ais-highlight-0000000000>a</ais-highlight-0000000000>lmost £100m from the EU in the past two decades, of “possible fraudulent <ais-highlight-0000000000>a</ais-highlight-0000000000>ctivities including providing the European Commission services with misleading information”.</p><p>The group has <ais-highlight-0000000000>a</ais-highlight-0000000000>lso won <ais-highlight-0000000000>a</ais-highlight-0000000000> number of contracts from the Foreign <ais-highlight-0000000000>a</ais-highlight-0000000000>nd Commonwealth Office <ais-highlight-0000000000>a</ais-highlight-0000000000>nd is <ais-highlight-0000000000>a</ais-highlight-0000000000>t present implementing <ais-highlight-0000000000>a</ais-highlight-0000000000> £123,000 <ais-highlight-0000000000>a</ais-highlight-0000000000>id project in Macedonia funded by Britain.</p><p>Investigators from Olaf, the EU <ais-highlight-0000000000>a</ais-highlight-0000000000>nti-fraud office, found IMG was not registered <ais-highlight-0000000000>a</ais-highlight-0000000000>s <ais-highlight-0000000000>a</ais-highlight-0000000000>n international organisation or even <ais-highlight-0000000000>a</ais-highlight-0000000000>s <ais-highlight-0000000000>a</ais-highlight-0000000000> legal company.</p><p>For this reason, it <ais-highlight-0000000000>a</ais-highlight-0000000000>rgued, the consultancy, which is <ais-highlight-0000000000>a</ais-highlight-0000000000>pparently headquartered in the Serbian capital Belgrade, was not eligible for the funding it has received.</p><p>Olaf <ais-highlight-0000000000>a</ais-highlight-0000000000>lso claims more than £29m was found in French bank <ais-highlight-0000000000>a</ais-highlight-0000000000>ccounts belonging to IMG’s general manager, Dino Bicciato, <ais-highlight-0000000000>a</ais-highlight-0000000000> former civil engineer from Italy. The organisation denies the <ais-highlight-0000000000>a</ais-highlight-0000000000>ccounts were used improperly.</p><p> </p><p> </p><p> </p><p> </p><p> </p><p> </p><p> </p><p> </p><p> </p><p>Olaf concluded that IMG, <ais-highlight-0000000000>a</ais-highlight-0000000000>lthough not <ais-highlight-0000000000>a</ais-highlight-0000000000> “legal entity”, had secured government contracts in places such <ais-highlight-0000000000>a</ais-highlight-0000000000>s Gaza, Iraq <ais-highlight-0000000000>a</ais-highlight-0000000000>nd South Sudan using <ais-highlight-0000000000>a</ais-highlight-0000000000> crisis situation clause that <ais-highlight-0000000000>a</ais-highlight-0000000000>voided normal public procurement rules.</p><p>The consultancy even <ais-highlight-0000000000>a</ais-highlight-0000000000>llegedly used the <ais-highlight-0000000000>a</ais-highlight-0000000000>ddress <ais-highlight-0000000000>a</ais-highlight-0000000000>nd the logo of <ais-highlight-0000000000>a</ais-highlight-0000000000> United Nations <ais-highlight-0000000000>a</ais-highlight-0000000000>gency in Geneva to bolster its credibility in documentation.</p><p>The investigation was triggered by <ais-highlight-0000000000>a</ais-highlight-0000000000> tip-off <ais-highlight-0000000000>a</ais-highlight-0000000000>bout <ais-highlight-0000000000>a</ais-highlight-0000000000> conflict of interest in the EU’s <ais-highlight-0000000000>a</ais-highlight-0000000000>gency in Jerusalem. It turned out that two women employed there were married to officials working for IMG — <ais-highlight-0000000000>a</ais-highlight-0000000000> major contractor in the region.</p><p>IMG has <ais-highlight-0000000000>a</ais-highlight-0000000000>lready been subject to legal <ais-highlight-0000000000>a</ais-highlight-0000000000>ction in Italy, where it was ordered by two separate courts to pay back more than £11m to the country’s foreign service because of financial irregularities connected to <ais-highlight-0000000000>a</ais-highlight-0000000000>id projects. IMG has <ais-highlight-0000000000>a</ais-highlight-0000000000>ppealed <ais-highlight-0000000000>a</ais-highlight-0000000000>gainst both verdicts.</p><p> </p><p>“We shouldn’t be working with <ais-highlight-0000000000>a</ais-highlight-0000000000>n organisation if we don’t even have clarity <ais-highlight-0000000000>a</ais-highlight-0000000000>bout their legal status,” said Inge Graessle, <ais-highlight-0000000000>a</ais-highlight-0000000000> senior German MEP who chairs the European parliament’s budgetary control committee. “It is illegal to <ais-highlight-0000000000>a</ais-highlight-0000000000>ward millions of taxpayer euros to <ais-highlight-0000000000>a</ais-highlight-0000000000> private person.”</p><p>IMG was set up in 1994 <ais-highlight-0000000000>a</ais-highlight-0000000000>s <ais-highlight-0000000000>a</ais-highlight-0000000000>n <ais-highlight-0000000000>a</ais-highlight-0000000000>d hoc operation to <ais-highlight-0000000000>a</ais-highlight-0000000000>ssist diplomatic operations <ais-highlight-0000000000>a</ais-highlight-0000000000>fter the civil war in Bosnia <ais-highlight-0000000000>a</ais-highlight-0000000000>nd Herzegovina. It now employs more than 300 permanent <ais-highlight-0000000000>a</ais-highlight-0000000000>nd temporary workers, including former senior EU officials.</p><p>The organisation vehemently denies the charges.</p><p>Eric Tonon, <ais-highlight-0000000000>a</ais-highlight-0000000000> former French diplomat <ais-highlight-0000000000>a</ais-highlight-0000000000>nd IMG’s representative to the EU, said investigators had come to erroneous conclusions <ais-highlight-0000000000>a</ais-highlight-0000000000>nd disregarded relevant facts.</p><p>He claimed there was more than one definition of what constitutes <ais-highlight-0000000000>a</ais-highlight-0000000000>n international organisation <ais-highlight-0000000000>a</ais-highlight-0000000000>nd maintained that IMG was eligible for the contracts it had undertaken.</p><p>Tonon, who operates from <ais-highlight-0000000000>a</ais-highlight-0000000000> three-storey townhouse in Brussels, said <ais-highlight-0000000000>a</ais-highlight-0000000000>ll <ais-highlight-0000000000>a</ais-highlight-0000000000>ccounts containing donor funds were controlled by IMG <ais-highlight-0000000000>a</ais-highlight-0000000000>nd subject to the group’s official <ais-highlight-0000000000>a</ais-highlight-0000000000>uditor.</p><p>Donors preferred to see the group operate French <ais-highlight-0000000000>a</ais-highlight-0000000000>ccounts <ais-highlight-0000000000>a</ais-highlight-0000000000>s it was <ais-highlight-0000000000>a</ais-highlight-0000000000> country with <ais-highlight-0000000000>a</ais-highlight-0000000000> “stable financial system” compared with <ais-highlight-0000000000>a</ais-highlight-0000000000> “transition country” such <ais-highlight-0000000000>a</ais-highlight-0000000000>s Serbia, he said.</p><p><ais-highlight-0000000000>A</ais-highlight-0000000000>mong IMG projects is one for £6.9m, part-funded by Britain, to train police in Burma that includes handing out bicycles to officers.</p><p>Tonon said his consultancy was one of the “only” bodies in the country capable of fulfilling the task.</p><p>“Why is someone trying to kill one of the few purely European operators in this field?” he said.</p><p><ais-highlight-0000000000>A</ais-highlight-0000000000> Foreign <ais-highlight-0000000000>a</ais-highlight-0000000000>nd Commonwealth Office spokesman said IMG had undergone <ais-highlight-0000000000>a</ais-highlight-0000000000> formal evaluation by the British embassy in Macedonia <ais-highlight-0000000000>a</ais-highlight-0000000000>nd no concerns had been raised.</p><p>The group is threatening legal <ais-highlight-0000000000>a</ais-highlight-0000000000>ction <ais-highlight-0000000000>a</ais-highlight-0000000000>gainst the EU. Tonon claimed <ais-highlight-0000000000>a</ais-highlight-0000000000>nother branch of the commission has <ais-highlight-0000000000>a</ais-highlight-0000000000>lready contradicted the Olaf report.</p><p>The commission said the EU would not <ais-highlight-0000000000>a</ais-highlight-0000000000>ward new contracts to IMG <ais-highlight-0000000000>a</ais-highlight-0000000000>nd it would verify <ais-highlight-0000000000>a</ais-highlight-0000000000>ll <ais-highlight-0000000000>a</ais-highlight-0000000000>ctivities where there were payments pending.</p><p>“The commission has taken concrete steps to safeguard EU finances,” <ais-highlight-0000000000>a</ais-highlight-0000000000> spokesman said.</p><p>@bopanc</p>",
+              },
+              "date_timestamp": Object {
+                "matchLevel": "none",
+                "matchedWords": Array [],
+                "value": "1426982460",
+              },
+              "headline": Object {
+                "fullyHighlighted": false,
+                "matchLevel": "full",
+                "matchedWords": Array [
+                  "a",
+                ],
+                "value": "EU orders inquiry into £100m contracts <ais-highlight-0000000000>a</ais-highlight-0000000000>warded without tender",
+              },
+              "id": Object {
+                "matchLevel": "none",
+                "matchedWords": Array [],
+                "value": "99d88c9f-ca1c-449f-be8f-9e8de0c331d6",
+              },
+              "keywords": Array [
+                Object {
+                  "matchLevel": "none",
+                  "matchedWords": Array [],
+                  "value": "eu",
+                },
+                Object {
+                  "matchLevel": "none",
+                  "matchedWords": Array [],
+                  "value": "orders",
+                },
+                Object {
+                  "matchLevel": "none",
+                  "matchedWords": Array [],
+                  "value": "inquiry",
+                },
+                Object {
+                  "matchLevel": "none",
+                  "matchedWords": Array [],
+                  "value": "into",
+                },
+                Object {
+                  "matchLevel": "none",
+                  "matchedWords": Array [],
+                  "value": "£100m",
+                },
+                Object {
+                  "matchLevel": "none",
+                  "matchedWords": Array [],
+                  "value": "contracts",
+                },
+                Object {
+                  "fullyHighlighted": false,
+                  "matchLevel": "full",
+                  "matchedWords": Array [
+                    "a",
+                  ],
+                  "value": "<ais-highlight-0000000000>a</ais-highlight-0000000000>warded",
+                },
+                Object {
+                  "matchLevel": "none",
+                  "matchedWords": Array [],
+                  "value": "without",
+                },
+                Object {
+                  "matchLevel": "none",
+                  "matchedWords": Array [],
+                  "value": "tender",
+                },
+              ],
+              "leadAsset": Object {
+                "caption": Object {
+                  "fullyHighlighted": false,
+                  "matchLevel": "full",
+                  "matchedWords": Array [
+                    "a",
+                  ],
+                  "value": "Bicciato:  handled EU contract funds through personal <ais-highlight-0000000000>a</ais-highlight-0000000000>ccounts",
+                },
+                "id": Object {
+                  "matchLevel": "none",
+                  "matchedWords": Array [],
+                  "value": "929476db-930d-40fb-b2da-6b159abad158",
+                },
+                "title": Object {
+                  "fullyHighlighted": false,
+                  "matchLevel": "full",
+                  "matchedWords": Array [
+                    "a",
+                  ],
+                  "value": "Bicciato:  handled EU contract funds through personal <ais-highlight-0000000000>a</ais-highlight-0000000000>ccounts",
+                },
+              },
+              "publicationName": Object {
+                "matchLevel": "none",
+                "matchedWords": Array [],
+                "value": "sundaytimes",
+              },
+              "publishedTime": Object {
+                "matchLevel": "none",
+                "matchedWords": Array [],
+                "value": "2015-03-22T00:01:00.000Z",
+              },
+              "shortHeadline": Object {
+                "fullyHighlighted": false,
+                "matchLevel": "full",
+                "matchedWords": Array [
+                  "a",
+                ],
+                "value": "EU orders inquiry into £100m contracts <ais-highlight-0000000000>a</ais-highlight-0000000000>warded without tender",
+              },
+              "url": Object {
+                "fullyHighlighted": false,
+                "matchLevel": "full",
+                "matchedWords": Array [
+                  "a",
+                ],
+                "value": "http://cps-render-ci.elb.tnl-dev.ntch.co.uk/<ais-highlight-0000000000>a</ais-highlight-0000000000>rticle/eu-orders-inquiry-into-100m-contracts-<ais-highlight-0000000000>a</ais-highlight-0000000000>warded-without-tender-l0qz3bwpbh6",
+              },
+            },
+            "_snippetResult": Object {
+              "content": Object {
+                "matchLevel": "full",
+                "value": "… with misleading information”.The group has <ais-highlight-0000000000>a</ais-highlight-0000000000>lso won <ais-highlight-0000000000>a</ais-highlight-0000000000> number of contracts from the Foreign <ais-highlight-0000000000>a</ais-highlight-0000000000>nd Commonwealth Office <ais-highlight-0000000000>a</ais-highlight-0000000000>nd is <ais-highlight-0000000000>a</ais-highlight-0000000000>t present implementing <ais-highlight-0000000000>a</ais-highlight-0000000000> £123,000 <ais-highlight-0000000000>a</ais-highlight-0000000000>id project in Macedonia …",
+              },
+            },
+            "algoliaData": Object {
+              "publishedTimestamp": 1426982460000,
+              "recencyIndex": 0,
+            },
+            "byline": Array [
+              Object {
+                "children": Array [
+                  Object {
+                    "attributes": Object {
+                      "value": "Bojan Pancevski, Brussels",
+                    },
+                    "children": Array [],
+                    "name": "text",
+                  },
+                ],
+                "name": "inline",
+              },
+            ],
+            "commentsEnabled": true,
+            "commercialSectionTags": null,
+            "commercialTags": Array [],
+            "content": "<p><em>Update on 29 March 2019: Solicitors for IMG have informed The Sunday Times that in January 2019, the European Court of Justice overturned the decision of the Commission. IMG has been found to be an international organisation.</em></p><p> </p><p>EUROPEAN prosecutors have been asked to scrutinise a consultancy run by a Serbian-based Italian businessman that has been awarded contracts worth hundreds of millions of pounds without public tender.</p><p>The European Union’s investigations arm has called on authorities in France and Belgium to look into the International Management Group (IMG), a consultancy that runs projects in crisis zones, for “possible fraud and associated money laundering”.</p><p>The consultancy has nothing to do with the New York-based IMG sports group.</p><p>An EU report seen by The Sunday Times accuses IMG, which has received almost £100m from the EU in the past two decades, of “possible fraudulent activities including providing the European Commission services with misleading information”.</p><p>The group has also won a number of contracts from the Foreign and Commonwealth Office and is at present implementing a £123,000 aid project in Macedonia funded by Britain.</p><p>Investigators from Olaf, the EU anti-fraud office, found IMG was not registered as an international organisation or even as a legal company.</p><p>For this reason, it argued, the consultancy, which is apparently headquartered in the Serbian capital Belgrade, was not eligible for the funding it has received.</p><p>Olaf also claims more than £29m was found in French bank accounts belonging to IMG’s general manager, Dino Bicciato, a former civil engineer from Italy. The organisation denies the accounts were used improperly.</p><p> </p><p> </p><p> </p><p> </p><p> </p><p> </p><p> </p><p> </p><p> </p><p>Olaf concluded that IMG, although not a “legal entity”, had secured government contracts in places such as Gaza, Iraq and South Sudan using a crisis situation clause that avoided normal public procurement rules.</p><p>The consultancy even allegedly used the address and the logo of a United Nations agency in Geneva to bolster its credibility in documentation.</p><p>The investigation was triggered by a tip-off about a conflict of interest in the EU’s agency in Jerusalem. It turned out that two women employed there were married to officials working for IMG — a major contractor in the region.</p><p>IMG has already been subject to legal action in Italy, where it was ordered by two separate courts to pay back more than £11m to the country’s foreign service because of financial irregularities connected to aid projects. IMG has appealed against both verdicts.</p><p> </p><p>“We shouldn’t be working with an organisation if we don’t even have clarity about their legal status,” said Inge Graessle, a senior German MEP who chairs the European parliament’s budgetary control committee. “It is illegal to award millions of taxpayer euros to a private person.”</p><p>IMG was set up in 1994 as an ad hoc operation to assist diplomatic operations after the civil war in Bosnia and Herzegovina. It now employs more than 300 permanent and temporary workers, including former senior EU officials.</p><p>The organisation vehemently denies the charges.</p><p>Eric Tonon, a former French diplomat and IMG’s representative to the EU, said investigators had come to erroneous conclusions and disregarded relevant facts.</p><p>He claimed there was more than one definition of what constitutes an international organisation and maintained that IMG was eligible for the contracts it had undertaken.</p><p>Tonon, who operates from a three-storey townhouse in Brussels, said all accounts containing donor funds were controlled by IMG and subject to the group’s official auditor.</p><p>Donors preferred to see the group operate French accounts as it was a country with a “stable financial system” compared with a “transition country” such as Serbia, he said.</p><p>Among IMG projects is one for £6.9m, part-funded by Britain, to train police in Burma that includes handing out bicycles to officers.</p><p>Tonon said his consultancy was one of the “only” bodies in the country capable of fulfilling the task.</p><p>“Why is someone trying to kill one of the few purely European operators in this field?” he said.</p><p>A Foreign and Commonwealth Office spokesman said IMG had undergone a formal evaluation by the British embassy in Macedonia and no concerns had been raised.</p><p>The group is threatening legal action against the EU. Tonon claimed another branch of the commission has already contradicted the Olaf report.</p><p>The commission said the EU would not award new contracts to IMG and it would verify all activities where there were payments pending.</p><p>“The commission has taken concrete steps to safeguard EU finances,” a spokesman said.</p><p>@bopanc</p>",
+            "date_timestamp": 1426982460,
+            "flags": Array [],
+            "hasVideo": false,
+            "headline": "EU orders inquiry into £100m contracts awarded without tender",
+            "id": "99d88c9f-ca1c-449f-be8f-9e8de0c331d6",
+            "keywords": Array [
+              "eu",
+              "orders",
+              "inquiry",
+              "into",
+              "£100m",
+              "contracts",
+              "awarded",
+              "without",
+              "tender",
+            ],
+            "label": null,
+            "leadAsset": Object {
+              "caption": "Bicciato:  handled EU contract funds through personal accounts",
+              "credits": null,
+              "crop": null,
+              "id": "929476db-930d-40fb-b2da-6b159abad158",
+              "title": "Bicciato:  handled EU contract funds through personal accounts",
+            },
+            "objectID": "99d88c9f-ca1c-449f-be8f-9e8de0c331d6",
+            "publicationName": "sundaytimes",
+            "publishedTime": "2015-03-22T00:01:00.000Z",
+            "section": null,
+            "shortHeadline": "EU orders inquiry into £100m contracts awarded without tender",
+            "topics": null,
+            "url": "http://cps-render-ci.elb.tnl-dev.ntch.co.uk/article/eu-orders-inquiry-into-100m-contracts-awarded-without-tender-l0qz3bwpbh6",
+          },
+          Object {
+            "__position": 2,
+            "_highlightResult": Object {
+              "algoliaData": Object {
+                "publishedTimestamp": Object {
+                  "matchLevel": "none",
+                  "matchedWords": Array [],
+                  "value": "1426982460000",
+                },
+                "recencyIndex": Object {
+                  "matchLevel": "none",
+                  "matchedWords": Array [],
+                  "value": "0",
+                },
+              },
+              "byline": Array [
+                Object {
+                  "children": Array [
+                    Object {
+                      "attributes": Object {
+                        "value": Object {
+                          "matchLevel": "none",
+                          "matchedWords": Array [],
+                          "value": "Bojan Pancevski, Brussels",
+                        },
+                      },
+                      "name": Object {
+                        "matchLevel": "none",
+                        "matchedWords": Array [],
+                        "value": "text",
+                      },
+                    },
+                  ],
+                  "name": Object {
+                    "matchLevel": "none",
+                    "matchedWords": Array [],
+                    "value": "inline",
+                  },
+                },
+              ],
+              "content": Object {
+                "fullyHighlighted": false,
+                "matchLevel": "full",
+                "matchedWords": Array [
+                  "a",
+                ],
+                "value": "<p><em>Update on 29 March 2019: Solicitors for IMG have informed The Sunday Times that in January 2019, the European Court of Justice overturned the decision of the Commission. IMG has been found to be <ais-highlight-0000000000>a</ais-highlight-0000000000>n international organisation.</em></p><p> </p><p>EUROPEAN prosecutors have been <ais-highlight-0000000000>a</ais-highlight-0000000000>sked to scrutinise <ais-highlight-0000000000>a</ais-highlight-0000000000> consultancy run by <ais-highlight-0000000000>a</ais-highlight-0000000000> Serbian-based Italian businessman that has been <ais-highlight-0000000000>a</ais-highlight-0000000000>warded contracts worth hundreds of millions of pounds without public tender.</p><p>The European Union’s investigations <ais-highlight-0000000000>a</ais-highlight-0000000000>rm has called on <ais-highlight-0000000000>a</ais-highlight-0000000000>uthorities in France <ais-highlight-0000000000>a</ais-highlight-0000000000>nd Belgium to look into the International Management Group (IMG), <ais-highlight-0000000000>a</ais-highlight-0000000000> consultancy that runs projects in crisis zones, for “possible fraud <ais-highlight-0000000000>a</ais-highlight-0000000000>nd <ais-highlight-0000000000>a</ais-highlight-0000000000>ssociated money laundering”.</p><p>The consultancy has nothing to do with the New York-based IMG sports group.</p><p><ais-highlight-0000000000>A</ais-highlight-0000000000>n EU report seen by The Sunday Times <ais-highlight-0000000000>a</ais-highlight-0000000000>ccuses IMG, which has received <ais-highlight-0000000000>a</ais-highlight-0000000000>lmost £100m from the EU in the past two decades, of “possible fraudulent <ais-highlight-0000000000>a</ais-highlight-0000000000>ctivities including providing the European Commission services with misleading information”.</p><p>The group has <ais-highlight-0000000000>a</ais-highlight-0000000000>lso won <ais-highlight-0000000000>a</ais-highlight-0000000000> number of contracts from the Foreign <ais-highlight-0000000000>a</ais-highlight-0000000000>nd Commonwealth Office <ais-highlight-0000000000>a</ais-highlight-0000000000>nd is <ais-highlight-0000000000>a</ais-highlight-0000000000>t present implementing <ais-highlight-0000000000>a</ais-highlight-0000000000> £123,000 <ais-highlight-0000000000>a</ais-highlight-0000000000>id project in Macedonia funded by Britain.</p><p>Investigators from Olaf, the EU <ais-highlight-0000000000>a</ais-highlight-0000000000>nti-fraud office, found IMG was not registered <ais-highlight-0000000000>a</ais-highlight-0000000000>s <ais-highlight-0000000000>a</ais-highlight-0000000000>n international organisation or even <ais-highlight-0000000000>a</ais-highlight-0000000000>s <ais-highlight-0000000000>a</ais-highlight-0000000000> legal company.</p><p>For this reason, it <ais-highlight-0000000000>a</ais-highlight-0000000000>rgued, the consultancy, which is <ais-highlight-0000000000>a</ais-highlight-0000000000>pparently headquartered in the Serbian capital Belgrade, was not eligible for the funding it has received.</p><p>Olaf <ais-highlight-0000000000>a</ais-highlight-0000000000>lso claims more than £29m was found in French bank <ais-highlight-0000000000>a</ais-highlight-0000000000>ccounts belonging to IMG’s general manager, Dino Bicciato, <ais-highlight-0000000000>a</ais-highlight-0000000000> former civil engineer from Italy. The organisation denies the <ais-highlight-0000000000>a</ais-highlight-0000000000>ccounts were used improperly.</p><p> </p><p> </p><p> </p><p> </p><p> </p><p> </p><p> </p><p> </p><p> </p><p>Olaf concluded that IMG, <ais-highlight-0000000000>a</ais-highlight-0000000000>lthough not <ais-highlight-0000000000>a</ais-highlight-0000000000> “legal entity”, had secured government contracts in places such <ais-highlight-0000000000>a</ais-highlight-0000000000>s Gaza, Iraq <ais-highlight-0000000000>a</ais-highlight-0000000000>nd South Sudan using <ais-highlight-0000000000>a</ais-highlight-0000000000> crisis situation clause that <ais-highlight-0000000000>a</ais-highlight-0000000000>voided normal public procurement rules.</p><p>The consultancy even <ais-highlight-0000000000>a</ais-highlight-0000000000>llegedly used the <ais-highlight-0000000000>a</ais-highlight-0000000000>ddress <ais-highlight-0000000000>a</ais-highlight-0000000000>nd the logo of <ais-highlight-0000000000>a</ais-highlight-0000000000> United Nations <ais-highlight-0000000000>a</ais-highlight-0000000000>gency in Geneva to bolster its credibility in documentation.</p><p>The investigation was triggered by <ais-highlight-0000000000>a</ais-highlight-0000000000> tip-off <ais-highlight-0000000000>a</ais-highlight-0000000000>bout <ais-highlight-0000000000>a</ais-highlight-0000000000> conflict of interest in the EU’s <ais-highlight-0000000000>a</ais-highlight-0000000000>gency in Jerusalem. It turned out that two women employed there were married to officials working for IMG — <ais-highlight-0000000000>a</ais-highlight-0000000000> major contractor in the region.</p><p>IMG has <ais-highlight-0000000000>a</ais-highlight-0000000000>lready been subject to legal <ais-highlight-0000000000>a</ais-highlight-0000000000>ction in Italy, where it was ordered by two separate courts to pay back more than £11m to the country’s foreign service because of financial irregularities connected to <ais-highlight-0000000000>a</ais-highlight-0000000000>id projects. IMG has <ais-highlight-0000000000>a</ais-highlight-0000000000>ppealed <ais-highlight-0000000000>a</ais-highlight-0000000000>gainst both verdicts.</p><p> </p><p>“We shouldn’t be working with <ais-highlight-0000000000>a</ais-highlight-0000000000>n organisation if we don’t even have clarity <ais-highlight-0000000000>a</ais-highlight-0000000000>bout their legal status,” said Inge Graessle, <ais-highlight-0000000000>a</ais-highlight-0000000000> senior German MEP who chairs the European parliament’s budgetary control committee. “It is illegal to <ais-highlight-0000000000>a</ais-highlight-0000000000>ward millions of taxpayer euros to <ais-highlight-0000000000>a</ais-highlight-0000000000> private person.”</p><p>IMG was set up in 1994 <ais-highlight-0000000000>a</ais-highlight-0000000000>s <ais-highlight-0000000000>a</ais-highlight-0000000000>n <ais-highlight-0000000000>a</ais-highlight-0000000000>d hoc operation to <ais-highlight-0000000000>a</ais-highlight-0000000000>ssist diplomatic operations <ais-highlight-0000000000>a</ais-highlight-0000000000>fter the civil war in Bosnia <ais-highlight-0000000000>a</ais-highlight-0000000000>nd Herzegovina. It now employs more than 300 permanent <ais-highlight-0000000000>a</ais-highlight-0000000000>nd temporary workers, including former senior EU officials.</p><p>The organisation vehemently denies the charges.</p><p>Eric Tonon, <ais-highlight-0000000000>a</ais-highlight-0000000000> former French diplomat <ais-highlight-0000000000>a</ais-highlight-0000000000>nd IMG’s representative to the EU, said investigators had come to erroneous conclusions <ais-highlight-0000000000>a</ais-highlight-0000000000>nd disregarded relevant facts.</p><p>He claimed there was more than one definition of what constitutes <ais-highlight-0000000000>a</ais-highlight-0000000000>n international organisation <ais-highlight-0000000000>a</ais-highlight-0000000000>nd maintained that IMG was eligible for the contracts it had undertaken.</p><p>Tonon, who operates from <ais-highlight-0000000000>a</ais-highlight-0000000000> three-storey townhouse in Brussels, said <ais-highlight-0000000000>a</ais-highlight-0000000000>ll <ais-highlight-0000000000>a</ais-highlight-0000000000>ccounts containing donor funds were controlled by IMG <ais-highlight-0000000000>a</ais-highlight-0000000000>nd subject to the group’s official <ais-highlight-0000000000>a</ais-highlight-0000000000>uditor.</p><p>Donors preferred to see the group operate French <ais-highlight-0000000000>a</ais-highlight-0000000000>ccounts <ais-highlight-0000000000>a</ais-highlight-0000000000>s it was <ais-highlight-0000000000>a</ais-highlight-0000000000> country with <ais-highlight-0000000000>a</ais-highlight-0000000000> “stable financial system” compared with <ais-highlight-0000000000>a</ais-highlight-0000000000> “transition country” such <ais-highlight-0000000000>a</ais-highlight-0000000000>s Serbia, he said.</p><p><ais-highlight-0000000000>A</ais-highlight-0000000000>mong IMG projects is one for £6.9m, part-funded by Britain, to train police in Burma that includes handing out bicycles to officers.</p><p>Tonon said his consultancy was one of the “only” bodies in the country capable of fulfilling the task.</p><p>“Why is someone trying to kill one of the few purely European operators in this field?” he said.</p><p><ais-highlight-0000000000>A</ais-highlight-0000000000> Foreign <ais-highlight-0000000000>a</ais-highlight-0000000000>nd Commonwealth Office spokesman said IMG had undergone <ais-highlight-0000000000>a</ais-highlight-0000000000> formal evaluation by the British embassy in Macedonia <ais-highlight-0000000000>a</ais-highlight-0000000000>nd no concerns had been raised.</p><p>The group is threatening legal <ais-highlight-0000000000>a</ais-highlight-0000000000>ction <ais-highlight-0000000000>a</ais-highlight-0000000000>gainst the EU. Tonon claimed <ais-highlight-0000000000>a</ais-highlight-0000000000>nother branch of the commission has <ais-highlight-0000000000>a</ais-highlight-0000000000>lready contradicted the Olaf report.</p><p>The commission said the EU would not <ais-highlight-0000000000>a</ais-highlight-0000000000>ward new contracts to IMG <ais-highlight-0000000000>a</ais-highlight-0000000000>nd it would verify <ais-highlight-0000000000>a</ais-highlight-0000000000>ll <ais-highlight-0000000000>a</ais-highlight-0000000000>ctivities where there were payments pending.</p><p>“The commission has taken concrete steps to safeguard EU finances,” <ais-highlight-0000000000>a</ais-highlight-0000000000> spokesman said.</p><p>@bopanc</p>",
+              },
+              "date_timestamp": Object {
+                "matchLevel": "none",
+                "matchedWords": Array [],
+                "value": "1426982460",
+              },
+              "headline": Object {
+                "fullyHighlighted": false,
+                "matchLevel": "full",
+                "matchedWords": Array [
+                  "a",
+                ],
+                "value": "Copy of: EU orders inquiry into £100m contracts <ais-highlight-0000000000>a</ais-highlight-0000000000>warded without tender",
+              },
+              "id": Object {
+                "matchLevel": "none",
+                "matchedWords": Array [],
+                "value": "89d88c9f-ca1c-449f-be8f-9e8de0c331d6",
+              },
+              "keywords": Array [
+                Object {
+                  "matchLevel": "none",
+                  "matchedWords": Array [],
+                  "value": "eu",
+                },
+                Object {
+                  "matchLevel": "none",
+                  "matchedWords": Array [],
+                  "value": "orders",
+                },
+                Object {
+                  "matchLevel": "none",
+                  "matchedWords": Array [],
+                  "value": "inquiry",
+                },
+                Object {
+                  "matchLevel": "none",
+                  "matchedWords": Array [],
+                  "value": "into",
+                },
+                Object {
+                  "matchLevel": "none",
+                  "matchedWords": Array [],
+                  "value": "£100m",
+                },
+                Object {
+                  "matchLevel": "none",
+                  "matchedWords": Array [],
+                  "value": "contracts",
+                },
+                Object {
+                  "fullyHighlighted": false,
+                  "matchLevel": "full",
+                  "matchedWords": Array [
+                    "a",
+                  ],
+                  "value": "<ais-highlight-0000000000>a</ais-highlight-0000000000>warded",
+                },
+                Object {
+                  "matchLevel": "none",
+                  "matchedWords": Array [],
+                  "value": "without",
+                },
+                Object {
+                  "matchLevel": "none",
+                  "matchedWords": Array [],
+                  "value": "tender",
+                },
+              ],
+              "leadAsset": Object {
+                "caption": Object {
+                  "fullyHighlighted": false,
+                  "matchLevel": "full",
+                  "matchedWords": Array [
+                    "a",
+                  ],
+                  "value": "Bicciato:  handled EU contract funds through personal <ais-highlight-0000000000>a</ais-highlight-0000000000>ccounts",
+                },
+                "id": Object {
+                  "matchLevel": "none",
+                  "matchedWords": Array [],
+                  "value": "929476db-930d-40fb-b2da-6b159abad158",
+                },
+                "title": Object {
+                  "fullyHighlighted": false,
+                  "matchLevel": "full",
+                  "matchedWords": Array [
+                    "a",
+                  ],
+                  "value": "Bicciato:  handled EU contract funds through personal <ais-highlight-0000000000>a</ais-highlight-0000000000>ccounts",
+                },
+              },
+              "publicationName": Object {
+                "matchLevel": "none",
+                "matchedWords": Array [],
+                "value": "sundaytimes",
+              },
+              "publishedTime": Object {
+                "matchLevel": "none",
+                "matchedWords": Array [],
+                "value": "2015-03-22T00:01:00.000Z",
+              },
+              "shortHeadline": Object {
+                "fullyHighlighted": false,
+                "matchLevel": "full",
+                "matchedWords": Array [
+                  "a",
+                ],
+                "value": "EU orders inquiry into £100m contracts <ais-highlight-0000000000>a</ais-highlight-0000000000>warded without tender",
+              },
+              "url": Object {
+                "fullyHighlighted": false,
+                "matchLevel": "full",
+                "matchedWords": Array [
+                  "a",
+                ],
+                "value": "http://cps-render-ci.elb.tnl-dev.ntch.co.uk/<ais-highlight-0000000000>a</ais-highlight-0000000000>rticle/eu-orders-inquiry-into-100m-contracts-<ais-highlight-0000000000>a</ais-highlight-0000000000>warded-without-tender-l0qz3bwpbh6",
+              },
+            },
+            "_snippetResult": Object {
+              "content": Object {
+                "matchLevel": "full",
+                "value": "… with misleading information”.The group has <ais-highlight-0000000000>a</ais-highlight-0000000000>lso won <ais-highlight-0000000000>a</ais-highlight-0000000000> number of contracts from the Foreign <ais-highlight-0000000000>a</ais-highlight-0000000000>nd Commonwealth Office <ais-highlight-0000000000>a</ais-highlight-0000000000>nd is <ais-highlight-0000000000>a</ais-highlight-0000000000>t present implementing <ais-highlight-0000000000>a</ais-highlight-0000000000> £123,000 <ais-highlight-0000000000>a</ais-highlight-0000000000>id project in Macedonia …",
+              },
+            },
+            "algoliaData": Object {
+              "publishedTimestamp": 1426982460000,
+              "recencyIndex": 0,
+            },
+            "byline": Array [
+              Object {
+                "children": Array [
+                  Object {
+                    "attributes": Object {
+                      "value": "Bojan Pancevski, Brussels",
+                    },
+                    "children": Array [],
+                    "name": "text",
+                  },
+                ],
+                "name": "inline",
+              },
+            ],
+            "commentsEnabled": true,
+            "commercialSectionTags": null,
+            "commercialTags": Array [],
+            "content": "<p><em>Update on 29 March 2019: Solicitors for IMG have informed The Sunday Times that in January 2019, the European Court of Justice overturned the decision of the Commission. IMG has been found to be an international organisation.</em></p><p> </p><p>EUROPEAN prosecutors have been asked to scrutinise a consultancy run by a Serbian-based Italian businessman that has been awarded contracts worth hundreds of millions of pounds without public tender.</p><p>The European Union’s investigations arm has called on authorities in France and Belgium to look into the International Management Group (IMG), a consultancy that runs projects in crisis zones, for “possible fraud and associated money laundering”.</p><p>The consultancy has nothing to do with the New York-based IMG sports group.</p><p>An EU report seen by The Sunday Times accuses IMG, which has received almost £100m from the EU in the past two decades, of “possible fraudulent activities including providing the European Commission services with misleading information”.</p><p>The group has also won a number of contracts from the Foreign and Commonwealth Office and is at present implementing a £123,000 aid project in Macedonia funded by Britain.</p><p>Investigators from Olaf, the EU anti-fraud office, found IMG was not registered as an international organisation or even as a legal company.</p><p>For this reason, it argued, the consultancy, which is apparently headquartered in the Serbian capital Belgrade, was not eligible for the funding it has received.</p><p>Olaf also claims more than £29m was found in French bank accounts belonging to IMG’s general manager, Dino Bicciato, a former civil engineer from Italy. The organisation denies the accounts were used improperly.</p><p> </p><p> </p><p> </p><p> </p><p> </p><p> </p><p> </p><p> </p><p> </p><p>Olaf concluded that IMG, although not a “legal entity”, had secured government contracts in places such as Gaza, Iraq and South Sudan using a crisis situation clause that avoided normal public procurement rules.</p><p>The consultancy even allegedly used the address and the logo of a United Nations agency in Geneva to bolster its credibility in documentation.</p><p>The investigation was triggered by a tip-off about a conflict of interest in the EU’s agency in Jerusalem. It turned out that two women employed there were married to officials working for IMG — a major contractor in the region.</p><p>IMG has already been subject to legal action in Italy, where it was ordered by two separate courts to pay back more than £11m to the country’s foreign service because of financial irregularities connected to aid projects. IMG has appealed against both verdicts.</p><p> </p><p>“We shouldn’t be working with an organisation if we don’t even have clarity about their legal status,” said Inge Graessle, a senior German MEP who chairs the European parliament’s budgetary control committee. “It is illegal to award millions of taxpayer euros to a private person.”</p><p>IMG was set up in 1994 as an ad hoc operation to assist diplomatic operations after the civil war in Bosnia and Herzegovina. It now employs more than 300 permanent and temporary workers, including former senior EU officials.</p><p>The organisation vehemently denies the charges.</p><p>Eric Tonon, a former French diplomat and IMG’s representative to the EU, said investigators had come to erroneous conclusions and disregarded relevant facts.</p><p>He claimed there was more than one definition of what constitutes an international organisation and maintained that IMG was eligible for the contracts it had undertaken.</p><p>Tonon, who operates from a three-storey townhouse in Brussels, said all accounts containing donor funds were controlled by IMG and subject to the group’s official auditor.</p><p>Donors preferred to see the group operate French accounts as it was a country with a “stable financial system” compared with a “transition country” such as Serbia, he said.</p><p>Among IMG projects is one for £6.9m, part-funded by Britain, to train police in Burma that includes handing out bicycles to officers.</p><p>Tonon said his consultancy was one of the “only” bodies in the country capable of fulfilling the task.</p><p>“Why is someone trying to kill one of the few purely European operators in this field?” he said.</p><p>A Foreign and Commonwealth Office spokesman said IMG had undergone a formal evaluation by the British embassy in Macedonia and no concerns had been raised.</p><p>The group is threatening legal action against the EU. Tonon claimed another branch of the commission has already contradicted the Olaf report.</p><p>The commission said the EU would not award new contracts to IMG and it would verify all activities where there were payments pending.</p><p>“The commission has taken concrete steps to safeguard EU finances,” a spokesman said.</p><p>@bopanc</p>",
+            "date_timestamp": 1426982460,
+            "flags": Array [],
+            "hasVideo": false,
+            "headline": "Copy of: EU orders inquiry into £100m contracts awarded without tender",
+            "id": "89d88c9f-ca1c-449f-be8f-9e8de0c331d6",
+            "keywords": Array [
+              "eu",
+              "orders",
+              "inquiry",
+              "into",
+              "£100m",
+              "contracts",
+              "awarded",
+              "without",
+              "tender",
+            ],
+            "label": null,
+            "leadAsset": Object {
+              "caption": "Bicciato:  handled EU contract funds through personal accounts",
+              "credits": null,
+              "crop": null,
+              "id": "929476db-930d-40fb-b2da-6b159abad158",
+              "title": "Bicciato:  handled EU contract funds through personal accounts",
+            },
+            "objectID": "89d88c9f-ca1c-449f-be8f-9e8de0c331d6",
+            "publicationName": "sundaytimes",
+            "publishedTime": "2015-03-22T00:01:00.000Z",
+            "section": null,
+            "shortHeadline": "EU orders inquiry into £100m contracts awarded without tender",
+            "topics": null,
+            "url": "http://cps-render-ci.elb.tnl-dev.ntch.co.uk/article/eu-orders-inquiry-into-100m-contracts-awarded-without-tender-l0qz3bwpbh6",
+          },
+          Object {
+            "__position": 3,
+            "_highlightResult": Object {
+              "algoliaData": Object {
+                "publishedTimestamp": Object {
+                  "matchLevel": "none",
+                  "matchedWords": Array [],
+                  "value": "1599519660000",
+                },
+                "recencyIndex": Object {
+                  "matchLevel": "none",
+                  "matchedWords": Array [],
+                  "value": "2",
+                },
+              },
+              "byline": Array [
+                Object {
+                  "children": Array [
+                    Object {
+                      "attributes": Object {
+                        "value": Object {
+                          "matchLevel": "none",
+                          "matchedWords": Array [],
+                          "value": "Tim Palmer",
+                        },
+                      },
+                      "name": Object {
+                        "matchLevel": "none",
+                        "matchedWords": Array [],
+                        "value": "text",
+                      },
+                    },
+                  ],
+                  "name": Object {
+                    "matchLevel": "none",
+                    "matchedWords": Array [],
+                    "value": "inline",
+                  },
+                },
+              ],
+              "content": Object {
+                "fullyHighlighted": false,
+                "matchLevel": "full",
+                "matchedWords": Array [
+                  "a",
+                ],
+                "value": "<p>“Bath is just so beautiful — it’s easy to take that for granted,” says Helen Chapman. She was <ais-highlight-0000000000>a</ais-highlight-0000000000> student here <ais-highlight-0000000000>a</ais-highlight-0000000000>nd returned to settle permanently in 2010 <ais-highlight-0000000000>a</ais-highlight-0000000000>fter ten years in London. “I wanted to live somewhere <ais-highlight-0000000000>a</ais-highlight-0000000000> bit greener, but still with the cultural side. Here you can walk for ten minutes in one direction <ais-highlight-0000000000>a</ais-highlight-0000000000>nd be in the country, <ais-highlight-0000000000>a</ais-highlight-0000000000>nd ten minutes in the other <ais-highlight-0000000000>a</ais-highlight-0000000000>nd you’re in the centre of the city.”</p><p>It’s <ais-highlight-0000000000>a</ais-highlight-0000000000>lso <ais-highlight-0000000000>a</ais-highlight-0000000000> family-friendly city. “There’s <ais-highlight-0000000000>a</ais-highlight-0000000000> social media thing called Bath Mums, which is <ais-highlight-0000000000>a</ais-highlight-0000000000> great source of information <ais-highlight-0000000000>a</ais-highlight-0000000000>nd support,” says Helen, 40, <ais-highlight-0000000000>a</ais-highlight-0000000000> consultant <ais-highlight-0000000000>a</ais-highlight-0000000000>nd mother to Ella, seven <ais-highlight-0000000000>a</ais-highlight-0000000000>nd Molly, three. “<ais-highlight-0000000000>A</ais-highlight-0000000000>nd there <ais-highlight-0000000000>a</ais-highlight-0000000000>re so many interesting things to do. For example, I take Molly to <ais-highlight-0000000000>a</ais-highlight-0000000000>n <ais-highlight-0000000000>a</ais-highlight-0000000000>rt class <ais-highlight-0000000000>a</ais-highlight-0000000000>t the Holburne Museum. It’s <ais-highlight-0000000000>a</ais-highlight-0000000000>lways linked to what’s on, so makes it’s <ais-highlight-0000000000>a</ais-highlight-0000000000> lot more interesting for us <ais-highlight-0000000000>a</ais-highlight-0000000000>dults than just gluing things together to make <ais-highlight-0000000000>a</ais-highlight-0000000000> badger.”</p><p>Her escape route is <ais-highlight-0000000000>a</ais-highlight-0000000000> well-trodden one. Thousands of London families have followed her lead, seduced by Bath’s generously proportioned, wall-to-wall honey-coloured Georgian beauty, (slightly) cheaper house prices, excellent schools <ais-highlight-0000000000>a</ais-highlight-0000000000>nd convenient rail links from <ais-highlight-0000000000>a</ais-highlight-0000000000> station that’s easily reached on foot.</p><p>The Covid crisis has, if <ais-highlight-0000000000>a</ais-highlight-0000000000>nything, <ais-highlight-0000000000>a</ais-highlight-0000000000>dded to its pull. “The family market has bounced back. <ais-highlight-0000000000>A</ais-highlight-0000000000> lot of buyers, especially from London, had five-year plans to move from the city, which they’ve now brought forward. They want to <ais-highlight-0000000000>a</ais-highlight-0000000000>ct now <ais-highlight-0000000000>a</ais-highlight-0000000000>nd make <ais-highlight-0000000000>a</ais-highlight-0000000000> lifestyle change,” says Sam Daniels, <ais-highlight-0000000000>a</ais-highlight-0000000000>n <ais-highlight-0000000000>a</ais-highlight-0000000000>ssociate <ais-highlight-0000000000>a</ais-highlight-0000000000>t the Bath office of Knight Frank estate <ais-highlight-0000000000>a</ais-highlight-0000000000>gency.</p><p>The exodus hasn’t quite returned to the peak levels of early 2018, when more than 40 per cent of homes sold went to buyers based in the capital. Swapping your Victorian terrace in Clapham for <ais-highlight-0000000000>a</ais-highlight-0000000000> golden townhouse is no longer the financial no-brainer it was, especially if you <ais-highlight-0000000000>a</ais-highlight-0000000000>re going to fork out over £11,000 <ais-highlight-0000000000>a</ais-highlight-0000000000> year for <ais-highlight-0000000000>a</ais-highlight-0000000000>n <ais-highlight-0000000000>a</ais-highlight-0000000000>nnual season ticket, including Tube fares.</p><p>You’ll need deep pockets if you want the full Jane <ais-highlight-0000000000>A</ais-highlight-0000000000>usten experience. Period townhouses start <ais-highlight-0000000000>a</ais-highlight-0000000000>t <ais-highlight-0000000000>a</ais-highlight-0000000000>bout £1 million <ais-highlight-0000000000>a</ais-highlight-0000000000>nd rise very rapidly from there. Three- <ais-highlight-0000000000>a</ais-highlight-0000000000>nd four-bedroom houses just outside the city in Widcombe or Bear Flat (which is slightly cheaper) cost <ais-highlight-0000000000>a</ais-highlight-0000000000>nywhere from £750,000 to just over £1 million. <ais-highlight-0000000000>A</ais-highlight-0000000000> few flats <ais-highlight-0000000000>a</ais-highlight-0000000000>re <ais-highlight-0000000000>a</ais-highlight-0000000000>vailable for under £200,000, but to taste even <ais-highlight-0000000000>a</ais-highlight-0000000000> hint of Bath’s wow factor, you’ll need <ais-highlight-0000000000>a</ais-highlight-0000000000>t least £300,000 for two bedrooms.</p><p>Tom Chesher, 40, who runs Ink, <ais-highlight-0000000000>a</ais-highlight-0000000000> copywriting <ais-highlight-0000000000>a</ais-highlight-0000000000>gency, moved last year with his wife Ingrid <ais-highlight-0000000000>a</ais-highlight-0000000000>nd children Max, six, <ais-highlight-0000000000>a</ais-highlight-0000000000>nd Matilda, four, into <ais-highlight-0000000000>a</ais-highlight-0000000000> beautiful three-storey, three-bedroom Georgian townhouse that occupies <ais-highlight-0000000000>a</ais-highlight-0000000000> lofty perch on Beechen Cliff.</p><p>“It was <ais-highlight-0000000000>a</ais-highlight-0000000000> house we had walked past for years <ais-highlight-0000000000>a</ais-highlight-0000000000>nd we <ais-highlight-0000000000>a</ais-highlight-0000000000>lways said that we really wanted to live in it one day. From her bedroom, Matilda has one of the best views in the country. Some mornings you can see mist in the valley, <ais-highlight-0000000000>a</ais-highlight-0000000000>nd the Royal Crescent spread out below us — it’s heavenly,” he says.</p><p>They live in Bear Flat, <ais-highlight-0000000000>a</ais-highlight-0000000000> short if strenuous uphill walk from the station. <ais-highlight-0000000000>A</ais-highlight-0000000000>long with Larkhall, Bathwick <ais-highlight-0000000000>a</ais-highlight-0000000000>nd Widcombe (home to <ais-highlight-0000000000>a</ais-highlight-0000000000> top deli <ais-highlight-0000000000>a</ais-highlight-0000000000>nd <ais-highlight-0000000000>a</ais-highlight-0000000000>n excellent coffee shop in Mus), it’s one of the villagey “suburbs” that <ais-highlight-0000000000>a</ais-highlight-0000000000>re fast catching up with Lansdown <ais-highlight-0000000000>a</ais-highlight-0000000000>nd the city centre <ais-highlight-0000000000>a</ais-highlight-0000000000>t the top of property shopping lists. <i>The Sunday Times </i>chose Bear Flat <ais-highlight-0000000000>a</ais-highlight-0000000000>s one of its best places to live in Britain this year, thanks to its family-friendliness <ais-highlight-0000000000>a</ais-highlight-0000000000>nd great sense of community.</p><p>Bath isn’t pure paradise. “The only problems with Bath <ais-highlight-0000000000>a</ais-highlight-0000000000>re pollution, overcrowding <ais-highlight-0000000000>a</ais-highlight-0000000000>nd getting <ais-highlight-0000000000>a</ais-highlight-0000000000>round,” says Margaret Heath, 88, who lives near the rugby ground. She fears plans to <ais-highlight-0000000000>a</ais-highlight-0000000000>dd <ais-highlight-0000000000>a</ais-highlight-0000000000> permanent stadium <ais-highlight-0000000000>a</ais-highlight-0000000000>s well <ais-highlight-0000000000>a</ais-highlight-0000000000>s cafés, shops <ais-highlight-0000000000>a</ais-highlight-0000000000>nd <ais-highlight-0000000000>a</ais-highlight-0000000000> car park will “make them <ais-highlight-0000000000>a</ais-highlight-0000000000>ll worse”. Supporters say it will regenerate <ais-highlight-0000000000>a</ais-highlight-0000000000> neglected <ais-highlight-0000000000>a</ais-highlight-0000000000>rea of the riverside.</p><p>The shopping centre can look <ais-highlight-0000000000>a</ais-highlight-0000000000> bit corporate — <ais-highlight-0000000000>a</ais-highlight-0000000000>nd it’s <ais-highlight-0000000000>a</ais-highlight-0000000000>lways packed with tourists — but if you look hard enough <ais-highlight-0000000000>a</ais-highlight-0000000000>n <ais-highlight-0000000000>a</ais-highlight-0000000000>ppealingly quirky side is emerging, including one of the best vegan food scenes in the UK.</p><p>Chesher says the city has improved <ais-highlight-0000000000>a</ais-highlight-0000000000> lot since he’s been here, <ais-highlight-0000000000>a</ais-highlight-0000000000>nd he has seen <ais-highlight-0000000000>a</ais-highlight-0000000000> new side of life emerge. He says: “There’s still old-school, well-to-do traditional Bath, based <ais-highlight-0000000000>a</ais-highlight-0000000000>round the rugby <ais-highlight-0000000000>a</ais-highlight-0000000000>nd real <ais-highlight-0000000000>a</ais-highlight-0000000000>le pubs such <ais-highlight-0000000000>a</ais-highlight-0000000000>s the Star Inn <ais-highlight-0000000000>a</ais-highlight-0000000000>nd the Old Green Tree. But now there’s <ais-highlight-0000000000>a</ais-highlight-0000000000>lso <ais-highlight-0000000000>a</ais-highlight-0000000000> young, vibrant hipster Bath, inspired by the students, with vegan cafés, coffee shops, cocktail bars <ais-highlight-0000000000>a</ais-highlight-0000000000>nd boutique gyms.”</p>",
+              },
+              "date_timestamp": Object {
+                "matchLevel": "none",
+                "matchedWords": Array [],
+                "value": "1599519660",
+              },
+              "headline": Object {
+                "matchLevel": "none",
+                "matchedWords": Array [],
+                "value": "Where to buy property in Bath, Somerset",
+              },
+              "id": Object {
+                "fullyHighlighted": false,
+                "matchLevel": "full",
+                "matchedWords": Array [
+                  "a",
+                ],
+                "value": "f9f23e72-f1c0-11ea-<ais-highlight-0000000000>a</ais-highlight-0000000000>eed-ec95eac61729",
+              },
+              "keywords": Array [
+                Object {
+                  "matchLevel": "none",
+                  "matchedWords": Array [],
+                  "value": "where",
+                },
+                Object {
+                  "matchLevel": "none",
+                  "matchedWords": Array [],
+                  "value": "to",
+                },
+                Object {
+                  "matchLevel": "none",
+                  "matchedWords": Array [],
+                  "value": "buy",
+                },
+                Object {
+                  "matchLevel": "none",
+                  "matchedWords": Array [],
+                  "value": "property",
+                },
+                Object {
+                  "matchLevel": "none",
+                  "matchedWords": Array [],
+                  "value": "in",
+                },
+                Object {
+                  "matchLevel": "none",
+                  "matchedWords": Array [],
+                  "value": "bath",
+                },
+                Object {
+                  "matchLevel": "none",
+                  "matchedWords": Array [],
+                  "value": "somerset",
+                },
+              ],
+              "leadAsset": Object {
+                "caption": Object {
+                  "fullyHighlighted": false,
+                  "matchLevel": "full",
+                  "matchedWords": Array [
+                    "a",
+                  ],
+                  "value": "<ais-highlight-0000000000>A</ais-highlight-0000000000> five-bedroom flat in the grade I listed Royal Crescent is on sale for £5.75 million with Savills",
+                },
+                "crop": Object {
+                  "ratio": Object {
+                    "matchLevel": "none",
+                    "matchedWords": Array [],
+                    "value": "16:9",
+                  },
+                  "url": Object {
+                    "fullyHighlighted": false,
+                    "matchLevel": "full",
+                    "matchedWords": Array [
+                      "a",
+                    ],
+                    "value": "https://nu-cps-imgsrv-tnl-dev-webapp.elb.tnl-dev.ntch.co.uk/imageserver/image/%2Fmethode%2Ftimes%2Fprod%2Fweb%2Fbin%2F17a614c8-f1c8-11ea-<ais-highlight-0000000000>a</ais-highlight-0000000000>eed-ec95eac61729.jpg?crop=4169%2C2345%2C779%2C351",
+                  },
+                },
+                "id": Object {
+                  "matchLevel": "none",
+                  "matchedWords": Array [],
+                  "value": "3879fea9-db72-4939-87d8-77777a36e7c8",
+                },
+                "title": Object {
+                  "matchLevel": "none",
+                  "matchedWords": Array [],
+                  "value": "",
+                },
+              },
+              "publicationName": Object {
+                "matchLevel": "none",
+                "matchedWords": Array [],
+                "value": "times",
+              },
+              "publishedTime": Object {
+                "matchLevel": "none",
+                "matchedWords": Array [],
+                "value": "2020-09-07T23:01:00.000Z",
+              },
+              "section": Object {
+                "matchLevel": "none",
+                "matchedWords": Array [],
+                "value": "bricksmortar",
+              },
+              "shortHeadline": Object {
+                "matchLevel": "none",
+                "matchedWords": Array [],
+                "value": "Wish you lived in Bath?",
+              },
+              "url": Object {
+                "fullyHighlighted": false,
+                "matchLevel": "full",
+                "matchedWords": Array [
+                  "a",
+                ],
+                "value": "http://cps-render-ci.elb.tnl-dev.ntch.co.uk/<ais-highlight-0000000000>a</ais-highlight-0000000000>rticle/where-to-buy-property-in-bath-somerset-z7q8792vd",
+              },
+            },
+            "_snippetResult": Object {
+              "content": Object {
+                "matchLevel": "full",
+                "value": "… rugby ground. She fears plans to <ais-highlight-0000000000>a</ais-highlight-0000000000>dd <ais-highlight-0000000000>a</ais-highlight-0000000000> permanent stadium <ais-highlight-0000000000>a</ais-highlight-0000000000>s well <ais-highlight-0000000000>a</ais-highlight-0000000000>s cafés, shops <ais-highlight-0000000000>a</ais-highlight-0000000000>nd <ais-highlight-0000000000>a</ais-highlight-0000000000> car park will “make them <ais-highlight-0000000000>a</ais-highlight-0000000000>ll worse”. Supporters say it will regenerate <ais-highlight-0000000000>a</ais-highlight-0000000000> …",
+              },
+            },
+            "algoliaData": Object {
+              "publishedTimestamp": 1599519660000,
+              "recencyIndex": 2,
+            },
+            "byline": Array [
+              Object {
+                "children": Array [
+                  Object {
+                    "attributes": Object {
+                      "value": "Tim Palmer",
+                    },
+                    "children": Array [],
+                    "name": "text",
+                  },
+                ],
+                "name": "inline",
+              },
+            ],
+            "commentsEnabled": true,
+            "commercialSectionTags": null,
+            "commercialTags": Array [],
+            "content": "<p>“Bath is just so beautiful — it’s easy to take that for granted,” says Helen Chapman. She was a student here and returned to settle permanently in 2010 after ten years in London. “I wanted to live somewhere a bit greener, but still with the cultural side. Here you can walk for ten minutes in one direction and be in the country, and ten minutes in the other and you’re in the centre of the city.”</p><p>It’s also a family-friendly city. “There’s a social media thing called Bath Mums, which is a great source of information and support,” says Helen, 40, a consultant and mother to Ella, seven and Molly, three. “And there are so many interesting things to do. For example, I take Molly to an art class at the Holburne Museum. It’s always linked to what’s on, so makes it’s a lot more interesting for us adults than just gluing things together to make a badger.”</p><p>Her escape route is a well-trodden one. Thousands of London families have followed her lead, seduced by Bath’s generously proportioned, wall-to-wall honey-coloured Georgian beauty, (slightly) cheaper house prices, excellent schools and convenient rail links from a station that’s easily reached on foot.</p><p>The Covid crisis has, if anything, added to its pull. “The family market has bounced back. A lot of buyers, especially from London, had five-year plans to move from the city, which they’ve now brought forward. They want to act now and make a lifestyle change,” says Sam Daniels, an associate at the Bath office of Knight Frank estate agency.</p><p>The exodus hasn’t quite returned to the peak levels of early 2018, when more than 40 per cent of homes sold went to buyers based in the capital. Swapping your Victorian terrace in Clapham for a golden townhouse is no longer the financial no-brainer it was, especially if you are going to fork out over £11,000 a year for an annual season ticket, including Tube fares.</p><p>You’ll need deep pockets if you want the full Jane Austen experience. Period townhouses start at about £1 million and rise very rapidly from there. Three- and four-bedroom houses just outside the city in Widcombe or Bear Flat (which is slightly cheaper) cost anywhere from £750,000 to just over £1 million. A few flats are available for under £200,000, but to taste even a hint of Bath’s wow factor, you’ll need at least £300,000 for two bedrooms.</p><p>Tom Chesher, 40, who runs Ink, a copywriting agency, moved last year with his wife Ingrid and children Max, six, and Matilda, four, into a beautiful three-storey, three-bedroom Georgian townhouse that occupies a lofty perch on Beechen Cliff.</p><p>“It was a house we had walked past for years and we always said that we really wanted to live in it one day. From her bedroom, Matilda has one of the best views in the country. Some mornings you can see mist in the valley, and the Royal Crescent spread out below us — it’s heavenly,” he says.</p><p>They live in Bear Flat, a short if strenuous uphill walk from the station. Along with Larkhall, Bathwick and Widcombe (home to a top deli and an excellent coffee shop in Mus), it’s one of the villagey “suburbs” that are fast catching up with Lansdown and the city centre at the top of property shopping lists. <i>The Sunday Times </i>chose Bear Flat as one of its best places to live in Britain this year, thanks to its family-friendliness and great sense of community.</p><p>Bath isn’t pure paradise. “The only problems with Bath are pollution, overcrowding and getting around,” says Margaret Heath, 88, who lives near the rugby ground. She fears plans to add a permanent stadium as well as cafés, shops and a car park will “make them all worse”. Supporters say it will regenerate a neglected area of the riverside.</p><p>The shopping centre can look a bit corporate — and it’s always packed with tourists — but if you look hard enough an appealingly quirky side is emerging, including one of the best vegan food scenes in the UK.</p><p>Chesher says the city has improved a lot since he’s been here, and he has seen a new side of life emerge. He says: “There’s still old-school, well-to-do traditional Bath, based around the rugby and real ale pubs such as the Star Inn and the Old Green Tree. But now there’s also a young, vibrant hipster Bath, inspired by the students, with vegan cafés, coffee shops, cocktail bars and boutique gyms.”</p>",
+            "date_timestamp": 1599519660,
+            "flags": Array [],
+            "hasVideo": false,
+            "headline": "Where to buy property in Bath, Somerset",
+            "id": "f9f23e72-f1c0-11ea-aeed-ec95eac61729",
+            "keywords": Array [
+              "where",
+              "to",
+              "buy",
+              "property",
+              "in",
+              "bath",
+              "somerset",
+            ],
+            "label": null,
+            "leadAsset": Object {
+              "caption": "A five-bedroom flat in the grade I listed Royal Crescent is on sale for £5.75 million with Savills",
+              "credits": null,
+              "crop": Object {
+                "ratio": "16:9",
+                "url": "https://nu-cps-imgsrv-tnl-dev-webapp.elb.tnl-dev.ntch.co.uk/imageserver/image/%2Fmethode%2Ftimes%2Fprod%2Fweb%2Fbin%2F17a614c8-f1c8-11ea-aeed-ec95eac61729.jpg?crop=4169%2C2345%2C779%2C351",
+              },
+              "id": "3879fea9-db72-4939-87d8-77777a36e7c8",
+              "title": "",
+            },
+            "objectID": "f9f23e72-f1c0-11ea-aeed-ec95eac61729",
+            "publicationName": "times",
+            "publishedTime": "2020-09-07T23:01:00.000Z",
+            "section": "bricksmortar",
+            "shortHeadline": "Wish you lived in Bath?",
+            "topics": null,
+            "url": "http://cps-render-ci.elb.tnl-dev.ntch.co.uk/article/where-to-buy-property-in-bath-somerset-z7q8792vd",
+          },
+        ]
+      }
+      disableVirtualization={false}
+      getItem={[Function]}
+      getItemCount={[Function]}
+      horizontal={false}
+      initialNumToRender={10}
+      keyExtractor={[Function]}
+      maxToRenderPerBatch={10}
+      nestedScrollEnabled={true}
+      onContentSizeChange={[Function]}
+      onEndReached={[Function]}
+      onEndReachedThreshold={2}
+      onLayout={[Function]}
+      onMomentumScrollEnd={[Function]}
+      onScroll={[Function]}
+      onScrollBeginDrag={[Function]}
+      onScrollEndDrag={[Function]}
+      removeClippedSubviews={true}
+      renderItem={[Function]}
+      scrollEventThrottle={50}
+      stickyHeaderIndices={Array []}
+      updateCellsBatchingPeriod={50}
+      viewabilityConfigCallbackPairs={Array []}
+      windowSize={21}
+    >
+      <View>
+        <View
+          onLayout={[Function]}
+          style={null}
+        >
+          <View
+            accessible={true}
+            focusable={true}
+            nativeBackgroundAndroid={
+              Object {
+                "attribute": "selectableItemBackground",
+                "rippleRadius": undefined,
+                "type": "ThemeAttrAndroid",
+              }
+            }
+            onClick={[Function]}
+            onResponderGrant={[Function]}
+            onResponderMove={[Function]}
+            onResponderRelease={[Function]}
+            onResponderTerminate={[Function]}
+            onResponderTerminationRequest={[Function]}
+            onStartShouldSetResponder={[Function]}
+            style={Object {}}
+          >
+            <View
+              style={
+                Object {
+                  "paddingHorizontal": 10,
+                  "paddingVertical": 10,
+                }
+              }
+            >
+              <Text
+                accessibilityRole="header"
+                allowFontScaling={false}
+                aria-level="3"
+                className=""
+                style={
+                  Array [
+                    Object {
+                      "color": "#333333",
+                      "fontFamily": "TimesModern-Bold",
+                      "fontWeight": "900",
+                      "includeFontPadding": false,
+                      "marginBottom": 10,
+                    },
+                    Object {
+                      "fontFamily": "TimesModern-Bold",
+                      "fontSize": 22,
+                      "lineHeight": 27,
+                    },
+                    Object {},
+                  ]
+                }
+              >
+                EU orders inquiry into £100m contracts awarded without tender
+              </Text>
+              <View
+                style={
+                  Object {
+                    "marginBottom": 10,
+                  }
+                }
+              >
+                <Text
+                  style={
+                    Object {
+                      "color": "#333333",
+                      "flexDirection": "row",
+                      "fontFamily": "GillSansMTStd-Medium",
+                      "fontSize": 13,
+                      "lineHeight": 13,
+                    }
+                  }
+                >
+                  <Text
+                    style={
+                      Array [
+                        Object {
+                          "color": "#333333",
+                          "flexDirection": "row",
+                          "fontFamily": "GillSansMTStd-Medium",
+                          "fontSize": 13,
+                          "lineHeight": 13,
+                        },
+                        undefined,
+                      ]
+                    }
+                  >
+                    Bojan Pancevski, Brussels
+                  </Text>
+                </Text>
+              </View>
+              <Text>
+                <Text
+                  style={
+                    Object {
+                      "color": "#696969",
+                    }
+                  }
+                >
+                  <Text
+                    style={
+                      Object {
+                        "color": "#000000",
+                      }
+                    }
+                  >
+                    Elvis
+                  </Text>
+                </Text>
+                <Text
+                  style={
+                    Object {
+                      "color": "#696969",
+                    }
+                  }
+                >
+                  is the king
+                </Text>
+              </Text>
+              <Text
+                style={
+                  Object {
+                    "color": "#696969",
+                    "fontFamily": "GillSansMTStd-Medium",
+                    "fontSize": 13,
+                    "lineHeight": 15,
+                    "marginVertical": 10,
+                  }
+                }
+                testID="datePublication"
+              >
+                Sunday March 22 2015, 12.01am GMT, The Sunday Times
+              </Text>
+            </View>
+          </View>
+          <View
+            style={
+              Object {
+                "backgroundColor": "#DBDBDB",
+                "flex": 1,
+                "height": 1,
+                "maxWidth": 660,
+              }
+            }
+          />
+        </View>
+        <View
+          onLayout={[Function]}
+          style={null}
+        >
+          <View
+            accessible={true}
+            focusable={true}
+            nativeBackgroundAndroid={
+              Object {
+                "attribute": "selectableItemBackground",
+                "rippleRadius": undefined,
+                "type": "ThemeAttrAndroid",
+              }
+            }
+            onClick={[Function]}
+            onResponderGrant={[Function]}
+            onResponderMove={[Function]}
+            onResponderRelease={[Function]}
+            onResponderTerminate={[Function]}
+            onResponderTerminationRequest={[Function]}
+            onStartShouldSetResponder={[Function]}
+            style={Object {}}
+          >
+            <View
+              style={
+                Object {
+                  "paddingHorizontal": 10,
+                  "paddingVertical": 10,
+                }
+              }
+            >
+              <Text
+                accessibilityRole="header"
+                allowFontScaling={false}
+                aria-level="3"
+                className=""
+                style={
+                  Array [
+                    Object {
+                      "color": "#333333",
+                      "fontFamily": "TimesModern-Bold",
+                      "fontWeight": "900",
+                      "includeFontPadding": false,
+                      "marginBottom": 10,
+                    },
+                    Object {
+                      "fontFamily": "TimesModern-Bold",
+                      "fontSize": 22,
+                      "lineHeight": 27,
+                    },
+                    Object {},
+                  ]
+                }
+              >
+                Copy of: EU orders inquiry into £100m contracts awarded without tender
+              </Text>
+              <View
+                style={
+                  Object {
+                    "marginBottom": 10,
+                  }
+                }
+              >
+                <Text
+                  style={
+                    Object {
+                      "color": "#333333",
+                      "flexDirection": "row",
+                      "fontFamily": "GillSansMTStd-Medium",
+                      "fontSize": 13,
+                      "lineHeight": 13,
+                    }
+                  }
+                >
+                  <Text
+                    style={
+                      Array [
+                        Object {
+                          "color": "#333333",
+                          "flexDirection": "row",
+                          "fontFamily": "GillSansMTStd-Medium",
+                          "fontSize": 13,
+                          "lineHeight": 13,
+                        },
+                        undefined,
+                      ]
+                    }
+                  >
+                    Bojan Pancevski, Brussels
+                  </Text>
+                </Text>
+              </View>
+              <Text>
+                <Text
+                  style={
+                    Object {
+                      "color": "#696969",
+                    }
+                  }
+                >
+                  <Text
+                    style={
+                      Object {
+                        "color": "#000000",
+                      }
+                    }
+                  >
+                    Elvis
+                  </Text>
+                </Text>
+                <Text
+                  style={
+                    Object {
+                      "color": "#696969",
+                    }
+                  }
+                >
+                  is the king
+                </Text>
+              </Text>
+              <Text
+                style={
+                  Object {
+                    "color": "#696969",
+                    "fontFamily": "GillSansMTStd-Medium",
+                    "fontSize": 13,
+                    "lineHeight": 15,
+                    "marginVertical": 10,
+                  }
+                }
+                testID="datePublication"
+              >
+                Sunday March 22 2015, 12.01am GMT, The Sunday Times
+              </Text>
+            </View>
+          </View>
+          <View
+            style={
+              Object {
+                "backgroundColor": "#DBDBDB",
+                "flex": 1,
+                "height": 1,
+                "maxWidth": 660,
+              }
+            }
+          />
+        </View>
+        <View
+          onLayout={[Function]}
+          style={null}
+        >
+          <View
+            accessible={true}
+            focusable={true}
+            nativeBackgroundAndroid={
+              Object {
+                "attribute": "selectableItemBackground",
+                "rippleRadius": undefined,
+                "type": "ThemeAttrAndroid",
+              }
+            }
+            onClick={[Function]}
+            onResponderGrant={[Function]}
+            onResponderMove={[Function]}
+            onResponderRelease={[Function]}
+            onResponderTerminate={[Function]}
+            onResponderTerminationRequest={[Function]}
+            onStartShouldSetResponder={[Function]}
+            style={Object {}}
+          >
+            <View
+              style={
+                Object {
+                  "paddingHorizontal": 10,
+                  "paddingVertical": 10,
+                }
+              }
+            >
+              <Text
+                accessibilityRole="header"
+                allowFontScaling={false}
+                aria-level="3"
+                className=""
+                style={
+                  Array [
+                    Object {
+                      "color": "#333333",
+                      "fontFamily": "TimesModern-Bold",
+                      "fontWeight": "900",
+                      "includeFontPadding": false,
+                      "marginBottom": 10,
+                    },
+                    Object {
+                      "fontFamily": "TimesModern-Bold",
+                      "fontSize": 22,
+                      "lineHeight": 27,
+                    },
+                    Object {},
+                  ]
+                }
+              >
+                Where to buy property in Bath, Somerset
+              </Text>
+              <View
+                style={
+                  Object {
+                    "marginBottom": 10,
+                  }
+                }
+              >
+                <Text
+                  style={
+                    Object {
+                      "color": "#333333",
+                      "flexDirection": "row",
+                      "fontFamily": "GillSansMTStd-Medium",
+                      "fontSize": 13,
+                      "lineHeight": 13,
+                    }
+                  }
+                >
+                  <Text
+                    style={
+                      Array [
+                        Object {
+                          "color": "#333333",
+                          "flexDirection": "row",
+                          "fontFamily": "GillSansMTStd-Medium",
+                          "fontSize": 13,
+                          "lineHeight": 13,
+                        },
+                        undefined,
+                      ]
+                    }
+                  >
+                    Tim Palmer
+                  </Text>
+                </Text>
+              </View>
+              <Text>
+                <Text
+                  style={
+                    Object {
+                      "color": "#696969",
+                    }
+                  }
+                >
+                  <Text
+                    style={
+                      Object {
+                        "color": "#000000",
+                      }
+                    }
+                  >
+                    Elvis
+                  </Text>
+                </Text>
+                <Text
+                  style={
+                    Object {
+                      "color": "#696969",
+                    }
+                  }
+                >
+                  is the king
+                </Text>
+              </Text>
+              <Text
+                style={
+                  Object {
+                    "color": "#696969",
+                    "fontFamily": "GillSansMTStd-Medium",
+                    "fontSize": 13,
+                    "lineHeight": 15,
+                    "marginVertical": 10,
+                  }
+                }
+                testID="datePublication"
+              >
+                Tuesday September 08 2020, 12.01am BST, The Times
+              </Text>
+            </View>
+          </View>
+        </View>
+        <View
+          onLayout={[Function]}
+        >
+          <ActivityIndicator
+            animating={true}
+            color="#696969"
+            hidesWhenStopped={true}
+            size="large"
+            style={
+              Object {
+                "padding": 20,
+              }
+            }
+          />
+        </View>
+      </View>
+    </RCTScrollView>
+  </View>
+</View>
+`;
+
+exports[`SearchListItemByLine should render correctly 1`] = `
+<View
+  style={
+    Object {
+      "marginBottom": 10,
+    }
+  }
+>
+  <Text
+    style={
+      Object {
+        "color": "#333333",
+        "flexDirection": "row",
+        "fontFamily": "GillSansMTStd-Medium",
+        "fontSize": 13,
+        "lineHeight": 13,
+      }
+    }
+  >
+    <Text
+      style={
+        Array [
+          Object {
+            "color": "#333333",
+            "flexDirection": "row",
+            "fontFamily": "GillSansMTStd-Medium",
+            "fontSize": 13,
+            "lineHeight": 13,
+          },
+          undefined,
+        ]
+      }
+    >
+      Bojan Pancevski, Brussels
+    </Text>
+  </Text>
+</View>
+`;
+
+exports[`SearchListItemSnippet should render correctly 1`] = `
+<Text>
+  <Text
+    style={
+      Object {
+        "color": "#696969",
+      }
+    }
+  >
+    <Text
+      style={
+        Object {
+          "color": "#000000",
+        }
+      }
+    >
+      Elvis
+    </Text>
+  </Text>
+  <Text
+    style={
+      Object {
+        "color": "#696969",
+      }
+    }
+  >
+    is the king
+  </Text>
+</Text>
+`;

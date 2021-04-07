@@ -302,3 +302,81 @@ exports[`11. closeicon sets a width when height is set 1`] = `
   width={28}
 />
 `;
+
+exports[`12. closeroundicon sets a width when height is set 1`] = `
+<RNSVGSvgView
+  align="xMidYMid"
+  bbHeight="24"
+  bbWidth="24"
+  fill="none"
+  focusable={false}
+  height="24"
+  meetOrSlice={0}
+  minX={0}
+  minY={0}
+  style={
+    Object {
+      "backgroundColor": "transparent",
+      "borderWidth": 0,
+      "flex": 0,
+      "height": 24,
+      "width": 24,
+    }
+  }
+  vbHeight={24}
+  vbWidth={24}
+  width="24"
+/>
+`;
+
+exports[`13. glassmagnifiericon sets a width when height is set 1`] = `
+<RNSVGSvgView
+  align="xMidYMid"
+  bbHeight="24"
+  bbWidth="24"
+  fill="none"
+  focusable={false}
+  height="24"
+  meetOrSlice={0}
+  minX={0}
+  minY={0}
+  style={
+    Object {
+      "backgroundColor": "transparent",
+      "borderWidth": 0,
+      "flex": 0,
+      "height": 24,
+      "width": 24,
+    }
+  }
+  vbHeight={24}
+  vbWidth={24}
+  width="24"
+/>
+`;
+
+exports[`14. leftchevron sets a width when height is set 1`] = `
+<RNSVGSvgView
+  align="xMidYMid"
+  bbHeight="24"
+  bbWidth="24"
+  fill="none"
+  focusable={false}
+  height="24"
+  meetOrSlice={0}
+  minX={0}
+  minY={0}
+  style={
+    Object {
+      "backgroundColor": "transparent",
+      "borderWidth": 0,
+      "flex": 0,
+      "height": 24,
+      "width": 24,
+    }
+  }
+  vbHeight={24}
+  vbWidth={24}
+  width="24"
+/>
+`;

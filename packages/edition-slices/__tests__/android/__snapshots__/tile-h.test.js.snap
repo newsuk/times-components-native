@@ -26,15 +26,7 @@ exports[`tile h without breakpoint 1`] = `
         }
       >
         <ArticleLabel
-          articleReadState={
-            Object {
-              "animate": false,
-              "read": false,
-            }
-          }
           color="#005B8D"
-          hide={false}
-          isVideo={false}
           title="label"
         />
       </View>

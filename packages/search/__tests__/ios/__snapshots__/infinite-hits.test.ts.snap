@@ -1,0 +1,24 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`SearchResults should render correctly 1`] = `
+<View
+  style={
+    Object {
+      "flex": 1,
+      "justifyContent": "center",
+    }
+  }
+>
+  <Text
+    style={
+      Object {
+        "color": "#696969",
+        "marginBottom": 25,
+        "textAlign": "center",
+      }
+    }
+  >
+    Search is an online only feature
+  </Text>
+</View>
+`;

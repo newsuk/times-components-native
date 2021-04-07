@@ -78,6 +78,27 @@ const startTabs = () => {
           },
           {
             stack: {
+              id: ViewsIDs.TAB_ID_SEARCH,
+              children: [
+                {
+                  component: {
+                    name: ViewsIDs.VIEW_ID_SEARCH,
+                    options: {
+                      ...getOptions("Search"),
+                    },
+                  },
+                },
+              ],
+              options: {
+                bottomTab: {
+                  ...bottomTabOptions,
+                  text: "Search",
+                },
+              },
+            },
+          },
+          {
+            stack: {
               id: ViewsIDs.TAB_ID_MY_ARTICLES,
               children: [
                 {

@@ -28,15 +28,7 @@ exports[`tile x landscape huge 1`] = `
             }
           >
             <ArticleLabel
-              articleReadState={
-                Object {
-                  "animate": false,
-                  "read": false,
-                }
-              }
               color="#005B8D"
-              hide={false}
-              isVideo={false}
               title="label"
             />
           </View>
@@ -138,15 +130,7 @@ exports[`tile x landscape medium 1`] = `
             }
           >
             <ArticleLabel
-              articleReadState={
-                Object {
-                  "animate": false,
-                  "read": false,
-                }
-              }
               color="#005B8D"
-              hide={false}
-              isVideo={false}
               title="label"
             />
           </View>
@@ -248,15 +232,7 @@ exports[`tile x landscape smallTablet 1`] = `
             }
           >
             <ArticleLabel
-              articleReadState={
-                Object {
-                  "animate": false,
-                  "read": false,
-                }
-              }
               color="#005B8D"
-              hide={false}
-              isVideo={false}
               title="label"
             />
           </View>
@@ -358,15 +334,7 @@ exports[`tile x landscape wide 1`] = `
             }
           >
             <ArticleLabel
-              articleReadState={
-                Object {
-                  "animate": false,
-                  "read": false,
-                }
-              }
               color="#005B8D"
-              hide={false}
-              isVideo={false}
               title="label"
             />
           </View>
@@ -468,15 +436,7 @@ exports[`tile x portrait huge 1`] = `
             }
           >
             <ArticleLabel
-              articleReadState={
-                Object {
-                  "animate": false,
-                  "read": false,
-                }
-              }
               color="#005B8D"
-              hide={false}
-              isVideo={false}
               title="label"
             />
           </View>
@@ -578,15 +538,7 @@ exports[`tile x portrait medium 1`] = `
             }
           >
             <ArticleLabel
-              articleReadState={
-                Object {
-                  "animate": false,
-                  "read": false,
-                }
-              }
               color="#005B8D"
-              hide={false}
-              isVideo={false}
               title="label"
             />
           </View>
@@ -688,15 +640,7 @@ exports[`tile x portrait smallTablet 1`] = `
             }
           >
             <ArticleLabel
-              articleReadState={
-                Object {
-                  "animate": false,
-                  "read": false,
-                }
-              }
               color="#005B8D"
-              hide={false}
-              isVideo={false}
               title="label"
             />
           </View>
@@ -798,15 +742,7 @@ exports[`tile x portrait wide 1`] = `
             }
           >
             <ArticleLabel
-              articleReadState={
-                Object {
-                  "animate": false,
-                  "read": false,
-                }
-              }
               color="#005B8D"
-              hide={false}
-              isVideo={false}
               title="label"
             />
           </View>

@@ -6,6 +6,7 @@ import { PastSixDaysView } from "../views/PastSixDays";
 import { MyArticlesView } from "../views/MyArticles";
 import { MoreView } from "../views/More";
 import { StorybookUIRoot } from "../storybook/";
+import { SearchView } from "../views/Search";
 
 // prettier-ignore
 export const registerScreens = () => {
@@ -13,6 +14,7 @@ export const registerScreens = () => {
     Navigation.registerComponent(ViewsIDs.VIEW_ID_P6D, () => PastSixDaysView);
     Navigation.registerComponent(ViewsIDs.VIEW_ID_MY_ARTICLES, () => MyArticlesView);
     Navigation.registerComponent(ViewsIDs.VIEW_ID_MORE, () => MoreView);
+    Navigation.registerComponent(ViewsIDs.VIEW_ID_SEARCH, () => SearchView)
 
     // Misc
     Navigation.registerComponent(ViewsIDs.VIEW_ID_STORYBOOK, () => StorybookUIRoot);

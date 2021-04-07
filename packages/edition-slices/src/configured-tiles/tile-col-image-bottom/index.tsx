@@ -41,7 +41,7 @@ const TileColImageBottom: FC<Props> = ({
 }) => {
   if (!tile.config) return null;
 
-  const config = tile.config[breakpoint];
+  const config = tile.config[breakpoint as EditionBreakpointKeys];
 
   const styles = stylesFactory(config as TileConfig);
 

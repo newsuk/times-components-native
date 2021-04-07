@@ -37,14 +37,7 @@ exports[`1. has video 1`] = `
                 <View>
                   <View>
                     <VideoLabel
-                      articleReadState={
-                        Object {
-                          "animate": false,
-                          "read": false,
-                        }
-                      }
                       color="#DB133B"
-                      isVideo={true}
                       title="BAYEUX TAPESTRY"
                     />
                   </View>

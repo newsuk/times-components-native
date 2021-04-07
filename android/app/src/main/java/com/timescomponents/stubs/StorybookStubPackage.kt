@@ -8,14 +8,15 @@ import com.facebook.react.uimanager.ViewManager
 
 // Stub NativeModules for storybook
 class StorybookStubPackage : ReactPackage {
-    override fun createNativeModules(reactContext: ReactApplicationContext) = listOf(
-            ArticleEvents(),
-            AuthorProfileEvents(),
-            ReactAnalytics(),
-            ReactConfig(),
-            SectionEvents(),
-            TopicEvents()
-    )
+  override fun createNativeModules(reactContext: ReactApplicationContext) = listOf(
+    ArticleEvents(),
+    AuthorProfileEvents(),
+    ReactAnalytics(),
+    ReactConfig(),
+    SectionEvents(),
+    TopicEvents(),
+    SearchEvents()
+  )
 
-    override fun createViewManagers(reactContext: ReactApplicationContext) = emptyList<ViewManager<View, ReactShadowNode<*>>>()
+  override fun createViewManagers(reactContext: ReactApplicationContext) = emptyList<ViewManager<View, ReactShadowNode<*>>>()
 }

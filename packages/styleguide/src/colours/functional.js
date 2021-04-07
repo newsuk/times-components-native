@@ -6,6 +6,7 @@ const functionalColours = {
   articleFlagUpdated: "#3C81BE",
   backgroundPrimary: "#F9F9F9",
   backgroundSecondary: "#EDEDED",
+  backgroundTertiary: "#01000D",
   black: "#000000",
   border: "#F0F0F0",
   buff: "#F0EEDF",
@@ -33,6 +34,8 @@ const functionalColours = {
   whiteGrey: "#F5F5F5",
   darkGrey: "#999999",
   red: "#CC0000",
+  lightGreyText: "#C2C2C2",
+  offlineSearchText: "#8E8E8E",
 };
 
 export default functionalColours;

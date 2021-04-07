@@ -1,0 +1,54 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`EmptySearchMessage should render correctly 1`] = `
+<View
+  style={
+    Object {
+      "flex": 1,
+      "justifyContent": "center",
+    }
+  }
+>
+  <Text
+    style={
+      Object {
+        "color": "#696969",
+        "marginBottom": 25,
+        "textAlign": "center",
+      }
+    }
+  >
+    Popular thing to search for:
+  </Text>
+  <Text
+    style={
+      Object {
+        "color": "#696969",
+        "textAlign": "center",
+      }
+    }
+  >
+    Articles
+  </Text>
+  <Text
+    style={
+      Object {
+        "color": "#696969",
+        "textAlign": "center",
+      }
+    }
+  >
+    Topics
+  </Text>
+  <Text
+    style={
+      Object {
+        "color": "#696969",
+        "textAlign": "center",
+      }
+    }
+  >
+    Journalists
+  </Text>
+</View>
+`;

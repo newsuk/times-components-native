@@ -3,10 +3,16 @@ import React from "react";
 import { sections } from "@times-components-native/storybook";
 import Page from "./src/pages";
 import Section from "./section-showcase-helper";
+import {
+  ALGOLIA_API_KEY,
+  ALGOLIA_APP_ID,
+  ALGOLIA_INDEX,
+} from "@times-components-native/pages/src/search/config";
 
 const Article = Page("Article");
 const AuthorProfile = Page("AuthorProfile");
 const Topic = Page("Topic");
+const Search = Page("Search");
 
 export default {
   children: [
@@ -51,6 +57,19 @@ export default {
         return <Topic topicSlug={topicSlug} />;
       },
       name: "Topic",
+      type: "story",
+    },
+    {
+      component: () => (
+        <Search
+          algoliaConfig={{
+            ALGOLIA_APP_ID: ALGOLIA_APP_ID,
+            ALGOLIA_API_KEY: ALGOLIA_API_KEY,
+            ALGOLIA_INDEX: ALGOLIA_INDEX,
+          }}
+        />
+      ),
+      name: "Search",
       type: "story",
     },
   ],

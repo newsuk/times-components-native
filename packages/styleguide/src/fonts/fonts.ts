@@ -1,4 +1,17 @@
-const fonts = {
+export type FontsKeys =
+  | "body"
+  | "bodyRegular"
+  | "bodyRegularSmallCaps"
+  | "cultureMagazine"
+  | "dropCap"
+  | "frontByline"
+  | "headline"
+  | "headlineRegular"
+  | "stMagazine"
+  | "styleMagazine"
+  | "supporting";
+
+const fonts: Record<FontsKeys, string> = {
   body: "TimesDigitalW04",
   bodyRegular: "TimesDigitalW04-Regular",
   bodyRegularSmallCaps: "TimesDigitalW04-RegularSC",

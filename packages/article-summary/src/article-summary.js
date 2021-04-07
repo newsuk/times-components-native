@@ -1,11 +1,7 @@
-import React, { useRef, useEffect } from "react";
+import React, { useEffect, useRef } from "react";
 import { Animated, Platform, Text, View } from "react-native";
 import PropTypes from "prop-types";
-import ArticleByline, {
-  articleBylinePropTypes,
-} from "@times-components-native/article-byline";
-import ArticleLabel from "@times-components-native/article-label";
-import VideoLabel from "@times-components-native/video-label";
+import { articleBylinePropTypes } from "@times-components-native/article-byline";
 import DatePublication from "@times-components-native/date-publication";
 import renderTrees from "@times-components-native/markup-forest";
 import { ARTICLE_READ_ANIMATION } from "@times-components-native/styleguide";
@@ -15,6 +11,8 @@ import ArticleSummaryStrapline from "./article-summary-strapline";
 import renderer from "./article-summary-renderer";
 import styles from "./styles";
 import summarise from "./summarise";
+import ArticleSummaryByline from "./article-summary-byline";
+import ArticleSummaryLabel from "./article-summary-label";
 
 function renderAst(ast) {
   return renderTrees(summarise(ast), renderer);
@@ -55,34 +53,6 @@ const MarkAsRead = ({ children, articleReadState }) => {
     <View>{children}</View>
   );
 };
-
-function ArticleSummaryLabel(props) {
-  const { articleReadState, hide, title, isVideo } = props;
-
-  if (hide || (!title && !isVideo)) {
-    return null;
-  }
-
-  return (
-    <MarkAsRead articleReadState={articleReadState} title={title}>
-      <View style={styles.labelWrapper}>
-        {isVideo ? <VideoLabel {...props} /> : <ArticleLabel {...props} />}
-      </View>
-    </MarkAsRead>
-  );
-}
-
-function ArticleSummaryByline(props) {
-  const { ast, articleReadState, bylineClass } = props;
-
-  if (!ast || ast.length === 0) return null;
-
-  return (
-    <MarkAsRead articleReadState={articleReadState}>
-      <ArticleByline {...props} className={bylineClass} />
-    </MarkAsRead>
-  );
-}
 
 function ArticleSummary(props) {
   const {

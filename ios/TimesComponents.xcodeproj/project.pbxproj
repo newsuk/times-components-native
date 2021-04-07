@@ -37,6 +37,7 @@
 		81AB9BB82411601600AC10FF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */; };
 		A6CBA86FE3C3FAE284518F4A /* libPods-TimesComponents.a in Frameworks */ = {isa = PBXBuildFile; fileRef = A780229AAC4D71C1774B1C3B /* libPods-TimesComponents.a */; };
 		ADEADA3F25419A9B00B6B55C /* GillSansMTStd-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = ADEADA3925418E7A00B6B55C /* GillSansMTStd-Bold.ttf */; };
+		B9792CE125EF967100A928F0 /* SearchEvents.m in Sources */ = {isa = PBXBuildFile; fileRef = B9792CE025EF967100A928F0 /* SearchEvents.m */; };
 		B9E82FFB25ED5EA800D00CCC /* SectionEvents.m in Sources */ = {isa = PBXBuildFile; fileRef = B9E82FFA25ED5EA800D00CCC /* SectionEvents.m */; };
 /* End PBXBuildFile section */
 
@@ -96,6 +97,7 @@
 		A780229AAC4D71C1774B1C3B /* libPods-TimesComponents.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-TimesComponents.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		ADEADA3925418E7A00B6B55C /* GillSansMTStd-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "GillSansMTStd-Bold.ttf"; path = "../../dist/public/fonts/GillSansMTStd-Bold.ttf"; sourceTree = "<group>"; };
 		B5382007B5E2DE215910BC69 /* Pods-TimesComponents.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TimesComponents.debug.xcconfig"; path = "Target Support Files/Pods-TimesComponents/Pods-TimesComponents.debug.xcconfig"; sourceTree = "<group>"; };
+		B9792CE025EF967100A928F0 /* SearchEvents.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SearchEvents.m; sourceTree = "<group>"; };
 		B9E82FFA25ED5EA800D00CCC /* SectionEvents.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SectionEvents.m; sourceTree = "<group>"; };
 		D64F3BD61DAF3B2659F8DC6D /* Pods-TimesComponents-TimesComponentsTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TimesComponents-TimesComponentsTests.debug.xcconfig"; path = "Target Support Files/Pods-TimesComponents-TimesComponentsTests/Pods-TimesComponents-TimesComponentsTests.debug.xcconfig"; sourceTree = "<group>"; };
 		DB2FEFA28A97B26CA78469CC /* Pods-TimesComponents-tvOS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TimesComponents-tvOS.debug.xcconfig"; path = "Target Support Files/Pods-TimesComponents-tvOS/Pods-TimesComponents-tvOS.debug.xcconfig"; sourceTree = "<group>"; };
@@ -161,6 +163,7 @@
 		120322AD24E1A56600D265FF /* Native Modules */ = {
 			isa = PBXGroup;
 			children = (
+				B9792CE025EF967100A928F0 /* SearchEvents.m */,
 				120322AE24E1A58B00D265FF /* ArticleEvents.m */,
 				120322B224E1A58B00D265FF /* AuthorProfileEvents.m */,
 				120322AF24E1A58B00D265FF /* ReactAnalytics.m */,
@@ -655,6 +658,7 @@
 				120322B424E1A58B00D265FF /* ReactAnalytics.m in Sources */,
 				B9E82FFB25ED5EA800D00CCC /* SectionEvents.m in Sources */,
 				120322B724E1A58B00D265FF /* AuthorProfileEvents.m in Sources */,
+				B9792CE125EF967100A928F0 /* SearchEvents.m in Sources */,
 				13B07FC11A68108700A75B9A /* main.m in Sources */,
 				120322B624E1A58B00D265FF /* ReactConfig.m in Sources */,
 			);
