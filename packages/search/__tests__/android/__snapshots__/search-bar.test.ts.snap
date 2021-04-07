@@ -133,7 +133,7 @@ exports[`Search Bar should render correctly 1`] = `
     style={
       Object {
         "flex": 1,
-        "marginLeft": 15,
+        "marginLeft": 16,
         "marginRight": 8,
         "marginVertical": 8,
       }
@@ -245,10 +245,11 @@ exports[`Search Bar should render correctly 1`] = `
     <TextInput
       allowFontScaling={true}
       autoFocus={true}
+      defaultValue="test"
+      editable={true}
       keyboardType="web-search"
       onChangeText={[Function]}
       placeholder="Search our archive"
-      placeholderTextColor="#C2C2C2"
       rejectResponderTermination={true}
       style={
         Object {
@@ -262,6 +263,7 @@ exports[`Search Bar should render correctly 1`] = `
         }
       }
       underlineColorAndroid="transparent"
+      value="test"
     />
   </View>
   <View
