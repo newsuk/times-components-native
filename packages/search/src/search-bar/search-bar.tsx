@@ -54,13 +54,17 @@ export const SearchBarComponent: FC<SearchBarComponentProps> = ({
               }
             />
           ) : (
-            <Chevron
-              style={styles.iconStyle}
-              onPress={handleCancelSearch}
-              color={
-                !isConnected ? colours.functional.offlineSearchText : undefined
-              }
-            />
+            !!text && (
+              <Chevron
+                style={{ marginTop: 10 }}
+                onPress={handleCancelSearch}
+                color={
+                  !isConnected
+                    ? colours.functional.offlineSearchText
+                    : colours.functional.offlineSearchText
+                }
+              />
+            )
           )}
           <TextInput
             placeholder="Enter your search..."
@@ -79,11 +83,19 @@ export const SearchBarComponent: FC<SearchBarComponentProps> = ({
           />
         </View>
         {text && isIOS ? <XButton onPress={handleResetSearch} /> : null}
+        {!isIOS && (
+          <CancelButton
+            onPress={isIOS ? handleCancelSearch : handleResetSearch}
+            isConnected={isConnected}
+          />
+        )}
       </View>
-      <CancelButton
-        onPress={isIOS ? handleCancelSearch : handleResetSearch}
-        isConnected={isConnected}
-      />
+      {isIOS && (
+        <CancelButton
+          onPress={isIOS ? handleCancelSearch : handleResetSearch}
+          isConnected={isConnected}
+        />
+      )}
     </View>
   );
 };

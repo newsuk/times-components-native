@@ -28,15 +28,13 @@ export const styles = StyleSheet.create({
   magnifierTextWrapper: { flexDirection: "row", width: "85%" },
   input: {
     marginLeft: spacing(2),
-    paddingTop: 4,
+    paddingTop: isIOS ? 4 : 7,
     ...fontFactory({
       font: "supporting",
       fontSize: "body",
     }),
 
-    backgroundColor: isIOS
-      ? colours.functional.transparentWhite
-      : colours.functional.backgroundTertiary,
+    backgroundColor: colours.functional.grey,
     color: colours.functional.black,
   },
 });
