@@ -45,35 +45,38 @@ export const SearchBarComponent: FC<SearchBarComponentProps> = ({
   return (
     <View style={styles.container}>
       <View style={styles.inputContainer}>
-        {isIOS ? (
-          <Magnifier
-            color={
-              !isConnected ? colours.functional.offlineSearchText : undefined
+        <View style={styles.magnifierTextWrapper}>
+          {isIOS ? (
+            <Magnifier
+              style={{ marginTop: 1 }}
+              color={
+                !isConnected ? colours.functional.offlineSearchText : undefined
+              }
+            />
+          ) : (
+            <Chevron
+              onPress={handleCancelSearch}
+              color={
+                !isConnected ? colours.functional.offlineSearchText : undefined
+              }
+            />
+          )}
+          <TextInput
+            placeholder="Enter your search..."
+            style={styles.input}
+            defaultValue={currentRefinement}
+            onChangeText={handleSetText}
+            keyboardType="web-search"
+            placeholderTextColor={
+              isConnected
+                ? colours.functional.searchText
+                : colours.functional.offlineSearchText
             }
+            value={text}
+            autoFocus
+            editable={isConnected ? isConnected : false}
           />
-        ) : (
-          <Chevron
-            onPress={handleCancelSearch}
-            color={
-              !isConnected ? colours.functional.offlineSearchText : undefined
-            }
-          />
-        )}
-        <TextInput
-          placeholder="Search our archive"
-          style={styles.input}
-          defaultValue={currentRefinement}
-          onChangeText={handleSetText}
-          keyboardType="web-search"
-          placeholderTextColor={
-            isConnected
-              ? colours.functional.searchText
-              : colours.functional.offlineSearchText
-          }
-          value={text}
-          autoFocus
-          editable={isConnected ? isConnected : false}
-        />
+        </View>
         {text && isIOS ? <XButton onPress={handleResetSearch} /> : null}
       </View>
       <CancelButton
