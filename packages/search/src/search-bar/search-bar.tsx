@@ -48,13 +48,14 @@ export const SearchBarComponent: FC<SearchBarComponentProps> = ({
         <View style={styles.magnifierTextWrapper}>
           {isIOS ? (
             <Magnifier
-              style={{ marginTop: 1 }}
+              style={styles.iconStyle}
               color={
                 !isConnected ? colours.functional.offlineSearchText : undefined
               }
             />
           ) : (
             <Chevron
+              style={styles.iconStyle}
               onPress={handleCancelSearch}
               color={
                 !isConnected ? colours.functional.offlineSearchText : undefined

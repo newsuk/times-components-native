@@ -21,8 +21,10 @@ export const styles = StyleSheet.create({
     paddingHorizontal: spacing(2),
     backgroundColor: colours.functional.grey,
     justifyContent: "space-between",
+    alignItems: "center",
     width: "100%",
   },
+  iconStyle: { marginTop: 1 },
   magnifierTextWrapper: { flexDirection: "row", width: "85%" },
   input: {
     marginLeft: spacing(2),

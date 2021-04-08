@@ -10,4 +10,7 @@ export {
   TheSTLogo,
   TheTimesLogo,
   CloseIcon,
+  DeleteIcon,
+  GlassMagnifierIcon,
+  ImageIcons,
 } from "./src/icons";

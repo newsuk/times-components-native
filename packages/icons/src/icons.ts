@@ -13,3 +13,5 @@ export { default as CloseRoundIcon } from "./icons/close-round";
 export { default as GlassMagnifierIcon } from "./icons/glass-magnifier";
 export { default as RightOrientedGlassMagnifier } from "./icons/right-oriented-magnifier";
 export { default as LeftChevron } from "./icons/left-chevron";
+export { default as DeleteIcon } from "./icons/delete-icon";
+export * from "./icons/imageIcons";
