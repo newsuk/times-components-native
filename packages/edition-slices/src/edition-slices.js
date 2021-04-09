@@ -21,6 +21,7 @@ import {
   PuzzleSlice,
   TopSecondarySlice,
   SectionAd,
+  SupplementLeadOneAndFourSlice,
   SupplementLeadOneAndFourV2Slice,
   SupplementLeadOneAndOneSlice,
   SupplementSecondaryFourSlice,
@@ -28,11 +29,18 @@ import {
   SupplementSecondaryTwoAndTwoSlice,
 } from "./slices";
 import { sectionConfigs } from "@times-components-native/section/src/utils";
+import { Platform } from "react-native";
 
 const { sectionTitles } = sectionConfigs;
 
+const isIOS = Platform.OS === "ios";
+
 const selectLeadOneAndFourSlice = (isInTabletSupplement) =>
-  isInTabletSupplement ? SupplementLeadOneAndFourV2Slice : LeadOneAndFourSlice;
+  isInTabletSupplement
+    ? isIOS
+      ? SupplementLeadOneAndFourV2Slice
+      : SupplementLeadOneAndFourSlice
+    : LeadOneAndFourSlice;
 
 const selectLeadOneAndOneSlice = (isInTabletSupplement) =>
   isInTabletSupplement ? SupplementLeadOneAndOneSlice : LeadOneAndOneSlice;
