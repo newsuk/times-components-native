@@ -38,10 +38,7 @@ const TileAH = ({ onPress, tile, breakpoint = editionBreakpoints.medium }) => {
         bylineOnTop={true}
         bylineStyle={styles.byline}
         headlineStyle={styles.headline}
-        strapline={
-          breakpoint !== editionBreakpoints.smallTablet &&
-          getTileStrapline(tile)
-        }
+        strapline={getTileStrapline(tile)}
         straplineStyle={styles.strapline}
         style={styles.summaryContainer}
         tile={tile}
