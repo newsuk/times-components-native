@@ -170,7 +170,28 @@ exports[`13. glassmagnifiericon renders with different colours 1`] = `
 </RNSVGSvgView>
 `;
 
-exports[`14. leftchevron renders with different colours 1`] = `
+exports[`14. rightorientedglassmagnifier renders with different colours 1`] = `
+<RNSVGSvgView>
+  <RNSVGGroup>
+    <RNSVGGroup
+      fill={null}
+    >
+      <RNSVGGroup
+        stroke={-16777216}
+      >
+        <RNSVGGroup>
+          <RNSVGGroup>
+            <RNSVGCircle />
+            <RNSVGPath />
+          </RNSVGGroup>
+        </RNSVGGroup>
+      </RNSVGGroup>
+    </RNSVGGroup>
+  </RNSVGGroup>
+</RNSVGSvgView>
+`;
+
+exports[`15. leftchevron renders with different colours 1`] = `
 <RNSVGSvgView
   fill="none"
 >
@@ -186,6 +207,29 @@ exports[`14. leftchevron renders with different colours 1`] = `
       <RNSVGRect
         fill={-1}
       />
+    </RNSVGGroup>
+  </RNSVGGroup>
+</RNSVGSvgView>
+`;
+
+exports[`16. deleteicon renders with different colours 1`] = `
+<RNSVGSvgView>
+  <RNSVGGroup>
+    <RNSVGGroup
+      fill={null}
+    >
+      <RNSVGGroup
+        stroke={-16777216}
+      >
+        <RNSVGGroup>
+          <RNSVGGroup>
+            <RNSVGGroup>
+              <RNSVGPath />
+              <RNSVGPath />
+            </RNSVGGroup>
+          </RNSVGGroup>
+        </RNSVGGroup>
+      </RNSVGGroup>
     </RNSVGGroup>
   </RNSVGGroup>
 </RNSVGSvgView>
