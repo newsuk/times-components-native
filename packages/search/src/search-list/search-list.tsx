@@ -45,6 +45,7 @@ const SearchList: FC<SearchListProps> = ({
           ListFooterComponent={SearchListLoader}
           nestedScrollEnabled
           onEndReached={handleFetchMore}
+          keyboardShouldPersistTaps={"always"}
         />
       </View>
     </View>

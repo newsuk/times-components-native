@@ -67,7 +67,7 @@ export const SearchBarComponent: FC<SearchBarComponentProps> = ({
             )
           )}
           <TextInput
-            placeholder="Enter your search..."
+            placeholder="Search"
             style={styles.input}
             defaultValue={currentRefinement}
             onChangeText={handleSetText}

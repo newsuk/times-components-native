@@ -7,7 +7,6 @@ import {
   InfiniteHitsProvided,
   SearchBoxProvided,
 } from "react-instantsearch-core";
-import EmptySearchMessage from "./empty-search-message";
 import { Hit } from "./types";
 import SearchList from "./search-list/search-list";
 import SearchListEmptyState from "@times-components-native/search/src/search-list/search-list-empty-state";
@@ -48,7 +47,7 @@ const SearchResults: FC<InfiniteHitsProps> = ({
     return (
       <SearchListEmptyState
         title="Over 2 million articles"
-        message="Search our archive of over 2 million articles from The Times and The Sunday Times going all the way back to 2001"
+        message="Search our archive of articles from The Times and The Sunday Times going all the way back to 2001"
         icon="search"
       />
     );
