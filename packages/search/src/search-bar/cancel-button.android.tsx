@@ -7,10 +7,7 @@ import { colours } from "@times-components-native/styleguide";
 const ICON_SIZE = 24;
 
 const CancelButton: FC<CancelButtonProps> = ({ onPress, isConnected }) => (
-  <TouchableOpacity
-    onPress={onPress}
-    disabled={!isConnected}
-  >
+  <TouchableOpacity onPress={onPress} disabled={!isConnected}>
     <IconClose
       fillColour={
         isConnected
