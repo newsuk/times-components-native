@@ -11,13 +11,13 @@ export const styles = StyleSheet.create({
     backgroundColor: colours.functional.white,
     flexDirection: "row",
     paddingLeft: spacing(3),
-    marginBottom: 8,
+    marginBottom: spacing(2),
   },
   inputContainer: {
     flexDirection: "row",
     flex: 1,
     marginRight: 8,
-    paddingVertical: 8,
+    paddingVertical: spacing(2),
     paddingHorizontal: spacing(2),
     backgroundColor: colours.functional.grey,
     justifyContent: "space-between",
@@ -37,4 +37,5 @@ export const styles = StyleSheet.create({
     backgroundColor: colours.functional.grey,
     color: colours.functional.black,
   },
+  chevron: { marginTop: spacing(2) },
 });

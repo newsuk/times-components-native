@@ -1,6 +1,6 @@
 import React from "react";
 import Svg, { G, Path } from "react-native-svg";
-import functional from "@times-components-native/styleguide/src/colours/functional";
+import { colours } from "@times-components-native/styleguide";
 
 interface LeftChevronProps {
   color?: string;
@@ -9,7 +9,7 @@ interface LeftChevronProps {
 }
 
 const DeleteIcon: React.FC<LeftChevronProps> = ({
-  color = functional.black,
+  color = colours.functional.black,
   width = 13,
   height = 13,
 }) => {

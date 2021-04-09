@@ -56,12 +56,12 @@ export const SearchBarComponent: FC<SearchBarComponentProps> = ({
           ) : (
             !!text && (
               <Chevron
-                style={{ marginTop: 10 }}
+                style={styles.chevron}
                 onPress={handleCancelSearch}
                 color={
                   !isConnected
                     ? colours.functional.offlineSearchText
-                    : colours.functional.offlineSearchText
+                    : colours.functional.black
                 }
               />
             )
