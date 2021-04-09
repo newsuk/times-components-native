@@ -31,7 +31,7 @@ exports[`SearchResults should render correctly 1`] = `
         "fontFamily": "TimesModern-Bold",
         "fontSize": 30,
         "lineHeight": 35,
-        "marginVertical": 29,
+        "marginVertical": 30,
         "textAlign": "center",
         "width": "75%",
       }
