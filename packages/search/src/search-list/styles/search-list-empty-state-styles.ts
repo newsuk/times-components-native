@@ -7,7 +7,7 @@ import {
 
 export const styles = StyleSheet.create({
   listEmptyTitle: {
-    marginVertical: 29,
+    marginVertical: spacing(6),
     color: colours.functional.black,
     fontFamily: "TimesModern-Bold",
     fontSize: 30,
