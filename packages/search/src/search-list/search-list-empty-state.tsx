@@ -1,7 +1,7 @@
 import React from "react";
 import { View, Text, Image } from "react-native";
 import { styles } from "./styles/search-list-empty-state-styles";
-import { ImageIcons } from "@times-components-native/icons";
+import { ImageIcons } from "@times-components-native/icons/src/icons/imageIcons";
 
 interface SearchListEmptyStateProps {
   message: string;

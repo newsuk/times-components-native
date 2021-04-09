@@ -38,8 +38,10 @@ exports[`Search Bar List SearchList should render correctly 1`] = `
     <RCTScrollView
       ItemSeparatorComponent={[Function]}
       ListEmptyComponent={
-        <ArticleListEmptyState
-          message="There were no results for your search term"
+        <SearchListEmptyState
+          icon="emptyResultsIcon"
+          message="Please check all words are spelled correctly, or try a different search term"
+          title="Sorry, we found no results"
         />
       }
       ListFooterComponent={[Function]}
@@ -738,6 +740,7 @@ exports[`Search Bar List SearchList should render correctly 1`] = `
       horizontal={false}
       initialNumToRender={10}
       keyExtractor={[Function]}
+      keyboardShouldPersistTaps="always"
       maxToRenderPerBatch={10}
       nestedScrollEnabled={true}
       onContentSizeChange={[Function]}

@@ -221,7 +221,32 @@ exports[`13. glassmagnifiericon sets a width when height is set 1`] = `
 />
 `;
 
-exports[`14. leftchevron sets a width when height is set 1`] = `
+exports[`14. rightorientedglassmagnifier sets a width when height is set 1`] = `
+<RNSVGSvgView
+  align="xMidYMid"
+  bbHeight="20"
+  bbWidth="22"
+  focusable={false}
+  height="20"
+  meetOrSlice={0}
+  minX={0}
+  minY={0}
+  style={
+    Object {
+      "backgroundColor": "transparent",
+      "borderWidth": 0,
+      "flex": 0,
+      "height": 20,
+      "width": 22,
+    }
+  }
+  vbHeight={18}
+  vbWidth={20}
+  width="22"
+/>
+`;
+
+exports[`15. leftchevron sets a width when height is set 1`] = `
 <RNSVGSvgView
   align="xMidYMid"
   bbHeight="24"
@@ -244,5 +269,30 @@ exports[`14. leftchevron sets a width when height is set 1`] = `
   vbHeight={24}
   vbWidth={24}
   width="24"
+/>
+`;
+
+exports[`16. deleteicon sets a width when height is set 1`] = `
+<RNSVGSvgView
+  align="xMidYMid"
+  bbHeight={50}
+  bbWidth={13}
+  focusable={false}
+  height={50}
+  meetOrSlice={0}
+  minX={0}
+  minY={0}
+  style={
+    Object {
+      "backgroundColor": "transparent",
+      "borderWidth": 0,
+      "flex": 0,
+      "height": 50,
+      "width": 13,
+    }
+  }
+  vbHeight={13}
+  vbWidth={13}
+  width={13}
 />
 `;
