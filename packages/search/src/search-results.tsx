@@ -7,10 +7,9 @@ import {
   InfiniteHitsProvided,
   SearchBoxProvided,
 } from "react-instantsearch-core";
-import EmptySearchMessage from "./empty-search-message";
 import { Hit } from "./types";
 import SearchList from "./search-list/search-list";
-import { OfflineMessage } from "./offline-message";
+import SearchListEmptyState from "@times-components-native/search/src/search-list/search-list-empty-state";
 
 export interface InfiniteHitsProps
   extends InfiniteHitsProvided<Hit>,
@@ -35,11 +34,23 @@ const SearchResults: FC<InfiniteHitsProps> = ({
   };
 
   if (!isConnected) {
-    return <OfflineMessage />;
+    return (
+      <SearchListEmptyState
+        icon="offline"
+        title={"You appear to be offline"}
+        message="Please check your network connection and try again"
+      />
+    );
   }
 
   if (!currentRefinement) {
-    return <EmptySearchMessage />;
+    return (
+      <SearchListEmptyState
+        title="Over 2 million articles"
+        message="Search our archive of articles from The Times and The Sunday Times going all the way back to 2001"
+        icon="search"
+      />
+    );
   }
 
   return (

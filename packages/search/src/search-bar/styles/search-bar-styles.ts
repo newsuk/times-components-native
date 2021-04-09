@@ -8,27 +8,34 @@ import { isIOS } from "@times-components-native/utils/src/platformUtils";
 
 export const styles = StyleSheet.create({
   container: {
-    paddingHorizontal: 0,
-    backgroundColor: colours.functional.backgroundTertiary,
+    backgroundColor: colours.functional.white,
     flexDirection: "row",
+    paddingLeft: spacing(3),
+    marginBottom: spacing(2),
   },
   inputContainer: {
+    flexDirection: "row",
     flex: 1,
-    marginLeft: 16,
     marginRight: 8,
-    marginVertical: 8,
+    paddingVertical: spacing(2),
+    paddingHorizontal: spacing(2),
+    backgroundColor: colours.functional.grey,
+    justifyContent: "space-between",
+    alignItems: "center",
+    width: "100%",
   },
+  iconStyle: { marginTop: 1 },
+  magnifierTextWrapper: { flexDirection: "row", width: "85%" },
   input: {
+    marginLeft: spacing(2),
+    paddingTop: isIOS ? 4 : 7,
     ...fontFactory({
       font: "supporting",
       fontSize: "body",
     }),
-    lineHeight: 22,
-    padding: 4,
-    paddingLeft: spacing(6),
-    backgroundColor: isIOS
-      ? colours.functional.transparentWhite
-      : colours.functional.backgroundTertiary,
-    color: colours.functional.white,
+
+    backgroundColor: colours.functional.grey,
+    color: colours.functional.black,
   },
+  chevron: { marginTop: spacing(2) },
 });

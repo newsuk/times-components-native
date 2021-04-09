@@ -1,15 +1,19 @@
 import React, { FC } from "react";
-import { TouchableOpacity, TouchableOpacityProps } from "react-native";
-import CloseRoundIcon from "@times-components-native/icons/src/icons/close-round";
-import { styles } from "./styles/x-button-styles";
+import {
+  TouchableOpacity,
+  TouchableOpacityProps,
+  ViewStyle,
+} from "react-native";
+import { DeleteIcon } from "@times-components-native/icons";
 
 export interface XButtonProps {
   onPress: TouchableOpacityProps["onPress"];
+  style?: ViewStyle;
 }
 
-const XButton: FC<XButtonProps> = ({ onPress }) => (
-  <TouchableOpacity onPress={onPress} style={styles.closeIconContainer}>
-    <CloseRoundIcon />
+const XButton: FC<XButtonProps> = ({ onPress, style }) => (
+  <TouchableOpacity onPress={onPress} style={style}>
+    <DeleteIcon width={16} height={16} />
   </TouchableOpacity>
 );
 

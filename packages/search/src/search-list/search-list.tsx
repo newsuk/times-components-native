@@ -1,11 +1,11 @@
 import React, { FC } from "react";
-import { ArticleListEmptyState } from "@times-components-native/article-list";
 import { FlatList, View } from "react-native";
 import SearchListItem from "./search-list-item";
 import { Hit } from "../types";
 import ArticleListItemSeparator from "@times-components-native/article-list/src/article-list-item-separator";
 import SearchListLoader from "@times-components-native/search/src/search-list/search-list-loader";
 import { styles } from "./styles/search-list-styles";
+import SearchListEmptyState from "./search-list-empty-state";
 
 export interface SearchListProps {
   hits: Hit[];
@@ -36,11 +36,16 @@ const SearchList: FC<SearchListProps> = ({
           ItemSeparatorComponent={ArticleListItemSeparator}
           contentContainerStyle={styles.contentContainer}
           ListEmptyComponent={
-            <ArticleListEmptyState message="There were no results for your search term" />
+            <SearchListEmptyState
+              icon="emptyResultsIcon"
+              title="Sorry, we found no results"
+              message="Please check all words are spelled correctly, or try a different search term"
+            />
           }
           ListFooterComponent={SearchListLoader}
           nestedScrollEnabled
           onEndReached={handleFetchMore}
+          keyboardShouldPersistTaps={"always"}
         />
       </View>
     </View>

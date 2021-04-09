@@ -14,19 +14,15 @@ exports[`XButton Should render correctly 1`] = `
   style={
     Object {
       "opacity": 1,
-      "position": "absolute",
-      "right": 10,
-      "top": 5,
     }
   }
 >
   <RNSVGSvgView
     align="xMidYMid"
-    bbHeight="24"
-    bbWidth="24"
-    fill="none"
+    bbHeight={16}
+    bbWidth={16}
     focusable={false}
-    height="24"
+    height={16}
     meetOrSlice={0}
     minX={0}
     minY={0}
@@ -38,67 +34,65 @@ exports[`XButton Should render correctly 1`] = `
         },
         Object {
           "flex": 0,
-          "height": 24,
-          "width": 24,
+          "height": 16,
+          "width": 16,
         },
       ]
     }
-    vbHeight={24}
-    vbWidth={24}
-    width="24"
+    vbHeight={13}
+    vbWidth={13}
+    width={16}
   >
-    <RNSVGGroup
-      fill={null}
-      propList={
-        Array [
-          "fill",
-        ]
-      }
-    >
-      <RNSVGMask
-        height="24"
-        maskContentUnits={1}
-        maskTransform={
+    <RNSVGGroup>
+      <RNSVGGroup
+        fill={null}
+        propList={
           Array [
-            1,
-            0,
-            0,
-            1,
-            0,
-            0,
+            "fill",
           ]
         }
-        maskUnits={1}
-        name="mask0"
-        width="24"
-        x="0"
-        y="0"
       >
-        <RNSVGPath
-          d="M2 12C2 6.47 6.47 2 12 2C17.53 2 22 6.47 22 12C22 17.53 17.53 22 12 22C6.47 22 2 17.53 2 12ZM15.59 17L17 15.59L13.41 12L17 8.41L15.59 7L12 10.59L8.41 7L7 8.41L10.59 12L7 15.59L8.41 17L12 13.41L15.59 17Z"
-          fill={4294967295}
+        <RNSVGGroup
           propList={
             Array [
-              "fill",
+              "stroke",
             ]
           }
-        />
-      </RNSVGMask>
-      <RNSVGGroup
-        mask="mask0"
-      >
-        <RNSVGRect
-          fill={4294967295}
-          height="24"
-          propList={
-            Array [
-              "fill",
-            ]
-          }
-          width="24"
-          x={0}
-          y={0}
-        />
+          stroke={4278190080}
+        >
+          <RNSVGGroup>
+            <RNSVGGroup>
+              <RNSVGGroup>
+                <RNSVGPath
+                  d="M0.591 0.591L12.409 12.409"
+                  matrix={
+                    Array [
+                      -1,
+                      0,
+                      0,
+                      1,
+                      13,
+                      0,
+                    ]
+                  }
+                />
+                <RNSVGPath
+                  d="M0.591 0.591L12.409 12.409"
+                  matrix={
+                    Array [
+                      1,
+                      0,
+                      0,
+                      1,
+                      0,
+                      0,
+                    ]
+                  }
+                />
+              </RNSVGGroup>
+            </RNSVGGroup>
+          </RNSVGGroup>
+        </RNSVGGroup>
       </RNSVGGroup>
     </RNSVGGroup>
   </RNSVGSvgView>

@@ -5,20 +5,54 @@ exports[`SearchResults should render correctly 1`] = `
   style={
     Object {
       "flex": 1,
-      "justifyContent": "center",
+      "paddingTop": 60,
     }
   }
 >
+  <Image
+    source={
+      Object {
+        "testUri": "../../../packages/icons/src/icons/offline.png",
+      }
+    }
+    style={
+      Object {
+        "alignSelf": "center",
+        "height": 200,
+        "width": 200,
+      }
+    }
+  />
   <Text
     style={
       Object {
-        "color": "#696969",
-        "marginBottom": 25,
+        "alignSelf": "center",
+        "color": "#000000",
+        "fontFamily": "TimesModern-Bold",
+        "fontSize": 30,
+        "lineHeight": 35,
+        "marginVertical": 30,
         "textAlign": "center",
+        "width": "75%",
       }
     }
   >
-    Search is an online only feature
+    You appear to be offline
+  </Text>
+  <Text
+    style={
+      Object {
+        "alignSelf": "center",
+        "color": "#696969",
+        "fontFamily": "TimesDigitalW04-Regular",
+        "fontSize": 20,
+        "lineHeight": 30,
+        "textAlign": "center",
+        "width": "90%",
+      }
+    }
+  >
+    Please check your network connection and try again
   </Text>
 </View>
 `;

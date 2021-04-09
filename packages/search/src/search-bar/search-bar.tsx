@@ -45,41 +45,57 @@ export const SearchBarComponent: FC<SearchBarComponentProps> = ({
   return (
     <View style={styles.container}>
       <View style={styles.inputContainer}>
-        {isIOS ? (
-          <Magnifier
-            color={
-              !isConnected ? colours.functional.offlineSearchText : undefined
+        <View style={styles.magnifierTextWrapper}>
+          {isIOS ? (
+            <Magnifier
+              style={styles.iconStyle}
+              color={
+                !isConnected ? colours.functional.offlineSearchText : undefined
+              }
+            />
+          ) : (
+            !!text && (
+              <Chevron
+                style={styles.chevron}
+                onPress={handleCancelSearch}
+                color={
+                  !isConnected
+                    ? colours.functional.offlineSearchText
+                    : colours.functional.black
+                }
+              />
+            )
+          )}
+          <TextInput
+            placeholder="Search"
+            style={styles.input}
+            defaultValue={currentRefinement}
+            onChangeText={handleSetText}
+            keyboardType="web-search"
+            placeholderTextColor={
+              isConnected
+                ? colours.functional.searchText
+                : colours.functional.offlineSearchText
             }
+            value={text}
+            autoFocus
+            editable={isConnected ? isConnected : false}
           />
-        ) : (
-          <Chevron
-            onPress={handleCancelSearch}
-            color={
-              !isConnected ? colours.functional.offlineSearchText : undefined
-            }
+        </View>
+        {text && isIOS ? <XButton onPress={handleResetSearch} /> : null}
+        {!isIOS && (
+          <CancelButton
+            onPress={isIOS ? handleCancelSearch : handleResetSearch}
+            isConnected={isConnected}
           />
         )}
-        <TextInput
-          placeholder="Search our archive"
-          style={styles.input}
-          defaultValue={currentRefinement}
-          onChangeText={handleSetText}
-          keyboardType="web-search"
-          placeholderTextColor={
-            isConnected
-              ? colours.functional.searchText
-              : colours.functional.offlineSearchText
-          }
-          value={text}
-          autoFocus
-          editable={isConnected ? isConnected : false}
-        />
-        {text && isIOS ? <XButton onPress={handleResetSearch} /> : null}
       </View>
-      <CancelButton
-        onPress={isIOS ? handleCancelSearch : handleResetSearch}
-        isConnected={isConnected}
-      />
+      {isIOS && (
+        <CancelButton
+          onPress={isIOS ? handleCancelSearch : handleResetSearch}
+          isConnected={isConnected}
+        />
+      )}
     </View>
   );
 };

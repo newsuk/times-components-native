@@ -1,22 +1,13 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Magnifier Should render correctly 1`] = `
-<View
-  style={
-    Object {
-      "left": 4,
-      "position": "absolute",
-      "top": 6,
-    }
-  }
->
+<View>
   <RNSVGSvgView
     align="xMidYMid"
-    bbHeight="24"
-    bbWidth="24"
-    fill="none"
+    bbHeight="20"
+    bbWidth="22"
     focusable={false}
-    height="24"
+    height="20"
     meetOrSlice={0}
     minX={0}
     minY={0}
@@ -28,67 +19,82 @@ exports[`Magnifier Should render correctly 1`] = `
         },
         Object {
           "flex": 0,
-          "height": 24,
-          "width": 24,
+          "height": 20,
+          "width": 22,
         },
       ]
     }
-    vbHeight={24}
-    vbWidth={24}
-    width="24"
+    vbHeight={18}
+    vbWidth={20}
+    width="22"
   >
-    <RNSVGGroup
-      fill={null}
-      propList={
-        Array [
-          "fill",
-        ]
-      }
-    >
-      <RNSVGMask
-        height="24"
-        maskContentUnits={1}
-        maskTransform={
+    <RNSVGGroup>
+      <RNSVGGroup
+        fill={null}
+        fillRule={0}
+        propList={
           Array [
-            1,
-            0,
-            0,
-            1,
-            0,
-            0,
+            "fill",
+            "fillRule",
           ]
         }
-        maskUnits={1}
-        name="mask0"
-        width="24"
-        x="0"
-        y="0"
       >
-        <RNSVGPath
-          d="M14.71 14H15.5L20.49 19L19 20.49L14 15.5V14.71L13.73 14.43C12.59 15.41 11.11 16 9.5 16C5.91 16 3 13.09 3 9.5C3 5.91 5.91 3 9.5 3C13.09 3 16 5.91 16 9.5C16 11.11 15.41 12.59 14.43 13.73L14.71 14ZM5 9.5C5 11.99 7.01 14 9.5 14C11.99 14 14 11.99 14 9.5C14 7.01 11.99 5 9.5 5C7.01 5 5 7.01 5 9.5Z"
-          fill={4294967295}
+        <RNSVGGroup
           propList={
             Array [
-              "fill",
+              "stroke",
             ]
           }
-        />
-      </RNSVGMask>
-      <RNSVGGroup
-        mask="mask0"
-      >
-        <RNSVGRect
-          fill={4294967295}
-          height="24"
-          propList={
-            Array [
-              "fill",
-            ]
-          }
-          width="24"
-          x={0}
-          y={0}
-        />
+          stroke={4278190080}
+        >
+          <RNSVGGroup>
+            <RNSVGGroup
+              matrix={
+                Array [
+                  1,
+                  0,
+                  0,
+                  1,
+                  0,
+                  -3,
+                ]
+              }
+            >
+              <RNSVGCircle
+                cx="11.268"
+                cy="11.232"
+                matrix={
+                  Array [
+                    0.7071067811865476,
+                    0.7071067811865475,
+                    -0.7071067811865475,
+                    0.7071067811865476,
+                    11.242544155877283,
+                    -4.677902576697321,
+                  ]
+                }
+                propList={
+                  Array [
+                    "strokeWidth",
+                  ]
+                }
+                r="6.75"
+                strokeWidth="1.5"
+              />
+              <RNSVGPath
+                d="M5.611 16.889L2.782 19.718"
+                propList={
+                  Array [
+                    "strokeWidth",
+                    "strokeLinecap",
+                  ]
+                }
+                strokeLinecap={1}
+                strokeWidth="2"
+              />
+            </RNSVGGroup>
+          </RNSVGGroup>
+        </RNSVGGroup>
       </RNSVGGroup>
     </RNSVGGroup>
   </RNSVGSvgView>

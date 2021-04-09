@@ -21,7 +21,7 @@ const CancelButton: FC<CancelButtonProps> = ({ onPress, isConnected }) => (
           styles.cancel,
           {
             color: isConnected
-              ? colours.functional.white
+              ? colours.functional.black
               : colours.functional.offlineSearchText,
           },
         ]}
