@@ -1,5 +1,5 @@
 import React, { useEffect, useRef } from "react";
-import { Animated, Platform, Text, View } from "react-native";
+import { Animated, Text, View } from "react-native";
 import PropTypes from "prop-types";
 import { articleBylinePropTypes } from "@times-components-native/article-byline";
 import DatePublication from "@times-components-native/date-publication";
@@ -26,10 +26,10 @@ const MarkAsRead = ({ children, articleReadState }) => {
     if (!articleReadState.animate) return;
 
     Animated.timing(animationOpacity, {
-      delay: ARTICLE_READ_ANIMATION.DELAY,
-      duration: ARTICLE_READ_ANIMATION.DURATION,
+      delay: ARTICLE_READ_ANIMATION.delay,
+      duration: ARTICLE_READ_ANIMATION.duration,
       toValue: opacity,
-      useNativeDriver: Platform.OS === "ios",
+      useNativeDriver: true,
     }).start();
   }, [articleReadState.animate]);
 
@@ -50,7 +50,7 @@ const MarkAsRead = ({ children, articleReadState }) => {
       {children}
     </View>
   ) : (
-    <View>{children}</View>
+    children
   );
 };
 

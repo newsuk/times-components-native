@@ -26,8 +26,8 @@ const styles = (breakpoint) => ({
     color: colours.section.comment,
     fontFamily: fonts.supporting,
     fontSize: fontSizes.cardMetaMobile,
-    letterSpacing: 1,
-    fontWeight: "100",
+    letterSpacing: 0.6,
+    lineHeight: 12,
     textTransform: "uppercase",
   },
   container: {
