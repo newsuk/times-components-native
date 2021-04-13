@@ -26,10 +26,10 @@ const MarkAsRead = ({ children, articleReadState }) => {
     if (!articleReadState.animate) return;
 
     Animated.timing(animationOpacity, {
-      delay: ARTICLE_READ_ANIMATION.DELAY,
-      duration: ARTICLE_READ_ANIMATION.DURATION,
+      delay: ARTICLE_READ_ANIMATION.delay,
+      duration: ARTICLE_READ_ANIMATION.duration,
       toValue: opacity,
-      useNativeDriver: Platform.OS === "ios",
+      useNativeDriver: true,
     }).start();
   }, [articleReadState.animate]);
 
