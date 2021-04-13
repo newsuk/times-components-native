@@ -43,50 +43,48 @@ exports[`1. article summary component with a single paragraph 1`] = `
       publication="TIMES"
     />
   </Text>
-  <Text>
-    <View>
-      <ArticleByline
-        articleReadState={
+  <View>
+    <ArticleByline
+      articleReadState={
+        Object {
+          "animate": false,
+          "read": false,
+        }
+      }
+      ast={
+        Array [
           Object {
-            "animate": false,
-            "read": false,
-          }
-        }
-        ast={
-          Array [
-            Object {
-              "attributes": Object {
-                "slug": "camilla-long",
+            "attributes": Object {
+              "slug": "camilla-long",
+            },
+            "children": Array [
+              Object {
+                "attributes": Object {
+                  "value": "Camilla Long",
+                },
+                "children": Array [],
+                "name": "text",
               },
-              "children": Array [
-                Object {
-                  "attributes": Object {
-                    "value": "Camilla Long",
-                  },
-                  "children": Array [],
-                  "name": "text",
+            ],
+            "name": "author",
+          },
+          Object {
+            "attributes": Object {},
+            "children": Array [
+              Object {
+                "attributes": Object {
+                  "value": ", Environment Editor",
                 },
-              ],
-              "name": "author",
-            },
-            Object {
-              "attributes": Object {},
-              "children": Array [
-                Object {
-                  "attributes": Object {
-                    "value": ", Environment Editor",
-                  },
-                  "children": Array [],
-                  "name": "text",
-                },
-              ],
-              "name": "inline",
-            },
-          ]
-        }
-      />
-    </View>
-  </Text>
+                "children": Array [],
+                "name": "text",
+              },
+            ],
+            "name": "inline",
+          },
+        ]
+      }
+    />
+  </View>
 </View>
 `;
 
@@ -115,39 +113,37 @@ exports[`2. article summary component with multiple paragraphs 1`] = `
       publication="TIMES"
     />
   </Text>
-  <Text>
-    <View>
-      <ArticleByline
-        articleReadState={
+  <View>
+    <ArticleByline
+      articleReadState={
+        Object {
+          "animate": false,
+          "read": false,
+        }
+      }
+      ast={
+        Array [
           Object {
-            "animate": false,
-            "read": false,
-          }
-        }
-        ast={
-          Array [
-            Object {
-              "byline": Array [
-                Object {
-                  "attributes": Object {},
-                  "children": Array [
-                    Object {
-                      "attributes": Object {
-                        "value": "A byline",
-                      },
-                      "children": Array [],
-                      "name": "text",
+            "byline": Array [
+              Object {
+                "attributes": Object {},
+                "children": Array [
+                  Object {
+                    "attributes": Object {
+                      "value": "A byline",
                     },
-                  ],
-                  "name": "inline",
-                },
-              ],
-            },
-          ]
-        }
-      />
-    </View>
-  </Text>
+                    "children": Array [],
+                    "name": "text",
+                  },
+                ],
+                "name": "inline",
+              },
+            ],
+          },
+        ]
+      }
+    />
+  </View>
 </View>
 `;
 
@@ -295,39 +291,37 @@ exports[`6. article summary component with empty content at the end trimmed 1`] 
       publication="SUNDAYTIMES"
     />
   </Text>
-  <Text>
-    <View>
-      <ArticleByline
-        articleReadState={
+  <View>
+    <ArticleByline
+      articleReadState={
+        Object {
+          "animate": false,
+          "read": false,
+        }
+      }
+      ast={
+        Array [
           Object {
-            "animate": false,
-            "read": false,
-          }
-        }
-        ast={
-          Array [
-            Object {
-              "byline": Array [
-                Object {
-                  "attributes": Object {},
-                  "children": Array [
-                    Object {
-                      "attributes": Object {
-                        "value": "A byline",
-                      },
-                      "children": Array [],
-                      "name": "text",
+            "byline": Array [
+              Object {
+                "attributes": Object {},
+                "children": Array [
+                  Object {
+                    "attributes": Object {
+                      "value": "A byline",
                     },
-                  ],
-                  "name": "inline",
-                },
-              ],
-            },
-          ]
-        }
-      />
-    </View>
-  </Text>
+                    "children": Array [],
+                    "name": "text",
+                  },
+                ],
+                "name": "inline",
+              },
+            ],
+          },
+        ]
+      }
+    />
+  </View>
 </View>
 `;
 
@@ -352,7 +346,6 @@ exports[`7. article summary component with no byline 1`] = `
       publication="TIMES"
     />
   </Text>
-  <Text />
 </View>
 `;
 
@@ -377,39 +370,37 @@ exports[`8. article summary component with no label 1`] = `
       publication="TIMES"
     />
   </Text>
-  <Text>
-    <View>
-      <ArticleByline
-        articleReadState={
+  <View>
+    <ArticleByline
+      articleReadState={
+        Object {
+          "animate": false,
+          "read": false,
+        }
+      }
+      ast={
+        Array [
           Object {
-            "animate": false,
-            "read": false,
-          }
-        }
-        ast={
-          Array [
-            Object {
-              "byline": Array [
-                Object {
-                  "attributes": Object {},
-                  "children": Array [
-                    Object {
-                      "attributes": Object {
-                        "value": "A byline",
-                      },
-                      "children": Array [],
-                      "name": "text",
+            "byline": Array [
+              Object {
+                "attributes": Object {},
+                "children": Array [
+                  Object {
+                    "attributes": Object {
+                      "value": "A byline",
                     },
-                  ],
-                  "name": "inline",
-                },
-              ],
-            },
-          ]
-        }
-      />
-    </View>
-  </Text>
+                    "children": Array [],
+                    "name": "text",
+                  },
+                ],
+                "name": "inline",
+              },
+            ],
+          },
+        ]
+      }
+    />
+  </View>
 </View>
 `;
 
@@ -462,39 +453,37 @@ exports[`10. article summary component with no date publication 1`] = `
       ...
     </Text>
   </Text>
-  <Text>
-    <View>
-      <ArticleByline
-        articleReadState={
+  <View>
+    <ArticleByline
+      articleReadState={
+        Object {
+          "animate": false,
+          "read": false,
+        }
+      }
+      ast={
+        Array [
           Object {
-            "animate": false,
-            "read": false,
-          }
-        }
-        ast={
-          Array [
-            Object {
-              "byline": Array [
-                Object {
-                  "attributes": Object {},
-                  "children": Array [
-                    Object {
-                      "attributes": Object {
-                        "value": "A byline",
-                      },
-                      "children": Array [],
-                      "name": "text",
+            "byline": Array [
+              Object {
+                "attributes": Object {},
+                "children": Array [
+                  Object {
+                    "attributes": Object {
+                      "value": "A byline",
                     },
-                  ],
-                  "name": "inline",
-                },
-              ],
-            },
-          ]
-        }
-      />
-    </View>
-  </Text>
+                    "children": Array [],
+                    "name": "text",
+                  },
+                ],
+                "name": "inline",
+              },
+            ],
+          },
+        ]
+      }
+    />
+  </View>
 </View>
 `;
 
@@ -527,39 +516,37 @@ exports[`11. article summary component with a video label 1`] = `
       publication="TIMES"
     />
   </Text>
-  <Text>
-    <View>
-      <ArticleByline
-        articleReadState={
+  <View>
+    <ArticleByline
+      articleReadState={
+        Object {
+          "animate": false,
+          "read": false,
+        }
+      }
+      ast={
+        Array [
           Object {
-            "animate": false,
-            "read": false,
-          }
-        }
-        ast={
-          Array [
-            Object {
-              "byline": Array [
-                Object {
-                  "attributes": Object {},
-                  "children": Array [
-                    Object {
-                      "attributes": Object {
-                        "value": "A byline",
-                      },
-                      "children": Array [],
-                      "name": "text",
+            "byline": Array [
+              Object {
+                "attributes": Object {},
+                "children": Array [
+                  Object {
+                    "attributes": Object {
+                      "value": "A byline",
                     },
-                  ],
-                  "name": "inline",
-                },
-              ],
-            },
-          ]
-        }
-      />
-    </View>
-  </Text>
+                    "children": Array [],
+                    "name": "text",
+                  },
+                ],
+                "name": "inline",
+              },
+            ],
+          },
+        ]
+      }
+    />
+  </View>
 </View>
 `;
 
@@ -612,58 +599,56 @@ exports[`12. article summary component with a strapline 1`] = `
       publication="TIMES"
     />
   </Text>
-  <Text>
-    <View>
-      <ArticleByline
-        articleReadState={
+  <View>
+    <ArticleByline
+      articleReadState={
+        Object {
+          "animate": false,
+          "read": false,
+        }
+      }
+      ast={
+        Array [
           Object {
-            "animate": false,
-            "read": false,
-          }
-        }
-        ast={
-          Array [
-            Object {
-              "byline": Array [
-                Object {
-                  "attributes": Object {
-                    "slug": "camilla-long",
+            "byline": Array [
+              Object {
+                "attributes": Object {
+                  "slug": "camilla-long",
+                },
+                "children": Array [
+                  Object {
+                    "attributes": Object {
+                      "value": "Camilla Long",
+                    },
+                    "children": Array [],
+                    "name": "text",
                   },
-                  "children": Array [
-                    Object {
-                      "attributes": Object {
-                        "value": "Camilla Long",
-                      },
-                      "children": Array [],
-                      "name": "text",
+                ],
+                "name": "author",
+              },
+            ],
+          },
+          Object {
+            "byline": Array [
+              Object {
+                "attributes": Object {},
+                "children": Array [
+                  Object {
+                    "attributes": Object {
+                      "value": ", Environment Editor",
                     },
-                  ],
-                  "name": "author",
-                },
-              ],
-            },
-            Object {
-              "byline": Array [
-                Object {
-                  "attributes": Object {},
-                  "children": Array [
-                    Object {
-                      "attributes": Object {
-                        "value": ", Environment Editor",
-                      },
-                      "children": Array [],
-                      "name": "text",
-                    },
-                  ],
-                  "name": "inline",
-                },
-              ],
-            },
-          ]
-        }
-      />
-    </View>
-  </Text>
+                    "children": Array [],
+                    "name": "text",
+                  },
+                ],
+                "name": "inline",
+              },
+            ],
+          },
+        ]
+      }
+    />
+  </View>
 </View>
 `;
 
@@ -754,50 +739,48 @@ exports[`18. article summary component with a single paragraph and flag on table
       publication="TIMES"
     />
   </Text>
-  <Text>
-    <View>
-      <ArticleByline
-        articleReadState={
+  <View>
+    <ArticleByline
+      articleReadState={
+        Object {
+          "animate": false,
+          "read": false,
+        }
+      }
+      ast={
+        Array [
           Object {
-            "animate": false,
-            "read": false,
-          }
-        }
-        ast={
-          Array [
-            Object {
-              "attributes": Object {
-                "slug": "camilla-long",
+            "attributes": Object {
+              "slug": "camilla-long",
+            },
+            "children": Array [
+              Object {
+                "attributes": Object {
+                  "value": "Camilla Long",
+                },
+                "children": Array [],
+                "name": "text",
               },
-              "children": Array [
-                Object {
-                  "attributes": Object {
-                    "value": "Camilla Long",
-                  },
-                  "children": Array [],
-                  "name": "text",
+            ],
+            "name": "author",
+          },
+          Object {
+            "attributes": Object {},
+            "children": Array [
+              Object {
+                "attributes": Object {
+                  "value": ", Environment Editor",
                 },
-              ],
-              "name": "author",
-            },
-            Object {
-              "attributes": Object {},
-              "children": Array [
-                Object {
-                  "attributes": Object {
-                    "value": ", Environment Editor",
-                  },
-                  "children": Array [],
-                  "name": "text",
-                },
-              ],
-              "name": "inline",
-            },
-          ]
-        }
-      />
-    </View>
-  </Text>
+                "children": Array [],
+                "name": "text",
+              },
+            ],
+            "name": "inline",
+          },
+        ]
+      }
+    />
+  </View>
 </View>
 `;
 
@@ -850,58 +833,56 @@ exports[`19. article summary component with a strapline and flag on tablet 1`] =
       publication="TIMES"
     />
   </Text>
-  <Text>
-    <View>
-      <ArticleByline
-        articleReadState={
+  <View>
+    <ArticleByline
+      articleReadState={
+        Object {
+          "animate": false,
+          "read": false,
+        }
+      }
+      ast={
+        Array [
           Object {
-            "animate": false,
-            "read": false,
-          }
-        }
-        ast={
-          Array [
-            Object {
-              "byline": Array [
-                Object {
-                  "attributes": Object {
-                    "slug": "camilla-long",
+            "byline": Array [
+              Object {
+                "attributes": Object {
+                  "slug": "camilla-long",
+                },
+                "children": Array [
+                  Object {
+                    "attributes": Object {
+                      "value": "Camilla Long",
+                    },
+                    "children": Array [],
+                    "name": "text",
                   },
-                  "children": Array [
-                    Object {
-                      "attributes": Object {
-                        "value": "Camilla Long",
-                      },
-                      "children": Array [],
-                      "name": "text",
+                ],
+                "name": "author",
+              },
+            ],
+          },
+          Object {
+            "byline": Array [
+              Object {
+                "attributes": Object {},
+                "children": Array [
+                  Object {
+                    "attributes": Object {
+                      "value": ", Environment Editor",
                     },
-                  ],
-                  "name": "author",
-                },
-              ],
-            },
-            Object {
-              "byline": Array [
-                Object {
-                  "attributes": Object {},
-                  "children": Array [
-                    Object {
-                      "attributes": Object {
-                        "value": ", Environment Editor",
-                      },
-                      "children": Array [],
-                      "name": "text",
-                    },
-                  ],
-                  "name": "inline",
-                },
-              ],
-            },
-          ]
-        }
-      />
-    </View>
-  </Text>
+                    "children": Array [],
+                    "name": "text",
+                  },
+                ],
+                "name": "inline",
+              },
+            ],
+          },
+        ]
+      }
+    />
+  </View>
 </View>
 `;
 
@@ -940,50 +921,48 @@ exports[`20. article summary component with hidden label 1`] = `
       publication="TIMES"
     />
   </Text>
-  <Text>
-    <View>
-      <ArticleByline
-        articleReadState={
+  <View>
+    <ArticleByline
+      articleReadState={
+        Object {
+          "animate": false,
+          "read": false,
+        }
+      }
+      ast={
+        Array [
           Object {
-            "animate": false,
-            "read": false,
-          }
-        }
-        ast={
-          Array [
-            Object {
-              "attributes": Object {
-                "slug": "camilla-long",
+            "attributes": Object {
+              "slug": "camilla-long",
+            },
+            "children": Array [
+              Object {
+                "attributes": Object {
+                  "value": "Camilla Long",
+                },
+                "children": Array [],
+                "name": "text",
               },
-              "children": Array [
-                Object {
-                  "attributes": Object {
-                    "value": "Camilla Long",
-                  },
-                  "children": Array [],
-                  "name": "text",
+            ],
+            "name": "author",
+          },
+          Object {
+            "attributes": Object {},
+            "children": Array [
+              Object {
+                "attributes": Object {
+                  "value": ", Environment Editor",
                 },
-              ],
-              "name": "author",
-            },
-            Object {
-              "attributes": Object {},
-              "children": Array [
-                Object {
-                  "attributes": Object {
-                    "value": ", Environment Editor",
-                  },
-                  "children": Array [],
-                  "name": "text",
-                },
-              ],
-              "name": "inline",
-            },
-          ]
-        }
-      />
-    </View>
-  </Text>
+                "children": Array [],
+                "name": "text",
+              },
+            ],
+            "name": "inline",
+          },
+        ]
+      }
+    />
+  </View>
 </View>
 `;
 
@@ -1030,49 +1009,47 @@ exports[`21. article summary component with byline on top 1`] = `
       publication="TIMES"
     />
   </Text>
-  <Text>
-    <View>
-      <ArticleByline
-        articleReadState={
+  <View>
+    <ArticleByline
+      articleReadState={
+        Object {
+          "animate": false,
+          "read": false,
+        }
+      }
+      ast={
+        Array [
           Object {
-            "animate": false,
-            "read": false,
-          }
-        }
-        ast={
-          Array [
-            Object {
-              "attributes": Object {
-                "slug": "camilla-long",
+            "attributes": Object {
+              "slug": "camilla-long",
+            },
+            "children": Array [
+              Object {
+                "attributes": Object {
+                  "value": "Camilla Long",
+                },
+                "children": Array [],
+                "name": "text",
               },
-              "children": Array [
-                Object {
-                  "attributes": Object {
-                    "value": "Camilla Long",
-                  },
-                  "children": Array [],
-                  "name": "text",
+            ],
+            "name": "author",
+          },
+          Object {
+            "attributes": Object {},
+            "children": Array [
+              Object {
+                "attributes": Object {
+                  "value": ", Environment Editor",
                 },
-              ],
-              "name": "author",
-            },
-            Object {
-              "attributes": Object {},
-              "children": Array [
-                Object {
-                  "attributes": Object {
-                    "value": ", Environment Editor",
-                  },
-                  "children": Array [],
-                  "name": "text",
-                },
-              ],
-              "name": "inline",
-            },
-          ]
-        }
-      />
-    </View>
-  </Text>
+                "children": Array [],
+                "name": "text",
+              },
+            ],
+            "name": "inline",
+          },
+        ]
+      }
+    />
+  </View>
 </View>
 `;
