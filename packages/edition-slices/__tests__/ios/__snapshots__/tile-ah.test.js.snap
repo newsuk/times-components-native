@@ -33,54 +33,52 @@ exports[`tile ah huge 1`] = `
       }
     }
   >
-    <Text>
-      <View>
+    <View>
+      <Text
+        style={
+          Object {
+            "color": "#333333",
+            "flexDirection": "row",
+            "fontFamily": "GillSansMTStd-Medium",
+            "fontSize": 13,
+            "lineHeight": 15,
+          }
+        }
+      >
         <Text
           style={
             Object {
-              "color": "#333333",
+              "color": "#850029",
               "flexDirection": "row",
               "fontFamily": "GillSansMTStd-Medium",
-              "fontSize": 13,
+              "fontSize": 12,
+              "fontWeight": "100",
+              "letterSpacing": 1,
               "lineHeight": 15,
+              "textTransform": "uppercase",
             }
           }
         >
-          <Text
-            style={
-              Object {
-                "color": "#850029",
-                "flexDirection": "row",
-                "fontFamily": "GillSansMTStd-Medium",
-                "fontSize": 12,
-                "fontWeight": "100",
-                "letterSpacing": 1,
-                "lineHeight": 15,
-                "textTransform": "uppercase",
-              }
-            }
-          >
-            Richard Lloyd Parry
-          </Text>
-          <Text
-            style={
-              Object {
-                "color": "#850029",
-                "flexDirection": "row",
-                "fontFamily": "GillSansMTStd-Medium",
-                "fontSize": 12,
-                "fontWeight": "100",
-                "letterSpacing": 1,
-                "lineHeight": 15,
-                "textTransform": "uppercase",
-              }
-            }
-          >
-            , Hanoi
-          </Text>
+          Richard Lloyd Parry
         </Text>
-      </View>
-    </Text>
+        <Text
+          style={
+            Object {
+              "color": "#850029",
+              "flexDirection": "row",
+              "fontFamily": "GillSansMTStd-Medium",
+              "fontSize": 12,
+              "fontWeight": "100",
+              "letterSpacing": 1,
+              "lineHeight": 15,
+              "textTransform": "uppercase",
+            }
+          }
+        >
+          , Hanoi
+        </Text>
+      </Text>
+    </View>
     <Text
       accessibilityRole="header"
       aria-level="3"
@@ -167,54 +165,52 @@ exports[`tile ah medium 1`] = `
       }
     }
   >
-    <Text>
-      <View>
+    <View>
+      <Text
+        style={
+          Object {
+            "color": "#333333",
+            "flexDirection": "row",
+            "fontFamily": "GillSansMTStd-Medium",
+            "fontSize": 13,
+            "lineHeight": 15,
+          }
+        }
+      >
         <Text
           style={
             Object {
-              "color": "#333333",
+              "color": "#850029",
               "flexDirection": "row",
               "fontFamily": "GillSansMTStd-Medium",
-              "fontSize": 13,
+              "fontSize": 12,
+              "fontWeight": "100",
+              "letterSpacing": 1,
               "lineHeight": 15,
+              "textTransform": "uppercase",
             }
           }
         >
-          <Text
-            style={
-              Object {
-                "color": "#850029",
-                "flexDirection": "row",
-                "fontFamily": "GillSansMTStd-Medium",
-                "fontSize": 12,
-                "fontWeight": "100",
-                "letterSpacing": 1,
-                "lineHeight": 15,
-                "textTransform": "uppercase",
-              }
-            }
-          >
-            Richard Lloyd Parry
-          </Text>
-          <Text
-            style={
-              Object {
-                "color": "#850029",
-                "flexDirection": "row",
-                "fontFamily": "GillSansMTStd-Medium",
-                "fontSize": 12,
-                "fontWeight": "100",
-                "letterSpacing": 1,
-                "lineHeight": 15,
-                "textTransform": "uppercase",
-              }
-            }
-          >
-            , Hanoi
-          </Text>
+          Richard Lloyd Parry
         </Text>
-      </View>
-    </Text>
+        <Text
+          style={
+            Object {
+              "color": "#850029",
+              "flexDirection": "row",
+              "fontFamily": "GillSansMTStd-Medium",
+              "fontSize": 12,
+              "fontWeight": "100",
+              "letterSpacing": 1,
+              "lineHeight": 15,
+              "textTransform": "uppercase",
+            }
+          }
+        >
+          , Hanoi
+        </Text>
+      </Text>
+    </View>
     <Text
       accessibilityRole="header"
       aria-level="3"
@@ -301,54 +297,52 @@ exports[`tile ah smallTablet 1`] = `
       }
     }
   >
-    <Text>
-      <View>
+    <View>
+      <Text
+        style={
+          Object {
+            "color": "#333333",
+            "flexDirection": "row",
+            "fontFamily": "GillSansMTStd-Medium",
+            "fontSize": 13,
+            "lineHeight": 15,
+          }
+        }
+      >
         <Text
           style={
             Object {
-              "color": "#333333",
+              "color": "#850029",
               "flexDirection": "row",
               "fontFamily": "GillSansMTStd-Medium",
-              "fontSize": 13,
+              "fontSize": 12,
+              "fontWeight": "100",
+              "letterSpacing": 1,
               "lineHeight": 15,
+              "textTransform": "uppercase",
             }
           }
         >
-          <Text
-            style={
-              Object {
-                "color": "#850029",
-                "flexDirection": "row",
-                "fontFamily": "GillSansMTStd-Medium",
-                "fontSize": 12,
-                "fontWeight": "100",
-                "letterSpacing": 1,
-                "lineHeight": 15,
-                "textTransform": "uppercase",
-              }
-            }
-          >
-            Richard Lloyd Parry
-          </Text>
-          <Text
-            style={
-              Object {
-                "color": "#850029",
-                "flexDirection": "row",
-                "fontFamily": "GillSansMTStd-Medium",
-                "fontSize": 12,
-                "fontWeight": "100",
-                "letterSpacing": 1,
-                "lineHeight": 15,
-                "textTransform": "uppercase",
-              }
-            }
-          >
-            , Hanoi
-          </Text>
+          Richard Lloyd Parry
         </Text>
-      </View>
-    </Text>
+        <Text
+          style={
+            Object {
+              "color": "#850029",
+              "flexDirection": "row",
+              "fontFamily": "GillSansMTStd-Medium",
+              "fontSize": 12,
+              "fontWeight": "100",
+              "letterSpacing": 1,
+              "lineHeight": 15,
+              "textTransform": "uppercase",
+            }
+          }
+        >
+          , Hanoi
+        </Text>
+      </Text>
+    </View>
     <Text
       accessibilityRole="header"
       aria-level="3"
@@ -417,54 +411,52 @@ exports[`tile ah wide 1`] = `
       }
     }
   >
-    <Text>
-      <View>
+    <View>
+      <Text
+        style={
+          Object {
+            "color": "#333333",
+            "flexDirection": "row",
+            "fontFamily": "GillSansMTStd-Medium",
+            "fontSize": 13,
+            "lineHeight": 15,
+          }
+        }
+      >
         <Text
           style={
             Object {
-              "color": "#333333",
+              "color": "#850029",
               "flexDirection": "row",
               "fontFamily": "GillSansMTStd-Medium",
-              "fontSize": 13,
+              "fontSize": 12,
+              "fontWeight": "100",
+              "letterSpacing": 1,
               "lineHeight": 15,
+              "textTransform": "uppercase",
             }
           }
         >
-          <Text
-            style={
-              Object {
-                "color": "#850029",
-                "flexDirection": "row",
-                "fontFamily": "GillSansMTStd-Medium",
-                "fontSize": 12,
-                "fontWeight": "100",
-                "letterSpacing": 1,
-                "lineHeight": 15,
-                "textTransform": "uppercase",
-              }
-            }
-          >
-            Richard Lloyd Parry
-          </Text>
-          <Text
-            style={
-              Object {
-                "color": "#850029",
-                "flexDirection": "row",
-                "fontFamily": "GillSansMTStd-Medium",
-                "fontSize": 12,
-                "fontWeight": "100",
-                "letterSpacing": 1,
-                "lineHeight": 15,
-                "textTransform": "uppercase",
-              }
-            }
-          >
-            , Hanoi
-          </Text>
+          Richard Lloyd Parry
         </Text>
-      </View>
-    </Text>
+        <Text
+          style={
+            Object {
+              "color": "#850029",
+              "flexDirection": "row",
+              "fontFamily": "GillSansMTStd-Medium",
+              "fontSize": 12,
+              "fontWeight": "100",
+              "letterSpacing": 1,
+              "lineHeight": 15,
+              "textTransform": "uppercase",
+            }
+          }
+        >
+          , Hanoi
+        </Text>
+      </Text>
+    </View>
     <Text
       accessibilityRole="header"
       aria-level="3"
@@ -551,54 +543,52 @@ exports[`tile ah without breakpoint should be like medium 1`] = `
       }
     }
   >
-    <Text>
-      <View>
+    <View>
+      <Text
+        style={
+          Object {
+            "color": "#333333",
+            "flexDirection": "row",
+            "fontFamily": "GillSansMTStd-Medium",
+            "fontSize": 13,
+            "lineHeight": 15,
+          }
+        }
+      >
         <Text
           style={
             Object {
-              "color": "#333333",
+              "color": "#850029",
               "flexDirection": "row",
               "fontFamily": "GillSansMTStd-Medium",
-              "fontSize": 13,
+              "fontSize": 12,
+              "fontWeight": "100",
+              "letterSpacing": 1,
               "lineHeight": 15,
+              "textTransform": "uppercase",
             }
           }
         >
-          <Text
-            style={
-              Object {
-                "color": "#850029",
-                "flexDirection": "row",
-                "fontFamily": "GillSansMTStd-Medium",
-                "fontSize": 12,
-                "fontWeight": "100",
-                "letterSpacing": 1,
-                "lineHeight": 15,
-                "textTransform": "uppercase",
-              }
-            }
-          >
-            Richard Lloyd Parry
-          </Text>
-          <Text
-            style={
-              Object {
-                "color": "#850029",
-                "flexDirection": "row",
-                "fontFamily": "GillSansMTStd-Medium",
-                "fontSize": 12,
-                "fontWeight": "100",
-                "letterSpacing": 1,
-                "lineHeight": 15,
-                "textTransform": "uppercase",
-              }
-            }
-          >
-            , Hanoi
-          </Text>
+          Richard Lloyd Parry
         </Text>
-      </View>
-    </Text>
+        <Text
+          style={
+            Object {
+              "color": "#850029",
+              "flexDirection": "row",
+              "fontFamily": "GillSansMTStd-Medium",
+              "fontSize": 12,
+              "fontWeight": "100",
+              "letterSpacing": 1,
+              "lineHeight": 15,
+              "textTransform": "uppercase",
+            }
+          }
+        >
+          , Hanoi
+        </Text>
+      </Text>
+    </View>
     <Text
       accessibilityRole="header"
       aria-level="3"
