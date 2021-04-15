@@ -37,7 +37,7 @@ exports[`advert 1`] = `
         "ad-pixelskin",
         "ad-pixelteads",
       ],
-      "networkId": "25436805",
+      "networkId": "3048",
       "pageTargeting": Object {
         "breakpoint": "huge",
         "cips": null,
@@ -117,7 +117,7 @@ exports[`advert with narrow content 1`] = `
         "ad-pixelskin",
         "ad-pixelteads",
       ],
-      "networkId": "25436805",
+      "networkId": "3048",
       "pageTargeting": Object {
         "breakpoint": "huge",
         "cips": null,
@@ -198,7 +198,7 @@ exports[`advert with width 1`] = `
         "ad-pixelskin",
         "ad-pixelteads",
       ],
-      "networkId": "25436805",
+      "networkId": "3048",
       "pageTargeting": Object {
         "breakpoint": "huge",
         "cips": null,
