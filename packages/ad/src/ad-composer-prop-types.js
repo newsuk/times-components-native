@@ -44,7 +44,7 @@ export const defaultProps = {
     bidderSlots: ["header", "inline-ad"],
     bidInitialiser: Promise.resolve(),
     globalSlots: ["ad-pixel", "ad-pixelskin", "ad-pixelteads"],
-    networkId: "25436805",
+    networkId: "3048",
     pageTargeting: {
       label: "This is label",
       title: "This is title",
