@@ -22,16 +22,6 @@ const ArticleTopic = ({
 }) => {
   const fontSizeStyle = fontSize ? { fontSize } : null;
   const lineHeightStyle = lineHeight ? { lineHeight } : null;
-  const { isArticleTablet } = useResponsiveContext();
-
-  const tooltipType = "topics";
-  const showTooltip = index === 0 && tooltips.includes(tooltipType);
-  const [isHighlighted, setIsHighlighted] = useState(showTooltip);
-
-  const unhighlightTopic = () => {
-    setIsHighlighted(false);
-  };
-
   const articleTopic = (
     <Context.Consumer>
       {({ makeTopicUrl }) => (
@@ -40,12 +30,7 @@ const ArticleTopic = ({
             onPress={(e) => onPress(e, { name, slug })}
             url={makeTopicUrl({ slug })}
           >
-            <View
-              style={[
-                styles.container,
-                isHighlighted && styles.borderHighlight,
-              ]}
-            >
+            <View style={[styles.container]}>
               <Text
                 accessibilityComponentType="button"
                 accessibilityRole="button"
@@ -61,24 +46,7 @@ const ArticleTopic = ({
     </Context.Consumer>
   );
 
-  const articleTopicWithTooltip = (
-    <Tooltip
-      articleId={articleId}
-      content={<Text>Tap a topic to see more of our coverage</Text>}
-      displayedInView={tooltipDisplayedInView}
-      offsetY={5}
-      onClose={unhighlightTopic}
-      onTooltipPresented={onTooltipPresented}
-      placement="top"
-      type={tooltipType}
-      tooltips={tooltips}
-      width={isArticleTablet ? 236 : 207}
-    >
-      {articleTopic}
-    </Tooltip>
-  );
-
-  return showTooltip ? articleTopicWithTooltip : articleTopic;
+  return articleTopic;
 };
 
 ArticleTopic.propTypes = topicPropTypes;

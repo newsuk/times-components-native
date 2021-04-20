@@ -78,7 +78,7 @@ const ArticleBylineWithLinks = ({ ast, ...props }) => {
     </Tooltip>
   );
 
-  return showTooltip ? bylineWithTooltip : byline;
+  return byline;
 };
 
 ArticleBylineWithLinks.propTypes = propTypes;

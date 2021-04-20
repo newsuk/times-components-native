@@ -26,7 +26,6 @@ const articlePageDefaultProps = {
   error: null,
   isLoading: false,
   receiveChildList: () => null,
-  tooltips: [],
 };
 
 export { articlePagePropTypes, articlePageDefaultProps };

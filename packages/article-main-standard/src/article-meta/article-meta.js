@@ -17,32 +17,14 @@ function ArticleMeta({
   publishedTime,
   onAuthorPress,
   onTooltipPresented,
-  tooltips = [],
+  tooltips,
 }) {
-  const withBylineTooltip =
-    hasBylineData(bylines) && tooltips.includes("profile");
+  console.log("isArticleTablet", isArticleTablet);
   return (
-    <View
-      style={[
-        styles.articleMeta,
-        isArticleTablet && styles.articleMetaTablet,
-        !isArticleTablet && withBylineTooltip && styles.articleMetaWidthMargin,
-      ]}
-    >
+    <View style={[styles.articleMeta]}>
       {hasBylineData(bylines) && (
         <View style={styles.articleMetaElementWithBorder}>
-          <View style={styles.datePublication}>
-            <ArticleBylineWithLinks
-              articleId={articleId}
-              ast={bylines}
-              onAuthorPress={onAuthorPress}
-              onTooltipPresented={onTooltipPresented}
-              tooltipArrowOffset={isArticleTablet ? 130 : 120}
-              tooltips={tooltips}
-              tooltipOffsetX={isArticleTablet ? -20 : 20}
-              tooltipOffsetY={isArticleTablet ? 26 : 38}
-            />
-          </View>
+          <View style={styles.datePublication}></View>
         </View>
       )}
       <View
