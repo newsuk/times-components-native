@@ -255,6 +255,7 @@ exports[`Search Bar should render correctly 1`] = `
             "lineHeight": undefined,
             "marginLeft": 10,
             "paddingTop": 4,
+            "width": "100%",
           }
         }
         underlineColorAndroid="transparent"
