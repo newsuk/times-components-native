@@ -33,7 +33,7 @@ export const styles = StyleSheet.create({
       font: "supporting",
       fontSize: "body",
     }),
-    width: '100%',
+    width: "100%",
     backgroundColor: colours.functional.grey,
     color: colours.functional.black,
   },
