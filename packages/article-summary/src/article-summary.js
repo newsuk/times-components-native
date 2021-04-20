@@ -71,12 +71,10 @@ function ArticleSummary(props) {
   const { bylineOnTop = false } = bylineProps || {};
 
   const byline = bylineProps ? (
-    <Text>
-      <ArticleSummaryByline
-        {...bylineProps}
-        articleReadState={articleReadState}
-      />
-    </Text>
+    <ArticleSummaryByline
+      {...bylineProps}
+      articleReadState={articleReadState}
+    />
   ) : null;
 
   return (

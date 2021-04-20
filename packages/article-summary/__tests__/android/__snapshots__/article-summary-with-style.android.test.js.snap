@@ -82,50 +82,48 @@ exports[`1. article summary component with a single paragraph 1`] = `
       publication="TIMES"
     />
   </Text>
-  <Text>
-    <View>
-      <ArticleByline
-        articleReadState={
+  <View>
+    <ArticleByline
+      articleReadState={
+        Object {
+          "animate": false,
+          "read": false,
+        }
+      }
+      ast={
+        Array [
           Object {
-            "animate": false,
-            "read": false,
-          }
-        }
-        ast={
-          Array [
-            Object {
-              "attributes": Object {
-                "slug": "camilla-long",
+            "attributes": Object {
+              "slug": "camilla-long",
+            },
+            "children": Array [
+              Object {
+                "attributes": Object {
+                  "value": "Camilla Long",
+                },
+                "children": Array [],
+                "name": "text",
               },
-              "children": Array [
-                Object {
-                  "attributes": Object {
-                    "value": "Camilla Long",
-                  },
-                  "children": Array [],
-                  "name": "text",
+            ],
+            "name": "author",
+          },
+          Object {
+            "attributes": Object {},
+            "children": Array [
+              Object {
+                "attributes": Object {
+                  "value": ", Environment Editor",
                 },
-              ],
-              "name": "author",
-            },
-            Object {
-              "attributes": Object {},
-              "children": Array [
-                Object {
-                  "attributes": Object {
-                    "value": ", Environment Editor",
-                  },
-                  "children": Array [],
-                  "name": "text",
-                },
-              ],
-              "name": "inline",
-            },
-          ]
-        }
-      />
-    </View>
-  </Text>
+                "children": Array [],
+                "name": "text",
+              },
+            ],
+            "name": "inline",
+          },
+        ]
+      }
+    />
+  </View>
 </View>
 `;
 
