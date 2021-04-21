@@ -17,7 +17,7 @@
     "ios:build-lib:js": "mkdir -p lib/ios/assets/js && mkdir -p lib/ios/assets/res/graphql && cp ./packages/provider-queries/src/*.graphql ./lib/ios/assets/res/graphql && react-native ram-bundle --platform ios --dev false --entry-file lib/ios/index.ios.js --bundle-output lib/ios/assets/js/index.ios.bundle --assets-dest lib/ios/assets/res/",
     "ios:build-lib:update-version": "cat package.json | grep version | head -1 | sed 's/[\",\t ]//g' | awk -F: '{ print \"Bundle Version: \" $2 }' > lib/ios/assets/js/version.meta",
     "android:native": "react-native start --config ./lib/android/metro.config.js",
-    "android:build-lib": "yarn android:build-lib:js && cp -r node_modules/@react-native-community/art node_modules/react-native-community-art && yarn android:build-lib:aar",
+    "android:build-lib": "yarn android:build-lib:js && cp -r node_modules/@react-native-community/netinfo node_modules/react-native-community-netinfo && cp -r node_modules/@react-native-community/art node_modules/react-native-community-art && yarn android:build-lib:aar",
     "android:build-lib:js": "mkdir -p lib/android/xnative/src/main/assets/ && mkdir -p lib/android/xnative/src/main/res/ && react-native ram-bundle --platform android --dev false --minify --entry-file lib/android/index.android.js --bundle-output lib/android/xnative/src/main/assets/index.android.bundle --assets-dest lib/android/xnative/src/main/res/",
     "android:build-lib:aar": "cd lib/android && ./gradlew clean && ./gradlew generateReactArchives && ./gradlew assemble && ./gradlew publish && cd -",
     "typecheck": "tsc --project ./",
@@ -57,7 +57,7 @@
   "dependencies": {
     "@react-native-community/art": "1.2.0",
     "@react-native-community/async-storage": "^1.11.0",
-    "@react-native-community/netinfo": "^5.9.9",
+    "@react-native-community/netinfo": "5.9.9",
     "@skele/components": "1.0.0-alpha.40",
     "algoliasearch": "4.8.5",
     "apollo-cache-inmemory": "1.5.1",
