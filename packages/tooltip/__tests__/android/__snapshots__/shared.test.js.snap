@@ -199,9 +199,6 @@ exports[`Tooltip renders correctly with flexDirectionColumnReverse 1`] = `
       <View
         style={
           Object {
-            "0": Object {
-              "top": 0,
-            },
             "backgroundColor": "#006699",
             "borderRadius": 3,
             "left": 0,
@@ -214,6 +211,7 @@ exports[`Tooltip renders correctly with flexDirectionColumnReverse 1`] = `
             },
             "shadowOpacity": 0.3,
             "shadowRadius": 3,
+            "top": 0,
             "width": 256,
           }
         }
