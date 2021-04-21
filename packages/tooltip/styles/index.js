@@ -126,13 +126,11 @@ const generateStyles = (options) => {
       flexDirection: "column-reverse",
       justifyContent: "space-between",
     };
-    containerPlacementStyles = {
-      ...{
-        position: "relative",
-        marginTop: spacing(4),
-      },
-      ...containerPlacementStyles,
-    };
+
+    containerPlacementStyles.push({
+      position: "relative",
+      marginTop: spacing(4),
+    });
   }
 
   return {
