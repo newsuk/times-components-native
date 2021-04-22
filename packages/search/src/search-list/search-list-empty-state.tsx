@@ -1,5 +1,5 @@
 import React from "react";
-import { View, Text, Image } from "react-native";
+import { Text, Image, KeyboardAvoidingView, Platform } from "react-native";
 import { styles } from "./styles/search-list-empty-state-styles";
 import { ImageIcons } from "@times-components-native/icons/src/icons/imageIcons";
 
@@ -14,14 +14,17 @@ const SearchListEmptyState: React.FC<SearchListEmptyStateProps> = ({
   title,
   icon = "search",
 }) => (
-  <View style={styles.listEmptyStateContainer}>
+  <KeyboardAvoidingView
+    behavior={Platform.OS === "ios" ? "padding" : "height"}
+    style={styles.listEmptyStateContainer}
+  >
     <Image
       source={ImageIcons[icon]}
       style={{ width: 200, height: 200, alignSelf: "center" }}
     />
     <Text style={styles.listEmptyTitle}>{title}</Text>
     <Text style={styles.listEmptyMessage}>{message}</Text>
-  </View>
+  </KeyboardAvoidingView>
 );
 
 export default SearchListEmptyState;

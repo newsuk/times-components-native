@@ -2,11 +2,17 @@
 
 exports[`SearchResults should render correctly 1`] = `
 <View
+  onLayout={[Function]}
   style={
-    Object {
-      "flex": 1,
-      "paddingTop": 60,
-    }
+    Array [
+      Object {
+        "flex": 1,
+        "paddingTop": 60,
+      },
+      Object {
+        "paddingBottom": 0,
+      },
+    ]
   }
 >
   <Image
@@ -44,7 +50,7 @@ exports[`SearchResults should render correctly 1`] = `
       Object {
         "alignSelf": "center",
         "color": "#696969",
-        "fontFamily": "TimesDigitalW04-Regular",
+        "fontFamily": "GillSansMTStd-Medium",
         "fontSize": 20,
         "lineHeight": 30,
         "textAlign": "center",

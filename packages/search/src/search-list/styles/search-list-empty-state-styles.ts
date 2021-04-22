@@ -2,6 +2,7 @@ import { StyleSheet } from "react-native";
 import {
   colours,
   fontFactory,
+  fonts,
   spacing,
 } from "@times-components-native/styleguide";
 
@@ -22,6 +23,7 @@ export const styles = StyleSheet.create({
       font: "bodyRegular",
       fontSize: "infoTitle",
     }),
+    fontFamily: fonts.supporting,
     width: "90%",
     textAlign: "center",
     alignSelf: "center",

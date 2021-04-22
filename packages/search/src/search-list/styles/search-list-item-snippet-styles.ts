@@ -1,8 +1,9 @@
 import { StyleSheet } from "react-native";
-import { colours } from "@times-components-native/styleguide";
+import { colours, fonts } from "@times-components-native/styleguide";
 
 export const styles = StyleSheet.create({
   text: {
+    fontFamily: fonts.body,
     color: colours.functional.secondary,
   },
   hightlighted: {

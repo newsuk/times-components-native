@@ -2,6 +2,7 @@
 
 exports[`SearchResults should render correctly 1`] = `
 <View
+  onLayout={[Function]}
   style={
     Object {
       "flex": 1,
@@ -44,7 +45,7 @@ exports[`SearchResults should render correctly 1`] = `
       Object {
         "alignSelf": "center",
         "color": "#696969",
-        "fontFamily": "TimesDigitalW04-Regular",
+        "fontFamily": "GillSansMTStd-Medium",
         "fontSize": 20,
         "lineHeight": 30,
         "textAlign": "center",
