@@ -857,7 +857,7 @@ exports[`Search Bar List SearchList should render correctly 1`] = `
                   style={
                     Object {
                       "color": "#696969",
-                      "fontFamily": "TimesModern-Regular",
+                      "fontFamily": "TimesDigitalW04",
                     }
                   }
                 >
@@ -875,7 +875,7 @@ exports[`Search Bar List SearchList should render correctly 1`] = `
                   style={
                     Object {
                       "color": "#696969",
-                      "fontFamily": "TimesModern-Regular",
+                      "fontFamily": "TimesDigitalW04",
                     }
                   }
                 >
@@ -1006,7 +1006,7 @@ exports[`Search Bar List SearchList should render correctly 1`] = `
                   style={
                     Object {
                       "color": "#696969",
-                      "fontFamily": "TimesModern-Regular",
+                      "fontFamily": "TimesDigitalW04",
                     }
                   }
                 >
@@ -1024,7 +1024,7 @@ exports[`Search Bar List SearchList should render correctly 1`] = `
                   style={
                     Object {
                       "color": "#696969",
-                      "fontFamily": "TimesModern-Regular",
+                      "fontFamily": "TimesDigitalW04",
                     }
                   }
                 >
@@ -1155,7 +1155,7 @@ exports[`Search Bar List SearchList should render correctly 1`] = `
                   style={
                     Object {
                       "color": "#696969",
-                      "fontFamily": "TimesModern-Regular",
+                      "fontFamily": "TimesDigitalW04",
                     }
                   }
                 >
@@ -1173,7 +1173,7 @@ exports[`Search Bar List SearchList should render correctly 1`] = `
                   style={
                     Object {
                       "color": "#696969",
-                      "fontFamily": "TimesModern-Regular",
+                      "fontFamily": "TimesDigitalW04",
                     }
                   }
                 >
@@ -1263,7 +1263,7 @@ exports[`SearchListItemSnippet should render correctly 1`] = `
     style={
       Object {
         "color": "#696969",
-        "fontFamily": "TimesModern-Regular",
+        "fontFamily": "TimesDigitalW04",
       }
     }
   >
@@ -1281,7 +1281,7 @@ exports[`SearchListItemSnippet should render correctly 1`] = `
     style={
       Object {
         "color": "#696969",
-        "fontFamily": "TimesModern-Regular",
+        "fontFamily": "TimesDigitalW04",
       }
     }
   >
