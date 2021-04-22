@@ -1,10 +1,9 @@
 import { StyleSheet } from "react-native";
-import { colours } from "@times-components-native/styleguide";
-import { TimesModern } from "../../../../../app/utils/fonts";
+import { colours, fonts } from "@times-components-native/styleguide";
 
 export const styles = StyleSheet.create({
   text: {
-    fontFamily: TimesModern.Regular,
+    fontFamily: fonts.body,
     color: colours.functional.secondary,
   },
   hightlighted: {

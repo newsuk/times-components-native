@@ -2,9 +2,9 @@ import { StyleSheet } from "react-native";
 import {
   colours,
   fontFactory,
+  fonts,
   spacing,
 } from "@times-components-native/styleguide";
-import { GillSansMTStdMedium } from "../../../../../app/utils/fonts";
 
 export const styles = StyleSheet.create({
   listEmptyTitle: {
@@ -23,7 +23,7 @@ export const styles = StyleSheet.create({
       font: "bodyRegular",
       fontSize: "infoTitle",
     }),
-    fontFamily: GillSansMTStdMedium,
+    fontFamily: fonts.supporting,
     width: "90%",
     textAlign: "center",
     alignSelf: "center",
