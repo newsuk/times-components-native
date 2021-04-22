@@ -4,6 +4,7 @@ import {
   fontFactory,
   spacing,
 } from "@times-components-native/styleguide";
+import { GillSansMTStdMedium } from "../../../../../app/utils/fonts";
 
 export const styles = StyleSheet.create({
   listEmptyTitle: {
@@ -22,6 +23,7 @@ export const styles = StyleSheet.create({
       font: "bodyRegular",
       fontSize: "infoTitle",
     }),
+    fontFamily: GillSansMTStdMedium,
     width: "90%",
     textAlign: "center",
     alignSelf: "center",
