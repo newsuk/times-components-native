@@ -3,6 +3,7 @@
 import React, { Component, Fragment } from "react";
 import ArticleError from "@times-components-native/article-error";
 import ArticleSkeleton from "@times-components-native/article-skeleton";
+import { ResponsiveContext } from "@times-components-native/responsive";
 import {
   getHeadline,
   getLeadAsset,
@@ -119,35 +120,40 @@ class ArticleMagazineComment extends Component {
     } = this.props;
 
     return (
-      <Context.Consumer>
-        {({ theme: { scale, dropCapFont } }) => (
-          <ArticleSkeleton
-            adConfig={adConfig}
-            analyticsStream={analyticsStream}
-            data={article}
-            Header={this.renderHeader}
-            interactiveConfig={interactiveConfig}
-            dropCapFont={dropCapFont}
-            onArticleRead={onArticleRead}
-            onAuthorPress={onAuthorPress}
-            onCommentGuidelinesPress={onCommentGuidelinesPress}
-            onCommentsPress={onCommentsPress}
-            onImagePress={onImagePress}
-            onLinkPress={onLinkPress}
-            onRelatedArticlePress={onRelatedArticlePress}
-            onTooltipPresented={onTooltipPresented}
-            onTopicPress={onTopicPress}
-            onTwitterLinkPress={onTwitterLinkPress}
-            onVideoPress={onVideoPress}
-            onViewableItemsChanged={
-              onViewed ? this.onViewableItemsChanged : null
-            }
-            receiveChildList={receiveChildList}
-            scale={scale}
-            tooltips={tooltips}
-          />
+      <ResponsiveContext.Consumer>
+        {({ isArticleTablet }) => (
+          <Context.Consumer>
+            {({ theme: { scale, dropCapFont } }) => (
+              <ArticleSkeleton
+                adConfig={adConfig}
+                analyticsStream={analyticsStream}
+                data={article}
+                Header={this.renderHeader}
+                interactiveConfig={interactiveConfig}
+                isArticleTablet={isArticleTablet}
+                dropCapFont={dropCapFont}
+                onArticleRead={onArticleRead}
+                onAuthorPress={onAuthorPress}
+                onCommentGuidelinesPress={onCommentGuidelinesPress}
+                onCommentsPress={onCommentsPress}
+                onImagePress={onImagePress}
+                onLinkPress={onLinkPress}
+                onRelatedArticlePress={onRelatedArticlePress}
+                onTooltipPresented={onTooltipPresented}
+                onTopicPress={onTopicPress}
+                onTwitterLinkPress={onTwitterLinkPress}
+                onVideoPress={onVideoPress}
+                onViewableItemsChanged={
+                  onViewed ? this.onViewableItemsChanged : null
+                }
+                receiveChildList={receiveChildList}
+                scale={scale}
+                tooltips={tooltips}
+              />
+            )}
+          </Context.Consumer>
         )}
-      </Context.Consumer>
+      </ResponsiveContext.Consumer>
     );
   }
 }
