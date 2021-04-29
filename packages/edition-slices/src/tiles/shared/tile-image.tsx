@@ -37,11 +37,9 @@ const TileImage: FC<Props> = ({
   };
 
   return (
-    <View style={style}>
+    <View style={style} onLayout={handleOnLayout}>
       <Image
-        onLayout={handleOnLayout}
         {...props}
-        style={style}
         key={isPortrait ? "tile-image-portrait" : "tile-image-landscape"}
       />
       {!hideVideoIcon && (
