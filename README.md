@@ -59,7 +59,7 @@ The release to production pipeline comes with a _hold_ step on CircleCI for buil
 
 ![Prod@3x](https://user-images.githubusercontent.com/6333409/88397111-64af2600-cdbb-11ea-8f7f-bbcc17d45200.png)
 
-##### Beta Releases
+##### Beta / Patch Releases
 
 Similar to the production releases, you can triger builds with the `hold_release_beta` step from all branches (apart from `master`) as long as the version in `package.json` is a beta version (includes the word beta). Once the "hold" step is approved, the pipeline will build and push to the beta artifacts repos (different location to prod).
 
