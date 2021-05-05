@@ -230,6 +230,7 @@ class DOMContext extends PureComponent {
               baseUrl,
               html,
             }}
+            allowsInlineMediaPlayback={true}
           />
         )}
         {height !== 0 && (
