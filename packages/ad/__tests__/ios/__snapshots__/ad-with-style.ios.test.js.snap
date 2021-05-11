@@ -14,6 +14,7 @@ Array [
       >
         <RNCWebView
           allowsInlineMediaPlayback={true}
+          androidLayerType="software"
           cacheEnabled={true}
           className="IS1"
           injectedJavaScriptBeforeContentLoadedForMainFrameOnly={true}
@@ -41,6 +42,7 @@ Array [
       >
         <RNCWebView
           allowsInlineMediaPlayback={true}
+          androidLayerType="software"
           cacheEnabled={true}
           className="IS1"
           injectedJavaScriptBeforeContentLoadedForMainFrameOnly={true}
