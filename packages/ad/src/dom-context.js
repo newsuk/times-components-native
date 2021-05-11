@@ -231,6 +231,7 @@ class DOMContext extends PureComponent {
               html,
             }}
             allowsInlineMediaPlayback={true}
+            androidLayerType={"software"}
           />
         )}
         {height !== 0 && (
