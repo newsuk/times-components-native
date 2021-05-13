@@ -41,6 +41,7 @@ export const SponsoredAd: React.FC<Props> = ({ numberOfAds = 4 }) => {
 <div class="dianomi_context" data-dianomi-context-id="${contextId}"></div>
 `,
         }}
+        androidLayerType={"software"}
       />
     </View>
   );
