@@ -3,7 +3,7 @@ import { NativeModules } from "react-native";
 import { Text, Image, KeyboardAvoidingView, Platform } from "react-native";
 import { styles } from "./styles/search-list-empty-state-styles";
 import { ImageIcons } from "@times-components-native/icons/src/icons/imageIcons";
-import { TTrackingData } from "@times-components-native/types";
+import { TrackingData } from "@times-components-native/types";
 
 const { track } = NativeModules.ReactAnalytics;
 
@@ -11,7 +11,7 @@ interface SearchListEmptyStateProps {
   message: string;
   title: string;
   icon?: string;
-  trackingData: TTrackingData;
+  trackingData: TrackingData;
 }
 
 function SearchListEmptyState({

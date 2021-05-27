@@ -6,7 +6,7 @@ import ArticleListItemSeparator from "@times-components-native/article-list/src/
 import SearchListLoader from "@times-components-native/search/src/search-list/search-list-loader";
 import { styles } from "./styles/search-list-styles";
 import SearchListEmptyState from "./search-list-empty-state";
-import { TTrackingData } from "@times-components-native/types";
+import { TrackingData } from "@times-components-native/types";
 
 export interface SearchListProps {
   hits: Hit[];
@@ -29,7 +29,7 @@ const SearchList: FC<SearchListProps> = ({
   };
 
   useEffect(() => {
-    const trackingData: TTrackingData = {
+    const trackingData: TrackingData = {
       object: "Search",
       action: "Search results",
       component: "Search",

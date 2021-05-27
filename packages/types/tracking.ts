@@ -1,10 +1,10 @@
-type TTrackingAtrributes = {
+type TrackingAtrributes = {
   eventTime: Date;
 };
 
-export type TTrackingData = {
+export type TrackingData = {
   object: string;
   action: string;
   component: string;
-  attrs?: TTrackingAtrributes;
+  attrs?: TrackingAtrributes;
 };
