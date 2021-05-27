@@ -1,10 +1,12 @@
-import React, { FC } from "react";
+import React, { FC, useEffect } from "react";
+import { NativeModules } from "react-native";
 import { SearchBarComponent } from "./search-bar/search-bar";
 import SearchResults from "@times-components-native/search/src/search-results";
 import { connectSearchBox, InstantSearch } from "react-instantsearch-native";
 import algoliasearch, { SearchClient } from "algoliasearch";
-import { withTrackingContext } from "@times-components-native/tracking";
 import { useIsConnected } from "@times-components-native/utils/src/useIsConnected";
+
+const { track } = NativeModules.ReactAnalytics;
 
 export interface SearchProps {
   onArticlePress: (url: string) => void;
@@ -32,6 +34,16 @@ const Search: FC<SearchProps> = ({ onArticlePress, algoliaConfig }) => {
   const ConnectedSearchBar = connectSearchBox((props) => (
     <SearchBarComponent {...props} isConnected={isConnected} />
   ));
+
+  useEffect(() => {
+    track({
+      object: "Search",
+      action: "Viewed",
+      component: "Page",
+      attrs: {},
+    });
+  }, []);
+
   return (
     <InstantSearch
       indexName={algoliaConfig.ALGOLIA_INDEX}
@@ -46,10 +58,4 @@ const Search: FC<SearchProps> = ({ onArticlePress, algoliaConfig }) => {
   );
 };
 
-const trackingContext = (Component: React.FC<any>) =>
-  withTrackingContext(Component, {
-    getAttrs: () => ({}),
-    trackingObjectName: "Search",
-  });
-
-export default trackingContext(Search);
+export default Search;
