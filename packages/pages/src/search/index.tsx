@@ -18,11 +18,7 @@ const SearchPage = withErrorBoundaries(
     }
 
     return (
-      <Search
-        analyticsStream={track}
-        onArticlePress={onArticlePress}
-        algoliaConfig={algoliaConfig}
-      />
+      <Search onArticlePress={onArticlePress} algoliaConfig={algoliaConfig} />
     );
   },
 );

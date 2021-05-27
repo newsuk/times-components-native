@@ -1,5 +1,5 @@
-import React, { FC } from "react";
-import { FlatList, View } from "react-native";
+import React, { FC, useEffect } from "react";
+import { FlatList, View, NativeModules } from "react-native";
 import SearchListItem from "./search-list-item";
 import { Hit } from "../types";
 import ArticleListItemSeparator from "@times-components-native/article-list/src/article-list-item-separator";
@@ -13,6 +13,8 @@ export interface SearchListProps {
   fetchMore: () => void;
 }
 
+const { track } = NativeModules.ReactAnalytics;
+
 const SearchList: FC<SearchListProps> = ({
   hits,
   onArticlePress,
@@ -24,6 +26,15 @@ const SearchList: FC<SearchListProps> = ({
       return fetchMore();
     }
   };
+
+  useEffect(() => {
+    const trackingData = {
+      object: "Search",
+      action: "Search results",
+      component: "Search",
+    };
+    track(trackingData);
+  }, []);
 
   return (
     <View style={styles.container}>
@@ -40,6 +51,11 @@ const SearchList: FC<SearchListProps> = ({
               icon="emptyResultsIcon"
               title="Sorry, we found no results"
               message="Please check all words are spelled correctly, or try a different search term"
+              trackingData={{
+                object: "Search",
+                action: "No search results",
+                component: "Search ",
+              }}
             />
           }
           ListFooterComponent={SearchListLoader}

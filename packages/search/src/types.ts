@@ -86,3 +86,9 @@ export interface Hit {
     };
   };
 }
+
+export type TTrackingData = {
+  object: string;
+  action: string;
+  component: string;
+};
