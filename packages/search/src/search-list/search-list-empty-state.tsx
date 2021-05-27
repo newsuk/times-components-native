@@ -3,7 +3,7 @@ import { NativeModules } from "react-native";
 import { Text, Image, KeyboardAvoidingView, Platform } from "react-native";
 import { styles } from "./styles/search-list-empty-state-styles";
 import { ImageIcons } from "@times-components-native/icons/src/icons/imageIcons";
-import { TTrackingData } from "../types";
+import { TTrackingData } from "@times-components-native/types";
 
 const { track } = NativeModules.ReactAnalytics;
 
