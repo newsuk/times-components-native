@@ -4,7 +4,6 @@ import { Search } from "@times-components-native/search";
 import { withErrorBoundaries } from "@times-components-native/pages/src/with-error-boundaries";
 import { SearchProps } from "@times-components-native/search/src/search";
 
-const { track } = NativeModules.ReactAnalytics;
 const { onArticlePress } = NativeModules.SearchEvents;
 
 export interface SearchPageProps {
