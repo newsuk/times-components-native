@@ -31,7 +31,11 @@ function SearchListEmptyState({
     >
       <Image
         source={ImageIcons[icon]}
-        style={{ width: 200, height: 200, alignSelf: "center" }}
+        style={{
+          width: 160,
+          height: 160,
+          alignSelf: "center",
+        }}
       />
       <Text style={styles.listEmptyTitle}>{title}</Text>
       <Text style={styles.listEmptyMessage}>{message}</Text>

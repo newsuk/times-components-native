@@ -1,4 +1,11 @@
-import React, { FC, PropsWithChildren, useCallback, useState } from "react";
+import React, {
+  FC,
+  PropsWithChildren,
+  useCallback,
+  useEffect,
+  useState,
+  useRef,
+} from "react";
 import { Keyboard, TextInput, View } from "react-native";
 import { colours } from "@times-components-native/styleguide";
 import CancelButton from "./cancel-button";
@@ -14,15 +21,18 @@ const DEBOUNCE_WAIT = 300;
 
 type SearchBarComponentProps = PropsWithChildren<SearchBoxProvided> & {
   isConnected: boolean | null;
+  shouldFocus?: boolean;
 };
 
 export const SearchBarComponent: FC<SearchBarComponentProps> = ({
   currentRefinement,
   refine,
   isConnected,
+  shouldFocus = false,
 }) => {
   const [text, setText] = useState(currentRefinement);
-  const [hasFocus, setHasFocus] = useState(false);
+  const [hasFocus, setHasFocus] = useState(shouldFocus);
+  const field = useRef<TextInput>(null);
 
   const debouncedRefine = useCallback(
     debounce((nextValue) => refine(nextValue), DEBOUNCE_WAIT),
@@ -51,6 +61,10 @@ export const SearchBarComponent: FC<SearchBarComponentProps> = ({
     setHasFocus(true);
   };
 
+  useEffect(() => {
+    console.log("IS CONNECTED: ", isConnected);
+  }, [isConnected]);
+
   return (
     <View style={styles.container}>
       <View style={styles.inputContainer}>
@@ -76,6 +90,7 @@ export const SearchBarComponent: FC<SearchBarComponentProps> = ({
             )
           )}
           <TextInput
+            ref={field}
             placeholder="Search"
             style={styles.input}
             defaultValue={currentRefinement}
