@@ -22,6 +22,7 @@ export const SearchBarComponent: FC<SearchBarComponentProps> = ({
   isConnected,
 }) => {
   const [text, setText] = useState(currentRefinement);
+  const [hasFocus, setHasFocus] = useState(false);
 
   const debouncedRefine = useCallback(
     debounce((nextValue) => refine(nextValue), DEBOUNCE_WAIT),
@@ -40,6 +41,14 @@ export const SearchBarComponent: FC<SearchBarComponentProps> = ({
   const handleCancelSearch = () => {
     handleSetText("");
     Keyboard.dismiss();
+  };
+
+  const handleOnBlur = () => {
+    setHasFocus(false);
+  };
+
+  const handleOnFocus = () => {
+    setHasFocus(true);
   };
 
   return (
@@ -71,6 +80,8 @@ export const SearchBarComponent: FC<SearchBarComponentProps> = ({
             style={styles.input}
             defaultValue={currentRefinement}
             onChangeText={handleSetText}
+            onBlur={handleOnBlur}
+            onFocus={handleOnFocus}
             keyboardType="web-search"
             placeholderTextColor={
               isConnected
@@ -90,7 +101,7 @@ export const SearchBarComponent: FC<SearchBarComponentProps> = ({
           />
         )}
       </View>
-      {isIOS && (
+      {isIOS && hasFocus && (
         <CancelButton
           onPress={isIOS ? handleCancelSearch : handleResetSearch}
           isConnected={isConnected}
