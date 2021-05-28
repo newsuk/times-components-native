@@ -7,6 +7,12 @@ import SearchListItemSnippet from "../src/search-list/search-list-item-snippet";
 
 const mockHits = require("../__mocks__/mock-hits.json");
 
+jest.mock("react-native", () => {
+  const rn = jest.requireActual("react-native");
+  rn.NativeModules.ReactAnalytics = { track: jest.fn() };
+  return rn;
+});
+
 export default () => {
   describe("Search Bar List", () => {
     it("SearchList should render correctly", () => {

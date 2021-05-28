@@ -42,6 +42,13 @@ exports[`Search Bar List SearchList should render correctly 1`] = `
           icon="emptyResultsIcon"
           message="Please check all words are spelled correctly, or try a different search term"
           title="Sorry, we found no results"
+          trackingData={
+            Object {
+              "action": "No search results",
+              "component": "Search ",
+              "object": "Search",
+            }
+          }
         />
       }
       ListFooterComponent={[Function]}
