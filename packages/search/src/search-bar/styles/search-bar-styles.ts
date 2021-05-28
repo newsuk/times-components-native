@@ -24,7 +24,7 @@ export const styles = StyleSheet.create({
     alignItems: "center",
     width: "100%",
   },
-  iconStyle: { marginTop: 1 },
+  iconStyle: { marginTop: 1, transform: [{ scaleX: -1 }] },
   magnifierTextWrapper: { flexDirection: "row", width: "85%" },
   input: {
     marginLeft: spacing(2),
