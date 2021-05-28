@@ -1,14 +1,11 @@
 import TestRenderer from "react-test-renderer";
 import React from "react";
-import { mockNativeModules } from "@times-components-native/mocks";
 import SearchList from "../src/search-list/search-list";
 import FormattedDate from "../src/search-list/formatted-date";
 import SearchListItemByLine from "../src/search-list/search-list-item-by-line";
 import SearchListItemSnippet from "../src/search-list/search-list-item-snippet";
 
 const mockHits = require("../__mocks__/mock-hits.json");
-
-// mockNativeModules();
 
 jest.mock("react-native", () => {
   const rn = jest.requireActual("react-native");
