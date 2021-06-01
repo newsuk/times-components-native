@@ -1,5 +1,5 @@
 import React, { FC, useEffect } from "react";
-import { FlatList, View, NativeModules } from "react-native";
+import { FlatList, NativeModules } from "react-native";
 import SearchListItem from "./search-list-item";
 import { Hit } from "../types";
 import ArticleListItemSeparator from "@times-components-native/article-list/src/article-list-item-separator";
@@ -39,34 +39,32 @@ const SearchList: FC<SearchListProps> = ({
   }, []);
 
   return (
-    <View style={styles.container}>
-      <View style={styles.subContainer}>
-        <FlatList
-          data={hits}
-          renderItem={({ item }) => (
-            <SearchListItem item={item} onItemPress={onArticlePress} />
-          )}
-          ItemSeparatorComponent={ArticleListItemSeparator}
-          contentContainerStyle={styles.contentContainer}
-          ListEmptyComponent={
-            <SearchListEmptyState
-              icon="emptyResultsIcon"
-              title="Sorry, we found no results"
-              message="Please check all words are spelled correctly, or try a different search term"
-              trackingData={{
-                object: "Search",
-                action: "No search results",
-                component: "Search ",
-              }}
-            />
-          }
-          ListFooterComponent={SearchListLoader}
-          nestedScrollEnabled
-          onEndReached={handleFetchMore}
-          keyboardShouldPersistTaps={"always"}
+    // <View style={styles.container}>
+    <FlatList
+      data={hits}
+      renderItem={({ item }) => (
+        <SearchListItem item={item} onItemPress={onArticlePress} />
+      )}
+      ItemSeparatorComponent={ArticleListItemSeparator}
+      contentContainerStyle={styles.contentContainer}
+      ListEmptyComponent={
+        <SearchListEmptyState
+          icon="emptyResultsIcon"
+          title="Sorry, we found no results"
+          message="Please check all words are spelled correctly, or try a different search term"
+          trackingData={{
+            object: "Search",
+            action: "No search results",
+            component: "Search ",
+          }}
         />
-      </View>
-    </View>
+      }
+      ListFooterComponent={SearchListLoader}
+      nestedScrollEnabled
+      onEndReached={handleFetchMore}
+      keyboardShouldPersistTaps={"always"}
+    />
+    // </View>
   );
 };
 
