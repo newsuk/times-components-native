@@ -77,17 +77,7 @@ export const SearchBarComponent: FC<SearchBarComponentProps> = ({
               }
             />
           ) : (
-            !!text && (
-              <Chevron
-                style={styles.chevron}
-                onPress={handleCancelSearch}
-                color={
-                  !isConnected
-                    ? colours.functional.offlineSearchText
-                    : colours.functional.black
-                }
-              />
-            )
+            !!text && null
           )}
           <TextInput
             ref={field}

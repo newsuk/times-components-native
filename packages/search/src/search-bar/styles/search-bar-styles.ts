@@ -10,7 +10,7 @@ export const styles = StyleSheet.create({
   container: {
     backgroundColor: colours.functional.white,
     flexDirection: "row",
-    paddingLeft: spacing(3),
+    paddingLeft: spacing(2),
     marginBottom: spacing(2),
   },
   inputContainer: {
