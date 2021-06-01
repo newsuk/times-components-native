@@ -5,6 +5,7 @@ import {
   spacing,
 } from "@times-components-native/styleguide";
 import { isIOS } from "@times-components-native/utils/src/platformUtils";
+import { tabletWidth } from "@times-components-native/styleguide";
 
 export const styles = StyleSheet.create({
   container: {
@@ -12,8 +13,11 @@ export const styles = StyleSheet.create({
     flexDirection: "row",
     paddingLeft: spacing(2),
     marginBottom: spacing(2),
+    justifyContent: "center",
   },
   inputContainer: {
+    borderWidth: 1,
+    borderColor: "red",
     flexDirection: "row",
     flex: 1,
     marginRight: 8,
@@ -23,6 +27,7 @@ export const styles = StyleSheet.create({
     justifyContent: "space-between",
     alignItems: "center",
     width: "100%",
+    maxWidth: tabletWidth,
   },
   iconStyle: { marginTop: 1, transform: [{ scaleX: -1 }] },
   magnifierTextWrapper: { flexDirection: "row", width: "85%" },

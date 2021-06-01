@@ -9,6 +9,8 @@ export const styles = StyleSheet.create({
     paddingVertical: spacing(2),
   },
   listItemContainerTablet: {
+    borderWidth: 1,
+    borderColor: "red",
     paddingVertical: spacing(3),
   },
 });

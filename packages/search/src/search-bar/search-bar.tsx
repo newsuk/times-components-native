@@ -11,7 +11,6 @@ import { colours } from "@times-components-native/styleguide";
 import CancelButton from "./cancel-button";
 import XButton from "./x-button";
 import Magnifier from "./magnifier";
-import Chevron from "./chevron";
 import debounce from "lodash.debounce";
 import { isIOS } from "@times-components-native/utils/src/platformUtils";
 import { styles } from "./styles/search-bar-styles";
@@ -68,50 +67,54 @@ export const SearchBarComponent: FC<SearchBarComponentProps> = ({
   return (
     <View style={styles.container}>
       <View style={styles.inputContainer}>
-        <View style={styles.magnifierTextWrapper}>
-          {isIOS ? (
-            <Magnifier
-              style={styles.iconStyle}
-              color={
-                !isConnected ? colours.functional.offlineSearchText : undefined
+        <View style={{ borderWidth: 1, bordeColor: "green" }}>
+          <View style={styles.magnifierTextWrapper}>
+            {isIOS ? (
+              <Magnifier
+                style={styles.iconStyle}
+                color={
+                  !isConnected
+                    ? colours.functional.offlineSearchText
+                    : undefined
+                }
+              />
+            ) : (
+              !!text && null
+            )}
+            <TextInput
+              ref={field}
+              placeholder="Search"
+              style={styles.input}
+              defaultValue={currentRefinement}
+              onChangeText={handleSetText}
+              onBlur={handleOnBlur}
+              onFocus={handleOnFocus}
+              keyboardType="web-search"
+              placeholderTextColor={
+                isConnected
+                  ? colours.functional.searchText
+                  : colours.functional.offlineSearchText
               }
+              value={text}
+              autoFocus
+              editable={isConnected ? isConnected : false}
             />
-          ) : (
-            !!text && null
+          </View>
+          {text && isIOS ? <XButton onPress={handleResetSearch} /> : null}
+          {!isIOS && (
+            <CancelButton
+              onPress={isIOS ? handleCancelSearch : handleResetSearch}
+              isConnected={isConnected}
+            />
           )}
-          <TextInput
-            ref={field}
-            placeholder="Search"
-            style={styles.input}
-            defaultValue={currentRefinement}
-            onChangeText={handleSetText}
-            onBlur={handleOnBlur}
-            onFocus={handleOnFocus}
-            keyboardType="web-search"
-            placeholderTextColor={
-              isConnected
-                ? colours.functional.searchText
-                : colours.functional.offlineSearchText
-            }
-            value={text}
-            autoFocus
-            editable={isConnected ? isConnected : false}
-          />
         </View>
-        {text && isIOS ? <XButton onPress={handleResetSearch} /> : null}
-        {!isIOS && (
+        {isIOS && hasFocus && (
           <CancelButton
             onPress={isIOS ? handleCancelSearch : handleResetSearch}
             isConnected={isConnected}
           />
         )}
       </View>
-      {isIOS && hasFocus && (
-        <CancelButton
-          onPress={isIOS ? handleCancelSearch : handleResetSearch}
-          isConnected={isConnected}
-        />
-      )}
     </View>
   );
 };
