@@ -66,8 +66,8 @@ export const SearchBarComponent: FC<SearchBarComponentProps> = ({
 
   return (
     <View style={styles.container}>
-      <View style={styles.inputContainer}>
-        <View style={{ borderWidth: 1, bordeColor: "green" }}>
+      <View style={styles.subContainer}>
+        <View style={styles.inputContainer}>
           <View style={styles.magnifierTextWrapper}>
             {isIOS ? (
               <Magnifier

@@ -9,18 +9,26 @@ import { tabletWidth } from "@times-components-native/styleguide";
 
 export const styles = StyleSheet.create({
   container: {
-    backgroundColor: colours.functional.white,
-    flexDirection: "row",
-    paddingLeft: spacing(2),
+    alignItems: "center",
+    backgroundColor: "pink", //colours.functional.white,
+    //flexDirection: "row",
     marginBottom: spacing(2),
-    justifyContent: "center",
+    paddingLeft: spacing(2),
+    width: "100%",
+    // justifyContent: "center",
+  },
+  subContainer: {
+    borderWidth: 2,
+    borderColor: "purple",
+    flexDirection: "row",
+    maxWidth: tabletWidth,
   },
   inputContainer: {
     borderWidth: 1,
     borderColor: "red",
     flexDirection: "row",
     flex: 1,
-    marginRight: 8,
+    // marginRight: 8,
     paddingVertical: spacing(2),
     paddingHorizontal: spacing(2),
     backgroundColor: colours.functional.grey,
