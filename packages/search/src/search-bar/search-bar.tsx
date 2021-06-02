@@ -15,6 +15,7 @@ import debounce from "lodash.debounce";
 import { isIOS } from "@times-components-native/utils/src/platformUtils";
 import { styles } from "./styles/search-bar-styles";
 import { SearchBoxProvided } from "react-instantsearch-core";
+import { ResponsiveContext } from "@times-components-native/responsive";
 
 const DEBOUNCE_WAIT = 300;
 
@@ -65,56 +66,62 @@ export const SearchBarComponent: FC<SearchBarComponentProps> = ({
   }, [isConnected]);
 
   return (
-    <View style={styles.container}>
-      <View style={styles.subContainer}>
-        <View style={styles.inputContainer}>
-          <View style={styles.magnifierTextWrapper}>
-            {isIOS ? (
-              <Magnifier
-                style={styles.iconStyle}
-                color={
-                  !isConnected
-                    ? colours.functional.offlineSearchText
-                    : undefined
-                }
+    <ResponsiveContext.Consumer>
+      {({ isTablet }) => (
+        <View
+          style={[styles.container, { paddingHorizontal: isTablet ? 0 : 8 }]}
+        >
+          <View style={styles.subContainer}>
+            <View style={styles.inputContainer}>
+              <View style={styles.magnifierTextWrapper}>
+                {isIOS ? (
+                  <Magnifier
+                    style={styles.iconStyle}
+                    color={
+                      !isConnected
+                        ? colours.functional.offlineSearchText
+                        : undefined
+                    }
+                  />
+                ) : (
+                  !!text && null
+                )}
+                <TextInput
+                  ref={field}
+                  placeholder="Search"
+                  style={styles.input}
+                  defaultValue={currentRefinement}
+                  onChangeText={handleSetText}
+                  onBlur={handleOnBlur}
+                  onFocus={handleOnFocus}
+                  keyboardType="web-search"
+                  placeholderTextColor={
+                    isConnected
+                      ? colours.functional.searchText
+                      : colours.functional.offlineSearchText
+                  }
+                  value={text}
+                  autoFocus
+                  editable={isConnected ? isConnected : false}
+                />
+              </View>
+              {text && isIOS ? <XButton onPress={handleResetSearch} /> : null}
+              {!isIOS && (
+                <CancelButton
+                  onPress={isIOS ? handleCancelSearch : handleResetSearch}
+                  isConnected={isConnected}
+                />
+              )}
+            </View>
+            {isIOS && hasFocus && (
+              <CancelButton
+                onPress={isIOS ? handleCancelSearch : handleResetSearch}
+                isConnected={isConnected}
               />
-            ) : (
-              !!text && null
             )}
-            <TextInput
-              ref={field}
-              placeholder="Search"
-              style={styles.input}
-              defaultValue={currentRefinement}
-              onChangeText={handleSetText}
-              onBlur={handleOnBlur}
-              onFocus={handleOnFocus}
-              keyboardType="web-search"
-              placeholderTextColor={
-                isConnected
-                  ? colours.functional.searchText
-                  : colours.functional.offlineSearchText
-              }
-              value={text}
-              autoFocus
-              editable={isConnected ? isConnected : false}
-            />
           </View>
-          {text && isIOS ? <XButton onPress={handleResetSearch} /> : null}
-          {!isIOS && (
-            <CancelButton
-              onPress={isIOS ? handleCancelSearch : handleResetSearch}
-              isConnected={isConnected}
-            />
-          )}
         </View>
-        {isIOS && hasFocus && (
-          <CancelButton
-            onPress={isIOS ? handleCancelSearch : handleResetSearch}
-            isConnected={isConnected}
-          />
-        )}
-      </View>
-    </View>
+      )}
+    </ResponsiveContext.Consumer>
   );
 };
