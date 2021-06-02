@@ -1,5 +1,5 @@
 import React, { useEffect } from "react";
-import { NativeModules } from "react-native";
+import { NativeModules, Button } from "react-native";
 import { Text, Image, KeyboardAvoidingView, Platform } from "react-native";
 import { styles } from "./styles/search-list-empty-state-styles";
 import { ImageIcons } from "@times-components-native/icons/src/icons/imageIcons";
@@ -8,6 +8,7 @@ import { TrackingData } from "@times-components-native/types";
 const { track } = NativeModules.ReactAnalytics;
 
 interface SearchListEmptyStateProps {
+  children?: React.ReactNode;
   message: string;
   title: string;
   icon?: string;
@@ -15,6 +16,7 @@ interface SearchListEmptyStateProps {
 }
 
 function SearchListEmptyState({
+  children = null,
   message,
   title,
   icon = "search",
@@ -39,6 +41,7 @@ function SearchListEmptyState({
       />
       <Text style={styles.listEmptyTitle}>{title}</Text>
       <Text style={styles.listEmptyMessage}>{message}</Text>
+      {children}
     </KeyboardAvoidingView>
   );
 }

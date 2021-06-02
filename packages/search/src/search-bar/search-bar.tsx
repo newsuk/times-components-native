@@ -69,7 +69,12 @@ export const SearchBarComponent: FC<SearchBarComponentProps> = ({
     <ResponsiveContext.Consumer>
       {({ isTablet }) => (
         <View
-          style={[styles.container, { paddingHorizontal: isTablet ? 0 : 8 }]}
+          style={[
+            styles.container,
+            {
+              paddingHorizontal: isTablet ? 0 : 8,
+            },
+          ]}
         >
           <View style={styles.subContainer}>
             <View style={styles.inputContainer}>
