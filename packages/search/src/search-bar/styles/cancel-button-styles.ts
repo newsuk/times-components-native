@@ -4,6 +4,7 @@ import { fontFactory } from "@times-components-native/styleguide";
 export const styles = StyleSheet.create({
   cancelContainer: {
     justifyContent: "center",
+    marginLeft: 8,
     paddingRight: 16,
   },
   cancel: {
