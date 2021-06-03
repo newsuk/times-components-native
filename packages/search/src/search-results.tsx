@@ -1,5 +1,4 @@
 import React, { FC } from "react";
-import { View } from "react-native";
 import {
   connectInfiniteHits,
   connectSearchBox,
@@ -11,7 +10,6 @@ import {
 import { Hit } from "./types";
 import SearchList from "./search-list/search-list";
 import SearchListEmptyState from "@times-components-native/search/src/search-list/search-list-empty-state";
-import Button from "@times-components-native/button";
 
 export interface InfiniteHitsProps
   extends InfiniteHitsProvided<Hit>,
@@ -47,24 +45,7 @@ const SearchResults: FC<InfiniteHitsProps> = ({
           component: "Search",
           attrs: { eventTime: new Date() },
         }}
-      >
-        <View
-          style={{
-            flexDirection: "row",
-            justifyContent: "center",
-          }}
-        >
-          <View
-            style={{
-              alignSelf: "flex-start",
-              borderWidth: 1,
-              borderColor: "green",
-            }}
-          >
-            <Button title="Try again" onPress={() => null} />
-          </View>
-        </View>
-      </SearchListEmptyState>
+      />
     );
   }
 

@@ -11,6 +11,7 @@ export const styles = StyleSheet.create({
   container: {
     alignItems: "center",
     backgroundColor: colours.functional.white,
+    marginBottom: spacing(2),
     width: "100%",
   },
   subContainer: {
