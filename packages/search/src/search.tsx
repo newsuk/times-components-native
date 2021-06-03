@@ -1,5 +1,5 @@
 import React, { FC, useEffect } from "react";
-import { NativeModules } from "react-native";
+import { NativeModules, Keyboard } from "react-native";
 import { SearchBarComponent } from "./search-bar/search-bar";
 import SearchResults from "@times-components-native/search/src/search-results";
 import { connectSearchBox, InstantSearch } from "react-instantsearch-native";
@@ -35,6 +35,11 @@ const Search: FC<SearchProps> = ({ onArticlePress, algoliaConfig }) => {
     <SearchBarComponent {...props} isConnected={isConnected} />
   ));
 
+  const handleOnArticlePress = (url: string) => {
+    onArticlePress(url);
+    Keyboard.dismiss();
+  };
+
   useEffect(() => {
     track({
       object: "Search",
@@ -51,7 +56,7 @@ const Search: FC<SearchProps> = ({ onArticlePress, algoliaConfig }) => {
     >
       <ConnectedSearchBar />
       <SearchResults
-        onArticlePress={onArticlePress}
+        onArticlePress={handleOnArticlePress}
         isConnected={isConnected}
       />
     </InstantSearch>
