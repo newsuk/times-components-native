@@ -118,37 +118,76 @@ exports[`Search Bar CancelButton 1`] = `
 exports[`Search Bar should render correctly 1`] = `
 <View
   style={
-    Object {
-      "backgroundColor": "#FFFFFF",
-      "flexDirection": "row",
-      "marginBottom": 10,
-      "paddingLeft": 15,
-    }
+    Array [
+      Object {
+        "alignItems": "center",
+        "backgroundColor": "#FFFFFF",
+        "marginBottom": 10,
+        "width": "100%",
+      },
+      Object {
+        "paddingHorizontal": 8,
+      },
+    ]
   }
 >
   <View
     style={
       Object {
-        "alignItems": "center",
-        "backgroundColor": "#EFEFEF",
-        "flex": 1,
         "flexDirection": "row",
-        "justifyContent": "space-between",
-        "marginRight": 8,
-        "paddingHorizontal": 10,
-        "paddingVertical": 10,
-        "width": "100%",
+        "maxWidth": 660,
       }
     }
   >
     <View
       style={
         Object {
+          "alignItems": "center",
+          "backgroundColor": "#EFEFEF",
+          "flex": 1,
           "flexDirection": "row",
-          "width": "85%",
+          "justifyContent": "space-between",
+          "paddingHorizontal": 10,
+          "paddingVertical": 10,
+          "width": "100%",
         }
       }
     >
+      <View
+        style={
+          Object {
+            "flexDirection": "row",
+            "width": "85%",
+          }
+        }
+      >
+        <TextInput
+          allowFontScaling={true}
+          autoFocus={true}
+          defaultValue="test"
+          editable={true}
+          keyboardType="web-search"
+          onBlur={[Function]}
+          onChangeText={[Function]}
+          onFocus={[Function]}
+          placeholder="Search"
+          rejectResponderTermination={true}
+          style={
+            Object {
+              "backgroundColor": "#EFEFEF",
+              "color": "#000000",
+              "fontFamily": "GillSansMTStd-Medium",
+              "fontSize": 18,
+              "lineHeight": undefined,
+              "marginLeft": 10,
+              "paddingTop": 7,
+              "width": "100%",
+            }
+          }
+          underlineColorAndroid="transparent"
+          value="test"
+        />
+      </View>
       <View
         accessible={true}
         focusable={true}
@@ -161,18 +200,17 @@ exports[`Search Bar should render correctly 1`] = `
         onStartShouldSetResponder={[Function]}
         style={
           Object {
-            "marginTop": 10,
             "opacity": 1,
           }
         }
       >
         <RNSVGSvgView
           align="xMidYMid"
-          bbHeight="24"
-          bbWidth="24"
-          fill="none"
+          aria-label="icon-close"
+          bbHeight={24}
+          bbWidth={24}
           focusable={false}
-          height="24"
+          height={24}
           meetOrSlice={0}
           minX={0}
           minY={0}
@@ -189,149 +227,26 @@ exports[`Search Bar should render correctly 1`] = `
               },
             ]
           }
-          vbHeight={24}
-          vbWidth={24}
-          width="24"
+          title="Close Icon"
+          vbHeight={28}
+          vbWidth={28}
+          width={24}
         >
-          <RNSVGGroup
-            fill={null}
-            propList={
-              Array [
-                "fill",
-              ]
-            }
-          >
-            <RNSVGMask
-              height="24"
-              maskContentUnits={1}
-              maskTransform={
+          <RNSVGGroup>
+            <RNSVGPath
+              d="M15.617 14l4.683 5.838-.462.462L14 15.617 8.162 20.3l-.462-.462L12.383 14 7.7 8.162l.462-.462L14 12.383 19.838 7.7l.462.462z"
+              fill={-16777216}
+              propList={
                 Array [
-                  1,
-                  0,
-                  0,
-                  1,
-                  0,
-                  0,
+                  "fill",
+                  "stroke",
                 ]
               }
-              maskUnits={1}
-              name="mask0"
-              width="24"
-              x="0"
-              y="0"
-            >
-              <RNSVGPath
-                d="M15.41 7.41L14 6L8 12L14 18L15.41 16.59L10.83 12L15.41 7.41Z"
-                fill={-16777216}
-                propList={
-                  Array [
-                    "fill",
-                  ]
-                }
-              />
-            </RNSVGMask>
-            <RNSVGGroup
-              mask="mask0"
-            >
-              <RNSVGRect
-                fill={-16777216}
-                height="24"
-                propList={
-                  Array [
-                    "fill",
-                  ]
-                }
-                width="24"
-                x={0}
-                y={0}
-              />
-            </RNSVGGroup>
+              stroke={-16777216}
+            />
           </RNSVGGroup>
         </RNSVGSvgView>
       </View>
-      <TextInput
-        allowFontScaling={true}
-        autoFocus={true}
-        defaultValue="test"
-        editable={true}
-        keyboardType="web-search"
-        onChangeText={[Function]}
-        placeholder="Search"
-        rejectResponderTermination={true}
-        style={
-          Object {
-            "backgroundColor": "#EFEFEF",
-            "color": "#000000",
-            "fontFamily": "GillSansMTStd-Medium",
-            "fontSize": 18,
-            "lineHeight": undefined,
-            "marginLeft": 10,
-            "paddingTop": 7,
-            "width": "100%",
-          }
-        }
-        underlineColorAndroid="transparent"
-        value="test"
-      />
-    </View>
-    <View
-      accessible={true}
-      focusable={true}
-      onClick={[Function]}
-      onResponderGrant={[Function]}
-      onResponderMove={[Function]}
-      onResponderRelease={[Function]}
-      onResponderTerminate={[Function]}
-      onResponderTerminationRequest={[Function]}
-      onStartShouldSetResponder={[Function]}
-      style={
-        Object {
-          "opacity": 1,
-        }
-      }
-    >
-      <RNSVGSvgView
-        align="xMidYMid"
-        aria-label="icon-close"
-        bbHeight={24}
-        bbWidth={24}
-        focusable={false}
-        height={24}
-        meetOrSlice={0}
-        minX={0}
-        minY={0}
-        style={
-          Array [
-            Object {
-              "backgroundColor": "transparent",
-              "borderWidth": 0,
-            },
-            Object {
-              "flex": 0,
-              "height": 24,
-              "width": 24,
-            },
-          ]
-        }
-        title="Close Icon"
-        vbHeight={28}
-        vbWidth={28}
-        width={24}
-      >
-        <RNSVGGroup>
-          <RNSVGPath
-            d="M15.617 14l4.683 5.838-.462.462L14 15.617 8.162 20.3l-.462-.462L12.383 14 7.7 8.162l.462-.462L14 12.383 19.838 7.7l.462.462z"
-            fill={-16777216}
-            propList={
-              Array [
-                "fill",
-                "stroke",
-              ]
-            }
-            stroke={-16777216}
-          />
-        </RNSVGGroup>
-      </RNSVGSvgView>
     </View>
   </View>
 </View>

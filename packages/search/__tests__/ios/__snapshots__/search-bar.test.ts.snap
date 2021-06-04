@@ -58,6 +58,7 @@ exports[`Search Bar CancelButton 1`] = `
   style={
     Object {
       "justifyContent": "center",
+      "marginLeft": 8,
       "paddingRight": 16,
     }
   }
@@ -102,50 +103,215 @@ exports[`Search Bar CancelButton 1`] = `
 exports[`Search Bar should render correctly 1`] = `
 <View
   style={
-    Object {
-      "backgroundColor": "#FFFFFF",
-      "flexDirection": "row",
-      "marginBottom": 10,
-      "paddingLeft": 15,
-    }
+    Array [
+      Object {
+        "alignItems": "center",
+        "backgroundColor": "#FFFFFF",
+        "marginBottom": 10,
+        "width": "100%",
+      },
+      Object {
+        "paddingHorizontal": 8,
+      },
+    ]
   }
 >
   <View
     style={
       Object {
-        "alignItems": "center",
-        "backgroundColor": "#EFEFEF",
-        "flex": 1,
         "flexDirection": "row",
-        "justifyContent": "space-between",
-        "marginRight": 8,
-        "paddingHorizontal": 10,
-        "paddingVertical": 10,
-        "width": "100%",
+        "maxWidth": 660,
       }
     }
   >
     <View
       style={
         Object {
+          "alignItems": "center",
+          "backgroundColor": "#EFEFEF",
+          "flex": 1,
           "flexDirection": "row",
-          "width": "85%",
+          "justifyContent": "space-between",
+          "paddingHorizontal": 10,
+          "paddingVertical": 10,
+          "width": "100%",
         }
       }
     >
       <View
         style={
           Object {
-            "marginTop": 1,
+            "flexDirection": "row",
+            "width": "85%",
+          }
+        }
+      >
+        <View
+          style={
+            Object {
+              "marginTop": 1,
+              "transform": Array [
+                Object {
+                  "scaleX": -1,
+                },
+              ],
+            }
+          }
+        >
+          <RNSVGSvgView
+            align="xMidYMid"
+            bbHeight="20"
+            bbWidth="22"
+            focusable={false}
+            height="20"
+            meetOrSlice={0}
+            minX={0}
+            minY={0}
+            style={
+              Array [
+                Object {
+                  "backgroundColor": "transparent",
+                  "borderWidth": 0,
+                },
+                Object {
+                  "flex": 0,
+                  "height": 20,
+                  "width": 22,
+                },
+              ]
+            }
+            vbHeight={18}
+            vbWidth={20}
+            width="22"
+          >
+            <RNSVGGroup>
+              <RNSVGGroup
+                fill={null}
+                fillRule={0}
+                propList={
+                  Array [
+                    "fill",
+                    "fillRule",
+                  ]
+                }
+              >
+                <RNSVGGroup
+                  propList={
+                    Array [
+                      "stroke",
+                    ]
+                  }
+                  stroke={4278190080}
+                >
+                  <RNSVGGroup>
+                    <RNSVGGroup
+                      matrix={
+                        Array [
+                          1,
+                          0,
+                          0,
+                          1,
+                          0,
+                          -3,
+                        ]
+                      }
+                    >
+                      <RNSVGCircle
+                        cx="11.268"
+                        cy="11.232"
+                        matrix={
+                          Array [
+                            0.7071067811865476,
+                            0.7071067811865475,
+                            -0.7071067811865475,
+                            0.7071067811865476,
+                            11.242544155877283,
+                            -4.677902576697321,
+                          ]
+                        }
+                        propList={
+                          Array [
+                            "strokeWidth",
+                          ]
+                        }
+                        r="6.75"
+                        strokeWidth="1.5"
+                      />
+                      <RNSVGPath
+                        d="M5.611 16.889L2.782 19.718"
+                        propList={
+                          Array [
+                            "strokeWidth",
+                            "strokeLinecap",
+                          ]
+                        }
+                        strokeLinecap={1}
+                        strokeWidth="2"
+                      />
+                    </RNSVGGroup>
+                  </RNSVGGroup>
+                </RNSVGGroup>
+              </RNSVGGroup>
+            </RNSVGGroup>
+          </RNSVGSvgView>
+        </View>
+        <TextInput
+          allowFontScaling={true}
+          autoFocus={true}
+          defaultValue="test"
+          editable={true}
+          keyboardType="web-search"
+          onBlur={[Function]}
+          onChangeText={[Function]}
+          onFocus={[Function]}
+          placeholder="Search"
+          rejectResponderTermination={true}
+          style={
+            Object {
+              "backgroundColor": "#EFEFEF",
+              "color": "#000000",
+              "fontFamily": "GillSansMTStd-Medium",
+              "fontSize": 18,
+              "lineHeight": undefined,
+              "marginLeft": 10,
+              "paddingTop": 4,
+              "width": "100%",
+            }
+          }
+          underlineColorAndroid="transparent"
+          value="test"
+        />
+      </View>
+      <View
+        accessible={true}
+        focusable={true}
+        hitSlop={
+          Object {
+            "bottom": 12,
+            "left": 12,
+            "right": 12,
+            "top": 12,
+          }
+        }
+        onClick={[Function]}
+        onResponderGrant={[Function]}
+        onResponderMove={[Function]}
+        onResponderRelease={[Function]}
+        onResponderTerminate={[Function]}
+        onResponderTerminationRequest={[Function]}
+        onStartShouldSetResponder={[Function]}
+        style={
+          Object {
+            "opacity": 1,
           }
         }
       >
         <RNSVGSvgView
           align="xMidYMid"
-          bbHeight="20"
-          bbWidth="22"
+          bbHeight={16}
+          bbWidth={16}
           focusable={false}
-          height="20"
+          height={16}
           meetOrSlice={0}
           minX={0}
           minY={0}
@@ -157,23 +323,21 @@ exports[`Search Bar should render correctly 1`] = `
               },
               Object {
                 "flex": 0,
-                "height": 20,
-                "width": 22,
+                "height": 16,
+                "width": 16,
               },
             ]
           }
-          vbHeight={18}
-          vbWidth={20}
-          width="22"
+          vbHeight={13}
+          vbWidth={13}
+          width={16}
         >
           <RNSVGGroup>
             <RNSVGGroup
               fill={null}
-              fillRule={0}
               propList={
                 Array [
                   "fill",
-                  "fillRule",
                 ]
               }
             >
@@ -186,50 +350,35 @@ exports[`Search Bar should render correctly 1`] = `
                 stroke={4278190080}
               >
                 <RNSVGGroup>
-                  <RNSVGGroup
-                    matrix={
-                      Array [
-                        1,
-                        0,
-                        0,
-                        1,
-                        0,
-                        -3,
-                      ]
-                    }
-                  >
-                    <RNSVGCircle
-                      cx="11.268"
-                      cy="11.232"
-                      matrix={
-                        Array [
-                          0.7071067811865476,
-                          0.7071067811865475,
-                          -0.7071067811865475,
-                          0.7071067811865476,
-                          11.242544155877283,
-                          -4.677902576697321,
-                        ]
-                      }
-                      propList={
-                        Array [
-                          "strokeWidth",
-                        ]
-                      }
-                      r="6.75"
-                      strokeWidth="1.5"
-                    />
-                    <RNSVGPath
-                      d="M5.611 16.889L2.782 19.718"
-                      propList={
-                        Array [
-                          "strokeWidth",
-                          "strokeLinecap",
-                        ]
-                      }
-                      strokeLinecap={1}
-                      strokeWidth="2"
-                    />
+                  <RNSVGGroup>
+                    <RNSVGGroup>
+                      <RNSVGPath
+                        d="M0.591 0.591L12.409 12.409"
+                        matrix={
+                          Array [
+                            -1,
+                            0,
+                            0,
+                            1,
+                            13,
+                            0,
+                          ]
+                        }
+                      />
+                      <RNSVGPath
+                        d="M0.591 0.591L12.409 12.409"
+                        matrix={
+                          Array [
+                            1,
+                            0,
+                            0,
+                            1,
+                            0,
+                            0,
+                          ]
+                        }
+                      />
+                    </RNSVGGroup>
                   </RNSVGGroup>
                 </RNSVGGroup>
               </RNSVGGroup>
@@ -237,169 +386,6 @@ exports[`Search Bar should render correctly 1`] = `
           </RNSVGGroup>
         </RNSVGSvgView>
       </View>
-      <TextInput
-        allowFontScaling={true}
-        autoFocus={true}
-        defaultValue="test"
-        editable={true}
-        keyboardType="web-search"
-        onChangeText={[Function]}
-        placeholder="Search"
-        rejectResponderTermination={true}
-        style={
-          Object {
-            "backgroundColor": "#EFEFEF",
-            "color": "#000000",
-            "fontFamily": "GillSansMTStd-Medium",
-            "fontSize": 18,
-            "lineHeight": undefined,
-            "marginLeft": 10,
-            "paddingTop": 4,
-            "width": "100%",
-          }
-        }
-        underlineColorAndroid="transparent"
-        value="test"
-      />
-    </View>
-    <View
-      accessible={true}
-      focusable={true}
-      onClick={[Function]}
-      onResponderGrant={[Function]}
-      onResponderMove={[Function]}
-      onResponderRelease={[Function]}
-      onResponderTerminate={[Function]}
-      onResponderTerminationRequest={[Function]}
-      onStartShouldSetResponder={[Function]}
-      style={
-        Object {
-          "opacity": 1,
-        }
-      }
-    >
-      <RNSVGSvgView
-        align="xMidYMid"
-        bbHeight={16}
-        bbWidth={16}
-        focusable={false}
-        height={16}
-        meetOrSlice={0}
-        minX={0}
-        minY={0}
-        style={
-          Array [
-            Object {
-              "backgroundColor": "transparent",
-              "borderWidth": 0,
-            },
-            Object {
-              "flex": 0,
-              "height": 16,
-              "width": 16,
-            },
-          ]
-        }
-        vbHeight={13}
-        vbWidth={13}
-        width={16}
-      >
-        <RNSVGGroup>
-          <RNSVGGroup
-            fill={null}
-            propList={
-              Array [
-                "fill",
-              ]
-            }
-          >
-            <RNSVGGroup
-              propList={
-                Array [
-                  "stroke",
-                ]
-              }
-              stroke={4278190080}
-            >
-              <RNSVGGroup>
-                <RNSVGGroup>
-                  <RNSVGGroup>
-                    <RNSVGPath
-                      d="M0.591 0.591L12.409 12.409"
-                      matrix={
-                        Array [
-                          -1,
-                          0,
-                          0,
-                          1,
-                          13,
-                          0,
-                        ]
-                      }
-                    />
-                    <RNSVGPath
-                      d="M0.591 0.591L12.409 12.409"
-                      matrix={
-                        Array [
-                          1,
-                          0,
-                          0,
-                          1,
-                          0,
-                          0,
-                        ]
-                      }
-                    />
-                  </RNSVGGroup>
-                </RNSVGGroup>
-              </RNSVGGroup>
-            </RNSVGGroup>
-          </RNSVGGroup>
-        </RNSVGGroup>
-      </RNSVGSvgView>
-    </View>
-  </View>
-  <View
-    style={
-      Object {
-        "justifyContent": "center",
-        "paddingRight": 16,
-      }
-    }
-  >
-    <View
-      accessible={true}
-      focusable={true}
-      onClick={[Function]}
-      onResponderGrant={[Function]}
-      onResponderMove={[Function]}
-      onResponderRelease={[Function]}
-      onResponderTerminate={[Function]}
-      onResponderTerminationRequest={[Function]}
-      onStartShouldSetResponder={[Function]}
-      style={
-        Object {
-          "opacity": 1,
-        }
-      }
-    >
-      <Text
-        style={
-          Array [
-            Object {
-              "fontFamily": "GillSansMTStd-Medium",
-              "fontSize": 18,
-              "lineHeight": undefined,
-              "marginTop": 5,
-            },
-            Object {
-              "color": "#000000",
-            },
-          ]
-        }
-      >
-        Cancel
-      </Text>
     </View>
   </View>
 </View>

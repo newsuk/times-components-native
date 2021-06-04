@@ -78,7 +78,9 @@ exports[`4. loading state 1`] = `
         </View>
       </View>
       <View>
-        <View />
+        <View>
+          <View />
+        </View>
       </View>
     </View>
     <View>
@@ -101,35 +103,39 @@ exports[`4. loading state 1`] = `
           </Link>
         </View>
       </View>
-      <View>
-        <View />
-      </View>
-    </View>
-    <View>
-      <View>
-        <View>
-          <Link>
-            <View>
-              <Card
-                highResSize={1670}
-                imageRatio={1}
-                imageUri={null}
-                isLoading={true}
-                showImage={true}
-              >
-                <ArticleSummary
-                  headline={<ArticleSummaryHeadline />}
-                />
-              </Card>
-            </View>
-          </Link>
-        </View>
-      </View>
-    </View>
-    <View>
       <View>
         <View>
           <View />
+        </View>
+      </View>
+    </View>
+    <View>
+      <View>
+        <View>
+          <Link>
+            <View>
+              <Card
+                highResSize={1670}
+                imageRatio={1}
+                imageUri={null}
+                isLoading={true}
+                showImage={true}
+              >
+                <ArticleSummary
+                  headline={<ArticleSummaryHeadline />}
+                />
+              </Card>
+            </View>
+          </Link>
+        </View>
+      </View>
+    </View>
+    <View>
+      <View>
+        <View>
+          <View>
+            <View />
+          </View>
           <ActivityIndicator
             animating={true}
             color="#DBDBDB"

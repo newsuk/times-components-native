@@ -30,14 +30,18 @@ exports[`2. article list 1`] = `
     <View>
       ArticleListItem
       <View>
-        <View />
+        <View>
+          <View />
+        </View>
       </View>
     </View>
     <View />
     <View>
       <View>
         <View>
-          <View />
+          <View>
+            <View />
+          </View>
           <ActivityIndicator
             animating={true}
             color="#DBDBDB"
