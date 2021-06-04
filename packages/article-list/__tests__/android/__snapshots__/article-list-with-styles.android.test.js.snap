@@ -48,13 +48,23 @@ exports[`1. article list 1`] = `
         <View
           style={
             Object {
-              "backgroundColor": "#DBDBDB",
               "flex": 1,
-              "height": 1,
-              "maxWidth": 660,
+              "flexDirection": "row",
+              "justifyContent": "center",
             }
           }
-        />
+        >
+          <View
+            style={
+              Object {
+                "backgroundColor": "#DBDBDB",
+                "flex": 1,
+                "height": 1,
+                "maxWidth": 660,
+              }
+            }
+          />
+        </View>
       </View>
     </View>
     <View>
@@ -111,13 +121,23 @@ exports[`1. article list 1`] = `
           <View
             style={
               Object {
-                "backgroundColor": "#DBDBDB",
                 "flex": 1,
-                "height": 1,
-                "maxWidth": 660,
+                "flexDirection": "row",
+                "justifyContent": "center",
               }
             }
-          />
+          >
+            <View
+              style={
+                Object {
+                  "backgroundColor": "#DBDBDB",
+                  "flex": 1,
+                  "height": 1,
+                  "maxWidth": 660,
+                }
+              }
+            />
+          </View>
           <ActivityIndicator
             style={
               Object {
@@ -189,13 +209,23 @@ exports[`2. article list with no images 1`] = `
           <View
             style={
               Object {
-                "backgroundColor": "#DBDBDB",
                 "flex": 1,
-                "height": 1,
-                "maxWidth": 660,
+                "flexDirection": "row",
+                "justifyContent": "center",
               }
             }
-          />
+          >
+            <View
+              style={
+                Object {
+                  "backgroundColor": "#DBDBDB",
+                  "flex": 1,
+                  "height": 1,
+                  "maxWidth": 660,
+                }
+              }
+            />
+          </View>
           <ActivityIndicator
             style={
               Object {
@@ -252,13 +282,23 @@ exports[`3. a retry button when load more fails 1`] = `
         <View
           style={
             Object {
-              "backgroundColor": "#DBDBDB",
               "flex": 1,
-              "height": 1,
-              "maxWidth": 660,
+              "flexDirection": "row",
+              "justifyContent": "center",
             }
           }
-        />
+        >
+          <View
+            style={
+              Object {
+                "backgroundColor": "#DBDBDB",
+                "flex": 1,
+                "height": 1,
+                "maxWidth": 660,
+              }
+            }
+          />
+        </View>
         <View
           style={
             Object {

@@ -4,6 +4,14 @@ exports[`XButton Should render correctly 1`] = `
 <View
   accessible={true}
   focusable={true}
+  hitSlop={
+    Object {
+      "bottom": 12,
+      "left": 12,
+      "right": 12,
+      "top": 12,
+    }
+  }
   onClick={[Function]}
   onResponderGrant={[Function]}
   onResponderMove={[Function]}

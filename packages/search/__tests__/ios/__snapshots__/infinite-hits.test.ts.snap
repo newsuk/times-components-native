@@ -7,7 +7,7 @@ exports[`SearchResults should render correctly 1`] = `
     Array [
       Object {
         "flex": 1,
-        "paddingTop": 60,
+        "paddingTop": 30,
       },
       Object {
         "paddingBottom": 0,
@@ -24,8 +24,8 @@ exports[`SearchResults should render correctly 1`] = `
     style={
       Object {
         "alignSelf": "center",
-        "height": 200,
-        "width": 200,
+        "height": 160,
+        "width": 160,
       }
     }
   />

@@ -8,6 +8,7 @@ import { TrackingData } from "@times-components-native/types";
 const { track } = NativeModules.ReactAnalytics;
 
 interface SearchListEmptyStateProps {
+  children?: React.ReactNode;
   message: string;
   title: string;
   icon?: string;
@@ -15,6 +16,7 @@ interface SearchListEmptyStateProps {
 }
 
 function SearchListEmptyState({
+  children = null,
   message,
   title,
   icon = "search",
@@ -31,10 +33,15 @@ function SearchListEmptyState({
     >
       <Image
         source={ImageIcons[icon]}
-        style={{ width: 200, height: 200, alignSelf: "center" }}
+        style={{
+          width: 160,
+          height: 160,
+          alignSelf: "center",
+        }}
       />
       <Text style={styles.listEmptyTitle}>{title}</Text>
       <Text style={styles.listEmptyMessage}>{message}</Text>
+      {children}
     </KeyboardAvoidingView>
   );
 }

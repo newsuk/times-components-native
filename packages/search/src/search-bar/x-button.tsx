@@ -12,7 +12,11 @@ export interface XButtonProps {
 }
 
 const XButton: FC<XButtonProps> = ({ onPress, style }) => (
-  <TouchableOpacity onPress={onPress} style={style}>
+  <TouchableOpacity
+    onPress={onPress}
+    style={style}
+    hitSlop={{ top: 12, bottom: 12, left: 12, right: 12 }}
+  >
     <DeleteIcon width={16} height={16} />
   </TouchableOpacity>
 );

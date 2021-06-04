@@ -30,6 +30,6 @@ export const styles = StyleSheet.create({
   },
   listEmptyStateContainer: {
     flex: 1,
-    paddingTop: spacing(12),
+    paddingTop: spacing(6),
   },
 });

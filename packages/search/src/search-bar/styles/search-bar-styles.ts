@@ -5,18 +5,22 @@ import {
   spacing,
 } from "@times-components-native/styleguide";
 import { isIOS } from "@times-components-native/utils/src/platformUtils";
+import { tabletWidth } from "@times-components-native/styleguide";
 
 export const styles = StyleSheet.create({
   container: {
+    alignItems: "center",
     backgroundColor: colours.functional.white,
-    flexDirection: "row",
-    paddingLeft: spacing(3),
     marginBottom: spacing(2),
+    width: "100%",
+  },
+  subContainer: {
+    flexDirection: "row",
+    maxWidth: tabletWidth,
   },
   inputContainer: {
     flexDirection: "row",
     flex: 1,
-    marginRight: 8,
     paddingVertical: spacing(2),
     paddingHorizontal: spacing(2),
     backgroundColor: colours.functional.grey,
@@ -24,7 +28,7 @@ export const styles = StyleSheet.create({
     alignItems: "center",
     width: "100%",
   },
-  iconStyle: { marginTop: 1 },
+  iconStyle: { marginTop: 1, transform: [{ scaleX: -1 }] },
   magnifierTextWrapper: { flexDirection: "row", width: "85%" },
   input: {
     marginLeft: spacing(2),
