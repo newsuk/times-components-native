@@ -43,14 +43,23 @@ class ArticlePage extends Component {
     } = article;
     const showLeadAsset = template === "magazinecomment";
 
+    const getLongReadFlag = () => {
+      switch (String(label).toLowerCase()) {
+        case "letters to the editor":
+          return false;
+        default:
+          return longRead;
+      }
+    };
+
     return (
-      <>
+      <View>
         <ArticleHeader
           flags={expirableFlags}
           hasVideo={hasVideo}
           headline={getHeadline(headline, shortHeadline)}
           label={label}
-          longRead={longRead}
+          longRead={getLongReadFlag()}
           onAuthorPress={onAuthorPress}
           onImagePress={onImagePress}
           publicationName={publicationName}
@@ -69,7 +78,7 @@ class ArticlePage extends Component {
             style={styles.leadAssetContainer}
           />
         )}
-      </>
+      </View>
     );
   }
 
