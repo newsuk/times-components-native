@@ -207,6 +207,7 @@ export default ({
       );
     },
     interactive(key, { id, display, element }) {
+      console.log("INTERACTIVE: ", element);
       if (
         Platform.OS === "ios" &&
         element &&
@@ -238,6 +239,7 @@ export default ({
         const {
           attributes: { code, copy, headline, imageUri, label },
         } = element;
+        console.log("NEWS LETTER PUFF");
         return (
           <InlineNewsletterPuff
             analyticsStream={analyticsStream}
@@ -257,6 +259,10 @@ export default ({
             styles.interactiveContainer,
             isArticleTablet && styles.interactiveContainerTablet,
             display === "fullwidth" && styles.interactiveContainerFullWidth,
+            {
+              borderColor: "red",
+              borderWidth: 2,
+            },
           ]}
         >
           <InteractiveWrapper config={interactiveConfig} id={id} key={key} />
