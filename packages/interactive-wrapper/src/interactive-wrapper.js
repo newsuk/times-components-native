@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import { Linking, View } from "react-native";
+import { Linking, View, Text } from "react-native";
 import { WebView } from "react-native-webview";
 import PropTypes from "prop-types";
 import webviewEventCallbackSetup from "./webview-event-callback-setup";
@@ -86,7 +86,7 @@ class InteractiveWrapper extends Component {
     const scriptToInject = `window.postMessage = function(data) {window.ReactNativeWebView.postMessage(data);};(${webviewEventCallbackSetup})({window});`;
 
     return (
-      <View style={{ backgroundColor: "pink", height, width: "100%" }}>
+      <View style={{ backgroundColor: "pink", height: 200, width: "100%" }}>
         <Text>Interactive wrapper here</Text>
       </View>
       // <WebView
