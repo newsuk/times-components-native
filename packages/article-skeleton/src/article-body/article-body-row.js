@@ -130,15 +130,14 @@ export default ({
       );
     },
     ad(key, attributes) {
-      return (
-        <Ad
-          key={key}
-          adConfig={adConfig}
-          narrowContent={narrowContent}
-          slotName="native-inline-ad"
-          {...attributes}
-        />
-      );
+      return null;
+      // <Ad
+      //   key={key}
+      //   adConfig={adConfig}
+      //   narrowContent={narrowContent}
+      //   slotName="native-inline-ad"
+      //   {...attributes}
+      // />
     },
     articleEndTracking() {
       return (
