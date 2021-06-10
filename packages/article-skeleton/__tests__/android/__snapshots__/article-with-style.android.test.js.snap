@@ -263,9 +263,7 @@ exports[`1. a full article with all content items with dropcap template 1`] = `
             "width": undefined,
           }
         }
-      >
-        <Ad />
-      </View>
+      />
       <View
         style={
           Object {
@@ -2663,9 +2661,7 @@ exports[`17. an article skeleton with responsive items 1`] = `
             "width": undefined,
           }
         }
-      >
-        <Ad />
-      </View>
+      />
       <View
         style={
           Object {

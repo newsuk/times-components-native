@@ -129,15 +129,17 @@ export default ({
         </ArticleParagraphWrapper>
       );
     },
-    ad(key, attributes) {
+    // ad(key, attributes) {
+    //   <Ad
+    //     key={key}
+    //     adConfig={adConfig}
+    //     narrowContent={narrowContent}
+    //     slotName="native-inline-ad"
+    //     {...attributes}
+    //   />
+    // },
+    ad() {
       return null;
-      // <Ad
-      //   key={key}
-      //   adConfig={adConfig}
-      //   narrowContent={narrowContent}
-      //   slotName="native-inline-ad"
-      //   {...attributes}
-      // />
     },
     articleEndTracking() {
       return (
