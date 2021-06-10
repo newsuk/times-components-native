@@ -69,11 +69,11 @@ const ArticleExtrasContent = ({
         tooltips={tooltips}
         url={articleUrl}
       />
-      {(isArticleTablet || isMobileMainStandard) && (
+      {/* {(isArticleTablet || isMobileMainStandard) && (
         <SponsoredAd
           numberOfAds={isMobileMainStandard ? 2 : narrowContent ? 3 : 4}
         />
-      )}
+      )} */}
     </View>
   );
 };
