@@ -83,7 +83,6 @@ class InteractiveWrapper extends Component {
             onPress={() => this.setState({ active: !active })}
           />
           <AutoHeightWebView
-            androidLayerType="software"
             onSizeUpdated={(size) => this.updateHeight(size.height)}
             scalesPageToFit={false}
             automaticallyAdjustContentInsets={false}
