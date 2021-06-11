@@ -88,7 +88,7 @@ class InteractiveWrapper extends Component {
 
     if (active) {
       return (
-        <>
+        <View style={{ borderWidth: 1, borderColor: "red", padding: 10 }}>
           <Button
             title="toggle interactive"
             onPress={() => this.setState({ active: !active })}
@@ -105,7 +105,7 @@ class InteractiveWrapper extends Component {
             source={{ uri }}
             style={{ height }}
           />
-        </>
+        </View>
       );
     }
     return (
