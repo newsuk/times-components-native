@@ -4,6 +4,7 @@ interface Dictionary<T> {
   [index: string]: T;
 }
 
+/*
 declare module "@times-components-native/styleguide" {
   type ColourMap = Record<string, string>;
   type Colours = Record<string, ColourMap>;
@@ -26,6 +27,8 @@ declare module "@times-components-native/styleguide" {
   export const fonts;
   export default styleguide;
 }
+
+*/
 
 declare module "@times-components-native/utils" {
   import { Crop } from "@times-components-native/fixture-generator/src/types";

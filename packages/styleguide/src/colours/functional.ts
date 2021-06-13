@@ -37,6 +37,8 @@ const functionalColours = {
   lightGreyText: "#C2C2C2",
   offlineSearchText: "#8E8E8E",
   grey: "#EFEFEF",
-};
+} as const;
+
+export type functionalColourKeys = keyof typeof functionalColours;
 
 export default functionalColours;
