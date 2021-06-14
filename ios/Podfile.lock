@@ -313,8 +313,8 @@ PODS:
     - React
     - React-RCTImage
     - React-RCTText
-  - RNCAsyncStorage (1.12.1):
-    - React-Core
+  - RNCAsyncStorage (1.12.0):
+    - React
   - RNDeviceInfo (7.3.1):
     - React-Core
   - RNSVG (12.1.0):
@@ -515,4 +515,4 @@ SPEC CHECKSUMS:
 
 PODFILE CHECKSUM: 85641bc07c6138e591265624c44c17c46b4d7230
 
-COCOAPODS: 1.9.3
+COCOAPODS: 1.10.1

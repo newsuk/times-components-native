@@ -14,7 +14,7 @@ const Checkmark: React.FC<CheckmarkProps> = ({
   height = 15,
 }) => {
   return (
-    <Svg width={width} height={height} viewBox={`0 0 512 512`}>
+    <Svg width={width} height={height} viewBox="0 0 512 512">
       <Path
         fill="none"
         stroke={color}
