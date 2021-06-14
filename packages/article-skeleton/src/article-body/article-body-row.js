@@ -7,7 +7,7 @@ import {
   tabletRowPadding,
   tabletWidth,
 } from "@times-components-native/styleguide";
-import Ad from "@times-components-native/ad";
+// import Ad from "@times-components-native/ad";
 import InlineContent from "@times-components-native/inline-content";
 import ArticleImage from "@times-components-native/article-image";
 import InteractiveWrapper from "@times-components-native/interactive-wrapper";
@@ -129,16 +129,17 @@ export default ({
         </ArticleParagraphWrapper>
       );
     },
-    ad(key, attributes) {
-      return (
-        <Ad
-          key={key}
-          adConfig={adConfig}
-          narrowContent={narrowContent}
-          slotName="native-inline-ad"
-          {...attributes}
-        />
-      );
+    // ad(key, attributes) {
+    //   <Ad
+    //     key={key}
+    //     adConfig={adConfig}
+    //     narrowContent={narrowContent}
+    //     slotName="native-inline-ad"
+    //     {...attributes}
+    //   />
+    // },
+    ad() {
+      return null;
     },
     articleEndTracking() {
       return (
@@ -206,6 +207,7 @@ export default ({
       );
     },
     interactive(key, { id, display, element }) {
+      console.log("INTERACTIVE: ", element);
       if (
         Platform.OS === "ios" &&
         element &&
@@ -237,6 +239,7 @@ export default ({
         const {
           attributes: { code, copy, headline, imageUri, label },
         } = element;
+        console.log("NEWS LETTER PUFF");
         return (
           <InlineNewsletterPuff
             analyticsStream={analyticsStream}

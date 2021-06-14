@@ -6,7 +6,7 @@ import ArticleComments from "@times-components-native/article-comments";
 import RelatedArticles from "@times-components-native/related-articles";
 import ArticleTopics from "./article-topics";
 import styles from "./styles";
-import { SponsoredAd } from "@times-components-native/ad";
+// import { SponsoredAd } from "@times-components-native/ad";
 
 const ArticleExtrasContent = ({
   analyticsStream,
@@ -69,11 +69,11 @@ const ArticleExtrasContent = ({
         tooltips={tooltips}
         url={articleUrl}
       />
-      {(isArticleTablet || isMobileMainStandard) && (
+      {/* {(isArticleTablet || isMobileMainStandard) && (
         <SponsoredAd
           numberOfAds={isMobileMainStandard ? 2 : narrowContent ? 3 : 4}
         />
-      )}
+      )} */}
     </View>
   );
 };

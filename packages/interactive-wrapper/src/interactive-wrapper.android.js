@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import { Linking } from "react-native";
+import { Linking, Button, View, Text } from "react-native";
 import PropTypes from "prop-types";
 import AutoHeightWebView from "react-native-autoheight-webview";
 import ResponsiveImageInteractive from "./responsive-image";
@@ -25,6 +25,7 @@ class InteractiveWrapper extends Component {
     this.state = {
       height: 1,
       hasError: false,
+      active: false,
     };
     this.handleOnShouldStartLoadWithRequest = this.handleOnShouldStartLoadWithRequest.bind(
       this,
@@ -69,26 +70,46 @@ class InteractiveWrapper extends Component {
       config: { dev, environment, platform, version },
       id,
     } = this.props;
-    const { height, hasError } = this.state;
+    const { height, hasError, active } = this.state;
     const uri = `${editorialLambdaProtocol}${editorialLambdaOrigin}/${editorialLambdaSlug}/${id}?dev=${dev}&env=${environment}&platform=${platform}&version=${version}`;
 
     if (hasError) return null;
 
+    if (active) {
+      return (
+        <>
+          <Button
+            title="toggle"
+            onPress={() => this.setState({ active: !active })}
+          />
+          <AutoHeightWebView
+            onSizeUpdated={(size) => this.updateHeight(size.height)}
+            scalesPageToFit={false}
+            automaticallyAdjustContentInsets={false}
+            onLoadEnd={this.onLoadEnd}
+            ref={(ref) => {
+              this.webview = ref;
+            }}
+            scrollEnabled={false}
+            onShouldStartLoadWithRequest={
+              this.handleOnShouldStartLoadWithRequest
+            }
+            source={{ uri }}
+            style={{ height, width: "100%" }}
+            onHttpError={this.handleHttpError}
+          />
+        </>
+      );
+    }
+
     return (
-      <AutoHeightWebView
-        onSizeUpdated={(size) => this.updateHeight(size.height)}
-        scalesPageToFit={false}
-        automaticallyAdjustContentInsets={false}
-        onLoadEnd={this.onLoadEnd}
-        ref={(ref) => {
-          this.webview = ref;
-        }}
-        scrollEnabled={false}
-        onShouldStartLoadWithRequest={this.handleOnShouldStartLoadWithRequest}
-        source={{ uri }}
-        style={{ height, width: "100%" }}
-        onHttpError={this.handleHttpError}
-      />
+      <View style={{ backgroundColor: "pink", height: 200, width: "100%" }}>
+        <Text>Interactive wrapper here</Text>
+        <Button
+          title="toggle interactive"
+          onPress={() => this.setState({ active: !active })}
+        />
+      </View>
     );
   }
 }

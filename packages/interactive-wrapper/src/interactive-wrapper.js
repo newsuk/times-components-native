@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import { Linking } from "react-native";
+import { Linking, View, Text, Button } from "react-native";
 import { WebView } from "react-native-webview";
 import PropTypes from "prop-types";
 import webviewEventCallbackSetup from "./webview-event-callback-setup";
@@ -25,6 +25,7 @@ class InteractiveWrapper extends Component {
     super();
     this.state = {
       height: 0,
+      active: false,
     };
     this.onMessage = this.onMessage.bind(this);
     this.handleNavigationStateChange = this.handleNavigationStateChange.bind(
@@ -81,23 +82,40 @@ class InteractiveWrapper extends Component {
       config: { dev, environment, platform, version },
       id,
     } = this.props;
-    const { height } = this.state;
+    const { height, active } = this.state;
     const uri = `${editorialLambdaProtocol}${editorialLambdaOrigin}/${editorialLambdaSlug}/${id}?dev=${dev}&env=${environment}&platform=${platform}&version=${version}`;
     const scriptToInject = `window.postMessage = function(data) {window.ReactNativeWebView.postMessage(data);};(${webviewEventCallbackSetup})({window});`;
 
+    if (active) {
+      return (
+        <View style={{ borderWidth: 1, borderColor: "red", padding: 10 }}>
+          <Button
+            title="toggle interactive"
+            onPress={() => this.setState({ active: !active })}
+          />
+          <WebView
+            injectedJavaScriptBeforeContentLoaded={scriptToInject}
+            onLoadEnd={this.onLoadEnd}
+            onMessage={this.onMessage}
+            onNavigationStateChange={this.handleNavigationStateChange}
+            ref={(ref) => {
+              this.webview = ref;
+            }}
+            scrollEnabled={false}
+            source={{ uri }}
+            style={{ height }}
+          />
+        </View>
+      );
+    }
     return (
-      <WebView
-        injectedJavaScriptBeforeContentLoaded={scriptToInject}
-        onLoadEnd={this.onLoadEnd}
-        onMessage={this.onMessage}
-        onNavigationStateChange={this.handleNavigationStateChange}
-        ref={(ref) => {
-          this.webview = ref;
-        }}
-        scrollEnabled={false}
-        source={{ uri }}
-        style={{ height }}
-      />
+      <View style={{ backgroundColor: "pink", height: 200, width: "100%" }}>
+        <Text>Interactive wrapper here</Text>
+        <Button
+          title="toggle interactive"
+          onPress={() => this.setState({ active: !active })}
+        />
+      </View>
     );
   }
 }
