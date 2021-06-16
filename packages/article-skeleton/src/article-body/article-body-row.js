@@ -10,7 +10,10 @@ import {
 import Ad from "@times-components-native/ad";
 import InlineContent from "@times-components-native/inline-content";
 import ArticleImage from "@times-components-native/article-image";
-import InteractiveWrapper from "@times-components-native/interactive-wrapper";
+import {
+  InteractiveWrapper,
+  WebviewWrapper,
+} from "@times-components-native/interactive-wrapper";
 import KeyFacts from "@times-components-native/key-facts";
 import PullQuote from "@times-components-native/pull-quote";
 import Video from "@times-components-native/video";
@@ -256,9 +259,14 @@ export default ({
             styles.interactiveContainer,
             isArticleTablet && styles.interactiveContainerTablet,
             display === "fullwidth" && styles.interactiveContainerFullWidth,
+            {
+              borderColor: "green",
+              borderWidth: 4,
+            },
           ]}
         >
-          <InteractiveWrapper config={interactiveConfig} id={id} key={key} />
+          {/* <InteractiveWrapper config={interactiveConfig} id={id} key={key} /> */}
+          <WebviewWrapper config={interactiveConfig} id={id} key={key} />
         </View>
       );
     },
