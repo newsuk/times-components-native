@@ -1,5 +1,7 @@
 type TrackingAtrributes = {
   eventTime: Date;
+  pageName: string;
+  pageSection: string;
 };
 
 export type TrackingData = {
