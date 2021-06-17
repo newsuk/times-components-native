@@ -46,28 +46,14 @@ function WebviewWrapper({ config, id }: IProps) {
   };
 
   const handleNavigationStateChange = (event: WebViewNavigation) => {
-    console.log("handle navigation state change", event);
     if (event.url === uri) {
-      console.log("url is the same");
       return;
     }
     webview.current?.stopLoading();
     webview.current?.goBack();
-    ///webview.current?.reload();
     openURLInBrowser(event.url);
     console.log("url is different");
   };
-
-  //    <WebView
-  //       ref={(ref) => { this.webview = ref; }}
-  //       source={{ uri }}
-  //       onNavigationStateChange={(event) => {
-  //         if (event.url !== uri) {
-  //           this.webview.stopLoading();
-  //           Linking.openURL(event.url);
-  //         }
-  //       }}
-  //     />
 
   return (
     <WebView
