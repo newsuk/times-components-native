@@ -1,6 +1,5 @@
 import TestRenderer from "react-test-renderer";
 import React from "react";
-import SearchList from "../src/search-list/search-list";
 import FormattedDate from "../src/search-list/formatted-date";
 import SearchListItemByLine from "../src/search-list/search-list-item-by-line";
 import SearchListItemSnippet from "../src/search-list/search-list-item-snippet";
