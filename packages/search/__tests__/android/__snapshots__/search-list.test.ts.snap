@@ -27,7 +27,12 @@ exports[`Search Bar List SearchList should render correctly 1`] = `
       title="Sorry, we found no results"
       trackingData={
         Object {
-          "action": "No search results",
+          "action": "Viewed",
+          "attrs": Object {
+            "eventTime": 2021-06-17T12:23:14.623Z,
+            "pageName": "no search results",
+            "pageSection": "search",
+          },
           "component": "Search ",
           "object": "Search",
         }
