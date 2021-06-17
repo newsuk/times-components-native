@@ -3,7 +3,7 @@ import { Platform, View } from "react-native";
 import PropTypes from "prop-types";
 import { Viewport } from "@skele/components";
 
-import { withTrackEvents } from "@times-components-native/tracking";
+import { withTrackEvents, withTrackingContext } from "@times-components-native/tracking";
 
 const ArticleEndTracking = ({ onViewed }) => {
   if (Platform.OS === "android") return null;
@@ -23,17 +23,26 @@ ArticleEndTracking.propTypes = {
   onViewed: PropTypes.func.isRequired,
 };
 
-export default withTrackEvents(ArticleEndTracking, {
-  analyticsEvents: [
-    {
-      actionName: "onViewed",
-      eventName: "onViewed",
-      getAttrs: () => ({
-        event_navigation_action: "navigation",
-        event_navigation_name: "article : view end",
-        event_navigation_browsing_method: "scroll",
-      }),
-      trackingName: "ArticleEndTracking",
-    },
-  ],
+export default withTrackingContext(
+  withTrackEvents(ArticleEndTracking, {
+    analyticsEvents: [
+      {
+        actionName: "onPress",
+        eventName: "onPress",
+        getAttrs: () => ({
+          event_navigation_action: "navigation",
+          event_navigation_name: "article : view end",
+          event_navigation_browsing_method: "scroll",
+        }),
+        trackingName: "ArticleEndTracking",
+      },
+    ],
+  }), {
+  getAttrs: ({ newsletterPuffName }) => ({
+    event_navigation_action: "navigation",
+    event_navigation_name: "article : view end",
+    event_navigation_browsing_method: "scroll",
+  }),
+  trackingName: "ArticleEndTracking",
+  trackingObjectName: "ArticleEndTracking",
 });

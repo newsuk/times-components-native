@@ -3,7 +3,7 @@
 exports[`ArticleEndTracking renders the component and triggers the onViewed callback when in viewport 1`] = `
 <View
   inViewport={false}
-  onViewportEnter={[Function]}
+  onViewportEnter={[MockFunction]}
   testID="viewportAwareView"
 />
 `;
@@ -17,19 +17,6 @@ Array [
         "eventTime": "2018-01-01T00:00:00.000Z",
       },
       "component": "Page",
-      "object": "Article",
-    },
-  ],
-  Array [
-    Object {
-      "action": "onViewed",
-      "attrs": Object {
-        "eventTime": "2018-01-01T00:00:00.000Z",
-        "event_navigation_action": "navigation",
-        "event_navigation_browsing_method": "scroll",
-        "event_navigation_name": "article : view end",
-      },
-      "component": "ArticleEndTracking",
       "object": "Article",
     },
   ],
