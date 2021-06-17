@@ -31,7 +31,7 @@ const SearchList: FC<SearchListProps> = ({
   useEffect(() => {
     const trackingData: TrackingData = {
       object: "Search",
-      action: "Search results",
+      action: "Viewed",
       component: "Search",
       attrs: {
         eventTime: new Date(),
@@ -57,7 +57,7 @@ const SearchList: FC<SearchListProps> = ({
           message="Please check all words are spelled correctly, or try a different search term"
           trackingData={{
             object: "Search",
-            action: "No search results",
+            action: "Viewed",
             component: "Search ",
             attrs: {
               eventTime: new Date(),

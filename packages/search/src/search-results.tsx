@@ -41,7 +41,7 @@ const SearchResults: FC<InfiniteHitsProps> = ({
         message="Please check your network connection and try again"
         trackingData={{
           object: "Search",
-          action: "No internet found",
+          action: "Viewed",
           component: "Search",
           attrs: {
             pageName: "no internet found",
