@@ -15,18 +15,6 @@ jest.mock("react-native", () => {
 
 export default () => {
   describe("Search Bar List", () => {
-    it("SearchList should render correctly", () => {
-      const testInstance = TestRenderer.create(
-        <SearchList
-          fetchMore={() => null}
-          hits={mockHits}
-          onArticlePress={() => null}
-        />,
-      );
-
-      expect(testInstance).toMatchSnapshot();
-    });
-
     it("FormattedDate should render correctly", () => {
       const testInstance = TestRenderer.create(
         <FormattedDate
