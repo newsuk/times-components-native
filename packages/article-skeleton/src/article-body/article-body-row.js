@@ -259,10 +259,6 @@ export default ({
             styles.interactiveContainer,
             isArticleTablet && styles.interactiveContainerTablet,
             display === "fullwidth" && styles.interactiveContainerFullWidth,
-            {
-              borderColor: "green",
-              borderWidth: 4,
-            },
           ]}
         >
           {/* <InteractiveWrapper config={interactiveConfig} id={id} key={key} /> */}

@@ -1,9 +1,9 @@
 import React, { useRef, useState } from "react";
-import { Linking } from "react-native";
+import { Alert, Linking, Platform } from "react-native";
 import {
   WebView,
-  WebViewNavigation,
   WebViewMessageEvent,
+  WebViewNavigation,
 } from "react-native-webview";
 import webviewEventCallbackSetup from "./webview-event-callback-setup";
 
@@ -41,9 +41,17 @@ function WebviewWrapper({ config, id }: IProps) {
       .catch((err) => console.error("An error occurred", err)); // eslint-disable-line no-console
   };
 
-  // const handleOnLoadEnd = (event: SyntheticEvent) => {};
-
   const handleOnMessage = (event: WebViewMessageEvent) => {
+    console.log("url: ", event.nativeEvent.url);
+    if (event.persist) {
+      event.persist();
+    }
+    if (event.nativeEvent.url !== uri) {
+      webview.current?.stopLoading();
+      webview.current?.goBack();
+      openURLInBrowser(event.nativeEvent.url);
+      return;
+    }
     const newHeight = parseInt(event.nativeEvent.data, 10);
     if (isNaN(newHeight)) {
       return;
@@ -66,13 +74,11 @@ function WebviewWrapper({ config, id }: IProps) {
     webview.current?.stopLoading();
     webview.current?.goBack();
     openURLInBrowser(event.url);
-    console.log("url is different");
   };
 
   return (
     <WebView
       injectedJavaScriptBeforeContentLoaded={scriptToInject}
-      // onLoadEnd={handleOnLoadEnd}
       onMessage={handleOnMessage}
       onNavigationStateChange={handleNavigationStateChange}
       ref={webview}
