@@ -1,6 +1,10 @@
 import React, { useRef, useState } from "react";
 import { Linking } from "react-native";
-import { WebView, WebViewNavigation } from "react-native-webview";
+import {
+  WebView,
+  WebViewNavigation,
+  WebViewMessageEvent,
+} from "react-native-webview";
 import webviewEventCallbackSetup from "./webview-event-callback-setup";
 
 type TConfig = {
@@ -37,12 +41,22 @@ function WebviewWrapper({ config, id }: IProps) {
       .catch((err) => console.error("An error occurred", err)); // eslint-disable-line no-console
   };
 
-  const handleOnLoadEnd = () => {
-    setHeight(2000);
-  };
+  // const handleOnLoadEnd = (event: SyntheticEvent) => {};
 
-  const handleOnMessage = () => {
-    console.log("handle on message");
+  const handleOnMessage = (event: WebViewMessageEvent) => {
+    const newHeight = parseInt(event.nativeEvent.data, 10);
+    if (isNaN(newHeight)) {
+      return;
+    }
+    const minimumDifferenceInPixels = 5;
+    const smallInteractiveAdditionalHeight = 30;
+    if (newHeight && Math.abs(newHeight - height) > minimumDifferenceInPixels) {
+      const updatedHeight =
+        newHeight < smallInteractiveAdditionalHeight
+          ? newHeight + smallInteractiveAdditionalHeight
+          : newHeight;
+      setHeight(updatedHeight);
+    }
   };
 
   const handleNavigationStateChange = (event: WebViewNavigation) => {
@@ -58,7 +72,7 @@ function WebviewWrapper({ config, id }: IProps) {
   return (
     <WebView
       injectedJavaScriptBeforeContentLoaded={scriptToInject}
-      onLoadEnd={handleOnLoadEnd}
+      // onLoadEnd={handleOnLoadEnd}
       onMessage={handleOnMessage}
       onNavigationStateChange={handleNavigationStateChange}
       ref={webview}
