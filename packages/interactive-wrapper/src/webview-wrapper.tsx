@@ -1,16 +1,12 @@
 import React, { useRef, useState } from "react";
-import { Linking, Platform } from "react-native";
-import {
-  WebView,
-  WebViewMessageEvent,
-  WebViewNavigation,
-} from "react-native-webview";
+import { Linking } from "react-native";
+import { WebView, WebViewMessageEvent } from "react-native-webview";
 import webviewEventCallbackSetup from "./webview-event-callback-setup";
 
 type TConfig = {
   dev: boolean;
   environment: string;
-  platform: string; // "ios or android?"
+  platform: string;
   version: string;
 };
 
@@ -68,31 +64,10 @@ function WebviewWrapper({ config, id }: IProps) {
     }
   };
 
-  // const handleNavigationStateChange = (event: WebViewNavigation) => {
-  //   if (Platform.OS === "android") {
-  //     // if (event.url === uri) {
-  //     //   return;
-  //     // }
-  //     // // webview.current?.stopLoading();
-  //     // //webview.current?.goBack();
-  //     // webview.current?.reload();
-  //     // openURLInBrowser(event.url);
-  //     if (
-  //       !event.url.includes("data:text/html") &&
-  //       event.url.includes("http") &&
-  //       !event.url.includes(editorialLambdaOrigin)
-  //     ) {
-  //       openURLInBrowser(event.url);
-  //       webview.current?.reload();
-  //     }
-  //   }
-  // };
-
   return (
     <WebView
       injectedJavaScriptBeforeContentLoaded={scriptToInject}
       onMessage={handleOnMessage}
-      // onNavigationStateChange={handleNavigationStateChange}
       ref={webview}
       scrollEnabled={false}
       source={{ uri }}
