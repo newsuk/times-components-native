@@ -266,8 +266,6 @@ export default ({
           ) : (
             <WebviewWrapper config={interactiveConfig} id={id} key={key} />
           )}
-          {/* <InteractiveWrapper config={interactiveConfig} id={id} key={key} /> */}
-          {/* <WebviewWrapper config={interactiveConfig} id={id} key={key} /> */}
         </View>
       );
     },
