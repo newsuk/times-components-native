@@ -31,15 +31,18 @@ const SearchList: FC<SearchListProps> = ({
   useEffect(() => {
     const trackingData: TrackingData = {
       object: "Search",
-      action: "Search results",
+      action: "Viewed",
       component: "Search",
-      attrs: { eventTime: new Date() },
+      attrs: {
+        eventTime: new Date(),
+        pageName: "search results",
+        pageSection: "search",
+      },
     };
     track(trackingData);
   }, []);
 
   return (
-    // <View style={styles.container}>
     <FlatList
       data={hits}
       renderItem={({ item }) => (
@@ -54,8 +57,13 @@ const SearchList: FC<SearchListProps> = ({
           message="Please check all words are spelled correctly, or try a different search term"
           trackingData={{
             object: "Search",
-            action: "No search results",
+            action: "Viewed",
             component: "Search ",
+            attrs: {
+              eventTime: new Date(),
+              pageName: "no search results",
+              pageSection: "search",
+            },
           }}
         />
       }
@@ -64,7 +72,6 @@ const SearchList: FC<SearchListProps> = ({
       onEndReached={handleFetchMore}
       keyboardShouldPersistTaps={"always"}
     />
-    // </View>
   );
 };
 

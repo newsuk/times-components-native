@@ -45,7 +45,10 @@ const Search: FC<SearchProps> = ({ onArticlePress, algoliaConfig }) => {
       object: "Search",
       action: "Viewed",
       component: "Page",
-      attrs: {},
+      attrs: {
+        pageName: "search",
+        pageSection: "search",
+      },
     });
   }, []);
 
