@@ -1,5 +1,5 @@
 import React, { useRef, useState } from "react";
-import { Alert, Linking, Platform } from "react-native";
+import { Linking, Platform } from "react-native";
 import {
   WebView,
   WebViewMessageEvent,
@@ -22,6 +22,8 @@ interface IProps {
 const editorialLambdaProtocol = "https://";
 const editorialLambdaOrigin = "jotn9sgpg6.execute-api.eu-west-1.amazonaws.com";
 const editorialLambdaSlug = "prod/component";
+const minimumDifferenceInPixels = 5;
+const smallInteractiveAdditionalHeight = 30;
 
 function WebviewWrapper({ config, id }: IProps) {
   const { dev, environment, platform, version } = config;
@@ -42,22 +44,21 @@ function WebviewWrapper({ config, id }: IProps) {
   };
 
   const handleOnMessage = (event: WebViewMessageEvent) => {
-    console.log("url: ", event.nativeEvent.url);
-    if (event.persist) {
-      event.persist();
-    }
+    event.persist();
+
     if (event.nativeEvent.url !== uri) {
       webview.current?.stopLoading();
       webview.current?.goBack();
       openURLInBrowser(event.nativeEvent.url);
       return;
     }
+
     const newHeight = parseInt(event.nativeEvent.data, 10);
+
     if (isNaN(newHeight)) {
       return;
     }
-    const minimumDifferenceInPixels = 5;
-    const smallInteractiveAdditionalHeight = 30;
+
     if (newHeight && Math.abs(newHeight - height) > minimumDifferenceInPixels) {
       const updatedHeight =
         newHeight < smallInteractiveAdditionalHeight
@@ -67,20 +68,31 @@ function WebviewWrapper({ config, id }: IProps) {
     }
   };
 
-  const handleNavigationStateChange = (event: WebViewNavigation) => {
-    if (event.url === uri) {
-      return;
-    }
-    webview.current?.stopLoading();
-    webview.current?.goBack();
-    openURLInBrowser(event.url);
-  };
+  // const handleNavigationStateChange = (event: WebViewNavigation) => {
+  //   if (Platform.OS === "android") {
+  //     // if (event.url === uri) {
+  //     //   return;
+  //     // }
+  //     // // webview.current?.stopLoading();
+  //     // //webview.current?.goBack();
+  //     // webview.current?.reload();
+  //     // openURLInBrowser(event.url);
+  //     if (
+  //       !event.url.includes("data:text/html") &&
+  //       event.url.includes("http") &&
+  //       !event.url.includes(editorialLambdaOrigin)
+  //     ) {
+  //       openURLInBrowser(event.url);
+  //       webview.current?.reload();
+  //     }
+  //   }
+  // };
 
   return (
     <WebView
       injectedJavaScriptBeforeContentLoaded={scriptToInject}
       onMessage={handleOnMessage}
-      onNavigationStateChange={handleNavigationStateChange}
+      // onNavigationStateChange={handleNavigationStateChange}
       ref={webview}
       scrollEnabled={false}
       source={{ uri }}

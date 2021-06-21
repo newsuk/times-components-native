@@ -261,8 +261,13 @@ export default ({
             display === "fullwidth" && styles.interactiveContainerFullWidth,
           ]}
         >
+          {Platform.OS === "android" ? (
+            <InteractiveWrapper config={interactiveConfig} id={id} key={key} />
+          ) : (
+            <WebviewWrapper config={interactiveConfig} id={id} key={key} />
+          )}
           {/* <InteractiveWrapper config={interactiveConfig} id={id} key={key} /> */}
-          <WebviewWrapper config={interactiveConfig} id={id} key={key} />
+          {/* <WebviewWrapper config={interactiveConfig} id={id} key={key} /> */}
         </View>
       );
     },
