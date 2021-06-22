@@ -11,6 +11,7 @@ exports[`1. renders correctly with an image lead asset 1`] = `
       }
     }
     index={0}
+    testId="lead-image"
     uri="https://crop169.io/"
   />
   <Text>
