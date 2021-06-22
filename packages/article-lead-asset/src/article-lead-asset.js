@@ -21,6 +21,7 @@ const ArticleLeadAssetModalImage = ({
   extraContent,
 }) => (
   <ModalImage
+    testId={"lead-image"}
     {...{
       aspectRatio,
       caption,
