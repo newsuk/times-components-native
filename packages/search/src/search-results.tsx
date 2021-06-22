@@ -41,9 +41,13 @@ const SearchResults: FC<InfiniteHitsProps> = ({
         message="Please check your network connection and try again"
         trackingData={{
           object: "Search",
-          action: "No internet found",
+          action: "Viewed",
           component: "Search",
-          attrs: { eventTime: new Date() },
+          attrs: {
+            pageName: "no internet found",
+            pageSection: "search",
+            eventTime: new Date(),
+          },
         }}
       />
     );
@@ -59,7 +63,11 @@ const SearchResults: FC<InfiniteHitsProps> = ({
           object: "Search",
           action: "Empty state",
           component: "Search",
-          attrs: { eventTime: new Date() },
+          attrs: {
+            eventTime: new Date(),
+            pageName: "search",
+            pageSection: "search",
+          },
         }}
       />
     );
