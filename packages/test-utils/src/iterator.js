@@ -1,4 +1,3 @@
-/* global it */
 const iterator = (tests) =>
   tests.forEach(({ name, test }, indx) => {
     const index = indx + 1;

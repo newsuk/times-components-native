@@ -264,6 +264,7 @@ const ArticleSummary: React.FC<Props> = ({
       strapline={renderStrapline(articleReadState)}
       saveStar={withStar && renderSaveStar()}
       style={style}
+      center={!!centeredStar}
     />
   );
 };

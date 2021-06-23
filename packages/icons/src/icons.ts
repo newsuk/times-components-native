@@ -14,3 +14,4 @@ export { default as GlassMagnifierIcon } from "./icons/glass-magnifier";
 export { default as RightOrientedGlassMagnifier } from "./icons/right-oriented-magnifier";
 export { default as LeftChevron } from "./icons/left-chevron";
 export { default as DeleteIcon } from "./icons/delete-icon";
+export { default as IconCheckmark } from "./icons/checkmark";

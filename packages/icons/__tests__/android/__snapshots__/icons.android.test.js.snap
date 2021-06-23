@@ -832,3 +832,48 @@ exports[`16. deleteicon renders 1`] = `
   </RNSVGGroup>
 </RNSVGSvgView>
 `;
+
+exports[`17. iconcheckmark renders 1`] = `
+<RNSVGSvgView
+  align="xMidYMid"
+  bbHeight={15}
+  bbWidth={20}
+  focusable={false}
+  height={15}
+  meetOrSlice={0}
+  minX={0}
+  minY={0}
+  style={
+    Object {
+      "backgroundColor": "transparent",
+      "borderWidth": 0,
+      "flex": 0,
+      "height": 15,
+      "width": 20,
+    }
+  }
+  vbHeight={512}
+  vbWidth={512}
+  width={20}
+>
+  <RNSVGGroup>
+    <RNSVGPath
+      d="8b88ef71fa40ed4105a0ce4099357cf6"
+      fill={null}
+      propList={
+        Array [
+          "fill",
+          "stroke",
+          "strokeWidth",
+          "strokeLinecap",
+          "strokeMiterlimit",
+        ]
+      }
+      stroke={-1728053248}
+      strokeLinecap={2}
+      strokeMiterlimit={10}
+      strokeWidth="44"
+    />
+  </RNSVGGroup>
+</RNSVGSvgView>
+`;

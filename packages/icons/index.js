@@ -12,4 +12,5 @@ export {
   CloseIcon,
   DeleteIcon,
   GlassMagnifierIcon,
+  IconCheckmark,
 } from "./src/icons";
