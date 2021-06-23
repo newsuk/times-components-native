@@ -129,7 +129,7 @@ exports[`1. a full article with all content items with dropcap template 1`] = `
             }
           }
         >
-          <InteractiveWrapper />
+          <WebviewWrapper />
         </View>
       </View>
       <View
@@ -811,7 +811,7 @@ exports[`2. an article with interactives 1`] = `
             }
           }
         >
-          <InteractiveWrapper />
+          <WebviewWrapper />
         </View>
       </View>
       <View
@@ -833,7 +833,7 @@ exports[`2. an article with interactives 1`] = `
             }
           }
         >
-          <InteractiveWrapper />
+          <WebviewWrapper />
         </View>
       </View>
       <View
@@ -2555,7 +2555,7 @@ exports[`17. an article skeleton with responsive items 1`] = `
             }
           }
         >
-          <InteractiveWrapper />
+          <WebviewWrapper />
         </View>
       </View>
       <View
