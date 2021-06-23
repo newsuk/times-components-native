@@ -11,7 +11,7 @@ const HeaderStandfirst = ({ hasFlags, standfirst }) => {
       accessibilityRole="header"
       aria-level="2"
       style={[styles.standFirst, !hasFlags && styles.standFirstWithoutFlags]}
-      testID="standfirst"
+      testID="sub-headline"
     >
       {standfirst}
     </Text>
