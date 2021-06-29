@@ -11,7 +11,7 @@ exports[`1. article with header 1`] = `
       <View />
       <View>
         <View>
-          <InteractiveWrapper
+          <WebviewWrapper
             id="d883baab-bac6-4572-b54f-2c136d62c34b"
           />
         </View>
@@ -262,7 +262,7 @@ exports[`1. article with header 1`] = `
       </View>
       <View>
         <View>
-          <InteractiveWrapper
+          <WebviewWrapper
             id="d2f83305-d558-4f78-f582-32115c659355"
           />
         </View>

@@ -10,7 +10,10 @@ import {
 import Ad from "@times-components-native/ad";
 import InlineContent from "@times-components-native/inline-content";
 import ArticleImage from "@times-components-native/article-image";
-import InteractiveWrapper from "@times-components-native/interactive-wrapper";
+import {
+  InteractiveWrapper,
+  WebviewWrapper,
+} from "@times-components-native/interactive-wrapper";
 import KeyFacts from "@times-components-native/key-facts";
 import PullQuote from "@times-components-native/pull-quote";
 import Video from "@times-components-native/video";
@@ -258,7 +261,11 @@ export default ({
             display === "fullwidth" && styles.interactiveContainerFullWidth,
           ]}
         >
-          <InteractiveWrapper config={interactiveConfig} id={id} key={key} />
+          {Platform.OS === "android" ? (
+            <InteractiveWrapper config={interactiveConfig} id={id} key={key} />
+          ) : (
+            <WebviewWrapper config={interactiveConfig} id={id} key={key} />
+          )}
         </View>
       );
     },

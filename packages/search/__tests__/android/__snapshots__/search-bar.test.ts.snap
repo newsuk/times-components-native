@@ -171,6 +171,7 @@ exports[`Search Bar should render correctly 1`] = `
           onChangeText={[Function]}
           onFocus={[Function]}
           placeholder="Search"
+          placeholderTextColor="#000"
           rejectResponderTermination={true}
           style={
             Object {

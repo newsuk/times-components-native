@@ -31,7 +31,9 @@ const primaryColoursBase = {
   travel: "#2C79AD",
   weekend: "#05829A",
   world: "#636C17",
-};
+} as const;
+
+export type PrimaryColourBaseKeys = keyof typeof primaryColoursBase;
 
 const primaryColours = {
   "Arts & Features": primaryColoursBase.artsfeatures,
@@ -66,15 +68,25 @@ const primaryColours = {
   World: primaryColoursBase.world,
 };
 
+export type PrimaryColourKeys = keyof typeof primaryColours;
+
 const secondaryColoursBase = {
   thesundaytimesmagazine: "#F13D00",
 };
+
+export type SecondaryColoursBaseKeys = keyof typeof secondaryColoursBase;
 
 const secondaryColours = {
   "The Sunday Times Magazine": secondaryColoursBase.thesundaytimesmagazine,
 };
 
+export type SecondaryColoursKeys = keyof typeof secondaryColours;
+
 export default { ...primaryColoursBase, ...primaryColours };
+export type PrimaryAndSecondaryColoursKeys =
+  | PrimaryColourBaseKeys
+  | PrimaryColourKeys;
+
 export const secondarySectionColours = {
   ...secondaryColoursBase,
   ...secondaryColours,

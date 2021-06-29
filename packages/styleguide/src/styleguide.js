@@ -42,13 +42,9 @@ export {
 } from "./breakpoints";
 
 export { default as scales } from "./scales";
-
 export { default as spacing, globalSpacingStyles } from "./spacing";
-
 export { default as themeFactory } from "./theme/theme-factory";
-
 export { default as columnToPercentage } from "./grid/columnToPercentage";
-
 export { ARTICLE_READ_ANIMATION } from "./articleRead";
 
 export default ({ scale = scales.medium } = {}) => ({
