@@ -9,9 +9,7 @@ import {
   ImageStyle,
   NativeSyntheticEvent,
   PixelRatio,
-  StyleProp,
   View,
-  ViewProps,
 } from "react-native";
 import Url from "url-parse";
 import logoPath from "../assets/t.png";
@@ -30,7 +28,7 @@ export interface ResponsiveImageProps {
   readonly relativeWidth?: number;
   readonly resizeMode?: ImageStyle["resizeMode"];
   readonly rounded?: boolean;
-  readonly style?: StyleProp<ViewProps>;
+  readonly style?: any;
   readonly onLayout?: ImageBackgroundProps["onLayout"];
   readonly onError?: ImageProps["onError"];
 }

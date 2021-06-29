@@ -31,7 +31,7 @@ exports[`renders correctly 1`] = `
     document.body.appendChild(wrapper);
   }
   
-  var usingScale = 0;
+  var usingScale = false ? screen.width / window.innerWidth : 1;
   var scaling = false;
   var zoomedin = false;
   var lastHeight = 0;
@@ -42,7 +42,7 @@ exports[`renders correctly 1`] = `
   var checkPostMessageTimeout;
 
   function updateSize() {
-    if (zoomedin || scaling) {
+    if (zoomedin || scaling || document.fullscreenElement) {
       return;
     }
     if (
@@ -54,12 +54,16 @@ exports[`renders correctly 1`] = `
     }
 
     clearTimeout(checkPostMessageTimeout);
-    height = wrapper.offsetHeight || document.documentElement.offsetHeight;
-    width = wrapper.offsetWidth || document.documentElement.offsetWidth;
-
-    if(!usingScale && window.innerWidth) {
-      usingScale = 1;
+    var result = wrapper.getBoundingClientRect()
+    height = result.height + result.top;
+    if(!height) {
+      height = wrapper.offsetHeight || document.documentElement.offsetHeight
     }
+    width = result.width;
+    if(!width) {
+      width = wrapper.offsetWidth || document.documentElement.offsetWidth
+    }
+
 
     window.ReactNativeWebView.postMessage(JSON.stringify({ width: Math.min(width, screen.width), height: height * usingScale }));
 
@@ -101,6 +105,7 @@ exports[`renders correctly 1`] = `
     messagingModuleName="WebViewMessageHandler1"
     overScrollMode="always"
     scrollEnabled={false}
+    setSupportMultipleWindows={true}
     showsHorizontalScrollIndicator={false}
     showsVerticalScrollIndicator={false}
     source={
@@ -108,6 +113,7 @@ exports[`renders correctly 1`] = `
         "uri": "https://jotn9sgpg6.execute-api.eu-west-1.amazonaws.com/prod/component/a0534eee-682e-4955-8e1e-84b428ef1e79?dev=false&env=jest&platform=android&version=0.0.0",
       }
     }
+    startInLoadingState={true}
     style={
       Object {
         "backgroundColor": "transparent",
@@ -118,6 +124,26 @@ exports[`renders correctly 1`] = `
       }
     }
   />
+  <View
+    style={
+      Object {
+        "alignItems": "center",
+        "backgroundColor": "white",
+        "flex": 1,
+        "height": "100%",
+        "justifyContent": "center",
+        "position": "absolute",
+        "width": "100%",
+      }
+    }
+  >
+    <ActivityIndicator
+      animating={true}
+      color={null}
+      hidesWhenStopped={true}
+      size="small"
+    />
+  </View>
 </View>
 `;
 
