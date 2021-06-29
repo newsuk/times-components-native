@@ -296,3 +296,28 @@ exports[`16. deleteicon sets a width when height is set 1`] = `
   width={13}
 />
 `;
+
+exports[`17. iconcheckmark sets a width when height is set 1`] = `
+<RNSVGSvgView
+  align="xMidYMid"
+  bbHeight={50}
+  bbWidth={15}
+  focusable={false}
+  height={50}
+  meetOrSlice={0}
+  minX={0}
+  minY={0}
+  style={
+    Object {
+      "backgroundColor": "transparent",
+      "borderWidth": 0,
+      "flex": 0,
+      "height": 50,
+      "width": 15,
+    }
+  }
+  vbHeight={512}
+  vbWidth={512}
+  width={15}
+/>
+`;

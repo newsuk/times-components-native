@@ -13,6 +13,7 @@ import styles from "./styles";
 import summarise from "./summarise";
 import ArticleSummaryByline from "./article-summary-byline";
 import ArticleSummaryLabel from "./article-summary-label";
+import Read from "@times-components-native/read";
 
 function renderAst(ast) {
   return renderTrees(summarise(ast), renderer);
@@ -54,20 +55,19 @@ const MarkAsRead = ({ children, articleReadState }) => {
   );
 };
 
-function ArticleSummary(props) {
-  const {
-    articleReadState,
-    bylineProps,
-    content,
-    datePublicationProps,
-    flags,
-    headline,
-    labelProps,
-    style,
-    strapline,
-    saveStar,
-  } = props;
-
+function ArticleSummary({
+  articleReadState,
+  bylineProps,
+  content,
+  datePublicationProps,
+  flags,
+  headline,
+  labelProps,
+  style,
+  strapline,
+  saveStar,
+  center = false,
+}) {
   const { bylineOnTop = false } = bylineProps || {};
 
   const byline = bylineProps ? (
@@ -88,7 +88,12 @@ function ArticleSummary(props) {
       {bylineOnTop && byline}
       {headline}
       {strapline}
-      {flags}
+      {!articleReadState.read && flags}
+      {articleReadState.read && (
+        <Read
+          containerStyle={{ justifyContent: center ? "center" : "flex-start" }}
+        />
+      )}
       {content}
       {saveStar}
       {datePublicationProps ? (

@@ -234,3 +234,14 @@ exports[`16. deleteicon renders with different colours 1`] = `
   </RNSVGGroup>
 </RNSVGSvgView>
 `;
+
+exports[`17. iconcheckmark renders with different colours 1`] = `
+<RNSVGSvgView>
+  <RNSVGGroup>
+    <RNSVGPath
+      fill={null}
+      stroke={-1728053248}
+    />
+  </RNSVGGroup>
+</RNSVGSvgView>
+`;
