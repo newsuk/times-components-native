@@ -36,7 +36,7 @@ export default withTrackEvents(ArticleEndTracking, {
       eventName: "onViewed",
       getAttrs: () => ({
         event_navigation_action: "article : view end",
-        event_navigation_name: "scroll",
+        event_navigation_name: "link",
       }),
       trackingName: "ArticleEndTracking",
     },
