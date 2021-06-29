@@ -2,7 +2,13 @@ import React from "react";
 import { TouchableOpacity, ViewPropTypes } from "react-native";
 import PropTypes from "prop-types";
 
-const Link = ({ children, disabled, linkStyle, onPress, testIDProp = "" }) => {
+const Link = ({
+  children,
+  disabled,
+  linkStyle,
+  onPress,
+  testIDProp = null,
+}) => {
   return (
     <TouchableOpacity
       delayPressIn={100}

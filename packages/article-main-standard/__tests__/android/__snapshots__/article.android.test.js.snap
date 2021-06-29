@@ -32,6 +32,7 @@ exports[`1. an article 1`] = `
           }
           index={0}
           onImagePress={null}
+          testIDProp="lead-image"
           uri="https://crop169.io"
         />
         <Caption
@@ -224,6 +225,7 @@ exports[`6. an article with no byline 1`] = `
           }
           index={0}
           onImagePress={null}
+          testIDProp="lead-image"
           uri="https://crop169.io"
         />
         <Caption
@@ -317,6 +319,7 @@ exports[`7. an article with no label 1`] = `
           }
           index={0}
           onImagePress={null}
+          testIDProp="lead-image"
           uri="https://crop169.io"
         />
         <Caption

@@ -11,6 +11,7 @@ exports[`1. renders correctly with an image lead asset 1`] = `
       }
     }
     index={0}
+    testIDProp="lead-image"
     uri="https://crop169.io/"
   />
   <Text>
@@ -33,6 +34,7 @@ exports[`2. renders correctly with a video lead asset 1`] = `
         "uri": "https://crop169.io/",
       }
     }
+    testIDProp="lead-video"
     videoId="5678"
     width={600}
   />

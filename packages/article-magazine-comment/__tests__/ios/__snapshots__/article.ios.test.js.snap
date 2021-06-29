@@ -129,6 +129,7 @@ exports[`3. an article with no headline falls back to use shortheadline 1`] = `
         }
         index={0}
         onImagePress={null}
+        testIDProp="lead-image"
         uri="https://crop169.io"
       />
       <CenteredCaption
@@ -223,6 +224,7 @@ exports[`4. an article with ads 1`] = `
         }
         index={0}
         onImagePress={null}
+        testIDProp="lead-image"
         uri="https://crop169.io"
       />
       <CenteredCaption
@@ -320,6 +322,7 @@ exports[`7. an article with no author 1`] = `
       }
       index={0}
       onImagePress={null}
+      testIDProp="lead-image"
       uri="https://crop169.io"
     />
     <CenteredCaption
