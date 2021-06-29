@@ -2,16 +2,19 @@ import React from "react";
 import { TouchableOpacity, ViewPropTypes } from "react-native";
 import PropTypes from "prop-types";
 
-const Link = ({ children, disabled, linkStyle, onPress }) => (
-  <TouchableOpacity
-    delayPressIn={100}
-    disabled={disabled}
-    onPress={onPress}
-    style={linkStyle}
-  >
-    {children}
-  </TouchableOpacity>
-);
+const Link = ({ children, disabled, linkStyle, onPress, testIDProp = "" }) => {
+  return (
+    <TouchableOpacity
+      delayPressIn={100}
+      disabled={disabled}
+      onPress={onPress}
+      style={linkStyle}
+      testID={testIDProp}
+    >
+      {children}
+    </TouchableOpacity>
+  );
+};
 
 const { style: ViewPropTypesStyle } = ViewPropTypes;
 

@@ -31,6 +31,7 @@ const ArticleHeader = ({
     >
       <HeaderLabel isVideo={hasVideo} label={label} />
       <Text
+        testID={"headline"}
         selectable
         style={[
           styles.articleHeadLineText,

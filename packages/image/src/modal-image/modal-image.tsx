@@ -32,6 +32,7 @@ interface ModalImageProps extends MainImage {
   rounded?: boolean;
   show?: boolean;
   imageStyles?: StyleProp<ImageProps>;
+  testIDProp?: ImageProps["testID"];
 }
 
 const computeAspectRatio = (ratio?: number | string) => {
@@ -74,6 +75,7 @@ const getUrls = (images: ImageContent[], mainImage: MainImage) => {
 };
 
 const ModalImage: FC<ModalImageProps> = ({
+  testIDProp,
   aspectRatio,
   images: initialImages = [],
   caption,
@@ -119,7 +121,10 @@ const ModalImage: FC<ModalImageProps> = ({
 
   if (onImagePress && !isSmallImage) {
     return (
-      <Button onPress={() => onImagePress(currentIndex)}>
+      <Button
+        onPress={() => onImagePress(currentIndex)}
+        testIDProp={testIDProp}
+      >
         <Image
           uri={uri}
           rounded={rounded}
@@ -215,7 +220,7 @@ const ModalImage: FC<ModalImageProps> = ({
           </ResponsiveContext.Consumer>
         </View>
       </Modal>
-      <Button onPress={handleShowModal}>
+      <Button onPress={handleShowModal} testIDProp={testIDProp}>
         <Image
           aspectRatio={aspectRatio}
           relativeHeight={relativeHeight}
