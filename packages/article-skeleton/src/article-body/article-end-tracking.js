@@ -32,8 +32,8 @@ ArticleEndTracking.propTypes = {
 export default withTrackEvents(ArticleEndTracking, {
   analyticsEvents: [
     {
-      actionName: "onViewed",
-      eventName: "onViewed",
+      actionName: "link",
+      eventName: "link",
       getAttrs: () => ({
         event_navigation_action: "article : view end",
         event_navigation_name: "link",
