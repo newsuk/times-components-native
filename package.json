@@ -59,6 +59,7 @@
     "@react-native-community/async-storage": "^1.11.0",
     "@react-native-community/netinfo": "5.9.10",
     "@skele/components": "1.0.0-alpha.40",
+    "@types/cheerio": "^0.22.29",
     "algoliasearch": "4.8.5",
     "apollo-cache-inmemory": "1.5.1",
     "apollo-client": "2.5.1",
