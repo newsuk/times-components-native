@@ -19,25 +19,26 @@ const ArticleLeadAssetModalImage = ({
   relativeHorizontalOffset,
   relativeVerticalOffset,
   extraContent,
-}) => (
-  <ModalImage
-    {...{
-      aspectRatio,
-      caption,
-      crop,
-      onImagePress,
-      uri,
-      relativeWidth,
-      relativeHeight,
-      relativeHorizontalOffset,
-      relativeVerticalOffset,
-      images: extraContent,
-    }}
-    testIDProp={"lead-image"}
-    index={0}
-  />
-);
-
+}) => {
+  return (
+    <ModalImage
+      {...{
+        aspectRatio,
+        caption,
+        crop,
+        onImagePress,
+        uri,
+        relativeWidth,
+        relativeHeight,
+        relativeHorizontalOffset,
+        relativeVerticalOffset,
+        images: extraContent,
+      }}
+      testIDProp={"lead-image"}
+      index={0}
+    />
+  );
+};
 const ArticleLeadAsset = ({
   getImageCrop,
   renderCaption,

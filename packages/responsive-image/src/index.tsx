@@ -31,6 +31,7 @@ export interface ResponsiveImageProps {
   readonly style?: any;
   readonly onLayout?: ImageBackgroundProps["onLayout"];
   readonly onError?: ImageProps["onError"];
+  readonly captionText?: string;
 }
 
 interface ElementProps {
@@ -42,6 +43,7 @@ interface ElementProps {
   readonly resize: ImageStyle["resizeMode"];
   readonly fadeDuration: number;
   readonly onError?: ImageProps["onError"];
+  readonly captionText?: string;
 }
 
 const ImageElement = ({
@@ -53,8 +55,11 @@ const ImageElement = ({
   resize,
   fadeDuration,
   onError,
+  captionText,
 }: ElementProps) => (
   <Image
+    accessible
+    accessibilityLabel={captionText}
     fadeDuration={fadeDuration}
     source={source}
     onLoadEnd={onLoadEnd}
@@ -70,21 +75,20 @@ const ImageElement = ({
   />
 );
 
-const ResponsiveImage = (props: ResponsiveImageProps) => {
-  const {
-    uri,
-    aspectRatio,
-    style: propStyle = {},
-    relativeHeight = 1,
-    relativeHorizontalOffset = 0,
-    relativeVerticalOffset = 0,
-    relativeWidth = 1,
-    resizeMode,
-    rounded,
-    onLayout,
-    onError,
-  } = props;
-
+const ResponsiveImage = ({
+  uri,
+  aspectRatio,
+  style: propStyle = {},
+  relativeHeight = 1,
+  relativeHorizontalOffset = 0,
+  relativeVerticalOffset = 0,
+  relativeWidth = 1,
+  resizeMode,
+  rounded,
+  onLayout,
+  onError,
+  captionText,
+}: ResponsiveImageProps) => {
   const [width, setWidth] = React.useState(0);
   const [showOffline, setShowOffline] = React.useState(false);
   const [showOnline, setShowOnline] = React.useState(false);
@@ -177,6 +181,7 @@ const ResponsiveImage = (props: ResponsiveImageProps) => {
   const highRes = showOnline && (
     <ImageElement
       key="online"
+      captionText={captionText}
       source={{ uri: appendToImageURL(onlineUrl, "resize", closestWidth) }}
       aspectRatio={aspectRatio}
       borderRadius={borderRadius}
