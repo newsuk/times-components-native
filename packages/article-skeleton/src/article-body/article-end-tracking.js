@@ -14,7 +14,6 @@ const ArticleEndTracking = ({ onViewed }) => {
     <ViewportAwareView
       testID="viewportAwareView"
       onViewportEnter={() => {
-        console.log("onviewed");
         onViewed();
       }}
     />
