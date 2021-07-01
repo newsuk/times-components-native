@@ -87,6 +87,7 @@ exports[`Image loads high-res 1`] = `
     }
   />
   <Image
+    accessible={true}
     fadeDuration={0}
     onError={[Function]}
     onLoadEnd={[Function]}
