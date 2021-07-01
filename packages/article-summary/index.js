@@ -4,7 +4,8 @@ export {
   ArticleSummaryHeadline,
   ArticleSummaryLabel,
   ArticleSummaryStrapline,
-  renderAst,
-  renderer,
   summarise,
 } from "./src/article-summary";
+
+export { renderAst } from "./src/renderAst";
+export { renderer } from "./src/article-summary-renderer";
