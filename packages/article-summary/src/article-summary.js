@@ -1,10 +1,9 @@
-import React, { useEffect, useRef } from "react";
-import { Animated, Platform, Text, View } from "react-native";
+import React from "react";
+import { Text, View } from "react-native";
 import PropTypes from "prop-types";
 import { articleBylinePropTypes } from "@times-components-native/article-byline";
 import DatePublication from "@times-components-native/date-publication";
 
-import { ARTICLE_READ_ANIMATION } from "@times-components-native/styleguide";
 import ArticleSummaryContent from "./article-summary-content";
 import ArticleSummaryHeadline from "./article-summary-headline";
 import ArticleSummaryStrapline from "./article-summary-strapline";
@@ -14,42 +13,6 @@ import summarise from "./summarise";
 import ArticleSummaryByline from "./article-summary-byline";
 import ArticleSummaryLabel from "./article-summary-label";
 import Read from "@times-components-native/read";
-
-const MarkAsRead = ({ children, articleReadState }) => {
-  const animationOpacity = useRef(new Animated.Value(1)).current;
-  const opacity = 0.57;
-
-  useEffect(() => {
-    if (!articleReadState.animate) return;
-
-    Animated.timing(animationOpacity, {
-      delay: ARTICLE_READ_ANIMATION.DELAY,
-      duration: ARTICLE_READ_ANIMATION.DURATION,
-      toValue: opacity,
-      useNativeDriver: Platform.OS === "ios",
-    }).start();
-  }, [articleReadState.animate]);
-
-  return articleReadState.animate ? (
-    <Animated.View
-      style={{
-        opacity: animationOpacity,
-      }}
-    >
-      {children}
-    </Animated.View>
-  ) : articleReadState.read ? (
-    <View
-      style={{
-        opacity: opacity,
-      }}
-    >
-      {children}
-    </View>
-  ) : (
-    <View>{children}</View>
-  );
-};
 
 function ArticleSummary({
   articleReadState,
@@ -157,7 +120,6 @@ export {
   ArticleSummaryHeadline,
   ArticleSummaryLabel,
   ArticleSummaryStrapline,
-  MarkAsRead,
   renderer,
   summarise,
 };
