@@ -11,7 +11,12 @@ const ArticleEndTracking = ({ onViewed }) => {
   const ViewportAwareView = Viewport.Aware(View);
 
   return (
-    <ViewportAwareView testID="viewportAwareView" onViewportEnter={onViewed} />
+    <ViewportAwareView
+      testID="viewportAwareView"
+      onViewportEnter={() => {
+        onViewed();
+      }}
+    />
   );
 };
 
@@ -26,12 +31,11 @@ ArticleEndTracking.propTypes = {
 export default withTrackEvents(ArticleEndTracking, {
   analyticsEvents: [
     {
-      actionName: "onViewed",
-      eventName: "onViewed",
+      actionName: "link",
+      eventName: "link",
       getAttrs: () => ({
-        event_navigation_action: "navigation",
-        event_navigation_name: "article : view end",
-        event_navigation_browsing_method: "scroll",
+        event_navigation_action: "article : view end",
+        event_navigation_name: "link",
       }),
       trackingName: "ArticleEndTracking",
     },
