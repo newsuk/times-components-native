@@ -32,7 +32,7 @@ export default withTrackingContext(
         trackingName: "NewsletterPuffButton",
         getAttrs: ({ newsletterPuffName }) => ({
           article_parent_name: `${newsletterPuffName}`,
-          event_navigation_name: "widget : puff : sign up now",
+          event_navigation_name: `widget : puff : ${newsletterPuffName}`,
           event_navigation_browsing_method: "click",
         }),
       },
@@ -41,7 +41,7 @@ export default withTrackingContext(
   {
     getAttrs: ({ newsletterPuffName }) => ({
       event_navigation_action: "navigation",
-      event_navigation_name: "widget : puff : sign up now : displayed",
+      event_navigation_name: `widget : puff : ${newsletterPuffName} : displayed`,
       article_parent_name: `${newsletterPuffName}`,
       event_navigation_browsing_method: "automated",
     }),

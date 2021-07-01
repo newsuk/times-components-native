@@ -34,6 +34,7 @@ export const SponsoredAd: React.FC<Props> = ({ numberOfAds = 4 }) => {
         style={styles.sponsoredAd}
         originWhitelist={["*"]}
         onShouldStartLoadWithRequest={handleRequest}
+        startInLoadingState={true}
         scrollEnabled={false}
         source={{
           html: `

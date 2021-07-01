@@ -84,6 +84,7 @@ class InteractiveWrapper extends Component {
           this.webview = ref;
         }}
         scrollEnabled={false}
+        startInLoadingState={true}
         onShouldStartLoadWithRequest={this.handleOnShouldStartLoadWithRequest}
         source={{ uri }}
         style={{ height, width: "100%" }}

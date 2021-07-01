@@ -805,6 +805,7 @@ exports[`Inline Newsletter Puff renders the success view after subscribing:  med
             "opacity": 1,
           }
         }
+        testID={null}
       >
         <View
           style={
@@ -993,6 +994,7 @@ exports[`Inline Newsletter Puff renders the success view after subscribing:  sma
             "opacity": 1,
           }
         }
+        testID={null}
       >
         <View
           style={
@@ -1189,6 +1191,7 @@ exports[`Inline Newsletter Puff renders the success view after subscribing:  wid
             "opacity": 1,
           }
         }
+        testID={null}
       >
         <View
           style={

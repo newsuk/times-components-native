@@ -5,6 +5,7 @@ exports[`1. group of topics 1`] = `
   <View>
     <View
       focusable={true}
+      testID={null}
     >
       <View>
         <Text
@@ -20,6 +21,7 @@ exports[`1. group of topics 1`] = `
   <View>
     <View
       focusable={true}
+      testID={null}
     >
       <View>
         <Text
@@ -35,6 +37,7 @@ exports[`1. group of topics 1`] = `
   <View>
     <View
       focusable={true}
+      testID={null}
     >
       <View>
         <Text
@@ -50,6 +53,7 @@ exports[`1. group of topics 1`] = `
   <View>
     <View
       focusable={true}
+      testID={null}
     >
       <View>
         <Text
@@ -65,6 +69,7 @@ exports[`1. group of topics 1`] = `
   <View>
     <View
       focusable={true}
+      testID={null}
     >
       <View>
         <Text
@@ -123,6 +128,7 @@ exports[`4. article topic 1`] = `
 <View>
   <View
     focusable={true}
+    testID={null}
   >
     <View>
       <Text
