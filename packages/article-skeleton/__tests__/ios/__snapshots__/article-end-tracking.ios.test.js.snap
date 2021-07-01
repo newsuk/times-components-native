@@ -20,18 +20,5 @@ Array [
       "object": "Article",
     },
   ],
-  Array [
-    Object {
-      "action": "onViewed",
-      "attrs": Object {
-        "eventTime": "2018-01-01T00:00:00.000Z",
-        "event_navigation_action": "navigation",
-        "event_navigation_browsing_method": "scroll",
-        "event_navigation_name": "article : view end",
-      },
-      "component": "ArticleEndTracking",
-      "object": "Article",
-    },
-  ],
 ]
 `;
