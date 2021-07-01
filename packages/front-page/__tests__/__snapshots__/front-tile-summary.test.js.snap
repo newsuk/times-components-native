@@ -337,18 +337,15 @@ exports[`FrontTileSummary renders with a missing byline 1`] = `
         "flex": 1,
       },
       Object {
-        "minHeight": 200,
-        "opacity": 1,
+        "minHeight": undefined,
+        "opacity": 0,
       },
     ]
   }
 >
   <View
-    style={
-      Object {
-        "marginBottom": 10,
-      }
-    }
+    onLayout={[Function]}
+    testID="headlineWrapper"
   >
     <ArticleSummaryHeadline
       allowFontScaling={false}
@@ -366,11 +363,8 @@ exports[`FrontTileSummary renders with a missing byline 1`] = `
     />
   </View>
   <View
-    style={
-      Object {
-        "marginBottom": 20,
-      }
-    }
+    onLayout={[Function]}
+    testID="straplineWrapper"
   >
     <ArticleSummaryStrapline
       allowFontScaling={false}
@@ -387,32 +381,9 @@ exports[`FrontTileSummary renders with a missing byline 1`] = `
       }
     />
   </View>
-  <FrontArticleSummaryContent
-    contentHeight={120}
-    contentWidth={200}
-    numberOfLines={6}
-    summary={
-      Array [
-        Object {
-          "attributes": Object {},
-          "children": Array [
-            Object {
-              "attributes": Object {
-                "value": "Test",
-              },
-              "children": Array [],
-              "name": "text",
-            },
-          ],
-          "name": "paragraph",
-        },
-      ]
-    }
-    summaryStyle={
-      Object {
-        "backgroundColor": "orange",
-      }
-    }
+  <View
+    onLayout={[Function]}
+    testID="bylineWrapper"
   />
 </View>
 `;
@@ -428,18 +399,15 @@ exports[`FrontTileSummary renders with a missing strapline 1`] = `
         "flex": 1,
       },
       Object {
-        "minHeight": 200,
-        "opacity": 1,
+        "minHeight": undefined,
+        "opacity": 0,
       },
     ]
   }
 >
   <View
-    style={
-      Object {
-        "marginBottom": 10,
-      }
-    }
+    onLayout={[Function]}
+    testID="headlineWrapper"
   >
     <ArticleSummaryHeadline
       allowFontScaling={false}
@@ -457,11 +425,12 @@ exports[`FrontTileSummary renders with a missing strapline 1`] = `
     />
   </View>
   <View
-    style={
-      Object {
-        "marginBottom": 15,
-      }
-    }
+    onLayout={[Function]}
+    testID="straplineWrapper"
+  />
+  <View
+    onLayout={[Function]}
+    testID="bylineWrapper"
   >
     <FrontPageByline
       byline={
@@ -485,44 +454,6 @@ exports[`FrontTileSummary renders with a missing strapline 1`] = `
       }
     />
   </View>
-  <FrontArticleSummaryContent
-    bylines={
-      Array [
-        Object {
-          "byline": Array [
-            Object {
-              "foo": "bar",
-            },
-          ],
-        },
-      ]
-    }
-    contentHeight={120}
-    contentWidth={200}
-    numberOfLines={6}
-    summary={
-      Array [
-        Object {
-          "attributes": Object {},
-          "children": Array [
-            Object {
-              "attributes": Object {
-                "value": "Test",
-              },
-              "children": Array [],
-              "name": "text",
-            },
-          ],
-          "name": "paragraph",
-        },
-      ]
-    }
-    summaryStyle={
-      Object {
-        "backgroundColor": "orange",
-      }
-    }
-  />
 </View>
 `;
 

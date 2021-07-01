@@ -6,7 +6,7 @@ import { NativeModules } from "react-native";
 import { isTablet } from "react-native-device-info";
 import { initialWindowMetrics } from "react-native-safe-area-context";
 
-import { ContextType, Orientation } from "./context";
+import { ContextType, Orientation } from "./types";
 
 const config = (NativeModules || {}).ReactConfig;
 

@@ -780,12 +780,9 @@ export interface InTheNewsSliceInput {
 
 export interface PuffLiteInput {
   title: string;
-
   strapline: string;
-
   mainLink: PuffMainLinkInput;
-
-  leadImage: ImageInput;
+  leadImage?: ImageInput;
 }
 
 export interface PuzzleSectionInput {

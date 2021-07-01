@@ -1,5 +1,5 @@
 import { Tile } from "@times-components-native/fixture-generator/src/types";
-import { Orientation } from "@times-components-native/responsive/src/context";
+import { Orientation } from "@times-components-native/responsive/src/types";
 import { Slice } from "@times-components-native/section/src/utils/transformSlice";
 import { editionBreakpoints } from "@times-components-native/styleguide";
 

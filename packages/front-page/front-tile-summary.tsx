@@ -115,14 +115,12 @@ const FrontTileSummary: React.FC<Props> = (props) => {
     hasVideo = false,
   } = props;
   const styles = styleFactory();
-  const [headlineHeight, setHeadlineHeight] = useState();
-  const [straplineHeight, setStraplineHeight] = useState();
-  const [bylineHeight, setBylineHeight] = useState();
+  const [headlineHeight, setHeadlineHeight] = useState<number>(0);
+  const [straplineHeight, setStraplineHeight] = useState<number>(0);
+  const [bylineHeight, setBylineHeight] = useState<number>(0);
 
   const allMeasured =
-    headlineHeight !== undefined &&
-    straplineHeight !== undefined &&
-    bylineHeight !== undefined;
+    headlineHeight !== 0 && straplineHeight !== 0 && bylineHeight !== 0;
 
   const TileSummaryContainer: React.FC<{
     hidden: boolean;
@@ -143,9 +141,9 @@ const FrontTileSummary: React.FC<Props> = (props) => {
 
   // re-measure/render on orientation change
   useEffect(() => {
-    setHeadlineHeight(undefined);
-    setStraplineHeight(undefined);
-    setBylineHeight(undefined);
+    setHeadlineHeight(0);
+    setStraplineHeight(0);
+    setBylineHeight(0);
   }, [orientation]);
 
   return (
