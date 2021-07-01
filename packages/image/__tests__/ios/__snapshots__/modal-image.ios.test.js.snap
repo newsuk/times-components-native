@@ -20,6 +20,7 @@ exports[`1. modal image 1`] = `
       >
         <View
           focusable={true}
+          testID={null}
         >
           <Image
             resizeMode="contain"
@@ -136,6 +137,7 @@ exports[`1. modal image 1`] = `
   </Modal>
   <View
     focusable={true}
+    testID={null}
   >
     <View>
       <Image
@@ -172,6 +174,7 @@ exports[`2. modal image with no caption 1`] = `
       >
         <View
           focusable={true}
+          testID={null}
         >
           <Image
             resizeMode="contain"
@@ -277,6 +280,7 @@ exports[`2. modal image with no caption 1`] = `
   </Modal>
   <View
     focusable={true}
+    testID={null}
   >
     <View
       accessibilityIgnoresInvertColors={true}
@@ -314,6 +318,7 @@ exports[`3. modal image with custom highressize 1`] = `
       >
         <View
           focusable={true}
+          testID={null}
         >
           <Image
             resizeMode="contain"
@@ -430,6 +435,7 @@ exports[`3. modal image with custom highressize 1`] = `
   </Modal>
   <View
     focusable={true}
+    testID={null}
   >
     <View>
       <Image

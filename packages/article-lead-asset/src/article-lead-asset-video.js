@@ -26,6 +26,7 @@ const ArticleLeadAssetVideo = ({
 
   return (
     <Video
+      testIDProp={"lead-video"}
       accountId={brightcoveAccountId}
       height={height}
       onVideoPress={onVideoPress}

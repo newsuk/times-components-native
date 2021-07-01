@@ -16,6 +16,7 @@ exports[`NewsletterPuffLink renders the link with the text \`Manage preferences 
       "opacity": 1,
     }
   }
+  testID={null}
 >
   <View
     style={

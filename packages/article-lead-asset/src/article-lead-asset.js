@@ -21,7 +21,6 @@ const ArticleLeadAssetModalImage = ({
   extraContent,
 }) => (
   <ModalImage
-    testId={"lead-image"}
     {...{
       aspectRatio,
       caption,
@@ -34,6 +33,7 @@ const ArticleLeadAssetModalImage = ({
       relativeVerticalOffset,
       images: extraContent,
     }}
+    testIDProp={"lead-image"}
     index={0}
   />
 );

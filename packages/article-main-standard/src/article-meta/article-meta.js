@@ -52,7 +52,7 @@ function ArticleMeta({
             : styles.articleMetaElementWithBorder
         }
       >
-        <Text style={styles.datePublication}>
+        <Text style={styles.datePublication} testID={"date-time"}>
           <DatePublication date={publishedTime} publication={publicationName} />
         </Text>
       </View>

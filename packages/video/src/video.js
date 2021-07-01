@@ -19,6 +19,7 @@ const Video = ({
   relativeHeight,
   relativeHorizontalOffset,
   relativeVerticalOffset,
+  testIDProp,
 }) => (
   <Touchable
     accessibilityLabel="Video Splash"
@@ -29,7 +30,7 @@ const Video = ({
         videoId,
       });
     }}
-    testID="splash-component"
+    testID={testIDProp ? testIDProp : "splash-component"}
   >
     <View style={[styles.videoTabletContainer, { height, width }]}>
       {poster ? (
