@@ -1,5 +1,5 @@
 import React, { FC } from "react";
-import Caption from "@times-components-native/caption";
+import { Caption } from "@times-components-native/caption";
 import { captionStyles, tabletCaptionStyles } from "../styles";
 
 export interface ModalCaptionProps {
