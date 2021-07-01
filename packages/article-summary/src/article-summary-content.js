@@ -1,7 +1,7 @@
 import React from "react";
 import { Text } from "react-native";
 import PropTypes from "prop-types";
-import { renderAst as defaultRenderAst } from "./article-summary";
+import { renderAst as defaultRenderAst } from "./renderAst";
 import styles from "./styles";
 
 const ArticleSummaryContent = ({

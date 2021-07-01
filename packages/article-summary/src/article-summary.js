@@ -3,7 +3,7 @@ import { Animated, Platform, Text, View } from "react-native";
 import PropTypes from "prop-types";
 import { articleBylinePropTypes } from "@times-components-native/article-byline";
 import DatePublication from "@times-components-native/date-publication";
-import renderTrees from "@times-components-native/markup-forest";
+
 import { ARTICLE_READ_ANIMATION } from "@times-components-native/styleguide";
 import ArticleSummaryContent from "./article-summary-content";
 import ArticleSummaryHeadline from "./article-summary-headline";
@@ -14,10 +14,6 @@ import summarise from "./summarise";
 import ArticleSummaryByline from "./article-summary-byline";
 import ArticleSummaryLabel from "./article-summary-label";
 import Read from "@times-components-native/read";
-
-function renderAst(ast) {
-  return renderTrees(summarise(ast), renderer);
-}
 
 const MarkAsRead = ({ children, articleReadState }) => {
   const animationOpacity = useRef(new Animated.Value(1)).current;
@@ -162,7 +158,6 @@ export {
   ArticleSummaryLabel,
   ArticleSummaryStrapline,
   MarkAsRead,
-  renderAst,
   renderer,
   summarise,
 };
