@@ -1,6 +1,6 @@
 import React from "react";
 import { View } from "react-native";
-import { TabletContentContainer } from "@times-components-native/slice-layout";
+import { TabletContentContainer } from "../shared";
 import HorizontalLayout from "../horizontallayout";
 import { getStyles } from "./styles";
 import { useResponsiveContext } from "@times-components-native/responsive";

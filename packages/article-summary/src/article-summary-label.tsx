@@ -3,7 +3,7 @@ import styles from "@times-components-native/article-summary/src/styles";
 import VideoLabel from "@times-components-native/video-label";
 import ArticleLabel from "@times-components-native/article-label";
 import React, { FC } from "react";
-import { MarkAsRead } from "@times-components-native/article-summary/src/article-summary";
+import { MarkAsRead } from "@times-components-native/article-summary/src/MarkAsRead";
 
 export interface ArticleSummaryLabelProps {
   articleReadState: {

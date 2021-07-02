@@ -25,7 +25,7 @@ import {
   Crop,
   Tile,
 } from "@times-components-native/fixture-generator/src/types";
-import { Orientation } from "@times-components-native/responsive/src/context";
+import { Orientation } from "@times-components-native/responsive/src/types";
 
 interface Props {
   onPress: OnArticlePress;

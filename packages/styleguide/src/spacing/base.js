@@ -1,10 +1,10 @@
 const spacingBase = 5;
 
-export default function (multiple) {
-  return spacingBase * multiple;
-}
+const spacing = (multiple) => spacingBase * multiple;
 
 export const globalSpacingStyles = {
   tabletHeadline: {},
   tabletTeaser: {},
 };
+
+export default spacing;

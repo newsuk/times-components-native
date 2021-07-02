@@ -1,5 +1,5 @@
 import { consecutiveItemsFlagger } from "../../src/utils/consecutiveItemsFlagger";
-import { Orientation } from "@times-components-native/responsive/src/context";
+import { Orientation } from "@times-components-native/responsive/src/types";
 
 describe("consecutiveItemsFlagger", () => {
   const landscape = Orientation.LANDSCAPE;

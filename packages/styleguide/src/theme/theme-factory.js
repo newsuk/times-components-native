@@ -53,7 +53,7 @@ const headlineCasePicker = (section, template) =>
     ? "uppercase"
     : null;
 
-export default (sectionParam, templateParam) => {
+const themeFactory = (sectionParam, templateParam) => {
   const section = sectionParam || "default";
   const template = templateParam || "mainstandard";
 
@@ -65,3 +65,5 @@ export default (sectionParam, templateParam) => {
     headlineCase: headlineCasePicker(section, template),
   };
 };
+
+export default themeFactory;

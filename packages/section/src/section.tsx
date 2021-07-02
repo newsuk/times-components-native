@@ -22,7 +22,7 @@ import {
 } from "./utils";
 import { OnArticlePress } from "@times-components-native/types";
 import { SectionTitles } from "./utils/sectionConfigs";
-import { Orientation } from "@times-components-native/responsive/src/context";
+import { Orientation } from "@times-components-native/responsive/src/types";
 // @ts-ignore
 import { Viewport } from "@skele/components";
 
@@ -36,7 +36,7 @@ interface Props {
   onLinkPress: (link: any) => void;
   onPuzzlePress: () => void;
   onPuzzleBarPress: () => void;
-  onViewed: (item: any, slices: any[]) => void;
+  onViewed?: (item: any, slices: any[]) => void;
   publishedTime: string;
   receiveChildList: (childList: any) => void;
   section: {
