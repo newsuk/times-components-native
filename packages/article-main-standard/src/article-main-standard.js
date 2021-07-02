@@ -13,7 +13,7 @@ import {
   getCropByPriority,
 } from "@times-components-native/utils";
 import { tabletWidth } from "@times-components-native/styleguide";
-import Caption from "@times-components-native/caption";
+import { Caption } from "@times-components-native/caption";
 import Context from "@times-components-native/context";
 import ArticleHeader from "./article-header/article-header";
 import ArticleMeta from "./article-meta/article-meta";

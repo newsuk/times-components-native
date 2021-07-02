@@ -11,7 +11,7 @@ import {
 } from "@times-components-native/utils";
 import ArticleLeadAsset from "@times-components-native/article-lead-asset";
 import { ResponsiveContext } from "@times-components-native/responsive";
-import Caption from "@times-components-native/caption";
+import { Caption } from "@times-components-native/caption";
 import Context from "@times-components-native/context";
 import ArticleHeader from "./article-header/article-header";
 import ArticleLeftColumn from "./article-left-column/article-left-column";

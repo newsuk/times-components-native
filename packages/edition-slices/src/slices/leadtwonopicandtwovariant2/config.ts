@@ -1,4 +1,4 @@
-import { Orientation } from "@times-components-native/responsive/src/context";
+import { Orientation } from "@times-components-native/responsive/src/types";
 import { SliceBaseConfig, TileConfig } from "@times-components-native/types";
 
 const lead1Base: Pick<TileConfig, "headline" | "summary"> = {

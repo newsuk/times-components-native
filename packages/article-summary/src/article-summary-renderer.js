@@ -2,7 +2,7 @@ import React from "react";
 import coreRenderers from "@times-components-native/markup";
 import { Text } from "react-native";
 
-export default {
+const renderer = {
   ...coreRenderers,
   link(key, attributes, renderedChildren) {
     return <Text key={key}>{renderedChildren}</Text>;
@@ -27,3 +27,5 @@ export default {
     );
   },
 };
+
+export default renderer;

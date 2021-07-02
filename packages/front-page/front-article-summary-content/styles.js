@@ -3,7 +3,7 @@ import articleSummaryStyles from "@times-components-native/article-summary/src/s
 
 const { colours, fonts, spacing } = styleguide();
 
-export default {
+const styles = {
   summary: {
     ...articleSummaryStyles.text,
     color: colours.functional.primary,
@@ -12,3 +12,5 @@ export default {
   bylineContainer: { marginBottom: spacing(1) },
   container: { flex: 1 },
 };
+
+export default styles;

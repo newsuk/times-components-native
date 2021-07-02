@@ -1,5 +1,5 @@
 import { prepareSlicesForRender } from "../../src/utils/prepareSlicesForRender";
-import { Orientation } from "@times-components-native/responsive/src/context";
+import { Orientation } from "@times-components-native/responsive/src/types";
 
 describe("prepareSlicesForRender", () => {
   it("should transform data", () => {

@@ -1,6 +1,6 @@
 import memoizeOne from "memoize-one";
 import { SliceName } from "@times-components-native/types";
-import { Orientation } from "@times-components-native/responsive/src/context";
+import { Orientation } from "@times-components-native/responsive/src/types";
 
 const withIsConsecutive = (slice: any) => ({ ...slice, isConsecutive: true });
 

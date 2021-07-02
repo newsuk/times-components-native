@@ -1,6 +1,6 @@
 import ArticleByline from "@times-components-native/article-byline";
 import React, { FC } from "react";
-import { MarkAsRead } from "@times-components-native/article-summary/src/article-summary";
+import { MarkAsRead } from "./MarkAsRead";
 
 export interface ArticleSummaryBylineProps {
   articleReadState: {

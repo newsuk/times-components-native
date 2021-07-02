@@ -24,7 +24,7 @@ import {
   EditionBreakpointKeys,
   TileConfig,
 } from "@times-components-native/types";
-import { Orientation } from "@times-components-native/responsive/src/context";
+import { Orientation } from "@times-components-native/responsive/src/types";
 
 interface Props {
   onPress: OnArticlePress;

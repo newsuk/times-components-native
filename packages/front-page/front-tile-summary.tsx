@@ -105,6 +105,20 @@ const renderByline = (props: Props) => {
   );
 };
 
+const TileSummaryContainer: React.FC<{
+  hidden: boolean;
+  minHeight?: number;
+  containerStyle?: any;
+}> = ({ children, hidden, minHeight, containerStyle = {} }) => {
+  const styles = styleFactory();
+  const style = [containerStyle, styles.container];
+  return (
+    <View style={[...style, { minHeight, opacity: hidden ? 0 : 1 }]}>
+      {children}
+    </View>
+  );
+};
+
 const FrontTileSummary: React.FC<Props> = (props) => {
   const {
     bylineMarginBottom,
@@ -113,45 +127,29 @@ const FrontTileSummary: React.FC<Props> = (props) => {
     headlineMarginBottom,
     summaryLineHeight,
     hasVideo = false,
+    containerStyle,
   } = props;
-  const styles = styleFactory();
-  const [headlineHeight, setHeadlineHeight] = useState();
-  const [straplineHeight, setStraplineHeight] = useState();
-  const [bylineHeight, setBylineHeight] = useState();
-
-  const allMeasured =
-    headlineHeight !== undefined &&
-    straplineHeight !== undefined &&
-    bylineHeight !== undefined;
-
-  const TileSummaryContainer: React.FC<{
-    hidden: boolean;
-    minHeight?: number;
-  }> = ({ children, hidden, minHeight }) => (
-    <View
-      style={[
-        props.containerStyle,
-        styles.container,
-        { minHeight, opacity: hidden ? 0 : 1 },
-      ]}
-    >
-      {children}
-    </View>
-  );
 
   const { orientation } = useResponsiveContext();
 
+  const [headlineHeight, setHeadlineHeight] = useState(-1);
+  const [straplineHeight, setStraplineHeight] = useState(-1);
+  const [bylineHeight, setBylineHeight] = useState(-1);
+
+  const allMeasured =
+    headlineHeight !== -1 && straplineHeight !== -1 && bylineHeight !== -1;
+
   // re-measure/render on orientation change
   useEffect(() => {
-    setHeadlineHeight(undefined);
-    setStraplineHeight(undefined);
-    setBylineHeight(undefined);
+    setHeadlineHeight(-1);
+    setStraplineHeight(-1);
+    setBylineHeight(-1);
   }, [orientation]);
 
   return (
     <>
       {!allMeasured && (
-        <TileSummaryContainer hidden key={"unmeasured"}>
+        <TileSummaryContainer hidden key={"unmeasured"} {...{ containerStyle }}>
           <View
             testID={"headlineWrapper"}
             onLayout={(e) => setHeadlineHeight(e.nativeEvent.layout.height)}
@@ -199,7 +197,11 @@ const FrontTileSummary: React.FC<Props> = (props) => {
             });
 
             return (
-              <TileSummaryContainer hidden={false} minHeight={height}>
+              <TileSummaryContainer
+                hidden={false}
+                minHeight={height}
+                {...{ containerStyle }}
+              >
                 <View
                   style={{
                     marginBottom: frontTileConfig.headline.marginBottom,

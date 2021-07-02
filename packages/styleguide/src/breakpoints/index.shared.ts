@@ -30,7 +30,7 @@ const narrowArticleWidths = {
   },
 };
 
-export default {
+const breakpoints = {
   small: 520,
   smallTablet: 600,
   medium: 768,
@@ -40,6 +40,7 @@ export default {
   nativeTabletWide: 1366,
 };
 
+export default breakpoints;
 export {
   editionBreakpoints,
   editionMaxWidth,

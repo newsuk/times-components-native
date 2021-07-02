@@ -1,6 +1,6 @@
 import React, { Fragment } from "react";
 import { View } from "react-native";
-import Caption from "@times-components-native/caption";
+import { Caption } from "@times-components-native/caption";
 import Context from "@times-components-native/context";
 import { ModalImage } from "@times-components-native/image";
 import InsetCaption from "./inset-caption";

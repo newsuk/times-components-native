@@ -25,7 +25,7 @@ jest.mock("@times-components-native/button", () => "Button");
 jest.mock("@times-components-native/caption", () => ({
   __esModule: true,
   CentredCaption: "CenteredCaption",
-  default: "Caption",
+  Caption: "Caption",
 }));
 jest.mock("@times-components-native/image", () => ({
   __esModule: true,

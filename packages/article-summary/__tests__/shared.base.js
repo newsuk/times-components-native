@@ -1,11 +1,9 @@
 import React from "react";
 import TestRenderer from "react-test-renderer";
 import { iterator } from "@times-components-native/test-utils";
-import ArticleSummary, {
-  renderAst,
-  ArticleSummaryContent,
-  MarkAsRead,
-} from "../src/article-summary";
+import ArticleSummary, { ArticleSummaryContent } from "../src/article-summary";
+import { renderAst } from "../src/renderAst";
+import { MarkAsRead } from "../src/MarkAsRead";
 import defaultFixture from "../fixtures/default";
 import withSummaryLinksFixture from "../fixtures/with-summary-links";
 import articleMultiFixture from "../fixtures/article-multi";

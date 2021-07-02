@@ -1,5 +1,6 @@
 import PropTypes from "prop-types";
-import Caption, {
+import {
+  Caption,
   propTypes as captionPropTypes,
   defaultProps as captionDefaultProps,
 } from "@times-components-native/caption";
