@@ -134,6 +134,7 @@ const ModalImage: FC<ModalImageProps> = ({
           relativeHorizontalOffset={relativeHorizontalOffset}
           relativeVerticalOffset={relativeVerticalOffset}
           style={imageStyles}
+          captionText={caption && caption.text ? caption.text : ""}
         />
       </Button>
     );
@@ -148,22 +149,30 @@ const ModalImage: FC<ModalImageProps> = ({
     const onlineUrl = new Url(source.uri, true);
     delete onlineUrl.query.offline;
 
+    const {
+      relativeWidth,
+      relativeHeight,
+      relativeVerticalOffset,
+      relativeHorizontalOffset,
+      aspectRatio,
+      caption,
+    } = images[currentIndex];
+
     return (
       <View style={styles.modalImageContainer}>
         <Image
+          captionText={caption}
           rounded={rounded}
           uri={onlineUrl.toString()}
           style={[
             styles.modalImage,
             isSmallImage ? styles.modalSmallImage : imageStyles,
           ]}
-          relativeWidth={images[currentIndex].relativeWidth}
-          relativeHeight={images[currentIndex].relativeHeight}
-          relativeVerticalOffset={images[currentIndex].relativeVerticalOffset}
-          relativeHorizontalOffset={
-            images[currentIndex].relativeHorizontalOffset
-          }
-          aspectRatio={images[currentIndex].aspectRatio}
+          relativeWidth={relativeWidth}
+          relativeHeight={relativeHeight}
+          relativeVerticalOffset={relativeVerticalOffset}
+          relativeHorizontalOffset={relativeHorizontalOffset}
+          aspectRatio={aspectRatio}
         />
       </View>
     );
