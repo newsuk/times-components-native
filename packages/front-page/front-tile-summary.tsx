@@ -119,6 +119,38 @@ const TileSummaryContainer: React.FC<{
   );
 };
 
+type Heights = {
+  headline: number;
+  strapline: number;
+  byline: number;
+};
+
+type InputHeights = {
+  headline?: number;
+  strapline?: number;
+  byline?: number;
+};
+
+const defaultHeights: Heights = { headline: -1, strapline: -1, byline: -1 };
+
+const useHeights = (): [Heights, (newheights: InputHeights) => void] => {
+  const [heights, setHeights] = useState(defaultHeights);
+
+  const { headline, strapline, byline } = heights;
+
+  let exportedHeights = defaultHeights;
+
+  if (headline !== -1 && strapline !== -1 && byline !== -1) {
+    exportedHeights = heights;
+  }
+
+  const mergeHeights = (newHeights: InputHeights) => {
+    setHeights({ ...heights, ...newHeights });
+  };
+
+  return [exportedHeights, mergeHeights];
+};
+
 const FrontTileSummary: React.FC<Props> = (props) => {
   const {
     bylineMarginBottom,
@@ -131,19 +163,20 @@ const FrontTileSummary: React.FC<Props> = (props) => {
   } = props;
 
   const { orientation } = useResponsiveContext();
+  const [heights, setHeights] = useHeights();
 
-  const [headlineHeight, setHeadlineHeight] = useState(-1);
-  const [straplineHeight, setStraplineHeight] = useState(-1);
-  const [bylineHeight, setBylineHeight] = useState(-1);
+  const {
+    headline: headlineHeight,
+    strapline: straplineHeight,
+    byline: bylineHeight,
+  } = heights;
 
   const allMeasured =
     headlineHeight !== -1 && straplineHeight !== -1 && bylineHeight !== -1;
 
   // re-measure/render on orientation change
   useEffect(() => {
-    setHeadlineHeight(-1);
-    setStraplineHeight(-1);
-    setBylineHeight(-1);
+    setHeights(defaultHeights);
   }, [orientation]);
 
   return (
@@ -152,19 +185,25 @@ const FrontTileSummary: React.FC<Props> = (props) => {
         <TileSummaryContainer hidden key={"unmeasured"} {...{ containerStyle }}>
           <View
             testID={"headlineWrapper"}
-            onLayout={(e) => setHeadlineHeight(e.nativeEvent.layout.height)}
+            onLayout={(e) =>
+              setHeights({ headline: e.nativeEvent.layout.height })
+            }
           >
             {renderHeadline(props)}
           </View>
           <View
             testID={"straplineWrapper"}
-            onLayout={(e) => setStraplineHeight(e.nativeEvent.layout.height)}
+            onLayout={(e) =>
+              setHeights({ strapline: e.nativeEvent.layout.height })
+            }
           >
             {renderStrapline(props)}
           </View>
           <View
             testID={"bylineWrapper"}
-            onLayout={(e) => setBylineHeight(e.nativeEvent.layout.height)}
+            onLayout={(e) =>
+              setHeights({ byline: e.nativeEvent.layout.height })
+            }
           >
             {renderByline(props)}
           </View>
