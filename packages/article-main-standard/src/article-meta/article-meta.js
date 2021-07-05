@@ -1,5 +1,5 @@
 import React from "react";
-import { Text, View } from "react-native";
+import { View } from "react-native";
 import {
   ArticleBylineWithLinks,
   hasBylineData,
@@ -52,9 +52,11 @@ function ArticleMeta({
             : styles.articleMetaElementWithBorder
         }
       >
-        <Text style={styles.datePublication} testID={"date-time"}>
-          <DatePublication date={publishedTime} publication={publicationName} />
-        </Text>
+        <DatePublication
+          style={styles.datePublication}
+          date={publishedTime}
+          publication={publicationName}
+        />
       </View>
     </View>
   );

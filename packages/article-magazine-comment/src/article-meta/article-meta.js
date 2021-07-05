@@ -1,5 +1,5 @@
 import React from "react";
-import { Text, View } from "react-native";
+import { View } from "react-native";
 import PropTypes from "prop-types";
 import {
   ArticleBylineWithLinks,
@@ -36,9 +36,11 @@ const ArticleMeta = ({
       </View>
     )}
     <View style={styles.meta}>
-      <Text style={styles.datePublication}>
-        <DatePublication date={publishedTime} publication={publicationName} />
-      </Text>
+      <DatePublication
+        style={styles.datePublication}
+        date={publishedTime}
+        publication={publicationName}
+      />
     </View>
   </View>
 );

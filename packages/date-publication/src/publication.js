@@ -9,7 +9,9 @@ export const getPublicationComma = (publication) =>
 export const getPublicationName = (publication) =>
   publication && publications[publication] ? publications[publication] : "";
 
-export default (publication) =>
+const publication = (publication) =>
   publication && publications[publication]
     ? `, ${publications[publication]}`
     : "";
+
+export default publication;

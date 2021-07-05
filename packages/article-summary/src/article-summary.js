@@ -1,5 +1,5 @@
 import React from "react";
-import { Text, View } from "react-native";
+import { View } from "react-native";
 import PropTypes from "prop-types";
 import { articleBylinePropTypes } from "@times-components-native/article-byline";
 import DatePublication from "@times-components-native/date-publication";
@@ -56,9 +56,7 @@ function ArticleSummary({
       {content}
       {saveStar}
       {datePublicationProps ? (
-        <Text style={styles.metaText} testID="datePublication">
-          <DatePublication {...datePublicationProps} />
-        </Text>
+        <DatePublication style={styles.metaText} {...datePublicationProps} />
       ) : null}
       {!bylineOnTop && byline}
     </View>

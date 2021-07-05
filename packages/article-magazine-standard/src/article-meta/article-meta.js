@@ -1,5 +1,5 @@
 import React from "react";
-import { Text, View } from "react-native";
+import { View } from "react-native";
 import PropTypes from "prop-types";
 import {
   ArticleBylineWithLinks,
@@ -51,14 +51,14 @@ const ArticleMeta = ({
     )}
     {isArticleTablet ? <Separator /> : null}
     <View style={[styles.meta, isArticleTablet && styles.metaTablet]}>
-      <Text
+      <DatePublication
         style={[
           styles.datePublication,
           isArticleTablet && styles.datePublicationTablet,
         ]}
-      >
-        <DatePublication date={publishedTime} publication={publicationName} />
-      </Text>
+        date={publishedTime}
+        publication={publicationName}
+      />
     </View>
   </View>
 );
