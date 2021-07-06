@@ -44,6 +44,7 @@ exports[`tile ah huge 1`] = `
             "lineHeight": 15,
           }
         }
+        testID="author"
       >
         <Text
           style={
@@ -176,6 +177,7 @@ exports[`tile ah medium 1`] = `
             "lineHeight": 15,
           }
         }
+        testID="author"
       >
         <Text
           style={
@@ -308,6 +310,7 @@ exports[`tile ah smallTablet 1`] = `
             "lineHeight": 15,
           }
         }
+        testID="author"
       >
         <Text
           style={
@@ -422,6 +425,7 @@ exports[`tile ah wide 1`] = `
             "lineHeight": 15,
           }
         }
+        testID="author"
       >
         <Text
           style={
@@ -554,6 +558,7 @@ exports[`tile ah without breakpoint should be like medium 1`] = `
             "lineHeight": 15,
           }
         }
+        testID="author"
       >
         <Text
           style={

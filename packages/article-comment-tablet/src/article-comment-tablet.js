@@ -73,7 +73,12 @@ class ArticlePage extends Component {
             onImagePress={onImagePress}
             onVideoPress={onVideoPress}
             renderCaption={({ caption }) => (
-              <Caption {...caption} style={styles.captionContainer} />
+              <Caption
+                testIDCaption={"lead-image-caption"}
+                testIDCredit={"lead-image-credit"}
+                {...caption}
+                style={styles.captionContainer}
+              />
             )}
             style={styles.leadAssetContainer}
           />

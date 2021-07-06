@@ -47,7 +47,7 @@ const SponsoredArticleFlag = (props) => (
   <ArticleFlag {...props} title="sponsored" />
 );
 const LongReadArticleFlag = (props) => (
-  <ArticleFlag {...props} title="long read" />
+  <ArticleFlag {...props} title="long read" testID={"long-read"} />
 );
 
 NewArticleFlag.propTypes = articleFlagPropTypes;

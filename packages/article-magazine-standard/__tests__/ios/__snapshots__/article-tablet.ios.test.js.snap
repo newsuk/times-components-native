@@ -96,19 +96,40 @@ exports[`1. article magazine standard - tablet 1`] = `
             }
           }
         >
-          <Text
+          <View
             style={
               Object {
-                "color": "#696969",
-                "fontFamily": "GillSansMTStd-Medium",
-                "fontSize": 13,
-                "lineHeight": 15,
-                "marginTop": "auto",
+                "flexDirection": "row",
               }
             }
           >
-            Friday March 13 2015, 6.54pm, The Times
-          </Text>
+            <Text
+              style={
+                Object {
+                  "color": "#696969",
+                  "fontFamily": "GillSansMTStd-Medium",
+                  "fontSize": 13,
+                  "lineHeight": 15,
+                  "marginTop": "auto",
+                }
+              }
+            >
+              Friday March 13 2015, 6.54pm
+            </Text>
+            <Text
+              style={
+                Object {
+                  "color": "#696969",
+                  "fontFamily": "GillSansMTStd-Medium",
+                  "fontSize": 13,
+                  "lineHeight": 15,
+                  "marginTop": "auto",
+                }
+              }
+            >
+              , The Times
+            </Text>
+          </View>
         </View>
       </View>
     </View>

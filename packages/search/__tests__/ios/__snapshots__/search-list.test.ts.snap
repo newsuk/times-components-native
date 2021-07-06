@@ -1,20 +1,42 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Search Bar List FormattedDate should render correctly 1`] = `
-<Text
+<View
   style={
     Object {
-      "color": "#696969",
-      "fontFamily": "GillSansMTStd-Medium",
-      "fontSize": 13,
-      "lineHeight": 15,
-      "marginVertical": 10,
+      "flexDirection": "row",
     }
   }
-  testID="datePublication"
 >
-  Tuesday September 08 2020, 12.01am BST, The Times
-</Text>
+  <Text
+    style={
+      Object {
+        "color": "#696969",
+        "fontFamily": "GillSansMTStd-Medium",
+        "fontSize": 13,
+        "lineHeight": 15,
+        "marginVertical": 10,
+      }
+    }
+    testID="date-time"
+  >
+    Tuesday September 08 2020, 12.01am BST
+  </Text>
+  <Text
+    style={
+      Object {
+        "color": "#696969",
+        "fontFamily": "GillSansMTStd-Medium",
+        "fontSize": 13,
+        "lineHeight": 15,
+        "marginVertical": 10,
+      }
+    }
+    testID="publication-name"
+  >
+    , The Times
+  </Text>
+</View>
 `;
 
 exports[`SearchListItemByLine should render correctly 1`] = `
@@ -35,6 +57,7 @@ exports[`SearchListItemByLine should render correctly 1`] = `
         "lineHeight": 15,
       }
     }
+    testID="author"
   >
     <Text
       style={

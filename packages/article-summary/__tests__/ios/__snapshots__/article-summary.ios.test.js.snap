@@ -37,12 +37,10 @@ exports[`1. article summary component with a single paragraph 1`] = `
       ...
     </Text>
   </Text>
-  <Text>
-    <DatePublication
-      date="2017-11-17T00:01:00.000Z"
-      publication="TIMES"
-    />
-  </Text>
+  <DatePublication
+    date="2017-11-17T00:01:00.000Z"
+    publication="TIMES"
+  />
   <View>
     <ArticleByline
       articleReadState={
@@ -107,12 +105,10 @@ exports[`2. article summary component with multiple paragraphs 1`] = `
       ...
     </Text>
   </Text>
-  <Text>
-    <DatePublication
-      date="2017-11-17T00:01:00.000Z"
-      publication="TIMES"
-    />
-  </Text>
+  <DatePublication
+    date="2017-11-17T00:01:00.000Z"
+    publication="TIMES"
+  />
   <View>
     <ArticleByline
       articleReadState={
@@ -221,12 +217,10 @@ exports[`4. article summary component containing links 1`] = `
       ...
     </Text>
   </Text>
-  <Text>
-    <DatePublication
-      date="2017-11-17T00:01:00.000Z"
-      publication="TIMES"
-    />
-  </Text>
+  <DatePublication
+    date="2017-11-17T00:01:00.000Z"
+    publication="TIMES"
+  />
 </View>
 `;
 
@@ -246,12 +240,10 @@ exports[`5. article summary component with headline and no content 1`] = `
   >
     Test Headline
   </Text>
-  <Text>
-    <DatePublication
-      date="2017-07-01T14:32:00.000Z"
-      publication="SUNDAYTIMES"
-    />
-  </Text>
+  <DatePublication
+    date="2017-07-01T14:32:00.000Z"
+    publication="SUNDAYTIMES"
+  />
 </View>
 `;
 
@@ -285,12 +277,10 @@ exports[`6. article summary component with empty content at the end trimmed 1`] 
       ...
     </Text>
   </Text>
-  <Text>
-    <DatePublication
-      date="2017-07-01T14:32:00.000Z"
-      publication="SUNDAYTIMES"
-    />
-  </Text>
+  <DatePublication
+    date="2017-07-01T14:32:00.000Z"
+    publication="SUNDAYTIMES"
+  />
   <View>
     <ArticleByline
       articleReadState={
@@ -340,12 +330,10 @@ exports[`7. article summary component with no byline 1`] = `
       ...
     </Text>
   </Text>
-  <Text>
-    <DatePublication
-      date="2017-11-17T00:01:00.000Z"
-      publication="TIMES"
-    />
-  </Text>
+  <DatePublication
+    date="2017-11-17T00:01:00.000Z"
+    publication="TIMES"
+  />
 </View>
 `;
 
@@ -364,12 +352,10 @@ exports[`8. article summary component with no label 1`] = `
       ...
     </Text>
   </Text>
-  <Text>
-    <DatePublication
-      date="2017-11-17T00:01:00.000Z"
-      publication="TIMES"
-    />
-  </Text>
+  <DatePublication
+    date="2017-11-17T00:01:00.000Z"
+    publication="TIMES"
+  />
   <View>
     <ArticleByline
       articleReadState={
@@ -421,12 +407,10 @@ exports[`9. article summary component with no headline 1`] = `
       ...
     </Text>
   </Text>
-  <Text>
-    <DatePublication
-      date="2017-07-01T14:32:00.000Z"
-      publication="SUNDAYTIMES"
-    />
-  </Text>
+  <DatePublication
+    date="2017-07-01T14:32:00.000Z"
+    publication="SUNDAYTIMES"
+  />
 </View>
 `;
 
@@ -510,12 +494,10 @@ exports[`11. article summary component with a video label 1`] = `
       ...
     </Text>
   </Text>
-  <Text>
-    <DatePublication
-      date="2017-11-17T00:01:00.000Z"
-      publication="TIMES"
-    />
-  </Text>
+  <DatePublication
+    date="2017-11-17T00:01:00.000Z"
+    publication="TIMES"
+  />
   <View>
     <ArticleByline
       articleReadState={
@@ -593,12 +575,10 @@ exports[`12. article summary component with a strapline 1`] = `
       ...
     </Text>
   </Text>
-  <Text>
-    <DatePublication
-      date="2017-11-17T00:01:00.000Z"
-      publication="TIMES"
-    />
-  </Text>
+  <DatePublication
+    date="2017-11-17T00:01:00.000Z"
+    publication="TIMES"
+  />
   <View>
     <ArticleByline
       articleReadState={
@@ -663,12 +643,10 @@ exports[`15. article summary component with no headline and no label title 1`] =
       ...
     </Text>
   </Text>
-  <Text>
-    <DatePublication
-      date="2017-07-01T14:32:00.000Z"
-      publication="SUNDAYTIMES"
-    />
-  </Text>
+  <DatePublication
+    date="2017-07-01T14:32:00.000Z"
+    publication="SUNDAYTIMES"
+  />
 </View>
 `;
 
@@ -733,12 +711,10 @@ exports[`18. article summary component with a single paragraph and flag on table
       ...
     </Text>
   </Text>
-  <Text>
-    <DatePublication
-      date="2017-11-17T00:01:00.000Z"
-      publication="TIMES"
-    />
-  </Text>
+  <DatePublication
+    date="2017-11-17T00:01:00.000Z"
+    publication="TIMES"
+  />
   <View>
     <ArticleByline
       articleReadState={
@@ -827,12 +803,10 @@ exports[`19. article summary component with a strapline and flag on tablet 1`] =
       ...
     </Text>
   </Text>
-  <Text>
-    <DatePublication
-      date="2017-11-17T00:01:00.000Z"
-      publication="TIMES"
-    />
-  </Text>
+  <DatePublication
+    date="2017-11-17T00:01:00.000Z"
+    publication="TIMES"
+  />
   <View>
     <ArticleByline
       articleReadState={
@@ -915,12 +889,10 @@ exports[`20. article summary component with hidden label 1`] = `
       ...
     </Text>
   </Text>
-  <Text>
-    <DatePublication
-      date="2017-11-17T00:01:00.000Z"
-      publication="TIMES"
-    />
-  </Text>
+  <DatePublication
+    date="2017-11-17T00:01:00.000Z"
+    publication="TIMES"
+  />
   <View>
     <ArticleByline
       articleReadState={
@@ -1003,12 +975,10 @@ exports[`21. article summary component with byline on top 1`] = `
       ...
     </Text>
   </Text>
-  <Text>
-    <DatePublication
-      date="2017-11-17T00:01:00.000Z"
-      publication="TIMES"
-    />
-  </Text>
+  <DatePublication
+    date="2017-11-17T00:01:00.000Z"
+    publication="TIMES"
+  />
   <View>
     <ArticleByline
       articleReadState={

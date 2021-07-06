@@ -65,7 +65,9 @@ exports[`1. article summary component with a single paragraph 1`] = `
       ...
     </Text>
   </Text>
-  <Text
+  <DatePublication
+    date="2017-11-17T00:01:00.000Z"
+    publication="TIMES"
     style={
       Object {
         "color": "#696969",
@@ -76,12 +78,7 @@ exports[`1. article summary component with a single paragraph 1`] = `
         "marginTop": 0,
       }
     }
-  >
-    <DatePublication
-      date="2017-11-17T00:01:00.000Z"
-      publication="TIMES"
-    />
-  </Text>
+  />
   <View>
     <ArticleByline
       articleReadState={

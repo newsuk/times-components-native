@@ -11,10 +11,14 @@ exports[`4. inline image with no ratio only shows caption and credits 1`] = `
   <View>
     <View>
       <View>
-        <Text>
+        <Text
+          testID={null}
+        >
           Some caption
         </Text>
-        <Text>
+        <Text
+          testID={null}
+        >
           SOME CREDIT
         </Text>
       </View>
@@ -47,7 +51,9 @@ exports[`6. image with no display only shows given caption 1`] = `
   <View>
     <View>
       <View>
-        <Text>
+        <Text
+          testID={null}
+        >
           Some caption
         </Text>
       </View>
@@ -61,7 +67,9 @@ exports[`7. image with no display only shows given credits 1`] = `
   <View>
     <View>
       <View>
-        <Text>
+        <Text
+          testID={null}
+        >
           SOME CREDIT
         </Text>
       </View>
@@ -89,10 +97,14 @@ exports[`8. primary image renders with caption and credits 1`] = `
   <View>
     <View>
       <View>
-        <Text>
+        <Text
+          testID={null}
+        >
           Some caption
         </Text>
-        <Text>
+        <Text
+          testID={null}
+        >
           SOME CREDIT
         </Text>
       </View>
@@ -122,10 +134,14 @@ exports[`9. primary image with given resolutions 1`] = `
   <View>
     <View>
       <View>
-        <Text>
+        <Text
+          testID={null}
+        >
           Some caption
         </Text>
-        <Text>
+        <Text
+          testID={null}
+        >
           SOME CREDIT
         </Text>
       </View>
