@@ -43,6 +43,7 @@ exports[`1. mobile primary image with caption and credits 1`] = `
               "lineHeight": 20,
             }
           }
+          testID={null}
         >
           Some caption
         </Text>
@@ -58,6 +59,7 @@ exports[`1. mobile primary image with caption and credits 1`] = `
               "marginTop": 0,
             }
           }
+          testID={null}
         >
           SOME CREDITS
         </Text>
@@ -110,6 +112,7 @@ exports[`2. tablet primary image with caption and credits 1`] = `
               "lineHeight": 20,
             }
           }
+          testID={null}
         >
           Some caption
         </Text>
@@ -125,6 +128,7 @@ exports[`2. tablet primary image with caption and credits 1`] = `
               "marginTop": 0,
             }
           }
+          testID={null}
         >
           SOME CREDITS
         </Text>
@@ -185,6 +189,7 @@ exports[`3. mobile fullwidth image with caption and credits 1`] = `
               "textAlign": "center",
             }
           }
+          testID={null}
         >
           Some caption
         </Text>
@@ -202,6 +207,7 @@ exports[`3. mobile fullwidth image with caption and credits 1`] = `
               "textAlign": "center",
             }
           }
+          testID={null}
         >
           SOME CREDITS
         </Text>
@@ -262,6 +268,7 @@ exports[`4. tablet fullwidth image with caption and credits 1`] = `
               "textAlign": "center",
             }
           }
+          testID={null}
         >
           Some caption
         </Text>
@@ -279,6 +286,7 @@ exports[`4. tablet fullwidth image with caption and credits 1`] = `
               "textAlign": "center",
             }
           }
+          testID={null}
         >
           SOME CREDITS
         </Text>
@@ -347,6 +355,7 @@ exports[`5. secondary image with caption and credits 1`] = `
               "lineHeight": 20,
             }
           }
+          testID={null}
         >
           Another caption
         </Text>
@@ -362,6 +371,7 @@ exports[`5. secondary image with caption and credits 1`] = `
               "marginTop": 0,
             }
           }
+          testID={null}
         >
           OTHER CREDITS
         </Text>

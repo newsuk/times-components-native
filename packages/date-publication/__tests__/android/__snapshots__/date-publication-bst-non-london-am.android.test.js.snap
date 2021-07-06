@@ -1,3 +1,24 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`1. date and times publication 1`] = `"Saturday July 01 2017, 5.32am BST, The Times"`;
+exports[`1. date and times publication 1`] = `
+<View
+  style={
+    Object {
+      "flexDirection": "row",
+    }
+  }
+>
+  <Text
+    style={Object {}}
+    testID="date-time"
+  >
+    Saturday July 01 2017, 5.32am BST
+  </Text>
+  <Text
+    style={Object {}}
+    testID="publication-name"
+  >
+    , The Times
+  </Text>
+</View>
+`;

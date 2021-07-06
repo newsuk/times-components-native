@@ -1,5 +1,5 @@
 import React from "react";
-import { Text, View } from "react-native";
+import { View } from "react-native";
 import PropTypes from "prop-types";
 import DatePublication from "@times-components-native/date-publication";
 
@@ -9,9 +9,11 @@ import styles from "../styles";
 const ArticleMeta = ({ hasStandfirst, publicationName, publishedTime }) => (
   <View style={[styles.metaContainer, !hasStandfirst && styles.metaFlagSpacer]}>
     <View style={styles.meta}>
-      <Text style={styles.datePublication}>
-        <DatePublication date={publishedTime} publication={publicationName} />
-      </Text>
+      <DatePublication
+        style={styles.datePublication}
+        date={publishedTime}
+        publication={publicationName}
+      />
     </View>
   </View>
 );

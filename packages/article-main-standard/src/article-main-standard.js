@@ -64,6 +64,8 @@ class ArticlePage extends Component {
                 onVideoPress={onVideoPress}
                 renderCaption={({ caption }) => (
                   <Caption
+                    testIDCaption={"lead-image-caption"}
+                    testIDCredit={"lead-image-credit"}
                     {...caption}
                     style={
                       !isArticleTablet && { container: styles.captionContainer }

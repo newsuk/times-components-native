@@ -56,6 +56,7 @@ exports[`1. inline image (landscape) with caption and credits 1`] = `
               "lineHeight": 20,
             }
           }
+          testID={null}
         >
           Landscape caption
         </Text>
@@ -71,6 +72,7 @@ exports[`1. inline image (landscape) with caption and credits 1`] = `
               "marginTop": 0,
             }
           }
+          testID={null}
         >
           LANDSCAPE CREDITS
         </Text>
@@ -136,6 +138,7 @@ exports[`2. inline image (portrait) with caption and credits 1`] = `
               "lineHeight": 20,
             }
           }
+          testID={null}
         >
           Portrait caption
         </Text>
@@ -151,6 +154,7 @@ exports[`2. inline image (portrait) with caption and credits 1`] = `
               "marginTop": 0,
             }
           }
+          testID={null}
         >
           PORTRAIT CREDITS
         </Text>

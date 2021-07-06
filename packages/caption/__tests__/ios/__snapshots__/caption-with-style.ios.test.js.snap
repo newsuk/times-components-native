@@ -19,6 +19,7 @@ exports[`1. caption with container and text styles 1`] = `
           "lineHeight": 16,
         }
       }
+      testID={null}
     >
       Some caption text goes in here
     </Text>
@@ -33,6 +34,7 @@ exports[`1. caption with container and text styles 1`] = `
           "lineHeight": 16,
         }
       }
+      testID={null}
     >
       JUST CREDITS
     </Text>
@@ -59,6 +61,7 @@ exports[`2. caption with container, caption, and credit styles 1`] = `
           "lineHeight": 16,
         }
       }
+      testID={null}
     >
       Some caption text goes in here
     </Text>
@@ -73,6 +76,7 @@ exports[`2. caption with container, caption, and credit styles 1`] = `
           "lineHeight": 16,
         }
       }
+      testID={null}
     >
       JUST CREDITS
     </Text>
@@ -99,6 +103,7 @@ exports[`3. caption with only container styles 1`] = `
           "lineHeight": 16,
         }
       }
+      testID={null}
     >
       Some caption text goes in here
     </Text>
@@ -113,6 +118,7 @@ exports[`3. caption with only container styles 1`] = `
           "lineHeight": 16,
         }
       }
+      testID={null}
     >
       JUST CREDITS
     </Text>

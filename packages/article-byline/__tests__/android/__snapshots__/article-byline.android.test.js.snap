@@ -2,7 +2,9 @@
 
 exports[`1. single inline element 1`] = `
 <View>
-  <Text>
+  <Text
+    testID="author"
+  >
     <Text>
       Lindsay McIntosh, Scottish Political Editor
     </Text>
@@ -12,7 +14,9 @@ exports[`1. single inline element 1`] = `
 
 exports[`2. with the author in the begining 1`] = `
 <View>
-  <Text>
+  <Text
+    testID="author"
+  >
     <Text>
       Camilla Long
     </Text>
@@ -25,7 +29,9 @@ exports[`2. with the author in the begining 1`] = `
 
 exports[`3. with the author at the end 1`] = `
 <View>
-  <Text>
+  <Text
+    testID="author"
+  >
     <Text>
       RBS Six Nations, 
     </Text>
@@ -38,7 +44,9 @@ exports[`3. with the author at the end 1`] = `
 
 exports[`4. with multiple authors separated by a pipe 1`] = `
 <View>
-  <Text>
+  <Text
+    testID="author"
+  >
     <Text>
       Camilla Long
     </Text>
@@ -60,7 +68,9 @@ exports[`4. with multiple authors separated by a pipe 1`] = `
 
 exports[`5. with multiple authors separated by text with commas 1`] = `
 <View>
-  <Text>
+  <Text
+    testID="author"
+  >
     <Text>
       Camilla Long
     </Text>
@@ -82,7 +92,9 @@ exports[`5. with multiple authors separated by text with commas 1`] = `
 
 exports[`6. with multiple authors separated by spaces 1`] = `
 <View>
-  <Text>
+  <Text
+    testID="author"
+  >
     <Text>
       Camilla Long
     </Text>
@@ -99,4 +111,8 @@ exports[`6. with multiple authors separated by spaces 1`] = `
 </View>
 `;
 
-exports[`7. null with an empty ast 1`] = `<Text />`;
+exports[`7. null with an empty ast 1`] = `
+<Text
+  testID="author"
+/>
+`;

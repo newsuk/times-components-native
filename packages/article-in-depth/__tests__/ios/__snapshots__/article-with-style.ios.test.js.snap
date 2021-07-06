@@ -100,18 +100,38 @@ exports[`full article with style 1`] = `
           }
         }
       >
-        <Text
+        <View
           style={
             Object {
-              "color": "#696969",
-              "fontFamily": "GillSansMTStd-Medium",
-              "fontSize": 13,
-              "lineHeight": 15,
+              "flexDirection": "row",
             }
           }
         >
-          Friday March 13 2015, 6.54pm, The Times
-        </Text>
+          <Text
+            style={
+              Object {
+                "color": "#696969",
+                "fontFamily": "GillSansMTStd-Medium",
+                "fontSize": 13,
+                "lineHeight": 15,
+              }
+            }
+          >
+            Friday March 13 2015, 6.54pm
+          </Text>
+          <Text
+            style={
+              Object {
+                "color": "#696969",
+                "fontFamily": "GillSansMTStd-Medium",
+                "fontSize": 13,
+                "lineHeight": 15,
+              }
+            }
+          >
+            , The Times
+          </Text>
+        </View>
       </View>
     </View>
   </View>
@@ -218,18 +238,38 @@ exports[`full article with style in the culture magazine 1`] = `
           }
         }
       >
-        <Text
+        <View
           style={
             Object {
-              "color": "#696969",
-              "fontFamily": "GillSansMTStd-Medium",
-              "fontSize": 13,
-              "lineHeight": 15,
+              "flexDirection": "row",
             }
           }
         >
-          Friday March 13 2015, 6.54pm, The Times
-        </Text>
+          <Text
+            style={
+              Object {
+                "color": "#696969",
+                "fontFamily": "GillSansMTStd-Medium",
+                "fontSize": 13,
+                "lineHeight": 15,
+              }
+            }
+          >
+            Friday March 13 2015, 6.54pm
+          </Text>
+          <Text
+            style={
+              Object {
+                "color": "#696969",
+                "fontFamily": "GillSansMTStd-Medium",
+                "fontSize": 13,
+                "lineHeight": 15,
+              }
+            }
+          >
+            , The Times
+          </Text>
+        </View>
       </View>
     </View>
   </View>
@@ -337,18 +377,38 @@ exports[`full article with style in the style magazine 1`] = `
           }
         }
       >
-        <Text
+        <View
           style={
             Object {
-              "color": "#696969",
-              "fontFamily": "GillSansMTStd-Medium",
-              "fontSize": 13,
-              "lineHeight": 15,
+              "flexDirection": "row",
             }
           }
         >
-          Friday March 13 2015, 6.54pm, The Times
-        </Text>
+          <Text
+            style={
+              Object {
+                "color": "#696969",
+                "fontFamily": "GillSansMTStd-Medium",
+                "fontSize": 13,
+                "lineHeight": 15,
+              }
+            }
+          >
+            Friday March 13 2015, 6.54pm
+          </Text>
+          <Text
+            style={
+              Object {
+                "color": "#696969",
+                "fontFamily": "GillSansMTStd-Medium",
+                "fontSize": 13,
+                "lineHeight": 15,
+              }
+            }
+          >
+            , The Times
+          </Text>
+        </View>
       </View>
     </View>
   </View>
@@ -455,18 +515,38 @@ exports[`full article with style in the sunday times magazine 1`] = `
           }
         }
       >
-        <Text
+        <View
           style={
             Object {
-              "color": "#696969",
-              "fontFamily": "GillSansMTStd-Medium",
-              "fontSize": 13,
-              "lineHeight": 15,
+              "flexDirection": "row",
             }
           }
         >
-          Friday March 13 2015, 6.54pm, The Times
-        </Text>
+          <Text
+            style={
+              Object {
+                "color": "#696969",
+                "fontFamily": "GillSansMTStd-Medium",
+                "fontSize": 13,
+                "lineHeight": 15,
+              }
+            }
+          >
+            Friday March 13 2015, 6.54pm
+          </Text>
+          <Text
+            style={
+              Object {
+                "color": "#696969",
+                "fontFamily": "GillSansMTStd-Medium",
+                "fontSize": 13,
+                "lineHeight": 15,
+              }
+            }
+          >
+            , The Times
+          </Text>
+        </View>
       </View>
     </View>
   </View>
@@ -607,19 +687,40 @@ exports[`tablet full article with style in the culture magazine 1`] = `
           }
         }
       >
-        <Text
+        <View
           style={
             Object {
-              "color": "#696969",
-              "fontFamily": "GillSansMTStd-Medium",
-              "fontSize": 13,
-              "lineHeight": 15,
-              "marginTop": 0,
+              "flexDirection": "row",
             }
           }
         >
-          Friday March 13 2015, 6.54pm, The Times
-        </Text>
+          <Text
+            style={
+              Object {
+                "color": "#696969",
+                "fontFamily": "GillSansMTStd-Medium",
+                "fontSize": 13,
+                "lineHeight": 15,
+                "marginTop": 0,
+              }
+            }
+          >
+            Friday March 13 2015, 6.54pm
+          </Text>
+          <Text
+            style={
+              Object {
+                "color": "#696969",
+                "fontFamily": "GillSansMTStd-Medium",
+                "fontSize": 13,
+                "lineHeight": 15,
+                "marginTop": 0,
+              }
+            }
+          >
+            , The Times
+          </Text>
+        </View>
       </View>
     </View>
   </View>
@@ -761,19 +862,40 @@ exports[`tablet full article with style in the style magazine 1`] = `
           }
         }
       >
-        <Text
+        <View
           style={
             Object {
-              "color": "#696969",
-              "fontFamily": "GillSansMTStd-Medium",
-              "fontSize": 13,
-              "lineHeight": 15,
-              "marginTop": 0,
+              "flexDirection": "row",
             }
           }
         >
-          Friday March 13 2015, 6.54pm, The Times
-        </Text>
+          <Text
+            style={
+              Object {
+                "color": "#696969",
+                "fontFamily": "GillSansMTStd-Medium",
+                "fontSize": 13,
+                "lineHeight": 15,
+                "marginTop": 0,
+              }
+            }
+          >
+            Friday March 13 2015, 6.54pm
+          </Text>
+          <Text
+            style={
+              Object {
+                "color": "#696969",
+                "fontFamily": "GillSansMTStd-Medium",
+                "fontSize": 13,
+                "lineHeight": 15,
+                "marginTop": 0,
+              }
+            }
+          >
+            , The Times
+          </Text>
+        </View>
       </View>
     </View>
   </View>
@@ -914,19 +1036,40 @@ exports[`tablet full article with style in the sunday times magazine 1`] = `
           }
         }
       >
-        <Text
+        <View
           style={
             Object {
-              "color": "#696969",
-              "fontFamily": "GillSansMTStd-Medium",
-              "fontSize": 13,
-              "lineHeight": 15,
-              "marginTop": 0,
+              "flexDirection": "row",
             }
           }
         >
-          Friday March 13 2015, 6.54pm, The Times
-        </Text>
+          <Text
+            style={
+              Object {
+                "color": "#696969",
+                "fontFamily": "GillSansMTStd-Medium",
+                "fontSize": 13,
+                "lineHeight": 15,
+                "marginTop": 0,
+              }
+            }
+          >
+            Friday March 13 2015, 6.54pm
+          </Text>
+          <Text
+            style={
+              Object {
+                "color": "#696969",
+                "fontFamily": "GillSansMTStd-Medium",
+                "fontSize": 13,
+                "lineHeight": 15,
+                "marginTop": 0,
+              }
+            }
+          >
+            , The Times
+          </Text>
+        </View>
       </View>
     </View>
   </View>
