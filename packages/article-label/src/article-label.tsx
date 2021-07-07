@@ -13,11 +13,17 @@ export type ArticleLabelProps = {
         red: number;
       };
   title: string;
+  childTestID?: string;
 };
 
-const ArticleLabel: FC<ArticleLabelProps> = ({ color = "black", title }) => {
+const ArticleLabel: FC<ArticleLabelProps> = ({
+  color = "black",
+  title,
+  childTestID,
+}) => {
   return (
     <Text
+      testID={childTestID}
       style={[
         styles.title,
         { color: gqlRgbaToHex(color) || (color as string | undefined) },
