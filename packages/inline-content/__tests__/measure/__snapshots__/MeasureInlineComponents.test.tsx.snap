@@ -35,6 +35,7 @@ exports[`MeasureContent renders the content 1`] = `
             "lineHeight": 52,
           }
         }
+        testID="paragraph"
       >
         <Text>
           abc
