@@ -58,7 +58,7 @@ class RelatedArticles extends Component {
     };
 
     return (
-      <View>
+      <View testID="related-articles">
         <RelatedArticlesHeading />
         <StandardSlice
           itemCount={items.length}

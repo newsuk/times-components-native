@@ -4,6 +4,7 @@ exports[`1. multiple ad slots 1`] = `
 Array [
   <View
     className="IS5"
+    testID="article-advertisement"
   >
     <View
       className="IS4"
@@ -32,6 +33,7 @@ Array [
   </View>,
   <View
     className="IS5"
+    testID="article-advertisement"
   >
     <View
       className="IS4"

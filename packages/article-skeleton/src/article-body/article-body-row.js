@@ -25,7 +25,7 @@ import ArticleEndTracking from "./article-end-tracking";
 import InlineNewsletterPuff from "./inline-newsletter-puff";
 import { useResponsiveContext } from "@times-components-native/responsive";
 
-export default ({
+const ArticleBodyRow = ({
   interactiveConfig,
   onLinkPress,
   onTwitterLinkPress,
@@ -86,6 +86,7 @@ export default ({
     link(key, { href, canonicalId, type }, children) {
       return (
         <ArticleLink
+          testID={"hyperlink"}
           url={href}
           style={styles.articleLink}
           onPress={(e) =>
@@ -122,6 +123,7 @@ export default ({
           ast={children}
         >
           <Text
+            testID={"paragraph"}
             onTextLayout={onParagraphTextLayout}
             selectable
             allowFontScaling={false}
@@ -340,6 +342,7 @@ export default ({
           ]}
         >
           <Video
+            testIDProp="inline-video"
             accountId={brightcoveAccountId}
             height={height}
             onVideoPress={onVideoPress}
@@ -357,3 +360,5 @@ export default ({
     },
   };
 };
+
+export default ArticleBodyRow;

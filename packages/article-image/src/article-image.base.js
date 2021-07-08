@@ -99,6 +99,7 @@ const ArticleImage = ({
     <Fragment>
       <View style={styles[`${display}Image`]}>
         <ModalImage
+          testIDProp={"inline-image"}
           accessibilityLabel={caption}
           aspectRatio={aspectRatio}
           caption={{ text: caption, credits }}

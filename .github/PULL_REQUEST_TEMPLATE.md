@@ -1,9 +1,17 @@
-<!--
-Thank you for your PR!
+## NOTE - The subject line above ^ needs to be in the conventional commit format.
+## e.g. "feat(TNLT-1234): opens a new pr"
+## Delete these above notes before opening PR.
 
-Please provide clear instructions on how you verified your work.
+## [TNLT-XXXX](https://nidigitalsolutions.jira.com/browse/TNLT-XXXX)
 
-If there are any visual changes, include screenshots and demo videos (try https://giphy.com/apps/giphycapture).
+#### Description
 
-:-)
--->
+#### Screenshots 
+
+#### Checklist
+ - [ ] Unit tests
+ - [ ] Updated E2E tests
+ - [ ] Updated storybook
+ - [ ] Tested on iOS simulator
+ - [ ] Tested on Android emulator
+ - [ ] Tested on Tablet
