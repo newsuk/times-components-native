@@ -35,7 +35,7 @@ const Comments: FC<CommentsProps> = ({
 }) => {
   const { isTablet } = useResponsiveContext();
   return (
-    <View style={styles.container}>
+    <View style={styles.container} testID="comments">
       <Text style={styles.headline}>{`${commentCount} ${
         commentCount === 1 ? "comment" : "comments"
       }`}</Text>

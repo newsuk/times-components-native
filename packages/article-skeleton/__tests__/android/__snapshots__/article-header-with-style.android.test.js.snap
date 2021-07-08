@@ -109,6 +109,7 @@ exports[`1. article with header 1`] = `
                 "uri": "http://placekitten.com/1000/1000",
               }
             }
+            testIDProp="inline-video"
             videoId="5831024132001"
             width={NaN}
           />
@@ -160,6 +161,7 @@ exports[`1. article with header 1`] = `
                 "uri": "http://placekitten.com/500/500",
               }
             }
+            testIDProp="inline-video"
             videoId="5831024132001"
             width={NaN}
           />
