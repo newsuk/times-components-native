@@ -2,60 +2,62 @@
 
 exports[`tile a without breakpoint 1`] = `
 <Link>
-  <View
-    style={
-      Object {
-        "margin": 10,
+  <View>
+    <View
+      style={
+        Object {
+          "margin": 10,
+        }
       }
-    }
-  >
-    <View>
-      <View
+    >
+      <View>
+        <View
+          style={
+            Object {
+              "marginBottom": 5,
+            }
+          }
+        >
+          <ArticleLabel
+            color="#005B8D"
+            title="label"
+          />
+        </View>
+      </View>
+      <Text
+        accessibilityRole="header"
+        aria-level="3"
         style={
           Object {
+            "color": "#333333",
+            "fontFamily": "TimesModern-Bold",
+            "fontSize": 35,
+            "fontWeight": "900",
+            "includeFontPadding": false,
+            "lineHeight": 35,
             "marginBottom": 5,
           }
         }
       >
-        <ArticleLabel
-          color="#005B8D"
-          title="label"
-        />
-      </View>
-    </View>
-    <Text
-      accessibilityRole="header"
-      aria-level="3"
-      style={
-        Object {
-          "color": "#333333",
-          "fontFamily": "TimesModern-Bold",
-          "fontSize": 35,
-          "fontWeight": "900",
-          "includeFontPadding": false,
-          "lineHeight": 35,
-          "marginBottom": 5,
+        This is tile headline
+      </Text>
+      <ArticleFlags
+        flags={
+          Array [
+            Object {
+              "expiryTime": "2030-03-14T12:00:00.000Z",
+              "type": "EXCLUSIVE",
+            },
+          ]
         }
-      }
-    >
-      This is tile headline
-    </Text>
-    <ArticleFlags
-      flags={
-        Array [
+        longRead={true}
+        style={
           Object {
-            "expiryTime": "2030-03-14T12:00:00.000Z",
-            "type": "EXCLUSIVE",
-          },
-        ]
-      }
-      longRead={true}
-      style={
-        Object {
-          "marginBottom": -5,
+            "marginBottom": -5,
+          }
         }
-      }
-    />
+      />
+    </View>
   </View>
   <Image
     aspectRatio={1.7777777777777777}

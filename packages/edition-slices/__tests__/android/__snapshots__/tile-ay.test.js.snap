@@ -33,47 +33,49 @@ exports[`tile ay huge 1`] = `
     <View>
       <View>
         <View>
-          <View
+          <View>
+            <View
+              style={
+                Object {
+                  "marginBottom": 5,
+                }
+              }
+            >
+              <ArticleLabel
+                color="#005B8D"
+                title="label"
+              />
+            </View>
+          </View>
+          <Text
+            accessibilityRole="header"
+            aria-level="3"
             style={
               Object {
-                "marginBottom": 5,
+                "color": "#333333",
+                "fontFamily": "TimesModern-Regular",
+                "fontSize": 27,
+                "fontWeight": "normal",
+                "includeFontPadding": false,
+                "lineHeight": 27,
+                "marginBottom": 10,
               }
             }
           >
-            <ArticleLabel
-              color="#005B8D"
-              title="label"
-            />
-          </View>
-        </View>
-        <Text
-          accessibilityRole="header"
-          aria-level="3"
-          style={
-            Object {
-              "color": "#333333",
-              "fontFamily": "TimesModern-Regular",
-              "fontSize": 27,
-              "fontWeight": "normal",
-              "includeFontPadding": false,
-              "lineHeight": 27,
-              "marginBottom": 10,
+            This is tile headline
+          </Text>
+          <ArticleFlags
+            flags={
+              Array [
+                Object {
+                  "expiryTime": "2030-03-14T12:00:00.000Z",
+                  "type": "EXCLUSIVE",
+                },
+              ]
             }
-          }
-        >
-          This is tile headline
-        </Text>
-        <ArticleFlags
-          flags={
-            Array [
-              Object {
-                "expiryTime": "2030-03-14T12:00:00.000Z",
-                "type": "EXCLUSIVE",
-              },
-            ]
-          }
-          longRead={true}
-        />
+            longRead={true}
+          />
+        </View>
       </View>
     </View>
   </View>
@@ -113,47 +115,49 @@ exports[`tile ay medium 1`] = `
     <View>
       <View>
         <View>
-          <View
+          <View>
+            <View
+              style={
+                Object {
+                  "marginBottom": 5,
+                }
+              }
+            >
+              <ArticleLabel
+                color="#005B8D"
+                title="label"
+              />
+            </View>
+          </View>
+          <Text
+            accessibilityRole="header"
+            aria-level="3"
             style={
               Object {
-                "marginBottom": 5,
+                "color": "#333333",
+                "fontFamily": "TimesModern-Regular",
+                "fontSize": 19,
+                "fontWeight": "normal",
+                "includeFontPadding": false,
+                "lineHeight": 19,
+                "marginBottom": 10,
               }
             }
           >
-            <ArticleLabel
-              color="#005B8D"
-              title="label"
-            />
-          </View>
-        </View>
-        <Text
-          accessibilityRole="header"
-          aria-level="3"
-          style={
-            Object {
-              "color": "#333333",
-              "fontFamily": "TimesModern-Regular",
-              "fontSize": 19,
-              "fontWeight": "normal",
-              "includeFontPadding": false,
-              "lineHeight": 19,
-              "marginBottom": 10,
+            This is tile headline
+          </Text>
+          <ArticleFlags
+            flags={
+              Array [
+                Object {
+                  "expiryTime": "2030-03-14T12:00:00.000Z",
+                  "type": "EXCLUSIVE",
+                },
+              ]
             }
-          }
-        >
-          This is tile headline
-        </Text>
-        <ArticleFlags
-          flags={
-            Array [
-              Object {
-                "expiryTime": "2030-03-14T12:00:00.000Z",
-                "type": "EXCLUSIVE",
-              },
-            ]
-          }
-          longRead={true}
-        />
+            longRead={true}
+          />
+        </View>
       </View>
     </View>
   </View>
@@ -193,47 +197,49 @@ exports[`tile ay smallTablet 1`] = `
     <View>
       <View>
         <View>
-          <View
+          <View>
+            <View
+              style={
+                Object {
+                  "marginBottom": 5,
+                }
+              }
+            >
+              <ArticleLabel
+                color="#005B8D"
+                title="label"
+              />
+            </View>
+          </View>
+          <Text
+            accessibilityRole="header"
+            aria-level="3"
             style={
               Object {
-                "marginBottom": 5,
+                "color": "#333333",
+                "fontFamily": "TimesModern-Regular",
+                "fontSize": 19,
+                "fontWeight": "normal",
+                "includeFontPadding": false,
+                "lineHeight": 19,
+                "marginBottom": 10,
               }
             }
           >
-            <ArticleLabel
-              color="#005B8D"
-              title="label"
-            />
-          </View>
-        </View>
-        <Text
-          accessibilityRole="header"
-          aria-level="3"
-          style={
-            Object {
-              "color": "#333333",
-              "fontFamily": "TimesModern-Regular",
-              "fontSize": 19,
-              "fontWeight": "normal",
-              "includeFontPadding": false,
-              "lineHeight": 19,
-              "marginBottom": 10,
+            This is tile headline
+          </Text>
+          <ArticleFlags
+            flags={
+              Array [
+                Object {
+                  "expiryTime": "2030-03-14T12:00:00.000Z",
+                  "type": "EXCLUSIVE",
+                },
+              ]
             }
-          }
-        >
-          This is tile headline
-        </Text>
-        <ArticleFlags
-          flags={
-            Array [
-              Object {
-                "expiryTime": "2030-03-14T12:00:00.000Z",
-                "type": "EXCLUSIVE",
-              },
-            ]
-          }
-          longRead={true}
-        />
+            longRead={true}
+          />
+        </View>
       </View>
     </View>
   </View>
@@ -273,47 +279,49 @@ exports[`tile ay wide 1`] = `
     <View>
       <View>
         <View>
-          <View
+          <View>
+            <View
+              style={
+                Object {
+                  "marginBottom": 5,
+                }
+              }
+            >
+              <ArticleLabel
+                color="#005B8D"
+                title="label"
+              />
+            </View>
+          </View>
+          <Text
+            accessibilityRole="header"
+            aria-level="3"
             style={
               Object {
-                "marginBottom": 5,
+                "color": "#333333",
+                "fontFamily": "TimesModern-Regular",
+                "fontSize": 22,
+                "fontWeight": "normal",
+                "includeFontPadding": false,
+                "lineHeight": 22,
+                "marginBottom": 10,
               }
             }
           >
-            <ArticleLabel
-              color="#005B8D"
-              title="label"
-            />
-          </View>
-        </View>
-        <Text
-          accessibilityRole="header"
-          aria-level="3"
-          style={
-            Object {
-              "color": "#333333",
-              "fontFamily": "TimesModern-Regular",
-              "fontSize": 22,
-              "fontWeight": "normal",
-              "includeFontPadding": false,
-              "lineHeight": 22,
-              "marginBottom": 10,
+            This is tile headline
+          </Text>
+          <ArticleFlags
+            flags={
+              Array [
+                Object {
+                  "expiryTime": "2030-03-14T12:00:00.000Z",
+                  "type": "EXCLUSIVE",
+                },
+              ]
             }
-          }
-        >
-          This is tile headline
-        </Text>
-        <ArticleFlags
-          flags={
-            Array [
-              Object {
-                "expiryTime": "2030-03-14T12:00:00.000Z",
-                "type": "EXCLUSIVE",
-              },
-            ]
-          }
-          longRead={true}
-        />
+            longRead={true}
+          />
+        </View>
       </View>
     </View>
   </View>
@@ -353,47 +361,49 @@ exports[`tile ay without breakpoint should be like medium 1`] = `
     <View>
       <View>
         <View>
-          <View
+          <View>
+            <View
+              style={
+                Object {
+                  "marginBottom": 5,
+                }
+              }
+            >
+              <ArticleLabel
+                color="#005B8D"
+                title="label"
+              />
+            </View>
+          </View>
+          <Text
+            accessibilityRole="header"
+            aria-level="3"
             style={
               Object {
-                "marginBottom": 5,
+                "color": "#333333",
+                "fontFamily": "TimesModern-Regular",
+                "fontSize": 19,
+                "fontWeight": "normal",
+                "includeFontPadding": false,
+                "lineHeight": 19,
+                "marginBottom": 10,
               }
             }
           >
-            <ArticleLabel
-              color="#005B8D"
-              title="label"
-            />
-          </View>
-        </View>
-        <Text
-          accessibilityRole="header"
-          aria-level="3"
-          style={
-            Object {
-              "color": "#333333",
-              "fontFamily": "TimesModern-Regular",
-              "fontSize": 19,
-              "fontWeight": "normal",
-              "includeFontPadding": false,
-              "lineHeight": 19,
-              "marginBottom": 10,
+            This is tile headline
+          </Text>
+          <ArticleFlags
+            flags={
+              Array [
+                Object {
+                  "expiryTime": "2030-03-14T12:00:00.000Z",
+                  "type": "EXCLUSIVE",
+                },
+              ]
             }
-          }
-        >
-          This is tile headline
-        </Text>
-        <ArticleFlags
-          flags={
-            Array [
-              Object {
-                "expiryTime": "2030-03-14T12:00:00.000Z",
-                "type": "EXCLUSIVE",
-              },
-            ]
-          }
-          longRead={true}
-        />
+            longRead={true}
+          />
+        </View>
       </View>
     </View>
   </View>
