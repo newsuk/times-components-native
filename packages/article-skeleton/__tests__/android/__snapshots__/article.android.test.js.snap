@@ -658,6 +658,7 @@ exports[`1. a full article with all content items with dropcap template 1`] = `
                 "uri": "https://image.io",
               }
             }
+            testIDProp="inline-video"
             videoId="4084164751001"
             width={300}
           />

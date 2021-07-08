@@ -39,6 +39,7 @@ const ArticleTopic = ({
           <Link
             onPress={(e) => onPress(e, { name, slug })}
             url={makeTopicUrl({ slug })}
+            testIDProp="topic"
           >
             <View
               style={[

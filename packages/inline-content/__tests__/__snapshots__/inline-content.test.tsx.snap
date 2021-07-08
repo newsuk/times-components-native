@@ -102,6 +102,7 @@ exports[`InlineContent ad renders content and inline ad via a render-prop 1`] = 
                   "lineHeight": 52,
                 }
               }
+              testID="paragraph"
             >
               <Text>
                 article content
@@ -315,6 +316,7 @@ exports[`InlineContent dropcap renders content and dropcap via a render-prop 1`]
                   "lineHeight": 52,
                 }
               }
+              testID="paragraph"
             >
               <Text>
                 article content
@@ -489,6 +491,7 @@ exports[`InlineContent image renders content and inline image via a render-prop 
               "lineHeight": 52,
             }
           }
+          testID="paragraph"
         >
           <Text>
             article content
@@ -640,6 +643,7 @@ exports[`InlineContent pullQuote renders content and pullQuote ad via a render-p
               "lineHeight": 52,
             }
           }
+          testID="paragraph"
         >
           <Text>
             article content

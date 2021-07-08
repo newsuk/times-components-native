@@ -137,7 +137,10 @@ export class AdBase extends PureComponent {
     const isInline = display === "inline";
 
     return (
-      <View style={[styles.container, style, isInline && styles.inlineAd]}>
+      <View
+        style={[styles.container, style, isInline && styles.inlineAd]}
+        testID="article-advertisement"
+      >
         {isInline ? (
           <View style={[styles.inlineAdTitle, { width: sizeProps.width }]}>
             <Text style={styles.inlineAdTitleText}>Advertisement</Text>

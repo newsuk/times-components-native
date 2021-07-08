@@ -5,7 +5,7 @@ import { colours } from "@times-components-native/styleguide";
 import VideoLabel from "@times-components-native/video-label";
 import styles from "../styles/article-header";
 
-export default (render) => ({ isVideo, label }) => {
+const articleHeaderLabelBase = (render) => ({ isVideo, label }) => {
   if (!isVideo && !label) return null;
 
   const Label = isVideo ? VideoLabel : ArticleLabel;
@@ -17,8 +17,14 @@ export default (render) => ({ isVideo, label }) => {
     },
     <Context.Consumer>
       {({ theme: { sectionColour } }) => (
-        <Label color={sectionColour || colours.section.default} title={label} />
+        <Label
+          childTestID="article-slug"
+          color={sectionColour || colours.section.default}
+          title={label}
+        />
       )}
     </Context.Consumer>,
   );
 };
+
+export default articleHeaderLabelBase;

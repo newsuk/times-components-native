@@ -21,6 +21,7 @@ exports[`1. mobile primary image with caption and credits 1`] = `
         }
       }
       onImagePress={null}
+      testIDProp="inline-image"
       uri="https://img/someImage"
     />
   </View>
@@ -89,6 +90,7 @@ exports[`2. tablet primary image with caption and credits 1`] = `
         }
       }
       onImagePress={null}
+      testIDProp="inline-image"
       uri="https://img/someImage"
     />
   </View>
@@ -157,6 +159,7 @@ exports[`3. mobile fullwidth image with caption and credits 1`] = `
         }
       }
       onImagePress={null}
+      testIDProp="inline-image"
       uri="https://img/someImage"
     />
   </View>
@@ -235,6 +238,7 @@ exports[`4. tablet fullwidth image with caption and credits 1`] = `
         }
       }
       onImagePress={null}
+      testIDProp="inline-image"
       uri="https://img/someImage"
     />
   </View>
@@ -322,6 +326,7 @@ exports[`5. secondary image with caption and credits 1`] = `
         }
       }
       onImagePress={null}
+      testIDProp="inline-image"
       uri="https://img/someImage"
     />
   </View>

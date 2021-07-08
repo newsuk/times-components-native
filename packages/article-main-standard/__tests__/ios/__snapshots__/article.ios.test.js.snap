@@ -46,6 +46,7 @@ exports[`1. an article 1`] = `
     <View>
       <View>
         <ArticleLabel
+          childTestID="article-slug"
           color="#1D1D1B"
           title="Some Label"
         />
@@ -256,6 +257,7 @@ exports[`6. an article with no byline 1`] = `
     <View>
       <View>
         <ArticleLabel
+          childTestID="article-slug"
           color="#1D1D1B"
           title="Some Label"
         />
