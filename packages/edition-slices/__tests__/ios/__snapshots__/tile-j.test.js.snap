@@ -18,56 +18,58 @@ exports[`tile j without breakpoint 1`] = `
     }
     uri="https://www.thetimes.co.uk/imageserver/image/%2Fmethode%2Ftimes%2Fprod%2Fweb%2Fbin%2F5a14c64e-06db-11e9-abe2-4909b2eb0130.jpg?crop=2688%2C1792%2C0%2C0"
   />
-  <View
-    style={
-      Object {
-        "paddingLeft": 10,
-        "width": "60%",
+  <View>
+    <View
+      style={
+        Object {
+          "paddingLeft": 10,
+          "width": "60%",
+        }
       }
-    }
-  >
-    <View>
-      <View
+    >
+      <View>
+        <View
+          style={
+            Object {
+              "marginBottom": 5,
+            }
+          }
+        >
+          <ArticleLabel
+            color="#005B8D"
+            title="label"
+          />
+        </View>
+      </View>
+      <Text
+        accessibilityRole="header"
+        aria-level="3"
         style={
           Object {
+            "color": "#333333",
+            "fontFamily": "TimesModern-Bold",
+            "fontSize": 20,
+            "fontWeight": "900",
+            "includeFontPadding": false,
+            "lineHeight": 20,
             "marginBottom": 5,
           }
         }
       >
-        <ArticleLabel
-          color="#005B8D"
-          title="label"
-        />
-      </View>
-    </View>
-    <Text
-      accessibilityRole="header"
-      aria-level="3"
-      style={
-        Object {
-          "color": "#333333",
-          "fontFamily": "TimesModern-Bold",
-          "fontSize": 20,
-          "fontWeight": "900",
-          "includeFontPadding": false,
-          "lineHeight": 20,
-          "marginBottom": 5,
+        This is tile headline
+      </Text>
+      <ArticleFlags
+        flags={
+          Array [
+            Object {
+              "expiryTime": "2030-03-14T12:00:00.000Z",
+              "type": "EXCLUSIVE",
+            },
+          ]
         }
-      }
-    >
-      This is tile headline
-    </Text>
-    <ArticleFlags
-      flags={
-        Array [
-          Object {
-            "expiryTime": "2030-03-14T12:00:00.000Z",
-            "type": "EXCLUSIVE",
-          },
-        ]
-      }
-      longRead={true}
-    />
+        longRead={true}
+      />
+    </View>
   </View>
 </Link>
 `;

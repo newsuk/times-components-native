@@ -21,38 +21,40 @@ const ArticleHeader = ({
   publicationName,
   publishedTime,
   standfirst,
-}) => (
-  <Context.Consumer>
-    {({ theme: { headlineFont, headlineCase } }) => (
-      <View style={styles.header}>
-        <View style={styles.container}>
-          <Label isVideo={hasVideo} label={label} />
-          <Text
-            style={[
-              styles.articleHeadline,
-              {
-                ...fontFactory({
-                  font: headlineFont || "headline",
-                  fontSize: "tabletCommentHeadline",
-                }),
-              },
-              headlineCase ? { textTransform: headlineCase } : null,
-            ]}
-          >
-            {headline}
-          </Text>
-          <ArticleFlags flags={flags} longRead={longRead} withContainer />
-          <Standfirst standfirst={standfirst} />
-          <Meta
-            hasStandfirst={standfirst}
-            publicationName={publicationName}
-            publishedTime={publishedTime}
-          />
+}) => {
+  return (
+    <Context.Consumer>
+      {({ theme: { headlineFont, headlineCase } }) => (
+        <View style={styles.header}>
+          <View style={styles.container}>
+            <Label isVideo={hasVideo} label={label} />
+            <Text
+              style={[
+                styles.articleHeadline,
+                {
+                  ...fontFactory({
+                    font: headlineFont || "headline",
+                    fontSize: "tabletCommentHeadline",
+                  }),
+                },
+                headlineCase ? { textTransform: headlineCase } : null,
+              ]}
+            >
+              {headline}
+            </Text>
+            <ArticleFlags flags={flags} longRead={longRead} withContainer />
+            <Standfirst standfirst={standfirst} />
+            <Meta
+              hasStandfirst={standfirst}
+              publicationName={publicationName}
+              publishedTime={publishedTime}
+            />
+          </View>
         </View>
-      </View>
-    )}
-  </Context.Consumer>
-);
+      )}
+    </Context.Consumer>
+  );
+};
 
 ArticleHeader.propTypes = {
   ...articleHeaderPropTypes,

@@ -196,6 +196,16 @@ const ArticleSummary: React.FC<Props> = ({
     </MarkAsRead>
   );
 
+  const getLongReadFlag = () => {
+    switch (String(label).toLowerCase()) {
+      case "letters to the editor":
+        return false;
+      default:
+        return longRead;
+    }
+    return true;
+  };
+
   const renderFlags = (articleReadState: ArticleReadState) => (
     <MarkAsRead
       articleReadState={articleReadState}
@@ -206,7 +216,7 @@ const ArticleSummary: React.FC<Props> = ({
         {...flagColour}
         style={flagsStyle}
         flags={expirableFlags}
-        longRead={longRead}
+        longRead={getLongReadFlag()}
       />
     </MarkAsRead>
   );
@@ -246,26 +256,30 @@ const ArticleSummary: React.FC<Props> = ({
     );
 
   return (
-    <ArticleSummaryComponent
-      articleReadState={articleReadState}
-      bylineProps={bylines ? { ast: bylines, bylineStyle, bylineOnTop } : null}
-      content={summary && renderContent(articleReadState)}
-      flags={renderFlags(articleReadState)}
-      headline={renderHeadline(articleReadState)}
-      labelProps={{
-        color:
-          labelColour ||
-          (section && colours.section[section]) ||
-          colours.section.default,
-        isVideo: hasVideo,
-        title: label,
-        hide: hideLabel,
-      }}
-      strapline={renderStrapline(articleReadState)}
-      saveStar={withStar && renderSaveStar()}
-      style={style}
-      center={!!centeredStar}
-    />
+    <View>
+      <ArticleSummaryComponent
+        articleReadState={articleReadState}
+        bylineProps={
+          bylines ? { ast: bylines, bylineStyle, bylineOnTop } : null
+        }
+        content={summary && renderContent(articleReadState)}
+        flags={renderFlags(articleReadState)}
+        headline={renderHeadline(articleReadState)}
+        labelProps={{
+          color:
+            labelColour ||
+            (section && colours.section[section]) ||
+            colours.section.default,
+          isVideo: hasVideo,
+          title: label,
+          hide: hideLabel,
+        }}
+        strapline={renderStrapline(articleReadState)}
+        saveStar={withStar && renderSaveStar()}
+        style={style}
+        center={!!centeredStar}
+      />
+    </View>
   );
 };
 
