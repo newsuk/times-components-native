@@ -37,6 +37,7 @@ exports[`1. no short headline 1`] = `
                 <View>
                   <View>
                     <ArticleLabel
+                      childTestID="article-slug"
                       color="#004D6D"
                       title="test label"
                     />

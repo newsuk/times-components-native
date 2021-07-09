@@ -30,6 +30,7 @@ exports[`tile u with headline style 1`] = `
         }
       >
         <ArticleLabel
+          childTestID="article-slug"
           color="#005B8D"
           title="label"
         />
@@ -50,6 +51,7 @@ exports[`tile u with headline style 1`] = `
           "marginBottom": 10,
         }
       }
+      testID="article-summary-headline"
     >
       This is tile headline
     </Text>
@@ -98,6 +100,7 @@ exports[`tile u without breakpoint 1`] = `
         }
       >
         <ArticleLabel
+          childTestID="article-slug"
           color="#005B8D"
           title="label"
         />
@@ -117,6 +120,7 @@ exports[`tile u without breakpoint 1`] = `
           "marginBottom": 10,
         }
       }
+      testID="article-summary-headline"
     >
       This is tile headline
     </Text>

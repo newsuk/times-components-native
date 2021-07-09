@@ -41,6 +41,7 @@ exports[`tile ar huge 1`] = `
             }
           >
             <ArticleLabel
+              childTestID="article-slug"
               color="#005B8D"
               title="label"
             />
@@ -60,6 +61,7 @@ exports[`tile ar huge 1`] = `
               "marginBottom": 10,
             }
           }
+          testID="article-summary-headline"
         >
           This is tile headline
         </Text>
@@ -86,6 +88,7 @@ exports[`tile ar huge 1`] = `
               "marginBottom": 0,
             }
           }
+          testID="article-summary-content"
         >
           <Text>
             
@@ -140,6 +143,7 @@ exports[`tile ar medium 1`] = `
             }
           >
             <ArticleLabel
+              childTestID="article-slug"
               color="#005B8D"
               title="label"
             />
@@ -159,6 +163,7 @@ exports[`tile ar medium 1`] = `
               "marginBottom": 10,
             }
           }
+          testID="article-summary-headline"
         >
           This is tile headline
         </Text>
@@ -185,6 +190,7 @@ exports[`tile ar medium 1`] = `
               "marginBottom": 0,
             }
           }
+          testID="article-summary-content"
         >
           <Text>
             
@@ -239,6 +245,7 @@ exports[`tile ar smallTablet 1`] = `
             }
           >
             <ArticleLabel
+              childTestID="article-slug"
               color="#005B8D"
               title="label"
             />
@@ -258,6 +265,7 @@ exports[`tile ar smallTablet 1`] = `
               "marginBottom": 10,
             }
           }
+          testID="article-summary-headline"
         >
           This is tile headline
         </Text>
@@ -284,6 +292,7 @@ exports[`tile ar smallTablet 1`] = `
               "marginBottom": 0,
             }
           }
+          testID="article-summary-content"
         >
           <Text>
             
@@ -338,6 +347,7 @@ exports[`tile ar wide 1`] = `
             }
           >
             <ArticleLabel
+              childTestID="article-slug"
               color="#005B8D"
               title="label"
             />
@@ -357,6 +367,7 @@ exports[`tile ar wide 1`] = `
               "marginBottom": 10,
             }
           }
+          testID="article-summary-headline"
         >
           This is tile headline
         </Text>
@@ -383,6 +394,7 @@ exports[`tile ar wide 1`] = `
               "marginBottom": 0,
             }
           }
+          testID="article-summary-content"
         >
           <Text>
             
@@ -437,6 +449,7 @@ exports[`tile ar without breakpoint should be like medium 1`] = `
             }
           >
             <ArticleLabel
+              childTestID="article-slug"
               color="#005B8D"
               title="label"
             />
@@ -456,6 +469,7 @@ exports[`tile ar without breakpoint should be like medium 1`] = `
               "marginBottom": 10,
             }
           }
+          testID="article-summary-headline"
         >
           This is tile headline
         </Text>
@@ -482,6 +496,7 @@ exports[`tile ar without breakpoint should be like medium 1`] = `
               "marginBottom": 0,
             }
           }
+          testID="article-summary-content"
         >
           <Text>
             

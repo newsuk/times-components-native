@@ -35,6 +35,7 @@ exports[`tile k huge 1`] = `
         }
       >
         <ArticleLabel
+          childTestID="article-slug"
           color="#005B8D"
           title="label"
         />
@@ -54,6 +55,7 @@ exports[`tile k huge 1`] = `
           "marginBottom": 10,
         }
       }
+      testID="article-summary-headline"
     >
       This is tile headline
     </Text>
@@ -107,6 +109,7 @@ exports[`tile k medium 1`] = `
         }
       >
         <ArticleLabel
+          childTestID="article-slug"
           color="#005B8D"
           title="label"
         />
@@ -126,6 +129,7 @@ exports[`tile k medium 1`] = `
           "marginBottom": 10,
         }
       }
+      testID="article-summary-headline"
     >
       This is tile headline
     </Text>
@@ -179,6 +183,7 @@ exports[`tile k small 1`] = `
         }
       >
         <ArticleLabel
+          childTestID="article-slug"
           color="#005B8D"
           title="label"
         />
@@ -198,6 +203,7 @@ exports[`tile k small 1`] = `
           "marginBottom": 5,
         }
       }
+      testID="article-summary-headline"
     >
       This is tile headline
     </Text>
@@ -251,6 +257,7 @@ exports[`tile k smallTablet 1`] = `
         }
       >
         <ArticleLabel
+          childTestID="article-slug"
           color="#005B8D"
           title="label"
         />
@@ -270,6 +277,7 @@ exports[`tile k smallTablet 1`] = `
           "marginBottom": 10,
         }
       }
+      testID="article-summary-headline"
     >
       This is tile headline
     </Text>
@@ -323,6 +331,7 @@ exports[`tile k wide 1`] = `
         }
       >
         <ArticleLabel
+          childTestID="article-slug"
           color="#005B8D"
           title="label"
         />
@@ -342,6 +351,7 @@ exports[`tile k wide 1`] = `
           "marginBottom": 10,
         }
       }
+      testID="article-summary-headline"
     >
       This is tile headline
     </Text>
@@ -395,6 +405,7 @@ exports[`tile k without breakpoint should be like small 1`] = `
         }
       >
         <ArticleLabel
+          childTestID="article-slug"
           color="#005B8D"
           title="label"
         />
@@ -414,6 +425,7 @@ exports[`tile k without breakpoint should be like small 1`] = `
           "marginBottom": 5,
         }
       }
+      testID="article-summary-headline"
     >
       This is tile headline
     </Text>

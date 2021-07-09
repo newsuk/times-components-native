@@ -37,6 +37,7 @@ exports[`1. has video 1`] = `
                 <View>
                   <View>
                     <VideoLabel
+                      childTestID="article-slug"
                       color="#DB133B"
                       title="BAYEUX TAPESTRY"
                     />

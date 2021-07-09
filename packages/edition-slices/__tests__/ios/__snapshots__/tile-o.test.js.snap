@@ -26,6 +26,7 @@ exports[`tile n huge 1`] = `
         }
       >
         <ArticleLabel
+          childTestID="article-slug"
           color="#CCC"
           title="label"
         />
@@ -46,6 +47,7 @@ exports[`tile n huge 1`] = `
           "marginTop": 5,
         }
       }
+      testID="article-summary-headline"
     >
       This is tile headline
     </Text>
@@ -91,6 +93,7 @@ exports[`tile n medium 1`] = `
         }
       >
         <ArticleLabel
+          childTestID="article-slug"
           color="#CCC"
           title="label"
         />
@@ -111,6 +114,7 @@ exports[`tile n medium 1`] = `
           "marginTop": 0,
         }
       }
+      testID="article-summary-headline"
     >
       This is tile headline
     </Text>
@@ -158,6 +162,7 @@ exports[`tile n small 1`] = `
         }
       >
         <ArticleLabel
+          childTestID="article-slug"
           color="#CCC"
           title="label"
         />
@@ -177,6 +182,7 @@ exports[`tile n small 1`] = `
           "marginBottom": 5,
         }
       }
+      testID="article-summary-headline"
     >
       This is tile headline
     </Text>
@@ -222,6 +228,7 @@ exports[`tile n smallTablet 1`] = `
         }
       >
         <ArticleLabel
+          childTestID="article-slug"
           color="#CCC"
           title="label"
         />
@@ -242,6 +249,7 @@ exports[`tile n smallTablet 1`] = `
           "marginTop": 0,
         }
       }
+      testID="article-summary-headline"
     >
       This is tile headline
     </Text>
@@ -287,6 +295,7 @@ exports[`tile n wide 1`] = `
         }
       >
         <ArticleLabel
+          childTestID="article-slug"
           color="#CCC"
           title="label"
         />
@@ -307,6 +316,7 @@ exports[`tile n wide 1`] = `
           "marginTop": 0,
         }
       }
+      testID="article-summary-headline"
     >
       This is tile headline
     </Text>
@@ -354,6 +364,7 @@ exports[`tile n with default star 1`] = `
         }
       >
         <ArticleLabel
+          childTestID="article-slug"
           color="#CCC"
           title="label"
         />
@@ -373,6 +384,7 @@ exports[`tile n with default star 1`] = `
           "marginBottom": 5,
         }
       }
+      testID="article-summary-headline"
     >
       This is tile headline
     </Text>

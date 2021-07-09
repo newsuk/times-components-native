@@ -38,6 +38,7 @@ exports[`tile z huge 1`] = `
               }
             >
               <ArticleLabel
+                childTestID="article-slug"
                 color="#005B8D"
                 title="label"
               />
@@ -57,6 +58,7 @@ exports[`tile z huge 1`] = `
                 "marginBottom": 10,
               }
             }
+            testID="article-summary-headline"
           >
             This is tile headline
           </Text>
@@ -83,6 +85,7 @@ exports[`tile z huge 1`] = `
                 "marginBottom": 0,
               }
             }
+            testID="article-summary-content"
           >
             <Text>
               
@@ -144,6 +147,7 @@ exports[`tile z wide 1`] = `
               }
             >
               <ArticleLabel
+                childTestID="article-slug"
                 color="#005B8D"
                 title="label"
               />
@@ -163,6 +167,7 @@ exports[`tile z wide 1`] = `
                 "marginBottom": 10,
               }
             }
+            testID="article-summary-headline"
           >
             This is tile headline
           </Text>
@@ -189,6 +194,7 @@ exports[`tile z wide 1`] = `
                 "marginBottom": 0,
               }
             }
+            testID="article-summary-content"
           >
             <Text>
               
@@ -250,6 +256,7 @@ exports[`tile z without breakpoint should be like wide 1`] = `
               }
             >
               <ArticleLabel
+                childTestID="article-slug"
                 color="#005B8D"
                 title="label"
               />
@@ -269,6 +276,7 @@ exports[`tile z without breakpoint should be like wide 1`] = `
                 "marginBottom": 10,
               }
             }
+            testID="article-summary-headline"
           >
             This is tile headline
           </Text>
@@ -295,6 +303,7 @@ exports[`tile z without breakpoint should be like wide 1`] = `
                 "marginBottom": 0,
               }
             }
+            testID="article-summary-content"
           >
             <Text>
               

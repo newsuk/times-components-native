@@ -41,6 +41,7 @@ exports[`tile az portrait medium 1`] = `
         }
       >
         <ArticleLabel
+          childTestID="article-slug"
           color="#005B8D"
           title="label"
         />
@@ -62,6 +63,7 @@ exports[`tile az portrait medium 1`] = `
           "textAlign": "center",
         }
       }
+      testID="article-summary-headline"
     >
       This is tile headline
     </Text>
@@ -121,6 +123,7 @@ exports[`tile az portrait smallTablet 1`] = `
         }
       >
         <ArticleLabel
+          childTestID="article-slug"
           color="#005B8D"
           title="label"
         />
@@ -142,6 +145,7 @@ exports[`tile az portrait smallTablet 1`] = `
           "textAlign": "center",
         }
       }
+      testID="article-summary-headline"
     >
       This is tile headline
     </Text>
@@ -201,6 +205,7 @@ exports[`tile az portrait wide 1`] = `
         }
       >
         <ArticleLabel
+          childTestID="article-slug"
           color="#005B8D"
           title="label"
         />
@@ -222,6 +227,7 @@ exports[`tile az portrait wide 1`] = `
           "textAlign": "center",
         }
       }
+      testID="article-summary-headline"
     >
       This is tile headline
     </Text>

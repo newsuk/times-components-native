@@ -30,6 +30,7 @@ exports[`tile bf huge 1`] = `
           }
         >
           <ArticleLabel
+            childTestID="article-slug"
             color="#005B8D"
             title="label"
           />
@@ -49,6 +50,7 @@ exports[`tile bf huge 1`] = `
             "marginBottom": 10,
           }
         }
+        testID="article-summary-headline"
       >
         This is tile headline
       </Text>
@@ -111,6 +113,7 @@ exports[`tile bf medium 1`] = `
           }
         >
           <ArticleLabel
+            childTestID="article-slug"
             color="#005B8D"
             title="label"
           />
@@ -130,6 +133,7 @@ exports[`tile bf medium 1`] = `
             "marginBottom": 10,
           }
         }
+        testID="article-summary-headline"
       >
         This is tile headline
       </Text>
@@ -192,6 +196,7 @@ exports[`tile bf smallTablet 1`] = `
           }
         >
           <ArticleLabel
+            childTestID="article-slug"
             color="#005B8D"
             title="label"
           />
@@ -211,6 +216,7 @@ exports[`tile bf smallTablet 1`] = `
             "marginBottom": 10,
           }
         }
+        testID="article-summary-headline"
       >
         This is tile headline
       </Text>
@@ -273,6 +279,7 @@ exports[`tile bf wide 1`] = `
           }
         >
           <ArticleLabel
+            childTestID="article-slug"
             color="#005B8D"
             title="label"
           />
@@ -292,6 +299,7 @@ exports[`tile bf wide 1`] = `
             "marginBottom": 10,
           }
         }
+        testID="article-summary-headline"
       >
         This is tile headline
       </Text>
@@ -354,6 +362,7 @@ exports[`tile bf without breakpoint should be like medium 1`] = `
           }
         >
           <ArticleLabel
+            childTestID="article-slug"
             color="#005B8D"
             title="label"
           />
@@ -373,6 +382,7 @@ exports[`tile bf without breakpoint should be like medium 1`] = `
             "marginBottom": 10,
           }
         }
+        testID="article-summary-headline"
       >
         This is tile headline
       </Text>

@@ -27,6 +27,7 @@ exports[`tile column with image bottom huge 1`] = `
             }
           >
             <ArticleLabel
+              childTestID="article-slug"
               color="#005B8D"
               title="label"
             />
@@ -46,6 +47,7 @@ exports[`tile column with image bottom huge 1`] = `
               "marginBottom": 10,
             }
           }
+          testID="article-summary-headline"
         >
           This is tile headline
         </Text>
@@ -72,6 +74,7 @@ exports[`tile column with image bottom huge 1`] = `
               "marginBottom": 0,
             }
           }
+          testID="article-summary-content"
         >
           <Text>
             
@@ -112,6 +115,7 @@ exports[`tile column with image bottom medium 1`] = `
             }
           >
             <ArticleLabel
+              childTestID="article-slug"
               color="#005B8D"
               title="label"
             />
@@ -131,6 +135,7 @@ exports[`tile column with image bottom medium 1`] = `
               "marginBottom": 10,
             }
           }
+          testID="article-summary-headline"
         >
           This is tile headline
         </Text>
@@ -178,6 +183,7 @@ exports[`tile column with image bottom shows an image 1`] = `
             }
           >
             <ArticleLabel
+              childTestID="article-slug"
               color="#005B8D"
               title="label"
             />
@@ -197,6 +203,7 @@ exports[`tile column with image bottom shows an image 1`] = `
               "marginBottom": 10,
             }
           }
+          testID="article-summary-headline"
         >
           This is tile headline
         </Text>
@@ -244,6 +251,7 @@ exports[`tile column with image bottom shows portrait image when in portrait wid
             }
           >
             <ArticleLabel
+              childTestID="article-slug"
               color="#005B8D"
               title="label"
             />
@@ -263,6 +271,7 @@ exports[`tile column with image bottom shows portrait image when in portrait wid
               "marginBottom": 10,
             }
           }
+          testID="article-summary-headline"
         >
           This is tile headline
         </Text>
@@ -320,6 +329,7 @@ exports[`tile column with image bottom smallTablet 1`] = `
             }
           >
             <ArticleLabel
+              childTestID="article-slug"
               color="#005B8D"
               title="label"
             />
@@ -339,6 +349,7 @@ exports[`tile column with image bottom smallTablet 1`] = `
               "marginBottom": 10,
             }
           }
+          testID="article-summary-headline"
         >
           This is tile headline
         </Text>
@@ -386,6 +397,7 @@ exports[`tile column with image bottom wide 1`] = `
             }
           >
             <ArticleLabel
+              childTestID="article-slug"
               color="#005B8D"
               title="label"
             />
@@ -405,6 +417,7 @@ exports[`tile column with image bottom wide 1`] = `
               "marginBottom": 10,
             }
           }
+          testID="article-summary-headline"
         >
           This is tile headline
         </Text>
@@ -431,6 +444,7 @@ exports[`tile column with image bottom wide 1`] = `
               "marginBottom": 0,
             }
           }
+          testID="article-summary-content"
         >
           <Text>
             

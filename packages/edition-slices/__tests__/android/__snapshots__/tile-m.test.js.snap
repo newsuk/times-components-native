@@ -25,6 +25,7 @@ exports[`tile m huge 1`] = `
           "textAlign": "center",
         }
       }
+      testID="article-summary-headline"
     >
       Driving Off
     </Text>
@@ -76,6 +77,7 @@ exports[`tile m medium 1`] = `
           "textAlign": "center",
         }
       }
+      testID="article-summary-headline"
     >
       Driving Off
     </Text>
@@ -134,6 +136,7 @@ exports[`tile m small 1`] = `
           "textAlign": "center",
         }
       }
+      testID="article-summary-headline"
     >
       Driving Off
     </Text>
@@ -185,6 +188,7 @@ exports[`tile m smallTablet 1`] = `
           "textAlign": "center",
         }
       }
+      testID="article-summary-headline"
     >
       Driving Off
     </Text>
@@ -236,6 +240,7 @@ exports[`tile m wide 1`] = `
           "textAlign": "center",
         }
       }
+      testID="article-summary-headline"
     >
       Driving Off
     </Text>
@@ -294,6 +299,7 @@ exports[`tile m without breakpoint should be like small 1`] = `
           "textAlign": "center",
         }
       }
+      testID="article-summary-headline"
     >
       Driving Off
     </Text>

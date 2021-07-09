@@ -28,6 +28,7 @@ exports[`tile col standard huge 1`] = `
             }
           >
             <ArticleLabel
+              childTestID="article-slug"
               color="#005B8D"
               title="label"
             />
@@ -47,6 +48,7 @@ exports[`tile col standard huge 1`] = `
               "marginBottom": 10,
             }
           }
+          testID="article-summary-headline"
         >
           This is tile headline
         </Text>
@@ -73,6 +75,7 @@ exports[`tile col standard huge 1`] = `
               "marginBottom": 0,
             }
           }
+          testID="article-summary-content"
         >
           <Text>
             
@@ -114,6 +117,7 @@ exports[`tile col standard medium 1`] = `
             }
           >
             <ArticleLabel
+              childTestID="article-slug"
               color="#005B8D"
               title="label"
             />
@@ -133,6 +137,7 @@ exports[`tile col standard medium 1`] = `
               "marginBottom": 10,
             }
           }
+          testID="article-summary-headline"
         >
           This is tile headline
         </Text>
@@ -181,6 +186,7 @@ exports[`tile col standard shows an image 1`] = `
             }
           >
             <ArticleLabel
+              childTestID="article-slug"
               color="#005B8D"
               title="label"
             />
@@ -200,6 +206,7 @@ exports[`tile col standard shows an image 1`] = `
               "marginBottom": 10,
             }
           }
+          testID="article-summary-headline"
         >
           This is tile headline
         </Text>
@@ -257,6 +264,7 @@ exports[`tile col standard shows portrait image when in portrait wide (ipad pro)
             }
           >
             <ArticleLabel
+              childTestID="article-slug"
               color="#005B8D"
               title="label"
             />
@@ -276,6 +284,7 @@ exports[`tile col standard shows portrait image when in portrait wide (ipad pro)
               "marginBottom": 10,
             }
           }
+          testID="article-summary-headline"
         >
           This is tile headline
         </Text>
@@ -324,6 +333,7 @@ exports[`tile col standard smallTablet 1`] = `
             }
           >
             <ArticleLabel
+              childTestID="article-slug"
               color="#005B8D"
               title="label"
             />
@@ -343,6 +353,7 @@ exports[`tile col standard smallTablet 1`] = `
               "marginBottom": 10,
             }
           }
+          testID="article-summary-headline"
         >
           This is tile headline
         </Text>
@@ -391,6 +402,7 @@ exports[`tile col standard wide 1`] = `
             }
           >
             <ArticleLabel
+              childTestID="article-slug"
               color="#005B8D"
               title="label"
             />
@@ -410,6 +422,7 @@ exports[`tile col standard wide 1`] = `
               "marginBottom": 10,
             }
           }
+          testID="article-summary-headline"
         >
           This is tile headline
         </Text>
@@ -436,6 +449,7 @@ exports[`tile col standard wide 1`] = `
               "marginBottom": 0,
             }
           }
+          testID="article-summary-content"
         >
           <Text>
             
