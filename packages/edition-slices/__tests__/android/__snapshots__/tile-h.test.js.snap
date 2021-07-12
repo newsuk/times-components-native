@@ -9,114 +9,116 @@ exports[`tile h without breakpoint 1`] = `
     }
   }
 >
-  <View
-    style={
-      Object {
-        "paddingRight": 10,
-        "width": "50%",
+  <View>
+    <View
+      style={
+        Object {
+          "paddingRight": 10,
+          "width": "50%",
+        }
       }
-    }
-  >
-    <View>
-      <View
+    >
+      <View>
+        <View
+          style={
+            Object {
+              "marginBottom": 5,
+            }
+          }
+        >
+          <ArticleLabel
+            color="#005B8D"
+            title="label"
+          />
+        </View>
+      </View>
+      <Text
+        accessibilityRole="header"
+        aria-level="3"
         style={
           Object {
+            "color": "#333333",
+            "fontFamily": "TimesModern-Bold",
+            "fontSize": 20,
+            "fontWeight": "900",
+            "includeFontPadding": false,
+            "lineHeight": 20,
             "marginBottom": 5,
           }
         }
       >
-        <ArticleLabel
-          color="#005B8D"
-          title="label"
-        />
-      </View>
-    </View>
-    <Text
-      accessibilityRole="header"
-      aria-level="3"
-      style={
-        Object {
-          "color": "#333333",
-          "fontFamily": "TimesModern-Bold",
-          "fontSize": 20,
-          "fontWeight": "900",
-          "includeFontPadding": false,
-          "lineHeight": 20,
-          "marginBottom": 5,
-        }
-      }
-    >
-      This is tile headline
-    </Text>
-    <ArticleFlags
-      flags={
-        Array [
-          Object {
-            "expiryTime": "2030-03-14T12:00:00.000Z",
-            "type": "EXCLUSIVE",
-          },
-        ]
-      }
-      longRead={true}
-    />
-    <Text
-      style={
-        Object {
-          "color": "#696969",
-          "flexWrap": "wrap",
-          "fontFamily": "TimesDigitalW04",
-          "fontSize": 14,
-          "lineHeight": 20,
-          "marginBottom": 0,
-        }
-      }
-    >
-      <Text>
-        
-        Theresa May has two objectives tomorrow when MPs get to vote on Brexit — the trouble is both are fraught with difficulty.
-        ...
+        This is tile headline
       </Text>
-    </Text>
-    <View>
+      <ArticleFlags
+        flags={
+          Array [
+            Object {
+              "expiryTime": "2030-03-14T12:00:00.000Z",
+              "type": "EXCLUSIVE",
+            },
+          ]
+        }
+        longRead={true}
+      />
       <Text
         style={
           Object {
-            "color": "#333333",
-            "flexDirection": "row",
-            "fontFamily": "GillSansMTStd-Medium",
-            "fontSize": 13,
-            "lineHeight": 13,
+            "color": "#696969",
+            "flexWrap": "wrap",
+            "fontFamily": "TimesDigitalW04",
+            "fontSize": 14,
+            "lineHeight": 20,
+            "marginBottom": 0,
           }
         }
-        testID="author"
       >
-        <Text
-          style={
-            Object {
-              "color": "#333333",
-              "flexDirection": "row",
-              "fontFamily": "GillSansMTStd-Medium",
-              "fontSize": 13,
-              "lineHeight": 13,
-            }
-          }
-        >
-          Richard Lloyd Parry
-        </Text>
-        <Text
-          style={
-            Object {
-              "color": "#333333",
-              "flexDirection": "row",
-              "fontFamily": "GillSansMTStd-Medium",
-              "fontSize": 13,
-              "lineHeight": 13,
-            }
-          }
-        >
-          , Hanoi
+        <Text>
+          
+          Theresa May has two objectives tomorrow when MPs get to vote on Brexit — the trouble is both are fraught with difficulty.
+          ...
         </Text>
       </Text>
+      <View>
+        <Text
+          style={
+            Object {
+              "color": "#333333",
+              "flexDirection": "row",
+              "fontFamily": "GillSansMTStd-Medium",
+              "fontSize": 13,
+              "lineHeight": 13,
+            }
+          }
+          testID="author"
+        >
+          <Text
+            style={
+              Object {
+                "color": "#333333",
+                "flexDirection": "row",
+                "fontFamily": "GillSansMTStd-Medium",
+                "fontSize": 13,
+                "lineHeight": 13,
+              }
+            }
+          >
+            Richard Lloyd Parry
+          </Text>
+          <Text
+            style={
+              Object {
+                "color": "#333333",
+                "flexDirection": "row",
+                "fontFamily": "GillSansMTStd-Medium",
+                "fontSize": 13,
+                "lineHeight": 13,
+              }
+            }
+          >
+            , Hanoi
+          </Text>
+        </Text>
+      </View>
     </View>
   </View>
   <Image

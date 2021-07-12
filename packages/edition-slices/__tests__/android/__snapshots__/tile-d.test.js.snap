@@ -27,56 +27,58 @@ exports[`tile d medium 1`] = `
     }
   >
     <View>
-      <View
-        style={
-          Object {
-            "flex": 1,
-            "paddingLeft": 10,
-          }
-        }
-      >
-        <View>
-          <View
-            style={
-              Object {
-                "marginBottom": 5,
-              }
-            }
-          >
-            <ArticleLabel
-              color="#005B8D"
-              title="label"
-            />
-          </View>
-        </View>
-        <Text
-          accessibilityRole="header"
-          aria-level="3"
+      <View>
+        <View
           style={
             Object {
-              "color": "#333333",
-              "fontFamily": "TimesModern-Bold",
-              "fontSize": 20,
-              "fontWeight": "900",
-              "includeFontPadding": false,
-              "lineHeight": 20,
-              "marginBottom": 10,
+              "flex": 1,
+              "paddingLeft": 10,
             }
           }
         >
-          This is tile headline
-        </Text>
-        <ArticleFlags
-          flags={
-            Array [
+          <View>
+            <View
+              style={
+                Object {
+                  "marginBottom": 5,
+                }
+              }
+            >
+              <ArticleLabel
+                color="#005B8D"
+                title="label"
+              />
+            </View>
+          </View>
+          <Text
+            accessibilityRole="header"
+            aria-level="3"
+            style={
               Object {
-                "expiryTime": "2030-03-14T12:00:00.000Z",
-                "type": "EXCLUSIVE",
-              },
-            ]
-          }
-          longRead={true}
-        />
+                "color": "#333333",
+                "fontFamily": "TimesModern-Bold",
+                "fontSize": 20,
+                "fontWeight": "900",
+                "includeFontPadding": false,
+                "lineHeight": 20,
+                "marginBottom": 10,
+              }
+            }
+          >
+            This is tile headline
+          </Text>
+          <ArticleFlags
+            flags={
+              Array [
+                Object {
+                  "expiryTime": "2030-03-14T12:00:00.000Z",
+                  "type": "EXCLUSIVE",
+                },
+              ]
+            }
+            longRead={true}
+          />
+        </View>
       </View>
     </View>
   </View>
@@ -110,56 +112,58 @@ exports[`tile d small 1`] = `
     }
   >
     <View>
-      <View
-        style={
-          Object {
-            "flex": 1,
-            "paddingLeft": 10,
-          }
-        }
-      >
-        <View>
-          <View
-            style={
-              Object {
-                "marginBottom": 5,
-              }
-            }
-          >
-            <ArticleLabel
-              color="#005B8D"
-              title="label"
-            />
-          </View>
-        </View>
-        <Text
-          accessibilityRole="header"
-          aria-level="3"
+      <View>
+        <View
           style={
             Object {
-              "color": "#333333",
-              "fontFamily": "TimesModern-Bold",
-              "fontSize": 20,
-              "fontWeight": "900",
-              "includeFontPadding": false,
-              "lineHeight": 20,
-              "marginBottom": 10,
+              "flex": 1,
+              "paddingLeft": 10,
             }
           }
         >
-          This is tile headline
-        </Text>
-        <ArticleFlags
-          flags={
-            Array [
+          <View>
+            <View
+              style={
+                Object {
+                  "marginBottom": 5,
+                }
+              }
+            >
+              <ArticleLabel
+                color="#005B8D"
+                title="label"
+              />
+            </View>
+          </View>
+          <Text
+            accessibilityRole="header"
+            aria-level="3"
+            style={
               Object {
-                "expiryTime": "2030-03-14T12:00:00.000Z",
-                "type": "EXCLUSIVE",
-              },
-            ]
-          }
-          longRead={true}
-        />
+                "color": "#333333",
+                "fontFamily": "TimesModern-Bold",
+                "fontSize": 20,
+                "fontWeight": "900",
+                "includeFontPadding": false,
+                "lineHeight": 20,
+                "marginBottom": 10,
+              }
+            }
+          >
+            This is tile headline
+          </Text>
+          <ArticleFlags
+            flags={
+              Array [
+                Object {
+                  "expiryTime": "2030-03-14T12:00:00.000Z",
+                  "type": "EXCLUSIVE",
+                },
+              ]
+            }
+            longRead={true}
+          />
+        </View>
       </View>
     </View>
   </View>
@@ -193,56 +197,58 @@ exports[`tile d smallTablet 1`] = `
     }
   >
     <View>
-      <View
-        style={
-          Object {
-            "flex": 1,
-            "paddingLeft": 10,
-          }
-        }
-      >
-        <View>
-          <View
-            style={
-              Object {
-                "marginBottom": 5,
-              }
-            }
-          >
-            <ArticleLabel
-              color="#005B8D"
-              title="label"
-            />
-          </View>
-        </View>
-        <Text
-          accessibilityRole="header"
-          aria-level="3"
+      <View>
+        <View
           style={
             Object {
-              "color": "#333333",
-              "fontFamily": "TimesModern-Bold",
-              "fontSize": 20,
-              "fontWeight": "900",
-              "includeFontPadding": false,
-              "lineHeight": 20,
-              "marginBottom": 10,
+              "flex": 1,
+              "paddingLeft": 10,
             }
           }
         >
-          This is tile headline
-        </Text>
-        <ArticleFlags
-          flags={
-            Array [
+          <View>
+            <View
+              style={
+                Object {
+                  "marginBottom": 5,
+                }
+              }
+            >
+              <ArticleLabel
+                color="#005B8D"
+                title="label"
+              />
+            </View>
+          </View>
+          <Text
+            accessibilityRole="header"
+            aria-level="3"
+            style={
               Object {
-                "expiryTime": "2030-03-14T12:00:00.000Z",
-                "type": "EXCLUSIVE",
-              },
-            ]
-          }
-          longRead={true}
-        />
+                "color": "#333333",
+                "fontFamily": "TimesModern-Bold",
+                "fontSize": 20,
+                "fontWeight": "900",
+                "includeFontPadding": false,
+                "lineHeight": 20,
+                "marginBottom": 10,
+              }
+            }
+          >
+            This is tile headline
+          </Text>
+          <ArticleFlags
+            flags={
+              Array [
+                Object {
+                  "expiryTime": "2030-03-14T12:00:00.000Z",
+                  "type": "EXCLUSIVE",
+                },
+              ]
+            }
+            longRead={true}
+          />
+        </View>
       </View>
     </View>
   </View>
@@ -276,56 +282,58 @@ exports[`tile d without breakpoint should be like small 1`] = `
     }
   >
     <View>
-      <View
-        style={
-          Object {
-            "flex": 1,
-            "paddingLeft": 10,
-          }
-        }
-      >
-        <View>
-          <View
-            style={
-              Object {
-                "marginBottom": 5,
-              }
-            }
-          >
-            <ArticleLabel
-              color="#005B8D"
-              title="label"
-            />
-          </View>
-        </View>
-        <Text
-          accessibilityRole="header"
-          aria-level="3"
+      <View>
+        <View
           style={
             Object {
-              "color": "#333333",
-              "fontFamily": "TimesModern-Bold",
-              "fontSize": 20,
-              "fontWeight": "900",
-              "includeFontPadding": false,
-              "lineHeight": 20,
-              "marginBottom": 10,
+              "flex": 1,
+              "paddingLeft": 10,
             }
           }
         >
-          This is tile headline
-        </Text>
-        <ArticleFlags
-          flags={
-            Array [
+          <View>
+            <View
+              style={
+                Object {
+                  "marginBottom": 5,
+                }
+              }
+            >
+              <ArticleLabel
+                color="#005B8D"
+                title="label"
+              />
+            </View>
+          </View>
+          <Text
+            accessibilityRole="header"
+            aria-level="3"
+            style={
               Object {
-                "expiryTime": "2030-03-14T12:00:00.000Z",
-                "type": "EXCLUSIVE",
-              },
-            ]
-          }
-          longRead={true}
-        />
+                "color": "#333333",
+                "fontFamily": "TimesModern-Bold",
+                "fontSize": 20,
+                "fontWeight": "900",
+                "includeFontPadding": false,
+                "lineHeight": 20,
+                "marginBottom": 10,
+              }
+            }
+          >
+            This is tile headline
+          </Text>
+          <ArticleFlags
+            flags={
+              Array [
+                Object {
+                  "expiryTime": "2030-03-14T12:00:00.000Z",
+                  "type": "EXCLUSIVE",
+                },
+              ]
+            }
+            longRead={true}
+          />
+        </View>
       </View>
     </View>
   </View>
