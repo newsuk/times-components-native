@@ -98,6 +98,7 @@ exports[`tile ah huge 1`] = `
             "textAlign": "center",
           }
         }
+        testID="article-summary-headline"
       >
         This is tile headline
       </Text>
@@ -233,6 +234,7 @@ exports[`tile ah medium 1`] = `
             "textAlign": "center",
           }
         }
+        testID="article-summary-headline"
       >
         This is tile headline
       </Text>
@@ -368,6 +370,7 @@ exports[`tile ah smallTablet 1`] = `
             "textAlign": "center",
           }
         }
+        testID="article-summary-headline"
       >
         This is tile headline
       </Text>
@@ -485,6 +488,7 @@ exports[`tile ah wide 1`] = `
             "textAlign": "center",
           }
         }
+        testID="article-summary-headline"
       >
         This is tile headline
       </Text>
@@ -620,6 +624,7 @@ exports[`tile ah without breakpoint should be like medium 1`] = `
             "textAlign": "center",
           }
         }
+        testID="article-summary-headline"
       >
         This is tile headline
       </Text>

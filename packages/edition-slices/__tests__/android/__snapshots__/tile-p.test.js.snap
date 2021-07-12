@@ -75,7 +75,6 @@ exports[`tile p without breakpoint 1`] = `
           "paddingTop": 10,
         }
       }
-      testID="article-summary-headline"
     >
       <Text
         accessibilityRole="header"
@@ -93,6 +92,7 @@ exports[`tile p without breakpoint 1`] = `
             "textAlign": "center",
           }
         }
+        testID="article-summary-headline"
       >
         This is tile headline
       </Text>

@@ -37,6 +37,7 @@ exports[`tile t without breakpoint 1`] = `
           }
         >
           <ArticleLabel
+            childTestID="article-slug"
             color="#005B8D"
             title="label"
           />
@@ -56,6 +57,7 @@ exports[`tile t without breakpoint 1`] = `
             "marginBottom": 5,
           }
         }
+        testID="article-summary-headline"
       >
         This is tile headline
       </Text>

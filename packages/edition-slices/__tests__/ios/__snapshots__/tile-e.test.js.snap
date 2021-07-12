@@ -29,6 +29,7 @@ exports[`tile e landscape huge 1`] = `
               }
             >
               <ArticleLabel
+                childTestID="article-slug"
                 color="#005B8D"
                 title="label"
               />
@@ -48,6 +49,7 @@ exports[`tile e landscape huge 1`] = `
                 "marginBottom": 10,
               }
             }
+            testID="article-summary-headline"
           >
             This is tile headline
           </Text>
@@ -109,6 +111,7 @@ exports[`tile e landscape medium 1`] = `
               }
             >
               <ArticleLabel
+                childTestID="article-slug"
                 color="#005B8D"
                 title="label"
               />
@@ -128,6 +131,7 @@ exports[`tile e landscape medium 1`] = `
                 "marginBottom": 10,
               }
             }
+            testID="article-summary-headline"
           >
             This is tile headline
           </Text>
@@ -195,6 +199,7 @@ exports[`tile e landscape small 1`] = `
               }
             >
               <ArticleLabel
+                childTestID="article-slug"
                 color="#005B8D"
                 title="label"
               />
@@ -214,6 +219,7 @@ exports[`tile e landscape small 1`] = `
                 "marginBottom": 5,
               }
             }
+            testID="article-summary-headline"
           >
             This is tile headline
           </Text>
@@ -240,6 +246,7 @@ exports[`tile e landscape small 1`] = `
                 "marginBottom": 0,
               }
             }
+            testID="article-summary-content"
           >
             <Text>
               
@@ -292,6 +299,7 @@ exports[`tile e landscape wide 1`] = `
               }
             >
               <ArticleLabel
+                childTestID="article-slug"
                 color="#005B8D"
                 title="label"
               />
@@ -311,6 +319,7 @@ exports[`tile e landscape wide 1`] = `
                 "marginBottom": 10,
               }
             }
+            testID="article-summary-headline"
           >
             This is tile headline
           </Text>
@@ -372,6 +381,7 @@ exports[`tile e portrait huge 1`] = `
               }
             >
               <ArticleLabel
+                childTestID="article-slug"
                 color="#005B8D"
                 title="label"
               />
@@ -391,6 +401,7 @@ exports[`tile e portrait huge 1`] = `
                 "marginBottom": 10,
               }
             }
+            testID="article-summary-headline"
           >
             This is tile headline
           </Text>
@@ -452,6 +463,7 @@ exports[`tile e portrait medium 1`] = `
               }
             >
               <ArticleLabel
+                childTestID="article-slug"
                 color="#005B8D"
                 title="label"
               />
@@ -471,6 +483,7 @@ exports[`tile e portrait medium 1`] = `
                 "marginBottom": 10,
               }
             }
+            testID="article-summary-headline"
           >
             This is tile headline
           </Text>
@@ -538,6 +551,7 @@ exports[`tile e portrait small 1`] = `
               }
             >
               <ArticleLabel
+                childTestID="article-slug"
                 color="#005B8D"
                 title="label"
               />
@@ -557,6 +571,7 @@ exports[`tile e portrait small 1`] = `
                 "marginBottom": 5,
               }
             }
+            testID="article-summary-headline"
           >
             This is tile headline
           </Text>
@@ -583,6 +598,7 @@ exports[`tile e portrait small 1`] = `
                 "marginBottom": 0,
               }
             }
+            testID="article-summary-content"
           >
             <Text>
               
@@ -635,6 +651,7 @@ exports[`tile e portrait smallTablet 1`] = `
               }
             >
               <ArticleLabel
+                childTestID="article-slug"
                 color="#005B8D"
                 title="label"
               />
@@ -654,6 +671,7 @@ exports[`tile e portrait smallTablet 1`] = `
                 "marginBottom": 10,
               }
             }
+            testID="article-summary-headline"
           >
             This is tile headline
           </Text>
@@ -715,6 +733,7 @@ exports[`tile e portrait wide 1`] = `
               }
             >
               <ArticleLabel
+                childTestID="article-slug"
                 color="#005B8D"
                 title="label"
               />
@@ -734,6 +753,7 @@ exports[`tile e portrait wide 1`] = `
                 "marginBottom": 10,
               }
             }
+            testID="article-summary-headline"
           >
             This is tile headline
           </Text>

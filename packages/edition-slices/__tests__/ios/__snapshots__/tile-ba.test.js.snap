@@ -36,6 +36,7 @@ exports[`tile ba portrait medium 1`] = `
           }
         >
           <ArticleLabel
+            childTestID="article-slug"
             color="#005B8D"
             title="label"
           />
@@ -55,6 +56,7 @@ exports[`tile ba portrait medium 1`] = `
             "marginBottom": 10,
           }
         }
+        testID="article-summary-headline"
       >
         This is tile headline
       </Text>
@@ -110,6 +112,7 @@ exports[`tile ba portrait smallTablet 1`] = `
           }
         >
           <ArticleLabel
+            childTestID="article-slug"
             color="#005B8D"
             title="label"
           />
@@ -129,6 +132,7 @@ exports[`tile ba portrait smallTablet 1`] = `
             "marginBottom": 10,
           }
         }
+        testID="article-summary-headline"
       >
         This is tile headline
       </Text>
@@ -184,6 +188,7 @@ exports[`tile ba portrait wide 1`] = `
           }
         >
           <ArticleLabel
+            childTestID="article-slug"
             color="#005B8D"
             title="label"
           />
@@ -203,6 +208,7 @@ exports[`tile ba portrait wide 1`] = `
             "marginBottom": 10,
           }
         }
+        testID="article-summary-headline"
       >
         This is tile headline
       </Text>

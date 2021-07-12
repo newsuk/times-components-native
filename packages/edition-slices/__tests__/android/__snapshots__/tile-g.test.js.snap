@@ -60,6 +60,7 @@ exports[`tile g huge 1`] = `
               }
             >
               <ArticleLabel
+                childTestID="article-slug"
                 color="#005B8D"
                 title="label"
               />
@@ -79,6 +80,7 @@ exports[`tile g huge 1`] = `
                 "marginBottom": 10,
               }
             }
+            testID="article-summary-headline"
           >
             This is tile headline
           </Text>
@@ -160,6 +162,7 @@ exports[`tile g medium 1`] = `
               }
             >
               <ArticleLabel
+                childTestID="article-slug"
                 color="#005B8D"
                 title="label"
               />
@@ -179,6 +182,7 @@ exports[`tile g medium 1`] = `
                 "marginBottom": 10,
               }
             }
+            testID="article-summary-headline"
           >
             This is tile headline
           </Text>
@@ -258,6 +262,7 @@ exports[`tile g small 1`] = `
               }
             >
               <ArticleLabel
+                childTestID="article-slug"
                 color="#005B8D"
                 title="label"
               />
@@ -277,6 +282,7 @@ exports[`tile g small 1`] = `
                 "marginBottom": 5,
               }
             }
+            testID="article-summary-headline"
           >
             This is tile headline
           </Text>
@@ -358,6 +364,7 @@ exports[`tile g smallTablet 1`] = `
               }
             >
               <ArticleLabel
+                childTestID="article-slug"
                 color="#005B8D"
                 title="label"
               />
@@ -377,6 +384,7 @@ exports[`tile g smallTablet 1`] = `
                 "marginBottom": 10,
               }
             }
+            testID="article-summary-headline"
           >
             This is tile headline
           </Text>
@@ -458,6 +466,7 @@ exports[`tile g wide 1`] = `
               }
             >
               <ArticleLabel
+                childTestID="article-slug"
                 color="#005B8D"
                 title="label"
               />
@@ -477,6 +486,7 @@ exports[`tile g wide 1`] = `
                 "marginBottom": 10,
               }
             }
+            testID="article-summary-headline"
           >
             This is tile headline
           </Text>
@@ -558,6 +568,7 @@ exports[`tile g without breakpoint should be like small 1`] = `
               }
             >
               <ArticleLabel
+                childTestID="article-slug"
                 color="#005B8D"
                 title="label"
               />
@@ -577,6 +588,7 @@ exports[`tile g without breakpoint should be like small 1`] = `
                 "marginBottom": 10,
               }
             }
+            testID="article-summary-headline"
           >
             This is tile headline
           </Text>
