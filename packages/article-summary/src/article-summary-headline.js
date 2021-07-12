@@ -12,6 +12,7 @@ const ArticleSummaryHeadline = ({
   allowFontScaling,
 }) => (
   <Text
+    testID={"article-summary-headline"}
     accessibilityRole="header"
     aria-level="3"
     allowFontScaling={

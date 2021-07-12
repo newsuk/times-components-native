@@ -37,6 +37,7 @@ exports[`1. two related articles 1`] = `
                 <View>
                   <View>
                     <ArticleLabel
+                      childTestID="article-slug"
                       color="#C74600"
                       title="first label"
                     />
@@ -101,6 +102,7 @@ exports[`1. two related articles 1`] = `
                 <View>
                   <View>
                     <ArticleLabel
+                      childTestID="article-slug"
                       color="#6C6C69"
                       title="second label"
                     />

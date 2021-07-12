@@ -5,6 +5,7 @@ exports[`1. article summary component with a single paragraph 1`] = `
   <View>
     <View>
       <ArticleLabel
+        childTestID="article-slug"
         color="#333333"
         title="Test label"
       />
@@ -192,6 +193,7 @@ exports[`4. article summary component containing links 1`] = `
   <View>
     <View>
       <ArticleLabel
+        childTestID="article-slug"
         color="#333333"
         title="Test label"
       />
@@ -229,6 +231,7 @@ exports[`5. article summary component with headline and no content 1`] = `
   <View>
     <View>
       <ArticleLabel
+        childTestID="article-slug"
         color="#333333"
         title="Test label"
       />
@@ -252,6 +255,7 @@ exports[`6. article summary component with empty content at the end trimmed 1`] 
   <View>
     <View>
       <ArticleLabel
+        childTestID="article-slug"
         color="#333333"
         title="Test label"
       />
@@ -395,6 +399,7 @@ exports[`9. article summary component with no headline 1`] = `
   <View>
     <View>
       <ArticleLabel
+        childTestID="article-slug"
         color="#333333"
         title="Test label"
       />
@@ -419,6 +424,7 @@ exports[`10. article summary component with no date publication 1`] = `
   <View>
     <View>
       <ArticleLabel
+        childTestID="article-slug"
         color="#333333"
         title="Test label"
       />
@@ -476,6 +482,7 @@ exports[`11. article summary component with a video label 1`] = `
   <View>
     <View>
       <VideoLabel
+        childTestID="article-slug"
         color="#333333"
         title="Test label"
       />
@@ -537,6 +544,7 @@ exports[`12. article summary component with a strapline 1`] = `
   <View>
     <View>
       <ArticleLabel
+        childTestID="article-slug"
         color="#333333"
         title="Test label"
       />
@@ -679,6 +687,7 @@ exports[`18. article summary component with a single paragraph and flag on table
   <View>
     <View>
       <ArticleLabel
+        childTestID="article-slug"
         color="#333333"
         title="Camilla Long"
       />
@@ -765,6 +774,7 @@ exports[`19. article summary component with a strapline and flag on tablet 1`] =
   <View>
     <View>
       <ArticleLabel
+        childTestID="article-slug"
         color="#333333"
         title="Camilla Long"
       />
@@ -943,6 +953,7 @@ exports[`21. article summary component with byline on top 1`] = `
   <View>
     <View>
       <ArticleLabel
+        childTestID="article-slug"
         color="#333333"
         title="Camilla Long"
       />

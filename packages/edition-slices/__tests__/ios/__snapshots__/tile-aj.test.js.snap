@@ -35,6 +35,7 @@ exports[`tile aj without breakpoint 1`] = `
           "marginBottom": 10,
         }
       }
+      testID="article-summary-headline"
     >
       Times Concise medium No 7881
     </Text>

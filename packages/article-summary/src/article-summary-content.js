@@ -24,6 +24,7 @@ const ArticleSummaryContent = ({
 
   return ast.length > 0 ? (
     <Text
+      testID={"article-summary-content"}
       className={className}
       style={[styles.text, style]}
       {...numberOfLinesProp}
