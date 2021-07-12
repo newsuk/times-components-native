@@ -11,6 +11,7 @@ exports[`1. article summary component with a single paragraph 1`] = `
       }
     >
       <ArticleLabel
+        childTestID="article-slug"
         color="#333333"
         title="Test label"
       />

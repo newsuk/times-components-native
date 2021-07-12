@@ -54,6 +54,7 @@ exports[`tile lead supplement landscape huge 1`] = `
               }
             >
               <ArticleLabel
+                childTestID="article-slug"
                 color="#005B8D"
                 title="label"
               />
@@ -73,6 +74,7 @@ exports[`tile lead supplement landscape huge 1`] = `
                 "marginBottom": 10,
               }
             }
+            testID="article-summary-headline"
           >
             This is tile headline
           </Text>
@@ -99,6 +101,7 @@ exports[`tile lead supplement landscape huge 1`] = `
                 "marginBottom": 0,
               }
             }
+            testID="article-summary-content"
           >
             <Text>
               
@@ -167,6 +170,7 @@ exports[`tile lead supplement landscape medium 1`] = `
               }
             >
               <ArticleLabel
+                childTestID="article-slug"
                 color="#005B8D"
                 title="label"
               />
@@ -186,6 +190,7 @@ exports[`tile lead supplement landscape medium 1`] = `
                 "marginBottom": 10,
               }
             }
+            testID="article-summary-headline"
           >
             This is tile headline
           </Text>
@@ -212,6 +217,7 @@ exports[`tile lead supplement landscape medium 1`] = `
                 "marginBottom": 0,
               }
             }
+            testID="article-summary-content"
           >
             <Text>
               
@@ -280,6 +286,7 @@ exports[`tile lead supplement landscape smallTablet 1`] = `
               }
             >
               <ArticleLabel
+                childTestID="article-slug"
                 color="#005B8D"
                 title="label"
               />
@@ -299,6 +306,7 @@ exports[`tile lead supplement landscape smallTablet 1`] = `
                 "marginBottom": 10,
               }
             }
+            testID="article-summary-headline"
           >
             This is tile headline
           </Text>
@@ -325,6 +333,7 @@ exports[`tile lead supplement landscape smallTablet 1`] = `
                 "marginBottom": 0,
               }
             }
+            testID="article-summary-content"
           >
             <Text>
               
@@ -393,6 +402,7 @@ exports[`tile lead supplement landscape wide 1`] = `
               }
             >
               <ArticleLabel
+                childTestID="article-slug"
                 color="#005B8D"
                 title="label"
               />
@@ -412,6 +422,7 @@ exports[`tile lead supplement landscape wide 1`] = `
                 "marginBottom": 10,
               }
             }
+            testID="article-summary-headline"
           >
             This is tile headline
           </Text>
@@ -438,6 +449,7 @@ exports[`tile lead supplement landscape wide 1`] = `
                 "marginBottom": 0,
               }
             }
+            testID="article-summary-content"
           >
             <Text>
               

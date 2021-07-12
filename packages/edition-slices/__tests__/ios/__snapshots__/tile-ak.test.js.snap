@@ -37,6 +37,7 @@ exports[`tile ak huge 1`] = `
           "marginBottom": 10,
         }
       }
+      testID="article-summary-headline"
     >
       Times Concise medium No 7881
     </Text>
@@ -93,6 +94,7 @@ exports[`tile ak medium 1`] = `
           "marginBottom": 10,
         }
       }
+      testID="article-summary-headline"
     >
       Times Concise medium No 7881
     </Text>
@@ -149,6 +151,7 @@ exports[`tile ak smallTablet 1`] = `
           "marginBottom": 10,
         }
       }
+      testID="article-summary-headline"
     >
       Times Concise medium No 7881
     </Text>
@@ -205,6 +208,7 @@ exports[`tile ak wide 1`] = `
           "marginBottom": 10,
         }
       }
+      testID="article-summary-headline"
     >
       Times Concise medium No 7881
     </Text>
@@ -261,6 +265,7 @@ exports[`tile ak without breakpoint should be like medium 1`] = `
           "marginBottom": 10,
         }
       }
+      testID="article-summary-headline"
     >
       Times Concise medium No 7881
     </Text>

@@ -38,6 +38,7 @@ exports[`tile ab huge 1`] = `
                 }
               >
                 <ArticleLabel
+                  childTestID="article-slug"
                   color="#005B8D"
                   title="label"
                 />
@@ -57,6 +58,7 @@ exports[`tile ab huge 1`] = `
                   "marginBottom": 10,
                 }
               }
+              testID="article-summary-headline"
             >
               This is tile headline
             </Text>
@@ -83,6 +85,7 @@ exports[`tile ab huge 1`] = `
                   "marginBottom": 0,
                 }
               }
+              testID="article-summary-content"
             >
               <Text>
                 
@@ -145,6 +148,7 @@ exports[`tile ab medium 1`] = `
                 }
               >
                 <ArticleLabel
+                  childTestID="article-slug"
                   color="#005B8D"
                   title="label"
                 />
@@ -164,6 +168,7 @@ exports[`tile ab medium 1`] = `
                   "marginBottom": 10,
                 }
               }
+              testID="article-summary-headline"
             >
               This is tile headline
             </Text>
@@ -190,6 +195,7 @@ exports[`tile ab medium 1`] = `
                   "marginBottom": 0,
                 }
               }
+              testID="article-summary-content"
             >
               <Text>
                 
@@ -252,6 +258,7 @@ exports[`tile ab smallTablet 1`] = `
                 }
               >
                 <ArticleLabel
+                  childTestID="article-slug"
                   color="#005B8D"
                   title="label"
                 />
@@ -271,6 +278,7 @@ exports[`tile ab smallTablet 1`] = `
                   "marginBottom": 10,
                 }
               }
+              testID="article-summary-headline"
             >
               This is tile headline
             </Text>
@@ -297,6 +305,7 @@ exports[`tile ab smallTablet 1`] = `
                   "marginBottom": 0,
                 }
               }
+              testID="article-summary-content"
             >
               <Text>
                 
@@ -359,6 +368,7 @@ exports[`tile ab wide 1`] = `
                 }
               >
                 <ArticleLabel
+                  childTestID="article-slug"
                   color="#005B8D"
                   title="label"
                 />
@@ -378,6 +388,7 @@ exports[`tile ab wide 1`] = `
                   "marginBottom": 10,
                 }
               }
+              testID="article-summary-headline"
             >
               This is tile headline
             </Text>
@@ -404,6 +415,7 @@ exports[`tile ab wide 1`] = `
                   "marginBottom": 0,
                 }
               }
+              testID="article-summary-content"
             >
               <Text>
                 
@@ -466,6 +478,7 @@ exports[`tile ab without breakpoint should be like medium 1`] = `
                 }
               >
                 <ArticleLabel
+                  childTestID="article-slug"
                   color="#005B8D"
                   title="label"
                 />
@@ -485,6 +498,7 @@ exports[`tile ab without breakpoint should be like medium 1`] = `
                   "marginBottom": 10,
                 }
               }
+              testID="article-summary-headline"
             >
               This is tile headline
             </Text>
@@ -511,6 +525,7 @@ exports[`tile ab without breakpoint should be like medium 1`] = `
                   "marginBottom": 0,
                 }
               }
+              testID="article-summary-content"
             >
               <Text>
                 

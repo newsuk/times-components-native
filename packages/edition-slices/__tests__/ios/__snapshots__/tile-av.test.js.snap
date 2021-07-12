@@ -29,6 +29,7 @@ exports[`tile as huge 1`] = `
               }
             >
               <ArticleLabel
+                childTestID="article-slug"
                 color="#005B8D"
                 title="label"
               />
@@ -48,6 +49,7 @@ exports[`tile as huge 1`] = `
                 "marginBottom": 10,
               }
             }
+            testID="article-summary-headline"
           >
             This is tile headline
           </Text>
@@ -74,6 +76,7 @@ exports[`tile as huge 1`] = `
                 "marginBottom": 0,
               }
             }
+            testID="article-summary-content"
           >
             <Text>
               
@@ -117,6 +120,7 @@ exports[`tile as medium 1`] = `
               }
             >
               <ArticleLabel
+                childTestID="article-slug"
                 color="#005B8D"
                 title="label"
               />
@@ -136,6 +140,7 @@ exports[`tile as medium 1`] = `
                 "marginBottom": 10,
               }
             }
+            testID="article-summary-headline"
           >
             This is tile headline
           </Text>
@@ -162,6 +167,7 @@ exports[`tile as medium 1`] = `
                 "marginBottom": 0,
               }
             }
+            testID="article-summary-content"
           >
             <Text>
               
@@ -205,6 +211,7 @@ exports[`tile as smallTablet 1`] = `
               }
             >
               <ArticleLabel
+                childTestID="article-slug"
                 color="#005B8D"
                 title="label"
               />
@@ -224,6 +231,7 @@ exports[`tile as smallTablet 1`] = `
                 "marginBottom": 10,
               }
             }
+            testID="article-summary-headline"
           >
             This is tile headline
           </Text>
@@ -250,6 +258,7 @@ exports[`tile as smallTablet 1`] = `
                 "marginBottom": 0,
               }
             }
+            testID="article-summary-content"
           >
             <Text>
               
@@ -293,6 +302,7 @@ exports[`tile as wide 1`] = `
               }
             >
               <ArticleLabel
+                childTestID="article-slug"
                 color="#005B8D"
                 title="label"
               />
@@ -312,6 +322,7 @@ exports[`tile as wide 1`] = `
                 "marginBottom": 10,
               }
             }
+            testID="article-summary-headline"
           >
             This is tile headline
           </Text>
@@ -338,6 +349,7 @@ exports[`tile as wide 1`] = `
                 "marginBottom": 0,
               }
             }
+            testID="article-summary-content"
           >
             <Text>
               

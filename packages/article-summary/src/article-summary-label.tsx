@@ -38,11 +38,12 @@ const ArticleSummaryLabel: FC<ArticleSummaryLabelProps> = ({
     <View style={styles.labelWrapper}>
       {isVideo ? (
         <VideoLabel
+          childTestID="article-slug"
           title={title}
           color={typeof color === "string" ? color : undefined}
         />
       ) : (
-        <ArticleLabel title={title} color={color} />
+        <ArticleLabel childTestID="article-slug" title={title} color={color} />
       )}
     </View>
   );

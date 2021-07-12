@@ -37,6 +37,7 @@ exports[`tile bc huge 1`] = `
           }
         >
           <ArticleLabel
+            childTestID="article-slug"
             color="#005B8D"
             title="label"
           />
@@ -56,6 +57,7 @@ exports[`tile bc huge 1`] = `
             "marginBottom": 10,
           }
         }
+        testID="article-summary-headline"
       >
         This is tile headline
       </Text>
@@ -112,6 +114,7 @@ exports[`tile bc medium 1`] = `
           }
         >
           <ArticleLabel
+            childTestID="article-slug"
             color="#005B8D"
             title="label"
           />
@@ -131,6 +134,7 @@ exports[`tile bc medium 1`] = `
             "marginBottom": 10,
           }
         }
+        testID="article-summary-headline"
       >
         This is tile headline
       </Text>
@@ -187,6 +191,7 @@ exports[`tile bc smallTablet 1`] = `
           }
         >
           <ArticleLabel
+            childTestID="article-slug"
             color="#005B8D"
             title="label"
           />
@@ -206,6 +211,7 @@ exports[`tile bc smallTablet 1`] = `
             "marginBottom": 10,
           }
         }
+        testID="article-summary-headline"
       >
         This is tile headline
       </Text>
@@ -262,6 +268,7 @@ exports[`tile bc wide 1`] = `
           }
         >
           <ArticleLabel
+            childTestID="article-slug"
             color="#005B8D"
             title="label"
           />
@@ -281,6 +288,7 @@ exports[`tile bc wide 1`] = `
             "marginBottom": 10,
           }
         }
+        testID="article-summary-headline"
       >
         This is tile headline
       </Text>
@@ -337,6 +345,7 @@ exports[`tile bc without breakpoint 1`] = `
           }
         >
           <ArticleLabel
+            childTestID="article-slug"
             color="#005B8D"
             title="label"
           />
@@ -356,6 +365,7 @@ exports[`tile bc without breakpoint 1`] = `
             "marginBottom": 10,
           }
         }
+        testID="article-summary-headline"
       >
         This is tile headline
       </Text>

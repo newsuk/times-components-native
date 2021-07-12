@@ -37,6 +37,7 @@ exports[`1. a single related article 1`] = `
                 <View>
                   <View>
                     <ArticleLabel
+                      childTestID="article-slug"
                       color="#004D6D"
                       title="test label"
                     />
