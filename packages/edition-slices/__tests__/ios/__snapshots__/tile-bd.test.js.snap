@@ -40,60 +40,60 @@ exports[`tile bd medium 1`] = `
         }
         uri="https://www.thetimes.co.uk/imageserver/image/methode%2Ftimes%2Fprod%2Fweb%2Fbin%2F5af6925e-2599-11e9-b782-40e94f317da5.jpg?crop=1000%2C1000%2C250%2C0"
       />
-      <View
-        style={
-          Object {
-            "flex": 1,
-            "justifyContent": "center",
-            "paddingLeft": 10,
-            "width": "70%",
+      <View>
+        <View
+          style={
+            Object {
+              "flex": 1,
+              "justifyContent": "center",
+              "paddingLeft": 10,
+              "width": "70%",
+            }
           }
-        }
-      >
-        <View>
-          <View
+        >
+          <View>
+            <View
+              style={
+                Object {
+                  "marginBottom": 5,
+                }
+              }
+            >
+              <ArticleLabel
+                color="#005B8D"
+                title="label"
+              />
+            </View>
+          </View>
+          <Text
+            accessibilityRole="header"
+            aria-level="3"
             style={
               Object {
+                "color": "#333333",
+                "fontFamily": "TimesModern-Regular",
+                "fontSize": 20,
+                "fontWeight": "normal",
+                "includeFontPadding": false,
+                "lineHeight": 20,
                 "marginBottom": 5,
               }
             }
           >
-            <ArticleLabel
-              childTestID="article-slug"
-              color="#005B8D"
-              title="label"
-            />
-          </View>
-        </View>
-        <Text
-          accessibilityRole="header"
-          aria-level="3"
-          style={
-            Object {
-              "color": "#333333",
-              "fontFamily": "TimesModern-Regular",
-              "fontSize": 20,
-              "fontWeight": "normal",
-              "includeFontPadding": false,
-              "lineHeight": 20,
-              "marginBottom": 5,
+            This is tile headline
+          </Text>
+          <ArticleFlags
+            flags={
+              Array [
+                Object {
+                  "expiryTime": "2030-03-14T12:00:00.000Z",
+                  "type": "EXCLUSIVE",
+                },
+              ]
             }
-          }
-          testID="article-summary-headline"
-        >
-          This is tile headline
-        </Text>
-        <ArticleFlags
-          flags={
-            Array [
-              Object {
-                "expiryTime": "2030-03-14T12:00:00.000Z",
-                "type": "EXCLUSIVE",
-              },
-            ]
-          }
-          longRead={true}
-        />
+            longRead={true}
+          />
+        </View>
       </View>
     </View>
   </View>
@@ -140,60 +140,60 @@ exports[`tile bd smallTablet 1`] = `
         }
         uri="https://www.thetimes.co.uk/imageserver/image/methode%2Ftimes%2Fprod%2Fweb%2Fbin%2F5af6925e-2599-11e9-b782-40e94f317da5.jpg?crop=1000%2C1000%2C250%2C0"
       />
-      <View
-        style={
-          Object {
-            "flex": 1,
-            "justifyContent": "center",
-            "paddingLeft": 10,
-            "width": "70%",
+      <View>
+        <View
+          style={
+            Object {
+              "flex": 1,
+              "justifyContent": "center",
+              "paddingLeft": 10,
+              "width": "70%",
+            }
           }
-        }
-      >
-        <View>
-          <View
+        >
+          <View>
+            <View
+              style={
+                Object {
+                  "marginBottom": 5,
+                }
+              }
+            >
+              <ArticleLabel
+                color="#005B8D"
+                title="label"
+              />
+            </View>
+          </View>
+          <Text
+            accessibilityRole="header"
+            aria-level="3"
             style={
               Object {
+                "color": "#333333",
+                "fontFamily": "TimesModern-Regular",
+                "fontSize": 20,
+                "fontWeight": "normal",
+                "includeFontPadding": false,
+                "lineHeight": 20,
                 "marginBottom": 5,
               }
             }
           >
-            <ArticleLabel
-              childTestID="article-slug"
-              color="#005B8D"
-              title="label"
-            />
-          </View>
-        </View>
-        <Text
-          accessibilityRole="header"
-          aria-level="3"
-          style={
-            Object {
-              "color": "#333333",
-              "fontFamily": "TimesModern-Regular",
-              "fontSize": 20,
-              "fontWeight": "normal",
-              "includeFontPadding": false,
-              "lineHeight": 20,
-              "marginBottom": 5,
+            This is tile headline
+          </Text>
+          <ArticleFlags
+            flags={
+              Array [
+                Object {
+                  "expiryTime": "2030-03-14T12:00:00.000Z",
+                  "type": "EXCLUSIVE",
+                },
+              ]
             }
-          }
-          testID="article-summary-headline"
-        >
-          This is tile headline
-        </Text>
-        <ArticleFlags
-          flags={
-            Array [
-              Object {
-                "expiryTime": "2030-03-14T12:00:00.000Z",
-                "type": "EXCLUSIVE",
-              },
-            ]
-          }
-          longRead={true}
-        />
+            longRead={true}
+          />
+        </View>
       </View>
     </View>
   </View>
@@ -240,60 +240,60 @@ exports[`tile bd wide 1`] = `
         }
         uri="https://www.thetimes.co.uk/imageserver/image/methode%2Ftimes%2Fprod%2Fweb%2Fbin%2F5af6925e-2599-11e9-b782-40e94f317da5.jpg?crop=1000%2C1000%2C250%2C0"
       />
-      <View
-        style={
-          Object {
-            "flex": 1,
-            "justifyContent": "center",
-            "paddingLeft": 10,
-            "width": "70%",
+      <View>
+        <View
+          style={
+            Object {
+              "flex": 1,
+              "justifyContent": "center",
+              "paddingLeft": 10,
+              "width": "70%",
+            }
           }
-        }
-      >
-        <View>
-          <View
+        >
+          <View>
+            <View
+              style={
+                Object {
+                  "marginBottom": 5,
+                }
+              }
+            >
+              <ArticleLabel
+                color="#005B8D"
+                title="label"
+              />
+            </View>
+          </View>
+          <Text
+            accessibilityRole="header"
+            aria-level="3"
             style={
               Object {
+                "color": "#333333",
+                "fontFamily": "TimesModern-Regular",
+                "fontSize": 24,
+                "fontWeight": "normal",
+                "includeFontPadding": false,
+                "lineHeight": 24,
                 "marginBottom": 5,
               }
             }
           >
-            <ArticleLabel
-              childTestID="article-slug"
-              color="#005B8D"
-              title="label"
-            />
-          </View>
-        </View>
-        <Text
-          accessibilityRole="header"
-          aria-level="3"
-          style={
-            Object {
-              "color": "#333333",
-              "fontFamily": "TimesModern-Regular",
-              "fontSize": 24,
-              "fontWeight": "normal",
-              "includeFontPadding": false,
-              "lineHeight": 24,
-              "marginBottom": 5,
+            This is tile headline
+          </Text>
+          <ArticleFlags
+            flags={
+              Array [
+                Object {
+                  "expiryTime": "2030-03-14T12:00:00.000Z",
+                  "type": "EXCLUSIVE",
+                },
+              ]
             }
-          }
-          testID="article-summary-headline"
-        >
-          This is tile headline
-        </Text>
-        <ArticleFlags
-          flags={
-            Array [
-              Object {
-                "expiryTime": "2030-03-14T12:00:00.000Z",
-                "type": "EXCLUSIVE",
-              },
-            ]
-          }
-          longRead={true}
-        />
+            longRead={true}
+          />
+        </View>
       </View>
     </View>
   </View>
@@ -340,60 +340,60 @@ exports[`tile bd without breakpoint 1`] = `
         }
         uri="https://www.thetimes.co.uk/imageserver/image/methode%2Ftimes%2Fprod%2Fweb%2Fbin%2F5af6925e-2599-11e9-b782-40e94f317da5.jpg?crop=1000%2C1000%2C250%2C0"
       />
-      <View
-        style={
-          Object {
-            "flex": 1,
-            "justifyContent": "center",
-            "paddingLeft": 10,
-            "width": "70%",
+      <View>
+        <View
+          style={
+            Object {
+              "flex": 1,
+              "justifyContent": "center",
+              "paddingLeft": 10,
+              "width": "70%",
+            }
           }
-        }
-      >
-        <View>
-          <View
+        >
+          <View>
+            <View
+              style={
+                Object {
+                  "marginBottom": 5,
+                }
+              }
+            >
+              <ArticleLabel
+                color="#005B8D"
+                title="label"
+              />
+            </View>
+          </View>
+          <Text
+            accessibilityRole="header"
+            aria-level="3"
             style={
               Object {
+                "color": "#333333",
+                "fontFamily": "TimesModern-Regular",
+                "fontSize": 20,
+                "fontWeight": "normal",
+                "includeFontPadding": false,
+                "lineHeight": 20,
                 "marginBottom": 5,
               }
             }
           >
-            <ArticleLabel
-              childTestID="article-slug"
-              color="#005B8D"
-              title="label"
-            />
-          </View>
-        </View>
-        <Text
-          accessibilityRole="header"
-          aria-level="3"
-          style={
-            Object {
-              "color": "#333333",
-              "fontFamily": "TimesModern-Regular",
-              "fontSize": 20,
-              "fontWeight": "normal",
-              "includeFontPadding": false,
-              "lineHeight": 20,
-              "marginBottom": 5,
+            This is tile headline
+          </Text>
+          <ArticleFlags
+            flags={
+              Array [
+                Object {
+                  "expiryTime": "2030-03-14T12:00:00.000Z",
+                  "type": "EXCLUSIVE",
+                },
+              ]
             }
-          }
-          testID="article-summary-headline"
-        >
-          This is tile headline
-        </Text>
-        <ArticleFlags
-          flags={
-            Array [
-              Object {
-                "expiryTime": "2030-03-14T12:00:00.000Z",
-                "type": "EXCLUSIVE",
-              },
-            ]
-          }
-          longRead={true}
-        />
+            longRead={true}
+          />
+        </View>
       </View>
     </View>
   </View>

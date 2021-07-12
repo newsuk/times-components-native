@@ -22,50 +22,50 @@ exports[`tile u with headline style 1`] = `
   />
   <View>
     <View>
-      <View
+      <View>
+        <View
+          style={
+            Object {
+              "marginBottom": 5,
+            }
+          }
+        >
+          <ArticleLabel
+            color="#005B8D"
+            title="label"
+          />
+        </View>
+      </View>
+      <Text
+        accessibilityRole="header"
+        aria-level="3"
         style={
           Object {
-            "marginBottom": 5,
+            "backgroundColor": "red",
+            "color": "#333333",
+            "fontFamily": "TimesModern-Bold",
+            "fontSize": 40,
+            "fontWeight": "900",
+            "includeFontPadding": false,
+            "lineHeight": 40,
+            "marginBottom": 10,
           }
         }
       >
-        <ArticleLabel
-          childTestID="article-slug"
-          color="#005B8D"
-          title="label"
-        />
-      </View>
-    </View>
-    <Text
-      accessibilityRole="header"
-      aria-level="3"
-      style={
-        Object {
-          "backgroundColor": "red",
-          "color": "#333333",
-          "fontFamily": "TimesModern-Bold",
-          "fontSize": 40,
-          "fontWeight": "900",
-          "includeFontPadding": false,
-          "lineHeight": 40,
-          "marginBottom": 10,
+        This is tile headline
+      </Text>
+      <ArticleFlags
+        flags={
+          Array [
+            Object {
+              "expiryTime": "2030-03-14T12:00:00.000Z",
+              "type": "EXCLUSIVE",
+            },
+          ]
         }
-      }
-      testID="article-summary-headline"
-    >
-      This is tile headline
-    </Text>
-    <ArticleFlags
-      flags={
-        Array [
-          Object {
-            "expiryTime": "2030-03-14T12:00:00.000Z",
-            "type": "EXCLUSIVE",
-          },
-        ]
-      }
-      longRead={true}
-    />
+        longRead={true}
+      />
+    </View>
   </View>
 </Link>
 `;
@@ -92,49 +92,49 @@ exports[`tile u without breakpoint 1`] = `
   />
   <View>
     <View>
-      <View
+      <View>
+        <View
+          style={
+            Object {
+              "marginBottom": 5,
+            }
+          }
+        >
+          <ArticleLabel
+            color="#005B8D"
+            title="label"
+          />
+        </View>
+      </View>
+      <Text
+        accessibilityRole="header"
+        aria-level="3"
         style={
           Object {
-            "marginBottom": 5,
+            "color": "#333333",
+            "fontFamily": "TimesModern-Bold",
+            "fontSize": 40,
+            "fontWeight": "900",
+            "includeFontPadding": false,
+            "lineHeight": 40,
+            "marginBottom": 10,
           }
         }
       >
-        <ArticleLabel
-          childTestID="article-slug"
-          color="#005B8D"
-          title="label"
-        />
-      </View>
-    </View>
-    <Text
-      accessibilityRole="header"
-      aria-level="3"
-      style={
-        Object {
-          "color": "#333333",
-          "fontFamily": "TimesModern-Bold",
-          "fontSize": 40,
-          "fontWeight": "900",
-          "includeFontPadding": false,
-          "lineHeight": 40,
-          "marginBottom": 10,
+        This is tile headline
+      </Text>
+      <ArticleFlags
+        flags={
+          Array [
+            Object {
+              "expiryTime": "2030-03-14T12:00:00.000Z",
+              "type": "EXCLUSIVE",
+            },
+          ]
         }
-      }
-      testID="article-summary-headline"
-    >
-      This is tile headline
-    </Text>
-    <ArticleFlags
-      flags={
-        Array [
-          Object {
-            "expiryTime": "2030-03-14T12:00:00.000Z",
-            "type": "EXCLUSIVE",
-          },
-        ]
-      }
-      longRead={true}
-    />
+        longRead={true}
+      />
+    </View>
   </View>
 </Link>
 `;
