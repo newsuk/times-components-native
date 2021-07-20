@@ -12,70 +12,68 @@ exports[`tile y landscape huge 1`] = `
 >
   <View>
     <View>
-      <View>
-        <View
-          style={
-            Object {
-              "marginBottom": 5,
-            }
+      <View
+        style={
+          Object {
+            "marginBottom": 5,
           }
-        >
-          <ArticleLabel
-            childTestID="article-slug"
-            color="#005B8D"
-            title="label"
-          />
-        </View>
+        }
+      >
+        <ArticleLabel
+          childTestID="article-slug"
+          color="#005B8D"
+          title="label"
+        />
       </View>
-      <Text
-        accessibilityRole="header"
-        aria-level="3"
-        style={
-          Object {
-            "color": "#333333",
-            "fontFamily": "TimesModern-Bold",
-            "fontSize": 35,
-            "fontWeight": "900",
-            "includeFontPadding": false,
-            "lineHeight": 35,
-            "marginBottom": 10,
-          }
-        }
-        testID="article-summary-headline"
-      >
-        This is tile headline
-      </Text>
-      <ArticleFlags
-        flags={
-          Array [
-            Object {
-              "expiryTime": "2030-03-14T12:00:00.000Z",
-              "type": "EXCLUSIVE",
-            },
-          ]
-        }
-        longRead={true}
-      />
-      <Text
-        style={
-          Object {
-            "color": "#696969",
-            "flexWrap": "wrap",
-            "fontFamily": "TimesDigitalW04",
-            "fontSize": 14,
-            "lineHeight": 20,
-            "marginBottom": 0,
-          }
-        }
-        testID="article-summary-content"
-      >
-        <Text>
-          
-          Senior ministers accused Labour today of trying to “frustrate and cancel Brexit” after the party announced plans to hijack Boris Johnson’s deal with amendments for a second referendum and customs union with the EU. Rishi Sunak, the chief secretary to the Treasury, warned that any attempt by MPs to add a customs union to the government’s Brexit deal would be “procedural tricks” intended to frustrate departure. His comments came as ministers announced that they planned to publish the legislation that would formally take Britain out of the European Union today. They will also apply to the Speaker to hold another so-called meaningful vote on the deal following Mr Johnson’s decision to comply with the Benn act, which forces the prime minister to request a Brexit. to “frustrate and cancel Brexit” after the party announced plans to hijack Boris Johnson’s deal with amendments for a second referendum and customs union with the EU. Rishi Sunak, the chief secretary to the Treasury, warned that any attempt by MPs to add a customs union to the government’s Brexit deal would be “procedural tricks” intended to frustrate departure. His comments came as ministers announced that they planned to publish the legislation that would formally take Britain out of the European Union today.
-          ...
-        </Text>
-      </Text>
     </View>
+    <Text
+      accessibilityRole="header"
+      aria-level="3"
+      style={
+        Object {
+          "color": "#333333",
+          "fontFamily": "TimesModern-Bold",
+          "fontSize": 35,
+          "fontWeight": "900",
+          "includeFontPadding": false,
+          "lineHeight": 35,
+          "marginBottom": 10,
+        }
+      }
+      testID="article-summary-headline"
+    >
+      This is tile headline
+    </Text>
+    <ArticleFlags
+      flags={
+        Array [
+          Object {
+            "expiryTime": "2030-03-14T12:00:00.000Z",
+            "type": "EXCLUSIVE",
+          },
+        ]
+      }
+      longRead={true}
+    />
+    <Text
+      style={
+        Object {
+          "color": "#696969",
+          "flexWrap": "wrap",
+          "fontFamily": "TimesDigitalW04",
+          "fontSize": 14,
+          "lineHeight": 20,
+          "marginBottom": 0,
+        }
+      }
+      testID="article-summary-content"
+    >
+      <Text>
+        
+        Senior ministers accused Labour today of trying to “frustrate and cancel Brexit” after the party announced plans to hijack Boris Johnson’s deal with amendments for a second referendum and customs union with the EU. Rishi Sunak, the chief secretary to the Treasury, warned that any attempt by MPs to add a customs union to the government’s Brexit deal would be “procedural tricks” intended to frustrate departure. His comments came as ministers announced that they planned to publish the legislation that would formally take Britain out of the European Union today. They will also apply to the Speaker to hold another so-called meaningful vote on the deal following Mr Johnson’s decision to comply with the Benn act, which forces the prime minister to request a Brexit. to “frustrate and cancel Brexit” after the party announced plans to hijack Boris Johnson’s deal with amendments for a second referendum and customs union with the EU. Rishi Sunak, the chief secretary to the Treasury, warned that any attempt by MPs to add a customs union to the government’s Brexit deal would be “procedural tricks” intended to frustrate departure. His comments came as ministers announced that they planned to publish the legislation that would formally take Britain out of the European Union today.
+        ...
+      </Text>
+    </Text>
   </View>
 </Link>
 `;
@@ -92,70 +90,68 @@ exports[`tile y landscape medium 1`] = `
 >
   <View>
     <View>
-      <View>
-        <View
-          style={
-            Object {
-              "marginBottom": 5,
-            }
+      <View
+        style={
+          Object {
+            "marginBottom": 5,
           }
-        >
-          <ArticleLabel
-            childTestID="article-slug"
-            color="#005B8D"
-            title="label"
-          />
-        </View>
+        }
+      >
+        <ArticleLabel
+          childTestID="article-slug"
+          color="#005B8D"
+          title="label"
+        />
       </View>
-      <Text
-        accessibilityRole="header"
-        aria-level="3"
-        style={
-          Object {
-            "color": "#333333",
-            "fontFamily": "TimesModern-Bold",
-            "fontSize": 30,
-            "fontWeight": "900",
-            "includeFontPadding": false,
-            "lineHeight": 30,
-            "marginBottom": 10,
-          }
-        }
-        testID="article-summary-headline"
-      >
-        This is tile headline
-      </Text>
-      <ArticleFlags
-        flags={
-          Array [
-            Object {
-              "expiryTime": "2030-03-14T12:00:00.000Z",
-              "type": "EXCLUSIVE",
-            },
-          ]
-        }
-        longRead={true}
-      />
-      <Text
-        style={
-          Object {
-            "color": "#696969",
-            "flexWrap": "wrap",
-            "fontFamily": "TimesDigitalW04",
-            "fontSize": 14,
-            "lineHeight": 20,
-            "marginBottom": 0,
-          }
-        }
-        testID="article-summary-content"
-      >
-        <Text>
-          
-          ‘The prodigal son returns.” So read a banner tied to the wall of the Paul Strank Stand at Kingsmeadow, the home of AFC Wimbledon, on Saturday, alongside the sepia-toned image of a fresh-faced Wally Downes, sporting an 80s haircut and Wimbledon strip, with a mischievous glint in his eye.
-          ...
-        </Text>
-      </Text>
     </View>
+    <Text
+      accessibilityRole="header"
+      aria-level="3"
+      style={
+        Object {
+          "color": "#333333",
+          "fontFamily": "TimesModern-Bold",
+          "fontSize": 30,
+          "fontWeight": "900",
+          "includeFontPadding": false,
+          "lineHeight": 30,
+          "marginBottom": 10,
+        }
+      }
+      testID="article-summary-headline"
+    >
+      This is tile headline
+    </Text>
+    <ArticleFlags
+      flags={
+        Array [
+          Object {
+            "expiryTime": "2030-03-14T12:00:00.000Z",
+            "type": "EXCLUSIVE",
+          },
+        ]
+      }
+      longRead={true}
+    />
+    <Text
+      style={
+        Object {
+          "color": "#696969",
+          "flexWrap": "wrap",
+          "fontFamily": "TimesDigitalW04",
+          "fontSize": 14,
+          "lineHeight": 20,
+          "marginBottom": 0,
+        }
+      }
+      testID="article-summary-content"
+    >
+      <Text>
+        
+        ‘The prodigal son returns.” So read a banner tied to the wall of the Paul Strank Stand at Kingsmeadow, the home of AFC Wimbledon, on Saturday, alongside the sepia-toned image of a fresh-faced Wally Downes, sporting an 80s haircut and Wimbledon strip, with a mischievous glint in his eye.
+        ...
+      </Text>
+    </Text>
   </View>
 </Link>
 `;
@@ -172,70 +168,68 @@ exports[`tile y landscape smallTablet 1`] = `
 >
   <View>
     <View>
-      <View>
-        <View
-          style={
-            Object {
-              "marginBottom": 5,
-            }
+      <View
+        style={
+          Object {
+            "marginBottom": 5,
           }
-        >
-          <ArticleLabel
-            childTestID="article-slug"
-            color="#005B8D"
-            title="label"
-          />
-        </View>
+        }
+      >
+        <ArticleLabel
+          childTestID="article-slug"
+          color="#005B8D"
+          title="label"
+        />
       </View>
-      <Text
-        accessibilityRole="header"
-        aria-level="3"
-        style={
-          Object {
-            "color": "#333333",
-            "fontFamily": "TimesModern-Bold",
-            "fontSize": 30,
-            "fontWeight": "900",
-            "includeFontPadding": false,
-            "lineHeight": 30,
-            "marginBottom": 10,
-          }
-        }
-        testID="article-summary-headline"
-      >
-        This is tile headline
-      </Text>
-      <ArticleFlags
-        flags={
-          Array [
-            Object {
-              "expiryTime": "2030-03-14T12:00:00.000Z",
-              "type": "EXCLUSIVE",
-            },
-          ]
-        }
-        longRead={true}
-      />
-      <Text
-        style={
-          Object {
-            "color": "#696969",
-            "flexWrap": "wrap",
-            "fontFamily": "TimesDigitalW04",
-            "fontSize": 14,
-            "lineHeight": 20,
-            "marginBottom": 0,
-          }
-        }
-        testID="article-summary-content"
-      >
-        <Text>
-          
-          ‘The prodigal son returns.” So read a banner tied to the wall of the Paul Strank Stand at Kingsmeadow, the home of AFC Wimbledon, on Saturday, alongside the sepia-toned image of a fresh-faced Wally Downes, sporting an 80s haircut and Wimbledon strip, with a mischievous glint in his eye.
-          ...
-        </Text>
-      </Text>
     </View>
+    <Text
+      accessibilityRole="header"
+      aria-level="3"
+      style={
+        Object {
+          "color": "#333333",
+          "fontFamily": "TimesModern-Bold",
+          "fontSize": 30,
+          "fontWeight": "900",
+          "includeFontPadding": false,
+          "lineHeight": 30,
+          "marginBottom": 10,
+        }
+      }
+      testID="article-summary-headline"
+    >
+      This is tile headline
+    </Text>
+    <ArticleFlags
+      flags={
+        Array [
+          Object {
+            "expiryTime": "2030-03-14T12:00:00.000Z",
+            "type": "EXCLUSIVE",
+          },
+        ]
+      }
+      longRead={true}
+    />
+    <Text
+      style={
+        Object {
+          "color": "#696969",
+          "flexWrap": "wrap",
+          "fontFamily": "TimesDigitalW04",
+          "fontSize": 14,
+          "lineHeight": 20,
+          "marginBottom": 0,
+        }
+      }
+      testID="article-summary-content"
+    >
+      <Text>
+        
+        ‘The prodigal son returns.” So read a banner tied to the wall of the Paul Strank Stand at Kingsmeadow, the home of AFC Wimbledon, on Saturday, alongside the sepia-toned image of a fresh-faced Wally Downes, sporting an 80s haircut and Wimbledon strip, with a mischievous glint in his eye.
+        ...
+      </Text>
+    </Text>
   </View>
 </Link>
 `;
@@ -252,70 +246,68 @@ exports[`tile y landscape wide 1`] = `
 >
   <View>
     <View>
-      <View>
-        <View
-          style={
-            Object {
-              "marginBottom": 5,
-            }
+      <View
+        style={
+          Object {
+            "marginBottom": 5,
           }
-        >
-          <ArticleLabel
-            childTestID="article-slug"
-            color="#005B8D"
-            title="label"
-          />
-        </View>
+        }
+      >
+        <ArticleLabel
+          childTestID="article-slug"
+          color="#005B8D"
+          title="label"
+        />
       </View>
-      <Text
-        accessibilityRole="header"
-        aria-level="3"
-        style={
-          Object {
-            "color": "#333333",
-            "fontFamily": "TimesModern-Bold",
-            "fontSize": 30,
-            "fontWeight": "900",
-            "includeFontPadding": false,
-            "lineHeight": 30,
-            "marginBottom": 10,
-          }
-        }
-        testID="article-summary-headline"
-      >
-        This is tile headline
-      </Text>
-      <ArticleFlags
-        flags={
-          Array [
-            Object {
-              "expiryTime": "2030-03-14T12:00:00.000Z",
-              "type": "EXCLUSIVE",
-            },
-          ]
-        }
-        longRead={true}
-      />
-      <Text
-        style={
-          Object {
-            "color": "#696969",
-            "flexWrap": "wrap",
-            "fontFamily": "TimesDigitalW04",
-            "fontSize": 14,
-            "lineHeight": 20,
-            "marginBottom": 0,
-          }
-        }
-        testID="article-summary-content"
-      >
-        <Text>
-          
-          ‘The prodigal son returns.” So read a banner tied to the wall of the Paul Strank Stand at Kingsmeadow, the home of AFC Wimbledon, on Saturday, alongside the sepia-toned image of a fresh-faced Wally Downes, sporting an 80s haircut and Wimbledon strip, with a mischievous glint in his eye.
-          ...
-        </Text>
-      </Text>
     </View>
+    <Text
+      accessibilityRole="header"
+      aria-level="3"
+      style={
+        Object {
+          "color": "#333333",
+          "fontFamily": "TimesModern-Bold",
+          "fontSize": 30,
+          "fontWeight": "900",
+          "includeFontPadding": false,
+          "lineHeight": 30,
+          "marginBottom": 10,
+        }
+      }
+      testID="article-summary-headline"
+    >
+      This is tile headline
+    </Text>
+    <ArticleFlags
+      flags={
+        Array [
+          Object {
+            "expiryTime": "2030-03-14T12:00:00.000Z",
+            "type": "EXCLUSIVE",
+          },
+        ]
+      }
+      longRead={true}
+    />
+    <Text
+      style={
+        Object {
+          "color": "#696969",
+          "flexWrap": "wrap",
+          "fontFamily": "TimesDigitalW04",
+          "fontSize": 14,
+          "lineHeight": 20,
+          "marginBottom": 0,
+        }
+      }
+      testID="article-summary-content"
+    >
+      <Text>
+        
+        ‘The prodigal son returns.” So read a banner tied to the wall of the Paul Strank Stand at Kingsmeadow, the home of AFC Wimbledon, on Saturday, alongside the sepia-toned image of a fresh-faced Wally Downes, sporting an 80s haircut and Wimbledon strip, with a mischievous glint in his eye.
+        ...
+      </Text>
+    </Text>
   </View>
 </Link>
 `;
@@ -332,70 +324,68 @@ exports[`tile y portrait huge 1`] = `
 >
   <View>
     <View>
-      <View>
-        <View
-          style={
-            Object {
-              "marginBottom": 5,
-            }
+      <View
+        style={
+          Object {
+            "marginBottom": 5,
           }
-        >
-          <ArticleLabel
-            childTestID="article-slug"
-            color="#005B8D"
-            title="label"
-          />
-        </View>
+        }
+      >
+        <ArticleLabel
+          childTestID="article-slug"
+          color="#005B8D"
+          title="label"
+        />
       </View>
-      <Text
-        accessibilityRole="header"
-        aria-level="3"
-        style={
-          Object {
-            "color": "#333333",
-            "fontFamily": "TimesModern-Bold",
-            "fontSize": 35,
-            "fontWeight": "900",
-            "includeFontPadding": false,
-            "lineHeight": 35,
-            "marginBottom": 10,
-          }
-        }
-        testID="article-summary-headline"
-      >
-        This is tile headline
-      </Text>
-      <ArticleFlags
-        flags={
-          Array [
-            Object {
-              "expiryTime": "2030-03-14T12:00:00.000Z",
-              "type": "EXCLUSIVE",
-            },
-          ]
-        }
-        longRead={true}
-      />
-      <Text
-        style={
-          Object {
-            "color": "#696969",
-            "flexWrap": "wrap",
-            "fontFamily": "TimesDigitalW04",
-            "fontSize": 14,
-            "lineHeight": 20,
-            "marginBottom": 0,
-          }
-        }
-        testID="article-summary-content"
-      >
-        <Text>
-          
-          Senior ministers accused Labour today of trying to “frustrate and cancel Brexit” after the party announced plans to hijack Boris Johnson’s deal with amendments for a second referendum and customs union with the EU. Rishi Sunak, the chief secretary to the Treasury, warned that any attempt by MPs to add a customs union to the government’s Brexit deal would be “procedural tricks” intended to frustrate departure. His comments came as ministers announced that they planned to publish the legislation that would formally take Britain out of the European Union today. They will also apply to the Speaker to hold another so-called meaningful vote on the deal following Mr Johnson’s decision to comply with the Benn act, which forces the prime minister to request a Brexit. to “frustrate and cancel Brexit” after the party announced plans to hijack Boris Johnson’s deal with amendments for a second referendum and customs union with the EU. Rishi Sunak, the chief secretary to the Treasury, warned that any attempt by MPs to add a customs union to the government’s Brexit deal would be “procedural tricks” intended to frustrate departure. His comments came as ministers announced that they planned to publish the legislation that would formally take Britain out of the European Union today.
-          ...
-        </Text>
-      </Text>
     </View>
+    <Text
+      accessibilityRole="header"
+      aria-level="3"
+      style={
+        Object {
+          "color": "#333333",
+          "fontFamily": "TimesModern-Bold",
+          "fontSize": 35,
+          "fontWeight": "900",
+          "includeFontPadding": false,
+          "lineHeight": 35,
+          "marginBottom": 10,
+        }
+      }
+      testID="article-summary-headline"
+    >
+      This is tile headline
+    </Text>
+    <ArticleFlags
+      flags={
+        Array [
+          Object {
+            "expiryTime": "2030-03-14T12:00:00.000Z",
+            "type": "EXCLUSIVE",
+          },
+        ]
+      }
+      longRead={true}
+    />
+    <Text
+      style={
+        Object {
+          "color": "#696969",
+          "flexWrap": "wrap",
+          "fontFamily": "TimesDigitalW04",
+          "fontSize": 14,
+          "lineHeight": 20,
+          "marginBottom": 0,
+        }
+      }
+      testID="article-summary-content"
+    >
+      <Text>
+        
+        Senior ministers accused Labour today of trying to “frustrate and cancel Brexit” after the party announced plans to hijack Boris Johnson’s deal with amendments for a second referendum and customs union with the EU. Rishi Sunak, the chief secretary to the Treasury, warned that any attempt by MPs to add a customs union to the government’s Brexit deal would be “procedural tricks” intended to frustrate departure. His comments came as ministers announced that they planned to publish the legislation that would formally take Britain out of the European Union today. They will also apply to the Speaker to hold another so-called meaningful vote on the deal following Mr Johnson’s decision to comply with the Benn act, which forces the prime minister to request a Brexit. to “frustrate and cancel Brexit” after the party announced plans to hijack Boris Johnson’s deal with amendments for a second referendum and customs union with the EU. Rishi Sunak, the chief secretary to the Treasury, warned that any attempt by MPs to add a customs union to the government’s Brexit deal would be “procedural tricks” intended to frustrate departure. His comments came as ministers announced that they planned to publish the legislation that would formally take Britain out of the European Union today.
+        ...
+      </Text>
+    </Text>
   </View>
 </Link>
 `;
@@ -412,70 +402,68 @@ exports[`tile y portrait medium 1`] = `
 >
   <View>
     <View>
-      <View>
-        <View
-          style={
-            Object {
-              "marginBottom": 5,
-            }
+      <View
+        style={
+          Object {
+            "marginBottom": 5,
           }
-        >
-          <ArticleLabel
-            childTestID="article-slug"
-            color="#005B8D"
-            title="label"
-          />
-        </View>
+        }
+      >
+        <ArticleLabel
+          childTestID="article-slug"
+          color="#005B8D"
+          title="label"
+        />
       </View>
-      <Text
-        accessibilityRole="header"
-        aria-level="3"
-        style={
-          Object {
-            "color": "#333333",
-            "fontFamily": "TimesModern-Bold",
-            "fontSize": 30,
-            "fontWeight": "900",
-            "includeFontPadding": false,
-            "lineHeight": 30,
-            "marginBottom": 10,
-          }
-        }
-        testID="article-summary-headline"
-      >
-        This is tile headline
-      </Text>
-      <ArticleFlags
-        flags={
-          Array [
-            Object {
-              "expiryTime": "2030-03-14T12:00:00.000Z",
-              "type": "EXCLUSIVE",
-            },
-          ]
-        }
-        longRead={true}
-      />
-      <Text
-        style={
-          Object {
-            "color": "#696969",
-            "flexWrap": "wrap",
-            "fontFamily": "TimesDigitalW04",
-            "fontSize": 14,
-            "lineHeight": 20,
-            "marginBottom": 0,
-          }
-        }
-        testID="article-summary-content"
-      >
-        <Text>
-          
-          ‘The prodigal son returns.” So read a banner tied to the wall of the Paul Strank Stand at Kingsmeadow, the home of AFC Wimbledon, on Saturday, alongside the sepia-toned image of a fresh-faced Wally Downes, sporting an 80s haircut and Wimbledon strip, with a mischievous glint in his eye.
-          ...
-        </Text>
-      </Text>
     </View>
+    <Text
+      accessibilityRole="header"
+      aria-level="3"
+      style={
+        Object {
+          "color": "#333333",
+          "fontFamily": "TimesModern-Bold",
+          "fontSize": 30,
+          "fontWeight": "900",
+          "includeFontPadding": false,
+          "lineHeight": 30,
+          "marginBottom": 10,
+        }
+      }
+      testID="article-summary-headline"
+    >
+      This is tile headline
+    </Text>
+    <ArticleFlags
+      flags={
+        Array [
+          Object {
+            "expiryTime": "2030-03-14T12:00:00.000Z",
+            "type": "EXCLUSIVE",
+          },
+        ]
+      }
+      longRead={true}
+    />
+    <Text
+      style={
+        Object {
+          "color": "#696969",
+          "flexWrap": "wrap",
+          "fontFamily": "TimesDigitalW04",
+          "fontSize": 14,
+          "lineHeight": 20,
+          "marginBottom": 0,
+        }
+      }
+      testID="article-summary-content"
+    >
+      <Text>
+        
+        ‘The prodigal son returns.” So read a banner tied to the wall of the Paul Strank Stand at Kingsmeadow, the home of AFC Wimbledon, on Saturday, alongside the sepia-toned image of a fresh-faced Wally Downes, sporting an 80s haircut and Wimbledon strip, with a mischievous glint in his eye.
+        ...
+      </Text>
+    </Text>
   </View>
 </Link>
 `;
@@ -492,70 +480,68 @@ exports[`tile y portrait smallTablet 1`] = `
 >
   <View>
     <View>
-      <View>
-        <View
-          style={
-            Object {
-              "marginBottom": 5,
-            }
+      <View
+        style={
+          Object {
+            "marginBottom": 5,
           }
-        >
-          <ArticleLabel
-            childTestID="article-slug"
-            color="#005B8D"
-            title="label"
-          />
-        </View>
+        }
+      >
+        <ArticleLabel
+          childTestID="article-slug"
+          color="#005B8D"
+          title="label"
+        />
       </View>
-      <Text
-        accessibilityRole="header"
-        aria-level="3"
-        style={
-          Object {
-            "color": "#333333",
-            "fontFamily": "TimesModern-Bold",
-            "fontSize": 30,
-            "fontWeight": "900",
-            "includeFontPadding": false,
-            "lineHeight": 30,
-            "marginBottom": 10,
-          }
-        }
-        testID="article-summary-headline"
-      >
-        This is tile headline
-      </Text>
-      <ArticleFlags
-        flags={
-          Array [
-            Object {
-              "expiryTime": "2030-03-14T12:00:00.000Z",
-              "type": "EXCLUSIVE",
-            },
-          ]
-        }
-        longRead={true}
-      />
-      <Text
-        style={
-          Object {
-            "color": "#696969",
-            "flexWrap": "wrap",
-            "fontFamily": "TimesDigitalW04",
-            "fontSize": 14,
-            "lineHeight": 20,
-            "marginBottom": 0,
-          }
-        }
-        testID="article-summary-content"
-      >
-        <Text>
-          
-          ‘The prodigal son returns.” So read a banner tied to the wall of the Paul Strank Stand at Kingsmeadow, the home of AFC Wimbledon, on Saturday, alongside the sepia-toned image of a fresh-faced Wally Downes, sporting an 80s haircut and Wimbledon strip, with a mischievous glint in his eye.
-          ...
-        </Text>
-      </Text>
     </View>
+    <Text
+      accessibilityRole="header"
+      aria-level="3"
+      style={
+        Object {
+          "color": "#333333",
+          "fontFamily": "TimesModern-Bold",
+          "fontSize": 30,
+          "fontWeight": "900",
+          "includeFontPadding": false,
+          "lineHeight": 30,
+          "marginBottom": 10,
+        }
+      }
+      testID="article-summary-headline"
+    >
+      This is tile headline
+    </Text>
+    <ArticleFlags
+      flags={
+        Array [
+          Object {
+            "expiryTime": "2030-03-14T12:00:00.000Z",
+            "type": "EXCLUSIVE",
+          },
+        ]
+      }
+      longRead={true}
+    />
+    <Text
+      style={
+        Object {
+          "color": "#696969",
+          "flexWrap": "wrap",
+          "fontFamily": "TimesDigitalW04",
+          "fontSize": 14,
+          "lineHeight": 20,
+          "marginBottom": 0,
+        }
+      }
+      testID="article-summary-content"
+    >
+      <Text>
+        
+        ‘The prodigal son returns.” So read a banner tied to the wall of the Paul Strank Stand at Kingsmeadow, the home of AFC Wimbledon, on Saturday, alongside the sepia-toned image of a fresh-faced Wally Downes, sporting an 80s haircut and Wimbledon strip, with a mischievous glint in his eye.
+        ...
+      </Text>
+    </Text>
   </View>
 </Link>
 `;
@@ -572,70 +558,68 @@ exports[`tile y portrait wide 1`] = `
 >
   <View>
     <View>
-      <View>
-        <View
-          style={
-            Object {
-              "marginBottom": 5,
-            }
+      <View
+        style={
+          Object {
+            "marginBottom": 5,
           }
-        >
-          <ArticleLabel
-            childTestID="article-slug"
-            color="#005B8D"
-            title="label"
-          />
-        </View>
+        }
+      >
+        <ArticleLabel
+          childTestID="article-slug"
+          color="#005B8D"
+          title="label"
+        />
       </View>
-      <Text
-        accessibilityRole="header"
-        aria-level="3"
-        style={
-          Object {
-            "color": "#333333",
-            "fontFamily": "TimesModern-Bold",
-            "fontSize": 35,
-            "fontWeight": "900",
-            "includeFontPadding": false,
-            "lineHeight": 35,
-            "marginBottom": 10,
-          }
-        }
-        testID="article-summary-headline"
-      >
-        This is tile headline
-      </Text>
-      <ArticleFlags
-        flags={
-          Array [
-            Object {
-              "expiryTime": "2030-03-14T12:00:00.000Z",
-              "type": "EXCLUSIVE",
-            },
-          ]
-        }
-        longRead={true}
-      />
-      <Text
-        style={
-          Object {
-            "color": "#696969",
-            "flexWrap": "wrap",
-            "fontFamily": "TimesDigitalW04",
-            "fontSize": 14,
-            "lineHeight": 20,
-            "marginBottom": 0,
-          }
-        }
-        testID="article-summary-content"
-      >
-        <Text>
-          
-          Senior ministers accused Labour today of trying to “frustrate and cancel Brexit” after the party announced plans to hijack Boris Johnson’s deal with amendments for a second referendum and customs union with the EU. Rishi Sunak, the chief secretary to the Treasury, warned that any attempt by MPs to add a customs union to the government’s Brexit deal would be “procedural tricks” intended to frustrate departure. His comments came as ministers announced that they planned to publish the legislation that would formally take Britain out of the European Union today. They will also apply to the Speaker to hold another so-called meaningful vote on the deal following Mr Johnson’s decision to comply with the Benn act, which forces the prime minister to request a Brexit. to “frustrate and cancel Brexit” after the party announced plans to hijack Boris Johnson’s deal with amendments for a second referendum and customs union with the EU. Rishi Sunak, the chief secretary to the Treasury, warned that any attempt by MPs to add a customs union to the government’s Brexit deal would be “procedural tricks” intended to frustrate departure. His comments came as ministers announced that they planned to publish the legislation that would formally take Britain out of the European Union today.
-          ...
-        </Text>
-      </Text>
     </View>
+    <Text
+      accessibilityRole="header"
+      aria-level="3"
+      style={
+        Object {
+          "color": "#333333",
+          "fontFamily": "TimesModern-Bold",
+          "fontSize": 35,
+          "fontWeight": "900",
+          "includeFontPadding": false,
+          "lineHeight": 35,
+          "marginBottom": 10,
+        }
+      }
+      testID="article-summary-headline"
+    >
+      This is tile headline
+    </Text>
+    <ArticleFlags
+      flags={
+        Array [
+          Object {
+            "expiryTime": "2030-03-14T12:00:00.000Z",
+            "type": "EXCLUSIVE",
+          },
+        ]
+      }
+      longRead={true}
+    />
+    <Text
+      style={
+        Object {
+          "color": "#696969",
+          "flexWrap": "wrap",
+          "fontFamily": "TimesDigitalW04",
+          "fontSize": 14,
+          "lineHeight": 20,
+          "marginBottom": 0,
+        }
+      }
+      testID="article-summary-content"
+    >
+      <Text>
+        
+        Senior ministers accused Labour today of trying to “frustrate and cancel Brexit” after the party announced plans to hijack Boris Johnson’s deal with amendments for a second referendum and customs union with the EU. Rishi Sunak, the chief secretary to the Treasury, warned that any attempt by MPs to add a customs union to the government’s Brexit deal would be “procedural tricks” intended to frustrate departure. His comments came as ministers announced that they planned to publish the legislation that would formally take Britain out of the European Union today. They will also apply to the Speaker to hold another so-called meaningful vote on the deal following Mr Johnson’s decision to comply with the Benn act, which forces the prime minister to request a Brexit. to “frustrate and cancel Brexit” after the party announced plans to hijack Boris Johnson’s deal with amendments for a second referendum and customs union with the EU. Rishi Sunak, the chief secretary to the Treasury, warned that any attempt by MPs to add a customs union to the government’s Brexit deal would be “procedural tricks” intended to frustrate departure. His comments came as ministers announced that they planned to publish the legislation that would formally take Britain out of the European Union today.
+        ...
+      </Text>
+    </Text>
   </View>
 </Link>
 `;

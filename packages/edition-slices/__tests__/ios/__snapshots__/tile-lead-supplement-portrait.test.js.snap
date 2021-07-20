@@ -19,66 +19,64 @@ exports[`tile lead supplement portrait medium 1`] = `
     }
     uri="https://www.thetimes.co.uk/imageserver/image/%2Fmethode%2Ftimes%2Fprod%2Fweb%2Fbin%2F5a14c64e-06db-11e9-abe2-4909b2eb0130.jpg?crop=1250%2C1000%2C627%2C0"
   />
-  <View>
-    <View
-      style={
-        Object {
-          "alignItems": "center",
-          "backgroundColor": "#F0F0F0",
-          "flex": 1,
-          "height": 534,
-          "justifyContent": "center",
-          "paddingHorizontal": 50,
-          "paddingVertical": 20,
-        }
+  <View
+    style={
+      Object {
+        "alignItems": "center",
+        "backgroundColor": "#F0F0F0",
+        "flex": 1,
+        "height": 534,
+        "justifyContent": "center",
+        "paddingHorizontal": 50,
+        "paddingVertical": 20,
       }
-    >
-      <View>
-        <View
-          style={
-            Object {
-              "marginBottom": 5,
-            }
-          }
-        >
-          <ArticleLabel
-            childTestID="article-slug"
-            color="#005B8D"
-            title="label"
-          />
-        </View>
-      </View>
-      <Text
-        accessibilityRole="header"
-        aria-level="3"
+    }
+  >
+    <View>
+      <View
         style={
           Object {
-            "color": "#1D1D1B",
-            "fontFamily": "TimesModern-Regular",
-            "fontSize": 40,
-            "fontWeight": "normal",
-            "includeFontPadding": false,
-            "lineHeight": 40,
-            "marginBottom": 10,
-            "textAlign": "center",
+            "marginBottom": 5,
           }
         }
-        testID="article-summary-headline"
       >
-        This is tile headline
-      </Text>
-      <ArticleFlags
-        flags={
-          Array [
-            Object {
-              "expiryTime": "2030-03-14T12:00:00.000Z",
-              "type": "EXCLUSIVE",
-            },
-          ]
-        }
-        longRead={true}
-      />
+        <ArticleLabel
+          childTestID="article-slug"
+          color="#005B8D"
+          title="label"
+        />
+      </View>
     </View>
+    <Text
+      accessibilityRole="header"
+      aria-level="3"
+      style={
+        Object {
+          "color": "#1D1D1B",
+          "fontFamily": "TimesModern-Regular",
+          "fontSize": 40,
+          "fontWeight": "normal",
+          "includeFontPadding": false,
+          "lineHeight": 40,
+          "marginBottom": 10,
+          "textAlign": "center",
+        }
+      }
+      testID="article-summary-headline"
+    >
+      This is tile headline
+    </Text>
+    <ArticleFlags
+      flags={
+        Array [
+          Object {
+            "expiryTime": "2030-03-14T12:00:00.000Z",
+            "type": "EXCLUSIVE",
+          },
+        ]
+      }
+      longRead={true}
+    />
   </View>
 </Link>
 `;
@@ -102,66 +100,64 @@ exports[`tile lead supplement portrait smallTablet 1`] = `
     }
     uri="https://www.thetimes.co.uk/imageserver/image/%2Fmethode%2Ftimes%2Fprod%2Fweb%2Fbin%2F5a14c64e-06db-11e9-abe2-4909b2eb0130.jpg?crop=1250%2C1000%2C627%2C0"
   />
-  <View>
-    <View
-      style={
-        Object {
-          "alignItems": "center",
-          "backgroundColor": "#F0F0F0",
-          "flex": 1,
-          "height": 534,
-          "justifyContent": "center",
-          "paddingHorizontal": 50,
-          "paddingVertical": 20,
-        }
+  <View
+    style={
+      Object {
+        "alignItems": "center",
+        "backgroundColor": "#F0F0F0",
+        "flex": 1,
+        "height": 534,
+        "justifyContent": "center",
+        "paddingHorizontal": 50,
+        "paddingVertical": 20,
       }
-    >
-      <View>
-        <View
-          style={
-            Object {
-              "marginBottom": 5,
-            }
-          }
-        >
-          <ArticleLabel
-            childTestID="article-slug"
-            color="#005B8D"
-            title="label"
-          />
-        </View>
-      </View>
-      <Text
-        accessibilityRole="header"
-        aria-level="3"
+    }
+  >
+    <View>
+      <View
         style={
           Object {
-            "color": "#1D1D1B",
-            "fontFamily": "TimesModern-Regular",
-            "fontSize": 40,
-            "fontWeight": "normal",
-            "includeFontPadding": false,
-            "lineHeight": 40,
-            "marginBottom": 10,
-            "textAlign": "center",
+            "marginBottom": 5,
           }
         }
-        testID="article-summary-headline"
       >
-        This is tile headline
-      </Text>
-      <ArticleFlags
-        flags={
-          Array [
-            Object {
-              "expiryTime": "2030-03-14T12:00:00.000Z",
-              "type": "EXCLUSIVE",
-            },
-          ]
-        }
-        longRead={true}
-      />
+        <ArticleLabel
+          childTestID="article-slug"
+          color="#005B8D"
+          title="label"
+        />
+      </View>
     </View>
+    <Text
+      accessibilityRole="header"
+      aria-level="3"
+      style={
+        Object {
+          "color": "#1D1D1B",
+          "fontFamily": "TimesModern-Regular",
+          "fontSize": 40,
+          "fontWeight": "normal",
+          "includeFontPadding": false,
+          "lineHeight": 40,
+          "marginBottom": 10,
+          "textAlign": "center",
+        }
+      }
+      testID="article-summary-headline"
+    >
+      This is tile headline
+    </Text>
+    <ArticleFlags
+      flags={
+        Array [
+          Object {
+            "expiryTime": "2030-03-14T12:00:00.000Z",
+            "type": "EXCLUSIVE",
+          },
+        ]
+      }
+      longRead={true}
+    />
   </View>
 </Link>
 `;
@@ -185,66 +181,64 @@ exports[`tile lead supplement portrait wide 1`] = `
     }
     uri="https://www.thetimes.co.uk/imageserver/image/%2Fmethode%2Ftimes%2Fprod%2Fweb%2Fbin%2F5a14c64e-06db-11e9-abe2-4909b2eb0130.jpg?crop=1250%2C1000%2C627%2C0"
   />
-  <View>
-    <View
-      style={
-        Object {
-          "alignItems": "center",
-          "backgroundColor": "#F0F0F0",
-          "flex": 1,
-          "height": 534,
-          "justifyContent": "center",
-          "paddingHorizontal": 140,
-          "paddingVertical": 20,
-        }
+  <View
+    style={
+      Object {
+        "alignItems": "center",
+        "backgroundColor": "#F0F0F0",
+        "flex": 1,
+        "height": 534,
+        "justifyContent": "center",
+        "paddingHorizontal": 140,
+        "paddingVertical": 20,
       }
-    >
-      <View>
-        <View
-          style={
-            Object {
-              "marginBottom": 5,
-            }
-          }
-        >
-          <ArticleLabel
-            childTestID="article-slug"
-            color="#005B8D"
-            title="label"
-          />
-        </View>
-      </View>
-      <Text
-        accessibilityRole="header"
-        aria-level="3"
+    }
+  >
+    <View>
+      <View
         style={
           Object {
-            "color": "#1D1D1B",
-            "fontFamily": "TimesModern-Regular",
-            "fontSize": 45,
-            "fontWeight": "normal",
-            "includeFontPadding": false,
-            "lineHeight": 45,
-            "marginBottom": 10,
-            "textAlign": "center",
+            "marginBottom": 5,
           }
         }
-        testID="article-summary-headline"
       >
-        This is tile headline
-      </Text>
-      <ArticleFlags
-        flags={
-          Array [
-            Object {
-              "expiryTime": "2030-03-14T12:00:00.000Z",
-              "type": "EXCLUSIVE",
-            },
-          ]
-        }
-        longRead={true}
-      />
+        <ArticleLabel
+          childTestID="article-slug"
+          color="#005B8D"
+          title="label"
+        />
+      </View>
     </View>
+    <Text
+      accessibilityRole="header"
+      aria-level="3"
+      style={
+        Object {
+          "color": "#1D1D1B",
+          "fontFamily": "TimesModern-Regular",
+          "fontSize": 45,
+          "fontWeight": "normal",
+          "includeFontPadding": false,
+          "lineHeight": 45,
+          "marginBottom": 10,
+          "textAlign": "center",
+        }
+      }
+      testID="article-summary-headline"
+    >
+      This is tile headline
+    </Text>
+    <ArticleFlags
+      flags={
+        Array [
+          Object {
+            "expiryTime": "2030-03-14T12:00:00.000Z",
+            "type": "EXCLUSIVE",
+          },
+        ]
+      }
+      longRead={true}
+    />
   </View>
 </Link>
 `;
