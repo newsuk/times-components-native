@@ -256,30 +256,26 @@ const ArticleSummary: React.FC<Props> = ({
     );
 
   return (
-    <View>
-      <ArticleSummaryComponent
-        articleReadState={articleReadState}
-        bylineProps={
-          bylines ? { ast: bylines, bylineStyle, bylineOnTop } : null
-        }
-        content={summary && renderContent(articleReadState)}
-        flags={renderFlags(articleReadState)}
-        headline={renderHeadline(articleReadState)}
-        labelProps={{
-          color:
-            labelColour ||
-            (section && colours.section[section]) ||
-            colours.section.default,
-          isVideo: hasVideo,
-          title: label,
-          hide: hideLabel,
-        }}
-        strapline={renderStrapline(articleReadState)}
-        saveStar={withStar && renderSaveStar()}
-        style={style}
-        center={!!centeredStar}
-      />
-    </View>
+    <ArticleSummaryComponent
+      articleReadState={articleReadState}
+      bylineProps={bylines ? { ast: bylines, bylineStyle, bylineOnTop } : null}
+      content={summary && renderContent(articleReadState)}
+      flags={renderFlags(articleReadState)}
+      headline={renderHeadline(articleReadState)}
+      labelProps={{
+        color:
+          labelColour ||
+          (section && colours.section[section]) ||
+          colours.section.default,
+        isVideo: hasVideo,
+        title: label,
+        hide: hideLabel,
+      }}
+      strapline={renderStrapline(articleReadState)}
+      saveStar={withStar && renderSaveStar()}
+      style={style}
+      center={!!centeredStar}
+    />
   );
 };
 
