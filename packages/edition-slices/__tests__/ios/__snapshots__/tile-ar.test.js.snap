@@ -33,71 +33,69 @@ exports[`tile ar huge 1`] = `
     <View>
       <View>
         <View>
-          <View>
-            <View
-              style={
-                Object {
-                  "marginBottom": 5,
-                }
+          <View
+            style={
+              Object {
+                "marginBottom": 5,
               }
-            >
-              <ArticleLabel
-                childTestID="article-slug"
-                color="#005B8D"
-                title="label"
-              />
-            </View>
+            }
+          >
+            <ArticleLabel
+              childTestID="article-slug"
+              color="#005B8D"
+              title="label"
+            />
           </View>
-          <Text
-            accessibilityRole="header"
-            aria-level="3"
-            style={
-              Object {
-                "color": "#333333",
-                "fontFamily": "TimesModern-Bold",
-                "fontSize": 22,
-                "fontWeight": "900",
-                "includeFontPadding": false,
-                "lineHeight": 22,
-                "marginBottom": 10,
-              }
-            }
-            testID="article-summary-headline"
-          >
-            This is tile headline
-          </Text>
-          <ArticleFlags
-            flags={
-              Array [
-                Object {
-                  "expiryTime": "2030-03-14T12:00:00.000Z",
-                  "type": "EXCLUSIVE",
-                },
-              ]
-            }
-            longRead={true}
-          />
-          <Text
-            numberOfLines={2}
-            style={
-              Object {
-                "color": "#696969",
-                "flexWrap": "wrap",
-                "fontFamily": "TimesDigitalW04",
-                "fontSize": 14,
-                "lineHeight": 20,
-                "marginBottom": 0,
-              }
-            }
-            testID="article-summary-content"
-          >
-            <Text>
-              
-              Theresa May has two objectives tomorrow when MPs get to vote on Brexit — the trouble is both are fraught with difficulty.
-              ...
-            </Text>
-          </Text>
         </View>
+        <Text
+          accessibilityRole="header"
+          aria-level="3"
+          style={
+            Object {
+              "color": "#333333",
+              "fontFamily": "TimesModern-Bold",
+              "fontSize": 22,
+              "fontWeight": "900",
+              "includeFontPadding": false,
+              "lineHeight": 22,
+              "marginBottom": 10,
+            }
+          }
+          testID="article-summary-headline"
+        >
+          This is tile headline
+        </Text>
+        <ArticleFlags
+          flags={
+            Array [
+              Object {
+                "expiryTime": "2030-03-14T12:00:00.000Z",
+                "type": "EXCLUSIVE",
+              },
+            ]
+          }
+          longRead={true}
+        />
+        <Text
+          numberOfLines={2}
+          style={
+            Object {
+              "color": "#696969",
+              "flexWrap": "wrap",
+              "fontFamily": "TimesDigitalW04",
+              "fontSize": 14,
+              "lineHeight": 20,
+              "marginBottom": 0,
+            }
+          }
+          testID="article-summary-content"
+        >
+          <Text>
+            
+            Theresa May has two objectives tomorrow when MPs get to vote on Brexit — the trouble is both are fraught with difficulty.
+            ...
+          </Text>
+        </Text>
       </View>
     </View>
   </View>
@@ -137,71 +135,69 @@ exports[`tile ar medium 1`] = `
     <View>
       <View>
         <View>
-          <View>
-            <View
-              style={
-                Object {
-                  "marginBottom": 5,
-                }
+          <View
+            style={
+              Object {
+                "marginBottom": 5,
               }
-            >
-              <ArticleLabel
-                childTestID="article-slug"
-                color="#005B8D"
-                title="label"
-              />
-            </View>
+            }
+          >
+            <ArticleLabel
+              childTestID="article-slug"
+              color="#005B8D"
+              title="label"
+            />
           </View>
-          <Text
-            accessibilityRole="header"
-            aria-level="3"
-            style={
-              Object {
-                "color": "#333333",
-                "fontFamily": "TimesModern-Bold",
-                "fontSize": 20,
-                "fontWeight": "900",
-                "includeFontPadding": false,
-                "lineHeight": 20,
-                "marginBottom": 10,
-              }
-            }
-            testID="article-summary-headline"
-          >
-            This is tile headline
-          </Text>
-          <ArticleFlags
-            flags={
-              Array [
-                Object {
-                  "expiryTime": "2030-03-14T12:00:00.000Z",
-                  "type": "EXCLUSIVE",
-                },
-              ]
-            }
-            longRead={true}
-          />
-          <Text
-            numberOfLines={2}
-            style={
-              Object {
-                "color": "#696969",
-                "flexWrap": "wrap",
-                "fontFamily": "TimesDigitalW04",
-                "fontSize": 14,
-                "lineHeight": 20,
-                "marginBottom": 0,
-              }
-            }
-            testID="article-summary-content"
-          >
-            <Text>
-              
-              Theresa May has two objectives tomorrow when MPs get to vote on Brexit — the trouble is both are fraught with difficulty.
-              ...
-            </Text>
-          </Text>
         </View>
+        <Text
+          accessibilityRole="header"
+          aria-level="3"
+          style={
+            Object {
+              "color": "#333333",
+              "fontFamily": "TimesModern-Bold",
+              "fontSize": 20,
+              "fontWeight": "900",
+              "includeFontPadding": false,
+              "lineHeight": 20,
+              "marginBottom": 10,
+            }
+          }
+          testID="article-summary-headline"
+        >
+          This is tile headline
+        </Text>
+        <ArticleFlags
+          flags={
+            Array [
+              Object {
+                "expiryTime": "2030-03-14T12:00:00.000Z",
+                "type": "EXCLUSIVE",
+              },
+            ]
+          }
+          longRead={true}
+        />
+        <Text
+          numberOfLines={2}
+          style={
+            Object {
+              "color": "#696969",
+              "flexWrap": "wrap",
+              "fontFamily": "TimesDigitalW04",
+              "fontSize": 14,
+              "lineHeight": 20,
+              "marginBottom": 0,
+            }
+          }
+          testID="article-summary-content"
+        >
+          <Text>
+            
+            Theresa May has two objectives tomorrow when MPs get to vote on Brexit — the trouble is both are fraught with difficulty.
+            ...
+          </Text>
+        </Text>
       </View>
     </View>
   </View>
@@ -241,71 +237,69 @@ exports[`tile ar smallTablet 1`] = `
     <View>
       <View>
         <View>
-          <View>
-            <View
-              style={
-                Object {
-                  "marginBottom": 5,
-                }
+          <View
+            style={
+              Object {
+                "marginBottom": 5,
               }
-            >
-              <ArticleLabel
-                childTestID="article-slug"
-                color="#005B8D"
-                title="label"
-              />
-            </View>
+            }
+          >
+            <ArticleLabel
+              childTestID="article-slug"
+              color="#005B8D"
+              title="label"
+            />
           </View>
-          <Text
-            accessibilityRole="header"
-            aria-level="3"
-            style={
-              Object {
-                "color": "#333333",
-                "fontFamily": "TimesModern-Bold",
-                "fontSize": 20,
-                "fontWeight": "900",
-                "includeFontPadding": false,
-                "lineHeight": 20,
-                "marginBottom": 10,
-              }
-            }
-            testID="article-summary-headline"
-          >
-            This is tile headline
-          </Text>
-          <ArticleFlags
-            flags={
-              Array [
-                Object {
-                  "expiryTime": "2030-03-14T12:00:00.000Z",
-                  "type": "EXCLUSIVE",
-                },
-              ]
-            }
-            longRead={true}
-          />
-          <Text
-            numberOfLines={2}
-            style={
-              Object {
-                "color": "#696969",
-                "flexWrap": "wrap",
-                "fontFamily": "TimesDigitalW04",
-                "fontSize": 14,
-                "lineHeight": 20,
-                "marginBottom": 0,
-              }
-            }
-            testID="article-summary-content"
-          >
-            <Text>
-              
-              Theresa May has two objectives tomorrow when MPs get to vote on Brexit — the trouble is both are fraught with difficulty.
-              ...
-            </Text>
-          </Text>
         </View>
+        <Text
+          accessibilityRole="header"
+          aria-level="3"
+          style={
+            Object {
+              "color": "#333333",
+              "fontFamily": "TimesModern-Bold",
+              "fontSize": 20,
+              "fontWeight": "900",
+              "includeFontPadding": false,
+              "lineHeight": 20,
+              "marginBottom": 10,
+            }
+          }
+          testID="article-summary-headline"
+        >
+          This is tile headline
+        </Text>
+        <ArticleFlags
+          flags={
+            Array [
+              Object {
+                "expiryTime": "2030-03-14T12:00:00.000Z",
+                "type": "EXCLUSIVE",
+              },
+            ]
+          }
+          longRead={true}
+        />
+        <Text
+          numberOfLines={2}
+          style={
+            Object {
+              "color": "#696969",
+              "flexWrap": "wrap",
+              "fontFamily": "TimesDigitalW04",
+              "fontSize": 14,
+              "lineHeight": 20,
+              "marginBottom": 0,
+            }
+          }
+          testID="article-summary-content"
+        >
+          <Text>
+            
+            Theresa May has two objectives tomorrow when MPs get to vote on Brexit — the trouble is both are fraught with difficulty.
+            ...
+          </Text>
+        </Text>
       </View>
     </View>
   </View>
@@ -345,71 +339,69 @@ exports[`tile ar wide 1`] = `
     <View>
       <View>
         <View>
-          <View>
-            <View
-              style={
-                Object {
-                  "marginBottom": 5,
-                }
+          <View
+            style={
+              Object {
+                "marginBottom": 5,
               }
-            >
-              <ArticleLabel
-                childTestID="article-slug"
-                color="#005B8D"
-                title="label"
-              />
-            </View>
+            }
+          >
+            <ArticleLabel
+              childTestID="article-slug"
+              color="#005B8D"
+              title="label"
+            />
           </View>
-          <Text
-            accessibilityRole="header"
-            aria-level="3"
-            style={
-              Object {
-                "color": "#333333",
-                "fontFamily": "TimesModern-Bold",
-                "fontSize": 20,
-                "fontWeight": "900",
-                "includeFontPadding": false,
-                "lineHeight": 20,
-                "marginBottom": 10,
-              }
-            }
-            testID="article-summary-headline"
-          >
-            This is tile headline
-          </Text>
-          <ArticleFlags
-            flags={
-              Array [
-                Object {
-                  "expiryTime": "2030-03-14T12:00:00.000Z",
-                  "type": "EXCLUSIVE",
-                },
-              ]
-            }
-            longRead={true}
-          />
-          <Text
-            numberOfLines={2}
-            style={
-              Object {
-                "color": "#696969",
-                "flexWrap": "wrap",
-                "fontFamily": "TimesDigitalW04",
-                "fontSize": 14,
-                "lineHeight": 20,
-                "marginBottom": 0,
-              }
-            }
-            testID="article-summary-content"
-          >
-            <Text>
-              
-              Theresa May has two objectives tomorrow when MPs get to vote on Brexit — the trouble is both are fraught with difficulty.
-              ...
-            </Text>
-          </Text>
         </View>
+        <Text
+          accessibilityRole="header"
+          aria-level="3"
+          style={
+            Object {
+              "color": "#333333",
+              "fontFamily": "TimesModern-Bold",
+              "fontSize": 20,
+              "fontWeight": "900",
+              "includeFontPadding": false,
+              "lineHeight": 20,
+              "marginBottom": 10,
+            }
+          }
+          testID="article-summary-headline"
+        >
+          This is tile headline
+        </Text>
+        <ArticleFlags
+          flags={
+            Array [
+              Object {
+                "expiryTime": "2030-03-14T12:00:00.000Z",
+                "type": "EXCLUSIVE",
+              },
+            ]
+          }
+          longRead={true}
+        />
+        <Text
+          numberOfLines={2}
+          style={
+            Object {
+              "color": "#696969",
+              "flexWrap": "wrap",
+              "fontFamily": "TimesDigitalW04",
+              "fontSize": 14,
+              "lineHeight": 20,
+              "marginBottom": 0,
+            }
+          }
+          testID="article-summary-content"
+        >
+          <Text>
+            
+            Theresa May has two objectives tomorrow when MPs get to vote on Brexit — the trouble is both are fraught with difficulty.
+            ...
+          </Text>
+        </Text>
       </View>
     </View>
   </View>
@@ -449,71 +441,69 @@ exports[`tile ar without breakpoint should be like medium 1`] = `
     <View>
       <View>
         <View>
-          <View>
-            <View
-              style={
-                Object {
-                  "marginBottom": 5,
-                }
+          <View
+            style={
+              Object {
+                "marginBottom": 5,
               }
-            >
-              <ArticleLabel
-                childTestID="article-slug"
-                color="#005B8D"
-                title="label"
-              />
-            </View>
+            }
+          >
+            <ArticleLabel
+              childTestID="article-slug"
+              color="#005B8D"
+              title="label"
+            />
           </View>
-          <Text
-            accessibilityRole="header"
-            aria-level="3"
-            style={
-              Object {
-                "color": "#333333",
-                "fontFamily": "TimesModern-Bold",
-                "fontSize": 20,
-                "fontWeight": "900",
-                "includeFontPadding": false,
-                "lineHeight": 20,
-                "marginBottom": 10,
-              }
-            }
-            testID="article-summary-headline"
-          >
-            This is tile headline
-          </Text>
-          <ArticleFlags
-            flags={
-              Array [
-                Object {
-                  "expiryTime": "2030-03-14T12:00:00.000Z",
-                  "type": "EXCLUSIVE",
-                },
-              ]
-            }
-            longRead={true}
-          />
-          <Text
-            numberOfLines={2}
-            style={
-              Object {
-                "color": "#696969",
-                "flexWrap": "wrap",
-                "fontFamily": "TimesDigitalW04",
-                "fontSize": 14,
-                "lineHeight": 20,
-                "marginBottom": 0,
-              }
-            }
-            testID="article-summary-content"
-          >
-            <Text>
-              
-              Theresa May has two objectives tomorrow when MPs get to vote on Brexit — the trouble is both are fraught with difficulty.
-              ...
-            </Text>
-          </Text>
         </View>
+        <Text
+          accessibilityRole="header"
+          aria-level="3"
+          style={
+            Object {
+              "color": "#333333",
+              "fontFamily": "TimesModern-Bold",
+              "fontSize": 20,
+              "fontWeight": "900",
+              "includeFontPadding": false,
+              "lineHeight": 20,
+              "marginBottom": 10,
+            }
+          }
+          testID="article-summary-headline"
+        >
+          This is tile headline
+        </Text>
+        <ArticleFlags
+          flags={
+            Array [
+              Object {
+                "expiryTime": "2030-03-14T12:00:00.000Z",
+                "type": "EXCLUSIVE",
+              },
+            ]
+          }
+          longRead={true}
+        />
+        <Text
+          numberOfLines={2}
+          style={
+            Object {
+              "color": "#696969",
+              "flexWrap": "wrap",
+              "fontFamily": "TimesDigitalW04",
+              "fontSize": 14,
+              "lineHeight": 20,
+              "marginBottom": 0,
+            }
+          }
+          testID="article-summary-content"
+        >
+          <Text>
+            
+            Theresa May has two objectives tomorrow when MPs get to vote on Brexit — the trouble is both are fraught with difficulty.
+            ...
+          </Text>
+        </Text>
       </View>
     </View>
   </View>

@@ -9,47 +9,45 @@ exports[`tile m huge 1`] = `
   }
 >
   <View>
-    <View>
-      <Text
-        accessibilityRole="header"
-        aria-level="3"
-        style={
-          Object {
-            "color": "#1D1D1B",
-            "fontFamily": "TimesModern-Bold",
-            "fontSize": 24,
-            "fontWeight": "900",
-            "includeFontPadding": false,
-            "lineHeight": 24,
-            "marginBottom": 10,
-            "marginTop": 30,
-            "textAlign": "center",
-          }
+    <Text
+      accessibilityRole="header"
+      aria-level="3"
+      style={
+        Object {
+          "color": "#1D1D1B",
+          "fontFamily": "TimesModern-Bold",
+          "fontSize": 24,
+          "fontWeight": "900",
+          "includeFontPadding": false,
+          "lineHeight": 24,
+          "marginBottom": 10,
+          "marginTop": 30,
+          "textAlign": "center",
         }
-        testID="article-summary-headline"
-      >
-        Driving Off
-      </Text>
-      <Text
-        accessibilityRole="header"
-        aria-level="4"
-        style={
-          Object {
-            "color": "#333333",
-            "fontFamily": "TimesModern-Regular",
-            "fontSize": 16,
-            "includeFontPadding": false,
-            "lineHeight": 19,
-            "marginBottom": 10,
-            "paddingBottom": 5,
-            "textAlign": "center",
-          }
+      }
+      testID="article-summary-headline"
+    >
+      Driving Off
+    </Text>
+    <Text
+      accessibilityRole="header"
+      aria-level="4"
+      style={
+        Object {
+          "color": "#333333",
+          "fontFamily": "TimesModern-Regular",
+          "fontSize": 16,
+          "includeFontPadding": false,
+          "lineHeight": 19,
+          "marginBottom": 10,
+          "paddingBottom": 5,
+          "textAlign": "center",
         }
-      >
-        Three Conservative MPs resign
-      </Text>
-      <ArticleFlags />
-    </View>
+      }
+    >
+      Three Conservative MPs resign
+    </Text>
+    <ArticleFlags />
   </View>
 </Link>
 `;
@@ -63,47 +61,45 @@ exports[`tile m medium 1`] = `
   }
 >
   <View>
-    <View>
-      <Text
-        accessibilityRole="header"
-        aria-level="3"
-        style={
-          Object {
-            "color": "#1D1D1B",
-            "fontFamily": "TimesModern-Bold",
-            "fontSize": 20,
-            "fontWeight": "900",
-            "includeFontPadding": false,
-            "lineHeight": 20,
-            "marginBottom": 10,
-            "marginTop": 30,
-            "textAlign": "center",
-          }
+    <Text
+      accessibilityRole="header"
+      aria-level="3"
+      style={
+        Object {
+          "color": "#1D1D1B",
+          "fontFamily": "TimesModern-Bold",
+          "fontSize": 20,
+          "fontWeight": "900",
+          "includeFontPadding": false,
+          "lineHeight": 20,
+          "marginBottom": 10,
+          "marginTop": 30,
+          "textAlign": "center",
         }
-        testID="article-summary-headline"
-      >
-        Driving Off
-      </Text>
-      <Text
-        accessibilityRole="header"
-        aria-level="4"
-        style={
-          Object {
-            "color": "#333333",
-            "fontFamily": "TimesModern-Regular",
-            "fontSize": 16,
-            "includeFontPadding": false,
-            "lineHeight": 19,
-            "marginBottom": 10,
-            "paddingBottom": 5,
-            "textAlign": "center",
-          }
+      }
+      testID="article-summary-headline"
+    >
+      Driving Off
+    </Text>
+    <Text
+      accessibilityRole="header"
+      aria-level="4"
+      style={
+        Object {
+          "color": "#333333",
+          "fontFamily": "TimesModern-Regular",
+          "fontSize": 16,
+          "includeFontPadding": false,
+          "lineHeight": 19,
+          "marginBottom": 10,
+          "paddingBottom": 5,
+          "textAlign": "center",
         }
-      >
-        Three Conservative MPs resign
-      </Text>
-      <ArticleFlags />
-    </View>
+      }
+    >
+      Three Conservative MPs resign
+    </Text>
+    <ArticleFlags />
   </View>
 </Link>
 `;
@@ -117,54 +113,52 @@ exports[`tile m small 1`] = `
     }
   }
 >
-  <View>
-    <View
+  <View
+    style={
+      Object {
+        "flex": 1,
+      }
+    }
+  >
+    <Text
+      accessibilityRole="header"
+      aria-level="3"
       style={
         Object {
-          "flex": 1,
+          "color": "#333333",
+          "fontFamily": "TimesModern-Bold",
+          "fontSize": 20,
+          "fontWeight": "900",
+          "includeFontPadding": false,
+          "lineHeight": 20,
+          "marginBottom": 5,
+          "marginTop": 20,
+          "textAlign": "center",
+        }
+      }
+      testID="article-summary-headline"
+    >
+      Driving Off
+    </Text>
+    <Text
+      accessibilityRole="header"
+      aria-level="4"
+      style={
+        Object {
+          "color": "#696969",
+          "fontFamily": "TimesDigitalW04-Regular",
+          "fontSize": 14,
+          "includeFontPadding": false,
+          "lineHeight": 20,
+          "marginBottom": 10,
+          "paddingHorizontal": 40,
+          "textAlign": "center",
         }
       }
     >
-      <Text
-        accessibilityRole="header"
-        aria-level="3"
-        style={
-          Object {
-            "color": "#333333",
-            "fontFamily": "TimesModern-Bold",
-            "fontSize": 20,
-            "fontWeight": "900",
-            "includeFontPadding": false,
-            "lineHeight": 20,
-            "marginBottom": 5,
-            "marginTop": 20,
-            "textAlign": "center",
-          }
-        }
-        testID="article-summary-headline"
-      >
-        Driving Off
-      </Text>
-      <Text
-        accessibilityRole="header"
-        aria-level="4"
-        style={
-          Object {
-            "color": "#696969",
-            "fontFamily": "TimesDigitalW04-Regular",
-            "fontSize": 14,
-            "includeFontPadding": false,
-            "lineHeight": 20,
-            "marginBottom": 10,
-            "paddingHorizontal": 40,
-            "textAlign": "center",
-          }
-        }
-      >
-        Three Conservative MPs resign
-      </Text>
-      <ArticleFlags />
-    </View>
+      Three Conservative MPs resign
+    </Text>
+    <ArticleFlags />
   </View>
 </Link>
 `;
@@ -178,47 +172,45 @@ exports[`tile m smallTablet 1`] = `
   }
 >
   <View>
-    <View>
-      <Text
-        accessibilityRole="header"
-        aria-level="3"
-        style={
-          Object {
-            "color": "#1D1D1B",
-            "fontFamily": "TimesModern-Bold",
-            "fontSize": 20,
-            "fontWeight": "900",
-            "includeFontPadding": false,
-            "lineHeight": 20,
-            "marginBottom": 10,
-            "marginTop": 30,
-            "textAlign": "center",
-          }
+    <Text
+      accessibilityRole="header"
+      aria-level="3"
+      style={
+        Object {
+          "color": "#1D1D1B",
+          "fontFamily": "TimesModern-Bold",
+          "fontSize": 20,
+          "fontWeight": "900",
+          "includeFontPadding": false,
+          "lineHeight": 20,
+          "marginBottom": 10,
+          "marginTop": 30,
+          "textAlign": "center",
         }
-        testID="article-summary-headline"
-      >
-        Driving Off
-      </Text>
-      <Text
-        accessibilityRole="header"
-        aria-level="4"
-        style={
-          Object {
-            "color": "#333333",
-            "fontFamily": "TimesModern-Regular",
-            "fontSize": 16,
-            "includeFontPadding": false,
-            "lineHeight": 19,
-            "marginBottom": 10,
-            "paddingBottom": 5,
-            "textAlign": "center",
-          }
+      }
+      testID="article-summary-headline"
+    >
+      Driving Off
+    </Text>
+    <Text
+      accessibilityRole="header"
+      aria-level="4"
+      style={
+        Object {
+          "color": "#333333",
+          "fontFamily": "TimesModern-Regular",
+          "fontSize": 16,
+          "includeFontPadding": false,
+          "lineHeight": 19,
+          "marginBottom": 10,
+          "paddingBottom": 5,
+          "textAlign": "center",
         }
-      >
-        Three Conservative MPs resign
-      </Text>
-      <ArticleFlags />
-    </View>
+      }
+    >
+      Three Conservative MPs resign
+    </Text>
+    <ArticleFlags />
   </View>
 </Link>
 `;
@@ -232,47 +224,45 @@ exports[`tile m wide 1`] = `
   }
 >
   <View>
-    <View>
-      <Text
-        accessibilityRole="header"
-        aria-level="3"
-        style={
-          Object {
-            "color": "#1D1D1B",
-            "fontFamily": "TimesModern-Bold",
-            "fontSize": 24,
-            "fontWeight": "900",
-            "includeFontPadding": false,
-            "lineHeight": 24,
-            "marginBottom": 10,
-            "marginTop": 30,
-            "textAlign": "center",
-          }
+    <Text
+      accessibilityRole="header"
+      aria-level="3"
+      style={
+        Object {
+          "color": "#1D1D1B",
+          "fontFamily": "TimesModern-Bold",
+          "fontSize": 24,
+          "fontWeight": "900",
+          "includeFontPadding": false,
+          "lineHeight": 24,
+          "marginBottom": 10,
+          "marginTop": 30,
+          "textAlign": "center",
         }
-        testID="article-summary-headline"
-      >
-        Driving Off
-      </Text>
-      <Text
-        accessibilityRole="header"
-        aria-level="4"
-        style={
-          Object {
-            "color": "#333333",
-            "fontFamily": "TimesModern-Regular",
-            "fontSize": 16,
-            "includeFontPadding": false,
-            "lineHeight": 19,
-            "marginBottom": 10,
-            "paddingBottom": 5,
-            "textAlign": "center",
-          }
+      }
+      testID="article-summary-headline"
+    >
+      Driving Off
+    </Text>
+    <Text
+      accessibilityRole="header"
+      aria-level="4"
+      style={
+        Object {
+          "color": "#333333",
+          "fontFamily": "TimesModern-Regular",
+          "fontSize": 16,
+          "includeFontPadding": false,
+          "lineHeight": 19,
+          "marginBottom": 10,
+          "paddingBottom": 5,
+          "textAlign": "center",
         }
-      >
-        Three Conservative MPs resign
-      </Text>
-      <ArticleFlags />
-    </View>
+      }
+    >
+      Three Conservative MPs resign
+    </Text>
+    <ArticleFlags />
   </View>
 </Link>
 `;
@@ -286,54 +276,52 @@ exports[`tile m without breakpoint should be like small 1`] = `
     }
   }
 >
-  <View>
-    <View
+  <View
+    style={
+      Object {
+        "flex": 1,
+      }
+    }
+  >
+    <Text
+      accessibilityRole="header"
+      aria-level="3"
       style={
         Object {
-          "flex": 1,
+          "color": "#333333",
+          "fontFamily": "TimesModern-Bold",
+          "fontSize": 20,
+          "fontWeight": "900",
+          "includeFontPadding": false,
+          "lineHeight": 20,
+          "marginBottom": 5,
+          "marginTop": 20,
+          "textAlign": "center",
+        }
+      }
+      testID="article-summary-headline"
+    >
+      Driving Off
+    </Text>
+    <Text
+      accessibilityRole="header"
+      aria-level="4"
+      style={
+        Object {
+          "color": "#696969",
+          "fontFamily": "TimesDigitalW04-Regular",
+          "fontSize": 14,
+          "includeFontPadding": false,
+          "lineHeight": 20,
+          "marginBottom": 10,
+          "paddingHorizontal": 40,
+          "textAlign": "center",
         }
       }
     >
-      <Text
-        accessibilityRole="header"
-        aria-level="3"
-        style={
-          Object {
-            "color": "#333333",
-            "fontFamily": "TimesModern-Bold",
-            "fontSize": 20,
-            "fontWeight": "900",
-            "includeFontPadding": false,
-            "lineHeight": 20,
-            "marginBottom": 5,
-            "marginTop": 20,
-            "textAlign": "center",
-          }
-        }
-        testID="article-summary-headline"
-      >
-        Driving Off
-      </Text>
-      <Text
-        accessibilityRole="header"
-        aria-level="4"
-        style={
-          Object {
-            "color": "#696969",
-            "fontFamily": "TimesDigitalW04-Regular",
-            "fontSize": 14,
-            "includeFontPadding": false,
-            "lineHeight": 20,
-            "marginBottom": 10,
-            "paddingHorizontal": 40,
-            "textAlign": "center",
-          }
-        }
-      >
-        Three Conservative MPs resign
-      </Text>
-      <ArticleFlags />
-    </View>
+      Three Conservative MPs resign
+    </Text>
+    <ArticleFlags />
   </View>
 </Link>
 `;
